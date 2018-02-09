@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Field20::Value
 - _Parameter::Value
-helpviewer_keywords: Value property [ADO]
+helpviewer_keywords:
+- Value property [ADO]
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7fe603ac5853d1cc4afa6511ea6568593feebf6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c48952d89eb58a835ab3372784c0fea468f492af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="value-property-ado"></a>值属性 (ADO)
 指示分配给值[字段](../../../ado/reference/ado-api/field-object.md)，[参数](../../../ado/reference/ado-api/parameter-object.md)，或[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**Variant**值，该值指示对象的值。 默认值取决于[类型](../../../ado/reference/ado-api/type-property-ado.md)属性。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**值**属性来设置或返回数据自**字段**对象，设置或返回参数值和**参数**对象，或用于设置或返回与属性设置**属性**对象。 是否**值**属性为读/写或只读取决于多种因素，??? 请参阅各自对象主题以了解更多信息。  
   
  ADO 允许设置和返回长度的二进制数据与**值**属性。  

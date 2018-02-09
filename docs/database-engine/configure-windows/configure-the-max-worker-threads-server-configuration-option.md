@@ -8,23 +8,24 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - worker threads [SQL Server]
 - max worker threads option
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26bfb29be87a3a208a1111c107fc8f8ea8c4d1ef
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f90a697f2eef22c30e928a4d3ba2f0eb9177a752
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>配置 max worker threads 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 建议  
   
--   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。 如果怀疑存在性能问题，可能不是由于工作线程不可用。 很有可能是导致工作线程等待的因素造成的，例如 I/O。 在更改最大工作线程设置之前，最好找到导致性能问题的根本原因。  
+-   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。 如果怀疑存在性能问题，可能不是由于工作线程不可用。 很有可能是导致工作线程等待的因素造成的，例如 I/O。 在更改最大工作线程设置之前，最好找到导致性能问题的根本原因。  
   
 -   当服务器上连接有大量客户端时，线程池有助于优化性能。 一般情况下，会为每个查询请求创建一个单独的操作系统线程。 但是，当到服务器的连接达到数以百计时，为每个查询请求使用一个线程会占用大量的系统资源。 **max worker threads** 选项使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以为更大数量的查询请求创建一个工作线程池，这将提高性能。  
   

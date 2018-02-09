@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - attribute axis [SQL Server]
 - axis step [XQuery]
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d19dec5b1ea98242c96ca43e3c295290827a8bcf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>路径表达式的指定轴
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +54,12 @@ ms.lasthandoff: 12/05/2017
   
 |Axis|Description|  
 |----------|-----------------|  
-|**子**|返回上下文节点的子级。|  
-|**后代**|返回上下文节点的所有后代。|  
-|**父**|返回上下文节点的父级。|  
-|**属性**|返回上下文节点的属性。|  
-|**自助**|返回上下文节点本身。|  
-|**后代或自助**|返回上下文节点及其所有后代。|  
+|**child**|返回上下文节点的子级。|  
+|**descendant**|返回上下文节点的所有后代。|  
+|**parent**|返回上下文节点的父级。|  
+|**attribute**|返回上下文节点的属性。|  
+|**self**|返回上下文节点本身。|  
+|**descendant-or-self**|返回上下文节点及其所有后代。|  
   
  所有这些轴，除**父**轴，是正轴。 **父**轴是反向轴，因为它会在文档层次结构中向后搜索。 例如，相对路径表达式 `child::ProductDescription/child::Summary` 包含两个步骤，每个步骤均指定一个 `child` 轴。 第一步检索\<ProductDescription > 元素的上下文节点的子级。 每个\<ProductDescription > 元素节点的第二步检索\<摘要 > 子元素节点。  
   

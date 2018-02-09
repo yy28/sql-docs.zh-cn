@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 本文档说明如何在 Ubuntu 上创建一个三节点群集并将以前创建的可用性组添加为群集中的资源。 在 Linux 上的可用性组以实现高可用性，需要三个节点-请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。
 
 > [!NOTE] 
-> 此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 从在 SQL 中，也没有有关群集的状态不知道、 在中，超出的所有业务流程和服务由 Pacemaker 控制作为独立实例。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 AlwaysOn 动态管理视图查询群集信息，返回空行。 你仍可创建一个侦听器，以将其用于故障转移后，透明重新连接，但你将需要使用手动注册侦听器名称在 DNS 服务器中用于创建虚拟 IP 资源 （如下所述） 的 IP。
+> 此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 从在 SQL 中，也没有有关群集的状态不知道、 在中，超出的所有业务流程和服务由 Pacemaker 控制作为独立实例。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 Alwayson 动态管理视图查询群集信息返回空行。 你仍可创建一个侦听器，以将其用于故障转移后，透明重新连接，但你必须手动注册侦听器名称在 DNS 服务器与用于创建虚拟 IP 资源 （如下所述） 的 IP。
 
 以下各部分介绍了设置故障转移群集解决方案的步骤。 
 
@@ -95,18 +95,18 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->启用 Pacemaker 命令完成，出现错误“Pacemaker 默认启动不包含运行级别，正在中止”。 这无关紧要，群集配置可继续进行。 我们正在联系群集供应商修复该问题。
+>启用 pacemaker 命令可能会完成并出现错误 pacemaker 默认启动包含没有运行，正在中止的级别。 这无关紧要，群集配置可继续进行。 
 
 ## <a name="create-the-cluster"></a>创建群集
 
 1. 从所有节点中删除任何现有的群集配置。 
 
-   运行“sudo apt-get install pcs”将同时安装 pacemaker、corosync 和 pcs，并开始运行这 3 个服务。  启动 corosync 将生成“/etc/cluster/corosync.conf”模板文件。  能够成功此文件的后续步骤应不存在 – 因此解决方法是停止 pacemaker / corosync 和删除 ' / etc/cluster/corosync.conf，然后接下来的步骤将成功完成。 电脑群集销毁执行同样的操作，并可以将其用作一个时间初始群集安装步骤。
+   运行“sudo apt-get install pcs”将同时安装 pacemaker、corosync 和 pcs，并开始运行这 3 个服务。  启动 corosync 将生成“/etc/cluster/corosync.conf”模板文件。  能够成功此文件的后续步骤应不存在 – 因此解决方法是停止 pacemaker / corosync 和删除 ' / etc/cluster/corosync.conf，然后接下来的步骤已成功完成。 电脑群集销毁执行同样的操作，并可以将其用作一个时间初始群集安装步骤。
    
    以下命令将删除所有现存群集配置文件并停止所有群集服务。 这会永久性销毁群集。 请在预生产环境中将其作为第一个步骤运行。 请注意，“pcs cluster destroy”已禁用 Pacemaker 服务，需重新启用。 在所有节点上运行以下命令。
    
    >[!WARNING]
-   >该命令会销毁任何现有群集资源。
+   >该命令销毁任何现有的群集资源。
 
    ```bash
    sudo pcs cluster destroy 
@@ -116,18 +116,18 @@ sudo systemctl enable pacemaker
 1. 创建群集。 
 
    >[!WARNING]
-   >由于出现一个已知问题（群集服务供应商正在对其进行调查），启动群集（“pcs cluster start”）将失败，并出现以下错误。 这是因为在运行群集安装程序命令时创建，不正确的 /etc/corosync/corosync.conf 中配置日志文件。 若要解决此问题，更改到的日志文件： /var/log/corosync/corosync.log。 或者可创建 /var/log/cluster/corosync.log 文件。
+   >由于已知问题，调查、 启动聚类分析的供应商群集 （电脑群集启动） 失败，错误下面。 这是因为在运行群集安装程序命令时创建，不正确的 /etc/corosync/corosync.conf 中配置日志文件。 若要解决此问题，更改到的日志文件： /var/log/corosync/corosync.log。 或者可创建 /var/log/cluster/corosync.log 文件。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-以下命令将创建一个三节点群集。 在运行该脚本之前，替换 `**< ... >**` 之内的值。 在主节点上运行以下命令。 
+以下命令将创建一个三节点群集。 在运行该脚本之前，替换 `< ... >` 之内的值。 在主节点上运行以下命令。 
 
    ```bash
-   sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
-   sudo pcs cluster setup --name **<clusterName>** **<node1>** **<node2…>** **<node3>**
+   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
    sudo pcs cluster start --all
    ```
    
@@ -146,11 +146,11 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->禁用 STONITH 仅出于测试目的。 如果计划在生产环境中使用 Pacemaker，则应根据环境计划 STONITH 实现，并使其处于启用状态。 请注意，目前不对任何云环境（包括 Azure）或 Hyper-V 提供隔离代理。 因此，群集供应商未提供在这些环境中运行生产群集相关的支持。 我们正在研究解决方案弥补该漏洞，并在将来版本中推出。
+>禁用 STONITH 仅出于测试目的。 如果计划在生产环境中使用 Pacemaker，则应根据环境计划 STONITH 实现，并使其处于启用状态。 请注意，目前不对任何云环境（包括 Azure）或 Hyper-V 提供隔离代理。 因此，群集供应商未提供在这些环境中运行生产群集相关的支持。 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Set cluster property start-failure-is-fatal to false
 
-`start-failure-is-fatal`指示是否无法在节点上启动资源将阻止进一步开始尝试在该节点上。 当设置为`false`，群集将决定是否要尝试恢复使用基于资源的当前故障计数和迁移阈值的同一节点上启动。 因此，故障转移发生后，在 SQL 实例可用时，Pacemaker 将重新尝试在先前主节点上启动可用性组资源。 Pacemaker 将降级为辅助副本和它将自动重新加入可用性组。 
+`start-failure-is-fatal`指示是否无法在节点上启动资源将阻止进一步开始尝试在该节点上。 当设置为`false`，群集来决定是否要尝试恢复使用基于资源的当前故障计数和迁移阈值的同一节点上启动。 因此，发生故障转移后，Pacemaker 重试启动可用性组主前者上资源的 SQL 实例可用后。 Pacemaker 将降级到辅助数据库副本，并自动重新加入可用性组。 
 
 若要更新属性值设置为`false`运行以下脚本：
 
@@ -187,17 +187,17 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## <a name="create-virtual-ip-resource"></a>创建虚拟 IP 资源
 
-若要创建虚拟 IP 地址资源，请在一个节点上运行以下命令。 使用网络中的可用静态 IP 地址。 在运行该脚本之前，将之间的值`**< ... >**`带有有效的 IP 地址。
+若要创建虚拟 IP 地址资源，请在一个节点上运行以下命令。 使用网络中的可用静态 IP 地址。 在运行该脚本之前，将之间的值`< ... >`带有有效的 IP 地址。
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 Pacemaker 中不存在等效的虚拟服务器名称。 若要使用指向字符串服务器名称的连接字符串而不使用 IP 地址，请在 DNS 中注册 IP 资源地址和所需的虚拟服务器名称。 对于 DR 配置，请在主站点和 DR 站点上通过 DNS 服务器注册所需的虚拟服务器名称和 IP 地址。
 
 ## <a name="add-colocation-constraint"></a>添加主机托管约束
 
-Pacemaker 群集中几乎所有的决定（例如，选择资源运行的位置）都靠比较分数来制定。 分数按资源计算，群集资源管理器选择特定资源分数最高的节点。 （如果节点的某一资源分数为负，则该资源无法在此节点上运行。）我们可以使用约束来控制群集的决定。 约束具有一个分数。 如果约束的分数低于 INFINITY，则仅为建议项。 分数为 INFINITY 则表明它是必需项。 我们需要确保可用性组主要副本和虚拟 IP 资源在同一主机上运行，因此我们定义一个分数为 INFINITY 的主机托管约束。 若要添加主机托管约束，请在一个节点上运行以下命令。 
+Pacemaker 群集中几乎所有的决定（例如，选择资源运行的位置）都靠比较分数来制定。 分数按资源计算，群集资源管理器选择特定资源分数最高的节点。 （如果节点的某一资源分数为负，则该资源无法在此节点上运行。）使用约束来配置群集的决策。 约束具有一个分数。 如果约束的分数低于 INFINITY，则仅为建议项。 无穷大的分数意味着它是强制的。 若要确保主副本和虚拟 ip 资源位于同一主机上，分数为无穷大将归置约束的定义。 若要添加主机托管约束，请在一个节点上运行以下命令。 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master

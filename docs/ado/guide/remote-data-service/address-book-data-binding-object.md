@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22552b3b4f9574f04b5fec8a382ee792b1267ebf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9689d8c41a899c9446f3f21ede83ea88c68b77a3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="address-book-data-binding-object"></a>通讯簿数据绑定对象
 通讯簿应用程序使用[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)将数据从 SQL Server 数据库绑定到可视对象 （在这种情况下，DHTML 表格中），在应用程序的客户端 HTML 页中的对象。 事件驱动的 VBScript 程序逻辑使用[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)到：  
@@ -66,8 +67,8 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |参数|Description|  
 |---------------|-----------------|  
-|[服务器](../../../ado/reference/rds-api/server-property-rds.md)|如果你使用的 HTTP，值前面是在服务器计算机的名称`http://`。|  
-|[连接](../../../ado/reference/rds-api/connect-property-rds.md)|提供的必要的连接信息**rds.DataControl**以连接到 SQL Server。|  
+|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|如果你使用的 HTTP，值前面是在服务器计算机的名称`http://`。|  
+|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|提供的必要的连接信息**rds.DataControl**以连接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|设置或返回用于检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
   
 ## <a name="see-also"></a>另请参阅  

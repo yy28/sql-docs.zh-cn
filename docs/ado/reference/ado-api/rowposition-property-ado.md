@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - ADORecordConstruction::GetRowPosition
 - ADORecordConstruction::RowPosition
 - ADORecordConstruction::get_RowPosition
-helpviewer_keywords: RowPosition property [ADO]
+helpviewer_keywords:
+- RowPosition property [ADO]
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65bd34a35b48b980cd3d9b6c29dc5e297b732fa3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0e384d850a51cc94439a896040951ec3c23f2f6a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 属性 (ADO)
 获取或设置 OLE DB **RowPosition**对象从/上**ADORecordsetConstruction**对象。 当你使用**put_RowPosition**设置**RowPosition**对象，生成**记录集**对象使用**RowPosition**对象传递给确定当前行。  
@@ -53,7 +55,7 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>返回值  
  此属性方法返回的标准的 HRESULT 值，包括，则为 S_OK 和 E_FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  设置此属性时，如果**行集**对象上**RowPosition**对象与不同**行集**对象上**记录集**对象，前者将覆盖后者。 相同的行为将应用于当前**章**的**RowPosition**以及。  
   
 ## <a name="applies-to"></a>适用范围  

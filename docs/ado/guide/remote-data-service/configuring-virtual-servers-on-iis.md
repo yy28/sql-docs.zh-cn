@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: virtual servers in RDS [ADO]
+helpviewer_keywords:
+- virtual servers in RDS [ADO]
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05eaeb3a40093158fbcf82fb2b8239e92204a350
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 838a9ee2dd248a41ecb4874e75b669f9dd4ba51d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>在 IIS 上配置虚拟服务器
 时在 Internet 信息服务 4.0 中创建虚拟服务器，以便配置要与 RDS 一起工作的虚拟服务器需要以下两个额外的步骤：  

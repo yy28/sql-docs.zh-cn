@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,16 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8c6afcc5c41535031961f0d96cf756cd4015c9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8dbbe05208498d4b23f95ded09ea9a9238c806d0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 事件实例化： ADO 和 WFC
 ADO 的 Windows 基础类 (ADO/WFC) 的 ADO 事件模型上构建，并提供简化的应用程序的编程接口。 一般情况下，ADO/WFC 截获 ADO 事件，将在事件参数合并到单个事件类，，然后调用事件处理程序。  
@@ -46,7 +47,7 @@ ADO 的 Windows 基础类 (ADO/WFC) 的 ADO 事件模型上构建，并提供简
   
      第一个参数**ConnectionEventHandler**构造函数是对包含事件处理程序在第二个参数名为的类的引用。  
   
-3.  将事件处理程序添加到指定用于处理特定类型的事件的处理程序的列表。 使用带名称的方法，如**加载项***EventName*(*处理程序*)。  
+3.  将事件处理程序添加到指定用于处理特定类型的事件的处理程序的列表。 使用带名称的方法，如 **加载项 * * * EventName*(*处理程序*)。  
   
 4.  ADO/WFC 内部实现所有 ADO 事件处理程序。 因此，事件引起**连接**或**记录集**操作截获 ADO/WFC 事件处理程序。  
   
@@ -64,7 +65,7 @@ ADO 的 Windows 基础类 (ADO/WFC) 的 ADO 事件模型上构建，并提供简
   
 6.  从事件处理程序返回到 ADO 事件 ADO/WFC 处理程序。 ADO/WFC 相关 ADO/WFC 事件数据成员复制回 ADO 事件参数，并返回 ADO 事件处理程序。  
   
-7.  如果你已完成处理，从 ADO/WFC 事件处理程序的列表中删除您的处理程序。 使用带名称的方法，如**removeOn***EventName*(*处理程序*)。  
+7.  如果你已完成处理，从 ADO/WFC 事件处理程序的列表中删除您的处理程序。 使用带名称的方法，如 **removeOn * * * EventName*(*处理程序*)。  
   
 ## <a name="see-also"></a>另请参阅  
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - dynamic properties [ADO]
 - properties [ADO], dynamic
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98b2e7a1c4cbd7063379249b9d7fb0ac3264a56f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 254372b292229f5ab65dacdbf1b021209a8ecb9a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-dynamic-properties"></a>ADO 动态属性
 可以将动态属性添加到[属性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 这些属性的源是哪种数据提供程序，如[OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，或服务提供程序，如[Microsoft 游标服务用于 OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)。 引用适当的数据提供程序或服务提供程序文档，了解有关特定的动态属性的详细信息。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指定是否应在此字段创建索引。|  
-|[提示](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定的 OLE DB 访问接口是否应提示用户输入的初始化信息。|  
+|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定的 OLE DB 访问接口是否应提示用户输入的初始化信息。|  
 |[重新调整形状名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|指定的名称**记录集**对象。|  
 |[重新同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|指定用户提供的命令字符串**重新同步**要刷新中名为的表中的数据的方法问题**唯一表**动态属性。|  
 |[唯一表、 唯一的架构、 唯一的目录](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**唯一表**指定的更新、 插入和删除允许在其基础表的名称。<br /><br /> **唯一架构**指定架构或表的所有者的名称。<br /><br /> **唯一的目录**指定的目录或包含的表的数据库名称。|  

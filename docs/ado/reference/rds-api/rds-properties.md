@@ -1,6 +1,7 @@
 ---
 title: "RDS 属性 |Microsoft 文档"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 167812e66df35eda1127cf4d0d1d075871e00ab8
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: ee22ac8887a628d4b1ada9bf7f42b58e3c997274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-properties"></a>RDS 属性
 > [!IMPORTANT]
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/20/2017
 |[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|指示等待请求超时之前的毫秒数。|  
 |[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|指示进度的**DataControl**对象，如它提取数据到其**记录集**对象。|  
 |[记录集和 SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|指示**记录集**从自定义业务对象返回的对象。|  
-|[服务器 (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|指示 Internet 信息服务 (IIS) 名称和通信协议。|  
+|[Server (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|指示 Internet 信息服务 (IIS) 名称和通信协议。|  
 |[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|表示要对记录进行排序的列。|  
 |[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|指示是按升序还是降序排序顺序。|  
 |[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|指示用于检索查询字符串**记录集**。|  

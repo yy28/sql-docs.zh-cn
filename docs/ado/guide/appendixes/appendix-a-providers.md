@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc27499ecc4b67a95067002be0d8d3a5c86c76da
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad762b73bd91ed92bf32a74587105a2be64e5192
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendix-a-data-and-service-providers"></a>附录 a： 数据和服务提供商
 本节介绍三种类型的提供程序： 数据提供程序、 服务提供商和服务组件。 提供程序分为两类： 提供数据和提供服务。 A*数据提供程序*拥有其自己的数据，并以表格形式向你的应用程序公开。 A*服务提供商*通过生成和使用数据，并增加在 ADO 应用程序的功能来封装服务。 服务提供商还可进一步定义作为*服务组件*，哪项必须与其他服务提供程序或组件一起工作。
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 |----------|-----------|
 |ODBC 数据库|[Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |Microsoft 索引服务|[Microsoft OLE DB Provider for Microsoft 索引服务](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
-|Active Directory 服务|[Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
+|Active Directory Service|[Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |Microsoft Jet 数据库|[Microsoft Jet 的 OLE DB 访问接口](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Microsoft SQL Server|[Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Oracle 数据库|[适用于 Oracle 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
@@ -66,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 
 -   [用于 OLE DB 的 Microsoft 数据整理服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
 
--   [Microsoft OLE DB 永久性提供程序](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+-   [Microsoft OLE DB Persistence Provider](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
 
 -   [Microsoft OLE DB 远程处理提供程序](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
 

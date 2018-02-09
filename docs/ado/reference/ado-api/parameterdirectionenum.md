@@ -1,10 +1,11 @@
 ---
-title: "ParameterDirectionEnum |Microsoft 文档"
+title: ParameterDirectionEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,33 +13,35 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ParameterDirectionEnum
-helpviewer_keywords: ParameterDirectionEnum enumeration [ADO]
+f1_keywords:
+- ParameterDirectionEnum
+helpviewer_keywords:
+- ParameterDirectionEnum enumeration [ADO]
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51083883a293bb44c76cadf3971e920e8c3ed05c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40c8ef97704d48b13eebd7c76aeb6dbe0d709377
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定是否[参数](../../../ado/reference/ado-api/parameter-object.md)表示输入的参数、 输出参数，这两个输入和输出参数或存储过程的返回值。  
   
-|常量|ReplTest1|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|@shouldalert|默认值。 指示该参数表示输入的参数。|  
+|**adParamInput**|1|默认值。 指示该参数表示输入的参数。|  
 |**adParamInputOutput**|3|指示该参数表示一个输入和输出参数。|  
 |**adParamOutput**|2|指示该参数表示输出参数。|  
 |**adParamReturnValue**|4|指示该参数表示的返回值。|  
 |**adParamUnknown**|0|指示参数方向为未知。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

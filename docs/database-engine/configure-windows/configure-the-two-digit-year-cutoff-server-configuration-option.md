@@ -8,23 +8,24 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - two digit year cutoff option
 - four-digit years [SQL Server]
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea6f7de3504b806b46c9c9e36284993e5786708
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6c04eb2a0831bb5dd2c5c143dbd293cebce414fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>配置两位数年份截止服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +52,11 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 建议  
   
--   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
+-   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
--   OLE 自动化对象使用 2030 作为两位数年份截止。 可以使用 **“两位数年份截止”** 选项使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和客户端应用程序之间的日期值保持一致。 然而，为了在使用日期时避免含糊歧义，请在日期中使用 4 位数字的年份。  
+-   OLE 自动化对象使用 2030 作为两位数年份截止。 可以使用 **“两位数年份截止”** 选项使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和客户端应用程序之间的日期值保持一致。 
+
+-   为避免日期含糊歧义，请在数据中使用 4 位数字的年份。  
   
 ###  <a name="Security"></a> 安全性  
   

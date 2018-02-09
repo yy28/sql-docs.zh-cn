@@ -8,24 +8,26 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: views [SQL Server], creating
+helpviewer_keywords:
+- views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe4fd77f53ba3bf19a8f8ad0e3936fe0793b9527
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a740bee23d84fc92097bac5a385c01236f688e16
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-views"></a>创建视图
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建视图。 可以将视图用于以下用途：  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建视图。 可以将视图用于以下用途：  
   
 -   集中、简化和自定义每个用户对数据库的认识。  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **创建视图，使用：**  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -75,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  在 **“条件窗格”**中，选择列的其他排序或筛选条件。  
   
-7.  在“文件”菜单上，单击“保存”以保存*视图名称*。  
+7.  在“文件”菜单上，单击“保存***视图名称”。  
   
 8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”**。  
   
@@ -85,11 +87,11 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-a-view"></a>创建视图  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012 ;   

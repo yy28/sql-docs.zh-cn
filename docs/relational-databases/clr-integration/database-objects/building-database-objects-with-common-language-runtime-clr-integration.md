@@ -19,19 +19,20 @@ helpviewer_keywords:
 - building database objects [CLR integration]
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96bcc0d6c847815fa92499cd004657bf6a51cb37
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bffc0c6796955eee2a23bc4885c3cfc23a7e9304
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>使用公共语言运行时 (CLR) 集成生成数据库对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以生成使用的数据库对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与.NET Framework 公共语言运行时 (CLR) 集成。 托管代码的内部运行[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]简称为"CLR 例程"。 这些例程包括：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 .NET Framework 公共语言运行时 (CLR) 集成来生成数据库对象。 托管代码的内部运行[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]简称为"CLR 例程"。 这些例程包括：  
   
 -   标量值用户定义函数（标量 UDF）  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/08/2018
  [CLR 用户定义函数](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  说明如何实现和使用各种类型的 CLR 函数：表值、标量和用户定义的聚合函数。  
   
- [CLR 用户定义类型](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [CLR 用户定义的类型](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  说明如何实现和使用 CLR 用户定义类型。  
   
  [CLR 存储过程](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  

@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae662529fc9297fa709d1a185b63d0648b0af903
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-ado-programming"></a>Visual c + + ADO 编程
 ADO API 参考描述 ADO 应用程序编程接口 (API) 使用到 Microsoft Visual Basic 类似的语法的功能。 ADO 程序员虽然目标的受众是所有用户，但采用 Visual Basic，Visual c + + 等各种语言 (具有和没有**#import**指令)，和 Visual J + + （与 ADO/WFC 类包）。  
@@ -44,7 +46,7 @@ ADO API 参考描述 ADO 应用程序编程接口 (API) 使用到 Microsoft Visu
   
  对于类 （即，一个方法或属性调用） 中的每个操作，没有声明来调用此操作直接 （即"原始"形式的操作），并声明调用原始操作并引发 COM 错误，如果该操作无法执行 successfully。 如果该操作是一个属性，是通常创建具有类似 Visual Basic 语法的操作的备用语法的编译器指令。  
   
- 检索属性的值的操作设置该窗体的名称**获取***属性*。 设置属性的值的操作设置该窗体的名称**放***属性*。 具有指针的属性的值设置为 ADO 对象的操作设置该窗体的名称**PutRef***属性*。  
+ 检索属性的值的操作设置该窗体的名称 **获取 * * * 属性*。 设置属性的值的操作设置该窗体的名称 **Put * * * 属性*。 具有指针的属性的值设置为 ADO 对象的操作设置该窗体的名称 **PutRef * * * 属性*。  
   
  你可以获取或设置具有以下形式的调用的属性：  
   
@@ -69,13 +71,13 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```  
   
- 编译器将生成相应**获取***-*，**放**-，或**PutRef***属性*调用基于声明哪些替代语法，并且是否正在属性读取或写入。  
+ 编译器将生成相应 **Get * * *-*，**放**-，或 **PutRef * * * 属性*调用基于声明哪些替代语法以及属性是否是正在读取或写入。  
   
  **__Declspec(property...)**编译器指令可以仅声明**获取**，**放**，或**获取**和**放**函数的替代语法。 只读操作只有**获取**声明; 只写操作只有**放**声明; 操作，同时读取和写入同时具有**获取**和**放**声明。  
   
- 只有两个声明可能包含此指令;但是，每个属性可以具有三个属性函数：**获取***属性*，**放***属性*，和**PutRef***属性*。 在这种情况下，只有两个窗体的属性具有的备用语法。  
+ 只有两个声明可能包含此指令;但是，每个属性可以具有三个属性函数: **获取 * * * 属性*，**Put * * * 属性*，和 **PutRef * * * 属性*。 在这种情况下，只有两个窗体的属性具有的备用语法。  
   
- 例如，**命令**对象**ActiveConnection**属性声明具有备用语法的**获取***ActiveConnection*和**PutRef***ActiveConnection*。 **PutRef**的语法是一个不错的选择，因为在实践中，通常要将打开**连接**对象 (即，**连接**对象指针) 在此属性。 另一方面，**记录集**对象具有**获取**-，**放**-，和**PutRef***ActiveConnection*操作，但没有替代语法。  
+ 例如，**命令**对象**ActiveConnection**属性声明具有备用语法的 **获取 * * * ActiveConnection*和 **PutRef ** * ActiveConnection*。 **PutRef**的语法是一个不错的选择，因为在实践中，通常要将打开**连接**对象 (即，**连接**对象指针) 在此属性。 另一方面，**记录集**对象具有**获取**-，**放**-，和 **PutRef * * * ActiveConnection*操作，但没有其他方法语法。  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>集合、 GetItem 方法中和项属性  
  ADO 定义几个集合，包括**字段**，**参数**，**属性**，和**错误**。 Visual c + + 中**GetItem (***索引***)**方法返回集合的成员。 *索引*是**Variant**，其值是在集合中，成员的数字索引或包含的成员名称的字符串。  
@@ -226,7 +228,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```  
   
- -或 -  
+ - 或 -  
   
 ```  
 Dim rst As ADODB.Recordset  
@@ -245,14 +247,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```  
   
- -或 -  
+ - 或 -  
   
 ```  
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```  
   
- -或 -  
+ - 或 -  
   
 ```  
 _RecordsetPtr  rs;  
@@ -437,7 +439,7 @@ cn.Close
 End Sub  
 ```  
   
- 此 Visual c + + 示例演示**获取**/**放**/**PutRef***属性*。  
+ 此 Visual c + + 示例演示**获取**/**放**/**PutRef * * * 属性*。  
   
 #### <a name="notes"></a>说明  
  以下说明与中的代码示例的注释部分相对应。  

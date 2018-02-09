@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::Update
-helpviewer_keywords: Update method [ADO]
+f1_keywords:
+- Recordset15::Update
+helpviewer_keywords:
+- Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7d416b0d132af4d2f1d2145de577ca930eaeef9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6cf6ded5026c89caa6e8656cf9160ab192650484
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="update-method"></a>Update 方法
 将保存的当前行的任何更改[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  
@@ -38,13 +41,13 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Parameters  
- Fields  
- 可选。 A **Variant**表示单个名称或**Variant**数组，表示名称或序号位置或多个你想要修改的字段。  
+ *Fields*  
+ 選擇性。 A **Variant**表示单个名称或**Variant**数组，表示名称或序号位置或多个你想要修改的字段。  
   
  *值*  
- 可选。 A **Variant**表示单个值，或**Variant**数组，表示字段或新记录中的字段的值。  
+ 選擇性。 A **Variant**表示单个值，或**Variant**数组，表示字段或新记录中的字段的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 ## <a name="recordset"></a>记录集  
  使用**更新**方法以将保存的当前记录的任何更改**记录集**以来调用的对象[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法或以来更改中的任何字段值现有记录。 **记录集**对象必须支持更新。  
@@ -65,7 +68,7 @@ record.Fields.Update
   
  当前记录后，仍当前调用**更新**方法。  
   
-## <a name="record"></a>录制  
+## <a name="record"></a>記錄  
  **更新**方法完成添加、 删除和中的字段的更新[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合**记录**对象。  
   
  例如，字段随删除**删除**方法将立即标记为删除，但保留在集合中。 **更新**必须调用方法来从提供程序的集合中实际删除这些字段。  

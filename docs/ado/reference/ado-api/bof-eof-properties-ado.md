@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c2b827856eac7ec2eed9ca4f3580b2a12418933
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9eb298b7bc18a959a6cd7d044a4c166ee77065eb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bof-eof-properties-ado"></a>BOF，EOF 属性 (ADO)
 -   **BOF**指示当前记录位置处于之前的第一个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="return-value"></a>返回值  
  **BOF**和**EOF**属性返回**布尔**值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**BOF**和**EOF**属性来确定是否**记录集**对象包含的记录或者是否已超出限制的**记录集**对象移动到记录时。  
   
  **BOF**属性返回**True** (-1) 的当前记录的位置是否在第一条记录之前和**False** (0); 如果当前记录的位置位于或迟于第一个记录。  

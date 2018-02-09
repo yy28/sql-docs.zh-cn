@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Table
-helpviewer_keywords: Table object [ADOX]
+f1_keywords:
+- Table
+helpviewer_keywords:
+- Table object [ADOX]
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd6d351f97d2b6357b8d4156c3208fb4f32a4805
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: da9c76799df8983b50298ee7005f5a357905e4d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="table-object-adox"></a>表对象 (ADOX)
 表示包括列、 索引和密钥的数据库表。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  下面的代码创建一个新**表**:  
   
 ```  

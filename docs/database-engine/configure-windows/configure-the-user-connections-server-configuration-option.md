@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - maximum number of simultaneous user connections
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b800031c9467a8b57851675b3e99e10b41c0b21f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 51eb56b34a8f3aa18ab0a115954e7a4004aca74e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>配置 user connections 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 建议  
   
--   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
+-   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
 -   使用 **user connections** 选项有助于避免由于过多并发连接而使服务器超载。 可以根据系统和用户要求估计连接数。 例如，在很多用户的系统上，每个用户通常不要求唯一的连接。 可以在用户间共享连接。 对于运行 OLE DB 应用程序的用户，每个打开的连接对象需要一个连接；对于运行开放式数据库连接 (ODBC) 应用程序的用户，每个活动连接句柄需要一个连接；对于运行 DB-Library 应用程序的用户，每个调用 DB-Library **dbopen** 函数启动的进程需要一个连接。  
   

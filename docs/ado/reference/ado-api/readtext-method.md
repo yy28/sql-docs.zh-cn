@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
 - _Stream::ReadText
-helpviewer_keywords: ReadText method [ADO]
+helpviewer_keywords:
+- ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9915f0bfe1b70cef5cab39a058f7131ceaa44f98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e26f365d2b25bab878f0a8b9a321240d7c8ee347
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="readtext-method"></a>ReadText 方法
 读取指定数目的字符来自文本[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -39,13 +41,13 @@ String = Stream.ReadText ( NumChars)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *Numchar*  
- 可选。 A**长**值，该值指定要从文件读取的字符数或[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)值。 默认值是**adReadAll**。  
+ *NumChars*  
+ 選擇性。 A**长**值，该值指定要从文件读取的字符数或[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)值。 默认值是**adReadAll**。  
   
 ## <a name="return-value"></a>返回值  
  **ReadText**方法读取指定的数目的字符、 一整行或从整个流**流**对象并返回结果字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果*保留的 NumChar*的字符数超过留在流中，将返回仅剩余字符。 读取的字符串没有字节可读取指定的长度*保留的 NumChar*。 如果没有留下可供读取的字符，则返回一个变体，其值为 null。 **ReadText**无法用于向后读取。  
   
 > [!NOTE]

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysprocesses_TSQL
 - sys.sysprocesses
 - sysprocesses
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8589b865843b0ec7a8d4a087dee5bbc0a646b289
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 551d266374d6fd367eb4bba9e1d76a6322461c31
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/27/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|spid|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话 ID。|  
+|spid|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话 id。|  
 |kpid|**int**|Windows 线程 ID。|  
 |blocked|**int**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而无法确定阻塞闩锁所有者的会话 ID。|  
 |waittype|**binary(2)**|保留。|  

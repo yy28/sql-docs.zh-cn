@@ -33,19 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1abec952d7ad6ca57b38ff1bda37134312da4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>创建用户定义的类型的编码
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]进行编码时你的用户定义类型 (UDT) 定义，则必须实现各种功能，具体取决于是否要实现用户定义的类型作为类或结构，以及你已选择的格式和序列化选项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+编写用户定义类型 (UDT) 的定义时，必须根据是要将 UDT 作为类还是作为结构实现以及您所选择的格式和序列化选项来实现各种功能。  
   
  本部分中的示例阐释了实现**点**作为 UDT**结构**(或**结构**在 Visual Basic 中)。 **点**UDT 包含 X 和 Y 坐标实现为属性过程。  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - ActiveConnection
 - Cellset::ActiveConnection
 - Catalog::ActiveConnection
-helpviewer_keywords: ActiveConnection property [ADO MD]
+helpviewer_keywords:
+- ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00f177b12594e834f5ab7a15a4d357bd4a7f75f1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ec51c77b1963832cf101278b5c00bcbfe253093
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 属性 (ADO MD)
 指示哪些 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的当前的单元集或当前所属的编录。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**Variant** ，其中包含定义连接字符串或**连接**对象。 默认值为空。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  你可以将此属性设置为有效的 ADO**连接**对象或有效的连接字符串。 当此属性设置为连接字符串时，该提供程序创建一个新**连接**对象使用此定义，并打开该连接。  
   
  如果你使用*ActiveConnection*参数[打开](../../../ado/reference/ado-md-api/open-method-ado-md.md)方法打开[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象， **ActiveConnection**属性将继承自变量的值。  

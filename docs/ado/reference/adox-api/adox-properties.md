@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 024d824d6fd8e7b11f5ec3ea184a356da84408b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 779d8fe872fe5db8d36b7dc7feb2f0e4742595be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-properties"></a>ADOX 属性
 |||  
@@ -33,8 +34,8 @@ ms.lasthandoff: 12/21/2017
 |[属性](../../../ado/reference/adox-api/attributes-property-adox.md)|描述列的特征。|  
 |[群集](../../../ado/reference/adox-api/clustered-property-adox.md)|指示索引是否聚集索引。|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|指定 ADO**命令**可以用于创建或执行该过程的对象。|  
-|[计数](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
-|[时间](../../../ado/reference/adox-api/datecreated-property-adox.md)|指示创建对象时的日期。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
+|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|指示创建对象时的日期。|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|指示对象上次修改日期。|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|指示列的规定的最大大小。|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|指示删除主键时，将执行的操作。|  

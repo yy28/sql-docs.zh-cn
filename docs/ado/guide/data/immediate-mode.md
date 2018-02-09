@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b667a5ebb190ddd7c3507bc04e5f2fbcd25dca19
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f737d3b05e27eff7aae0aa95ee336a054c38f29f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="immediate-mode"></a>即时模式
 即时模式，则当**LockType**属性设置为**adLockOptimistic**或**adLockPessimistic**。 在即时模式下，对记录的更改会传播到数据源通过调用声明行上的操作完成时，就会立即**更新**方法。  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - persistence provider [ADO]
 - OLE DB persistence provider [ADO]
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 846abf657a2cce58fec6dca65f80691f14cb52a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30df806429167550cdf39f064e349e46dd692502
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 持久性提供程序概述
 Microsoft OLE DB 永久性提供程序使你可以保存[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象为文件，并在以后还原，**记录集**文件中的对象。 架构信息、 数据和挂起的更改将被保留。
@@ -47,7 +48,7 @@ Microsoft OLE DB 永久性提供程序使你可以保存[记录集](../../../ado
 |E_BADSTREAM|打开的文件不是有效的格式 （即的格式不 ADTG 或 XML）。|
 |E_CANTPERSISTROWSET|**记录集**保存对象具有阻止存储的特征。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注释
  Microsoft OLE DB 永久性提供程序公开任何动态属性。
 
  目前，只有参数化分层**记录集**无法保存对象。

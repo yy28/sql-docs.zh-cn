@@ -1,5 +1,5 @@
 ---
-title: "sys.syslockinfo (Transact SQL) |Microsoft 文档"
+title: sys.syslockinfo (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslockinfo_TSQL
 - sys.syslockinfo
 - syslockinfo
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 410d07a73d4a5b96c3fa5805208735055bc36174
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4b58420c47d73e1eff9bb895ccab1fab0be82844
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +48,8 @@ ms.lasthandoff: 11/27/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|锁资源的文本化描述。 包含资源名称的一部分。|  
-|**rsc_bin**|**binary （16)**|二进制锁资源。 包含锁管理器中所含的实际锁资源。 用于了解的有关锁定资源格式以生成其自己的工具已设置格式锁资源，则此列是包含和自助上执行的联接**syslockinfo**。|  
-|**rsc_valblk**|**binary （16)**|锁值块。 有些资源类型可以在特定的锁资源中包含附加数据，锁管理器不对这类锁资源进行哈希运算以决定具体某个锁资源的所有关系。 例如，页锁不归具体的对象 ID 所有。 但是，对于锁升级和出于其他目的， 页锁的对象 ID 可以包括在锁值块中。|  
+|**rsc_bin**|**binary(16)**|二进制锁资源。 包含锁管理器中所含的实际锁资源。 用于了解的有关锁定资源格式以生成其自己的工具已设置格式锁资源，则此列是包含和自助上执行的联接**syslockinfo**。|  
+|**rsc_valblk**|**binary(16)**|锁值块。 有些资源类型可以在特定的锁资源中包含附加数据，锁管理器不对这类锁资源进行哈希运算以决定具体某个锁资源的所有关系。 例如，页锁不归具体的对象 ID 所有。 但是，对于锁升级和出于其他目的， 页锁的对象 ID 可以包括在锁值块中。|  
 |**rsc_dbid**|**int**|与资源关联的数据库 ID。|  
 |**rsc_indid**|**int**|与资源关联的索引 ID（如果适合）。|  
 |**rsc_objid**|**int**|与资源关联的对象 ID（如果适合）。|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 11/27/2017
 |**req_transactionID**|**bigint**|唯一的事务中使用 ID **syslockinfo**和探查器事件|  
 |**req_transactionUOW**|**uniqueidentifier**|标识 DTC 事务的工作单元 ID (UOW)。 对于非 MS DTC 事务，UOW 设置为 0。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  

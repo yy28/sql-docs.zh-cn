@@ -20,19 +20,20 @@ helpviewer_keywords:
 - invoking user-defined aggregate functions
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4a1bf6dc27e59e0e739a8a8841ac2f19f69ff32
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4c15694986403c4b4eba39e7b4a70738fbf40cc8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 用户定义聚合的调用函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT 语句中，你可以调用公共语言运行时 (CLR) 用户定义聚合，需遵循适用于系统聚合函数的所有规则。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，您可以根据适用于系统聚合函数的所有规则调用公共语言运行时 (CLR) 用户定义聚合。  
   
  应遵循下列附加规则：  
   
@@ -242,7 +243,7 @@ GROUP BY BookID;
   
 |BookID|Author Names|  
 |------------|------------------|  
-|@shouldalert|Johnson|  
+|1|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::UpdateBatch
 - Recordset15::raw_UpdateBatch
-helpviewer_keywords: UpdateBatch method [ADO]
+helpviewer_keywords:
+- UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a1b1e31de97eb701fed5db18acf45b7551f5984
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5da32525c4ff0d04c19704efd2aa04050d3db93d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 方法
 将写入磁盘的所有挂起的批更新。  
@@ -40,12 +42,12 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Parameters  
  *AffectRecords*  
- 可选。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值指示多少个记录**UpdateBatch**方法将会影响。  
+ 選擇性。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值指示多少个记录**UpdateBatch**方法将会影响。  
   
  *PreserveStatus*  
- 可选。 A**布尔**值，该值指定是否本地更改，如所示[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性，应将其提交。 如果此值设置为**True**、**状态**在更新完成后，每个记录的属性保持不变。  
+ 選擇性。 A**布尔**值，该值指定是否本地更改，如所示[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性，应将其提交。 如果此值设置为**True**、**状态**在更新完成后，每个记录的属性保持不变。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**UpdateBatch**方法修改时**记录集**在批处理更新模式下传输中所做的所有更改的对象**记录集**到基础数据库对象。  
   
  如果**记录集**对象支持批处理更新，你可以本地直到你调用缓存到一个或多个记录的多个更改**UpdateBatch**方法。 如果你要编辑的当前记录或添加一条新记录，当你调用**UpdateBatch**方法时，将自动调用 ADO[更新](../../../ado/reference/ado-api/update-method.md)方法将任何挂起的更改保存到之前的当前记录传输到提供程序的批处理的更改。 你应使用批处理使用的键集或仅静态游标更新。  

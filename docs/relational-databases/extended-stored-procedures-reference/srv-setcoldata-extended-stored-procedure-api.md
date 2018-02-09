@@ -8,31 +8,36 @@ ms.service:
 ms.component: extended-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: srv_setcoldata
-apilocation: opends60.dll
+apiname:
+- srv_setcoldata
+apilocation:
+- opends60.dll
 apitype: DLLExport
-dev_langs: C++
-helpviewer_keywords: srv_setcoldata
+dev_langs:
+- C++
+helpviewer_keywords:
+- srv_setcoldata
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f5ceda0ee37487d7a4d7dba2a4dad25b7d43d14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8be41b91658e1eeb2b5da1c361d64b76829e6126
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="srvsetcoldata-extended-stored-procedure-api"></a>srv_setcoldata（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
   
  指定列的数据的当前地址。  
   
@@ -59,7 +64,7 @@ data
  column  
  指示指定其地址的列的编号。 列的编号从 1 开始。  
   
- data  
+ *data*  
  指向列的数据的指针。 在将列数据替换为对 srv_setcoldata 的其他调用或调用 srv_senddone 之前，不能释放为 data 分配的内存。  
   
 ## <a name="returns"></a>返回  

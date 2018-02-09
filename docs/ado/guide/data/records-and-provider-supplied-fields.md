@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69cb7375808e3c11dd8d92bab48a3588693e30e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>记录和提供程序提供的字段
 当[记录](../../../ado/reference/ado-api/record-object-ado.md)打开对象，其源可以是已打开的当前行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，绝对 URL 或相对 URL 结合打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象.  
@@ -72,13 +73,13 @@ ms.lasthandoff: 12/21/2017
 |RESOURCE_CONTENTCLASS|AdVarWChar|指示文档中，如指示格式的 MIME 类型"`text/html`"。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|指示在其中存储内容的语言。|  
 |RESOURCE_CREATIONTIME|adFileTime|只读。 指示包含资源的创建的时间的 FILETIME 结构。 该时间采用协调世界时 (UTC) 格式报告。|  
-|RESOURCE_LASTACCESSTIME|adFileTime|只读。 指示包含上次访问资源的时间的 FILETIME 结构。 时间是 UTC 格式。 FILETIME 成员均为零，如果提供程序不支持此时间成员。|  
-|RESOURCE_LASTWRITETIME|adFileTime|只读。 指示包含资源上次写入时间 FILETIME 结构。 时间是 UTC 格式。 FILETIME 成员均为零，如果提供程序不支持此时间成员。|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|只读。 指示包含上次访问资源的时间的 FILETIME 结构。 时间是 UTC 格式。 FILETIME 成员均为零，如果提供程序不支持此时间成员。|  
+|RESOURCE_LASTWRITETIME|AdFileTime|只读。 指示包含资源上次写入时间 FILETIME 结构。 时间是 UTC 格式。 FILETIME 成员均为零，如果提供程序不支持此时间成员。|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|只读。 指示资源的默认流，以字节为单位的大小。|  
 |RESOURCE_ISCOLLECTION|adBoolean|只读。 如果资源是一个集合，例如一个目录，则为 true。 如果资源是一个简单的文件，则为 false。|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|如果资源是结构化的文档，则为 true。 如果资源不是结构化的文档，则为 false。 它可以为集合或一个简单的文件。|  
 |DEFAULT_DOCUMENT|AdVarWChar|只读。 指示此资源包含到的文件夹的默认简单文档或结构化的文档的 URL。 从资源请求的默认流时使用。 此属性是一个简单的文件为空。|  
-|CHAPTERED_CHILDREN|AdChapter|只读。 可选。 指示包含资源的子级的行集的章节。 ( *OLE DB Provider for Internet 发布*不使用此列。)|  
+|CHAPTERED_CHILDREN|AdChapter|只读。 選擇性。 指示包含资源的子级的行集的章节。 ( *OLE DB Provider for Internet 发布*不使用此列。)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|只读。 指示该资源的显示名称。|  
 |RESOURCE_ISROOT|adBoolean|只读。 如果资源是集合或结构化的文档的根，则为 true。|  
   

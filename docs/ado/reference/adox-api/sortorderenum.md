@@ -1,10 +1,11 @@
 ---
-title: "SortOrderEnum |Microsoft 文档"
+title: SortOrderEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: SortOrderEnum
-helpviewer_keywords: SortOrderEnum enumeration [ADOX]
+f1_keywords:
+- SortOrderEnum
+helpviewer_keywords:
+- SortOrderEnum enumeration [ADOX]
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c69bd2e7fde2499947c524cab5934ba4c3f17cad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 58d7e00a33565dbf7f5038ac3f19431b75edbc40
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 指定索引列的排序顺序。  
   
-|常量|ReplTest1|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
-|**adSortAscending**|@shouldalert|默认值。 列的排序顺序为升序。|  
+|**adSortAscending**|1|默认值。 列的排序顺序为升序。|  
 |**adSortDescending**|2|列的排序顺序为降序。|  
   
 ## <a name="applies-to"></a>适用范围  

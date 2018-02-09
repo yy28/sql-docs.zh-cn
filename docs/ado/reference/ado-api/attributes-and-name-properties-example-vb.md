@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b30e36bf9b3325bbf14a285bd55c0966e26d9f97
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 28506a9073abf5c71a049aec7a651d4896c8ff9b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>特性和名称属性示例 (VB)
 此示例中显示的值[属性](../../../ado/reference/ado-api/attributes-property-ado.md)属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[字段](../../../ado/reference/ado-api/field-object.md)，和[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。 它使用[名称](../../../ado/reference/ado-api/name-property-ado.md)属性来显示每个名称**字段**和**属性**对象。  

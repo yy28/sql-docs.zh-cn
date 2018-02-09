@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Errors::raw_Clear
 - Errors::Clear
-helpviewer_keywords: Clear method [ADO]
+helpviewer_keywords:
+- Clear method [ADO]
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0d9f5831c8e9f5925fa7726fb822797a672daaf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b843c14580d792dac671dfa198d23444829db78d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clear-method-ado"></a>Clear 方法 (ADO)
 中删除所有[错误](../../../ado/reference/ado-api/error-object.md)对象从[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 Errors.Clear  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**清除**方法[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合中移除所有现有[错误](../../../ado/reference/ado-api/error-object.md)从集合的对象。 发生错误时，自动清除 ADO**错误**集合和填充其与**错误**对象基于新的错误。  
   
  某些属性和方法返回显示为警告**错误**中的对象**错误**集合但不是会停止对程序的执行。 在调用之前[重新同步](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，或[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象;[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象; 或设置[筛选器](../../../ado/reference/ado-api/filter-property.md)属性**记录集**对象，请调用**清除**方法**错误**集合。 这样一来，你可以阅读[计数](../../../ado/reference/ado-api/count-property-ado.md)属性**错误**集合以测试是否返回警告。  

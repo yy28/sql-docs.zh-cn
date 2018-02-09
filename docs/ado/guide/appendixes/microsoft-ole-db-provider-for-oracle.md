@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb8cf771b758dc81bb80e38bc709c611d8125921
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概述
 > [!IMPORTANT]
@@ -73,7 +74,7 @@ MSDAORA
 |**窗口句柄**|指示要用于提示输入其他信息的窗口句柄。|
 |**区域设置标识符**|指示唯一的 32 位数字 （例如 1033年），指定与用户的语言首选项。 这些首选项指示如何格式化日期和时间，项按字母顺序排列，字符串进行比较，依次类推。|
 |**OLE DB 服务**|指示指定 OLE DB 服务启用或禁用的位掩码。|
-|**提示**|指示是否正在建立连接时提示用户。|
+|**Prompt**|指示是否正在建立连接时提示用户。|
 |**扩展的属性**|包含提供程序特定的扩展的连接信息的字符串。 此属性仅用于不能通过属性机制所述的提供程序特定的连接信息。|
 
 ## <a name="see-also"></a>另请参阅

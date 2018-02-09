@@ -1,34 +1,39 @@
 ---
 title: "数据迁移助手 (SQL Server) 概述 |Microsoft 文档"
 ms.custom: 
-ms.date: 10/04/2017
+ms.date: 02/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, overview
+helpviewer_keywords:
+- Data Migration Assistant, overview
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>数据迁移助手的概述
 
 数据迁移助手 (DMA) 使您能够通过检测可能会影响你的 SQL Server 和 Azure SQL 数据库的新版本中的数据库功能的兼容性问题升级到现代数据平台。 DMA 性能和你的目标环境的可靠性改进建议，并允许你将架构、 数据和非包含的对象从源服务器移到目标服务器。
 
+> [!NOTE] 
+> 对于大型 （在方面的数量和大小数据库） 迁移，建议使用[Azure 数据库迁移服务](https://docs.microsoft.com/en-us/azure/dms/dms-overview)，这将在规模较大的数据库迁移。
+  
 ## <a name="capabilities"></a>功能
 
 - 评估迁移到 Azure SQL 数据库的本地 SQL Server 实例。 评估工作流帮助可以检测到可能会影响 Azure SQL 数据库迁移，并提供有关如何解决这些问题的详细的指南的以下问题。
@@ -37,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 
   - 部分支持或不受支持的功能： 检测到当前正在使用源 SQL Server 实例上的部分支持或不受支持的功能。 DMA 提供一套全面的建议，在 Azure 中和缓解措施中可用的其他方法，以便你可以将合并到你迁移的项目。
 
-- 发现可能会影响到本地 SQL Server 升级的问题。  这些被称为兼容性问题，而且必须组织在以下类别：
+- 发现可能会影响到本地 SQL Server 升级的问题。 这些被称为兼容性问题，而且必须组织在以下类别：
 
   - 重大更改
 
@@ -47,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 
 - 发现数据库可以受益于升级后的目标 SQL Server 平台中的新增功能。 这些被称为功能建议和分为以下类别：
 
-  - “性能”
+  - 性能
 
   - Security
 
@@ -76,11 +81,13 @@ DMA 替换所有以前版本的 SQL Server 升级顾问，并应该用于大多�
 - SQL Server 2012 
 - SQL Server 2014
 - SQL Server 2016
+- Windows 版 SQL Server 2017
 
 **目标**
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- 在 Windows 和 Linux 上的 SQL Server 自 2017 年 1
 - Azure SQL Database
 
 ## <a name="installation"></a>安装

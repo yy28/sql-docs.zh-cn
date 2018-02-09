@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - RecordsetChangeComplete event [ADO]
 - WillChangeRecordset event [ADO]
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 188bdb13879e4229686fb725edbc190db9ea59b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b720776cd7c230e55e77cb37f7a66de3ad6772b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 和 RecordsetChangeComplete 事件 (ADO)
 **WillChangeRecordset**挂起的操作更改之前，将调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **RecordsetChangeComplete**事件后，会调用**记录集**已更改。  
@@ -64,7 +65,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  A**记录集**对象。 **记录集**此事件发生的。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  A **WillChangeRecordset**或**RecordsetChangeComplete**事件可能会发生由于**记录集** [Requery](../../../ado/reference/ado-api/requery-method.md)或[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法。  
   
  如果提供程序不支持书签， **RecordsetChange**新行从提供程序检索每次发生的事件通知。 此事件的频率取决于**RecordsetCacheSize**属性。  

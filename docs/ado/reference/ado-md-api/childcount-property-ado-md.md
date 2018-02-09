@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - ChildCount
 - Member::ChildCount
-helpviewer_keywords: ChildCount property [ADO MD]
+helpviewer_keywords:
+- ChildCount property [ADO MD]
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83637d5fd74dd034ae33c4f2ae1a4e6dfaeca43d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1dea6c6878ee9ff56a40818b54e64e2c1f8ef68c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount 属性 (ADO MD)
 指示为其成员的数目当前[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象是层次结构中的父级。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="return-values"></a>返回值  
  返回**长**整数并且是只读的。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**ChildCount**属性以返回多少子级估计**成员**具有。 实际的子级**成员**可以由[子级](../../../ado/reference/ado-md-api/children-property-ado-md.md)属性。  
   
  有关**成员**对象从[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象，返回的最大数量为 65536。 如果子级的实际数目超过 65536，返回的值仍为 65536。 因此，应用程序应将解释为**ChildCount**的 65536 为等于或大于 65536 的子级。  

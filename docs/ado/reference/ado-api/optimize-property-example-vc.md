@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Optimize property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b7ef91419c5891d4f49aacfb0c50712609aeec8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 927448414395ded11b0896b0f0e692ef05c13ce1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-example-vc"></a>优化属性示例 （VC + +）
 此示例演示[字段](../../../ado/reference/ado-api/field-object.md)对象动态**优化**属性。 **Zip**字段**作者**表中**Pubs**数据库未被索引。 设置[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)属性**True**上**zip**字段授权 ADO 建立索引，可改进的性能[查找](../../../ado/reference/ado-api/find-method-ado.md)方法。  

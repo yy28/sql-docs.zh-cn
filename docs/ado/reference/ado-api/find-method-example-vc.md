@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Find method [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f57ddec367149e809995e1db4bed15ec09591170
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 587289df9a029732fade5c761b07037126c4877e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-example-vc"></a>查找方法示例 （VC + +）
 此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法定位并计数业务中的标题数目**Pubs**数据库。 该示例假定基础提供程序不支持类似的功能。  

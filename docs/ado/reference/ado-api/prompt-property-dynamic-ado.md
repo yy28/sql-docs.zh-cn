@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Prompt property [ADO]
+helpviewer_keywords:
+- Prompt property [ADO]
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9ca7365c2f9f97bc4219715bcbb8d1e25ea5f79
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 02f6a8423aac843adf90b4ea865b910d55f89bd6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prompt-property-dynamic-ado"></a>提示属性的动态 (ADO)
 指定的 OLE DB 访问接口是否应提示用户输入的初始化信息。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置并返回[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **提示**是动态的属性，这可能会追加到[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[属性](../../../ado/reference/ado-api/properties-collection-ado.md)OLE DB 访问接口的集合。 若要初始化的信息提示，OLE DB 提供程序通常将向用户显示一个对话框。  
   
  动态属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象将会丢失时**连接**已关闭。 **提示**属性必须在重新打开之前重置**连接**若要使用默认值以外的值。  

@@ -4,29 +4,31 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - BeginTrans method [ADO], VC++ example
 - RollbackTrans method [ADO], VC++ example
 - CommitTrans method [ADO], VC++ example
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93205d3fa02f120c855be0056a8a8859134ce669
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8308c891ec2732a84c48216b91f04b03caccaece
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans、 CommitTrans 和不方法示例 （VC + +）
 此示例将更改中的所有心理书籍的书籍类型***标题***在数据库表。 后[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法会启动的事务的隔离对所做的所有更改***标题***表， [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法将保存所做的更改。 你可以使用[回滚](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法来撤消使用保存的更改[更新](../../../ado/reference/ado-api/update-method.md)方法。  

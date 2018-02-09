@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd04128317f2f938df87218da27c18c807d833a7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4aaa1e92c83d16c951989a12f962fcfe45aec447
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration---what39s-new"></a>CLR 集成的新增功能; s 新
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]以下是中的 CLR 集成中的新增功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+以下是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中 CLR 集成的新功能：  
   
 -   在 CLR 版本 4 中，CLR 数据库对象不再捕获损坏的状态异常。 这些异常现在在 CLR 集成承载层中捕获。 这些异常仍由 CLR 数据库组件通过设置 code 属性捕获 ([\<legacyCorruptedStateExceptionsPolicy > 元素](http://go.microsoft.com/fwlink/?LinkId=204954))。 但是，我们建议不要这样做，因为损坏的状态异常发生时结果不可靠。  
   

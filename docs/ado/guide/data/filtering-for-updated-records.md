@@ -4,30 +4,32 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: filtering for updated records [ADO]
+helpviewer_keywords:
+- filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37ad79ea1018a2e272cb9071bde61176ddf6348e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6fee8a407c5cc01e768eb86854c07d215fc420d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtering-for-updated-records"></a>筛选更新的记录
 在调用 UpdateBatch 之前，你可以使用要查看自该记录集打开后已更改的那些记录的记录集筛选器属性或 UpdateBatch 上次调用。 若要执行此操作，将筛选器设置为等于 adFilterPendingRecords 以确定将更新多少条记录下, 一节中的代码示例中所示。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此示例将 UpdateBatch 上例扩展通过筛选记录集，它调用 UpdateBatch 之前，显示用户的记录将更改，并允许她可以取消更新 （使用执行方法）。  
   
 ```  

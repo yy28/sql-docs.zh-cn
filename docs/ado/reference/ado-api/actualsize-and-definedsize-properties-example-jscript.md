@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: JScript
+dev_langs:
+- JScript
 helpviewer_keywords:
 - ActualSize property [ADO], JScript example
 - DefinedSize property [ADO], JScript example
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47b769f54c738be0d3dffd5878448e153c359ddd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 64e3688811759197b1f4c3e19c28e416fe30aa92
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize 和 DefinedSize 属性示例 (JScript)
 此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)要显示的定义的大小和实际大小的字段的属性。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**ActualSizeJS.asp**。  

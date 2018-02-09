@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::raw_Open
 - Connection15::Open
 - _Connection::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41850de804523a50dbf0d489e678b93c9f29b6ae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 （ADO 连接）
 打开与数据源的连接。  
@@ -41,18 +43,18 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Parameters  
  *ConnectionString*  
- 可选。 A**字符串**值，该值包含连接信息。 请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有关有效的设置的详细信息的属性。  
+ 選擇性。 A**字符串**值，该值包含连接信息。 请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有关有效的设置的详细信息的属性。  
   
- *用户 Id*  
- 可选。 A**字符串**值，该值包含用于建立连接时所使用的用户名。  
+ *UserID*  
+ 選擇性。 A**字符串**值，该值包含用于建立连接时所使用的用户名。  
   
  *密码*  
- 可选。 A**字符串**值，该值包含要建立连接时使用的密码。  
+ 選擇性。 A**字符串**值，该值包含要建立连接时使用的密码。  
   
- *选项*  
- 可选。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，该值确定是否将此方法应返回后 （同步） 或 （异步） 建立连接之前。  
+ *Options*  
+ 選擇性。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，该值确定是否将此方法应返回后 （同步） 或 （异步） 建立连接之前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**打开**方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象建立到数据源的物理连接。 此方法成功完成后，连接处于活动状态并可以发出对其的命令，还可以处理的结果。  
   
  使用可选*ConnectionString*自变量以指定包含一系列的连接字符串*参数* *= value*语句由分号分隔，或提供一个 URL 标识的文件或目录资源。 **ConnectionString**属性都将自动继承的值用于*ConnectionString*自变量。 因此，你可以设置**ConnectionString**属性**连接**对象然后再打开它，或使用*ConnectionString*参数用于设置或重写在当前连接参数**打开**方法调用。  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::PageSize
-helpviewer_keywords: PageSize property [ADO]
+f1_keywords:
+- Recordset15::PageSize
+helpviewer_keywords:
+- PageSize property [ADO]
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1a538e98500a0fb162ab9720ff5f9c2ad933e2a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3f611c47acb81b661e7c99422a785d6fb1c0d489
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="pagesize-property-ado"></a>PageSize 属性 (ADO)
 指示构成多少条记录中的一个页[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**值，该值指示在页面上的记录数。 默认值是**10**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**PageSize**属性来确定多少条记录组成的数据的逻辑页。 建立的页大小，可使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)属性可以移到特定页的第一个记录。 当你想要允许用户逐页浏览数据，一次查看一定数量的记录时，这是 Web 服务器方案中十分有用。  
   
  可以在任何时候，设置此属性，其值将用于计算的特定页的第一个记录的位置。  

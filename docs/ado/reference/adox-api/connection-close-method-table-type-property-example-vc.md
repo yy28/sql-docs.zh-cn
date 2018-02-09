@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Type property [ADOX], VC++ example
 - Close method [ADOX], VC++ example
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7d5552d124ce60ee9849aa1e22e2c1f0b0f29c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5556e7087cbdddc7dab24538898b1422360ec753
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>连接关闭方法，表类型的属性示例 （VC + +）
 设置[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性**执行任何操作**应"关闭"目录。 关联的集合将为空。 将孤立从目录中的架构对象创建的任何对象。 已缓存这些对象上的任何属性仍将可用，但尝试读取属性需要访问接口的调用将失败。  

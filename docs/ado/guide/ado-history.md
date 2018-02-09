@@ -1,5 +1,5 @@
 ---
-title: "ADO 历史记录 |Microsoft 文档"
+title: ADO History | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +11,19 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, what's new
+helpviewer_keywords:
+- ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8be523be459914814d7e92541dd5cca21da006eb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-features-for-each-release"></a>每个版本的 ADO 功能
 本主题列出每个版本的 ADO、 ADO MD 和 ADOX 引入的新功能。
@@ -36,13 +37,13 @@ ms.lasthandoff: 12/21/2017
  *受信任区域之外不允许硬盘驱动器访问。*
 在跨域脚本涉及非信任的站点，会禁用以下操作： **Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，和**Recordset.Open**、 结合使用**adCmdFile**标志或与 Microsoft OLE DB 持久性提供程序 (MSPersist)。
 
- **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和* **Stream.LoadFromFile***物理的文件进行操作。* 
+ **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和* **Stream.LoadFromFile***物理的文件进行操作。        *
 这些方法现在验证文件句柄指向仅限于物理文件。
 
- **Recordset.ActiveCommand***返回调用从 HTML/ASP 页时出错。* 
+ **Recordset.ActiveCommand***返回调用从 HTML/ASP 页时出错。  *
 这可以防止**命令**被误用的对象。
 
- *数***记录集***返回嵌套***形状***命令具有上限。* 
+ *数***记录集***返回嵌套***形状***命令具有上限。        *
 嵌套的形状命令现在返回最多 512 个**记录集**。 这意味着，**形状**不再可以在任何深度嵌套命令。 相反，最大级别深度是 512，如果每个命令结果在一次 （子级）**记录集**。 如果是，在任何级别**形状**命令将返回多个**记录集**，最大深度级别将小于 512。
 
 ## <a name="ado-27"></a>ADO 2.7

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::Move
 - Recordset15::raw_Move
-helpviewer_keywords: Move method [ADO]
+helpviewer_keywords:
+- Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47239335259fc7bee4d01ef01741e4148f1a3ea0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 098ef46d9d0e336cb142b29b9b899ec0bcaf2eba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="move-method-ado"></a>Move 方法 (ADO)
 移动中的当前记录的位置[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -42,10 +44,10 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  有符号**长**指定的当前记录位置移动的记录数的表达式。  
   
- *启动*  
- 可选。 A**字符串**值或**Variant**计算结果为书签。 你还可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
+ *开始*  
+ 選擇性。 A**字符串**值或**Variant**计算结果为书签。 你还可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **移动**方法支持对所有**记录集**对象。  
   
  如果*NumRecords*参数为大于零，将当前记录的位置前移 (的一端**记录集**)。 如果*NumRecords*小于零，将当前记录的位置向后移动 (右边的开头**记录集**)。  

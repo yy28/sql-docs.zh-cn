@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::GetRows
 - Recordset15::raw_GetRows
-helpviewer_keywords: Getrows method [ADO]
+helpviewer_keywords:
+- Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 317e654699ab6e2c6abc349d91ed58d4c97a7a19
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1fb0ab2e6673a85b7204cacfbeed5bf4968970b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
 检索的多个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到一个数组对象。  
@@ -43,15 +45,15 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Parameters  
  *行*  
- 可选。 A [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)值，该值指示要检索的记录数。 默认值是**adGetRowsRest**。  
+ 選擇性。 A [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)值，该值指示要检索的记录数。 默认值是**adGetRowsRest**。  
   
- *启动*  
- 可选。 A**字符串**值或**Variant**计算结果为记录的书签从其**GetRows**应开始操作。 你还可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
+ *开始*  
+ 選擇性。 A**字符串**值或**Variant**计算结果为记录的书签从其**GetRows**应开始操作。 你还可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
- Fields  
- 可选。 A **Variant**表示单个字段名称或序号位置或数组的字段名称或序号位置编号。 ADO 仅返回的数据在这些字段中。  
+ *Fields*  
+ 選擇性。 A **Variant**表示单个字段名称或序号位置或数组的字段名称或序号位置编号。 ADO 仅返回的数据在这些字段中。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**GetRows**方法以从记录中复制**记录集**到二维数组。 第一个下标标识字段，第二个标识记录编号。 *数组*变量自动尺寸到正确大小时**GetRows**方法返回的数据。  
   
  如果未指定的值*行*自变量， **GetRows**方法自动检索中的所有记录**记录集**对象。 如果请求更多记录多于可用， **GetRows**返回仅可用的记录数。  

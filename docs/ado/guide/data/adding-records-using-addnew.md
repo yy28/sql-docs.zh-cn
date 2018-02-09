@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c29eacc0e556f82458cf313f1c0fc93d7ab83d3b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f68a67e0eafaf7bbb9d89ddd151b73dd5d0bbb75
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adding-records-using-addnew-method"></a>添加记录使用 AddNew 方法
 这是基本语法的**AddNew**方法：
@@ -53,5 +54,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注释
  因为此代码使用断开连接**记录集**与客户端游标在批处理模式下，你必须重新连接**记录集**到具有新的数据源**连接**对象，然后你可以调用**UpdateBatch**方法发布到数据库的更改。 轻松地完成此操作通过使用新函数**GetNewConnection**。

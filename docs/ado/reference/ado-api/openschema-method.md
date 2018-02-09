@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection15::OpenSchema
 - Connection15::raw_OpenSchema
-helpviewer_keywords: OpenSchema method [ADO]
+helpviewer_keywords:
+- OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b79dcd972c3b14a27cae47cc08893f2266dfd6b2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf2b79bc39ff1f376801b5df6c24a768067a53b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
 从提供程序获取数据库架构信息。  
@@ -46,12 +48,12 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  任何[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)值，该值表示架构运行查询的类型。  
   
  *条件*  
- 可选。 数组的每个查询约束*QueryType*选项，因为列入[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)。  
+ 選擇性。 数组的每个查询约束*QueryType*选项，因为列入[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)。  
   
  *SchemaID*  
  提供程序架构查询未定义的 OLE DB 规范的 GUID。 此参数是必需的如果*QueryType*设置为**adSchemaProviderSpecific**; 否则为不使用它。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **OpenSchema**方法返回有关数据源，例如什么表是在数据源，在表中，列中的自我描述的信息和支持数据类型。  
   
  *QueryType*自变量是一个 GUID，指示返回的列 （架构）。 OLE DB 规范有架构的完整列表。  

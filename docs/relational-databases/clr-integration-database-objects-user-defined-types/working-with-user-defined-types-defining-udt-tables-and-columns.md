@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - user-defined types [CLR integration], columns
 - UDTs [CLR integration], columns
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], indexes
 - indexes [CLR integration]
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
-caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2a8219dc2496b3ecb7cad21f8122ba10fcbe97f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 55419a1d921713b88bfc046c94be74b137eb037a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>使用用户定义的类型的定义 UDT 表和列
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含用户定义类型 (UDT) 的程序集定义注册后在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，可在列定义。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+包含用户定义类型 (UDT) 的程序集定义注册后在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，可在列定义。  
   
 ## <a name="creating-tables-with-udts"></a>使用 UDT 创建表  
  没有用于在表中创建 UDT 列的特殊语法。 您可以在某一列定义中使用 UDT 的名称，就像它是某一内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型一样。 以下的 CREATE TABLE[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建名为的表**点**，具有名为的列**ID，**其定义为**int**标识列和表的的主键。 第二个列名为**PointValue**，数据类型为**点**。 在此示例中使用的架构名称是**dbo**。 请注意，您必须具有指定架构名称所需的权限。 如果省略架构名称，将使用数据库用户的默认架构。  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87c39965c7cf46c628aac17dd00fa3bf7ff18fdc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cd893e19c1ab5ac5a4dd657ce61ef76295f2b188
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-pages"></a>使用页
 使用**PageCount**属性来确定多少页的数据位于**记录集**对象。 *页*是一组记录其大小等于**PageSize**属性设置。 即使的最后一页是不完整，因为有较少的记录，比**PageSize**值，它将计为中的其他页**PageCount**值。 如果**记录集**对象不支持此属性， **PageCount**将为-1，则指示**PageCount**是无法确定。  

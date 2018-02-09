@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c00af6ce5dcdff509b04d25bc09a42a6e9e89fd7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d9e182d5b1e1b8755250cbf620ac102a7eacde0f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 连接和记录集事件
 两个 ADO 对象可以引发事件：[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **ConnectionEvent**系列与操作上**连接**对象，与**RecordsetEvent**系列与操作上**记录集**对象。

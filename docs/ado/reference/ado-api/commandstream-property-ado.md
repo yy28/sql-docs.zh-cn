@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Command::CommandStream
-helpviewer_keywords: CommandStream property [ADO]
+f1_keywords:
+- _Command::CommandStream
+helpviewer_keywords:
+- CommandStream property [ADO]
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d1c75a7db62475c8f717e36a93b9bf554c6248d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ba80c7527dad72860c2c58336ffe3bfabcc29ad
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 属性 (ADO)
 指示用作输入的流[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回用作输入的流**命令**对象。 此流的格式是特定于提供程序;请参阅详细信息的提供程序的文档。 此属性是类似于[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性，用于指定的输入的字符串**命令**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **CommandStream**和**CommandText**是互相排斥。 当用户设置**CommandStream**属性， **CommandText**属性将设置为空字符串 ("")。 如果用户设置**CommandText**属性， **CommandStream**属性将设置为**执行任何操作**。  
   
  行为**Command.Parameters.Refresh**和**Command.Prepare**方法定义提供程序。 无法刷新流中的参数值。  

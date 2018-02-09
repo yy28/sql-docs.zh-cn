@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,18 +20,19 @@ f1_keywords:
 - _Record::put_Source
 - _Record::putref_Source
 - _Record::get_Source
-helpviewer_keywords: Source property [ADO Record]
+helpviewer_keywords:
+- Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c096d669bbda0fa5dde92b6aed25374fb456d30a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ea9472275b0dbaa8a1a88ba70c21e8b6576af14
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-record"></a>源属性 （ADO 记录）
 指示数据源或由表示对象[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**Variant**值，该值指示所表示的实体**记录**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **源**属性返回*源*参数**记录**对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 它可以包含一个绝对或相对 URL 字符串。 绝对 URL 可用但不包括设置[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性以直接打开**记录**对象。 一种隐式**连接**在这种情况下创建对象。  
   
  **源**属性还可以包含对已打开的引用**记录集**，这将打开**记录**表示中的当前行对象**记录集**。  

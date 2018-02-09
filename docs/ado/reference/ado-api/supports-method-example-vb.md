@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Supports method [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc46e19049b576ca1af9a6cbce24087b7672e501
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f078404d2f524b0ae98cf875724a744f8b0d034e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supports-method-example-vb"></a>支持方法示例 (VB)
 此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法以显示数据集所支持的选项将打开具有不同的游标类型。 有关运行此过程需要 DisplaySupport 过程。  

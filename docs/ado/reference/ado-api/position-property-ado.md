@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::Position
-helpviewer_keywords: Position property [ADO]
+f1_keywords:
+- _Stream::Position
+helpviewer_keywords:
+- Position property [ADO]
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d26a7c2640b855d34aceadf0369ccb2112d243d9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c11f5153f63c0fcacd6286b64ee6628c2e0ee439
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="position-property-ado"></a>位置属性 (ADO)
 指示当前位置[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**指定的偏移量中的流的当前位置从一开始的字节数的值。 默认值为 0，它表示流中的第一个字节。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  可以移动到点结束后的流的当前位置。 如果指定超出流末尾当前位置[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)的**流**对象将会相应地增加。 在这种方式中添加任何新字节将为 null。  
   
 > [!NOTE]

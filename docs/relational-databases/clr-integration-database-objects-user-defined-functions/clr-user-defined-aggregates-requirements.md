@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 - UDTs [CLR integration], user-defined aggregates
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 158b2aaa95f289a558f0d186e359903252f6d90e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 204a01f25e90be1885bad41361aa41d919159bd0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR 用户定义聚合要求
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]公共语言运行时 (CLR) 程序集中的类型可以作为用户定义聚合函数中，注册，只要它实现所需的聚合协定。 此协定组成**SqlUserDefinedAggregate**属性和聚合协定方法。 聚合协定包含用于保存的聚合的中间状态的机制和累积新值，其中包括四个方法的机制： **Init**， **Accumulate**， **合并**，和**终止**。 当满足这些要求后时，你将能够充分利用中的用户定义聚合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主题的以下章节提供有关如何创建和使用用户定义聚合的其他详细信息。 有关示例，请参阅[Invoking CLR User-Defined 聚合函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+只要公共语言运行时 (CLR) 程序集中的类型实现了所需的聚合约定，就可以将它作为用户定义聚合函数注册。 此协定组成**SqlUserDefinedAggregate**属性和聚合协定方法。 聚合协定包含用于保存的聚合的中间状态的机制和累积新值，其中包括四个方法的机制： **Init**， **Accumulate**， **合并**，和**终止**。 当满足这些要求后时，你将能够充分利用中的用户定义聚合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主题的以下章节提供有关如何创建和使用用户定义聚合的其他详细信息。 有关示例，请参阅[Invoking CLR User-Defined 聚合函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)。  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  有关详细信息，请参阅[SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626)。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="change-history"></a>更改历史记录  
   
-|更新的内容|  
+|更新内容|  
 |---------------------|  
 |更新的说明**Accumulate**方法; 它现在接受向多个参数。|  
   

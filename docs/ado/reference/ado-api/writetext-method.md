@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_WriteText
 - _Stream::WriteText
-helpviewer_keywords: WriteText method [ADO]
+helpviewer_keywords:
+- WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c744551b835ce814f8a6baf9781e04e67b6139d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ce6482cf6b3b640f737ced8dedda66279245a0cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="writetext-method"></a>WriteText 方法
 将一个指定的文本字符串写入[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -42,10 +44,10 @@ Stream.WriteText Data, Options
  *数据*  
  A**字符串**值，该值包含要写入的字符中的文本。  
   
- *选项*  
- 可选。 A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)值，该值指定是否必须在指定的字符串的末尾写入的行的分隔符。  
+ *Options*  
+ 選擇性。 A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)值，该值指定是否必须在指定的字符串的末尾写入的行的分隔符。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  指定的字符串写入到**流**没有任何干预空格或每个字符串之间的字符的对象。  
   
  当前[位置](../../../ado/reference/ado-api/position-property-ado.md)设置为以下写入的数据的字符。 **WriteText**方法不截断流中的数据的其余部分。 如果要进行截断操作这些字符，调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  

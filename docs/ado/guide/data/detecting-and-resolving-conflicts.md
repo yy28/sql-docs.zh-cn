@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,23 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23ed1396e76f0339c2fdda92501aca751d2d4559
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61f54b700be8ec03e56bf63999dc7f93b8d5fcdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
 如果你处理的记录集，在即时模式中，则要少得多的并发问题发生的机会。 另一方面，如果你的应用程序使用批处理模式更新，可能有一个不错的概率一个用户将更改的记录，然后再将保存所做的另一个用户编辑同一个记录的更改。 在这种情况下，你需要应用程序，用于正常处理冲突。 它可能是您所希望的最后一个人将更新发送到服务器"wins"。 或者，你可能想要让最新的用户来决定哪种更新应优先通过向他提供两个冲突值之间进行选择。  
   
  任何情况下，ADO 提供要处理这些类型的冲突的字段对象的 UnderlyingValue 和 OriginalValue 属性。 使用重新同步方法和记录集的筛选器属性结合使用这些属性。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  当 ADO 批处理更新的过程中遇到冲突时，警告将添加到错误集合中。 因此，你应始终检查错误立即后调用 batchupdate 之后，并且如果找到它们，就会开始测试遇到了冲突的假设。 第一步是在记录集等于 adFilterConflictingRecords 上设置的筛选器属性。 这就限制了对你以上正在发生冲突的记录的记录集的视图。 如果 RecordCount 属性值等于零，在此步骤后，就知道错误由冲突之外的内容。  
   
  当你调用 batchupdate 之后时，ADO 和提供程序正在生成 SQL 语句以便在数据源上执行更新。 请记住，某些数据源可以在其使用类型的列的 WHERE 子句中的限制。  

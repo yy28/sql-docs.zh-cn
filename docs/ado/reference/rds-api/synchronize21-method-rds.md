@@ -1,6 +1,7 @@
 ---
 title: "Synchronize21 方法 (RDS) |Microsoft 文档"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Synchronize21 method [ADO]
+helpviewer_keywords:
+- Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f48789fef088affdfa664ead4da2bd379aa51b7
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c973d97465963ba865bb768569bf70f70366a1b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 方法 (RDS)
 将给定的记录集与指定与 ADO 2.1 一起使用的连接字符串的数据库同步。  
@@ -61,7 +63,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  用于返回受影响的行的行状态的安全数组的一个变体同步。 如果任何以下的同步选项设置不设置： *RefreshWithUpdate*，*刷新*和*RefreshConflicts*。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  *HandlerString*参数可以为 null。 在这种情况下发生的情况取决于如何配置的 RDS 服务器。 "MSDFMAP.handler"的处理程序字符串指示应使用 Microsoft 提供处理程序 (Msdfmap.dll)。 "MASDFMAP.handler,sample.ini"的处理程序字符串指示应使用 Msdfmap.dll 处理程序和自变量"sample.ini"，应传递到处理程序。 Msdfmap.dll 然后会将自变量解释为一个方向，若要使用 sample.ini 检查连接和查询字符串。  
   
 > [!NOTE]

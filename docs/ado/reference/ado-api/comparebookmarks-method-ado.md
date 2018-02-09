@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - CompareBookmarks
 - Recordset20::CompareBookmarks
 - Recordset20::raw_CompareBookmarks
-helpviewer_keywords: CompareBookmarks method [ADO]
+helpviewer_keywords:
+- CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e4c3ebb53e34b8e17ae7bc3740bc33d1bfce4fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 431ffdb1a2be03404b4d0c3636f547b6c8cf8514
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 方法 (ADO)
 比较两个的书签，并返回对其相对值的指示。  
@@ -49,7 +51,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  第二行的书签。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  书签必须应用到同一个[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或**记录集**对象并将其[克隆](../../../ado/reference/ado-api/clone-method-ado.md)。 不能可靠地比较通过不同的书签**记录集**对象，即使它们已创建从相同的源或命令。 也可以比较书签**记录集**其基础提供程序不支持比较的对象。  
   
  书签唯一标识中的行**记录集**对象。 使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)要获取其书签的当前行的属性。  

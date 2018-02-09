@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS tutorial [ADO], specifying server program
+helpviewer_keywords:
+- RDS tutorial [ADO], specifying server program
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01d69622e92814719ee5e27ef5f32fff93ff82fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9eae6b17fc9277bd5e3c4cfe9259a026681252f0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>步骤 1： 指定的服务器程序 （RDS 教程）
 在最一般情况下，使用[rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)对象[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法，以指定默认的服务器程序，[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，或你自己的自定义服务器程序 （业务对象）。 在服务器和服务器程序中，引用上实例化服务器程序或*代理*，则返回。  

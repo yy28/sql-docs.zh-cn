@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,21 +13,22 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Parameter collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 370528b6a58ab987f95ae551ab5473f3b8e549e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05f3e2f6f6b3985c1c68604e6e9829c1b1f3eef1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>参数 (ADO-WFC 语法)
-## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>构造函数  
   
@@ -74,7 +76,7 @@ public AdoProperties getProperties()
   
  ADO/WFC 实现**值**具有属性**getValue**方法，返回的变体对象; 与**setValue**方法，后者采用 VARIANT 类型作为自变量。 变体，可以在某些语言中，如 Microsoft Visual Basic 高效率。  
   
- 除了**值**属性，ADO/WFC 提供*访问器*使用 Java 数据类型来获取和设置的内容的方法**参数**对象。 具有窗体的名称，这些方法中的大多数**获取***DataType*或**设置***DataType*。  
+ 除了**值**属性，ADO/WFC 提供*访问器*使用 Java 数据类型来获取和设置的内容的方法**参数**对象。 具有窗体的名称，这些方法中的大多数 **获取 * * * 数据类型*或 **设置 * * * 数据类型*。  
   
  一种更具吸引力情况例外： 有没有**getNull**属性; 而是有**isNull**返回一个布尔值，该值指示字段是否为 null 的属性。  
   

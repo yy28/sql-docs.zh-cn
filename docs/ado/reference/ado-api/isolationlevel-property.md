@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::IsolationLevel
-helpviewer_keywords: IsolationLevel property
+f1_keywords:
+- Connection15::IsolationLevel
+helpviewer_keywords:
+- IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9b94c3d33c04f71adbbf82c9a4aa672d04fc482
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b66b246ef3bc64e841ec6322de41ba0fc1e7af97
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel 属性
 指示的隔离级别[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回[IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)值。 默认值是**adXactReadCommitted**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**IsolationLevel**属性来设置的隔离级别的**连接**对象。 设置直到下次调用的时不会生效[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法。 如果您请求的隔离级别不可用，提供程序可能返回下一个更大的隔离级别，而无需更新**IsolationLevel**属性。  
   
  **IsolationLevel**属性为读/写。  

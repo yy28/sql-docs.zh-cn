@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 034f0f577201d3f0b3b4e38e78e11acb8649884e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f62e184e4a51d82fc0b0369444ce78a9b2619039
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一表，唯一的架构，唯一目录属性的动态 (ADO)
 使您能够紧密控制特定基础表中的修改[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的组上多个基表的联接操作而形成。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**是表、 架构或目录的名称的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  由其目录、 架构和表名称唯一标识所需的基表。 当**唯一表**设置属性，值**唯一架构**或**唯一目录**属性用于查找基表。 这是预期的位置，但不是必需的任一或全部**唯一架构**和**唯一目录**之前设置属性**唯一表**属性设置。  
   
  主键值**唯一表**视为整个的主键**记录集**。 这是可用于任何方法，该方法需要主密钥的密钥。  

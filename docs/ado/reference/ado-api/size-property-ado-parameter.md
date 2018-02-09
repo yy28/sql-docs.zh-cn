@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Parameter::Size
-helpviewer_keywords: Size property [ADO Parameter]
+f1_keywords:
+- _Parameter::Size
+helpviewer_keywords:
+- Size property [ADO Parameter]
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0c9454da339650414e9ecce6826907240e2cc53
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1959316966e284ab1f7880d6afcaa4820c009556
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="size-property-ado-parameter"></a>Size 属性 （ADO 参数）
 指示的最大大小，以字节或字符，[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**值，该值指示字节或字符中的值的最大大小**参数**对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**大小**属性，以确定值写入到的最大大小，或从读取[值](../../../ado/reference/ado-api/value-property-ado.md)属性**参数**对象。  
   
  如果你指定的可变长度数据类型**参数**对象 (例如，任何**字符串**类型，如**以便您可以排除**)，你必须设置对象的**大小**之前追加到属性[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合; 否则，将会出错。  

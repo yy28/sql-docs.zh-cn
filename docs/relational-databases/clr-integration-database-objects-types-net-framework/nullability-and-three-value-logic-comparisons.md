@@ -19,19 +19,20 @@ helpviewer_keywords:
 - data types [CLR integration]
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ca7947c1b07478c43be0e0eaeb3f41d8ae2686d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abef06c62b28aa2e25f61127d8dd23551652b12c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>为 Null 性和三值逻辑比较
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果你熟悉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，你将找到相似的语义和精度**System.Data.SqlTypes**中的命名空间[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 但是，这些数据类型之间存在一些不同之处，本主题介绍了这些不同之处中最重要的内容。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+如果你熟悉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，你将找到相似的语义和精度**System.Data.SqlTypes**中的命名空间[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 但是，这些数据类型之间存在一些不同之处，本主题介绍了这些不同之处中最重要的内容。  
   
 ## <a name="null-values"></a>NULL 值  
  本机公共语言运行时 (CLR) 数据类型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之间的一个主要不同就是前者不允许 NULL 值，而后者提供了完整 NULL 语义。  

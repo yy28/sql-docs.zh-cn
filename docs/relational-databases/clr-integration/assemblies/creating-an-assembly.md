@@ -19,19 +19,20 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 249bd52e59dfb91ca4d4a24efb3cd824fb329864
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 01e863a5e39ebc32baba97b49e3421e5c8c202bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-an-assembly"></a>创建程序集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]托管的数据库对象，例如存储的过程或触发器，编译，且然后将其部署在名为程序集的单元。 托管的 DLL 程序集必须在注册[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]前，可以使用程序集提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中注册程序集，请使用 CREATE ASSEMBLY 语句。 本主题讨论如何使用 CREATE ASSEMBLY 语句在数据库中注册程序集，以及如何为程序集指定安全设置。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+托管数据库对象（如存储过程或触发器）先经过编译，然后部署到称为程序集的单元中。 托管的 DLL 程序集必须在注册[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]前，可以使用程序集提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中注册程序集，请使用 CREATE ASSEMBLY 语句。 本主题讨论如何使用 CREATE ASSEMBLY 语句在数据库中注册程序集，以及如何为程序集指定安全设置。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY 语句  
  CREATE ASSEMBLY 语句用于在数据库中创建程序集。 以下是示例：  
@@ -43,7 +44,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  FROM 子句指定要创建的程序集的路径名。 此路径既可以是通用命名约定 (UNC) 路径，也可以是计算机本地的物理文件路径。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允许使用相同的名称、区域性和公钥来注册程序集的不同版本。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允许使用相同的名称、 区域性和公钥注册的程序集的不同版本。  
   
  可以创建引用其他程序集的程序集。 当在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建程序集时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 还将创建由根级别程序集引用的程序集（如果尚未在数据库中创建被引用程序集）。  
   

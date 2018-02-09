@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - publishing to Internet [ADO]
 - Internet publishing [ADO]
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec405d3f1e0ab13edfe39f71bc049e89d1cb9159
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4595cb4cadc4ebf3a2599af3f228bc6d47aaacb0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internet-publishing-scenario"></a>Internet 发布方案
 此代码示例演示如何使用 ADO Microsoft OLE DB Provider for Internet 发布。 在此方案中，你将创建的 Visual Basic 应用程序使用**记录集**，**记录**，和**流**通过发布的对象显示的资源的内容Internet 发布提供程序。  

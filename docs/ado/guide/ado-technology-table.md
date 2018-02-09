@@ -11,18 +11,19 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, technologies
+helpviewer_keywords:
+- ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a03ed3b7537d81fac8045ceaad2c1c9a1afcaa0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6ab214b72913118e12d1ce1a7db67e0e00dc118
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="products-and-technologies-table"></a>产品和技术表
 下表列出了 Microsoft 产品、 工具和 ADO 程序员指南中讨论的技术。 它提供的链接，只要有可能，到指南中相关的主题。

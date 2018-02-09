@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset object [ADO]
+helpviewer_keywords:
+- Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a861030b8ec30e176d7535d6e2f7976a87c0832a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-recordsets"></a>使用记录集
 **记录集**对象具有的内置功能，可让您重新排列结果集中的数据的顺序，来搜索特定记录根据你提供的条件并甚至优化使用索引这些搜索操作。 这些功能是否可供使用取决于提供程序以及在某些情况下 — 例如[索引](../../../ado/reference/ado-api/index-property.md)属性-数据源本身的结构。  

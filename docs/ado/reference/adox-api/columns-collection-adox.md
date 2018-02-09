@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,23 +18,24 @@ f1_keywords:
 - Table::Columns
 - Key::Columns
 - Columns
-helpviewer_keywords: Columns collection [ADOX]
+helpviewer_keywords:
+- Columns collection [ADOX]
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d0d98b31644ef96ac31a1c6bba88d053d677838
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: afacdd2d86d25382c6026dba8d3deda55d05c99a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="columns-collection-adox"></a>列集合 (ADOX)
 包含所有[列](../../../ado/reference/adox-api/column-object-adox.md)的表、 索引或键的对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  [追加](../../../ado/reference/adox-api/append-method-adox-columns.md)方法**列**集合是唯一的 ADOX。 您可以：  
   
 -   将新列添加到具有集合**追加**方法。  

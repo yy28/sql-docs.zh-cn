@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::CursorType
-helpviewer_keywords: CursorType property [ADO]
+f1_keywords:
+- Recordset15::CursorType
+helpviewer_keywords:
+- CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 605fd338c9a5f41a893eccc885a610770c4e37bc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6b2123fe185bd52947812bea251c7af4b46989a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-property-ado"></a>游标类型属性 (ADO)
 指示在中使用的游标类型[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回[CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值。 默认值是**adOpenForwardOnly**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**游标类型**属性指定的一种打开时应使用的游标**记录集**对象。  
   
  仅设置**adOpenStatic**如果，则支持[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。 如果设置不支持的值，则不会产生错误;最近支持**游标类型**将改为使用。  
@@ -44,9 +47,9 @@ ms.lasthandoff: 12/21/2017
 |为此游标类型的记录集|这些常量的所有支持方法必须返回 True|  
 |----------------------------------------|---------------------------------------------------------------------|  
 |**adOpenForwardOnly**|none|  
-|**adOpenKeyset**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
+|**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
-|**adOpenStatic**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
+|**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
   
 > [!NOTE]
 >  尽管**支持**(**adUpdateBatch**) 的可能是为动态和只进游标，批处理更新你应使用键集或静态游标。 设置[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性**adLockBatchOptimistic**和**CursorLocation**属性**adUseClient**启用光标用于 OLE DB，所需的批处理更新的服务。  

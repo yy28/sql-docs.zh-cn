@@ -1,6 +1,7 @@
 ---
 title: "Synchronize 方法 (RDS) |Microsoft 文档"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Synchronize method [ADO]
+helpviewer_keywords:
+- Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c933cbb0a39486ea1ed04b645057bdc31011b05b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: d223df00d0b32c3f608bcd61207de23da77e15cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 将给定的记录集与在 ADO 2.5 及更高版本中使用的连接字符串指定的数据库同步。  
@@ -67,7 +69,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pInformation*  
  指向返回的信息错误**执行**。 如果为 NULL，则不返回任何错误的信息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  *HandlerString*参数可以为 null。 在这种情况下发生的情况取决于如何配置的 RDS 服务器。 "MSDFMAP.handler"的处理程序字符串指示应使用 Microsoft 提供处理程序 (Msdfmap.dll)。 "MASDFMAP.handler,sample.ini"的处理程序字符串指示应使用 Msdfmap.dll 处理程序和自变量"sample.ini"，应传递到处理程序。 Msdfmap.dll 然后会将自变量解释为一个方向，若要使用 sample.ini 检查连接和查询字符串。  
   
 ## <a name="applies-to"></a>适用范围  

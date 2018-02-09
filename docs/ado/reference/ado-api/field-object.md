@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Field
-helpviewer_keywords: Field object [ADO]
+f1_keywords:
+- Field
+helpviewer_keywords:
+- Field object [ADO]
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 638ba9740e02ef403256b76a8fd800993b237fb2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6948d38ad24d1f2a8cbbd7723eef8946d0fade2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-object"></a>字段对象
 表示对类型为通用数据类型的数据列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  每个**字段**对象中的列对应[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 你使用[值](../../../ado/reference/ado-api/value-property-ado.md)属性**字段**对象设置或返回当前记录的数据。 根据的功能提供程序的公开，一些集合、 方法或属性的**字段**对象可能不可用。  
   
  使用集合、 方法和属性的**字段**对象，你可以执行以下操作：  

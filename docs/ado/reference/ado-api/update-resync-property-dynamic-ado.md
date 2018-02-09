@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Update Resync property [ADO]
+helpviewer_keywords:
+- Update Resync property [ADO]
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64f0b19708dcb2a2333e800ba9cddb5b092ba04a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6084a0075508c8a9a3658b4a8c694957409376c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="update-resync-property-dynamic-ado"></a>更新重新同步属性的动态 (ADO)
 指定是否[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法后跟一种隐式[重新同步](../../../ado/reference/ado-api/resync-method.md)方法操作，如果是，该操作的作用域。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回一个或多个[ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md)值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  可能合并 ADCPROP_UPDATERESYNC_ENUM 的值，但已表示值的其余部分的组合的 adResyncAll 除外。  
   
  常量**adResyncConflicts**存储的重新同步值作为基础值，但不会覆盖挂起的更改。  

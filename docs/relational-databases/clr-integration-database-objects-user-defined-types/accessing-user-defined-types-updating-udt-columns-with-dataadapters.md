@@ -25,19 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae91b291c11e3993b2182414bf4845fb91969fb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>访问用户定义的类型-使用 Dataadapter 更新 UDT 的列
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过使用支持用户定义类型 (Udt) **System.Data.DataSet**和**System.Data.SqlClient.SqlDataAdapter**来检索和修改数据。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+通过使用支持用户定义类型 (Udt) **System.Data.DataSet**和**System.Data.SqlClient.SqlDataAdapter**来检索和修改数据。  
   
 ## <a name="populating-a-dataset"></a>填充数据集  
  您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定你具有**点**定义具有以下结构和一些示例数据的表。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句创建**点**表和插入几行。  
@@ -376,6 +377,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [在 ADO.NET 中访问用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [在 ADO.NET 中访问的用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

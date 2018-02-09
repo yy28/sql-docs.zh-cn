@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,24 @@ apitype: COM
 f1_keywords:
 - Catalog::Tables
 - Tables
-helpviewer_keywords: Tables collection [ADOX]
+helpviewer_keywords:
+- Tables collection [ADOX]
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ff2e5eccc74e4fa08816531b6600f6fd0940f69
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19e4ae74c893062559d8cffbec8c6e8e375ce07
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tables-collection-adox"></a>表集合 (ADOX)
 包含所有[表](../../../ado/reference/adox-api/table-object-adox.md)的目录对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  [追加](../../../ado/reference/adox-api/append-method-adox-tables.md)方法**表**集合是唯一的 ADOX。 您可以：  
   
 -   将新表添加到具有集合**追加**方法。  

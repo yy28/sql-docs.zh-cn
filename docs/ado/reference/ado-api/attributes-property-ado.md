@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::Attributes
 - Field20::Attributes
 - _Parameter::Attributes
-helpviewer_keywords: Attributes property [ADO]
+helpviewer_keywords:
+- Attributes property [ADO]
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d62e02663cb14c83ec69c467a0fe5e02b04cfa8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c2b63ff111ddf295784a6e8d3d574f0c36267f19
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-ado"></a>Attributes 属性 (ADO)
 指示一个或多个特征的对象。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  有关[属性](../../../ado/reference/ado-api/property-object-ado.md)对象，**属性**属性是只读的且其值可以是任何一个或多个总和[PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md)值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**属性**属性来设置或返回的特征**连接**对象，**参数**对象，**字段**对象，或**属性**对象。  
   
  当你设置多个属性时，你可以总和的相应常量。 如果属性值设置为包括不兼容的常量的总和中时，出现错误。  

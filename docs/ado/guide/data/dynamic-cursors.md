@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - cursors [ADO], dynamic
 - dynamic cursors [ADO]
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e434cef7d54ea04e3d90c8c08360e4aacb6cb488
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dbeb8f40cf6d1ad91a59fa9719410f26386953d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dynamic-cursors"></a>动态游标
 动态游标检测到的行在结果集中，而不考虑是否发生的更改从游标内部或外部光标的其他用户所做的所有更改。 所有的 insert、 update 和 delete 语句所做的所有用户都通过游标可见。 动态游标可以检测到行、 顺序和设置后在打开游标的结果中的值所做的任何更改。 游标外部所做的更新不可见，直到它们已提交 （除非将游标事务隔离级别设置为"未提交"）。  

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: cea19257746be6e16c835764605eb6005e565dab
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f201b14de079eda6954bbc0ee3559a19e34dbed6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>安装 SQL Server 和 Red Hat 上创建数据库
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
    ```
 
    > [!NOTE]
-   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[更改源存储库](sql-server-linux-setup.md#repositories)。
+   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 1. 运行以下命令，安装 SQL Server：
 

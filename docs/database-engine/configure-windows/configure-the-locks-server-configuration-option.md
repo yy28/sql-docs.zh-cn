@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: locks option [SQL Server]
+helpviewer_keywords:
+- locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f064676358d21bf48b785b0a782c237576e7d96c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0cdafcdcd8fbabebfc55c285b46ea4ee1534ec43
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>配置 locks 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 建议  
   
--   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
+-   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
 -   如果服务器启动时 **locks** 设置为 0，锁管理器将从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中获取足够的内存，用于包含 2,500 个锁结构的初始池。 当锁池用完时，将另外为该池获取内存。  
   

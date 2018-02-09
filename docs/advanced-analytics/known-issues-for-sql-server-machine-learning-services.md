@@ -1,6 +1,6 @@
 ---
 title: "机器学习服务中的已知问题 |Microsoft 文档"
-ms.date: 01/31/2018
+ms.date: 02/05/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5a262bb73d5989ebf3ad961ee7c2e84e75415f26
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2c3bd4ada6d234015ef1ab4d8b474f7ab45c4b85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知的问题
 
@@ -71,17 +71,31 @@ SQL Server 2016 需要客户端上的 R 库与服务器上的 R 库完全匹配�
 
 **适用于：** SQL Server 2016 R Services，与 R Server 9.0.0 版或更早版本
 
+### <a name="r-components-missing-from-cu3-setup"></a>从 CU3 安装程序缺少的 R 组件
+
+如果没有应包含在 SQL Server R 安装文件设置有限的数量的 Azure 虚拟机。 此问题适用于在从 2018年-01-05 2018年-01-23 到期间设置的虚拟机。 如果你应用 SQL Server 2017 CU3 更新期间从 2018年-01-05 2018年-01-23 到，则此问题可能也会影响在本地安装。
+
+包括 R 安装文件的正确版本提供了服务版本。
+
++ [SQL Server 自 2017 年 KB4052987 的累积更新包 3](https://www.microsoft.com/en-us/download/details.aspx?id=56128)。
+
+若要安装组件并修复 SQL Server 自 2017 年 1 CU3，必须卸载 CU3，然后重新安装的更新的版本：
+
+1. 下载更新的 CU3 安装文件，其中包含 R 安装程序。
+2. 卸载 CU3。 在 Control Panel 中，搜索**卸载的更新**，然后选择"SQL Server 2017 (KB4052987) （64 位） 的修补 3015 程序"。 继续执行卸载步骤。
+3. 重新安装 CU3 更新中，双击 KB4052987 刚下载的更新： `SQLServer2017-KB4052987-x64.exe`。 按照安装说明进行操作。
+
 ### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>无法在脱机安装的 SQL Server 自 2017 年 1 CTP 2.0 或更高版本中安装 Python 组件
 
 如果在没有 internet 访问的计算机上安装 SQL Server 自 2017 年的预发行版本，安装程序可能无法显示页面，提示输入下载 Python 组件的位置。 在这种情况下，你可以安装机器学习服务功能，但不是 Python 组件。
 
-在发布版本中修复此问题。 如果遇到此问题，一种解决方法，你可以暂时的安装程序的持续时间内启用 internet 访问权限。 此限制不适用于。
+在发布版本中修复此问题。 此外，此限制不适用于 R 组件。
 
 **适用于：**使用 Python 的 SQL Server 自 2017 年 1
 
 ### <a name="bkmk_sqlbindr"></a>当你从连接到旧版本的 SQL Server R Services 客户端使用的不兼容版本警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-在 SQL Server 2016 计算上下文中运行 R 代码时，可能会看到如下错误：
+当在运行 R 代码 SQL Server 2016 计算上下文，你可能会看到以下错误：
 
 > *计算机上运行的 Microsoft R Client 版本为 9.0.0，与 8.0.3 版的 Microsoft R Server 不兼容。请下载并安装兼容版本。
 
@@ -170,13 +184,13 @@ SQL Server 2016 需要客户端上的 R 库与服务器上的 R 库完全匹配�
 
 如果 SQL Server 的实例已安装到非默认位置，如外部`Program Files`文件夹中，当你尝试运行安装包的脚本时引发 ACCESS_DENIED 警告。 例如：
 
-> *In normalizePath(path.expand(path), winslash, mustWork) : path[2]="~ExternalLibraries/R/8/1": Access is denied*
+> *在`normalizePath(path.expand(path), winslash, mustWork)`： 路径 [2] ="~ExternalLibraries/R/8/1": 访问被拒绝*
 
 R 函数尝试进行读取的路径，而且如果失败，原因是内置的用户组**SQLRUserGroup**，不具有读取权限。 引发警告不会阻止执行当前的 R 脚本，但警告可能重复发生，每当用户在运行任何其他 R 脚本。
 
 如果在你安装 SQL Server 的默认位置，此错误不会发生，因为所有的 Windows 用户具有读取权限上`Program Files`文件夹。
 
-将在即将发布的服务版本中解决此问题。 一种解决方法，提供组， **SQLRUserGroup**，具有针对所有父文件夹的读取访问`ExternalLibraries`。
+Ia 在即将发布的服务版本中解决此问题。 一种解决方法，提供组， **SQLRUserGroup**，具有针对所有父文件夹的读取访问`ExternalLibraries`。
 
 ### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>RevoScaleR 版本旧和新版本之间的序列化错误
 
@@ -192,13 +206,13 @@ R 函数尝试进行读取的路径，而且如果失败，原因是内置的用
 
 换而言之，将相同版本的 RevoScaleR 用于序列化和反序列化的操作。
 
-### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>实时评分不正确处理树和林模型中的 learningRate 参数
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>实时评分不正确处理_learningRate_树和林模型中的参数
 
 如果你使用决策树或决策林方法创建模型，并指定学习速率，则可能出现不一致的结果时使用`sp_rxpredict`或 SQL`PREDICT`函数，与使用相比`rxPredict`。
 
 原因是该序列化的进程模型的 API 中的错误，并仅限于`learningRate`参数： 例如，在[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)，或
 
-将在即将发布的服务版本中修复此问题。
+在即将发布的服务版本中解决此问题。
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>R 作业的处理器关联限制
 
@@ -376,7 +390,7 @@ R --max-ppsize=500000
 
 + 在安装的预先训练的模型时，选择自定义位置。
 + 如果可能，请使用较短的路径，例如 C:\SQL\MSSQL14 安装自定义安装路径下的 SQL Server 实例。MSSQLSERVER。
-+ 使用 Windows 实用工具[Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx)创建硬链接，将模型文件映射到较短的路径。 
++ 使用 Windows 实用工具[Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx)以创建将模型文件映射到较短的路径的硬链接。
 + 更新到最新的服务版本。
 
 ### <a name="error-when-saving-serialized-model-to-sql-server"></a>错误保存时序列化到 SQL Server 的模型

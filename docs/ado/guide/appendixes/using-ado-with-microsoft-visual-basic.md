@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5f3652eba15968b40a6d8a33902e1ca757275dd8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: abeb037ed89277082fce38c833baadc5a4170e3c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>使用 ADO 使用 Microsoft Visual Basic 和 Visual Basic for Applications
 设置 ADO 项目并编写 ADO 代码非常类似是否为应用程序使用 Visual Basic 或 Visual Basic。 本主题介绍使用 Visual Basic 和 Visual Basic 中为应用程序使用 ADO，并且说明的任何差异。
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 
     -   OLE 自动化
 
-3.  单击“确定” 。
+3.  单击 **“确定”**。
 
  你可以使用 ADO 轻松地使用 Visual Basic 应用程序，例如通过使用 Microsoft Access。
 
@@ -65,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 
     -   Microsoft DAO 3.5 对象库 （或更高版本）
 
-4.  单击“确定” 。
+4.  单击 **“确定”**。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>在 Visual Basic 中创建 ADO 对象
  若要创建一个自动化变量，并为该变量的对象的实例，可以使用两种方法： **Dim**或**CreateObject**。

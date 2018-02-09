@@ -15,19 +15,20 @@ helpviewer_keywords:
 - clr enabled option
 - common language runtime [SQL Server], enabling
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 25ced29f577ca896f190922e7debfc82c1fcc6f4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 70cf91f827d9cc181107e28bbe51c01ca0a99440
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration---enabling"></a>CLR 集成-启用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]公共语言运行时 (CLR) 集成功能默认情况下，处于关闭状态，并且必须启用才能使用通过 CLR 集成实现的对象。 若要启用 CLR 集成，请使用**启用 clr**选项**sp_configure**存储中的过程[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+默认情况下关闭公共语言运行时 (CLR) 集成功能，必须启用该功能才能使用借助 CLR 集成实现的对象。 若要启用 CLR 集成，请使用**启用 clr**选项**sp_configure**存储中的过程[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 ```sql  
   
@@ -53,10 +54,10 @@ GO
 >  轻型池不支持执行公共语言运行时 (CLR)。 启用 CLR 集成之前，必须禁用轻型池。 有关详细信息，请参阅 [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [clr enabled 服务器配置选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
- [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [RECONFIGURE &#40;Transact SQL &#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [服务器级角色](../../relational-databases/security/authentication-access/server-level-roles.md)  
+ [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)  
   
   

@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADOX, fundamentals
+helpviewer_keywords:
+- ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed0321e6703a80ef433e5e07e2d0da6f6d4d2905
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 69b460a0d18501f89f8d9f7ab4b83b5251bf38e9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-fundamentals"></a>ADOX 基础知识
 适用于数据定义语言和安全 (ADOX) 的 Microsoft® ActiveX® 数据对象扩展是对 ADO 对象和编程模型的扩展。 ADOX 包括架构创建和修改，以及安全的对象。 因为它是架构操作的基于对象的方法，你可以编写代码来处理各种数据源而不考虑其本机语法方面的差异。  

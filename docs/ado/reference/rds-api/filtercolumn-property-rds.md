@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: FilterColumn property [ADO]
+helpviewer_keywords:
+- FilterColumn property [ADO]
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c255767f4dc479d7f5c056725f672016dd3d084f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 62e04ee49313e60dd7f474ed38e179b0ca084ddf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn 属性 (RDS)
 指示要在其中计算的筛选条件的列。  
@@ -45,7 +47,7 @@ DataControl.FilterColumn = String
  *字符串*  
  A**字符串**值，该值指定要在其中计算的筛选条件的列。 中指定的筛选器条件[FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)属性。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)， [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)， [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)， [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)，和**FilterColumn**属性提供了排序和筛选功能对客户端缓存。 排序功能的一个列中的值对记录进行排序。 筛选功能显示基于时完整的查找条件的记录的子集[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)保留在缓存。 [重置](../../../ado/reference/rds-api/reset-method-rds.md)方法将执行条件，并将当前**记录集**与可更新**记录集**。  
   
 ## <a name="applies-to"></a>适用范围  

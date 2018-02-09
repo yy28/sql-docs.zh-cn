@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Schema section [ADO]
+helpviewer_keywords:
+- Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65b56003d7fd7723dce57a0c8c6fae2ecee6da06
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 51c10f0fb21bdab8c83d799d635153b62c2c6e58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schema-section"></a>架构部分
 架构部分是必需的。 如前面的示例所示，ADO 写出详细的元数据有关每一列来保留的数据值语义尽可能多地更新。 但是，若要在 XML 中加载，ADO 仅需要的列和它们所属的行集的名称。 下面是架构的最小的示例：  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/21/2017
  同样，因为没有定义任何别名为`CompanyName`在前面的示例中，`CompanyName`必须使用在整个文档的一致。  
   
 ## <a name="data-types"></a>数据类型  
- 你可以应用到具有 dt: type 属性的列数据类型。 允许的 XML 类型的权威指南，请参阅的数据类型部分[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)。 你可以通过两种方式指定数据类型： 直接在列定义本身上指定 dt: type 属性或 s:datatype 构造用作列定义的嵌套元素。 例如，  
+ 你可以应用到具有 dt: type 属性的列数据类型。 允许的 XML 类型的权威指南，请参阅的数据类型部分[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)。 你可以通过两种方式指定数据类型： 直接在列定义本身上指定 dt: type 属性或 s:datatype 构造用作列定义的嵌套元素。 例如：  
   
 ```  
 <s:AttributeType name="Phone" >  

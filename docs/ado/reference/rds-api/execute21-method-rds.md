@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Execute21 method [RDS]
+helpviewer_keywords:
+- Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b94d4cdb75cbdcfaa2dfece8d7172e2935d6759d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 执行该请求，并使用 ADO 记录集在创建 ADO 2.1。  
@@ -45,7 +47,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*  
  该字符串标识要用于此执行的处理程序。 该字符串包含两个部分。 第一部分包含要使用的处理程序的名称 (ProgID)。 字符串的第二部分包含自变量传递到处理程序。 如何解释自变量字符串是特定的处理程序。 两个部分 （尽管参数字符串可以包含其他逗号） 的第一个实例在字符串中的逗号分隔。 这些参数是可选的。  
   
- *查询字符串*  
+ *QueryString*  
  在连接字符串中标识的 OLE DB 访问接口支持的命令语言中的命令。 对于基于 SQL 的提供程序，它可能包含[!INCLUDE[tsql](../../../includes/tsql_md.md)]命令语句，但对于非 SQL 提供程序 (例如，MSDataShape)，这可能不是[!INCLUDE[tsql](../../../includes/tsql_md.md)]查询语句。  
   
  此外，如果正在使用一个处理程序 （和强烈建议使用一个处理程序），处理程序可以更改或替换此处指定的值。 例如，该处理程序通常取代*QueryString*其.ini 文件中的查询字符串。 默认情况下，使用 Msdfmap.ini 文件。  
@@ -74,7 +76,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  包含安全数组的参数定义一个变体。 如果*GetInfo*选项中指定*lExecuteOptions*，此参数用于返回从 OLE DB 提供程序获取的参数定义。 否则，此参数可能为空。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  *HandlerString*参数可以为 null。 在这种情况下会发生取决于如何配置的 RDS 服务器。 "MSDFMAP.handler"的处理程序字符串指示应使用 Microsoft 提供处理程序 (Msdfmap.dll)。 "MASDFMAP.handler,sample.ini"的处理程序字符串指示应使用 Msdfmap.dll 处理程序和自变量"sample.ini"，应传递到处理程序。 MSDFMAP.dll 将解释为一个方向，若要使用 sample.ini 检查连接和查询字符串参数。  
   
 > [!NOTE]

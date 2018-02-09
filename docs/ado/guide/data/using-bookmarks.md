@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cbabea62b99f36adb2adf9f12e52d80644f33ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a8da466d7fb1cc988df297dee72d80ed19fed44
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-bookmarks"></a>使用书签
 通常很有用，在需要移动中后返回到特定记录直接**记录集**而无需滚动的每个记录，并比较值。 例如，如果你尝试搜索记录使用**查找**方法，但搜索未返回任何记录，系统会自动在的任何一端**记录集**。 如果你的提供商支持它们，可以使用书签来将你的位置标记在使用之前**查找**方法，以便你可以返回到你的位置。 书签是**Variant**键入值，该值唯一地标识中的记录**记录集**对象。  

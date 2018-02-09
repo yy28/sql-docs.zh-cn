@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5731b15274e4d2c1acafec09bd6478fc244a1f59
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 128d8531f1a5f4c2ebff06b9db8b1510964bdcd4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet 发布
 ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../../ado/reference/ado-api/stream-object-ado.md)对象可以用于使用 Microsoft OLE DB 提供程序 Internet 发布 （Internet 发布提供程序） 访问和处理资源，如 Web 文件夹或文件由 Microsoft FrontPage 提供服务。 使用 ADO，您可以指定的源**记录**，**流**，或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)是 url。 你可以然后上载、 下载、 移动、 复制和删除资源，或直接操作资源属性。  

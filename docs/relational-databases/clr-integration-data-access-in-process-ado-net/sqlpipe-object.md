@@ -1,5 +1,5 @@
 ---
-title: "SqlPipe 对象 |Microsoft 文档"
+title: SqlPipe Object | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SqlPipe object
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
-caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e99da62dd46ff34e13cb009ef1dd20141be75ead
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5db45b3c67fcf865214ad422662acfb80bab293e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，是很常见，它将结果或输出参数发送到调用的客户端编写存储的过程 （或扩展存储的过程）。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，编写向调用客户端发送结果或输出参数的存储过程（或扩展存储过程）非常常见。  
   
  在[!INCLUDE[tsql](../../includes/tsql-md.md)]任何存储过程，**选择**返回零个或多行语句将结果发送到的连接调用方的"命名管道。"  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Recordset15::RecordCount
 - Recordset15::GetRecordCount
 - Recordset15::get_RecordCount
-helpviewer_keywords: RecordCount property [ADO]
+helpviewer_keywords:
+- RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f33a73aa4aa322d6eb0a00612789f4048a24e85d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 92faeb5d2ec0b62c03292f71e0299c779e362478
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 属性 (ADO)
 指示中的记录数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="return-value"></a>返回值  
  返回**长**值，该值指示中的记录数**记录集**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**RecordCount**属性来查明多少个记录位于**记录集**对象。 该属性返回-1 时 ADO 无法确定的记录数，或提供程序或光标类型不支持**RecordCount**。 读取**RecordCount**属性关闭**记录集**会导致错误。  
   
  如果**记录集**对象支持近似定位或创建一个书签，??? 也就是说，**支持 (adApproxPosition)**或**支持 (adBookmark)**分别返回**True**??? 此值将为中的记录的精确数目**记录集**，不管是否它已完全填充。 如果**记录集**对象不支持近似定位，此属性可能是大量消耗资源，因为所有记录都将都具有检索和计数以返回准确**RecordCount**值。  

@@ -28,47 +28,48 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: "71"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3592a4c547b3586df4be45b2e1734e330dd16664
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，公共语言运行时 (CLR) 来中的等效项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**System.Data.SqlTypes**命名空间，和中的本机 CLR 等效项[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，公共语言运行时 (CLR) 来中的等效项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**System.Data.SqlTypes**命名空间，和中的本机CLR等效项[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework。  
   
 ||||  
 |-|-|-|  
 |**SQL Server 数据类型**|类型（在 System.Data.SqlTypes 或 Microsoft.SqlServer.Types 中）|**CLR 数据类型 (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64，可以为 Null\<Int64 >**|  
-|**binary**|**对 SqlBinary**|**Byte]**|  
+|**binary**|**对 SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**布尔值、 可以为 Null\<布尔 >**|  
 |**char**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**cursor**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**date**|**SqlDateTime**|**日期/时间，可以为 Null\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**日期/时间，可以为 Null\<DateTime >**|  
 |**datetime2**|InclusionThresholdSetting|**日期/时间，可以为 Null\<DateTime >**|  
-|**DATETIMEOFFSET**|**无**|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
+|**DATETIMEOFFSET**|**InclusionThresholdSetting**|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal、 可以为 Null\<十进制 >**|  
 |**float**|**SqlDouble**|**双精度，可以为 Null\<Double >**|  
 |**地理**|**SqlGeography**<br /><br /> **SqlGeography**中 Microsoft.SqlServer.Types.dll 与 SQL Server 安装，并且可以从下载定义[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|InclusionThresholdSetting|  
 |**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry**中 Microsoft.SqlServer.Types.dll 与 SQL Server 安装，并且可以从下载定义[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|InclusionThresholdSetting|  
 |**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId**中 Microsoft.SqlServer.Types.dll 与 SQL Server 安装，并且可以从下载定义[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|InclusionThresholdSetting|  
-|**图像**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**image**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**int**|**SqlInt32**|**Int32，可以为 Null\<Int32 >**|  
 |**money**|**SqlMoney**|**Decimal、 可以为 Null\<十进制 >**|  
 |**nchar**|**对 SqlString**|**字符串，Char]**|  
 |**ntext**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**numeric**|**SqlDecimal**|**Decimal、 可以为 Null\<十进制 >**|  
 |**nvarchar**|**对 SqlString**<br /><br /> **对**数据传输和访问权限，更好的匹配和**SQLString**是执行字符串操作的更好的匹配项。|**字符串，Char]**|  
-|**nvarchar(1)、 nchar(1)**|**对 SqlString**|**Char、 字符串，Char []，可以为 Null\<char >**|  
+|**nvarchar(1), nchar(1)**|**对 SqlString**|**Char、 字符串，Char []，可以为 Null\<char >**|  
 |**real**|**以**(的范围**以**，但是，大于**实际**)|**单个，为 Null\<单个 >**|  
-|**rowversion**|InclusionThresholdSetting|**Byte]**|  
+|**rowversion**|InclusionThresholdSetting|**Byte[]**|  
 |**int**|**SqlInt16**|**Int16，可以为 Null\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**Decimal、 可以为 Null\<十进制 >**|  
 |**sql_variant**|InclusionThresholdSetting|**对象**|  
@@ -76,10 +77,10 @@ ms.lasthandoff: 01/08/2018
 |**text**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**time**|InclusionThresholdSetting|**时间跨度，可以为 Null\<TimeSpan >**|  
 |**timestamp**|InclusionThresholdSetting|InclusionThresholdSetting|  
-|**tinyint**|**以**|**字节，可以为 Null\<字节 >**|  
+|**tinyint**|**SqlByte**|**字节，可以为 Null\<字节 >**|  
 |**uniqueidentifier**|**SqlGuid**|**Guid，可以为 Null\<Guid >**|  
 |**用户定义 type(UDT)**|InclusionThresholdSetting|绑定到相同程序集或依赖程序集中的用户定义类型的相同类。|  
-|**varbinary**|**对 SqlBinary**|**Byte]**|  
+|**varbinary**|**对 SqlBinary**|**Byte[]**|  
 |**varbinary(1)、 binary(1)**|**对 SqlBinary**|**字节、 Byte []，可以为 Null\<字节 >**|  
 |**varchar**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**xml**|**SqlXml**|InclusionThresholdSetting|  
@@ -116,15 +117,15 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 数据类型 (SQL Server)**|**SQL Server 数据类型**|  
-|**十进制**|SMALLMONEY|  
-|**SqlMoney**|SMALLMONEY|  
-|**十进制**|money|  
+|**Decimal**|smallmoney|  
+|**SqlMoney**|smallmoney|  
+|**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
 ## <a name="change-history"></a>更改历史记录  
   
-|更新的内容|  
+|更新内容|  
 |---------------------|  
 |添加**SqlGeography**， **SqlGeometry**，和**SqlHierarchyId**到映射表的类型。|  
   

@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ee36f96183a8b2e2a099402b500523345585460
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 9042b6cf7cb7298e5f327ab96c77cf625eee3872
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
 SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 现在可在 SQL Server 或 SQL 数据库中存储 JSON 文档并查询 JSON 数据，操作与在 NoSQL 数据库中类似。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。
@@ -166,5 +166,18 @@ END
 
 可使用 SQL Server 和 SQL 数据库中的本机 JSON 函数处理 JSON 文档，如在 NoSQL 数据库中一样。 每种数据库（关系型或 NoSQL）在 JSON 数据处理方面都各有优缺点。 在 SQL Server 或 SQL 数据库中存储 JSON 文档的关键优势在于，可以获得完整的 SQL 语言支持。 可以使用丰富的 Transact-SQL 语言处理数据和配置各种存储选项（从列存储索引的高压缩比和快速分析到内存优化表的无锁处理方式）。 同时，还可获取成熟的安全性和国际化功能带来的优势，这些功能可在 NoSQL 方案中重复使用。 鉴于本文中所述的理由，建议考虑在 SQL Server 和 SQL 数据库中存储 JSON 文档。
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
-若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>详细了解 SQL Server 和 Azure SQL 数据库中的 JSON  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft 博客文章  
+  
+若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
+
+### <a name="microsoft-videos"></a>Microsoft 视频
+
+有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)（SQL Server 2016 和 JSON 支持）
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)（在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON）
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)（JSON 充当 NoSQL 和关系环境之间的桥梁）

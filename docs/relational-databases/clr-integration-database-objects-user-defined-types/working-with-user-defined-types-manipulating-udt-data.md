@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CAST function
 - data deletions [CLR integration]
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - invoking UDT methods
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e4067f2a0eedee1f06031ccdbc9bb9b85f97e0d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 365c7171b4bc00f718add4261ebcebab1cd5dfd2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>使用用户定义的类型的操作 UDT 数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)]修改用户定义类型 (UDT) 列中的数据时，提供了用于插入、 更新或删除语句的任何专用的语法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函数用于将本机数据类型转换为 UDT 类型。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 没有为在对用户定义类型 (UDT) 列中的数据进行修改时所使用的 INSERT、UPDATE 或 DELETE 语句提供专用语法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函数用于将本机数据类型转换为 UDT 类型。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>在 UDT 列中插入数据  
  以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句插入到示例数据的三个行**点**表。 **点**数据类型包含 X 和 Y 整数值作为用户定义的类型的属性公开。 必须使用 CAST 或 CONVERT 函数来强制转换以逗号分隔 X 和 Y 值复制到**点**类型。 前两个语句使用 CONVERT 函数将转换为一个字符串值**点**类型和第三个语句使用 CAST 函数：  

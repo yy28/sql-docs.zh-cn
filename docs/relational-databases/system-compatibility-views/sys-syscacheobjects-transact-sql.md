@@ -1,5 +1,5 @@
 ---
-title: "sys.syscacheobjects (Transact SQL) |Microsoft 文档"
+title: sys.syscacheobjects (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syscacheobjects
 - syscacheobjects
 - syscacheobjects_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syscacheobjects system table
 - sys.syscacheobjects compatibility view
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aee1092010168413f316e3b42083bb752f2d9cfa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: afc20f732375a4ecd04075c1dbd228139b0005d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|存储桶 ID。 该值表示从 0 到（目录大小 - 1）的范围。 目录大小为哈希表的大小。|  
 |**cacheobjtype**|**nvarchar(17)**|缓存中的对象类型：<br /><br /> 编译计划<br /><br /> 可执行计划<br /><br /> 分析树<br /><br /> 游标<br /><br /> 扩展存储过程|  
-|**objtype**|**nvarchar （8)**|对象的类型：<br /><br /> 存储过程<br /><br /> 预定义语句<br /><br /> 即席查询 ([!INCLUDE[tsql](../../includes/tsql-md.md)]作为语言事件提交**sqlcmd**或**osql**实用程序，而不是远程过程调用)<br /><br /> ReplProc（复制过程）<br /><br /> 触发器<br /><br /> 视图<br /><br /> 默认<br /><br /> 用户表<br /><br /> 系统表<br /><br /> 检查<br /><br /> 规则|  
+|**objtype**|**nvarchar(8)**|对象的类型：<br /><br /> 存储过程<br /><br /> 预定义语句<br /><br /> 即席查询 ([!INCLUDE[tsql](../../includes/tsql-md.md)]作为语言事件提交**sqlcmd**或**osql**实用程序，而不是远程过程调用)<br /><br /> ReplProc（复制过程）<br /><br /> 触发器<br /><br /> 视图<br /><br /> 默认<br /><br /> 用户表<br /><br /> 系统表<br /><br /> 检查<br /><br /> 规则|  
 |**objid**|**int**|用于在缓存中查找对象的主键之一。 这是的对象 ID 存储在**sysobjects**的数据库对象 （过程、 视图、 触发器和等等）。 如即席或已准备 SQL 的缓存对象**objid**是一个内部生成的值。|  
 |**dbid**|**int**|在其中编译缓存对象的数据库 ID。|  
 |**dbidexec**|**int**|执行查询的数据库 ID。<br /><br /> 对于大多数对象， **dbidexec**具有相同的值**dbid**。<br /><br /> 对于系统视图， **dbidexec**是从其执行查询的数据库 ID。<br /><br /> 针对即席查询**dbidexec**为 0。 这意味着**dbidexec**具有相同的值**dbid**。|  
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/27/2017
 |**avgexectime**|**bigint**|仅为保持向后兼容。 始终返回 0。|  
 |**lastreads**|**bigint**|仅为保持向后兼容。 始终返回 0。|  
 |**lastwrites**|**bigint**|仅为保持向后兼容。 始终返回 0。|  
-|**对**|**int**|过程定义或提交的批处理的长度（以字节为单位）。|  
+|**sqlbytes**|**int**|过程定义或提交的批处理的长度（以字节为单位）。|  
 |**sql**|**nvarchar(3900)**|模块定义或提交的批处理的前 3900 个字符。|  
   
 ## <a name="see-also"></a>另请参阅  

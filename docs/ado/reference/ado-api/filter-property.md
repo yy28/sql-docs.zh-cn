@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::Filter
-helpviewer_keywords: Filter property
+f1_keywords:
+- Recordset15::Filter
+helpviewer_keywords:
+- Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3732e0820c0c258074e2a8b76d35c4af94a8c8a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8e0a74efdc9eeef18eac76e582355653d6677139
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-property"></a>筛选器属性
 指示数据中的筛选器[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -38,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**筛选器**属性可以有选择地剔除中记录**记录集**对象。 将筛选**记录集**将成为当前光标。 其他返回值的属性取决于当前**光标**受到影响，如[AbsolutePosition 属性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)， [AbsolutePage 属性 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)， [RecordCount 属性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)，和[PageCount 属性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)。 这是因为设置**筛选器**为特定值的属性会将当前记录移到满足的新值的第一个记录。  
   
  条件字符串形式的子句组成*FieldName 运算符值*(例如， `"LastName = 'Smith'"`)。 你可以通过串联与单个子句创建复合子句**AND** (例如， `"LastName = 'Smith' AND FirstName = 'John'"`) 或**OR** (例如， `"LastName = 'Smith' OR LastName = 'Jones'"`)。 条件字符串中使用以下准则：  

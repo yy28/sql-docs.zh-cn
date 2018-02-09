@@ -24,19 +24,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], attributes
 - SqlUserDefinedTypeAttribute attribute
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
-caps.latest.revision: "82"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9f7d12c087ad75ab8734d4e1e722402abf04a09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6df69b1b413ca79e2ee6c9bb1de7c9d3e9ff1213
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>对于 CLR 例程的 CLR 集成自定义属性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]列出的属性可以应用于公共语言运行时 (CLR) 例程、 用户定义类型和在中注册的用户定义聚合[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性中定义**Microsoft.SqlServer.Server**命名空间。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+列出的属性可以应用于公共语言运行时 (CLR) 例程、 用户定义类型和在中注册的用户定义聚合[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性中定义**Microsoft.SqlServer.Server**命名空间。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 属性  
  **SqlUserDefinedAggregate**属性指示应将该方法注册为用户定义聚合。 必须使用此属性注释每个用户定义聚合。  

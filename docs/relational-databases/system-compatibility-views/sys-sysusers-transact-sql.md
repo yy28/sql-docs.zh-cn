@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysusers_TSQL
 - sysusers_TSQL
 - sysusers
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysusers system table
 - sys.sysusers compatibility view
 ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4c732149e7b7b2aaeb92a6d8930b3f3ecfae388
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 661d42fbc8b55250ac38fb84e44faa33701c20b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |**createdate**|**datetime**|帐户的添加日期。|  
 |**updatedate**|**datetime**|帐户的上次更改日期。|  
 |**altuid**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
-|**密码**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**gid**|**int**|此用户所属的组 ID。 如果**uid**相同**gid**，此项定义一组。 如果组和用户的总数超过 32,767，则发生溢出或返回 NULL。|  
 |**environ**|**varchar(255)**|保留。|  
 |**hasdbaccess**|**int**|1 = 帐户具有数据库访问权。|  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: ExecuteOptions property [ADO], VBScript example
+helpviewer_keywords:
+- ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76876c9182ccba3eab0fa8f16171a3dceabd0876
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7cc52b6deb9915abd9f90b8596edee5ded07f816
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 属性 (RDS)
 指示是否启用异步执行。  
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  使用这些常量的每个可执行文件必须提供其声明。 你可剪切并粘贴文件 Adcvbs.inc，位于 RDS 库的默认安装文件夹中的所需的常量声明。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果**ExecuteOptions**设置为**adcExecAsync**，则这以异步方式执行下一步，则**刷新**上调用[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的**记录集**。  
   
  如果你尝试调用[重置](../../../ado/reference/rds-api/reset-method-rds.md)，[刷新](../../../ado/reference/rds-api/refresh-method-rds.md)， [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)，[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)，或[记录集](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)尽管可能会更改的另一个异步操作[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的**记录集**正在执行，则会出错。  

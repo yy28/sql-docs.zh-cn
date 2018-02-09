@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sysindexes_TSQL
 - sys.sysindexes
 - sys.sysindexes_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysindexes system table
 - sys.sysindexes compatibility view
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4d196e511921980543b23c45c36ada1a6f1eba41
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6871dcbbc0259e6aeca7b3d24ff6050b9608f199
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +42,19 @@ ms.lasthandoff: 11/27/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|索引所属表的 ID。|  
 |**status**|**int**|系统状态信息。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**第一个**|**binary(6)**|指向第一页或根页的指针。<br /><br /> 未使用的在**indid** = 0。<br /><br /> NULL = 索引进行分区时**indid** > 1。<br /><br /> NULL = 表进行分区时**indid**为 0 或 1。|  
+|**first**|**binary(6)**|指向第一页或根页的指针。<br /><br /> 未使用的在**indid** = 0。<br /><br /> NULL = 索引进行分区时**indid** > 1。<br /><br /> NULL = 表进行分区时**indid**为 0 或 1。|  
 |**indid**|**int**|索引 ID：<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引<br /><br /> > 1 = 非聚集索引|  
 |**根**|**binary(6)**|有关**indid** > = 1，**根**是一个指针指向根页。<br /><br /> 未使用的在**indid** = 0。<br /><br /> NULL = 索引进行分区时**indid** > 1。<br /><br /> NULL = 表进行分区时**indid**为 0 或 1。|  
 |**minlen**|**int**|行的最小大小。|  
 |**keycnt**|**int**|键数。|  
 |**groupid**|**int**|在其上创建对象的文件组 ID。<br /><br /> NULL = 索引进行分区时**indid** > 1。<br /><br /> NULL = 表进行分区时**indid**为 0 或 1。|  
 |**dpages**|**int**|有关**indid** = 0 或**indid** = 1， **dpages**是使用的数据页的计数。<br /><br /> 有关**indid** > 1， **dpages**是使用的索引页的计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
-|**保留**|**int**|有关**indid** = 0 或**indid** = 1，**保留**是分配的所有索引和表数据页的计数。<br /><br /> 有关**indid** > 1，**保留**是为索引分配的页数计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
-|**使用**|**int**|有关**indid** = 0 或**indid** = 1，**使用**是用于所有索引和表数据的总页数的计数。<br /><br /> 有关**indid** > 1，**使用**是用于索引的页的计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
+|**reserved**|**int**|有关**indid** = 0 或**indid** = 1，**保留**是分配的所有索引和表数据页的计数。<br /><br /> 有关**indid** > 1，**保留**是为索引分配的页数计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
+|**used**|**int**|有关**indid** = 0 或**indid** = 1，**使用**是用于所有索引和表数据的总页数的计数。<br /><br /> 有关**indid** > 1，**使用**是用于索引的页的计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
 |**rowcnt**|**bigint**|数据级别行计数基于**indid** = 0 和**indid** = 1。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。|  
 |**rowmodctr**|**int**|对自上次更新表的统计信息后插入、删除或更新行的总数进行计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更高版本， **rowmodctr**不是与早期版本完全兼容。 有关详细信息，请参阅“备注”。|  
 |**reserved3**|**int**|返回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -66,11 +68,11 @@ ms.lasthandoff: 11/27/2017
 |**impid**|**int**|索引实现标志。<br /><br /> 返回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**int**|用于约束经过考虑的索引锁粒度。 例如，对于本质上是只读的查找表，可以将其设置为仅进行表级锁定以最大限度地降低锁定成本。|  
 |**pgmodctr**|**int**|返回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**密钥**|**varbinary(816)**|组成索引键的列 ID 列表。<br /><br /> 返回 NULL。<br /><br /> 若要显示的索引键列，请使用[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
+|**keys**|**varbinary(816)**|组成索引键的列 ID 列表。<br /><br /> 返回 NULL。<br /><br /> 若要显示的索引键列，请使用[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
 |**名称**|**sysname**|索引或统计信息的名称。 时，则返回 NULL **indid** = 0。 修改应用程序以查找 NULL 堆名。|  
 |**statblob**|**image**|统计信息二进制大型对象 (BLOB)。<br /><br /> 返回 NULL。|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**行**|**int**|数据级别行计数基于**indid** = 0 和**indid** = 1，并且值重复的**indid** > 1。|  
+|**rows**|**int**|数据级别行计数基于**indid** = 0 和**indid** = 1，并且值重复的**indid** > 1。|  
   
 ## <a name="remarks"></a>注释  
  不得使用定义为保留的列。  

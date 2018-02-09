@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Command
-helpviewer_keywords: Command object [ADO]
+f1_keywords:
+- Command
+helpviewer_keywords:
+- Command object [ADO]
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cc65eed5ff64351932689c2f54d7fab44f7e0915
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 652b43d112d1a8ffb0741310f0af324d345b183f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-object-ado"></a>命令对象 (ADO)
 定义要对数据源执行的特定命令。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**命令**对象，用于查询数据库并返回中的记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，来执行大容量操作，或操作数据库的结构。 一些具体的提供程序的功能取决于**命令**集合、 方法或属性会引用它们时，可能会生成错误。  
   
  使用集合、 方法和属性的**命令**对象，你可以执行以下操作：  

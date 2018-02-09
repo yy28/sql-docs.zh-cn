@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Catalog::SetObjectOwner
 - _Catalog::raw_SetObjectOwner
-helpviewer_keywords: SetObjectOwner method [ADOX]
+helpviewer_keywords:
+- SetObjectOwner method [ADOX]
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 111c6180cd0bead3e440908ad54e39b2bfb8fa55
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35b592bf1503c457532d8988f0fd6e09f06115dd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner 方法
 指定中的某个对象的所有者[目录](../../../ado/reference/adox-api/catalog-object-adox.md)。  
@@ -49,9 +51,9 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  A**字符串**值，该值指定[名称](../../../ado/reference/adox-api/name-property-adox.md)的[用户](../../../ado/reference/adox-api/user-object-adox.md)或[组](../../../ado/reference/adox-api/group-object-adox.md)以拥有的对象。  
   
  *ObjectTypeId*  
- 可选。 A **Variant**值，该值指定不由 OLE DB 规范定义的提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
+ 選擇性。 A **Variant**值，该值指定不由 OLE DB 规范定义的提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果提供程序不支持指定的对象所有者，将会出错。  
   
 ## <a name="applies-to"></a>适用范围  

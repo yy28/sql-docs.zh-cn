@@ -8,25 +8,28 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - relational data [XQuery]
 - XQuery, relational data
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 447ffa853f8a5b6a257cc7e2918feaddcbde8a0f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 420caf1620974293f279e72892f0da2cad6a140b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xqueries-handling-relational-data"></a>处理关系数据的 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +38,9 @@ ms.lasthandoff: 12/05/2017
   
  由执行 XQuery 所生成的 XML 可以包括从其他 Transact-SQL 变量或行集列中检索的值。 若要将非 XML 关系数据绑定到得到的 XML 上，则 SQL Server 将提供以下伪函数作为 XQuery 扩展插件：  
   
--   **sql:column()**函数  
+-   **sql:column()** function  
   
--   **sql: variable**函数  
+-   **sql:variable()** function  
   
  指定在 XQuery 时，可以使用这些 XQuery 扩展**query （)**方法**xml**数据类型。 因此， **query （)**方法可以生成将数据从 XML 和非合并的 XML-**xml**数据类型。  
   

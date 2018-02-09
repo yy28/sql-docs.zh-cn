@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,23 +17,24 @@ f1_keywords:
 - Level::Members
 - Members
 - Position::Members
-helpviewer_keywords: Members collection [ADO MD]
+helpviewer_keywords:
+- Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc86aad4176a2f5bac9e9fd70331109c89aa445c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 087809ddb783b323a094a509aedd4c5b88005764
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="members-collection-ado-md"></a>Members 集合 (ADO MD)
 包含[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象从一个级别或沿 x 轴的位置。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  A**成员**使用集合来包含以下类型的成员：  
   
 -   构成多维数据集中的级别成员。 这些批注包含在**成员**集合[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。 例如，使用从示例[概述多维架构和数据](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)，国家/地区级别的四个成员是加拿大、 美国、 英国，和德国。  

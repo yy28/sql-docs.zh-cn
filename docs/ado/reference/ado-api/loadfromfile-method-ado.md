@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::raw_LoadFromFile
-helpviewer_keywords: LoadFromFile method [ADO]
+f1_keywords:
+- _Stream::raw_LoadFromFile
+helpviewer_keywords:
+- LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c50565a087c9323a7f4dbafb9c604a42a19e1179
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 071ba2d6a2aa5af96af07274455a7495a9650dea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
 加载到现有文件的内容[流](../../../ado/reference/ado-api/stream-object-ado.md)。  
@@ -40,7 +43,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  A**字符串**值，该值包含要加载到的文件的名称**流**。 *FileName*可以包含任何有效的路径和 UNC 格式的名称。 如果指定的文件不存在，则会发生运行时错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此方法可以用于加载到本地文件的内容**流**对象。 这可以用于将本地文件的内容上载到服务器。  
   
  **流**对象必须是已打开之前调用**LoadFromFile**。 此方法不会更改的绑定**流**对象; 它仍将绑定到 URL 指定的对象或**记录**与其**流**最初打开。  

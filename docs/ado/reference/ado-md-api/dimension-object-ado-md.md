@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Dimension
-helpviewer_keywords: Dimension object [ADO MD]
+f1_keywords:
+- Dimension
+helpviewer_keywords:
+- Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeab1d9f91ac80c78bd5c3f546d26ff1c868f3cd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a222c6495302f06e5fa2b8dd0e0d355869e3d40
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dimension-object-ado-md"></a>维度对象 (ADO MD)
 表示多维数据集中，包含一个或多个层次结构的成员的维度之一。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用集合和属性的**维度**对象，你可以执行以下操作：  
   
 -   标识**维度**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)和[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)属性。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|“属性”|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
 |CubeName|多维数据集的名称。|  

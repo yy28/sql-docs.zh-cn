@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Catalog
-helpviewer_keywords: Catalog object [ADO MD]
+f1_keywords:
+- Catalog
+helpviewer_keywords:
+- Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d39183e7c46dc8cd563e6f409b961d169dfd80da
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4201fb49c367575434948616d376f54a68bcf1e5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="catalog-object-ado-md"></a>目录对象 (ADO MD)
 包含特定于多维数据提供程序 (MDP) 的多维架构信息 （即，多维数据集和基础维度、 层次结构、 级别和成员）。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用集合和属性的**目录**对象，你可以执行以下操作：  
   
 -   通过设置打开目录[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)属性设置为标准 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象或有效的连接字符串。  

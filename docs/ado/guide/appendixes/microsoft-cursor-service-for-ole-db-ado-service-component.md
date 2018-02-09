@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62ee8c5da51de28eff001b2056e738653db5b813
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9ba0513f0a450a57e4d25088f16d96398af9f936
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 概述的 Microsoft 光标服务
 OLE DB Microsoft 游标服务将补充数据提供程序的光标支持函数。 因此，用户可以体验相对统一的功能，从所有数据提供程序。
@@ -90,7 +91,7 @@ rs.Properties("Optimize") = True
 
 |属性名称|Description|
 |-------------------|-----------------|
-|[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)|进行补充的类型的游标可用于**记录集**。|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|进行补充的类型的游标可用于**记录集**。|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|补充的锁可用于类型**记录集**。 启用批处理更新。|
 |[Sort](../../../ado/reference/ado-api/sort-property.md)|指定一个或多个字段的名称，**记录集**进行排序，并且是否按升序或降序排序的每个字段。|
 

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b7986fadc999eaa721e774ff95b04aa5b861c41
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 01a520c613a93806736d8e11fd1d451fe67b4eb0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>上下文连接和正则连接的限制
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题讨论与在中执行代码相关的限制[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]进程通过上下文和常规连接。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题讨论与在中执行代码相关的限制[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]进程通过上下文和常规连接。  
   
 ## <a name="restrictions-on-context-connections"></a>对上下文连接的限制  
  开发应用程序时，请考虑应用于上下文连接的以下限制：  

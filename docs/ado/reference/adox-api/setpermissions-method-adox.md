@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,18 +18,19 @@ f1_keywords:
 - User25::raw_SetPermissions
 - _Group25::SetPermissions
 - _Group25::raw_SetPermissions
-helpviewer_keywords: SetPermissions method [ADOX]
+helpviewer_keywords:
+- SetPermissions method [ADOX]
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a3aad4675415b4366c612960d78bc003061bb10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7987ce08f242421d2c84766c575e4867e7e1b8c8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定的权限[组](../../../ado/reference/adox-api/group-object-adox.md)或[用户](../../../ado/reference/adox-api/user-object-adox.md)对象上。  
@@ -53,13 +55,13 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *权限*  
  A**长**值可以是一个位屏蔽的一个或多个[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常量，指示设置的权限。  
   
- *继承*  
- 可选。 A**长**值可以是之一的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常量，用于指定如何将对象将继承这些权限。 默认值是**adInheritNone**。  
+ *Inherit*  
+ 選擇性。 A**长**值可以是之一的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常量，用于指定如何将对象将继承这些权限。 默认值是**adInheritNone**。  
   
  *ObjectTypeId*  
- 可选。 A **Variant**值，该值指定不由 OLE DB 规范定义的提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
+ 選擇性。 A **Variant**值，该值指定不由 OLE DB 规范定义的提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果提供程序不支持组或用户的设置访问权限，将会出错。  
   
 > [!NOTE]

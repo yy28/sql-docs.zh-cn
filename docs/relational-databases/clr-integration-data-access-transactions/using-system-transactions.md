@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-systemtransactions"></a>使用 System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions**命名空间提供与 ADO.NET 完全集成的事务框架和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言运行时 (CLR) 集成。 **System.Transactions.TransactionScope**类，使代码块事务通过隐式登记的分布式事务中的连接。 必须调用**完成**末尾的代码块的方法标记**TransactionScope**。 **释放**当程序执行离开代码块，导致要如果停用的事务调用方法**完成**不调用方法。 如果已引发导致代码离开范围的异常，则将该事务视为停止使用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**System.Transactions**命名空间提供与 ADO.NET 完全集成的事务框架和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言运行时 (CLR) 集成。 **System.Transactions.TransactionScope**类，使代码块事务通过隐式登记的分布式事务中的连接。 必须调用**完成**末尾的代码块的方法标记**TransactionScope**。 **释放**当程序执行离开代码块，导致要如果停用的事务调用方法**完成**不调用方法。 如果已引发导致代码离开范围的异常，则将该事务视为停止使用。  
   
  我们建议你采用**使用**块以确保**释放**方法调用**TransactionScope**对象时**使用**退出块。 如果无法提交或回滚挂起的事务可能会严重降低由于性能的默认超时为**TransactionScope**一分钟。 如果不使用**使用**语句中，你必须执行中的所有工作**重**阻止和显式调用**释放**中的方法**最后**块。  
   

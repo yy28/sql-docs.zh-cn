@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - deadlocks in RDS [ADO]
 - read repeatable in RDS [ADO]
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 361a6c96a461dba4de6b5e72be6a5ec362affefb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a77839f99bd14b0a4e689376087943778296bcf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>具有读取可重复的隔离级别的死锁
 如果自定义业务对象使用可重复读取的隔离级别来访问 SQL Server，且业务对象的两个发送查询和更新同一事务中的客户端同时调用，则可能发生死锁。 远程数据服务旨在允许一台进程到超时以释放死锁，但该客户端的更新将失败。  

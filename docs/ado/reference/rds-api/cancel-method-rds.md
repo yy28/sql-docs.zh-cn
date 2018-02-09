@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Cancel method [RDS]
+helpviewer_keywords:
+- Cancel method [RDS]
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bae65aa8c95d5dc6b0d21cbe66f3174462d69290
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b742549444f1348ebbadd1328147694b5f85a94e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancel-method-rds"></a>Cancel 方法 (RDS)
 取消执行的挂起异步方法调用。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 RDS.DataControl.Cancel  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  当调用**取消**， [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)自动设置为**adcReadyStateLoaded**，和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)将为空。  
   
 ## <a name="applies-to"></a>适用范围  

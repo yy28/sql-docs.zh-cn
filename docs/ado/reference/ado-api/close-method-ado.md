@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Recordset15::Close
 - _Stream::Close
 - _Record::Close
-helpviewer_keywords: Close method [ADO]
+helpviewer_keywords:
+- Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79b6267de87409f4b1e7d07a6b42d85e22042def
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 693f6adc51682fec4f9890d7d7618aa53e43593d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="close-method-ado"></a>Close 方法 (ADO)
 关闭打开的对象和任何从属对象。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 object.Close  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**关闭**方法来关闭[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[记录](../../../ado/reference/ado-api/record-object-ado.md)、[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象若要释放任何关联的系统资源。 关闭对象不会删除它从内存;你可以更改其属性设置，以后再打开它。 若要完全消除从内存的对象，关闭对象并将对象变量设置为*执行任何操作*（在 Visual Basic 中)。  
   
 ## <a name="connection"></a>连接  

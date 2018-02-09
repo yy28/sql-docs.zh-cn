@@ -8,24 +8,26 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, atomization
 - atomization [XQuery]
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b35d5e55a2d0e913586e7c60d161e4e2e85c6cb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 266a592860894ac255f7d01647e1f4caabbe88a3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="atomization-xquery"></a>原子化 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 隐式原子化的另一个示例是使用算术运算符。  **+** 运算符要求原子值，和**data （)**隐式应用检索 LaborHours 属性的原子值。 针对 Instructions 列指定的查询**xml** ProductModel 表中的类型。 下面的查询将返回 LaborHours 属性三次。 在该查询中，请注意下列情况：  
+ 隐式原子化的另一个示例是使用算术运算符。 **+** 运算符要求原子值，和**data （)**隐式应用检索 LaborHours 属性的原子值。 针对 Instructions 列指定的查询**xml** ProductModel 表中的类型。 下面的查询将返回 LaborHours 属性三次。 在该查询中，请注意下列情况：  
   
 -   构造 OrignialLaborHours 属性时，原子化隐式应用于 `$WC/@LaborHours` 返回的单独序列。 LaborHours 属性的类型化值被分配给 OrignialLaborHours。  
   

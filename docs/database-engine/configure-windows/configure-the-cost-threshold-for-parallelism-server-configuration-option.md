@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cost threshold for parallelism option
+helpviewer_keywords:
+- cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c13052e7d28cec8609abcc07d0580849e337a5be
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f81d5323ba6d967cd81b8fcf0382f32066168a1d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>配置并行的开销阈值服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,9 +73,11 @@ FROM sys.dm_os_sys_info
   
 ###  <a name="Recommendations"></a> 建议  
   
--   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
+-   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
 -   在某些情况下，即使查询的开销计划小于当前 **“并行的开销阈值”** 的值，也有可能选择并行计划。 出现这种情况，是因为使用并行还是串行计划是根据完成完全优化之前所提供的开销估计确定的。  
+
+-   尽管保留默认值 5 以获得向后兼容性，但当前系统可能适合使用更大的值。 许多 SQL Server 专业人员建议以 25 或 50 作为起始值，然后使用较高和较低的值执行应用程序测试以便优化应用程序性能。
   
 ###  <a name="Security"></a> 安全性  
   

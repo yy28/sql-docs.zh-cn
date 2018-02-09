@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Record::ParentURL
-helpviewer_keywords: ParentURL property [ADO]
+f1_keywords:
+- _Record::ParentURL
+helpviewer_keywords:
+- ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62c0bf264bb42ad8598140dfb2e4330b2d747a80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eca04999eece256ef22503c4d227ffcec297c79a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 属性 (ADO)
 指示指向父级的绝对 URL 字符串[记录](../../../ado/reference/ado-api/record-object-ado.md)的当前**记录**对象。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="return-value"></a>返回值  
  返回**字符串**值，该值指示的父 URL**记录**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **ParentURL**属性取决于用来打开源**记录**对象。 例如，**记录**可以与源包含引用的目录的相对路径名打开[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性。  
   
  假设一个文件夹包含在"first"之下的"第二个"。 打开**记录**对象通过使用以下语法：  

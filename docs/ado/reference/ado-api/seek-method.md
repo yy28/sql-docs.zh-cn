@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset21::Seek
 - Recordset21::raw_Seek
-helpviewer_keywords: Seek method [ADO]
+helpviewer_keywords:
+- Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d94cf588916667e2cf82992b6a3ac6b601e8f84
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: af29a65772019a31c495fedc546b204e98455809
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seek-method"></a>查找方法
 搜索的索引[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)快速找到的行与匹配的指定的值，并更改为该行的当前行位置。  
@@ -45,7 +47,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  A [SeekEnum](../../../ado/reference/ado-api/seekenum.md)值，该值指定要进行索引的列和相应之间的比较类型*KeyValues*。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**Seek**方法结合[索引](../../../ado/reference/ado-api/index-property.md)如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md)**(adSeek)**方法，以确定基础提供程序是否支持**Seek**，和**Supports(adIndex)**若要确定此提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**和**索引**。)  
   
  如果**Seek**功能不查找所需的行，没有错误发生，以及行是否定位在的结尾**记录集**。 设置**索引**为之前执行此方法所需索引的属性。  

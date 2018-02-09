@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - LevelDepth
 - Member::LevelDepth
-helpviewer_keywords: LevelDepth property [ADO MD]
+helpviewer_keywords:
+- LevelDepth property [ADO MD]
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a840c446df75f90f2455c59983b4365cb896a70
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b4addff63db42f2d5842db5854635a0b244699b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth 属性 (ADO MD)
 指示层次结构的根之间级别数和[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="return-values"></a>返回值  
  返回**长**整数，并且是只读的。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**LevelDepth**属性来确定之间的距离[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)从层次结构的根级别的对象。 **LevelDepth**的某一成员在根级别为 0。 这对应于[深度](../../../ado/reference/ado-md-api/depth-property-ado-md.md)属性[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。  
   
 ## <a name="applies-to"></a>适用范围  

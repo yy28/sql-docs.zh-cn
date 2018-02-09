@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b6afa16b339241460c33beb459fed74946a1238
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 概述
 用于 Microsoft Jet OLE DB 访问接口允许 ADO 来访问 Microsoft Jet 数据库。
@@ -152,7 +153,7 @@ Microsoft.Jet.OLEDB.4.0
 |最大行大小|DBPROP_MAXROWSIZE|
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |在选择的最大表|DBPROP_MAXTABLESINSELECT|
-|“模式”|DBPROP_INIT_MODE|
+|模式|DBPROP_INIT_MODE|
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|
 |多个结果|DBPROP_MULTIPLERESULTS|
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -165,7 +166,7 @@ Microsoft.Jet.OLEDB.4.0
 |通过选择列表中的列进行排序|DBPROP_ORDERBYCOLUMNSINSELECT|
 |输出参数可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |通过 Ref 访问器|DBPROP_BYREFACCESSORS|
-|Password|DBPROP_AUTH_PASSWORD|
+|密码|DBPROP_AUTH_PASSWORD|
 |持久性 ID 类型|DBPROP_PERSISTENTIDTYPE|
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|

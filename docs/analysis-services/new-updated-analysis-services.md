@@ -1,32 +1,24 @@
 ---
 title: "已更新-Analysis Services 的 SQL Server 文档 |Microsoft 文档"
 description: "显示有关最近更改中的文档，Analysis services for Microsoft SQL Server 的更新内容的代码段。"
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: 
-ms.component: 
-ms.suite: pro-bi
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: analysis-services
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
 ms.author: genemi
-ms.openlocfilehash: 557f3a545579baf9506d86e87ca01189f13e9456
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssas
+ms.date: 02/03/2018
+ms.openlocfilehash: 35da9b00567ea338a764bf1d1b3bc390bd9a88db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>新的和最近的更新： SQL Server 的 Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+
 
 几乎每日 Microsoft 及其现有的文章的一些上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文档网站。 这篇文章显示摘录最近已更新的文章。 可能还会列出链接到新的文章。
 
@@ -36,7 +28,7 @@ ms.lasthandoff: 01/22/2018
 
 
 
-- 更新日期范围：从 2017-09-28 到 2017-12-02&nbsp;&nbsp;&nbsp;
+- *日期范围的更新：* &nbsp; **自 2017 年 1-12-03** &nbsp;到&nbsp; **2018年-02-03**
 - *主题区域：* &nbsp; **Analysis Services for SQL Server**。
 
 
@@ -49,7 +41,7 @@ ms.lasthandoff: 01/22/2018
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [使用本机查询导入数据](tabular-models/ssas-import-query.md)
+暂时无新文章列出。
 
 
 
@@ -88,45 +80,44 @@ ms.lasthandoff: 01/22/2018
 
 
 
-## <a name="similar-articles"></a>类似的文章
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>有关新的或更新的文章的类似文章
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域它们具有新的或最近已更新的文章
 
-- [新文章和更新的文章 (3+14)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (1 + 0): **Analysis Services for SQL**文档](../analysis-services/new-updated-analysis-services.md)
-- [新文章和更新的文章 (87+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (5+4)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (2+2)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章 (10+9)：Linux 版 SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (2+4)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章 (4+2)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章 (0+1)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新文章和更新的文章 (21+0)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章 (5+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新 + 更新 (0 + 1): **SQL Server Data Tools (SSDT)**文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章 (1+0)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新 + 更新 (0 + 1): **SQL Server Management Studio (SSMS)**文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域的*执行*新或最近已更新的文章
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>主题区域的任何新的或最近已更新的文章
+
+- [新 + 更新 (1 + 3):&nbsp; **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新 + 更新 (0 + 1):&nbsp; **SQL 的分析平台系统**文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新 + 更新 (0 + 1):&nbsp; **连接到 SQL**文档](../connect/new-updated-connect.md)
+- [新 + 更新 (0 + 1):&nbsp; **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
+- [新 + 更新 (12 + 1): **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
+- [新 + 更新 (6 + 2):&nbsp; **sql Linux**文档](../linux/new-updated-linux.md)
+- [新 + 更新 (15 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
+- [新 + 更新 (2 + 9):&nbsp; **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
+- [新 + 更新 (1 + 0):&nbsp; **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
+- [新 + 更新 (1 + 1):&nbsp; **SQL 操作 Studio**文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新 + 更新 (1 + 1):&nbsp; **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
+- [新 + 更新 (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)**文档](../ssdt/new-updated-ssdt.md)
+- [新 + 更新 (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)**文档](../ssms/new-updated-ssms.md)
+- [新 + 更新 (0 + 2):&nbsp; **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>使用者执行的区域*不*有任何新最近更新或文章
+
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
 - [新 + 更新 (0 + 0): **ActiveX 数据对象 (ADO) sql**文档](../ado/new-updated-ado.md)
+- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
 - [新 + 更新 (0 + 0): **sql Data Quality Services**文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新 + 更新 (0 + 0):**数据挖掘扩展插件 (DMX) sql**文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
 - [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）**文档](../odbc/new-updated-odbc.md)
-- [新 + 更新 (0 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
+- [新 + 更新 (0 + 0): **SQL 的示例**文档](../sample/new-updated-sample.md)
+- [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)**文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
 

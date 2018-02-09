@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,24 @@ apitype: COM
 f1_keywords:
 - Levels
 - Hierarchy::Levels
-helpviewer_keywords: Levels collection [ADO MD]
+helpviewer_keywords:
+- Levels collection [ADO MD]
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6031d5542660350c5d8d5163a621f28a0bdfd6ff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 92bf82467e307747235a6e0d7c84906cdde5eb8c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="levels-collection-ado-md"></a>级别集合 (ADO MD)
 包含[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)构成层次结构的对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **级别**是一个标准的 ADO 集合。 通过使用的属性和方法的集合，您可以执行以下操作：  
   
 -   获取集合中具有的对象数[计数](../../../ado/reference/ado-api/count-property-ado.md)属性。  

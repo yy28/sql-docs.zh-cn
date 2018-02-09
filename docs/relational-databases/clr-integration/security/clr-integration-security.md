@@ -17,19 +17,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], security
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
-caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7045ebaf7ed6b6d9ce3590e8406df34a040584f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bc6038395a2a4206095da0d7a2a3ecf8ab5f72cc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]安全模型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与集成[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]公共语言运行时 (CLR) 可管理和保护不同类型的运行中的 CLR 和非 CLR 对象之间的访问权限[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 这些对象可能由 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句或服务器上运行的其他 CLR 对象调用。 对象之间的调用称为链接。 对这些对象执行的安全检查类型取决于相关的链接类型。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的安全模式用于管理和保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内运行的不同类型 CLR 对象和非 CLR 对象之间的访问。 这些对象可能由 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句或服务器上运行的其他 CLR 对象调用。 对象之间的调用称为链接。 对这些对象执行的安全检查类型取决于相关的链接类型。  
   
  CLR 集成安全模式可实现以下目的：  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 -   用户定义代码不应能通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程中运行而获得对系统资源的未经授权访问。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现在集成了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于用户的安全模式和 CLR 基于代码访问的安全模式。 本节将讨论此组合安全方法的某些优势。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现在将的基于用户的安全模型相集成[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与 CLR 的代码基于访问的安全模型。 本节将讨论此组合安全方法的某些优势。  
   
  下表列出了本节的主题。  
   

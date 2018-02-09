@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CubeDef
-helpviewer_keywords: CubeDef object [ADO MD]
+f1_keywords:
+- CubeDef
+helpviewer_keywords:
+- CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0317420ee6839e3b445784665a0a2594fb1083c1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea97010f67e571ddf9ddfb1dcc1cf36e38769710
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 对象 (ADO MD)
 从包含一组相关的维度的多维架构表示多维数据集。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用集合和属性的**CubeDef**对象，你可以执行以下操作：  
   
 -   标识**CubeDef**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|“属性”|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
 |CreatedOn|日期和时间的多维数据集创建。|  

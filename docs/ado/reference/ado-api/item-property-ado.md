@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -44,18 +45,19 @@ f1_keywords:
 - Parameters::get_Item
 - Errors::Item
 - Procedures::get_Item
-helpviewer_keywords: Item property [ADO]
+helpviewer_keywords:
+- Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bec4236ff89d27a4db3e4606ea95401e75ba2590
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 48abf6f8e4b1e99d498130aedfee6d653f214579
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="item-property-ado"></a>Item 属性 (ADO)
 按名称或序号指示集合的特定成员。  
@@ -73,7 +75,7 @@ Set object = collection.Item ( Index )
  *Index*  
  A **Variant**表达式计算结果为名称或集合中对象的序号。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**项**属性集合中返回特定对象。 如果**项**在对应的集合中找不到对象*索引*自变量，就会出错。 此外，某些集合不支持命名的对象;对于这些集合中，你必须使用序号引用。  
   
  **项**属性是所有集合的默认属性; 因此，以下语法窗体是可互换：  

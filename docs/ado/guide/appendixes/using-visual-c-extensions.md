@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 扩展
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 接口
@@ -91,7 +93,7 @@ Update(CADORecordBinding *binding)
  有关详细信息，请参阅[附录 a： 数据类型](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6)的 OLE DB 程序员参考。
 
 ### <a name="begin-binding-entries"></a>开始绑定项
- **BEGIN_ADO_BINDING**(*类*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>固定长度的数据
  **ADO_FIXED_LENGTH_ENTRY**(*序号、 数据类型、 缓冲区、 状态修改*)
@@ -113,16 +115,16 @@ Update(CADORecordBinding *binding)
  **ADO_VARIABLE_LENGTH_ENTRY4**(*序号、 数据类型、 缓冲区、 大小，修改*)
 
 ### <a name="end-binding-entries"></a>结束绑定项
- **END_ADO_BINDING**（)
+ **END_ADO_BINDING**()
 
 |参数|Description|
 |---------------|-----------------|
 |*类*|在其中定义的绑定项和 C/c + + 变量的类。|
 |*Ordinal*|从一个的计数的序号**记录集**字段对应于 C/c + + 变量。|
 |*数据类型*|等效的 C/c + + 变量的 ADO 数据类型 (请参阅[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)有关有效的数据类型的列表)。 值**记录集**字段将被转换为此数据类型，如有必要。|
-|*缓冲区*|C/c + + 变量的名称其中**记录集**将存储字段。|
+|*Buffer*|C/c + + 变量的名称其中**记录集**将存储字段。|
 |*Size*|最大大小 （字节）*缓冲区*。 如果*缓冲区*将包含可变长度字符串，留出空间的终止字符的零。|
-|*“状态”*|将指示的变量名称是否的内容*缓冲区*有效，以及是否的字段的转换*DataType*成功。<br /><br /> 此变量的两个最重要值是**adFldOK**，这意味着转换成功，则和**adFldNull**，这意味着字段的值将是一个变体类型 VT_NULL 并不是仅仅为空。<br /><br /> 可能的值有*状态*列出在下一步的表中，"状态值"。|
+|*状态*|将指示的变量名称是否的内容*缓冲区*有效，以及是否的字段的转换*DataType*成功。<br /><br /> 此变量的两个最重要值是**adFldOK**，这意味着转换成功，则和**adFldNull**，这意味着字段的值将是一个变体类型 VT_NULL 并不是仅仅为空。<br /><br /> 可能的值有*状态*列出在下一步的表中，"状态值"。|
 |*修改*|布尔型标志。如果为 TRUE，指示允许 ADO 更新相应**记录集**字段中包含的值与*缓冲区*。<br /><br /> 设置布尔值*修改*若要启用 ADO 更新绑定的字段中，为 TRUE 和 FALSE 如果你想要检查该字段，但不是能更改参数。|
 |*精度*|可在一个数值变量中表示的数字个数。|
 |*小数位数*|一个数值变量中的小数位数的数。|
@@ -133,10 +135,10 @@ Update(CADORecordBinding *binding)
 
  当设置数据，*状态*可能设置为**adFldNull**以指示**记录集**字段应设置为 null。
 
-|常量|ReplTest1|Description|
+|常量|“值”|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|返回一个非 null 字段值。|
-|**adFldBadAccessor**|@shouldalert|绑定句柄无效。|
+|**adFldBadAccessor**|1|绑定句柄无效。|
 |**adFldCantConvertValue**|2|符号不匹配或数据溢出之外的原因，无法转换值。|
 |**adFldNull**|3|获取字段，指示返回了 null 值。<br /><br /> 当设置字段时，该值指示字段应设置为**NULL**字段不能进行编码时**NULL**本身 （例如，字符数组或一个整数）。|
 |**adFldTruncated**|4|长度可变的数据或数字被截断。|

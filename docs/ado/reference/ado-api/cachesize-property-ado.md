@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::CacheSize
-helpviewer_keywords: CacheSize property [ADO]
+f1_keywords:
+- Recordset15::CacheSize
+helpviewer_keywords:
+- CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a035843f42ba6dd29f18887fec5ca334943a0df4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: de4d82f2788ce1166e8b69cd13e8f214b6338688
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cachesize-property-ado"></a>CacheSize 属性 (ADO)
 指示返回的记录数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)本地缓存在内存中的对象。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**必须大于 0 的值。 默认值为 1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**CacheSize**属性控制将在一次检索到从提供程序的本地内存的记录数。 例如，如果**CacheSize**后第一个左为 10，**记录集**对象，该提供程序检索前 10 条记录到本地内存。 当你移动通过**记录集**对象，该提供程序从本地内存缓冲区中返回数据。 一旦移过缓存中的最后一个记录，即会将提供程序会将从数据源的接下来的 10 的记录检索到缓存中。  
   
 > [!NOTE]

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::ConnectionTimeout
-helpviewer_keywords: ConnectionTimeout property [ADO]
+f1_keywords:
+- Connection15::ConnectionTimeout
+helpviewer_keywords:
+- ConnectionTimeout property [ADO]
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 603158672b81380976224b2d9ff708a27c879ff8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61efa2fd5ab730f9cf5373a72e58209c25134bc4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout 属性 (ADO)
 指示多长时间来建立的连接在终止尝试并生成错误之前，请稍候。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**值，该值指示，以秒为单位，多长时间等待要打开的连接。 默认值为 15。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**ConnectionTimeout**属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象如果从网络流量或大量服务器，请使用延迟使其成为需放弃的连接尝试。 如果从时间**ConnectionTimeout** ADO 取消尝试和设置的属性经过该连接，在打开之前发生错误。 如果将属性设置为零，ADO 将等到无限期地打开连接。 请确保你编写的代码提供程序支持**ConnectionTimeout**功能。  
   
  **ConnectionTimeout**属性为读/写，当连接已关闭，并且只读打开时。  

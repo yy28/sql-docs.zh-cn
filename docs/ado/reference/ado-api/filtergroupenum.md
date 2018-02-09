@@ -1,10 +1,11 @@
 ---
-title: "FilterGroupEnum |Microsoft 文档"
+title: FilterGroupEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,33 +13,35 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FilterGroupEnum
-helpviewer_keywords: FilterGroupEnum enumeration [ADO]
+f1_keywords:
+- FilterGroupEnum
+helpviewer_keywords:
+- FilterGroupEnum enumeration [ADO]
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3b80757a0836fd11757c9e80c2b1650b0cb983f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 64a9701680876231d0051789aec0fc43be4c0ad3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 指定要从筛选的记录组[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
-|常量|ReplTest1|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|用于查看仅由最后一个受影响的记录的筛选器[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)，[重新同步](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，或[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)调用。|  
 |**adFilterConflictingRecords**|5|用于查看失败的最后一个批处理更新的记录的筛选器。|  
 |**adFilterFetchedRecords**|3|用于查看当前的缓存中的记录的筛选器 — 也就是说，若要从数据库检索记录的最后一个调用的结果。|  
 |**adFilterNone**|0|移除当前筛选器并还原所有记录以进行查看。|  
-|**adFilterPendingRecords**|@shouldalert|用于查看仅记录的筛选器的已更改但尚未发送到服务器。 仅适用于批处理更新模式。|  
+|**adFilterPendingRecords**|1|用于查看仅记录的筛选器的已更改但尚未发送到服务器。 仅适用于批处理更新模式。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

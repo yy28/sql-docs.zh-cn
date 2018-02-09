@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::AbsolutePage
-helpviewer_keywords: AbsolutePage property [ADO]
+f1_keywords:
+- Recordset15::AbsolutePage
+helpviewer_keywords:
+- AbsolutePage property [ADO]
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 332064ee95d1d5b868d0aa7accad02b4966b4a7d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 677b512a88fe3b6e695bd460cb0d4dea00ed673d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage 属性 (ADO)
 指示当前记录驻留在哪一页上。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  对于 64 位代码，使用提供的存储的 64 位值的数据类型。 例如，你可以使用**长**或另一个值，可以如 DBORDINAL 的 64 位长度。 不要使用**PositionEnum**值，因为它们被限制为 32 位长度。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  可以使用此属性来标识当前记录所在的页号。 它使用[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)属性上逻辑划分的总的行集计数**记录集**对象插入一系列页面，其中每个具有相等的记录数**PageSize**（除外的最后一页，因此可能具有较少的记录）。 提供程序必须支持相应的功能，此属性才可用。  
   
 -   获取或设置时**AbsolutePage**属性、 ADO 使用[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性和[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)在一起，如下所示的属性：  

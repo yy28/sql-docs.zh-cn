@@ -4,32 +4,34 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: XML persistence [ADO], persistence format
+helpviewer_keywords:
+- XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56fbae28f2c1d5192f2ac1e1c4f8939d7e4b027
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 832f79408a348ef0e0aa40075214357d147f2644
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xml-persistence-format"></a>XML 持久性格式
 ADO 使用 utf-8 编码为 XML 流，它仍然存在。  
   
  ADO XML 格式将划分成两个部分后, 跟的数据部分架构部分。 下面是从 Northwind 数据库的 Shippers 表的示例 XML 文件。 下面的示例介绍了各个部分的 XML。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   

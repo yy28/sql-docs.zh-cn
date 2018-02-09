@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Hierarchy
-helpviewer_keywords: Hierarchy object [ADO MD]
+f1_keywords:
+- Hierarchy
+helpviewer_keywords:
+- Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0802ae503911ec8b84ee2f01b15de9ed7f57c4af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 355560aecba3e18317aa91ed1a09dcc9ed344f5f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchy-object-ado-md"></a>层次结构对象 (ADO MD)
 表示在其中的一种方式的成员[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)可以聚合或"汇总。" 可以在一个或多个层次结构上聚合的维度。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用集合和属性的**层次结构**对象，你可以执行以下操作：  
   
 -   标识**层次结构**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)和[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)属性。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|“属性”|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |AllMember|在层次结构中的汇总最高级别成员。|  
 |CatalogName|为此多维数据集所属的目录的名称。|  

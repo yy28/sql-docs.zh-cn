@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,23 +17,24 @@ f1_keywords:
 - Group::Users
 - Users
 - Catalog::Users
-helpviewer_keywords: Users collection [ADOX]
+helpviewer_keywords:
+- Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84e4484d2902913be2cf2afa615a474aeb2b4bf7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8e063db5cd8fa810a1729b0591883b9dda0f9bc2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="users-collection-adox"></a>用户集合 (ADOX)
 包含所有存储[用户](../../../ado/reference/adox-api/user-object-adox.md)的对象[目录](../../../ado/reference/adox-api/catalog-object-adox.md)或[组](../../../ado/reference/adox-api/group-object-adox.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **用户**集合[目录](../../../ado/reference/adox-api/catalog-object-adox.md)表示目录的所有用户。 **用户**集合[组](../../../ado/reference/adox-api/group-object-adox.md)表示仅限拥有特定的组成员身份的用户。  
   
  [追加](../../../ado/reference/adox-api/append-method-adox-users.md)方法**用户**集合是唯一的 ADOX。 您可以：  

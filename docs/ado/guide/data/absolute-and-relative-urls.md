@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 Url
 URL 指定存储在本地或网络的计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等*。*  
@@ -38,16 +39,16 @@ URL 指定存储在本地或网络的计算机上的目标的位置。 目标可
   
  相对 URL 通常仅包含*路径*，和 （可选）*资源*，但不*方案*或*服务器*。 下表定义的各个部分的完整的 URL 格式。  
   
- *方案*  
+ *scheme*  
  指定如何*资源*是访问。  
   
  服务器  
  指定的计算机的名称其中*资源*所在。  
   
- *路径*  
+ *path*  
  指定目录，从而导致目标的序列。 如果*资源*是省略，目标为中的最后一个目录*路径*。  
   
- *资源*  
+ *resource*  
  如果包含，*资源*是目标，并且通常是文件的名称。 它可能是*简单文件*包含单个二进制流的字节，或*结构化的文档，*包含一个或多个存储和的字节的二进制流。  
   
 ## <a name="url-scheme-registration"></a>URL 方案注册  

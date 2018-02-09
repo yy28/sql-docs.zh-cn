@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="provider-errors"></a>提供程序错误
 提供程序错误时，则返回-2147467259 运行时错误。 当你收到此错误时，请检查**错误**的活动的集合**连接**对象，将包含描述所发生的一个或多个错误。  
@@ -75,7 +76,7 @@ End Function
 |**Description**|发生的错误文本说明。|  
 |**HelpContext，帮助文件**|是指包含发生的错误的说明的帮助主题和帮助文件。|  
 |**NativeError**|提供程序特定的错误数。|  
-|**数**|一个长整数，它表示的数字 (列入**ErrorValueEnum**) 的发生的错误。|  
+|**Number**|一个长整数，它表示的数字 (列入**ErrorValueEnum**) 的发生的错误。|  
 |**数据源**|指示对象或生成了错误的应用程序的名称。|  
 |**SQLState**|该提供程序返回的 SQL 语句的过程为五个字符的错误代码。|  
   

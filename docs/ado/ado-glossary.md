@@ -4,30 +4,32 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO 术语词汇表
 本主题定义与 ADO 相关的术语。
 
-## <a name="a"></a>仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，
+## <a name="a"></a>指向
  绝对 URL 的完全限定的 URL，指定 Internet 或 intranet 上的资源所在的位置。 另请参阅*URL*和*相对 URL*。
 
  ActiveX 控件通常有一个可见元素在设计时或运行的时的自行注册，进程内 COM 组件。 ActiveX 控件还具有与活动文档容器，如 Microsoft Internet Explorer 进行通信的能力。
@@ -141,7 +143,7 @@ ms.lasthandoff: 11/17/2017
 
  通常，层次结构的层次结构是具有 top 的排名的结构级别并从属级别。 在 ADO 中，分层**记录集**用于表示一条记录和章节的父-子关系。 此外会在 ADO，**记录**和**流**对象可以用于访问层次结构树的结构，例如，文件夹和文档。 ADO MD 还包括**层次结构**对象来表示 OLAP 多维数据集中的维度的级别之间的关系。 另请参阅分层记录集、 父-子关系、 章节和树。
 
-## <a name="i-l"></a>我-L
+## <a name="i-l"></a>I-L
  ISAPI （Internet 服务器应用程序编程接口） 的函数的 Internet 服务器，如运行 Microsoft® Internet 信息服务 (IIS) 的 Windows NT® Server/Windows 2000 服务器的一组。
 
  键列或唯一标识某行; 表中的列通常用于索引的表。

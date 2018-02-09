@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset20::Clone
 - Recordset20::raw_Clone
-helpviewer_keywords: Clone method [ADO]
+helpviewer_keywords:
+- Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0fa4429b66b8a43bf2eecccca1fbc94597f07a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: db5785a40527f4f85558961068d2cb67eeabbfbc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clone-method-ado"></a>Clone 方法 (ADO)
 创建副本[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从现有对象**记录集**对象。 （可选） 指定的克隆是只读的。  
@@ -49,9 +51,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  标识的对象变量**记录集**可以进行复制的对象。  
   
  *LockType*  
- 可选。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，该值指定与原始的锁类型**记录集**，或只读模式**记录集**。 有效值为**adLockUnspecified**或**adLockReadOnly**。  
+ 選擇性。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，该值指定与原始的锁类型**记录集**，或只读模式**记录集**。 有效值为**adLockUnspecified**或**adLockReadOnly**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**克隆**方法来创建多个重复**记录集**对象，尤其是如果你想要维护多个给定的一组记录中的当前记录。 使用**克隆**方法是比创建并打开新更高效**记录集**使用相同的定义作为原始的对象。  
   
  [筛选器](../../../ado/reference/ado-api/filter-property.md)属性的原始**记录集**，如果任何，不会应用于克隆。 设置**筛选器**属性的新**记录集**以筛选的结果。 将复制任何现有的最简单方法**筛选器**值是将它分配直接、，如下所示。  
@@ -74,17 +76,17 @@ rsNew.Filter = rsOriginal.Filter
   
 |事件|在克隆中触发？|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|是|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|是|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|是|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|否|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|否|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|否|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|是|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|是|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|否|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|是|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|是|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|否|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|是|  
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|是|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|是|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|是|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|否|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|否|  
   
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

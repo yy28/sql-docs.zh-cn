@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Command15::ActiveConnection
 - Recordset15::get_ActiveConnection
 - _Record::ActiveConnection
-helpviewer_keywords: ActiveConnection property [ADO]
+helpviewer_keywords:
+- ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77c5f58c5fed82651e5fc7f0228ef36e5fbea880
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2bbd6ba28209df50d8956c784d0ef25f9ac73728
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 属性 (ADO)
 指示到[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象指定[命令](../../../ado/reference/ado-api/command-object-ado.md)，[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[记录](../../../ado/reference/ado-api/record-object-ado.md)当前所属的对象。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值，如果连接已关闭，或包含连接的定义**Variant**包含当前**连接**对象如果连接为打开状态。 默认值为空对象引用。 请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**ActiveConnection**属性来确定**连接**通过该对象指定**命令**对象执行或指定**记录集**将打开。  
   
 ## <a name="command"></a>Command  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  **远程数据服务使用情况**时在客户端上使用**记录集**对象，可以设置此属性，只对连接字符串或 （在 Microsoft Visual Basic 或 Visual Basic Scripting Edition） 到*执行任何操作*.  
   
-## <a name="record"></a>录制  
+## <a name="record"></a>記錄  
  此属性为读/写时**记录**对象已关闭，并且可能包含的连接字符串或对打开引用**连接**对象。 此属性为只读时**记录**对象处于打开状态，并包含对已打开的引用**连接**对象。  
   
  A**连接**时在隐式创建对象**记录**从 URL 中打开对象。 打开**记录**与一个现有打开**连接**通过分配的对象**连接**对象传递给此属性，或使用**连接**对象中的参数作为[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法调用。 如果**记录**打开从现有**记录**或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，则它是自动关联的**记录**或**记录集**对象的**连接**对象。  

@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Attributes property [ADOX], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a24ab881fb2c4c86f92d25c0c697ae4d40aa6707
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b3b34098f0530cc9bf6b986a9f477e7075c4a98
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-example-vc"></a>属性的属性示例 （VC + +）
 此示例演示[属性](../../../ado/reference/adox-api/attributes-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)。 将其设置为**adColNullable**允许用户设置的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)[字段](../../../ado/reference/ado-api/field-object.md)为空字符串。 在此情况下，用户可以区分不知道数据的记录和记录数据中不适用。  

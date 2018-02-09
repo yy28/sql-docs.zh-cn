@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cursor threshold option
+helpviewer_keywords:
+- cursor threshold option
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09edc2b444c6c5f49e913b6c60f72f3d490c5e6f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c758a083bea646322bae5654b521d9f187020b04
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>配置 cursor threshold 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 建议  
   
--   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员更改。  
+-   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
 -   如果将 **游标阙值** 设置为 -1，则所有游标键集将同步生成，这对于小游标集很有用。 如果将 **cursor threshold** 设置为 0，则所有游标键集将异步生成。 如果 **cursor threshold**为其他值，则查询优化器将比较该值与游标集中的所需行数，如果后者大于前者，则将异步生成键集。 不要将 **cursor threshold** 的值设置得过低，因为最好以同步方式创建小结果集。  
   

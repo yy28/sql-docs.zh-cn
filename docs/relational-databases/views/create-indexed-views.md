@@ -21,18 +21,18 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 16d6097ac129874ac5fb7f27118e499d86606ba7
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: d291e4ab071aeafd6db43f48749e4e9ff9bcfd25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-indexed-views"></a>创建索引视图
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 本主题介绍如何在视图上创建索引。 对视图创建的第一个索引必须是唯一聚集索引。 创建唯一聚集索引后，可以创建更多非聚集索引。 为视图创建唯一聚集索引可以提高查询性能，因为视图在数据库中的存储方式与具有聚集索引的表的存储方式相同。 查询优化器可使用索引视图加快执行查询的速度。 要使优化器考虑将该视图作为替换，并不需要在查询中引用该视图。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+本主题介绍如何在视图上创建索引。 对视图创建的第一个索引必须是唯一聚集索引。 创建唯一聚集索引后，可以创建更多非聚集索引。 为视图创建唯一聚集索引可以提高查询性能，因为视图在数据库中的存储方式与具有聚集索引的表的存储方式相同。 查询优化器可使用索引视图加快执行查询的速度。 要使优化器考虑将该视图作为替换，并不需要在查询中引用该视图。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  创建索引视图需要执行下列步骤并且这些步骤对于成功实现索引视图而言非常重要：  

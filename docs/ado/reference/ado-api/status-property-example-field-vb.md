@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Status property [ADO Field], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e1abe338e6034fec34d1576b52af6df43970ea9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ea3ebba271ebdc12802b31cc1f50cdd3befead0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-example-field-vb"></a>状态属性示例 （字段） (VB)
 下面的示例从读/写文件夹使用打开文档[Internet 发布提供商](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 [状态](../../../ado/reference/ado-api/status-property-ado-field.md)属性[字段](../../../ado/reference/ado-api/field-object.md)对象[记录](../../../ado/reference/ado-api/record-object-ado.md)首先将设置为**adFieldPendingInsert**，则将更新到**adFieldOk**。  

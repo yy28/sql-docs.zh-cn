@@ -17,19 +17,20 @@ helpviewer_keywords:
 - deploying assemblies [CLR integration]
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c5fd0a8abac60e2e5b0e2f1bce35bd1d6e3554e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac5aa32532c32b3e3066dd4aa3c8cf575e1e83ff
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 数据库对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]部署是用于分配已完成应用程序或模块，以安装并在另一台计算机上运行的过程。 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 开发公共语言运行时 (CLR) 数据库对象，并将这些对象部署到测试服务器。 或者，也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 再分发文件替代 Visual Studio 对托管数据库对象进行编译。 编译完之后，可以使用 Visual Studio 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，将包含 CLR 数据库对象的程序集部署到测试服务器。 请注意，Visual Studio .NET 2003 无法用于 CLR 集成编程或部署。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含预先安装的 .NET Framework，而 Visual Studio .NET 2003 无法使用 .NET Framework 2.0 程序集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+部署是分发要在其他计算机上安装并运行的已完成应用程序或模块的过程。 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 开发公共语言运行时 (CLR) 数据库对象，并将这些对象部署到测试服务器。 或者，也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 再分发文件替代 Visual Studio 对托管数据库对象进行编译。 编译完之后，可以使用 Visual Studio 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，将包含 CLR 数据库对象的程序集部署到测试服务器。 请注意，Visual Studio .NET 2003 无法用于 CLR 集成编程或部署。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含预先安装的 .NET Framework，而 Visual Studio .NET 2003 无法使用 .NET Framework 2.0 程序集。  
   
  在测试服务器上测试并验证了 CLR 方法后，便可以使用部署脚本将这些方法分发到生产服务器。 可以手动生成部署脚本，或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 生成（请参阅本主题后面的过程）。  
   

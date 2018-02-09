@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::DefaultDatabase
-helpviewer_keywords: DefaultDatabase property
+f1_keywords:
+- Connection15::DefaultDatabase
+helpviewer_keywords:
+- DefaultDatabase property
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af0a3be16d4f959b4541547f531b89d4fdbbdca5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c4220d8551d7aa9d1bd37f0770474214bc14209
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase 属性
 指示的默认数据库[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**从提供程序的计算结果为可用的数据库的名称的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**DefaultDatabase**属性来设置或返回的默认数据库的名称对特定**连接**对象。  
   
  如果没有默认数据库，SQL 字符串可以使用非限定的语法来访问该数据库中的对象。 之外中指定的数据库中访问对象**DefaultDatabase**属性，必须限定对象名称的所需的数据库名称。 在连接时提供程序将写入到的默认数据库信息**DefaultDatabase**属性。 某些访问接口允许每个连接只有一个数据库，在这种情况下不能更改**DefaultDatabase**属性。  

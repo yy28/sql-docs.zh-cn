@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - output parameters [SQL Server]
 - input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0b580149c946b88eafc138dc69e55ef673aafc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 029b4f8eab1af6ebbd26c1d8fe877d38420e7f5c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-parameters"></a>指定参数
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]通过指定过程参数，调用程序可以将值传递给过程的主体。 在执行过程期间，这些值可以用于各种目的。 如果将参数标记为 OUTPUT 参数，则过程参数还可以将值返回给调用程序。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+通过指定过程参数，调用程序可以将值传递给过程的主体。 在执行过程期间，这些值可以用于各种目的。 如果将参数标记为 OUTPUT 参数，则过程参数还可以将值返回给调用程序。  
   
  一个过程最多可以有 2100 个参数，每个参数都有名称、数据类型和方向。 还可以为参数指定默认值（可选）。  
   

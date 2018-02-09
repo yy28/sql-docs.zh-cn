@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Views::raw_Append
 - Views::Append
-helpviewer_keywords: Append method [ADOX]
+helpviewer_keywords:
+- Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: acb0a9ffbf26ccb0f181e19c54ac906ae7d4754f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a5db1507f6574567cc6acd54e9ede053e36f1552
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-views"></a>Append 方法 （ADOX 视图）
 创建一个新[视图](../../../ado/reference/adox-api/view-object-adox.md)对象，并将其附加到[视图](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
@@ -45,7 +47,7 @@ Views.Append Name, Command
  *Command*  
  ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，表示要创建的视图。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  在具有名称和特性中指定的数据源中创建新视图**命令**对象。  
   
  如果用户指定的命令文本表示一个过程，而不是一个视图，则行为将取决于提供程序。 **追加**如果提供程序不支持保留命令将失败。  

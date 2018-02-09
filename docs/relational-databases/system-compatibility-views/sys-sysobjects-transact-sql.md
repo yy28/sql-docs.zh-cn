@@ -1,5 +1,5 @@
 ---
-title: "sys.sysobjects (Transact SQL) |Microsoft 文档"
+title: sys.sysobjects (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sysobjects
 - sysobjects_TSQL
 - sys.sysobjects
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.sysobjects compatibility view
 - sysobjects system table
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 19b89924f5e900c5760d62b1177355467bb24544
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 58b3ba692fd946c15e3f00a7d1179f10df5d0b37
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|对象名称|  
 |id|**int**|对象标识号|  
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |ftcatid|**int**|注册为使用全文检索的所有用户表的全文目录标识符，对于没有注册的所有用户表则为 0。|  
 |schema_ver|**int**|在每次更改表的架构时都会增加的版本号。 始终返回 0。|  
 |stats_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|类型|**char(2)**|对象类型。 可以是以下值之一：<br /><br /> AF = 聚合函数 (CLR)<br /><br /> C = CHECK 约束<br /><br /> D = 默认值或 DEFAULT 约束<br /><br /> F = FOREIGN KEY 约束<br /><br /> FN = 标量函数<br /><br /> FS = 程序集 (CLR) 标量函数<br /><br /> FT = 程序集 (CLR) 表值函数 IF = 内联表函数<br /><br /> IT - 内部表<br /><br /> K = PRIMARY KEY 或 UNIQUE 约束<br /><br /> L = 日志<br /><br /> P = 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> R = 规则<br /><br /> RF = 复制筛选存储过程<br /><br /> S = 系统表<br /><br /> SN = 同义词<br /><br /> SQ = 服务队列<br /><br /> TA = 程序集 (CLR) DML 触发器<br /><br /> TF = 表函数<br /><br /> TR = SQL DML 触发器<br /><br /> TT = 表类型<br /><br /> U = 用户表<br /><br /> V = 视图<br /><br /> X = 扩展存储过程|  
+|type|**char(2)**|对象类型。 可以是以下值之一：<br /><br /> AF = 聚合函数 (CLR)<br /><br /> C = CHECK 约束<br /><br /> D = 默认值或 DEFAULT 约束<br /><br /> F = FOREIGN KEY 约束<br /><br /> FN = 标量函数<br /><br /> FS = 程序集 (CLR) 标量函数<br /><br /> FT = 程序集 (CLR) 表值函数 IF = 内联表函数<br /><br /> IT - 内部表<br /><br /> K = PRIMARY KEY 或 UNIQUE 约束<br /><br /> L = 日志<br /><br /> P = 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> R = 规则<br /><br /> RF = 复制筛选存储过程<br /><br /> S = 系统表<br /><br /> SN = 同义词<br /><br /> SQ = 服务队列<br /><br /> TA = 程序集 (CLR) DML 触发器<br /><br /> TF = 表函数<br /><br /> TR = SQL DML 触发器<br /><br /> TT = 表类型<br /><br /> U = 用户表<br /><br /> V = 视图<br /><br /> X = 扩展存储过程|  
 |userstat|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |sysstat|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |indexdel|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

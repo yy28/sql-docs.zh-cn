@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Error
-helpviewer_keywords: error object [ADO]
+f1_keywords:
+- Error
+helpviewer_keywords:
+- error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c1bd19724c3c62503deedc1fa450fde3b4cbcb4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 00f04d9ccdfd4547e7d207edc21db44a4e04508b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-object"></a>错误对象
 包含有关适用于涉及提供程序的单个操作的数据访问错误的详细信息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  涉及 ADO 对象的任何操作可以生成一个或多个提供程序错误。 每个错误发生时，一个或多个**错误**对象都将置于[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 当另一个 ADO 操作生成错误，**错误**集合处于未选中状态，以及新的集**错误**对象放入**错误**集合。  
   
 > [!NOTE]

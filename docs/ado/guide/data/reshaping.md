@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - reshaping previously shaped Recordset [ADO]
 - data shaping [ADO], reshaping
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f00f6a724f4ab500b82d44e06e78ae0af1fe955d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c15ec2a356fa1d9593de20f301fcdce44585445
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="reshaping"></a>重新调整
 A**记录集**创建可能的形状的子句来指定命令*别名*名称 （通常使用 AS 关键字）。 形状的别名**记录集**可以完全不同的命令中引用。 也就是说，你可以重复使用，或*重塑*，以前整形**记录集**新形状命令中。 若要支持此功能，ADO 提供一个属性，[重新调整形状名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  

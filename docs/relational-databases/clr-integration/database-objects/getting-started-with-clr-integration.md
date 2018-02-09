@@ -27,19 +27,20 @@ helpviewer_keywords:
 - Hello World example [CLR integration]
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
-caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f16f13a8f55429cb196a9cc6bc82e61bb8c7328
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 387ca6168d809aaf1a4a4938ee40f41a8d4f6bfb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 集成入门
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题提供的命名空间和编译使用的数据库对象所需的库的概述[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与.NET Framework 公共语言运行时 (CLR) 集成。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题提供的命名空间和编译使用的数据库对象所需的库的概述[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与.NET Framework 公共语言运行时 (CLR) 集成。 本主题还说明如何编写、编译和运行用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写的简单 CLR 存储过程。  
   
 ## <a name="required-namespaces"></a>所需命名空间  
  开发基本 CLR 数据库对象所需的组件安装与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 CLR 集成功能在称作 system.data.dll 的程序集中公开，该程序集是 .NET Framework 的一部分。 该程序集还在全局程序集缓存 (GAC) 以及 .NET Framework 目录中提供。 对此程序集的引用通常由命令行工具和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 自动添加，因此无需手动添加它。  
@@ -96,7 +97,7 @@ End Class
  此程序编译为库、 将其加载到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并将其作为存储过程运行。  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>编译"Hello World"存储过程  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认情况下将安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 再分发文件。 这些文件包括 csc.exe 和 vbc.exe，它们是用于 Visual C# 和 Visual Basic 程序的命令行编译器。 为了编译我们的示例，您必须修改路径变量以指向包含 csc.exe 或 vbc.exe 的目录。 下面是 .NET Framework 的默认安装路径。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装[!INCLUDE[msCoName](../../../includes/msconame-md.md)]默认情况下的.NET Framework 重新分发文件。 这些文件包括 csc.exe 和 vbc.exe，它们是用于 Visual C# 和 Visual Basic 程序的命令行编译器。 为了编译我们的示例，您必须修改路径变量以指向包含 csc.exe 或 vbc.exe 的目录。 下面是 .NET Framework 的默认安装路径。  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\(version)  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - NextRecordset
 - Recordset15::NextRecordset
 - Recordset15::raw_NextRecordset
-helpviewer_keywords: NextRecordset method [ADO]
+helpviewer_keywords:
+- NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 569303b6598f0d6b580f20049a02f7e9a5e90621
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ffbc85f40d684095b4f91512943f16911af3233f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nextrecordset-method-ado"></a>方法签名 (ADO)
 清除当前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象并返回下一个**记录集**方法通过一系列的命令。  
@@ -44,12 +46,12 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Parameters  
  *RecordsAffected*  
- 可选。 A**长**变量到该提供程序返回的当前操作所影响的记录数。  
+ 選擇性。 A**长**变量到该提供程序返回的当前操作所影响的记录数。  
   
 > [!NOTE]
 >  此参数仅返回操作; 所影响的记录的数它不从用于生成 select 语句返回的记录计数**记录集**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**签名**方法以返回结果的复合命令语句中的下一步命令或存储过程返回多个结果。 如果你打开**记录集**复合命令语句上基于的对象 (例如，"选择\*从 table1;选择\*从 table2") 使用[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)方法[命令](../../../ado/reference/ado-api/command-object-ado.md)或[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**记录集**，ADO 执行仅第一个命令并返回到结果*记录集*。 若要访问的语句中的后续命令的结果，调用**签名**方法。  
   
  只要有更多结果和**记录集**包含复合语句未断开连接或跨进程边界封送**签名**方法将继续到返回**记录集**对象。 如果返回行的命令成功执行，但未返回任何记录，返回**记录集**对象将被打开，但为空。 通过验证，这种情况下的测试[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性均**True**。 如果非???返回行的命令执行成功，返回**记录集**对象将被关闭，你可以通过测试来验证其[状态](../../../ado/reference/ado-api/state-property-ado.md)属性**记录集**。 当没有更多结果，*记录集*将设置为*执行任何操作*。  

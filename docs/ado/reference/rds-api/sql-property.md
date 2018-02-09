@@ -1,6 +1,7 @@
 ---
 title: "SQL 属性 |Microsoft 文档"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: SQL property [RDS]
+helpviewer_keywords:
+- SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3488758fb803b33be03a0126b0e514279ea8c4bc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 406d5cd5fcf159d9354ef0af0b7036e3ebd24bab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-property"></a>SQL 属性
 指示用于检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -41,13 +43,13 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *查询字符串*  
+ *QueryString*  
  A**字符串**包含有效的 SQL 数据请求的值。  
   
  *DataControl*  
  表示的对象变量**rds.DataControl**对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  一般情况下，这是一个 SQL 语句 （使用数据库服务器的方言），如`"Select * from NewTitles"`。 若要确保记录匹配，并可准确地更新，可更新查询必须包含长二进制字段或计算的字段以外的字段。  
   
  **SQL**属性是可选的如果自定义服务器端业务对象检索数据的客户端。  

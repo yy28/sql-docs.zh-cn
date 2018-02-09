@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::GetVersion
 - Connection15::Version
 - Connection15::get_Version
-helpviewer_keywords: Version property [ADO]
+helpviewer_keywords:
+- Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 500dee0adfd3be82def58ba0dcce532b4bffec70
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f79774c39e3ba3a877329867664d6ab1b303532d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="version-property-ado"></a>版本属性 (ADO)
 指示 ADO 版本号。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="return-value"></a>返回值  
  返回**字符串**值，该值指示版本。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**版本**属性以返回 ADO 实现的版本号。  
   
  提供程序的版本将用作中的动态属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  

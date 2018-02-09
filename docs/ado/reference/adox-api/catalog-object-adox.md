@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Catalog
-helpviewer_keywords: Catalog object [ADOX]
+f1_keywords:
+- Catalog
+helpviewer_keywords:
+- Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ada10bcb335b3ae9d83019d6fc60f6e23c8f7a38
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d8f47b63022f481c5ed102bcc9e97f5fa563aea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="catalog-object-adox"></a>目录对象 (ADOX)
 包含集合 ([表](../../../ado/reference/adox-api/tables-collection-adox.md)，[视图](../../../ado/reference/adox-api/views-collection-adox.md)，[用户](../../../ado/reference/adox-api/users-collection-adox.md)，[组](../../../ado/reference/adox-api/groups-collection-adox.md)，和[过程](../../../ado/reference/adox-api/procedures-collection-adox.md))，描述的架构目录中的数据源。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  你可以修改**目录**通过添加或删除对象，或者通过修改现有对象的对象。 某些访问接口可能不支持的所有**目录**对象，或在仅支持查看架构信息。  
   
  使用的属性和方法**目录**对象，你可以：  

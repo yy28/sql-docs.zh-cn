@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Stream::raw_Read
 - _Stream::Read
-helpviewer_keywords: Read method [ADO]
+helpviewer_keywords:
+- Read method [ADO]
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad739a0d3aded4b0bf0458803d9fcdba5b388272
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a702625e2bc1fbb00a8f7d1519d574a30d8df270
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="read-method"></a>Read 方法
 从二进制文件中读取指定的数目的字节[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -39,13 +41,13 @@ Variant = Stream.Read ( NumBytes)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *变量*  
- 可选。 A**长**值，该值指定要从文件中读取的字节数或[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)值**adReadAll**，这是默认设置。  
+ *NumBytes*  
+ 選擇性。 A**长**值，该值指定要从文件中读取的字节数或[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)值**adReadAll**，这是默认设置。  
   
 ## <a name="return-value"></a>返回值  
  **读取**方法读取指定的数目的字节数或从整个流**流**对象并返回生成的数据作为**Variant**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果*变量*的字节数超过会留在**流**，返回的仅剩余字节数。 读取的数据没有字节可读取指定的长度*变量*。 如果不有任何留下可供读取的字节，则返回具有 null 值的一个变体。 **读取**无法用于向后读取。  
   
 > [!NOTE]

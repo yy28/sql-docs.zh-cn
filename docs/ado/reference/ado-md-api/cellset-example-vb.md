@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Cellset object [ADO MD], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb72abdd44deeabda8a9513744ba7d962fa7bffc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 42b76d40fe98b142e85ee70a5e902397e58a4dab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cellset-example-vb"></a>单元集示例 (VB)
 此 Visual Basic 项目演示使用 ADO MD 访问多维数据集数据的基础知识。 它显示成员标题的列和行标题，然后显示带格式的单元集内的特定单元格的值。  

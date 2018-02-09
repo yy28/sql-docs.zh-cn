@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: errors [ADO]
+helpviewer_keywords:
+- errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af909032474f8007a730caaf55f15349d00b42df
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 06fc6433f6f1d5f00b7b6d619dce9169e1fb67c3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-run-time-errors"></a>ADO 运行时错误
 ADO 错误报告到你的程序为运行时错误。 您的编程语言的错误捕获机制可用于捕获和处理它们。 例如，在 Visual Basic 中，使用**On Error**语句。 Visual c + +，这取决于你要用于访问 ADO 库的方法。 借助 #import，使用**try catch**块。 否则，c + + 程序员需要显式调用检索错误对象**GetErrorInfo**。 下面的 Visual Basic sub 过程演示如何捕获 ADO 错误：

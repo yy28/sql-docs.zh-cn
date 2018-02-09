@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: onReadyStateChange event [ADO]
+helpviewer_keywords:
+- onReadyStateChange event [ADO]
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bfb7ee92573f1e21ecb70f34b73346a0c0303ce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e2641f28169199907fdfb66771a3a8e86ff1a86e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange 事件 (RDS)
 **OnReadyStateChange**事件时调用时的值[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)属性更改。  
@@ -41,7 +43,7 @@ onReadyStateChange
 #### <a name="parameters"></a>Parameters  
  无。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **ReadyState**属性反映的进度[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象，如它以异步方式检索数据插入其[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 使用**onReadyStateChange**事件来监视中的更改**ReadyState**它们发生的任何时候的属性。 这是比定期检查属性的值更高效。  
   
 ## <a name="applies-to"></a>适用范围  

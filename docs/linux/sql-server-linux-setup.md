@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 924542a970ac63df74e7bb725b4f7a171f74e95a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
 
@@ -73,6 +73,13 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 - [在 Ubuntu 上安装](quickstart-install-connect-ubuntu.md)
 - [在 Docker 上运行](quickstart-install-connect-docker.md)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+## <a id="repositories"></a>配置源存储库
+
+当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server 自 2017 年。 快速入门使用**累积更新 (CU)**存储库。 但是可以改为配置**GDR**存储库。 存储库以及如何配置它们的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+
+> [!IMPORTANT]
+> 如果你以前安装的 CTP 或 RC 版本的 SQL Server 自 2017 年，你必须删除预览存储库并注册一个常规正式版 (GA)。 有关详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 ## <a id="upgrade"></a>更新 SQL Server
 
@@ -130,77 +137,6 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 ```bash
 sudo rm -rf /var/opt/mssql/
 ```
-
-## <a id="repositories"></a>配置源存储库
-
-当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server。
-
-### <a name="repository-options"></a>存储库选项
-
-有两种主要类型的每个分布的存储库：
-
-- **累积更新 (CU)**: 累积更新 (CU) 存储库包含自该版本为基的 SQL Server 版本和任何 bug 修复或改进的包。 累积更新是特定于发行版中，如 SQL Server 自 2017 年。 正则的频率发布它们。
-
-- **GDR**: GDR 储存库自该版本中包含的基本 SQL Server 版本和仅关键的修复程序和安全更新的包。 这些更新也会添加到下一步 CU 发行版。
-
-每个 CU 和 GDR 版本包含完整的 SQL Server 程序包和所有以前的更新，该存储库。 从 GDR 版本更新到 CU 版本受更改 SQL Server 配置的存储库。 你还可以[降级](#rollback)到在主要版本中的任何版本 (ex： 自 2017 年)。 更新从 CU 的 GDR 发行版的版本不支持。
-
-### <a name="check-your-configured-repository"></a>检查你配置的存储库
-
-如果你想要验证配置了哪些存储库，使用以下依赖于平台的方法。
-
-| 平台 | 过程 |
-|-----|-----|
-| RHEL | 1.查看中的文件**/etc/yum.repos.d**目录：`sudo ls /etc/yum.repos.d`<br/>2.查找配置 SQL Server 目录中，如文件**mssql server.repo**。<br/>3.输出文件的内容：`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4.**名称**属性是配置的存储库。|
-| SLES | 1.运行以下命令：`sudo zypper info mssql-server`<br/>2.**存储库**属性是配置的存储库。 |
-| Ubuntu | 1.运行以下命令：`sudo cat /etc/apt/sources.list`<br/>2.检查 mssql 服务器的程序包 URL。 |
-
-存储库 URL 的末尾确认存储库类型：
-
-- **mssql server**： 预览存储库。
-- **mssql server 2017**: CU 存储库。
-- **mssql server 2017 gdr**: GDR 存储库。
-
-### <a name="change-the-source-repository"></a>更改源存储库
-
-若要配置的 CU 或 GDR 存储库，请使用以下步骤：
-
-> [!NOTE]
-> [快速入门](#platforms)配置 CU 存储库。 如果你按照这些教程，你不需要使用以下步骤以继续使用 CU 存储库。 这些步骤才需要更改你配置的存储库。
-
-1. 如有必要，删除以前配置的存储库。
-
-   | 平台 | 存储库 | 存储库删除命令 |
-   |---|---|---|
-   | RHEL | **全部** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
-   | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
-   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
-   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
-
-1. 有关**Ubuntu 仅**，导入公共存储库 GPG 密钥。
-
-   ```bash
-   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-   ```
-
-1. 配置新的存储库。
-
-   | 平台 | 存储库 | Command |
-   |-----|-----|-----|
-   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-   | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
-
-1. [安装](#platforms)或[更新](#upgrade)SQL Server 和任何相关包从新的存储库。
-
-   > [!IMPORTANT]
-   > 此时，如果你选择使用安装教程之一，如[快速入门教程](#platforms)，请记住您刚配置的目标存储库。 不在本教程中重复该步骤。 这是如果你配置 GDR 存储库，尤其如此，因为快速入门教程使用 CU 存储库。
 
 ## <a id="unattended"></a>无人参与的安装
 

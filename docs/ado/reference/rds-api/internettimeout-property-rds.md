@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: InternetTimeout property [ADO]
+helpviewer_keywords:
+- InternetTimeout property [ADO]
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a012318bccd243b7b950e28978769176de745ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7961cf7594df99caa6f8aa4c8ba0ef6cd94696dc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 属性 (RDS)
 指示等待请求超时之前的毫秒数。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**超时值，该值表示在请求之前的毫秒数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此属性仅适用于请求都发送的 HTTP 或 HTTPS 协议。  
   
  在三层环境中的请求可能需要几分钟才能执行。 此属性用于指定为长时间运行的请求的更多时间。  

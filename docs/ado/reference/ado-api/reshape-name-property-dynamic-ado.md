@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Reshape Name property [ADO]
+helpviewer_keywords:
+- Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e18334a3e438ed484f24382e4a84f0a278747ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec3b35a7b48c6db79b098bf20a2514fcc75038d8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>重新调整形状名称属性的动态 (ADO)
 指定的名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="return-values"></a>返回值  
  返回**字符串**值的名称**记录集**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  名称的连接或直到持续期间保留**记录集**已关闭。  
   
  **重新调整形状名称**属性主要用于与的重新调整功能一起使用[用于 OLE DB 的 Microsoft 数据调整服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)服务提供程序。 名称必须是唯一的以参与重新调整。  

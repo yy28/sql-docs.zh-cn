@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,24 @@ apitype: COM
 f1_keywords:
 - Table::Keys
 - Keys
-helpviewer_keywords: Keys collection [ADOX]
+helpviewer_keywords:
+- Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b832a459e5eac0a6e208517457eccba8b10e74c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 31b99b28a878048a59b6fd5b79760a1b70c1cd56
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keys-collection-adox"></a>键集合 (ADOX)
 包含所有[密钥](../../../ado/reference/adox-api/key-object-adox.md)的对象[表](../../../ado/reference/adox-api/table-object-adox.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  [追加](../../../ado/reference/adox-api/append-method-adox-keys.md)方法[密钥集合](../../../ado/reference/adox-api/keys-collection-adox.md)对于 ADOX 是唯一的。 您可以：  
   
 -   将新的密钥添加到与集合[追加](../../../ado/reference/adox-api/append-method-adox-keys.md)方法。  

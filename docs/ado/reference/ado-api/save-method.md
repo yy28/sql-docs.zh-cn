@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Recordset::Save
 - _Recordset::raw_Save
-helpviewer_keywords: Save method [ADO]
+helpviewer_keywords:
+- Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb9651c4bf6de24fd3cdf7c7d42e6c0c24365fda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ca1aa95841be1331ad1b214b2a8b377622883d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="save-method"></a>Save 方法
 将保存[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)文件中或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -40,12 +42,12 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parameters  
  *目标*  
- 可选。 A **Variant** ，表示该文件的完整路径名称其中**记录集**保存，或对引用**流**对象。  
+ 選擇性。 A **Variant** ，表示该文件的完整路径名称其中**记录集**保存，或对引用**流**对象。  
   
  *PersistFormat*  
- 可选。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)值，该值指定在其中的格式**记录集**（XML 或 ADTG） 保存。 默认值是**adPersistADTG**。  
+ 選擇性。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)值，该值指定在其中的格式**记录集**（XML 或 ADTG） 保存。 默认值是**adPersistADTG**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  [Save 方法](../../../ado/reference/ado-api/save-method.md)方法只能在 open 上调用**记录集**。 使用[Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)到更高版本的还原方法**记录集**从*目标*。  
   
  如果[筛选器属性](../../../ado/reference/ado-api/filter-property.md)属性实际上是为**记录集**，然后保存筛选器访问的行。 如果**记录集**是分层的然后当前子**记录集**和其子都得到保存，包括父**记录集**。 如果子 Save 方法**记录集**是调用子及其所有子级都保存，但不是父。  

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: b9aeae97abc2f60a9bb6c9c54f5061f68b61a1c9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 76a5ed98ddd1aa69c11cd371586ce963ebcd97de
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 02/01/2018
 * 设置主要和辅助副本`FAILOVER_MODE = EXTERNAL`。 
    指定与外部群集管理器，如 Pacemaker 交互副本。 
 
-下面的 TRANSACT-SQL 脚本创建名为的高可用性 AG `ag1`。 脚本将与可用性组副本`SEEDING_MODE = AUTOMATIC`。 此设置会导致 SQL Server 在每个辅助服务器上自动创建数据库。 为环境更新以下脚本。 替换`**<node1>**`， `**<node2>**`，或`**<node3>**`具有承载副本的 SQL Server 实例的名称的值。 替换`**<5022>**`端口你设置镜像终结点的数据。 若要创建可用性组，请在承载主副本的 SQL Server 实例上运行以下 TRANSACT-SQL。
+下面的 TRANSACT-SQL 脚本创建名为的高可用性 AG `ag1`。 脚本将与可用性组副本`SEEDING_MODE = AUTOMATIC`。 此设置会导致 SQL Server 在每个辅助服务器上自动创建数据库。 为环境更新以下脚本。 替换`<node1>`， `<node2>`，或`<node3>`具有承载副本的 SQL Server 实例的名称的值。 替换`<5022>`端口你设置镜像终结点的数据。 若要创建可用性组，请在承载主副本的 SQL Server 实例上运行以下 TRANSACT-SQL。
 
 运行**只有一个**的以下脚本： 
 
@@ -105,23 +105,23 @@ ms.lasthandoff: 02/01/2018
    CREATE AVAILABILITY GROUP [ag1]
        WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
        FOR REPLICA ON
-           N'**<node1>**' 
+           N'<node1>' 
             WITH (
-               ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+               ENDPOINT_URL = N'tcp://<node1>:<5022>',
                AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
                FAILOVER_MODE = EXTERNAL,
                SEEDING_MODE = AUTOMATIC
                ),
-           N'**<node2>**' 
+           N'<node2>' 
             WITH ( 
-               ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+               ENDPOINT_URL = N'tcp://<node2>:<5022>', 
                AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
                FAILOVER_MODE = EXTERNAL,
                SEEDING_MODE = AUTOMATIC
                ),
-           N'**<node3>**'
+           N'<node3>'
            WITH( 
-              ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+              ENDPOINT_URL = N'tcp://<node3>:<5022>', 
               AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
               FAILOVER_MODE = EXTERNAL,
               SEEDING_MODE = AUTOMATIC
@@ -142,20 +142,20 @@ ms.lasthandoff: 02/01/2018
    CREATE AVAILABILITY GROUP [ag1] 
       WITH (CLUSTER_TYPE = EXTERNAL) 
       FOR REPLICA ON 
-       N'**<node1>**' WITH ( 
-          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**', 
+       N'<node1>' WITH ( 
+          ENDPOINT_URL = N'tcp://<node1>:<5022>', 
           AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = EXTERNAL, 
           SEEDING_MODE = AUTOMATIC 
           ), 
-       N'**<node2>**' WITH (  
-          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',  
+       N'<node2>' WITH (  
+          ENDPOINT_URL = N'tcp://<node2>:<5022>',  
           AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = EXTERNAL, 
           SEEDING_MODE = AUTOMATIC 
           ), 
-       N'**<node3>**' WITH ( 
-          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+       N'<node3>' WITH ( 
+          ENDPOINT_URL = N'tcp://<node3>:<5022>', 
           AVAILABILITY_MODE = CONFIGURATION_ONLY  
           );
    ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

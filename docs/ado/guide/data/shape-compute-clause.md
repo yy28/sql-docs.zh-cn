@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-compute-clause"></a>形状 COMPUTE 子句
 形状 COMPUTE 子句生成父**记录集**，其列包含的参考子**记录集**; 可选其内容是章，新的或计算的列的列或子级上执行聚合函数的结果**记录集**或以前整形**记录集**; 以及从子级的任何列**记录集**中列出可选的 BY 子句。  
@@ -41,7 +42,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Description  
  此子句的部分如下所示：  
   
- *子命令*  
+ *child-command*  
  包括以下项之一：  
   
 -   在大括号 （"{"） 中返回的查询命令**记录集**对象。 对基础数据提供程序发出该命令，其语法取决于该提供程序的要求。 通常，这是 SQL 语言中，尽管 ADO 不需要任何特定的查询语言。  
@@ -52,13 +53,13 @@ SHAPE child-command [AS] child-alias
   
 -   表关键字后, 跟的表中的数据提供程序的名称。  
   
- *子别名*  
+ *child-alias*  
  用于引用别名**记录集**返回*子命令。* *子别名*COMPUTE 子句中的列的列表中需要并定义父级和子级之间的关系**记录集**对象。  
   
- *追加列列表*  
+ *appended-column-list*  
  在其中每个元素定义的生成的父代中的列列表。 每个元素包含一个章节列、 一个新列、 计算的列中或从子了聚合函数计算得出的值**记录集**。  
   
- *组字段列表*  
+ *grp-field-list*  
  中的父和子列的列表**记录集**指定应如何在子分组行的对象。  
   
  中的每列*组字段列表，*没有对应的列在子与父**记录集**对象。 每一行的父代中**记录集**、*组字段列表*列具有唯一值和子**记录集**引用的父行只包含子行其*组字段列表*列具有相同的值作为父行。  

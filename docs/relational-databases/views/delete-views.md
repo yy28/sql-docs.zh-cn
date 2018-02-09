@@ -8,7 +8,8 @@ ms.service:
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - views [SQL Server], deleting
 - removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44173d4693ad71c8d95da8db468c17afbc417a74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 287b4ffc42719b51d4af3c6750b81561305fe750
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="delete-views"></a>删除视图
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中删除视图  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中删除视图 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **本主题内容**  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **从数据库中删除视图，使用：**  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  需要对 SCHEMA 的 ALTER 权限或对 OBJECT 的 CONTROL 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,17 +70,17 @@ ms.lasthandoff: 11/17/2017
 3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
     > [!IMPORTANT]  
-    >  单击“删除对象”对话框中的“显示依赖关系”，打开“view_name 依赖关系”对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
+    >  在“删除对象”对话框中单击“显示依赖关系”，打开“view_name***依赖关系”对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-view-from-a-database"></a>从数据库中删除视图  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 仅在视图存在时，该示例才删除指定的视图。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 仅在视图存在时，该示例才删除指定的视图。  
   
     ```  
     USE AdventureWorks2012 ;  

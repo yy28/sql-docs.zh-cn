@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords: ExecuteComplete event [ADO]
+helpviewer_keywords:
+- ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a6e5ca2b5590952ac01bf70b1c2e457336a79a2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bda38ed41e57c84d629ff6f301575e963d893f5e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 事件 (ADO)
 **ExecuteComplete**命令执行完毕后，将调用事件。  
@@ -59,7 +61,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  A[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 连接对其执行该操作。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **ExecuteComplete**事件可能会发生由于**连接。**[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)，**命令。**[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)，**记录集。**[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)，**记录集。**[Requery](../../../ado/reference/ado-api/requery-method.md)，或**记录集。**[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法。  
   
 ## <a name="see-also"></a>另请参阅  

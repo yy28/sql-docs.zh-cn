@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: c97bdbafa557f8d3fe9346431926b9f1a490a286
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f50be15e4d778ffb9c77caa375dc6b963b5821cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux
 
@@ -33,6 +33,8 @@ SQL Server 的备份和还原功能是将从在 Windows 上的 SQL Server 数据
 > * 将备份文件从 Bash shell 移至 Linux
 > * 还原与 TRANSACT-SQL 的 Linux 上的备份文件
 > * 运行查询以验证迁移
+
+你还可以创建 SQL Server Alwayson 可用性组将从 Windows 的 SQL Server 数据库迁移到 Linux。 请参阅[sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)。
 
 ## <a name="prerequisites"></a>必要條件
 

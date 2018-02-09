@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,23 +17,24 @@ f1_keywords:
 - Command15::get_Parameters
 - Command15::Parameters
 - Command15::GetParameters
-helpviewer_keywords: Parameters collection [ADO]
+helpviewer_keywords:
+- Parameters collection [ADO]
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1cceeccbcca886b151dd505881be25687fd26e37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 96d30086b4c05455ef7d4fd5fdd82674979c205d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameters-collection-ado"></a>参数集合 (ADO)
 包含所有[参数](../../../ado/reference/ado-api/parameter-object.md)的对象[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  A**命令**对象具有**参数**组成的集合**参数**对象。  
   
  使用[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法**命令**对象的**参数**集合检索提供程序的存储的过程或参数化的查询的参数信息指定在**命令**对象。 某些提供程序不支持存储的过程调用或参数化的查询;调用**刷新**方法**参数**集合时使用此类提供程序将返回错误。  

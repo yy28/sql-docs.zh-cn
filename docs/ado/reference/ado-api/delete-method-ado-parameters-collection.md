@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _DynaCollection::Delete
 - _DynaCollection::raw_Delete
-helpviewer_keywords: Delete method [ADO]
+helpviewer_keywords:
+- Delete method [ADO]
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588b7c28a306cdf99baf549da3241882e9de2eb2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a5b7aff01cf3bb0dd34c53986a586aeae7b499a6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 方法 （ADO 参数集合）
 删除从对象[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  
@@ -42,7 +44,7 @@ Parameters.Delete Index
  *Index*  
  A**字符串**值，该值在集合中包含你想要删除的对象或对象的序号位置 （索引） 的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**删除**集合上的方法使你可以删除集合中的其中一个对象。 此方法是仅适用于**参数**集合[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 必须使用[参数](../../../ado/reference/ado-api/parameter-object.md)对象的[名称](../../../ado/reference/ado-api/name-property-ado.md)属性或调用时其集合索引**删除**方法-对象变量不是有效的参数。  
   
 ## <a name="applies-to"></a>适用范围  

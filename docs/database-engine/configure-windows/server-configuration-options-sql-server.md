@@ -8,10 +8,12 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "服务器配置 (SQL Server)"
+keywords:
+- "服务器配置 (SQL Server)"
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
 - configuration options [SQL Server], when take effect
@@ -30,16 +32,16 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-caps.latest.revision: "128"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 753fda1113e6d669e79b2296fbfa377e6b1fc3fc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4bf8c88d19d6b23f1cae11cc32c048e50a2d6b2f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +68,7 @@ ms.lasthandoff: 01/18/2018
 ## <a name="configuration-options-table"></a>配置选项表  
  下表列出了所有可用的配置选项、可能的设置范围及其默认值。 配置选项按以下字母代码标记：  
   
--   A = 高级选项，仅允许有经验的数据库管理员或经过认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术人员进行更改，并且需要将 show advanced options 设置为 1。  
+-   A = 高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改，并且需要将“显示高级选项”设置为 1。  
   
 -   RR = 需要重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的选项。  
   
@@ -82,7 +84,7 @@ ms.lasthandoff: 01/18/2018
     |[affinity I/O mask](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md) （A，RR）|-2147483648|2147483647|0|  
     |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) （A，仅适用于 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）|-2147483648|2147483647|0|  
     |[affinity mask](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
-    |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) （A，RR），仅适用于 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
+    |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md)（A，RR），仅适用于 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
     |[代理 XP](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|@shouldalert|0<br /><br /> （当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时，更改为 1。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理设置为在安装过程中自动启动，则默认值为 0。）|  
     |[允许更新](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) （已过时。 请勿使用。 将在重新配置期间导致错误。）|0|@shouldalert|0|  
     |[自动 soft-NUMA 已禁用](http://msdn.microsoft.com/library/ms345357.aspx)|0|@shouldalert|0|  

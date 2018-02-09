@@ -17,16 +17,16 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], creating
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66111dcdc5c69df0edbda0f57143873c89e12ac1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2f70abd5174790d445e4b3854bcb6efd8576ff83
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-extended-stored-procedures"></a>创建扩展存储过程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
  扩展存储过程是带有原型的函数：  
   
- SRVRETCODE *xp_extendedProcName* **(**SRVPROC  **\*);**  
+ SRVRETCODE *xp_extendedProcName* **(**SRVPROC **\*);**  
   
  使用前缀 xp_ 是可选的。 当在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用扩展存储过程名称时，名称区分大小写，而与服务器上安装的代码页/排序顺序无关。 当您生成 DLL 时：  
   

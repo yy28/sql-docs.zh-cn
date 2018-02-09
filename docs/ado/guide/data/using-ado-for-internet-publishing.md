@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97b94feddfa95a954294ba27a66dd02632c9a24a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 609f4574c7f8cf9cb13fd2d5b21f3504ec3ce9fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-for-internet-publishing"></a>ADO 用于 Internet 发布
 [OLE DB Provider for Internet 发布](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)显示访问用 ADO 异类数据的特定示例。 尽管此部分中的示例将特定于使用 Internet 发布提供程序，与其他提供程序与异类数据，如到电子邮件存储区提供程序一起使用 ADO 时应类似演示的原则。  

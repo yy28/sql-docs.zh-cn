@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: fddc7cf6f0badfdb07414c2fc4b51cc2dad5a12a
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 068cf3c1bb3bad2a42f5673f17d0067b0bd019f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>安装 SQL Server 和 SUSE Linux Enterprise Server 上创建数据库
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/01/2018
    ```
 
    > [!NOTE]
-   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[更改源存储库](sql-server-linux-setup.md#repositories)。
+   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 1. 运行以下命令，安装 SQL Server：
 

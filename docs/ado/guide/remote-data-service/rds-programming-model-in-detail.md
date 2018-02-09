@@ -4,32 +4,34 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS programming model [ADO], details
+helpviewer_keywords:
+- RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e3edfd1b1ec33d4c014fae4a0fed8d61d5ef8ed
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5a2798c750ba20b03c9e423b5897575ce4d5d697
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-programming-model-in-detail"></a>在详细信息的 RDS 编程模型
 RDS 的编程模型的关键元素如下：  
   
 -   RDS.DataSpace  
   
--   提高  
+-   RDSServer.DataFactory  
   
 -   RDS.DataControl  
   
@@ -47,7 +49,7 @@ RDS 的编程模型的关键元素如下：
   
  RDS 使内部具体取决于服务器计划是远程服务器上跨 Internet 或 intranet; 区别在局域网; 服务器不在或服务器上所有，而是在本地动态链接库 (DLL)。 这一区别确定信息客户端和服务器之间交换和使有形在返回到客户端应用程序的引用的类型不同的方式。 但是，从你的角度来看，这一区别的没有特殊含义。 所有重要的是接收某个可用程序的引用。  
   
-## <a name="rdsserverdatafactory"></a>提高  
+## <a name="rdsserverdatafactory"></a>RDSServer.DataFactory  
  RDS 提供默认的服务器程序也可以执行对数据源和返回的 SQL 查询[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象或采取**记录集**对象并更新数据源。  
   
  RDS 对象模型，它包含与此功能[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象。  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Parameter::NumericScale
 - Field20::NumericScale
-helpviewer_keywords: NumericScale property [ADO]
+helpviewer_keywords:
+- NumericScale property [ADO]
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4c162e5880176f56d30d3e973d8fa16d8cb351a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 21e85b7e9645761a6d25227113deb5d3eb564720
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 属性 (ADO)
 指示小数位数的数字值在[参数](../../../ado/reference/ado-api/parameter-object.md)或[字段](../../../ado/reference/ado-api/field-object.md)对象。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字节**值，该值指示的小数位数的数字的值数将会解决。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**NumericScale**属性来确定小数点右侧的位数将用于表示的数字值**参数**或**字段**对象。  
   
  有关**参数**对象， **NumericScale**属性为读/写。  

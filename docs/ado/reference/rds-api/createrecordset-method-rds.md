@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - CreateRecordset
 - RDSServer.DataFactory::CreateRecordset
 - DataFactory::CreateRecordset
-helpviewer_keywords: CreateRecordset method [RDS]
+helpviewer_keywords:
+- CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空断开连接[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -53,7 +55,7 @@ object.CreateRecordset(ColumnInfos)
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|“属性”|列标题的名称。|  
+|名称|列标题的名称。|  
 |类型|数据类型的整数。|  
 |Size|以字符为单位，无论何种数据类型的宽度的整数。|  
 |可空性|布尔值。|  
@@ -61,7 +63,7 @@ object.CreateRecordset(ColumnInfos)
   
  列数组的一套则组合到一个数组，它定义**记录集**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  服务器端业务对象可以填充生成**记录集**如与从非 OLE DB 数据提供程序的数据，操作系统文件包含股票报价。  
   
  下表列出[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)支持的值**CreateRecordset**方法。 列出数是用于定义字段的引用数。  
@@ -93,14 +95,14 @@ object.CreateRecordset(ColumnInfos)
 |固定|**adDBTime**|134||  
 |固定|**adDBTimestamp**|135|7|  
 |变量|**adBSTR**|8|130|  
-|变量|**每**|129|200|  
-|变量|**以便您可以排除**|200||  
+|变量|**adChar**|129|200|  
+|变量|**adVarChar**|200||  
 |变量|**adLongVarChar**|201|200|  
 |变量|**adWChar**|130||  
 |变量|**adVarWChar**|202|130|  
 |变量|**adLongVarWChar**|203|130|  
 |变量|**adBinary**|128||  
-|变量|**兴趣的绑定信息**|204||  
+|变量|**adVarBinary**|204||  
 |变量|**adLongVarBinary**|205|204|  
   
 ## <a name="applies-to"></a>适用范围  

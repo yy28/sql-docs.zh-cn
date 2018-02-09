@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Parameter::Direction
-helpviewer_keywords: Direction property
+f1_keywords:
+- _Parameter::Direction
+helpviewer_keywords:
+- Direction property
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 115301a55f3da3e9ff4dab4da880b366efeb8143
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3c4c3c61bef1f9c5ab483d6443eea75eae60b0fa
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="direction-property"></a>方向属性
 指示是否[参数](../../../ado/reference/ado-api/parameter-object.md)表示输入的参数、 输出参数、 输入和输出参数，或如果参数是存储过程的返回值。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**方向**属性来指定如何参数被传递到或从过程。 **方向**属性为读/写; 这样，你与不返回此信息的提供商合作或设置此信息时，你不希望 ADO 进行额外调用提供程序以检索参数信息。  
   
  并非所有提供程序可以确定其存储的过程中的参数的方向。 在这些情况下，你必须设置**方向**之前执行查询的属性。  

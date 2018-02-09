@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,31 +13,33 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Cellset
-helpviewer_keywords: Cellset object [ADO MD]
+f1_keywords:
+- Cellset
+helpviewer_keywords:
+- Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36bd85cb79d48590cb86a865cfd408db878a1b53
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d4b4fd5399fc595055f473f30fa97f9f73921f8a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cellset-object-ado-md"></a>单元集对象 (ADO MD)
 表示多维查询的结果。 它是从多维数据集或其他单元集中选定单元格的集合。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  中的数据**单元集**检索使用直接的、 类似数组的访问。 您可以深化到特定的成员，以获取有关该成员的数据。 例如，下面的代码返回的第一个成员的标题中的第一个位置上名为单元集的第一个轴`cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  没有单元集内的当前单元格的概念。 相反，[项](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)属性检索特定[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)从单元集的对象。 自变量**项**属性确定检索的单元格。 你可以指定单元格的唯一序号值。 您还可以通过使用其的单元集的每个轴的位置编号检索单元格。 有关检索单元格的详细信息，请参阅[项](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)属性。  
   
  使用集合、 方法和属性的**单元集**对象，你可以执行以下操作：  

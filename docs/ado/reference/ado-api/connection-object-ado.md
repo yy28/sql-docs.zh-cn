@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection
-helpviewer_keywords: Connection object [ADO]
+f1_keywords:
+- Connection
+helpviewer_keywords:
+- Connection object [ADO]
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68a54c70eb48a65e5bce6349adf99040945211d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7beb64b0620b1a5b603c02cb36904e3a42f5b3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-object-ado"></a>连接对象 (ADO)
 表示与数据源的开放连接。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  A**连接**对象表示与数据源的唯一会话。 在客户端/服务器数据库系统中，它可能等效于与服务器的实际网络连接。 具体取决于提供程序、 一些集合、 方法或属性的支持的功能**连接**对象可能不可用。  
   
  使用集合、 方法和属性的**连接**对象，你可以执行以下操作：  

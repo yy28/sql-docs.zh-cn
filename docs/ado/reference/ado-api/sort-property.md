@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e668f5d2644ece0fa9210bdb492fd37ca8089a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93be03c62c7950e2cd41a3ab5b56670c2e70b11c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sort-property"></a>排序属性
 指示在其上的一个或多个字段名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)进行排序，并且每个字段是否以升序或降序进行排序。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**中的值，该值指示字段名称**记录集**排序依据。 每个名称使用逗号分隔，并且 （可选） 可以后跟空白和关键字， **ASC**，其中进行排序以升序，字段或**DESC**，这对按降序字段进行排序。 默认情况下，如果未指定关键字，该字段是以升序排序。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此属性需要[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。 对于每个字段中指定将创建一个临时索引**排序**如果索引不存在的属性。  
   
  排序操作是高效的因为数据不以物理方式重新排列，但只由索引指定的顺序进行访问。  

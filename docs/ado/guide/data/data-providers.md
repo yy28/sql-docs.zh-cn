@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b424a116282c7c1edcfa06f22fc72f32a7e0fcda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 98eb787fc3dbaab7b55795a0a1b3a99d9a43e2a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-providers"></a>数据提供程序
 数据提供程序表示数据，例如 SQL 数据库、 索引顺序文件、 电子表格、 文档存储和邮件文件的多种不同的源。 提供程序公开使用称为行集的通用抽象统一的数据。  

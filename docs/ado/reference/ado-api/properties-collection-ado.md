@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,23 +17,24 @@ f1_keywords:
 - _ADO::get_Properties
 - _ADO::Properties
 - _ADO::GetProperties
-helpviewer_keywords: Properties collection [ADO]
+helpviewer_keywords:
+- Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d07db76b9e77dd9aba0d15126a2f01d0da59f243
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5652eb78750806f916d510e4558f12aa6718b30d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="properties-collection-ado"></a>属性集合 (ADO)
 包含所有[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的特定实例的对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  一些 ADO 对象具有**属性**组成的集合**属性**对象。 每个**属性**对象都对应于特定于所提供的 ADO 对象的特征。  
   
 > [!NOTE]

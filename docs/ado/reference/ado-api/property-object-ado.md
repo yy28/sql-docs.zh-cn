@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Property
-helpviewer_keywords: Property object [ADO]
+f1_keywords:
+- Property
+helpviewer_keywords:
+- Property object [ADO]
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c43ea682cb6ca8e0dc7767cd0372fa258cea27db
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e0e5fdf3b949eb95bab26c3bdf4fc98b3f7e616
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="property-object-ado"></a>属性对象 (ADO)
 表示由提供程序定义的 ADO 对象的动态特性。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  ADO 对象有两种类型的属性： 内置和动态。  
   
  内置属性是这些属性在 ADO 中实现，并立即可供任何新对象，请使用`MyObject.Property`语法。 它们不显示为**属性**中对象的对象[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合，因此尽管您可以更改其值，但不能修改其特征。  

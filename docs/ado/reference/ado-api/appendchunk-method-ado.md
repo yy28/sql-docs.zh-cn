@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Parameter::AppendChunk
 - Field20::AppendChunk
-helpviewer_keywords: AppendChunk method [ADO]
+helpviewer_keywords:
+- AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 733dbd43501211c631fad51f993b8d663da0d844
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 32430fd62de54adfba22af5d3ea5447a70fd75a7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 将数据追加到较大文本或二进制数据[字段](../../../ado/reference/ado-api/field-object.md)，或[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
@@ -45,7 +47,7 @@ object.AppendChunk Data
  *数据*  
  A **Variant** ，其中包含要追加到对象的数据。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**AppendChunk**方法**字段**或**参数**填充长二进制或字符数据的对象。 在系统内存有限的情况下，你可以使用**AppendChunk**方法，以操作部分而不是较长的值。  
   
 ## <a name="field"></a>字段  

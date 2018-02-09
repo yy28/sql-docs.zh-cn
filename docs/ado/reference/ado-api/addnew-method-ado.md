@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::AddNew
 - Recordset15::raw_AddNew
-helpviewer_keywords: AddNew method [ADO]
+helpviewer_keywords:
+- AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51978e39a34b02238d4c0b1658620c9ba8d538a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4d05354a7e164d5f739f7306fc4c418ed3d1de58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="addnew-method-ado"></a>AddNew 方法 (ADO)
 创建可更新的新记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -39,16 +41,16 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *记录集*  
+ *recordset*  
  A**记录集**对象。  
   
  *字段列表*  
- 可选。 单个名称或名称的数组或新记录中的字段的序号位置。  
+ 選擇性。 单个名称或名称的数组或新记录中的字段的序号位置。  
   
  *值*  
- 可选。 单个值，则新记录中字段的值为数组。 如果*Fieldlist*是一个数组，*值*必须也为数组具有相同成员的数目; 否则为将会出错。 字段名称的顺序必须匹配每个数组中的字段值的顺序。  
+ 選擇性。 单个值，则新记录中字段的值为数组。 如果*Fieldlist*是一个数组，*值*必须也为数组具有相同成员的数目; 否则为将会出错。 字段名称的顺序必须匹配每个数组中的字段值的顺序。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  使用**AddNew**方法创建并初始化一个新的记录。 使用[支持](../../../ado/reference/ado-api/supports-method.md)方法替换**adAddNew** ( [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)值) 以验证是否可以将记录添加到当前**记录集**对象。  
   
  调用后**AddNew**方法，新的记录将成为当前记录和调用方法后仍当前[更新](../../../ado/reference/ado-api/update-method.md)方法。 由于新的记录追加到**记录集**，调用**MoveNext**更新后的末尾将移动**记录集**，这会让**EOF** True。 如果**记录集**对象不支持书签，你可能无法访问新的记录，一旦您移动到另一条记录。 具体取决于游标类型，你可能需要调用[Requery](../../../ado/reference/ado-api/requery-method.md)方法，以便可以访问新的记录。  

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - parameter collation [CLR integration]
 - collations [CLR integration]
 ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a169a625d2ee3e55257e1629d3043fbe9851ac8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ab94a6397d8b070af754fa5fd8dd47f9bd553630
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="collation-and-clr-integration-data-types"></a>排序规则和 CLR 集成数据类型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 **compareinfo 一起**对象处理通过排序规则。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]字符串编程接口 (Api) 使用的应用程序**compareinfo 一起**与关联属性**CultureInfo**当前线程来执行字符串比较的对象。 默认设置**CultureInfo**对象基于[!INCLUDE[msCoName](../../includes/msconame-md.md)]的计算机上的 Windows 区域设置[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在运行。 这将确定默认的比较语义，如果不显式**CultureInfo** ，为指定的比较**System.String**值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会显式更改**compareinfo 一起**到数据库或服务器排序规则的属性。 如果需要，用户必须设置相应**compareinfo 一起**其例程中的属性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 **compareinfo 一起**对象处理通过排序规则。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]字符串编程接口 (Api) 使用的应用程序**compareinfo 一起**与关联属性**CultureInfo**当前线程来执行字符串比较的对象。 默认设置**CultureInfo**对象基于[!INCLUDE[msCoName](../../includes/msconame-md.md)]的计算机上的 Windows 区域设置[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在运行。 这将确定默认的比较语义，如果不显式**CultureInfo** ，为指定的比较**System.String**值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会显式更改**compareinfo 一起**到数据库或服务器排序规则的属性。 如果需要，用户必须设置相应**compareinfo 一起**其例程中的属性。  
   
 ## <a name="parameter-collation"></a>参数排序规则  
  当你创建的公共语言运行时 (CLR) 例程，并将 CLR 方法的参数绑定到的类型是例程**SQLString**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建具有数据库的默认排序规则的参数实例包含调用的例程。 如果参数不是**SqlType** (例如，**字符串**而非**SQLString**)，从数据库的排序规则信息不与参数相关联。  

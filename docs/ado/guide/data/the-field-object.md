@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Field object [ADO]
+helpviewer_keywords:
+- Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0313fdb98c7babc97faa642d7fd71299fe4cf4a3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7d537c963fa1e93c07289380f8eed682768961b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-field-object"></a>字段对象
 每个**字段**对象通常对应于数据库表中的列。 但是，**字段**还可以表示指针到另一个**记录集**，调用一章。 异常，如章节列，将在本指南后面进行介绍。  
