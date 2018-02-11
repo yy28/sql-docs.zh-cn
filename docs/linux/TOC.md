@@ -35,7 +35,7 @@
 ### [安装 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
 ### [安装 SQL Server 全文搜索](sql-server-linux-setup-full-text-search.md)
 ### [安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-### [注册 GA 存储库](sql-server-linux-change-repo.md)
+### [配置存储库](sql-server-linux-change-repo.md)
 
 ## 配置
 ### [使用 mssql conf 配置](sql-server-linux-configure-mssql-conf.md)
@@ -85,6 +85,7 @@
 ##### [操作](sql-server-linux-availability-group-failover-ha.md)
 #### [仅为读取缩放创建]()
 ##### [配置 AG](sql-server-linux-availability-group-configure-rs.md)
+#### [配置跨平台（Windows 和 Linux）](sql-server-linux-availability-group-cross-platform.md)
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [开始使用安全功能](sql-server-linux-security-get-started.md)
