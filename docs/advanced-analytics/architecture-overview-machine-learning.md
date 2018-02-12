@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 737087692cff4d5b76336b1a31b58e2f9390abfc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的体系结构概述 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题介绍在 SQL Server 中支持的 Python 和 R 脚本执行的 extensibility framework 的目标。
 
@@ -60,7 +61,7 @@ SQL Server 2016 数据库引擎，以支持使用 SQL Server 的 R 脚本执行�
 
    此外，Microsoft 提供了一组提供与 SQL Server，包括数据转换、 压缩和优化针对每个受支持的语言集成的专有库。
 
-+ **Security**
++ **安全性**
 
    更佳的安全性意味着支持集成的 Windows 身份验证和基于密码的 SQL 登录名，作为凭据，也为安全处理进行数据保护和使用 SQL Server 受信任的快速启动板来管理外部脚本需依赖于 SQL Server执行和在脚本中使用的安全数据。
 

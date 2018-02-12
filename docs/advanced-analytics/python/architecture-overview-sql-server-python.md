@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4bfecc8ed96b445c0d44c11449114d1d6c087942
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>具有 Python 的机器学习服务的体系结构概述
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题概述如何与 SQL Server，包括支持外部脚本执行的数据库引擎和启用与 SQL Server 的 Python 的互操作性的新组件中的安全模型，组件集成 Python。 有关详细信息，请参阅链接的主题。
 

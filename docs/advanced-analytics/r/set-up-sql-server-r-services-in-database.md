@@ -16,18 +16,19 @@ keywords:
 - "设置 R Services"
 - "安装 SQL 机器学习"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 04f2502853e21968f2edaac927247eb45730d000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>设置 SQL Server 计算机学习 Services （数据库）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题介绍如何安装和配置以下机器学习支持在 SQL Server 中的数据库中分析的功能：
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
 
 + 具有的机器学习服务器**没有**SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序还包括机器学习组件，不需要数据库引擎，并且不会运行在 SQL Server 中的"独立"版本安装的选项。  我们通常建议你安装而不是托管 SQL Server 计算机的其他计算机上的此选项。
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序还包括机器学习组件，不需要数据库引擎，并且不会运行在 SQL Server 中的"独立"版本安装的选项。  我们通常建议你安装而不是托管 SQL Server 计算机的其他计算机上的此选项。
     
     [设置独立机器学习服务器](create-a-standalone-r-server.md)。
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 01/08/2018
 > * 所需安装后步骤： 启用机器学习中，并重新启动
 > * 可选的安装后步骤： 添加防火墙规则、 添加用户、 更改或配置服务帐户设置远程数据科学客户端。
 
-**入门**
+**要开始**
 
 1. 运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。
   
@@ -231,7 +232,7 @@ ms.lasthandoff: 01/08/2018
 
     | Hello |
     |----|
-    | @shouldalert|
+    | 1|
 
 
 8. 如果出现任何错误，继续执行到描述可能需要使后安装已完成，或者请参阅疑难解答指南的其他 （可选） 更改的部分：

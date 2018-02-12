@@ -12,18 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs: 
 ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e8aa8d51c54fb98b3851676ddedd367f476dd1fa
-ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
+ms.openlocfilehash: 256a8a58a61f679cd5b2981134403cc389733e75
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用来自 OLAP 多维数据集的数据
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **OlapR**包是一个 R 程序包时，提供用于机器学习 Server 和 SQL Server 的 microsoft，它允许你运行 MDX 查询以从 OLAP 多维数据集获取数据。 此程序包，你不需要创建链接的服务器或清理平展行集;你可以获取 OLAP 数据直接从。
 

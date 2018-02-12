@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0d1b3a2a69a08495b5860b3aef2587dd61d9327
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e33a91587f393c6c510bdb16fe9c71dc2f422eac
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="getting-started-with-machine-learning-in-sql-server"></a>开始使用 SQL Server 中的机器学习
+# <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server 机器学习入门
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本地和云：
 

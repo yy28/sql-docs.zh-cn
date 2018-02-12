@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 408e2503-5c7d-4ec4-9d3d-bba5a8c7661d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5c27e75bf6248ebb403235e339750cf935ee3a3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 275bda79d9c8cb74d871a4d13612847dc58592e8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>安装机器学习 Server （独立） 或 R Server （独立）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 安装程序包括用于安装的机器学习在 SQL Server 外部运行的服务器的选项。 此选项可能会很有用，如果你需要开发高性能计算机学习解决方案，可以使用远程计算上下文，或者，可以部署到多个平台，包括：
   
@@ -153,7 +154,7 @@ SQL Server 安装程序包括用于安装的机器学习在 SQL Server 外部运
 |机器学习服务器（独立） |  自 2017 年 SQL Server 安装向导 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
 |机器学习服务器（独立） |  Windows 独立安装程序 |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services（数据库内） |SQL Server 2016 安装程序向导|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|机器学习服务（数据库内） |自 2017 年 SQL Server 安装向导|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES` 或 `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|机器学习服务（数据库内） |自 2017 年 SQL Server 安装向导|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`或`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 
 ### <a name="development-tools"></a>开发工具
 

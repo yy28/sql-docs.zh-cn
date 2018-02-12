@@ -13,20 +13,22 @@ ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c6aa0cd9afcb3b125c73106272979d008c2062bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cc613d303fa3200c3460face71399223e00272e6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>创建简单的模拟 （SQL 和 R 深入）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是在数据科学深入教程中，如何使用中的最后一步[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 

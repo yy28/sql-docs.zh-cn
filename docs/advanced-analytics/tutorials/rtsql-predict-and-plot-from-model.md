@@ -14,18 +14,19 @@ dev_langs:
 - R
 - SQL
 ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 6aea91e6ed80a1697b1eb8004debef557496818c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>预测和绘制从模型 (SQL 快速入门中的 R)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 若要执行_评分_使用新数据，从表中获取训练的模型之一，然后调用一组新的基于预测的数据。 计分就是一个术语，有时用于数据科学中表示生成预测、 概率或基于送入训练的模型的新数据的其他值。
 

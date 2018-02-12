@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e393db396c7d41f7eca7851fa10544d697eac5c8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>SQL Server 中的 R 互操作性
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题侧重于运行 SQL Server 中的 R 的机制，并介绍 Microsoft R 和开放源代码。 之间的差异
 
@@ -32,11 +33,11 @@ ms.lasthandoff: 01/25/2018
 
 ### <a name="open-source-r-components"></a>开放源代码 R 组件
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 包括基础 R 包和工具的完整发行版。 有关基础发行版包含哪些组件的详细信息，请参阅安装期间在以下默认位置安装的文档：`C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 包括基本 R 包和工具的完整分发。 有关基础发行版包含哪些组件的详细信息，请参阅安装期间在以下默认位置安装的文档：`C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 在安装 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 的过程中，必须同意 GNU 公共版的许可条款。 然后，无需进一步的修改即可运行标准 R 包，就像运行 R 的其他任何开源发行版一样。
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 不会以任何方式修改 R 运行时。 R 运行时在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 进程的外部执行，并且可独立于 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 运行。 但是，我们强烈建议不要在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 使用 R 时运行这些工具，以免发生资源争用。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 不会修改 R 运行时以任何方式。 R 运行时在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 进程的外部执行，并且可独立于 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 运行。 但是，我们强烈建议不要在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 使用 R 时运行这些工具，以免发生资源争用。
 
 可在与实例关联的文件夹中找到与特定 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例关联的 R 基础包发行版。 例如，如果在默认实例上安装 R Services，R 库位于此文件夹中默认情况下：
 

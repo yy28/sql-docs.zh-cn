@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abc79124569635f3aafaaa309e25e2c827fa5d9b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>设置 Python 机器学习服务 （数据库）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   本文介绍如何安装 Python 通过运行所需的组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导中，并按照交互式提示。
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 
 安装完成后，重新配置以允许使用外部的可执行文件的脚本执行的实例。 你可能需要进行其他更改到服务器以支持机器学习工作负荷。 配置更改通常需要重新启动实例或重新启动快速启动板服务。
 
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>必要條件
 
 + SQL Server 2017 是必需的。 在以前版本的 SQL Server 上不支持 Python 集成。
 + 请务必安装数据库引擎。 运行 Python 脚本数据库中需要的 SQL Server 实例。
@@ -273,7 +274,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
   
      [服务器内存服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
--   更改可以通过启动的辅助帐户数[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+-   更改可以通过启动的辅助帐户数 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
      [为 SQL Server R Services 中修改用户帐户池](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 

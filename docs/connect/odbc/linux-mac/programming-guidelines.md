@@ -1,5 +1,5 @@
 ---
-title: "编程指南 |Microsoft 文档"
+title: "编程指南 (ODBC Driver for SQL Server) |Microsoft 文档"
 ms.custom: 
 ms.date: 01/11/2018
 ms.prod: sql-non-specified
@@ -8,18 +8,19 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 118099ee43fa1644c8026f968dc041ea148588f1
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/12/2018
 
 编程功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 macOS 和 Linux 上基于在 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]本机客户端 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]本机客户端将基于 Windows 数据访问组件中的 ODBC ([ODBC 程序员参考](http://go.microsoft.com/fwlink/?LinkID=45250))。  
 
-ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定功能包括`/usr/local/include/msodbcsql.h`后的 unixODBC 标头 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 然后，使用的相同符号名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-就像在 Windows ODBC 应用程序中的特定项。
+ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定功能包括`/usr/local/include/msodbcsql.h`后的 unixODBC 标头 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 然后，使用的相同符号名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-你将在你 Windows ODBC 应用程序的特定项。
 
 ## <a name="available-features"></a>可用功能  
 以下各节从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]适用于 ODBC 的本机客户端文档 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) 时在 macOS 和 Linux 上使用的 ODBC 驱动程序都有效：  
@@ -54,7 +55,7 @@ ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssN
 以下功能不验证在 macOS 和 Linux 上的 ODBC 驱动程序的此版本中正常工作：
 
 -   故障转移群集连接
--   [透明网络 IP 解析](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)
+-   [透明网络 IP 解析](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)（之前 ODBC 驱动程序 17）
 -   [高级驱动程序跟踪](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 不在 macOS 和 Linux 上的 ODBC 驱动程序的此版本中提供以下功能： 
@@ -94,27 +95,27 @@ ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssN
 |CP1256|阿拉伯语|
 |CP1257|波罗的语|
 |CP1258|越南语|
-|ISO 8859-1 / CP1252|Latin 1|
-|ISO 8859-2 / CP1250|Latin 2|
-|ISO 8859-3|Latin 3|
-|ISO 8859-4|Latin-4|
-|ISO 8859-5|拉丁/西里尔|
-|ISO 8859-6|Latin/阿拉伯语|
-|ISO 8859-7|拉丁语/希腊语|
-|ISO 8859-8 / CP1255|希伯来语|
-|ISO 8859-9 / CP1254|土耳其语|
-|ISO 8859-13|Latin 7|
-|ISO 8859-15|拉丁语 9|
+|ISO-8859-1 / CP1252|Latin 1|
+|ISO-8859-2 / CP1250|Latin 2|
+|ISO-8859-3|Latin 3|
+|ISO-8859-4|Latin-4|
+|ISO-8859-5|拉丁/西里尔|
+|ISO-8859-6|Latin/阿拉伯语|
+|ISO-8859-7|拉丁语/希腊语|
+|ISO-8859-8 / CP1255|希伯来语|
+|ISO-8859-9 / CP1254|土耳其语|
+|ISO-8859-13|Latin 7|
+|ISO-8859-15|拉丁语 9|
 
-在连接时该驱动程序检测到的进程中加载的当前区域设置。 如果它使用上面的编码之一，该驱动程序将使用 SQLCHAR （窄字符） 数据; 该编码否则，它默认为 utf-8。 由于所有进程启动的"C"区域设置中，默认情况下 （并因此导致为 utf-8 的驱动程序添加到默认），如果应用程序需要使用上面的编码之一，它应使用**setlocale**函数适当之前设置的区域设置连接;通过显式指定所需的区域设置或使用空字符串，例如`setlocale(LC_ALL, "")`使用环境的区域设置。
+在连接时该驱动程序检测到的进程中加载的当前区域设置。 如果它使用上面的编码之一，驱动程序使用 SQLCHAR （窄字符） 数据; 该编码否则，它默认为 utf-8。 由于所有进程启动的"C"区域设置中，默认情况下 （并因此导致为 utf-8 的驱动程序添加到默认），如果应用程序需要使用上面的编码之一，它应使用**setlocale**函数适当之前设置的区域设置连接;通过显式指定所需的区域设置或使用空字符串，例如`setlocale(LC_ALL, "")`使用环境的区域设置。
 
-因此，在典型 Linux 或 Mac 环境中其中编码为 utf-8，ODBC 驱动程序 17 从 13 或 13.1 升级的用户将不会看到任何差异。 但是，应用程序使用通过上面的列表中的非 utf-8 编码`setlocale()`将需要使用向/从驱动程序而不是 utf-8 数据该编码。
+因此，在典型 Linux 或 Mac 环境中其中编码为 utf-8，ODBC 驱动程序 17 从 13 或 13.1 升级的用户将不会看到任何差异。 但是，应用程序使用通过上面的列表中的非 utf-8 编码`setlocale()`需要使用向/从驱动程序而不是 utf-8 数据该编码。
 
 SQLWCHAR 数据必须是 UTF-16LE (Little Endian)。
 
 当绑定使用 SQLBindParameter，输入的参数时如果窄字符 SQL 类型，如指定 SQL_VARCHAR，驱动程序将提供的数据转换从客户端为默认值 （通常代码页 1252年） 编码[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]编码。 对于输出参数，该驱动程序将从与向客户端编码的数据关联的排序规则信息中指定的编码转换。 但是，可能会丢失数据-编码中的字符源无法在目标编码中表示会将转换为一个问号 ('？ ')。
 
-若要避免这种数据丢失，绑定输入的参数时，指定一个 Unicode SQL 字符类型，例如 SQL_NVARCHAR。 在这种情况下，该驱动程序会将客户端编码为 utf-16，可以表示所有 Unicode 字符转换。 此外，目标列或服务器上的参数还必须是 Unicode 类型 (**nchar**， **nvarchar**， **ntext**) 或另一个使用排序规则/编码，可以表示原始的源数据的所有字符。 为避免数据丢失与 output 参数，指定是 Unicode SQL 类型和一个 Unicode C 类型 (SQL_C_WCHAR)，导致驱动程序 utf-16; 的形式返回数据或窄的 C 类型，并确保客户端编码可以表示源数据 （这是始终可能使用 utf-8。） 的所有字符
+若要避免这种数据丢失，绑定输入的参数时，指定一个 Unicode SQL 字符类型，例如 SQL_NVARCHAR。 在这种情况下，该驱动程序将从客户端编码为 utf-16，可以表示所有 Unicode 字符转换。 此外，目标列或服务器上的参数还必须是 Unicode 类型 (**nchar**， **nvarchar**， **ntext**) 或另一个使用排序规则/编码，这可以表示原始的源数据的所有字符。 为避免数据丢失与 output 参数，指定是 Unicode SQL 类型和一个 Unicode C 类型 (SQL_C_WCHAR)，导致驱动程序 utf-16; 的形式返回数据或窄的 C 类型，并确保客户端编码可以表示源数据 （这是始终可能使用 utf-8。） 的所有字符
 
 有关排序规则和编码的详细信息，请参阅[Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)。
 

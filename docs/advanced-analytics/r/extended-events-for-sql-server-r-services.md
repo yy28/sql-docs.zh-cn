@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d5e8d61735b5a40f178c76ccb6549150a2e9f0ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的扩展的事件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 提供了一套用于故障排除相关的操作的扩展事件[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]、 以及 Python 或 R 作业发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
@@ -95,7 +96,7 @@ SQL Server 机器学习服务开始在 SQL Server 进程外部运行某些服务
   
     若要捕获与 Launchpad 相关的事件，请将 *.config* 文件放在 SQL Server 实例的 Binn 目录中。  在默认安装中，这将是：
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`的用户。  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`中创建已分区表或索引。  
   
 + **BXLServer**是支持与外部脚本语言，如 R 或 Python 的 SQL 可扩展性的附属进程。 为每个外部语言实例启动时 BxlServer 的单独实例。
   

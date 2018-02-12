@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升级 SQL Server 实例中的机器学习组件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍的过程_绑定_，可以用于升级机器学习在 SQL Server 中使用的组件。 绑定的进程锁定服务器到基于在版本的机器学习服务器上的更新频率、 而不是使用 SQL Server 版本和更新计划。
 
