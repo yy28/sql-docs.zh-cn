@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>什么是 SQL Server 中的机器学习服务中的新增功能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 SQL Server 2016，Microsoft 引入了 SQL Server R Services，通过与 SQL Server 数据库引擎集成 R 语言支持企业级数据科学的功能。
 
@@ -60,7 +61,7 @@ SQL Server 开发人员访问到广泛的 Python 库从开放源生态系统，�
 
 + 在 Microsoft 机器学习 Server （独立版） 中的 Python 支持
 
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]包括 Microsoft 机器学习 Server 的独立版本安装的选项。 通过使用机器学习服务器，您可以分发，而无需使用 SQL Server 扩展 R 或 Python 代码。
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] 包括 Microsoft 机器学习 Server 的独立版本安装的选项。 通过使用机器学习服务器，您可以分发，而无需使用 SQL Server 扩展 R 或 Python 代码。
 
 ### <a name="linux-support"></a>Linux 支持
 
@@ -86,7 +87,7 @@ SQL Server 开发人员访问到广泛的 Python 库从开放源生态系统，�
 
     **Mrsdeploy**程序包以进行[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]和[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]支持 Python 模型和脚本作为 web 服务的部署。 它的工作原理的示例，请参阅[发布和使用的 Python 代码](python/publish-consume-python-code.md)。
 
-+ “性能”
++ 性能
 
     Microsoft 已推送的边界进行评分的性能。 与数据库中评分，我们处理每 100 万行倒数第二次使用 R 模型。 在此版本中，为新功能**实时评分**和**本机评分**单行更行和批处理计分中支持更好的性能。
 

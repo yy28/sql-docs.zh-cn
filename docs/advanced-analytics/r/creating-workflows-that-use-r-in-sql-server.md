@@ -1,6 +1,7 @@
 ---
 title: "使用 R 创建 BI 工作流 |Microsoft 文档"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 53359b392f1936fa968d22b8ae58c1f3816771d8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>使用 R 创建 BI 工作流
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 关系数据库是一种高度优化的技术，用于交付进行事务处理、存储和数据查询的可缩放解决方案。
 
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/25/2018
 
 这篇博客文章演示用于操作 R 代码使用的基本技术[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
 
-+ 调用 R 使用执行 SQL 任务，以生成数据，并保存到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ 调用 R 使用执行 SQL 任务，以生成数据，并保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 + 使用存储过程训练 R 模型并将其存储在数据库中
 
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/25/2018
 
 借助 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，你可以在 R 中通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程运行复杂的操作，这些操作可通过各种企业报告工具（包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Power BI）轻松处理。
 
-+ 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]直观显示从 R 脚本返回的图形对象
++ 直观显示从 R 脚本使用返回的图形对象 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + 在 Power BI 中使用表
 
 ### <a name="examples"></a>示例

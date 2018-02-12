@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 99f42ddd8d906799c02b05d856597db7c44a8eb6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 37362b8a3f6d8b41fe6b52f8445b9ba08ca54aa3
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server 机器学习服务
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 自 2017 年 1 机器学习服务 (以前 SQL Server 2016 R Services) 提供一个平台，用于开发和部署发掘新见解的智能应用程序。 由于与集成机器学习[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以使数据接近的分析，并消除成本和与数据移动相关的安全风险。
   

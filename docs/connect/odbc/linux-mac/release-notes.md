@@ -8,21 +8,36 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 895280e7c7c8924ec2ec5eea55049f87d9206c4f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>在 Linux 和 macOS 上的 SQL Server 的 Microsoft ODBC 驱动程序的发行说明
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>中[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC 驱动程序 17[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 Linux 和 macOS 上
+
+Azure SQL 管理 （扩展特邀预览阶段） 的实例。 请注意使用托管实例时有一些差异：
+-   不支持 FILESTREAM 
+-   本地文件系统访问是不受支持，但需要 tracefiles 之类的内容 
+-   从不支持的本地路径创建 UDT 
+-   不支持 Windows 集成身份验证 
+-   不支持的 DTC 
+-   'sa' 帐户不存在 （默认帐户称为 cloudSA）
+-   TDS 令牌错误 (0xAA) 返回不正确的服务器名称
+-   不支持数据库名称中的特殊字符 
+-   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 不支持
+-   错误消息将始终显示在英语，而不考虑语言设置 （与 Azure 相同） 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>中[!INCLUDE[msCoName](../../../includes/msconame_md.md)]的 ODBC Driver 13.1[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 Linux 和 macOS 上  
 

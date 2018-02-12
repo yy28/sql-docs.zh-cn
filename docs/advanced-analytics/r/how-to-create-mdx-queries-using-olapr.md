@@ -10,20 +10,22 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3ac889212aaccb25d0c738195e2e2e04c3c1a5d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>如何创建使用 olapR 的 MDX 查询
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)包支持针对托管在 SQL Server Analysis Services 多维数据集的 MDX 查询。 你可以生成针对现有多维数据集的查询、 浏览维度和其他多维数据集对象，并粘贴中现有的 MDX 查询以检索数据。
 
@@ -202,7 +204,7 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 | 附件|
 |自行车|
 |服装|
-|_组件_|
+|_Components_|
 |-> 程序集组件|
 |-> 程序集组件|
 

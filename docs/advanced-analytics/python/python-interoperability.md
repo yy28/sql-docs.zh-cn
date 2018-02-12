@@ -14,19 +14,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 71b578fb47a7bd7881f2681206a0f69f5c37facb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>与 SQL Server 的 Python 互操作性
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题介绍了当你启用该功能会安装的 Python 组件**机器学习服务 （数据库）**和选择 Python 作为语言。
 
 ## <a name="python-components"></a>Python 组件
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]不会修改 Python 可执行文件。 Python 运行时安装独立于 SQL 工具和外部执行[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]过程。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 不会修改 Python 可执行文件。 Python 运行时安装独立于 SQL 工具和外部执行[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]过程。
 
 具有特定关联分发[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]可以与实例关联的文件夹中找到实例。
 
