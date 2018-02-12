@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,27 +18,27 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>定位的 Update 和 Delete 语句
 应用程序可以更新或删除中定位的更新的结果集的当前行或删除语句。 定位 update 和 delete 语句支持的某些数据源，但不是所有异常。 若要确定是否定位数据源支持更新和 delete 语句，应用程序调用**SQLGetInfo**使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1*信息类型*（具体取决于游标的类型）。 请注意 ODBC 游标库模拟定位的 update 和 delete 语句。  
   
  若要使用定位的 update 或 delete 语句，应用程序必须创建一个结果集与**选择更新**语句。 此语句的语法是：  
   
- **选择**[**所有**&#124;**DISTINCT**]*选择列表*  
+ **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
- **从***表引用列表*  
+ **FROM** *table-reference-list*  
   
- [**其中***搜索条件*]  
+ [**WHERE** *search-condition*]  
   
  **有关更新的**[*列名称*[**，** *列名称*]...]  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  **更新***表名称*  
   
- **设置***列标识符*  **=**  {*表达式*&#124;**NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
  [**，** *列标识符*  **=**  {*表达式*&#124;**NULL**}]...  
   
