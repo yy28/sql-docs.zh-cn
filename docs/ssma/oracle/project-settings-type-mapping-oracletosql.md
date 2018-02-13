@@ -8,20 +8,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
 ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>项目设置 （类型映射） (OracleToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Oracle 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 若要指定设置的当前对象或对象的类，使用**类型映射**主 SSMA 窗口选项卡。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 下表显示**类型映射**选项卡上选项：  
   
 **源类型**  
@@ -66,9 +67,9 @@ ms.lasthandoff: 12/21/2017
 |Oracle 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float [53]|  
-|binary_float|float [53]|  
-|binary_integer|ssNoversion|  
+|binary_double|float[53]|  
+|binary_float|float[53]|  
+|binary_integer|int|  
 |blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -76,16 +77,16 @@ ms.lasthandoff: 12/21/2017
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |Clob|varchar(max)|  
-|日期|datetime2 [0]|  
-|dec|dec [38] [0]|  
-|Decimal|float [53]|  
-|双精度|float [53]|  
-|FLOAT|float [53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|date|datetime2[0]|  
+|dec|dec[38][0]|  
+|decimal|float[53]|  
+|双精度|float[53]|  
+|float|float[53]|  
+|int|int|  
+|integer|int|  
 |long|varchar(max)|  
 |长时间原始|varbinary(max)|  
-|长时间原始 [\*...8000]<sup>*</sup>|varbinary [*]|  
+|long raw[\*..8000]<sup>*</sup>|varbinary[*]|  
 |长时间原始 [8001..\*]<sup>*</sup>|varbinary(max)|  
 |国家/地区 char|nvarchar(max)|  
 |不同的国家/地区 char|nvarchar(max)|  
@@ -94,27 +95,27 @@ ms.lasthandoff: 12/21/2017
 |不同的国家/地区字符<sup>*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|number|float [53]|  
-|NUMERIC|float [53]|  
+|number|float[53]|  
+|numeric|float[53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|ssNoversion|  
+|pls_integer|int|  
 |raw|varbinary(max)|  
-|REAL|float [53]|  
-|Rowid|UNIQUEIDENTIFIER|  
-|Signtype|SMALLINT|  
-|SMALLINT|SMALLINT|  
+|real|float[53]|  
+|Rowid|uniqueidentifier|  
+|Signtype|smallint|  
+|smallint|smallint|  
 |string|varchar(max)|  
-|TIMESTAMP|datetime2|  
+|timestamp|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |时区的时间戳|datetimeoffset|  
-|Urowid|UNIQUEIDENTIFIER|  
+|Urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|Xml 类型|xml|  
+|xmltype|xml|  
   
-<sup>*</sup>适用于返回值类型映射仅。  
+<sup>*</sup> 适用于返回值类型映射仅。  
   
-<sup>**</sup>适用于自变量类型映射仅。  
+<sup>**</sup> 适用于自变量类型映射仅。  
   
 ### <a name="default-column-type-mapping"></a>默认列类型映射  
 下表包含列的默认类型映射。  
@@ -122,67 +123,67 @@ ms.lasthandoff: 12/21/2017
 |Oracle 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float [53]|  
-|binary_float|float [53]|  
+|binary_double|float[53]|  
+|binary_float|float[53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|不同的 char [*...\*]|varchar [*]|  
-|char [*...\*]|char [*]|  
+|不同的 char [*...\*]|varchar[*]|  
+|char[*..\*]|char[*]|  
 |character|char|  
-|不同的字符 [*...\*]|varchar [*]|  
-|字符 [*...\*]|char [*]|  
+|不同的字符 [*...\*]|varchar[*]|  
+|character[*..\*]|char[*]|  
 |Clob|varchar(max)|  
-|日期|datetime2 [0]|  
-|dec|dec [38] [0]|  
-|dec [*...\*]|dec [*] [0]|  
-|dec [*...\*][\*..\*]|dec[*][\*]|  
-|Decimal|小数 [38] [0]|  
-|十进制 [*...\*]|小数 [*] [0]|  
-|十进制 [*...\*][\*..\*]|小数 [*] [\*]|  
-|双精度|float [53]|  
-|FLOAT|float [53]|  
-|float [*...53]|float [*]|  
-|float [54..*]|float [53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|date|datetime2[0]|  
+|dec|dec[38][0]|  
+|dec[*..\*]|dec[*][0]|  
+|dec[*..\*][\*..\*]|dec[*][\*]|  
+|decimal|decimal[38][0]|  
+|decimal[*..\*]|decimal[*][0]|  
+|decimal[*..\*][\*..\*]|decimal[*][\*]|  
+|双精度|float[53]|  
+|float|float[53]|  
+|float[*..53]|float[*]|  
+|float[54..*]|float[53]|  
+|int|int|  
+|integer|int|  
 |long|varchar(max)|  
 |长时间原始|varbinary(max)|  
-|长时间原始 [*...8000]|varbinary [*]|  
+|长时间原始 [*...8000]|varbinary[*]|  
 |长时间原始 [8001..*]|varbinary(max)|  
 |long varchar|varchar(max)|  
-|长 [*...8000]|varchar [*]|  
-|长 [8001..*]|varchar(max)|  
+|long[*..8000]|varchar[*]|  
+|long[8001..*]|varchar(max)|  
 |国家/地区 char|NCHAR|  
-|不同的国家/地区 char [*...\*]|nvarchar [*]|  
-|国家/地区 char [*...\*]|nchar [*]|  
+|不同的国家/地区 char [*...\*]|nvarchar[*]|  
+|国家/地区 char [*...\*]|nchar[*]|  
 |国家/地区字符|NCHAR|  
-|不同的国家/地区字符 [*...\*]|nvarchar [*]|  
-|国家/地区字符 [*...\*]|nchar [*]|  
+|不同的国家/地区字符 [*...\*]|nvarchar[*]|  
+|国家/地区字符 [*...\*]|nchar[*]|  
 |NCHAR|NCHAR|  
-|nchar [*]|nchar [*]|  
+|nchar[*]|nchar[*]|  
 |Nclob|nvarchar(max)|  
-|number|float [53]|  
-|数字 [*...\*]|数字 [*]|  
-|数字 [*...\*][\*..\*]|数字 [*] [\*]|  
-|NUMERIC|NUMERIC|  
-|数字 [*...\*]|数字 [*]|  
-|数字 [*...\*][\*..\*]|数字 [*] [\*]|  
-|nvarchar2 [*...\*]|nvarchar [*]|  
-|原始 [*...\*]|varbinary [*]|  
-|REAL|float [53]|  
-|Rowid|UNIQUEIDENTIFIER|  
-|SMALLINT|SMALLINT|  
-|TIMESTAMP|datetime2|  
+|number|float[53]|  
+|number[*..\*]|numeric[*]|  
+|number[*..\*][\*..\*]|numeric[*][\*]|  
+|numeric|numeric|  
+|numeric[*..\*]|numeric[*]|  
+|numeric[*..\*][\*..\*]|numeric[*][\*]|  
+|nvarchar2[*..\*]|nvarchar[*]|  
+|raw[*..\*]|varbinary[*]|  
+|real|float[53]|  
+|Rowid|uniqueidentifier|  
+|smallint|smallint|  
+|timestamp|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
-|与本地时区的时间戳 [*...\*]|datetimeoffset [*]|  
+|与本地时区的时间戳 [*...\*]|datetimeoffset[*]|  
 |时区的时间戳|datetimeoffset|  
-|时区的时间戳 [*...\*]|datetimeoffset [*]|  
-|时间戳 [*...\*]|datetime2 [*]|  
-|Urowid|UNIQUEIDENTIFIER|  
-|urowid [*...\*]|UNIQUEIDENTIFIER|  
-|varchar [*...\*]|varchar [*]|  
-|varchar2 [*...\*]|varchar [*]|  
-|Xml 类型|xml|  
+|时区的时间戳 [*...\*]|datetimeoffset[*]|  
+|timestamp[*..\*]|datetime2[*]|  
+|Urowid|uniqueidentifier|  
+|urowid[*..\*]|uniqueidentifier|  
+|varchar[*..\*]|varchar[*]|  
+|varchar2[*..\*]|varchar[*]|  
+|Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>默认本地变量的类型映射  
 下表包含本地变量的默认类型映射。  
@@ -190,86 +191,86 @@ ms.lasthandoff: 12/21/2017
 |Oracle 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float [53]|  
-|binary_float|float [53]|  
-|binary_interger|ssNoversion|  
+|binary_double|float[53]|  
+|binary_float|float[53]|  
+|binary_interger|int|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
-|不同的 char [*...8000]|varchar [*]|  
-|不同的 char [8001..*]|varchar(max)|  
-|char [*...8000]|char [*]|  
-|char [8001..*]|varchar(max)|  
+|char varying[*..8000]|varchar[*]|  
+|char varying[8001..*]|varchar(max)|  
+|char[*..8000]|char[*]|  
+|char[8001..*]|varchar(max)|  
 |字符|char|  
-|不同的字符 [*...8000]|varchar [*]|  
-|不同的字符 [8001..*]|varchar(max)|  
-|字符 [*...8000]|char [*]|  
-|字符 [8001..*]|varchar(max)|  
+|character varying[*..8000]|varchar[*]|  
+|character varying[8001..*]|varchar(max)|  
+|character[*..8000]|char[*]|  
+|character[8001..*]|varchar(max)|  
 |Clob|varchar(max)|  
-|日期|datetime2 [0]|  
-|dec|dec [38] [0]|  
-|dec [*...\*]|dec [*] [0]|  
-|dec [*...\*][\*..\*]|dec[*][\*]|  
-|Decimal|小数 [38] [0]|  
-|十进制 [*...\*]|小数 [*] [0]|  
-|十进制 [*...\*][\*..\*]|小数 [*] [\*]|  
-|双精度|float [53]|  
-|float|float [53]|  
-|float [*...53]|float [*]|  
-|float [54..*]|float [53]|  
-|smallint|ssNoversion|  
-|Integer|ssNoversion|  
-|整数 [*...\*]|数字 [*] [0]|  
+|date|datetime2[0]|  
+|dec|dec[38][0]|  
+|dec[*..\*]|dec[*][0]|  
+|dec[*..\*][\*..\*]|dec[*][\*]|  
+|decimal|decimal[38][0]|  
+|decimal[*..\*]|decimal[*][0]|  
+|decimal[*..\*][\*..\*]|decimal[*][\*]|  
+|双精度|float[53]|  
+|Float|float[53]|  
+|float[*..53]|float[*]|  
+|float[54..*]|float[53]|  
+|int|int|  
+|Integer|int|  
+|integer[*..\*]|numeric[*][0]|  
 |Long|varchar(max)|  
 |长时间原始|varbinary(max)|  
-|长时间原始 [*...8000]|varbinary [*]|  
+|长时间原始 [*...8000]|varbinary[*]|  
 |长时间原始 [8001..*]|varbinary(max)|  
 |国家/地区 char|NCHAR|  
-|不同的国家/地区 char [*...4000]|nvarchar [*]|  
+|不同的国家/地区 char [*...4000]|nvarchar[*]|  
 |不同的国家/地区 char [4001..*]|nvarchar(max)|  
-|国家/地区 char [*...4000]|nchar [*]|  
+|国家/地区 char [*...4000]|nchar[*]|  
 |国家/地区 char [4001..*]|nvarchar(max)|  
 |国家/地区字符|NCHAR|  
-|国家/地区字符 [*...4000]|nvarchar [*]|  
-|国家/地区字符 [4001..*]|nvarchar(max)|  
-|不同的国家/地区字符 [*...4000]|nvarchar [*]|  
+|national character[*..4000]|nvarchar[*]|  
+|national character[4001..*]|nvarchar(max)|  
+|不同的国家/地区字符 [*...4000]|nvarchar[*]|  
 |不同的国家/地区字符 [4001..*]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|nchar [*...4000]|nchar [*]|  
-|nchar [4001..*]|nvarchar(max)|  
-|不同的 nchar [*...4000]|nvarchar [*]|  
+|nchar[*..4000]|nchar[*]|  
+|nchar[4001..*]|nvarchar(max)|  
+|不同的 nchar [*...4000]|nvarchar[*]|  
 |不同的 nchar [4001..*]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|Number|float [53]|  
-|数字 [*...\*]|数字 [*]|  
-|数字 [*...\*][\*..\*]|数字 [*] [\*]|  
-|数字|数字 [38] [0]|  
-|数字 [*...\*]|数字 [*]|  
-|数字 [*...\*][\*..\*]|数字 [*] [\*]|  
-|nvarchar2 [*...4000]|nvarchar [*]|  
-|nvarchar2 [4001..*]|nvarchar(max)|  
-|pls_integer|ssNoversion|  
-|原始 [*...8000]|varbinary [*]|  
-|原始 [8001..*]|varbinary(max)|  
-|Real|float [53]|  
-|Rowid|UNIQUEIDENTIFIER|  
-|Signtype|SMALLINT|  
-|Smallint|SMALLINT|  
-|字符串 [*...8000]|varchar [*]|  
-|字符串 [8001..*]|varchar(max)|  
-|TIMESTAMP|datetime2|  
+|Number|float[53]|  
+|number[*..\*]|numeric[*]|  
+|number[*..\*][\*..\*]|numeric[*][\*]|  
+|数字|numeric[38][0]|  
+|numeric[*..\*]|numeric[*]|  
+|numeric[*..\*][\*..\*]|numeric[*][\*]|  
+|nvarchar2[*..4000]|nvarchar[*]|  
+|nvarchar2[4001..*]|nvarchar(max)|  
+|pls_integer|int|  
+|raw[*..8000]|varbinary[*]|  
+|raw[8001..*]|varbinary(max)|  
+|Real|float[53]|  
+|Rowid|uniqueidentifier|  
+|Signtype|smallint|  
+|Smallint|smallint|  
+|string[*..8000]|varchar[*]|  
+|string[8001..*]|varchar(max)|  
+|timestamp|datetime2|  
 |与本地时区的时间戳|datetimeoffset|  
 |时区的时间戳|datetimeoffset|  
-|与本地时区的时间戳 [*...\*]|datetimeoffset [*]|  
-|时区的时间戳 [*...\*]|datetimeoffset [*]|  
-|时间戳 [*...\*]|datetime2 [*]|  
-|Urowid|UNIQUEIDENTIFIER|  
-|urowid [*...\*]|UNIQUEIDENTIFIER|  
-|varchar [*...8000]|varchar [*]|  
-|varchar [8001..*]|varchar(max)|  
-|varchar2 [*...8000]|varchar [*]|  
-|varchar2 [8001..*]|varcha(max)|  
-|Xml 类型|xml|  
+|与本地时区的时间戳 [*...\*]|datetimeoffset[*]|  
+|时区的时间戳 [*...\*]|datetimeoffset[*]|  
+|timestamp[*..\*]|datetime2[*]|  
+|Urowid|uniqueidentifier|  
+|urowid[*..\*]|uniqueidentifier|  
+|varchar[*..8000]|varchar[*]|  
+|varchar[8001..*]|varchar(max)|  
+|varchar2[*..8000]|varchar[*]|  
+|varchar2[8001..*]|varcha(max)|  
+|Xmltype|xml|  
   
 ## <a name="see-also"></a>另请参阅  
 [用户界面参考 &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
