@@ -26,10 +26,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5ff3fcef1362333dc1ac2de5774d63ce025b8557
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="multiple-files-connection-manager"></a>多文件连接管理器
   多文件连接管理器使包可以在运行时引用现有的文件和文件夹，或者创建文件和文件夹。  

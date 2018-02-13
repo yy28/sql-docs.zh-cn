@@ -1,6 +1,6 @@
 ---
 title: "在 Linux 上安装 SQL Server 代理 |Microsoft 文档"
-description: "本主题介绍如何在 Linux 上安装 SQL Server 代理。"
+description: "本文介绍如何在 Linux 上安装 SQL Server 代理。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: 873c2da961db577889a3fca4139e325083d609e9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7db50a59a4a6ce9ab7aa416e4ac8d597449541b7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安装 SQL Server 代理
 
@@ -53,7 +53,7 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果你需要的脱机安装，查找中的 SQL Server 代理包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后，使用主题中所述的相同脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果你需要的脱机安装，查找中的 SQL Server 代理包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后使用相同的脱机安装步骤文所述[安装 SQL Server](sql-server-linux-setup.md#offline)。
 
 ## <a name="ubuntu">在 Ubuntu 上安装</a>
 
@@ -73,7 +73,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果你需要的脱机安装，查找中的 SQL Server 代理包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后，使用主题中所述的相同脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果你需要的脱机安装，查找中的 SQL Server 代理包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后使用相同的脱机安装步骤文所述[安装 SQL Server](sql-server-linux-setup.md#offline)。
 
 ## <a name="SLES">在 SLES 上安装</a>
 
@@ -94,7 +94,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-如果你需要的脱机安装，查找中的 SQL Server 代理包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后，使用主题中所述的相同脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果你需要的脱机安装，查找中的 SQL Server 代理包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后使用相同的脱机安装步骤文所述[安装 SQL Server](sql-server-linux-setup.md#offline)。
 
 ## <a name="next-steps"></a>后续步骤
 有关如何使用 SQL Server 代理来创建、 计划和运行作业的详细信息，请参阅[在 Linux 上运行的 SQL Server 代理作业](sql-server-linux-run-sql-server-agent-job.md)。

@@ -12,26 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f45c7bfd04d974f661756fb06cacda3d34cb808d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 82106a146c4c491ebc48da493ab325c7553b7edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQL Server 中未安装 SQLXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]之前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，随发布 SQLXML 4.0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和已默认安装的所有一部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除版本[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不再包括 SQLXML 的最新版本 (SQLXML 4.0 SP1)。 若要安装 SQLXML 4.0 SP1，请从[SQLXML 4.0 SP1 的安装位置](https://www.microsoft.com/en-us/download/details.aspx?id=30403)。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前，SQLXML 4.0 随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起发布，是所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本（[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 除外）默认安装的一部分。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不再包括 SQLXML 的最新版本 (SQLXML 4.0 SP1)。 若要安装 SQLXML 4.0 SP1，请从[SQLXML 4.0 SP1 的安装位置](https://www.microsoft.com/en-us/download/details.aspx?id=30403)。  
   
  如果应用程序在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和需要 SQLXML 4.0，你必须下载并安装 SQLXML 4.0 SP1。  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>在使用 SQLOLEDB 和 SQL Server Native Client OLE DB 访问接口的新数据类型时 SQLXML 4.0 SP1 的行为  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了以下使用 SQLXML 的开发人员可能想要使用的数据类型：  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了以下使用 SQLXML 的开发人员可能想要使用的数据类型：  
   
--   **Date**  
+-   **日期**  
   
 -   **Time**  
   

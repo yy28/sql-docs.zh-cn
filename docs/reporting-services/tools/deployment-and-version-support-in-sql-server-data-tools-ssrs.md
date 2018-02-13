@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的部署和版本支持 (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支持以下方案：  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="bkmk_SupportedVersions"></a> 支持的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，是 32 位报表服务器项目开发环境，根据设计，它不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的计算机上运行，也不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的服务器上安装。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，是 32 位报表服务器项目开发环境，根据设计，它不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的计算机上运行，也不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的服务器上安装。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
   
  下表说明了可在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创作和发布报表的支持版本。  
   

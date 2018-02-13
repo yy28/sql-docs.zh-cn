@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8954831cd600a5e10ec9e98879d8d68568c837d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f704e45b165ecb4e29d909bcce09f7af92fb0989
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路径 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]XPath 查询表达式的形式指定。 具有各种各样的表达式。 一个位置路径是一个表达式，它选择相对于上下文节点的一组节点。 对位置路径进行求值的结果为节点集。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XPath 查询以表达式形式指定。 具有各种各样的表达式。 一个位置路径是一个表达式，它选择相对于上下文节点的一组节点。 对位置路径进行求值的结果为节点集。  
   
 ## <a name="types-of-location-paths"></a>位置路径的类型  
  位置路径可能采用以下任一形式：  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="location-steps"></a>位置步骤  
  位置路径（绝对或相对）由位置步骤组成，而位置步骤包含三个部分：  
   
--   **Axis**  
+-   **轴**  
   
      轴指定根据位置步骤和上下文节点选择的节点之间的树关系。 **父**，**子**，**属性**，和**自助**支持轴。 如果**子**轴是路径中指定位置，查询选择的所有节点都是上下文节点的子级。 如果**父**指定轴，所选节点为上下文节点的父节点。 如果**属性**指定轴，所选的节点是上下文节点的特性。  
   
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
      位置步骤的语法为轴名称和节点测试（用双冒号 (::) 分隔），后跟零或多个表达式，每个表达式都位于方括号中。 例如，XPath 表达式 （位置路径） **child::Customer [@CustomerID= ALFKI]**选择所有**\<客户 >**元素的上下文节点的子级。 然后，在谓词中的测试应用于的节点集，仅返回**\<客户 >**元素节点具有属性值 ALFKI 其**CustomerID**属性。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [指定轴 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
  提供用于指定轴的示例。  
   

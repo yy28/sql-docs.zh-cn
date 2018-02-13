@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: GetNextOrderValue Method (ClientNetworkProtocol Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- GetNextOrderValue Method (ClientNetworkProtocol Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: GetNextOrderValue method
+helpviewer_keywords:
+- GetNextOrderValue method
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 912009a7092b897610751e11a625ae122c34cbde
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d41f216ee73db3bccc456a6ed0da4c0838b494eb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>GetNextOrderValue 方法（ClientNetworkProtocol 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]选择在协议列表中的下一个位置中的协议。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+选择位于协议列表中的下一个位置的协议。  
   
 ## <a name="syntax"></a>语法  
   

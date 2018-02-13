@@ -1,7 +1,7 @@
 ---
 title: "表格建模 （1200年兼容级别） |Microsoft 文档"
 ms.custom: 
-ms.date: 01/17/2018
+ms.date: 02/10/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,23 +11,24 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 keywords:
 - Analysis Services
 - "表格模型"
 - "教程"
 - SSAS
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>表格建模 （1200年兼容级别）
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 如果你在使用 SQL Server 2017 或 Azure Analysis Services，并且你想要在 1400年兼容性级别创建您的模型，请使用[Azure Analysis Services-Adventure Works 教程](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master)。 此更新的版本使用新奇且现代的获取数据功能连接并导入源数据，并使用 M 语言配置分区。
  
   
-## <a name="what-youll-learn"></a>学习内容   
+## <a name="what-you-learn"></a>你掌握的内容   
   
 -   如何在 SSDT 中创建新的表格模型项目。
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/18/2018
   
 -   如何创建和管理可帮助用户分析模型数据的计算、度量值和关键绩效指标。  
   
--   如果创建和管理透视和层次结构，通过提供业务和应用程序特定的视点，帮助用户更轻松地浏览模型数据。  
+-   如何创建和管理透视和帮助用户更轻松地通过提供业务和应用程序特定视点中浏览模型数据的层次结构。  
   
 -   如何创建分区，以便将表数据划分为可独立于其他分区进行处理的更小逻辑部分。  
   
@@ -60,22 +61,22 @@ ms.lasthandoff: 01/18/2018
   
 为了更好地支持销售和营销团队以及高级管理人员的数据分析需要，您需要创建一个用户表格模型，以便分析 AdventureWorksDW 示例数据库中的互联网销售数据。  
   
-为了完成本教程和 Adventure Works 互联网销售表格模型，您必须完成一系列课程。 每个课程中有大量的任务；按顺序完成每项任务对于完成这一课是必不可少的。 在特定课中可能有多个任务完成的类似的结果，但如何完成每个任务却略有不同。 这是为了显示是通常用于完成特定任务，并为质询你通过使用您在前面的任务中学的技能的多个方法。  
+为了完成本教程和 Adventure Works 互联网销售表格模型，您必须完成一系列课程。 在每一课后生成是许多任务;完成顺序每个任务是所需完成本课程。 在特定课中可能有多个任务完成的类似的结果，但如何完成每个任务却略有不同。 这是为了显示是通常用于完成特定任务，并为质询你通过使用您在前面的任务中学的技能的多个方法。  
   
-这些课程旨在指导你完成创作基本表格模型使用许多 SSDT 中包括的功能在内存中模式中运行。 因为每一课都以上一课为基础，所以，您应该按顺序完成课程。 一旦你已完成的所有课程，你将已编写并部署 Analysis Services 服务器上的 Adventure Works Internet Sales 示例表格模型。  
+这些课程旨在指导你完成创作基本表格模型使用许多 SSDT 中包括的功能在内存中模式中运行。 因为每一课都以上一课为基础，所以，您应该按顺序完成课程。 一旦你已完成的所有课程，你已编写并部署 Analysis Services 服务器上的 Adventure Works Internet Sales 示例表格模型。  
   
 本教程并未提供有关以下内容的课程或信息：通过使用 SQL Server Management Studio 管理已部署的表格模型数据库，或者使用报表客户端应用程序连接到已部署的模型以浏览模型数据。  
   
 ## <a name="prerequisites"></a>必要條件  
-若要完成本教程，你将需要以下先决条件：  
+若要完成本教程，你需要以下先决条件：  
   
--   最新版本的 [！包括[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md)。
+-   最新版本[SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 -   SQL Server Management Studio 最新版本。 [获取最新版本](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。 
   
--   客户端应用程序，如[Power BI Desktop](https://powerbi.microsoft.com/desktop/)或[!INCLUDE[msCoName](../includes/msconame-md.md)]Excel。    
+-   客户端应用程序，如[Power BI Desktop](https://powerbi.microsoft.com/desktop/)或 Excel。    
   
--   具有 Adventure Works DW 2014 示例数据库的 SQL Server 实例。 此示例数据库包括完成本教程所需的数据。 [获取最新版本](http://go.microsoft.com/fwlink/?LinkID=335807)。  
+-   具有 Adventure Works DW 示例数据库的 SQL Server 实例。 此示例数据库包括完成本教程所需的数据。 [获取最新版本](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
 
 -   Azure Analysis Services 或 SQL Server 2016 或更高版本的 Analysis Services 实例部署到您的模型。 [注册一个免费的 Azure Analysis Services 试用版](https://azure.microsoft.com/services/analysis-services/)。

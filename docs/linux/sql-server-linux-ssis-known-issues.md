@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制和 Linux 上的 SSIS 的已知的问题
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本指南介绍了当前限制和已知的问题的 SQL Server Integration Services (SSIS) 在 Linux 上。
 
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/08/2017
 
 其他限制和 Linux 上的 SSIS 的已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md#ssis)。
 
-## <a name="components"></a>支持和不支持组件
+## <a name="components"></a> 支持和不支持组件
 
 在 Linux 上支持以下内置 Integration Services 组件。 下表中所述，其中一些具有 Linux 平台上的限制。
 
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 - 表达式任务
 - FTP 任务
 - Web 服务任务
-- XML 任务
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>支持限制的控制流任务
 
@@ -108,7 +110,7 @@ ms.lasthandoff: 12/08/2017
 - 透视
 - 行计数
 - 渐变维度
-- Sort
+- 排序
 - 字词查找
 - Union All
 - 逆透视

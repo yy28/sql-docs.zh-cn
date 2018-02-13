@@ -18,13 +18,14 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]本发行说明文档介绍了在安装 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或者解决其相关问题之前应该了解的一些已知问题。  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+本发行说明文档介绍了在安装 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]或者解决其相关问题之前应该了解的一些已知问题。  
   
 ## <a name="top"></a>目录  
 [1.0 安装之前](#BeforeInstall)  
@@ -293,9 +294,9 @@ DATEPART(weekday, @d)
   
 **详细信息：**  
   
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]本机模式不能与以下组件之一并行运行：  
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式不能与以下组件之一并行运行：  
   
--   用于 SharePoint 产品的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 用于 SharePoint 产品的外接程序  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务  
   
@@ -362,7 +363,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 访问接口” [Microsoft SQL Server 2012 SP1 功能包](http://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
-2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](http://technet.microsoft.com/library/hh758436.aspx)。  
+2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](http://technet.microsoft.com/library/hh758436.aspx)。  
   
 **详细信息：**  
   
@@ -377,7 +378,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 访问接口” [Microsoft SQL Server 2012 SP1 功能包](http://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
-2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](http://technet.microsoft.com/library/hh758436.aspx)。  
+2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](http://technet.microsoft.com/library/hh758436.aspx)。  
   
 **详细信息：**  
   

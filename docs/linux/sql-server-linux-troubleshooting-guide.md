@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 2771b3bc37eccf9fd24eecea3c716ea6d6b7b749
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/01/2018
 
 本文档介绍如何对 Linux 上或 Docker 容器中运行的 Microsoft SQL Server 进行故障排除。 在故障排除在 Linux 上的 SQL Server，请记得查看支持的功能和中的已知的限制[Linux 发行说明上的 SQL Server](sql-server-linux-release-notes.md)。
 
-## <a id="connection"></a>解决连接失败
+## <a id="connection"></a> 解决连接失败
 如果在连接到 Linux SQL Server 时存在问题，可以检查以下几点。 
 
 - 验证可从客户端计算机的服务器名称或 IP 地址。

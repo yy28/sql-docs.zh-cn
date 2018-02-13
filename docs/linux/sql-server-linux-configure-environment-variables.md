@@ -1,6 +1,6 @@
 ---
 title: "使用环境变量配置 SQL Server 设置 |Microsoft 文档"
-description: "本主题介绍如何使用环境变量来在 Linux 上配置特定的 SQL Server 2017 设置。"
+description: "本文介绍如何使用环境变量来在 Linux 上配置特定的 SQL Server 2017 设置。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: b32330aee4fcd427ecd05d27fba3ffb8539bffa6
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 |-----|-----|
 | **ACCEPT_EULA** | 在设置为任何值（例如“Y”）时接受 SQL Server 许可协议。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |
-| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**企业**</br>**产品密钥**</br></br>如果指定产品密钥，则它必须 # # #-# # #-# # #-# # #-# # #，其中 '#' 是一个数字或字母形式。|
+| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**企业**</br>产品密钥</br></br>如果指定产品密钥，则它必须 # # #-# # #-# # #-# # #-# # #，其中 '#' 是一个数字或字母形式。|
 | **MSSQL_LCID** | 设置要用于 SQL Server 的语言 ID。 例如 1036年为法语。 |
 | **MSSQL_COLLATION** | 设置 SQL Server 的默认排序规则。 此设置将替代对排序规则的语言 id (LCID) 的默认映射。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 设置最大 （以 mb 为单位） 可以使用 SQL Server 的内存量。 默认情况下它为总物理内存的 80%。 |

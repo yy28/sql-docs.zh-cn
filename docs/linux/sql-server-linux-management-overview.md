@@ -1,6 +1,6 @@
 ---
 title: "管理在 Linux 上的 SQL Server |Microsoft 文档"
-description: "本主题提供有关 SQL Server 运行在 Linux 上的常见管理任务和工具的链接。"
+description: "这篇文章提供有关 SQL Server 运行在 Linux 上的常见管理任务和工具的链接。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: f6710b3e7bd40a2589333cebbf94c8b07f9aaa5d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: de19f1952465c62bf026dbd3d92666b7a1b968ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>选择合适的工具管理 Linux 上的 SQL Server
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server 操作 Studio （预览版）
 
-新的 Microsoft SQL 操作 Studio （预览版） 是用于管理 SQL Server 的跨平台工具。 有关详细信息，请参阅[什么是 Microsoft SQL 操作 Studio （预览版）](../sql-operations-studio/what-is.md)。
+新的 Microsoft SQL 操作 Studio （预览版） 是用于管理 SQL Server 的跨平台工具。 有关详细信息，请参阅[Microsoft SQL 操作 Studio （预览版）](../sql-operations-studio/what-is.md)。
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows 上的 SQL Server Management Studio
 

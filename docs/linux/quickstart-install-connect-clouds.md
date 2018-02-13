@@ -8,14 +8,15 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.component: sql-linux
+ms.component: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>在云中运行 SQL Server 2017
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 02/01/2018
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  连接到与 AMI ssh
-1.  请按照你选择 Linux distrbution 快速入门： 
+1.  按照你选择的 Linux 分发的快速入门： 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -58,10 +59,10 @@ ms.lasthandoff: 02/01/2018
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  连接到的映像与 ssh
-1.  请按照你选择 Linux distrbution 快速入门： 
+1.  按照你选择的 Linux 分发的快速入门： 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  为远程连接配置： 
     * 转到[防火墙规则](https://console.cloud.google.com/networking/firewalls)
-    * 添加入站的规则以允许 SQL Server 在其侦听 (默认 tcp: 1433) 的端口上的流量
+    * 添加入站的规则以允许 SQL Server 在其侦听的端口上的流量 (默认 tcp: 1433年)

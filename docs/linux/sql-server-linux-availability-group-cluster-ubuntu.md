@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/09/2018
 本文档说明如何在 Ubuntu 上创建一个三节点群集并将以前创建的可用性组添加为群集中的资源。 在 Linux 上的可用性组以实现高可用性，需要三个节点-请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。
 
 > [!NOTE] 
-> 此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 从在 SQL 中，也没有有关群集的状态不知道、 在中，超出的所有业务流程和服务由 Pacemaker 控制作为独立实例。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 Alwayson 动态管理视图查询群集信息返回空行。 你仍可创建一个侦听器，以将其用于故障转移后，透明重新连接，但你必须手动注册侦听器名称在 DNS 服务器与用于创建虚拟 IP 资源 （如下所述） 的 IP。
+> 此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 从在 SQL 中，也没有有关群集的状态不知道、 在中，超出的所有业务流程和服务由 Pacemaker 控制作为独立实例。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 Alwayson 动态管理视图查询群集信息返回空行。 你仍可创建一个侦听器，以将其用于故障转移后，透明重新连接，但你必须手动注册侦听器名称在 DNS 服务器与用于创建虚拟 IP 资源 （如以下各节中所述） 的 IP。
 
 以下各部分介绍了设置故障转移群集解决方案的步骤。 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. 创建群集。 
 
    >[!WARNING]
-   >由于已知问题，调查、 启动聚类分析的供应商群集 （电脑群集启动） 失败，错误下面。 这是因为在运行群集安装程序命令时创建，不正确的 /etc/corosync/corosync.conf 中配置日志文件。 若要解决此问题，更改到的日志文件： /var/log/corosync/corosync.log。 或者可创建 /var/log/cluster/corosync.log 文件。
+   >由于已知问题，调查、 启动聚类分析的供应商群集 （电脑群集启动） 失败，出现以下错误。 这是因为在运行群集安装程序命令时创建，不正确的 /etc/corosync/corosync.conf 中配置日志文件。 若要解决此问题，更改到的日志文件： /var/log/corosync/corosync.log。 或者可创建 /var/log/cluster/corosync.log 文件。
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -137,7 +137,7 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>配置隔离 (STONITH)
 
-Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程序配置隔离设备。 群集资源管理器无法确定节点或节点上资源的状态时，将使用隔离使群集再次处于已知状态。 资源级别隔离主要确保在因配置资源引起服务中断时，不会发生数据损坏。 例如，可将资源级别隔离用于 DRBD（分布式复制块设备），从而在通信链接出现故障时将节点上的磁盘标记为过时。 节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持多种隔离设备，例如不间断电源或服务器的管理接口卡。 有关更多详细信息，请参阅[从头 Pacemaker 群集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)和[隔离和 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
+Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程序配置隔离设备。 群集资源管理器无法确定节点或节点上资源的状态时，将使用隔离使群集再次处于已知状态。 资源级别隔离主要确保在因配置资源引起服务中断时，不会发生数据损坏。 例如，可将资源级别隔离用于 DRBD（分布式复制块设备），从而在通信链接出现故障时将节点上的磁盘标记为过时。 节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持多种隔离设备，例如不间断电源或服务器的管理接口卡。 有关详细信息，请参阅[从头 Pacemaker 群集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)和[隔离和 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
 由于节点级别防御配置很大程度取决于你的环境，我们禁用它本教程中 （它可以配置在更高版本时）。 在主节点上运行以下脚本： 
 
@@ -150,7 +150,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Set cluster property start-failure-is-fatal to false
 
-`start-failure-is-fatal`指示是否无法在节点上启动资源将阻止进一步开始尝试在该节点上。 当设置为`false`，群集来决定是否要尝试恢复使用基于资源的当前故障计数和迁移阈值的同一节点上启动。 因此，发生故障转移后，Pacemaker 重试启动可用性组主前者上资源的 SQL 实例可用后。 Pacemaker 将降级到辅助数据库副本，并自动重新加入可用性组。 
+`start-failure-is-fatal` 指示是否无法在节点上启动资源将阻止进一步开始尝试在该节点上。 当设置为`false`，群集来决定是否要尝试恢复使用基于资源的当前故障计数和迁移阈值的同一节点上启动。 因此，发生故障转移后，Pacemaker 重试启动可用性组主前者上资源的 SQL 实例可用后。 Pacemaker 将降级到辅助数据库副本，并自动重新加入可用性组。 
 
 若要更新属性值设置为`false`运行以下脚本：
 

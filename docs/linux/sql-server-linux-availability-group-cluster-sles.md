@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9b0c068ce56a2f499ee452b56ca54025485163f5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
 
@@ -30,12 +30,12 @@ ms.lasthandoff: 02/01/2018
 群集配置、 资源代理选项、 管理、 最佳实践，和建议的详细信息，请参阅[SUSE Linux Enterprise 高可用性扩展 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
 >[!NOTE]
->此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 Linux 上的 SQL Server 服务无法识别群集。 Pacemaker 控制所有的群集资源，包括可用性组资源的业务流程。 在 Linux 上，你不应依赖于始终在可用性组动态管理视图 (Dmv) 提供群集信息，如 sys.dm_hadr_cluster。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 你仍可创建一个侦听器，以将其用于故障转移后，透明重新连接，但你将需要使用手动注册侦听器名称在 DNS 服务器中用于创建虚拟 IP 资源 （如下所述） 的 IP。
+>此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 Linux 上的 SQL Server 服务无法识别群集。 Pacemaker 控制所有的群集资源，包括可用性组资源的业务流程。 在 Linux 上，你不应依赖于始终在可用性组动态管理视图 (Dmv) 提供群集信息，如 sys.dm_hadr_cluster。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 你仍可创建一个侦听器，以将其用于故障转移后，透明重新连接，但你将需要使用手动注册侦听器名称在 DNS 服务器中用于创建虚拟 IP 资源 （如以下各节中所述） 的 IP。
 
 
 ## <a name="roadmap"></a>路线图
 
-在 Linux 服务器上创建可用性组以获得高可用性的步骤不同于 Windows Server 故障转移群集上的步骤。 下面的列表对高级别步骤进行了说明： 
+有关创建可用性组以实现高可用性的过程 Linux 服务器和 Windows Server 故障转移群集之间存在不同。 以下列表描述的高级步骤： 
 
 1. [群集节点上配置 SQL Server](sql-server-linux-setup.md)。
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/01/2018
    配置群集资源管理器的方式取决于特定的 Linux 分发版。 
 
    >[!IMPORTANT]
-   >生产环境需要 STONITH 之类的隔离代理，以获得高可用性。 本文档中的演示不使用隔离代理。 演示仅用于测试和验证目的。 
+   >生产环境需要 STONITH 之类的隔离代理，以获得高可用性。 这篇文章中的示例不使用隔离代理。 它们是用于测试和验证仅。 
    
    >Pacemaker 群集使用隔离群集返回到已知的状态。 配置隔离的方式取决于分发和环境。 此时，隔离在某些云环境中不可用。 请参阅[SUSE Linux Enterprise 高可用性扩展](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing)。
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成以下端到端方案需要三台计算机部署三个节点群集。 以下步骤概述了如何配置这些服务器。
+若要完成以下的端到端方案，你需要三台计算机部署三个节点群集。 以下步骤概述了如何配置这些服务器。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>在每个群集节点上安装和配置操作系统 
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/01/2018
 
 ### <a name="install-and-configure-sql-server-service-on-each-cluster-node"></a>在每个群集节点上安装和配置 SQL Server 服务
 
-1. 安装和设置的所有节点上的 SQL Server 服务。 有关详细说明请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
+1. 安装和设置的所有节点上的 SQL Server 服务。 有关详细说明，请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
 
 1. 将一个节点指定为主节点和其他节点作为辅助副本。 在本指南中使用这些术语。
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/01/2018
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   有关其他信息，请参阅[SLES 管理指南-杂项部分](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)。
+   有关详细信息，请参阅[SLES 管理指南-杂项部分](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)。
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>为 Pacemaker 创建 SQL Server 登录名
@@ -118,11 +118,11 @@ ms.lasthandoff: 02/01/2018
 
    如果 NTP 尚未配置为在启动时启动，则会显示一条消息。 
 
-   如果仍要继续，该脚本将自动生成用于 SSH 访问和用于 Csync2 同步工具的密钥，然后启动这二者所需的服务。 
+   如果你决定仍要继续，该脚本将自动生成密钥 SSH 访问权限和 Csync2 同步工具，并启动同时所需的服务。 
 
 3. 配置群集通信层 (Corosync)： 
 
-   a. 输入要绑定到的网络地址。 默认情况下，该脚本推荐使用 eth0 网络地址。 或者，输入一个不同的网络地址，例如 bond0 地址。 
+   a. 输入要绑定到的网络地址。 默认情况下，该脚本将建议 eth0 的网络地址。 或者，输入一个不同的网络地址，例如 bond0 地址。 
 
    b. 输入一个多播地址。 该脚本推荐一个随机地址，可将其用作默认地址。 
 
@@ -147,11 +147,11 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>将节点添加到现有群集
 
-如果运行的群集包含一个或多个节点，可使用 ha-cluster-join 启动脚本添加更多群集节点。 该脚本仅需现有节点访问权限，然后可自动在当前计算机上完成基本设置。 请执行下列步骤：
+如果运行的群集包含一个或多个节点，可使用 ha-cluster-join 启动脚本添加更多群集节点。 该脚本仅需现有节点访问权限，然后可自动在当前计算机上完成基本设置。 使用以下步骤：
 
 如果配置了与现有的群集节点`YaST`群集模块，请确保在运行之前满足以下先决条件`ha-cluster-join`:
 - 现有节点上根用户的 SSH 密钥已就绪，无需密码即可登录。 
-- `Csync2`现有的节点上进行配置。 有关详细信息，请参阅“使用 YaST 配置 Csync2”。 
+- `Csync2` 现有的节点上进行配置。 有关详细信息，请参阅与 YaST 配置 Csync2。 
 
 1. 以根用户身份登录到要加入群集的物理计算机或虚拟计算机。 
 2. 执行如下命令，启动该启动脚本： 
@@ -166,9 +166,9 @@ ms.lasthandoff: 02/01/2018
 
 4. 如果尚未配置这两个计算机之间的无密码 SSH 访问，系统还将提示输入现有节点的根密码。 
 
-   登录到指定的节点后, 脚本会将 Corosync 配置复制、 配置 SSH 和`Csync2`，并将显示为新群集节点当前联机的计算机。 此外，还将启动 Hawk 所需的服务。 如果已配置共享的存储，与使用`OCFS2`，它还会自动将创建的装载点目录`OCFS2`文件系统。 
+   登录后到指定的节点，该脚本将 Corosync 配置复制，配置 SSH 和`Csync2`，并使新的群集节点作为当前联机的计算机。 除了，它将启动所需的 Hawk 服务。 如果已配置共享的存储，与使用`OCFS2`，它还会自动创建的装载点目录`OCFS2`文件系统。 
 
-5. 对需要添加到群集中的所有计算机重复上述步骤。 
+5. 你想要添加到群集的所有计算机重复前面的步骤。 
 
 6. 过程的详细信息，请检查`/var/log/ha-cluster-bootstrap.log`。 
 
@@ -185,37 +185,40 @@ ms.lasthandoff: 02/01/2018
    ```
 
    >[!NOTE]
-   >`admin_addr`是一个单节点群集初始安装过程中配置虚拟 IP 群集资源。
+   >`admin_addr` 是一个单节点群集初始安装过程中配置虚拟 IP 群集资源。
 
-添加所有节点后，检查是否需要调整全局群集选项中的 no-quorum-policy。 这对双节点群集尤为重要。 有关详细信息，请参阅 4.1.2 部分（no-quorum-policy 选项）。 
+添加所有节点后，检查是否需要调整全局群集选项中的 no-quorum-policy。 这对双节点群集尤为重要。 有关详细信息，请参阅部分 4.1.2，选项否仲裁策略。 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Set cluster property start-failure-is-fatal to false
 
-`Start-failure-is-fatal`指示是否无法在节点上启动资源将阻止进一步开始尝试在该节点上。 当设置为`false`，群集将决定是否要尝试恢复使用基于资源的当前故障计数和迁移阈值的同一节点上启动。 因此，故障转移发生后，在 SQL 实例可用时，Pacemaker 将重新尝试在先前主节点上启动可用性组资源。 Pacemaker 负责将此副本降级为次要副本，并自动重新加入可用性组。 此外，如果`start-failure-is-fatal`设置为`false`，群集将回退到使用迁移阈值配置，因此你需要相应地更新迁移阈值，请确保默认的配置的 failcount 限制。
+`Start-failure-is-fatal` 指示是否无法在节点上启动资源将阻止进一步开始尝试在该节点上。 当设置为`false`，群集来决定是否要尝试恢复使用基于资源的当前故障计数和迁移阈值的同一节点上启动。 因此，发生故障转移后，Pacemaker 重试启动可用性组主前者上资源的 SQL 实例可用后。 Pacemaker 负责降级为辅助副本，并自动重新加入可用性组。 此外，如果`start-failure-is-fatal`设置为`false`，群集将回退到使用迁移阈值配置的配置的 failcount 限制。 请确保相应地更新默认值为迁移阈值。
 
 若要将属性值更新为 false，请运行：
 ```bash
 sudo crm configure property start-failure-is-fatal=false
 sudo crm configure rsc_defaults migration-threshold=5000
 ```
-如果属性具有的默认值`true`，如果第一次尝试启动资源故障、 用户干预的清理资源失败计数自动故障转移后需要并且重置配置使用：`sudo crm resource cleanup <resourceName>`命令。
+如果属性具有的默认值`true`，如果开始资源失败，用户干预的第一次尝试后需要自动故障转移以清理资源失败计数和重置配置使用：`sudo crm resource cleanup <resourceName>`命令。
 
-有关 Pacemaker 群集属性的详细信息，请参阅[配置群集资源](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)。
+Pacemaker 群集属性的详细信息，请参阅[配置群集资源](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)。
 
 # <a name="configure-fencing-stonith"></a>配置隔离 (STONITH)
 Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程序配置隔离设备。 群集资源管理器无法确定节点或节点上资源的状态时，将使用隔离使群集再次处于已知状态。
-资源级别隔离主要确保在因配置资源引起服务中断时，不会发生数据损坏。 例如，可将资源级别隔离用于 DRBD（分布式复制块设备），从而在通信链接出现故障时将节点上的磁盘标记为过时。
-节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持多种隔离设备，例如不间断电源或服务器的管理接口卡。
-有关更多详细信息，请参阅[从头 Pacemaker 群集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔离和 Stonith](http://clusterlabs.org/doc/crm_fencing.html)和[SUSE HA 文档： 隔离和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
 
-在群集初始化时，如果检测不到任何配置，则禁用 STONITH。 可以通过以下命令运行更高版本启用
+资源级别隔离主要确保通过配置资源有任何服务中断期间的数据损坏。 例如，可将资源级别隔离用于 DRBD（分布式复制块设备），从而在通信链接出现故障时将节点上的磁盘标记为过时。
+
+节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持大量防御设备，如服务器不间断电源提供或管理接口卡。
+
+有关详细信息，请参阅[从头 Pacemaker 群集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔离和 Stonith](http://clusterlabs.org/doc/crm_fencing.html)和[SUSE HA 文档： 隔离和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
+
+在群集初始化时，如果检测不到任何配置，则禁用 STONITH。 它可以通过运行以下命令来更高版本启用：
 
 ```bash
 sudo crm configure property stonith-enabled=true
 ```
   
 >[!IMPORTANT]
->禁用 STONITH 仅出于测试目的。 如果计划在生产环境中使用 Pacemaker，则应根据环境计划 STONITH 实现，并使其处于启用状态。 请注意，SUSE 不提供隔离代理的任何云环境 （包括 Azure） 或 HYPER-V。 因此，群集供应商未提供在这些环境中运行生产群集相关的支持。 我们正在研究解决方案弥补该漏洞，并在将来版本中推出。
+>禁用 STONITH 仅出于测试目的。 如果计划在生产环境中使用 Pacemaker，则应根据环境计划 STONITH 实现，并使其处于启用状态。 SUSE 不提供针对任何云环境 （包括 Azure） 或 HYPER-V 隔离代理。 因此，群集供应商未提供在这些环境中运行生产群集相关的支持。 我们正在研究解决方案弥补该漏洞，并在将来版本中推出。
 
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>为 SQL Server 配置群集资源
@@ -224,7 +227,7 @@ sudo crm configure property stonith-enabled=true
 
 ### <a name="create-availability-group-resource"></a>创建可用性组资源
 
-以下命令创建并配置可用性组 [ag1] 的 3 个副本的可用性组资源。 监视操作和超时必须基于这一事实超时具有高度相关的工作负荷和需要仔细调整为每个部署在 SLES 中显式指定。
+以下命令创建并配置三个副本的可用性组 [ag1] 的可用性组资源。 监视操作和超时必须基于这一事实超时高度取决于工作负荷，并需要仔细调整为每个部署在 SLES 中显式指定。
 在群集中的一个节点上运行命令：
 
 1. 运行`crm configure`打开 crm 提示：
@@ -233,7 +236,7 @@ sudo crm configure property stonith-enabled=true
    sudo crm configure 
    ```
 
-1. 在 crm 提示中，运行如下命令配置资源属性。
+1. 在 crm 提示符下，运行以下命令以配置资源属性。
 
    ```bash
 primitive ag_cluster \
@@ -268,7 +271,7 @@ primitive admin_addr \
 ```
 
 ### <a name="add-colocation-constraint"></a>添加主机托管约束
-Pacemaker 群集中几乎所有的决定（例如，选择资源运行的位置）都靠比较分数来制定。 分数按资源计算，群集资源管理器选择特定资源分数最高的节点。 （如果节点的某一资源分数为负，则该资源无法在此节点上运行。）我们可以使用约束来控制群集的决定。 约束具有一个分数。 如果约束的分数低于 INFINITY，则仅为建议项。 分数为 INFINITY 则表明它是必需项。 我们需要确保可用性组主要副本和虚拟 IP 资源在同一主机上运行，因此我们定义一个分数为 INFINITY 的主机托管约束。 
+Pacemaker 群集中几乎所有的决定（例如，选择资源运行的位置）都靠比较分数来制定。 分数按资源计算，群集资源管理器选择特定资源分数最高的节点。 （如果节点的某一资源分数为负，则该资源无法在此节点上运行。）我们可以使用约束来控制群集的决定。 约束具有一个分数。 如果约束的分数低于 INFINITY，则仅为建议项。 分数为 INFINITY 则表明它是必需项。 我们想要确保主可用性组和虚拟 ip 资源运行在同一主机上，因此我们定义分数为无穷大归置约束。 
 
 若要将主机托管约束设置为虚拟 IP 在作为主节点的节点上运行，请在一个节点上运行以下命令：
 
@@ -299,10 +302,10 @@ crm crm configure \
 >[!IMPORTANT]
 >配置群集并将可用性组添加为群集资源后，无法使用 Transact-SQL 对可用性组资源进行故障转移。 Linux 上的 SQL Server 群集资源与此操作系统的耦合性不及 Windows Server 故障转移群集 (WSFC) 上的高。 SQL Server 服务不知道此群集的存在。 所有业务流程都通过群集管理工具完成。 在 SLES 使用`crm`。 
 
-手动故障转移的可用性组`crm`。 请勿使用 Transact-SQL 启动故障转移。 有关说明，请参阅[故障转移](sql-server-linux-availability-group-failover-ha.md#failover)。
+手动故障转移的可用性组`crm`。 不启动与 TRANSACT-SQL 的故障转移。 有关详细信息，请参阅[故障转移](sql-server-linux-availability-group-failover-ha.md#failover)。
 
 
-有关其他信息，请参阅：
+有关详细信息，请参阅：
 - [管理群集资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm)。   
 - [HA 概念](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker 快速参考](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 

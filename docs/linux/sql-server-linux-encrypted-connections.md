@@ -1,6 +1,6 @@
 ---
 title: "加密连接到 Linux 上的 SQL Server |Microsoft 文档"
-description: "本主题介绍在 Linux 上的加密对 SQL Server 的连接。"
+description: "本指南介绍了在 Linux 上的加密对 SQL Server 的连接。"
 author: tmullaney
 ms.date: 01/30/2018
 ms.author: meetb
@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 646a876fb7cedc4733e4d3a60ef86361ab151c4f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密连接到 Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Linux 上可以使用传输层安全 (TLS)，客户端应用程序和的实例之间跨网络传输的数据进行加密[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Windows 和 Linux 上支持相同的 TLS 协议： TLS 1.2、 1.1 和 1.0。 但是，若要配置 TLS 的步骤是特定于操作系统在其上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正在运行。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Linux 上可以使用传输层安全 (TLS)，客户端应用程序和的实例之间跨网络传输的数据进行加密[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Windows 和 Linux 上支持相同的 TLS 协议： TLS 1.2、 1.1 和 1.0。 但是，若要配置 TLS 的步骤是特定于操作系统在其上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正在运行。  
 
 ## <a name="requirements-for-certificates"></a>对证书的要求 
 在开始之前，你需要确保你的证书遵循这些要求：
@@ -70,9 +70,9 @@ TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../inclu
         - **SUSE**： 将证书复制到```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```，使它作为系统 CA 证书。
         - **Windows**： 导入为下当前用户证书的.pem 文件-> 受信任根证书颁发机构证书->
         - **macOS**: 
-           - 将复制到证书```/usr/local/etc/openssl/certs```
-           - 运行以下命令来获取的哈希值：```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 将 cert 重命名为值。 例如： ```mv mssql.pem dc2dd900.0```。 请确保 dc2dd900.0 处于```/usr/local/etc/openssl/certs```
+           - 将复制到证书 ```/usr/local/etc/openssl/certs```
+           - 运行以下命令来获取的哈希值： ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - 将 cert 重命名为值。 例如： ```mv mssql.pem dc2dd900.0```。 请确保 dc2dd900.0 处于 ```/usr/local/etc/openssl/certs```
     
 -   **连接字符串示例** 
 

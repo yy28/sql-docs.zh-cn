@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a7333141672e9c6979202a95f24d42cae0ed82e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b0b325cea845e82519752b04591c2c7724b1acf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 属性指定目标命名空间 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]在编写 XSD 架构，你可以使用 XSD **targetNamespace**特性以指定目标命名空间。 本主题介绍如何 XSD **targetNamespace**， **elementFormDefault**，和**attributeFormDefault**特性工作，它们如何影响的 XML 实例生成，以及如何将 XPath 查询指定的命名空间。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+在编写 XSD 架构，你可以使用 XSD **targetNamespace**特性以指定目标命名空间。 本主题介绍如何 XSD **targetNamespace**， **elementFormDefault**，和**attributeFormDefault**特性工作，它们如何影响的 XML 实例生成，以及如何将 XPath 查询指定的命名空间。  
   
  你可以使用**xsd:targetNamespace**放到不同的命名空间的元素和属性从默认命名空间的属性。 还可以指定在显示局部声明的架构元素和属性时，是否应由命名空间限定（使用前缀显式限定或默认隐式限定）。 你可以使用**elementFormDefault**和**attributeFormDefault**属性上 **\<xsd:schema >**元素全局指定限定的本地元素和属性，也可以使用**窗体**特性以单独指定各个元素和属性。  
   

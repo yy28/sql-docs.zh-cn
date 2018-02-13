@@ -16,19 +16,20 @@ helpviewer_keywords:
 - sample applications [WMI]
 - managed code [WMI]
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f137b554dd9a87428b31b161703e3d96cb9113cc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3050570e26c562851e0a7b193307771f05ac4a97
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>示例：与 .NET Framework 结合使用 WMI 事件提供程序
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]下面的示例在 C# 程序使用 WMI 事件提供程序返回的默认安装实例发生的语言 (DDL) 事件的所有数据定义的事件数据中创建应用程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+下面的示例用 C# 创建使用 WMI 事件提供程序返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认安装实例上发生的所有数据定义语言 (DDL) 事件的事件数据的应用程序。  
   
 ## <a name="example"></a>示例  
  该示例使用以下命令文件进行编译：  

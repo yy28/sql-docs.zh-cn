@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: "141"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
 ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]安装 SQL Server 故障转移群集之前，必须选择运行 SQL Server 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+安装 SQL Server 故障转移群集之前，必须选择运行 SQL Server 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
   
  如果 Windows 群集具有本地磁盘驱动器，且同一盘符还在一个或多个群集节点上作为共享驱动器使用，则不能在该驱动器上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 |主题说明|主题|  
 |-----------------------|-----------|  
 |描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集概念并提供指向关联内容和任务的链接。|[AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
-|描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移策略概念，并提供指向配置故障转移策略以满足您的组织要求的链接。|[故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
+|描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移策略概念，并提供指向配置故障转移策略以满足您的组织要求的链接。|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |描述如何维护您的现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。|[故障转移群集实例管理和维护](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |介绍如何在 Windows Server 故障转移群集 (WSFC) 上安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|[如何安装群集 SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 12/05/2017
   
 ##  <a name="WSFC"></a> 配置 Windows Server 故障转移群集  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 必须至少在服务器群集的一个节点上配置群集服务 (WSFC)。 您还必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 与 WSFC 一起运行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 支持最多 16 节点的故障转移群集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支持两节点的故障转移群集。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 群集服务 (WSFC)。 您还必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 与 WSFC 一起运行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 支持最多 16 节点的故障转移群集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支持两节点的故障转移群集。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的资源 DLL 导出两个函数，WSFC 群集管理器使用它们来检查 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的可用性。 有关详细信息，请参阅 [故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)。  
   

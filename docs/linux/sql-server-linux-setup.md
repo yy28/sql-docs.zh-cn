@@ -1,6 +1,6 @@
 ---
 title: "在 Linux 上安装 SQL Server 自 2017 年 1 |Microsoft 文档"
-description: "安装、 更新和卸载 Linux 上的 SQL Server。 本主题介绍联机、 脱机和无人参与的方案。"
+description: "安装、 更新和卸载 Linux 上的 SQL Server。 本文介绍如何联机、 脱机和无人参与的方案。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,28 +9,28 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 924542a970ac63df74e7bb725b4f7a171f74e95a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本主题说明如何安装、 更新和卸载 Linux 上的 SQL Server 2017。 Red Hat Enterprise Linux (RHEL)、 SUSE Linux 企业服务器 (SLES) 和 Ubuntu 支持 SQL Server 自 2017 年。 此外，还可以作为可在 Linux 或 Docker 为 Windows/mac。 上的 Docker 引擎运行的 Docker 映像
+此文章介绍了如何安装、 更新和卸载 Linux 上的 SQL Server 2017。 Red Hat Enterprise Linux (RHEL)、 SUSE Linux 企业服务器 (SLES) 和 Ubuntu 支持 SQL Server 自 2017 年。 此外，还可以作为可在 Linux 或 Docker 为 Windows/mac。 上的 Docker 引擎运行的 Docker 映像
 
 > [!TIP]
 > 若要快速开始，跳转到为快速入门之一[RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)， [Ubuntu](quickstart-install-connect-ubuntu.md)，或[Docker](quickstart-install-connect-docker.md)。
 
-## <a id="supportedplatforms"></a>支持的平台
+## <a id="supportedplatforms"></a> 支持的平台
 
 以下 Linux 平台上支持 SQL Server 2017:
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/09/2018
 
 SQL Server 自 2017 年的最新支持策略，请参阅[Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
 
-## <a id="system"></a>系统要求
+## <a id="system"></a> 系统要求
 
 SQL Server 2017 具有以下适用于 Linux 的系统要求：
 
@@ -74,14 +74,14 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 - [在 Docker 上运行](quickstart-install-connect-docker.md)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a id="repositories"></a>配置源存储库
+## <a id="repositories"></a> 配置源存储库
 
 当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server 自 2017 年。 快速入门使用**累积更新 (CU)**存储库。 但是可以改为配置**GDR**存储库。 存储库以及如何配置它们的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 > [!IMPORTANT]
 > 如果你以前安装的 CTP 或 RC 版本的 SQL Server 自 2017 年，你必须删除预览存储库并注册一个常规正式版 (GA)。 有关详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
-## <a id="upgrade"></a>更新 SQL Server
+## <a id="upgrade"></a> 更新 SQL Server
 
 若要更新**mssql server**打包到最新版本，请使用以下命令基于你的平台之一：
 
@@ -93,7 +93,7 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 
 这些命令下载最新的包并将位于的二进制文件`/opt/mssql/`。 用户生成的数据库和系统数据库不受此操作。
 
-## <a id="rollback"></a>回滚 SQL Server
+## <a id="rollback"></a> 回滚 SQL Server
 
 回滚或降级到以前的版本的 SQL Server，使用以下步骤：
 
@@ -110,7 +110,7 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 > [!NOTE]
 > 它仅支持降级的相同的主版本，如 SQL Server 自 2017 年中的发行版。
 
-## <a id="versioncheck"></a>检查安装的 SQL Server 版本
+## <a id="versioncheck"></a> 检查安装的 SQL Server 版本
 
 若要验证你的当前版本和版本的 Linux 上的 SQL Server，请使用以下过程：
 
@@ -122,7 +122,7 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
 
-## <a id="uninstall"></a>卸载 SQL Server
+## <a id="uninstall"></a> 卸载 SQL Server
 
 若要删除**mssql server**打包在 Linux 上，请使用以下命令基于你的平台之一：
 
@@ -138,7 +138,7 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="unattended"></a>无人参与的安装
+## <a id="unattended"></a> 无人参与的安装
 
 可以按以下方式来执行无人参与的安装：
 
@@ -159,12 +159,12 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [SUSE 无人参与的安装脚本](sample-unattended-install-suse.md)
 - [Ubuntu 无人参与的安装脚本](sample-unattended-install-ubuntu.md)
 
-## <a id="offline"></a>脱机安装
+## <a id="offline"></a> 脱机安装
 
 如果你的 Linux 计算机无访问权限到联机存储库中使用[快速入门](#platforms)，你可以直接下载的包文件。 这些包位于 Microsoft 存储库中，网址为 [https://packages.microsoft.com](https://packages.microsoft.com)。
 
 > [!TIP]
-> 如果你成功安装快速入门中的步骤，你不需要下载，或者手动安装以下程序包。 本部分项仅用于脱机方案。
+> 如果你成功安装快速入门中的步骤，你不需要下载，或者手动安装 SQL Server 程序包。 本部分项仅用于脱机方案。
 
 1. **下载你的平台的数据库引擎包**。 包详细信息部分中找到包下载链接[发行说明](sql-server-linux-release-notes.md)。
 

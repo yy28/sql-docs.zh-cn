@@ -11,21 +11,23 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: DiffGrams [SQLXML], about DiffGrams
+helpviewer_keywords:
+- DiffGrams [SQLXML], about DiffGrams
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e1830f0cc86c652ce5ecb1a5cf0c0d0a6a76701
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2af871b240d318aaa027402a52a9c31498521b99
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>SQLXML 中 DiffGram 的准则和限制
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]使用 SQLXML 4.0 使用 Diffgram 时，请记住以下事项：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+通过 SQLXML 4.0 使用 DiffGram 时请记住以下事项：  
   
 -   二进制大型对象 (BLOB) 类型类似**文本/ntext**和映像不应在 **\<diffgr： 之前 >**时阻止使用 Diffgram，因为这会将其包含在中使用并发控制。 由于 BLOB 类型的比较限制，这可能导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 出现问题。 例如，一 LIKE 关键字的 WHERE 子句中使用，用于比较的各个栏之间时**文本**数据类型; 但是，比较将失败，对于数据的大小大于 8 K 的 BLOB 类型。  
   

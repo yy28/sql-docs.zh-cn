@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -35,19 +36,20 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abf9937e9d13dccdb3eb381dda760bad13f9544d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1d06fef3fcdc237740b9590d5d8e75fc9730a34e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 插入数据 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]属的 updategram 表示插入操作中的记录实例出现**\<后 >**块，但不是在相应**\<之前 >**块。 在这种情况下，属的 updategram 插入中的记录**\<后 >**到数据库的块。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+属的 updategram 表示插入操作中的记录实例出现**\<后 >**块，但不是在相应**\<之前 >**块。 在这种情况下，属的 updategram 插入中的记录**\<后 >**到数据库的块。  
   
  以下是 updategram 的插入操作格式：  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="before-block"></a>\<之前 > 块  
  **\<之前 >**为插入操作，可以省略块。 如果可选**映射架构**属性未指定，  **\<ElementName >**中指定的属的 updategram 映射到数据库表和子元素或属性映射到表中的列。  
   
-## <a name="after-block"></a>\<后 > 块  
+## <a name="after-block"></a>\<after> Block  
  你可以指定一个或多个记录中的**\<后 >**块。  
   
  如果**\<后 >**块不会提供特定列的值、 属的 updategram 使用 （如果已指定一个架构），带批注的架构中指定的默认值。 如果架构未指定列的默认值，属的 updategram 未指定任何显式值赋予此列，并且，相反，分配[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到此列的默认值 （如果指定）。 如果没有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认值并且此列接受 NULL 值，则 updategram 将此列的值设置为 NULL。 如果此列既没有默认值也不接受 NULL 值，则命令将失败并且 updategram 将返回一个错误。 可选**updg:returnid**特性用于返回具有标识类型列的表中添加一条记录时，系统会生成的标识值。  

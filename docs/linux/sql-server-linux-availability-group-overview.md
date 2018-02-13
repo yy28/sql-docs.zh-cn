@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性组
 
@@ -65,9 +65,9 @@ ms.lasthandoff: 02/09/2018
 -   1 – 一个辅助副本必须位于与主; 的同步状态自动故障转移的情况。 可用辅助同步副本之前，主数据库不可用。
 -   2-三个或多个节点可用性组配置中的两个辅助副本必须与主; 同步自动故障转移的情况。
 
-`required_synchronized_secondaries_to_commit`控制不仅的同步副本，但数据丢失的故障转移行为。 值为 1 或 2，辅助副本时始终需要同步，因此始终将数据冗余。 这意味着不会丢失数据。
+`required_synchronized_secondaries_to_commit` 控制不仅的同步副本，但数据丢失的故障转移行为。 值为 1 或 2，辅助副本时始终需要同步，因此始终将数据冗余。 这意味着不会丢失数据。
 
-若要更改的值`required_synchronized_secondaries_to_commit`，使用以下语法。
+若要更改的值`required_synchronized_secondaries_to_commit`，使用以下语法：
 
 >[!NOTE]
 >更改值会导致资源来重新启动，这意味着短暂的停机。 若要避免这种情况的唯一方法是设置不受群集暂时的资源。
@@ -132,7 +132,7 @@ CU1 中是一个已知的 bug，通过生成 corosync.log 文件中记录`mssql-
 
 侦听器是可用性组的可选功能。 它对所有连接 （读/写到的主副本和/或只读的辅助副本） 上提供单一入口点，以便应用程序和最终用户不需要知道哪个服务器承载数据。 在 WSFC 中，这是网络名称资源和 IP 资源，然后在 AD DS （如果需要） 中注册的组合以及 DNS。 在与可用性组资源本身组合使用，它提供该抽象。 有关侦听器的详细信息，请参阅[侦听器、 客户端连接和应用程序故障转移](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。
 
-在 Linux 下的侦听器配置不同，但其功能是相同的。 没有 Pacemaker 中的网络名称资源的概念也不在 AD DS; 创建为一个对象没有只需在可以在任何节点运行的 Pacemaker 中创建一个 IP 地址资源。 与 IP 资源的 DNS 中具有"友好名称"的侦听器关联的条目将需要创建。 侦听器的 IP 资源将只能承载该可用性组的主副本的服务器上处于活动状态。
+在 Linux 下的侦听器配置不同，但其功能是相同的。 没有 Pacemaker 中的网络名称资源的概念也不在 AD DS; 创建为一个对象没有只需在可以在任何节点运行的 Pacemaker 中创建一个 IP 地址资源。 需要创建与 IP 资源的 DNS 中具有"友好名称"的侦听器关联的条目。 侦听器的 IP 资源将只能承载该可用性组的主副本的服务器上处于活动状态。
 
 如果使用 Pacemaker 和 IP 地址资源创建与侦听器相关联，将有短暂的停机的 IP 地址会在一台服务器上停止和启动另一方面，无论它是自动还是手动故障转移。 尽管这提供了通过单个名称和 IP 地址的组合的抽象，它不会屏蔽中断。 应用程序必须能够处理具有某种形式的功能，可检测到这种并重新连接的断开连接。
 
@@ -147,11 +147,11 @@ CU1 中是一个已知的 bug，通过生成 corosync.log 文件中记录`mssql-
 
 具有外部或其中一个是 WSFC 群集类型可用性组不能具有跨平台及其副本。 这是 true 可用性组是否[!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]或[!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]。 在传统的可用性组配置中使用一个基础群集这意味着，一个副本不能为 WSFC 和 Pacemaker 使用 Linux 上其他。
 
-群集类型为一个可用性组可以让其跨 OS 边界，因此同一可用性组中可能有两个基于 Linux 和 Windows 的副本的副本。 其中的主副本是基于 Windows 的辅助数据库上的 Linux 分发之一时，一个示例所示。
+群集类型为一个可用性组可以让其跨 OS 边界，因此同一可用性组中可能有两个基于 Linux 和 Windows 的副本的副本。 示例如下所示其中主副本是基于 Windows 的辅助数据库上的 Linux 分发之一时。
 
 ![混合无](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分布式可用性组还可以跨 OS 边界。 有关如何配置情况，如外部为配置了一个基础承载个可用性组绑定的规则仅 Linux，但无法使用 WSFC 配置联接到可用性组。 以下是一个示例。
+分布式可用性组还可以跨 OS 边界。 有关如何配置情况，如外部为配置了一个基础承载个可用性组绑定的规则仅 Linux，但无法使用 WSFC 配置联接到可用性组。 请参考如下示例：
 
 ![混合 Dist 可用性组](./media/sql-server-linux-availability-group-overview/image2.png)
 

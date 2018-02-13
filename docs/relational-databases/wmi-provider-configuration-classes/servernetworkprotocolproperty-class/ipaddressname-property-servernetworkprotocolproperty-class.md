@@ -8,29 +8,34 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: IPAddressName Property (ServerNetworkProtocolProperty Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- IPAddressName Property (ServerNetworkProtocolProperty Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: IpAddressName property
+helpviewer_keywords:
+- IpAddressName property
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5bbbe74c752a6978db598e549d45054c8e74845
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e3c652f66b0b1051519967ab88e92b9aae58c2b5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>IPAddressName 属性（ServerNetworkProtocolProperty 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]获取的 IP 地址的名称。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+获取 IP 地址的名称。  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -44,7 +49,7 @@ object.IPAddressName [= value]
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定 IP 地址名称的字符串值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另请参阅  
  [配置服务器网络协议和网络库](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

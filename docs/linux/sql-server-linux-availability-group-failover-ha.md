@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: cf0a61c924a10066a41bcf4127e444b60f0f50bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>操作始终在 Linux 上的可用性组
 
@@ -129,7 +129,7 @@ ms.lasthandoff: 02/01/2018
  [SLES 管理指南-资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a>手动移动没有响应群集工具时 
+### <a name="forceManual"></a> 手动移动没有响应群集工具时 
 
 在极端情况下，如果用户不能使用的交互与群集的群集管理工具 （即群集无响应，群集管理工具具有错误的行为），用户可能需要手动的故障转移而跳过的外部群集管理器。 不建议用于常规操作，并且应在群集无法使用群集管理工具执行故障转移操作的情况下使用。
 
@@ -158,7 +158,7 @@ ms.lasthandoff: 02/01/2018
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. 使用 Transact-SQL 对可用性组进行故障转移。 在替换下面的示例`<**MyAg**>`替换为你的可用性组的名称。 连接到托管目标次要副本的 SQL Server 实例，并运行以下命令：
+1. 使用 Transact-SQL 对可用性组进行故障转移。 在以下示例中，将`<**MyAg**>`替换为你的可用性组的名称。 连接到托管目标次要副本的 SQL Server 实例，并运行以下命令：
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -244,7 +244,7 @@ ms.lasthandoff: 02/01/2018
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. 故障转移后，SQL Server 上升级旧的主副本通过重复步骤 b.1 b.3 上面所述的相同过程。
+1. 故障转移后，SQL Server 上升级旧的主副本通过重复步骤 b.1 b.3 中所述的相同过程。
 
    下面的示例将升级`mssql-server`和`mssql-server-ha`包。
 
@@ -267,7 +267,7 @@ ms.lasthandoff: 02/01/2018
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. 对于可用性组使用的外部群集管理器-群集在其中键入是外部，清理而引起的手动故障转移的位置约束。 
+1. 对于可用性组与外部群集管理器-群集类型所在外部，清除而引起的手动故障转移的位置约束。 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  

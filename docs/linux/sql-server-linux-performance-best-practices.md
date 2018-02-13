@@ -1,6 +1,6 @@
 ---
 title: "在 Linux 上的 SQL Server 的性能最佳实践 |Microsoft 文档"
-description: "本主题提供有关在 Linux 上运行 SQL Server 2017 性能最佳实践和准则。"
+description: "这篇文章提供有关在 Linux 上运行 SQL Server 2017 性能最佳实践和指南。"
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -9,20 +9,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>性能最佳实践和 SQL Server 自 2017 年在 Linux 上的配置指南
 
-本主题提供最佳做法和建议以最大化连接到 Linux 上的 SQL Server 的数据库应用程序的性能。 这些建议是特定于 Linux 平台上运行。 所有正常的 SQL Server 建议，如索引设计仍适用。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+本文提供了最佳做法和建议以最大化连接到 Linux 上的 SQL Server 的数据库应用程序的性能。 这些建议是特定于 Linux 平台上运行。 所有正常的 SQL Server 建议，如索引设计仍适用。
 
 以下准则包含配置 SQL Server 和 Linux 操作系统的建议。
 

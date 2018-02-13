@@ -8,28 +8,30 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, security
 - security [SQLXML]
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 311d5a3ff6cd5c23a3225985944facb0dbde0027
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a98701c588a51384377c40df917aa0fd4145e46
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 安全注意事项
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]本部分提供有关与安全相关注意事项的信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本部分提供 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 的安全相关注意事项的信息。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [SQLXML 核心安全性注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/core-sqlxml-security-considerations.md)  
  提供使用 SQLXML 进行数据访问的安全性准则。  
   

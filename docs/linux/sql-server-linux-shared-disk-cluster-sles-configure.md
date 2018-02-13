@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 SLES 共享磁盘群集
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成下面的端到端方案，需要两台计算机来部署两个节点群集，还需要一台服务器来配置 NFS 共享。 以下步骤概述了如何配置这些服务器。
+若要完成以下的端到端方案，你需要两台计算机部署两个节点群集和另一台服务器来配置 NFS 共享。 以下步骤概述了如何配置这些服务器。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>在每个群集节点上安装和配置操作系统
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每个群集节点上安装和配置 SQL Server
 
-1. 在两个节点上安装和设置 SQL Server。 有关详细说明请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
+1. 在两个节点上安装和设置 SQL Server。 有关详细说明，请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
 2. 出于配置目的，请将一个节点指定为主要节点，而将另一个指定为辅助节点。 使用以下术语，按照此指南操作。 
 3. 在辅助节点上，停止并禁用 SQL Server。 以下示例将停止并禁用 SQL Server：
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/01/2018
 
     > [!NOTE]
     > 在安装时，服务器主密钥是生成的 SQL Server 实例和放在`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。
-4. 在主节点上，为 Pacemaker 创建的 SQL server 登录名和授予登录权限运行`sp_server_diagnostics`。 Pacemaker 将用此帐户验证哪个节点正在运行 SQL Server。
+4. 在主节点上，为 Pacemaker 创建的 SQL server 登录名和授予登录权限运行`sp_server_diagnostics`。 Pacemaker 使用此帐户来验证哪些节点正在运行 SQL Server。
 
     ```bash
     sudo systemctl start mssql-server
@@ -203,7 +203,7 @@ ms.lasthandoff: 02/01/2018
 - **SQL Server 资源名称**： 群集的 SQL Server 资源的名称。 
 - **超时值**： 超时值是群集等待资源联机时的时间量。 对于 SQL Server，这是希望 SQL Server 以使所需的时间`master`数据库联机。 
 
-通过以下脚本更新环境的值。 在一个节点上运行，以配置并启动群集服务。
+更新你的环境的以下脚本中的值。 在一个节点上运行，以配置并启动群集服务。
 
 ```bash
 sudo crm configure
@@ -252,7 +252,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>管理群集资源
 
-若要管理你的群集资源，请参阅下列主题，SUSE:[管理群集资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+若要管理你的群集资源，请参阅以下 SUSE 主题：[管理群集资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>手动故障转移 (manual failover)
 

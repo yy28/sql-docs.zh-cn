@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ee15f5b5124d96b2f8033515f95f03c3aab89ae3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>使用 ssis conf 在 Linux 上配置 SQL Server Integration Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 你运行`ssis-conf`配置脚本时为 Red Hat Enterprise Linux 和 Ubuntu 安装 SQL Server Integration Services (SSIS)。 有关安装 SSIS 的详细信息，请参阅[安装 SQL Server Integration Services (SSIS) 在 Linux 上](sql-server-linux-setup-ssis.md)。
 
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/08/2017
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|
-| 集版本 | 设置 SQL Server 的版本                                       |
+| set-edition | 设置 SQL Server 的版本                                       |
 | 遥测   | 启用或禁用 SQL Server Integration Services 遥测服务 |
 | 安装       | 初始化并设置 Microsoft SQL Server Integration Services      |
 |||
@@ -116,7 +118,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 
 若要运行`setup`命令提示的语言与您希望在你可以指定区域设置。 例如，若要在中文收到提示，请运行以下命令： `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`。
 
-## <a name="ssisconf-format"></a>ssis.conf 格式
+## <a name="ssisconf-format"></a>ssis.conf format
 
 以下`/var/opt/ssis/ssis.conf`文件提供了为每个设置的一个示例。
 

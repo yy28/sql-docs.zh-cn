@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 6f8ba6ed2e56ea4dc97ab68fa85601d94edfe1fc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>运行故障转移群集实例-在 Linux 上的 SQL Server
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/01/2018
 - [RHEL 或 Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
-## <a name = "#rhelFailover"></a>手动故障转移 （RHEL 或 Ubuntu）
+## <a name = "#rhelFailover"></a> 手动故障转移 （RHEL 或 Ubuntu）
 
 若要执行的手动故障转移，onn Red Hat Enterprise Linux (RHEL) 或 Ubuntu 服务器，请执行以下步骤。
 1.  发出以下命令： 
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/01/2018
 
 \<FCIResourceName > 是 FCI 的 Pacemaker 资源名称。 
 
-## <a name = "#slesFailover"></a>手动故障转移 (SLES)
+## <a name = "#slesFailover"></a> 手动故障转移 (SLES)
 
 
 在 Suse Linux 企业服务器 (SLES)，使用`migrate`命令手动故障转移到 SQL Server FCI。 例如：

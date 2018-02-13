@@ -21,17 +21,18 @@ ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
 ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]将 PolyBase 用于受 Kerberos 保护的 Hadoop 群集时，可以使用 PolyBase 内置的交互式诊断工具帮助解决身份验证问题。 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+将 PolyBase 用于受 Kerberos 保护的 Hadoop 群集时，可以使用 PolyBase 内置的交互式诊断工具帮助解决身份验证问题。 
 
 本文可作为指南，引导用户利用此工具完成此类问题的整个调试过程。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 1. 已安装 PolyBase 的 SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 或更高版本
 1. 受 Kerberos（Active Directory 或 MIT）保护的 Hadoop 群集（Cloudera 或 Hortonworks）

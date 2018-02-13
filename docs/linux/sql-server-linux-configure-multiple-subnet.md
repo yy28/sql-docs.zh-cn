@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84195d2451664b2bee81ebbb1dc3b7d9d89060d5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>配置多子网 Alwayson 可用性组和故障转移群集实例
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/01/2018
 
     其中*filename*是你想要调用兴业的名称。
 
-2.  编辑生成的文件。 查找`<resources>`部分。 你将看到已创建的可用性组或 FCI 的各种资源。 找到一个与 IP 地址相关联。 添加`<instance attributes>`之前部分的上方或下方的现有版本，第二个 IP 地址的信息`<operations>`。 它将如下所示的以下语法：
+2.  编辑生成的文件。 查找`<resources>`部分。 你将看到已创建的可用性组或 FCI 的各种资源。 找到一个与 IP 地址相关联。 添加`<instance attributes>`之前部分的上方或下方的现有版本，第二个 IP 地址的信息`<operations>`。 它是类似于以下语法：
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">

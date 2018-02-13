@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], queries
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a873bc0b382c1b81daed1cedb6ebb6229296ba7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cd63b4426bdc1b4adf9020b5cf4bd3e50622528
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查询中使用带批注的 XSD 架构 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]你可以指定针对带批注的架构，通过在针对 XSD 架构的模板中指定 XPath 查询从数据库检索数据的查询。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+通过在模板中针对 XSD 架构指定 XPath 查询，可以针对带批注的架构指定查询以从数据库检索数据。  
   
  **\<Sql:xpath-查询 >**元素允许你指定 XPath 查询 XML 视图中定义的带批注的架构。 通过使用识别带批注的架构对其执行 XPath 查询是**映射架构**属性 **\<sql:xpath-查询 >**元素。  
   
@@ -145,6 +147,6 @@ ms.lasthandoff: 11/17/2017
 </sql:xpath-query>  
 ```  
   
- 该模板指定了一个 XPath 查询，但未指定映射架构。 因此，此查询将被视为**dbobject** Production.ProductPhoto 处于表名称的类型查询和@ProductPhotoID="100"是一个谓词，查找具有的 ID 值为 100 的产品照片。 @LargePhoto是要从中检索值的列。  
+ 该模板指定了一个 XPath 查询，但未指定映射架构。 因此，此查询将被视为**dbobject** Production.ProductPhoto 处于表名称的类型查询和@ProductPhotoID="100"是一个谓词，查找具有的 ID 值为 100 的产品照片。 @LargePhoto 是要从中检索值的列。  
   
   

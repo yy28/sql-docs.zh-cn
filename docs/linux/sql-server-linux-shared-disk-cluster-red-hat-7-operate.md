@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行操作
 
@@ -73,7 +73,7 @@ sudo pcs status
 sudo crm_mon 
 ```
 
-查看在资源代理日志`/var/log/cluster/corosync.log`
+查看在资源代理日志 `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>向群集添加节点
 
@@ -105,7 +105,7 @@ sudo crm_mon
 
 1. 按照说明将数据库文件目录装载到共享位置：
 
-   从 NFS 服务器中，安装`nfs-utils`
+   从 NFS 服务器中，安装 `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -224,7 +224,7 @@ PCSD 必须运行才能使用`pcs`工具。
 
 ### <a name="current-cluster-status"></a>当前群集状态 
 
-`sudo pcs status`返回有关每个节点的群集、 仲裁、 节点、 资源和守护程序状态的基本信息。 
+`sudo pcs status` 返回有关每个节点的群集、 仲裁、 节点、 资源和守护程序状态的基本信息。 
 
 一个运行状况良好的 pacemaker 仲裁输出的示例如下：
 
@@ -253,9 +253,9 @@ pacemaker: active/enabled
 
 在示例中，`partition with quorum`意味着节点多数仲裁处于联机状态。 如果群集失去节点多数仲裁`pcs status`将返回`partition WITHOUT quorum`和将停止所有资源。 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`返回当前参与到群集中的所有节点的名称。 如果没有加入任何节点，`pcs status`返回`OFFLINE: [<nodename>]`。
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` 返回当前参与到群集中的所有节点的名称。 如果没有加入任何节点，`pcs status`返回`OFFLINE: [<nodename>]`。
 
-`PCSD Status`显示每个节点的群集状态。
+`PCSD Status` 显示每个节点的群集状态。
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>节点可能处于脱机状态的原因
 

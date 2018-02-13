@@ -11,21 +11,23 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apilocation: sqluserinstance.dll
+apilocation:
+- sqluserinstance.dll
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55d0f7662217b9b2b92fbd8a7a0b640f2384f4ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 09b0bc0bb6e65799db8d0767d24a14a59304248d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 标头信息和版本信息
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQL Server Express LocalDB 实例 API; 没有单独的标头文件SQL Server Native Client 标头文件 (sqlncli.h) 中定义的 LocalDB 函数签名和错误代码。 若要使用 LocalDB 实例 API，必须在项目中包含 sqlncli.h 头文件。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+没有用于 SQL Server Express LocalDB 实例 API 的单独头文件；LocalDB 函数签名和错误代码在 SQL Server Native Client 头文件 (sqlncli.h) 中定义。 若要使用 LocalDB 实例 API，必须在项目中包含 sqlncli.h 头文件。  
   
 ## <a name="localdb-versioning"></a>LocalDB 版本  
  对于每个主要 SQL Server 版本，LocalDB 安装将使用单组二进制代码。 这些 LocalDB 版本独立进行维护和修补。 这意味着，用户必须指定他或她将使用的 LocalDB 基准版本（也即主 SQL Server 版本）。 在.NET Framework 定义的标准版本格式中指定的版本**System.Version**类：  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], DiffGrams
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32b5ddd71a02ae931d4e79ce12ebf2afdcf590cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9788bf33cb9ec0b1502fb338f39884bfb2f7dec8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML 托管类执行 DiffGram
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]此示例演示如何执行中的 DiffGram 文件[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 环境，以将数据应用更新到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表使用 SQLXML 托管类 (Microsoft.Data.SqlXml)。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+此示例演示如何执行中的 DiffGram 文件[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 环境，以将数据应用更新到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表使用 SQLXML 托管类 (Microsoft.Data.SqlXml)。  
   
  在本示例中，DiffGram 更新客户 ALFKI 的客户信息（CompanyName 和 ContactName）。  
   

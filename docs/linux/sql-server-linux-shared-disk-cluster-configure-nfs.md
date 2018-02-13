@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 25bcc2fb0ddb60198208d88ce9c19be139d6ec2f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>配置 NFS-在 Linux 上的 SQL Server 的故障转移群集实例-
 
@@ -33,8 +33,8 @@ NFS 或网络文件系统，是共享中 Linux world 但 Windows 一个磁盘的
 承载 NFS （Linux 服务器或其他） 的源必须使用/符合 4.2 或更高版本。 早期版本不会使用在 Linux 上的 SQL Server。
 
 配置 NFS 服务器上共享，请确保所文件夹时它们遵循以下这些准则常规选项：
-- `rw`若要确保文件夹可以进行读取和写入
-- `sync`若要确保保证对文件夹的写操作
+- `rw` 若要确保文件夹可以进行读取和写入
+- `sync` 若要确保保证对文件夹的写操作
 - 不要使用`no_root_squash`作为一个选项; 它将被视为安全风险
 - 请确保文件夹具有完全权限 (777) 应用
 
@@ -167,7 +167,7 @@ NFS 或网络文件系统，是共享中 Linux world 但 Windows 一个磁盘的
     sudo systemctl status mssql-server
     ```
     
-   * 创建一个数据库以测试已正确设置了安全。 下面的示例将显示正在完成通过 TRANSACT-SQL;它可以通过 SSMS 来完成。
+   * 创建一个数据库以测试已正确设置了安全。 下面的示例演示正在通过 TRANSACT-SQL;它可以通过 SSMS 来完成。
  
     ![CreateTestdatabase][3]
 
@@ -204,7 +204,7 @@ NFS 或网络文件系统，是共享中 Linux world 但 Windows 一个磁盘的
     mkdir <FolderName>
     ```
 
-    \<文件夹名称 > 是文件夹的名称。 该文件夹的完整路径将需要指定如果不在正确的位置。 下面的示例创建一个名为 /var/opt/mssql/userdata 文件夹。
+    \<文件夹名称 > 是文件夹的名称。 该文件夹的完整路径，需要指定如果不在正确的位置。 下面的示例创建一个名为 /var/opt/mssql/userdata 文件夹。
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -230,7 +230,7 @@ NFS 或网络文件系统，是共享中 Linux world 但 Windows 一个磁盘的
   
    * 键入 exit 以不再是超级用户。
 
-   * 若要测试，请在该文件夹中创建数据库。 下面所示的示例使用 sqlcmd 创建数据库，将上下文切换到它，验证文件中的操作系统级别中，存在，然后删除的临时位置。 你可以使用 SSMS。
+   * 若要测试，请在该文件夹中创建数据库。 下面的示例使用 sqlcmd 创建数据库，将上下文切换到它，验证文件中的操作系统级别中，存在，然后删除的临时位置。 你可以使用 SSMS。
 
     ![15-createtestdatabase][4]
  

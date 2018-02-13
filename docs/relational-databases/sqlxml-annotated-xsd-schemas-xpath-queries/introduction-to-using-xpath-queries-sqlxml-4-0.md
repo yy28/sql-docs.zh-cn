@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9113df3519ab212f3647b96c63620167c7913ffb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b08c314d50376e55d9825658aabc75385bbbe0be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]执行 XML 路径语言 (XPath) 查询可以指定为 URL 的一部分或在模板中。 映射架构决定生成的此片段的结构，值从数据库中进行检索。 从概念上来说，此过程类似于使用 CREATE VIEW 语句创建视图，然后根据视图编写 SQL 查询。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XML Path 语言 (XPath) 查询可以指定作为 URL 的一部分，或在模板内指定。 映射架构决定生成的此片段的结构，值从数据库中进行检索。 从概念上来说，此过程类似于使用 CREATE VIEW 语句创建视图，然后根据视图编写 SQL 查询。  
   
 > [!NOTE]  
 >  若要了解 SQLXML 4.0 中的 XPath 查询，必须熟悉 XML 视图和相关的概念，如模板和映射架构。 有关详细信息，请参阅[简介批注 XSD 架构 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)，和由 World Wide Web 联合会 (W3C) 定义的 XPath 标准。  
@@ -101,9 +103,9 @@ ms.lasthandoff: 11/17/2017
 |包含连续谓词和嵌套谓词的布尔值谓词||[在 XPath 查询 &#40; 中指定算术运算符SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |所有关系运算符|=, !=, <, \<=, >, >=|[在 XPath 查询 &#40; 中指定关系运算符SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算术运算符|+、-、*、div|[在 XPath 查询 &#40; 中指定算术运算符SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|显式转换函数|**number （） 来**， **string （)**， **boolean （)**|[在 XPath 查询 &#40; 中指定显式转换函数SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|显式转换函数|**number()**, **string()**, **Boolean()**|[在 XPath 查询 &#40; 中指定显式转换函数SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |布尔运算符|AND、OR|[在 XPath 查询 &#40; 中指定布尔运算符SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|布尔函数|**true()**， **false （)**， **not()**|[指定的 XPath 查询的布尔函数 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|布尔函数|**true()**, **false()**, **not()**|[指定的 XPath 查询的布尔函数 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath 变量||[在 XPath 查询 &#40; 中指定 XPath 变量SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>不支持的功能  
@@ -115,9 +117,9 @@ ms.lasthandoff: 11/17/2017
 |数值谓词||  
 |算术运算符|mod|  
 |节点函数|**上级**，**上级或自身**，**子代**，**后代或自助 (/ /)**，**以下**， **后面的同级**，**命名空间**，**前面**，**前面的同级**|  
-|字符串函数|**string （)**， **concat （)**， **starts-with()**， **contains （)**， **substring-before()**， **substring-after()**， **substring （)**， **string-length()**， **normalize()**， **translate()**|  
+|字符串函数|**string()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
 |布尔函数|**lang()**|  
-|数字函数|**sum （)**， **floor （)**， **ceiling()**， **round （)**|  
+|数字函数|**sum()**, **floor()**, **ceiling()**, **round()**|  
 |Union 运算符|&#124;|  
   
  在模板中指定 XPath 查询时，请注意以下行为：  

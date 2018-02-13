@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6ff13edf01370778da9361d5834e70ebfdb20a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新数据 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]在更新现有数据时，必须将同时指定**\<之前 >**和**\<后 >**块。 中指定的元素**\<之前 >**和**\<后 >**块描述所需的更改。 Updategram 使用中指定的元素**\<之前 >**块来标识数据库中的现有记录。 中的相应元素**\<后 >**块指示如何记录应查看后跟执行更新操作。 中的信息，含 updategram 创建匹配的 SQL 语句**\<后 >**块。 然后，Updategram 使用该语句更新数据库。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+在更新现有数据时，必须将同时指定**\<之前 >**和**\<后 >**块。 中指定的元素**\<之前 >**和**\<后 >**块描述所需的更改。 Updategram 使用中指定的元素**\<之前 >**块来标识数据库中的现有记录。 中的相应元素**\<后 >**块指示如何记录应查看后跟执行更新操作。 中的信息，含 updategram 创建匹配的 SQL 语句**\<后 >**块。 然后，Updategram 使用该语句更新数据库。  
   
  以下是 Updategram 的更新操作格式：  
   
@@ -59,10 +61,10 @@ ms.lasthandoff: 11/17/2017
 </ROOT>  
 ```  
   
- **\<updg： 之前 >**  
+ **\<updg:before>**  
  中的元素**\<之前 >**块标识数据库表中的现有记录。  
   
- **\<updg： 后 >**  
+ **\<updg:after>**  
  中的元素**\<后 >**块描述如何在指定的记录**\<之前 >**应用更新后，应查看块。  
   
  **映射架构**特性标识要由属的 updategram 的映射架构。 如果属的 updategram 指定的映射架构，元素和属性名称中指定**\<之前 >**和**\<后 >**块必须与架构中的名称匹配。 该映射架构将这些元素或属性名称映射到数据库表和列名称。  

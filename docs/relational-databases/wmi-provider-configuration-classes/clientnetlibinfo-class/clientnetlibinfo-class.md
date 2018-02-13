@@ -11,23 +11,27 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ClientNetLibInfo Class
-apilocation: sqlmgmproviderxpsp2up.mof
-helpviewer_keywords: ClientNetLibInfo class
+apiname:
+- ClientNetLibInfo Class
+apilocation:
+- sqlmgmproviderxpsp2up.mof
+helpviewer_keywords:
+- ClientNetLibInfo class
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa38feac5529dd454bb74d39fad34b6fb7ef5af5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 93d8b5374a8112d4d2ab5fa48f94831d0c3dbdf5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 类
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)][ClientNetLibInfo 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)表示有关客户端网络库的信息。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[ClientNetLibInfo 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)表示有关客户端网络库的信息。  
   
  客户端网络库文件允许通过具有的实例的网络通信的客户端实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用特定的网络协议。  
   

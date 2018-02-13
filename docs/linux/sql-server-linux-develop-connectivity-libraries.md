@@ -9,25 +9,25 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 2f9d7d8697aa82caf3822cefefe83a2525a72e24
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>适用于 Microsoft SQL Server 的连接库和框架
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-签出我们[入门教程](http://aka.ms/sqldev)快速开始使用编程语言，例如 C#、 Java、 Node.js、 PHP 和 Python 和生成在 macOS 上使用 Linux 或 Windows 或 Docker 上的 SQL Server 的应用程序。
+签出[入门教程](http://aka.ms/sqldev)快速开始使用编程语言，例如 C#、 Java、 Node.js、 PHP 和 Python 和生成在 macOS 上使用 Linux 或 Windows 或 Docker 上的 SQL Server 的应用程序。
 
-下表列出了连接库或*驱动程序*客户端应用程序可以使用不同的语言来连接到并使用 Microsoft SQL Server 在本地运行或在云中，在 Linux、 Windows 或 Docker 以及 Azure SQL 数据库和 Azure SQL 数据仓库。 
+下表列出了连接库或*驱动程序*客户端应用程序可以使用不同的语言来连接到并使用 Microsoft SQL Server 在本地运行或在云中，在 Linux、 Windows 或 Docker 上和此外为 Azure SQL 数据库和 Azure SQL 数据仓库。 
 
 | 语言 | 平台 | 其他资源 | 下载 | 开始操作 |
 | :-- | :-- | :-- | :-- | :-- |
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/01/2018
 | Ruby | Windows、Linux、macOS | [适用于 SQL Server 的 Ruby 驱动程序](../connect/ruby/ruby-driver-for-sql-server.md) | [要开始](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu)
 | C++ | Windows、Linux、macOS | [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) | [下载](https://msdn.microsoft.com/en-us/library/mt654048(v=sql.1).aspx) |  
 
-下表列出了对象关系映射 (ORM) 框架和 Web 框架的几个示例，客户端应用程序可将这些框架与本地或云中、在 Linux、Windows 或 Docker 上运行的 Microsoft SQL Server 以及 Azure SQL 数据库和 Azure SQL 数据仓库结合使用。 
+下表列出的对象关系映射 (ORM) 框架和 web 框架的客户端应用程序可以使用与 Microsoft SQL Server 在本地运行或在云中，在 Linux、 Windows 或 Docker 和 Azure SQL 数据库的几个示例和Azure SQL 数据仓库。 
 
 | 语言 | 平台 | ORM(s) |
 | :-- | :-- | :-- |

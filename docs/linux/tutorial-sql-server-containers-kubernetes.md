@@ -9,16 +9,16 @@ ms.topic: tutorial
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: mvc
+ms.custom: sql-linux,mvc
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 4ada1034b64f710f4eeae995b771ef8be5bf4fe2
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a21856b3a864373f84ad304484ecdd88ac17f52a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>在 Kubernetes 中配置 SQL Server 容器，以实现高可用性
 
@@ -119,7 +119,7 @@ Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/do
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
-   `<Path to pvc.yaml file>`保存该文件的位置。
+   `<Path to pvc.yaml file>` 保存该文件的位置。
 
    持久的卷上自动创建为 Azure 存储帐户，并绑定到持久卷声明。 
 
@@ -131,7 +131,7 @@ Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/do
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
-   `<PersistentVolumeClaim>`是持久的卷声明的名称。
+   `<PersistentVolumeClaim>` 是持久的卷声明的名称。
 
    在前面的步骤中，名为持久卷声明`mssql-data`。 若要查看有关持久性卷声明的元数据，请运行以下命令：
 
@@ -153,7 +153,7 @@ Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/do
    kubectl describe pv
    ```
 
-   `kubectl`返回有关的持久的卷的自动创建并绑定到持久卷声明的元数据。 
+   `kubectl` 返回有关的持久的卷的自动创建并绑定到持久卷声明的元数据。 
 
 ## <a name="create-the-deployment"></a>创建部署
 
@@ -242,7 +242,7 @@ Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/do
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
-   `<Path to sqldeployment.yaml file>`保存该文件的位置。
+   `<Path to sqldeployment.yaml file>` 保存该文件的位置。
 
    ![部署命令的屏幕截图](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
@@ -267,7 +267,7 @@ Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/do
 
    ![获取服务命令的屏幕截图](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
 
-   Kubernetes 群集中的对象的状态的其他信息，请运行：
+   Kubernetes 群集中的对象的状态的详细信息，请运行：
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
@@ -293,8 +293,8 @@ Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/do
 
    替换以下值：
       
-    - `<External IP Address>`具有的 IP 地址的`mssql-deployment`服务 
-    - `MyC0m9l&xP@ssw0rd`用您的密码
+    - `<External IP Address>` 具有的 IP 地址的`mssql-deployment`服务 
+    - `MyC0m9l&xP@ssw0rd` 用您的密码
 
 ## <a name="verify-failure-and-recovery"></a>验证故障与恢复
 
@@ -313,7 +313,7 @@ Kubernetes 1.6 及更高版本具有对支持[存储类](http://kubernetes.io/do
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
-   `mssql-deployment-0`从上一步 pod 名称返回的值。 
+   `mssql-deployment-0` 从上一步 pod 名称返回的值。 
 
 Kubernetes 自动重新创建 pod 恢复的 SQL Server 实例，并连接到持久性存储区。 使用`kubectl get pods`以验证部署一个新的组合。 使用`kubectl get services`以验证新的容器的 IP 地址是否相同。 
 

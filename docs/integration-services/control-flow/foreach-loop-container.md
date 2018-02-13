@@ -39,10 +39,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/25/2018
 |Foreach ADLS 文件|指定包含要枚举的文件的 Azure Data Lake Store 目录。|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>使用 Foreach 循环容器将枚举添加到控制流
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含 Foreach 循环容器，此容器是一个控制流元素，利用它可以轻松地将枚举文件和对象的循环构造包括到包的控制流中。 有关详细信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含 Foreach 循环容器，此容器是控制流元素，使得可以更简便地将枚举文件和对象的循环构造包括到包的控制流中。 有关详细信息，请参阅 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)。  
   
  Foreach 循环容器不提供任何功能，只提供用以生成可重复的控制流、指定枚举器类型以及配置枚举器的结构。 若要提供容器功能，Foreach Loop 循环容器中必须包含至少一个任务。 有关详细信息，请参阅 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  
   

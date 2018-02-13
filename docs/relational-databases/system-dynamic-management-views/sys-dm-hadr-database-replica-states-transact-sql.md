@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_hadr_database_replica_states (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 11/08/2017
+ms.date: 02/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9c0d53a9d2a339b59f9696aa02dd0e409d8e95a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c69d36319ca4273fad7b1c4890bf27e4e4fa0797
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.lasthandoff: 02/03/2018
 |**replica_id**|**uniqueidentifier**|可用性组内可用性副本的标识符。|  
 |**group_database_id**|**uniqueidentifier**|可用性组内数据库的标识符。 在此数据库联接到的每个副本上，该标识符都是相同的。|  
 |**is_local**|**bit**|可用性数据库是否是本地的，可以是下列值之一：<br /><br /> 0 = 数据库对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例而言不是本地的。<br /><br /> 1 = 数据库对于服务器实例而言是本地的。|  
-|**is_primary_replica**|**bit**|如果副本是主要副本则返回 1；如果副本是辅助副本则返回 0。 适用于 SQL Server 2014 及更高。|  
-|**synchronization_state**|**tinyint**|数据移动状态，下列值之一。<br /><br /> 0 = 不同步。 对于某一主数据库，指示该数据库未做好将其事务日志与相应的辅助数据库同步的准备。 对于辅助数据库，指示数据库由于连接问题而未开始日志同步，正被挂起，或者在启动或角色切换过程中正在转换状态。<br /><br /> 1 = 正在同步。 对于主数据库，指示此数据库已做好接受来自辅助数据库的扫描请求的准备。 对于辅助数据库，指示对于该数据库正在发生活动数据移动。<br /><br /> 2 = 已同步。 主数据库显示 SYNCHRONIZED 来代替 SYNCHRONIZING。 同步提交辅助数据库在以下情况下将显示已同步：本地缓存指示数据库副本可供故障转移并且数据库正在同步。<br /><br /> 3 = Reverting。 指示撤消进程中辅助数据库主动从主数据库获取页时的阶段。 **注意：**当辅助副本上的数据库处于 REVERTING 状态时，强制故障转移到辅助副本使数据库处于顺序它无法启动作为主数据库的状态。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。<br /><br /> 4 = 正在初始化。 指示在正在辅助副本上传送和强制写入辅助数据库跟上撤消 LSN 所需的事务日志时的撤消阶段。 **注意：**辅助副本上的数据库处于正在初始化状态时，强制故障转移到辅助副本使数据库处于状态它启动作为主数据库。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。|  
+|**is_primary_replica**|**bit**|如果副本是主要副本则返回 1；如果副本是辅助副本则返回 0。<br /><br />**适用于：** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|**synchronization_state**|**tinyint**|数据移动状态，下列值之一。<br /><br /> 0 = 不同步。 对于某一主数据库，指示该数据库未做好将其事务日志与相应的辅助数据库同步的准备。 对于辅助数据库，指示数据库由于连接问题而未开始日志同步，正被挂起，或者在启动或角色切换过程中正在转换状态。<br /><br /> 1 = 正在同步。 对于主数据库，指示此数据库已做好接受来自辅助数据库的扫描请求的准备。 对于辅助数据库，指示对于该数据库正在发生活动数据移动。<br /><br /> 2 = 已同步。 主数据库显示 SYNCHRONIZED 来代替 SYNCHRONIZING。 同步提交辅助数据库在以下情况下将显示已同步：本地缓存指示数据库副本可供故障转移并且数据库正在同步。<br /><br /> 3 = Reverting。 指示撤消进程中辅助数据库主动从主数据库获取页时的阶段。<br />**注意：**当辅助副本上的数据库处于 REVERTING 状态时，强制故障转移到辅助副本使数据库处于顺序它无法启动作为主数据库的状态。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。<br /><br /> 4 = 正在初始化。 指示在正在辅助副本上传送和强制写入辅助数据库跟上撤消 LSN 所需的事务日志时的撤消阶段。<br />**注意：**辅助副本上的数据库处于正在初始化状态时，强制故障转移到辅助副本使数据库处于状态它启动作为主数据库。 该数据库将需要作为辅助数据库重新连接，或者您需要应用来自日志备份的新日志记录。|  
 |**synchronization_state_desc**|**nvarchar(60)**|数据移动状态的说明，可以是下列值之一：<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 就此数据库而言，事务提交未同步。<br /><br /> 1 = 就此数据库而言，事务提交同步。<br /><br /> 对于异步提交可用性副本上的数据库，该值始终为 0。<br /><br /> 对于同步提交可用性副本上的数据库，该值仅在主数据库上是准确的。|  
 |**synchronization_health**|**tinyint**|反映数据库联接到可用性组的可用性副本的同步状态和可用性副本 （同步提交或异步提交模式） 之一的可用性模式的交集的以下值。<br /><br /> 0 = 不正常。 **Synchronization_state**的数据库是 0 （不同步）。<br /><br /> 1 = 部分正常运行。 同步提交可用性副本上的数据库被视为部分正常如果**synchronization_state**为 1 （正在同步）。<br /><br /> 2 = 正常。 同步提交可用性副本上的数据库被视为正常如果**synchronization_state**为 2 （同步），异步提交可用性副本上的数据库被视为正常如果**synchronization_state**为 1 （正在同步）。|  
 |**synchronization_health_desc**|**nvarchar(60)**|说明**synchronization_health**可用性数据库。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**database_state**|**tinyint**|0 = 联机<br /><br /> 1 = 正在还原<br /><br /> 2 = 正在恢复<br /><br /> 3 = 恢复挂起<br /><br /> 4 = 可疑<br /><br /> 5 = 紧急<br /><br /> 6 = 脱机<br /><br /> **注意：**相同**状态**sys.databases 中的列。|  
-|**database_state_desc**|**nvarchar(60)**|说明**database_state**的可用性副本。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **注意：**相同**状态**sys.databases 中的列。|  
+|**database_state_desc**|**nvarchar(60)**|说明**database_state**的可用性副本。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **注意：**相同**state_desc** sys.databases 中的列。|  
 |**is_suspended**|**bit**|数据库状态，可以是下列值之一：<br /><br /> 0 = 已恢复<br /><br /> 1 = 已挂起|  
 |**suspend_reason**|**tinyint**|如果数据库处于已挂起状态，则为已挂起状态的原因，可以是下列值之一：<br /><br /> 0 = 用户操作<br /><br /> 1 = 挂起来自伙伴<br /><br /> 2 = 重做<br /><br /> 3 = 捕获<br /><br /> 4 = 应用<br /><br /> 5 = 重新启动<br /><br /> 6 = 撤消<br /><br /> 7 = 重新验证<br /><br /> 8 = 计算辅助副本同步点时出错|  
 |**suspend_reason_desc**|**nvarchar(60)**|数据库挂起状态的原因的说明，可以是下列值之一：<br /><br /> SUSPEND_FROM_USER = 用户手动挂起的收据移动<br /><br /> SUSPEND_FROM_PARTNER = 在强制故障转移后挂起数据库副本<br /><br /> SUSPEND_FROM_REDO = 在重做阶段中出错<br /><br /> SUSPEND_FROM_APPLY = 在将日志写入文件时出错（请参阅错误日志）<br /><br /> SUSPEND_FROM_CAPTURE = 在捕获主副本上的日志时出错<br /><br /> SUSPEND_FROM_RESTART = 在重新启动数据库前挂起数据库副本（请参阅错误日志）<br /><br /> SUSPEND_FROM_UNDO = 在撤消阶段中出错（请参阅错误日志）<br /><br /> SUSPEND_FROM_REVALIDATION = 在重新连接时检测到了日志更改不匹配（请参阅错误日志）<br /><br /> SUSPEND_FROM_XRF_UPDATE = 找不到公共日志点（请参阅错误日志）|  
@@ -79,9 +79,9 @@ ms.lasthandoff: 02/03/2018
 |**last_commit_lsn**|**Numeric(25,0)**|与事务日志中的最后提交的记录相对应的实际日志序列号。<br /><br /> 主数据库上，这对应于上次处理的提交记录。 辅助数据库的行显示辅助副本已发送到主副本的日志序列号。<br /><br /> 在辅助副本上，这是已重做的最后一个提交记录。|  
 |**last_commit_time**|**datetime**|与最后一个提交记录对应的时间。<br /><br /> 在辅助数据库上，此时间与主数据库上的时间相同。<br /><br /> 在主副本上，每个辅助数据库行都显示承载该辅助数据库的辅助副本报告回主副本的时间。 主数据库行和给定辅助数据库行之间的时间差异大体上表示还原时间目标 (RPO)，并且假定跟随进行重做进程并且进度已由辅助副本报告回主副本。|  
 |**low_water_mark_for_ghosts**|**bigint**|针对数据库的单调递增的数字，指示主数据库上虚影清除使用的低水印。 如果这个数字没有随着时间的推移而增加，则意味着虚影清除可能未发生。 为了确定要清除的虚影行，主副本会在所有可用性副本（包括主副本）上将该列的最小值用于此数据库。|  
-|**secondary_lag_seconds**|**bigint**|在同步期间位于主副本的辅助副本的秒数。|  
+|**secondary_lag_seconds**|**bigint**|在同步期间位于主副本的辅助副本的秒数。<br /><br />**适用于：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
-##  <a name="LSNcolumns"></a>了解的 LSN 列的值  
+##  <a name="LSNcolumns"></a> 了解的 LSN 列的值  
  值**end_of_log_lsn**， **last_hardened_lsn**， **last_received_lsn**， **last_sent_lsn**，**恢复_lsn**，和**truncation_lsn**列不是实际日志序列号 (Lsn)。 上述各值反映了用零填充的日志块 ID。  
   
  **end_of_log_lsn**， **last_hardened_lsn**，和**recovery_lsn**是刷新 Lsn。 例如， **last_hardened_lsn**指示包已在磁盘的块之后的下一个块的开头。  因此任何 LSN < 的值**last_hardened_lsn**磁盘上。  不刷新 >= 此值的 LSN。  

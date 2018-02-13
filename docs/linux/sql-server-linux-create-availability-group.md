@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>创建和配置 Linux 上的 SQL Server 的可用性组
 
@@ -64,7 +64,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>重新启动[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>重新启动 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 启用可用性组，如在 Windows 上，你必须重新启动后[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 可以通过以下：
 
 ```bash
@@ -319,7 +319,7 @@ sudo systemctl restart mssql-server
 
 本部分介绍如何使用[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)](SSMS) 或 TRANSACT-SQL 创建的可用性组[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>使用[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 本部分演示如何创建可用性组的外部群集类型 SSMS 使用新建可用性组向导。
 
@@ -365,7 +365,7 @@ sudo systemctl restart mssql-server
 
 12. 单击“下一步” 。
 
-13. 选择如何将初始化辅助副本。 默认值是使用[自动种子设定](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，这需要参与可用性组的所有服务器上的同一路径。 此外可以让向导执行备份、 复制和还原 （第二个选项）;其加入如果手动备份、 复制和还原副本上的数据库 （第三个选项）;或更高版本添加数据库 （在最后选项）。 通过使用证书，如果您是手动进行备份，并将其复制，备份文件的权限将需要在其他副本上设置。 单击“下一步” 。
+13. 选择如何将初始化辅助副本。 默认值是使用[自动种子设定](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)，这需要参与可用性组的所有服务器上的同一路径。 此外可以让向导执行备份、 复制和还原 （第二个选项）;其加入如果手动备份、 复制和还原副本上的数据库 （第三个选项）;或更高版本添加数据库 （在最后选项）。 通过使用证书，如果您是手动进行备份，并将其复制，需要在其他副本上设置的备份文件权限。 单击“下一步” 。
 
 14. 在验证对话框中，如果所有内容将不起返回为成功，调查。 一些警告是可以接受且不致命的例如如果你不创建侦听器。 单击“下一步” 。
 
@@ -596,7 +596,7 @@ Pacemaker 高可用性群集基础[!INCLUDE[ssnoversion-md](../includes/ssnovers
     ```
 
     >[!NOTE]
-    >RHEL 7.4 上可能会遇到与使用-master 警告。 若要避免此问题，请使用`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >RHEL 7.4 上可能会遇到与使用-master 警告。 若要避免此问题，请使用 `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     

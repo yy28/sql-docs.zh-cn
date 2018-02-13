@@ -8,26 +8,28 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 581472d13c4bb9e11d52a8a71965f9b8f64bf0c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 中的 xml 数据类型支持
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]开头[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 XML 类型化数据使用**xml**数据类型。 本主题提供有关 SQLXML 4.0 识别的实例的方式的信息**xml**数据类型和实现对它们的支持。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+开头[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 XML 类型化数据使用**xml**数据类型。 本主题提供有关 SQLXML 4.0 识别的实例的方式的信息**xml**数据类型和实现对它们的支持。  
   
 ## <a name="working-with-xml-data-types"></a>使用 xml 数据类型  
  若要了解有关如何使用实现的 SQL 表**xml**数据类型列，提供了以下示例：  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   SQLXML 4.0 依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的 XML 分析支持。 **Xml**列可以既作为类型化的 XML 或非类型化的 XML 映射。 在任一种情况下，SQLXML 4.0 都不验证输入 XML。  如果输入 XML 无效或格式不正确，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将向 SQLXML 报告此情况，并将服务器返回的任何相关的错误信息传播给用户。  
   
--   SQLXML 4.0 依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的对于 DTD 的有限支持。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]允许在内部 DTD **xml**数据类型数据，可以使用提供默认值并将其展开的内容替换的实体引用。 SQLXML 将 XML 数据“按原样”（包括内部 DTD）传递到服务器。 可以通过使用第三方工具将 DTD 转换为 XML 架构 (XSD)，然后使用内联 XSD 架构将数据加载到数据库中。  
+-   SQLXML 4.0 依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的对于 DTD 的有限支持。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在内部 DTD **xml**数据类型数据，可以使用提供默认值并将其展开的内容替换的实体引用。 SQLXML 将 XML 数据“按原样”（包括内部 DTD）传递到服务器。 可以通过使用第三方工具将 DTD 转换为 XML 架构 (XSD)，然后使用内联 XSD 架构将数据加载到数据库中。  
   
 -   SQLXML 4.0 不会保留 XML 声明处理指令 （例如，） 上的行为基于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 相反，XML 声明被视为对的指令[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]XML 分析器和其属性 （版本、 编码和独立） 都将丢失数据转换为**xml**数据类型。 XML 数据在内部存储为 UCS-2。 将保留 XML 实例中的所有其他处理指令;它们可以用在**xml**列，并且可以支持 SQLXML。  
   

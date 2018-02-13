@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: 14119be0cc95be9f7acb324553b0c0598896c5d9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 创建和运行 SQL Server 的 TRANSACT-SQL 脚本
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本主题演示如何使用**mssql** Visual Studio Code (VS Code) 要开发 SQL Server 数据库的扩展。
+这篇文章演示如何使用**mssql** Visual Studio Code (VS Code) 要开发 SQL Server 数据库的扩展。
 
 Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码编辑器，支持扩展。 [**Mssql** VS Code 的扩展]使您能够连接到 SQL Server，使用 TRANSACT-SQL (T-SQL)，查询并查看结果。
 
@@ -105,7 +105,7 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
    | **[可选]输入此配置文件的名称** | 连接配置文件名称。 例如，无法将该配置文件**localhost 配置文件**。 
 
    > [!Tip] 
-   > 可在用户设置文件 (settings.json) 中创建和编辑连接配置文件。 通过选择打开设置文件**首选项**然后**用户设置**VS Code 菜单中。 有关更多详细信息，请参阅[管理连接配置文件]。
+   > 可在用户设置文件 (settings.json) 中创建和编辑连接配置文件。 通过选择打开设置文件**首选项**然后**用户设置**VS Code 菜单中。 有关详细信息，请参阅[管理连接配置文件]。
 
 6. 按 ESC 键关闭提示配置文件已创建并连接的提示消息。
 

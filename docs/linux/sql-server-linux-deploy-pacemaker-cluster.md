@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的部署 Pacemaker 群集
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/01/2018
 [安装 SQL Server 自 2017 年](sql-server-linux-setup.md)。
 
 ## <a name="install-the-high-availability-add-on"></a>安装高可用性外接程序
-使用以下语法来安装构成针对的每个分布的 Linux 的高可用性 (HA) 外接程序的包。 
+使用以下语法以安装程序包构成的高可用性 (HA) 外接程序针对的每个分布的 Linux。 
 
 **Red Hat Enterprise Linux (RHEL)**
 1.  注册服务器使用以下语法。 系统提示您输入有效的用户名和密码。
@@ -153,7 +153,7 @@ Pacemaker 本身使用用户创建名为对分发*hacluster*。 RHEL 和 Ubuntu 
 
 **SLES**
 
-用于创建 Pacemaker 群集的过程是完全不同上 SLES 相比 RHEL 和 Ubuntu。 下面的步骤介绍如何使用 SLES 创建群集。
+用于创建 Pacemaker 群集的过程是完全不同上 SLES 相比 RHEL 和 Ubuntu。 以下步骤介绍如何使用 SLES 创建群集。
 1. 通过运行启动群集配置过程 
    ```bash
    sudo ha-cluster-init

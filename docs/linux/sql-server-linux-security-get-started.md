@@ -1,6 +1,6 @@
 ---
 title: "在 Linux 上的 SQL Server 安全入门 |Microsoft 文档"
-description: "本主题介绍典型的安全操作。"
+description: "本指南介绍了典型的安全操作。"
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d927bf68b06050c8067d6f6d63d737f084219341
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 的安全功能演练
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 如果你不熟悉 SQL Server 的 Linux 用户，以下任务将指导你完成一些安全任务。 虽然这些并非 Linux 独有或特定的任务，但能有助于你了解需要深入了解的领域。 在每个示例中，均提供该领域的详细文档链接。
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  务必使用强密码代替以上星号。
+>  始终在前一个命令中使用强密码来代替星号。
 
 登录名可连接到 SQL Server，且能（通过有限权限）访问 master 数据库。 若要连接到用户数据库，登录名需要数据库级别的相应标识，称为数据库用户。 用户特定于每个数据库，且必须在每个要向其授予访问权限的数据库中单独创建。 下面的示例到 AdventureWorks2014 数据库中，可使您移动，然后使用[CREATE USER](../t-sql/statements/create-user-transact-sql.md)语句以创建名为 Larry 都与名为 Larry 的登录名相关联的用户。 尽管该登录名和用户相关（相互映射），但它们是不同的对象。 登录名是服务器级主体。 用户是数据库级主体。
 
@@ -101,7 +103,7 @@ ALTER ROLE Sales ADD MEMBER Jerry;
 
 [行级别安全性](../relational-databases/security/row-level-security.md)使您能够将访问限制为基于执行查询的用户数据库中的行。 在某些情况下（如确保客户只能访问自己的数据，或员工只能访问与其部门相关的数据）此功能很有用。   
 
-以下演练设置两个用户不同步骤行级访问`Sales.SalesOrderHeader`表。 
+以下步骤引导设置两个具有不同的行级访问权限的用户`Sales.SalesOrderHeader`表。 
 
 创建两个用户帐户，测试行级安全性：    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-若要删除 TDE，执行`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+若要删除 TDE，执行 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 加密和解密操作由 SQL Server 安排在后台线程中执行。 您可以使用本主题后面部分显示的列表中的目录视图和动态管理视图查看这些操作的状态。   
 

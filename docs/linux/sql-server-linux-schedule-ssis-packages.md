@@ -10,24 +10,26 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: b2251e306098c2f4e9c0fe7a7cbe0200eddf8a4e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 005757c0a1b1f4309201fc7b7c63987f4ff3bcb8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>计划 SQL Server Integration Services 包执行在 Linux 上的使用 cron
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 当在 Windows 上运行的是 SQL Server Integration Services (SSIS) 和 SQL Server 时，你可以使用 SQL Server 代理自动 SSIS 包的执行。 当在 Linux 上运行的是 SQL Server 和 SSIS 时，但是，SQL Server 代理程序实用工具不可用来安排在 Linux 上的作业。 相反，你使用 cron 服务，广泛用于 Linux 平台自动执行包。
 
 本文提供了演示如何自动执行 SSIS 包的示例。 编写示例是在 Red Hat Enterprise 上运行。 此代码是类似的其他 Linux 发行版，如 Ubuntu。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 Cron 服务用于运行作业之前，请检查以查看是否它在你的计算机上运行。
 

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: 9a0a1243ede149ada6a1042a246006929370a4b2
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 96450590b55a6cb9cf6fcf517380bc25a13c1431
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
@@ -71,7 +71,7 @@ sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/m
 ```
 
 > [!TIP]
-> 如果你意外使用 NORECOVERY，但没有其他日志文件备份，运行命令`RESTORE DATABASE demodb`不带任何其他参数。 这将完成还原，并使数据库处于操作状态。
+> 如果你意外使用 NORECOVERY，但没有其他日志文件备份，运行命令`RESTORE DATABASE demodb`不带任何其他参数。 这将完成还原，并保持你的数据库操作状态。
 
 ### <a name="restore-the-transaction-log"></a>还原事务日志
 
