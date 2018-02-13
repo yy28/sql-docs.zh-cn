@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>SQL Server 可用性 Linux 部署的基础知识
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/12/2018
 -   Always On 故障转移群集实例 (Fci)
 -   [日志传送](sql-server-linux-use-log-shipping.md)
 
-在 Windows 上，Fci 始终要求基础的 Windows Server 故障转移群集 (WSFC)。 根据部署方案中，可用性组通常需要基础 WSFC 中，使用的例外是新 variant 中无[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]。 WSFC Linux 中不存在。 群集在 Linux 中的实现下面将讨论在[Pacemaker Alwayson 可用性组和故障转移群集实例在 Linux 上](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux)。
+在 Windows 上，Fci 始终要求基础的 Windows Server 故障转移群集 (WSFC)。 根据部署方案中，可用性组通常需要基础 WSFC 中，使用的例外是新 variant 中无[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]。 WSFC Linux 中不存在。 群集在 Linux 中的实现节所述[Pacemaker Alwayson 可用性组和故障转移群集实例在 Linux 上](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux)。
 
 ## <a name="a-quick-linux-primer"></a>快速的 Linux 入门
 虽然某些 Linux 安装，可能会安装接口大多数但不是，这意味着在操作系统层几乎所有操作通过命令行。 Linux 世界上的此命令行的常用术语是*bash shell*。
@@ -59,9 +59,9 @@ ms.lasthandoff: 02/12/2018
 本部分介绍任务所共有的基于 Linux 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署。
 
 ### <a name="ensure-that-files-can-be-copied"></a>确保可以复制文件
-一件事情的任何人都使用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]在 Linux 上应能够执行是将文件从一台服务器复制到另一个。 此任务是非常重要的可用性组配置。
+将文件从一台服务器复制到另一个是一项任务的任何人都使用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]在 Linux 上应能够执行。 此任务是非常重要的可用性组配置。
 
-在 Linux 上以及在基于 Windows 的安装，可以存在权限问题等。 但是，熟悉如何在 Windows 上复制从服务器到服务器的那些可能不熟悉如何在 Linux 上执行。 一种常用方法是使用命令行实用工具`scp`，这代表安全的复制。 在后台，`scp`使用 OpenSSH。 SSH 代表安全 shell。 Linux 分发中，可能未安装了 OpenSSH 本身。 如果不是这样，OpenSSH 将需要先安装。 有关配置 OpenSSH 的详细信息，请参阅以下链接了解每个分布的信息：
+在 Linux 上以及在基于 Windows 的安装，可以存在权限问题等。 但是，熟悉如何在 Windows 上复制从服务器到服务器的那些可能不熟悉如何在 Linux 上执行。 一种常用方法是使用命令行实用工具`scp`，这代表安全的复制。 在后台，`scp`使用 OpenSSH。 SSH 代表安全 shell。 Linux 分发中，可能未安装了 OpenSSH 本身。 如果不是这样，OpenSSH 需要先安装。 有关配置 OpenSSH 的详细信息，请参阅以下链接了解每个分布的信息：
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
@@ -135,7 +135,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 有关其他可选包[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]在 Linux 上，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]的全文搜索 (*mssql server fts*) 和[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Integration Services (*mssql 服务器是*)，不是所需的高可用性，FCI 或可用性组。
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>为 Alwayson 可用性组和 Linux 上的故障转移群集实例的 pacemaker
-如上所述，于承载个可用性组和 Fci 当前支持 Microsoft 的唯一聚类分析机制是与 Corosync Pacemaker。 本部分介绍基本的信息，以了解该解决方案，以及如何规划和部署为[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]配置。
+与以前所述，于承载个可用性组和 Fci 当前支持 Microsoft 的唯一聚类分析机制是使用 Corosync Pacemaker。 本部分介绍基本的信息，以了解该解决方案，以及如何规划和部署为[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]配置。
 
 ### <a name="ha-add-onextension-basics"></a>HA 上加载/扩展基础知识
 所有当前受支持的分发提供高可用性加载-上/扩展，该扩展基于群集堆栈 Pacemaker。 此堆栈包含两个关键组件： Pacemaker 和 Corosync。 堆栈的所有组件都包括：
@@ -247,7 +247,7 @@ WSFC，如 Pacemaker 希望使用冗余的网络，这意味着不同的网卡 �
 -   分布式可用性组，这是一种特殊类型的允许两个不同承载个可用性组配置为自己的可用性组的可用性组。 分布式承载个可用性组的详细信息，请参阅文档[分布式可用性组](../database-engine/availability-groups/windows/distributed-availability-groups.md)。
 
 #### <a name="other-linux-distributions"></a>其他 Linux 分发
-在 Linux 上，Pacemaker 群集的所有节点都必须位于相同的分布。 例如，这意味着 RHEL 节点不能为具有的 SLES 节点 Pacemaker 群集的一部分。 上面提到这的主要原因： 分发可能具有不同的版本和功能，因此操作可能无法正常工作。 混合使用分发具有混合 WSFCs 和 Linux 的文字部分： 使用无或分布式承载个可用性组。
+在 Linux 上，Pacemaker 群集的所有节点都必须位于相同的分布。 例如，这意味着 RHEL 节点不能为具有的 SLES 节点 Pacemaker 群集的一部分。 在以前说明这的主要原因： 分发可能具有不同的版本和功能，因此操作可能无法正常工作。 混合使用分发具有混合 WSFCs 和 Linux 的文字部分： 使用无或分布式承载个可用性组。
 
 ## <a name="next-steps"></a>后续步骤
 [在 Linux 上的 SQL Server 的部署 Pacemaker 群集](sql-server-linux-deploy-pacemaker-cluster.md)
