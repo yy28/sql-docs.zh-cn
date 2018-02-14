@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE （Azure SQL 数据库） |Microsoft 文档"
 ms.custom: 
-ms.date: 12/20/2017
+ms.date: 02/13/2018
 ms.prod: 
 ms.prod_service: sql-database
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a5c22e2ce58189f396835f65748fdbab7ef8f9d5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER DATABASE { database_name }
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
+    | EDITION = { 'basic' | 'standard' | 'premium' }   
     | SERVICE_OBJECTIVE = 
                  {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
@@ -69,8 +69,7 @@ ALTER DATABASE { database_name }
    }  
 
 <service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' }
 
 ```  
   
@@ -210,8 +209,10 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
- 修改 (版本 **=**  [基本 |标准 |高级 |premiumrs'])    
- 更改数据库的服务层。 下面的示例更改版本到`premium`:
+ 修改 (版本 **=**  [基本 |标准 |高级]）    
+ 更改数据库的服务层。 删除了对 premiumrs 支持。 如有问题，使用此电子邮件别名： premium-rs@microsoft.com。
+
+下面的示例更改版本到`premium`:
   
 ```  
 ALTER DATABASE current 
@@ -223,7 +224,7 @@ ALTER DATABASE current
  MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  指定数据库的最大大小。 该最大大小必须符合针对数据库的 EDITION 属性的有效值集。 更改数据库的最大大小可能导致更改数据库 EDITION。 下表列出 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务层支持的 MAXSIZE 值和默认值 (D)。  
   
-|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1 P6 和 PRS1 PRS6**|**P11-P15**|  
+|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -266,7 +267,7 @@ ALTER DATABASE current
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- 服务目标的可用值有： `S0`， `S1`， `S2`， `S3`， `S4`， `S6`， `S7`， `S9`， `S12`， `P1`， `P2`，`P4`， `P6`， `P11`， `P15`， `PRS1`， `PRS2`， `PRS4`，和`PRS6`。 服务目标说明和有关大小、 版本，以及服务目标组合的详细信息，请参阅[Azure SQL 数据库服务层和性能级别](http://msdn.microsoft.com/library/azure/dn741336.aspx)。 如果版本不支持指定的 SERVICE_OBJECTIVE，你将收到错误。 若要将 SERVICE_OBJECTIVE 值从一层更改为另一层（例如从 S1 更改为 P1），还必须更改 EDITION 值。  
+ 服务目标的可用值有： `S0`， `S1`， `S2`， `S3`， `S4`， `S6`， `S7`， `S9`， `S12`， `P1`， `P2`，`P4`， `P6`， `P11`，或`P15`。 服务目标说明和有关大小、 版本，以及服务目标组合的详细信息，请参阅[Azure SQL 数据库服务层和性能级别](http://msdn.microsoft.com/library/azure/dn741336.aspx)。 如果版本不支持指定的 SERVICE_OBJECTIVE，你将收到错误。 若要将 SERVICE_OBJECTIVE 值从一层更改为另一层（例如从 S1 更改为 P1），还必须更改 EDITION 值。 删除了的 PR 服务目标的支持。 如有问题，使用此电子邮件别名： premium-rs@microsoft.com。 
   
  MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
  若要将现有数据库添加到弹性池，设置数据库的 SERVICE_OBJECTIVE 为 ELASTIC_POOL 并提供弹性池的名称。 你可以使用此选项以将数据库更改到同一服务器内的不同弹性池。 有关详细信息，请参阅[创建和管理 SQL 数据库弹性池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。 若要从弹性池删除数据库，请使用 ALTER DATABASE 设置 SERVICE_OBJECTIVE 到单个数据库的性能级别。  
@@ -277,7 +278,7 @@ ALTER DATABASE current
  与 ALLOW_CONNECTIONS {所有 |**否**}  
  如果未指定 ALLOW_CONNECTIONS，则将它设置为否默认情况下。 如果它将所有设置，则允许有连接的适当权限的所有登录名的只读数据库。  
   
- 与 SERVICE_OBJECTIVE {S0 |S1 |S2 |S3"|S4 |S6 |S7 |S9 |S12 |P1 |P2 |P4 |P6 |P11 |P15 |PRS1 |PRS2 |PRS4 |PRS6}  
+ 与 SERVICE_OBJECTIVE {S0 |S1 |S2 |S3"|S4 |S6 |S7 |S9 |S12 |P1 |P2 |P4 |P6 |P11 |P15}  
  如果未指定 SERVICE_OBJECTIVE，在与主数据库相同的服务级别创建辅助数据库。 当指定 SERVICE_OBJECTIVE 时，在指定的级别创建辅助数据库。 此选项支持使用成本较低的服务级别创建异地复制的辅助数据库。 指定 SERVICE_OBJECTIVE 必须位于与源相同的版本。 例如，如果版本是高级无法指定 S0。  
   
  ELASTIC_POOL (name = \<elastic_pool_name)  
