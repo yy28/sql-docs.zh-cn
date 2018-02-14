@@ -8,25 +8,29 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "数据收集"
-helpviewer_keywords: data collection [SQL Server]
+keywords:
+- "“数据收集”"
+helpviewer_keywords:
+- data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2ba0a8ac11577590da78a5975a9447f3478709b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 28d83f656e80e1e50b9176a3b705e6b5e62fe0f3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="data-collection"></a>数据收集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 数据收集器是[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
+# <a name="data-collection"></a>“数据收集”
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。  
   
 ## <a name="what-is-data-collector"></a>什么是数据收集器？ 
  数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据收集平台的核心组件，是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所提供的工具。 数据收集器为在数据库服务器和应用程序范围内的数据收集提供了一个中心点。 与 SQL 跟踪不同，此收集点可获取来自多种来源的数据而不仅限于性能数据。  
@@ -56,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
  有关详细信息，请参阅 [自动执行管理任务（SQL Server 代理）](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 用于执行从各个数据提供程序收集数据的包。 您应该熟悉以下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 用于执行从各个数据访问接口收集数据的包。 您应该熟悉以下 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包  
   
@@ -115,7 +119,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="things-you-can-do"></a>你可以执行的事项  
   
-|说明|主题|  
+|Description|主题|  
 |----------------------|-----------|  
 |管理数据收集的各个方面，例如启用或禁用数据收集、更改收集组配置或查看管理数据仓库中的数据。|[管理数据收集](../../relational-databases/data-collection/manage-data-collection.md)|  
 |使用这些报表获取信息以监视系统功能和解决系统性能问题。|[系统数据收集组报表](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  

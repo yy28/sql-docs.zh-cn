@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 107ccdd35c7ba36b74af7121b67b6c17e009cfb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="management-data-warehouse"></a>管理数据仓库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 管理数据仓库是一种关系数据库，其中包含从作为数据收集目标的服务器中收集的数据。 此数据用于生成系统数据收集组的报表，而且还可用于创建自定义报表。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+管理数据仓库是一种关系数据库，其中包含从身为数据收集目标的服务器收集来的数据。 此数据用于生成系统数据收集组的报表，而且还可用于创建自定义报表。  
   
  数据收集器基础结构定义了实现保留策略所需的作业和维护计划，而保留策略是由数据库管理员定义的。  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了核心架构中的数据库表。 这些数据库表使得数据收集器可以跟踪数据来自何处、谁插入的数据以及数据是什么时候上载至数据仓库的。  
   
-|表名|说明|  
+|表名|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|存储有关管理数据仓库报表应如何对性能计数器进行分组和聚合的信息。|  
 |core.snapshots_internal|标识每个新快照。 只要上载包开始上载一批新数据，此表中即会插入新的一行。|  
@@ -126,7 +128,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="change-history"></a>更改历史记录  
   
-|更新内容|  
+|更新的内容|  
 |---------------------|  
 |向“核心架构”部分增添了 core.performance_counter_report_group_items 表。|  
 |更新了“快照架构”部分中表的列表。 增加了 snapshots.os_memory_clerks、snapshots.sql_process_and_system_memory 和 snapshots.io_virtual_file_stats。 删除了 snapshots.os_process_memory 和 snapshots.distinct_query_stats。|  

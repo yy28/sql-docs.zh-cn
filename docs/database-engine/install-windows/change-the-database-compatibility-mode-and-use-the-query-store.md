@@ -21,14 +21,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fa6e9e16be729fba7334b26b130c8e22525e479
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2701a951f0c8847b028e3a87717ad9ac3a965529
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>更改数据库兼容性模式和使用 Query Store
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，某些更改仅在[数据库兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)更改后才会启用。 执行此操作的原因如下：  
   
@@ -37,8 +38,10 @@ ms.lasthandoff: 02/03/2018
 - 更改查询处理器可能会产生复杂的影响。 即使对系统进行的是“较好的”更改（对大多数工作负荷而言可能是非常好的更改），也可能对其他工作负荷的重要查询造成不可接受的回归。 通过从升级过程中分离此逻辑，查询存储等功能可在生产服务器中快速缓解计划选择回归或甚至完全将其规避。  
   
 > [!IMPORTANT]  
-> 如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前用户数据库的兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持的最低兼容级别。 升级后，tempdb、model、msdb 和 Resource 数据库的兼容性级别将设置为当前兼容性级别。
-> master 系统数据库保留它在升级之前的兼容性级别。 
+> 如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。    
+> 如果升级前用户数据库的兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持的最低兼容级别。    
+> 升级后，tempdb、model、msdb 和 Resource 数据库的兼容性级别将设置为当前兼容性级别。   
+> master 系统数据库保留它在升级之前的兼容性级别。    
   
 用于启用新查询处理器功能的升级过程与产品的发布后服务模式相关。  这些修补程序中的一部分发布在[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) 下。  需要修补程序的客户可以选择加入这些修补程序而不会导致其他客户的意外回归。 查询处理器修补程序的发布后服务模式记录于 [此处](http://support.microsoft.com/kb/974006)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，转换到新的兼容级别意味着不再需要跟踪标志 4199 ，因为在最新的兼容级别中这些修复程序现在默认处于启用状态。 因此，作为升级过程的一部分，验证升级过程完成后未启用 4199 是很重要的。  
 

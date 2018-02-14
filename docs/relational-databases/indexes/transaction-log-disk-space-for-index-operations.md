@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - disk space [SQL Server], transaction logs
 - space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 964e94f9eed81eabd86cf56c781ae1defde0303b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7fcf3131776066e183f0b6f031dce00d143bdeca
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>索引操作的事务日志磁盘空间
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]大规模索引操作可以产生大量数据负载，从而导致事务日志的空间很快被占满。 若要确保索引操作能够回滚，不能在完成索引操作之前截断事务日志，但可以在索引操作期间备份日志。 因此，事务日志必须具有足够的空间，以存储索引操作期间的索引操作事务和任何并发用户事务。 这对脱机索引操作和联机索引操作都适用。 因为在脱机索引操作期间不能访问基础表，所以用户事务可能很少，日志的增长速度不快。 联机索引操作不能防止并发用户活动，因此，大规模联机索引操作与大量的并发用户事务相结合可能会导致事务日志不断增长，而不会提供截断日志的选项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+大规模索引操作可以产生大量数据负载，从而导致事务日志的空间很快被占满。 若要确保索引操作能够回滚，不能在完成索引操作之前截断事务日志，但可以在索引操作期间备份日志。 因此，事务日志必须具有足够的空间，以存储索引操作期间的索引操作事务和任何并发用户事务。 这对脱机索引操作和联机索引操作都适用。 因为在脱机索引操作期间不能访问基础表，所以用户事务可能很少，日志的增长速度不快。 联机索引操作不能防止并发用户活动，因此，大规模联机索引操作与大量的并发用户事务相结合可能会导致事务日志不断增长，而不会提供截断日志的选项。  
   
 ## <a name="recommendations"></a>建议  
  运行大规模索引操作时，请考虑下列建议：  

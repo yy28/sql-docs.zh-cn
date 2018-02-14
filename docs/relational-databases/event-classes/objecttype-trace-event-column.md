@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1c0753ed19215c5d45610aa5582fbce2c906cd6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 跟踪事件列
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]ObjectType 跟踪事件列用在各种跟踪事件中。 本主题说明此列的可能值以及其相关定义。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ObjectType 跟踪事件列用在各种跟踪事件中。 本主题说明此列的可能值以及其相关定义。  
   
 ## <a name="object-type-column-values"></a>ObjectType 列值  
   
-|值|定义|  
+|ReplTest1|定义|  
 |-----------|----------------|  
 |8259|检查约束|  
 |8260|默认值（约束或独立）|  
@@ -46,8 +48,8 @@ ms.lasthandoff: 11/17/2017
 |8278|视图|  
 |8280|扩展存储过程|  
 |16724|CLR 触发器|  
-|16964|数据库|  
-|16975|对象|  
+|16964|“数据库”|  
+|16975|Object|  
 |17222|全文目录|  
 |17232|CLR 存储过程|  
 |17235|架构|  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |20821|唯一约束|  
 |21057|应用程序角色|  
 |21059|证书|  
-|21075|Server|  
+|21075|“服务器”|  
 |21076|Transact-SQL 触发器|  
 |21313|Assembly|  
 |21318|CLR 标量函数|  

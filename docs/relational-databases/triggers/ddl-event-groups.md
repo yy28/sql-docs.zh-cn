@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ddl
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - DDL event groups
 - DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec4272b36c365f38793bcf8ccd5692e5933e3164
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c3ffbbf2c2aa0fb781bc6f3a5927d95d4975092f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-event-groups"></a>DDL 事件组
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]下表列出了可用于运行 DDL 触发器或事件通知的 DDL 事件组以及它们所涵盖的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 请注意事件组的内在关系。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 触发器或事件通知涵盖 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 触发器或事件通知涵盖 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 类型下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+下表列出了可用于运行 DDL 触发器或事件通知的 DDL 事件组以及它们所涵盖的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 请注意事件组的内在关系。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 触发器或事件通知涵盖 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 触发器或事件通知涵盖 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 类型下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 > [!NOTE]  
 >  执行 DDL 式操作的特定系统存储过程也可以激发 DDL 触发器或事件通知。 请测试您的 DDL 触发器和事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和 **sp_addtype** 存储过程都将激发针对 CREATE_TYPE 事件创建的 DDL 触发器或事件通知。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 ||||  
 |-|-|-|  
-|parent_type|type|name|  
+|parent_type|type|NAME|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

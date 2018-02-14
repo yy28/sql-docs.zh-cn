@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Background Job Error event class
+helpviewer_keywords:
+- Background Job Error event class
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6d3226f88a122531b79d53cfaa48d23c40cb805
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a1c2644233c06589a4a30970060d8d2c7df3930a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]当后台作业异常终止时，会发生 Background Job Error 事件类。 这种情况可能需要引起系统管理员的注意。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+当后台作业异常终止时，会发生 **Background Job Error** 事件类。 这种情况可能需要引起系统管理员的注意。  
   
 ## <a name="background-job-error-event-class-data-columns"></a>Background Job Error 事件类的数据列  
   
-|数据列名称|数据类型|说明|列 ID|可筛选|  
+|数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|作业指定的数据库的 ID。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**DatabaseName**|**nvarchar**|正在其中运行用户语句的数据库的名称。|35|是|  
@@ -40,12 +43,12 @@ ms.lasthandoff: 11/17/2017
 |**IndexID**|**int**|受事件影响的对象的索引的 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|24|是|  
 |**IntegerData**|**int**|作业尝试的次数（仅限**EventSubClass** 1）。|25|是|  
 |**IntegerData2**|**int**|作业序列号。|55|是|  
-|**ObjectID**|**int**|系统分配的对象 ID。|22|是|  
+|**Exchange Spill**|**int**|系统分配的对象 ID。|22|是|  
 |**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录名。|64|是|  
 |**Severity**|**int**|上次尝试中出现的错误的严重级别（仅限**EventSubClass** 1）。|20|是|  
 |**StartTime**|**datetime**|创建作业的时间。|14|是|  
 |**State**|**int**|上次尝试中出现的错误状态（仅限**EventSubClass** 1）。|30|是|  
-|**TextData**|**ntext**|事件子类值的文本说明。|1|是|  
+|**TextData**|**ntext**|事件子类值的文本说明。|@shouldalert|是|  
 |**类型**|**int**|作业类型。|57|是|  
   
 ## <a name="see-also"></a>另请参阅  

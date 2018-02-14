@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Broker:Conversation event class
+helpviewer_keywords:
+- Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 092d248289e6376e8fe889303d17d45c4b35783d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d021508d5b8774e3f3fa0f416819dfee48cc6918
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 Broker:Conversation 事件来报告 Service Broker 会话的进度。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **Broker:Conversation** 事件来报告 Service Broker 会话的进度。  
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation 事件类的数据列  
   
-|数据列|类型|说明|列号|可筛选|  
+|数据列|类型|Description|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |**Severity**|**int**|在此事件报告错误时表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的严重级别。|29|是|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|该事件的启动时间（如果可用）。|14|是|  
-|**TextData**|**ntext**|会话的当前状态。 可以是下列值之一：|1|是|  
+|**TextData**|**ntext**|会话的当前状态。 可以是下列值之一：|@shouldalert|是|  
 |||**SO**。 已开始出站。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已处理了此会话的 BEGIN CONVERSATION，但尚未发送消息。|||  
 |||**SI**。 已开始入站。 另一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例开始了与当前实例的新会话，但当前实例尚未完成第一条消息的接收工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不按照顺序接收消息，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会在此状态下创建会话。 但是，如果为会话接收的第一个传输包含了完整的第一条消息，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会在 CO 状态下创建会话。|||  
 |||**CO**。 正在进行会话。 会话已建立，会话的双方都可以发送消息。 典型服务的大部分通信都在会话处于此状态时发生。|||  
@@ -63,9 +66,9 @@ ms.lasthandoff: 11/17/2017
   
  下表列出了此事件类的子类值。  
   
-|ID|子类|说明|  
+|ID|子类|Description|  
 |--------|--------------|-----------------|  
-|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **SEND Message** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
+|@shouldalert|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **SEND Message** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行不包含 WITH ERROR 子句的 END CONVERSATION 语句时 **END CONVERSATION** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行不包含 WITH ERROR 子句的 END CONVERSATION 语句时 **END CONVERSATION WITH ERROR** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **Broker Initiated Error** Broker Initiated Error [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。 例如，当 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 无法成功为对话发送消息时，将为该对话创建错误消息并生成此事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不生成此事件。|  

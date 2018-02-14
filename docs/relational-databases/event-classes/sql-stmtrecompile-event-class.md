@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SQL:StmtRecompile event class
+helpviewer_keywords:
+- SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 359ca7f1f54a28241adc2322c76f027d760a7a1b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df67c9972328d7e418a5f68315bcd46d8d60e369
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]SQL:StmtRecompile 事件类指示由下列所有类型的批处理引起的语句级重新编译：存储过程、触发器、即席批查询和查询。 可以通过使用 sp_executesql、动态 SQL、“准备”方法、“执行”方法或类似接口来提交查询。 应使用 SQL:StmtRecompile 事件类而不是 SP:Recompile 事件类。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SQL:StmtRecompile 事件类指示由下列所有类型的批处理引起的语句级重新编译：存储过程、触发器、即席批查询和查询。 可以通过使用 sp_executesql、动态 SQL、“准备”方法、“执行”方法或类似接口来提交查询。 应使用 SQL:StmtRecompile 事件类而不是 SP:Recompile 事件类。  
   
 ## <a name="sqlstmtrecompile-event-class-data-columns"></a>SQL:StmtRecompile 事件类的数据列  
   
-|数据列名称|数据类型|说明|列 ID|可筛选|  
+|数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 该列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了进程 ID，则填充此数据列。|9|是|  
@@ -55,9 +58,9 @@ ms.lasthandoff: 11/17/2017
 |ServerName|**nvarchar**|正在跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的名称。|26|是|  
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|连接的服务器进程 ID。|12|是|  
-|SqlHandle|**varbinary**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 sys.dm_exec_sql_text 以检索关联的 SQL 文本。|63|否|  
+|SqlHandle|**varbinary**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 sys.dm_exec_sql_text 以检索关联的 SQL 文本。|63|是|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
-|TextData|**ntext**|重新编译的 Transact-SQL 语句的文本。|1|是|  
+|TextData|**ntext**|重新编译的 Transact-SQL 语句的文本。|@shouldalert|是|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|是|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|是|  
   

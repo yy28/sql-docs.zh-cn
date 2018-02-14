@@ -18,16 +18,16 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a3902085accac37a3649d407ff1504e01e0ac16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74ba5c0435a64cbeb6271967c4ca37c4a5ac1d86
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了配置 ETW 目标时可用的选项。  
   
-|选项|允许的值|说明|  
+|选项|允许的值|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|任何不超过 256 个字符的字符串。 该值是可选的。|扩展事件会话名称。 默认情况下为 XE_DEFAULT_ETW_SESSION。|  
 |default_etw_session_logfile_path|任何不超过 256 个字符的字符串。 该值是可选的。|扩展事件会话日志文件的路径。 默认情况下为 %TEMP%\ XEEtw.etl。|  

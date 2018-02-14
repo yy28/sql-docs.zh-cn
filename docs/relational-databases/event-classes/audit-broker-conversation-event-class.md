@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Broker Conversation event class
+helpviewer_keywords:
+- Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0255dd19ca58c79f48c136f33bd9d0a46754a59
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6708839a1ca98810dd74a7ad1c36f1af43f3e8d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建了 Audit Broker Conversation 事件以报告与 Service Broker 对话安全有关的审核消息。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建了 **Audit Broker Conversation** 事件以报告与 Service Broker 对话安全有关的审核消息。  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker Conversation 事件类的数据列  
   
-|数据列|类型|说明|列号|可筛选|  
+|数据列|类型|Description|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**BigintData1**|**bigint**|消息序列号。|52|是|  
@@ -51,13 +54,13 @@ ms.lasthandoff: 11/17/2017
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
 |**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|是|  
-|**TextData**|**ntext**|如果发生错误，将显示一条用来说明失败原因的消息。 可以是以下值之一：<br /><br /> <br /><br /> **Cert not found**。 针对对话协议安全指定的用户没有证书。<br /><br /> **Not in valid time period**。 针对对话协议安全指定的用户有一份证书，但该证书已过期。<br /><br /> **Cert too large for memory allocation**。 针对对话协议安全指定的用户有一份证书，但该证书过大。 Service Broker 支持的最大证书大小为 32,768 字节。<br /><br /> **Private key not found**。 针对对话协议安全指定的用户有一份证书，但没有与该证书相关联的私钥。<br /><br /> **The cert's private key size is incompatible with the crypto provider**。 无法成功处理证书的私钥大小。 私钥大小必须是 64 字节的倍数。<br /><br /> **The cert's public key size is incompatible with the crypto provider**。 无法成功处理证书的公钥大小。 公钥大小必须是 64 字节的倍数。<br /><br /> **The cert's private key size is incompatible with the encrypted key exchange key**。 密钥交换密钥中指定的密钥大小与证书的私钥大小不匹配。 这通常表示远程计算机上的证书与数据库中的证书不匹配。<br /><br /> **The cert's public key size is incompatible with the security header's signature**。 无法通过证书的公钥来验证安全标头的签名。 这通常表示远程计算机上的证书与数据库中的证书不匹配。|1|是|  
+|**TextData**|**ntext**|如果发生错误，将显示一条用来说明失败原因的消息。 可以是以下值之一：<br /><br /> <br /><br /> **Cert not found**。 针对对话协议安全指定的用户没有证书。<br /><br /> **Not in valid time period**。 针对对话协议安全指定的用户有一份证书，但该证书已过期。<br /><br /> **Cert too large for memory allocation**。 针对对话协议安全指定的用户有一份证书，但该证书过大。 Service Broker 支持的最大证书大小为 32,768 字节。<br /><br /> **Private key not found**。 针对对话协议安全指定的用户有一份证书，但没有与该证书相关联的私钥。<br /><br /> **The cert's private key size is incompatible with the crypto provider**。 无法成功处理证书的私钥大小。 私钥大小必须是 64 字节的倍数。<br /><br /> **The cert's public key size is incompatible with the crypto provider**。 无法成功处理证书的公钥大小。 公钥大小必须是 64 字节的倍数。<br /><br /> **The cert's private key size is incompatible with the encrypted key exchange key**。 密钥交换密钥中指定的密钥大小与证书的私钥大小不匹配。 这通常表示远程计算机上的证书与数据库中的证书不匹配。<br /><br /> **The cert's public key size is incompatible with the security header's signature**。 无法通过证书的公钥来验证安全标头的签名。 这通常表示远程计算机上的证书与数据库中的证书不匹配。|@shouldalert|是|  
   
  下表列出了此事件类的子类值。  
   
-|ID|子类|说明|  
+|ID|子类|Description|  
 |--------|--------------|-----------------|  
-|1|No Security Header|安全会话期间，Service Broker 接收到不包含会话密钥的消息。 建立了安全会话后，对话协议要求会话中的所有消息都包含会话密钥。|  
+|@shouldalert|No Security Header|安全会话期间，Service Broker 接收到不包含会话密钥的消息。 建立了安全会话后，对话协议要求会话中的所有消息都包含会话密钥。|  
 |2|No Certificate|Service Broker 无法为会话中的某一名参与者找到可用的证书。 为了保证会话安全，数据库必须同时包含会话发送方和接收方的证书。|  
 |3|Invalid Signature|Broker 无法使用发送方证书中的公钥来验证发送方所提供的消息签名。 这可能表示消息已损坏、消息被篡改、远程服务和本地服务没有配置相同的用户证书的或者证书已过期。|  
 |4|Run As Target Failure|目标用户不具有对目标队列的接收权限。 为了防止未经授权的用户接收消息，如果目标用户无法接收消息队列，则无论初始用户是否有权将消息排队，Service Broker 都不会将消息排队。|  

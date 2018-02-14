@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 051c080de8a5b670a7fe3dbe70ccebf73bfb57a3
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 01d0f988103f39aa311b84a1bf9e03292e60f511
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
 
 
 ## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
@@ -542,10 +543,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 现在按 Ctrl-R 可在 SSMS DAX 查询编辑器中切换结果窗格
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![下载](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 公开发布 | 内部版本号 ：13.0.16106.4
 
-[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 此版本已解决以下问题：
 

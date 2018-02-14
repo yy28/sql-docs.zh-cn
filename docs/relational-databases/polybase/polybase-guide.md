@@ -8,7 +8,8 @@ ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]PolyBase 是一种可通过 t-sql 语言访问数据库外部数据的技术。  在 SQL Server 2016 中，可以对 Hadoop 中的外部数据运行查询或将数据导入/导出 Azure Blob 存储。 查询会进行优化以将计算推送到 Hadoop。 在 Azure SQL 数据仓库中，可以将数据导入/导出 Azure Blob 存储和 Azure Data Lake Store。
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase 是一种可通过 t-sql 语言访问数据库外部数据的技术。  在 SQL Server 2016 中，可以对 Hadoop 中的外部数据运行查询或将数据导入/导出 Azure Blob 存储。 查询会进行优化以将计算推送到 Hadoop。 在 Azure SQL 数据仓库中，可以将数据导入/导出 Azure Blob 存储和 Azure Data Lake Store。
   
   
  若要使用 Polybase，请参阅 [PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)。  
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/28/2017
   
 -   **与 BI 工具集成** 结合使用 PolyBase 和 Microsoft 的商业智能和分析堆栈，或使用任何与 SQL Server 兼容的第三方工具。  
   
-## <a name="performance"></a>性能  
+## <a name="performance"></a>“性能”  
   
 -   **将计算推送到 Hadoop。**查询优化器制定了基于开销的决策，以在执行此操作将提升查询性能时将计算推送到 Hadoop。  它使用外部表上的统计以制定基于开销的决策。 推送计算会创建 MapReduce 作业并利用 Hadoop 的分布计算资源。  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/28/2017
   
 |||  
 |-|-|  
-|**主题**|**说明**|  
+|**主题**|**Description**|  
 |[PolyBase 入门](../../relational-databases/polybase/get-started-with-polybase.md)|安装和配置 PolyBase 的基本步骤。 这演示了如何创建指向 Hadoop 或 Azure blob 存储中数据的外部对象，并提供了查询示例。|  
 |[PolyBase 受版本控制的功能摘要](../../relational-databases/polybase/polybase-versioned-feature-summary.md)|描述 SQL Server、SQL 数据库和 SQL 数据仓库上支持哪些 PolyBase 功能。|  
 |[PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)|通过使用 SQL Server 横向扩展组在 SQL Server 和 Hadoop 之间横向扩展并行度。|  

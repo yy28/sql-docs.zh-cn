@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: acb1b3a650c43652dd6a2b46e52ce84690173f6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供两个用于在数据库中跟踪数据更改的功能：[变更数据捕获](#Capture)和[更改跟踪](#Tracking)。 这两个功能使应用程序能够确定对数据库中的用户表所做的 DML 更改（插入、更新和删除操作）。 可对同一个数据库启用变更数据捕获和更改跟踪；没有特殊的注意事项。 有关支持变更数据捕获和更改跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]支持更改跟踪。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供两个用于在数据库中跟踪数据更改的功能： [变更数据捕获](#Capture) 和 [更改跟踪](#Tracking)。 这两个功能使应用程序能够确定对数据库中的用户表所做的 DML 更改（插入、更新和删除操作）。 可对同一个数据库启用变更数据捕获和更改跟踪；没有特殊的注意事项。 有关支持变更数据捕获和更改跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]支持更改跟踪。
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>使用变更数据捕获或更改跟踪的好处  
  对于某些注重效能的应用程序来说，查询数据库中已更改的数据的能力是一项很重要的要求。 通常，为了确定数据更改，应用程序开发人员必须在其应用程序中使用触发器、时间戳列和其他表的组合来实现自定义跟踪方法。 创建这些应用程序通常涉及多项工作，导致架构更新，并且通常带来较高的性能开销。  

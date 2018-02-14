@@ -8,30 +8,33 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SP:Recompile event class
+helpviewer_keywords:
+- SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbf4970fd14025832f234b194f3314b189013766
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f56543d46915673c51e1626d669f473416aed01f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]SP:Recompile 事件类指示存储过程、触发器或用户定义的函数已被重新编译。 此事件类报告的重新编译在语句级上发生。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SP:Recompile 事件类指示存储过程、触发器或用户定义的函数已被重新编译。 此事件类报告的重新编译在语句级上发生。  
   
  跟踪语句级重新编译的首选方法是使用 SQL:StmtRecompile 事件类。 已弃用 SP:Recompile 事件类。 有关详细信息，请参阅 [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)。  
   
 ## <a name="sprecompile-event-class-data-columns"></a>SP:Recompile 事件类的数据列  
   
-|数据列名称|**数据类型**|说明|列 ID|可筛选|  
+|数据列名称|**Data type**|Description|列 ID|可筛选|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |ClientProcessID|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了进程 ID，则填充此数据列。|9|是|  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |IntegerData2|**int**|在存储过程或批处理中导致重新编译的语句的终止偏移量。 如果该语句是其所在批处理中的最后一个语句，则终止偏移量是 -1。|55|是|  
 |IsSystem|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |LoginName|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
-|LoginSid|**image**|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
+|LoginSid|**图像**|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NestLevel|**int**|存储过程的嵌套级别。|29|是|  
 |NTDomainName|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |NTUserName|**nvarchar**|Windows 用户名。|6|是|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |SqlHandle|**varbinary**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 sys.dm_exec_sql_text 以检索关联的 SQL 文本。|63|是|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
-|TextData|**ntext**|导致语句级重新编译的 Transact-SQL 语句文本。|1|是|  
+|TextData|**ntext**|导致语句级重新编译的 Transact-SQL 语句文本。|@shouldalert|是|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|是|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|是|  
   

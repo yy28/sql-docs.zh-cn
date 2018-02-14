@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: User-Configurable event class
+helpviewer_keywords:
+- User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76c62dfdfecf2aa657d64f6bc6209749ea8bff35
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6858694e1407806db8763d8de3dd01feda3bab59
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]User-Configurable 事件类别可用于监视用户定义事件。 创建用户定义事件类来监视不能由其他事件类别中系统提供的事件类监视的事件。 例如，可以创建用户定义事件来监视测试应用程序的进度。 应用程序运行时，用户定义事件可以在预定义点生成事件，使您能够确定应用程序的当前执行点。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+User-Configurable 事件类别可用于监视用户定义事件。 创建用户定义事件类来监视不能由其他事件类别中系统提供的事件类监视的事件。 例如，可以创建用户定义事件来监视测试应用程序的进度。 应用程序运行时，用户定义事件可以在预定义点生成事件，使您能够确定应用程序的当前执行点。  
   
 ## <a name="user-configurable-event-class-data-columns"></a>User-Configurable 事件类的数据列  
   
-|数据列名称|数据类型|说明|列 ID|可筛选|  
+|数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BinaryData|**图像**|与在跟踪中捕获的事件类相关的二进制值。|2|是|  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|是|  
-|TextData|**ntext**|依赖于跟踪中捕获的事件类的文本值。|1|是|  
+|TextData|**ntext**|依赖于跟踪中捕获的事件类的文本值。|@shouldalert|是|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|是|  
   
 ## <a name="see-also"></a>另请参阅  

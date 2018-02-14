@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 445ba773310316e4d3938e7842937650b55c04f7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 9bc429301acd87544925195879ba116983454627
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列存储索引 - 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/02/2018
   列存储索引与分区结合使用对于构建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库而言必不可少。  
   
 ## <a name="whats-new"></a>新增功能  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 引入了以下用于增强列存储性能的功能：  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 引入了用于列存储性能增强的这些功能：  
   
 -   AlwaysOn 支持查询可读次要副本上的列存储索引。  
 -   多个活动的结果集 (MARS) 支持列存储索引。  

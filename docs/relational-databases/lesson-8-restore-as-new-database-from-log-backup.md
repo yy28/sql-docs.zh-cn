@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65e5464a1a3ee36420d92b23268ab9aa7cb88c02
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2fccaf04b123ec7ba354ffabef8d21ee6c35845
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>第 8 课. 从日志备份还原为新数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课程中，需将 AdventureWorks2014 数据库作为新数据库从文件快照事务日志备份进行还原。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在本课程中，需将 AdventureWorks2014 数据库作为新数据库从文件快照事务日志备份进行还原。  
   
 在此方案中，是还原到不同虚拟机上的 SQL Server 实例，以便进行业务分析和报告。 还原到不同虚拟机上的不同实例可将工作负荷卸载到针对此用途调整了大小的专用虚拟机，从而从事务系统中消除资源要求。  
   

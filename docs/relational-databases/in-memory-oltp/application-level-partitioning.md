@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f27dbf8d8a6deb04fc9f45af51d0a90f694e4ef
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b10dd4f325b79672d4b0c880186f9331bc71dc1b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-level-partitioning"></a>应用程序级分区
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]此应用程序可处理订单。 最近的订单处理量很大。 更早的订单处理量不大。 最近的订单位于内存优化的表中。 更早的订单位于基于磁盘的表中。 *hotDate* 之后的所有订单位于内存优化的表中。 *hotDate* 之前的所有订单位于基于磁盘的表中。 假定存在一个极端 OLTP 工作负荷，它包含很多并发事务。 必须实施此业务规则（内存优化的表中的最近订单），即使几个并发事务正在尝试更改 *hotDate*。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+此应用程序处理订单。 最近的订单处理量很大。 更早的订单处理量不大。 最近的订单位于内存优化的表中。 更早的订单位于基于磁盘的表中。 *hotDate* 之后的所有订单位于内存优化的表中。 *hotDate* 之前的所有订单位于基于磁盘的表中。 假定存在一个极端 OLTP 工作负荷，它包含很多并发事务。 必须实施此业务规则（内存优化的表中的最近订单），即使几个并发事务正在尝试更改 *hotDate*。  
   
  该示例未对磁盘表使用分区表，而是利用第三个表来跟踪两个表之间的显式拆分点。 拆分点可用于确保将新插入的数据始终按照日期插入到适当的表中。 此外，拆分点还可用于确定查找数据的位置。 晚到数据仍会进入适当的表中。  
   

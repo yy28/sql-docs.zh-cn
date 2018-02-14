@@ -8,23 +8,25 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82fcb8cf47767278fbc6889e49511660ef450d0c
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 3e845dd3ae91488060e72ad75c3f60d7dc0c7977
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="selective-xml-indexes-sxi"></a>选择性 XML 索引 (SXI)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]选择性 XML 索引是除了普通 XML 索引之外可供使用的另外一种 XML 索引类型。 选择性 XML 索引功能的目标如下：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+选择性 XML 索引是除了普通 XML 索引之外可供您使用的另外一种 XML 索引类型。 选择性 XML 索引功能的目标如下：  
   
 -   改进对在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的 XML 数据的查询性能。  
   

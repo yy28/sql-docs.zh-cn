@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 00fbddda37b58442e37618a25347576bc88caf07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fbe87e904a8e46ae19d6dcb06600352a29949dc2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 密钥管理概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 - 不在托管数据库的计算机上生成列主密钥或列加密密钥。 在单独的计算机上生成密钥，该计算机专门用于密钥管理，或者是该计算机中托管的应用程序需要访问密钥。 这意味着 **不要在托管数据库的计算机上运行用于生成密钥的工具** ，因为如果攻击者访问用于预配或维护“始终加密”密钥的计算机，即使密钥仅在工具的内存中出现了一会，攻击者也有可能获取密钥。
 - 为确保密钥管理过程不会无意中泄露列主密钥或列加密密钥，在定义并执行密钥管理过程之前识别潜在的攻击者和安全威胁很重要。 例如，如果你的目标是要确保 DBA 没有访问敏感数据的权限，那么 DBA 就不能负责生成密钥。 但是，DBA 可以管理数据库中的密钥元数据，因为元数据不包含纯文本密钥。
 
-## <a name="next-steps"></a>后续步骤
+## <a name="next-steps"></a>Next Steps
 
 - [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [使用 PowerShell 配置 Always Encrypted 密钥](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)

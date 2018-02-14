@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text search [SQL Server]
+helpviewer_keywords:
+- full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1e7d3cfd9aa001c9fb842d46b649bd164c5b359
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f69fa33969aeaa0d6ae1064651afd6c93c93d353
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="full-text-search"></a>全文搜索
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中的全文搜索为用户和应用程序提供了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于字符的数据运行全文查询的功能。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中的全文搜索为用户和应用程序提供了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于字符的数据运行全文查询的功能。
   
 ## <a name="basic-tasks"></a>基本任务
 本主题概述了全文搜索并介绍了其组件和体系结构。 如果你希望马上开始，可以使用下面的基本任务。
@@ -161,7 +164,7 @@ ms.lasthandoff: 11/17/2017
   
 |DocumentID|Title|  
 |----------------|-----------|  
-|1|Crank Arm and Tire Maintenance|  
+|@shouldalert|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -175,20 +178,20 @@ ms.lasthandoff: 11/17/2017
   
 |关键字|ColId|DocId|出现次数|  
 |-------------|-----------|-----------|----------------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|维护|1|1|5|  
-|Front|1|2|1|  
-|Front|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Bracket|1|3|3|  
-|Assembly|1|2|6|  
-|3|1|2|7|  
-|安装|1|3|4|  
+|Crank|@shouldalert|@shouldalert|@shouldalert|  
+|Arm|@shouldalert|@shouldalert|2|  
+|Tire|@shouldalert|@shouldalert|4|  
+|维护|@shouldalert|@shouldalert|5|  
+|Front|@shouldalert|2|@shouldalert|  
+|Front|@shouldalert|3|@shouldalert|  
+|Reflector|@shouldalert|2|2|  
+|Reflector|@shouldalert|2|5|  
+|Reflector|@shouldalert|3|2|  
+|Bracket|@shouldalert|2|3|  
+|Bracket|@shouldalert|3|3|  
+|Assembly|@shouldalert|2|6|  
+|3|@shouldalert|2|7|  
+|安装|@shouldalert|3|4|  
   
  **Keyword** 列包含在创建索引时提取的单个标记的表示形式。 断字符可确定组成标记的词。  
   
@@ -211,8 +214,8 @@ ms.lasthandoff: 11/17/2017
   
 |关键字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear|1|3|1|  
-|Reflector|1|3|2|  
+|Rear|@shouldalert|3|@shouldalert|  
+|Reflector|@shouldalert|3|2|  
   
  从 Fragment 2 可以看到，全文查询需要在内部查询每个碎片，并放弃更旧的条目。 因此，全文索引中太多的全文索引碎片会导致查询性能大幅下降。 若要减少碎片数，请使用 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 REORGANIZE 选项来重新组织全文目录。 此语句将执行一次 *主合并*，主合并将碎片合并成一个更大的碎片，并从全文索引中删除所有过时的条目。  
   
@@ -220,18 +223,18 @@ ms.lasthandoff: 11/17/2017
   
 |关键字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|维护|1|1|5|  
-|Front|1|2|1|  
-|Rear|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Assembly|1|2|6|  
-|3|1|2|7|  
+|Crank|@shouldalert|@shouldalert|@shouldalert|  
+|Arm|@shouldalert|@shouldalert|2|  
+|Tire|@shouldalert|@shouldalert|4|  
+|维护|@shouldalert|@shouldalert|5|  
+|Front|@shouldalert|2|@shouldalert|  
+|Rear|@shouldalert|3|@shouldalert|  
+|Reflector|@shouldalert|2|2|  
+|Reflector|@shouldalert|2|5|  
+|Reflector|@shouldalert|3|2|  
+|Bracket|@shouldalert|2|3|  
+|Assembly|@shouldalert|2|6|  
+|3|@shouldalert|2|7|  
 
 ### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>全文索引和普通 SQL Server 索引之间的区别：  
   

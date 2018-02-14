@@ -8,32 +8,34 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Database Mail [SQL Server], SQL Server Agent Mail
 - SQL Server Agent Mail
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d568bd30597377e0d8fdd8affea3c0212977ada6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6df4b370247aa4149693b6259bab889c797124ab
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>配置 SQL Server 代理邮件以使用数据库邮件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以使用数据库邮件发送 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的通知和警报。  有关如何启用和配置数据库邮件的信息，请参阅 [配置数据库邮件](../../relational-databases/database-mail/configure-database-mail.md)。  有关使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的示例，请参阅 [创建数据库邮件配置文件](../../relational-databases/database-mail/create-a-database-mail-profile.md)。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题说明如何配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以使用数据库邮件通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发送 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的通知和警报。  有关如何启用和配置数据库邮件的信息，请参阅 [配置数据库邮件](../../relational-databases/database-mail/configure-database-mail.md)。  有关使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的示例，请参阅 [创建数据库邮件配置文件](../../relational-databases/database-mail/create-a-database-mail-profile.md)。
   
 -   **开始之前：**  
   
 -   [先决条件](#Prerequisites)  
   
--   [安全性](#Security)  
+-   [Security](#Security)  
   
 -   [使用 SQL Server Management Studio 配置 SQL Server 代理以使用数据库邮件](#SSMSProcedure)  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  创建配置文件帐户和执行存储过程的用户应是 sysadmin 固定服务器角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

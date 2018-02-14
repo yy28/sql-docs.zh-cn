@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Broker Login event class
+helpviewer_keywords:
+- Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05ce6fba0a4c447b270bbb9e5cb831f4a4c1d146
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e8329aa53d05239ad609a873de07d2ce09e4e31
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建 Audit Broker Login 事件，报告与 Service Broker 传输安全相关的审核消息。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建 **Audit Broker Login** 事件以报告与 Service Broker 传输安全相关的审核消息。  
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker Login 事件类的数据列  
   
-|数据列|类型|说明|列号|可筛选|  
+|数据列|类型|Description|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|在此事件类中未使用。|10|是|  
 |**ClientProcessID**|**int**|在此事件类中未使用。|9|是|  
@@ -51,14 +54,14 @@ ms.lasthandoff: 11/17/2017
 |**SPID**|**int**|SQL Server 为与客户端相关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
 |**State**|**int**|指示 SQL Server 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|是|  
-|**TargetUserName**|**nvarchar**|登录状态。 可为下列值之一：<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> **注意**：ISC = 启动安全上下文。 ASC = 接受安全上下文|39|是|  
+|**TargetUserName**|**nvarchar**|登录状态。 可为下列值之一：<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> **注意**：ISC = 启动安全上下文。 ASC = 接受安全上下文|39|是|  
 |**TransactionID**|**bigint**|系统为事务分配的 ID。|4|是|  
   
  下表列出了此事件类的子类值。  
   
-|ID|子类|说明|  
+|ID|子类|Description|  
 |--------|--------------|-----------------|  
-|1|Login Success|Login Success 事件报告相邻的 broker 登录进程已经成功完成。|  
+|@shouldalert|Login Success|Login Success 事件报告相邻的 broker 登录进程已经成功完成。|  
 |2|Login Protocol Error|Login Protocol Error 事件报告 broker 接收到一个消息，该消息格式正确但对于登录进程的当前状态无效。 消息可能已丢失，或未按顺序发送。|  
 |3|Message Format Error|Message Format Error 事件报告 broker 收到一条与所需格式不匹配的消息。 该消息可能已损坏，或者 SQL Server 之外的某个程序可能正将消息发送到 Service Broker 使用的端口。|  
 |4|Negotiate Failure|Negotiate Failure 事件报告本地 broker 和远程 broker 支持身份验证的互斥级别。|  

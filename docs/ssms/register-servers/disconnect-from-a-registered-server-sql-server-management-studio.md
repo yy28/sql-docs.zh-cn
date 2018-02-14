@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], disconnecting
 - disconnecting registered servers [SQL Server]
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1035bc9e9e7d83997daef36300d8b2234ef43d0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: a41c28806be100d553a77362db504b0807647575
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>断开与已注册服务器的连接 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中随时断开对象资源管理器与服务器的连接。 断开对象资源管理器不会断开其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 组件（如 SQL 编辑器）。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中随时断开对象资源管理器与服务器的连接。 断开对象资源管理器不会断开其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 组件（如 SQL 编辑器）。  
   
 ##  <a name="SSMSProcedure"></a>  
   

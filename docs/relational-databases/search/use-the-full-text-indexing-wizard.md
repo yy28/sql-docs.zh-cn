@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cfca84ed59bd6922a6667a0b214668836e421ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85be544c13310a98863b03d8bd515c5a1990a5ba
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]SSMS 中的全文索引向导可引导你完成一系列步骤，以帮助你创建全文索引。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+SSMS 中的全文索引向导可引导你完成一系列步骤，以帮助你创建全文索引。  
   
 ## <a name="create-a--full-text-index"></a>创建全文索引 
 
@@ -89,10 +91,10 @@ ms.lasthandoff: 11/17/2017
  10. **“创建新目录”**
  - 选择全文目录。  
   
-    a. **名称**  
+    A. **名称**  
      为新的全文目录输入一个名称。  
   
-     b. **设置为默认目录**  
+     B. **设置为默认目录**  
      选中此项可以将该目录设为此数据库的默认目录。  
   
      c. **区分重音**  
@@ -102,7 +104,7 @@ ms.lasthandoff: 11/17/2017
      指定对其创建全文索引的文件组。  
   
      e. 选择值：  
-      |“值”|说明|  
+      |ReplTest1|Description|  
       |-----------|-----------------|
       |**<default>**| 如果表或视图尚未分区，则选择此值，将与基础表或视图使用相同的文件组。 如果表或视图已分区，则使用主文件组|
       |**PRIMARY**|选择此值可将主文件组用于新全文索引。|
@@ -112,11 +114,11 @@ ms.lasthandoff: 11/17/2017
  11. **选择全文非索引字表**  
      指定要用于全文索引的非索引字表，或者禁用非索引字表。  
   
-     使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。 有关详细信息，请参阅[为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
+     使用称为“非索引字表”的对象在数据库中管理非索引字。 “非索引字表”是一个由非索引字组成的列表，这些非索引字在与全文检索关联时会应用于该索引的全文查询。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
      选择下列值之一：  
   
-   |“值”|说明|  
+   |ReplTest1|Description|  
     |-----------|-----------------|  
     |**<system>**|选择此值将对新全文索引使用系统非索引字表。 这是默认值。|  
     |**<off>**|选择此值将禁用新全文索引的非索引字表。|  

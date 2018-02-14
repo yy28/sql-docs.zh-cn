@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e8a9a30e4221c0c425c45d46b1e3bdddda9a66e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  此示例的文档的结构如下：  
   
--   安装示例和运行演示工作负荷的[先决条件](#Prerequisites)  
+-   安装示例和运行演示工作负荷的[先决条件](#Prerequisites)   
   
 -   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [示例中的内存和磁盘空间利用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> 先决条件  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/17/2017
   
 -   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
 
-    - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。
 
   
@@ -468,10 +469,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**类型**|**名称**|**pages_MB**|  
-|MEMORYCLERK_XTP|默认|94|  
+|MEMORYCLERK_XTP|，则“默认”|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|默认|0|  
-|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|，则“默认”|0|  
+|MEMORYCLERK_XTP|，则“默认”|0|  
   
  默认内存分配器包含系统范围内存结构，相对较小。 用户数据库（在此例中是 ID 为 5 的数据库）的内存分配器大约为 900MB。  
   
@@ -517,10 +518,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**类型**|**名称**|**pages_MB**|  
-|MEMORYCLERK_XTP|默认|146|  
+|MEMORYCLERK_XTP|，则“默认”|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|默认|0|  
-|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|，则“默认”|0|  
+|MEMORYCLERK_XTP|，则“默认”|0|  
   
  可以看到，SQL Server 将稍小于 8GB 的大小用于示例数据库中的内存优化表和索引。  
   
@@ -563,10 +564,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**类型**|**名称**|**pages_MB**|  
-|MEMORYCLERK_XTP|默认|2261|  
+|MEMORYCLERK_XTP|，则“默认”|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|默认|0|  
-|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|，则“默认”|0|  
+|MEMORYCLERK_XTP|，则“默认”|0|  
   
  这是预期行为：事务工作负荷运行时将回收内存。  
   
@@ -582,10 +583,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**类型**|**名称**|**pages_MB**|  
-|MEMORYCLERK_XTP|默认|1863|  
+|MEMORYCLERK_XTP|，则“默认”|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|默认|0|  
-|MEMORYCLERK_XTP|默认|0|  
+|MEMORYCLERK_XTP|，则“默认”|0|  
+|MEMORYCLERK_XTP|，则“默认”|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>内存优化表的磁盘利用率  
  可以使用查询获得数据库检查点文件在给定时间的总体磁盘上大小：  
@@ -641,8 +642,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1|128|  
-|UNDER CONSTRUCTION|DELTA|1|8|  
+|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
+|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
   
  可以看到，大部分空间由预先创建的数据和差异文件使用。 SQL Server 为每个逻辑处理器预先创建一对（数据、差异）文件。 此外，数据文件的预设大小为 128MB，差异文件的预设大小为 8MB，以便更高效地向这些文件插入数据。  
   
@@ -687,8 +688,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|1|128|  
-|UNDER CONSTRUCTION|DELTA|1|8|  
+|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
+|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
   
  我们仍有 16 对预先创建的文件，准备好在关闭检查点时执行。  
   

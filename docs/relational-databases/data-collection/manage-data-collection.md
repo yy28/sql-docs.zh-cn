@@ -8,28 +8,31 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "数据收集"
+keywords:
+- "“数据收集”"
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82d9d1e74c0419f9ea685dc9ae9c243c9bba2840
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48b2043f77c301cebdc6750d6445063ff121946
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-data-collection"></a>管理数据收集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程和功能来管理数据收集的各个方面，例如启用或禁用数据收集、更改收集组配置或查看管理数据仓库中的数据。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程和功能来管理数据收集的各个方面，例如启用或禁用数据收集、更改收集组配置或查看管理数据仓库中的数据。  
   
 ## <a name="manage-data-collection-using-ssms"></a>使用 SSMS 管理数据收集  
  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的对象资源管理器可以执行以下与数据收集器相关的任务：  
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了使用数据收集器时可以使用的存储过程。  
   
-|过程名称|说明|  
+|过程名称|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|启用数据收集器。|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|禁用数据收集器。|  
@@ -85,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了使用收集组时可以使用的存储过程。  
   
-|过程名称|说明|  
+|过程名称|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|按需运行收集组。|  
 |[sp_syscollector_start_collection_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|启动收集组。|  
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了使用收集项时可以使用的存储过程。  
   
-|过程名称|说明|  
+|过程名称|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|创建收集项。|  
 |[sp_syscollector_delete_collection_item (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|删除收集项。|  
@@ -109,7 +112,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了使用收集器类型时可以使用的存储过程。  
   
-|过程名称|说明|  
+|过程名称|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|创建收集器类型。|  
 |[sp_syscollector_update_collector_type (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|更新收集器类型。|  
@@ -119,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了可用于获取配置信息和执行日志数据的视图。  
   
-|视图名称|说明|  
+|视图名称|Description|  
 |---------------|-----------------|  
 |[syscollector_config_store (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|获取数据收集器的配置。|  
 |[syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|获取收集项信息。|  
@@ -133,7 +136,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了可用于配置访问管理数据仓库的权限的存储过程。  
   
-|过程名称|说明|  
+|过程名称|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|指定在连接字符串中为管理数据仓库定义的数据库名称。|  
 |[sp_syscollector_set_warehouse_instance_name (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|指定在连接字符串中为管理数据仓库定义的实例。|  
@@ -142,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了使用管理数据仓库配置时可以使用的存储过程。  
   
-|过程名称|说明|  
+|过程名称|Description|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|在管理数据仓库中创建一个收集快照。|  
 |[core.sp_update_data_source (Transact-SQL)](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|为数据收集更新数据源。|  
@@ -154,7 +157,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了使用上载包时可以使用的存储过程。  
   
-|过程名称|说明|  
+|过程名称|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|配置数据上载重试的次数。|  
 |[sp_syscollector_set_cache_directory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|指定在两次上载重试之间数据的临时存储区。|  
@@ -163,14 +166,14 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了使用数据收集执行日志时可以使用的存储过程。  
   
-|过程名称|说明|  
+|过程名称|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|从执行日志删除收集组条目。|  
   
 ### <a name="functions"></a>函数  
  下表介绍了可用于获取执行和跟踪信息的函数。  
   
-|函数名称|说明|  
+|函数名称|Description|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|为特定包获取 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 执行日志数据。|  
 |[fn_syscollector_get_execution_stats (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|为收集组或包获取执行统计信息。 此信息包含所记录的错误。|  
@@ -179,6 +182,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>另请参阅  
  [执行存储过程](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
  [使用 SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

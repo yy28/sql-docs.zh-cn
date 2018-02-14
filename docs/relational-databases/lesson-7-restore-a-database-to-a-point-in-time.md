@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b321e64b93a696f9a21ceef3279a6b89bea90974
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2341db7864a6122ae9bb182afe664f10fd73359
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>第 7 课：将数据库还原到时间点
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课程中，需将 AdventureWorks2014 数据库还原到两个事务日志备份之间的时间点。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在本课程中，需将 AdventureWorks2014 数据库还原到两个事务日志备份之间的时间点。  
   
 借助传统备份来完成时间点还原，需要使用完整数据库备份（可能是差异备份）以及所有达到以及刚刚超过想要还原到的时间点的事务日志文件。 借助文件快照备份，则只需要两个相邻日志备份文件，文件提供想要还原的时间前后的目标帖子。 由于每个日志备份会创建每个数据库文件（每个数据文件和日志文件）的文件快照，因此只需要两个日志文件快照备份集。  
   

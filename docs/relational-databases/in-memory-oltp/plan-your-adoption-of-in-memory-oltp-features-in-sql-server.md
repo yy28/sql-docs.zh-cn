@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8cfb42dd7bfa261ba364b427075280631d386b9
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 833d774381654b77bc1efcfcb3efdbb1e6d61068
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>在 SQL Server 中计划内存中 OLTP 功能的应用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -198,7 +199,7 @@ ms.lasthandoff: 11/22/2017
 
 
 
-## <a name="d-performance"></a>D. 性能
+## <a name="d-performance"></a>D. “性能”
 
 本部分介绍内存优化表在完全利用潜力时达到卓越性能的情况。
 
@@ -265,7 +266,7 @@ ms.lasthandoff: 11/22/2017
 
 有关将使用不支持的功能的 Transact-SQL 模块迁移到本机编译的模块时的注意事项，请参阅：
 
-- [本机编译的存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
+- [本机编译存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
 除存在对 Transact-SQL 特定元素的限制外，对本机编译的 T-SQL 模块中支持的查询运算符也存在限制。 由于这些限制，本机编译的存储过程不适用于可处理大型数据集的分析查询。
 

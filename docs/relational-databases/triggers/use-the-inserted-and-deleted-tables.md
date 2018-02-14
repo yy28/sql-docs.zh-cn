@@ -22,18 +22,19 @@ helpviewer_keywords:
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a285b7ece1c5f8c84c7cfc1292f4e5a4dffdc6f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+DML 触发器语句使用两种特殊的表：删除的表和插入的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动创建和管理这两种表。 您可以使用这两种驻留内存的临时表来测试特定数据修改的影响以及设置 DML 触发器操作条件。 但不能直接修改表中的数据或对表执行数据定义语言 (DDL) 操作，例如 CREATE INDEX。  
   
  在 DML 触发器中，inserted 和 deleted 表主要用于执行以下操作：  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
  由于 CHECK 约束只能引用定义了列级或表级约束的列，表间的任何约束（在本例中是业务规则）都必须定义为触发器。  
   
- 以下示例将创建一个 DML 触发器。 如果有人试图将一个新采购订单插入到 `PurchaseOrderHeader` 表中，此触发器将进行检查以确保供应商具有良好的信用等级。 若要获取与刚插入的采购订单对应的供应商信用等级，必须引用 `Vendor` 表并将其与插入的表联接。 如果信用等级太低，则显示信息，并且不执行该插入操作。 请注意，此示例不允许进行多行数据修改。 有关详细信息，请参阅 [创建 DML 触发器以处理多行数据](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。  
+ 以下示例将创建一个 DML 触发器。 如果有人试图将一个新采购订单插入到 `PurchaseOrderHeader` 表中，此触发器将进行检查以确保供应商具有良好的信用等级。 若要获取与刚插入的采购订单对应的供应商信用等级，必须引用 `Vendor` 表并将其与插入的表联接。 如果信用等级太低，则显示信息，并且不执行该插入操作。 请注意，此示例不允许进行多行数据修改。 有关详细信息，请参阅 [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   

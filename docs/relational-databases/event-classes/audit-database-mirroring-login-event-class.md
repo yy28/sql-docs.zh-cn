@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - Audit Database Mirroring Login event class
 - database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d845ba23a517b6afd3e74d9d807dc3cac3f3a794
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e224b60ca56dab7ce2c46d6bf3a554690bc3b0c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建一个 Audit Database Mirroring Login 事件来报告与数据库镜像传输安全性相关的审核消息。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建一个 **Audit Database Mirroring Login** 事件来报告与数据库镜像传输安全性相关的审核消息。  
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login 事件类的数据列  
   
-|数据列|类型|说明|列号|可筛选|  
+|数据列|类型|Description|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|在此事件类中未使用。|10|是|  
 |**ClientProcessID**|**int**|在此事件类中未使用。|9|是|  
@@ -59,9 +61,9 @@ ms.lasthandoff: 11/17/2017
   
  下表列出了此事件类的子类值。  
   
-|ID|子类|说明|  
+|ID|子类|Description|  
 |--------|--------------|-----------------|  
-|1|Login Success|Login Success 事件报告相邻的数据库镜像登录进程已成功完成。|  
+|@shouldalert|Login Success|Login Success 事件报告相邻的数据库镜像登录进程已成功完成。|  
 |2|Login Protocol Error|Login Protocol Error 事件报告数据库镜像登录收到一条格式正确但对登录进程的当前状态无效的消息。 消息可能已丢失，或未按顺序发送。|  
 |3|Message Format Error|Message Format Error 事件报告数据库镜像登录收到一条与所需格式不匹配的消息。 消息可能已损坏，或者其他程序（而非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）正在向数据库镜像使用的端口发送消息。|  
 |4|Negotiate Failure|Negotiate Failure 事件报告本地数据库镜像端点和远程数据库镜像端点互相支持身份验证的排他级别。|  
