@@ -1,4 +1,4 @@
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 创建可用性组前，需要：
 
@@ -138,15 +138,15 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>在所有副本上创建数据库镜像终结点
 
-数据库镜像端点使用传输控制协议 (TCP) 发送和接收参与数据库镜像会话或承载可用性副本的服务器实例之间的消息。 数据库镜像端点在唯一的 TCP 端口号上进行侦听。 TCP 侦听器需要的侦听器 IP 地址。 侦听器 IP 地址必须是 IPv4 地址。 你还可以使用`0.0.0.0`。 
+数据库镜像端点使用传输控制协议 (TCP) 发送和接收参与数据库镜像会话或承载可用性副本的服务器实例之间的消息。 数据库镜像端点在唯一的 TCP 端口号上进行侦听。 
 
-下面的 TRANSACT-SQL 脚本创建一个名为的侦听终结点`Hadr_endpoint`为可用性组。 它启动终结点，并为你创建的用户授予连接权限。 在运行该脚本之前，替换 `**< ... >**` 之内的值。
+下面的 TRANSACT-SQL 脚本创建一个名为的侦听终结点`Hadr_endpoint`为可用性组。 它启动终结点，并为你创建的用户授予连接权限。 在运行该脚本之前，替换 `**< ... >**` 之内的值。 （可选） 可以包含 IP 地址`LISTENER_IP = (0.0.0.0)`。 侦听器 IP 地址必须是 IPv4 地址。 你还可以使用`0.0.0.0`。 
 
 更新你的环境的所有 SQL Server 实例上的以下 TRANSACT-SQL 脚本： 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = ALL,
         AUTHENTICATION = CERTIFICATE dbm_certificate,
@@ -161,7 +161,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
         ROLE = WITNESS,
         AUTHENTICATION = CERTIFICATE dbm_certificate,

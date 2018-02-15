@@ -1,27 +1,28 @@
 ---
 title: "连接选项 |Microsoft 文档"
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 02/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b90819fbed37aa41a23a257caf287fd563da6ffa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 899e072051224e2f28423e31f44d368a2884497b
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="connection-options"></a>连接选项
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +35,8 @@ ms.lasthandoff: 01/17/2018
 |ApplicationIntent|字符串|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite。<br /><br />有关对 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]支持的详细信息，请参阅 [PHP Driver for SQL Server 对高可用性和灾难恢复的支持](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|ReadWrite|  
 |AttachDBFileName|字符串|指定服务器应附加的数据库文件。|未设置任何值。|  
 |身份验证|以下字符串之一：<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|指定的身份验证模式。|未设置。|  
-|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|字符串|指定的路径、 名称和始终加密功能自定义密钥存储提供程序的加密密钥。 为了正确配置自定义密钥存储提供程序，在连接时，必须设置所有三个值。 |未设置任何值。|
 |CharacterSet<br /><br />（在 PDO_SQLSRV 驱动程序中不受支持）|字符串|指定用于将数据发送到服务器的字符集。<br /><br />可能的值为 SQLSRV_ENC_CHAR 和 UTF-8。 有关详细信息，请参阅 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|SQLSRV_ENC_CHAR|  
-|ColumnEncryption|**启用**或**已禁用**|指定是否已启用始终加密功能。 |Disabled|  
+|ColumnEncryption<br /><br />（仅支持在 Windows 中）|**启用**或**已禁用**|指定是否已启用始终加密功能。 |Disabled|  
 |ConnectionPooling|1 或 **true** ，表示启用连接池。<br /><br />0 或 **false** ，表示禁用连接池。|指定是否从连接池分配连接 (1 或**true**) 或不 (0 或**false**)。<sup>1</sup>|**true** (1)|  
 |数据库|字符串|指定数据库的名称以用于正在建立的连接<sup>2</sup>。|供登录时使用的默认数据库。|  
 |驱动程序|字符串|指定用于与 SQL Server 进行通信的 Microsoft ODBC 驱动程序。<br /><br />可能的值有：<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (仅限 Windows)。|如果未指定驱动程序关键字，Microsoft Drivers for PHP for SQL Server 尝试查找受支持的 Microsoft ODBC 驱动程序存在在系统中，依次类推开头 ODBC 的最新版本。|  

@@ -27,16 +27,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9652e093a6b358a209bb7b84f1c4aa4c6854c328
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: fef54757181e9a4fc39a8eabf6399041ac0d6879
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不同类型索引操作的计数以及上次执行每种操作的时间。  
+  返回不同类型索引操作的计数以及上次执行每种操作的时间。  
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 要避免公开此类信息，需要将包含不属于已连接租户的数据的每一行都筛选掉。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 >  **sys.dm_db_index_usage_stats**不返回有关内存优化索引的信息。 有关内存优化索引使用的信息，请参阅[sys.dm_db_xtp_index_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_db_index_usage_stats**。  
+>  调用此视图从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用**sys.dm_pdw_nodes_db_index_usage_stats**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,9 +52,9 @@ ms.lasthandoff: 02/03/2018
 |**object_id**|**int**|为其定义索引的表或视图的 ID。|  
 |**index_id**|**int**|索引的 ID。|  
 |**user_seeks**|**bigint**|通过用户查询执行的搜索次数。|  
-|**user_scans**|**bigint**|通过用户查询执行的扫描次数。 这表示未使用 seek 谓词的扫描。|  
+|**user_scans**|**bigint**|通过未使用的用户查询的扫描次数查找谓词。|  
 |**user_lookups**|**bigint**|由用户查询执行的书签查找次数。|  
-|**user_updates**|**bigint**|通过用户查询执行的更新次数。 这包括插入、 删除和更新表示的操作完成不受影响的实际行数。 例如，如果你删除在一个语句中的 1000年行，此计数将递增 1|  
+|**user_updates**|**bigint**|通过用户查询执行的更新次数。 这包括插入、 删除，并更新数字表示的操作完成不受影响的实际行数。 例如，如果你删除在一个语句中的 1000年行，此计数递增 1|  
 |**last_user_seek**|**datetime**|用户上次执行搜索的时间。|  
 |**last_user_scan**|**datetime**|用户上次执行扫描的时间。|  
 |**last_user_lookup**|**datetime**|用户上次执行查找的时间。|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。  
   
 ## <a name="see-also"></a>另请参阅  
 

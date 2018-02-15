@@ -4,7 +4,7 @@ description: "检查并为在 Linux 上的 SQL Server 2017 配置源存储库。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/07/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置存储库安装和升级在 Linux 上的 SQL Server
 
@@ -181,8 +181,5 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 > [!IMPORTANT]
 > 此时，如果你选择使用的某个安装项目中，如[快速入门](sql-server-linux-setup.md#platforms)，请记住，你已配置的目标存储库。 不在本教程中重复该步骤。 这是如果你配置 GDR 存储库，尤其如此，因为快速入门使用 CU 存储库。
-
-> [!IMPORTANT]
-> 在升级到正式版之前，必须将任何版本的 SQL Server 自 2017 年之前 CTP 2.1 升级到至少 2.1 另一个选项是到备份你的数据库，卸载以前的版本，然后执行全新安装的 GA 版本。
 
 有关如何在 Linux 上安装 SQL Server 自 2017 年的详细信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
