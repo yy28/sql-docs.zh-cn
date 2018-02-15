@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 76a5ed98ddd1aa69c11cd371586ce963ebcd97de
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c1d84ae8ac797775759bc53a29cc55acd1323f32
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 
@@ -164,7 +164,7 @@ ms.lasthandoff: 02/09/2018
 
 - 创建具有两个同步副本的可用性组
 
-   包括与同步的可用性模式的两个副本。 例如，以下脚本创建调用 AG `ag1`。 `node1`和`node2`驻留在同步模式下，使用自动种子设定和自动故障转移的副本。
+   包括与同步的可用性模式的两个副本。 例如，以下脚本创建调用 AG `ag1`。 `node1` 和`node2`驻留在同步模式下，使用自动种子设定和自动故障转移的副本。
 
    >[!IMPORTANT]
    >仅运行以下脚本来创建具有两个同步副本的可用性组。 如果在运行前面编写的脚本，则不运行以下脚本。 

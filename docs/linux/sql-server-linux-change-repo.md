@@ -9,18 +9,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 82a1f6d840897311dbb52ffbbf2620c8ec3994ec
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置存储库安装和升级在 Linux 上的 SQL Server
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文介绍如何在 Linux 上配置 SQL Server 2017 安装和升级的正确存储库。
 
@@ -37,7 +39,7 @@ ms.lasthandoff: 02/09/2018
 | **CU** | **mssql-server-2017** | 服务器 2017年累积 SQL 更新 (CU) 存储库。 |
 | **GDR** | **mssql-server-2017-gdr** | 仅适用于关键更新的 SQL Server 自 2017 年 GDR 存储库。 |
 
-## <a id="cuversusgdr"></a>与 GDR 的累积更新
+## <a id="cuversusgdr"></a> 与 GDR 的累积更新
 
 请务必请注意，有两种主要类型的每个分布的存储库：
 
@@ -50,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 > 你可以从 GDR 版本更新到 CU 释放任何时候通过更改存储库。 更新从 CU 的 GDR 发行版的版本不支持。 
 
-## <a id="configure"></a>配置存储库
+## <a id="configure"></a> 配置存储库
 
 下列各节描述如何验证和配置以下支持的平台的存储库：
 
@@ -58,7 +60,7 @@ ms.lasthandoff: 02/09/2018
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#sles)
 
-## <a id="rhel"></a>配置 RHEL 存储库
+## <a id="rhel"></a> 配置 RHEL 存储库
 使用以下步骤配置 Red Hat Enterprise Server (RHEL) 上的存储库。
 
 ### <a name="check-for-previously-configured-repositories-rhel"></a>检查有以前配置的存储库 (RHEL)
@@ -97,7 +99,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
-## <a id="sles"></a>配置 SLES 存储库
+## <a id="sles"></a> 配置 SLES 存储库
 使用以下步骤在 SLES 上配置存储库。
 
 ### <a name="check-for-previously-configured-repositories-sles"></a>检查有以前配置的存储库 (SLES)
@@ -128,7 +130,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 | **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
-## <a id="ubuntu"></a>配置 Ubuntu 存储库
+## <a id="ubuntu"></a> 配置 Ubuntu 存储库
 使用以下步骤在 Ubuntu 上配置存储库。
 
 ### <a name="check-for-previously-configured-repositories-ubuntu"></a>检查有以前配置的存储库 (Ubuntu)

@@ -92,20 +92,18 @@
 ## [跟踪事件](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # 开发人员
-## 表格模型
-### [表格模型编程兼容级别 1200 及更高](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [表格模型脚本语言 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [表格模型脚本语言 (TMSL) 命令](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [表格模型脚本语言 (TMSL) 对象](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [表格模型编程兼容级别 1050 和 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+## [表格模型编程兼容级别 1200 及更高](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [表格模型脚本语言 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+### [表格模型脚本语言 (TMSL) 命令](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [表格模型脚本语言 (TMSL) 对象](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [表格模型编程兼容级别 1050 和 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## 多维模型
-### [Analysis Services 脚本语言 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [分析管理对象 +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [OLAP 逻辑 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [OLAP 物理 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [扩展 OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [Analysis Services 脚本语言 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [分析管理对象 (AMO)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [OLAP 逻辑 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [OLAP 物理 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [扩展 OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [架构行集](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services 脚本语言 (ASSL for XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
