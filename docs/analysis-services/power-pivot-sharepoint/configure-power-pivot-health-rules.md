@@ -12,20 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>配置 Power Pivot 运行状况规则
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]for SharePoint 包含的 SharePoint 运行状况规则，以帮助你监视和解决服务器可用性和配置问题。 应用于 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 的运行状况规则显示在“查看规则定义”页。  
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 包含一些 SharePoint 运行状况规则，它们可帮助你监视和解决服务器可用性和配置问题。 应用于 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 的运行状况规则显示在“查看规则定义”页。  
   
  运行状况规则有助于提前发现可能最终导致服务中断的服务器问题。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 提供多种规则以便帮助你在问题对用户造成影响前发现并纠正问题。 您可以自定义其中许多规则以便适合于您的部署的独有特性。 例如，如果您想要更多时间以便解决与磁盘空间有关的警告，则可以将可用磁盘空间百分比从 5% 提升到 10%，以便更早获得警告。  
   
@@ -49,7 +49,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [配置用于评估应用程序稳定性的运行状况规则（Power Pivot 服务应用程序）](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
  必须是服务应用程序管理员才能更改 Analysis Services 实例和 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序的配置属性。  
   
 ##  <a name="bkmk_view"></a> 查看 Power Pivot 运行状况规则  

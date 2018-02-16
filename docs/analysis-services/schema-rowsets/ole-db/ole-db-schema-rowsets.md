@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [OLE DB]
 - schema rowsets [Analysis Services], OLE DB
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 架构行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]支持以下的 OLE DB 架构行集[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XML for Analysis (XMLA) 提供。 使用**DISCOVER_ENUMERATORS**行集[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法来检查特定数据源提供程序是否支持行集。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口支持下列 OLE DB 架构行集。 使用**DISCOVER_ENUMERATORS**行集[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法来检查特定数据源提供程序是否支持行集。  
   
  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 网站的 MSDN® Library 的“OLE DB Programmer's Reference”部分搜索“Schema Rowsets”主题，还可以找到有关这些行集的详细信息。  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |**DBSCHEMA_TABLE_CONSTRAINTS**|标识在目录中定义、给定用户拥有的表约束。|  
 |**DBSCHEMA_TABLE_PRIVILEGES**|标识在目录中定义的、给定用户可使用或授权的对表的特权。|  
 |**DBSCHEMA_TABLE_STATISTICS**|描述访问接口中有关表的可用统计信息集。<br /><br /> 此行集不与相关**统计信息**行集。|  
-|[DBSCHEMA_TABLES 行集](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|标识的度量值组和维度中的表作为公开[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
+|[DBSCHEMA_TABLES Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) <sup>1</sup>|标识的度量值组和维度中的表作为公开[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
 |**DBSCHEMA_TABLES_INFO** <sup>1</sup>|标识在目录中定义的、给定用户可以访问的表（包括视图）。|  
 |**DBSCHEMA_TRANSLATIONS**|标识在目录中定义的、给定用户可以访问的字符转换。|  
 |**DBSCHEMA_TRUSTEE**|枚举数据源的受信者。|  

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]包括数据库同步功能，使两个[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]等效通过将数据和元数据的源服务器上的数据库复制到目标服务器上的数据库的数据库。 使用“同步数据库”功能可完成以下任务之一：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一个数据同步功能，该功能通过将数据和元数据从源服务器上的数据库复制到目标服务器上的数据库，使两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
   
 -   将数据库从临时服务器部署到生产服务器。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  以下针对以前版本的 Analysis Services 撰写的白皮书仍适用于使用 SQL Server 2012 生成的可缩放多维解决方案。 有关详细信息，请参阅 [使用 Analysis Services 缩放查询](http://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用只读数据库缩放 Analysis Services 查询](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
  在启动数据库同步的目标服务器上，您必须是具有 Analysis Services 服务器管理员角色的成员。 在源服务器上，您的 Windows 用户帐户必须拥有源数据库上的完全控制权限。 如果以交互方式同步数据库，请注意同步在 Windows 用户标识的安全上下文中运行。 如果帐户被拒绝访问特定对象，则操作将排除这些对象。 有关服务器管理员角色和数据库权限的详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[授予数据库权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)。  
   
  两个服务器上的 TCP 端口 2383 必须都打开，默认实例之间才能建立远程连接。 有关在 Windows 防火墙中创建例外的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  对于源实例的默认位置中存储的本地分区，无法更改此列。  
   
-     **大小**  
+     **Size**  
      显示本地分区的估计大小。  
   
      **“所选位置中的分区”** 选项显示一个网格，对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “位置” **中所选行的** “源文件夹” **列中指定的源**实例所在位置存储的本地分区进行了说明。  
@@ -157,7 +158,7 @@ ms.lasthandoff: 01/08/2018
   
      单击省略号 (**...**) 按钮可显示“查找远程文件夹” 对话框，通过该对话框可以指定所选位置中存储的远程分区应同步到其中的目标实例上的文件夹。  
   
-     **大小**  
+     **Size**  
      显示该位置中存储的远程分区的估计大小。  
   
      **“所选位置中的分区”** 显示一个网格，对在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上指定位置（在 **“位置”** 中所选行的 **“源文件夹”**列指定）存储的远程分区进行了说明。 该网格包含以下列：  
@@ -189,7 +190,7 @@ ms.lasthandoff: 01/08/2018
   
 8.  单击 **“完成”** 进行同步。 验证 **“完成向导”** 页上的选项后，再次单击 **“完成”** 。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  如果未同步角色或成员身份，请注意立即指定对目标数据库的用户访问权限。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>课程 2-5-部署 Analysis Services 项目
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/22/2018
     > [!NOTE]  
     > 如果您在部署过程中出现错误，则使用 SQL Server Management Studio 检查数据库权限。 您为数据源连接指定的帐户必须在 SQL Server 实例上具有登录名。 双击该登录名可以查看“用户映射”属性。 该帐户必须对 **AdventureWorksDW2012** 数据库具有 db_datareader 权限。  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将生成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目，然后使用部署脚本将其部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中。 部署进度将在下列两个窗口中显示：“输出”窗口和“部署进度 – Analysis Services 教程”窗口。  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将生成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程项目，然后使用部署脚本将其部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中。 部署进度将在下列两个窗口中显示：“输出”窗口和“部署进度 – Analysis Services 教程”窗口。  
   
     打开“输出”窗口，如果需要，可通过单击“视图”菜单上的“输出”实现。 “输出”窗口显示部署的整体进度。 “部署进度 - Analysis Services 教程”窗口显示部署过程中执行的每个步骤的详细信息。 有关详细信息，请参阅[生成 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)和[部署 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
   

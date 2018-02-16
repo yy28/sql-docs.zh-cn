@@ -23,19 +23,20 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供大量用于的多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 的语言，旨在完成从到标准统计计算的所有内容的内部函数通过遍历层次结构中的成员。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供大量用于的多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 的语言，旨在完成从到遍历层次结构中的成员的标准统计计算的所有内容的内部函数。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
   
  因此，通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以将程序集添加到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例或数据库。 使用程序集，您可以使用任何公共语言运行时 (CLR) 语言（如 Microsoft Visual Basic .NET 或 Microsoft Visual C#）来创建用户定义的外部函数。 还可以使用组件对象模型 (COM) 自动化语言，如 Microsoft Visual Basic 或 Microsoft Visual C++。  
   
@@ -119,7 +120,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  不应依赖于在同一应用程序域中查找程序集，因为应用程序域边界和每个域中的程序集都是由此实现而定义的。  
   
 ## <a name="see-also"></a>另请参阅  
- [设置存储过程的安全性](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
- [定义存储过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [安全设置的存储过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [定义存储的过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 78b908cfe8e5601ecd5d8fcea6c6816459d6e73a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Power Pivot BI 语义模型连接 (.bism)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]BI 语义模型连接 (.bism) 是一个可移植的连接，连接 Excel 或 Power View 报表到 Analysis Services 表格模型数据库或在多维模式下的 Analysis Services 实例。 如果您熟悉 Office 数据连接 (.odc) 文件，则您会注意到定义和使用 .bism 连接文件的方式的相似性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+BI 语义模型连接 (.bism) 是可移植的连接，可在多维模式下将 Excel 或 Power View 报表连接到 Analysis Services 表格模型数据库或 Analysis Services 实例。 如果您熟悉 Office 数据连接 (.odc) 文件，则您会注意到定义和使用 .bism 连接文件的方式的相似性。  
   
  BI 语义模型连接是通过 SharePoint 创建和访问的。 创建 BI 语义模型连接后，您可以对库中的 BI 语义模型连接启用快速启动命令。 快速启动命令打开新的 Excel 工作簿或选项来供您编辑连接文件。 如果已安装了 Reporting Services，则还将看到一个用于创建 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表的命令。  
   

@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比较表格和多维解决方案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -151,9 +151,9 @@ ms.lasthandoff: 01/22/2018
   
 -   多维模型数据库可以使用维度和单元格级安全性，使用基于角色的权限。  
 
--   使用 SharePoint 权限在文件级别保护[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿。  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿。  
   
- [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿可还原到表格模式服务器。 一旦还原该文件，它被脱离 SharePoint，让你能够使用所有表格建模功能，包括行级别安全性。  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿还原到表格模式服务器。 一旦还原该文件，它被脱离 SharePoint，让你能够使用所有表格建模功能，包括行级别安全性。  
   
 ##  <a name="bkmk_designer"></a> 设计工具  
  对于需要生成分析模型的用户，数据建模技能和专业技术可能会大不相同。 如果您的解决方案需要考虑工具熟悉程度或用户专业技术，请比较以下模型创建体验。  

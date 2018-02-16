@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="subselects-in-queries"></a>查询中的嵌套 select 语句
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]嵌套 select 语句表达式是用于从计算外部的外部 SELECT 的位置来限制的多维数据集空间的嵌套 SELECT 表达式。 嵌套 select 语句可用于定义要对其执行所有计算的新空间。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+嵌套 select 语句表达式是嵌套的 SELECT 表达式，用于限制从其计算更外部的外部 SELECT 的多维数据集的空间。 嵌套 select 语句可用于定义要对其执行所有计算的新空间。  
   
 ## <a name="subselects-by-example"></a>嵌套 select 语句示例  
  让我们从一个示例开始，了解嵌套 select 语句如何帮助生成我们想要显示的结果。 假定要求您生成一个表，该表显示前 10 种产品在几年中的销售行为。  
@@ -261,7 +262,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|组件|Mountain|Road|Touring|  
+||All Products|Accessory|Components|Mountain|Road|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
 |United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
@@ -286,7 +287,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|组件|Mountain|Road|Touring|  
+||All Products|Accessory|Components|Mountain|Road|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -344,7 +345,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  正如您所看到的，在这两个结果集之间存在差异。 第一个查询指明在前 5 个销售区域中哪些产品的销量最高；第二个查询指明对于前 5 种销售产品哪些区域的销量最高。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>注释  
  嵌套 select 语句具有以下限制：  
   
 -   WHERE 子句不筛选子空间。  
@@ -355,6 +356,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   轴子句中不允许 HAVING 子句；请改用 [Filter (MDX)](../../../mdx/filter-mdx.md) 函数表达式。  
   
--   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，是每个会话为基础，在通过将分配到的值**子查询**中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROP_MSMD_SUBQUERIES**中属性[支持的 XMLA 属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 有关计算成员行为（基于 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 或 **DBPROP_MSMD_SUBQUERIES** 的值）的详细解释，请参阅 **嵌套 select 和子多维数据集中的计算成员**。  
+-   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，是每个会话为基础，在通过将分配到的值**子查询**中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROP_MSMD_SUBQUERIES**中属性[支持的 XMLA 属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 有关计算成员行为（基于 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 或 **DBPROP_MSMD_SUBQUERIES** 的值）的详细解释，请参阅 **嵌套 select 和子多维数据集中的计算成员**。  
   
   

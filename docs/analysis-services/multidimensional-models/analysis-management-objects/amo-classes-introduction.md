@@ -1,7 +1,7 @@
 ---
 title: "引入 AMO 类 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a07edb14a747c43abaca0451ca69a35921f3cda
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b288d323d4de3272afb434f3782c1df133e304af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-classes---introduction"></a>AMO 类-简介
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]分析管理对象 (AMO) 是用于管理的实例的类的库[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序。 AMO 类可用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象，例如数据库、维度、多维数据集、挖掘结构和模型、角色和权限、异常以及其他对象。  
+  分析管理对象 (AMO) 是用于管理的实例的类的库[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序。 AMO 类可用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象，例如数据库、维度、多维数据集、挖掘结构和模型、角色和权限、异常以及其他对象。  
   
  下图显示了本主题中介绍的类之间的关系。  
   

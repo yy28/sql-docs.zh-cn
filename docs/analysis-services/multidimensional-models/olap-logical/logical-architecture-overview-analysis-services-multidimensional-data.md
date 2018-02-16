@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services 会在确定使用的 Analysis Services 模型的不同类型的内存体系结构和运行时环境的服务器部署模式运行。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统 OLAP 和数据挖掘。 **表格模式下**支持表格模型。 **SharePoint 集成模式下**作为安装的 Analysis Services 的实例是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]对于 SharePoint，用于加载和查询 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工作簿内的数据模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统 OLAP 和数据挖掘。 **表格模式下**支持表格模型。 **SharePoint 集成模式下**作为安装的 Analysis Services 的实例是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]对于 SharePoint，用于加载和查询 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工作簿内的数据模型。  
   
- 本主题介绍 Analysis Services 在多维和数据挖掘模式下操作时的基本体系结构。 有关其他模式的详细信息，请参阅[表格建模 &#40;SSAS &#41;](../../../analysis-services/tabular-models/tabular-models-ssas.md)和[比较表格和多维解决方案 &#40;SSAS &#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ 本主题介绍 Analysis Services 在多维和数据挖掘模式下操作时的基本体系结构。 有关其他模式的详细信息，请参阅[表格建模 & #40;SSAS & #41;](../../../analysis-services/tabular-models/tabular-models-ssas.md)和[比较表格和多维解决方案 & #40;SSAS & #41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>基本体系结构  
  一个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例可包含多个数据库，一个数据库中可同时包含 OLAP 对象和数据挖掘对象。 应用程序可以连接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例和指定的数据库。 一个服务器计算机可以承载多个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例。 实例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]命名为"\<ServerName >\\< InstanceName\>"。 下图显示之间的所有提到的关系[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象。  
@@ -117,20 +119,20 @@ ms.lasthandoff: 01/08/2018
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|包|上一次|  
-|3516987|@shouldalert|6|@shouldalert|15|99/01/10|  
-|3554790|@shouldalert|6|@shouldalert|40|99/01/19|  
-|3572673|@shouldalert|6|@shouldalert|34|99/01/27|  
-|3600974|@shouldalert|6|@shouldalert|45|99/02/02|  
-|3645541|@shouldalert|6|@shouldalert|20|99/02/09|  
-|3674906|@shouldalert|6|@shouldalert|36|99/02/17|  
+|3516987|1|6|1|15|99/01/10|  
+|3554790|1|6|1|40|99/01/19|  
+|3572673|1|6|1|34|99/01/27|  
+|3600974|1|6|1|45|99/02/02|  
+|3645541|1|6|1|20|99/02/09|  
+|3674906|1|6|1|36|99/02/17|  
   
  在前面的表中，每行都有相同的值**RouteKey**， **SourceKey**，和**TimeKey**的列，指明这些行参与到同一个多维数据集单元格中。  
   
- 这里显示的示例提供了一个非常简单的多维数据集，该多维数据集仅有一个度量值组，并且所有维度表均与事实数据表以星型架构联接。 另一个常见的架构为雪花型架构，在该架构中，一个或多个维度表联接到其他维度表，而不是直接联接到事实数据表。 **相关的主题：**[维度 &#40;Analysis Services-多维数据 &#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ 这里显示的示例提供了一个非常简单的多维数据集，该多维数据集仅有一个度量值组，并且所有维度表均与事实数据表以星型架构联接。 另一个常见的架构为雪花型架构，在该架构中，一个或多个维度表联接到其他维度表，而不是直接联接到事实数据表。 **相关的主题：**[维度 & #40;Analysis Services-多维数据 & #41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
  此处显示的示例仅包含一个事实数据表。 如果多维数据集具有多个事实数据表，则会将每个事实数据表中的度量值组织到度量值组中，并且通过已定义的维度关系使每个度量值组都与一组特定的维度相关。 这些关系是通过指定数据源视图中的参与表以及关系的粒度来定义的。 **相关的主题：**[维度关系](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [多维模型数据库 &#40;SSAS &#41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多维模型数据库 & #40;SSAS & #41;](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

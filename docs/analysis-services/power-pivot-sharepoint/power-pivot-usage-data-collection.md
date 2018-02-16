@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-usage-data-collection"></a>PowerPivot 使用情况数据收集
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用情况数据收集是场级别 SharePoint 功能。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用情况数据收集是场级 SharePoint 功能。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
   
  有关 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理仪表板中使用情况数据的信息，请参阅 [PowerPivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
   
 ##  <a name="usagearch"></a> 使用情况数据收集和报告体系结构  
- [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]收集使用情况数据，存储和管理使用从 SharePoint 基础结构和 Power Pivot 服务器组件的功能的组合。 SharePoint 基础结构提供了集中的使用情况服务和内置的计时器作业。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 为你在 SharePoint 管理中心中查看的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 使用情况数据和报告添加了更长期的存储。  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 收集使用情况数据，存储和管理使用从 SharePoint 基础结构和 Power Pivot 服务器组件的功能的组合。 SharePoint 基础结构提供了集中的使用情况服务和内置的计时器作业。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 为你在 SharePoint 管理中心中查看的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 使用情况数据和报告添加了更长期的存储。  
   
  在使用情况数据收集系统中，事件信息进入应用程序服务器或 Web 前端上的使用情况收集系统。 使用情况数据在系统中移动以便响应计时器作业，这些计时器作业导致数据从物理服务器上的临时数据文件移到数据库服务器上的永久存储区中。 下图说明了通过数据收集和报告系统移动使用情况数据的组件和过程。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 |阶段|Description|  
 |-----------|-----------------|  
-|@shouldalert|使用情况数据收集由 SharePoint 部署中的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 组件和 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 数据提供程序所生成的事件触发。 可启用或禁用的可配置事件包括连接请求、加载和卸载请求以及应用程序服务器上 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务监视的查询响应计时事件。 由服务器管理单独并且不能禁用的其他事件。 这些事件包括数据刷新事件和服务器运行状况事件。<br /><br /> 最初，使用 SharePoint 系统的数据收集功能在本地日志文件中收集和存储使用情况数据。 这些文件和它们的位置是 SharePoint 中标准使用情况数据收集系统的一部分。 文件的位置在场中的每个服务器上均相同。 要查看或更改日志记录目录的位置，请在 SharePoint 管理中心中转到 **“监视”** ，然后单击 **“配置 Usage and Health Data Collection”**。|  
+|1|使用情况数据收集由 SharePoint 部署中的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 组件和 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 数据提供程序所生成的事件触发。 可启用或禁用的可配置事件包括连接请求、加载和卸载请求以及应用程序服务器上 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务监视的查询响应计时事件。 由服务器管理单独并且不能禁用的其他事件。 这些事件包括数据刷新事件和服务器运行状况事件。<br /><br /> 最初，使用 SharePoint 系统的数据收集功能在本地日志文件中收集和存储使用情况数据。 这些文件和它们的位置是 SharePoint 中标准使用情况数据收集系统的一部分。 文件的位置在场中的每个服务器上均相同。 要查看或更改日志记录目录的位置，请在 SharePoint 管理中心中转到 **“监视”** ，然后单击 **“配置 Usage and Health Data Collection”**。|  
 |2|“Microsoft SharePoint Foundation 使用率数据导入”计时器作业按照计划的间隔（默认为每小时）将使用情况数据从本地文件移到 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序数据库。 如果你在场中具有多个 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序，则每个应用程序都将具有自己的数据库。 事件包含标识哪个 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序生成此事件的内部信息。 应用程序标识符确保使用情况数据绑定到创建它的应用程序。|  
 |3|数据复制到可用于管理中心中的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板的内部报告数据库。|  
 |4|该数据源是你可以访问以便在 Excel 中创建自定义报告的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿。 只有源工作簿的一个实例。 本地化的报告都基于相同的源工作簿。|  

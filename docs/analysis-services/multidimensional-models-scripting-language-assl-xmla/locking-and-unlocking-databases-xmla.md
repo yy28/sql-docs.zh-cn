@@ -1,7 +1,7 @@
 ---
 title: "锁定和解锁数据库 (XMLA) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,31 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - locking [XML for Analysis]
 - XML for Analysis, locking
 - XMLA, locking
 - unlocking objects
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0d4a50d1e4732a0b93f0fd536aa0ddfb950ca695
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 05a2627f13306e59a6369e2bafa206f82977c186
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>锁定数据库和解除数据库锁定 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以锁定和解锁分别使用的数据库，则[锁](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)和[解锁](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)XML Analysis (XMLA) 中的命令。 通常，其他 XMLA 命令会在执行期间根据需要自动锁定对象和解除对象锁定，从而完成命令。 你可以显式锁定或解锁数据库执行多个命令在单个事务中，如[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令，同时防止从提交到数据库写入事务的其他应用程序。  
+  你可以锁定和解锁分别使用的数据库，则[锁](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)和[解锁](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)XML Analysis (XMLA) 中的命令。 通常，其他 XMLA 命令会在执行期间根据需要自动锁定对象和解除对象锁定，从而完成命令。 你可以显式锁定或解锁数据库执行多个命令在单个事务中，如[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令，同时防止从提交到数据库写入事务的其他应用程序。  
   
 ## <a name="locking-databases"></a>锁定数据库  
- **锁**命令锁定的对象，供共享或独占使用，在当前活动事务的上下文中。 对象上的锁将阻止提交事务，直到删除该锁为止。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持两种类型的锁、 共享的锁和排他锁。 有关支持的锁类型的详细信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，请参阅[模式元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
+ **锁**命令锁定的对象，供共享或独占使用，在当前活动事务的上下文中。 对象上的锁将阻止提交事务，直到删除该锁为止。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持两种类型的锁、 共享的锁和排他锁。 有关支持的锁类型的详细信息[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，请参阅[模式元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅允许锁定数据库。 [对象](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)元素必须包含对的对象引用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 如果**对象**未指定元素或如果**对象**元素引用数据库之外的对象将会出错。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 允许仅数据库被锁定。 [对象](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)元素必须包含对的对象引用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 如果**对象**未指定元素或如果**对象**元素引用数据库之外的对象将会出错。  
   
 > [!IMPORTANT]  
 >  只有数据库管理员或服务器管理员可以显式发出**锁**命令。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>另请参阅  
  [锁定元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
  [解锁元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
- [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [使用 Analysis Services 中的 XMLA 进行开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

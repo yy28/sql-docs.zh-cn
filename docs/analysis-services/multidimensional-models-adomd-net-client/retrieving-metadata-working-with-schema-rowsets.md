@@ -1,7 +1,7 @@
 ---
 title: "Working with Schema Rowsets in ADOMD.NET |Microsoft 文档"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dcb2905c471751275b6dae19737541b798e2b68b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 279cc537776f6c96193026d5f0bccafcbd8f0c8b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>检索元数据-使用架构行集
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你需要比 ADOMD.NET 对象模型中可用的多个元数据时，ADOMD.NET 提供了有关 Analysis (XMLA)、 OLE DB、 OLE DB for OLAP 和 OLE DB for 数据挖掘架构行集检索完整范围的 XML 的功能：  
+  当需要的元数据超过 ADOMD.NET 对象模型中提供的元数据时，ADOMD.NET 会提供检索 XML for Analysis (XMLA)、OLE DB、OLE DB for OLAP 以及 OLE DB for Data Mining 的所有架构行集的功能：  
   
  **分析元数据的 XML**  
  XML for Analysis 架构行集可提供检索有关服务器的低级别信息的方法。 提供的信息包括服务器上可用的数据源、访问接口保留的关键字、访问接口支持的文字等。 您甚至可以使用 XML for Analysis 架构行集发现访问接口支持的所有架构行集。  

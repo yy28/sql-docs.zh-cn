@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>课程 1-2-定义了一个数据源
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/22/2018
   
 4.  在“连接管理器”对话框中，为数据源定义连接属性。 在“提供程序”列表框中，确保已选中“本机 OLE DB\SQL Server Native Client 11.0”。  
   
-    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]此外支持其他提供程序，它显示在**提供程序**列表。  
+    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 还支持“提供程序”列表中显示的其他提供程序。  
   
 5.  在“服务器名称”文本框中，键入 **localhost**。  
   

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: ac8358a3-ee71-44c7-8ee6-ac7afe3ebaa4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 22a4a92f63616664ff5018d8a440e437879c7225
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-refresh"></a>Power Pivot 数据刷新
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]创建包含工作簿后[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据，你可能想要定期刷新数据，通过重新运行查询或命令以从来源获取更新的信息你最初用来创建工作簿。 此过程称作 **数据刷新**，并且可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]中按需刷新数据，或者作为在 SharePoint 场中的应用程序服务器上以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进程形式运行的定期操作来刷新数据。 有关详细信息，请参阅：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在你创建包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的某一工作簿后，可能希望通过重新运行查询或命令从你最初用于创建该工作簿的数据源获取更新的信息，从而定期刷新数据。 此过程称作 **数据刷新**，并且可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]中按需刷新数据，或者作为在 SharePoint 场中的应用程序服务器上以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进程形式运行的定期操作来刷新数据。 有关详细信息，请参阅：  
   
 -   [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
 -   [查看数据刷新历史记录 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 SharePoint Server 2013 Excel Services 使用不同的体系结构的数据刷新[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据模型。 SharePoint 2013 支持的体系结构利用 Excel Services 作为主要组件加载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型。 以前使用的数据刷新体系结构依赖在 SharePoint 模式下运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器来加载数据模型。 有关详细信息，请参见以下内容：  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 SharePoint Server 2013 Excel Services 将不同的体系结构用于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型的数据刷新。 SharePoint 2013 支持的体系结构利用 Excel Services 作为主要组件加载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型。 以前使用的数据刷新体系结构依赖在 SharePoint 模式下运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器来加载数据模型。 有关详细信息，请参见以下内容：  
 >   
 >  -   [使用 SharePoint 2013 进行 Power Pivot 数据刷新](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)  
 > -   [升级工作簿和计划的数据刷新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  

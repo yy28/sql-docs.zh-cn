@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>在创建和配置 Power Pivot 服务应用程序 CA
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序是共享的服务实例的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]系统服务。 每个服务应用程序都具有自己的应用程序标识、配置设置、属性和内部数据存储。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务的共享服务实例。 每个服务应用程序都具有自己的应用程序标识、配置设置、属性和内部数据存储。  
   
  本主题包含以下各节：  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
      有关服务关联的详细信息，请参阅 [将 PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
-10. 单击“确定” **。** 。该服务将在场的服务应用程序列表中与其他托管服务显示在一起。  
+10. 单击 **“确定”**。 。该服务将在场的服务应用程序列表中与其他托管服务显示在一起。  
   
 ##  <a name="ConfigApp"></a> 配置 Power Pivot 服务应用程序  
  使用默认配置创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 对于大多数情况，建议您采用这些默认设置。 仅在遇到响应时间较长或删除的连接时，或者你在为特定的 SharePoint Web 应用程序改变 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务配置时，才更改这些默认设置。  
@@ -147,7 +148,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  对于“[自定义]”，选中要使用的每个服务应用程序连接旁边的复选框。 如果有多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序（由设置为“PowerPivot 服务应用程序代理”的类型指示），请确保仅选择一个。  
   
-6.  单击“确定” 。  
+6.  单击 **“确定”**。  
   
 ##  <a name="EditGSA"></a> 编辑服务应用程序属性  
  使用下面的说明可重新打开指定服务应用程序名称、应用程序池、数据库设置和服务关联的属性页。  

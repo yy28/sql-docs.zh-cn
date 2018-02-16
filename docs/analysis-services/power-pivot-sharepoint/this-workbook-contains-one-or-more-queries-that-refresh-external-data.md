@@ -12,26 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 354c8c0baca1372c0bc6cb17e2acbfc74c45b9b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此工作簿包含一个或多个刷新外部数据的查询
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]包含的 Excel 工作簿的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据，Excel Services 将显示此警告，如果它检测到连接信息并且可以启用或禁用此工作簿的查询提示。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 检测到连接信息，则将显示此警告，并提示你为此工作簿启用或禁用查询。  
   
 ## <a name="details"></a>详细信息  
   
 |||  
 |-|-|  
 |产品名称|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint|  
-|产品版本|[!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11_md](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]|  
+|產品版本|[!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11_md](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]|  
 |原因|Excel Services 配置为对数据刷新显示警告。|  
 |消息正文|此工作簿包含一个或多个用于刷新外部数据的查询。 恶意用户可能设计一个查询来访问机密信息，并将其分发给其他用户或执行其他有害操作。<br /><br /> 如果您信任此工作簿的源，则单击“是”以启用对此工作簿中外部数据的查询。 如果您不确定，则单击“否”，以便不将更改应用到您的工作簿。<br /><br /> 是否要启用对此工作簿中外部数据的查询？|  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
  若要筛选工作簿中的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据并对其执行切片，必须启用查询。 确保你只对你信任的这些 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿启用查询。  
   
-## <a name="user-action"></a>用户操作  
+## <a name="user-action"></a>使用者動作  
  单击 **“是”** 以启用查询。  
   
  还可以更改配置设置，以便不再发生刷新时警告：  
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  在“外部数据”中，取消选中 **“数据刷新时警告”**复选框。  
   
-6.  单击“确定” 。  
+6.  单击 **“确定”**。  
   
  此外，你还可以为包含 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿的站点创建新的受信任位置，然后仅修改该站点的配置设置。 有关详细信息，请参阅 [在管理中心中为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   

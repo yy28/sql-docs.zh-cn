@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 00353a4a955b631fda3e0fb6521ecad764f1328c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tuples"></a>元组
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]元组唯一标识多维数据集中的数据的一个切片。 只要没有两个或多个成员属于相同的层次结构，元组就由维度成员的组合构成。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+一个元组唯一标识多维数据集中数据的一个切片。 只要没有两个或多个成员属于相同的层次结构，元组就由维度成员的组合构成。  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>元组中的隐式或默认属性成员  
  在 MDX 查询或表达式中定义元组时，不必显式包含每个属性层次结构中的属性成员。 如果属性层次结构中的成员未显式包含在查询或表达式中，则该属性层次结构的默认成员为隐式包含在元组中的属性成员。 除非在多维数据集中进行显式定义，否则每个属性层次结构的默认成员均为“(全部)”成员（如果存在“(全部)”成员）。 如果属性层次结构中不存在“(全部)”成员，则默认成员为属性层次结构中的顶级成员。 除非显式定义了默认度量值，否则默认度量值为多维数据集中指定的第一个度量值。 有关详细信息，请参阅[定义默认成员](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)和 [DefaultMember (MDX)](../../../mdx/defaultmember-mdx.md)。  
@@ -72,8 +73,8 @@ FROM [Adventure Works]
 >  属性成员可以按成员名称或成员键引用。 在前面的示例中，您可以将对 [CY 2004] 的引用替换为对 &[2004] 的引用。  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [MDX &#40; 中的重要概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [多维数据集空间](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [使用成员、 元组，和集 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   

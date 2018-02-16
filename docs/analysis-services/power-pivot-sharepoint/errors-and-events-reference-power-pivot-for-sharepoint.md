@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6a8300259dd2ac5a670a69677cfb7153d30c9825
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="errors-and-events-reference-power-pivot-for-sharepoint"></a>错误和事件参考 (Power Pivot for SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本部分提供有关错误和事件信息[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint。 本节中的错误由在日志或错误窗口中出现的错误消息文本标识。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本节提供有关 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的错误和事件的信息。 本节中的错误由在日志或错误窗口中出现的错误消息文本标识。  
   
  若要查看在本节中提供的错误消息的列表，请使用联机丛书中的目录窗格。  
   

@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附录 b: ODBC 状态转换表
 本附录中的表显示如何 ODBC 函数导致的环境、 连接、 语句和描述符状态的转换。 通常，环境、 连接、 语句或描述符的状态决定使用句柄 （环境、 连接、 语句或描述符） 的相应类型的函数可以调用时。 环境、 连接、 语句中，和描述符状态重叠大致如下图中所示。 例如，连接的确切重叠状态 C5，C6 并且语句说明了通过 S12 S1 是数据源而定，因为在不同的数据源，在不同时间开始事务，描述符状态 D1i （隐式已分配的描述符） 依赖描述符与之关联的语句的状态，在状态 D1e （显式已分配的描述符） 时不依赖于状态的任何语句。 有关每个状态的说明，请参阅[环境转换](../../../odbc/reference/appendixes/environment-transitions.md)，[连接转换](../../../odbc/reference/appendixes/connection-transitions.md)，[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述符转换](../../../odbc/reference/appendixes/descriptor-transitions.md)、 本附录内容更高版本。  
@@ -49,10 +49,10 @@ ms.lasthandoff: 02/12/2018
   
  转换表中的每个条目可以是以下值之一：  
   
--   **--**-状态执行函数后保持不变。  
+-   **--** -状态执行函数后保持不变。  
   
 -   **E**  
-     ***n*****C*n * * *，**S*n***，或**D * n***  -环境、 连接、 语句或描述符状态将移到指定的状态。  
+     ***n*** **C*n * * *，**S*n***，或**D * n***  -环境、 连接、 语句或描述符状态将移到指定的状态。  
   
 -   **(IH)** -向函数传递了无效的句柄。 如果句柄是句柄为空或已错误类型的有效句柄 — 例如，传递了语句句柄时所需的连接句柄，该函数将返回 SQL_INVALID_HANDLE;否则，该行为是未定义和可能严重。 仅当它是调用该函数中指定的状态的唯一可能的结果时，会显示此错误。 此错误不会更改状态，并由括号始终检测到的驱动程序管理器中。  
   

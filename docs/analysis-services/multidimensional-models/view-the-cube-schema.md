@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 25343dab0a818aa86f0a3a2f5080204602cc1f38
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-the-cube-schema"></a>查看多维数据集架构
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**数据源视图**窗格**多维数据集结构**选项卡中**多维数据集设计器**显示多维数据集架构。 架构是从中派生多维数据集的度量值和维度的表的集合。 每个多维数据集架构包含多维数据集中的度量值和维度基于的一个或多个事实表以及一个或多个维度表。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 **“多维数据集设计器”** 的 **“多维数据集结构”** 选项卡的 **“数据源视图”** 窗格中显示多维数据集架构。 架构是从中派生多维数据集的度量值和维度的表的集合。 每个多维数据集架构包含多维数据集中的度量值和维度基于的一个或多个事实表以及一个或多个维度表。  
   
  **“多维数据集结构”** 选项卡的 **“数据源视图”** 窗格显示多维数据集所基于的数据源视图的关系图。 此关系图是数据源视图主关系图的一个子集。 您可以在 **“数据源视图”** 窗格中隐藏和显示表并查看任何现有的关系图。 但是，您不能更改（例如添加新关系或命名查询）基础架构。 若要更改该架构，请使用数据源视图设计器。  
   

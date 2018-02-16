@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a0fec3423b126a425206441543fd50679712c2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供有关在 SharePoint 或表格模式下运行的 Analysis Services 数据库所使用的存储表在列级别的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+在列级提供有关在 SharePoint 或表格模式下运行的 Analysis Services 数据库使用的存储表的信息。  
   
  **适用于：** 表格模型  
   
@@ -39,13 +41,13 @@ ms.lasthandoff: 01/08/2018
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|是|度量值组的名称。|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||维度的名称。|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||属性的名称。|  
-|**针对 TABLE_ID 所**|**DBTYPE_WSTR**||表的 ID。|  
+|**TABLE_ID**|**DBTYPE_WSTR**||表的 ID。|  
 |**COLUMN_ID**|**DBTYPE_ WSTR**||列的 ID。 该列 ID 在 xVelocity 内存中分析引擎 (VertiPaq) 的内部使用并且仅供参考。|  
 |**COLUMN_TYPE**|**DBTYPE_WSTR**||列的类型。 该列类型在 xVelocity 内存中分析引擎 (VertiPaq) 的内部使用并且仅供参考。<br /><br /> BASIC_DATA<br /><br /> HIERARCHY_DATAID_TO_POSITION<br /><br /> HIERARCHY_POSITION_TO_DATAID<br /><br /> RELATIONSHIP|  
 |**COLUMN_ENCODING**|**DBTYPE_UI8**||表示用于列数据的编码类型的整数。<br /><br /> **0**、 用于**COLUMN_TYPE**: HIERARCHY_DATAID_TO_POSITION，HIERARCHY_POSITION_TO_DATAID，关系<br /><br /> **1**、 用于**COLUMN_TYPE**: BASIC_DATA<br /><br /> **2**、 用于**COLUMN_TYPE**: BASIC_DATA|  
-|**数据类型**|**DBTYPE_WSTR**||列的数据类型。 具有以下可能值：<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> N/A|  
+|**DATATYPE**|**DBTYPE_WSTR**||列的数据类型。 具有以下可能值：<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> N/A|  
 |**ISKEY**|**DBTYPE_BOOL**||**True**如果列是主键或外键类型用作; 否则为**false**。|  
-|**是唯一的**|**DBTYPE_BOOL**||**True**列中的值是否唯一; 否则为**false**。|  
+|**ISUNIQUE**|**DBTYPE_BOOL**||**True**列中的值是否唯一; 否则为**false**。|  
 |**ISNULLABLE**|**DBTYPE_BOOL**||**True**此列是否可以为 null; 否则为**false**。|  
 |**ISROWNUMBER**|**DBTYPE_BOOL**||**True**如果列是行号列。 行号列供 xVelocity 内存中分析引擎内部使用。|  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |--------------|-----------|  
 |GUID|a07ccd44-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|StorageTableColumns|  

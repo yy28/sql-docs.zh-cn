@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Power Pivot 服务应用程序连接到 CA 中的 SharePoint Web 应用
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序可由任意数量的场中的 SharePoint Web 应用程序。 若要使 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序可用，请将其添加到服务关联列表中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序可由场中任意数目的 SharePoint Web 应用程序使用。 若要使 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序可用，请将其添加到服务关联列表中。  
   
 > [!IMPORTANT]  
 >  默认组中必须有一个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，以确保 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板正常工作。 不要向默认组添加多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 添加同一服务应用程序类型的多个条目是不支持的配置并且可能导致错误。 如果您要创建其他服务应用程序，请将它们添加到自定义列表。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  选中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序（表示为类型名称“PowerPivot 服务应用程序代理”）旁边的复选框。 如果有多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，请只选择一个。  
   
-4.  单击“确定” 。  
+4.  单击 **“确定”**。  
   
 ##  <a name="custom"></a> 将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序添加到自定义服务关联列表  
  默认组可由自定义列表替换。 自定义列表是专门为单个 SharePoint Web 应用程序创建的。 它覆盖默认组，并且仅使用场管理员或服务管理员指定的服务关联来替换它。 如果你创建了多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，则必须使用自定义列表指定要使用的应用程序。 自定义列表不能由其他 Web 应用程序重用。 它仅适用于为其创建的 Web 应用程序。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  选中您要使用的每个服务应用程序连接旁边的复选框。 如果有多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序（表示为“PowerPivot 服务应用程序代理”的类型集），请确保仅选择一个。  
   
-6.  单击“确定” 。  
+6.  单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [在管理中心中创建和配置 Power Pivot 服务应用程序](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   

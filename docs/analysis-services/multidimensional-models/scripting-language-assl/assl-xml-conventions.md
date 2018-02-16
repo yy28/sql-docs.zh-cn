@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
 - trailing whitespace
@@ -27,19 +28,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 约定
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services 脚本语言 (ASSL) 表示为一组元素类型，其中每个定义它们可以包含的子元素的对象的层次结构。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services 脚本语言 (ASSL) 将对象层次结构表示为一组元素类型，其中的每个元素类型定义了可包含的子元素。  
   
  ASSL 使用以下 XML 约定来表示对象层次结构：  
   
@@ -133,7 +135,7 @@ ms.lasthandoff: 01/08/2018
  **Long**  
  -263 到 263 – 1 范围内的整数值。  
   
- **String**  
+ **字符串**  
  符合以下全局规则的字符串值：  
   
 -   去除控制字符。  
@@ -156,9 +158,9 @@ ms.lasthandoff: 01/08/2018
 |XML 数据类型|默认值|  
 |-------------------|-------------------|  
 |**Boolean**|False|  
-|**String**|""（空字符串）|  
+|**字符串**|""（空字符串）|  
 |**整数**或**长**|0（零）|  
-|**时间戳**|12:00:00 AM，0001 年 1 月 1 日 (对应于.NET 框架**System.DateTime** 0 时钟周期)|  
+|**Timestamp**|12:00:00 AM，0001 年 1 月 1 日 (对应于.NET 框架**System.DateTime** 0 时钟周期)|  
   
  存在但为空的元素被解释为具有 Null 字符串值，而非默认值。  
   

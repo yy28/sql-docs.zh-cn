@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1d769567a033eedd98eff41aee9cde5306c9b7ea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回的一个或多个性能计数器的值。 不支持返回有关一段时间内的使用情况的信息（如每秒的磁盘读取数和 CPU 使用率的百分比）的计数器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+返回一个或多个性能计数器的值。 不支持返回有关一段时间内的使用情况的信息（如每秒的磁盘读取数和 CPU 使用率的百分比）的计数器。  
   
  **适用于：**表格模型、 多维模型  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**PERF_COUNTER_NAME**|**DBTYPE_WSTR**|Required|性能计数器的名称。|  
+|**PERF_COUNTER_NAME**|**DBTYPE_WSTR**|必需|性能计数器的名称。|  
 |**PERF_COUNTER_VALUE**|**DBTYPE_DOUBLE**||性能计数器的值。|  
   
  未对此架构行集进行排序。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |--------------|-----------|  
 |GUID|a07ccd2e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PerformanceCounters|  

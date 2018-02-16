@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>验证 Power Pivot for SharePoint 安装
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 在 SharePoint 场中安装的实例通过 SharePoint 管理中心进行管理。 至少，你可以检查管理中心和 SharePoint 网站上的页面以便确认 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器组件和功能可用。 但是，若要完全验证某一安装，你必须具有可发布到 SharePoint 并从库中访问的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿。 出于测试目的，你可以发布已包含 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+在 SharePoint 场中安装的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 实例可通过 SharePoint 管理中心进行管理。 至少，你可以检查管理中心和 SharePoint 网站上的页面以便确认 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器组件和功能可用。 但是，若要完全验证某一安装，你必须具有可发布到 SharePoint 并从库中访问的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿。 出于测试目的，你可以发布已包含 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  
 
   
 ##  <a name="verifyinstall"></a> 验证管理中心集成  

@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 61f69caeab165c4d6822f8f25667ad544d6014ec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverlocations-rowset"></a>DISCOVER_LOCATIONS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回备份文件的内容的相关信息。 您必须有权访问备份文件位置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+返回有关备份文件的内容的信息。 您必须有权访问备份文件位置。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_LOCATIONS**行集包含以下各列。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制状态|  
 |-----------------|--------------------|-----------------------|  
-|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|Required|  
+|**LOCATION_BACKUP_FILE_PATHNAME**|**DBTYPE_WSTR**|必需|  
 |**LOCATION_PASSWORD PF_DBTYPE**|**DBTYPE_WSTR**|在备份过程中指定了该项时是必需的。 此限制不用来限制返回的行， 而用于提供访问该位置所需的密码。|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>使用 ADOMD.NET 返回行集  
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/08/2018
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |--------------|-----------|  
 |GUID|a07ccd92-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|位置|  

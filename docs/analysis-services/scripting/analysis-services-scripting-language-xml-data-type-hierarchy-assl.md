@@ -11,10 +11,13 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Analysis Services Scripting Language XML Data Type Hierarchy
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Analysis Services Scripting Language XML Data Type Hierarchy
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, data types
 - Analysis Services Scripting Language, data types
@@ -22,19 +25,20 @@ helpviewer_keywords:
 - inheritance [Analysis Services Scripting Language]
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: f143c9f8-225d-495d-ac8e-ac2d2a7b4c07
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0ea49ba2092ac91481615403456dfb33268e2ee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-data-type-hierarchy-assl"></a>Analysis Services 脚本语言 XML 数据类型层次结构 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]下表显示数据类型的继承层次结构中 Analysis Services 脚本语言 (ASSL)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+下表显示 Analysis Services 脚本语言 (ASSL) 中的数据类型的继承层次结构。  
   
 ## <a name="syntax"></a>语法  
   

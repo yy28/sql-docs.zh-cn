@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bf4626b3-4d6b-4795-bb01-df335fb9c09a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 42bbe583c494830308c021c1adc385ec48491007
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>DISCOVER_PARTITION_DIMENSION_STAT 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回与分区相关联的维度上的统计信息  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+返回与分区关联的维度的统计信息  
   
  **适用于：**表格模型、 多维模型  
   
@@ -34,15 +36,15 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|Required|数据库的名称。<br /><br /> 此列在限制列表中是必需的。|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Required|多维数据集或表格模型的名称。<br /><br /> 此列在限制列表中是必需的。|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Required|度量值组的名称。<br /><br /> 此列在限制列表中是必需的。|  
-|**PARTITION_NAME**|**DBTYPE_WSTR**|Required|分区的名称。<br /><br /> 此列在限制列表中是必需的。|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|必需|数据库的名称。<br /><br /> 此列在限制列表中是必需的。|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|必需|多维数据集或表格模型的名称。<br /><br /> 此列在限制列表中是必需的。|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|必需|度量值组的名称。<br /><br /> 此列在限制列表中是必需的。|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|必需|分区的名称。<br /><br /> 此列在限制列表中是必需的。|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||维度的名称。<br /><br /> 此列在限制列表中是必需的。|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||维度中的属性的名称。|  
 |**ATTRIBUTE_INDEXED**|**DBTYPE_BOOL**||如果为 true，则表示对该属性创建索引；否则为 false。|  
-|**ATTRIBUTE_COUNT_MIN**|**是 DBTYPE_I8**||最小属性计数。|  
-|**ATTRIBUTE_COUNT_MAX**|**是 DBTYPE_I8**||最大属性计数。|  
+|**ATTRIBUTE_COUNT_MIN**|**DBTYPE_I8**||最小属性计数。|  
+|**ATTRIBUTE_COUNT_MAX**|**DBTYPE_I8**||最大属性计数。|  
   
  未对此架构行集进行排序。  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |--------------|-----------|  
 |GUID|a07ccd8e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  

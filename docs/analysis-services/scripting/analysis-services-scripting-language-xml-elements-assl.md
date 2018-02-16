@@ -12,25 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Services Scripting Language, elements
 - elements [Analysis Services Scripting Language]
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 87d59c2d4041cbb7267054d2a691e0e39745827a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services 脚本语言 XML 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]尽管 Analysis Services 脚本语言 (ASSL) 架构仅包含 XML 元素，从开发人员的角度来看，这些元素对应于以下概念：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+尽管 Analysis Services 脚本语言 (ASSL) 架构仅包含 XML 元素，但从开发人员的角度来说，这些元素与以下概念相对应：  
   
 -   对象，如**数据库**，**多维数据集**，和**维度**对象，包含的实例的对象的层次结构中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  本节不涉及数据类型元素。 有关详细信息，请参阅， [Analysis Services 脚本语言 XML 数据类型 &#40;ASSL &#41;](../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md).  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |-----------|-----------------|  

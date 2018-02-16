@@ -22,19 +22,20 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-and-measure-groups"></a>度量值和度量值组
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多维数据集包括*度量值*中*度量值组*，业务逻辑和给出上下文用于计算度量值提供的数值数据的维度的集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+多维数据集包括 *度量值组* 中的 *度量值*、业务逻辑和给出上下文用于计算度量值提供的数值数据的维度集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
   
  本主题将介绍 [Measures](#bkmk_measure) 和 [Measure Groups](#bkmk_mg)。 它还包含以下表格，以及指向有关创建和配置度量值和度量值组的过程步骤的链接。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 |[配置度量值属性](../../analysis-services/multidimensional-models/configure-measure-properties.md)|如果使用多维数据集向导来启动多维数据集，则在聚合值之前可能需要更改聚合方法、应用数据格式、在客户端应用程序中设置该度量值的可见性，或添加度量值表达式以处理数据。|  
 |[配置度量值组属性](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|在多维模型中，度量值组相当于源数据仓库中的事实数据表。 通过度量值组的属性，你可以指定缓存行为、存储以及在度量值组级别统一操作的处理指令。 分区配置部分确定于你在度量值组对象上设置的属性。|  
 |[使用聚合函数](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|了解可分配给度量值的聚合方法。|  
-|[“选择增强功能”](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|半累加性行为是指对某些维度有效而对其他维度无效的聚合。 常见示例为银行帐户余额。 你可能想按客户和地域（而不是时间）来聚合余额。 例如，您可能不想连续数日从相同帐户添加余额。 若要定义半累加性行为，请使用“添加商业智能向导”。|  
+|[定义半累加性行为](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|半累加性行为是指对某些维度有效而对其他维度无效的聚合。 常见示例为银行帐户余额。 你可能想按客户和地域（而不是时间）来聚合余额。 例如，您可能不想连续数日从相同帐户添加余额。 若要定义半累加性行为，请使用“添加商业智能向导”。|  
 |[链接度量值组](../../analysis-services/multidimensional-models/linked-measure-groups.md)|重用同一数据库中或不同 Analysis Services 数据库中其他多维数据集的现有度量值组。|  
   
 ##  <a name="bkmk_measure"></a> Measures  

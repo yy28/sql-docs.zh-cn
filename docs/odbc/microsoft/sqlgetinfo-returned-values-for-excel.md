@@ -25,16 +25,16 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 946742b89eb1023737adbc0fd0bdc4196587463c
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo excel 返回值
 下表列出了 C 语言 #defines *fInfoType*自变量和返回的相应值**SQLGetInfo**。 可以通过将列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*自变量。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**返回 32 位位掩码，垂直条 (&#124;) 表示按位 OR。  
+>  其中**SQLGetInfo**返回 32 位位掩码，垂直条 (& #124;) 表示按位 OR。  
   
 |InfoType|返回值|  
 |--------------|--------------------|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/13/2018
 |SQL_DRIVER_HSTMT|处理由驱动程序管理器。|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00。*nnnn*"( *nnnn* 指定生成日期)|  
+|SQL_DRIVER_VER|"4.00。*nnnn*"(* nnnn *指定生成日期)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  

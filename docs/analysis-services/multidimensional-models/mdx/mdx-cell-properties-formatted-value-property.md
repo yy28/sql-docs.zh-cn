@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>MDX 单元格属性-FORMATTED_VALUE 属性
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]FORMATTED_VALUE 属性基于单元格的值、 FORMAT_STRING 和语言属性的交互。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+FORMATTED_VALUE 属性是基于单元的 VALUE、FORMAT_STRING 和 LANGUAGE 属性的交互生成的。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  
   
 ## <a name="value-formatstring-language-properties"></a>VALUE、FORMAT_STRING、LANGUAGE 属性  
  下表说明了这些属性的定义，可为我们将来合并使用这些属性提供帮助。  
@@ -84,14 +85,14 @@ ms.lasthandoff: 01/08/2018
   
 |成员|FORMATTED_VALUE|解释|  
 |------------|----------------------|-----------------|  
-|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|$5,040.00|FORMAT_STRING 设置为 `Currency` ，LANGUAGE 为从系统区域设置值继承的 `1033`|  
+|指向|$5,040.00|FORMAT_STRING 设置为 `Currency` ，LANGUAGE 为从系统区域设置值继承的 `1033`|  
 |B|€5.040,00|FORMAT_STRING 设置为 `Currency` （从 A 继承），并且 LANGUAGE 显式设置为 `1034` （西班牙），因此显示的是欧元符号，所使用的小数分隔符和千分分隔符也与前面的示例不相同。|  
 |C|$5.040,00|FORMAT_STRING 设置为 `$#,##0.00` ，取代了来自 A 的 Currency，并且 LANGUAGE 显式设置为 `1034` （西班牙）。 因为 FORMAT_STRING 属性将货币符号显式设置为 $，因此 FORMATTED_VALUE 将使用 $ 符号显示。 然而，因为 `.` （点）和 `,` （逗号）分别为小数分隔符和千位分隔符的占位符，因此该语言规范将对这些占位符所生成的小数点分隔符和千位分隔符的本地化输出结果产生影响。|  
 |D|5.04E+03|FORMAT_STRING 设置为 `Scientific` ，LANGUAGE 设置为从系统区域设置值继承的 `1033`，因此以 `.` （点）作为小数分隔符。|  
 |E|5,04E+03|FORMAT_STRING 设置为 `Scientific` ，LANGUAGE 显式设置为 `1034,` ，因此以 `,` （逗号）作为小数分隔符。|  
 |F|50.40%|FORMAT_STRING 设置为 `Percent` ，LANGUAGE 设置为从系统区域设置值继承的 `1033`，因此以 `.` （点）作为小数分隔符。<br /><br /> 请注意，VALUE 已从 5040 更改为 0.5040|  
 |G|50,40%|FORMAT_STRING 设置为 `Percent`（从 F 继承），LANGUAGE 显式设置为 `1034` ，因此以 `,` （逗号）作为小数点分隔符。<br /><br /> 请注意，VALUE 从 F 的值继承。|  
-|H|是|FORMAT_STRING 设置为 `YES/NO`，VALUE 设置为 0，并且 LANGUAGE 显式设置为 `1034`；因为英语 NO 和西班牙语 NO 之间并无区别，因此用户在 FORMATTED_VALUE 中看不到任何差别。|  
+|H|“否”|FORMAT_STRING 设置为 `YES/NO`，VALUE 设置为 0，并且 LANGUAGE 显式设置为 `1034`；因为英语 NO 和西班牙语 NO 之间并无区别，因此用户在 FORMATTED_VALUE 中看不到任何差别。|  
 |I|SI|FORMAT_STRING 设置为 `YES/NO`，VALUE 设置为 59，并且 LANGUAGE 显式设置为 `1034`；根据针对 YES/NO 格式设置的定义，任何零 (0) 以外的值均为 YES，并且因为语言设置为西班牙语，所以 FORMATTED_VALUE 为 SI。|  
 |J|Desactivado|FORMAT_STRING 设置为 `ON/OFF`，VALUE 设置为 0，并且 LANGUAGE 显式设置为 `1034`；根据针对 ON/OFF 格式设置的定义，任何等于零 (0) 的值均为 OFF，并且因为语言设置为西班牙语，因此 FORMATTED_VALUE 为 Desactivado。|  
 |K|Activado|FORMAT_STRING 设置为 `ON/OFF`，VALUE 设置为 -312，并且 LANGUAGE 显式设置为 `1034`；根据针对 ON/OFF 格式设置的定义，任何零 (0) 以外的值均为 ON，并且因为语言设置为西班牙语，因此 FORMATTED_VALUE 为 Activado。|  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/08/2018
   
 |成员|FORMATTED_VALUE|解释|  
 |------------|----------------------|-----------------|  
-|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|3/12/1959 6:30:00 AM|FORMAT_STRING 通过 CDate() 表达式隐式设置为 `General Date` ，并且 LANGUAGE 为从系统区域设置值继承的 `1033` （英语）|  
+|指向|3/12/1959 6:30:00 AM|FORMAT_STRING 通过 CDate() 表达式隐式设置为 `General Date` ，并且 LANGUAGE 为从系统区域设置值继承的 `1033` （英语）|  
 |B|Thursday, March 12, 1959|FORMAT_STRING 显式设置为 `Long Date` ，并且 LANGUAGE 为从系统区域设置值继承的 `1033` （英语）|  
 |C|12/03/1959 6:30:00|FORMAT_STRING 显式设置为 `General Date` ，并且 LANGUAGE 为显式 `1034` （西班牙语）。<br /><br /> 请注意，在与美国格式设置样式进行比较时应切换月和天|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING 显式设置为 `Long Date` ，并且 LANGUAGE 为显式 `1034` （西班牙语）。<br /><br /> 请注意月和星期是用西班牙语拼写的|  
@@ -148,9 +149,9 @@ ms.lasthandoff: 01/08/2018
 |L|06:30|FORMAT_STRING 显式设置为 `Short Time` ，并且 LANGUAGE 显式设置为 `1041` （日语）。|  
   
 ## <a name="see-also"></a>另请参阅  
- [FORMAT_STRING 内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [FORMAT_STRING 内容 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [使用单元属性 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [创建和使用属性值 &#40;MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

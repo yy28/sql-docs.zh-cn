@@ -15,19 +15,20 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9b9d17eac58d4ae287f71e924d9c012f63484c21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-analysis-services-objects"></a>处理 Analysis Services 对象
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]处理影响下列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象类型：[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库、 多维数据集、 维度、 度量值组、 分区和数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+处理影响下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象类型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、多维数据集、维度、度量值组、分区、数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
  应注意处理行为的后果以减少负面影响。 例如，完全处理某个维度会将所有依赖于此维度的分区自动设置为未处理状态。 这将使受影响的多维数据集在依赖分区得到处理之前变得无法查询。  
   

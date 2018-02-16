@@ -12,28 +12,29 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>无法刷新工作簿中用于数据连接的数据
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]包含的 Excel 工作簿的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据，Excel Services 返回此错误，如果它提交到的连接请求[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务器并且请求将失败。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 提交对某一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的连接请求并且该请求失败，则会返回此错误。  
   
 ## <a name="details"></a>详细信息  
   
 |||  
 |-|-|  
 |适用范围：|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装|  
-|产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|请参阅下文。|  
-|消息正文|无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新： [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据|  
+|訊息文字|无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新： [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据|  
   
 ## <a name="explanation-and-resolution"></a>说明和解决方法  
  Excel Services 无法连接到或加载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。 在下列情况下会出现此错误：  
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
  默认情况下，SharePoint Server 2010 会在运行 Excel Services 的应用程序服务器上安装 SQL Server 2008 版本的 Analysis Services OLE DB 访问接口。 在支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的场中，运行请求 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的应用程序（如 Excel Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint）的所有物理服务器都必须使用更高版本的数据提供程序。  
   
- 运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器将自动获取更新后的 OLE DB 数据提供程序。 必须对其他服务器（例如运行独立 Excel Services 实例、但在同一台计算机上没有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器）进行修补才能使用更高版本的客户端库。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。  
+ 运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器将自动获取更新后的 OLE DB 数据提供程序。 必须对其他服务器（例如运行独立 Excel Services 实例、但在同一台计算机上没有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器）进行修补才能使用更高版本的客户端库。 有关更多信息，请参见 [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
  **应用场景 3：域控制器不可用**  
   
