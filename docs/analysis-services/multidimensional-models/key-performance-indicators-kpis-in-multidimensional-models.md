@@ -21,19 +21,20 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在业务术语中，关键绩效指标 (KPI) 是用于测定业务成功的可量化度量。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在业务术语中，关键绩效指标 (KPI) 是一个用于测定业务绩效的可计量度量值。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，KPI 是指与用于评估业务绩效的多维数据集中某个度量值组关联的计算的集合。 这些计算通常是多维表达式 (MDX) 或计算成员的组合。 KPI 还包括其他的元数据，该元数据提供有关客户端应用程序如何显示 KPI 计算结果的信息。  
   
@@ -53,8 +54,8 @@ ms.lasthandoff: 01/08/2018
 |术语|定义|  
 |----------|----------------|  
 |目的|一个返回 KPI 目标值的 MDX 数值表达式或计算。|  
-|ReplTest1|一个返回 KPI 实际值的 MDX 数值表达式。|  
-|“登录属性”|一个表示指定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
+|“值”|一个返回 KPI 实际值的 MDX 数值表达式。|  
+|状态|一个表示指定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
 |走向|一个评估一段时间内 KPI 值的 MDX 表达式。 走向可以是任何基于时间的条件，该条件在特定的业务上下文中很有用。<br /><br /> 使用走向 MDX 表达式，业务用户可以确定 KPI 是随时间升高还是随时间降低。|  
 |状态指示器|一个提供 KPI 状态快速指示的可见元素。 该元素的显示内容由评估状态的 MDX 表达式的值确定。|  
 |走向指示器|一个提供 KPI 走向的快速指示的可见元素。 该元素的显示内容由评估走向的 MDX 表达式的值确定。|  

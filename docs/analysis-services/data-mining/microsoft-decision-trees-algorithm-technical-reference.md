@@ -22,19 +22,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法是一种混合算法，包含不同的方法，用于创建一个树中，并支持多种分析任务，包括回归、 分类和关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
   
  本主题说明此算法的实现，介绍如何针对不同的任务自定义算法行为，并提供指向有关决策树模型查询的其他信息的链接。  
   
@@ -155,9 +156,9 @@ ms.lasthandoff: 01/08/2018
  *SCORE_METHOD*  
  确定用于计算拆分分数的方法。 可用选项包括：  
   
-|ID|“属性”|  
+|ID|名称|  
 |--------|----------|  
-|@shouldalert|Entropy|  
+|1|Entropy|  
 |3|Bayesian with K2 Prior|  
 |4|Bayesian Dirichlet Equivalent (BDE) with uniform prior<br /><br /> （默认值）|  
   
@@ -168,9 +169,9 @@ ms.lasthandoff: 01/08/2018
  *SPLIT_METHOD*  
  确定用于拆分节点的方法。 可用选项包括：  
   
-|ID|“属性”|  
+|ID|名称|  
 |--------|----------|  
-|@shouldalert|**Binary:** 指示无论属性值的实际数量是多少，树都拆分为两个分支。|  
+|1|**Binary:** 指示无论属性值的实际数量是多少，树都拆分为两个分支。|  
 |2|**Complete:** 指示树可以创建与属性值数目相同的分叉。|  
 |3|**Both:** 指定 Analysis Services 可确定应使用 binary 还是 complete，以获得最佳结果。|  
   
@@ -193,13 +194,13 @@ ms.lasthandoff: 01/08/2018
   
  例如，如果要将 **Income** 用作属性来预测客户的购买行为，并对列设置 REGRESSOR 建模标志，则算法将会先通过使用标准回归公式来尝试拟合 **Income** 值。 如果偏差过大，则会放弃回归公式，并根据其他属性对树进行拆分。 拆分完毕后，决策树算法将尝试拟合每个分支中的 Income 的回归量。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  一个决策树模型必须包含一个键列、若干输入列和至少一个可预测列。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|“列”|内容类型|  
+|列|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Ordered 和 Table|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized、Ordered 和 Table|  
@@ -210,6 +211,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [决策树模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

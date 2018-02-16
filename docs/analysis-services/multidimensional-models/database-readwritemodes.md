@@ -15,19 +15,20 @@ helpviewer_keywords:
 - databases [Analysis Services], read/write
 - databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea794ce008d5e7acc6aa01a23b8ca7629546efc0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-readwritemodes"></a>数据库 ReadWriteMode
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在通常情况下时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库管理员 (dba) 想要更改读/写数据库为只读数据库，反之亦然。 通常根据业务需要进行相应的更改，例如：为制定解决方案和提高性能，在多个服务器之间共享同一数据库文件夹。 对于上述情况，通过 **ReadWriteMode** 数据库属性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地更改数据库运行模式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将读/写数据库更改为只读数据库，或者恰好相反。 通常根据业务需要进行相应的更改，例如：为制定解决方案和提高性能，在多个服务器之间共享同一数据库文件夹。 对于上述情况，通过 **ReadWriteMode** 数据库属性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以很容易地更改数据库运行模式。  
   
 ## <a name="readwritemode-database-property"></a>ReadWriteMode 数据库属性  
  **ReadWriteMode** 数据库属性指定数据库处于读/写模式还是只读模式。 只可能有两个属性值。 在数据库处于只读模式时，不能对数据库应用更改或更新。 但是，在数据库处于读/写模式时，可能会出现更改和更新。 **ReadWriteMode** 数据库属性被定义为只读属性；只能通过 **Attach** 命令设置该属性。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
 |只读模式|受限操作|  
 |-------------------|---------------------------|  
-|XML/A 命令<br /><br /> <br /><br /> 注意：如果执行下列命令之一，则产生错误。|**创建**<br /><br /> **Alter**<br /><br /> **删除**<br /><br /> **处理**<br /><br /> **MergePartitions**<br /><br /> **Query**<br /><br /> **CommitTransaction**<br /><br /> **还原**<br /><br /> **同步**<br /><br /> **Insert**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> 注意：在设置为只读的数据库中允许单元写回；但是，不能提交更改。|  
+|XML/A 命令<br /><br /> <br /><br /> 注意：如果执行下列命令之一，则产生错误。|**创建**<br /><br /> **Alter**<br /><br /> **删除**<br /><br /> **处理**<br /><br /> **MergePartitions**<br /><br /> **Query**<br /><br /> **CommitTransaction**<br /><br /> **还原**<br /><br /> **同步**<br /><br /> **插入**<br /><br /> **更新**<br /><br /> **Drop**<br /><br /> <br /><br /> 注意：在设置为只读的数据库中允许单元写回；但是，不能提交更改。|  
 |MDX 语句<br /><br /> <br /><br /> 注意：如果执行下列语句之一，则产生错误。|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> 注意：由于分组功能是使用 **CREATE SESSION CUBE** 命令在内部实现的，因此 Excel 用户不能在透视表中使用该功能。|  
 |DMX 语句<br /><br /> <br /><br /> 注意：如果执行下列语句之一，则产生错误。|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |后台操作|禁用将修改数据库的所有后台操作。 这包括迟缓处理和主动缓存。|  

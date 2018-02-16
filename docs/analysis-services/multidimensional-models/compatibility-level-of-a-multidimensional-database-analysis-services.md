@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>多维数据库的兼容级别 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，数据库兼容级别属性确定数据库的功能级别。 兼容级别对于每个模型类型都是唯一的。 例如，兼容级别 **1100** 具有不同的含义，具体取决于该数据库是多维数据库还是表格数据库。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据库兼容级别属性确定数据库的功能级别。 兼容级别对于每个模型类型都是唯一的。 例如，兼容级别 **1100** 具有不同的含义，具体取决于该数据库是多维数据库还是表格数据库。  
   
  本主题仅描述多维数据库的兼容级别。 有关表格解决方案的详细信息，请参阅 [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 > [!WARNING]  
 >  将数据库兼容级别设置为更高级别是不可逆的。 在你将兼容级别增加到 **1100**后，必须继续在更高版本的服务器上运行该数据库。 你无法回滚到 **1050**。 你不能在早于 **或** 的服务器版本上附加或还原 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 1100 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入数据库兼容级别。 你必须具有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或更高版本才能查看或设置数据库兼容级别。  
   
  数据库不能为本地多维数据集。 本地多维数据集不支持 **CompatibilityLevel** 属性。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  仅对于共享相同版本和数据库兼容级别的服务器，才支持同步服务器。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  在增加了数据库兼容级别之后，可以在 **中设置** StringStoresCompatibilityLevel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]属性。 这样将增大度量值和维度的字符串存储空间。 有关此功能的详细信息，请参阅 [配置维度和分区的字符串存储](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)。  
   
 ## <a name="see-also"></a>另请参阅  

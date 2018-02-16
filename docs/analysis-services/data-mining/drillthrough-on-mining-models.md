@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cc94d0226262eb6c40fce83370774e9fed08a8ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-on-mining-models"></a>对挖掘模型的钻取功能
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*钻取*意味着能够查询挖掘模型或挖掘结构和获取的详细的数据不公开在模型中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了两种不同的选项来钻取到事例数据中。 您可以钻取到用来生成数据的事例，也可以钻取到挖掘结构中的事例。  
   
@@ -57,18 +58,18 @@ ms.lasthandoff: 01/08/2018
 |Microsoft 线性回归算法|支持。<br /><br /> 但是，由于该模型创建一个节点 ( **All**)，因此钻取时会返回该模型的所有定型事例。 如果定型集非常大，则加载结果可能会需要很长时间。|  
 |Microsoft 时序算法|支持。<br /><br /> 但是，不能通过使用数据挖掘设计器的 **“挖掘模型查看器”** 来钻取到结构或事例数据， 而必须创建一个 DMX 查询。<br /><br /> 同样，不能钻取到特定节点，也不能编写一个 DMX 查询来检索时序模型内特定节点中的事例。 可以通过使用其他条件（如日期或属性值）来从模型或结构中检索事例数据。<br /><br /> 如果希望查看由 Microsoft 时序算法创建的 ARTXP 和 ARIMA 节点的详细信息，使用 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)可能简单一些。|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
  有关如何将钻取功能用于挖掘模型的详细信息，请参阅下列主题：  
   
 |“任务”|链接|  
 |-----------|-----------|  
 |在挖掘模型查看器中使用钻取|[从模型查看器使用钻取](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |使用钻取检索模型的事例数据|[从挖掘模型钻取到事例数据](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
-|对现有挖掘模型启用钻取|[对挖掘模型启用钻取](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
+|对现有挖掘模型启用钻取|[为挖掘模型启用钻取](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
 |有关特定的模型类型，请参阅钻取查询的示例。|[数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)|  
 |在数据挖掘向导中启用钻取|[完成向导（数据挖掘向导）](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [对挖掘结构的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+ [对挖掘结构的钻取](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

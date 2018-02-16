@@ -18,19 +18,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3f6e0b1540d9dc1072e7370b50cfa8736894b712
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>逻辑体系结构（Analysis Services - 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据挖掘是一个过程，包括多个组件的交互。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+数据挖掘过程涉及多个组件的交互。  
   
 -   您可以访问 SQL Server 数据库中的数据源或任何其他数据源，以便用于定型、测试或预测。  
   
@@ -93,9 +94,9 @@ ms.lasthandoff: 01/08/2018
  有关详细信息，请参阅 [多维模型程序集管理](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)。  
   
  **自定义存储过程**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据挖掘支持使用存储过程来处理数据挖掘对象。 您可以创建自己的存储过程来扩展功能，以便更方便地使用预测查询和内容查询返回的数据。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘支持使用存储过程来处理数据挖掘对象。 您可以创建自己的存储过程来扩展功能，以便更方便地使用预测查询和内容查询返回的数据。  
   
- [定义存储过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [定义存储的过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  支持将下面的存储过程用于交叉验证中。  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 01/08/2018
  此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含很多供数据挖掘内部使用的系统存储过程。 尽管系统存储过程供内部使用，但是您可能发现它们是有用的快捷方式。 Microsoft 保留根据需要更改这些存储过程的权利；因此，对于生产而言，我们建议您使用 DMX、AMO 或 XMLA 创建查询。  
   
  **自定义插件算法**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]有关创建自己的算法，以及作为新数据挖掘服务的算法然后添加到的服务器实例中提供的机制。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一种机制，你可以使用它创建自己的算法，然后将这些算法作为新的数据挖掘服务添加到服务器实例。  
   
  Analysis Services 使用 COM 接口与插件算法进行通信。 若要了解有关如何实现新算法的详细信息，请参阅 [Plugin Algorithms](../../analysis-services/data-mining/plugin-algorithms.md)。  
   
@@ -113,6 +114,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [数据挖掘扩展插件 &#40; DMX &#41;引用](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

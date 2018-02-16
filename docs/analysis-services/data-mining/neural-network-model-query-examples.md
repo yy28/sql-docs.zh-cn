@@ -16,19 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="neural-network-model-query-examples"></a>神经网络模型查询示例
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你创建针对数据挖掘模型的查询时，你可以创建内容查询，提供了有关分析过程中发现的模式的详细信息或在模型中使用的模式，来对新数据进行预测的预测查询。 例如，神经网络模型的内容查询可能会检索模型元数据，如隐藏层数。 而预测查询会基于输入提供分类建议，还可以选择是否提供每个分类的概率。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来对新数据进行预测。 例如，神经网络模型的内容查询可能会检索模型元数据，如隐藏层数。 而预测查询会基于输入提供分类建议，还可以选择是否提供每个分类的概率。  
   
  本节说明如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的模型创建查询。  
   
@@ -71,7 +72,7 @@ WHERE NODE_TYPE = 24
   
 |MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|@shouldalert|  
+|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
  有关架构行集中的列在神经网络模型的上下文中的含义的定义，请参阅 [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)的挖掘模型。  
@@ -217,18 +218,18 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant (DMX)](../../dmx/isdescendant-dmx.md)|确定一个节点是否是神经网络图中另一个节点的子节点。|  
-|[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
-|[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是神经网络图中另一个节点的子节点。|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
+|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
 |[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|返回预测值的方差。|  
-|[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
-|[PredictStdev (DMX)](../../dmx/predictstdev-dmx.md)|返回预测值的标准偏差。|  
-|[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md)|对于神经网络模型和逻辑回归模型，该函数将返回表示整个模型的定型集大小的单个值。|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|返回预测值的标准偏差。|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|对于神经网络模型和逻辑回归模型，该函数将返回表示整个模型的定型集大小的单个值。|  
   
  有关对所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都通用的函数列表，请参阅[算法参考（Analysis Services - 数据挖掘）](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft 神经网络算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft 神经网络算法技术参考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [神经网络模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [第 5 课： 生成神经网络和逻辑回归模型 &#40; 数据挖掘中级教程 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  

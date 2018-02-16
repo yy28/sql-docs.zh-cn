@@ -30,19 +30,20 @@ helpviewer_keywords:
 - CRISP-DM
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>测试和验证（数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]验证是评估挖掘模型对实际数据执行的程度的过程。 在将挖掘模型部署到生产环境之前，务必通过了解其质量和特征来对其进行验证。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+验证是评估挖掘模型对实际数据执行情况的过程。 在将挖掘模型部署到生产环境之前，务必通过了解其质量和特征来对其进行验证。  
   
  本节将介绍与模型质量有关的一些基本概念，还将介绍 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中提供的模型验证的策略。 有关模型验证如何适合更大数据挖掘过程的概述，请参阅 [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
   
@@ -91,14 +92,14 @@ ms.lasthandoff: 01/08/2018
   
 |主题|链接|  
 |------------|-----------|  
-|了解如何使用向导或 DMX 命令设置测试数据集|[定型数据集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|了解提供的准确性图表类型。|[提升图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|了解如何使用向导或 DMX 命令设置测试数据集|[定型集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|了解提供的准确性图表类型。|[提升图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)   
- [测试和验证任务和操作指南（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [测试和验证任务和操作指南 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

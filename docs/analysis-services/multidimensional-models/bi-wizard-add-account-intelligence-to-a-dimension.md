@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 向导-向维度中添加帐户智能
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]将帐户智能增强功能添加到多维数据集或维度中，将标准帐户分类，如收入和支出，分配给某一帐户属性的成员。 这种增强功能还可以标识帐户类型（如“资产”和“负债”）并为每种帐户类型分配适当的聚合。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以使用这些分类对一段时间内的帐户进行聚合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在多维数据集或维度中添加帐户智能增强功能，以向具有某一帐户属性的成员分配标准帐户分类，如收入和支出。 这种增强功能还可以标识帐户类型（如“资产”和“负债”）并为每种帐户类型分配适当的聚合。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以随着时间的推移使用分类来聚合帐户。  
   
 > [!NOTE]  
 >  帐户智能仅可用于基于现有数据源的维度。 对于不使用数据源创建的维度，必须先运行架构生成向导创建数据源视图，然后再添加帐户智能。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
     |服务器帐户类型|聚合|Description|  
     |-------------------------|-----------------|-----------------|  
-    |**统计**|**无**|某事物的计算比率，或者未在某段时间内聚合的某事物的计数。 该帐户类型不会使用换算规则在各种货币之间进行换算。|  
+    |**统计**|**InclusionThresholdSetting**|某事物的计算比率，或者未在某段时间内聚合的某事物的计数。 该帐户类型不会使用换算规则在各种货币之间进行换算。|  
     |**负债**|**LastNonEmpty**|在特定时间所拖欠的现金或事物的价值。 该帐户类型不会随时间而积累，因此，不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。 该帐户类型使用“期末”汇率在各种货币之间进行换算。|  
     |**资产**|**LastNonEmpty**|在特定时间所拥有的现金或事物的价值。 该帐户类型随时间而积累，因此，不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。 该帐户类型使用“期末”汇率在各种货币之间进行换算。|  
     |**平衡**|**LastNonEmpty**|在特定时间某事物的计数。 该帐户类型随时间而积累，但不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。|  

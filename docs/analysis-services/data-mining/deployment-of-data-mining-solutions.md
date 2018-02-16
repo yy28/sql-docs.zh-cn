@@ -18,19 +18,20 @@ helpviewer_keywords:
 - solutions [Analysis Services], deploying
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署数据挖掘解决方案
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据挖掘过程的最后一步是将模型部署到生产环境。 部署非常重要，这是因为它使用户可以利用模型，以便执行以任何任务：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+数据挖掘过程的最后一步是将模型部署到生产环境中。 部署非常重要，这是因为它使用户可以利用模型，以便执行以任何任务：  
   
 -   使用这些模型创建预测并做出业务决策。 有关可用于创建查询的工具的信息，请参阅 [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
   
@@ -83,13 +84,13 @@ ms.lasthandoff: 01/08/2018
   
  当模型将多维数据集用作数据源时，请参考本主题以了解有关如何移动模型及其支持的多维数据集数据的详细信息。  
   
- [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 项目 &#40;SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  提供有关部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的常规信息，并介绍可作为项目配置的一部分设置的属性。  
   
 ## <a name="see-also"></a>另请参阅  
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [处理要求和注意事项（数据挖掘）](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

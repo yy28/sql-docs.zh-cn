@@ -15,32 +15,33 @@ helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>创建和管理远程分区 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]分区的度量值组，你可以辅助数据库上配置远程[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例作为分区存储。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+对度量值组进行分区时，可将远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的辅助数据库配置为分区存储。  
   
  多维数据集（称作主数据库）的远程分区存储于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的远程实例上的专用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（称作辅助数据库）中。  
   
  专用辅助数据库可存储一个（且仅一个）主数据库的远程分区，但主数据库可使用多个辅助数据库，条件是所有辅助数据库都在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的同一个远程实例上。 数据库中专用于远程分区的维度作为链接维度创建。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  在创建远程分区之前，必须满足以下条件：  
   
 -   您必须有第二个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例和专用数据库才能存储分区。 辅助数据库只有一个用途：它提供主数据库的远程分区存储。  
   
 -   两个服务器实例必须是相同版本。 两个数据库应该具有相同功能级别。  
   
--   两个实例都必须配置为进行 TCP 连接。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不支持通过使用 HTTP 协议创建远程分区。  
+-   两个实例都必须配置为进行 TCP 连接。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过使用 HTTP 协议，不支持创建远程分区。  
   
 -   两个计算机上的防火墙设置都必须设置为接受外部连接。 有关设置防火墙的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>设置远程分区（在 SSDT 中）  
   
-1.  在主服务器上：在多维数据集设计器中打开多维数据集，然后单击 **“分区”** 选项卡。展开度量值组。 如果已为多个分区配置了度量值组，则单击“新建分区”，或单击“源”列中的浏览 (. 实例时都提供 SQL Server 登录名。 .) 按钮编辑现有分区。  
+1.  在主服务器上：在多维数据集设计器中打开多维数据集，然后单击 **“分区”** 选项卡。展开度量值组。 如果已为多个分区配置了度量值组，则单击“新建分区”，或单击“源”列中的浏览 (. 。 .) 按钮编辑现有分区。  
   
 2.  在分区向导的 **“指定源信息”**中，选择初始数据源视图和事实数据表。  
   
@@ -138,6 +139,6 @@ ms.lasthandoff: 01/08/2018
 >  尽管不向架构行集公开专用于存储远程分区的数据库，但使用分析管理对象 (AMO) 的应用程序仍可以通过使用 XML for Analysis Discover 命令来发现专用数据库。 通过使用 TCP 或 HTTP 客户端直接发送到专用数据库的所有 CREATE 或 DELETE 命令都将成功，但服务器将返回一个警告，指示该操作可能会损害这一紧密管理的数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [分区（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分区 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

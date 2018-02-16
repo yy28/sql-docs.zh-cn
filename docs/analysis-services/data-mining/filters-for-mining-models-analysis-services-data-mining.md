@@ -18,19 +18,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>挖掘模型的筛选器（Analysis Services - 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]基于数据的模型筛选可帮助你创建挖掘结构中使用的数据子集的挖掘模型。 使用筛选功能，可以基于全面的数据源视图来创建单个挖掘结构，因此可以灵活地设计挖掘结构和数据源。 随后即可以创建筛选器，以便仅将该数据的一部分用于对各种模型进行定型和测试，而不是为数据的每个子集均生成不同的结构和相关模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+基于数据的模型筛选有助于创建利用挖掘结构中的数据子集的挖掘模型。 使用筛选功能，可以基于全面的数据源视图来创建单个挖掘结构，因此可以灵活地设计挖掘结构和数据源。 随后即可以创建筛选器，以便仅将该数据的一部分用于对各种模型进行定型和测试，而不是为数据的每个子集均生成不同的结构和相关模型。  
   
  例如，针对 Customers 表和相关表定义数据源视图。 随后，定义一个包括所需的全部字段的挖掘结构。 最后，创建一个针对特定的客户属性（如 Region）进行筛选的模型。 随后，您即可以方便地创建该模型的副本，而且只需更改筛选条件即可基于不同的区域生成新模型。  
   
@@ -128,6 +129,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>另请参阅  
  [模型筛选器语法和示例（Analysis Services – 数据挖掘）](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

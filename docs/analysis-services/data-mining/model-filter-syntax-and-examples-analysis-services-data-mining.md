@@ -17,19 +17,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型筛选器语法和示例（Analysis Services – 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本部分提供有关模型筛选器，以及示例表达式的语法的详细的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本节提供有关模型筛选器语法的详细信息以及示例表达式。  
   
  [筛选器语法](#bkmk_Syntax)  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
  *avPredicate*  
  只能应用到标量挖掘结构列的筛选表达式。 *avPredicate* 表达式既可用于模型筛选器中，也可用于嵌套表筛选器中。  
   
- 使用以下任何运算符的表达式只能应用到连续列中。 解码的字符：  
+ 使用以下任何运算符的表达式只能应用到连续列中。 设置用户帐户 ：  
   
 -   **\<** （小于）  
   
@@ -318,7 +319,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [为挖掘模型 &#40; 筛选器Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="training-and-testing-data-sets"></a>定型数据集和测试数据集
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]将数据分为定型集和测试集是评估数据挖掘模型的重要组成部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+将数据分为定型集和测试集是评估数据挖掘模型的一个重要部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
   
  使用定型集处理模型后，可通过对测试集进行预测来测试该模型。 由于测试集内的数据已经包含要预测属性的已知值，因此可以方便地确定模型的预测准确性。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>修改结构属性以创建测试数据集  
  如果您在创建和处理挖掘结构之后又决定取消一个测试数据集，可以修改挖掘结构的属性。 若要更改数据的分区方式，请编辑下列属性：  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|指定要包括在测试集内的最大事例数。|  
 |**HoldoutMaxPercent**|指定测试集内要包括的事例数在整个数据集中所占的百分比。 如果没有数据集，则将指定 0。|  
@@ -108,15 +109,15 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |主题|链接|  
 |------------|-----------|  
 |说明模型的筛选器如何与定型数据集和测试数据集进行交互。|[挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|说明定型数据和测试数据的使用如何影响交叉验证。|[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|说明定型数据和测试数据的使用如何影响交叉验证。|[交叉验证 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |提供用于处理挖掘结构中定型集和测试集的编程接口的相关信息。|[AMO 概念和对象模型](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure 元素 (ASSL)](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|提供用于创建维持集的 DMX 语法。|[CREATE MINING STRUCTURE (DMX)](../../dmx/create-mining-structure-dmx.md)|  
+|提供用于创建维持集的 DMX 语法。|[创建挖掘结构 &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
 |在定型集和测试集中检索有关事例的信息。|[数据挖掘架构行集](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [数据挖掘架构行集 (SSA)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘概念](../../analysis-services/data-mining/data-mining-concepts.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)   
- [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

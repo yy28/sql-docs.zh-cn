@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - incremental updates [Analysis Services]
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>分区（Analysis Services - 多维数据）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]分区是度量值组数据的一部分的容器。 从 MDX 查询是看不到分区的，任何查询反映的均是度量值组的全部内容，这与为度量值组定义的分区数量无关。 分区的数据内容由分区的查询绑定和切片表达式定义。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+分区是一部分度量值组数据的容器。 从 MDX 查询是看不到分区的，任何查询反映的均是度量值组的全部内容，这与为度量值组定义的分区数量无关。 分区的数据内容由分区的查询绑定和切片表达式定义。  
   
  简单 <xref:Microsoft.AnalysisServices.Partition> 对象由基本信息、切片定义、聚合设计等组成。 基本信息包括分区的名称、存储模式和处理模式等。 切片定义是指定元组或集的 MDX 表达式。 切片定义具有的限制与 StrToSet MDX 函数相同。 借助 CONSTRAINED 参数，切片定义可使用多维数据集中的维度、层次结构、级别和成员名称、键、唯一名称或其他命名对象，但不能使用 MDX 函数。 聚合设计是可由多个分区共享的聚合定义的集合。 默认聚合设计取自父多维数据集的聚合设计。  
   

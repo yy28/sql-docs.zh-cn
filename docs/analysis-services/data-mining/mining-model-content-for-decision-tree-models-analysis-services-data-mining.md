@@ -16,19 +16,20 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍使用的模型特有的挖掘模型内容[!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
   
 ##  <a name="bkmk_Top"></a> 了解决策树模型的结构  
  决策树模型具有表示该模型及其元数据的单一父节点。 父节点下是表示选择的可预测属性的独立树。 例如，如果设置决策树模型以预测客户是否将购买产品，并为性别和收入提供输入，该模型将为购买属性创建一个树，该树具有大量根据性别和收入相关条件进行划分的分支。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
  Microsoft 决策树算法不允许使用连续数据类型作为输入；因此，如果任何列具有连续数值数据类型，将对该值进行离散化处理。 该算法在拆分点针对所有连续属性执行其自己的离散化处理。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]会自动选择一个用于存储桶的连续属性; 方法但是，可以控制如何连续输入中的值设置到的挖掘结构列的内容类型 discretized **Discretized** ，然后设置<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>或<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>属性。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动选择一个用于存储桶的连续属性; 方法但是，可以控制如何连续输入中的值设置到的挖掘结构列的内容类型 discretized **Discretized** ，然后设置<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>或<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>属性。  
   
  [Top](#bkmk_Top)  
   
@@ -165,7 +166,7 @@ ms.lasthandoff: 01/08/2018
  MSOLAP_NODE_SHORT_CAPTION  
  用于显示的标签。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  决策树模型没有用于存储整个模型的统计信息的单独节点，这与 Naive Bayes 或神经网络模型中的边际统计信息节点不同。 该模型为每个可预测属性创建一个单独的树，树的顶部为“(全部)”节点。 每个树独立于其他树。 如果模型仅包含一个可预测属性，则只有一个树，因此只有一个“(全部)”节点。  
   
  表示输出属性的每个树还进一步细分为表示拆分的内部分支 (NODE_TYPE = 3)。 其中的每个树都包含有关目标属性的分布的统计信息。 此外，每个叶节点 (NODE_TYPE = 4) 包含说明输入属性及其值以及支持每个属性值对的事例数目的统计信息。 因此，在决策树的任何分支中，可以方便地查看数据的概率或分布，而不需要查询源数据。 树的每个级别必须表示其直接子节点的总和。  
@@ -212,7 +213,7 @@ ms.lasthandoff: 01/08/2018
  XML 片段可以表示简单或复杂的属性。 简单属性包含模型列的名称以及属性的值。 如果模型列包含嵌套表，嵌套表属性则表示为串联在一起的表名称、键值和属性。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持 2.0 版本的 PMML 标准，并带有支持使用嵌套表的扩展插件。 如果数据包含嵌套表，并且生成 PMML 版本的模型，则模型中包括谓词的所有元素均被标记为扩展。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持 2.0 版本的 PMML 标准，使用扩展以支持使用嵌套表。 如果数据包含嵌套表，并且生成 PMML 版本的模型，则模型中包括谓词的所有元素均被标记为扩展。  
   
  [Top](#bkmk_Top)  
   
@@ -300,7 +301,7 @@ ms.lasthandoff: 01/08/2018
  有关回归节点的详细信息，请参阅[线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [挖掘模型内容 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

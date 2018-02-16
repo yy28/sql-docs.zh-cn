@@ -35,19 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>数据源和绑定（SSAS 多维）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]多维数据集、 维度和其他[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象可以绑定到数据源。 数据源可为以下对象之一：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可将多维数据集、维度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象绑定到数据源。 数据源可为以下对象之一：  
   
 -   关系数据源。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |BigInt|64 位有符号整数。 此数据类型映射到 Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int64 数据类型和 OLE DB 中的 DBTYPE_I8 数据类型。|  
 |Bool|一个布尔值。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Boolean 数据类型和 OLE DB 中的 DBTYPE_BOOL 数据类型。|  
 |货币|货币值，范围在 -263（或 -922,337,203,685,477.5808）到 263-1（或 +922,337,203,685,477.5807）之间，精确到货币单位的万分之一。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Decimal 数据类型和 OLE DB 中的 DBTYPE_CY 数据类型。|  
-|date|日期数据，以双精度浮点数存储。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 DateTime 数据类型和 OLE DB 中的 DBTYPE_DATE 数据类型。|  
+|日期|日期数据，以双精度浮点数存储。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 DateTime 数据类型和 OLE DB 中的 DBTYPE_DATE 数据类型。|  
 |双精度|双精度浮点数，范围在 -1.79E +308 到 1.79E +308 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Double 数据类型或 OLE DB 中的 DBTYPE_R8 数据类型。|  
 |Integer|32 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int32 数据类型和 OLE DB 中的 DBTYPE_I4 数据类型。|  
 |Single|单精度浮点数，范围在 -3.40E +38 到 3.40E +38 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Single 数据类型和 OLE DB 中的 DBTYPE_R4 数据类型。|  
@@ -174,9 +175,9 @@ ms.lasthandoff: 01/08/2018
   
  外部绑定是通过将可选 **Bindings** 集合对象与处理命令包含在一起而指定的。 可选的 **Bindings** 集合包含以下元素。  
   
-|“属性”|基数|类型|Description|  
+|属性|基数|类型|Description|  
 |--------------|-----------------|----------|-----------------|  
-|**Binding**|0-n|**Binding**|提供新绑定的集合。|  
+|**绑定**|0-n|**Binding**|提供新绑定的集合。|  
 |**DataSource**|0-1|**DataSource**|替换服务器中本应使用的 **DataSource** 。|  
 |**DataSourceView**|0-1|**DataSourceView**|替换服务器中本应使用 **DataSourceView** <br /><br /> 。|  
   

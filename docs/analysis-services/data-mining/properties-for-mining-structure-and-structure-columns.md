@@ -17,19 +17,20 @@ helpviewer_keywords:
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>挖掘结构和结构列的属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以设置或通过更改挖掘结构以及其关联的列和嵌套的表的属性**挖掘结构**数据挖掘设计器选项卡。 在该选项卡中设置的属性将传播到与结构相关联的每个挖掘模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以使用数据挖掘设计器的 **“挖掘结构”** 选项卡，为挖掘结构及其关联的列和嵌套表设置或更改属性。 在该选项卡中设置的属性将传播到与结构相关联的每个挖掘模型。  
   
 > [!NOTE]  
 >  如果更改挖掘结构中的任何属性的值，即使是名称或说明等元数据，也必须首先重新处理该挖掘结构及其模型，然后才能查看或查询模型。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="properties-of-the-mining-structure"></a>挖掘结构的属性  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**CacheMode**|指定在定型中使用的事例在定型完成之后应缓存还是放弃。 **注意：**  此属性必须设置为 **KeepTrainingCases** 以启用钻取和维持功能。|  
 |**排序规则**|指定列的默认排序规则。 如果没有指定排序规则，则将使用服务器的排序规则。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="properties-of-the-mining-structure-columns"></a>挖掘结构列的属性  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|标识已分类列所说明的列。|  
 |**内容**|列的内容类型。|  

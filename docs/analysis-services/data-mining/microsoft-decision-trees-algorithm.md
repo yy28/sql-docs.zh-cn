@@ -23,19 +23,20 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 68821f25ad1a0defca193fa2c8023f64def0da1b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 决策树算法
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法是使用的离散和连续属性的预测性建模的分类和回归算法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是分类和回归算法，用于对离散和连续属性进行预测性建模。  
   
  对于离散属性，该算法根据数据集中输入列之间的关系进行预测。 它使用这些列的值（也称之为状态）预测指定为可预测的列的状态。 具体地说，该算法标识与可预测列相关的输入列。 例如，在预测哪些客户可能购买自行车的方案中，假如在十名年轻客户中有九名购买了自行车，但在十名年龄较大的客户中只有两名购买了自行车，则该算法从中推断出年龄是自行车购买情况的最佳预测因子。 决策树根据朝向特定结果发展的趋势进行预测。  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="viewing-a-decision-trees-model"></a>查看决策树模型  
  若要浏览该模型，可以使用 **“Microsoft 树查看器”**。 如果模型生成多个树，则可以选择其中一个树，然后该查看器即会显示对于每个可预测属性，这些事例分类方式的明细。 还可以使用依赖关系网络查看器来查看这些树的交互。 有关详细信息，请参阅 [使用 Microsoft 树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)。  
   
- 如果想了解关于树中任何分支或节点的更多详细信息，还可以使用 [Microsoft 一般内容树查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)浏览该模型。 为该模型存储的内容包括每个节点中所有值的分布、树中每一级别的概率和连续属性的回归公式。 有关详细信息，请参阅 [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
+ 如果想了解关于树中任何分支或节点的更多详细信息，还可以使用 [Microsoft 一般内容树查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)浏览该模型。 为该模型存储的内容包括每个节点中所有值的分布、树中每一级别的概率和连续属性的回归公式。 有关详细信息，请参阅[决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   
 ## <a name="creating-predictions"></a>创建预测  
  处理过模型之后，结果将以一组模式和统计信息的形式存储，可以使用这些结果来研究关系或作出预测。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/08/2018
   
  有关如何创建针对挖掘模型的查询的常规信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 -   支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   
@@ -111,9 +112,9 @@ ms.lasthandoff: 01/08/2018
 -   支持使用 OLAP 挖掘模型和创建数据挖掘维度。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
  [决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [决策树模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

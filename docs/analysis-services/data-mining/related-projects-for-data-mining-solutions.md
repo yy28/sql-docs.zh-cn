@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>数据挖掘解决方案的相关项目
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]所需要的数据挖掘解决方案的最低要求是数据挖掘项目中，定义数据源、 数据源视图、 挖掘结构和挖掘模型。 但是，在使用数据挖掘模型做出日常决策时，将数据挖掘与预测分析解决方案的其他部分集成非常重要，其中可包含以下过程和组成部分：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+数据挖掘解决方案中至少要包含数据挖掘项目，该项目定义了数据源、数据源视图、挖掘结构和挖掘模型。 但是，在使用数据挖掘模型做出日常决策时，将数据挖掘与预测分析解决方案的其他部分集成非常重要，其中可包含以下过程和组成部分：  
   
 -   准备和选择数据和变量。 这一过程包括数据清除、元数据管理和多个数据源的集成，以及数据的转换、合并和数据到数据仓库的上载。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  **数据流组件**  
   
--   [CDC 流组件](../../integration-services/data-flow/cdc-flow-components.md)  
+-   [CDC 数据流组件](../../integration-services/data-flow/cdc-flow-components.md)  
   
 -   [有条件拆分转换](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
@@ -108,11 +109,11 @@ ms.lasthandoff: 01/08/2018
   
  有关如何将 Reporting Services 作为数据源与 DMX 查询一起使用的详细信息，请参阅以下链接：  
   
- [从数据挖掘模型检索数据 (DMX) (SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [从数据挖掘模型 &#40; DMX &#41; 中检索数据&#40;SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 查询设计器用户界面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [针对 DMX &#40; analysis Services 连接类型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  但是，不需要将 DMX 用作数据源。 用于数据挖掘的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件还支持将预测查询的结果保存到关系数据库中。 如果已建立用于使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]更新模型的工作流，则将预测和其他数据挖掘查询结果保存到 SQL Server 可使您能够使用 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 进行报告，并能使用其他不与 DMX 建立接口连接的工具。  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 01/08/2018
 -   不是所有的全文语言都支持语义索引。 有关支持的语言的列表，请参阅 [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [多维模型解决方案 (SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [表格模型解决方案（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [多维模型解决方案 &#40;SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [表格模型解决方案 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

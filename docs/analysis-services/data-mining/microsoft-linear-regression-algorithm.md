@@ -17,19 +17,20 @@ helpviewer_keywords:
 - linear regression [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b904dc4d9858b87f135b180b66ea24e8f688f0c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 线性回归算法
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]线性回归算法是一种变体[!INCLUDE[msCoName](../../includes/msconame-md.md)]有助于计算依赖和独立变量之间的线性关系，然后使用该关系进行预测的决策树算法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的一种变体，有助于计算依赖变量和独立变量之间的线性关系，然后使用该关系进行预测。  
   
  该关系采用的表示形式是最能代表数据序列的线的公式。 例如，以下关系图中的线是数据最可能的线性表示形式。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/08/2018
   
  除了通过选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法创建线性回归模型外，您还可以在可预测属性为连续数值数据类型时，创建包含回归的决策树模型。 在这种情况下，如果找到适当的分离点，该算法会对数据进行拆分；但对于某些数据区域，则会创建回归公式。 有关决策树模型中回归树的详细信息，请参阅[决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   
@@ -83,9 +84,9 @@ ms.lasthandoff: 01/08/2018
 -   支持使用 OLAP 挖掘模型。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [线性回归模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

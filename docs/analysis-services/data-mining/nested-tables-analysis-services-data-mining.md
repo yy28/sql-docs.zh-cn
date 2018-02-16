@@ -16,19 +16,20 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 945ded7d4323d509f20fec89574fcfff98654a1b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>嵌套表（Analysis Services – 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，数据必须为一系列的情况下在事例表包含提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一种用来处理这些事例的独特方法，即使用 *嵌套表*。 下图将阐释嵌套表的概念。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据必须作为包含在事例表中的一系列事例提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供一个唯一的方法，用于处理这些情况下，通过使用*嵌套表*。 下图将阐释嵌套表的概念。  
   
  ![通过使用嵌套的表的两个表组合](../../analysis-services/data-mining/media/nested-tables.gif "两个表组合使用嵌套的表")  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
  您可以通过使用数据挖掘扩展插件 (DMX) 或分析管理对象 (AMO) 以编程方式创建嵌套表，也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘向导或数据挖掘设计器创建嵌套表。  
   
 ## <a name="using-nested-table-columns-in-a-mining-model"></a>在挖掘模型中使用嵌套表列  
- 在事例表中，键通常是客户 ID、产品名称或日期序列，是唯一标识表中行的数据。 实例时都提供 SQL Server 登录名。 而在嵌套表中，键通常不是关系键（或外键），而是表示要对其进行建模的属性的列。  
+ 在事例表中，键通常是客户 ID、产品名称或日期序列，是唯一标识表中行的数据。 。 而在嵌套表中，键通常不是关系键（或外键），而是表示要对其进行建模的属性的列。  
   
  例如，如果事例表包含订单，嵌套表包含订单中的项目，则您会对以下工作感兴趣：为存储在嵌套表中的跨事例表中多个订单的项目之间的关系建模。 因此，虽然 **Items** 嵌套表通过关系键 **OrderID** 联接到 **Orders**事例表，但是不应将 **OrderID** 用作嵌套表键， 而应选择 **Items** 列作为嵌套表键，因为该列包含要建模的数据。 大多数情况下，由于事例表和嵌套表之间的关系已通过数据源视图定义建立起来，因此可以安全地在挖掘模型中忽略 **OrderID** 。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/08/2018
  有关如何创建和使用模型筛选器的详细信息，请参阅[挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

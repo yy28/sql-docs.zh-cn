@@ -19,19 +19,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9fe63b761a9834e53832c1525d8d77ea00a9a508
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>挖掘模型（Analysis Services - 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*挖掘模型*创建的应用某种算法来数据，但它多个算法或元数据容器： 它是一系列数据、 统计信息，以及可以应用于新数据以便生成预测和进行推断的模式有关关系。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+“挖掘模型”是通过将算法应用于数据创建的  ，但挖掘模型并不仅仅是算法或元数据容器：它是可应用于新数据以便生成预测和对关系进行推断的数据、统计信息和模式的集合。  
   
  本节解释什么是数据挖掘模型以及它可用于的对象：模型和结构的基本体系结构、挖掘模型的属性以及创建和使用挖掘模型的方式。  
   
@@ -131,22 +132,22 @@ ms.lasthandoff: 01/08/2018
   
 |主题|链接|  
 |------------|-----------|  
-|了解如何构建可以支持多个挖掘模型的挖掘结构。 了解模型中的列用法。|[挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)|  
-|了解不同的算法，以及所选算法是如何影响模型内容的。|[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
-|了解如何设置将影响其组成和行为的模型的属性。|[挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [建模标志（数据挖掘）](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
-|了解用于数据挖掘的可编程接口。|[使用分析管理对象 (AMO) 进行开发](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)|  
+|了解如何构建可以支持多个挖掘模型的挖掘结构。 了解模型中的列用法。|[挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [内容类型 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
+|了解不同的算法，以及所选算法是如何影响模型内容的。|[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|了解如何设置将影响其组成和行为的模型的属性。|[挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [建模标志 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
+|了解用于数据挖掘的可编程接口。|[使用分析管理对象 &#40; 进行开发AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)|  
 |了解如何使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的自定义数据挖掘查看器。|[数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |查看可针对数据挖掘模型使用的不同查询类型的示例。|[数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
  使用下面的链接可以获取有关使用数据挖掘模型的更具体信息  
   
 |任务|链接|  
 |----------|----------|  
-|添加和删除挖掘模型|[在现有挖掘结构中添加挖掘模型](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [从挖掘结构中删除挖掘模型](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
+|添加和删除挖掘模型|[将挖掘模型添加到现有挖掘结构](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [从挖掘结构中删除挖掘模型](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
 |使用挖掘模型列|[从挖掘模型中排除列](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [为模型列创建别名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [更改挖掘模型中列的离散化](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定用作回归量的列](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|更改模型属性|[更改挖掘模型的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [对挖掘模型应用筛选器](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [从挖掘模型中删除筛选器](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [对挖掘模型启用钻取](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [查看或更改算法参数](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
-|复制、 移动或管理模型|[生成挖掘模型的副本](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [复制挖掘模型的视图](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT (DMX)](../../dmx/export-dmx.md)<br /><br /> [IMPORT (DMX)](../../dmx/import-dmx.md)|  
+|更改模型属性|[更改挖掘模型的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [将筛选器应用于挖掘模型](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [从挖掘模型中删除筛选器](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [为挖掘模型启用钻取](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [查看或更改算法参数](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
+|复制、 移动或管理模型|[创建挖掘模型的副本](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [复制挖掘模型的视图](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [导出 &#40; DMX &#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT (DMX)](../../dmx/import-dmx.md)|  
 |使用数据填充模型，或更新模型中的数据|[处理挖掘模型](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |使用 OLAP 模型|[创建数据挖掘维度](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   

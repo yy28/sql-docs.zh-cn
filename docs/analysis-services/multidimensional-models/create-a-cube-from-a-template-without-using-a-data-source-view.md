@@ -12,22 +12,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>从模板创建多维数据集而无需使用数据源视图
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]选择**不使用数据源生成多维数据集**多维数据集向导创建多维数据集，而不使用数据源视图的第一页。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在多维数据集向导的第一页上选择 **“不使用数据源生成多维数据集”** ，可以在不使用数据源视图的情况下创建多维数据集。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
   
 ## <a name="selecting-the-build-method"></a>选择生成方法  
- 在多维数据集向导的 **“选择生成方法”** 页上，单击 **“不使用数据源生成多维数据集”**。 若要使用现有多维数据集模板生成多维数据集，请选中 **“使用多维数据集模板”** 复选框。 实例时都提供 SQL Server 登录名。 如果您不选择使用模板，则必须手动设置选项。  
+ 在多维数据集向导的 **“选择生成方法”** 页上，单击 **“不使用数据源生成多维数据集”**。 若要使用现有多维数据集模板生成多维数据集，请选中 **“使用多维数据集模板”** 复选框。 。 如果您不选择使用模板，则必须手动设置选项。  
   
  多维数据集模板包含预定义的度量值、度量值组、维度、层次结构和属性。 如果选择了某个模板，向导将基于模板中的对象定义来设置后续页面中的选项。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 预装了多个用于标准多维数据集的模板。 服务器管理员还可以添加专门为您的组织数据设计的多维数据集或维度模板。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  **“从模板中选择度量值”** 网格和 **“添加新度量值”** 网格均将值显示在下表所说明的列中。 您可以单击任一列表中的值对其进行更改。  
   
-|“列”|Description|  
+|列|Description|  
 |------------|-----------------|  
 |**“度量值名称”**|此列中的值定义多维数据集中度量值的名称。 单击此列中的值可键入名称。 单击此列中的 **“添加新度量值”** 可创建新的度量值。 此列设置度量值对象的 **Name** 属性。|  
 |**度量值组**|包含该度量值的度量值组的名称。 单击此值可选择或键入名称。 如果删除属于某个度量值组的所有度量值，则该度量值组也随之删除。 此列设置度量值组对象的 **Name** 属性。|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
  **“从模板中选择维度”** 网格和 **“添加新维度”** 网格均将值显示在下表所说明的列中。 您可以单击任一列表中的值对其进行更改。  
   
-|“列”|Description|  
+|列|Description|  
 |------------|-----------------|  
 |**类型**|显示模板维度的维度类型。 单击此单元可更改维度的维度类型。 此列设置维度对象的 **Type** 属性。|  
 |**名称**|显示维度名称。 单击此单元可以键入不同的名称。 此值设置维度对象的 **Name** 属性。|  

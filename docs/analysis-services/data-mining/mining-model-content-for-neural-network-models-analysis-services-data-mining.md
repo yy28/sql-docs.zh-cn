@@ -22,19 +22,20 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍使用 Microsoft 神经网络算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主题介绍使用 Microsoft 神经网络算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>了解神经网络模型的结构  
  每个神经网络模型都具有一个表示该模型及其元数据的单一父节点，以及一个提供有关输入属性的说明性统计信息的边际统计信息节点 (NODE_TYPE = 24)。 边际统计信息节点非常有用，它汇总了输入相关信息，因此您无需从各个节点查询数据。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
 |节点类型 ID|Description|  
 |------------------|-----------------|  
-|@shouldalert|模型。|  
+|1|模型。|  
 |17|子网的组织程序节点。|  
 |18|输入层的组织程序节点。|  
 |19|隐藏层的组织程序节点。|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 01/08/2018
  MSOLAP_NODE_SHORT_CAPTION  
  对于神经网络模型，始终为空白。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  定型神经网络模型的目的是确定与从输入到中点、再从中点到终结点的每个转换关联的权重。 因此，该模型的输入层的主要存在目的是存储用于生成该模型的实际值。 隐藏层存储计算的权重，并提供回指到输入属性的指针。 输出层存储可预测值，并提供回指到隐藏层的中点的指针。  
   
 ##  <a name="bkmk_NodeIDs"></a> 使用节点名称和 ID  
@@ -243,7 +244,7 @@ ms.lasthandoff: 01/08/2018
  **连续属性：** NODE_DISTRIBUTION 表的最后两行包含该属性的平均值、整个节点的系数和系数的方差。  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft 神经网络算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft 神经网络算法技术参考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [神经网络模型查询示例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>创建 OLAP 挖掘结构
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]有很多好处创建数据挖掘模型基于 OLAP 多维数据集或其他多维数据存储区。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+基于 OLAP 多维数据集或其他多维数据存储区创建数据挖掘模型有很多好处。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  
   
  本主题介绍如何基于现有多维解决方案中的维度和相关度量值创建 OLAP 挖掘结构。  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 01/08/2018
   
 10. **创建测试集**：在此页上，您可以告知向导应留出多少数据以便测试模型。 如果数据将支持多个模型，则最好是创建一个保留数据集，以便能基于同一数据测试所有模型。  
   
-     有关详细信息，请参阅 [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)生成数据挖掘项目。  
+     有关详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
 11. **完成向导**：在此页上，您可以为新的挖掘结构和关联的挖掘模型提供名称，并保存该结构和模型。  
   
@@ -165,7 +166,7 @@ ms.lasthandoff: 01/08/2018
 >  只有以下模型类型支持数据挖掘维度的创建：基于 Microsoft 聚类分析算法、Microsoft 决策树算法或 Microsoft 关联算法的模型。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)   
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)   
  [挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 中的高可用性和可伸缩性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本指南介绍了使用最常用的技术来提高 Analysis Services 数据库高可用性和可扩展性。 尽管每个目标无法单独实现，在在现实生活中，它们往往是相辅相成的：大型查询或处理工作负载的可伸缩部署通常附带高可用性的预期值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本指南介绍提高 Analysis Services 数据库可用性和可伸缩性的方法。 尽管每个目标无法单独实现，在在现实生活中，它们往往是相辅相成的：大型查询或处理工作负载的可伸缩部署通常附带高可用性的预期值。  
   
  反之亦然。 当任务关键型的中等查询工作负载存在严格的服务级别协议时，唯一的目标可能是实现高可用性而不要求可伸缩性。  
   

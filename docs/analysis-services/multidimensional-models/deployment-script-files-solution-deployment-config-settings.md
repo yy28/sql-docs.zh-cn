@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Analysis Services deployments, configuration settings
 - deploying [Analysis Services], configuration settings
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e778ee4c1962ac51eb145174dd424b9c3868512d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deployment-script-files---solution-deployment-config-settings"></a>部署脚本文件的解决方案部署配置设置
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取的分区和角色的部署选项，使用部署脚本从中\<*项目名称*>.configsettings 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用当前项目的配置设置创建\<*项目名称*>.configsettings 文件。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取的分区和角色的部署选项，使用部署脚本从中\<*项目名称*>.configsettings 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用当前项目的配置设置创建\<*项目名称*>.configsettings 文件。  
   
 ## <a name="reviewing-the-configuration-settings-for-deployment"></a>检查部署的配置设置  
  以下是中存储的配置设置\<*项目名称*>.configsettings 文件：  
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
  若要修改的分区和角色中的部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，则必须更改中的此信息\<*项目名称*>.configsettings 文件，如下面的过程中所述。 无法更改项目中的分区和角色设置，因为*\<项目名称 >* **属性页**中的对话框[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不会显示这些选项。  
   
 > [!NOTE]  
->  配置设置可应用于所有对象，也可仅应用于新创建的对象。 仅当要将其他对象部署到以前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中，并且不希望覆盖现有对象时，才将配置设置应用于新创建的对象。 若要指定是否配置设置应用于所有对象，或只是为了新创建的违规时，在中设置此选项\<*项目名称*>.deploymentoptions 文件。 有关详细信息，请参阅 [指定分区和角色部署选项](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)。  
+>  配置设置可应用于所有对象，也可仅应用于新创建的对象。 仅当要将其他对象部署到以前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中，并且不希望覆盖现有对象时，才将配置设置应用于新创建的对象。 若要指定是否配置设置应用于所有对象，或只是为了新创建的违规时，在中设置此选项\<*项目名称*>.deploymentoptions 文件。 有关详细信息，请参阅[指定分区和角色部署选项](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)。  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>在生成输入文件后更改配置设置  
   

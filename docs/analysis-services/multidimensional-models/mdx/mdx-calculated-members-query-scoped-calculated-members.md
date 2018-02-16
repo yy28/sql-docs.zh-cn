@@ -15,19 +15,20 @@ helpviewer_keywords:
 - WITH keyword
 - query-scoped calculated members [MDX]
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 2ba34cb6af554bb958c8754a9971f3ff4ba5b9a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX 计算成员的查询作用域的计算成员
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]如果计算的成员仅需要一个多维表达式 (MDX) 查询，您可以通过使用 WITH 关键字定义该计算的成员。 使用 WITH 关键字创建的计算成员在执行完查询之后就不再存在。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+如果某个计算成员仅用于单个多维表达式 (MDX) 查询，则可以使用 WITH 关键字定义该计算成员。 使用 WITH 关键字创建的计算成员在执行完查询之后就不再存在。  
   
  如本主题中所述，WITH 关键字的语法非常灵活，甚至允许一个计算成员基于另一个计算成员。  
   
@@ -97,8 +98,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)   
- [SELECT 语句 (MDX)](../../../mdx/mdx-data-manipulation-select.md)   
+ [MDX 函数引用 &#40;MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [SELECT 语句 &#40;MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [创建会话作用域计算成员 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

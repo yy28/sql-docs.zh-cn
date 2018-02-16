@@ -16,19 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: be3c1ddd743204b18823ef4d77c054504328fc3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="decision-trees-model-query-examples"></a>决策树模型查询示例
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当您创建针对数据挖掘模型的查询时，你可以创建内容查询，提供了有关分析过程中发现的模式的详细信息，也可以创建预测查询，使用在模型中的模式来对新数据进行预测。 例如，决策树模型的内容查询可能提供有关树在每个级别上的事例数的统计信息或者区分事例的规则。 而预测查询则是将模型映射到新数据，以生成建议、分类等等。 您还可以使用查询来检索有关模型的元数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，决策树模型的内容查询可能提供有关树在每个级别上的事例数的统计信息或者区分事例的规则。 而预测查询则是将模型映射到新数据，以生成建议、分类等等。 您还可以使用查询来检索有关模型的元数据。  
   
  本节说明如何为基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型创建查询。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
  [从决策树模型中检索回归公式](#bkmk_Query6)  
   
 ##  <a name="bkmk_top2"></a> 查找有关决策树模型的信息  
- 若要针对决策树模型内容创建有意义的查询，您应该了解模型内容的结构以及哪些节点类型存储哪类信息。 有关详细信息，请参阅 [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
+ 若要针对决策树模型内容创建有意义的查询，您应该了解模型内容的结构以及哪些节点类型存储哪类信息。 有关详细信息，请参阅[决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   
 ###  <a name="bkmk_Query1"></a> 示例查询 1：从数据挖掘架构行集中检索模型参数  
  通过查询数据挖掘架构行集，您可以找到有关模型的元数据，如模型创建时间、上次处理模型的时间、模型基于的挖掘结构的名称以及用作可预测属性的列的名称。 您还可以返回首次创建模型时所使用的参数。  
@@ -85,7 +86,7 @@ WHERE NODE_TYPE = 2
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|All|12939|5|  
+|TM_DecisionTree|000000001|全部|12939|5|  
   
  这些结果是什么意思？ 在决策树模型中，特定节点的基数指明该节点有多少个直属子级。 此节点的基数是 5，这意味着该模型将潜在的自行车购买者的目标总体分成了 5 个子组。  
   
@@ -104,19 +105,19 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
  示例结果：  
   
-|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|Support|  
+|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
-|00000000100|Number Cars Owned = 0|Bike Buyer|Missing|0|  
+|00000000100|Number Cars Owned = 0|Bike Buyer|缺少|0|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|0|1067|  
-|00000000100|Number Cars Owned = 0|Bike Buyer|@shouldalert|1875|  
-|00000000101|Number Cars Owned = 3|Bike Buyer|Missing|0|  
+|00000000100|Number Cars Owned = 0|Bike Buyer|1|1875|  
+|00000000101|Number Cars Owned = 3|Bike Buyer|缺少|0|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
-|00000000101|Number Cars Owned = 3|Bike Buyer|@shouldalert|473|  
+|00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
  根据这些结果，你可以知道购买了自行车的客户数 ([Bike Buyer] = 1)，1067 个客户拥有 0 辆汽车，473 个客户拥有 3 辆汽车。  
   
 ###  <a name="bkmk_Query3"></a> 示例查询 3：从模型中检索子树  
- 假定您希望查找有关购买了自行车的客户的更多信息。 你可以通过在查询中使用 [IsDescendant (DMX)](../../dmx/isdescendant-dmx.md) 函数来查看任何子树的其他详细信息，如下面的示例所示。 通过从包含 42 岁以上的客户的树中检索叶节点 (NODE_TYPE = 4)，查询将返回自行车购买者的计数。 查询将嵌套表中的行限定为其中 Bike Buyer = 1 的行。  
+ 假定您希望查找有关购买了自行车的客户的更多信息。 你可以通过在查询中使用 [IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md) 函数来查看任何子树的其他详细信息，如下面的示例所示。 通过从包含 42 岁以上的客户的树中检索叶节点 (NODE_TYPE = 4)，查询将返回自行车购买者的计数。 查询将嵌套表中的行限定为其中 Bike Buyer = 1 的行。  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,NODE_TYPE,  
@@ -148,7 +149,7 @@ AND NODE_TYPE = 4
 ###  <a name="bkmk_Query4"></a> 示例查询 4：返回具有概率的预测  
  下面的示例查询使用在 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的决策树模型。 该查询在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW 的表 dbo.ProspectiveBuyers 中遍历新的示例数据集，以便预测新数据集中的哪些客户将购买自行车。  
   
- 查询使用预测函数 [PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)，该函数返回一个嵌套表，其中包含有关该模型发现的概率的有用信息。 该查询的最后的 WHERE 子句将筛选结果，以便仅返回预测购买自行车的概率大于 0% 的那些潜在客户。  
+ 查询使用预测函数 [PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)，该函数返回一个嵌套表，其中包含有关该模型发现的概率的有用信息。 该查询的最后的 WHERE 子句将筛选结果，以便仅返回预测购买自行车的概率大于 0% 的那些潜在客户。  
   
 ```  
 SELECT  
@@ -191,7 +192,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
-|@shouldalert|2540|0.634849242045644|0.013562168281562|0|0|  
+|1|2540|0.634849242045644|0.013562168281562|0|0|  
 |0|1460|0.364984174579377|0.00661336932550915|0|0|  
 ||0|0.000166583374979177|0.000166583374979177|0|0|  
   
@@ -212,7 +213,7 @@ NATURAL PREDICTION JOIN
   
  预期的结果：  
   
-|“模型”|  
+|Model|  
 |-----------|  
 |Mountain-200|  
 |Mountain Tire Tube|  
@@ -231,7 +232,7 @@ NATURAL PREDICTION JOIN
   
  预期的结果：  
   
-|“模型”|  
+|Model|  
 |-----------|  
 |Long-Sleeve Logo Jersey|  
 |Mountain-400-W|  
@@ -252,7 +253,7 @@ WHERE NODE_TYPE = 25
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
+|Yearly Income|缺少|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   
@@ -264,16 +265,16 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant (DMX)](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[IsInNode (DMX)](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
-|[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
-|[PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
-|[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
-|[PredictNodeId (DMX)](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
-|[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
-|[PredictStdev (DMX)](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
-|[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
+|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
+|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](../../dmx/general-prediction-functions-dmx.md)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -281,6 +282,6 @@ WHERE NODE_TYPE = 25
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Microsoft 决策树算法技术参考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
- [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [决策树模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

@@ -21,19 +21,20 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]时，时序算法提供多个针对预测连续值，如产品销量，随着时间的推移进行了优化的算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
+# <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series Algorithm
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法提供了一些针对连续值（例如一段时间内的产品销售额）预测进行了优化的多种算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
   
  下面的关系图显示了一个用于预测一段时间内某一产品在四个不同销售区域的销售额的典型模型。 该关系图中的模型以红色、黄色、紫色和蓝色线条分别显示每个区域的销售额。 每个区域的线条都分为两部分：  
   
@@ -109,8 +110,8 @@ ms.lasthandoff: 01/08/2018
   
 |TimeID|Product|Sales|数据量|  
 |------------|-------------|-----------|------------|  
-|1/2001|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|1000|600|  
-|2/2001|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|1100|500|  
+|1/2001|指向|1000|600|  
+|2/2001|指向|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 01/08/2018
   
 -   服务器使用的 64 位操作系统不同，时序模型作出的预测也可能不同（有时差异会很大）。 出现这些差异的原因是基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的系统表示和处理浮点算术数字的方式与基于 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]的系统处理这些计算的方式不同。 由于预测结果可能是特定于操作系统的，因此建议您在评估模型时使用与将用于生产的操作系统相同的操作系统。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   
@@ -159,10 +160,10 @@ ms.lasthandoff: 01/08/2018
 -   支持钻取。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [使用 Microsoft 时序查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

@@ -19,19 +19,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 31dcf6975fb2ed24e2957f1d9171473b01da891a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>测试和验证任务和操作指南（数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以使用**挖掘准确性图表**中的数据挖掘设计器选项卡[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]要比较的挖掘结构中的挖掘模型的预测准确性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以使用 **中的数据挖掘设计器的** “挖掘准确性图表” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项卡，比较挖掘结构中的挖掘模型的预测准确性。  
   
  可以创建四种图表：  
   
@@ -49,18 +50,18 @@ ms.lasthandoff: 01/08/2018
   
  有关如何使用挖掘准确性图表的详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
--   [创建提升图、利润图或分类矩阵](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
+-   [创建提升图、 利润图或分类矩阵](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
 -   [创建交叉验证报表](../../analysis-services/data-mining/create-a-cross-validation-report.md)  
   
 -   [选择和映射模型测试数据](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)  
   
--   [将筛选器应用于模型测试数据](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
+-   [应用筛选器以测试数据创建模型](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
--   [选择用于测试挖掘模型的列](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
+-   [选择用于测试挖掘模型列](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
   
--   [使用嵌套表数据作为准确性图表的输入](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
+-   [使用嵌套表数据作为输入准确性图表](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   
   

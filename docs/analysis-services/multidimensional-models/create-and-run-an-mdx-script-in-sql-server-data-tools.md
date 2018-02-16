@@ -16,19 +16,20 @@ helpviewer_keywords:
 - scripts [Analysis Services], creating
 - scripts [MDX], creating
 ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ec19c9f3c826910b7c5d8a3d5a3737e09228b664
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中创建和运行 MDX 脚本
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要创建和运行 MDX 脚本[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，你需要在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]与多维数据集已经创建并准备好编辑。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+若要在  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建和运行 MDX 脚本，您需要使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 以及已创建并准备好编辑的多维数据集。  
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>创建多维表达式 (MDX) 脚本  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
 4.  若要运行 MDX 脚本，请使用新的 MDX 脚本更改来部署和处理多维数据集。  
   
 ## <a name="see-also"></a>另请参阅  
- [基本 MDX 脚本 (MDX)](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [基本 MDX 脚本 &#40;MDX &#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
  [MDX 脚本编写基础知识 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX 脚本语句 &#40;MDX &#41;](../../mdx/mdx-scripting-statements-mdx.md)  
   

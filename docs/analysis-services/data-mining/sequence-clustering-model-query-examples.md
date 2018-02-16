@@ -16,19 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>顺序分析和聚类分析模型查询示例
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你创建针对数据挖掘模型的查询时，你可以创建任一内容查询，提供了有关存储在模型中的信息的详细信息，或者可以创建预测查询，使用在模型中的模式来进行基于新数据的预测你提供。 对于顺序分析和聚类分析模型，内容查询通常会提供所发现的分类的更多详细信息，或这些分类中的转换。 您还可以使用查询来检索有关模型的元数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关模型中存储的信息的详细信息，预测查询使用模型中的模式并基于您提供的新数据进行预测。 对于顺序分析和聚类分析模型，内容查询通常会提供所发现的分类的更多详细信息，或这些分类中的转换。 您还可以使用查询来检索有关模型的元数据。  
   
  针对顺序分析和聚类分析模型的预测查询通常是基于序列和转换、基于模型中包含的非序列属性或基于序列属性和非序列属性的组合来提出建议。  
   
@@ -95,7 +96,7 @@ AND [PARENT_UNIQUE_NAME] = 0
   
 |NODE_UNIQUE_NAME|Product 1|Sequence Support|Sequence Probability|  
 |------------------------|---------------|----------------------|--------------------------|  
-|1081327|Missing|0|#######|  
+|1081327|缺少|0|#######|  
 |1081327|All-Purpose Bike Stand|17|0.00111|  
 |1081327|Bike Wash|64|0.00418|  
 |1081327|（第 4-36 行省略）|||  
@@ -238,7 +239,7 @@ AS t
   
 |Expression.$Sequence|Expression.Line Number|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
-|@shouldalert||Cycling Cap|  
+|1||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
 |4||Long-Sleeve Logo Jersey|  
@@ -264,16 +265,16 @@ AS t
 |[ClusterDistance (DMX)](../../dmx/clusterdistance-dmx.md)|返回输入事例与指定分类之间的距离；如果未指定分类，则返回输入事例与可能性最大的分类之间的距离。<br /><br /> 此函数可用于任何类型的聚类分析模型（EM、K-Means 等），但结果会因算法而异。|  
 |[ClusterProbability (DMX)](../../dmx/clusterprobability-dmx.md)|返回输入事例属于指定分类的概率。|  
 |[IsInNode (DMX)](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
-|[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|返回指定状态调整后的概率。|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|返回指定状态调整后的概率。|  
 |[PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md)|预测关联的成员身份。|  
 |[PredictCaseLikelihood (DMX)](../../dmx/predictcaselikelihood-dmx.md)|返回输入事例适合现有模型的可能性。|  
-|[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|返回一个表示给定列预测的直方图的表。|  
-|[PredictNodeId (DMX)](../../dmx/predictnodeid-dmx.md)|返回事例所属的节点的 Node_ID。|  
-|[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|返回指定状态的概率。|  
+|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|返回一个表示给定列预测的直方图的表。|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|返回事例所属的节点的 Node_ID。|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|返回指定状态的概率。|  
 |[PredictSequence (DMX)](../../dmx/predictsequence-dmx.md)|为一组指定的序列数据预测将来的序列值。|  
 |[PredictStdev (DMX)](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
-|[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](../../dmx/general-prediction-functions-dmx.md)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -281,6 +282,6 @@ AS t
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 顺序分析算法技术参考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [序列聚类分析模型 &#40; 挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

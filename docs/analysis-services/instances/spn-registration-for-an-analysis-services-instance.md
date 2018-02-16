@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]服务主体名称 (SPN) 唯一标识 Active Directory 域中的服务实例时使用 Kerberos 进行相互身份验证客户端和服务标识。 SPN 与服务实例运行所基于的登录帐户相关联。  
+# <a name="spn-registration-for-an-analysis-services-instance"></a>针对 Analysis Services 实例的 SPN 注册
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在使用 Kerberos 对客户端和服务标识进行相互身份验证时，服务主体名称 (SPN) 唯一标识 Active Directory 域中的某一服务实例。 SPN 与服务实例运行所基于的登录帐户相关联。  
   
  对于通过 Kerberos 身份验证连接到 Analysis Services 的客户端应用程序，Analysis Services 客户端库使用来自连接字符串的主机名以及在 Analysis Services 的任何给定发行版中固定的其他已知变量（例如服务类）构建一个 SPN。  
   
@@ -170,15 +171,15 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft BI 身份验证和身份委托](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [相互身份验证使用 Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [如何配置 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 以使用 Kerberos 身份验证](http://support.microsoft.com/kb/917409)   
- [服务主体名称 (Spn) SetSPN 语法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [不要使用哪些 SPN 和如何会获取存在？](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [使用 Kerberos 进行相互身份验证](http://go.microsoft.com/fwlink/?LinkId=299283)   
+ [如何配置 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 以便使用 Kerberos 身份验证](http://support.microsoft.com/kb/917409)   
+ [服务主体名称 (SPN) SetSPN 语法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [我使用哪个 SPN，它如何起作用？](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
- [服务帐户循序渐进指南](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
+ [服务帐户分步指南](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [如何在 Internet Information Services 上配置托管的 Web 应用时使用 Spn](http://support.microsoft.com/kb/929650)   
- [什么是服务帐户中的新增功能](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [配置 Kerberos 身份验证用于 SharePoint 2010 产品 （白皮书）](http://technet.microsoft.com/library/ff829837.aspx)  
+ [在配置托管在 Internet Information Services 上的 Web 应用程序时，如何使用 SPN](http://support.microsoft.com/kb/929650)   
+ [服务帐户中的新增功能有哪些](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [配置用于 SharePoint 2010 产品的 Kerberos 身份验证（白皮书）](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

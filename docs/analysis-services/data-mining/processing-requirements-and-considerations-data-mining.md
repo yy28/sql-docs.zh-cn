@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f55e2d47bcc8228111b35f86ec620a6623b68cad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>处理要求和注意事项（数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本主题介绍在处理数据挖掘对象时，需要注意一些技术注意事项。 有关处理的涵义以及如何将处理应用于数据挖掘的一般说明，请参阅 [处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主题介绍了一些处理数据挖掘对象时要记住的技术注意事项。 有关处理的涵义以及如何将处理应用于数据挖掘的一般说明，请参阅 [处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)。  
   
  [针对关系存储区的查询](#bkmk_QueryReqs)  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  有关详细信息，请参阅 [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md)。  
   
- 如果您十分关注对硬盘空间的节省，则请注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构缓存保留在本地。 也就是说，所有定型数据都将写在本地硬盘上。 如果不希望更改缓存数据，则可更改默认值，方法是将挖掘结构的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性设置为 **ClearAfterProcessing**。 这会在处理模型之后破坏缓存；但是，这还会在挖掘结构中禁用钻取功能。 有关详细信息，请参阅 [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 如果您十分关注对硬盘空间的节省，则请注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构缓存保留在本地。 也就是说，所有定型数据都将写在本地硬盘上。 如果不希望更改缓存数据，则可更改默认值，方法是将挖掘结构的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性设置为 **ClearAfterProcessing**。 这会在处理模型之后破坏缓存；但是，这还会在挖掘结构中禁用钻取功能。 有关详细信息，请参阅[钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
  此外，如果您清理了缓存，则将无法使用维持测试集；如果已定义一个维持测试集，则此测试集分区的定义也将丢失。 有关维持测试集的详细信息，请参阅 [定型和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
@@ -93,8 +94,8 @@ ms.lasthandoff: 01/08/2018
  有关详细信息，请参阅 [导出和导入数据挖掘对象](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

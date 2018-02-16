@@ -17,19 +17,20 @@ helpviewer_keywords:
 - dimension intelligence [Analysis Services]
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 86c5f345dc963667ea5b05177e84517609f7e5a7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 向导-向维度中添加维度智能
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]将维度智能增强功能添加到多维数据集或维度指定维度的标准业务类型。 此增强功能还将为维度属性指定相应的类型。 客户端应用程序在分析数据时可以使用这些指定的类型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以在多维数据集或维度中添加维度智能增强功能，以便为维度指定标准业务类型。 此增强功能还将为维度属性指定相应的类型。 客户端应用程序在分析数据时可以使用这些指定的类型。  
   
  若要添加维度智能，请使用商业智能向导，并在 **“选择增强功能”** 页中选择 **“定义维度智能”** 选项。 然后，此向导将引导您完成相应的步骤，以选择要应用维度智能的维度，并标识所选维度的属性。  
   
@@ -47,6 +48,6 @@ ms.lasthandoff: 01/08/2018
  例如，您希望向“帐户”维度添加维度智能。 在 **“维度类型”**中，选择 **“帐户”**。 然后，如果维度有 **“帐户类型”** 和 **“帐户说明”** 属性，则在 **“包含”** 列中选中 **“帐户名”** 和 **“帐户类型”** 帐户类型的复选框。 接着，在 **“维度属性”** 列中，将这些帐户类型分别与 **“帐户说明”** 和 **“帐户类型”** 属性关联。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用商业智能向导定义时间智能计算](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [定义时间智能计算使用商业智能向导](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - name columns [Analysis Services]
 - attributes [Analysis Services], binding
 ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4b17e4ed33f172dd109fdd3aad43269a0daf31b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>特性属性-将属性绑定到名称列
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此过程描述如何将属性绑定到名称列手动使用**属性**窗格在维度设计器以及通过使用**对象绑定**对话框。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+此过程介绍如何使用维度设计器的 **“属性”** 窗格以及 **“对象绑定”** 对话框将属性手动绑定到名称列。  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>将属性绑定到名称列  
   

@@ -16,19 +16,20 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>多维数据集、 分区和维度处理的错误配置
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在多维数据集、 分区或维度对象上的错误配置属性确定在处理期间出现数据完整性错误时服务器的响应方式。 键列中的重复键、缺失键和空值通常会触发这类错误，尽管导致错误的记录不会添加到数据库中，不过您仍可以设置确定后续操作的属性。 默认情况下处理会停止。 但在多维数据集开发过程中，您可能希望在出现错误时继续进行处理，以便使用导入的数据测试多维数据集的行为（即使数据不完整）。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+有关多维数据集、分区或维度对象的错误配置属性决定了当处理过程中出现数据完整性错误时服务器的响应方式。 键列中的重复键、缺失键和空值通常会触发这类错误，尽管导致错误的记录不会添加到数据库中，不过您仍可以设置确定后续操作的属性。 默认情况下处理会停止。 但在多维数据集开发过程中，您可能希望在出现错误时继续进行处理，以便使用导入的数据测试多维数据集的行为（即使数据不完整）。  
   
  本主题包含以下各节：  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 01/08/2018
   
  **针对特定错误的服务器响应**  
   
-|“属性”|，则“默认”|其他值|  
+|属性|默认|其他值|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> 当初始化错误配置时发生。|**IgnoreError** 不对错误进行记录和计数；只要错误计数低于最大限制，处理便会继续。|**ReportAndContinue** 对错误进行记录和计数。<br /><br /> **ReportAndStop** 报告错误并立即停止处理（与错误限制无关）。|  
 |**KeyNotFound**<br /><br /> 当事实数据表中的外键在相关维度表中没有匹配主键时（例如，“销售量”事实数据表的某个记录的产品 ID 在“产品”维度表中不存在）发生。 此错误可能会在分区处理或雪花状维度的维度处理过程中发生。|**ReportAndContinue** 对错误进行记录和计数。|**ReportAndStop** 报告错误并立即停止处理（与错误限制无关）。<br /><br /> **IgnoreError** 不对错误进行记录和计数；只要错误计数低于最大限制，处理便会继续。 触发此错误的记录在默认情况下会转换为未知成员，但是您通过更改 **KeyErrorAction** 属性弃用这些记录。|  
@@ -184,7 +185,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_next"></a> 下一步  
  决定错误是停止处理还是被忽略。 请记住，忽略的只是错误。 不会忽略导致错误的记录；该记录会被弃用或转换为未知成员。 违反数据完整性规则的记录绝不会添加到数据库中。 默认情况下，处理在出现第一个错误时停止，但是您可以通过提高错误限制来更改此行为。 在多维数据集开发中，放宽错误配置规则可能十分有用，从而允许处理继续进行，以便可以使用数据进行测试。  
   
- 决定是否更改默认 null 值处理行为。 默认情况下，字符串列中的 null 值会作为空字符串进行处理，而数字列中的 null 值会作为零值进行处理。 有关对属性设置 null 值处理的说明，请参阅 [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 。  
+ 决定是否更改默认 null 值处理行为。 默认情况下，字符串列中的 null 值会作为空字符串进行处理，而数字列中的 null 值会作为零值进行处理。 有关对属性设置 null 值处理的说明，请参阅 [定义未知成员和 Null 处理属性](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [日志属性](../../analysis-services/server-properties/log-properties.md)   

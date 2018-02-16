@@ -17,19 +17,20 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]逻辑回归是一种众所周知的统计方法用于建模二进制结果。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+逻辑回归是一种众所周知的统计方法，用于对二进制结果建模。  
   
  通过采用不同的学习方法，可以在统计研究中以各种方式实现逻辑回归。 已通过使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的一种变体来实现 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法。 虽然此算法与神经网络算法有许多共性，但逻辑回归算法更易于定型。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
   
 -   有关查询逻辑回归模型的示例，请参阅 [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
   
 -   不支持钻取， 这是因为挖掘模型中节点的结构不一定直接与基础数据对应。  
   

@@ -15,21 +15,22 @@ helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>维度特性属性参考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，有许多属性可确定如何维度和维度特性函数。 下表列出了这些特性属性并逐一对其进行说明。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，提供了许多可确定维度和维度特性工作方式的属性。 下表列出了这些特性属性并逐一对其进行说明。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|标识向最终用户显示关联的特性层次结构的文件夹。|  
 |**AttributeHierarchyEnabled**|确定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是否为特性生成特性层次结构。 如果未启用特性层次结构，则不能在用户定义的层次结构中使用该特性，也不能在多维表达式 (MDX) 语句中引用该特性层次结构。|  

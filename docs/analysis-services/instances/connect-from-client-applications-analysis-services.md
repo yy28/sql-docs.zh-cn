@@ -16,19 +16,20 @@ f1_keywords:
 - sql13.swb.connecttoas.connectionproperties.f1
 - sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 20302da167c1ba1d19fb1b65ab871d81f7170591
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果你不熟悉 Analysis Services，信息用于本主题中连接到的现有实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用常用工具和应用程序。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+如果您不熟悉 Analysis Services，则在了解了本主题中的信息之后，您就可以通过常用工具和应用程序连接到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
   
 -   [使用 SQL Server Management Studio (SSMS) 进行连接](#bkmk_SSMS)  
   
@@ -42,9 +43,9 @@ ms.lasthandoff: 01/08/2018
   
  成功的连接依赖于有效的端口配置和适当的用户权限。 要了解有关各项要求的详细信息，请单击以下链接。  
   
--   [配置 Windows 防火墙以允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
+-   [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [授予对对象和操作的访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授权访问对象和操作 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 进行连接  
  在 SSMS 中连接到 Analysis Services 时，能够以交互方式管理服务器实例和数据库。 还可以运行 XMLA 或 MDX 查询以便执行管理任务或检索数据。 与只在发出查询时才加载数据库的其他工具和应用程序相比，SSMS 会在您连接服务器时加载所有数据库，前提是您拥有查看数据库的权限。 这意味着，如果您在服务器上保存有大量的表格数据库，所有这些数据库都会在您使用 SSMS 连接时加载至系统内存。  
@@ -141,6 +142,6 @@ ms.lasthandoff: 01/08/2018
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [模拟 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [创建数据源（SSAS 多维）](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [创建数据源 &#40;SSAS 多维 &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

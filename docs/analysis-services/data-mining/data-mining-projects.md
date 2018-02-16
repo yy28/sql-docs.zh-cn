@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据挖掘项目属于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]解决方案。 在设计过程中，在此项目中创建的对象作为工作区数据库的一部分可用于测试和查询。 当您希望用户能够查询或浏览此项目中的对象时，必须将此项目部署到在多维模型中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+数据挖掘项目是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案的一部分。 在设计过程中，在此项目中创建的对象作为工作区数据库的一部分可用于测试和查询。 当您希望用户能够查询或浏览此项目中的对象时，必须将此项目部署到在多维模型中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
  本主题为您提供了理解和创建数据挖掘项目所需的基本信息。  
   
@@ -129,7 +130,7 @@ ms.lasthandoff: 01/08/2018
 > [!WARNING]  
 >  如果要筛选数据，则可以在数据源视图中执行此操作，但也可以在挖掘模型级别对数据创建筛选器。 因为筛选器定义存储在挖掘模型中，所以通过使用模型筛选器更便于确定用于对模型进行定型的数据。 此外，使用不同的筛选条件可以创建多个相关模型。 有关详细信息，请参阅[挖掘模型筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
- 请注意，您创建的数据源视图可能包含不直接用于分析的其他数据。 例如，您可能添加用于测试、预测或钻取的数据源视图数据。 有关这些用法的详细信息，请参阅 [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md) 和 [钻取](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)生成数据挖掘项目。  
+ 请注意，您创建的数据源视图可能包含不直接用于分析的其他数据。 例如，您可能添加用于测试、预测或钻取的数据源视图数据。 有关这些用法的详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)和[钻取](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
   
 ###  <a name="bkmk_Structures"></a> Mining Structures  
@@ -193,7 +194,7 @@ ms.lasthandoff: 01/08/2018
   
  请注意：这些报表和图表不与项目存储在一起，也不存储在 ssASnoversion 数据库中，因此，如果您需要保留或复制这些结果，则应保存这些结果或使用 DMX 或 AMO 编写这些对象的脚本。 还可以将存储过程用于交叉验证。  
   
- 有关详细信息，请参阅 [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)生成数据挖掘项目。  
+ 有关详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
   
 ###  <a name="bkmk_Predict"></a> Create Predictions  
@@ -208,22 +209,22 @@ ms.lasthandoff: 01/08/2018
  还可以通过使用 Analysis Services 脚本语言 (ASSL) 或使用分析管理对象 (AMO) 来执行这些任务。 有关详细信息，请参阅 [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)。  
   
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
  下面的主题介绍使用数据挖掘向导来创建数据挖掘项目及关联的对象。  
   
 |“任务”|主题|  
 |-----------|------------|  
 |介绍如何使用挖掘结构列|[创建关系挖掘结构](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|提供有关如何添加新的挖掘模型以及处理结构和模型的详细信息|[向结构中添加挖掘模型（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|提供有关如何添加新的挖掘模型以及处理结构和模型的详细信息|[将挖掘模型添加到结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |提供了指向一些资源的链接，这些资源可帮助您自定义生成数据挖掘模型的算法|[自定义挖掘模型和结构](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |提供了指向有关各个挖掘模型查看器的信息的链接|[数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
-|了解如何创建提升图、利润图、分类矩阵或测试挖掘结构|[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|了解如何创建提升图、利润图、分类矩阵或测试挖掘结构|[测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |了解有关处理选项和权限的信息|[处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|提供有关 Analysis Services 的详细信息|[多维模型数据库 (SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|提供有关 Analysis Services 的详细信息|[多维模型数据库 &#40;SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [使用 SQL Server Data Tools 创建多维模型 (SSDT)](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [工作区数据库（SSAS 表格）](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [数据挖掘设计器](../../analysis-services/data-mining/data-mining-designer.md)   
+ [创建使用 SQL Server Data Tools &#40; 多维模型SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [工作区数据库 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

@@ -30,19 +30,20 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 神经网络算法技术参考
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络使用*多层感知器*网络，也称为*Back-Propagated Delta 法则网络*、 组成的神经元，最多三个层或*感知*。 这些层分别是输入层、可选隐藏层和输出层。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络使用由最多三层神经元（即感知器）组成的“多层感知器”网络（也称为“反向传播 Delta 法则”网络）。 这些层分别是输入层、可选隐藏层和输出层。  
   
  有关多层感知器神经网络的详细探讨不属于本文档的讨论范围。 本主题介绍该算法的基本实现，包括用于规范化输入值与输出值的方法以及用于缩减属性基数的功能选择方法。 本主题介绍可用于自定义该算法行为的参数和其他设置，并提供与查询该模型有关的其他信息的链接。  
   
@@ -198,7 +199,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法支持下表中列出的特定输入列和可预测列。  
   
-|“列”|内容类型|  
+|列|内容类型|  
 |------------|-------------------|  
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Table 和 Ordered|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized 和 Ordered|  

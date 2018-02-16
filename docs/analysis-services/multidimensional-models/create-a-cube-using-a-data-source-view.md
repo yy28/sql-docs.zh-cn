@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>使用数据源视图创建多维数据集
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用此方法来生成新多维数据集，如果你想要使用的现有数据源视图。 使用此方法，您可以指定数据源视图并选择您要在数据源视图中使用的事实数据表和维度表。 然后，您选择要包括在多维数据集中的维度和度量值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+如果您想要使用现有的数据源视图，则可以使用这个生成新多维数据集的方法。 使用此方法，您可以指定数据源视图并选择您要在数据源视图中使用的事实数据表和维度表。 然后，您选择要包括在多维数据集中的维度和度量值。  
   
  若要使用数据源创建多维数据集，请在解决方案资源管理器中右键单击“多维数据集”，然后选择“新建多维数据集”。 多维数据集向导将打开。  
   

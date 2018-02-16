@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 77b32b08e1ffc1765d731e9bc9112f093ef854bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>使用多维数据源创建 Power View 报表
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]创建 Power View 报表基于多维模型是比创建基于的报表没有什么不同[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿或 Analysis Services 表格模型。 从 SharePoint 库中的报表数据源连接文件 (.rsds) 创建 Power View 报表。 有关如何创建 .rsds 的详细信息，请参阅 [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+基于多维模型创建 Power View 报表与基于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或 Analysis Services 表格模型创建报表没有什么不同。 从 SharePoint 库中的报表数据源连接文件 (.rsds) 创建 Power View 报表。 有关如何创建 .rsds 的详细信息，请参阅 [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md)。  
   
  在开始之前，您需要知道：  
   

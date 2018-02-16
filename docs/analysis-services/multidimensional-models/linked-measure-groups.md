@@ -18,19 +18,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a5139e2e9e9d5bb06d594f9463f6632b6ee9fb78
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="linked-measure-groups"></a>链接度量值组
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]链接度量值组基于同一数据库或其他 Analysis Services 数据库内不同多维数据集中的另一个度量值组。 如果要在多个多维数据集中重用一组度量值以及对应的数据值，可能使用链接度量值组。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+链接度量值组基于同一数据库内不同多维数据集中的另一度量值组，或基于一个不同的 Analysis Services 数据库。 如果要在多个多维数据集中重用一组度量值以及对应的数据值，可能使用链接度量值组。  
   
  Microsoft 建议原始和链接度量值组驻留于在同一台服务器上运行的解决方案中。 链接到位于远程服务器上的度量值组在未来版本中计划不推荐使用（请参阅 [SQL Server 2016 中不推荐使用的 Analysis Services 功能](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)）。  
   

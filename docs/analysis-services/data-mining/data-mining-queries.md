@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Prediction Query Builder
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-queries"></a>数据挖掘查询
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]数据挖掘查询可用于多种用途。 您可以：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+数据挖掘查询可用于多种目的。 您可以：  
   
 -   将模型应用于新数据以进行单个或多个预测。 可以将输入值作为参数提供，也可以使用批处理文件提供输入值。  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_Understand"></a> 了解数据挖掘查询  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘支持以下查询类型：  
   
--   [预测查询（数据挖掘）](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [预测查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      基于模型中的模式和输入数据进行推断的查询。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
      返回元数据、统计信息和有关模型本身的其他信息的查询。  
   
--   [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [钻取查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      可以检索模型的基础事例数据、甚至结构中未用于模型的数据的查询。  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 01/08/2018
     |[关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)|[Microsoft Naive Bayes 算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|  
     |[聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)|[神经网络模型查询示例](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
     |[决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[顺序分析和聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-    |[线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+    |[线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
     |[逻辑回归模型查询示例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)||  
   
      您还可以调用 VBA 函数，或创建您自己的函数。 有关详细信息，请参阅[函数 (DMX)](../../dmx/functions-dmx.md)。  
@@ -145,35 +146,35 @@ ms.lasthandoff: 01/08/2018
   
  有关运行数据挖掘查询所需的安全上下文的详细信息，请参阅[安全性概述（数据挖掘）](../../analysis-services/data-mining/security-overview-data-mining.md)。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  本节中的各个主题详细地介绍了每种类型的数据挖掘查询，并提供了一些链接，这些链接指向有关如何创建针对数据挖掘模型的查询的详细示例。  
   
- [预测查询（数据挖掘）](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [预测查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [内容查询（数据挖掘）](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [数据定义查询（数据挖掘）](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [数据定义查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
  使用这些链接了解如何创建和使用数据挖掘查询。  
   
 |“任务”|链接|  
 |-----------|-----------|  
 |查看有关数据挖掘查询的教程和演练|[第 6 课：创建和使用预测（数据挖掘基础教程）](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [时序预测 DMX 教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
-|在 SQL Server Management Studio 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[在 SQL Server Management Studio 中创建 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [使用预测查询生成器创建预测查询](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [将预测函数应用于模型](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手动编辑预测查询](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
-|使用预测查询中使用的外部数据|[为预测查询选择和映射输入数据](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [为预测查询选择和映射输入数据](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
+|在 SQL Server Management Studio 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[在 SQL Server Management Studio 中创建 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [使用预测查询生成器创建预测查询](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [对模型应用预测函数](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [手动编辑预测查询](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
+|使用预测查询中使用的外部数据|[选择和映射为预测查询的输入的数据](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [选择和映射为预测查询的输入的数据](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |使用查询结果|[查看和保存预测查询的结果](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
-|使用 Management Studio 中提供的 DMX 和 XMLA 查询模板|[通过模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [使用 XMLA 创建数据挖掘查询](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [在 SQL Server Management Studio 中使用 Analysis Services 模板](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|了解有关内容查询的详细信息和参阅示例|[针对挖掘模型创建内容查询](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [查询用于创建挖掘模型的参数](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [内容查询（数据挖掘）](../../analysis-services/data-mining/content-queries-data-mining.md)|  
+|使用 Management Studio 中提供的 DMX 和 XMLA 查询模板|[从模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [使用 XMLA 创建数据挖掘查询](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [在 SQL Server Management Studio 中使用 Analysis Services 模板](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|了解有关内容查询的详细信息和参阅示例|[在挖掘模型上创建内容查询](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [查询用于创建挖掘模型的参数](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [内容查询（数据挖掘）](../../analysis-services/data-mining/content-queries-data-mining.md)|  
 |设置查询选项和解决查询权限问题|[更改数据挖掘查询的超时值](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
 |在 Integration Services 中使用数据挖掘组件|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

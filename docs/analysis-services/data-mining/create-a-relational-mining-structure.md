@@ -18,19 +18,20 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>创建关系挖掘结构
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]大多数数据挖掘模型基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+大多数数据挖掘模型都基于关系数据源。 创建关系数据挖掘模型的好处是，您可以汇集即席数据并定型和更新模型，此操作不会像创建多维数据集那样复杂。  
   
  关系挖掘结构可从不同源绘制数据。 只要原始数据可定义为数据源视图的一部分，就可以将该数据存储在表、文件或关系数据库系统中。 例如，如果数据位于 Excel、SQL Server 数据仓库或 SQL Server 报表数据库中，或位于通过 OLE DB 或 ODBC 访问接口访问的外部源中，则应使用关系挖掘结构。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  **创建测试集**：在此页上，您可以告知向导应留出多少数据以便测试模型。 如果数据将支持多个模型，则最好是创建一个保留数据集，以便能基于同一数据测试所有模型。  
   
-     有关详细信息，请参阅 [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)生成数据挖掘项目。  
+     有关详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
 8.  **完成向导**：在此页上，您可以为新的挖掘结构和关联的挖掘模型提供名称，并保存该结构和模型。  
   
@@ -128,7 +129,7 @@ ms.lasthandoff: 01/08/2018
  为何此功能会很有用？ 假设您查看的是聚类分析模型的结果，并希望查看已放入特定分类的客户。 通过使用钻取功能，您可以查看详细信息（例如，联系人信息）。  
   
 > [!WARNING]  
->  若要使用钻取功能，您必须在创建挖掘结构时启用它。 以后，您可以通过对模型设置属性来对其启用钻取功能，但挖掘结构要求一开始就设置此选项。 有关详细信息，请参阅 [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+>  若要使用钻取功能，您必须在创建挖掘结构时启用它。 以后，您可以通过对模型设置属性来对其启用钻取功能，但挖掘结构要求一开始就设置此选项。 有关详细信息，请参阅[钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘设计器](../../analysis-services/data-mining/data-mining-designer.md)   

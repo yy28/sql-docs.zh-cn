@@ -23,19 +23,20 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: "77"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>挖掘结构（Analysis Services – 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]挖掘结构定义从中生成挖掘模型的数据： 它指定的源数据视图、 数量和类型的列，和的可选分区为定型集和测试设置。 单个挖掘结构可以支持多个共享同一个域的挖掘模型。 下图说明了数据挖掘结构与数据源以及构成数据挖掘模型之间的关系。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+挖掘结构定义生成挖掘模型时依据的数据：它指定源数据视图、列数量和类型以及分为定型集和测试集的可选分区。 单个挖掘结构可以支持多个共享同一个域的挖掘模型。 下图说明了数据挖掘结构与数据源以及构成数据挖掘模型之间的关系。  
   
  ![处理的数据： 源模型的结构到](../../analysis-services/data-mining/media/dmcon-modelarch.gif "处理的数据： 源到模型的结构")  
   
@@ -115,19 +116,19 @@ ms.lasthandoff: 01/08/2018
   
  有关数据挖掘模型的体系结构的详细信息，请参阅 [挖掘模型（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
  使用提供的链接了解有关如何定义、管理和使用挖掘结构的详细信息。  
   
 |“任务”|链接|  
 |-----------|-----------|  
-|使用关系挖掘结构|[创建新的关系挖掘结构](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [向挖掘结构中添加嵌套表](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
+|使用关系挖掘结构|[创建新的关系挖掘结构](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [向挖掘结构中添加嵌套的表](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |使用基于 OLAP 多维数据集的挖掘结构|[创建新的 OLAP 挖掘结构](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
-|使用挖掘结构中的列|[向挖掘结构中添加列](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [从挖掘结构中删除列](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
+|使用挖掘结构中的列|[将列添加到挖掘结构](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [从挖掘结构中删除列](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |更改或查询挖掘结构属性和数据|[更改挖掘结构的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
 |使用基础数据源和更新源数据|[编辑用于挖掘结构的数据源视图](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [处理挖掘结构](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库对象（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [挖掘模型（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [挖掘模型 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

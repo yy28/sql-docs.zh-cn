@@ -15,19 +15,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-linked-dimensions"></a>定义链接维度
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]链接的维度基于维度创建和存储的同一版本和兼容性级别的另一个 Analysis Services 数据库中。 通过使用链接维度，您可以创建、存储以及维护某个数据库上的维度，同时可让多个数据库的用户使用该维度。 对于用户，链接维度在外观上就像其他任意维度一样。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+链接维度基于在具有相同版本和兼容性级别的另一个 Analysis Services 数据库中创建和存储的维度。 通过使用链接维度，您可以创建、存储以及维护某个数据库上的维度，同时可让多个数据库的用户使用该维度。 对于用户，链接维度在外观上就像其他任意维度一样。  
   
  链接文档是只读的。 如果您想要修改维度或创建新关系，则必须更改源维度，然后删除后再重新创建链接的维度及其关系。 不能刷新某一链接的维度以便从源项目中提取更改。  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  因为刷新功能不可用，所以，大多数 Analysis Services 开发人员都是复制维度，而不是链接它们。 可以跨同一个解决方案中的多个项目复制维度。 有关详细信息，请参阅 [在 SSAS 中刷新链接的维度](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
  提供维度的源数据库和使用维度的当前数据库必须处于相同的版本和兼容级别。 有关详细信息，请参阅 [多维数据库的兼容级别 (Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
   
  源数据库必须已部署并且处于联机状态。 发布或恢复链接对象的服务器必须配置为允许该操作（见下文）。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
 7.  在“模拟信息”页中，单击 **“使用服务帐户”**。 单击 **“下一步”**，然后完成向导。 将在“链接对象”向导中选择您刚定义的连接。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  您不能更改链接维度的结构，因此无法使用维度设计器的 **“维度结构”** 选项卡来进行查看。 处理链接维度后，可以使用 **“浏览器”** 选项卡进行查看。还可以更改维度的名称，并为该名称创建一个转换。  
   
 ## <a name="see-also"></a>另请参阅  

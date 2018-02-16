@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SystemGetAccuracyResults
 - cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults（Analysis Services - 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]返回挖掘结构和所有相关的模型，不包括聚类分析模型的交叉验证准确性度量。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+返回挖掘结构和所有相关模型（不包括聚类分析模型）的交叉验证准确性指标。  
   
  此存储过程将为作为单个分区的整个数据集返回指标。 若要将数据集分区为交叉部分，并返回每个分区的度量值，请使用 [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)。  
   
@@ -109,21 +110,21 @@ SystemGetAccuracyResults(<mining structure>,
   
 |列名|Description|  
 |-----------------|-----------------|  
-|“模型”|所测试模型的名称。 **All** 指示结果为所有模型的聚合。|  
+|Model|所测试模型的名称。 **All** 指示结果为所有模型的聚合。|  
 |AttributeName|可预测列的名称。|  
 |AttributeState|可预测列中的目标值。<br /><br /> 如果此列包含一个值，则只针对指定的状态收集指标。<br /><br /> 如果未指定此值，或为 Null，则针对每个预测最有可能的状态计算指标。|  
 |PartitionIndex|表示结果适用的分区。<br /><br /> 对于此过程，始终为 0。|  
 |PartitionCases|一个整数，指示事例集，基于中的行数*\<数据集 >*参数。|  
 |测试|所执行测试的类型。|  
 |度量值|测试返回的度量值的名称。 每个模型的度量值取决于模型类型以及可预测值的类型。<br /><br /> 有关为每个可预测类型返回的度量值的列表，请参阅[交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。<br /><br /> 有关每个度量值的定义，请参阅[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。|  
-|ReplTest1|指定的度量值的值。|  
+|“值”|指定的度量值的值。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  下表提供了一些值的示例，您可以使用这些值指定用于交叉验证的挖掘结构中的数据。 如果要将测试事例用于交叉验证，挖掘结构必须已包含测试数据集。 有关如何在创建挖掘结构时定义测试数据集的信息，请参阅 [定型数据集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
 |整数值|Description|  
 |-------------------|-----------------|  
-|@shouldalert|仅使用定型事例。|  
+|1|仅使用定型事例。|  
 |2|仅使用测试事例。|  
 |3|同时使用定型事例和测试事例。|  
 |4|无效组合。|  
@@ -151,23 +152,23 @@ CALL SystemGetAccuracyResults (
   
  示例结果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|测试|度量值|ReplTest1|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|测试|度量值|“值”|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分类|真正|605|  
-|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分类|假正|177|  
-|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分类|真负|501|  
-|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|分类|假负|355|  
-|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|可能性|对数评分|-0.598454638753028|  
-|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|可能性|提升|0.0936717116894395|  
-|v Target Mail DT|Bike Buyer|@shouldalert|0|1638|可能性|均方根误差|0.361630800104946|  
+|v Target Mail DT|Bike Buyer|1|0|1638|分类|真正|605|  
+|v Target Mail DT|Bike Buyer|1|0|1638|分类|假正|177|  
+|v Target Mail DT|Bike Buyer|1|0|1638|分类|真负|501|  
+|v Target Mail DT|Bike Buyer|1|0|1638|分类|假负|355|  
+|v Target Mail DT|Bike Buyer|1|0|1638|可能性|对数评分|-0.598454638753028|  
+|v Target Mail DT|Bike Buyer|1|0|1638|可能性|提升|0.0936717116894395|  
+|v Target Mail DT|Bike Buyer|1|0|1638|可能性|均方根误差|0.361630800104946|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  从 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 开始，交叉验证仅在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中可用。  
   
 ## <a name="see-also"></a>另请参阅  
  [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
