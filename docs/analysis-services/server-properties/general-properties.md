@@ -40,19 +40,20 @@ helpviewer_keywords:
 - StatisticsStoreSize property
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 286999ab145671370f458f0ffb8f5f2db85d0461
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="general-properties"></a>常规属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **适用于：** 多维和表格服务器模式，除非另外说明。  
   
@@ -101,10 +102,10 @@ ms.lasthandoff: 01/08/2018
   
  此属性的有效值包括以下项：  
   
-|ReplTest1|Description|  
+|“值”|说明|  
 |-----------|-----------------|  
 |0|这是默认值。 它指定多维模式，用于支持使用 MOLAP、HOLAP 和 ROLAP 存储以及数据挖掘模型的多维数据库。|  
-|@shouldalert|指定 Analysis Services 实例已作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署的一部分安装。 不要更改作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装的一部分的 Analysis Services 实例的部署模式属性。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据将不再在该服务器上运行。|  
+|1|指定 Analysis Services 实例已作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署的一部分安装。 不要更改作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安装的一部分的 Analysis Services 实例的部署模式属性。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据将不再在该服务器上运行。|  
 |2|指定用于承载使用内存中存储或 DirectQuery 存储的表格模型数据库的表格模式。|  
   
  每个模式与其他模式都是互斥的。 配置为表格模式的服务器不能运行包含多维数据集和维度的 Analysis Services 数据库。 如果基础计算机硬件能够支持，则您可以在同一台计算机上安装 Analysis Services 的多个实例并且对每个实例进行配置以便使用不同的部署模式。 请记住，Analysis Services 是一种消耗大量资源的应用程序。 仅推荐对于高端服务器，才在同一个系统上部署多个实例。  

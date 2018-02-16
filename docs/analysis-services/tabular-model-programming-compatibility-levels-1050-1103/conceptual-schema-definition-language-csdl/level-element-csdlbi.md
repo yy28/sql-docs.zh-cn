@@ -11,31 +11,33 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6d2896a01a8efeacb42bde203ad93e0efdb52be4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="level-element-csdlbi"></a>Level 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]级别元素为复杂类型定义的层次结构中的单个级别  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Level 元素是定义层次结构中的单个级别的复杂类型  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 Level 元素的元素和属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
 |数据源|是|属性引用的容器。|  
 |PropertyRef|是|对实例属性的引用。 可以从所引用的实例属性中获取其他级别属性（例如标题、名称和引用名称）。 如果是这样，则不需要在 Level 元素中指定这些属性。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  有关表格模型中的层次结构的详细信息，请参阅[层次结构元素 (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md)。  
   
 ## <a name="example"></a>示例  

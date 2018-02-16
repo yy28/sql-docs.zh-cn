@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0986792fb9c8e7d6300e85d9a700e75cac783aeb
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>配置或修复 Power Pivot for SharePoint 2013
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要配置或修复安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，请使用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导安装 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 本主题介绍 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 有关 SharePoint 2010 的详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+若要配置或修复 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 的安装，请使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导安装 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 本主题介绍 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 有关 SharePoint 2010 的详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -130,7 +131,7 @@ ms.lasthandoff: 01/19/2018
 ||SharePoint 管理中心端口|默认值（如果需要）|如果未配置场，则该工具将提供用于创建场的选项，包括创建指向管理中心的 HTTP 端点。 它会选取一个未在使用中的随机生成的端口号。|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([服务器名称]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|用户输入|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器是 Excel Services 启用核心 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能所必需的。 你在此页上键入的服务器名称还将添加到“配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器”页上的列表中。|  
 |**配置新场**|数据库服务器<br /><br /> 场帐户<br /><br /> 通行短语<br /><br /> SharePoint 管理中心端口|默认值（如果需要）|这些设置默认为在主页上输入的设置。|  
-|**创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序**|服务应用程序名称|默认|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序名称，默认名称为**默认[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序**。 您可以在该工具中替换为不同的值。|  
+|**创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序**|服务应用程序名称|默认|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序名称，默认名称为“默认 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”。 您可以在该工具中替换为不同的值。|  
 ||数据库服务器|默认|承载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库的数据库服务器。 默认服务器名称与用于该场的数据库服务器相同。 您可以将默认服务器名称替换为其他值。|  
 ||数据库名称|默认|要为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库创建的数据库的名称。 默认数据库名称基于服务应用程序名称，后跟 GUID 以便确保名称唯一。 您可以在该工具中替换为不同的值。|  
 |**创建默认的 Web 应用程序**|Web 应用程序名称|默认值（如果需要）|如果不存在任何 Web 应用程序，该工具将创建一个。 Web 应用程序配置为使用经典模式身份验证，并侦听端口 80。 最大文件上载大小设为 2047，这是 SharePoint 所允许的最大值。 较大的文件上载大小用于容纳将上载到服务器的大型 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 文件。|  

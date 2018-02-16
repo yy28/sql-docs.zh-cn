@@ -20,10 +20,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教程课程中，你将向 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中添加分组和总计以便组织和汇总数据。  

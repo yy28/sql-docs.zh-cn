@@ -19,13 +19,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 10f572b6bb4dc81e2fb2ad87af058b3a114bd711
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>核对清单：使用 PowerShell 验证 Power Pivot for SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]不[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]安装或恢复操作已完成，而无需实体的验证测试通过，其中确认你的服务和数据运行正常。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+若非通过可靠的验证测试确认服务和数据运行正常， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安装或恢复操作就不算完成。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。  
   
 ![PowerShell 相关内容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相关内容")完整的 PowerShell 脚本时，包含在该主题的底部。 您可以使用此完整脚本作为起点，构建用于审计 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 完整部署的自定义脚本。
   

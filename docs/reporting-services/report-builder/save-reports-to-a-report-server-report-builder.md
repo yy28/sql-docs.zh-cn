@@ -18,10 +18,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b92ace95ff7d250fda16b1e021fddf61379cdb19
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>将报表保存到报表服务器（报表生成器）
   在报表生成器中，可以将报表定义保存到报表服务器（也称为发布报表）。 将报表保存到报表服务器时，其他用户可以查看报表。 每次运行已发布的报表时，将检索最新的数据。 若要保存所呈现报表的静态副本，请将该报表导出为另一文件格式并保存它，或使用报表历史记录功能来保存所呈现报表的各个版本。  

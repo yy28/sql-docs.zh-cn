@@ -19,13 +19,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题说明在以前创建的工作簿的用户体验[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]环境以及如何升级[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工作簿以便你可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [Power Pivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本主题说明了在以前的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 环境中创建的工作簿的用户体验，以及如何升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿以便你可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [Power Pivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
   
 > [!WARNING]  
 >  对于在服务器上自动升级的工作簿，不能回滚升级。 一旦升级某一工作簿后，它就将保持升级状态。 若要使用以前的版本，可以将以前的工作簿重新发布到 SharePoint，还原以前的版本，或者回收工作簿。 有关在 SharePoint 中还原或回收文档的详细信息，请参阅 [通过使用回收站和版本控制计划保护内容](http://go.microsoft.com/fwlink/?LinkId=238669)。  

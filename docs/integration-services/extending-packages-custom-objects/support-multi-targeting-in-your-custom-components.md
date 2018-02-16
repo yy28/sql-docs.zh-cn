@@ -21,10 +21,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支持自定义组件中的多目标
  现在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。 若要获取用于 Visual Studio 2015 的 SSDT，请参阅[下载最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 

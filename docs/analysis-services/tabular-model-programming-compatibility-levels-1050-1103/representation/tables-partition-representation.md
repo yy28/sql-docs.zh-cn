@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a3df4bd31c72c38a34167693c542b0fce87d8eb4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---partition-representation"></a>表的分区表示形式
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]可用于操作的目的，划分表中的行的不同子集，当组合在一起构成表;每个这些子集是表的一个分区。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+为便于操作，可以将一个表划分为不同的行子集，而将这些行子集组合在一起可形成表；这些子集中的每个子集都是表的一个分区。  
   
 ## <a name="partition-representation"></a>分区表示形式  
  就 AMO 对象而言，分区表示形式与 <xref:Microsoft.AnalysisServices.Partition> 之间存在一对一映射关系，并且不需要任何其他主要 AMO 对象。  

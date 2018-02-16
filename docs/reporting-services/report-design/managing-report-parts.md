@@ -18,10 +18,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0728592148787403783279f0be8d42e52f5237a2
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="managing-report-parts"></a>管理报表部件
   报表部件可在分页报表中由多个用户重用，并且可以在多个报表中重用。 用户可以搜索服务器上的报表部件并将其添加到报表中。  用户还可以接收服务器上的报表部件更新通知，以及重新发布报表部件的新版本。 这些报表创作操作可能受 Reporting Services 安全权限的影响和控制。  本主题介绍报表部件在位于服务器上后的属性和行为。  

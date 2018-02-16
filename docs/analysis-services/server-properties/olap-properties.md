@@ -97,19 +97,20 @@ helpviewer_keywords:
 - MemoryLimit property
 - AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cfeaedcf34ffdafdc54c0ce88ae80ecfc6190f6f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="olap-properties"></a>OLAP 属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **适用范围：** 仅限多维服务器模式  
   
@@ -293,7 +294,7 @@ ms.lasthandoff: 01/08/2018
  **ROLAPDimensionProcessingEffort**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="query"></a>查询  
+## <a name="query"></a>Query  
  **AggregationsUseEnabled**  
  一个布尔值属性，定义在运行时是否使用存储聚合。 此属性允许在不更改聚合设计或不重新处理的情况下禁用聚合，用于基准确定，可供参考。  
   
@@ -437,7 +438,7 @@ ms.lasthandoff: 01/08/2018
  **DataCache\ MemoryModel\ Tax**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="jobs"></a>中执行计划的管理任务，即“作业”  
+## <a name="jobs"></a>作业  
  **ProcessAggregation\ MemoryModel\ Income**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   

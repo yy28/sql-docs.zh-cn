@@ -19,10 +19,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0abefa916dda5690d033bc9cd74ac5f75245d408
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-roles"></a>用户角色
   本节介绍 Change Data Capture Service for Oracle by Attunity 的用户角色。 介绍的角色包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色、Windows 角色或 Oracle 数据库角色。  

@@ -1,7 +1,7 @@
 ---
 title: "处理对象 (XMLA) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - errors [XML for Analysis]
 - objects [XML for Analysis]
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - processing objects [XML for Analysis]
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72d5bdfcfc7c3d461dc3bc986c7ff6106e3da51
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-objects-xmla"></a>处理对象 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 处理是步骤或系列的指导将数据转换进行业务分析的信息。 处理因对象类型而异，但处理始终是将数据转换为信息的一个环节。  
+  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 处理是步骤或系列的指导将数据转换进行业务分析的信息。 处理因对象类型而异，但处理始终是将数据转换为信息的一个环节。  
   
  到进程[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象时，可以使用[过程](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)命令。 **过程**命令可以处理以下对象上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例：  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 -   挖掘结构  
   
--   “度量值组”  
+-   分区  
   
  若要控制处理的对象，**过程**命令具有可以设置的各种属性。 **过程**命令具有控制属性： 将执行多少处理、 将处理哪些对象、 是否使用的外部绑定、 如何处理错误，以及如何管理写回表。  
   

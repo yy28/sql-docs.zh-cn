@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 21e4a28e2be7492302e1b68506b4e74f695d30fd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---calculated-column-representation"></a>表的计算的列表示形式
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]计算的列是在表中创建一个新列的 DAX 表达式和获得的值存储在表中。 每次处理表时，都会对计算列表达式进行计算。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+计算列是在表中创建新列并且获取的值存储于该表中的 DAX 表达式。 每次处理表时，都会对计算列表达式进行计算。  
   
 ## <a name="calculated-column-representation"></a>计算列表示形式  
   

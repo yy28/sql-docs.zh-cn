@@ -11,25 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, objects
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ea027aba8d0d49c752bd31569f84d0f0cec022bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="objects-assl"></a>对象 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此引用部分包含的每个元素，它就像在 Analysis Services 脚本语言 (ASSL) 架构中的对象的语法和用法的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本参考部分包含在 Analysis Services 脚本语言 (ASSL) 架构中作为对象的每个元素的语法和用法信息。  
   
  尽管 ASSL 架构仅包含 XML 元素，从开发人员的角度来看，本部分中描述的元素的对象相对应，如**数据库**，**多维数据集**，和**维度**对象，包含的实例的对象的层次结构中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
@@ -37,12 +39,12 @@ ms.lasthandoff: 01/08/2018
   
  在少数情况下，架构中显示为属性的叶级元素可归类为对象，这是因为该元素的类型是对象类型。 例如，**源**的**维度**对象属于类型**DimensionBinding**。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |元素|Description|  
 |-------------|-----------------|  
 |[帐户元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/account-element-assl.md)|包含有关中的帐户类型的详细信息[数据库](../../../analysis-services/scripting/objects/database-element-assl.md)元素。|  
-|[Action 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|包含有关中可用的操作信息[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)元素或[透视](../../../analysis-services/scripting/objects/perspective-element-assl.md)元素。|  
+|[Action 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|包含 [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) 或 [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) 元素中提供的操作的相关信息。|  
 |[聚合元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)|定义为单个聚合[分区](../../../analysis-services/scripting/objects/partition-element-assl.md)元素。|  
 |[AggregationDesign 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)|定义一组可由数据库中的多个分区共享的聚合定义。|  
 |[AggregationInstance 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)|定义分区的聚合实例。|  

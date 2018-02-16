@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c2f754a253e2c33555712dd456002ed69b608188
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>安装或卸载 Power Pivot for SharePoint 加载项 (SharePoint 2016)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)]是应用程序服务器组件和后端服务提供的集合[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的数据访问[!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]场。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 加载项 (**spPowerpivot16.msi**) 是用于安装应用程序服务器组件的安装程序包。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 是在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 场中提供 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 数据访问的应用程序服务器组件和后端服务的集合。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 加载项 (**spPowerpivot16.msi**) 是用于安装应用程序服务器组件的安装程序包。  
   
  **注意：** 本主题介绍如何安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 解决方案文件和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置工具。 安装后，请参阅以下主题以了解有关配置工具和附加功能的信息：[配置 Power Pivot 和部署解决方案 (SharePoint 2013)](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)。  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/29/2018
   
 -   **应用程序服务器：** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能包括将工作簿用作数据源、计划数据刷新以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板。  
   
-     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] 是一个 Windows 安装程序包 (**spPowerpivot16.msi**)，用于部署 Analysis Services 客户端库和将 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 安装文件复制到计算机。 此安装程序不会在 SharePoint 中部署或配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能。 默认情况下将安装下列组件：  
+     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 是一个 Windows 安装程序包 (**spPowerpivot16.msi**)，用于部署 Analysis Services 客户端库和将 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 安装文件复制到计算机。 此安装程序不会在 SharePoint 中部署或配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能。 默认情况下将安装下列组件：  
   
     -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]。 此组件包括 PowerShell 脚本（.ps1 文件）、SharePoint 解决方案包 (.wsp) 和 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 配置工具，用于在 SharePoint 2016 场中部署 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 。  
   

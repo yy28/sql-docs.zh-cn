@@ -1,7 +1,7 @@
 ---
 title: "编程 AMO OLAP 高级对象 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,26 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09f1785d313f0598121ad06e42b26ca4f4367730
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 高级对象的编程
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题说明分析管理对象 (AMO) 编程的 OLAP 的详细信息高级对象。 本主题包含以下各节：  
+  本主题介绍 OLAP 高级对象的分析管理对象 (AMO) 编程详细信息。 本主题包含以下各节：  
   
 -   [操作对象](#Action)  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [转换对象](#Transl)  
   
-##  <a name="Action"></a>操作对象  
+##  <a name="Action">操作对象</a>  
  操作类用于在浏览多维数据集的某些区域时创建活动响应。 Action 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。 操作可为不同类型，因而也就必须根据其类型进行创建。 操作可为：  
   
 -   钻取操作，对于在其上执行了该操作的多维数据，该操作将返回表示其所选单元的基础数据的行集。  
@@ -190,7 +191,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI"></a>Kpi 对象  
+##  <a name="KPI">Kpi 对象</a>  
  关键绩效指标 (KPI) 是与多维数据集中的某个度量值组关联并用于评估业务成败的计算集合。 <xref:Microsoft.AnalysisServices.Kpi> 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。  
   
  创建 <xref:Microsoft.AnalysisServices.Kpi> 对象需要执行下列步骤：  
@@ -233,15 +234,15 @@ static public void CreateActions(Cube cube)
   
 |图像用法|图像名称|状态数|  
 |-----------------|----------------|----------------------|  
-|“登录属性”|形状|3|  
-|“登录属性”|交通灯|3|  
-|“登录属性”|路标|3|  
-|“登录属性”|测量|3|  
-|“登录属性”|反向测量|5|  
-|“登录属性”|温度计|3|  
-|“登录属性”|柱状|3|  
-|“登录属性”|面|3|  
-|“登录属性”|方差箭头|3|  
+|状态|形状|3|  
+|状态|交通灯|3|  
+|状态|路标|3|  
+|状态|仪表|3|  
+|状态|反向测量|5|  
+|状态|温度计|3|  
+|状态|柱状|3|  
+|状态|面|3|  
+|状态|方差箭头|3|  
 |走向|标准箭头|3|  
 |走向|状态箭头|3|  
 |走向|反向状态箭头|5|  
@@ -349,7 +350,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp"></a>透视对象  
+##  <a name="Persp">透视对象</a>  
  <xref:Microsoft.AnalysisServices.Perspective> 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。  
   
  创建 <xref:Microsoft.AnalysisServices.Perspective> 对象需要执行下列步骤：  
@@ -412,7 +413,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC"></a>ProactiveCaching 对象  
+##  <a name="PC">ProactiveCaching 对象</a>  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> 对象可通过 AMO 进行定义。  
   
  创建 <xref:Microsoft.AnalysisServices.ProactiveCaching> 对象需要执行下列步骤：  
@@ -469,7 +470,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a>转换对象  
+##  <a name="Transl">转换对象</a>  
  Translation 对象可通过 AMO 进行定义，但要从浏览数据的客户端应用程序使用这些对象。 Translation 对象是易于编码的简单对象。 对象标题的翻译由区域设置标识符和翻译后的标题对提供。 对于任何标题，都可以启用多个翻译。 可以为多数 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象（例如维度、属性、层次结构、多维数据集、度量值组、度量值以及其他对象）提供翻译。  
   
  下面的代码示例为属性“产品名称”的名称提供了西班牙语翻译。  

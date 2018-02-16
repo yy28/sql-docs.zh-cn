@@ -11,30 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ec23a28ccf5a6fc115ae9aac984c6e9a30eea694
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>用于商业智能的 CSDL 批注 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持与商业智能批注 (CSDLBI) 称为概念架构定义语言 XML 格式的表示法的表格模型的定义。 本主题概要介绍了 CSDLBI 以及如何将其与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型结合使用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持以 XML 格式（称为带商业智能注释的概念性架构定义语言 (CSDLBI)）来表示表格模型定义。 本主题概要介绍了 CSDLBI 以及如何将其与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型结合使用。  
   
 ## <a name="understanding-the-role-of-csdl"></a>理解 CSDL 的角色  
  概念性架构定义语言 (CSDL) 是一种描述实体、关系和函数的基于 XML 的语言。 CSDL 定义为实体数据框架的一部分。 BI 注释是一个扩展，旨在支持使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来对数据建模。  
   
  尽管 CSDL 符合实体数据框架，但您无需理解实体关系模型或具有用于基于模型生成表格模型或报表的任何特殊工具。 您可以使用客户端工具（如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]）或 API（如 AMO）来生成模型，并将模型部署到服务器。 客户端通过使用模型定义文件连接到模型，模型定义文件通常发布到报表设计人员和报表使用者可以使用该文件的 SharePoint 库。 有关详细信息，请参阅以下链接：  
   
--   [表格模型解决方案（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+-   [表格模型解决方案 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
--   [表格模型解决方案部署（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [表格模型解决方案部署 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [PowerPivot BI 语义模型连接 (.bism)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   

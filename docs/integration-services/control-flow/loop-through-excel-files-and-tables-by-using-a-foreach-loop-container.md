@@ -23,10 +23,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8344f5e7ec975af0dea3b35a218347b8c1d6224f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 循环容器，循环遍历 Excel 文件和表
   本主题中的过程介绍如何使用具有相应枚举器的 Foreach 循环容器循环访问文件夹中的 Excel 工作簿或 Excel 工作簿中的表。  

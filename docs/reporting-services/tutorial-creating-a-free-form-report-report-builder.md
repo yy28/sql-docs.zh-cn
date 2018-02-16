@@ -20,10 +20,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 76a43f57cfd8c5712928dc8ee408cb517f7dceaf
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
 在本教程中，将创建充当新闻稿的分页报表。 每一页都会显示静态文本、汇总视觉对象和详细的示例销售数据。

@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4-3-自动分组属性成员
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/22/2018
 **DiscretizationMethod** 属性可以确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是否创建分组，并可确定要执行的分组类型。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不执行任何分组。 如果启用了自动分组，则可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性的结构自动确定最佳分组方法，也可以选择下面列表中的一个分组算法来指定分组方法：  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建分组范围，在各个组之间平均分布所有维度成员。  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建分组范围，以便在各个组之间平均分布所有维度成员。  
   
 **Clusters**  
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 K-Means 聚类分析方法和高斯分布，对输入值执行单一维度聚类分析，以此创建分组。 此选项只对数值列有效。  

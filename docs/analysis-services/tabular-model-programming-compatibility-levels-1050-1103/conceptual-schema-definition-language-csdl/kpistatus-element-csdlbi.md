@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 6fee5b82-caa8-46a1-ad68-bbce3e11e01e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: af4c2fd061dcfcce4316fd16dd0272bbac45c6c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="kpistatus-element-csdlbi"></a>KpiStatus 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]KpiStatus 元素定义对包含作为状态指示器中关键绩效指标 (KPI) 的值的列的引用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+KpiStatus 元素定义对某列的引用，该列包含用作关键绩效指标 (KPI) 中的状态指示器的值。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 KpiStatus 元素的元素和属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|是|对某列的引用，该列包含用作 KPI 中的状态指示器的值。<br /><br /> 此元素必须正好包含一个列引用，如 TPropertyRefcomplex 类型所定义。|  
   

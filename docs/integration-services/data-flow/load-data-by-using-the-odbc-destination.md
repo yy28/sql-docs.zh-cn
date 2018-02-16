@@ -19,10 +19,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9675d9f901f47a08cb18ea725e272f054eeb17ac
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
   本过程说明如何使用 ODBC 目标加载数据。 若要添加和配置 ODBC 目标，包中必须已包含至少一个数据流任务和源。  

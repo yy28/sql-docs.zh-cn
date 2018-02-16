@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>什么 &#39; s Analysis Services 中的新增功能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -89,7 +89,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>并行处理表格模型中的多个表分区    
  此版本为包含两个或更多个分区的表提供新的并行处理功能，从而提高处理性能。 使用此功能不需要进行任何配置设置。 有关配置分区和处理表的详细信息，请参阅[表格模型分区（SSAS 表格）](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)。    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>在 SSMS 中将计算机帐户添加为管理员    
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]管理员现在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将计算机帐户配置为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员组的成员。 在“选择用户或组”对话框中，设置计算机域的“位置”，然后添加“计算机”对象类型。 有关详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员现在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将计算机帐户配置为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员组的成员。 在“选择用户或组”对话框中，设置计算机域的“位置”，然后添加“计算机”对象类型。 有关详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
  ### <a name="dbcc-for-analysis-services"></a>DBCC for Analysis Services    
  数据库一致性检查 (DBCC) 在内部运行，以检测数据库负载上的潜在数据损坏问题，但如果你怀疑数据或模型有问题，也可以按需运行该工具。 DBCC 将根据模型是表格式还是多维式来运行不同的检查。 有关详细信息，请参阅[适用于 Analysis Services 表格数据库和多维数据库的数据库一致性检查器 (DBCC)](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md)。    
  ### <a name="extended-events-updates"></a>扩展事件更新    

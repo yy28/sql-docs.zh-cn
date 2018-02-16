@@ -19,10 +19,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 29791eaade29aa28089dfb579206c2dbddbed1ad
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="look-up-process-chain"></a>查找进程链
   使用 **“查找进程链”** 对话框查找在 SAP Netweaver BW 系统中定义的进程链。 当可用进程链列表显示时，选择您需要的进程链，然后源将使用需要的值填充关联的选项。  

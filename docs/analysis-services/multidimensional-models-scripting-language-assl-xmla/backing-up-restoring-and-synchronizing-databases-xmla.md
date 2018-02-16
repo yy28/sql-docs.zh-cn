@@ -1,7 +1,7 @@
 ---
 title: "备份、 还原和同步数据库 (XMLA) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>备份、还原和同步数据库 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 XML for Analysis，有三个命令的备份、 还原和同步数据库：  
+  在 XML for Analysis 中，有三个命令分别用于备份、还原和同步数据库：  
   
 -   [备份](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令备份[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]备份文件 (.abf)，部分中所述[备份数据库](#backing_up_databases)。  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [同步](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)命令将一个同步[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部分中所述，使用数据和元数据的另一个数据库数据库[同步数据库](#synchronizing_databases)。  
   
-##  <a name="backing_up_databases"></a>备份数据库  
+##  <a name="backing_up_databases"></a> 备份数据库  
  如前所述，**备份**命令备份指定[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]到备份文件的数据库。 **备份**命令具有各种属性，可让你指定要备份的数据库备份的文件，若要使用，如何备份安全定义和要备份远程分区。  
   
 > [!IMPORTANT]  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  值**安全**属性仅限于下表中列出的字符串之一。  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|在备份文件中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在备份文件中包括安全定义和成员身份信息。|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  对于要备份每个远程数据源中,，你可以指定其相应的备份文件通过包括[位置](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)中的元素[位置](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md)属性**备份**命令。 **位置**元素应具有其**文件**属性设置为远程的备份文件的 UNC 路径和文件名称并将其[DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)属性设置为的标识符在数据库中定义的远程数据源。  
   
-##  <a name="restoring_databases"></a>还原数据库  
+##  <a name="restoring_databases"></a> 还原数据库  
  **还原**命令会将还原指定[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]从备份文件的数据库。 **还原**命令具有各种属性，可让你指定要还原的备份文件，若要使用，如何还原安全定义、 远程分区要存储和重新分配的数据库关系 OLAP (ROLAP)对象。  
   
 > [!IMPORTANT]  
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/08/2018
   
  此元素的值限定为下表中列出的字符串之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|在数据库中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在数据库中包括安全定义和成员身份信息。|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  你可以使用**位置**中的元素**还原**命令来重新定位 ROLAP 对象。 每个**位置**元素，用于重新定位数据源， **DataSourceType**属性必须显式设置为*本地*。 你还必须设置**ConnectionString**属性**位置**到新位置的连接字符串的元素。 在还原期间，**还原**命令将替换由标识数据源的连接字符串**DataSourceID**属性**位置**元素值为**ConnectionString**属性**位置**元素。  
   
-##  <a name="synchronizing_databases"></a>同步数据库  
+##  <a name="synchronizing_databases"></a> 同步数据库  
  **同步**命令同步的数据和元数据指定的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]与另一个数据库的数据库。 **同步**命令具有允许你指定的源数据库的各种属性如何同步安全定义、 远程分区同步和 ROLAP 对象的同步。  
   
 > [!NOTE]  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/08/2018
   
  此元素的值限定为下表中列出的字符串之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|在目标数据库中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在目标数据库中包括安全定义和成员身份信息。|  
@@ -150,12 +151,12 @@ ms.lasthandoff: 01/08/2018
 ### <a name="synchronizing-rolap-objects"></a>同步 ROLAP 对象  
  **同步**命令无法同步聚合或使用 ROLAP 存储，因为此类信息存储在基础关系数据源上的表中的对象的数据。 但可以同步 ROLAP 对象的元数据。 同步元数据，**同步**命令重新创建关系数据源上的表结构。  
   
- 你可以使用**位置**Synchronize 命令同步 ROLAP 对象中的元素。 每个**位置**元素，用于重新定位数据源， **DataSourceType**属性必须显式设置为*本地*。 实例时都提供 SQL Server 登录名。 你还必须设置**ConnectionString**属性**位置**到新位置的连接字符串的元素。 在同步期间，**同步**命令将替换由标识数据源的连接字符串**DataSourceID**属性**位置**具有值的元素**ConnectionString**属性**位置**元素。  
+ 你可以使用**位置**Synchronize 命令同步 ROLAP 对象中的元素。 每个**位置**元素，用于重新定位数据源， **DataSourceType**属性必须显式设置为*本地*。 。 你还必须设置**ConnectionString**属性**位置**到新位置的连接字符串的元素。 在同步期间，**同步**命令将替换由标识数据源的连接字符串**DataSourceID**属性**位置**具有值的元素**ConnectionString**属性**位置**元素。  
   
 ## <a name="see-also"></a>另请参阅  
  [Backup 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [还原元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Synchronize 元素 (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [同步元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [备份和还原 Analysis Services 数据库](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

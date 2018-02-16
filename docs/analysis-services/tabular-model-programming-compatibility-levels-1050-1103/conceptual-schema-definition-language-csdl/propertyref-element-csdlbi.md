@@ -11,35 +11,37 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9df2f9bfd77a854c90f08ed8b4314bfa212bf469
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="propertyref-element-csdlbi"></a>PropertyRef 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]PropertyRef 元素是一个简单类型，提供对提供所需的另一个属性的值的列的引用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+PropertyRef 元素是一种简单类型，可提供对某列的引用，而该列提供其他属性所需要的值。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 PropertyRef 元素的元素和属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|“属性”|是|一个包含属性名称的字符串，该属性是引用的目标。|  
+|名称|是|一个包含属性名称的字符串，该属性是引用的目标。|  
   
 ## <a name="propertyrefs-element"></a>PropertyRefs 元素  
  PropertyRefs 是一种复杂类型，用于定义 PropertyRef 元素中包含的每个属性的属性集合。  
   
  下表列出了 PropertyRefs 类型的元素和属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|是|一个包含属性引用的字符串。|  
   
@@ -89,6 +91,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [用于商业智能的 CSDL 注释技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [BI 批注的 CSDL 的技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

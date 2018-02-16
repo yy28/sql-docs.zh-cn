@@ -19,13 +19,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]此主题介绍如何部署和配置的中间层增强功能[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中的功能[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]包括[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]库、 计划数据刷新、 管理仪表板和数据访问接口。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 配置** 工具以便完成以下任务：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本主题介绍如何部署和配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 功能的中间层增强功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理面板和数据提供程序。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 配置** 工具以便完成以下任务：  
   
 -   部署 SharePoint 解决方案文件。  
   

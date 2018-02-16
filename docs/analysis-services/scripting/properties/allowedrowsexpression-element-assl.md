@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 01f8ab2e7383058fb7fc322f2c06943f1499daca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="allowedrowsexpression-element-assl"></a>AllowedRowsExpression 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含布尔类型，该定义的父元素的内容类型的数据分析表达式 (DAX)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+包含布尔类型的数据分析表达式 (DAX)，该表达式定义了父元素的内容。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,10 +42,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
-|数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|字符串|  
+|默认值|无|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -51,9 +53,9 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[CellPermission](../../../analysis-services/scripting/objects/cellpermission-element-assl.md)， [StandardAction](../../../analysis-services/scripting/data-type/standardaction-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  有关**CellPermission**元素，**表达式**元素包含一个逻辑的 MDX 表达式，标识适用于由的权限的单元格[访问](../../../analysis-services/scripting/properties/access-element-assl.md)元素的**CellPermission**元素。 如果值**表达式**元素**CellPermission**元素为空， **CellPermission**元素将被忽略。  
   
  有关**StandardAction**元素，**表达式**元素包含一个表示操作的内容的 MDX 表达式。 如果值**表达式**元素**StandardAction**元素为空， **StandardAction**元素将被忽略。  

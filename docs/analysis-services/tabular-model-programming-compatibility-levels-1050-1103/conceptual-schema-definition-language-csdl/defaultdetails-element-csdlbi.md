@@ -11,28 +11,30 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8010e9c0412b50c8d65a67c87c176bff02d1a887
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]DefaultDetails 元素表示共同定义"默认字段集"表中的列的属性引用的列表。 每个属性只能引用一个度量值或一列。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+DefaultDetails 元素表示一系列属性参考，这些属性参考一起定义表中各列的“默认字段集”。 每个属性只能引用一个度量值或一列。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 DefaultDetails 元素的元素和属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|DefaultDetailsPosition|是|指示在集合中存在与位置的正整数。|  
+|DefaultDetailsPosition|“否”|指示在集合中存在与位置的正整数。|  
   
 ## <a name="example"></a>示例  
  **表格**  

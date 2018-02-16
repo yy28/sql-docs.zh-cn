@@ -1,7 +1,7 @@
 ---
 title: "创建和更改对象 (XMLA) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -27,15 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6906c6dbab99923983cbfa4e75c35c6f3c0f5073
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3a57805854f7a7dfa51546425090f9e323511112
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>创建和更改对象 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-可以单独创建、更改和删除主要对象。 主要对象包括以下对象：  
+  可以单独创建、更改和删除主要对象。 主要对象包括以下对象：  
   
 -   服务器  
   

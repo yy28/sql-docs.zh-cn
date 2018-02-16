@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>表的关键绩效指标表示形式
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]KPI 用于衡量性能的基础度量值，对目标值由定义的值  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+KPI 用于根据目标值度量由基础度量值定义的值的性能。  
   
 ## <a name="key-performance-indicator-representation"></a>关键绩效指标表示形式  
  在表格对象模型中，关键绩效指标 KPI 是一个度量值，该值带有可在客户端应用程序中以图形方式显示的附加信息。 KPI 通常包含关于要实现的目标和度量值相对于目标的状态的信息，以及客户端工具如何以图形方式显示状态的信息。  

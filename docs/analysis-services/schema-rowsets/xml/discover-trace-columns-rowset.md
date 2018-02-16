@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 02baf401-52b0-4a73-8a7b-3b5b5e568626
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 75e41e8d4784d04570eaebafc0efc607a45f40b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertracecolumns-rowset"></a>DISCOVER_TRACE_COLUMNS 行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回描述可用于跟踪的列的 XML 文档。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+返回描述可用于跟踪的列的 XML 文档。  
   
  **适用于：**表格模型、 多维模型  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**Data**|**DBTYPE_WSTR**|是|包含编码的 XML 字符串，该字符串描述了有关由跟踪提供程序提供的跟踪列的信息。|  
+|**数据**|**DBTYPE_WSTR**|是|包含编码的 XML 字符串，该字符串描述了有关由跟踪提供程序提供的跟踪列的信息。|  
   
  未对此架构行集进行排序。  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|ReplTest1|  
+|参数|值|  
 |--------------|-----------|  
 |GUID|a07ccd18-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|TraceColumns|  

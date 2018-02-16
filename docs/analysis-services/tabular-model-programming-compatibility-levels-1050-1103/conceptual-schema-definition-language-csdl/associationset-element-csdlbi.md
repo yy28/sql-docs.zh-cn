@@ -11,31 +11,33 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**AssociationSet**元素是用于定义关联的复杂类型。 在 CSDLBI 数据模型中，关联是指两个表之间的关系。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+**AssociationSet** 元素是一种用于定义关联的复杂类型。 在 CSDLBI 数据模型中，关联是指两个表之间的关系。  
   
  必须为模型中的每个唯一关系指定一个 **AssociationSet**。 **AssociationSet** 通过使用 **Association** 元素来定义端点。 **AssociationSet** 元素还定义有关数据模型中的关系及其使用情况的元数据。  
   
 ## <a name="applicable-attributes"></a>适用的属性  
  下表列出了用于定义 **AssociationSet** 元素的元素和属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
 |State|是|指示关联是否有效的字符串。 值由 State 元素定义。|  
-|Hidden|是|指示关系是否可见的布尔值。 默认情况下，Hidden 的值为 **false**，表示所有关系在模型中均可见。|  
+|Hidden|“否”|指示关系是否可见的布尔值。 默认情况下，Hidden 的值为 **false**，表示所有关系在模型中均可见。|  
   
 ## <a name="state-element"></a>State 元素  
  **State** 元素是一种简单类型，说明关联是否处于活动状态，如果处于活动状态，则可用于计算；如果处于非活动状态，则必须在计算中显式引用。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  下表列出了 **State** 元素的值。  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |在职|关联处于活动状态。|  
 |Inactive|关联处于活动状态。|  
@@ -81,6 +83,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [用于商业智能的 CSDL 注释技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [BI 批注的 CSDL 的技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

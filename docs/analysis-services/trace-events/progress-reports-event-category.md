@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Progress Reports event category
 - event classes [Analysis Services], progress reports
 ms.assetid: c130f160-28ef-49bc-9ee6-da47dc9aab2a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c90cfbe7e30d0678d13a329737c21f7d45575e22
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="progress-reports-event-category"></a>“进度报告”事件类别
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]进度报告事件类别具有下表中说明的事件类。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+“进度报告事件”类别包含下表中说明的事件类。  
   
 |Event Class|事件 ID|Description|  
 |-----------------|--------------|-----------------|  

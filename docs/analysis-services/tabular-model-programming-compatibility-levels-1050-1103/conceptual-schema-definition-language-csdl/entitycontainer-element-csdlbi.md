@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]EntityContainer 元素是一个复杂类型，基于 CSDL 类型，EntityContainer，定义单个数据模型中实体的集合。 在商业智能应用程序中，EntityContainer 表示的数据模型可能包含多个其列按关系相互关联的表以及计算、度量值和 KPI。 它在概念上类似于数据库或数据源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+EntityContainer 元素是一种复杂类型，它基于 CSDL 类型 EntityContainer，用于定义单个数据模型中的实体集合。 在商业智能应用程序中，EntityContainer 表示的数据模型可能包含多个其列按关系相互关联的表以及计算、度量值和 KPI。 它在概念上类似于数据库或数据源。  
   
  EntityContainer 必须指定数据模型中包含的每种实体类型，包括表和关系。 有关这些模型实体的信息是通过列出此类型的 Entity 元素的子实体指定的。 有关详细信息，请参阅 [EntityType 元素 (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md)。  
   
@@ -34,20 +36,20 @@ ms.lasthandoff: 01/08/2018
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 EntityContainer 的元素和属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|“属性”|是|数据模型的名称。|  
-|Caption|是|数据库或数据模型的说明。|  
+|名称|是|数据模型的名称。|  
+|Caption|“否”|数据库或数据模型的说明。|  
 |Culture|是|一个字符串，该字符串包含请求的 LCID。|  
 |CompareOptions|是|模型的特定于语言的排序和字符串比较选项。|  
-|DirectQueryMode|是|指示当模型正在使用 DirectQuery 模式时的查询模式的枚举。|  
+|DirectQueryMode|“否”|指示当模型正在使用 DirectQuery 模式时的查询模式的枚举。|  
 |EntitySet 元素|是|[EntitySet 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|AssociationSet 元素|是|[AssociationSet 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|AssociationSet 元素|否|[AssociationSet 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>CompareOptions 元素  
  CompareOptions 属性定义应用于数据模型的排序规则属性。 CompareOptions 定义的属性派生自在模型设计时在 Analysis Services 数据库中设置的排序顺序、区分假名和区分大小写的设置。 下表描述了作为 CompareOptions 属性的一部分包含的值。  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |IgnoreCase|指示字符串比较是否应忽略大小写的布尔值。|  
 |IgnoreNonSpace|一个布尔值，指示字符串比较是否应忽略非空格组合字符（如标注字符）。|  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
  简单类型 DirectQueryMode 定义的是：当启用模型直接从关系数据源中检索数据时，默认情况下使用的查询类型。 此属性只适用于在 DirectQuery 模式下运行的表格模型。 下表列出了 DirectQuery 模式枚举的可能值。  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |InMemory|指示针对模型的查询将使用缓存中的数据。|  
 |InMemoryWithDirectQuery|指示默认情况下，针对模型的查询将使用关系数据源中的数据。|  

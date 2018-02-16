@@ -20,19 +20,20 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 98e15a75b97eae9c4b2fa4093f03f9c8ccf92000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services 跟踪事件
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以通过捕获，然后分析生成的实例的跟踪事件跟踪 Microsoft SQL Server Analysis Services (SSAS) 实例的活动。  跟踪事件将会划分为若干组，以便您可以更轻松地找到相关跟踪事件。  每个跟踪事件都包含与该事件相关的一组数据；并不是所有数据片段都与所有事件相关。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+您可以通过捕获然后分析实例生成的跟踪事件，执行 Microsoft SQL Server Analysis Services (SSAS) 实例的活动。  跟踪事件将会划分为若干组，以便您可以更轻松地找到相关跟踪事件。  每个跟踪事件都包含与该事件相关的一组数据；并不是所有数据片段都与所有事件相关。  
   
  可以使用 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**启动和捕获跟踪事件（请参阅 [使用 SQL Server Profiler 监视 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)），也可以通过 XMLA 命令作为 **SQL Server 扩展事件** 启动跟踪事件，并在以后进行分析（请参阅 [使用 SQL Server 扩展事件监视 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)）。  
   
@@ -174,7 +175,7 @@ ms.lasthandoff: 01/08/2018
   
 |**事件 ID**|**事件名称**|**事件说明**|  
 |------------------|--------------------|---------------------------|  
-|@shouldalert|审核登录|收集从开始跟踪之后发生的所有新连接事件，如客户端请求与正在运行 SQL Server 实例的服务器进行连接。|  
+|1|审核登录|收集从开始跟踪之后发生的所有新连接事件，如客户端请求与正在运行 SQL Server 实例的服务器进行连接。|  
 |2|审核注销|收集从开始跟踪之后发生的所有新断开连接事件，如客户端发出一个断开连接命令即属于一个断开连接事件。|  
 |4|审核服务器启动和停止|记录服务关闭、启动和暂停活动。|  
 |18|审核对象权限事件|记录对象权限更改。|  

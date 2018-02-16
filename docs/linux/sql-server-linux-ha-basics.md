@@ -15,10 +15,10 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>SQL Server 可用性 Linux 部署的基础知识
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/13/2018
 
 从开始[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]支持 Linux 和 Windows 上。 像基于 Windows 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署，[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]数据库和实例需要在 Linux 下高度可用。 本文介绍如何规划和部署高度可用的技术方面基于 Linux 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]数据库和实例，以及从基于 Windows 的安装的区别。 因为[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 专业人员和 Linux 可能用于的新功能可能新[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]专业人员、 文章有时介绍了可能是为某些所熟悉并且不给其他人熟悉的概念。
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]对于 Linux 部署的可用性选项
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 对于 Linux 部署的可用性选项
 除了备份和还原，相同的三个可用性功能均可用在 Linux 上与基于 Windows 的部署:
 -   Always On 可用性组 （承载个可用性组）
 -   Always On 故障转移群集实例 (Fci)
@@ -43,16 +43,16 @@ ms.lasthandoff: 02/13/2018
 2. 多个常规和安全意识运行的方式操作是使用`sudo`之前执行任何操作。 在此示例的许多文章使用`sudo`。
 
 某些常用命令，其中每个都有各种开关和可以联机研究的选项：
--   `cd`– 将目录更改
--   `chmod`– 更改的文件或目录的权限
--   `chown`– 更改的文件或目录的所有权
--   `ls`– 显示一个目录的内容
--   `mkdir`– 驱动器上创建文件夹 （目录）
--   `mv`-将文件从一个位置移到另一个
--   `ps`– 显示的所有工作进程
--   `rm`– 删除本地服务器上的文件
--   `rmdir`– 删除文件夹 （目录）
--   `systemctl`– 启动、 停止或启用服务
+-   `cd` – 将目录更改
+-   `chmod` – 更改的文件或目录的权限
+-   `chown` – 更改的文件或目录的所有权
+-   `ls` – 显示一个目录的内容
+-   `mkdir` – 驱动器上创建文件夹 （目录）
+-   `mv` -将文件从一个位置移到另一个
+-   `ps` – 显示的所有工作进程
+-   `rm` – 删除本地服务器上的文件
+-   `rmdir` – 删除文件夹 （目录）
+-   `systemctl` – 启动、 停止或启用服务
 -   文本编辑器命令。 在 Linux 上，有各种文本编辑器选项，如 vi 和 emacs。
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>常见任务的可用性配置[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]在 Linux 上
@@ -96,9 +96,9 @@ Samba，这是服务器消息块 (SMB) 的 Linux 变体，还可以用于创建�
 | 138         | UDP      | Samba （如果使用） – NetBIOS 数据报                                                                                          |
 | 139         | TCP      | Samba （如果使用） – NetBIOS 会话                                                                                           |
 | 445         | TCP      | Samba （如果使用） – 通过 TCP 的 SMB                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 默认端口，则为如果需要，可以更改与`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 默认端口，则为如果需要，可以更改与 `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP、UDP | NFS （如果使用）                                                                                                               |
-| 2224        | TCP      | Pacemaker – 使用通过`pcsd`                                                                                                |
+| 2224        | TCP      | Pacemaker – 使用通过 `pcsd`                                                                                                |
 | 3121        | TCP      | Pacemaker – 所需是否存在 Pacemaker 远程节点                                                                    |
 | 3260        | TCP      | iSCSI 发起程序 （如果使用） – 可以在修改`/etc/iscsi/iscsid.config`(RHEL)，但应匹配的 iSCSI 目标端口 |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的默认端口用于可用性组终结点;创建终结点时，可以更改                                |
@@ -203,15 +203,15 @@ WSFCs 监视参与节点的状态，并出现问题时处理它们。 更高版�
 
 #### <a name="cluster-log-location"></a>群集日志位置
 Pacemaker 群集的日志位置因分发而异。
--   RHEL 和 SLES-`/var/log/cluster/corosync.log`
--   Ubuntu –`/var/log/corosync/corosync.log`
+-   RHEL 和 SLES- `/var/log/cluster/corosync.log`
+-   Ubuntu – `/var/log/corosync/corosync.log`
 
 若要更改默认日志记录位置，请修改`corosync.conf`。
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>计划 Pacemaker 群集[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>计划 Pacemaker 群集 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 本部分讨论 Pacemaker 群集的重要规划点。
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>群集管理基于 Linux 的虚拟化 Pacemaker[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>群集管理基于 Linux 的虚拟化 Pacemaker [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 使用虚拟机部署基于 Linux 的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]承载个可用性组和 Fci 的部署涵盖的与基于 Windows 的对应相同的规则。 没有一组基本的规则可支持性的虚拟化[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署由 Microsoft 在[Microsoft 支持 KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)。 Microsoft 的 HYPER-V 和 VMware 的 ESXi 等的不同虚拟机监控程序可能存在差异导致的平台本身除此之外，具有不同的方差。
 
 当它涉及到承载个可用性组和 Fci 下虚拟化时，请确保给定 Pacemaker 群集的节点设置反相关性。 托管的虚拟机以实现高可用性在可用性组或 FCI 配置中，配置时[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]应永远不会在同一虚拟机监控程序主机上运行。 例如，如果部署两个节点 FCI，存在需要*至少*因此的某处出现主机故障，请转到宿主节点 Vm 之一尤其是当使用功能的三个虚拟机监控程序主机如 Live迁移或 vMotion。

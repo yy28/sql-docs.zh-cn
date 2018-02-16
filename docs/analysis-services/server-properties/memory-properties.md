@@ -25,19 +25,20 @@ helpviewer_keywords:
 - HighMemoryPrice property
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memory-properties"></a>内存属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]预适度开头的内存量分配设置，以便可以立即处理请求。 可随着查询和处理工作负荷增加而分配更多内存。 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可在启动时预分配适量内存，以便可立即处理请求。 可随着查询和处理工作负荷增加而分配更多内存。 
   
   通过指定配置设置，可以控制释放内存时的阈值。 例如， **HardMemoryLimit** 设置指定自行强制实施的内存不足条件（默认情况下，此阈值未启用），在此条件下会彻底拒绝新请求，直到有更多资源可用。
 

@@ -1,7 +1,7 @@
 ---
 title: "AMO 数据挖掘类 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: de2b66f2dea7dfa29301ddd14f831d7318c6f4f9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-data-mining-classes"></a>AMO 数据挖掘类
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]数据挖掘类可帮助你创建、 修改、 删除和处理数据挖掘对象。 处理数据挖掘对象包括创建数据挖掘结构、创建数据挖掘模型以及处理这些模型。  
+  数据挖掘类可帮助您创建、修改、删除和处理数据挖掘对象。 处理数据挖掘对象包括创建数据挖掘结构、创建数据挖掘模型以及处理这些模型。  
   
  有关如何设置环境，和有关的详细信息<xref:Microsoft.AnalysisServices.Server>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>，和<xref:Microsoft.AnalysisServices.DataSourceView>对象，请参阅[AMO 基础类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  ![AMO 数据挖掘类](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "AMO 数据挖掘类")  
   
-##  <a name="MiningStructure"></a>MiningStructure 对象  
+##  <a name="MiningStructure">MiningStructure 对象</a>  
  挖掘结构是挖掘模型的容器。 该结构定义了挖掘模型可使用的所有可能列。 每个挖掘模型都在该挖掘结构的已定义列集中定义自己的列。  
   
  简单的 <xref:Microsoft.AnalysisServices.MiningStructure> 对象包括基本信息、数据源视图、一个或多个 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>、零个或多个 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> 以及 <xref:Microsoft.AnalysisServices.MiningModelCollection>。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  <xref:Microsoft.AnalysisServices.MiningStructure> 可使用它自己的处理方法进行处理，也可在父对象使用自己的处理方法进行自身处理时进行处理。  
   
-### <a name="columns"></a>“列”  
+### <a name="columns"></a>列  
  列包含模型的数据，根据用法不同可为不同类型：Key、Input、Predictable 或 InputPredictable。 可预测列是生成挖掘模型的目标。  
   
  单值列在 AMO 中称为 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。 多值列称为 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>。  
@@ -97,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
  若要删除 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>，必须从父 <xref:Microsoft.AnalysisServices.MiningStructure> 集合中将其删除，然后必须使用 Update 方法将父 <xref:Microsoft.AnalysisServices.MiningStructure> 对象更新到服务器中。  
   
-##  <a name="MiningModel"></a>MiningModel 对象  
+##  <a name="MiningModel">MiningModel 对象</a>  
  <xref:Microsoft.AnalysisServices.MiningModel> 对象可用于选择要使用结构中的哪些列、要使用的算法以及用于优化模型的可选特定参数。 例如，您可能想要在同一个挖掘结构中定义使用相同算法的多个挖掘模型，但要在一个模型中忽略挖掘结构的某些列，而在另一个模型中将这些列用作输入，在第三个模型中将这些列用作输入和预测。 当在一个挖掘模型中要将某列视为连续列，而在另一个模型中您要将该列视为离散化列时，此对象非常有用。  
   
  简单的 <xref:Microsoft.AnalysisServices.MiningModel> 对象由基本信息、算法定义和列组成。  

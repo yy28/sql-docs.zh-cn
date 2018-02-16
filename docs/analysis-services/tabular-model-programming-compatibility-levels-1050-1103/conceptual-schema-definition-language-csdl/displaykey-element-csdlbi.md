@@ -11,30 +11,32 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 7d881278-1e77-42e1-8cfc-f1bbd9ec2340
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6c3e0be2d677f87afae5bbdff84947b3d013c23f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="displaykey-element-csdlbi"></a>DisplayKey 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]DisplayKey 元素包含下列元素在一起构成一个性强的标识符的列表。 DisplayKey 只作为 EntityType 元素的子项存在。 它可以引用列或角色方。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+DisplayKey 元素包含共同构成强标识符的以下元素的列表。 DisplayKey 只作为 EntityType 元素的子项存在。 它可以引用列或角色方。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了 DisplayKey 元素的属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|IsDisplayKey|是|True 或 False。|  
+|IsDisplayKey|“否”|True 或 False。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  此元素不用于报表。 您将此属性应用到的元素不需要是实际的表键，而只是一个您将显示为键的元素。 但是，您用于 DisplayKey 的列必须包含唯一值。  
   
 ## <a name="example"></a>示例  

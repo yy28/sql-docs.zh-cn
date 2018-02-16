@@ -20,19 +20,20 @@ helpviewer_keywords:
 - properties [Analysis Services], configuration
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 4db4d5d2e57f5f4a967a2099ef11efa0ca10ca21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的服务器属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员可以修改的默认服务器配置属性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的默认服务器配置属性。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
   
  若要配置服务器，请使用 SQL Server Management Studio 或编辑特定实例的 msmdsrv.ini 文件。  
  
@@ -94,6 +95,6 @@ SQL Server Management Studio 中的“属性”页显示最可能需要修改的
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 实例管理](../../analysis-services/instances/analysis-services-instance-management.md)   
- [为解决方案部署指定配置设置](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [指定解决方案部署的配置的设置](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "检索数据使用 AdomdDataReader |Microsoft 文档"
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66058488afc823095c2868b45d4156d723fb6ae6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3e536803b34715bdfc4beb87de40cda0380a589e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>使用 AdomdDataReader 检索数据
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]检索分析数据时<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>对象提供了很好地兼顾开销和交互的能力。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象将从分析数据源检索只读、只进的平展数据流。 此未经缓冲的数据流使过程逻辑能够有效地按顺序处理分析数据源的结果。 当检索大量数据用于显示时，使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是一个不错的选择，因为这些数据未在内存中缓存。  
+  在检索分析数据时，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象可在开销和交互功能之间实现较好的平衡。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 对象将从分析数据源检索只读、只进的平展数据流。 此未经缓冲的数据流使过程逻辑能够有效地按顺序处理分析数据源的结果。 当检索大量数据用于显示时，使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是一个不错的选择，因为这些数据未在内存中缓存。  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 还可通过在数据可用后随即对数据进行检索（而不是等待返回查询的完整结果）来提高应用程序的性能。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 还可减少系统开销，因为默认情况下，此读取器一次仅在内存中存储一行。  
   
@@ -125,6 +126,6 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="see-also"></a>另请参阅  
  [从分析数据源检索数据](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [使用单元集中检索数据](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
- [使用 XmlReader 检索数据](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
+ [使用 XmlReader 中检索数据](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
   
   

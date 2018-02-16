@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9aa018ac9f692eac5de76743fb2d74c0d9832e56
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指示 RelationshipEnd 中的属性是否在的"一"方或关系的"多"端。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+指示 RelationshipEnd 中的属性是位于关系的“一”方还是关系的“多”方。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|说明|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值||  
@@ -51,12 +53,12 @@ ms.lasthandoff: 01/08/2018
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|无|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  此元素的值限定为下表中列出的字符串之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |*其中一个*|这是主键方。|  
 |*许多*|这是外键方。|  

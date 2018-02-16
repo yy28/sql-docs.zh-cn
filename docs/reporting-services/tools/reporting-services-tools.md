@@ -29,10 +29,10 @@ ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含支持在托管环境中开发和使用具有丰富功能的报表的一组图形和脚本编写工具。 该工具集包括开发工具、配置和管理工具以及报表查看工具。 本主题简要介绍 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的各工具以及如何访问该工具。  

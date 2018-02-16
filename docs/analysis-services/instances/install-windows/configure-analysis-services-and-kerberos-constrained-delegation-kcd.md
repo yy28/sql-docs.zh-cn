@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>配置 Analysis Services 和 Kerberos 约束委派 (KCD)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kerberos 约束的委派 (KCD) 是一种身份验证协议，你可以使用 Windows 身份验证来委托从客户端凭据配置服务到整个环境的服务。 KCD 需要附加基础结构（例如域控制器）和你环境中的其他配置。 在某些通过 SharePoint 2016 涉及 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的方案中，要求使用 KCD。 在 SharePoint 2016 中，Excel Services 已从 SharePoint 场移出到单独的新服务器，即 **Office Online Server**。 由于 Office Online Server 是独立的服务器，因此在两个典型的跃点方案中更加需要委派客户端凭据的方法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Kerberos 约束委派 (KCD) 是一种身份验证协议，你可以使用 Windows 身份验证进行配置，使其在整个环境的服务之间委派客户端凭据。 KCD 需要附加基础结构（例如域控制器）和你环境中的其他配置。 在某些通过 SharePoint 2016 涉及 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的方案中，要求使用 KCD。 在 SharePoint 2016 中，Excel Services 已从 SharePoint 场移出到单独的新服务器，即 **Office Online Server**。 由于 Office Online Server 是独立的服务器，因此在两个典型的跃点方案中更加需要委派客户端凭据的方法。  
   
 ## <a name="overview"></a>概述  
  KCD 可以使一个帐户模拟另一个帐户，从而提供对资源的访问权限。 模拟帐户可以是分配给 Web 应用程序的服务帐户或 Web 服务器的计算机帐户，被模拟帐户可以是需要资源访问权限的用户帐户。 由于 KCD 在服务层进行操作，因此可通过模拟帐户对服务器上的选定服务授予访问权限，而同一服务器上的其他服务或其他服务器上的服务将被拒绝访问。  

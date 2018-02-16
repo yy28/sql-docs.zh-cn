@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>跟踪中使用的 Analysis Services 对象类型代码
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]此页列出在 Analysis Services 数据模型中的每个对象的对象类型 （6 位数字）。 这些代码显示在跟踪日志中并用于标识与具体锁定关联的对象的类型。 例如，数据库中的锁定超时将指示对象类型 100002，这是数据库对象类型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本页列举了 Analysis Services 数据模型中每个对象的对象类型（6 位数字）。 这些代码显示在跟踪日志中并用于标识与具体锁定关联的对象的类型。 例如，数据库中的锁定超时将指示对象类型 100002，这是数据库对象类型。  
   
 > [!NOTE]  
 >  下方所列代码的数量超过了实际将出现在跟踪日志中的数量。 下表是每个对象的类型代码的完整列表，但只有使用锁定的对象才会在跟踪日志中显示一个对象类型代码。  
@@ -33,9 +34,9 @@ ms.lasthandoff: 01/08/2018
   
 |对象类型|对象名称|  
 |-----------------|-----------------|  
-|100000|“服务器”|  
+|100000|Server|  
 |100001|Command|  
-|100002|“数据库”|  
+|100002|数据库|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
 |100005|角色|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/08/2018
 |100053|Command|  
 |100054|KPI|  
 |100055|DataSourceView|  
-|100056|Perspective|  
+|100056|透视|  
 |100100|CommandCollection|  
 |100101|DatabaseCollection|  
 |100102|DataSourceCollection|  

@@ -11,35 +11,37 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8c1bb47c2273d79e320e53b49c524112b067a2d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memberref-element-csdlbi"></a>MemberRef 元素 (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MemberRef 元素标识为引用的目标属性的名称。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+MemberRef 元素标识作为引用目标的属性的名称。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 MemberRef 元素的元素和属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|“属性”|是|MemberRef 元素中包含的属性的名称。|  
+|名称|是|MemberRef 元素中包含的属性的名称。|  
   
 ## <a name="memberrefs-element"></a>MemberRefs 元素  
  MemberRefs 是一种复杂类型，用于定义 MemberRef 元素中包含每个成员的成员集合。  
   
  下表列出了 MemberRefs 类型的元素和属性。  
   
-|“属性”|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
 |MemberRef|是|一个包含成员引用的字符串。|  
   
@@ -77,6 +79,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [用于商业智能的 CSDL 注释技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [BI 批注的 CSDL 的技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

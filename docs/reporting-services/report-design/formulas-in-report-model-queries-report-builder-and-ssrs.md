@@ -20,10 +20,10 @@ ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 498047a984da8c40cc7b935bf134ee2af2a648f3
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>报表模型查询中的公式（报表生成器和 SSRS）
   公式用于对报表中将报表模型用作数据源的值进行计算。 当你为报表模型数据源定义查询时，可以在报表模型查询设计器的“定义公式”对话框中定义公式。  公式可以包含函数、运算符、常量和对字段或实体的引用。 使用公式，您可以对数字和文本数据进行组合、聚合、筛选和计算。 您可以创建公式并将其另存为新字段；或者您也可以修改现有字段的公式。  

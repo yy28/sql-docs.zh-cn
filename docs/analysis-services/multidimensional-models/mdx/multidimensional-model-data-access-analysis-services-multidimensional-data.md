@@ -22,19 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多维模型数据访问（Analysis Services - 多维数据）
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用本主题中的信息来了解如何访问[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用编程方法、 脚本或客户端应用程序包括用于连接到的内置支持的多维数据[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]你网络上的服务器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+使用本主题中的信息可以了解如何使用编程方法、脚本或客户端应用程序（内置用于连接您网络上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器的支持）来访问 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据。  
   
  本主题包含以下各节：  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  以下 Microsoft 应用程序支持本机连接到多维数据。  
   
-### <a name="excel"></a>“导出”  
+### <a name="excel"></a>Excel  
  Analysis Services 多维数据经常使用数据透视表和数据透视图表控件呈现在 Excel 工作薄中。 数据透视表适用于多维数据，因为模型中的层次结构、聚合和导航构造与数据透视表的数据汇总功能十分吻合。 Excel 安装中包括 Analysis Services OLE DB 数据访问接口，便于更轻松地建立数据连接。 有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](http://go.microsoft.com/fwlink/?linkID=215150)。  
   
 ### <a name="reporting-services-reports"></a>Reporting Services 报表  
@@ -75,11 +76,11 @@ ms.lasthandoff: 01/08/2018
   
  [使用 MDX 查询多维数据](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [MDX &#40; 中的重要概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [MDX 脚本编写基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 脚本编写基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> 编程接口  
  如果要创建使用多维数据的自定义应用程序，访问数据所用的方法很可能属于以下类别之一：  
