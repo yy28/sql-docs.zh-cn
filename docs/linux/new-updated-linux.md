@@ -11,10 +11,10 @@ ms.prod_service: sql-non-specified
 ms.component: 
 ms.date: 02/03/2018
 ms.openlocfilehash: 827399587a8147c59caf6bf31bf8b10f10c83211
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新的和最近的更新： Linux 文档上的 SQL Server
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/13/2018
 
 如果满足这些条件，承载主副本的服务器失败，则可用性组将将所有权更改为同步的副本。 同步副本的行为 (的其中可以有三个总： 一个主节点和两个辅助副本) 进一步可通过控制`required_synchronized_secondaries_to_commit`。 这在 Windows 和 Linux 上配合承载个可用性组，但配置完全不同。 在 Linux 上，通过该可用性组资源本身上的群集自动配置的值。
 
-**仅配置副本和仲裁**
+仅配置副本和仲裁
 
 
 此外新在 SQL Server 自 2017 年截至 CU1 是仅配置副本。 因为 Pacemaker 不同于 WSFC，尤其是当涉及到仲裁和需要 STONITH，只需两个节点配置将无法工作时涉及到可用性组。 Fci，提供 Pacemaker 的仲裁机制可以是不错，因为所有 FCI 故障转移仲裁都发生在群集层。 对于可用性组，在 Linux 下的仲裁都会在 SQL Server 中，所有元数据的存储位置。 这是仅配置副本就会起作用。
@@ -159,7 +159,7 @@ ms.lasthandoff: 02/13/2018
     or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
     ```
 
-**设计包**
+设计包
 
 
 **连接到 ODBC 数据源**。 借助上 Linux CTP 2.1 刷新及更高版本的 SSIS，SSIS 包可以在 Linux 上使用 ODBC 连接。 此功能已测试 SQL Server 和 MySQL ODBC 驱动程序，但还需要使用任何 Unicode ODBC 驱动程序观察到 ODBC 规范。 在设计时，你可以提供一个 DSN 或连接字符串以连接到 ODBC 数据中;你还可以使用 Windows 身份验证。 有关详细信息，请参阅[博客文章在 Linux 上的宣布推出的 ODBC 支持](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
