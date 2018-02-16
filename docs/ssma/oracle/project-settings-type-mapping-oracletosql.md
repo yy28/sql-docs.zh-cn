@@ -19,10 +19,10 @@ ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
 ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>项目设置 （类型映射） (OracleToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Oracle 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/13/2018
 **源类型**  
 映射的 Oracle 数据类型。  
   
-**目标类型**  
+目标类型  
 目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]指定 Oracle 数据类型的数据类型。  
   
 请参阅下一部分对于 Oracle 类型映射的默认 SSMA 中的表。  
