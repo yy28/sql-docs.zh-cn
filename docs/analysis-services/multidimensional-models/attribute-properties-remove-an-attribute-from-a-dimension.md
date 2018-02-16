@@ -16,19 +16,20 @@ helpviewer_keywords:
 - deleting attributes
 - attributes [Analysis Services], removing
 ms.assetid: b41387c1-6c7d-42dc-bc14-d40586acb769
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c13a3b346c1c45b20e6e2ee08c8d21aa375d8f5d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---remove-an-attribute-from-a-dimension"></a>特性属性-维度中删除属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]若要在维度中删除属性[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，右键单击中的属性**属性**窗格**维度结构**的维度的选项卡在设计器[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，然后单击**删除**。 在 **“删除对象”** 对话框中，单击 **“确定”**。 这将从维度中删除属性，但不会影响维度的数据源视图。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+若要在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中删除维度的属性，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的维度设计器内的“维度结构”选项卡的“属性”窗格中右键单击该属性，然后单击“删除”。 在 **“删除对象”** 对话框中，单击 **“确定”**。 这将从维度中删除属性，但不会影响维度的数据源视图。  
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的维度](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)   

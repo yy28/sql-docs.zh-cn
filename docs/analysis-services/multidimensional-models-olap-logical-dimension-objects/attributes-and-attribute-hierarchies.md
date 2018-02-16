@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - regular attributes [Analysis Services]
 - parent attributes [Analysis Services]
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - attributes [Analysis Services]
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>属性和属性层次结构
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]维度是绑定到表中的一个或多个列或数据源视图中的视图的属性的集合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+维度是属性的集合，这些属性绑定到数据源视图的表或视图中的一列或多列。  
   
 ## <a name="key-attribute"></a>键属性  
  每个维度都包含一个键属性。 每个属性都绑定到维度表中的一列或多列。 键属性是维度中标识维度主表中各列（在与事实数据表的外键关系中使用）的属性。 通常，键属性表示维度表中的一个或多个主键列。 您可以对在基础数据源内没有物理主键的数据源视图中的某个表定义逻辑主键。 **有关详细信息**，请参阅[定义逻辑主键在数据源视图 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). 当定义键属性时，多维数据集向导和维度向导会尝试使用数据源视图中维度表的主键列。 如果维度表未定义逻辑主键或物理主键，则上述向导可能无法正确地为维度定义键属性。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/08/2018
  默认情况下，在星型架构中，所有属性都直接与键属性相关，这使得用户可根据维度中的任意属性层次结构浏览多维数据集中的事实数据。 在雪花型架构中，如果属性的基础表直接链接到事实数据表，则属性会直接链接到键属性；另外，属性还可以使用绑定到基础表（将雪花状表链接到直接链接的表）中键的属性间接地进行链接。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建用户定义层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
+ [创建用户定义的层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [定义属性关系](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   

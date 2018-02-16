@@ -16,19 +16,20 @@ helpviewer_keywords:
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 31b9c4f95cca42e2150cab40b92308df89efbef6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>刷新数据源视图中的架构 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在定义数据源视图 (DSV) 后[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目或数据库，可能会更改基础数据源中的架构。 无法在开发项目中自动检测或更新这些更改。 此外，如果您已将项目部署到服务器，当 Analysis Services 不再连接到外部数据源时，现在会遇到处理错误。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中定义数据源视图 (DSV) 后，基础数据源中的架构可能会更改。 无法在开发项目中自动检测或更新这些更改。 此外，如果您已将项目部署到服务器，当 Analysis Services 不再连接到外部数据源时，现在会遇到处理错误。  
   
  为了更新 DSV 以便它与外部数据源匹配，您可以在 Business Intelligence Development Studio (BIDS) 中刷新 DSV。 刷新 DSV 会检测 DSV 所基于的外部数据源的更改，并生成枚举外部数据源中的添加或删除操作的更改列表。 然后您可以将这些更改集应用到 DSV，以便它与基础数据源重新对齐。 请注意，在使用 DSV 的项目中，通常需要做其他工作以进一步更新多维数据集和维度。  
   
@@ -47,12 +48,12 @@ ms.lasthandoff: 01/08/2018
   
 -   添加新的唯一约束。 如果 DSV 中的表存在逻辑主键，那么，在数据源的表中添加物理键时，逻辑键将被删除并由物理键替换。  
   
- 刷新永远不会将新表添加到 DSV 中。 如果要添加新表，必须手动添加。 有关详细信息，请参阅 [在数据源视图中添加或删除表或视图 (Analysis Services)](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)中的解决方案资源管理器运行数据源视图向导。  
+ 刷新永远不会将新表添加到 DSV 中。 如果要添加新表，必须手动添加。 有关详细信息，请参阅 [在数据源视图中添加或删除表或视图 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)中的解决方案资源管理器运行数据源视图向导。  
   
 ##  <a name="bkmk_DSVrefresh"></a> 在 SQL Server Data Tools 中刷新 DSV  
  若要刷新 DSV，双击解决方案资源管理器中从 DSV [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  这将启动数据源视图设计器。  然后单击设计器中的刷新数据源视图按钮或选择**刷新**从数据源视图菜单。  
   
- 在刷新过程中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将查询所有基础关系数据源以确定 DSV 中包含的表/视图是否发生了更改。 如果建立了到所有基础数据源的连接，并且发生了更改，则您会在 **“刷新数据源视图”** 对话框中看到这些更改。  
+ 在刷新过程中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将查询所有基础关系数据源以确定 DSV 中包含的表/视图是否发生了更改。 如果建立了到所有基础数据源的连接，并且发生了更改，则您会在 **“刷新数据源视图”** 对话框中看到这些更改。  
   
  ![刷新数据源视图对话框中](../../analysis-services/multidimensional-models/media/ssas-olapdsv-refresh.gif "刷新数据源视图对话框中")  
   

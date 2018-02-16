@@ -15,25 +15,26 @@ helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8c1eef41d84a8bdbd758c02f4830467b14cd9ebb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>挖掘模型任务和操作指南
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用**挖掘模型**中的数据挖掘设计器选项卡[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]管理和处理挖掘结构中的挖掘模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以使用 **中的数据挖掘设计器的** “挖掘模型” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项卡，管理和处理挖掘结构中的挖掘模型。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [在现有挖掘结构中添加挖掘模型](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
+-   [将挖掘模型添加到现有挖掘结构](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
--   [从挖掘结构中删除挖掘模型](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)  
+-   [删除挖掘模型从挖掘结构](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)  
   
 -   [从挖掘模型中排除列](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)  
   
@@ -41,21 +42,21 @@ ms.lasthandoff: 01/08/2018
   
 -   [更改挖掘模型中列的离散化](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [查看或更改建模标志（数据挖掘）](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [查看或更改建模标志 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
--   [在模型中指定用作回归量的列](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
+-   [指定要用作回归量模型中的列](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
   
 -   [更改挖掘模型的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [对挖掘模型应用筛选器](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)  
+-   [将筛选器应用于挖掘模型](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)  
   
 -   [从挖掘模型中删除筛选器](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
--   [对挖掘模型启用钻取](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)  
+-   [为挖掘模型启用钻取](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)  
   
 -   [查看或更改算法参数](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
--   [生成挖掘模型的副本](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
+-   [创建挖掘模型的副本](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
   
 -   [处理挖掘模型](../../analysis-services/data-mining/process-a-mining-model.md)  
   

@@ -11,34 +11,36 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - rowsets [Analysis Services], XML for Analysis
 - XML for Analysis, schema rowsets
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis 架构行集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供程序包括返回有关服务器状态、 活动和对象元数据的架构行集。 如果要开发的客户端应用程序连接到结构和特征可变的 Analysis Services 模型，则需要检索元数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 访问接口包括返回有关服务器状态、活动和对象的元数据的多个架构行集。 如果要开发的客户端应用程序连接到结构和特征可变的 Analysis Services 模型，则需要检索元数据。  
   
  通过架构行集还可以深入了解内部进程和操作，帮助您监视服务器并解决问题。 为了更好地支持即席管理任务，您可以对大多数架构行集运行动态管理视图 (DMV) 查询。 DMV 查询以易读的表格格式返回结果，方便您在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中查看。  
   
  下表列出并描述了每个 XMLA 架构行集，并确定该架构行集是否返回与表格数据模型特定相关的信息。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
-|行集<sup>1</sup>|Description|  
+|Rowset<sup>1</sup>|Description|  
 |------------------------|-----------------|  
 |[DISCOVER_CALC_DEPENDENCY 行集](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|返回与表、列、度量值和计算列公式之间的依赖关系有关的信息。<br /><br /> 适用于部署的 Analysis Services 实例上的表格模型和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]在 SharePoint 环境中运行的 Excel 工作簿中的模型。|  
 |[DISCOVER_CONNECTIONS 行集](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|提供服务器上当前打开的连接的资源使用情况和活动信息。|  

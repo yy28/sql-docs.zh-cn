@@ -17,19 +17,20 @@ helpviewer_keywords:
 - filtering input rows [Analysis Services]
 - filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 57fedca20966d9ad7520b51ee850738e1e51b0e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>对挖掘模型应用筛选器
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您的挖掘结构包含嵌套的表，你可以对事例表和 / 或嵌套的表中，应用筛选器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+如果挖掘结构包含嵌套表，则可以对事例表、嵌套表或两者同时应用筛选器。  
   
  以下过程说明了如何创建两种筛选器：事例筛选器和嵌套表行筛选器。  
   
@@ -76,7 +77,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. 单击网格中的下一行。  
   
-     您所创建的筛选条件自动添加到“表达式”文本框中。 例如，使用 IPv4 地址 `[Income] > '30000'`  
+     您所创建的筛选条件自动添加到“表达式”文本框中。 例如： `[Income] > '30000'`  
   
 10. 单击网格下一行中的“AND/OR”文本框，以添加条件。  
   
@@ -131,7 +132,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  如果手动更改筛选表达式的任意部分，则会禁用该网格，以后只能在文本编辑模式下编辑筛选表达式。 若要恢复网格编辑模式，必须清除筛选表达式并重新开始。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [为挖掘模型 &#40; 筛选器Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

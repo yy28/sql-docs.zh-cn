@@ -17,19 +17,20 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], SQL Server Profiler
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 24a56699bbdb79f811ce0282aee0f1d93a5d43f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitor-an-analysis-services-instance"></a>监视 Analysis Services 实例
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以监视的性能[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]或性能监视器中，应用程序有时称为**PerfMon**。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于创建和管理跟踪并分析和重播跟踪结果。 性能监视器报告服务器状态（通过某些计数器进行索引），下一节中将对此进行讨论。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或性能监视器（此应用程序有时称为 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **）监视**的性能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]可创建和管理跟踪和分析和重播跟踪结果。 性能监视器报告服务器状态（通过某些计数器进行索引），下一节中将对此进行讨论。  
   
 > [!NOTE]  
 >  有关监视的详细信息，请参阅 [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)（SQL Server 2008 R2 操作指南）。  
@@ -43,8 +44,8 @@ ms.lasthandoff: 01/08/2018
   
  [使用 SQL Server 扩展事件监视 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [使用动态管理视图 (DMV) 监视 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [使用动态管理视图 &#40; Dmv &#41;监视 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [性能计数器 (SSAS)](../../analysis-services/instances/performance-counters-ssas.md)  
+ [性能计数器 &#40;SSAS &#41;](../../analysis-services/instances/performance-counters-ssas.md)  
   
   

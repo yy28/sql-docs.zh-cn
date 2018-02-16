@@ -20,19 +20,20 @@ helpviewer_keywords:
 - classification matrix [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7897c756eb0aa9aa53ed56356052974e53afd601
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分类矩阵（Analysis Services - 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*分类矩阵*分类到类别，从模型的所有情况下，通过确定预测的值是否匹配的实际值。 然后会对每个类别中的所有事例进行计数，并在矩阵中显示总计。 分类矩阵是评估统计模型的标准工具，有时被称为“混淆矩阵” 。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+“分类矩阵”  通过确定预测值是否与实际值匹配，将模型中的所有事例分为不同的类别。 然后会对每个类别中的所有事例进行计数，并在矩阵中显示总计。 分类矩阵是评估统计模型的标准工具，有时被称为“混淆矩阵” 。  
   
  在选择 **“分类矩阵”** 选项为每个指定的预测状态将实际值与预测值比较时创建的图表。 矩阵的行表示模型的预测值，而列则表示实际值。 分析中使用的类别为 , , “假负”和   
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 |预测|0（实际）|1（实际）|2（实际值）|  
 |---------------|------------------|------------------|------------------|  
 |0|111|3|5|  
-|@shouldalert|2|123|17|  
+|1|2|123|17|  
 |2|19|0|20|  
   
  尽管添加更多的列会使报表看起来更复杂，但如果希望评估做出错误预测的累计成本，则这些附加详细信息会非常有帮助。 若要在对角线上求和或者比较不同行组合的结果，可以单击 **“分类矩阵”** 选项卡中提供的 **“复制”** 按钮，然后将该报表粘贴到 Excel 中。 也可使用同时支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本的客户端，如 Excel 数据挖掘客户端，直接在包括计数和百分比的 Excel 中创建分类报表。 有关详细信息，请参阅 [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733)（SQL Server 数据挖掘）。  
@@ -84,12 +85,12 @@ ms.lasthandoff: 01/08/2018
   
 |主题|链接|  
 |------------|-----------|  
-|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [测试提升图的准确性（数据挖掘基础教程）](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|说明相关的图表类型。|[提升图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|说明如何将交叉验证用于挖掘模型和挖掘结构。|[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务和操作指南（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|提供如何创建目标邮递模型的提升图的演练。|[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [测试准确性，但提升图 &#40;数据挖掘基础教程 &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|说明相关的图表类型。|[提升图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|说明如何将交叉验证用于挖掘模型和挖掘结构。|[交叉验证 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|说明用于创建提升图和其他准确性图表的步骤。|[测试和验证任务和操作指南 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

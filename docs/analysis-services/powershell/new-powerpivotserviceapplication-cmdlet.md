@@ -1,5 +1,5 @@
 ---
-title: "新 PowerPivotServiceApplication cmdlet |Microsoft 文档"
+title: New-PowerPivotServiceApplication cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>New-PowerPivotServiceApplication cmdlet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]创建一个新[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务应用程序。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+创建新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -44,7 +45,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
   
 ## <a name="parameters"></a>Parameters  
   
-### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName\<字符串 >  
+### <a name="-serviceapplicationname-string"></a>-ServiceApplicationName \<string>  
  设置服务应用程序的显示名称。  
   
 |||  
@@ -55,18 +56,18 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-databaseservername-string"></a>-DatabaseServerName\<字符串 >  
+### <a name="-databaseservername-string"></a>-DatabaseServerName \<string>  
  指定承载应用程序数据库的 SQL Server 关系数据库引擎实例。 默认情况下，您可以使用场的数据库服务器，或者可以选择对其具有创建数据库权限的另一个数据库服务器。  
   
 |||  
 |-|-|  
 |必需？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |默认值||  
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-databasename-string"></a>-DatabaseName\<字符串 >  
+### <a name="-databasename-string"></a>-DatabaseName \<string>  
  指定存储应用程序数据的 SQL Server 关系数据库的名称。 请确保指定与应用程序相对应的名称，以便您可以更轻松地标识其用途。 你可以创建新的数据库，或者为你创建的新的应用程序指定现有的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库。  
   
 |||  
@@ -77,7 +78,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup\<切换 >  
+### <a name="-addtodefaultproxygroup-switch"></a>-AddToDefaultProxyGroup \<switch>  
  在默认服务连接组中创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务连接。 此组中的成员身份确定 Web 应用程序和服务应用程序之间的关联。 订阅默认服务连接组的所有 Web 应用程序都可以使用你添加到该组的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 尽管你可以在一个场中具有多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，但只有一个服务应用程序可以是默认服务连接组的成员。  
   
  如果你已经有一个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序是默认代理组的成员，则必须为你正在创建的新应用程序设置 AddToDefautlProxyGroup:$false。 您将需要向自定义服务连接组添加这个新的服务应用程序。  您可以将内置的 SharePoint cmdlet 用于此目的。  Get-SPServiceApplicationProxyGroup 返回在场中定义的服务连接组的列表。  
@@ -90,7 +91,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  此 cmdlet 支持以下常用参数：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用预测查询生成器创建预测查询
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当生成在 BI Development Studio，或通过右键单击现有挖掘模型在 SQL Server Management Studio，然后选择选项，一个数据挖掘解决方案时，你可以既创建预测查询**生成预测查询**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可在 BI Development Studio 中生成数据挖掘解决方案时创建预测查询，或在 SQL Server Management Studio 中右键单击现有挖掘模型，然后选择“生成预测查询”选项以创建预测查询。  
   
  “预测查询生成器”包含以下三种设计模式，可单击左上角的图标在这三种模式之间切换。  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
  **显示**  
  确定在“源”列中选择的内容是否显示在结果中。  
   
- **分组**  
+ **组**  
  通过使用括号来与“和/或”列一起使用以便将表达式组合到一起。 例如，(expr1 or expr2) and expr3。  
   
  **和/或**  

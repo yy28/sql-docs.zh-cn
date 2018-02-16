@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 身份验证和授权
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的 SharePoint 2010 场中运行的部署使用 SharePoint 服务器提供的身份验证子系统和授权模型。 SharePoint 安全基础结构扩展至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 内容和操作，因为所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相关的内容都存储在 SharePoint 内容数据库中，并且通过场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共享服务执行所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相关的操作。 使用基于对应 Windows 用户标识的 SharePoint 用户标识对请求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的工作簿的用户进行身份验证。 工作簿上的查看权限决定了是同意还是拒绝请求。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 SharePoint 2010 场中运行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署使用 SharePoint 服务器提供的身份验证子系统和授权模型。 SharePoint 安全基础结构扩展至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 内容和操作，因为所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]相关的内容都存储在 SharePoint 内容数据库中，并且通过场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共享服务执行所有与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 相关的操作。 使用基于对应 Windows 用户标识的 SharePoint 用户标识对请求包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的工作簿的用户进行身份验证。 工作簿上的查看权限决定了是同意还是拒绝请求。  
   
  因为自助式数据分析需要与 Excel Services 进行集成，所以，为了确保 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的安全，还需要了解 Excel Services 安全性。 当用户查询与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据具有数据连接的数据透视表时，Excel Services 将数据连接请求转发给场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器以加载数据。 服务器之间的这种交互要求您了解如何配置两个服务器的安全设置。  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 01/08/2018
  在 Excel Services 中，与安全性相关的配置设置在受信任位置、受信任的数据访问接口和受信任的数据连接库中指定。 下表介绍可实现或增强 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的设置。 如果某个设置未在此处列出，则它对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器连接没有影响。 有关如何分步指定这些设置的说明，请参阅 [初始配置 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)中的“启用 Excel Services”一节。  
   
 > [!NOTE]  
->  与安全性相关的大多数设置适用于受信任位置。 如果你希望保留默认值或为不同站点使用不同值，则可以为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的站点创建其他受信任位置，然后仅为该站点配置以下设置。 有关详细信息，请参阅 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+>  与安全性相关的大多数设置适用于受信任位置。 如果你希望保留默认值或为不同站点使用不同值，则可以为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的站点创建其他受信任位置，然后仅为该站点配置以下设置。 有关详细信息，请参阅 [为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 |区域|设置|Description|  
 |----------|-------------|-----------------|  
@@ -112,8 +113,8 @@ ms.lasthandoff: 01/08/2018
 |受信任位置|位置类型|此值必须设置为 **Microsoft SharePoint Foundation**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器检索 .xlsx 文件的副本，并将其加载到场中的 Analysis Services 服务器上。 此服务器只能从内容库中检索 .xlsx 文件。|  
 ||允许外部数据|此值必须设置为 **“受信任的数据连接库和嵌入连接”**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据连接嵌入在工作簿中。 如果你不允许嵌入的连接，则用户可以查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 缓存，但将不能与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据交互。|  
 ||刷新时警告|如果你正在使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库来存储工作簿和报表，则应禁用此值。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库包含一个文档预览功能，如果同时关闭“打开时刷新”和“刷新时警告”，则其效果最佳。|  
-|受信任的数据访问接口|MSOLAP.4<br /><br /> MSOLAP.5|默认情况下包含 MSOLAP.4，但是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问要求 MSOLAP.4 访问接口为 SQL Server 2008 R2 版本。<br /><br /> MSOLAP.5 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 版本一起安装。<br /><br /> 请勿从受信任的数据访问接口列表中删除这些访问接口。 在某些情况下，您可能需要在场中的其他 SharePoint 服务器上安装此访问接口的更多副本。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。|  
-|受信任的数据连接库|可选。|可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中使用 Office 数据连接 (.odc) 文件。 如果你使用 .odc 文件向本地 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿提供连接信息，则可以将相同的 .odc 文件添加到此库。|  
+|受信任的数据访问接口|MSOLAP.4<br /><br /> MSOLAP.5|默认情况下包含 MSOLAP.4，但是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问要求 MSOLAP.4 访问接口为 SQL Server 2008 R2 版本。<br /><br /> MSOLAP.5 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 版本一起安装。<br /><br /> 请勿从受信任的数据访问接口列表中删除这些访问接口。 在某些情况下，您可能需要在场中的其他 SharePoint 服务器上安装此访问接口的更多副本。 有关更多信息，请参见 [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)。|  
+|受信任的数据连接库|選擇性。|可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中使用 Office 数据连接 (.odc) 文件。 如果你使用 .odc 文件向本地 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿提供连接信息，则可以将相同的 .odc 文件添加到此库。|  
 |用户定义函数程序集|不适用。|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 会忽略你为 Excel Services 生成部署的用户定义函数程序集。 如果对于特定行为依赖于用户定义的程序集，请注意， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查询处理将不会使用你创建的用户定义函数。|  
   
 ## <a name="see-also"></a>另请参阅  

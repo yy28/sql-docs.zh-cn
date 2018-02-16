@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>安装 SQL Server Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services 是承载表格模型、 多维数据集和可以访问来自报表、 电子表格和仪表板的数据挖掘模型的分析数据库服务器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services 是托管表格模型、多维数据集以及数据挖掘模型的分析数据库服务器，可从报表、电子表格和仪表板进行访问。  
   
  Analysis Services 是多实例，这意味着你可以在一台计算机上安装多个副本或运行新和旧版本并行。 安装的任何示例都以三种模式之一运行，这是在安装期间确定的：多维和数据挖掘、表格或 SharePoint。 如果你想使用多种模式，每种模式都将需要一个单独实例。  
   
@@ -72,7 +73,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** 区分大小写。  所有值必须以大写形式表示。 下表对 **ASSERVERMODE**的有效值进行了说明。  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |TABULAR|这是默认值。 如果你未设置**ASSERVERMODE**，在表格模式下安装了服务器。|
 |MULTIDIMENSIONAL|该值是可选的。|  

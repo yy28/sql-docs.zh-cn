@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9f536c0956cec0be863b099b2c0540ccf7ac3da2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>创建或自定义数据馈送库 (Power Pivot for SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*数据馈送库*是一个特殊用途 SharePoint 库，使您能够注册并共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+*数据馈送库* 是一种特殊用途的 SharePoint 库，允许注册和共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：  
   
 -   创建或编辑“数据服务文档” ，用于指定与特定馈送的 HTTP 连接。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  在“内容类型”的“允许内容类型的管理?”部分中， 单击 **“是”**。  
   
-7.  单击“确定” 。  
+7.  单击 **“确定”**。  
   
 #### <a name="step-2-add-the-data-service-document-content-type"></a>步骤 2：添加数据服务文档内容类型  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  在“可用网站内容类型”中，单击 **“数据服务文档”**，然后单击 **“添加”** 将所选内容类型移至“要添加的内容类型”列表中。  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”**。  
   
 #### <a name="step-3-verify-data-service-document-configuration"></a>步骤 3：验证数据服务文档配置  
   

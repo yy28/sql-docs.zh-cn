@@ -15,19 +15,20 @@ helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 88119afa32933b6c35d8e404de13bc1c5acfefb1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在数据挖掘设计器中创建单独查询
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]单独查询很有用，如果你想要创建为单个事例预测。 有关单独查询的详细信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+如果需要为单个事例创建预测，单独查询是非常有用的。 有关单独查询的详细信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
   
  在数据挖掘设计器的 **“挖掘模型预测”** 选项卡中，可以创建许多不同类型的查询。 可以通过使用设计器或者通过键入数据挖掘扩展插件 (DMX) 语句来创建查询。 还可以从设计器开始工作，并通过更改 DMX 语句或者通过添加 WHERE 或 ORDER BY 子句来修改它所创建的查询。  
   
@@ -86,6 +87,6 @@ AS [t]
      此时将出现一个新屏幕，显示查询的结果。 若要查看刚创建的 DMX 语句，请单击 **SQL**。  
   
 ## <a name="see-also"></a>另请参阅  
- [预测查询（数据挖掘）](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [预测查询 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

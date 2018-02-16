@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: de9f32a826273ed1efaf9395c8a0e67030b1b573
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="delete-power-pivot-gallery"></a>删除 Power Pivot 库
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]删除[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]库还会删除所有项，包括的数据刷新历史记录[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]为计划的数据刷新配置的工作簿。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库还会删除它的所有项，包括为计划的数据刷新配置的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的数据刷新历史记录。  
   
 > [!NOTE]  
 >  本主题提供了有关如何删除 SharePoint 库的说明。 有关如何删除库中的各个文档的说明，请参阅 [使用 PowerPivot 库](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)。  

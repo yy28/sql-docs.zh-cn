@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]本文介绍 SQL Server 中的多维模型功能 Power View 和 BI 专业人员想要在其组织中实现适用于多维模型的 Power View 和管理员提供重要信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本文介绍 SQL Server 中用于多维模型的 Power View 功能，并为希望在组织中实施多维模型的 Power View 的 BI 专业人员和管理员提供重要信息。  
   
  多维模型提供业界领先的 OLAP 数据建模、存储和分析解决方案。 SQL Server 中的多维模型通过使用 Microsoft Power View 支持即席数据分析、探索和可视化。  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Power View 的多维模型体系结构](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "的 Power View 的多维模型体系结构")  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
  **服务器要求**  
   
 -   在多维模式下运行的 Microsoft SQL Server 2016 Analysis Services。  
@@ -61,14 +62,14 @@ ms.lasthandoff: 01/08/2018
   
 |多维对象|表格对象|  
 |-----------------------------|--------------------|  
-|多维数据集|“模型”|  
+|多维数据集|Model|  
 |多维数据集维度|表|  
-|维度属性（键、名称）|“列”|  
+|维度属性（键、名称）|列|  
 |度量值组|表|  
 |度量值|度量值|  
 |不具有度量值组的度量值|在名为 Measures 的表中|  
 |度量值组多维数据集维度关系|关系|  
-|Perspective|透视|  
+|透视|透视|  
 |KPI|KPI|  
 |用户/父子层次结构|层次结构|  
 |显示文件夹|显示文件夹|  
@@ -223,7 +224,7 @@ ms.lasthandoff: 01/08/2018
   
  DISCOVER_CSDL_METADATA 请求具有以下限制：  
   
-|“属性”|Required|Description|  
+|名称|必需|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|是|目录\数据库名称。|  
 |PERSPECTIVE_NAME|是（如果多维数据集包含多个透视）。 如果只有一个多维数据集或有一个默认透视，则为可选的。|多维数据库中的多维数据集名称或透视名称。|  

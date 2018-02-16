@@ -16,19 +16,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults（Analysis Services - 数据挖掘）
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]为指定数量的剖面，挖掘结构的分区训练模型为每个分区，然后返回每个分区的准确性度量值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+将挖掘结构分区为指定数目的交叉部分，并对每个分区为模型定型，然后返回每个分区的准确性指标。  
   
 > [!NOTE]  
 >  此存储过程不能用于交叉验证聚类分析模型，也不能交叉验证使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的模型。 若要交叉验证聚类分析模型，可使用单独的存储过程 [SystemGetClusterCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)。  
@@ -118,7 +119,7 @@ SystemGetCrossValidationResults(
  默认值为 **null**。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果你设置不会引发错误*状态阈值*为 0.0，但你应永远不会使用此值。 实际上，阈值为 0.0 意味着概率为 0% 的预测也将视为正确。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如果你将“状态阈值”设置为 0.0，将不会引发错误，但是请一定不要使用此值。 实际上，阈值为 0.0 意味着概率为 0% 的预测也将视为正确。  
   
  （可选）  
   
@@ -143,9 +144,9 @@ SystemGetCrossValidationResults(
 |PartitionSize|一个整数，指示每个分区中包含的事例数。|  
 |测试|所执行测试的类别。 有关各类别以及每个类别中包含的测试的说明，请参阅 [交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
 |度量值|测试返回的度量值的名称。 每个模型的度量值都取决于可预测值的类型。 有关每个度量值的定义，请参阅[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 有关为每个可预测类型返回的度量值的列表，请参阅 [交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
-|ReplTest1|指定的测试度量值的值。|  
+|“值”|指定的测试度量值的值。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  若要为完整数据集返回准确性指标，请使用 [SystemGetAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)。  
   
  如果挖掘模型已分区为若干折叠，可以使用 [SystemGetAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)。  
@@ -172,30 +173,30 @@ NULL
   
  示例结果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|测试|度量值|ReplTest1|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|测试|度量值|“值”|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分类|真正|144|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分类|假正|105|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分类|真负|186|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|分类|假负|65|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|可能性|对数评分|-0.619042807138345|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|可能性|提升|0.0740963734002671|  
-|Target Mail DT|Bike Buyer|@shouldalert|@shouldalert|500|可能性|均方根误差|0.346946279977653|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|分类|真正|162|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|分类|假正|86|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|分类|真负|165|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|分类|假负|87|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|可能性|对数评分|-0.654117781086519|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|可能性|提升|0.038997399132084|  
-|Target Mail DT|Bike Buyer|@shouldalert|2|500|可能性|均方根误差|0.342721344892651|  
+|Target Mail DT|Bike Buyer|1|1|500|分类|真正|144|  
+|Target Mail DT|Bike Buyer|1|1|500|分类|假正|105|  
+|Target Mail DT|Bike Buyer|1|1|500|分类|真负|186|  
+|Target Mail DT|Bike Buyer|1|1|500|分类|假负|65|  
+|Target Mail DT|Bike Buyer|1|1|500|可能性|对数评分|-0.619042807138345|  
+|Target Mail DT|Bike Buyer|1|1|500|可能性|提升|0.0740963734002671|  
+|Target Mail DT|Bike Buyer|1|1|500|可能性|均方根误差|0.346946279977653|  
+|Target Mail DT|Bike Buyer|1|2|500|分类|真正|162|  
+|Target Mail DT|Bike Buyer|1|2|500|分类|假正|86|  
+|Target Mail DT|Bike Buyer|1|2|500|分类|真负|165|  
+|Target Mail DT|Bike Buyer|1|2|500|分类|假负|87|  
+|Target Mail DT|Bike Buyer|1|2|500|可能性|对数评分|-0.654117781086519|  
+|Target Mail DT|Bike Buyer|1|2|500|可能性|提升|0.038997399132084|  
+|Target Mail DT|Bike Buyer|1|2|500|可能性|均方根误差|0.342721344892651|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  从 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 开始，交叉验证仅在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中可用。  
   
 ## <a name="see-also"></a>另请参阅  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   
