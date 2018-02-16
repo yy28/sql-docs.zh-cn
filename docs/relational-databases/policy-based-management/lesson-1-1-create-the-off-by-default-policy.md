@@ -8,24 +8,27 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-query-tuning
+ms.technology:
+- dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a56e8861cd256421962ef1728caabc325c0940bf
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 69702e51df3f1cec504647f333105abe56ecbd65
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-1---create-the-off-by-default-policy"></a>第 1-1 课 - 创建 Off By Default 策略
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此任务创建一个基于外围应用配置器方面的名为“Mail Off”的条件。 然后，创建一个名为 Off By Default 的条件。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+此任务创建一个基于外围应用配置器方面的名为 Mail Off 的条件。 然后，创建一个名为 Off By Default 的条件。  
   
 ### <a name="to-create-the-mail-off-condition"></a>创建 Mail Off 条件  
   
