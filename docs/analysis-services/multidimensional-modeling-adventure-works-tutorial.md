@@ -1,7 +1,7 @@
 ---
 title: "多维建模 （Adventure Works 教程） |Microsoft 文档"
 ms.custom: 
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -22,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1a6323632e17efab87ecf64358b5055288dfa5db
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af9371e71223eedc44b7b7ec8cbeb3ab20423da8
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多维建模（Adventure Works 教程）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 欢迎使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程。 本教程通过在所有示例中使用虚构公司 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ，说明如何使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 开发和部署 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 项目。  
   
-## <a name="what-you-will-learn"></a>学习内容  
+## <a name="what-you-learn"></a>你掌握的内容  
 在本教程中，您将了解以下内容：  
   
 -   如何在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]项目中定义数据源、数据源视图、维度、属性、属性关系、层次结构和多维数据集。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/15/2018
 |[第 10 课： 定义管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)|15 分钟|  
   
 > [!NOTE]  
-> 您将在本教程中创建的多维数据集数据库是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维模型项目的简化版本，此项目是可在 codeplex 站点上下载的 Adventure Works 示例数据库的一部分。 对 Adventure Works 多维数据库的教程版本进行了简化，以便重点关注您将要立即掌握的特定技能。 在完成该教程后，请考虑自己探索该多维模型项目，以便进一步理解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维建模。  
+> 将在本教程中创建的多维数据集数据库是的简化的版本[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]是可用于在 GitHub 上的下载的 Adventure Works 示例数据库的一部分的多维模型项目。 对 Adventure Works 多维数据库的教程版本进行了简化，以便重点关注您将要立即掌握的特定技能。 在完成该教程后，请考虑自己探索该多维模型项目，以便进一步理解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维建模。  
   
 ## <a name="next-step"></a>下一步  
 要开始学习本教程，请转到第一课： [第 1 课：在 Analysis Services 项目中定义数据源视图](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
