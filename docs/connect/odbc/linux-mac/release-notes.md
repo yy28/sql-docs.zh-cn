@@ -16,28 +16,40 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>在 Linux 和 macOS 上的 SQL Server 的 Microsoft ODBC 驱动程序的发行说明
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>中[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC 驱动程序 17[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 Linux 和 macOS 上
 
-Azure SQL 管理 （扩展特邀预览阶段） 的实例。 请注意使用托管实例时有一些差异：
--   不支持 FILESTREAM 
--   本地文件系统访问是不受支持，但需要 tracefiles 之类的内容 
--   从不支持的本地路径创建 UDT 
--   不支持 Windows 集成身份验证 
--   不支持的 DTC 
--   'sa' 帐户不存在 （默认帐户称为 cloudSA）
--   TDS 令牌错误 (0xAA) 返回不正确的服务器名称
--   不支持数据库名称中的特殊字符 
--   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 不支持
--   错误消息将始终显示在英语，而不考虑语言设置 （与 Azure 相同） 
+**支持的新分发**: macOS 高 Sierra 和 Ubuntu 17.10 
+
+**性能改进**： 大于 10 倍时驱动程序将转换为 / 从 UTF 8/16 的性能改进。
+
+**添加功能**:
+
+BCP api 始终加密支持
+
+新的连接字符串属性 UseFMTOnly 会导致在特殊情况下需要临时表使用旧的元数据的驱动程序。
+
+Azure SQL 托管实例 （扩展特邀预览阶段） 的支持。 
+> [!NOTE]
+> 在使用托管实例时，有一些差异：
+> -   不支持 FILESTREAM 
+> -   本地文件系统访问是不受支持，但需要 tracefiles 之类的内容 
+> -   从本地创建 UDT 不支持路径 
+> -   不支持 Windows 集成身份验证 
+> -   不支持 DTC 
+> -   'sa' 帐户不存在 （默认帐户称为 cloudSA）
+> -   TDS 令牌错误 (0xAA) 返回不正确的服务器名称
+> -   不支持数据库名称中的特殊字符 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] 不支持
+> -   错误消息将始终显示在英语，而不考虑语言设置 （与 Azure 相同） 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>中[!INCLUDE[msCoName](../../../includes/msconame_md.md)]的 ODBC Driver 13.1[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 Linux 和 macOS 上  
 

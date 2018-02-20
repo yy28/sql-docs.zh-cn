@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>机器学习服务 （数据库） 的无人参与的安装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 02/11/2018
 
 > [!IMPORTANT]
 > 
-> 在完成安装程序以启用该功能后，则需要其他步骤。 其中包括重新配置和重新启动的实例。 确保来检查 [安装后步骤] (#bkmk_PostInstall) 部分中的所有项，以确定操作需要在安装完成后。
+> 在完成安装程序以启用该功能后，则需要其他步骤。 其中包括重新配置和重新启动的实例。 请务必查看上一节中的所有项[安装后步骤](#bkmk_PostInstall)以确定需要在安装完成后的操作。
 
-## <a name="bkmk_NewInstall"></a>有关 SQL Server 自 2017 年的命令行安装
+## <a name="bkmk_NewInstall"></a>  有关 SQL Server 自 2017 年的命令行安装
 
 下面的示例包括**最小**的功能要求。
 
@@ -97,7 +97,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MPY
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>SQL Server 2016 命令行安装
+## <a name="OldInstall"></a> SQL Server 2016 命令行安装
  
 下面的示例演示使用添加 R 语言安装的 SQL Server 2016 的所需执行无提示，无人参与的参数。
 

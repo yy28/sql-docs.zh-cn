@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>生成 R 模型并将保存到 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,7 @@ ms.lasthandoff: 02/11/2018
 
      *结果*
 
-     *逻辑回归结果： 附属式 ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*数据： featureDataSource （RxSqlServerData 数据源）*
+     *逻辑回归结果： 附属式 ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance *   <br/>*数据： featureDataSource （RxSqlServerData 数据源）*
      <br/>*Dependent variable(s)： 附属式*
      <br/>*自变量的总： 5*
      <br/>*有效的观测值的数目： 17068*
@@ -210,7 +208,7 @@ ms.lasthandoff: 02/11/2018
     将模型保存到表仅需要 INSERT 语句。 但是，很容易时包装在存储过程中，如_PersistModel_。
 
     > [!NOTE]
-    > 如果你收到如下错误"的 EXECUTE 权限拒绝了对对象 PersistModel"，请确保你的登录名具有的权限。 可以通过运行类似的 T-SQL 语句授予显式权限，只需对存储过程：`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > 如果你收到如下错误"的 EXECUTE 权限拒绝了对对象 PersistModel"，请确保你的登录名具有的权限。 可以通过运行类似的 T-SQL 语句授予显式权限，只需对存储过程： `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. 创建模型并将其保存在数据库中，你可以调用它直接从后[!INCLUDE[tsql](../../includes/tsql-md.md)]代码，使用系统存储过程中， [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 

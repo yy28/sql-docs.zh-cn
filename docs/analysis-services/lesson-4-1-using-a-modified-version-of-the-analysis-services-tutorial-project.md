@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lesson 4-1-使用 Analysis Services 教程项目的修改的版本
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,15 +34,15 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="downloading-and-extracting-the-project-file"></a>下载并解压缩项目文件  
   
-1.  [单击此处](http://go.microsoft.com/fwlink/?LinkID=221866) 可以转到下载页，此页提供本教程随附的示例项目。 教程项目包括在 **Analysis Services 教程 SQL Server 2012** 下载中。  
+1.  [单击此处](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)可以转到下载页，此页提供本教程随附的示例项目。 教程的项目都将纳入**adventure 的工作原理的多维-教程-projects.zip**下载。  
   
-2.  单击“Analysis Services 教程 SQL Server 2012”可下载包含此教程项目的包。  
+2.  单击**adventure 的工作原理的多维-教程-projects.zip**若要下载本教程包含项目的包。  
   
     默认情况下，.zip 文件将保存到 Downloads 文件夹。 您必须将该 .zip 文件移到具有更短路径的位置（例如，创建一个 C:\Tutorials 文件夹以便存储这些文件）。  然后，您可以解压缩在该 .zip 文件中包含的文件。 如果您尝试从具有较长路径的 Downloads 文件夹解压缩这些文件，将只会获得课程 1。  
   
 3.  在根驱动器处或附近创建一个子文件夹，例如 C:\Tutorial。  
   
-4.  将 **Analysis Services Tutorial SQL Server 2012.zip** 文件移到子文件夹。  
+4.  移动**adventure 的工作原理的多维-教程-projects.zip**到的子文件夹的文件。  
   
 5.  右键单击该文件，然后选择“全部提取”。  
   
