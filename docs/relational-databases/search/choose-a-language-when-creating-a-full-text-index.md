@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.component: search
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>创建全文索引时选择语言
 
@@ -105,7 +106,7 @@ ms.lasthandoff: 12/21/2017
   
   
 ##  <a name="stemming"></a> 词干分析  
- 选择列级语言时的另外一个注意事项是词干分析。 全文查询中的*词干分析* 是指搜索特定语言中某个词的所有词干派生形式（变形）的过程。 当使用一般断字符处理多种语言时，词干分析过程仅对为相应列指定的语言起作用，对于此列中的其他语言则不起作用。 例如，德语词干分析器对于英语或西班牙语（等语言）不起作用。 这可能会影响恢复操作，具体取决于您选择在查询时要使用的语言。  
+ 选择列级语言时的另外一个注意事项是词干分析。 全文查询中的*词干分析* 是指搜索特定语言中某个词的所有词干派生形式（变形）的过程。 当使用一般断字符处理多种语言时，词干分析过程仅对为相应列指定的语言起作用，对于此列中的其他语言则不起作用。 例如，德语词干分析器对于英语或西班牙语（等语言）不起作用。 这可能会影响恢复操作，具体取决于你在查询时选择使用的语言。  
   
   
 ##  <a name="type"></a> 列类型对全文搜索的影响  
