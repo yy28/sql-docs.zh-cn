@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - OLTP databases [SQL Server]
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 947bbd87fca45f0647bffe38af8e51591799778c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f2dd347a2f17cd4712deb64e6dcd6c9a55e7cb15
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="databases"></a>“数据库”
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库由表的集合组成，这些表用于存储一组特定的结构化数据。 表中包含行（也称为记录或元组）和列（也称为属性）的集合。 表中的每一列都用于存储某种类型的信息，例如，日期、名称、金额和数字。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库由表的集合组成，这些表用于存储一组特定的结构化数据。 表中包含行（也称为记录或元组）和列（也称为属性）的集合。 表中的每一列都用于存储某种类型的信息，例如，日期、名称、金额和数字。  
   
 ## <a name="basic-information-about-databases"></a>有关数据库的基本信息  
  一台计算机可以安装一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可以包含一个或多个数据库。  在数据库中，有一个或多个对象所有权组（称为架构）。 在每个架构中，都存在数据库对象，如表、视图和存储过程。 某些对象（如证书和非对称密钥）包含在数据库中，但不包含在架构中。 有关创建表的详细信息，请参阅 [Tables](../../relational-databases/tables/tables.md)。  

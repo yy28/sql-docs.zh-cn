@@ -8,21 +8,23 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], domain independent
+helpviewer_keywords:
+- Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="domain-independent-availability-groups"></a>域独立可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,63 +87,81 @@ Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的
 1. [使用此链接中的说明](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)部署工作组群集，该群集由将加入可用性组的所有服务器组成。 确保在配置工作组群集之前已配置常见 DNS 后缀。
 2. 在将加入可用性组的每个实例上[启用 AlwaysOn 可用性组功能](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)。 这需要重新启动每个 SQL Server 实例。
 3. 将托管主要副本的每个实例都需要数据库主密钥。 如果主密钥不存在，运行以下命令：
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. 在将为主要副本的实例上，创建将用于次要副本上的入站连接和用于保护主要副本上的终结点的证书。
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. 备份该证书。 如有必要，还可以使用私钥提供进一步保护。 此示例不使用私钥。
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. 重复步骤 4 和 5 以创建和备份每个次要副本的证书，并对证书采用适当的名称，如 InstanceB_Cert。
 7. 在主要副本上，必须为可用性组的每个次要副本创建登录名。 此登录名将被授予权限，以连接到域独立可用性组使用的终结点。 例如，对于名为 InstanceB 的副本：
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. 在每个次要副本上，为主要副本创建登录名。 此登录名将被授予权限，以连接到终结点。 例如，在名为 InstanceB 的副本上：
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. 在所有实例上，为创建的每个登录名创建一个用户。 在还原证书时会使用此用户。 例如，若要为主要副本创建用户：
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. 对于可能是主要副本的任何副本，在所有相关次要副本上创建登录名和用户。
 11. 在每个实例上，为创建了登录名和用户的其他实例还原证书。 在主要副本上，还原所有次要副本证书。 在每个次要副本上，还原主要副本的证书，另外在任何其他副本上，也可能是还原主要副本的证书。 例如：
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. 创建可用性组可在将为副本的实例上使用的终结点。 对于可用性组，终结点必须具有类型 DATABASE_MIRRORING。 终结点使用在步骤 4 中为该实例创建的证书进行身份验证。 使用证书创建终结点的示例语法如下所示。 使用合适的加密方法和其他与环境相关的选项。 有关可用选项的详细信息，请参阅 [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)（创建终结点 (Transact-SQL)）。
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. 向在步骤 9 中在该实例上创建的每个用户分配权限，使其能够连接到终结点。 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. 配置基础证书和终结点安全性后，使用你喜欢的方法创建可用性组。 建议手动备份、复制和还原用于初始化次要副本的备份，或使用[自动种子设定](automatically-initialize-always-on-availability-group.md)。 使用向导初始化次要副本涉及使用服务器消息块 (SMB) 文件，在使用未加入域的工作组群集时该文件可能不起作用。
 15. 创建侦听器时，请确保在 DNS 中注册其名称和 IP 地址。
 
