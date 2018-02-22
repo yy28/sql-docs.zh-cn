@@ -43,14 +43,19 @@
 # [SQL Server 教程](tutorials-for-sql-server-2016.md)
 
 # Resources
+
 ## 博客
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [SQL Server 数据库引擎](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [SQL Server 安全性](https://blogs.msdn.microsoft.com/sqlsecurity/)
 ### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
+## 了解
+### [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/sql-server#!lang=1033)
+### [第 9 频道上的 SQL](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
+
 ## 反馈和帮助
-### [SQL Server 相关建议](https://feedback.azure.com/forums/908035-sql-server)
+### [UserVoice - 提出 SQL Server 改进建议](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ### [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)

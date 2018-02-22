@@ -12,6 +12,7 @@
 # [外围应用配置](surface-area-configuration.md)  
 # [SQL 注入](sql-injection.md)
 # [SQL 漏洞评估](sql-vulnerability-assessment.md)  
+# [SQL 数据发现和分类（预览）](sql-data-discovery-and-classification.md)  
 # [TRUSTWORTHY 数据库属性](trustworthy-database-property.md)  
 # [权限](permissions-database-engine.md)  
 # [权限层次结构](permissions-hierarchy-database-engine.md)  
