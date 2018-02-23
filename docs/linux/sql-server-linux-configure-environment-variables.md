@@ -4,7 +4,7 @@ description: "本文介绍如何使用环境变量来在 Linux 上配置特定�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/13/2018
 |-----|-----|
 | **ACCEPT_EULA** | 在设置为任何值（例如“Y”）时接受 SQL Server 许可协议。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |
-| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**企业**</br>产品密钥</br></br>如果指定产品密钥，则它必须 # # #-# # #-# # #-# # #-# # #，其中 '#' 是一个数字或字母形式。|
+| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**企业**</br>**产品密钥**</br></br>如果指定产品密钥，则它必须 # # #-# # #-# # #-# # #-# # #，其中 '#' 是一个数字或字母形式。|
 | **MSSQL_LCID** | 设置要用于 SQL Server 的语言 ID。 例如 1036年为法语。 |
 | **MSSQL_COLLATION** | 设置 SQL Server 的默认排序规则。 此设置将替代对排序规则的语言 id (LCID) 的默认映射。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 设置最大 （以 mb 为单位） 可以使用 SQL Server 的内存量。 默认情况下它为总物理内存的 80%。 |
@@ -49,7 +49,11 @@ ms.lasthandoff: 02/13/2018
 | **MSSQL_DATA_DIR** | 更改创建新 SQL Server 数据库数据文件 (.mdf) 的目录。 |
 | **MSSQL_LOG_DIR** | 更改其中创建新的 SQL Server 数据库日志 (.ldf) 文件的目录。 |
 | **MSSQL_DUMP_DIR** | 更改 SQL Server 存放内存转储和其他故障排除文件的默认目录。 |
-| **MSSQL_ENABLE_HADR** | 启用可用性组。 |
+| **MSSQL_ENABLE_HADR** | 启用可用性组。 例如，"1"已启用，并禁用 '0' 是 |
+| **MSSQL_AGENT_ENABLED** | 启用 SQL Server 代理。 例如，启用了 'true' 和 'false' 为禁用。 默认情况下，禁用代理。  |
+| **MSSQL_MASTER_DATA_FILE** | 设置的 master 数据库数据文件的位置。 |
+| **MSSQL_MASTER_LOG_FILE** | 设置的 master 数据库日志文件的位置。 |
+
 
 ## <a name="example-initial-setup"></a>示例： 初始设置
 
@@ -86,7 +90,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> 在容器中运行生产版本的过程是略有不同。 有关详细信息，请参阅[运行容器映像的生产](sql-server-linux-configure-docker.md#production)。
+> 在容器中运行生产版本的过程略有不同。 有关详细信息，请参阅[运行生产容器映像](sql-server-linux-configure-docker.md#production)。
 
 ## <a name="next-steps"></a>后续步骤
 

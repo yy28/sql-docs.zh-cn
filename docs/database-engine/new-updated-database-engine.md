@@ -1,25 +1,20 @@
 ---
 title: "更新内容 - 数据库引擎文档| Microsoft Docs"
 description: "显示数据库引擎的文档中最近更改的更新内容片段。"
-services: na
-documentationcenter: 
-author: MightyPen
 manager: craigg
-editor: barbkess
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: database-engine
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
+author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbf472ba2b8d2d7abad095992895b56940a82d92
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: database-engine
+ms.date: 02/03/2018
+ms.openlocfilehash: d01d9fa13342709a74d98033d093d9856ab5d680
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>新增内容和最近更新内容：数据库引擎文档
 
@@ -33,7 +28,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：从 2017-09-28 到 2017-12-02&nbsp;&nbsp;&nbsp;
+- 更新日期范围：2017-12-03 到 2018-02-03
 - 主题区域：&nbsp;数据库引擎。
 
 
@@ -72,7 +67,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [“针对即席工作负荷进行优化”服务器配置选项](#TitleNum_1)
+1. [升级 Always On 可用性组副本实例](#TitleNum_1)
 
 
 
@@ -83,83 +78,87 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-optimize-for-ad-hoc-workloads-server-configuration-optionconfigure-windowsoptimize-for-ad-hoc-workloads-server-configuration-optionmd"></a>1.&nbsp;[“针对即席工作负荷进行优化”服务器配置选项](configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)
+### <a name="1-nbsp-upgrading-always-on-availability-group-replica-instancesavailability-groupswindowsupgrading-always-on-availability-group-replica-instancesmd"></a>1.&nbsp; [升级 Always On 可用性组副本实例](availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)
 
-更新日期：2017-11-20 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+更新日期：2018-01-29 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 38.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 174.  ms.author= "mikeray".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 6ca71358f13780b930e6fd10e431d4df2bb96441 221306c4554ebd383ab68ed67cdaeca390f57106  (PR=4032  ,  Filename=optimize-for-ad-hoc-workloads-server-configuration-option.md  ,  Dirpath=docs\database-engine\configure-windows\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
+<!-- git diff --ignore-all-space --unified=0 20ca282e8965889a7a530fb67e125cc876410e41 9f27d0f9a74333b291c1cdc1529edc13960fae29  (PR=4741  ,  Filename=upgrading-always-on-availability-group-replica-instances.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
 
 
 
-**建议**
-
-如果一次性计划的数量在 OLTP 服务器的 ..!NCLUDE-NotShown--ssDEnoversion--../../includes/ssdenoversion-md.md)] 内存中占了很大一部分（并且这些计划是临时计划），请使用这个服务器选项降低这些对象的内存使用量。
-要获取一次性缓存计划的数量，请运行下列查询：
-
-```
-SELECT objtype, cacheobjtype,
-  AVG(usecounts) AS Avg_UseCount,
-  SUM(refcounts) AS AllRefObjects,
-  SUM(CAST(size_in_bytes AS bigint))/1024/1024 AS Size_MB
-FROM sys.dm_exec_cached_plans
-WHERE objtype = 'Adhoc' AND usecounts = 1
-GROUP BY objtype, cacheobjtype;
-```
-
-> [!IMPORTANT]
-> 将“针对即席工作负荷进行优化”  设置为 1 只会影响新计划；已在计划缓存中的计划不受影响。
-> 要立即影响已缓存的查询计划，需使用 [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE--../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 清除计划缓存，或重启 ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)]。
+**更改数据捕获或复制的特殊步骤**
 
 
+根据正在应用的更新，其他步骤可能需要 AG 副本数据库启用变更数据捕获或复制。 请参阅更新的发行说明以确定是否需要执行以下步骤：
+
+1. 升级每个次要副本。
+
+1. 升级所有次要副本之后，将 AG 故障转移到已升级的实例。
+
+1. 在托管主要副本的实例上运行下列 Transact-SQL：
+
+   ```
+   EXECUTE [master].[sys].[sp_vupgrade_replication];
+   ```
+
+   >[!NOTE]
+   >此命令可能需要几分钟才能运行。
+
+1. 升级最初为主要副本的实例。
+
+有关背景信息，请参阅[升级到最新 CU 后，CDC 功能可能会中断](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
 
 
 
 
 
-## <a name="similar-articles"></a>类似文章
 
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+
+
+
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新的文章的类似文章
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新文章和更新的文章 (3+14)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新的和更新的文章 (1+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
-- [新文章和更新的文章 (87+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (5+4)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (2+2)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章 (10+9)：Linux 版 SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (2+4)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章 (4+2)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章 (0+1)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新文章和更新的文章 (21+0)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章 (5+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新的和更新的文章 (0+1)：SQL Server Data Tool (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章 (1+0)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新的和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
+
+- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
+
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
+- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 

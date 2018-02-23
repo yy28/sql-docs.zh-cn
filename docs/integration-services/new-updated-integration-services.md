@@ -1,25 +1,20 @@
 ---
 title: "已更新 - 适用于 SQL Server 的 Integration Services 文档 | Microsoft Docs"
 description: "显示 Microsoft SQL Server Integration Services 文档中最近更新内容的片段。"
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: integration-services
-ms.openlocfilehash: 9660fa7239c14c3adc963cc75ceb98de8316734c
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssis
+ms.date: 02/03/2018
+ms.openlocfilehash: 8bfcdc3fb1033620d351ecaee2c79910c475dd94
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-integration-services-for-sql-server"></a>新增内容和最近更新内容：适用于 SQL Server 的 Integration Services
 
@@ -33,7 +28,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：从 2017-09-28 到 2017-12-02&nbsp;&nbsp;&nbsp;
+- 更新日期范围：2017-12-03 到 2018-02-03
 - 主题区域：SQL Server Integration Services&nbsp;。
 
 
@@ -46,8 +41,18 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [借助 SSIS 存储和检索本地和 Azure 中文件共享上的文件](lift-shift/ssis-azure-files-file-shares.md)
-2. [验证部署到 Azure 的 SSIS 包](lift-shift/ssis-azure-validate-packages.md)
+1. [“浏览所有主体”对话框](catalog/browse-all-principals-dialog-box.md)
+2. [“配置”对话框](catalog/configure-dialog-box.md)
+3. [“文件夹属性”对话框](catalog/folder-properties-dialog-box.md)
+4. [Integration Services (SSIS) 目录 Transact-SQL 引用](catalog/integration-services-ssis-catalog-transact-sql-reference.md)
+5. [Integration Services (SSIS) 服务器和目录](catalog/integration-services-ssis-server-and-catalog.md)
+6. [“包属性”对话框](catalog/package-properties-dialog-box.md)
+7. [“项目属性”对话框](catalog/project-properties-dialog-box.md)
+8. [“项目版本”对话框](catalog/project-versions-dialog-box.md)
+9. [“设置参数值”对话框](catalog/set-parameter-value-dialog-box.md)
+10. [SSIS 目录](catalog/ssis-catalog.md)
+11. [“验证”对话框](catalog/validate-dialog-box.md)
+12. [查看 Integration Services 服务器上的包列表](catalog/view-the-list-of-packages-on-the-integration-services-server.md)
 
 
 
@@ -73,8 +78,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [Hadoop 连接管理器](#TitleNum_1)
-2. [使用 Windows 身份验证连接到本地数据源和 Azure 文件共享](#TitleNum_2)
+1. [计划安排 Azure 上的 SSIS 包执行](#TitleNum_1)
 
 
 
@@ -85,141 +89,53 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-hadoop-connection-managerconnection-managerhadoop-connection-managermd"></a>1.&nbsp; [Hadoop 连接管理器](connection-manager/hadoop-connection-manager.md)
+### <a name="1-nbsp-schedule-the-execution-of-an-ssis-package-on-azurelift-shiftssis-azure-schedule-packagesmd"></a>1.&nbsp; [计划安排 Azure 上的 SSIS 包执行](lift-shift/ssis-azure-schedule-packages.md)
 
-更新日期：2017-11-28 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  （[下一篇](#TitleNum_2)）
+更新日期：2018-01-18 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 65.  ms.author= "douglasl".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 2d68f4e884304f1a28045b42b680c15cc6a41ec5 fb2429466ea4d545682975d8dbea47451ce98ec7  (PR=4113  ,  Filename=hadoop-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=28cccac53767db70763e5e705b8cc59a83c77317) -->
-
-
-
-**连接 Kerberos 身份验证**
-
-有两个选项可用来设置本地环境，以便可以配合使用 Kerberos 身份验证和 Hadoop 连接管理器。 可选择更符合你情况的选项。
--   选项 1：[将 SSIS 计算机联接到 Kerberos 领域--#kerberos-join-realm）
--   选项 2：[启用 Windows 域和 Kerberos 领域之间的相互信任--#kerberos-mutual-trust）
-
-**<a name="kerberos-join-realm"></a>选项 1：将 SSIS 计算机联接到 Kerberos 领域**
-
-
-**要求：**
-
-
--   网关计算机需要联接 Kerberos 领域，且不能联接任何 Windows 域。
-
-**配置方式：**
-
-
-**在 SSIS 计算机上：**
-
-1.  运行 Ksetup 实用工具来配置 Kerberos KDC 服务器和领域。
-
-    计算机必须配置为工作组的成员，因为 Kerberos 领域与 Windows 域不同。 设置 Kerberos 领域并添加 KDC 服务器，如以下示例所示。 根据需要，将 REALM.COM 替换为各自的领域。
-
-```
-    C:> Ksetup /setdomain REALM.COM`
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-```
-
-    Restart the computer after executing these two commands.
-
-2.  使用 Ksetup 命令验证配置。 输出应该如下例所示：
-
-```
-    C:> Ksetup
-    default realm = REALM.COM (external)
-    REALM.com:
-        kdc = <your_kdc_server_address>
-```
-
-**<a name="kerberos-mutual-trust"></a>选项 2：启用 Windows 域和 Kerberos 领域之间的相互信任**
-
-
-**要求：**
-
--   网关计算机必须联接 Windows 域。
--   需要用于更新域控制器设置的权限。
-
-**配置方式：**
-
-
-> [!NOTE]
-> 根据需要，将下面教程中的 REALM.COM 和 AD.COM 替换为各自的领域和域控制器。
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authenticationlift-shiftssis-azure-connect-with-windows-authmd"></a>2.&nbsp; [使用 Windows 身份验证连接到本地数据源和 Azure 文件共享](lift-shift/ssis-azure-connect-with-windows-auth.md)
-
-更新日期：2017-11-27 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  （[上一篇](#TitleNum_1)）
-
-<!-- Source markdown line 66.  ms.author= "douglasl".  -->
+<!-- Source markdown line 28.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 673386fca53cb60b983e0cb3cd4b9e2ee1dee0de 65458b4dceb92d01184c5e9c6f68ec0e8f16ba08  (PR=4104  ,  Filename=ssis-azure-connect-with-windows-auth.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=19e1c4067142d33e8485cb903a7a9beb7d894015) -->
+<!-- git diff --ignore-all-space --unified=0 be778f8096559da9b84670382deb11f56c129971 640dd3cb59a88ccbc4cf6eab363a45e284f6b873  (PR=4662  ,  Filename=ssis-azure-schedule-packages.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
 
 
 
-**连接到本地 SQL Server**
+必须先将 SQL 数据库服务器作为链接服务器添加到本地 SQL Server，才能在本地使用 SQL Server 代理来计划安排存储在 Azure SQL 数据库服务器上的包的执行。
 
-若要检查能否连接到本地 SQL Server，请执行以下操作：
+1.  **设置链接服务器**
 
-1.  若要运行此测试，请找一台未加入域的计算机。
+    ```
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location='',
+        @provstr='',
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
 
-2.  在未加入域的计算机上，运行以下命令，以通过要使用的域凭据启动 SQL Server Management Studio (SSMS)：
+2.  **设置链接服务器凭据**
 
-```
-    runas.exe /netonly /user:<domain>\<username> SSMS.exe
-```
+    ```
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer',
+        @useself = 'false',
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
 
-3.  从 SSMS 中，检查能否连接到要使用的本地 SQL Server。
+3.  **设置链接服务器选项**
 
-**连接到本地文件共享**
+    ```
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
 
-若要检查能否连接到本地文件共享，请执行以下操作：
-
-1.  若要运行此测试，请找一台未加入域的计算机。
-
-2.  在未加入域的计算机上运行以下命令。 此命令会打开一个命令提示符窗口，其中包含要使用的域凭据，然后通过获取目录列表测试与文件共享的连接性。
-
-```
-    runas.exe /netonly /user:<domain>\<username> cmd.exe
-    dir \\fileshare
-```
-
-3.  检查该目录列表是不是为要使用的本地文件共享返回的。
-
-**连接到 Azure VM 上的文件共享**
-
-若要连接到 Azure 虚拟机上的文件共享，请执行以下操作：
-
-1.  使用 SQL Server Management Studio (SSMS) 或其他工具连接到托管 SSIS 目录数据库 (SSISDB) 的 SQL 数据库。
-
-2.  将 SSISDB 设置为当前数据库后，打开一个查询窗口。
-
-3.  按以下选项中所述运行 `catalog.set_execution_credential` 存储过程：
-
-```
-    catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
-```
-
-**连接到 Azure 文件中的文件共享**
-
-有关 Azure 文件的详细信息，请参阅 [Azure 文件](https://azure.microsoft.com/services/storage/files/)。
+有关详细信息，请参阅[创建链接服务器](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)和[链接服务器](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md)。
 
 
 
@@ -227,45 +143,44 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-## <a name="similar-articles"></a>类似文章
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新的文章的类似文章
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新文章和更新的文章 (3+14)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新的和更新的文章 (1+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
-- [新文章和更新的文章 (87+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (5+4)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (2+2)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章 (10+9)：Linux 版 SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (2+4)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章 (4+2)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章 (0+1)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新文章和更新的文章 (21+0)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章 (5+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新的和更新的文章 (0+1)：SQL Server Data Tool (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章 (1+0)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新的和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
+
+- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
+
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
+- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 

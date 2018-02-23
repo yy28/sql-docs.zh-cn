@@ -1,29 +1,20 @@
 ---
 title: "已更新 - SQL Server 文档 | Microsoft Docs"
 description: "显示 SQL Serverl 文档中最近更改的更新内容片段。"
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: BYHAM
-ms.service: 
-ms.component: sql-non-specified
-ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: sql-server
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
 ms.author: genemi
-ms.openlocfilehash: 77a97d94d005b43bf4c1a313a15a501cbe74a216
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: sql-server
+ms.date: 02/03/2018
+ms.openlocfilehash: d819ecfc22e3a8e27fdfe7263b1d545298ca5055
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>新文章和最近更新的文章：SQL Server 文档
 
@@ -37,7 +28,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：从 2017-09-28 到 2017-12-02&nbsp;&nbsp;&nbsp;
+- 更新日期范围：2017-12-03 到 2018-02-03
 - 主题领域：&nbsp;**SQL Server**。
 
 
@@ -50,11 +41,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-1. [SQL Server 开发合作伙伴](partner-dev-sql-server.md)
-2. [SQL Server 高可用性和灾难恢复合作伙伴](partner-hadr-sql-server.md)
-3. [SQL Server 管理合作伙伴](partner-management-sql-server.md)
-4. [SQL Server 监视合作伙伴](partner-monitor-sql-server.md)
-5. [SQL Server 2012 SP4 发行说明](sql-server-2012-sp4-release-notes.md)
+1. [升级在 Windows Server 2008/2008 R2/2012 群集上运行的 SQL Server 实例](failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)
 
 
 
@@ -80,7 +67,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [SQL Server 2017 发行说明](#TitleNum_1)
+1. [SQL Server 脱机帮助和帮助查看器](#TitleNum_1)
 
 
 
@@ -91,44 +78,49 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-2017-release-notessql-server-2017-release-notesmd"></a>1.&nbsp; [SQL Server 2017 发行说明](sql-server-2017-release-notes.md)
+### <a name="1-nbsp-sql-server-offline-help-and-help-viewersql-server-help-installationmd"></a>1.&nbsp; [SQL Server 脱机帮助和帮助查看器](sql-server-help-installation.md)
 
-更新日期：2017-11-20 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+更新日期：2017-12-19 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 37.  ms.author= "craigg".  -->
+<!-- Source markdown line 67.  ms.author= "craigg".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c9ac7e027e32b17bb9b54a4a878f70a70404f1cb 5b1aa8dc715fbb08d82b241f1e47f6e443b3e2fc  (PR=4032  ,  Filename=sql-server-2017-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
+<!-- git diff --ignore-all-space --unified=0 ea491fdc173a54fb4cdb3dfa2e26bd206d1cc45d 22444427a48064b76088d19d1ffae0a885bfe2a7  (PR=4338  ,  Filename=sql-server-help-installation.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=f2fde1c324466530f92006561a9a29decb711e1b) -->
 
 
 
-- 解决方法：首先，重启计算机并检查 FILESTREAM 网络共享是否可用。 如果该共享仍不可用，请完成以下步骤：
+   帮助查看器随即打开“管理内容”选项卡。
 
-    1. 在 SQL Server 配置管理器中，右键单击 SQL Server 实例，然后单击“属性”。
-    2. 在“FILESTREAM”选项卡中，清除“针对文件 I/O 流访问启用 FILESTREAM”，然后单击“应用”。
-    3. 再次对原始共享名称选中“针对文件 I/O 流访问启用 FILESTREAM”，然后单击“应用”。
+2. 要安装最新帮助内容包，请在“安装源”下选择“联机”。
 
-**Master Data Services (MDS)**
+   ![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-onlinesource.png)
 
-- 问题及其对客户的影响：在用户权限页上，当向实体树视图中的根级别授予权限时，看到以下错误：`"The model permission cannot be saved. The object guid is not valid"`
+   >[!NOTE]
+   > 要从磁盘（SQL Server 2014 帮助）进行安装，请在“安装源”下选择“磁盘”，并指定磁盘位置。
 
-- **解决方法：**
-  - 向树视图中的子节点而非根级别授予权限。
-  - 或
-  - 运行以下 MDS 团队博客中介绍的脚本：[在实体级别上应用权限时出错](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
+   “管理内容”选项卡上的“本地存储路径”显示内容在本地计算机上的安装位置。 要更改位置，请单击“移动”，在“到”字段中输入不同的文件夹路径，然后单击“确定”。
+   如果更改本地存储路径后帮助安装失败，请关闭并重新打开帮助查看器，确保新位置显示在“本地存储路径”中，然后重试安装。
 
-**Analysis Services**
+3. 在每个要安装的内容包（丛书）旁，单击“添加”。
+   要安装所有 SQL Server 帮助内容，请添加 SQL Server 下的全部 13 本丛书。
 
-- **问题和对客户的影响：**对于 1400 兼容级别的表格模型，适用于以下源的数据连接器尚不可用。
-  - Amazon Redshift
-  - IBM Netezza
-  - Impala
-- **解决方法：** 无。
+4. 单击右下方的“更新”。
+   添加丛书时，左侧的帮助目录将自动更新。
 
-- 问题及其对客户的影响：具有透视的 1400 兼容性级别的直接查询模型可能在查询和发现元数据时失败。
-- **解决方法**：删除透视并重新部署。
+   ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)
+
+> [!NOTE]
+> 并非 SQL Server 目录中的所有顶部节点标题都与相应的可下载帮助丛书的名称完全匹配。 TOC 标题映射的丛书名称如下：
+
+| 内容窗格 | SQL Server 丛书 |
+|-----|-----|
+|Analysis Services 语言参考 | Analysis Services (MDX) 语言参考|
+|数据分析表达式 (DAX) 参考 | 数据分析表达式 (DAX) 参考|
+|数据挖掘扩展插件 (DMX) 参考 | 数据挖掘扩展插件 (DMX) 参考|
+|SQL Server 开发人员指南 | SQL Server Developer 参考|
+|下载 SQL Server Management Studio | SQL Server Management Studio|
 
 
 
@@ -136,45 +128,44 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-## <a name="similar-articles"></a>类似文章
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新的文章的类似文章
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新文章和更新的文章 (3+14)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新的和更新的文章 (1+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
-- [新文章和更新的文章 (87+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (5+4)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (2+2)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章 (10+9)：Linux 版 SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (2+4)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章 (4+2)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章 (0+1)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新文章和更新的文章 (21+0)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章 (5+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新的和更新的文章 (0+1)：SQL Server Data Tool (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章 (1+0)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新的和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
+
+- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
+
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
+- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 

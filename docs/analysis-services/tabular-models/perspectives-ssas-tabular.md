@@ -1,5 +1,5 @@
 ---
-title: "透视 (SSAS 表格) |Microsoft 文档"
+title: "透视 |Microsoft 文档"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a10f9bc23e8c08cb36dac71ad473a67008424e67
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e78bf1c9300fcd9a6c0d198d0239ecee12a5ea22
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="perspectives"></a>透视
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]透视，表格模型中定义的一个模型可查看提供的模型的已设定焦点、 业务特定或应用程序特定视点的子集。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在表格模型中，透视定义模型的可查看子集，借此您可以将注意力集中在该模型中的特定业务或特定应用上。  
   
 ##  <a name="bkmk_understanding"></a> 优点  
  表格模型可为非常复杂的对象，以使用户进行浏览。 单个模型可以表示完整的数据仓库内容，可具有多个表、度量值和维度。 用户可能只需要与模型的一小部分进行交互即可满足其商业智能和报表要求，因此，这样的复杂性会令用户感到过于复杂。  

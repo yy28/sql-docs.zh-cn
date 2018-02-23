@@ -1,32 +1,23 @@
 ---
 title: "已更新 - 适用于 SQL Server 的 SSMS 文档 | Microsoft Docs"
 description: "显示 SQL Server 的 SQL Server Management Studio (SSMS) 文档中最近更改的更新内容片段。"
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: 
-ms.component: ssms
-ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: 
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
 ms.author: genemi
-ms.workload: ssms-sql-server-management-studio
-ms.openlocfilehash: a1a9156ef4bc2846f377f9c0695ec015d58606dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssms
+ms.date: 02/03/2018
+ms.openlocfilehash: d69c32f2159c133d7c8042359b7d65885aac39d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>新的和最近更新的文章：适用于 SQL Server 的 SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 
 
 Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft.com/) 文档网站上的一些现有文章。 本文显示从最近更新的文章中摘录的内容。 可能还会列出新文章的链接。
@@ -37,7 +28,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：从 2017-09-28 到 2017-12-02&nbsp;&nbsp;&nbsp;
+- 更新日期范围：2017-12-03 到 2018-02-03
 - 主题区域： &nbsp; **SQL Server Management Studio (SSMS)**。
 
 
@@ -50,7 +41,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 单击以下链接可跳转到最近添加的新文章。
 
 
-暂时无新文章列出。
+1. [安装非英语语言版本的 SQL Server Management Studio (SSMS)](install-other-languages.md)
 
 
 
@@ -76,7 +67,8 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [SQL Server Management Studio (SSMS) - 更改日志](#TitleNum_1)
+1. [下载 SQL Server Management Studio (SSMS)](#TitleNum_1)
+2. [SQL Server Management Studio (SSMS) - 更改日志](#TitleNum_2)
 
 
 
@@ -87,39 +79,105 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1.&nbsp; [SQL Server Management Studio - 更改日志 (SSMS)](sql-server-management-studio-changelog-ssms.md)
+### <a name="1-nbsp-download-sql-server-management-studio-ssmsdownload-sql-server-management-studio-ssmsmd"></a>1.&nbsp;[下载 SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
 
-更新日期：2017-10-09 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+更新日期：2018-01-18 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  （[下一篇](#TitleNum_2)）
 
-<!-- Source markdown line 23.  ms.author= "sstein".  -->
+<!-- Source markdown line 83.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 f483a7e0ba53cff80d3f2d33c9196906d27a7a61 c125f43f0a45e70ce180e62edecc68bdcffd5086  (PR=3441  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=29122bdf543e82c1f429cf401b5fe1d8383515fc) -->
+<!-- git diff --ignore-all-space --unified=0 0e123e7bdf04f02fcd26ac31fa30ed5f31b19c7d 924246b55d3cad6a5d068da8a41f4be23dcfeb2b  (PR=4652  ,  Filename=download-sql-server-management-studio-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
 
 
 
-**[SSMS 17.3--download-sql-server-management-studio-ssms.md)**
+SSMS 17.4 是 SQL Server Management Studio 的最新版本。 SSMS 的 17.x 一代提供对 SQL Server 2008 到 SQL Server 2017 几乎所有功能领域的支持。 版本 17.x 也支持 SQL Analysis Service PaaS。
 
-正式发布版 | 内部版本号：14.0.17199.0
+版本 17.4 包括：
 
-**增强功能**
+漏洞评估：
+- 添加了一个新的 SQL 漏洞评估服务，以扫描数据库的潜在漏洞和最佳方案偏差，如配置错误、权限过多和敏感数据公开。
+- 评估结果包括旨在解决每个问题的可操作步骤，并提供自定义修正脚本（若适用）。 可以为每个环境自定义评估报表并进行调整以满足特定需求。 访问 [SQL 漏洞评估](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)了解详细信息。
+
+SMO：
+- 修复了 HasMemoryOptimizedObjects 在 Azure 上引发异常的问题。
+- 添加了对新 CATALOG_COLLATION 功能的支持。
+
+AlwaysOn 仪表板：
+- 可用性组中的延迟分析有所改进。
+- 添加了两个新报表：AlwaysOn\_Latency\_Primary 和 AlwaysOn\_Latency\_Secondary。
+
+Showplan：
+- 已更新指向正确文档的链接。
+- 允许直接从生成的实际计划进行单个计划分析。
+- 新图标集。
+- 添加了对识别 GbApply、InnerApply 等“应用逻辑运算符”的支持。
+
+XE 探查器：
+- 更名为 XEvent 探查器。
+- 默认情况下，停止/启动菜单命令会立即停止/启动会话。
+- 已启用键盘快捷方式（例如，用于搜索的 CTRL-F）。
+- 向 XEvent 探查器会话中的相应事件添加了 database\_name 和 client\_hostname 操作。 为了使更改生效，你可能需要删除服务器上现有 QuickSessionStandard 或 QuickSessionTSQL 会话实例 - [连接 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 
-- 新添加的“导入平面文件”向导通过智能框架简化了 CSV 文件的导入体验，极大地减少了所需的用户干预或领域的专业知识。 有关详细信息，请参阅 [Import Flat File to SQL Wizard--../relational-databases/import-export/import-flat-file-wizard.md)。
-- “XEvent 探查器”节点已添加到对象资源管理器。 有关详细信息，请参阅 [Use the SSMS XEvent Profiler--../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
-- 更新了性能仪表板历史等待报表中的等待过滤和分类。
-- 添加了“预测”函数的语法检查。
-- 添加了外部库管理查询的语法检查。
-- 添加了对外部库管理的 SMO 支持。
-- 添加了对“已注册服务器”窗口的“启动 PowerShell”支持（需要新的 SQL PowerShell 模块）。
-- AlwaysOn：已为可用性组添加 [read-only routing support--../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)。
-- 添加了一个用于将跟踪详细信息发送到“Active Directory - 含 MFA 支持的通用身份验证”登录的输出窗口（默认为关闭状态；必须在“工具”>“选项”>“Azure 服务”>“Azure 云”>“ADAL 输出窗口跟踪级别”下的用户设置中开启）。
-- 查询存储：
-  - 即使 QDS 为关闭状态，只要 QDS 已记录任何数据，就可以访问查询存储 UI。
-  - 查询存储 UI 现在会在所有现有报表中公开等待分类。 这会让客户解锁顶级等待查询等方案。
-- 包含可选的脚本参数标头（默认为关闭状态；可在“工具”>“选项”>“SQL Server 对象资源管理器”>“脚本”>“包括脚本参数标头”下的用户设置中启用）- [连接项 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)。
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>2.&nbsp; [SQL Server Management Studio - 更改日志 (SSMS)](sql-server-management-studio-changelog-ssms.md)
+
+更新日期：2018-01-29 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  （[上一篇](#TitleNum_1)）
+
+<!-- Source markdown line 27.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 b5096fa8f1ae3f2e4bc040f43cb8810d96f2c69c eb641ac39386a26a76dc303f5bd55eb3f9f4c78d  (PR=0  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=ba4b1c2e5200f2f78786b710da18fd38fedde6c9) -->
+
+
+
+**[SSMS 17.4](download-sql-server-management-studio-ssms.md)**
+
+正式发布版 | 内部版本号：14.0.17213.0
+
+**新增功能**
+
+
+**常规 SSMS**
+
+漏洞评估：
+- 添加了一个新的 SQL 漏洞评估服务，以扫描数据库的潜在漏洞和最佳方案偏差，如配置错误、权限过多和敏感数据公开。
+- 评估结果包括旨在解决每个问题的可操作步骤，并提供自定义修正脚本（若适用）。 可以为每个环境自定义评估报表并进行调整以满足特定需求。 访问 [SQL 漏洞评估](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)了解详细信息。
+
+SMO：
+- 修复了 HasMemoryOptimizedObjects 在 Azure 上引发异常的问题。
+- 添加了对新 CATALOG_COLLATION 功能的支持。
+
+AlwaysOn 仪表板：
+- 可用性组中的延迟分析有所改进。
+- 添加了两个新报表：AlwaysOn\_Latency\_Primary 和 AlwaysOn\_Latency\_Secondary。
+
+Showplan：
+- 已更新指向正确文档的链接。
+- 允许直接从生成的实际计划进行单个计划分析。
+- 新图标集。
+- 添加了对识别 GbApply、InnerApply 等“应用逻辑运算符”的支持。
+
+XE 探查器：
+- 更名为 XEvent 探查器。
+- 默认情况下，停止/启动菜单命令会立即停止/启动会话。
+- 已启用键盘快捷方式（例如，用于搜索的 CTRL-F）。
+- 向 XEvent 探查器会话中的相应事件添加了 database\_name 和 client\_hostname 操作。 为了使更改生效，你可能需要删除服务器上现有 QuickSessionStandard 或 QuickSessionTSQL 会话实例 - [连接 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+命令行：
+- 添加了新的命令行选项 (“-G”)，可以用于自动将 SSMS 连接到使用 Active Directory 身份验证（“集成”或“密码”）的服务器/数据库。 有关详细信息，请参阅 [Ssms 实用工具](ssms-utility.md)。
 
 
 
@@ -127,45 +185,44 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-## <a name="similar-articles"></a>类似文章
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新的文章的类似文章
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新文章和更新的文章 (3+14)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新的和更新的文章 (1+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
-- [新文章和更新的文章 (87+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (5+4)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (2+2)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章 (10+9)：Linux 版 SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (2+4)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章 (4+2)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章 (0+1)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新文章和更新的文章 (21+0)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章 (5+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新的和更新的文章 (0+1)：SQL Server Data Tool (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章 (1+0)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新的和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
+
+- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
+
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
+- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 

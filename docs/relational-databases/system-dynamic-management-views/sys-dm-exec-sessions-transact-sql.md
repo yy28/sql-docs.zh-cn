@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>权限  
 每个人都可以看到自己的会话信息。  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:**需要`VIEW SERVER STATE`权限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]查看服务器上的所有会话。  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**需要`VIEW DATABASE STATE`若要查看当前数据库的所有连接。 `VIEW DATABASE STATE`无法在中授予`master`数据库。 
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**需要`VIEW DATABASE STATE`若要查看当前数据库的所有连接。 `VIEW DATABASE STATE` 无法在中授予`master`数据库。 
   
   
 ## <a name="remarks"></a>注释  
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/03/2018
  如果未启用此选项，则这些列将返回 Null 值。 有关如何设置此服务器配置选项的详细信息，请参阅[符合通用准则 enabled 服务器配置选项](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)。  
  
  
- Azure SQL 数据库上的管理员连接将看到经过验证的会话，每一行，而非管理员连接将仅看到到其数据库的用户会话相关的信息。 
+ Azure SQL 数据库上的管理员连接将看到每个经过身份验证的会话的一行。 显示在结果集中，"sa"会话没有任何影响上的用户配额的会话。 非管理员连接将仅看到到其数据库的用户会话相关的信息。
  
   
 ## <a name="relationship-cardinalities"></a>关系基数  

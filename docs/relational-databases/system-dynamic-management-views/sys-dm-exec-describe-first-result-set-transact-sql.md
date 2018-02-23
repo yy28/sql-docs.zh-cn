@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee19d4df3deed6580a33be2620a6597ebd24f2ce
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 05555f2e64b191a43738c145e9c3029f8afe8cd5
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/03/2018
   
 ```  
   
-sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)  
+sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_information)  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -53,9 +53,9 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar (max)**。  
   
  *@params*  
- @params为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar （n)**或**nvarchar (max)**。  
+ @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar （n)**或**nvarchar (max)**。  
   
- 一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是一个占位符，表示附加参数定义。 必须在定义在 stmt 中指定的每个参数@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 NULL 是此参数的默认值。  
+ 一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n* 是一个占位符，表示附加参数定义。 必须在定义在 stmt 中指定的每个参数@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 NULL 是此参数的默认值。  
   
  *@include_browse_information*  
  如果设置为 1，则分析每个查询，就好像它在查询中使用 FOR BROWSE 选项。 将返回其他键列和源表信息。  

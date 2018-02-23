@@ -1,6 +1,6 @@
 ---
 title: "有关 SQL Server Analysis Services |Microsoft 文档"
-ms.date: 01/26/2018
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -25,17 +25,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 66bbbad6d55b8abb5e902e6d44355fc9c6c8cb29
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: fd94610fce0fb4c9329cc0725b3f8c54f9c6b9fe
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="about-sql-server-analysis-services"></a>有关 SQL Server Analysis Services
 
 Analysis Services 是决策支持和业务分析中使用的分析数据引擎。 它提供了企业级语义数据模型的业务报表和客户端应用程序，如 Power BI，Excel、 Reporting Services 报表和其他数据可视化工具。  
 
-典型的工作流包括在 Visual Studio 中创建多维或表格数据模型项目、 将模型作为到服务器实例的数据库部署、 设置重复的数据处理和分配权限以允许最终用户通过数据访问。 准备就绪时，可以通过支持作为数据源的 Analysis Services 的客户端应用程序访问你的语义的数据模型。  
+典型的工作流包括在 Visual Studio 中创建表格或多维数据模型项目、 将模型作为到服务器实例的数据库部署、 设置重复的数据处理和分配权限以允许最终用户通过数据访问。 准备就绪时，可以通过支持作为数据源的 Analysis Services 的客户端应用程序访问你的语义的数据模型。  
 
 Analysis Services 是在两个不同平台中可用： 
 
@@ -44,9 +44,7 @@ Analysis Services 是在两个不同平台中可用：
 **SQL Server Analysis Services** -支持表格模型在所有兼容性级别、 多维模型、 数据挖掘和 Power Pivot for SharePoint。
  
  ## <a name="documentation-by-area"></a>文档（按区域）  
-一般情况下， [Azure Analysis Services 文档](https://docs.microsoft.com/azure/analysis-services/)附带 Azure 文档。 如果你想在表格模型在云中，则最好从那里开始。 
-
-此文章和本部分中的文档是通常对于 SQL Server Analysis Services。 但是，至少对于表格模型中，如何创建和部署你的项目是大致相同，而不考虑所使用的平台。 签出这些部分来了解详细信息：
+一般情况下， [Azure Analysis Services 文档](https://docs.microsoft.com/azure/analysis-services/)附带 Azure 文档。 如果你想在表格模型在云中，则最好从那里开始。 此文章和本部分中的文档是通常对于 SQL Server Analysis Services。 但是，至少对于表格模型中，如何创建和部署表格模型项目是大致相同，而不考虑所使用的平台。 签出这些部分来了解详细信息：
 
    
 *  [比较表格和多维解决方案](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
@@ -55,8 +53,8 @@ Analysis Services 是在两个不同平台中可用：
 *  [多维模型](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
 *  [数据挖掘](../analysis-services/data-mining/data-mining-ssas.md)  
 *  [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
-*  [实例管理](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [教程](../analysis-services/analysis-services-tutorials-ssas.md)   
+*  [服务器管理](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [开发人员文档](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [技术参考](../analysis-services/powershell/technical-reference-ssas.md)
 

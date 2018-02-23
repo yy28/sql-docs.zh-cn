@@ -4,7 +4,7 @@ description: "本文介绍如何在 Linux 上的 SQL 服务器上使用数据库
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,25 +15,17 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: Inactive
-ms.openlocfilehash: d5d9dd84a7c3489c96e4e1aeaeb6d0928140a83f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 69d1ff539d2e488030f32b9246f1ccf40d92bdd8
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>数据库邮件和 Linux 上的 SQL 代理的电子邮件警报
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 以下步骤演示如何设置数据库邮件并将其用于 SQL Server 代理 (**mssql server 代理**) 在 Linux 上。 
-
-> [!NOTE]
-> 若要在 Linux 上的 SQL 服务器上使用数据库邮件，你需要使用 SQL Server 自 2017 年 1 RC1 或更高版本。
-
-## <a name="prerequisites"></a>必要條件
-
-- SQL Server 自 2017 年 1 RC1 和更高版本
-- SQL Server 代理 v14.0.800.90 2 及更高版本 （如果你打算使用警报的电子邮件）
 
 ## <a name="1-enable-db-mail"></a>1.启用数据库邮件
 

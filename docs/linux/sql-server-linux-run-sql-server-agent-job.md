@@ -4,7 +4,7 @@ description: "本教程演示如何在 Linux 上运行 SQL Server 代理作业�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: b812c67d693d6cf9670160c6d0d795e22a9b202f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上创建和运行 SQL Server 代理作业
 
@@ -47,23 +47,22 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
 * 使用 SSMS 的 Windows 计算机：
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)有关可选 SSMS 步骤。
 
-## <a name="install-sql-server-agent"></a>安装 SQL Server 代理
+## <a name="enable-sql-server-agent"></a>启用 SQL Server 代理
 
-若要在 Linux 上使用 SQL Server 代理，必须首先安装**mssql server 代理**已安装的 SQL Server 2017 的计算机上的包。
+若要在 Linux 上使用 SQL Server 代理，必须首先在已安装的 SQL Server 2017 的计算机上启用 SQL Server 代理。
 
-1. 安装**mssql server 代理**使用适合于您的 Linux 操作系统的命令。
-
-   | 平台 | 安装命令 |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. 若要启用 SQL Server 代理，请执行下列步骤。
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. 使用以下命令重新启动 SQL Server:
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> 从 SQL Server 自 2017 年 CU4 开始，SQL Server 代理是附带**mssql server**打包并默认处于禁用状态。 为代理之前 CU4 访问设置[在 Linux 上安装 SQL Server 代理](sql-server-linux-setup-sql-agent.md)。
 
 ## <a name="create-a-sample-database"></a>创建示例数据库
 

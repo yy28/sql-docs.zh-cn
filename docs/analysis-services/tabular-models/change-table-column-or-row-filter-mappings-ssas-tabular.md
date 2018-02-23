@@ -1,7 +1,7 @@
 ---
-title: "更改表、 列或行筛选器映射 （SSAS 表格） |Microsoft 文档"
+title: "更改表、 列或行筛选器映射 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,26 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 269513e992ce81a1e93044808cfd438b28e0cbef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 361cdea7d72a02c455ccf3f5b6d21255473b937e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>更改表、列或行筛选器映射（SSAS 表格）
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍如何通过更改表、 列或行筛选器映射**编辑表属性**中的对话框[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
+# <a name="change-table-column-or-row-filter-mappings"></a>更改表、列或行筛选器映射 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文介绍如何通过更改表、 列或行筛选器映射**编辑表属性**中的对话框[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
  根据您最初是通过从列表中选择表还是通过使用 SQL 查询导入数据的， **“编辑表属性”** 对话框中的选项将有所不同。 如果最初是通过从列表中选择数据来导入数据的，则 **“编辑表属性”** 对话框将显示“表预览”模式。 这种模式仅显示源表的一个子集，即前五十行。 如果最初是通过使用 SQL 语句来导入数据的，则 **“编辑表属性”** 对话框仅显示一条 SQL 语句。 通过使用 SQL 查询语句，您可以通过设计筛选器或手动编辑 SQL 语句来检索行的子集。  
   
  如果您将源更改为与当前表具有不同列的表，将显示一条消息以警告您列不相同。 然后，您必须选择要放在当前表中的列，并单击 **“保存”**。 您可以通过选中表左侧的复选框来替换整个表。  
   
 > [!NOTE]  
->  如果表有多个分区，则无法使用“编辑表属性”对话框更改行筛选器映射。 若要更改具有多个分区的表的行筛选器映射，请使用分区管理器。 有关详细信息，请参阅[分区（SSAS 表格）](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+>  如果表有多个分区，则无法使用“编辑表属性”对话框更改行筛选器映射。 若要更改具有多个分区的表的行筛选器映射，请使用分区管理器。 有关详细信息，请参阅[分区](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
 #### <a name="to-change-table-column-or-row-filter-mappings"></a>更改表、列或行筛选器映射  
   
@@ -49,7 +50,5 @@ ms.lasthandoff: 01/08/2018
   
          如果您执行了错误的操作并需要重新开始，请单击 **“清除行筛选器”**。  
   
-## <a name="see-also"></a>另请参阅  
- [“编辑表属性”对话框 (SSAS)](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)  
   
   

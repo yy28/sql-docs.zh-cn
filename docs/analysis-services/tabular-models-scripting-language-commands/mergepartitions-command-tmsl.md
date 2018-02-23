@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7960dbd174c0f959439029dc05cd16efbc42f319
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fce99eb78e6e5a40b825d13b81def4a87deb48b5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mergepartitions-command-tmsl"></a>撰写 MergePartitions 命令 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]将一个或多个源分区的数据合并到目标分区，，然后删除源分区。 目标分区的 SQL 查询将不会更新作为 merge 的一部分。 若要确保后续处理分区检索到的所有数据，应修订查询，以便它选择合并分区中的所有数据。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+将一个或多个源分区的数据合并到目标分区，，然后删除源分区。 目标分区的 SQL 查询将不会更新作为 merge 的一部分。 若要确保后续处理分区检索到的所有数据，应修订查询，以便它选择合并分区中的所有数据。  
   
 ## <a name="request"></a>请求  
  必须指定数据库、 表和分区源和目标分区。 你只能合并同一表中的分区。  
@@ -72,6 +73,6 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="see-also"></a>另请参阅  
  [表格模型脚本语言 (TMSL) 参考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [创建和管理表格模型分区（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

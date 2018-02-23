@@ -1,7 +1,7 @@
 ---
-title: "分析 Excel (SSAS 表格) 中的表格模型 |Microsoft 文档"
+title: "分析在 Excel 中的表格模型 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.chooseperspect.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.chooseperspect.f1
 ms.assetid: 47fa45fc-60ab-41a1-bde3-5781c8462889
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 57bcb66a1533cc56493f561ab81b2ccbade96eb7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6b9248c15ba18811781fe24ae3f432e61b7df540
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>在 Excel 中分析表格模型（SSAS 表格）
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 Excel 中的新功能中分析[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]打开 Microsoft Excel、 创建到模型工作区数据库的数据源连接并将数据透视表添加到工作表。 模型对象（表、列、度量值、层次结构和 KPI）作为数据透视表字段列表中的字段包含。  
+# <a name="analyze-a-tabular-model-in-excel"></a>分析在 Excel 中的表格模型  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“在 Excel 中分析”功能可以打开 Microsoft Excel、创建到模型工作区数据库的数据源连接以及将数据透视表添加到工作表。 模型对象（表、列、度量值、层次结构和 KPI）作为数据透视表字段列表中的字段包含。  
   
 > [!NOTE]  
 >  为了使用“在 Excel 中分析”功能，您必须在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]所在的计算机上安装 Microsoft Office 2003 或更高版本。 如果 Office 安装在不同的计算机上，您可以在另一计算机上使用 Excel 并连接到作为数据源的模型工作区数据库。 然后可以将数据透视表手动添加到工作表。 模型对象（表、列、度量值和 KPI）作为数据透视表字段列表中的字段包含。  
@@ -46,16 +48,16 @@ ms.lasthandoff: 01/08/2018
   
     -   若要使用安全角色，请选择 **“角色”**，然后在列表框中选择一个或多个角色。  
   
-         必须使用角色管理器定义安全角色。 有关详细信息，请参阅[创建和管理角色（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
+         必须使用角色管理器定义安全角色。 有关详细信息，请参阅[创建和管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
   
 3.  若要使用透视，请在 **“透视”** 列表框中选择一个透视。  
   
-     必须使用“透视”对话框定义透视（非默认值）。 有关详细信息，请参阅[创建和管理透视表（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)。  
+     必须使用“透视”对话框定义透视（非默认值）。 有关详细信息，请参阅[创建和管理透视](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)。  
   
 > [!NOTE]  
 >  当您在模型设计器中更改模型项目时，Excel 中的数据透视表字段列表不会自动刷新。 若要刷新 Excel 中的数据透视表字段列表，请在 **“选项”** 功能区上单击 **“刷新”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 Excel 中分析（SSAS 表格）](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [在 Excel 中分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

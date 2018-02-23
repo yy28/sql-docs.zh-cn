@@ -1,5 +1,5 @@
 ---
-title: "从 Power Pivot (SSAS 表格) 导入 |Microsoft 文档"
+title: "从 Power Pivot 导入 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.importfromppt.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71de8ff892ff328abe134069d0ffd703846721c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cf23e21dfa0a87af7702bf07961d71184e6a59c2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="import-from-power-pivot-ssas-tabular"></a>从 Power Pivot 导入（SSAS 表格）
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍如何通过导入的元数据和从数据中创建新的表格模型项目[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]按使用从导入工作簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中的项目模板[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+# <a name="import-from-power-pivot"></a>从 Power Pivot 导入 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文介绍如何通过导入的元数据和从数据中创建新的表格模型项目[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]按使用从导入工作簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中的项目模板[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>从 Power Pivot for Excel 文件创建新的表格模型  
  在通过从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中导入来创建新的表格模型项目时，将使用定义工作簿结构的元数据来在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创建和定义表格模型项目的结构。 表、列、度量值和关系之类的对象将与它们处于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中一样保留并出现在表格模型项目中。 不对 .xlsx 工作簿文件进行任何更改。  
@@ -52,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 4.  在 **“打开”** 对话框中，选择包含您要导入的模型元数据和数据的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 文件，然后单击 **“打开”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [工作区数据库（SSAS 表格）](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
- [复制和粘贴数据 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
+ [工作区数据库](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
+ [复制并粘贴数据](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: "将列添加到表 (SSAS 表格) |Microsoft 文档"
+title: "向表中添加列 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8f4dc0dc32d94ec793bab4e9912db739c942bb06
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="add-columns-to-a-table-ssas-tabular"></a>将列添加到表（SSAS 表格）
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍如何将列添加到现有表。  
+# <a name="add-columns-to-a-table"></a>向表中添加列
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文介绍如何将列添加到现有表。  
   
-## <a name="add-columns-from-the-data-source"></a>从数据源添加列  
+## <a name="add-columns-from-the-datasource"></a>从数据源添加列  
  使用表导入向导从数据源表导入数据时，将在模型中创建一个新表，该表包含源表中的所有列，如果您选择使用“预览并筛选”功能来筛选出某些列，则仅包含您选择的那些列和已筛选数据。 您还可以编写一个指定要导入的那些列的 SQL 查询。 但是，您可能以后决定源表具有要添加到模型表的其他列，或需要添加其值从 DAX 公式派生的计算列。  
   
  例如，如果在您最初从数据源导入时使用了表导入向导的“预览并筛选”功能以从源表选择有限数目的列，以后又决定添加在源表中存在而在模型表中不存在的另一个列。 或者，例如，在数据源将新的 AdjustedProfit 列添加到 FactSales 表，现在要向模型中的 Sales 表添加同样的 AdjustedProfit 列和数据。  
@@ -45,8 +46,8 @@ ms.lasthandoff: 01/08/2018
   
 2.  在 **“编辑表属性”** 对话框中，在表预览窗口中选择要添加的源列，然后单击“确定”。 已包含在表定义中的列将被选中。  
   
-## <a name="add-a-calculated-column"></a>添加计算列  
- 在计算列中，DAX 公式用于定义每一行的值。 例如，您可以创建一个计算列，该列包含简单的公式 (=1) 以将值 1 添加到每行。 计算列还可以有更复杂的公式，以基于模型中的其他数据计算值。 将在其他主题中更详细介绍计算列。 有关详细信息，请参阅 [计算列（SSAS 表格）](../../analysis-services/tabular-models/ssas-calculated-columns.md)中创建的表格模型项目。  
+## <a name="add-a-calculated-column"></a>添加一个计算的列  
+ 在计算列中，DAX 公式用于定义每一行的值。 例如，您可以创建一个计算列，该列包含简单的公式 (=1) 以将值 1 添加到每行。 计算列还可以有更复杂的公式，以基于模型中的其他数据计算值。 将在其他主题中更详细介绍计算列。 有关详细信息，请参阅 [计算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)中创建的表格模型项目。  
   
 #### <a name="to-create-a-calculated-column"></a>创建计算列  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 2.  在公式栏中，键入 DAX 公式以便为每个行添加属性。  
   
 ## <a name="add-a-blank-column"></a>添加空白列  
- 可以在模型表中创建命名的空白列。 如果要从另一个源粘贴数据，空白列很有用。 请记住，粘贴的数据的存储方式不同于导入的数据的存储方式。 有关详细信息，请参阅[复制并粘贴数据（SSAS 表格）](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
+ 可以在模型表中创建命名的空白列。 如果要从另一个源粘贴数据，空白列很有用。 请记住，粘贴的数据的存储方式不同于导入的数据的存储方式。 有关详细信息，请参阅[复制并粘贴数据](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
   
 #### <a name="to-create-a-named-blank-column"></a>创建命名的空白列  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 2.  单击顶部的单元，然后键入名称，按 Enter。  
   
 ## <a name="see-also"></a>另请参阅  
- [“编辑表属性”对话框 (SSAS)](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
- [更改表、列或行筛选器映射（SSAS 表格）](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [编辑表属性对话框](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
+ [更改表、列或行筛选器映射](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

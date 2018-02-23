@@ -1,29 +1,20 @@
 ---
 title: "已更新 - SQL Server SSDT 文档 | Microsoft Docs"
 description: "显示 Microsoft SQL Server 的 SQL Server Data Tools (SSDT) 文档中最近更新内容的片段。"
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: 
-ms.component: ssdt
-ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
 ms.author: genemi
-ms.workload: ssdt-sql-server-data-tools
-ms.openlocfilehash: ebc20b0e891426c468be439d80c838e641faab12
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssdt
+ms.date: 02/03/2018
+ms.openlocfilehash: c591ddddd60af31fe2d338fdee25ea2c17ab0ea5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>新的和最近更新的文章：SQL Server Data Tools (SSDT)
 
@@ -37,7 +28,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：从 2017-09-28 到 2017-12-02&nbsp;&nbsp;&nbsp;
+- 更新日期范围：2017-12-03 到 2018-02-03
 - 主题区域：&nbsp;**SQL Server Data Tools (SSDT)**。
 
 
@@ -89,66 +80,71 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 ### <a name="1-nbsp-changelog-for-sql-server-data-tools-ssdtchangelog-for-sql-server-data-tools-ssdtmd"></a>1.&nbsp; [SQL Server Data Tools (SSDT) 的更改日志](changelog-for-sql-server-data-tools-ssdt.md)
 
-更新日期：2017-11-20 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+更新日期：2018-01-18 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
 <!-- Source markdown line 28.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 7700cae7cafe1dac95c240b014f14d9c83e32be4 6416949beaee91da2f77dfebb9eb5ed363db4cb7  (PR=4032  ,  Filename=changelog-for-sql-server-data-tools-ssdt.md  ,  Dirpath=docs\ssdt\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
+<!-- git diff --ignore-all-space --unified=0 6416949beaee91da2f77dfebb9eb5ed363db4cb7 de18314845cffa197b3fd2ed868f2c330760bedb  (PR=4652  ,  Filename=changelog-for-sql-server-data-tools-ssdt.md  ,  Dirpath=docs\ssdt\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
 
 
 
+**SSDT for Visual Studio 2017 (15.5.1)**
 
-**SSDT for Visual Studio 2017（15.4.0 预览版）**
-
-内部版本号：14.0.16134.0
+内部版本号：14.0.16148.0
 
 **新增功能**
 
 
-此版本为 Visual Studio 2017 15.4 或更高版本中的 SQL Server 数据库、Analysis Services、Reporting Services 和 Integration Services 项目提供了独立的 Web 安装程序。
+除了安装程序的以下 bug 修复以外，Visual Studio 2017 (15.5.1) 与版本 15.5.0 相同：
+
+1.  修复安装程序在 SQL Server Integration Services 安装后挂起的问题。
+2.  修复安装失败并出现错误消息：“不支持请求的元文件操作(0x800707D3)”的问题。
+
+除了这两个 bug 修复之外，以下有关 15.5.0 的详细信息也仍适用于 15.5.1
+
+**SSDT for Visual Studio 2017 (15.5.0)**
+
+内部版本号：14.0.16146.0
+
+**新增功能**
+
+
+SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式版 (GA)。
 
 **安装程序**
+1. 安装程序 UI 已本地化。
+1. 将图标替换为更高质量的版本。
+
+**Integration Services (IS)**
+1. 在 ADF 中将包部署到 Azure SSIS IR 时，部署向导中添加了包验证步骤，可发现要在 Azure SSIS IR 中执行的 SSIS 包的潜在兼容性问题。 有关详细信息，请参阅[验证部署到 Azure 的 SSIS 包](..\integration-services\lift-shift\ssis-azure-validate-packages.md)。
+1. SSIS 扩展已本地化。
+
+**Bug 修复**
 
 
-- 允许用户在安装新的 SSDT for VS 2017 实例时设置昵称。
-- 在未选择任何 VS 实例的情况下会隐藏安装程序的功能选择复选框。
-- 根据客户反馈优化了安装程序的某些消息。
-- 修复了安装程序不支持升级的问题。
-
-
-**SSIS**
-
-
-- 修复了安装 Azure 功能包后导入/导出向导无法列出数据源的问题。
-- 修复了切换连接时编辑 SSIS Analysis Services 进程任务会引发异常的问题。
-- 修复了在应用添加 __$command_id 列的 SQL 修补程序后 CDC 组件会中断的问题。
-- 修复了面向旧版 SQL Server 时无法编辑和执行第三方包的问题。
-- 修复了双击 DTSWizard.exe 并选择“平面文件源”时“平面文件源”配置对话框无法正确显示的问题。
-- 修复了面向 SQL Server 2017 时包含 Azure 功能包任务/组件的包无法执行的问题。
-
+**Integration Services (IS)**
+1. 修复了 OLEDB 和 ADO.NET 连接管理器的布局损坏的问题。
+2. 修复了尝试编辑维度处理任务时出现程序集未发现已出现错误的问题。
 
 **已知问题**
 
-- 安装程序尚未本地化。
-- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+
+**Integration Services (IS)** 当 ExecuteOutOfProcess 设置为 True 时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
 
 
-**SSDT 17.3 for Visual Studio 2015**
 
-内部版本号：14.0.61709.290
+**SSDT 17.4 for Visual Studio 2015**
+
+内部版本号：14.0.61712.050
 
 **新增功能**
 
 
-**Analysis Services (AS)**
-
-- 在 1400 个模型中启用了 Cosmos DB 和 HDI Spark。
-- 表格数据源属性。
-- 现在支持“空白查询”选项，用于在查询编辑器中为 1400 兼容级别的模型创建新查询。
-- 1400 模式模型的查询编辑器现在支持保存查询，而系统不会自动处理新的表格。
+**Analysis Services (AS) 项目**
+- 向表格项目添加了三个新选项（在“选项”>“Analysis Services 表格”>“数据导入”下）：
 
 
 
@@ -156,45 +152,44 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-## <a name="similar-articles"></a>类似文章
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新的文章的类似文章
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新文章和更新的文章 (3+14)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新的和更新的文章 (1+0)：Analysis Services for SQL 文档](../analysis-services/new-updated-analysis-services.md)
-- [新文章和更新的文章 (87+0)：SQL 分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章和更新的文章 (5+4)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新文章和更新的文章 (0+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (2+2)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章 (10+9)：Linux 版 SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (2+4)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章 (4+2)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章 (0+1)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新文章和更新的文章 (21+0)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章和更新的文章 (5+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新的和更新的文章 (0+1)：SQL Server Data Tool (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新文章和更新的文章 (1+0)：SQL Server 迁移助手 (SSMA) 文档](../ssma/new-updated-ssma.md)
-- [新的和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章 (0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
+
+- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
+
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
 - [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
+- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
 - [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
 - [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "角色 (SSAS 表格) |Microsoft 文档"
+title: "角色 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bbbcfdbaafa7e5cbc17defc91b5dc7e391d92ad6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="roles"></a>角色
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]角色，在表格模型中，定义模型的成员权限。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在表格模型中，角色定义模型的成员权限。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。 
   
  对于 SQL Server Analysis Services，角色包含用户成员按 Windows 用户名或由 Windows 组和权限 （读取、 进程、 管理员）。 对于 Azure Analysis Services，用户必须在你的 Azure Active Directory 和用户名和指定组必须通过组织的电子邮件地址或 UPN。 
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
  默认情况下，当您创建某一新的表格模型项目时，该模型项目不具有任何角色。 可以通过使用 SSDT 中的角色管理器对话框定义角色。 在创作模型期间定义角色后，这些角色将应用于模型工作区数据库。 在部署模型时，相同的角色将应用于已部署的模型。 部署某一模型后，服务器角色 （[Analysis Services 管理员） 和数据库管理员的成员可以管理与模型关联的角色和使用 SSMS 关联与每个角色的成员。  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> 权限  
  每个角色都具有单个定义的数据库权限（合并的“读取和处理”权限除外）。 默认情况下，新角色将具有“无”权限。 也就是说，一旦将成员添加到具有“无”权限的角色，除非授予其他权限，否则，这些成员将无法修改数据库、运行处理操作、查询数据或查看数据库。  
   
  组或用户名可以是任意多个角色，每个具有不同的权限的角色的成员。 在某一用户是多个角色的成员时，为每个角色定义的权限将累积。 例如，如果某个用户是具有“读取”权限的角色的成员，并且还是具有“无”权限的角色的成员，则该用户将具有“读取”权限。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/08/2018
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|@shouldalert|企业|  
+|1|企业|  
 |2|一般行政和管理|  
 |3|库存管理|  
 |4|生产|  

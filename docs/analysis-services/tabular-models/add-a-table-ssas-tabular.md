@@ -1,7 +1,7 @@
 ---
-title: "添加表 (SSAS 表格) |Microsoft 文档"
+title: "将表添加 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 71a4385d5f6ab0a2fd396b78651a8609d55e74ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e8a168359f76db1b0871a6a4ba2b8d25d2973a1a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="add-a-table-ssas-tabular"></a>添加表（SSAS 表格）
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题介绍如何从从中你以前将数据导入您的模型的数据源添加表。 若要添加来自同一数据源的表，您可以使用现有的数据源连接。 建议您在从单个数据源导入任意数量的表时始终使用单个连接。  
+# <a name="add-a-table"></a>添加表
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文介绍如何从从中你以前将数据导入您的模型的数据源添加表。 若要添加来自同一数据源的表，您可以使用现有的数据源连接。 建议您在从单个数据源导入任意数量的表时始终使用单个连接。  
   
 ### <a name="to-add-a-table-from-an-existing-data-source"></a>从现有数据源添加表  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 >  从单个数据源同时导入多个表时，这些表在数据源中所具备的任何表间关系都将在模型中自动创建。 但如果稍后添加表，则可能需要在模型中手动创建新添加的表和以前导入的表之间的关系。  
   
 ## <a name="see-also"></a>另请参阅  
- [导入数据（SSAS 表格）](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
- [删除表（SSAS 表格）](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
+ [导入数据](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
+ [删除表](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   

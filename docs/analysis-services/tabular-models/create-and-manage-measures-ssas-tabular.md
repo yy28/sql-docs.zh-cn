@@ -1,7 +1,7 @@
 ---
-title: "创建和管理度量值 (SSAS 表格) |Microsoft 文档"
+title: "创建和管理度量值 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,31 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 799ada43cebe2f6358c88c0b4aa8719186f67823
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e61c65d65723b1500140a2c2493a479b0e2a640
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-measures-ssas-tabular"></a>创建和管理度量值（SSAS 表格）
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]度量值是创建的报表或 Excel 数据透视表 （或数据透视图） 中使用的公式。 度量值可以基于标准聚合函数，如 COUNT 或 SUM；或者，您可以通过使用 DAX 定义自己的公式。 本主题中的任务说明如何使用表的度量值网格创建和管理度量值。  
-  
- 本主题包括以下任务：  
-  
--   [使用标准聚合公式创建度量值](#bkmk_create_stand)  
-  
--   [使用自定义公式创建度量值](#bkmk_create_custom)  
-  
--   [编辑度量值属性](#bkmk_edit)  
-  
--   [重命名度量值](#bkmk_rename)  
-  
--   [删除度量值](#bkmk_delete)  
+# <a name="create-and-manage-measures"></a>创建和管理度量值 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+度量值是为用于报表或 Excel 数据透视表（或数据透视图）而创建的公式。 度量值可以基于标准聚合函数，如 COUNT 或 SUM；或者，您可以通过使用 DAX 定义自己的公式。 本主题中的任务说明如何使用表的度量值网格创建和管理度量值。  
   
 ## <a name="tasks"></a>“任务”  
  为了创建和管理度量值，您将使用表的度量值网格。 您只能在模型设计器的“数据视图”中查看表的度量值网格。 您不能在处于关系图视图中时创建度量值或查看度量值网格；不过，您可以在关系图视图中查看现有的度量值。 要为表显示度量值网格，请单击 **“表”** 菜单，然后单击 **“显示度量值网格”**。  
@@ -66,8 +55,8 @@ ms.lasthandoff: 01/08/2018
 -   在度量值网格中，右键单击某一度量值，然后单击“删除”。  
   
 ## <a name="see-also"></a>另请参阅  
- [度量值（SSAS 表格）](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [KPI（SSAS 表格）](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [计算列（SSAS 表格）](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+ [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [计算的列](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

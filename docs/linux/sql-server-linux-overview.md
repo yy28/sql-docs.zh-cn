@@ -4,7 +4,7 @@ description: "本指南介绍了 SQL Server 如何在 Linux 上运行和提供�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: d0047c61b5b02ad392da9e4b88deedc2033d070a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -29,7 +29,7 @@ SQL Server 2017 现在在 Linux 上运行。 它属于相同的 SQL Server 数�
 
 ## <a name="install"></a>Install
 
-若要开始，请在使用以下快速入门之一的 Linux 上安装 SQL Server:
+若要开始，请使用以下快速入门教程之一在Linux 上安装 SQL Server:
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)
@@ -38,11 +38,11 @@ SQL Server 2017 现在在 Linux 上运行。 它属于相同的 SQL Server 数�
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
-> 在运行 docker 本身在多个平台上，这意味着，你可以在 Linux、 Mac 和 Windows 上运行的 Docker 映像。
+> Docker 本身在多个平台上运行，这意味着，可以在 Linux、Mac 和 Windows 上运行 Docker 映像。
 
 ## <a name="connect"></a>“连接”
 
-安装完成后，连接到你的 Linux 计算机上的 SQL Server 实例。 你可以连接本地或远程和各种工具和驱动程序。 快速入门演示如何使用[sqlcmd](sql-server-linux-setup-tools.md)命令行工具。 其他工具包括：
+安装完成后，请连接到 Linux 计算机上的 SQL Server 实例。 可以使用各种工具和驱动程序进行本地或远程连接。 快速入门教程演示如何使用 [sqlcmd](sql-server-linux-setup-tools.md) 命令行工具。 其他工具包括：
 
 | 工具 | 教程 |
 |-----|-----|
