@@ -1,5 +1,5 @@
 ---
-title: "关系 (SSAS 表格) |Microsoft 文档"
+title: "关系 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="relationships-ssas-tabular"></a>关系（SSAS 表格）
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格模型中，关系是两个数据表之间的连接。 该关系确立两个表中的数据应该如何相关。 例如，Customers 表和 Orders 表可以彼此相关，以便显示与每个订单关联的客户名称。  
+# <a name="relationships"></a>关系 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在表格模型中，关系是两个数据表之间的连接。 该关系确立两个表中的数据应该如何相关。 例如，Customers 表和 Orders 表可以彼此相关，以便显示与每个订单关联的客户名称。  
   
  当使用“表导入向导”从相同数据源导入时，选择要导入的表（数据源中）中已存在的关系将在模型中重新创建。 通过使用关系图视图中的模型设计器或使用“管理关系”对话框，可以查看检测到的关系和自动重新创建的关系。 还可以通过使用关系图视图中的模型设计器或使用“创建关系”或“管理关系”对话框，手动创建表之间的新关系。  
   
@@ -37,34 +38,34 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="what"></a> 优点  
  关系是两个数据表之间的连接，它基于每个表中的一列或多列。 要理解关系为何有用，可以想像一下在业务中跟踪客户订单数据。 可以在具有以下结构的一个表中跟踪所有数据：  
   
-|CustomerID|“属性”|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|名称|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|@shouldalert|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|@shouldalert|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  这种方法可以用，但会存储大量冗余数据，如每个订单的客户电子邮件地址。 存储成本低廉，但如果电子邮件地址发生更改，就必须确保更新该客户的每一行数据。 针对这一问题，一种解决方法是将数据拆分到多个表中，然后在这些表之间定义关系。 这是中使用的方法*关系数据库*如 SQL Server。 例如，导入模型的某个数据库可以使用三个相关表来表示订单数据：  
   
-### <a name="customers"></a>Customers  
+### <a name="customers"></a>客户  
   
-|[CustomerID]|“属性”|EMail|  
+|[CustomerID]|名称|EMail|  
 |--------------------|----------|-----------|  
-|@shouldalert|Ashton|chris.ashton@contoso.com|  
+|1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |[CustomerID]|DiscountRate|  
 |--------------------|------------------|  
-|@shouldalert|.05|  
+|1|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Product|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|@shouldalert|256|2010-01-07|Compact Digital|11|  
-|@shouldalert|255|2010-01-03|SLR Camera|15|  
+|1|256|2010-01-07|Compact Digital|11|  
+|1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
  如果从同一数据库导入这些表，则“表导入向导”可以根据 [方括号] 中的列来检测这些表之间的关系，并可以在模型设计器中再现这些关系。 有关详细信息，请参阅本主题中的 [关系的自动检测和推理](#detection) 。 如果从多个源中导入表，则可以中所述地手动创建关系[创建表之间的关系两个](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 01/08/2018
   
  下表显示了三个表之间的关系：  
   
-|关系|类型|查找列|“列”|  
+|关系|类型|查找列|列|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|一对一|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|一对多|Customers.CustomerID|Orders.CustomerID|  
@@ -103,7 +104,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="single-active-relationship-between-tables"></a>表之间的单个活动关系  
  多个关系会导致表之间存在不明确的依赖关系。 若要创建准确的计算，需要从一个表到下一个表的单一路径。 因此，每对表之间只能存在一个活动关系。 例如，在 AdventureWorks DW 2012 中，表 DimDate 包含一个列 DateKey，该列与表 FactInternetSales 中的以下三个不同列相关：OrderDate、DueDate 和 ShipDate。 如果您试图导入这些表，则会成功创建第一个关系，但是在创建涉及相同列的后续关系时会接收到下面的错误：  
   
- \*关系： 表 [列 1]-> 表 [列 2] 的状态： 错误的原因： 无法表之间创建关系\<表 1 > 和\<表 2 >。 在两个表之间只能存在一个直接或间接关系。  
+ \* 关系： 表 [列 1]-> 表 [列 2] 的状态： 错误的原因： 无法表之间创建关系\<表 1 > 和\<表 2 >。 在两个表之间只能存在一个直接或间接关系。  
   
  如果您有两个表并且这两个表之间存在多个关系，则需要导入包含查找列的表的多个副本，并在每对表之间创建一个关系。  
   

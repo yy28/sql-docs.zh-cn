@@ -24,18 +24,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3bf21d3debd7c24ea7b2e5ddcea56392e0f33400
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d85d437ce17c04107d85cf444268eb26f1a460e8
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>表格建模 （1200年兼容级别）
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 本教程提供有关如何创建在 Analysis Services 表格模型的课程[1200年兼容级别](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)使用[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)，并将您的模型部署到 Analysis Services本地服务器还是在 Azure 中。  
  
-如果你在使用 SQL Server 2017 或 Azure Analysis Services，并且你想要在 1400年兼容性级别创建您的模型，请使用[Azure Analysis Services-Adventure Works 教程](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master)。 此更新的版本使用新奇且现代的获取数据功能连接并导入源数据，并使用 M 语言配置分区。
+如果你使用 SQL Server 2017 或 Azure Analysis Services，并且你想要在 1400年兼容性级别创建您的模型，请使用[表格建模 （1400年兼容性级别）](tutorial-tabular-1400/as-adventure-works-tutorial.md)。 此更新的版本使用现代的获取数据功能连接并导入源数据，使用的 M 语言来配置分区，并包括其他补充课程。
+
+> [!IMPORTANT]
+> 应在你的服务器支持的最新兼容性级别创建表格模型。 更高版本的兼容性级别模型提供改进的性能，其他功能，并将升级到以后的兼容性级别更紧密地。
  
   
 ## <a name="what-you-learn"></a>你掌握的内容   
@@ -50,14 +53,14 @@ ms.lasthandoff: 02/12/2018
   
 -   如何创建和管理透视和帮助用户更轻松地通过提供业务和应用程序特定视点中浏览模型数据的层次结构。  
   
--   如何创建分区，以便将表数据划分为可独立于其他分区进行处理的更小逻辑部分。  
+-   如何创建分区将表数据分割成较小的逻辑部分，可处理独立于其他分区。  
   
 -   如何通过创建角色以及用户成员来保护模型对象和数据的安全。  
   
 -   如何将表格模型部署到 Analysis Services 服务器上的本地或在 Azure 中。  
   
 ## <a name="scenario"></a>应用场景  
-本教程基于 Adventure Works Cycles，虚构的公司。 Adventure Works 是大型、 跨国的制造公司，生产和分发到商业市场北美、 欧洲和亚洲的裸机和复合自行车。 与总部位于俄罗斯 Bothell，Washington，公司使用 500 的辅助进程。 此外，Adventure Works 使用多个区域的销售团队整个其市场基。  
+本教程基于 Adventure Works Cycles，虚构的公司。 Adventure Works 是一大、 跨国制造公司生成自行车、 部件和商业市场北美、 欧洲和亚洲的附件。 与总部位于俄罗斯 Bothell，Washington，公司使用 500 的辅助进程。 此外，Adventure Works 使用多个区域的销售团队整个其市场基。  
   
 为了更好地支持销售和营销团队以及高级管理人员的数据分析需要，您需要创建一个用户表格模型，以便分析 AdventureWorksDW 示例数据库中的互联网销售数据。  
   

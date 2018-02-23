@@ -1,5 +1,5 @@
 ---
-title: "表格模型 (SSAS 表格) 中的 DAX |Microsoft 文档"
+title: "表格模型中的 DAX |Microsoft 文档"
 ms.custom: 
 ms.date: 10/21/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a95f7acdcf05c003521a4471f07036b5f458b65e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>表格模型 (SSAS 表格) 中的 DAX
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]数据分析表达式 (DAX) 是用于在 Analysis Services、 Power BI Desktop 和 Excel 中的 Power Pivot 中创建自定义计算公式语言。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
+# <a name="dax-in-tabular-models"></a>表格模型中的 DAX 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+数据分析表达式 (DAX) 是用于在 Analysis Services、 Power BI Desktop 和 Excel 中的 Power Pivot 中创建自定义计算公式语言。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
   
  尽管 DAX Analysis Services、 Power BI Desktop 和 Excel 中的 Power Pivot 中使用的则本主题更适用于 Analysis Services 表格模型项目创作 SQL Server Data Tools (SSDT) 中。  
   
@@ -73,8 +74,8 @@ ms.lasthandoff: 01/08/2018
 |整数|一个 64 位（八字节）整数值 <sup>1、2</sup>|没有小数位的数字。 整数可以是正数或负数，但必须是介于 -9,223,372,036,854,775,808 (-2^63) 和 9,223,372,036,854,775,807 (2^63-1) 之间的整数。|  
 |小数|一个 64 位（八字节）实数 <sup>1、2</sup>|实数是可具有小数位的数字。 实数涵盖很广范围的值：<br /><br /> 从 -1.79E +308 到 -2.23E -308 的负值<br /><br /> 零<br /><br /> 从 2.23E -308 到 1.79E + 308 的正值<br /><br /> 但是，有效位数限制为 17 个小数位。|  
 |Boolean|Boolean|True 或 False 值。|  
-|文本|String|一个 Unicode 字符数据字符串。 可以是字符串，或以文本格式表示的数字或日期。|  
-|date|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
+|Text|字符串|一个 Unicode 字符数据字符串。 可以是字符串，或以文本格式表示的数字或日期。|  
+|日期|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
 |货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
 |N/A|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
@@ -366,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  处理和重新计算对行筛选器公式没有影响，除非重新计算的结果返回不同的值，致使角色成员能够查询或不能查询该行。  
   
- 有关详细信息，请参阅 [处理数据（SSAS 表格）](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
+ 有关详细信息，请参阅[处理数据](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
 ##  <a name="bkmk_troubleshoot"></a> 更正公式中的错误  
  如果在定义公式时遇到错误，公式可能会包含“语法错误” 、“语义错误” 或“计算错误”。  
@@ -399,7 +400,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [计算的列](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [支持的数据源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

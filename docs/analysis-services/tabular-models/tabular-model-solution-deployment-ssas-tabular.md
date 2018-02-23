@@ -1,5 +1,5 @@
 ---
-title: "表格模型解决方案部署 (SSAS 表格) |Microsoft 文档"
+title: "表格模型解决方案部署 |Microsoft 文档"
 ms.custom: 
 ms.date: 02/13/2018
 ms.prod: analysis-services
@@ -17,35 +17,35 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d5628bc8c66f0c3d920e92be2a58928b8e382e59
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 276ff67a2c3dac1e557d782616bf9096349d3246
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格模型解决方案部署（SSAS 表格）
+# <a name="tabular-model-solution-deployment"></a>表格模型解决方案部署 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 在创作某一表格模型项目后，您必须部署此项目，以便用户通过使用报表客户端应用程序浏览该模型。 本文介绍各种属性和部署你的环境中的表格模型解决方案时，可以使用的方法。  
   
 ##  <a name="bkmk_benefits"></a> 优点  
  部署表格模型将在测试、临时或生产环境中创建模型数据库。 然后，用户可以通过 Sharepoint 中的 .bism 连接文件或通过直接使用来自报表客户端应用程序（例如 Microsoft Excel、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]或自定义应用程序）的数据连接，来连接到已部署的模型。 你在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的表格模型项目时创建并用于创作模型的模型工作区数据库将保留在工作区服务器实例上，这允许你对该模型项目进行更改，然后在需要时重新部署到测试、临时或生产环境中。  
   
-##  <a name="bkmk_deploying_bism"></a> 从 SQL Server Data Tools (SSDT) 部署表格模型  
+##  <a name="bkmk_deploying_bism"></a> 部署表格模型从 SQL Server Data Tools (SSDT)  
  部署是一个较为简单的过程；但是，必须执行某些步骤，以便确保您的模型部署到正确的 Analysis Services 实例上并且具有正确的配置选项。  
   
  表格模型被定义的多个特定于部署的属性。 在您部署时，将建立与在 **“服务器”** 属性中指定的 Analysis Services 实例的连接。 然后在该实例上创建具有在 **“数据库”** 属性中指定的名称的新模型数据库（如果此数据库尚不存在）。 使用来自该模型项目的 Model.bim 文件的元数据在部署服务器上的模型数据库中配置对象。 使用“处理选项”，你可以指定是否仅部署模型元数据，并且创建模型数据库；或者，如果指定了“默认”或“完全”，则用于连接到数据源的模拟凭据将从模型工作区数据库的内存中传递到已部署的模型数据库中。 Analysis Services 然后运行处理以便将数据填充到已部署的模型中。 一旦完成部署进程后，就可以通过使用数据连接或 SharePoint 中的 .bism 连接文件，将该模型连接到客户端应用程序。  
   
 ##  <a name="bkmk_deploy_props"></a> 部署属性  
- 项目的“部署选项”和“部署服务器”属性指定将模型部署到临时或生产 Analysis Services 环境的方式和位置。 在根据您的特定部署要求为所有模型项目定义默认属性设置时，可为每个项目更改这些属性设置。 有关设置默认部署属性的详细信息，请参阅[配置默认数据建模和部署属性（SSAS 表格）](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
+ 项目部署选项和部署服务器属性指定如何以及在何处模型部署到过渡或生产 Analysis Services 环境。 在根据您的特定部署要求为所有模型项目定义默认属性设置时，可为每个项目更改这些属性设置。 有关设置部署属性的默认值的详细信息，请参阅[配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
 ### <a name="deployment-options-properties"></a>部署选项属性  
- 部署选项属性包括以下项：  
+ 部署选项属性包括：  
   
 |属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**“处理选项”**|**默认**|此属性指定在部署对对象所做的更改时所需的处理类型。 此属性具有以下选项：<br /><br /> **默认** – 此设置指定 Analysis Services 将确定所需的处理类型。 将处理未处理的对象，如果需要，将重新计算属性关系、属性层次结构、用户层次结构和计算列。 此设置通常会导致比使用“完全”处理选项更快的部署时间。<br /><br /> **不处理** – 此设置指定将仅部署元数据。 在部署后，可能需要对已部署的模型运行处理操作，以便更新和重新计算数据。<br /><br /> **完全** – 此设置指定既部署元数据，又执行“处理全部”操作。 这确保已部署的模型对元数据和数据都具有最新更新。|  
 |**事务性部署**|**False**|此属性指定部署是否为事务性的。 默认情况下，在处理这些已部署的对象时，所有对象或已更改对象的部署并不是事务性部署。 即使在处理失败时，部署也会成功并且一直保留。 您可以将此默认设置更改为在单个事务中合并部署和处理。|  
-|**查询模式**|**内存中**|此属性指定从其返回查询结果的源是在内存中（缓存）模式下运行还是在 DirectQuery 模式下运行。 此属性具有以下选项：<br /><br /> **DirectQuery** – 此设置指定模型的所有查询都应该仅使用关系数据源。<br /><br /> **DirectQuery 以及内存中** - 此设置指定默认情况下应通过使用关系数据源响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> **内存中** - 此设置指定应仅通过使用缓存响应查询。<br /><br /> **内存中以及 DirectQuery** - 此设置指定默认情况下 应该通过使用缓存来响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> <br /><br /> 有关详细信息，请参阅 [DirectQuery 模式（SSAS 表格）](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。|  
+|**查询模式**|**内存中**|此属性指定从其返回查询结果的源是在内存中（缓存）模式下运行还是在 DirectQuery 模式下运行。 此属性具有以下选项：<br /><br /> **DirectQuery** – 此设置指定模型的所有查询都应该仅使用关系数据源。<br /><br /> **DirectQuery 以及内存中** - 此设置指定默认情况下应通过使用关系数据源响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> **内存中** - 此设置指定应仅通过使用缓存响应查询。<br /><br /> **内存中以及 DirectQuery** - 此设置指定默认情况下 应该通过使用缓存来响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> <br /><br /> 有关详细信息，请参阅[DirectQuery 模式下](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。|  
   
 ### <a name="deployment-server-properties"></a>部署服务器属性  
  部署服务器属性包括以下项：  
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/14/2018
   
 |方法|Description|链接|  
 |------------|-----------------|----------|  
-|**SQL Server Data Tools 中的“部署”命令**|“部署”命令提供了一个简单且直观的方法，用于从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 创作环境部署表格模型项目。<br /><br /> **警告：**不应使用此方法将部署到生产服务器。 使用此方法可以覆盖某些属性在已部署现有模型;例如，当使用脚本或 SSMS 修改属性。|[从 SQL Server Data Tools 部署（SSAS 表格）](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
+|**SQL Server Data Tools 中的“部署”命令**|“部署”命令提供了一个简单且直观的方法，用于从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 创作环境部署表格模型项目。<br /><br /> **警告：**不应使用此方法将部署到生产服务器。 使用此方法可以覆盖某些属性在已部署现有模型;例如，当使用脚本或 SSMS 修改属性。|[从 SQL Server Data Tools 进行部署](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
 |**分析管理对象 (AMO) 自动化**|AMO 提供用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的完整命令集的编程接口，包括可用于解决方案部署的命令。 AMO 自动化是最灵活的解决方案部署方法，但是也需要完成一些编程工作。  使用 AMO 的一个重要优势是：可以将 SQL Server 代理用于 AMO 应用程序，以便按预设的计划运行部署。|[使用分析管理对象 &#40; 进行开发AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 生成现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的元数据的 XMLA 脚本，然后在另一台服务器中运行该脚本以重新创建初始数据库。 通过定义部署过程，然后进行整理并将其保存在 XMLA 脚本中，可以很容易在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中形成 XMLA 脚本。 将 XMLA 脚本保存到文件中以后，即可很容易地按计划运行脚本，或将脚本嵌入直接连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的应用程序中。<br /><br /> 还可以使用 SQL Server 代理按预置的计划运行 XMLA 脚本，但使用 XMLA 脚本没有 AMO 所具备的灵活性。 AMO 通过驻留完整的管理命令提供了范围更广的功能。|[使用 XMLA 部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**部署向导**|通过部署向导，使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目生成的 XMLA 输出文件，以将项目的元数据部署到目标服务器中。 使用部署向导，可以直接从 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 文件（该文件由项目生成按输出目录创建）进行部署。<br /><br /> 使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的主要优势是部署向导使用方便。 就像您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中保存 XMLA 脚本以供以后使用一样，可以保存部署向导脚本。 部署向导可以交互运行，也可以通过部署实用工具在命令提示符下运行。|[使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
@@ -82,17 +82,17 @@ ms.lasthandoff: 02/14/2018
   
  在已部署某一模型并且配置了可选服务器设置后，该模型可以连接到报表客户端应用程序并且可用于浏览和分析模型元数据。 从客户端应用程序连接到已部署的模型数据库不属于本主题的讨论范围。 若要了解从客户端应用程序连接到模型数据库的详细信息，请参阅 [Tabular Model Data Access](../../analysis-services/tabular-models/tabular-model-data-access.md)。  
   
-##  <a name="bkmk_rt"></a> 相关任务  
+##  <a name="bkmk_rt"></a> Related tasks  
   
 |任务|Description|  
 |----------|-----------------|  
-|[从 SQL Server Data Tools 部署（SSAS 表格）](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|介绍如何使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的“部署”命令来配置部署属性和部署表格模型项目。|  
+|[从 SQL Server Data Tools 进行部署](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|介绍如何使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的“部署”命令来配置部署属性和部署表格模型项目。|  
 |[使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|本节中的主题说明如何使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导部署表格和多维模型解决方案。|  
 |[使用部署实用工具部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|说明如何使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署实用工具部署表格和多维模型解决方案。|  
 |[使用 XMLA 部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|说明如何使用 XMLA 部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格和多维解决方案。|  
 |[同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|说明如何使用同步数据库向导同步任意两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格或多维数据库之间的元数据和数据。|  
   
 ## <a name="see-also"></a>另请参阅  
- [连接到表格模型数据库 (SSAS)](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [连接到表格模型数据库 ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

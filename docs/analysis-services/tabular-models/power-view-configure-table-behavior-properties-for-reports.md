@@ -1,5 +1,5 @@
 ---
-title: "Power View 报表 (SSAS 表格) 的配置表行为属性 |Microsoft 文档"
+title: "为 Power View 报表配置表行为属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-为报表配置表行为属性
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]如果使用表格模型作为数据模型[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，你可以设置表行为属性公开更高粒度级别的详细信息行。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+如果您将表格模型用作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的数据模型，则可以设置以更高粒度级别显示详细信息行的表行为属性。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 不同于其他报表应用程序，因为它在报表设计期间自动对项进行分组，其方法是对照您所使用的显示格式计算您放入报表字段列表中的列。 在大多数情况下，默认分组会产生最佳结果。 但对于某些表（主要是包含详细数据的表），默认分组行为有时将对不应分组的行进行分组。 对于此类表，您可以设置用于更改对组进行计算的方式的属性。  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
 -   从矩阵报表中删除多余的小计。 在字段级别进行默认分组会为每个字段创建小计。 如果您只需要在行级别计算的单个小计，则设置行标识符将生成此结果。  
   
- 您不能为标记为日期表的表设置行标识符。 对于日期表，当您标记表时指定行标识符。 有关详细信息，请参阅[“标记为日期表”对话框 (SSAS)](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)。  
+ 您不能为标记为日期表的表设置行标识符。 对于日期表，当您标记表时指定行标识符。 有关详细信息，请参阅[标记为日期表对话框](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)。  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>设置“保留唯一行”属性  
  借助此属性，您可以指定哪些列通过区分不同行的方式传达标识信息（例如，员工姓名或产品代码）。 在行看起来完全相同的情况下（例如，两个同名的客户），您为此属性指定的列将重复出现在报表表格中。  
@@ -138,7 +140,7 @@ ms.lasthandoff: 01/08/2018
   
  ![图表，根据行 ID 分组](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "图表，根据行 ID 分组")  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
  在计算模型中的表并对包含详细信息行（这些行应始终显示为单独项）的表设置表行为属性之后，您可以通过其他属性或设置来进一步优化模型。  
   
   

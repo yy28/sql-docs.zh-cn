@@ -1,7 +1,7 @@
 ---
 title: "将示例数据添加到设计模式中的 DirectQuery 模型 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a95bc30ae2e75638c61f9d8bba8f5069c8fdf9d8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 068366df63bbe37d658345c1157a9d02eb7e5187
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>在设计模式下将示例数据添加到 DirectQuery 模型中
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 DirectQuery 模式下，使用表分区创建示例模型设计过程中使用的数据子集，或创建的完整数据视图的替代项。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在 DirectQuery 模式下，表分区用于创建在模型设计过程中使用的示例数据子集或创建完整数据视图的替代。
  
  部署 DirectQuery 表格模型时，每个表只允许有一个分区，并且该分区必须是完整数据视图。 所有其他分区要么是完整数据视图的替代，要么是示例数据。 在本主题中，我们将介绍使用数据子集创建示例分区。
  
