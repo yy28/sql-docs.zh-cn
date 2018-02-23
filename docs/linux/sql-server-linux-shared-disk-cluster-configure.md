@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: ccb754ce5b37e3364ebe68b7b2065ce7b68d050f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>配置故障转移群集实例的 SQL Server 上 Linux (RHEL)
 
@@ -41,7 +41,7 @@ SQL Server 两个节点共享的磁盘故障转移群集实例提供高可用性
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成以下端到端方案需要两台计算机部署两个节点群集和另一个服务器作为存储。 以下步骤概述了如何配置这些服务器。
+若要完成以下的端到端方案，你需要两台计算机部署两个节点群集和另一个服务器作为存储。 以下步骤概述了如何配置这些服务器。
 
 ## <a name="set-up-and-configure-linux"></a>设置和配置 Linux
 
@@ -51,7 +51,7 @@ SQL Server 两个节点共享的磁盘故障转移群集实例提供高可用性
 
 ## <a name="install-and-configure-sql-server"></a>安装和配置 SQL Server
 
-1. 在这两个节点上设置 SQL Server 和安装。  有关详细说明请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
+1. 在这两个节点上设置 SQL Server 和安装。  有关详细说明，请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
 1. 出于配置目的，请将一个节点指定为主要节点，而将另一个指定为辅助节点。 使用以下术语，按照此指南操作。  
 1. 在辅助节点上，停止并禁用 SQL Server。
     以下示例将停止并禁用 SQL Server： 
@@ -63,7 +63,7 @@ SQL Server 两个节点共享的磁盘故障转移群集实例提供高可用性
     > [!NOTE] 
     > 在设置时，生成的 SQL Server 实例和放置在服务器 Master Key `var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
 
-1.  在主节点上，为 Pacemaker 创建的 SQL server 登录名和授予登录权限运行`sp_server_diagnostics`。 Pacemaker 将用此帐户验证哪个节点正在运行 SQL Server。 
+1.  在主节点上，为 Pacemaker 创建的 SQL server 登录名和授予登录权限运行`sp_server_diagnostics`。 Pacemaker 使用此帐户来验证哪些节点正在运行 SQL Server。 
 
     ```bash
     sudo systemctl start mssql-server
@@ -207,7 +207,7 @@ FCI 将创建资源组中。 由于资源组后，就不必约束，这是稍微
 
     \<FolderToMountNFSShare > 是要安装的磁盘的文件夹 （对于系统数据库的默认位置，它将为 /var/opt/mssql/data）
 
-     一个示例所示：
+    下面显示了一个示例：
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr

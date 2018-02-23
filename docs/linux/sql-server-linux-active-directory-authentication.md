@@ -9,18 +9,18 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>在 Linux 上的 SQL 服务器的 active Directory 身份验证
 
@@ -157,7 +157,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
   
 5. 验证，可以现在从域中，收集有关用户的信息以及您可以获取作为该用户的 Kerberos 票证。
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   下面的示例使用**id**，  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**，和 **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** 此的命令。
 
    ```bash
    id user@contoso.com
@@ -182,7 +182,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>创建 AD 用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和设置 SPN
 
   > [!NOTE]
-  > 在下一步的步骤中，我们将使用你[完全限定的域名称](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果你在**Azure**，你必须**[创建一个](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在继续操作之前。
+  > 下一个步骤使用你[完全限定的域名称](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果你在**Azure**，你必须**[创建一个](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在继续操作之前。
 
 1. 在你的域控制器上运行[New-aduser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令以创建新的 AD 用户使用永不过期的密码。 本示例将命名的帐户"mssql，"但帐户名称可以是您喜欢的任何。 系统将提示您输入的帐户的新密码：
 
@@ -195,7 +195,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
    > [!NOTE]
    > 它是安全的最佳做法，对于 SQL Server，有一个专用的 AD 帐户，以便不会与其他服务使用同一个帐户共享 SQL Server 的凭据。 但是，你可以重用现有的 AD 帐户如果您愿意，如果你知道该帐户的密码 （需要在下一步中生成 keytab 文件）。
 
-2. 设置此帐户使用的 ServicePrincipalName (SPN)`setspn.exe`工具。 SPN 必须格式化为完全按照下面的示例中指定的方式： 你可以找到的完全限定的域名称[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通过运行的主机`hostname --all-fqdns`上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机和 TCP 端口应为 1433年，除非已配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]若要使用不同的端口号。
+2. 设置此帐户使用的 ServicePrincipalName (SPN)`setspn.exe`工具。 SPN 必须完全按照下面的示例中指定的方式进行格式化。 你可以找到的完全限定的域名称[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通过运行的主机`hostname --all-fqdns`上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机和 TCP 端口应为 1433年，除非已配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]若要使用不同的端口号。
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -218,7 +218,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 创建你在上一步中创建的 AD 用户的 keytab 文件。 为此，我们将使用 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**。 出现提示时，输入该 AD 帐户的密码。
+2. 创建具有的 keytab 文件 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 为你在上一步中创建的 AD 用户。 出现提示时，输入该 AD 帐户的密码。
 
    ```bash
    sudo ktutil
@@ -267,9 +267,9 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 
 登录到客户端计算机使用域凭据。 现在你可以连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]无需你的密码，重新输入通过使用 AD 身份验证。 如果你创建的 AD 组的登录名，只要 AD 用户是该组的成员可以连接的方式相同。
 
-客户端使用 AD 身份验证的特定连接字符串参数取决于你正在使用哪个驱动程序。 下面是几个示例。
+客户端使用 AD 身份验证的特定连接字符串参数取决于你正在使用哪个驱动程序。 请考虑下列示例：
 
-* `sqlcmd`在已加入域的 Linux 客户端
+* `sqlcmd` 在已加入域的 Linux 客户端
 
    登录到已加入域的 Linux 客户端使用`ssh`和你的域凭据：
 

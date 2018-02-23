@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例-iSCSI-在 Linux 上的 SQL Server
 
@@ -41,7 +41,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
 
 本部分将介绍如何在将充当 FCI 节点的服务器上配置 iSCSI 发起程序。 作为在 RHEL 和 Ubuntu 上，应运行说明。
 
-有关受支持的分发的 iSCSI 发起程序的其他信息，请参阅以下链接：
+有关受支持的分发的 iSCSI 发起程序的详细信息，请参阅以下链接：
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
@@ -210,7 +210,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > 是的卷组的名称和\<LogicalVolumeName > 是创建的逻辑卷的名称。 下面的示例语法与卷组和上面创建的逻辑卷匹配。
+    \<VolumeGroupName > 是的卷组的名称和\<LogicalVolumeName > 是创建的逻辑卷的名称。 下面的示例语法与卷组和前一个命令中的逻辑卷匹配。
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
     mkdir <FolderName>
     ```
 
-    \<文件夹名称 > 是文件夹的名称。 该文件夹的完整路径将需要指定如果不在正确的位置。 下面的示例创建一个名为 /var/opt/mssql/userdata 文件夹。
+    \<文件夹名称 > 是文件夹的名称。 该文件夹的完整路径，需要指定如果不在正确的位置。 下面的示例创建一个名为 /var/opt/mssql/userdata 文件夹。
 
     ```bash
     mkdir /var/opt/mssql/userdata

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 3f3c33387db96da502a9890093d0a1b68dd61fd0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58eb51a5a3ad174e9cd785a7da3ecb482b2f9f28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>配置 SQL Server Always On 可用性组在 Windows 和 Linux （跨平台） 上
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/09/2018
    >[!TIP]
    >如果您要验证此解决方案在 Azure 中的，将这两个服务器放在同一可用性集中，以确保它们在数据中心中隔开。 
 
-   **启用可用性组**
+   启用可用性组
 
    有关说明，请参阅[启用和禁用 Alwayson 可用性组 (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。
 

@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 3731e8fd8d5a90b063bf27c012e7cb5670193b23
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>故障转移群集实例-在 Linux 上的 SQL Server
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 此文章介绍了在 Linux 上的 SQL Server 故障转移群集实例 (FCI) 与相关的概念。 
 
@@ -40,13 +42,13 @@ ms.lasthandoff: 02/01/2018
 
 RHEL HA 外接程序和 SUSE HAE 基于[Pacemaker](http://clusterlabs.org/)。
 
-如下图所示，存储将呈现给两个服务器。 群集组件 - Corosync 和 Pacemaker - 协调通信和资源管理。 一台服务器具有到存储资源和 SQL Server 的活动连接。 当 Pacemaker 检测到故障时，群集组件负责管理将资源移到另一个节点。  
+下图所示，到两个服务器提供存储。 群集组件 - Corosync 和 Pacemaker - 协调通信和资源管理。 一台服务器具有到存储资源和 SQL Server 的活动连接。 当 Pacemaker 检测到故障时，群集组件负责管理将资源移到另一个节点。  
 
 ![Red Hat Enterprise Linux 7 共享磁盘 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> 此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 在 SQL 内部，无法了解到群集是否存在，所有业务流程都是由外至内，并且 Pacemaker.将该服务作为一个独立实例控制。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 它预期的 @@servername和 sys.servers 以返回节点名称，而群集 dmv sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 不将任何记录。 为了使用指向字符串服务器名称的连接字符串，且不使用 IP，它们需要在其 DNS 服务器中注册用于创建使用选定服务器名称的虚拟 IP 资源的 IP（如下文所述）。
+> 此时，在 Linux 上 SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 在 SQL 内部，无法了解到群集是否存在，所有业务流程都是由外至内，并且 Pacemaker.将该服务作为一个独立实例控制。 此外，虚拟网络名称特定于 WSFC，Pacemaker 中无相同的等效项。 它预期的 @@servername和 sys.servers 以返回节点名称，而群集 dmv sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 不将任何记录。 若要使用的连接字符串指向字符串服务器的名称，并不使用该 IP，他们将需要在中注册其 DNS 服务器用来创建虚拟 IP 资源 （如以下各节中所述） 的 IP 选的服务器名称。
 
 ## <a name="number-of-instances-and-nodes"></a>实例数和节点
 
@@ -57,7 +59,7 @@ Pacemaker 群集只能有最多 16 节点当 Corosync 涉及到，因此单个 F
 在 SQL Server FCI，SQL Server 实例是上一个节点或其他处于活动状态。
 
 ## <a name="ip-address-and-name"></a>IP 地址和名称
-在 Linux Pacemaker 群集上，每个 SQL Server FCI 将需要其自己的唯一的 IP 地址和名称。 如果 FCI 配置跨多个子网，一个 IP 地址都会要求提供每个子网。 唯一的名称和 IP 地址用于访问 FCI，以便应用程序和最终用户不需要知道哪些基础 Pacemaker 群集的服务器。
+在 Linux Pacemaker 群集上，每个 SQL Server FCI 需要其自己的唯一的 IP 地址和名称。 如果 FCI 配置跨多个子网，一个 IP 地址都会要求提供每个子网。 唯一的名称和 IP 地址用于访问 FCI，以便应用程序和最终用户不需要知道哪些基础 Pacemaker 群集的服务器。
 
 在 DNS 中在 FCI 的名称应为获取 Pacemaker 群集中创建的 FCI 资源的名称相同。
 必须在 DNS 中注册的名称和 IP 地址。
