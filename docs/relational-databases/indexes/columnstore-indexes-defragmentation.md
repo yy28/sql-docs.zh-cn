@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c4ca97bfc2bb8edd783913c8c2c3ad712eac57d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 283b8e0fe5173c6527e6f3708b578eca87c80ff3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---defragmentation"></a>列存储索引 - 碎片整理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/02/2018
   对列存储索引进行碎片整理的任务。  
   
 ## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>使用 ALTER INDEX REORGANIZE 对列存储索引进行在线碎片整理  
- **适用对象：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **适用对象：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 加载任何类型的数据之后，增量存储中会有多个较小的行组。 可以使用 `ALTER INDEX REORGANIZE` 将所有行组强制载入列存储，然后将行组合并成具有更多行的较少行组。  重新组织操作还将删除已从列存储中删除的行。  
   

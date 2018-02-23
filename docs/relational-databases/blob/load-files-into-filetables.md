@@ -8,7 +8,8 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7731c50b99ae5602f29de94bfd098cd9906d48d8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b9eef4bd725efda114727b5d6e7902daa2eaae93
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="load-files-into-filetables"></a>将文件加载到 FileTable 中
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]说明如何将文件加载或迁移到 FileTable 中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+说明如何将文件加载或迁移到 FileTable 中。  
   
 ##  <a name="BasicsLoadNew"></a> 将文件加载或迁移到 FileTable  
  您选择用于将文件加载或迁移到 FileTable 的方法取决于当前存储文件的位置。  
@@ -36,16 +38,16 @@ ms.lasthandoff: 01/02/2018
 |文件的当前位置|用于迁移的选项|  
 |-------------------------------|---------------------------|  
 |文件当前存储在文件系统中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不识别文件。|由于 FileTable 显示为 Windows 文件系统中的文件夹，您可以使用移动或复制文件的任何方法轻松地将文件加载到新的 FileTable。 这些方法包括 Windows 资源管理器、包括 xcopy 和 robocopy 在内的命令行选项，以及自定义脚本或应用程序。<br /><br /> 不能将现有文件夹转换为 FileTable。|  
-|文件当前存储在文件系统中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含一个元数据表，该表中包含指向文件的指针。|第一步是使用上文所述的方法之一移动或复制文件。<br /><br /> 第二步是更新现有元数据的表以指向该文件的新位置。<br /><br /> 有关详细信息，请参阅本主题中的 [示例：将文件从文件系统迁移到 FileTable](#HowToMigrateFiles) 。|  
+|文件当前存储在文件系统中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含一个元数据表，该表中包含指向文件的指针。|第一步是使用之前提到的方法之一移动或复制文件。<br /><br /> 第二步是更新现有元数据的表以指向该文件的新位置。<br /><br /> 有关详细信息，请参阅本文中的 [示例：将文件从文件系统迁移到 FileTable](#HowToMigrateFiles)。|  
   
 ###  <a name="HowToLoadNew"></a> 将文件加载到 FileTable 中  
- 可用于将文件加载到 FileTable 的方法包括：  
+可通过以下方法将文件加载到 FileTable 中：  
   
 -   在 Windows 资源管理器中将文件从源文件夹拖放到新的 FileTable 文件夹。  
   
 -   从命令提示符下、批处理文件或脚本中使用命令行选项（如 MOVE、COPY、XCOPY 或 ROBOCOPY）。  
   
--   用 C# 或 Visual Basic.NET 编写一个自定义应用程序，该应用程序使用 **System.IO** 命名空间的方法来移动或复制文件。  
+-   用 C# 或 Visual Basic.NET 编写一个用于移动或复制文件的自定义应用程序。 从 System.IO 命名空间调用方法。  
   
 ###  <a name="HowToMigrateFiles"></a> 示例：将文件从文件系统迁移到 FileTable  
  在这种情况下，您的文件存储在文件系统中，并且您具有包含指向这些文件的指针的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的元数据表。 您要将文件移入 FileTable，然后用 FileTable UNC 路径替换元数据中每个文件的原始 UNC 路径。 [GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函数帮助你实现这一目标。  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/02/2018
   
 2.  使用 xcopy 或类似的工具将 .jpg 文件连同目录结构一起复制到 FileTable 的根目录下。  
   
-3.  通过使用类似于以下内容的代码修复 **PhotoMetadata** 表中的元数据：  
+3.  通过使用类似于以下示例的代码修复 PhotoMetadata 表中的元数据：  
   
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  
@@ -83,7 +85,7 @@ UPDATE PhotoMetadata
 ```  
   
 ##  <a name="BasicsBulkLoad"></a> 大容量加载文件到 FileTable  
- 对于大容量操作，FileTable 在行为上与普通表相似，但具有以下限制。  
+ 对于大容量操作，FileTable 在行为上与普通表相似，但具有以下限制：  
   
  FileTable 具有系统定义的约束，这些约束确保维护文件和目录命名空间的完整性。 必须针对大容量加载到 FileTable 上的数据验证这些约束。 因为一些大容量插入操作允许忽略表约束，所以将强制以下要求。  
   

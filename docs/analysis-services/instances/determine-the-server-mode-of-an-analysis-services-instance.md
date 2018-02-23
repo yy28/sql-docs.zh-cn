@@ -17,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 559a3a65f9a24077bbcac1e0c45506179d2e3da8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c51a35297b1a079ec026c6bcd8ac0fbd0ea7169e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>确定 Analysis Services 实例的服务器模式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 Analysis Services 可以在以下三种服务器模式之一下安装：多维和数据挖掘（默认模式）、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 和表格。 Analysis Services 实例的服务器模式在安装过程中在您选择用于安装服务器的选项时确定。  
   
- 服务器模式确定您创建和部署的解决方案的类型。 如果您没有安装服务器软件并且想要知道服务器安装在哪一模式下，则可以使用本主题中的信息确定该模式。 有关特定模式中功能可用性的详细信息，请参阅[比较表格和多维解决方案 (SSAS)](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
+ 服务器模式确定您创建和部署的解决方案的类型。 如果您没有安装服务器软件并且想要知道服务器安装在哪一模式下，则可以使用本主题中的信息确定该模式。 有关为特定模式的功能可用性的详细信息，请参阅[比较表格和多维解决方案](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
  如果您不想使用所安装的服务器模式，则必须卸载后再重新安装该软件，并且选择想要的模式。 或者，您可以在同一台计算机上安装 Analysis Services 的其他实例，以便您具有运行不同模式的多个实例。  
   
@@ -60,8 +60,8 @@ Analysis Services 可以在以下三种服务器模式之一下安装：多维�
  [在多维和数据挖掘模式下安装 Analysis Services](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Power Pivot for SharePoint 2010 安装](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [表格模型解决方案 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
- [多维模型解决方案 &#40;SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [表格模型解决方案](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
+ [多维模型解决方案 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [挖掘模型 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

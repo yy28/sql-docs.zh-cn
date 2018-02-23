@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 276211036c3d977ab0a0b6a61114e7fe58505b63
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 970d341ee8c07cfcc15cda52f8f28dff9fed3d76
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multidimensional-modeling-ssas"></a>多维建模 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +32,10 @@ Analysis Services 多维解决方案使用多维数据集结构来分析多个�
   
  使用 Analysis Services 多维数据库所带来的另一个重要好处是，可与常用的 BI 报表工具（如 Excel、Reporting Services 和 PerformancePoint）以及自定义应用程序和第三方解决方案集成。  
   
-## <a name="in-this-section"></a>本节内容  
- [多维模型解决方案 &#40;SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
+## <a name="in-this-section"></a>本節內容  
+ [多维模型解决方案 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
   
- [多维模型数据库 &#40;SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多维模型数据库 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   

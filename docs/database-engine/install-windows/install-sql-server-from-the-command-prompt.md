@@ -91,14 +91,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1c275c5f9df33587f18eb791e92012d7aefa13c1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6c925a8f624143a5a6b3270716635a2863f8c1ba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在运行 SQL 安装程序之前，请查阅[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  在运行 SQL 安装程序之前，请查阅 [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)。  
   
  通过从命令提示符安装 SQL Server 的新实例，可以指定要安装的功能以及如何配置这些功能。 还可以指定与安装用户界面是进行静默交互、基本交互还是完全交互。  
   
@@ -193,7 +196,7 @@ ms.lasthandoff: 01/18/2018
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值： **安装**。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：**安装**。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安装程序控件|/IACCEPTROPENLICENSETERMS <br /><br /> **仅在为包括 R Services（数据库中）或 Microsoft R Server 的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -246,17 +249,17 @@ ms.lasthandoff: 01/18/2018
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。<br /><br /> 如果未提供此参数，则支持仅 Windows 身份验证模式。<br /><br /> 支持的值： **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **可选**|将当前用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定服务器角色。 当安装 Express 版本或使用 /Role=ALLFeatures_WithDefaults 时，可以使用 /ADDCURRENTUSERASSQLADMIN 参数。 有关详细信息，请参阅下面的 /ROLE。<br /><br /> 使用 /ADDCURRENTUSERASSQLADMIN 是可选的，但 /ADDCURRENTUSERASSQLADMIN 或 /SQLSYSADMINACCOUNTS 是必需的。 默认值：<br /><br /> **True** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 对于所有其他版本则为**False** |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **可选**|将当前用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定服务器角色。 当安装 Express 版本或使用 /Role=ALLFeatures_WithDefaults 时，可以使用 /ADDCURRENTUSERASSQLADMIN 参数。 有关详细信息，请参阅下面的 /ROLE。<br /><br /> 使用 /ADDCURRENTUSERASSQLADMIN 是可选的，但 /ADDCURRENTUSERASSQLADMIN 或 /SQLSYSADMINACCOUNTS 是必需的。 默认值：<br /><br /> 对于以下版本为 **True** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 对于所有其他版本则为 **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动帐户。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> **自动**<br /><br /> **禁用**<br /><br /> **手动**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。<br /><br /> 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本，/SQLSYSADMINACCOUNTS 是必需的。 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的各版本，使用 /SQLSYSADMINACCOUNTS 是可选的，但 /SQLSYSADMINACCOUNTS 或 /ADDCURRENTUSERASSQLADMIN 是必需的。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于  为 1 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（以下版本的最大值为 262,144 MB： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64。 允许的范围：最小值 = 0，最大值 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（以下版本的最大值为 262,144 MB： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64。 允许的范围：最小值 = 0，最大值 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **可选**|启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的即时文件初始化。 有关安全性和性能注意事项，请参阅 [数据库实例文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。<br /><br /> 默认值：“False”<br /><br /> 可选值：“True”|  
@@ -293,7 +296,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值： **PrepareImage**|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：**PrepareImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateEnabled<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
@@ -326,7 +329,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值： **CompleteImage**|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：**CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -363,9 +366,9 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 0，最大值 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 4<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：<br /><br /> 对于  为 4 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（以下版本的最大值为 262,144 MB： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于  为 1 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
@@ -405,7 +408,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../database-engine/install-windows/install-sql-server.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 SQL Server 版本的产品密钥。 如果未指定此参数，则使用 Evaluation。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/Q<br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/UIMODE<br /><br /> **可选**|指定在安装过程中是否只提供最少数量的对话框。 <br />                **/UIMode** 只能与 **/ACTION=INSTALL** 和 **UPGRADE** 参数一起使用。 支持的值：<br /><br /> **/UIMODE=Normal** 对于非 Express 版本是默认值，它为所选功能提供所有安装程序对话框。<br /><br /> **/UIMODE=AutoAdvance** 对于 Express 版本是默认值，它跳过不重要的对话框。<br /><br /> 请注意， **UIMode** 设置不能与 **/Q** 或 **/QS** 参数结合使用。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/UIMODE<br /><br /> **可选**|指定在安装过程中是否只提供最少数量的对话框。 <br />                **/UIMode** 只能与 **/ACTION=INSTALL** 和 **UPGRADE** 参数一起使用。 支持的值：<br /><br /> **/UIMODE=Normal** 对于非 Express 版本是默认值，它为所选功能提供所有安装程序对话框。<br /><br /> **/UIMODE=AutoAdvance** 对于 Express 版本是默认值，它跳过不重要的对话框。<br /><br /> 请注意，**UIMode** 设置不能与 **/Q** 或 **/QS** 参数结合使用。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/SQMREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/>要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的功能使用情况报告。<br /><br />支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口将隐藏或关闭。|  
 |SQL Server Browser Service|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 SQL Server Browser 服务的 [启动](#Accounts) 模式。 支持的值：<br /><br /> **自动**<br /><br /> **禁用**<br /><br /> **手动**|  
@@ -429,7 +432,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示修复工作流。<br /><br /> 支持的值： **修复**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示修复工作流。<br /><br /> 支持的值：**修复**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> **必需**|指定要修复的 [组件](#Feature) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../database-engine/install-windows/install-sql-server.md)。|  
@@ -449,11 +452,11 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ```  
   
 ##  <a name="Rebuild"></a> 重新生成系统数据库参数  
- 使用下表中的参数可开发命令行脚本来重新生成 master、model、msdb 和 tempdb 系统数据库。 有关详细信息，请参阅 [重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。 
+ 使用下表中的参数可开发命令行脚本来重新生成 master、model、msdb 和 tempdb 系统数据库。 有关详细信息，请参阅[重新生成系统数据库](../../relational-databases/databases/rebuild-system-databases.md)。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示重新生成数据库工作流。<br /><br /> 支持的值： **Rebuilddatabase**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示重新生成数据库工作流。<br /><br /> 支持的值：**Rebuilddatabase**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../database-engine/install-windows/install-sql-server.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/Q<br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定新的服务器级排序规则。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
@@ -461,18 +464,18 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例会删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于  为 1 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例会删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 0，最大值 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 4<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。 默认值：<br /><br /> 对于  为 4 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（以下版本的最大值为 262,144 MB： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ##  <a name="Uninstall"></a> 卸载参数  
  使用下表中的参数可开发用于卸载的命令行脚本。 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示卸载工作流。<br /><br /> 支持的值： **卸载**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示卸载工作流。<br /><br /> 支持的值：**卸载**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> **必需**|指定要卸载的 [组件](#Feature) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
@@ -488,10 +491,10 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERVER  
 ```  
   
- 若要删除命名实例，请指定实例名称，而不是本主题前面提到的示例中的“MSSQLSERVER”。 
+ 要删除命名实例，请指定实例名称，而不是本文前面提到的示例中的“MSSQLSERVER”。 
   
 ##  <a name="ClusterInstall"></a> 故障转移群集参数  
- 安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集实例之前，请先查看以下主题：  
+ 安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集实例之前，请先查看以下文章：  
   
 -   [安装 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
@@ -516,7 +519,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|详细信息|  
 |-----------------------------------------|---------------|-------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集安装工作流：<br /><br /> 支持的值： **InstallFailoverCluster**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集安装工作流：<br /><br /> 支持的值：**InstallFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERGROUP<br /><br /> **可选**|指定要用于 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集的资源组的名称。 可以是现有群集组的名称，也可以是新资源组的名称。<br /><br /> 默认值：<br /><br /> SQL Server (\<InstanceName>)|  
@@ -567,11 +570,11 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于  为 1 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 或内核的数量，对所有其他版本来说都较低<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>默认值 = 8 MB。<br/><br/>最小值 = 8 MB。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 0，最大值 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。 <br /> 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 4<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。 <br /> 默认值：<br /><br /> 对于  为 4 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（以下版本的最大值为 262,144 MB： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> **当 FILESTREAMLEVEL 大于 1 时是必需的。**|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
@@ -602,7 +605,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集准备工作流。<br /><br /> 支持的值： **PrepareFailoverCluster**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集准备工作流。<br /><br /> 支持的值：**PrepareFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 SQL Server 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
@@ -667,7 +670,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集完成工作流。<br /><br /> 支持的值： **CompleteFailoverCluster**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集完成工作流。<br /><br /> 支持的值：**CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERGROUP<br /><br /> **可选**|指定要用于 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集的资源组的名称。 可以是现有群集组的名称，也可以是新资源组的名称。<br /><br /> 默认值：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<InstanceName>)|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -704,11 +707,11 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **在“仅文件”模式下可用。**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 数据文件的目录。 指定多个目录时，请用空格将目录隔开。 如果指定了多个目录，则 tempdb 数据文件将以轮循机制的方式分布在目录中。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。<br /><br /> 默认值：`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`（系统数据目录）<br /><br /> 注意：此参数也被添加到了 RebuildDatabase 方案。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 1<br /><br /> 8 或内核的数量，无论哪个对所有其他版本来说较低。<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **可选**|指定要由安装程序添加的 tempdb 数据文件的数量。 此值可以增加至内核的数量。 默认值：<br /><br /> 对于  为 1 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 或内核的数量，无论哪个对所有其他版本来说较低。<br /><br /> 重要提示：tempdb 的主数据库文件依然为 tempdb.mdf。 将其他 tempdb 文件命名为 tempdb_mssql_#.ndf，其中 # 代表在安装期间创建的每个其他 tempdb 数据文件的唯一编号。 此命名约定的目的是使它们具有唯一性。 卸载 SQL Server 的实例将删除具有命名约定 tempdb_mssql_ #.ndf 的文件。 不要对用户数据库文件使用 tempdb_mssql_\*.ndf 命名约定。<br /><br /> 警告：[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不支持配置此参数。 安装程序仅安装 1 个 tempdb 数据文件。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 数据文件的初始大小。<br/><br/>默认值 = 8 MB。<br/><br/>最小值 = 8 MB。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262144 MB）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **可选**|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024。<br /><br /> 默认值：64<br /><br /> 允许的范围：最小值 = 0，最大值 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。 <br /> 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]为 4<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的最大值为 262,144 MB）|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **可选**|指定 tempdb 日志文件的初始大小 (MB)。 安装程序允许的大小最大为 1024。 <br /> 默认值：<br /><br /> 对于  为 4 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 所有其他版本为 8<br /><br /> 允许的范围：最小 = 默认值（4 或 8），最大 = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **可选**|已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中引入。 指定每个 tempdb 日志文件的初始大小。<br/><br/>[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认值为 4 MB，所有其他版本的默认值为 8 MB。<br/><br/>最小值 =（4 MB 或 8 MB）。<br/><br/>最大值 = 1024 MB（以下版本的最大值为 262,144 MB： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ###### <a name="sample-syntax"></a>示例语法：  
  针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]执行故障转移群集高级安装方案的“完成”步骤。 在将成为故障转移群集活动节点的计算机上运行以下命令，以使其可用。 必须在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 故障转移群集中拥有共享磁盘的节点上运行“CompleteFailoverCluster”操作。 
@@ -730,7 +733,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值： **升级**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。<br /><br /> 支持的值：**升级**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 SQL Server 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
@@ -760,7 +763,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 AddNode 工作流。<br /><br /> 支持的值： **AddNode**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 AddNode 工作流。<br /><br /> 支持的值：**AddNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
@@ -805,7 +808,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 RemoveNode 工作流。<br /><br /> 支持的值： **RemoveNode**|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 RemoveNode 工作流。<br /><br /> 支持的值：**RemoveNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
@@ -888,7 +891,7 @@ LocalDB 是安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任�
   
 |角色|Description|安装…|  
 |----------|-----------------|---------------|  
-|SPI_AS_ExistingFarm|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装在现有 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 场或独立服务器上。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算引擎，为内存中数据存储和处理而预先配置的。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server 联机丛书|  
+|SPI_AS_ExistingFarm|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装在现有 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 场或独立服务器上。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算引擎，为内存中数据存储和处理而预先配置的。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包<br /><br /> 的安装程序 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server 联机丛书|  
 |SPI_AS_NewFarm|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装在新的、未配置的 Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 场或独立服务器上。 SQL Server 安装程序将在功能角色安装过程中配置场。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算引擎，为内存中数据存储和处理而预先配置的。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包<br /><br /> SQL Server 联机丛书<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 配置工具<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|安装当前版本中提供的所有功能。<br /><br /> 将当前用户添加到 SQL Server **sysadmin** 固定服务器角色。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中，当操作系统不是域控制器时， [!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认为使用 NTAUTHORITY\NETWORK SERVICE 帐户，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 默认为使用 NTAUTHORITY\NETWORK SERVICE 帐户。<br /><br /> 默认情况下在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的版本中启用此角色。 对于所有其他版本，不启用此角色，但可以通过 UI 或使用命令行参数指定此角色。|对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的各版本，只安装相应版本中提供的那些功能。 对于其他版本，安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。<br /><br /> **AllFeatures_WithDefaults** 参数可以与其他覆盖 **AllFeatures_WithDefaults** 参数设置的参数结合使用。 例如，使用 **AllFeatures_WithDefaults** 参数和 **/Features=RS** 参数会覆盖用于安装所有功能的命令，而只安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但建议选择 **AllFeatures_WithDefaults** 参数以便将默认服务帐户用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。<br /><br /> 当将 **AllFeatures_WithDefaults** 参数与 **/ADDCURRENTUSERASSQLADMIN=FALSE** 结合使用时，当前用户不会自动填充设置对话框。 添加 **/AGTSVCACCOUNT** 和 **/AGTSVCPASSWORD** ，以便为 SQL Server 代理指定服务帐户和密码。|  
   

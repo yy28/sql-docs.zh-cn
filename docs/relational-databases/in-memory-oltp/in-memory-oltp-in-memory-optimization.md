@@ -8,23 +8,24 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ca8131b077c7c6b0e38be07cb037a17d42d2d08
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3403b3680edb3aa984def52b514d599c50852127
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |[概述和使用方案](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|有关什么是内存中 OLTP 以及什么是显示性能优势的方案的概述。|
 |[使用内存优化表的要求](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|讨论使用内存优化的表的硬件和软件要求及指导原则。|  
 |[内存中 OLTP 代码示例](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|包含说明如何创建和使用内存优化的表的代码示例。|  
-|[内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|介绍内存优化的表。|  
+|[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|介绍内存优化的表。|  
 |[内存优化表变量](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|一个代码示例，其中展示如何使用内存优化的表变量代替传统的表变量以减少 tempdb 的使用次数。|  
 |[内存优化表上的索引](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|介绍内存优化索引。|  
 |[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|介绍本机编译的存储过程。|  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text indexes [SQL Server], about
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]本主题介绍了如何在 SQL Server 中创建、填充和管理全文索引。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本主题介绍了如何在 SQL Server 中创建、填充和管理全文索引。
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>先决条件 - 创建全文目录
 必须具有全文目录，然后才能创建全文索引。 目录是包含一个或多个全文索引的虚拟容器。 有关详细信息，请参阅[创建和管理全文目录](../../relational-databases/search/create-and-manage-full-text-catalogs.md)。
@@ -80,7 +83,7 @@ ms.lasthandoff: 01/02/2018
     |**“列”**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[全文索引属性（“列”页面）](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)。|  
     |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文索引属性”对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 *database_name*.*table_name* 启动表增量填充）相关联。|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 保存任何更改并退出“全文索引属性”对话框。  
   
 ##  <a name="props"></a> 查看索引表和列的属性  
  一些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数（例如 OBJECTPROPERTYEX）可用来获取各种全文索引属性的值。 此信息可用于全文搜索的管理和故障排除。  
@@ -131,7 +134,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>查找全文键列的标识符  
   
-每个启用全文的表都有一个列，该列用于强制实现表中行的唯一性（唯一键列）。 从 OBJECTPROPERTYEX 函数获取的 **TableFulltextKeyColumn** 属性包含唯一键列的列 ID。  
+每个启用全文的表都有一个列，该列用于强制实现表中行的唯一性（“唯一键列”）。 从 OBJECTPROPERTYEX 函数获取的 **TableFulltextKeyColumn** 属性包含唯一键列的列 ID。  
  
 若要获取此标识符，可以使用 SELECT 语句调用 OBJECTPROPERTYEX 函数。 使用 OBJECT_ID 函数将表名 (*table_name*) 转换为表 ID，并指定 **TableFulltextKeyColumn** 属性，如下所示：  
   

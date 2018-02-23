@@ -19,11 +19,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 01/31/2018
 ms.author: aliceku
-ms.openlocfilehash: 8c192f5d1114ddab7d75761b385e91c0f22e481b
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的“创建自己的密钥”（预览）支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -59,9 +59,8 @@ ms.lasthandoff: 02/01/2018
 
 ### <a name="general-guidelines"></a>通用指导原则
 - 确保 Azure Key Vault 和 Azure SQL 数据库将在同一个租户中。  不支持跨租户的密钥保管库和服务器交互。
-
 - 选择所需资源将要使用的订阅 – 如果以后跨订阅移动服务器，则需要使用 BYOK 设置新的 TDE。
-- 在 SQL 数据库 TDE 保护程序专用的单个订阅中配置 Azure Key Vault。  与逻辑服务器关联的所有数据库都使用相同的 TDE 保护程序，因此需要考虑对逻辑服务器的数据库进行分组。 
+- 使用 BYOK 配置 TDE 时，必须考虑重复的包装/解包操作在密钥保管库中放置的负载。 例如，由于与逻辑服务器关联的所有数据库都使用相同的 TDE 保护程序，因此该服务器的故障转移触发针对保管库的密钥操作次数等于该服务器中的数据库数目。 根据我们的经验以及记录的[密钥保管库服务限制](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)，建议在单个订阅中将最多 500 个标准数据库或 200 个高级数据库与一个 Azure Key Vault 关联，以确保在访问保管库中的 TDE 保护程序时实现一致的高可用性。 
 - 建议：在本地保留 TDE 保护程序的副本。  这需要使用 HSM 设备在本地创建 TDE 保护程序和密钥托管系统，以存储 TDE 保护程序的本地副本。
 
 
@@ -86,7 +85,8 @@ ms.lasthandoff: 02/01/2018
 - 将密钥托管在密钥托管系统中。  
 - 将加密密钥文件（.pfx、.byok 或 .backup）导入 Azure Key Vault。 
     
-    >[!NOTE] 
+
+>[!NOTE] 
     >出于测试目的，可以使用 Azure Key Vault 创建一个密钥，但是无法托管该密钥，因为专用密钥绝不能离开密钥保管库。  务必备份并托管用于加密生产数据的密钥，因为密钥丢失（密钥保管库中的意外删除、过期等等）会导致永久性的数据丢失。
     >
     
@@ -148,3 +148,5 @@ ms.lasthandoff: 02/01/2018
    -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 若要了解有关 SQL 数据库的备份恢复的详细信息，请参阅[恢复 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)。 若要了解有关 SQL 数据仓库的备份恢复的详细信息，请参阅[恢复 Azure SQL 数据仓库](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview)。
+
+已备份日志文件的其他注意事项：已备份日志文件仍使用原始 TDE 加密程序进行加密，即使 TDE 保护程序已轮换，数据库现在使用新的 TDE 保护程序也是如此。  在还原时，需要这两个密钥才能还原数据库。  如果日志文件使用存储在 Azure Key Vault 中的 TDE 保护程序，还原时需要此密钥，即使数据库此时已更改为使用服务托管的 TDE。   

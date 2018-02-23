@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d582d7d9ca0bc90ca40ee34e946d49bf545024bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>是否从 SQL Server 2005 进行升级？
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ 需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
   
  有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
   
@@ -64,10 +68,10 @@ ms.lasthandoff: 01/18/2018
   
 -   阅读有关如何升级的内容。  
   
-    -   查看 [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)主题中的可用升级方法并了解规划和测试方法。  
+    -   查看[升级数据库引擎](../../database-engine/install-windows/upgrade-database-engine.md)一文中的可用升级方法并了解计划和测试方法。  
   
         > [!IMPORTANT]  
-        >  不能就地将 SQL Server 2005 实例升级到 SQL Server 2017 服务器。 必须先安装 SQL Server 2017 的实例，然后再将 SQL Server 2005 数据库迁移到新安装。 有关详细信息，请参阅 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)主题中的“新安装升级”部分。  
+        >  不能就地将 SQL Server 2005 实例升级到 SQL Server 2017 服务器。 必须先安装 SQL Server 2017 的实例，然后再将 SQL Server 2005 数据库迁移到新安装。 有关详细信息，请参阅[选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)一文中的“新安装升级”部分。  
    
   
 -   有关计划和自动化你的升级或迁移的详细信息、指南和工具，请参阅 [SQL Server 2005 终止支持](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  

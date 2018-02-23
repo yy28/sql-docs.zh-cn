@@ -8,32 +8,36 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a23b32644a51bf4e46cab280c7d382d2cb1c786
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本主题详细介绍如何在服务器核心安装上配置 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+本文详细介绍如何在服务器核心安装上配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
 ##  <a name="BKMK_ConfigureWindows"></a> 在 Windows Server 上配置和管理 Server Core  
-本节提供帮助配置和管理 Server Core 安装的主题参考资料。  
+本节提供帮助配置和管理 Server Core 安装的文章参考资料。  
   
 在 Server Core 模式下，部分 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 功能不受支持。  其中的一些功能可以安装在客户端计算机或未运行 Server Core 的另一服务器上，然后连接到在 Server Core 上安装的数据库引擎服务。  
   
-有关远程配置和管理 Server Core 安装的详细信息，请参阅以下主题：  
+有关远程配置和管理 Server Core 安装的详细信息，请参阅以下文章：  
   
 - [安装服务器核心](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -227,10 +231,10 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> 使用故障排除工具  
  可以使用 [SQLdiag 实用工具](../../tools/sqldiag-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他类型的服务器中收集日志和数据文件，同时还可将其用于一直监视服务器或对服务器的特定问题进行故障排除。 SQLdiag 用于加快和简化为 Microsoft 客户支持服务部门收集诊断信息的过程。  
   
- 您可以在 Server Core 上使用以下主题中指定的语法在管理员命令提示符下启动该实用工具： [SQLdiag Utility](../../tools/sqldiag-utility.md)。  
+ 可以在 Server Core 上使用 [SQLdiag Utility](../../tools/sqldiag-utility.md) 一文中指定的语法在管理员命令提示符下启动该实用工具。  
   
 ## <a name="see-also"></a>另请参阅  
  [在服务器核心上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [安装操作指南主题](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [安装操作指南文章](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

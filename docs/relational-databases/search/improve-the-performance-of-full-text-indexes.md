@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]本主题介绍全文索引和查询性能不佳的常见原因。 此外，还提供了有关缓解这些问题和提高性能的一些建议。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本主题介绍全文索引和查询性能不佳的常见原因。 此外，还提供了有关缓解这些问题和提高性能的一些建议。
   
 ##  <a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>硬件资源问题
@@ -141,7 +143,7 @@ ms.lasthandoff: 12/12/2017
 |x64|*F* = *爬网范围数* * 10 * 8|*M* = *T* – *F* – 500|  
 
 **有关公式的说明**
-1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2*等。 然后计算 *M* 为 *T***–** sigma**(***F*i**)**。  
+1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2*等。 然后计算 M 为 T– sigma(Fi)。  
 2.  500 MB 是系统中其他进程所需内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
 3.  。*ism_size* 假定为 8 MB。  
   
@@ -183,7 +185,7 @@ GO
   
      下表描述了这里需要了解的等待类型。  
   
-    |等待类型|说明|可能的解决方法|  
+    |等待类型|Description|可能的解决方法|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH（_EX 或 _UP）|这可能表明存在 IO 瓶颈，在此情况下通常还会发现平均磁盘队列长度很高。|将全文索引移动到其他磁盘上的其他文件组可能有助于减少 IO 瓶颈。|  
     |PAGELATCH_EX（或 _UP）|这可能表明多个正在试图写入相同数据库文件的线程之间存在大量争用现象。|将文件添加到全文索引所在的文件组可能有助于减轻此类争用。|  

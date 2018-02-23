@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a7c3e4fb4a7082a1874c9fc320ff67a1ce6031b0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 52c415b0c4c7f4913e8d675ce9fe86ad6051e233
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/02/2018
             DURABILITY = SCHEMA\_AND_DATA);  
     ```
 > [!NOTE]  
-> 对于每个内存优化表或表类型，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的索引数限制为 8 个。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中不再有内存优化表和表类型专属的索引数量限制。
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 对于每个内存优化表或表类型的索引数限制为 8 个。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中不再有内存优化表和表类型专属的索引数量限制。
   
 ### <a name="code-sample-for-syntax"></a>语法代码示例  
   

@@ -8,25 +8,29 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安装向导升级 SQL Server（安装程序）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用来将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件就地升级到最新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能树。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用来将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件就地升级到最新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能树。  
   
 >[!WARNING]  
 >升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将被覆盖，在计算机中不再存在。 
@@ -109,7 +113,7 @@ ms.lasthandoff: 01/18/2018
   
      **已安装的实例**  - 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的命名实例。  
   
-13. 本主题中的其余工作流取决于要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择。  
+13. 本文中的其余工作流取决于要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择。  
   
 14. 在“服务器配置 - 服务帐户”页上，显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的默认服务帐户。 此页上配置的实际服务取决于要升级的功能。  
   

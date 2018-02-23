@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]为了增强安全性，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在初始安装后不能从其他计算机对其进行访问。 本课介绍如何启用协议，配置端口以及配置 Windows 防火墙，以便从其他计算机进行连接。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+为了增强安全性， [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在初始安装时不能从其他计算机对其进行访问。 本课介绍如何启用协议，配置端口以及配置 Windows 防火墙，以便从其他计算机进行连接。  
   
 本课程包含以下任务：  
   
@@ -129,7 +132,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在“连接到服务器”对话框中，确认是否已在“服务器类型”框中选中“数据库引擎”。  
   
-3.  在“服务器名称”框中，键入 **tcp:**以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 **tcp:***<computer_name>*。 在命名实例的示例中，请键入 **tcp:***<computer_name>***,49172**。  
+3.  在“服务器名称”框中，键入 **tcp:**以便指定协议，后跟计算机名称、逗号以及端口号。 为了连接到默认实例，端口 1433 为隐式端口并可省略；因此，请键入 tcp:<computer_name>。 在命名实例的示例中，请键入 tcp:<computer_name>,49172。  
   
     > [!NOTE]  
     > 如果你在“服务器名称”框中省略 **tcp:**，则客户端将按照在客户端配置中指定的顺序依次尝试所有启用的协议。  

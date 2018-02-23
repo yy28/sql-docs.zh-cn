@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -220,11 +220,11 @@ ms.lasthandoff: 02/15/2018
 |提供了指向有关各个挖掘模型查看器的信息的链接|[数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |了解如何创建提升图、利润图、分类矩阵或测试挖掘结构|[测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |了解有关处理选项和权限的信息|[处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|提供有关 Analysis Services 的详细信息|[多维模型数据库 &#40;SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|提供有关 Analysis Services 的详细信息|[多维模型数据库 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘设计器](../../analysis-services/data-mining/data-mining-designer.md)   
  [创建使用 SQL Server Data Tools &#40; 多维模型SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [工作区数据库 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [工作区数据库](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

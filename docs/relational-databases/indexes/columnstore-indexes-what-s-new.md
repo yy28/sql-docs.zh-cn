@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列存储索引 - 新增功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,13 +58,13 @@ ms.lasthandoff: 01/03/2018
  <sup>1</sup> 要创建只读非聚集列存储索引，请将索引存储在只读文件组内。  
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 将添加这些新功能。
+ [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 可添加这些新功能。
 
 ### <a name="functional"></a>功能
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支持聚集列存储索引中的非持久化计算列。 聚集列存储索引中不支持持久化列。无法创建关于具有计算列的列存储索引的非聚集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 添加了重要的增强功能，以此来改善列存储索引的性能和灵活性。 这些改进功能可以增强数据仓库方案的效果，并实现实时运营分析。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 添加了重要的增强功能，目的是改进列存储索引的性能和灵活性。 这些改进功能可以增强数据仓库方案的效果，并实现实时运营分析。  
   
 ### <a name="functional"></a>功能  
   

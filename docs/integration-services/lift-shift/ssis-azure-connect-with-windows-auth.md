@@ -1,6 +1,6 @@
 ---
 title: "使用 Windows 身份验证连接到数据源和文件共享 | Microsoft Docs"
-ms.date: 01/12/2018
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>使用 Windows 身份验证连接到本地数据源和 Azure 文件共享
 本文介绍如何将 Azure SQL 数据库上的 SSIS 目录配置为运行以下包：使用 Windows 身份验证连接到本地数据源和 Azure 文件共享的包。 可以使用 Windows 身份验证连接到本地和 Azure 虚拟机以及 Azure 文件中与 Azure SSIS Integration Runtime 位于同一虚拟网络的数据源。
@@ -25,7 +26,11 @@ ms.lasthandoff: 01/12/2018
 > [!WARNING]
 > 如果不按照本文所述的步骤，通过运行 `catalog`.`set_execution_credential` 为 Windows 身份验证提供有效域凭证， 则依赖于 Windows 身份验证的包将无法连接到数据源，在运行时会失败。
 
-按照本文中的步骤操作时提供的域凭据适用于 SQL 数据库实例上的所有包执行（交互式或按预定），直至更改或删除这些凭据。
+## <a name="you-can-only-use-one-set-of-credentials"></a>仅可使用一组凭据
+
+此时，仅可在一个包中使用一组凭据。 按照本文中的步骤操作时提供的域凭据适用于 SQL 数据库实例上的所有包执行（交互式或按预定），直至更改或删除这些凭据。 如果必须使用多组不同的凭据将包连接到不同的数据源，可能需要将包分为多个包。
+
+如果其中一个数据源是 Azure 文件，可使用“执行进程任务”中的 `net use` 或等效命令在包运行时装载 Azure 文件共享，从而解除此限制。 有关详细信息，请参阅[在 Windows 中装载 Azure 文件共享并对其进行访问](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)。
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>提供 Windows 身份验证的域凭据
 若要提供域凭据，让包使用 Windows 身份验证连接到本地数据源，请执行以下操作：

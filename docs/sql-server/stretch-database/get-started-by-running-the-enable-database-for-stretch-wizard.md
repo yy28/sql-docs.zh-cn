@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -25,21 +26,22 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>通过运行“启用数据库延伸向导”开始
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- 若要为 Stretch Database 配置数据库，请运行“启用数据库延伸向导”。  本主题介绍了需要在该向导中输入的信息和做出的选择。  
+
+ 若要为 Stretch Database 配置数据库，请运行“启用数据库延伸向导”。  本文介绍了需要在该向导中输入的信息和做出的选择。  
   
  若要了解 Stretch Database，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。 
  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Stretch Database 向导的“选择表”页](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 向导的“选择表”页")  
   
-|列|说明|  
+|“列”|Description|  
 |------------|-----------------|  
 |（无标题）|选中此列中的复选框以为所选的表启用 Stretch。|  
 |**名称**|指定数据库中表的名称。|  

@@ -17,14 +17,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]当为了最小化停机时间和风险而计划将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 从 SQL Server 的先前版本进行升级时，有几种方法可以考虑。 你可以执行就地升级、迁移到新安装或者执行滚动升级。 下面的图表将帮助你在这些方法中进行选择。 图表中的每个方法也会在下面进行讨论。 为了有助于你了解图表中的决策点，也请查阅 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  当为了最小化停机时间和风险而计划将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 从 SQL Server 的先前版本进行升级时，有几种方法可以考虑。 你可以执行就地升级、迁移到新安装或者执行滚动升级。 下面的图表将帮助你在这些方法中进行选择。 图表中的每个方法也会在下面进行讨论。 为了有助于你了解图表中的决策点，也请查阅 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
  ![数据库引擎升级方法决策树](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "数据库引擎升级方法决策树")  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 01/29/2018
 -   是否拥有 Azure 帐户？  然后转到**[此处](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)**启动装有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 开发人员版的虚拟机。  
   
 > [!NOTE]  
->  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些主题已超出本主题的范围，但这里有一些链接：
+>  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些文章已超出本文的范围，但这里有一些链接：
 >   - [Azure 虚拟机上 SQL Server 的概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL 数据库](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [选择 Azure 中的 SQL Server 选项](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
@@ -105,7 +108,7 @@ ms.lasthandoff: 01/29/2018
      ![为 SAN 存储使用分离和附加的新安装升级方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "为 SAN 存储使用分离和附加的新安装升级方法")  
   
 ##  <a name="RollingUpgrade"></a> 滚动升级  
- 在涉及多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（这些实例必须以特定顺序进行升级以最大化运行时间、最小化风险和保留功能）的 SQL Server 解决方案环境中，需要执行滚动升级。 滚动升级实质上是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例按特定顺序进行的升级，此方法在每个现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上执行就地升级，或者执行新安装升级作为升级项目的一部分来简化硬件和/或操作系统的升级。 在很多方案中你都需要使用滚动升级方法。 以下主题中记录了这些方案：  
+ 在涉及多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（这些实例必须以特定顺序进行升级以最大化运行时间、最小化风险和保留功能）的 SQL Server 解决方案环境中，需要执行滚动升级。 滚动升级实质上是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例按特定顺序进行的升级，此方法在每个现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上执行就地升级，或者执行新安装升级作为升级项目的一部分来简化硬件和/或操作系统的升级。 在很多方案中你都需要使用滚动升级方法。 以下文章中记录了这些方案：  
   
 -   AlwaysOn 可用性组：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级AlwaysOn 可用性组副本实例](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。  
   

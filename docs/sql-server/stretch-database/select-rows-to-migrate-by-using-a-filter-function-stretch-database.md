@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a898c757120d29a8c64de5623cec02c35c5b5ac1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: efb55816db5f692231b66ca53780ab26318da90c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用筛选器函数选择要迁移的行 (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  如果在单独的表中存储冷数据，则可以将 Stretch Database 配置为迁移整个表。 另一方面，如果表中包含热数据和冷数据，则可以指定筛选器谓词以选择要迁移的行。 筛选器谓词是一个内联表值函数。 本主题介绍如何编写内联表值函数以选择要迁移的行。  
+
+  如果在单独的表中存储冷数据，则可以将 Stretch Database 配置为迁移整个表。 另一方面，如果表中包含热数据和冷数据，则可以指定筛选器谓词以选择要迁移的行。 筛选器谓词是一个内联表值函数。 本文介绍如何编写内联表值函数以选择要迁移的行。  
   
 > [!IMPORTANT]
 > 如果提供的筛选器函数性能不佳，则数据迁移性能也不佳。 Stretch Database 通过使用 CROSS APPLY 运算符将筛选器函数应用到表。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 -   运行 ALTER TABLE 语句以在退出向导后指定筛选器函数。  
   
- 本主题的后面部分将介绍添加函数的 ALTER TABLE 语法。  
+ 本主题的后面部分将介绍用于添加函数的 ALTER TABLE 语法。  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>筛选器函数的基本要求  
  Stretch Database 筛选器谓词所需的内联表值函数如下面的示例所示。  
@@ -65,7 +67,7 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="return-value"></a>返回值  
  如果该函数返回非空结果，则该行符合迁移条件。 否则（也就是说，如果该函数未返回结果），该行不符合迁移条件。  
   
-### <a name="conditions"></a>条件  
+### <a name="conditions"></a>“条件”  
  &lt;*谓词*&gt; 可以包含一个条件，或使用 AND 逻辑运算符联接的多个条件。  
   
 ```  

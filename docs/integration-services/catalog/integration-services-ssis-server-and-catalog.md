@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1ba94eb985130eb7e3f8ad020756c7387df297c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b6451f3d322ff92ee928e6a9ed98759df0bcc2e6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 服务器和目录
   当您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中设计和测试包后，可将包含包的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
  若要大致了解 SSISDB 目录功能，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
 ## <a name="high-availability"></a>高可用性  
- 像其他用户数据库一样， **SSISDB** 数据库不支持数据库镜像和复制。 若要详细了解镜像和复制，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 像其他用户数据库一样，SSISDB 数据库不支持数据库镜像和复制。 若要详细了解镜像和复制，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- 还可以利用 SSIS 和 Always On 可用性组，提供高可用性的 SSISDB 及其内容。 有关详细信息，请参阅 blogs.msdn.com 上 Matt Masson 的博客文章[结合使用 SSIS 和 Always On](http://go.microsoft.com/fwlink/?LinkId=255873)。  
+ 还可以利用 SSIS 和 Always On 可用性组，提供高可用性的 SSISDB 及其内容。 有关详细信息，请参阅[对 SSIS 目录 (SSISDB) 使用 Always On](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另请参阅 blogs.msdn.com 上 Matt Masson 的博客文章[结合使用 SSIS 和 Always On](http://go.microsoft.com/fwlink/?LinkId=255873)。  
   
 ##  <a name="ssms"></a> SQL Server Management Studio 中的 Integration Services 服务器  
  在您连接到承载 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库的 **ssDEnoversion** 实例时，您将在对象资源管理器中看到下列对象：  

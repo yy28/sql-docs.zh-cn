@@ -2,29 +2,33 @@
 title: "计划 SQL Server 安装 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: installing SQL Server, planning
+helpviewer_keywords:
+- installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 199ba3b531fd06ba0b87c8a929c7fef96cbc7c99
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fa512799bf19e284b25b7f847d71d3f6e5aab7a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="planning-a-sql-server-installation"></a>计划 SQL Server 安装
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请按下列步骤操作：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  若要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请按下列步骤操作：  
   
 -   查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的安装要求、系统配置检查和安全注意事项。  
   
@@ -41,25 +45,25 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="in-this-section"></a>本节内容  
  [SQL Server 安装中的新增功能](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
- 本主题介绍有关这一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中新增或改进的安装功能的详细信息。  
+ 本文介绍有关这一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中新增或改进的安装功能的详细信息。  
   
  [安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- 本主题列出了安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装的最低硬件和软件要求。  
+ 本文列出了安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例的最低硬件和软件要求。  
   
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- 本主题介绍安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前和安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之后应考虑采用的一些最佳安全做法。  
+ 本文介绍安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前和安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后应考虑的一些最佳安全做法。  
   
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
- 本主题介绍此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中服务的默认配置，以及可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中以及安装之后设置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的配置选项。  
+ 本文介绍此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中服务的默认配置，以及可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中以及安装之后设置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的配置选项。  
   
  [网络协议和网络库](../../sql-server/install/network-protocols-and-network-libraries.md)  
- 本主题介绍这一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中网络协议的默认配置，以及可用的配置选项。  
+ 本文介绍这一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中网络协议的默认配置，以及可用的配置选项。  
   
  [使用 SQL Server 的多个版本和实例](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
- 本主题介绍安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的多个版本和实例时的注意事项。  
+ 本文介绍安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个版本和实例时的注意事项。  
   
  [SQL Server 中的本地语言版本](../../sql-server/install/local-language-versions-in-sql-server.md)  
- 本主题介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地化版本。  
+ 本文介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地化版本。  
   
 ## <a name="related-sections"></a>相关章节  
  [安装 SQL Server](../../database-engine/install-windows/install-sql-server.md)  

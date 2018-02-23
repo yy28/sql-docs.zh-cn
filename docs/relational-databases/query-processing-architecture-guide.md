@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: "5"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -267,7 +268,7 @@ FROM CompanyData.dbo.Customers
 WHERE CustomerID = @CustomerIDParameter;
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 无法预测每次执行该过程时 `@CustomerIDParameter` 参数将提供什么键值。 因为无法预测键值，所以查询处理器还无法预测必须访问哪个成员表。 为了处理这种情况，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 生成了具有条件逻辑（称为动态筛选）的执行计划，可基于输入参数值来控制访问哪个成员表。 假设在 Server1 上执行了 `GetCustomer` 存储过程，则执行计划逻辑可以表示如下：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 无法预测每次执行该过程时 `@CustomerIDParameter` 参数提供什么键值。 因为无法预测键值，所以查询处理器还无法预测必须访问哪个成员表。 为了处理这种情况，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 生成了具有条件逻辑（称为动态筛选）的执行计划，可基于输入参数值来控制访问哪个成员表。 假设在 Server1 上执行了 `GetCustomer` 存储过程，则执行计划逻辑可以表示如下：
 
 ```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
@@ -278,7 +279,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
    Retrieve row from linked table Server3.CustomerData.dbo.Customer_99
 ```
 
-有时，对即使没有参数化的查询，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 也生成这些类型的动态执行计划。 查询优化器可以参数化查询以便可以重新使用执行计划。 如果查询优化器参数化引用了分区视图的查询，则查询优化器不再假设所需行将来自指定的基表。 它将必须在执行计划中使用动态筛选。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有时，对即使没有参数化的查询，也生成这些类型的动态执行计划。 查询优化器可以参数化查询以便可以重新使用执行计划。 如果查询优化器参数化引用了分区视图的查询，则查询优化器不再假设所需行将来自指定的基表。 它将必须在执行计划中使用动态筛选。
 
 ## <a name="stored-procedure-and-trigger-execution"></a>存储过程和触发器执行
 

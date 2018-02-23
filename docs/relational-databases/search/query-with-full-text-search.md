@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-caps.latest.revision: "80"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6c4d90a0e4498ecdb28727eeca14c2f6bbe147e6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 3eb62bf156079250cc129ab1b07aa3411381e211
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 结合 SELECT 语句使用全文谓词 CONTAINS 和 FREETEXT 以及行集值函数 CONTAINSTABLE 和 FREETEXTTABLE 编写全文查询。 本主题提供每个谓词和函数的示例，并帮助你选择要使用的最佳谓词和函数。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+结合 **SELECT** 语句使用全文谓词 **CONTAINS** 和 **FREETEXT** 以及行集值函数 **CONTAINSTABLE** 和 **FREETEXTTABLE** 编写全文查询。 本文提供每个谓词和函数的示例，并帮助用户选择要使用的最佳谓词和函数。
 
 -   使用 **CONTAINS** 和 **CONTAINSTABLE** 可匹配单词和短语。
 -   使用 **FREETEXT** 和 **FREETEXTTABLE** 可匹配含义，但无法匹配确切的措辞。
@@ -66,7 +68,7 @@ GO
 ```
 
 ### <a name="example---containstable"></a>示例 - CONTAINSTABLE  
- 对于在词“light”或“lightweight”附近包含词“aluminum”的 **Description** 列，以下示例返回其所有产品的说明 ID 和说明。 仅返回排名值为 2 或更高的行。  
+ 对于在词“light”或“lightweight”附近包含词“aluminum”的“Description”列，以下示例返回其所有产品的说明 ID 和说明。 仅返回排名值为 2 或更高的行。  
   
 ```sql
 USE AdventureWorks2012  
@@ -129,8 +131,8 @@ GO
 
 | |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
 |---|---|---|
-|**查询类型**|使用精确或模糊（不太精确）匹配来匹配单个单词和短语。|匹配指定单词、短语或句子（*Freetext 字符串*）的含义，但无法匹配确切的措辞。<br/><br/>只要在指定列的全文索引中找到任何搜索词或任何搜索词的任何形式，就会生成匹配项。|
-|**更多查询选项**|可以指定单词在彼此特定范围内的邻近性。<br/><br/>可以返回加权匹配项。<br/><br/>可以使用逻辑运算来组合搜索条件。 有关详细信息，请参阅本主题稍后的[使用布尔运算符（AND、OR 和 NOT）](#Using_Boolean_Operators)。|N/A|
+|**查询类型**|使用精确或模糊（不太精确）匹配来匹配单个单词和短语。|匹配指定单词、短语或句子（Freetext 字符串）的含义，但无法匹配确切的措辞。<br/><br/>只要在指定列的全文索引中找到任何搜索词或任何搜索词的任何形式，就会生成匹配项。|
+|**更多查询选项**|可以指定单词在彼此特定范围内的邻近性。<br/><br/>可以返回加权匹配项。<br/><br/>可以使用逻辑运算来组合搜索条件。 有关详细信息，请参阅本文稍后的[使用布尔运算符（AND、OR 和 NOT）](#Using_Boolean_Operators)。|N/A|
 
 ## <a name="compare-predicates-and-functions"></a>比较谓词和函数
 
@@ -141,7 +143,7 @@ GO
 | |谓词<br/>CONTAINS/FREETEXT|函数<br/>CONTAINSTABLE/FREETEXTTABLE|
 |---|---|---|
 |**用法**|在 SELECT 语句的 WHERE 或 HAVING 子句中使用全文**谓词** CONTAINS 和 FREETEXT。|在 SELECT 语句的 FROM 子句中使用全文**函数** CONTAINSTABLE 和 FREETEXTTABLE，就像使用普通的表名一样。|
-|**更多查询选项**|可将这些函数与 LIKE 和 BETWEEN 等其他任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词结合使用。<br/><br/>可以指定要搜索的表中的单个列、一组列或所有列。<br/><br/>此外，还可以指定语言，以便全文查询使用此语言的资源进行断字和词干分析、同义词库查找以及干扰词删除。|使用其中的任一函数时，必须指定要搜索的基表。 与谓词一样，可以指定搜索表中的单个列、一组列或所有列；此外，还可以指定给定的全文查询将使用的资源的语言。<br/><br/>通常，必须将 CONTAINSTABLE 或 FREETEXTTABLE 的结果与基表联接。 为此，必须知道唯一键列名。 该列出现在每个启用全文的表中，用于强制表的唯一行（唯一键列）。 有关键列的详细信息，请参阅[创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。|
+|**更多查询选项**|可将这些函数与 LIKE 和 BETWEEN 等其他任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词结合使用。<br/><br/>可以指定要搜索的表中的单个列、一组列或所有列。<br/><br/>此外，还可以指定语言，以便全文查询使用此语言的资源进行断字和词干分析、同义词库查找以及干扰词删除。|使用其中的任一函数时，必须指定要搜索的基表。 与谓词一样，可以指定搜索表中的单个列、一组列或所有列；此外，还可以指定给定的全文查询使用的资源的语言。<br/><br/>通常，必须将 CONTAINSTABLE 或 FREETEXTTABLE 的结果与基表联接。 为此，必须知道唯一键列名。 该列出现在每个启用全文的表中，用于强制表的唯一行（“唯一键列”）。 有关键列的详细信息，请参阅[创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。|
 |**结果**|CONTAINS 和 FREETEXT 谓词返回 TRUE 或 FALSE 值，指示给定的行是否与全文查询匹配。 匹配的行在结果集中返回。|这些函数返回与全文查询匹配的、包含零行、一行或多行的表。 返回的表只包含与该函数的全文搜索条件中指定的选择条件相匹配的基表的行。<br/><br/>使用这些函数之一的查询还针对返回的每个行返回相关性排名值 (RANK) 和全文键 (KEY)，如下所示<br/><ul><li>**KEY** 列 KEY 列返回所返回行的唯一值。 可使用 KEY 列指定选择条件。</li><li>**RANK** 列 RANK 列返回每一行的排名值  ，此值指示该行与选择条件相匹配的程度。 行中文本或文档的排名值越高，该行与给定的全文查询的相关性就越高。 请注意，不同行的排名可以相同。 可以通过指定可选的 top_n_by_rank 参数限制返回的匹配项的数目。 有关详细信息，请参阅 [使用 RANK 限制搜索结果](../../relational-databases/search/limit-search-results-with-rank.md)。</li></ul>|
 |**其他选项**|可以在 CONTAINS 或 FREETEXT 谓词中使用由四部分组成的名称对链接服务器上的目标表的全文索引列进行查询。 若要准备远程服务器以接收全文查询，请在远程服务器上的目标表和列上创建全文索引，然后将该远程服务器添加为链接服务器。|N/A|
 |**详细信息**|有关这些谓词的语法和参数的详细信息，请参阅 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)。|有关这些函数的语法和参数的详细信息，请参阅 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。|
@@ -152,12 +154,12 @@ GO
   
 |查询词形式|Description|支持的语句|  
 |----------------------|-----------------|------------------|  
-|一个或多个特定的单词或短语<br/>（*简单词*）|例如，“croissant”是一个词，“café au lait”是一个短语。 这样的词和短语称为“简单词”。<br /><br /> 在全文搜索中，*单词*（或*标记*）是其边界由相应的断字符标识、遵循指定语言的语言规则的字符串。 有效的*短语*由多个单词组成，单词之间可以有标点符号也可以没有标点符号。<br /><br /> 有关详细信息，请参阅本主题后面的 [搜索特定的词或短语（简单词）](#Simple_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查找短语的完全匹配项。<br /><br /> [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 将短语拆分为几个词。|  
-|以指定文本开头的单词或短语<br/>（*前缀词*）|对于单个前缀词，以指定词开头的任何词将是结果集的一部分。 例如，词“auto*”与“automatic”、“automobile”等匹配。<br /><br /> 如果是短语，则该短语内的每个词都被看作是一个前缀。 例如，词“auto tran\*”与“automatic transmission”和“automobile transducer”匹配，但与“automatic motor transmission”不匹配。<br /><br /> *前缀词*指附加到一个单词的前面以生成一个派生词或变形的字符串。<br /><br /> 有关详细信息，请参阅本主题后面的 [执行前缀搜索（前缀词）](#Prefix_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-|特定单词的变形<br/>（*派生词 - 变形*）|例如，搜索词“drive”的变形。 如果表中不同的行包含词“drive”、“drives”、“drove”、“driving”和“driven”，则这些词都会出现在结果集中，原因是它们每一个都可以从词 drive 变形而来。<br /><br /> *变形*是动词的不同时态和语态形式，或是名词的单数和复数形式。 <br /><br /> 有关详细信息，请参阅本主题后面的 [搜索特定词的变形（派生词）](#Inflectional_Generation_Term)。|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 默认情况下查找所有指定词的变形。<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支持可选的 INFLECTIONAL 参数。|  
+|一个或多个特定的单词或短语<br/>（*简单词*）|例如，“croissant”是一个词，“café au lait”是一个短语。 这样的词和短语称为“简单词”。<br /><br /> 在全文搜索中，*单词*（或*标记*）是其边界由相应的断字符标识、遵循指定语言的语言规则的字符串。 有效的*短语*由多个单词组成，单词之间可以有标点符号也可以没有标点符号。<br /><br /> 有关详细信息，请参阅本文后面的[搜索特定的词或短语（简单词）](#Simple_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查找短语的完全匹配项。<br /><br /> [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 将短语拆分为几个词。|  
+|以指定文本开头的单词或短语<br/>（*前缀词*）|对于单个前缀词，以指定词开头的任何词将是结果集的一部分。 例如，词“auto*”与“automatic”、“automobile”等匹配。<br /><br /> 如果是短语，则该短语内的每个词都被看作是一个前缀。 例如，词“auto tran\*”与“automatic transmission”和“automobile transducer”匹配，但与“automatic motor transmission”不匹配。<br /><br /> *前缀词*指附加到一个单词的前面以生成一个派生词或变形的字符串。<br /><br /> 有关详细信息，请参阅本文后面的[执行前缀搜索（前缀词）](#Prefix_Term)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|特定单词的变形<br/>（*派生词 - 变形*）|例如，搜索词“drive”的变形。 如果表中不同的行包含词“drive”、“drives”、“drove”、“driving”和“driven”，则这些词都会出现在结果集中，原因是它们每一个都可以从词 drive 变形而来。<br /><br /> *变形*是动词的不同时态和语态形式，或是名词的单数和复数形式。 <br /><br /> 有关详细信息，请参阅本文后面的[搜索特定词的变形（派生词）](#Inflectional_Generation_Term)。|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 默认情况下查找所有指定词的变形。<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支持可选的 INFLECTIONAL 参数。|  
 |特定单词的同义词形式<br/>（*派生词 - 同义词库*）|例如，如果将项“{car, automobile, truck, van}”添加到同义词库，则可以搜索单词“car”的同义词库形式。 由于这些单词中的每一个都属于包含单词“car”的同义词扩展集，因此在所查询的表中所有包括单词“automobile”、“truck”、“van”或“car”的行都会出现在结果集中。<br /><br />*同义词库*为词定义用户指定的同义词。<br /><br />  有关同义词库文件的结构的信息，请参阅 [配置和管理全文搜索同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 默认情况下使用同义词库。<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 支持可选的 THESAURUS 参数。|  
-|与另一个词或短语邻近的词或短语<br/>（*邻近词*）|例如，查找词“ice”与“hockey”邻近或短语“ice skating”与“ice hockey”邻近的行。<br /><br /> *邻近词*表示相邻的单词或短语。你也可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以以任意顺序或您指定的顺序搜索词或短语。<br /><br /> 有关详细信息，请参阅 [使用 NEAR 搜索与另一个词邻近的词](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-|使用加权值的单词或短语<br/>（*加权词*）|例如，在某个搜索多个词条的查询中，可以为每个搜索单词指定一个加权值，用于指示它相对于搜索条件中其他单词的重要性。 此查询类型的结果将按指定给搜索单词的相对权重首先返回最相关的行。 结果集由包含任何指定词（或它们之间的内容）的文档或行组成；但是，由于与不同搜索词关联的加权值的不同，某些结果将被视为比其他结果更相关。<br /><br /> *加权值*指示一组单词和短语中的每个单词和短语的重要程度。 加权值的最低值是 0.0，最高值是 1.0。<br /><br /> 有关详细信息，请参阅本主题后面的 [使用加权值搜索词或短语（加权词）](#Weighted_Term)。|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|与另一个词或短语邻近的词或短语<br/>（*邻近词*）|例如，查找词“ice”与“hockey”邻近或短语“ice skating”与“ice hockey”邻近的行。<br /><br /> 邻近词表示词或短语彼此相邻。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以以任意顺序或您指定的顺序搜索词或短语。<br /><br /> 有关详细信息，请参阅 [使用 NEAR 搜索与另一个词邻近的词](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
+|使用加权值的单词或短语<br/>（*加权词*）|例如，在某个搜索多个词条的查询中，可以为每个搜索单词指定一个加权值，用于指示它相对于搜索条件中其他单词的重要性。 此查询类型的结果将按指定给搜索单词的相对权重首先返回最相关的行。 结果集由包含任何指定词（或它们之间的内容）的文档或行组成；但是，由于与不同搜索词关联的加权值的不同，某些结果将被视为比其他结果更相关。<br /><br /> *加权值*指示一组单词和短语中的每个单词和短语的重要程度。 加权值的最低值是 0.0，最高值是 1.0。<br /><br /> 有关详细信息，请参阅本文后面的[使用加权值搜索词或短语（加权词）](#Weighted_Term)。|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
 
 ## <a name="examples_specific"></a>特定搜索类型的示例
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>系统数据收集组报表
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据收集器提供了每个系统数据收集组的历史记录报表。 下面的每个报表都使用管理数据仓库中存储的数据：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+数据收集器提供了每个系统数据收集组的历史记录报表。 下面的每个报表都使用管理数据仓库中存储的数据：  
   
 -   [磁盘使用情况摘要](#Disk)  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 11/17/2017
  图形下面的表列出了数据收集时间和相应的使用情况数据。  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>数据库的磁盘使用情况：<数据库名称> 子报表  
- 在你单击磁盘使用情况收集组报表的摘要表中的数据库名称后，系统会显示“数据库 <database_name> 的磁盘使用情况”子报表。 此报表提供了数据库的数据文件和事务日志文件空间使用情况的数值和图形明细。 数据文件的空间使用情况是按分配给索引页、未分配的空间、数据页以及未使用空间的百分比进行分类的。 这些类别定义如下：  
+ 在单击“磁盘使用情况收集组”报表的摘要表中的数据库名称后，系统会显示“数据库 <database_name> 的磁盘使用情况”子报表。 此报表提供了数据库的数据文件和事务日志文件空间使用情况的数值和图形明细。 数据文件的空间使用情况是按分配给索引页、未分配的空间、数据页以及未使用空间的百分比进行分类的。 这些类别定义如下：  
   
 |类别|定义|  
 |--------------|----------------|  
 |索引|用于保留索引页的磁盘空间量。|  
 |未分配|可用于数据库的磁盘空间量，但尚未分配给任何对象。|  
-|数据|由数据页使用的磁盘空间量。|  
+|data|由数据页使用的磁盘空间量。|  
 |未使用|已分配给一个或多个对象的磁盘空间量，但尚未使用。|  
   
  事务日志文件的空间使用情况是按已用空间和未使用空间分类的。  

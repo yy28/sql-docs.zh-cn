@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 约束委派配置 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_delegate"></a> 配置 Analysis Services 以实现可信委托  
  通过将 Analysis Services 配置为使用 Kerberos 约束委派，可允许服务模拟下级服务（例如关系数据库引擎）上的客户端标识，然后就可以像直接连接客户端一样查询数据。  
   
- 针对 Analysis Services 的委托方案被限制为针对 **DirectQuery** 模式配置的表格模型。 这是 Analysis Services 可以将委托的凭据传递到其他服务的唯一情形。 在所有其他情形中（如在前一节中提到的 SharePoint 情形），Analysis Services 位于委托链的接受端。 有关 DirectQuery 的详细信息，请参阅[DirectQuery 模式（SSAS 表格）](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。  
+ 针对 Analysis Services 的委托方案被限制为针对 **DirectQuery** 模式配置的表格模型。 这是 Analysis Services 可以将委托的凭据传递到其他服务的唯一情形。 在所有其他情形中（如在前一节中提到的 SharePoint 情形），Analysis Services 位于委托链的接受端。 有关 DirectQuery 的详细信息，请参阅[DirectQuery 模式下](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。  
   
 > [!NOTE]  
 >  一个常见的误解是 ROLAP 存储、处理操作或对远程分区的访问会以某种方式引入对约束委托的要求。 事实并非如此。 所有这些操作均由服务帐户（也称为处理帐户）代表其自身来直接执行。 在 Analysis Services 中，如果将这些操作的权限直接授予该服务帐户（例如，授予关系数据库的 db_datareader 权限以便服务可以处理数据），则这些操作无需委托。 有关服务器操作和权限的详细信息，请参阅[配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。  

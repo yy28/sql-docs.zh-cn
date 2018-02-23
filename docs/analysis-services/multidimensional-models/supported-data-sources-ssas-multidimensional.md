@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0bdae9c95ea05d217db895331fb641b2a7038271
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2089ceaf95022e1bed0e7409d9ccbc4af3a64fba
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>支持的数据源（SSAS - 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/15/2018
  **某些功能要求安装可在本地运行的 SQL Server 关系数据库才能正常运行。 特别是写回和 ROLAP 存储，它们要求基础数据源必须是 SQL Server 关系数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [支持的数据源 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [支持的数据源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [多维模型中的数据源](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

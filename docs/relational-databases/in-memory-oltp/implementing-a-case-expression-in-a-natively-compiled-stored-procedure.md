@@ -8,25 +8,26 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 350e9a3e8605aedec6791d135d08127a14d72c8a
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 6419acc6380b15d289d3ac3602d6a28c0fc5c75b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在本机编译的存储过程中实现 CASE 表达式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-适用于：[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] 和自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始的 SQL Server
+**适用对象：**[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] 和自以下版本开始的 SQL Server： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 
 本机编译的 T-SQL 模块支持 CASE 表达式。 下面的示例演示了在查询中使用 CASE 表达式的方法。 
 
@@ -49,7 +50,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-适用于：[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和自 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 开始的 SQL Server
+**适用对象：**[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和自以下版本开始的 SQL Server： [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
   本机编译的 T-SQL 模块不支持 CASE 表达式。 以下示例演示一种在本机编译的存储过程中实现 CASE 表达式功能的方法。  
   

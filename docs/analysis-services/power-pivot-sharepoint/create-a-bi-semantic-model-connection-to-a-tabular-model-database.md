@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>创建与表格模型数据库的 BI 语义模型连接
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_BISM"></a> 授予对表格模型数据库的读取权限  
  由于数据库在服务器场外部的服务器上运行，因此设置您的连接的部分工作是授予后端 Analysis Services 服务器的数据库用户权限。 Analysis Services 使用基于角色的权限模型。 连接到模型数据库的用户必须具有读取权限或更高权限并且通过对其成员授予读取读取访问权限的角色才能执行此操作。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建模型时会定义角色（有时会定义角色成员身份）。 虽然无法使用 SQL Server Management Studio 创建角色，但可以使用它向已定义的角色中添加成员。 有关创建角色的详细信息，请参阅[创建和管理角色（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建模型时会定义角色（有时会定义角色成员身份）。 虽然无法使用 SQL Server Management Studio 创建角色，但可以使用它向已定义的角色中添加成员。 有关创建角色的详细信息，请参阅[创建和管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
   
 #### <a name="assign-role-membership"></a>分配角色成员身份  
   

@@ -20,16 +20,17 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 tempdb 事务日志增长率以及控制事务日志文件的增长。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题介绍如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 tempdb 事务日志增长率以及控制事务日志文件的增长。  
 
 ##  <a name="MonitorSpaceUse"></a>监视日志空间使用情况  
 使用 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) 监视日志空间使用情况。 此 DMV 返回有关当前使用的日志空间量信息，并指示何时需要截断事务日志。 
@@ -102,9 +103,9 @@ ms.lasthandoff: 01/18/2018
   
       |版本|默认值|  
       |-------------|--------------------|  
-      |自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起|数据 64 MB。 日志文件 64 MB。|  
-      |自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 起|数据 1 MB。 日志文件 10%。|  
-      |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|数据 10%。 日志文件 10%。|  
+      |高于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|数据 64 MB。 日志文件 64 MB。|  
+      |高于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|数据 1 MB。 日志文件 10%。|  
+      |低于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|数据 10%。 日志文件 10%。|  
 
 -   小型的增长增量可能生成过多的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 并且可能降低性能。 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
 

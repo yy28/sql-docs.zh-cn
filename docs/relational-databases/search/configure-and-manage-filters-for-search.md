@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cca26f3d6479fb798806d5e6ed0cbcbf8b991272
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4c3a5a90c6dffb76f4569d86615cbb0034f3db5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-filters-for-search"></a>配置和管理搜索筛选器
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]对 varbinary、varbinary(max)、image 或 xml 数据类型列中的文档进行索引时，需要额外的处理工作。 该处理必须由筛选器执行。 筛选器从文档中提取文本信息（去除格式）。 然后，筛选器将这些文本发送至与表列相关联的语言的断字器组件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+对 varbinary、varbinary(max)、image 或 xml 数据类型列中的文档进行索引时，需要额外的处理工作。 该处理必须由筛选器执行。 筛选器从文档中提取文本信息（去除格式）。 然后，筛选器将这些文本发送至与表列相关联的语言的断字器组件。  
   
  给定筛选器特定于给定文档类型（.doc、.pdf、.xls、.xml 等等）。 这些筛选器实现 IFilter 接口。 有关这些文档类型的详细信息，请查询 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) 目录视图。  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  筛选器有可能能够处理嵌入到父对象中的对象，具体取决于筛选器的实现方式。 不过， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会将筛选器配置为跟踪指向其他对象的链接。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装它自己的 XML 和 HTML 筛选器。 此外，已在操作系统上安装的任何针对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 专有格式（.doc、.xdoc、.ppt 等）的筛选器也由  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]加载。 若要标识当前加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上的筛选器，请使用 [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) 存储过程，如下所示：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装它自己的 XML 和 HTML 筛选器。 此外，已在操作系统上安装的任何针对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 专有格式（.doc、.xdoc、.ppt 等）的筛选器也由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加载。 若要标识当前加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上的筛选器，请使用 [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) 存储过程，如下所示：  
   
 ```  
 EXEC sp_help_fulltext_system_components 'filter';   

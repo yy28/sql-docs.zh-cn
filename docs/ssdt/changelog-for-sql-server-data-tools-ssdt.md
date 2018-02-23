@@ -1,32 +1,58 @@
 ---
 title: "SQL Server Data Tools (SSDT) 的更改日志 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/22/2017
+ms.date: 02/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssdt
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]此更改日志适用于 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+此更改日志适用于 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md)。  
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
+内部版本号：14.0.16156.0
+  
+### <a name="whats-new"></a>新增功能
+
+**SSIS**
+1.  修复了 SSAS 和 SSIS 安装到同一 VS 2017 实例时，SSIS 2008 项目迁移会失败的问题。
+2.  修复了 Rdlc 报表设计器和 SSIS 安装到同一 VS 2017 实例时，无法生成 Rdlc 项目的问题。
+3.  修复了注释颜色无法更新的问题。
+4.  修复了使用其他语言时，某些字符串在 Hadoop 连接管理器编辑器中截断的问题。
+5.  修复了某些字符串在 OData 连接管理器编辑器中截断的问题。
+6.  修复了某些字符串在 Integration Services 导入项目向导窗口中截断的问题。
+7.  修复了标题位于 SSIS 工具中框信息窗口中的问题。
+8.  修复了某些字符串在 Integration Services 部署向导窗口中截断的问题。 
+
+**安装程序**
+- 修复了下载有效负载有时失败，出现错误“系统找不到指定的文件 (0x80070002)”的问题  
+
+### <a name="known-issues"></a>已知问题
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT for Visual Studio 2017 (15.5.1)
 内部版本号：14.0.16148.0

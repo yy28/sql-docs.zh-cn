@@ -1,6 +1,6 @@
 ---
 title: "在 Azure 上部署、运行和监视 SSIS 包 | Microsoft Docs"
-ms.date: 09/25/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,25 +8,26 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3391c69ccf0d3b31499d0cf18713847d3a88fc5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>在 Azure 上部署、运行和监视 SSIS 包
 本教程演示如何将 SQL Server Integration Services 项目部署到 Azure SQL 数据库上的 SSISDB 目录数据库、在 Azure-SSIS Integration Runtime 中运行包，以及监视正在运行的包。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 开始之前，请确保有 SQL Server Management Studio 版本 17.2 或更高版本。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-另外确保已经设置 SSISDB 数据库并预配 Azure-SSIS Integration Runtime。 有关如何在 Azure 上预配 SSIS 的信息，请参阅[将 SQL Server Integration Services (SSIS) 包直接迁移到 Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+另外确保已经设置 SSISDB 数据库并预配 Azure-SSIS Integration Runtime。 有关如何在 Azure 上预配 SSIS 的信息，请参阅[将 SQL Server Integration Services (SSIS) 包直接迁移到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
 ## <a name="connect-to-the-ssisdb-database"></a>连接到 SSISDB 数据库
 
@@ -42,18 +43,18 @@ ms.lasthandoff: 11/20/2017
    | 设置       | 建议的值 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器类型** | 数据库引擎 | 此值是必需的。 |
-   | **服务器名称** | 完全限定服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |
+   | **服务器名称** | 完全限定的服务器名称 | 名称应采用此格式：**mysqldbserver.database.windows.net**。 如果需要服务器名称，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。 |
    | **身份验证** | SQL Server 身份验证 | 本快速入门使用 SQL 身份验证。 |
-   | **登录** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
-   | **密码** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
+   | **登录** | 服务器管理员帐户 | 在创建服务器时指定的帐户。 |
+   | **密码** | 服务器管理员帐户的密码 | 在创建服务器时指定的密码。 |
 
 3. **连接到 SSISDB 数据库**。 选择“选项”展开“连接到服务器”对话框。 在展开的“连接到服务器”对话框中，选择“连接属性”选项卡。在“连接到数据库”字段中，选择或输入 `SSISDB`。
 
 4. 然后选择“连接”。 对象资源管理器窗口随即在 SSMS 中打开。 
 
-5. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”查看 SSIS 目录数据库中的对象。
+5. 在对象资源管理器中，展开“Integration Services 目录”，然后展开“SSISDB”，查看 SSIS 目录数据库中的对象。
 
-## <a name="deploy-a-project"></a>部署项目
+## <a name="deploy-a-project-with-the-deployment-wizard"></a>使用部署向导部署项目
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>启动 Integration Services 部署向导
 1. 在 SSMS 的对象资源管理器中，在展开“Integration Services 目录”节点和“SSISDB”节点后，展开一个项目文件夹。
@@ -78,11 +79,75 @@ ms.lasthandoff: 11/20/2017
 4.  在“查看”页上，查看所选的设置。
     -   可以通过选择“上一步”或选择左窗格中的任意步骤来更改所做的选择。
     -   选择“部署”启动部署过程。
-  
+
+    > ![注意] 如果收到错误消息“没有任何活动工作代理。(.Net SqlClient 数据提供程序)”，请确保 Azure SSIS Integration Runtime 正在运行。 如果尝试在 Azure SSIS IR 处于停止状态时进行部署，则会发生此错误。
+
 5.  部署过程完成之后，“结果”页随即打开。 该页显示每个操作是成功了还是失败了。
     -   如果操作失败，则选择“结果”列中的“失败”以显示错误说明。
     -   （可选）选择“保存报告...”将结果保存到 XML 文件中。
     -   选择“关闭”退出该向导。
+
+## <a name="deploy-a-project-with-powershell"></a>使用 PowerShell 部署项目
+
+要使用 PowerShell 将项目部署到 Azure SQL 数据库上的 SSISDB，请根据具体要求修改以下脚本：
+
+```powershell
+# Variables
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+# Load the IntegrationServices Assembly
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+# Store the IntegrationServices Assembly namespace to avoid typing it every time
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+# Create a connection to the server
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+# Create the Integration Services object
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+# Get the catalog
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+        $folder.Create()
+
+        $projects = ls -Path $filefolder.FullName -File -Filter *.ispac
+        if ($projects.Count -gt 0)
+        {
+            foreach($projectfile in $projects)
+            {
+                $projectfilename = $projectfile.Name.Replace(".ispac", "")
+                Write-Host "Deploying " $projectfilename " project ..."
+
+                # Read the project file, and deploy it to the folder
+                [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
+                $folder.DeployProject($projectfilename, $projectFileContent)
+            }
+        }
+    }
+}
+
+Write-Host "All done." 
+```
 
 ## <a name="run-a-package"></a>运行包
 
@@ -100,7 +165,7 @@ ms.lasthandoff: 11/20/2017
 
 也可以在对象资源管理器中选择包，右击并选择“报表”，然后选择“标准报表”、“所有执行”。
 
-有关如何在 SSMS 中监视正在运行的包的详细信息，请参阅[监视正在运行的包和其他操作](https://docs.microsoft.com/en-us/sql/integration-services/performance/monitor-running-packages-and-other-operations)。
+有关如何在 SSMS 中监视正在运行的包的详细信息，请参阅[监视正在运行的包和其他操作](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations)。
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>监视 Azure-SSIS Integration Runtime
 

@@ -1,9 +1,10 @@
 title: "Auto Stats 事件类 | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: "sql-non-specified" ms.prod_service: "database-engine, sql-database" ms.service: "" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
   - "database-engine" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
-  - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "JennieHubbard" ms.author: "jhubbard" manager: "jhubbard" ms.workload: "Inactive"
+  - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: "craigg" ms.workload: "Inactive"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Auto Stats 事件类指示索引和列统计信息自动更新事件的发生。  优化器加载使用统计数据时，也会触发 Auto Stats。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Auto Stats** 事件类指示索引和列统计信息自动更新事件的发生。  优化器加载使用统计数据时，也会触发 Auto Stats。
   
 ## <a name="auto-stats-event-class-data-columns"></a>Auto Stats 事件类的数据列  
   

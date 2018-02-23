@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Database Mail [SQL Server], archiving
 - saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc840281d8a9cd2ae9a1f85988f850cc29ab1582
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 msdb 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 **msdb** 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
   
 -   **开始之前：**[先决条件](#Prerequisites)、[建议](#Recommendations)、[权限](#Permissions)  
   
@@ -52,11 +54,11 @@ ms.lasthandoff: 01/02/2018
   
 -   第一个过程创建一个名为“存档数据库邮件”的作业，其中包含下列步骤。  
   
-    1.  将所有邮件从数据库邮件表中复制到一个格式为 **DBMailArchive_***<year_month>* 且用上一个月份命名的新表中。  
+    1.  将所有邮件从数据库邮件表中复制到一个格式为 DBMailArchive_<year_month> 且用上一个月份命名的新表中。  
   
-    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 **DBMailArchive_Attachments_**<year_month> 且用上一个月份命名的新表中。  
+    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 DBMailArchive_Attachments_<year_month> 且用上一个月份命名的新表中。  
   
-    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 **DBMailArchive_Log_**<year_month> 且用上一个月份命名的新表中。  
+    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 DBMailArchive_Log_<year_month> 且用上一个月份命名的新表中。  
   
     4.  从数据库邮件表中删除已传输邮件项的记录。  
   

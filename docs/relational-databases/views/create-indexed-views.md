@@ -24,11 +24,11 @@ caps.latest.revision:
 author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d291e4ab071aeafd6db43f48749e4e9ff9bcfd25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dc562d47b04c20a3878bc0e1b8c63bf5d1151e09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,73 +37,73 @@ ms.lasthandoff: 02/03/2018
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  创建索引视图需要执行下列步骤并且这些步骤对于成功实现索引视图而言非常重要：  
   
-1.  验证是否视图中将引用的所有现有表的 SET 选项都正确。   
-2.  在创建任意表和视图之前，验证会话的 SET 选项设置是否正确。  
-3.  验证视图定义是否为确定性的。  
-4.  使用 `WITH SCHEMABINDING` 选项创建视图。  
-5.  为视图创建唯一的聚集索引。  
+1.  验证是否视图中将引用的所有现有表的 SET 选项都正确。    
+2.  在创建任意表和视图之前，验证会话的 SET 选项设置是否正确。   
+3.  验证视图定义是否为确定性的。   
+4.  使用 `WITH SCHEMABINDING` 选项创建视图。   
+5.  为视图创建唯一的聚集索引。   
 
 > [!IMPORTANT]
-> 如果表被大量索引视图引用（或引用它的索引视图数量较少，但非常复杂），那么在该表上执行 DML<sup>1</sup> 时，必须更新这些引用的索引视图。 因此，DML 查询性能会显着降低，或者在某些情况下，甚至无法生成查询计划。
-> 在这种情况下，请在生成使用之前测试 DML 查询、分析查询计划并调整/简化 DML 语句。
->
-> <sup>1</sup> 例如 UPDATE、DELETE 或 INSERT 操作。
+> 如果表被大量索引视图引用（或引用它的索引视图数量较少，但非常复杂），那么在该表上执行 DML<sup>1</sup> 时，必须更新这些引用的索引视图。 因此，DML 查询性能会显着降低，或者在某些情况下，甚至无法生成查询计划。   
+> 在这种情况下，请在生成使用之前测试 DML 查询、分析查询计划并调整/简化 DML 语句。   
+>   
+> <sup>1</sup> 例如 UPDATE、DELETE 或 INSERT 操作。   
   
 ###  <a name="Restrictions"></a> 索引视图所需的 SET 选项  
- 如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 `CONCAT_NULL_YIELDS_NULL` 设置为 ON 后，表达式 'abc' + NULL 会返回值 NULL。 但将 `CONCAT_NULL_YIEDS_NULL` 设置为 OFF 后，同一表达式会生成 'abc'。  
+如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 `CONCAT_NULL_YIELDS_NULL` 设置为 ON 后，表达式 `'abc' + NULL` 会返回值 NULL`NULL`。 但将 `CONCAT_NULL_YIEDS_NULL` 设置为 OFF 后，同一表达式会生成 `'abc'`。  
   
- 为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 如果下列条件成立，则下表中的 SET 选项必须设置为“必需的值”列中显示的值：  
+为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 如果下列条件成立，则下表中的 SET 选项必须设置为“必需的值”列中显示的值：  
   
--   创建视图和视图上的后续索引。  
+-   创建视图和视图上的后续索引。    
   
--   在创建表时，在视图中引用的基表。  
+-   在创建表时，在视图中引用的基表。    
   
--   对构成该索引视图的任何表执行了任何插入、更新或删除操作。 此要求包括大容量复制、复制和分布式查询等操作。  
+-   对构成该索引视图的任何表执行了任何插入、更新或删除操作。 此要求包括大容量复制、复制和分布式查询等操作。    
   
--   查询优化器使用该索引视图生成查询计划。  
+-   查询优化器使用该索引视图生成查询计划。   
   
-    |SET 选项|必需的值|默认服务器值|，则“默认”<br /><br /> OLE DB 和 ODBC 值|，则“默认”<br /><br /> DB-Library 值|  
-    |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
-    |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|SET 选项|必需的值|默认服务器值|，则“默认”<br /><br /> OLE DB 和 ODBC 值|，则“默认”<br /><br /> DB-Library 值|  
+|-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
+|ANSI_NULLS|ON|ON|ON|OFF|  
+|ANSI_PADDING|ON|ON|ON|OFF|  
+|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
+|ARITHABORT|ON|ON|OFF|OFF|  
+|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
   
-     <sup>1</sup> 将 `ANSI_WARNINGS` 设置为 ON 会隐式地将 `ARITHABORT` 设置为 ON。  
+<sup>1</sup> 将 `ANSI_WARNINGS` 设置为 ON 会隐式地将 `ARITHABORT` 设置为 ON。  
   
- 如果使用的是 OLE DB 或 ODBC 服务器连接，则唯一必须要修改的值是 `ARITHABORT` 设置。 必须使用 **sp_configure** 在服务器级别或使用 SET 命令从应用程序中正确设置所有 DB-Library 值。  
+如果使用的是 OLE DB 或 ODBC 服务器连接，则唯一必须要修改的值是 `ARITHABORT` 设置。 必须使用 **sp_configure** 在服务器级别或使用 SET 命令从应用程序中正确设置所有 DB-Library 值。  
   
 > [!IMPORTANT]  
 > 强烈建议在服务器的任一数据库中创建计算列的第一个索引视图或索引后，尽早在服务器范围内将 `ARITHABORT` 用户选项设置为 ON。  
   
 ### <a name="deterministic-views"></a>确定性视图  
- 索引视图的定义必须是确定性的。 如果选择列表中的所有表达式、`WHERE` 和 `GROUP BY` 子句都具有确定性，则视图也具有确定性。 在使用特定的输入值集对确定性表达式求值时，它们始终返回相同的结果。 只有确定性函数可以加入确定性表达式。 例如，`DATEADD` 函数是确定性函数，因为对于其三个参数的任何给定参数值集它总是返回相同的结果。 `GETDATE` 不是确定性函数，因为总是使用相同的参数调用它，而它在每次执行时返回结果都不同。  
+索引视图的定义必须是确定性的。 如果选择列表中的所有表达式、`WHERE` 和 `GROUP BY` 子句都具有确定性，则视图也具有确定性。 在使用特定的输入值集对确定性表达式求值时，它们始终返回相同的结果。 只有确定性函数可以加入确定性表达式。 例如，`DATEADD` 函数是确定性函数，因为对于其三个参数的任何给定参数值集它总是返回相同的结果。 `GETDATE` 不是确定性函数，因为总是使用相同的参数调用它，而它在每次执行时返回结果都不同。  
   
- 要确定视图列是否为确定性列，请使用 **COLUMNPROPERTY** 函数的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 属性。 使用 COLUMNPROPERTY 函数的 **IsPrecise** 属性确定具有架构绑定的视图中的确定性列是否为精确列。 如果为 TRUE，则 COLUMNPROPERTY 返回 1；如果为 FALSE，则返回 0；如果输入无效，则返回 NULL。 这意味着该列不是确定性列，也不是精确列。  
+要确定视图列是否为确定性列，请使用 **COLUMNPROPERTY** 函数的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 属性。 使用 `COLUMNPROPERTY` 函数的 IsPrecise 属性确定具有架构绑定的视图中的确定性列是否为精确列。 如果为 TRUE，则 `COLUMNPROPERTY` 返回 1；如果为 FALSE，则返回 0；如果输入无效，则返回 NULL。 这意味着该列不是确定性列，也不是精确列。  
   
- 即使是确定性表达式，如果其中包含浮点表达式，则准确结果也会取决于处理器体系结构或微代码的版本。 为了确保数据完整性，此类表达式只能作为索引视图的非键列加入。 不包含浮点表达式的确定性表达式称为精确表达式。 只有精确的确定性表达式才能加入键列，并包含在索引视图的 WHERE 或 GROUP BY 子句中。  
+即使是确定性表达式，如果其中包含浮点表达式，则准确结果也会取决于处理器体系结构或微代码的版本。 为了确保数据完整性，此类表达式只能作为索引视图的非键列加入。 不包含浮点表达式的确定性表达式称为精确表达式。 只有精确的确定性表达式才能加入键列，并包含在索引视图的 `WHERE` 或 `GROUP BY` 子句中。  
 
 ### <a name="additional-requirements"></a>其他要求  
- 除对 SET 选项和确定性函数的要求外，还必须满足下列要求：  
+除对 SET 选项和确定性函数的要求外，还必须满足下列要求：  
   
--   执行 `CREATE INDEX` 的用户必须是视图所有者。  
+-   执行 `CREATE INDEX` 的用户必须是视图所有者。    
   
--   创建索引时，`IGNORE_DUP_KEY` 选项必须设置为 OFF（默认设置）。  
+-   创建索引时，`IGNORE_DUP_KEY` 选项必须设置为 OFF（默认设置）。    
   
--   在视图定义中，表必须由两部分组成的名称（即 schema.tablename）引用。  
+-   在视图定义中，表必须由两部分组成的名称（即 schema.tablename）引用。    
   
--   视图中引用的用户定义函数必须使用 `WITH SCHEMABINDING` 选项创建。  
+-   视图中引用的用户定义函数必须使用 `WITH SCHEMABINDING` 选项创建。    
   
--   视图中引用的任何用户定义函数都必须由两部分组成的名称（即 schema.function）引用。  
+-   视图中引用的任何用户定义的函数都必须由两部分组成的名称（即 \<schema>.\<function>）引用。   
   
--   用户定义函数的数据访问属性必须是 `NO SQL`，外部访问属性必须是 `NO`。  
+-   用户定义函数的数据访问属性必须是 `NO SQL`，外部访问属性必须是 `NO`。   
   
--   公共语言运行时 (CLR) 功能可以出现在视图的选择列表中，但不能作为聚集索引键定义的一部分。 CLR 函数不能出现在视图的 WHERE 子句中或视图中的 JOIN 运算的 ON 子句中。  
+-   公共语言运行时 (CLR) 功能可以出现在视图的选择列表中，但不能作为聚集索引键定义的一部分。 CLR 函数不能出现在视图的 WHERE 子句中或视图中的 JOIN 运算的 ON 子句中。   
   
--   在视图定义中使用的 CLR 函数和 CLR 用户定义类型方法必须具有下表所示的属性设置。  
+-   在视图定义中使用的 CLR 函数和 CLR 用户定义类型方法必须具有下表所示的属性设置。   
   
     |“属性”|注意|  
     |--------------|----------|  
@@ -138,12 +138,12 @@ ms.lasthandoff: 02/03/2018
 -   如果视图定义包含 `GROUP BY` 子句，则唯一聚集索引的键只能引用 `GROUP BY` 子句中指定的列。  
   
 > [!IMPORTANT]  
-> 临时查询顶部不支持索引视图（使用 `FOR SYSTEM_TIME` 子句的查询）  
+> 临时查询顶部不支持索引视图（使用 `FOR SYSTEM_TIME` 子句的查询）。  
 
 ###  <a name="Recommendations"></a> 建议  
  引用索引视图中的 **datetime** 和 **smalldatetime** 字符串文字时，建议使用确定性日期格式样式将文字显式转换为所需日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST 与 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 有关确定性和非确定性表达式的详细信息，请参阅本页中的[注意事项](#nondeterministic)部分。
 
-如果表被大量索引视图引用（或引用它的索引视图数量较少，但非常复杂），那么在该表上执行 DML（如 UPDATE、DELETE 或 INSERT）时，必须在执行 DML 期间更新这些索引视图。 因此，DML 查询性能可能会显着降低，或者在某些情况下，甚至无法生成查询计划。 在这种情况下，请在生成使用之前测试 DML 查询、分析查询计划并调整/简化 DML 语句。
+如果表被大量索引视图引用（或引用它的索引视图数量较少，但非常复杂），那么在该表上执行 DML（如 `UPDATE`、`DELETE` 或 `INSERT`）时，必须在执行 DML 期间更新这些索引视图。 因此，DML 查询性能可能会显着降低，或者在某些情况下，甚至无法生成查询计划。 在这种情况下，请在生成使用之前测试 DML 查询、分析查询计划并调整/简化 DML 语句。
   
 ###  <a name="Considerations"></a> 注意事项  
  索引视图中列的 **large_value_types_out_of_row** 选项的设置继承的是基表中相应列的设置。 此值是使用 [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)设置的。 从表达式组成的列的默认设置为 0。 这意味着大值类型存储在行内。  
@@ -220,7 +220,7 @@ ms.lasthandoff: 02/03/2018
     GO  
     ```  
   
- 有关详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
+有关详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
