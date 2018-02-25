@@ -17,7 +17,7 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
 ms.openlocfilehash: 1f018dd2b60365d89e912e7ef38499f8a4d14d9b
 ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/19/2018
 ---
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/19/2018
 > [!NOTE]
 > 本快速入门专门重点介绍 mssql-server-linux 映像的使用。 虽然未介绍 Windows 映像，但可在 [mssql-server-windows-developer Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)上找到关于它的详细信息。
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> 先决条件
 
 - 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
 - 至少 2 GB 的磁盘空间
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/19/2018
 
 ## <a name="pull-and-run-the-container-image"></a>请求和运行容器映像
 
-1. 从 Docker 中心请求 SQL Server 2017 Linux 容器映像。
+1. 从 Docker Hub 中拉出 SQL Server 2017 Linux 容器映像。
 
    ```bash
    sudo docker pull microsoft/mssql-server-linux:2017-latest
