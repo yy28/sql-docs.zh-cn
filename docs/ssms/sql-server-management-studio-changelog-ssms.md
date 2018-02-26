@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -18,19 +18,95 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 01d0f988103f39aa311b84a1bf9e03292e60f511
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f125db75de84856b8754a305a1c6ce8be9d29868
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
 
 
-## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
+
+## <a name="ssms-175download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.5](download-sql-server-management-studio-ssms.md)
+
+正式发布版 | 内部版本号：14.0.17224.0
+
+### <a name="whats-new"></a>新增功能
+
+**常规 SSMS**
+
+数据发现和分类：
+
+- 添加了新的 SQL 数据发现和分类功能，可用于发现数据库中的敏感数据并对其进行分类、标记和报告。 
+- 自动发现最敏感的数据（如商业、金融、医疗和 PII 等）并对其进行分类在组织的信息保护中可起到关键作用。
+- 详细了解 [SQL 数据发现和分类](../relational-databases/security/sql-data-discovery-and-classification.md)。
+
+查询编辑器：
+
+- 为 Azure SQL DW 的带分隔符的文本外部文件格式添加了 SkipRows 选项的支持。 此功能允许用户在将带分隔符的文本文件加载到 SQL DW 时，跳过指定的行数。 还为 FIRST_ROW 关键字添加了相应的 IntelliSense/SMO 支持。 
+
+Showplan：
+
+- 为 SQL 数据仓库启用了“显示估计计划”按钮
+- 添加了新显示计划属性 EstimateRowsWithoutRowGoal；还向 QueryTimeStats: UdfCpuTime 和 UdfElapsedTime 添加了新显示计划属性。 有关详细信息，请参阅 [SQL Server 2017 CU3 中添加的查询执行计划中的优化器行目标信息](http://support.microsoft.com/help/4051361)。
+
+
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**常规 SSMS**
+
+Showplan：
+
+- 修复了实时查询统计信息运行时间，以显示引擎执行时间（而非 LQS 连接运行时间）。
+- 修复了显示计划无法识别应用逻辑运算符（如 GbApply 和 InnerApply）的问题。
+- 修复了与 ExchangeSpill 相关的问题。
+
+查询编辑器：
+
+- 修复了在执行由“SET SHOWPLAN_ALL ON”开头的简单查询时，与 SPID 相关的问题， 例如 SSMS 无法引发“输入字符串格式不正确。(mscorlib)”等错误。 
+
+
+SMO：
+
+- 修复了当服务器排序规则区分大小写时，SMO 无法提取 AvailabilityReplica 属性的问题（修复后，SSM 可显示错误消息，例如“无法绑定多部分标识符 a.delimited。”）
+- 修复了 DatabaseScopedConfigurationCollection 类中无法正确处理排序规则的问题（修复后，右键单击在具有区分大小写排序规则的服务器中运行的数据库时，在区域设置为土耳其语的 ma 计算机上运行的 SSMS 可显示错误，如“旧版基数估计不是有效范围配置”）。
+- 修复了 JobServer 类中 SMO 无法在 SQL 2005 服务器上提取 SQL 代理属性的问题（修复后，SSMS 可引发如“无法向局部变量分配默认值。 必须声明标量变量 @ServiceStartMode”的错误，此外，SSMS 不会在对象资源管理器中显示 SQL 代理节点）。
+
+模板： 
+
+- “数据库邮件”：修复了一些拼写错误 [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512)。  
+
+对象资源管理器：
+- 修复了托管压缩无法进行索引的问题 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o)。
+
+审核：
+- 修复了“合并审核文件”功能的问题。
+<br>
+
+### <a name="known-issues"></a>已知问题
+
+数据分类：
+- 如果删除一个分类并为相同的列手动添加一个新分类，则旧信息类型和敏感标签将被分配给主视图中的该列。<br>
+解决方法：在将分类添加回主视图之后且在保存之前，先分配新信息类型和敏感标签。
+
+
+
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
+
+
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![download](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 正式发布版 | 内部版本号：14.0.17213.0
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>新增功能
 
@@ -121,9 +197,6 @@ XE 探查器：
 - 修复了在 SQL 探查器中当选择针对 Azure AS 的 Windows 身份验证时仍会提示登录的问题。
 
 
-## <a name="previous-ssms-releases"></a>SSMS 的早期版本
-
-通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![下载](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 正式发布版 | 内部版本号：14.0.17199.0

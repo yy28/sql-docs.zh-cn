@@ -1,7 +1,7 @@
 ---
 title: "下载 SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 12/14/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -31,14 +31,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0447d74f672398a5c9e242cc43c779e419526b99
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: fc8fe6a41661acd176c43cdf1de2a857846a7b83
+ms.sourcegitcommit: 03021482208259e6c67599b47df23fbbe8f3a393
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] SSMS 是一种集成环境，用于管理从 SQL Server 到 SQL 数据库的任何 SQL 基础结构。 SSMS 提供用于配置、监视和管理 SQL 实例的工具。 使用 SSMS 部署、监视和升级应用程序使用的数据层组件，以及生成查询和脚本。
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+SSMS 是一种集成环境，用于管理从 SQL Server 到 SQL 数据库的任何 SQL 基础结构。 SSMS 提供用于配置、监视和管理 SQL 实例的工具。 使用 SSMS 部署、监视和升级应用程序使用的数据层组件，以及生成查询和脚本。
 
 使用 SQL Server Management Studio (SSMS) 在本地计算机或云端查询、设计和管理数据库和数据仓库，无论它们位于何处。
 
@@ -46,9 +47,9 @@ ms.lasthandoff: 01/18/2018
 
 SSMS 17.x 是最新一代的 SQL Server Management Studio，可支持 SQL Server 2017。
 
-[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
+[![download](../ssdt/media/download.png)下载 SQL Server Management Studio 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 
-[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 17.4 升级包（将 17.x 升级到 17.4）](https://go.microsoft.com/fwlink/?linkid=864331)
+[![download](../ssdt/media/download.png)下载 SQL Server Management Studio 17.5 升级包（将 17.x 升级到 17.5）](https://go.microsoft.com/fwlink/?linkid=867672)
 
 SSMS 17.x 安装不会升级或替换 SSMS 16.x 或更早版本。 SSMS 17.x 与以前的版本并行安装，因此，这两个版本均可供使用。
 如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 17，并有一个新图标： 
@@ -64,11 +65,11 @@ SSMS 17.x 安装不会升级或替换 SSMS 16.x 或更早版本。 SSMS 17.x 与
 
 此版本的 SSMS 可以安装在以下语言中：
 
-SQL Server Management Studio 17.4：<br>
-[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+SQL Server Management Studio 17.5：<br>
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
-SQL Server Management Studio 17.4 升级包（将 17.x 升级到 17.4）：<br>
-[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40a)
+SQL Server Management Studio 17.5 升级包（将 17.x 升级到 17.5）：<br>
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模块现可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
@@ -76,64 +77,43 @@ SQL Server Management Studio 17.4 升级包（将 17.x 升级到 17.4）：<br>
 
 **版本信息**
 
-版本号：17.4
+版本号：17.5
 
-此版本的内部版本号为：14.0.17213.0
+此版本的内部版本号为：14.0.17224.0
 
-发布日期：2017 年 12 月 7 日
+发布日期：2018 年 2 月 15 日
 
 ## <a name="new-in-this-release"></a>此版本中的新增功能
 
-SSMS 17.4 是 SQL Server Management Studio 的最新版本。 SSMS 的 17.x 一代提供对 SQL Server 2008 到 SQL Server 2017 几乎所有功能领域的支持。 版本 17.x 也支持 SQL Analysis Service PaaS。
+SSMS 17.5 是 SQL Server Management Studio 的最新版本。 SSMS 的 17.x 一代提供对 SQL Server 2008 到 SQL Server 2017 几乎所有功能领域的支持。 版本 17.x 也支持 SQL Analysis Service PaaS。
 
-版本 17.4 包括：
+版本 17.5 包括：
 
-漏洞评估：
-- 添加了一个新的 SQL 漏洞评估服务，以扫描数据库的潜在漏洞和最佳方案偏差，如配置错误、权限过多和敏感数据公开。 
-- 评估结果包括旨在解决每个问题的可操作步骤，并提供自定义修正脚本（若适用）。 可以为每个环境自定义评估报表并进行调整以满足特定需求。 访问 [SQL 漏洞评估](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)了解详细信息。
+数据发现和分类：
 
-SMO：
-- 修复了 HasMemoryOptimizedObjects 在 Azure 上引发异常的问题。
-- 添加了对新 CATALOG_COLLATION 功能的支持。
+- 添加了新的 SQL 数据发现和分类功能，可用于发现数据库中的敏感数据并对其进行分类、标记和报告。 
+- 自动发现最敏感的数据（如商业、金融、医疗和 PII 等）并对其进行分类在组织的信息保护中可起到关键作用。
+- 详细了解 [SQL 数据发现和分类](../relational-databases/security/sql-data-discovery-and-classification.md)。
 
-AlwaysOn 仪表板：
-- 可用性组中的延迟分析有所改进。
-- 添加了两个新报表：AlwaysOn\_Latency\_Primary 和 AlwaysOn\_Latency\_Secondary。
+查询编辑器：
+
+- 为 Azure SQL DW 的带分隔符的文本外部文件格式添加了 SkipRows 选项的支持。 此功能允许用户在将带分隔符的文本文件加载到 SQL DW 时，跳过指定的行数。 还为 FIRST_ROW 关键字添加了相应的 IntelliSense/SMO 支持。 
 
 Showplan：
-- 已更新指向正确文档的链接。
-- 允许直接从生成的实际计划进行单个计划分析。
-- 新图标集。
-- 添加了对识别 GbApply、InnerApply 等“应用逻辑运算符”的支持。
-        
-XE 探查器：
-- 更名为 XEvent 探查器。
-- 默认情况下，停止/启动菜单命令会立即停止/启动会话。
-- 已启用键盘快捷方式（例如，用于搜索的 CTRL-F）。
-- 向 XEvent 探查器会话中的相应事件添加了 database\_name 和 client\_hostname 操作。 为了使更改生效，你可能需要删除服务器上现有 QuickSessionStandard 或 QuickSessionTSQL 会话实例 - [连接 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
-命令行：
-- 添加了新的命令行选项 (“-G”)，可以用于自动将 SSMS 连接到使用 Active Directory 身份验证（“集成”或“密码”）的服务器/数据库。 有关详细信息，请参阅 [Ssms 实用工具](ssms-utility.md)。
-
-导入平面文件向导：
-- 添加了一种方式，以在创建表时选择默认名称 (“dbo”) 以外的架构名称。
-
-查询存储：
-- 在展开查询存储可用报表列表时，还原了“回归查询”报表。
-
-**Integration Services (IS)**
-- 在部署向导中添加了包验证函数，可帮助用户找出 SSIS 包内在 Azure SSIS IR 中不受支持的组件。
+- 为 SQL 数据仓库启用了“显示估计计划”按钮
+- 添加了新显示计划属性 EstimateRowsWithoutRowGoal；还向 QueryTimeStats: UdfCpuTime 和 UdfElapsedTime 添加了新显示计划属性。 有关详细信息，请参阅 [SQL Server 2017 CU3 中添加的查询执行计划中的优化器行目标信息](http://support.microsoft.com/help/4051361)。
 
 
-有关更改的完整列表，请参阅 [SQL Server Management Studio - 更改日志 (SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md)。
 
-有关用户数据收集的信息，请参阅 [SQL Server 隐私声明](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)。
+
 
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
 * 此版本的 SSMS 适用于所有[受支持 SQL Server 版本 (SQL Server 2008 - SQL Server 2017)](https://support.microsoft.com/lifecycle?C2=1044)，并且在最大程度上支持与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能配合使用。
 * 没有显式阻止 SQL Server 2000 或 SQL Server 2005，但某些功能可能无法正常工作。
 * 此外，SSMS 17.x 可与 SSMS 16.x 或 SQL Server 2014 SSMS 及早期版本并行安装。
+* SQL Server Integration Services (SSIS) - SSMS 版本 17.x 不支持连接到旧版 SQL Server Integration Services 服务。 要连接到早期版本的 Integration Services，请使用与 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 连接到旧版 SQL Server 2016 Integration Services 服务。 可以在同一台计算机上并行安装 SSMS 17.x 和 SSMS 16.x。 由于 SQL Server 2012 的发布，建议使用 SSIS 目录数据库 (SSISDB) 来存储、管理、运行和监视 Integration Services 包。
 
 ## <a name="supported-operating-systems"></a>受支持的操作系统
   
@@ -160,14 +140,15 @@ XE 探查器：
   * 请确保计算机上已安装所有最新 OS 更新。
   * 所提及的操作通常只需执行一次。 有几种情况需要在额外升级到 SSMS 的同一主版本期间重新启动。 对于次要升级，计算机上已安装 SSMS 的所有要求。
 
-* 若要查看已知问题和解决方法的列表，请参阅 [SQL Server Management Studio 发行说明](../ssms/sql-server-management-studio-release-notes.md)
-
 
 ## <a name="release-notes"></a>发行说明
 
-以下是此 17.4 版本的问题和限制：
+以下是此 17.5 版本的问题和限制：
 
-目前没有已知问题。
+数据分类：
+- 如果删除一个分类并为相同的列手动添加一个新分类，则旧信息类型和敏感标签将被分配给主视图中的该列。<br>
+解决方法：在将分类添加回主视图之后且在保存之前，先分配新信息类型和敏感标签。  
+
 
 ## <a name="previous-releases"></a>以前的版本
 

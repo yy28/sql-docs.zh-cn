@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6455a2881d11ccd10c7be65a437357b1d1431dda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>导入和导出向导的简单示例入门
 通过浏览常见方案 - 从 Excel 电子表中将数据导入 SQL Server 数据库，了解 SQL Server 导入和导出向导中的内容。 即使计划使用其他源和目标，也可通过本主题最大程度地了解所需的向导相关内容。

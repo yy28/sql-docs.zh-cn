@@ -1,5 +1,5 @@
 ---
-title: "THROW (Transact SQL) |Microsoft 文档"
+title: THROW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - THROW_TSQL
 - THROW
-dev_langs: TSQL
-helpviewer_keywords: THROW statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32527795209b49b2b698962c86aee61b2956dd18
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 04e09db13babdf05ba4cfa2f213f6d6e0d58c1a5
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -45,21 +48,21 @@ THROW [ { error_number | @local_variable },
 ```  
   
 ## <a name="arguments"></a>参数  
- *error_number*  
- 表示异常的常量或变量。 *error_number*是**int**并且必须为大于或等于 50000 且小于或等于 2147483647。  
+ error_number  
+ 表示异常的常量或变量。 error_number 为 int，并且必须大于或等于 50000 且小于或等于 2147483647。  
   
  message  
- 描述异常的字符串或变量。 *消息*是**nvarchar(2048)**。  
+ 描述异常的字符串或变量。 message 为 nvarchar(2048)。  
   
  State  
- 在 0 到 255 之间的常量或变量，指示与消息关联的状态。 *状态*是**tinyint**。  
+ 在 0 到 255 之间的常量或变量，指示与消息关联的状态。 state 为 tinyint。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  THROW 语句前的语句必须后跟分号 (;) 语句终止符。  
   
- 如果 TRY…CATCH 构造不可用，则会话结束。 设置引发异常的行号和过程。 将严重性设置为 16。  
+ 如果 TRY…CATCH 构造不可用，则语句批处理将终止。 设置引发异常的行号和过程。 将严重性设置为 16。  
   
- 如果指定 THROW 语句时未使用任何参数，该语句必须出现在 CATCH 块内。 这将导致引发已捕获异常。 THROW 语句中出现任何错误将导致语句批处理结束状态。  
+ 如果指定 THROW 语句时未使用任何参数，该语句必须出现在 CATCH 块内。 这将导致引发已捕获异常。 THROW 语句中出现任何错误都将导致语句批处理终止。  
   
  % 是 THROW 语句的消息文本中的保留的字符，必须对其进行转义。 重复 % 字符以将 % 作为消息文本的一部分返回，例如“增加超出了 15%% 的原始值”。  
   
@@ -68,14 +71,14 @@ THROW [ { error_number | @local_variable },
   
 |RAISERROR 语句|THROW 语句|  
 |-------------------------|---------------------|  
-|如果*msg_id*传递到 RAISERROR，必须在 sys.messages 中定义的 ID。|*Error_number*参数无需在 sys.messages 中定义。|  
-|*Msg_str*参数可以包含**printf**格式设置样式。|*消息*参数不接受**printf**样式的格式设置。|  
-|*严重性*参数指定的异常的严重性。|没有任何*严重性*参数。 始终将异常严重性设置为 16。|  
+|如果将 msg_id 传递给 RAISERROR，则必须在 sys.messages 中定义 ID。|无需在 sys.messages 中定义 error_number 参数。|  
+|msg_str 参数可以包含 printf 格式设置样式。|message 参数不接受 printf 样式的格式设置。|  
+|severity 参数指定异常的严重性。|没有 severity 参数。 始终将异常严重性设置为 16。|  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. 使用 THROW 引发异常  
- 下面的示例演示如何使用`THROW`语句来引发异常。  
+ 以下示例演示如何使用 `THROW` 语句引发异常。  
   
 ```sql  
 THROW 51000, 'The record does not exist.', 1;  
@@ -121,7 +124,7 @@ END CATCH;
  ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. 使用带 THROW 的 FORMATMESSAGE  
- 下面的示例说明如何使用带 `FORMATMESSAGE` 的 `THROW` 函数来引发自定义错误消息。 该示例首先使用 `sp_addmessage` 创建用户定义的错误消息。 因为 THROW 语句不允许替换中的参数*消息*方式 RAISERROR 执行，而 FORMATMESSAGE 函数的参数用于传递错误消息 60000 所需的三个参数值。  
+ 下面的示例说明如何使用带 `FORMATMESSAGE` 的 `THROW` 函数来引发自定义错误消息。 该示例首先使用 `sp_addmessage` 创建用户定义的错误消息。 因为 THROW 语句不允许像 RAISERROR 那样替换 message 参数中的参数，因此使用 FORMATMESSAGE 函数传递错误消息 60000 所要求的三个参数值。  
   
 ```sql  
 EXEC sys.sp_addmessage  
@@ -145,20 +148,20 @@ THROW 60000, @msg, 1;
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [FORMATMESSAGE &#40;Transact SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)   
  [数据库引擎错误严重性](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)   
- [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO (Transact-SQL)](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END (Transact-SQL)](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE (Transact-SQL)](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT (Transact-SQL)](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 
