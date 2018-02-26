@@ -1,7 +1,7 @@
 ---
 title: "查询处理体系结构指南 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,40 @@ ms.lasthandoff: 02/09/2018
 ## <a name="sql-statement-processing"></a>SQL 语句处理
 
 处理单个 SQL 语句是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行 SQL 语句的最基本方法。 用于处理只引用本地基表（不引用视图或远程表）的单个 `SELECT` 语句的步骤说明了这个基本过程。
+
+#### <a name="logical-operator-precedence"></a>逻辑运算符的优先顺序
+
+当一个语句中使用了多个逻辑运算符时，计算顺序依次为：`NOT`、`AND`最后是 `OR`。 算术运算符和位运算符优先于逻辑运算符处理。 有关详细信息，请参阅[运算符优先级](../t-sql/language-elements/operator-precedence-transact-sql.md)。
+
+在下面的示例中，颜色条件适用于产品型号 21，而不适用于产品型号 20，因为 `AND` 的优先级高于 `OR`。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+可以通过添加括号强制先计算 `OR` 来改变查询的含义。 以下查询只查找型号 20 和 21 中红色的产品。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+因为运算符存在优先级，所以使用括号（即使不需要）可以提高查询的可读性，并减少出现细微错误的可能性。 使用括号不会造成重大的性能损失。 下面的示例比原始示例更可读，虽然它们在语义上是相同的。
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>优化 SELECT 语句
 
@@ -49,7 +83,6 @@ ms.lasthandoff: 02/09/2018
 * 包含源数据的表。 此表在 `FROM` 子句中指定。
 * 就 `SELECT` 语句而言，表之间的逻辑关系。 这在联接规范中定义，联接规范可出现在 `WHERE` 子句后的 `ON` 子句或 `FROM`子句中。
 * 为了符合 `SELECT` 语句的要求，源表中的行所必须满足的条件。 这些条件在 `WHERE` 和 `HAVING` 子句中指定。
-
 
 查询执行计划定义： 
 
@@ -1045,4 +1078,5 @@ GO
  [扩展事件](../relational-databases/extended-events/extended-events.md)  
  [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基数估计](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [自适应查询处理](../relational-databases/performance/adaptive-query-processing.md)
+ [自适应查询处理](../relational-databases/performance/adaptive-query-processing.md)   
+ [运算符优先级](../t-sql/language-elements/operator-precedence-transact-sql.md)
