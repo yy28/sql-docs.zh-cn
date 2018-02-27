@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>模拟 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]本主题提供了表格模型作者的登录凭据时如何使用的 Analysis services 连接到数据源导入和处理 （刷新） 数据的了解。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文提供了表格模型作者的登录凭据时如何使用的 Analysis services 连接到数据源导入和处理 （刷新） 数据的了解。  
 
-##  <a name="bkmk_conf_imp_info"></a>配置模拟  
+##  <a name="bkmk_conf_imp_info"></a> 配置模拟  
  其中，和在什么上下文中存在的模型确定如何配置模拟信息。 创建新的模型项目时，模拟时连接到要导入数据的数据源配置 SQL Server Data Tools (SSDT) 中。 一旦部署某一模型，可以通过使用 SQL Server Management Studio (SSMS) 在模型数据库连接字符串属性中配置模拟。 对于 Azure Analysis Services 中的表格模型，你可以使用 SSMS 或**视为： 脚本**基于浏览器的设计器编辑 JSON 中的 Model.bim 文件中的模式。
   
-##  <a name="bkmk_how_imper"></a>如何使用模拟  
+##  <a name="bkmk_how_imper"></a> 如何使用模拟  
   “模拟”是服务器应用程序（例如 Analysis Services）模拟某一客户端应用程序的身份的能力。 可以执行 analysis Services 使用服务帐户运行，但是，当服务器建立了连接到数据源，它使用模拟以便访问检查数据导入和处理。  
   
  用于模拟凭据不同于你当前在使用登录的凭据。 登录的用户凭据将用于特定客户端操作，在创作模型时。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |**特定 Windows 用户名和密码**|此选项指定模型使用 Windows 用户帐户导入或处理从数据源的数据。 域和用户帐户名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
 |**服务帐户**|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  
   
-##  <a name="bkmk_impers_sec"></a> Security  
+##  <a name="bkmk_impers_sec"></a> 安全性  
  与模拟一起使用的凭据是持久的内存中由 VertiPaq™ 引擎。 凭据永远不会写入到磁盘。 如果部署模型时，工作区数据库不是内存中，被提示用户输入用于连接到数据源并提取数据的凭据。  
   
 > [!NOTE]  

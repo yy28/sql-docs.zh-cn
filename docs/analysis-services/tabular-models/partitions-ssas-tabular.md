@@ -1,5 +1,5 @@
 ---
-title: "分区 (SSAS 表格) |Microsoft 文档"
+title: "分区 |Microsoft 文档"
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: analysis-services
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d4d1ba933a5f927c86908f743d21093e9ded602
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2130a0e6a8b6f734ec77564e7a41e3057e15572
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="partitions"></a>“度量值组”
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]分区将表划分为逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 通过使用 SSDT 中的分区对话框在模型创作期间创建的分区将应用于模型工作区数据库。 部署模型时，在已部署的模型数据库中将复制为模型工作区数据库定义的分区。 你可以进一步创建并管理通过使用 SSMS 中的分区对话框为已部署的模型数据库的分区。  本主题中提供的信息描述使用 SSDT 中的分区管理器对话框模型创作期间创建的分区。 有关创建和管理为部署的模型的分区的信息，请参阅[创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
+# <a name="partitions"></a>分区
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 通过使用 SSDT 中的分区对话框在模型创作期间创建的分区将应用于模型工作区数据库。 部署模型时，在已部署的模型数据库中将复制为模型工作区数据库定义的分区。 你可以进一步创建并管理通过使用 SSMS 中的分区对话框为已部署的模型数据库的分区。  本主题中提供的信息描述使用 SSDT 中的分区管理器对话框模型创作期间创建的分区。 有关创建和管理为部署的模型的分区的信息，请参阅[创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
   
-##  <a name="bkmk_benefits"></a> 优势  
+##  <a name="bkmk_benefits"></a> 优点  
  表格模型中的分区将一个表划分为各个逻辑分区对象。 然后，每个分区可独立于其他分区进行处理。 例如，表可能包含某些行集，这些行集的数据很少更改；但是也包含另一些行集，这些行集的数据则经常更改。 在这些情况中，如果您只想处理某一部分数据，没有必要处理所有数据。 通过分区，您可以将需要经常处理的那部分数据与很少处理的那部分数据分开。  
   
  有效的模型设计利用分区来消除 Analysis Services 服务器上不必要的处理和后续处理器负载，而同时可确保以足够的频率处理和刷新数据，以反映数据源中最新的数据。 在模型创建期间如何实现和利用分区可能与如何为已部署的模型实现和利用分区有很大不同。 请记住在模型创建阶段，您可能只使用将最终包含在已部署的模型中的数据的一个子集。  

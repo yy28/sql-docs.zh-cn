@@ -1,11 +1,11 @@
 ---
 title: "SQL Server Always On 可用性组部署模式 |Microsoft 文档"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
@@ -70,7 +70,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主是 R / 瓦 |自动故障转移。 新的主是 R / 瓦 |自动故障转移。 前面的主要恢复和联接可用性组作为辅助之前，新的主才可供用户事务。 
 |一个次要副本中断  | 主是 R / 瓦 如果主没有自动故障转移将失败。 |主是 R / 瓦 如果主没有自动故障转移也会失败。 | 主也无法供用户事务。 
-<sup>*</sup>默认值
+<sup>*</sup> 默认值
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主是 R / 瓦| 自动故障转移。 前面的主要恢复和联接可用性组作为辅助之前，新的主才可供用户事务。
 |一个次要副本中断  |主是 R/W，运行公开数据丢失。 |主辅助恢复之前不可用的用户事务。
-<sup>*</sup>默认值
+<sup>*</sup> 默认值
 
 >[!NOTE]
 >前面的方案是在 SQL Server 自 2017 年 CU 1 之前的行为。 
@@ -117,7 +117,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 |辅助副本中断 | 主数据库处于 R/W，运行已公开到数据丢失 （如果主失败并且无法恢复）。 如果主没有自动故障转移也会失败。 | 主也无法供用户事务。 如果主故障转移到没有副本也会失败。 
 |配置仅副本中断 | 主是 R / 瓦 如果主没有自动故障转移也会失败。 | 主是 R / 瓦 如果主没有自动故障转移也会失败。 
 |同步辅助 + 配置仅副本中断| 主也无法供用户事务。 自动故障转移。 | 主也无法供用户事务。 故障转移到如果没有副本以及主服务器失败。 
-<sup>*</sup>默认值
+<sup>*</sup> 默认值
 
 >[!NOTE]
 >承载配置唯一的副本的 SQL Server 的实例还可以托管其他数据库。 此外可以参与作为多个可用性组的配置数据库。 
@@ -142,7 +142,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>了解 Pacemaker 的 SQL Server 资源代理
 
-SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_groups`以允许 Pacemaker 来确定如何最新的辅助副本均与主副本。 `sequence_number`是单调递增 BIGINT 的表示方式保持最新的本地可用性组副本。 Pacemaker 更新`sequence_number`与每个可用性组配置更改。 配置更改的示例包括故障转移、 副本添加或删除。 对主要主机和更新数，则将其复制到辅助副本。 因此具有最新配置的辅助副本具有相同的序列号的主数据库。 
+SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_groups`以允许 Pacemaker 来确定如何最新的辅助副本均与主副本。 `sequence_number` 是单调递增 BIGINT 的表示方式保持最新的本地可用性组副本。 Pacemaker 更新`sequence_number`与每个可用性组配置更改。 配置更改的示例包括故障转移、 副本添加或删除。 对主要主机和更新数，则将其复制到辅助副本。 因此具有最新配置的辅助副本具有相同的序列号的主数据库。 
 
 当 Pacemaker 决定将提升为主副本时，它首先会发送*预提升*到所有副本的通知。 副本返回的序列号。 接下来，当 Pacemaker 实际尝试将提升为主副本，副本仅提升本身如果其序列号为最高的所有序列号。 如果其自己的序列号与最高序列号不匹配，副本会拒绝升级操作。 这样，就只有序列号最高的副本才会升级为主副本，确保不会丢失数据。 
 

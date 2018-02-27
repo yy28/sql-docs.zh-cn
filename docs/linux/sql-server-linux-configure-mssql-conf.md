@@ -1,25 +1,25 @@
 ---
 title: "在 Linux 上配置 SQL Server 设置 |Microsoft 文档"
-description: "本主题介绍如何使用 mssql conf 工具在 Linux 上配置 SQL Server 2017 设置。"
+description: "本文介绍如何使用 mssql conf 工具在 Linux 上配置 SQL Server 2017 设置。"
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/20/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: fe0a3bc095e1dcd76f9fdc98e1621974dca6693e
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -29,12 +29,16 @@ ms.lasthandoff: 02/01/2018
 
 |||
 |---|---|
+| [代理](#agent) | 启用 SQL Server 代理 |
 | [排序规则](#collation) | 在 Linux 上，为 SQL Server 设置新的排序规则。 |
 | [客户反馈](#customerfeedback) | 选择 SQL Server 向 Microsoft 发送反馈。 |
 | [数据库邮件配置文件](#dbmail) | 设置在 Linux 上的 SQL Server 的默认数据库邮件配置文件 |
 | [默认数据目录](#datadir) | 更改新的 SQL Server 数据库数据文件 (.mdf) 的默认目录。 |
 | [默认日志目录](#datadir) | 更改新的 SQL Server 数据库日志 (.ldf) 文件的默认目录。 |
+| [默认 master 数据库文件目录](#masterdatabasedir) | 更改现有的 SQL 安装上的 master 数据库文件的默认目录。|
+| [默认 master 数据库文件名称](#masterdatabasename) | 更改 master 数据库文件的名称。 |
 | [默认转储目录](#dumpdir) | 更改新内存转储和其他故障排除的文件的默认目录。 |
+| [默认错误日志目录](#errorlogdir) | 更改新的 SQL Server 错误日志、 默认事件探查器跟踪、 系统运行状况会话 XE，和 Hekaton 会话 XE 文件的默认目录。 |
 | [默认备份目录](#backupdir) | 更改新的备份文件的默认目录。 |
 | [转储类型](#coredump) | 选择要收集的转储内存转储文件的类型。 |
 | [高可用性](#hadr) | 启用可用性组。 |
@@ -56,7 +60,25 @@ ms.lasthandoff: 02/01/2018
 
 * 运行 mssql-conf 通过这些示例指定完整路径： **/opt/mssql/bin/mssql-conf**。 如果你选择请改为导航到该路径，在当前目录的上下文中运行 mssql conf: **。 / mssql conf**。
 
-## <a id="collation"></a>更改 SQL Server 排序规则
+## <a id="agent"></a> 启用 SQL Server 代理
+
+**Sqlagent.enabled**设置可让[SQL Server 代理](sql-server-linux-run-sql-server-agent-job.md)。 默认情况下，SQL Server 代理为禁用状态。
+
+若要更改此设置，请使用以下步骤：
+
+1. 启用 SQL Server 代理：
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+   ```
+
+1. 重新启动 SQL Server 服务：
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a id="collation"></a> 更改 SQL Server 排序规则
 
 **集排序规则**选项的排序规则值更改为任何支持的排序规则。
 
@@ -76,7 +98,7 @@ ms.lasthandoff: 02/01/2018
 
 支持的排序列表，请运行[sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)函数： `SELECT Name from sys.fn_helpcollations()`。
 
-## <a id="customerfeedback"></a>配置客户反馈
+## <a id="customerfeedback"></a> 配置客户反馈
 
 **Telemetry.customerfeedback**是否 SQL Server 向 Microsoft 发送反馈，或不设置更改。 默认情况下，此值设置为**true**。 若要更改的值，请运行以下命令：
 
@@ -94,7 +116,7 @@ ms.lasthandoff: 02/01/2018
 
 有关详细信息，请参阅[在 Linux 上的 SQL Server 的客户反馈](sql-server-linux-customer-feedback.md)。
 
-## <a id="datadir"></a>默认数据或日志目录位置更改
+## <a id="datadir"></a> 默认数据或日志目录位置更改
 
 **Filelocation.defaultdatadir**和**filelocation.defaultlogdir**设置更改其中创建新的数据库和日志文件的位置。 默认情况下，此位置为 /var/opt/mssql/data。 若要更改这些设置，请使用以下步骤：
 
@@ -131,7 +153,89 @@ ms.lasthandoff: 02/01/2018
 
 1. 此命令还假定/tmp/日志目录存在，并且它位于用户和组**mssql**。
 
-## <a id="dumpdir"></a>更改默认转储目录位置
+
+## <a id="masterdatabasedir"></a> 更改默认 master 数据库文件目录位置
+
+**Filelocation.masterdatafile**和**filelocation.masterlogfile**设置 SQL Server 引擎查找 master 数据库文件的位置的更改。 默认情况下，此位置为 /var/opt/mssql/data。 
+
+若要更改这些设置，请使用以下步骤：
+
+1. 创建新的错误日志文件的目标目录。 下面的示例创建一个新**/tmp/masterdatabasedir**目录：
+
+   ```bash
+   sudo mkdir /tmp/masterdatabasedir
+   ```
+
+1. 更改所有者和到的目录组**mssql**用户：
+
+   ```bash
+   sudo chown mssql /tmp/masterdatabasedir
+   sudo chgrp mssql /tmp/masterdatabasedir
+   ```
+
+1. 使用 mssql conf 更改使用的主数据和日志文件的默认 master 数据库目录**设置**命令：
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. 停止 SQL Server 服务：
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. 将 master.mdf 和 masterlog.ldf 移动： 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. 启动 SQL Server 服务：
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+   
+> [!NOTE]
+> 如果 SQL Server 找不到指定目录中的 master.mdf 和 mastlog.ldf 文件，将在指定的目录中，自动创建模板化副本的系统数据库和 SQL Server 已成功启动。 但是，元数据，例如用户数据库、 服务器登录名、 服务器证书、 加密密钥、 SQL 代理作业或旧 SA 登录密码将不会在新的 master 数据库中更新。 你将需要停止 SQL Server 并重将你的旧 master.mdf 和 mastlog.ldf 移动到新的指定位置，然后启动 SQL Server 以继续使用现有元数据。 
+
+
+## <a id="masterdatabasename"></a> 更改 master 数据库文件的名称。
+
+**Filelocation.masterdatafile**和**filelocation.masterlogfile**设置 SQL Server 引擎查找 master 数据库文件的位置的更改。 默认情况下，此位置为 /var/opt/mssql/data。 若要更改这些设置，请使用以下步骤：
+
+1. 停止 SQL Server 服务：
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. 使用 mssql conf 更改使用的主数据和日志文件的主数据库的预期的名称**设置**命令：
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   ```
+
+1. 更改 master 数据库数据和日志文件的名称 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /var/opt/mssql/data/masternew.mdf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data/mastlognew.ldf
+   ```
+
+1. 启动 SQL Server 服务：
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
+
+
+## <a id="dumpdir"></a> 更改默认转储目录位置
 
 **Filelocation.defaultdumpdir**设置的内存和 SQL 转储生成崩溃时的默认位置的更改。 默认情况下，这些文件在 /var/opt/mssql/log 中生成。
 
@@ -162,7 +266,39 @@ ms.lasthandoff: 02/01/2018
    sudo systemctl restart mssql-server
    ```
 
-## <a id="backupdir"></a>更改默认备份目录位置
+## <a id="errorlogdir"></a> 更改默认错误日志文件目录位置
+
+**Filelocation.errorlogfile**设置创建新的错误日志、 默认事件探查器跟踪、 系统运行状况会话 XE 和 Hekaton 会话 XE 文件的位置的更改。 默认情况下，此位置是 /var/opt/mssql/log。 在其中设置 SQL 错误日志文件的目录将成为其他日志的默认日志目录。
+
+若要更改这些设置：
+
+1. 创建新的错误日志文件的目标目录。 下面的示例创建一个新**/tmp/logs**目录：
+
+   ```bash
+   sudo mkdir /tmp/logs
+   ```
+
+1. 更改所有者和到的目录组**mssql**用户：
+
+   ```bash
+   sudo chown mssql /tmp/logs
+   sudo chgrp mssql /tmp/logs
+   ```
+
+1. 使用 mssql conf 更改的默认错误日志文件名**设置**命令：
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog
+   ```
+
+1. 重新启动 SQL Server 服务：
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+
+## <a id="backupdir"></a> 更改默认备份目录位置
 
 **Filelocation.defaultbackupdir**设置中生成的备份文件的默认位置的更改。 默认情况下，这些文件在 /var/opt/mssql/data 中生成。
 
@@ -193,7 +329,7 @@ ms.lasthandoff: 02/01/2018
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a>指定核心转储设置
+## <a id="coredump"></a> 指定核心转储设置
 
 如果一个 SQL Server 进程中发生异常，SQL Server 会创建内存转储。
 
@@ -226,14 +362,14 @@ ms.lasthandoff: 02/01/2018
     | **filtered** | filtered 采用基于减法的设计，包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和宿主环境，从转储中排除某些区域。
     | **full** | 完整的整个过程转储中包括所有区域位于**/proc/$ pid/映射**。 这不受**coredump.captureminiandfull**设置。 |
 
-## <a id="dbmail"></a>设置在 Linux 上的 SQL Server 的默认数据库邮件配置文件
+## <a id="dbmail"></a> 设置在 Linux 上的 SQL Server 的默认数据库邮件配置文件
 
 **Sqlpagent.databasemailprofile**可以设置电子邮件警报的默认数据库邮件配置文件。
 
 ```bash
 sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a>高可用性
+## <a id="hadr"></a> 高可用性
 
 **Hadr.hadrenabled**选项使您的 SQL Server 实例上的可用性组。 以下命令通过设置可使可用性组**hadr.hadrenabled**为 1。 必须重启 SQL Server，该设置才能生效。
 
@@ -247,7 +383,7 @@ sudo systemctl restart mssql-server
 - [配置 Always On 可用性组在 Linux 上的 SQL server](sql-server-linux-availability-group-configure-ha.md)
 - [在 Linux 上的 SQL Server 配置读取缩放可用性组](sql-server-linux-availability-group-configure-rs.md)
 
-## <a id="localaudit"></a>设置本地审核目录
+## <a id="localaudit"></a> 设置本地审核目录
 
 **Telemetry.userrequestedlocalauditdirectory**设置启用本地审核和创建的允许你设置目录，其中本地的审核日志。
 
@@ -278,7 +414,7 @@ sudo systemctl restart mssql-server
 
 有关详细信息，请参阅[在 Linux 上的 SQL Server 的客户反馈](sql-server-linux-customer-feedback.md)。
 
-## <a id="lcid"></a>更改 SQL Server 区域设置
+## <a id="lcid"></a> 更改 SQL Server 区域设置
 
 **Language.lcid**将更改的 SQL Server 区域设置设置为任何受支持的语言标识符 (LCID)。 
 
@@ -294,7 +430,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a>设置内存限制
+## <a id="memorylimit"></a> 设置内存限制
 
 **Memory.memorylimitmb**将控件设置为 SQL Server 的物理内存量 （以 mb 为单位） 可用。 默认值为 80%的物理内存。
 
@@ -310,7 +446,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-## <a id="tcpport"></a>更改 TCP 端口
+## <a id="tcpport"></a> 更改 TCP 端口
 
 **Network.tcpport**设置 SQL Server 侦听的连接的 TCP 端口的更改。 默认情况下，此端口设置为 1433。 若要更改端口，请运行以下命令：
 
@@ -332,7 +468,7 @@ sudo systemctl restart mssql-server
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a>指定 TLS 设置
+## <a id="tls"></a> 指定 TLS 设置
 
 以下选项在 Linux 上运行的 SQL Server 实例配置 TLS。
 
@@ -341,13 +477,13 @@ sudo systemctl restart mssql-server
 |**network.forceencryption** |如果为 1，然后[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]强制所有连接进行加密。 默认情况下，此选项为 0。 |
 |**network.tlscert** |证书的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用于 TLS。 示例：`/etc/ssl/certs/mssql.pem`证书文件必须是可由 mssql 帐户访问。 Microsoft 建议限制访问文件使用`chown mssql:mssql <file>; chmod 400 <file>`。 |
 |**network.tlskey** |私钥的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用于 TLS。 示例：`/etc/ssl/private/mssql.key`证书文件必须是可由 mssql 帐户访问。 Microsoft 建议限制访问文件使用`chown mssql:mssql <file>; chmod 400 <file>`。 |
-|**network.tlsprotocols** |哪些 TLS 协议都允许 SQL Server 的逗号分隔的列表。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]始终尝试协商允许的最高协议。 如果客户端不支持任何允许的协议，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]拒绝连接尝试。  为了实现兼容，默认情况下，（1.2、 1.1、 1.0） 允许所有支持的协议。  如果你的客户端支持 TLS 1.2，Microsoft 建议允许仅 TLS 1.2。 |
+|**network.tlsprotocols** |哪些 TLS 协议都允许 SQL Server 的逗号分隔的列表。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 始终尝试协商允许的最高协议。 如果客户端不支持任何允许的协议，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]拒绝连接尝试。  为了实现兼容，默认情况下，（1.2、 1.1、 1.0） 允许所有支持的协议。  如果你的客户端支持 TLS 1.2，Microsoft 建议允许仅 TLS 1.2。 |
 |**network.tlsciphers** |指定允许哪些密码[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tls。 此字符串的格式必须设置每个[OpenSSL 的密码的列表格式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)。 一般情况下，你应该不需要更改此选项。 <br /> 默认情况下，允许以下密码： <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab 文件路径 |
 
 使用 TLS 设置的示例，请参阅[Encrypting connections to Linux 上的 SQL Server 连接](sql-server-linux-encrypted-connections.md)。
 
-## <a id="traceflags"></a>启用/禁用跟踪标志
+## <a id="traceflags"></a> 启用/禁用跟踪标志
 
 这**跟踪标志**选项启用或禁用跟踪标志为 SQL Server 服务启动。 若要启用/禁用跟踪标志，请使用以下命令：
 

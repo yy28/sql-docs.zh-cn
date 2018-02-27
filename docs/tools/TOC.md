@@ -8,7 +8,10 @@
 
 # [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
+# [mssql cli（命令行查询工具）](mssql-cli.md)
+
 # [配置管理器](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+# [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
 # [数据库引擎优化顾问 (dta)](../tools/dta/dta-utility.md)
 # [SQL Server 事件探查器](../tools/sql-server-profiler/sql-server-profiler.md)
