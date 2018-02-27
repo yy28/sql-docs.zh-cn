@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b5a9ef6b56ee32f31b277273fb644a03925fdf0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 简介 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]你可以修改 （插入、 更新或删除） 中的数据库[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]从现有 XML 文档使用属的 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函数。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+你可以修改 （插入、 更新或删除） 中的数据库[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]从现有 XML 文档使用属的 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函数。  
   
  OPENXML 函数通过拆分现有 XML 文档并提供可以传递给 INSERT、UPDATE 或 DELETE 语句的行集来修改数据库。 使用 OPENXML 时，直接针对数据库表进行操作。 因此，在行集提供程序（如表）可以显示为源时，最适合使用 OPENXML。  
   
@@ -66,13 +68,13 @@ ms.lasthandoff: 11/17/2017
   
  以下定义描述了其中每个块的作用：  
   
- **\<之前 >**  
+ **\<before>**  
  标识记录实例的现有状态（也称为“以前状态”）。  
   
- **\<后 >**  
+ **\<after>**  
  标识要将数据更改到的新状态。  
   
- **\<同步 >**  
+ **\<sync>**  
  包含**\<之前 >**和**\<后 >**块。 A **\<同步 >**块可以包含多个组的**\<之前 >**和**\<后 >**块。 如果存在多个集的**\<之前 >**和**\<后 >**块，这些块 （即使它们是空的） 必须指定为对。 此外，属的 updategram 可以有多个**\<同步 >**块。 每个**\<同步 >**块是一个单位的事务 (这意味着，任一中的所有内容**\<同步 >**完成块或不做任何操作)。 如果指定多个**\<同步 >**属的 updategram，发生的故障中的块**\<同步 >**块不会影响其他**\<同步>**块。  
   
  Updategram 是否删除、 插入或更新的记录实例依赖于的内容**\<之前 >**和**\<后 >**块：  
@@ -114,7 +116,7 @@ ms.lasthandoff: 11/17/2017
  使用默认映射（在 updategram 中未指定映射架构）时，如果是以元素为中心的映射，则 updategram 元素映射到表并且子元素映射到列。如果是以属性为中心的映射，则属性映射到列。  
   
 ### <a name="element-centric-mapping"></a>以元素为中心的映射  
- 在以元素为中心的 updategram 中，元素包含指示元素属性的子元素。 请参阅以下 updategram 示例。 **\<Person.Contact >**元素包含 **\<FirstName >**和 **\<LastName >**子元素。 属性，这些子元素是 **\<Person.Contact >**元素。  
+ 在以元素为中心的 updategram 中，元素包含指示元素属性的子元素。 请参阅以下 updategram 示例。  **\<Person.Contact >**元素包含 **\<FirstName >**和 **\<LastName >**子元素。 属性，这些子元素是 **\<Person.Contact >**元素。  
   
  由于此属的 updategram 未指定的映射架构，属的 updategram 使用隐式映射，其中 **\<Person.Contact >**元素映射到 Person.Contact 表并及其子元素将映射到 FirstName 和LastName 列。  
   
