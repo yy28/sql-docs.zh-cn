@@ -23,13 +23,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1fb890bc73be0a4d27c5ea9cafe1e2fbed930679
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 课：创建合并发布订阅
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建订阅。 然后，为订阅数据库设置权限，并手动生成新订阅的筛选数据快照。 本课程要求已完成上一课， [第 1 课：使用合并复制发布数据](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在本课中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建订阅。 然后，为订阅数据库设置权限，并手动生成新订阅的筛选数据快照。 本课程要求已完成上一课， [第 1 课：使用合并复制发布数据](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md)。  
   
 ### <a name="to-create-the-subscription"></a>创建订阅  
   

@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bd0c4bab5c8a4474a3864df385af997febf656d9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]对于立即更新，如果在此向导的“可更新订阅”页上选择了“复制”，则必须为订阅服务器指定用来与发布服务器建立连接的帐户。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+若要立即更新，如果在此向导的“可更新订阅”页上选择了“复制”，则必须为订阅服务器指定用来与发布服务器建立连接的帐户。 
   
  连接由在订阅服务器上激发的触发器使用，这些触发器将更改传播到发布服务器。 即使在“可更新订阅”页上选择了“对更改进行排队并在可能时提交”，此帐户也是必需的。 默认情况下，“新建订阅向导”会为排队更新配置在需要时切换到立即更新的能力。  
   

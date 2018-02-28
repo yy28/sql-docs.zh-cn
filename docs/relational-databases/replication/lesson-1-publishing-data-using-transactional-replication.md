@@ -23,13 +23,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 49a9b7290e5f3253995f7bef0efd1390f74de5bf
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 课：使用事务复制发布数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中发布“Product”表的筛选子集。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程 [准备用于复制的服务器](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在本课中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 **示例数据库中发布** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的筛选子集。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程 [准备用于复制的服务器](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
   

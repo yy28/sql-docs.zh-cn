@@ -36,13 +36,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 7338e364e970aaccc6c24cdba04e1b43a188c8c9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以分离数据库的数据和事务日志文件，然后将它们重新附加到同一或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果要将数据库更改到同一计算机的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或要移动数据库，分离和附加数据库会很有用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+可以分离数据库的数据和事务日志文件，然后将它们重新附加到同一或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 如果要将数据库更改到同一计算机的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或要移动数据库，分离和附加数据库会很有用。  
   
   
 ##  <a name="Security"></a> Security  

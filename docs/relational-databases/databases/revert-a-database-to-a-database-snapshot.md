@@ -22,13 +22,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果联机数据库中的数据损坏，在某些情况下，将数据库恢复到发生损坏之前的数据库快照可能是一种合适的替代方案，替代从备份中还原数据库。 例如，通过恢复数据库可能会有助于从最近出现的严重用户错误（如删除的表）中恢复。 但是，在该快照创建以后进行的所有更改都会丢失。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+如果联机数据库中的数据损坏，在某些情况下，将数据库恢复到发生损坏之前的数据库快照可能是一种合适的替代方案，替代从备份中还原数据库。 例如，通过恢复数据库可能会有助于从最近出现的严重用户错误（如删除的表）中恢复。 但是，在该快照创建以后进行的所有更改都会丢失。  
   
 -   **开始之前：**  
   

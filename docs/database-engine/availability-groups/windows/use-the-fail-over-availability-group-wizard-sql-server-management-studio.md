@@ -29,13 +29,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f8d7a9a047bb1f60ea5e9c1d91d823af30ca35ff
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用故障转移可用性组向导 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍了如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。 可用性组在可用性副本级别进行故障转移。 如果故障转移到一个处于 SYNCHRONIZED 状态的辅助副本，则向导将执行计划的手动故障转移（不会造成数据丢失）。 如果故障转移到一个处于 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 状态的次要副本，则向导将执行强制的手动故障转移（这也称为“强制故障转移”，可能造成数据丢失）。 这两种形式的手动故障转移均会将您所连接的辅助副本转换为主角色。 计划的手动故障转移当前会将先前的主副本转换为辅助角色。 在强制故障转移之后，一旦先前的主副本联机，它就会转换为辅助角色。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题介绍了如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。 可用性组在可用性副本级别进行故障转移。 如果故障转移到一个处于 SYNCHRONIZED 状态的辅助副本，则向导将执行计划的手动故障转移（不会造成数据丢失）。 如果故障转移到一个处于 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 状态的次要副本，则向导将执行强制的手动故障转移（这也称为“强制故障转移”，可能造成数据丢失）。 这两种形式的手动故障转移均会将您所连接的辅助副本转换为主角色。 计划的手动故障转移当前会将先前的主副本转换为辅助角色。 在强制故障转移之后，一旦先前的主副本联机，它就会转换为辅助角色。  
 
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  在你首次执行计划的手动故障转移之前，请参阅 [执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  

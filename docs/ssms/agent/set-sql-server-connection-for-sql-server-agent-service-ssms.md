@@ -22,13 +22,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c75ea4b77160a1b34bbbfffe32f83aff55081514
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>为 SQL Server 代理服务设置 SQL Server 连接 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理和 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 之间的连接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务可以使用 Windows 身份验证连接到 SQL Server 本地实例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 在 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 中设置 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 代理和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]之间的连接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务可以使用 Windows 身份验证连接到 SQL Server 本地实例。  
   
 **本主题内容**  
   

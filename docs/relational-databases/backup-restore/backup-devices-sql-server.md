@@ -34,13 +34,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，备份的数据（“备份”）可写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个媒体集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，将备份的数据（“备份”）写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个媒体集。  
    
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
  备份磁盘 (backup disk)  

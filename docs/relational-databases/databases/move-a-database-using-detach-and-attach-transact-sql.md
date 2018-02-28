@@ -26,13 +26,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ca93272f5b9bf043c3a7cb0ed9a8c0a07bc1e853
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将分离的数据库移至其他位置，并将其重新附加到相同或不同的服务器实例。 但是，我们建议您使用 ALTER DATABASE 计划重定位过程（而不使用分离和附加操作）移动数据库。 有关详细信息，请参阅 [Move User Databases](../../relational-databases/databases/move-user-databases.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中将分离的数据库移至其他位置，并将其重新附加到相同或不同的服务器实例。 但是，我们建议您使用 ALTER DATABASE 计划重定位过程（而不使用分离和附加操作）移动数据库。 有关详细信息，请参阅 [Move User Databases](../../relational-databases/databases/move-user-databases.md)。  
   
 > [!IMPORTANT]  
 >  建议您不要附加或还原来自未知或不可信源的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  

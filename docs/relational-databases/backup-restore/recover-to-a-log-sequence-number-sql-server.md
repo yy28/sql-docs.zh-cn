@@ -30,13 +30,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: eb43b2630d4eebe0c101f616e7da71908c031ac7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>恢复到日志序列号 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题仅与使用完整恢复模式或大容量日志恢复模式的数据库相关。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题仅与使用完整恢复模式或大容量日志恢复模式的数据库相关。  
   
  您可以使用日志序列号 (LSN) 定义还原操作的恢复点。 但是，这是为工具供应商提供的专用功能，不太可能广泛使用。  
   

@@ -43,13 +43,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题与下列情况有关：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题与下列情况有关：  
   
 -   配置 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性组的可用性副本。  
   
@@ -213,13 +214,13 @@ ms.lasthandoff: 01/18/2018
   
 -   作业使用的登录名  
   
-     若要创建或执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，首先必须将作业所需的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到目标服务器实例。 有关详细信息，请参阅 [配置帐户以创建和管理 SQL Server 代理作业](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)。  
+     若要创建或执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，首先必须将作业所需的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到目标服务器实例。 有关详细信息，请参阅[配置帐户以创建和管理 SQL Server 代理作业](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务启动帐户  
   
      服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 代理服务的上下文会影响作业及其运行环境的设置。 帐户必须有权访问作业所需的资源（如网络共享）。 有关如何选择和修改服务启动帐户的信息，请参阅 [选择 SQL Server 代理服务帐户](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7)。  
   
-     为了正常操作，必须对服务启动帐户进行配置，使其具有正确的域、文件系统和注册表权限。 此外，作业可能还需要必须针对服务帐户配置的共享网络资源。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+     为了正常操作，必须对服务启动帐户进行配置，使其具有正确的域、文件系统和注册表权限。 此外，作业可能还需要必须针对服务帐户配置的共享网络资源。 有关详细信息，请参阅[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务与特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例关联，具有自己的注册表配置单元，并且其作业通常与此注册表配置单元中的一个或多个设置具有依赖关系。 若要按预期方式运行，作业需要这些注册表设置。 如果使用脚本在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务中重新创建一个作业，则此服务的注册表中可能没有用于该作业的正确设置。 为使重新创建的作业在目标服务器实例上正常运行，原始和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务应具有相同的注册表设置。  
   

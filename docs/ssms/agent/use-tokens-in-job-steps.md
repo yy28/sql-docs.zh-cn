@@ -25,14 +25,14 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: dd6a236b2ead2c5891d1794a7b20ea7a72c4a4de
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 通过代理，可以在 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤脚本中使用标记。 如果在编写作业步骤时使用标记，则可以为您提供编写软件程序时使用变量所提供的灵活性。 在作业步骤脚本中插入令牌之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理便会在运行时 [!INCLUDE[tsql](../../includes/tsql_md.md)] 子系统执行作业步骤之前替换此不标记。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 通过代理，你可以在 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤脚本中使用标记。 如果在编写作业步骤时使用标记，则可以为您提供编写软件程序时使用变量所提供的灵活性。 在作业步骤脚本中插入令牌之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理便会在运行时 [!INCLUDE[tsql](../../includes/tsql_md.md)] 子系统执行作业步骤之前替换此不标记。  
   
 > [!IMPORTANT]  
 > 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1 开始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤的标记语法已发生更改。 因此，作业步骤中使用的所有标记现在必须附带转义宏，否则，这些作业步骤将会失败。 下列部分说明了使用转义宏和更新使用标记的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤：“了解标记用法”、“[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理标记和宏”以及“更新作业步骤以使用宏”。 此外，使用方括号调用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] 代理作业步骤标记的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 语法（例如，“`[DATE]`”）也已发生更改。 现在，必须用括号将令牌名称括起来，并在令牌语法的开头加上美元符号 (`$`)。 例如：  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/17/2018
 >   
 > 如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，并在“警报系统”页上选择“为警报的所有作业响应替换标记”以启用这些标记。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理标记替换简单且有效： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理以准确的文字字符串值替换标记。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理标记替换简单且有效：[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理以准确的文字字符串值替换标记。 所有标记都是区分大小写的。 您的作业步骤必须考虑到这一点，并且将所用标记正确地用引号引起来或将替换字符串转换为正确的数据类型。  
   
 例如，您可以在作业步骤中使用以下语句输出数据库的名称：  
   

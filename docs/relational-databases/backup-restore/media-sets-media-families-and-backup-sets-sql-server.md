@@ -32,13 +32,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 13405de028f7392c9ef384743a44db9fb49c627c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的基本备份介质术语，适用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不熟悉的读者。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的基本备份介质术语，适用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不熟悉的读者。** 
   
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于备份介质的格式、备份介质和备份设备之间的对应关系、备份介质上备份的组织结构，以及介质集和介质簇的若干注意事项。 本主题还介绍在第一次使用备份介质或在使用新介质集替代旧介质集之前对备份介质进行初始化和格式化的步骤，如何覆盖介质集中的旧备份集，以及如何将新备份集追加到介质集。  
   

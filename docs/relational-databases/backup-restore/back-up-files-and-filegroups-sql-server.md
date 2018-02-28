@@ -25,13 +25,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 65b1141e3d47a947f9b1c90b25c6ba875373c266
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>备份文件和文件组 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中备份文件和文件组。 当数据库大小和性能要求使完整数据库备份显得不切实际，则可以创建文件备份。 文件备份包含一个或多个文件（或文件组）中的所有数据。 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份文件和文件组。 当数据库大小和性能要求使完整数据库备份显得不切实际，则可以创建文件备份。 文件备份包含一个或多个文件（或文件组）中的所有数据。 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
 
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  

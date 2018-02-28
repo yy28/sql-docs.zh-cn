@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d7b807d914d84a818e9ce9cccadde597a163955c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>事务项目 - 指定如何传播更改
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过使用事务复制，可以指定如何将数据更改从发布服务器传播到订阅服务器。 对于每个已发布表，可以指定下列四种方法之一，将每项操作（INSERT、UPDATE 或 DELETE）传播到订阅服务器：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+通过使用事务复制，可以指定如何将数据更改从发布服务器传播到订阅服务器。 对于每个已发布表，可以指定下列四种方法之一，将每项操作（INSERT、UPDATE 或 DELETE）传播到订阅服务器：  
   
 -   指定事务复制应编写出脚本，并随后调用存储过程以将更改传播到订阅服务器（默认方法）。  
   

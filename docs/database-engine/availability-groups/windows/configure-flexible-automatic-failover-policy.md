@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>配置灵活的自动故障转移策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/18/2018
   
          这些整数值与故障条件级别的关系如下：  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|级别|当出现以下情况时，自动启动故障转移…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] ReplTest1|Level|当出现以下情况时，自动启动故障转移…|  
         |------------------------------|-----------|-------------------------------------------|  
         |@shouldalert|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
         |2|二级|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  

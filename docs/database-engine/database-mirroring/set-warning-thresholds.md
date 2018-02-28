@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-warning-thresholds"></a>设置警告阈值
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用该对话框可为在“数据库镜像监视器”对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用该对话框可为在 **“数据库镜像监视器”** 对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
   
  该对话框尝试连接到两个服务器实例上。 将异步建立这两个连接。 对话框显示每个伙伴的连接状态。 如果伙伴没有连接，则可单击 **“连接”**。  
   

@@ -23,13 +23,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 66fcc054ffc20f45534845376c356745581db02d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果有适当的权限，可以使用数据库镜像监视器来监视服务器实例上的镜像数据库的任何子集。 通过监视可以验证数据库镜像会话中是否有数据流动以及数据流动的方式。 数据库镜像监视还有助于排查数据流减少的原因。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+如果有适当的权限，您可以使用数据库镜像监视器来监视服务器实例上的镜像数据库的任何子集。 通过监视可以验证数据库镜像会话中是否有数据流动以及数据流动的方式。 数据库镜像监视还有助于排查数据流减少的原因。  
   
  可以在每个故障转移伙伴上分别注册要监视的镜像数据库。 注册数据库时，数据库镜像监视器将缓存有关数据库的以下信息：  
   

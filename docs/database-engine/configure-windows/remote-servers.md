@@ -25,13 +25,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remote-servers"></a>远程服务器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
   
  远程服务器配置使客户端能够连接到一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便在没有建立单独的连接的情况下在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行存储过程。 此时，客户端所连接的服务器接受客户端的请求，并代表客户端将该请求发送到远程服务器。 远程服务器处理请求，并将所有结果返回到原始的服务器。 服务器再将那些结果传递给客户端。 当设置远程服务器配置时，还应考虑如何建立安全性。  
   

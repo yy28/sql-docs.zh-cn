@@ -22,13 +22,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>监视数据库镜像 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本节介绍数据库镜像监视器和 sp_dbmmonitor 系统存储过程，说明数据库镜像监视的工作方式（包括“数据库镜像监视器作业”），并概括介绍可以监视的有关数据库镜像会话的信息。 此外，本节还介绍如何为一组预定义数据库镜像事件定义警告阈值，以及如何设置有关任意数据库镜像事件的警报。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本节介绍数据库镜像监视器和 **sp_dbmmonitor** 系统存储过程，说明数据库镜像监视的工作方式（包括“数据库镜像监视器作业”），并概括介绍可以监视的有关数据库镜像会话的信息。 此外，本节还介绍如何为一组预定义数据库镜像事件定义警告阈值，以及如何设置有关任意数据库镜像事件的警报。  
   
  可以在镜像会话期间监视镜像数据库，以验证数据是否流动以及流动的情况。 若要对服务器实例上的一个或多个镜像数据库进行监视设置和管理，可以使用数据库镜像监视器或 **sp_dbmmonitor** 系统存储过程。  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/18/2018
   
  创建 **“数据库镜像监视器作业”** 之后，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在运行，则默认情况下，每分钟调用一次作业。 然后，作业会调用 **sp_dbmmonitorupdate** 系统存储过程。  
   
- 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理每分钟调用一次“数据库镜像监视器作业”，而作业随即调用 sp_dbmmonitorupdate 以更新状态表。 系统管理员可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程更改更新持续时间，他们还可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程查看当前的更新持续时间。 有关详细信息，请参阅 [sp_dbmmonitoraddmonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 和 [sp_dbmmonitorchangemonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认情况下，代理每分钟调用一次“数据库镜像监视器作业”，而作业随即调用 **sp_dbmmonitorupdate** 以更新状态表。 系统管理员可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程更改更新持续时间，他们还可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程查看当前的更新持续时间。 有关详细信息，请参阅 [sp_dbmmonitoraddmonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 和 [sp_dbmmonitorchangemonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)。  
   
 #### <a name="monitoring-database-mirroring-status-by-system-administrators"></a>监视数据库镜像状态（由系统管理员执行）  
  **sysadmin** 固定服务器角色成员可以查看和更新状态表。  

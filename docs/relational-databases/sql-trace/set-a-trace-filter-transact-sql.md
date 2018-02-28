@@ -22,13 +22,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 320a46a056d47943c0af58d55974f67b21375074
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>设置跟踪筛选器 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍了如何使用存储过程创建只检索有关所需跟踪事件信息的筛选器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题介绍了如何使用存储过程创建只检索有关所需跟踪事件信息的筛选器。  
   
 ### <a name="to-set-a-trace-filter"></a>设置跟踪筛选器  
   
