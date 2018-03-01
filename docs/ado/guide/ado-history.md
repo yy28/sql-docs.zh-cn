@@ -37,13 +37,13 @@ ms.lasthandoff: 02/09/2018
  *受信任区域之外不允许硬盘驱动器访问。*
 在跨域脚本涉及非信任的站点，会禁用以下操作： **Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，和**Recordset.Open**、 结合使用**adCmdFile**标志或与 Microsoft OLE DB 持久性提供程序 (MSPersist)。
 
- **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和* **Stream.LoadFromFile***物理的文件进行操作。        *
+ **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和* **Stream.LoadFromFile***物理的文件进行操作。* 
 这些方法现在验证文件句柄指向仅限于物理文件。
 
- **Recordset.ActiveCommand***返回调用从 HTML/ASP 页时出错。  *
+ **Recordset.ActiveCommand***返回调用从 HTML/ASP 页时出错。* 
 这可以防止**命令**被误用的对象。
 
- *数***记录集***返回嵌套***形状***命令具有上限。        *
+ *数***记录集***返回嵌套***形状***命令具有上限。* 
 嵌套的形状命令现在返回最多 512 个**记录集**。 这意味着，**形状**不再可以在任何深度嵌套命令。 相反，最大级别深度是 512，如果每个命令结果在一次 （子级）**记录集**。 如果是，在任何级别**形状**命令将返回多个**记录集**，最大深度级别将小于 512。
 
 ## <a name="ado-27"></a>ADO 2.7
