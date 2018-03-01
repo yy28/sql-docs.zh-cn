@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: "0"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 960803406d9dcf81e49b08ecf23c21fdb6e76645
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>SQL Server 2012 SP3 发行说明
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]这些发行说明介绍安装 SQL Server 2012 Service Pack 3 或者解决其相关问题之前需要了解的问题。 发行说明仅在线提供，不提供相关安装介质。 发行说明会在发现问题时定期更新。 有关增强和修复的详细列表，请参阅 [SQL Server 2012 Service Pack 3 版本信息](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+这些发行说明介绍安装 SQL Server 2012 Service Pack 3 或者解决其相关问题之前需要了解的问题。 发行说明仅在线提供，不提供相关安装介质。 发行说明会在发现问题时定期更新。 有关增强和修复的详细列表，请参阅 [SQL Server 2012 Service Pack 3 版本信息](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)。  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>正确选择要下载及安装的文件  
 使用下表，基于您当前安装的版本识别要下载的文件的位置和名称。 下载页包含系统要求和基本安装说明。  

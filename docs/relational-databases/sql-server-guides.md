@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cb5508fd58b6f5078d5c202e716109d58fbc8938
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4fba22c6d7a563f9645c1cf63f74b1becfc2869b
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="sql-server-guides"></a>SQL Server 指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +38,6 @@ ms.lasthandoff: 02/09/2018
 [页和区体系结构指南](../relational-databases/pages-and-extents-architecture-guide.md)  
 [迁移后验证和优化指南](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [查询处理体系结构指南](../relational-databases/query-processing-architecture-guide.md)  
-[SQL Server 事务锁定和行版本控制指南](https://msdn.microsoft.com/library/jj856598)  
+[SQL Server 事务锁定和行版本控制指南](../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)  
 [SQL Server 事务日志体系结构和管理指南](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
 [线程和任务体系结构指南](../relational-databases/thread-and-task-architecture-guide.md)
