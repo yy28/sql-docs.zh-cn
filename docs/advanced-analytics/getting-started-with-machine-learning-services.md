@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e33a91587f393c6c510bdb16fe9c71dc2f422eac
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server 机器学习入门
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
 
   从 SQL Server 自 2017 年开始，你现在可以使用 Python 代码在 SQL Server 中。 以反映多种语言 （的更多内容 ！），和名称的解决方案更广泛的支持已更改为[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]。 现在您可以通过使用 SQL 工具运行 R 或 Python 代码来自动化机器学习任务。 或者，使用 SQL Server 计算机作为_计算上下文_从远程开发环境中启动的作业。
 
-    + [SQL Server 中的 Python 的体系结构概述](/python/architecture-overview-sql-server-python.md)
+    + [SQL Server 中的 Python 的体系结构概述](../advanced-analytics/python/architecture-overview-sql-server-python.md)
     + [设置 SQL Server R Services 或机器学习服务](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016

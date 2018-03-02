@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
 
@@ -29,6 +29,8 @@ ms.lasthandoff: 02/13/2018
 
 > [!TIP]
 > 若要快速开始，跳转到为快速入门之一[RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)， [Ubuntu](quickstart-install-connect-ubuntu.md)，或[Docker](quickstart-install-connect-docker.md)。
+
+有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](../linux/sql-server-linux-faq.md)。
 
 ## <a id="supportedplatforms"></a> 支持的平台
 
@@ -40,6 +42,9 @@ ms.lasthandoff: 02/13/2018
 | **SUSE Linux Enterprise Server** | v12 SP2 | [获取 SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker 引擎** | 1.8+ | [获取 Docker](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> 它有时可以安装和运行 SQL Server 在其他密切相关 Linux 平台上，但 SQL Server 仅是测试，在前面的表中列出的平台上受支持。
 
 部署和管理 SQL Server 容器通过 OpenShift 和 Kubernetes，Microsoft 提供支持。
 

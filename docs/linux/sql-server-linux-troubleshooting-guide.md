@@ -4,7 +4,7 @@ description: "提供有关在 Linux 上使用 SQL Server 2017 故障排除提示
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 01/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,20 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文档介绍如何对 Linux 上或 Docker 容器中运行的 Microsoft SQL Server 进行故障排除。 在故障排除在 Linux 上的 SQL Server，请记得查看支持的功能和中的已知的限制[Linux 发行说明上的 SQL Server](sql-server-linux-release-notes.md)。
+
+> [!TIP]
+> 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。
 
 ## <a id="connection"></a> 解决连接失败
 如果在连接到 Linux SQL Server 时存在问题，可以检查以下几点。 
@@ -200,12 +203,4 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    资源：[特殊字符](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>支持
-
-可以通过社区获取支持，并且由工程团队核查。 有关特定问题，请参阅以下资源：
-
-- [DBA 堆栈 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)： 提问数据库管理
-- [堆栈溢出](http://stackoverflow.com/questions/tagged/sql-server)： 提出开发问题
-- [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)： 询问技术问题
-- [提交反馈](https://feedback.azure.com/forums/908035-sql-server)： 报告 bug 和请求功能
-- [Reddit](https://www.reddit.com/r/SQLServer/)： 讨论 SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

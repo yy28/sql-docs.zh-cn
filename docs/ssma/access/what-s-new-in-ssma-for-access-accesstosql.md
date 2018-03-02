@@ -5,29 +5,38 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b159377cfa3ff160d9be60dba91af5561649c4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 487fa165ce29ae2ae2a7fffe4463e88fb45001c6
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 的新增功能
 本主题列出每个版本中的访问权限更改 SSMA。  
+
+## <a name="ssma-v77"></a>SSMA v7.7
+SSMA for Access 的 v7.7 版本包含以下更改：
+- 访问的 SSMA 已得到增强提高质量和转换的度量值的目标修补程序。
+- SSMA for Access 的 32 位版本基于普遍需求，已恢复。 与以前的实现 （之前 v7.4) 相比，有两个安装包，但它们不能并行安装。 因此，你必须选择最适合您的版本基于连接组件。 最好始终使用 64 位版本，如有可能。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更高版本，.Net 4.5.2 是安装先决条件。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 SSMA for Access 的 v7.6 版本已得到增强，具有提高质量和转换的度量值的目标修补程序和 SQL Server 2017 （公共预览版） 支持。 对于 Windows 和 Linux 上的 SQL Server 2017 支持是在公共预览版中并不用于生产迁移。
@@ -35,7 +44,7 @@ SSMA for Access 的 v7.6 版本已得到增强，具有提高质量和转换的�
 > [!IMPORTANT]
 > SSMA v7.4 和更高版本，.Net 4.5.2 的目标是安装先决条件，并已停止使用该工具的 32 位版本。
 
-## <a name="ssma-v75"></a>SSMA v7.5 还是
+## <a name="ssma-v75"></a>SSMA v7.5
 SSMA for Access 的 v7.5 还是版本已得到增强几项改进，确保残障人士更大的可访问性。
 
 > [!IMPORTANT]
@@ -64,7 +73,7 @@ SSMA for Access 的 v7.3 版本包含以下更改：
       - 在此博客文章中，提供了有关如何构造的自定义转换器说明[扩展 SQL Server Migration Assistant 的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
       - 用于转换的示例项目可以下载这个[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
-## <a name="ssma-v72"></a>SSMA 7.2 版
+## <a name="ssma-v72"></a>SSMA v7.2
 SSMA for Access 的 7.2 版版本包含以下更改：
 - 改进的质量和转换度量值根据客户反馈的目标修补程序。
 - 遥测功能增强以提供更好的数据点，以解决客户问题和改进 SSMA 的转换率。

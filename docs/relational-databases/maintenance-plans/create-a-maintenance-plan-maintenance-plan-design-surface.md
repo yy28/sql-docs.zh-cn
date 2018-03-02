@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用维护计划设计图面创建单个服务器或多服务器维护计划。 尽管 **“维护计划向导”** 是创建基本维护计划的最佳方法，但使用设计图面创建计划允许您使用增强的工作流。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划设计图面创建单个服务器或多服务器维护计划。 尽管 **“维护计划向导”** 是创建基本维护计划的最佳方法，但使用设计图面创建计划允许您使用增强的工作流。  
   
  **本主题内容**  
   

@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: a661da062d65ca699627bc2b5bf0683e5fe08806
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
-ms.translationtype: HT
+ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -39,13 +39,9 @@ ms.lasthandoff: 02/21/2018
 > [!TIP]
 > 有关详细信息，查看[系统要求](sql-server-linux-setup.md#system)在 Linux 上的 SQL server。 SQL Server 自 2017 年的最新支持策略，请参阅[Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
 
-## <a name="supported-client-tools"></a>支持的客户端工具
+## <a name="tools"></a>工具
 
-| 工具 | 最低版本 |
-|-----|-----|
-| [适用于 Windows 的 SQL Server Management Studio (SSMS)](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com)与[mssql 扩展](https://aka.ms/mssql-marketplace) | 最新 |
+目标 SQL Server 的大多数现有的客户端工具可无缝地将目标在 Linux 上运行的 SQL Server。 一些工具可能具有适用于 Linux 的特定版本要求。 SQL Server 工具的完整列表，请参阅[SQL 工具和 SQL Server 实用工具中的](../tools/overview-sql-tools.md)。
 
 ## <a name="release-history"></a>版本历史记录
 
@@ -180,6 +176,7 @@ ms.lasthandoff: 02/21/2018
 | &nbsp; | Reporting Services |
 | &nbsp; | “数据库引擎服务” |
 | &nbsp; | Master Data Services |
+| &nbsp; | 分布式的事务处理协调器 (DTC) |
 
 ## <a name="known-issues"></a>已知问题
 
@@ -332,3 +329,5 @@ ms.lasthandoff: 02/21/2018
 - [在 Docker 上运行](quickstart-install-connect-ubuntu.md)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [运行和连接 - 云](quickstart-install-connect-clouds.md)
+
+有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。

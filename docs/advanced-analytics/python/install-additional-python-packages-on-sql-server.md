@@ -1,6 +1,6 @@
 ---
 title: "在 SQL Server 上安装新的 Python 包 |Microsoft 文档"
-ms.date: 01/04/2018
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,22 +16,22 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 68c3c0c3699455854ac23fed7befb042eaf17155
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>在 SQL Server 上安装新的 Python 软件包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何在 SQL Server 自 2017 年的实例上安装新的 Python 包。
 
-它还说明如何列出在当前环境中安装的包。
+通常情况下，安装新包的过程是类似于在标准的 Python 环境。 但是，执行一些其他步骤是必需的如果服务器没有 internet 连接。
+
+了解其中安装包，或者安装了哪些包的帮助，请参阅[查看安装 R 或 Python 包](../r/determine-which-packages-are-installed-on-sql-server.md)。
 
 ## <a name="prerequisites"></a>必要條件
-
-安装新包的过程很类似的标准 Python 环境中。 但是，执行一些其他步骤是必需的如果服务器没有 internet 连接。
 
 + 你必须已安装了机器学习服务 （数据库） 与 Python 语言选项。 有关说明，请参阅[设置 Python 机器学习服务](setup-python-machine-learning-services.md)。
 
@@ -39,7 +39,11 @@ ms.lasthandoff: 02/11/2018
 
 + 确定是否使用 Python 3.5 和 Windows 环境中，则你想要使用的包将起作用。 
 
-    一般情况下，有几个限制上的包可以导入并在 SQL Server 环境中使用。 可能的问题包括在服务器或防火墙的情况，通过使用被阻止的网络功能的包或具有不在 Windows 计算机安装的依赖项包。
++ 评估包是否非常适合于在 SQL Server 环境中使用。 通常，数据库服务器支持多个服务和应用程序，并且文件系统上的资源可能受限，以及连接到服务器。 在许多情况下会完全阻止 Internet 访问。
+
+    其他常见的问题包括： 网络服务器上或通过防火墙或具有不在 Windows 计算机安装的依赖项包被阻止的功能的使用。 
+
+    某些常用 Python 包 （如 Flask) 执行任务，例如 web 开发在独立环境中运行更好。 我们建议你使用 Python 数据库中的任务，例如机器学习中，需要处理大量数据与数据库引擎受益于紧密集成，而不是只需查询数据库。
 
 + 到服务器的管理访问权限需要安装包。
 
@@ -62,28 +66,31 @@ ms.lasthandoff: 02/11/2018
 
     例如，在单独的计算机，你可以下载的 WHL 文件从此站点[https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然后将文件复制`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 计算机上的本地文件夹。
 
-+ SQL Server 2017 使用 Python 3.5。 请确保获取的 Windows 版本的包，以及使用 Python 3.5 兼容的版本。
++ SQL Server 2017 使用 Python 3.5。 
+
+> [!IMPORTANT]
+> 请确保你获取包的 Windows 版本。 如果该文件以.gz 结尾，它可能并不是正确的版本。
 
 此页包含多个平台和多个 Python 版本的下载：[设置 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>步骤 2. 打开 Python 命令提示符
 
-找到 SQL Server 使用的默认 Python 库位置。 如果已安装多个实例，请务必找到你想要将包添加的实例的 PYTHON_SERVICE 文件夹。
+找到 SQL Server 使用的默认 Python 库位置。 如果已安装多个实例，找到你想要将包添加的实例的 PYTHON_SERVICE 文件夹。
 
 例如，如果已安装机器学习服务使用默认值，并且在默认实例上启用机器学习，该路径将为，如下所示：
 
-    `C:\Program Files\Microsoft SQL  Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 打开与实例相关联 Python 命令提示符。
 
 > [!TIP]
-> 我们建议你在设置设置 Python 环境特定于机器学习 Server 或 SQL Server。
+> 有关将来调试和测试，你可能想要设置特定于实例库的 Python 环境。
 
 ### <a name="step-3-install-the-package-using-pip"></a>步骤 3. 使用 pip 安装软件包
 
 + 如果你习惯于使用 Python 命令行，使用 PIP.exe 安装新包。 你可以找到**pip**中的安装程序`Scripts`子文件夹。 
 
-    如果收到错误**pip**未识别为内部或外部命令，你可以将 Python 可执行文件和 Python 脚本文件夹的路径添加到 Windows 中的 PATH 变量。
+    如果收到错误`pip`未识别为内部或外部命令，你可以将 Python 可执行文件和 Python 脚本文件夹的路径添加到 Windows 中的 PATH 变量。
 
     完整路径**脚本**默认安装中的文件夹是，如下所示：
 
@@ -91,9 +98,11 @@ ms.lasthandoff: 02/11/2018
 
 + 如果使用 Visual Studio 2017 或 Visual Studio 2015 使用的 Python 扩展，你可以运行`pip install`从**Python 环境**窗口。 单击**包**，并在文本框中提供的名称或要安装的包的位置。 你不需要键入`pip install`; 它为你自动填充。 
 
-    - 如果计算机具有 Internet 访问，提供包，名称或特定包和版本的 URL。 例如，若要安装 Windows 和 Python 3.5 支持 CNTK 的版本，可以指定的下载 URL:`https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+    - 如果计算机具有 Internet 访问，提供包，名称或特定包和版本的 URL。 
+    
+    例如，若要安装的版本支持 Windows 和 Python 3.5 CNTK，指定的下载 URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
-    - 如果计算机没有 internet 访问权限，你应下载的 WHL 文件提前。 然后，指定本地文件路径和名称。 例如，粘贴以下路径和要安装的 WHL 文件从站点下载文件：`"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+    - 如果计算机没有 internet 访问权限，你必须在开始安装之前下载的 WHL 文件。 然后，指定本地文件路径和名称。 例如，粘贴以下路径和要安装的 WHL 文件从站点下载文件： `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
 系统可能会提示你提升权限才能完成安装。
 
@@ -108,7 +117,6 @@ Collecting cntk==2.1 from https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp3
 Installing collected packages: cntk
 Successfully installed cntk-2.1
 ```
-
 
 
 ### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>步骤 4. 你的脚本的一部分加载包或其函数
@@ -131,7 +139,7 @@ cntk._version_
 
 如果你使用 Python 命令行，则可以使用**conda**包管理器中，这是包含由 SQL Server 安装程序添加的 Anaconda Python 环境。
 
-若要查看已安装在当前环境的 Python 包，请从命令提示符窗口运行以下命令：
+若要查看已安装在当前环境的 Python 包，请从命令提示符运行以下命令：
 
 ```python
 conda list

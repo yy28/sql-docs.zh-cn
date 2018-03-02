@@ -8,20 +8,21 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 81176070a9363e54dc469dd050891335edcb92af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>指定的多个 SQL Server 实例  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]允许的每个服务器的多个数据库实例的安装。 每个实例都由一个专用名称所标识。 若要连接到的命名实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以指定命名实例 （首选） 的端口号，也可以作为 JDBC URL 属性指定实例名称或**数据源**属性。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请参阅以下示例：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允许在每台服务器上安装多个数据库实例。 每个实例都由一个专用名称所标识。 若要连接到的命名实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，你可以指定命名实例 （首选） 的端口号，也可以作为 JDBC URL 属性指定实例名称或**数据源**属性。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请参阅以下示例：  
   
  若要使用端口号，请执行下列操作：  
   
@@ -97,12 +98,12 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  大括号内的空白为原义字符，不能删除。  
   
-##  <a name="Connectingintegrated"></a>使用 Windows 上的集成身份验证连接  
+##  <a name="Connectingintegrated"></a> 使用 Windows 上的集成身份验证连接  
  JDBC 驱动程序支持通过 integratedSecurity 连接字符串属性在 Windows 操作系统上使用“类型 2”集成身份验证。 若要使用集成身份验证，请将 sqljdbc_auth.dll 文件复制计算机中 Windows 系统路径下的 JDBC 驱动程序安装目录中。  
   
  sqljdbc_auth.dll 文件的安装位置如下：  
   
- \<*安装目录*> \sqljdbc_\<*版本*>\\<*语言*> \auth\  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
  有关支持的任何操作系统[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)有关的一项中的新增功能的说明[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]，允许应用程序连接到使用类型 4 Kerberos 使用集成身份验证的数据库。  
   
@@ -111,7 +112,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  也可以设置 java.libary.path 系统属性以指定 sqljdbc_auth.dll 的目录。 例如，如果 JDBC 驱动程序安装在默认目录中，您可以在 Java 应用程序启动时使用以下虚拟机 (VM) 参数来指定 DLL 的位置：  
   
- `-Djava.library.path=C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
+ `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## <a name="connecting-with-ipv6-addresses"></a>通过 IPv6 地址进行连接  
  JDBC 驱动程序支持结合使用 IPv6 地址以及连接属性集合和 serverName 连接字符串属性。 将初始 serverName 值，如 jdbc:*sqlserver*://*serverName*，不支持在连接字符串中的 IPv6 地址。 使用名称为*serverName*而不是原始 IPv6 地址将在连接中每个用例中工作。 以下实例提供了详细信息。  

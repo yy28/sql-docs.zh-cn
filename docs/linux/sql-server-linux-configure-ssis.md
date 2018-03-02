@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: ee15f5b5124d96b2f8033515f95f03c3aab89ae3
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>使用 ssis conf 在 Linux 上配置 SQL Server Integration Services
 
@@ -145,3 +145,9 @@ enabled = Y
                        
 lcid = 2052
 ```
+
+## <a name="related-content-about-ssis-on-linux"></a>有关在 Linux 上的 SSIS 的相关的内容
+-   [提取、 转换和加载使用 SSIS 的 Linux 上的数据](sql-server-linux-migrate-ssis.md)
+-   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [限制和 Linux 上的 SSIS 的已知的问题](sql-server-linux-ssis-known-issues.md)
+-   [计划 SQL Server Integration Services 包执行在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)

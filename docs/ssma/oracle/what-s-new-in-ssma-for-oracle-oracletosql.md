@@ -5,26 +5,37 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 908bd781fcbb32e2991976ad197401da0c5c0776
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 63bc96b49c351d9923c5e4d4ae59056c7911ae40
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 的新增功能
 本主题列出每个版本中的 Oracle 更改 SSMA。  
+
+## <a name="ssma-v77"></a>SSMA v7.7
+适用于 Oracle 的 SSMA v7.7 版本包含以下更改：
+- 适用于 Oracle 的 SSMA 已得到增强提高质量和转换的度量值的目标修补程序。
+- 32 位版本的适用于 Oracle 的 SSMA 根据普遍需求，已恢复。 与以前的实现 （之前 v7.4) 相比，有两个安装包，但它们不能并行安装。 因此，你必须选择最适合您的版本基于连接组件。 最好始终使用 64 位版本，如有可能。
+- SQL Server 2017 支持现已正式使用 Oracle 扩展包以及支持在 Linux 上 （新的远程安装选项）。 请注意，扩展包功能有限时安装在 Linux 上，因为不支持的测试人员和服务器端数据迁移功能 
+- 适用于 Oracle 的 SSMA 允许你迁移作为普通表的具体化视图 (可通过在设置配置**项目设置** -> **同步** ->  **发现的具体化视图的后备表**)。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更高版本，.Net 4.5.2 是安装先决条件。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 适用于 Oracle 的 SSMA v7.6 版本已得到增强，具有提高质量和转换的度量值的目标修补程序和 SQL Server 2017 （公共预览版） 支持。 对于 Windows 和 Linux 上的 SQL Server 2017 支持是在公共预览版中并不用于生产迁移。
@@ -32,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 > [!IMPORTANT]
 > SSMA v7.4 和更高版本，.Net 4.5.2 的目标是安装先决条件，并已停止使用该工具的 32 位版本。
 
-## <a name="ssma-v75"></a>SSMA v7.5 还是
+## <a name="ssma-v75"></a>SSMA v7.5
 适用于 Oracle 的 SSMA v7.5 还是版本包含以下更改：
 - 增强了多项改进，以确保残障人士更大的可访问性。
 - 更新以改进的质量和转换指标，目标修补程序，如改进数据在迁移期间，根据客户反馈的日期和 float 数据类型处理。
@@ -75,7 +86,7 @@ ms.lasthandoff: 12/21/2017
       - 用于转换的示例项目可以下载这个[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
 
-## <a name="ssma-v72"></a>SSMA 7.2 版
+## <a name="ssma-v72"></a>SSMA v7.2
 适用于 Oracle 的 SSMA 7.2 版版本包含以下更改：
 - 改进的质量和转换度量值根据客户反馈的目标修补程序。
 - 遥测功能增强以提供更好的数据点，以解决客户问题和改进 SSMA 的转换率。

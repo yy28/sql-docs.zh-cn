@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制和 Linux 上的 SSIS 的已知的问题
 
@@ -132,3 +132,8 @@ SSIS 日志提供程序为文本文件、 XML 文件和 SQL Server 事件探查�
 -   如果不提供的路径，日志提供程序写入到主机的当前目录。 如果当前用户没有写入到主机的当前目录的权限，日志提供程序将引发错误。
 -   不能使用环境变量中的文件路径。 如果你指定环境变量，你指定的文字文本将出现在文件路径中。 例如，如果你指定`%TMP%/log.txt`，日志提供程序将文本的文本追加`/%TMP%/log.txt`到当前的主机目录。
 
+## <a name="related-content-about-ssis-on-linux"></a>有关在 Linux 上的 SSIS 的相关的内容
+-   [提取、 转换和加载使用 SSIS 的 Linux 上的数据](sql-server-linux-migrate-ssis.md)
+-   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 ssis conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [计划 SQL Server Integration Services 包执行在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,22 +29,23 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > SQL Server 2014 和更低，请参阅[sqlcmd 实用工具](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)。
 
+ > 有关在 Linux 上使用 sqlcmd，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
   **Sqlcmd**实用工具，可以在输入 TRANSACT-SQL 语句、 系统过程和脚本文件在命令提示符下，**查询编辑器**在 SQLCMD 模式下，Windows 脚本文件或 SQL Server 代理作业的操作系统 (Cmd.exe) 作业步骤。 此实用工具使用 ODBC 执行 TRANSACT-SQL 批处理。 
   
@@ -55,14 +57,14 @@ ms.lasthandoff: 01/17/2018
   若要在 SSMS 中运行 sqlcmd 语句，请从顶部导航栏上的“查询菜单”下拉列表中选择“SQLCMD 模式”。  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) 使用 Microsoft[!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)]用于执行的常规和中的 SQLCMD 模式下的 SqlClient**查询编辑器**。 从命令行运行 **sqlcmd** 时， **sqlcmd** 使用 ODBC 驱动程序。 由于可以应用不同的默认选项，因此在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQLCMD 模式下以及在 **sqlcmd** 实用工具中执行相同的查询时，可能会看到不同的行为。  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft[!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)]用于执行的常规和中的 SQLCMD 模式下的 SqlClient**查询编辑器**。 从命令行运行 **sqlcmd** 时， **sqlcmd** 使用 ODBC 驱动程序。 由于可以应用不同的默认选项，因此在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQLCMD 模式下以及在 **sqlcmd** 实用工具中执行相同的查询时，可能会看到不同的行为。  
 >   
   
  当前， **sqlcmd** 在命令行选项和值之间不需要空格。 但是，在将来的版本中，在命令行选项和值之间可能需要空格。  
  
  其他主题：
 - [启动 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [使用 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [使用 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>语法  
   
@@ -406,7 +408,7 @@ sqlcmd
   
 -   **varchar(n** *n* **)**, where 1<=n<=8000  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **nvarchar (n**  *n*  **)**，其中 1 < = n < = 4000  
   
 -   **varbinary(n** *n* **)**, where 1<=n\<=4000  
   
@@ -452,7 +454,7 @@ sqlcmd
   
  其中：  
   
- `x`= 由 SQL Server 处理的事务数。  
+ `x` = 由 SQL Server 处理的事务数。  
   
  `t1` = 所有事务的总时间。  
   
@@ -688,7 +690,7 @@ sqlcmd
  转到发出信号，这两个批的末尾，并执行任何缓存 TRANSACT-SQL 语句。作为单独的批处理文件; 多次执行批处理不能在单个批处理中多次声明变量。
   
  **其他命令**  
-  **:r \<** *filename***>**  
+  **: r \<**  *filename* **>**  
  分析其他 TRANSACT-SQL 语句和**sqlcmd**从指定的文件的命令 **\< ***filename***>**到语句中缓存。  
   
  如果该文件包含不跟的 TRANSACT-SQL 语句**转**，必须输入**转**后面的行上**: r**。  

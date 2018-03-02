@@ -112,7 +112,7 @@ msglen
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数向客户端发送错误或信息性消息。 每一要发送的消息都调用一次该函数。  
   
  可以在使用 srv_sendrow 发送所有行（如果有）之前或之后，使用 srv_sendmsg 以任意顺序向客户端发送消息。 在使用 srv_senddone 发送完成状态之前，所有消息（如果有）都必须发送到客户端。  

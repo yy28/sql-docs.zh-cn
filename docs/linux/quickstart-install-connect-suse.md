@@ -4,7 +4,7 @@ description: "本快速入门演示如何在 SUSE Linux Enterprise Server 上安
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/09/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,17 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: d2914737940999b438d99f382f1960a49a2000cd
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e1690120790be2de70ddd19aa3c1c4893178cb08
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>安装 SQL Server 和 SUSE Linux Enterprise Server 上创建数据库
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门： 安装 SQL Server 和 SUSE Linux Enterprise Server 上创建数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在本快速入门教程，你首先安装 SQL Server 2017 在 SUSE Linux 企业服务器 (SLES) v12 SP2。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
+在本快速入门教程，你首先安装 SQL Server 2017 在 SUSE Linux 企业服务器 (SLES) v12 SP2。 然后使用 **sqlcmd** 连接，以创建第一个数据库并运行查询。
 
 > [!TIP]
 > 本教程需要用户输入和 internet 连接。 如果你有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
@@ -123,9 +123,9 @@ ms.lasthandoff: 02/13/2018
 > [!TIP]
 > **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括：
 >
-> * [SQL Server 操作 Studio （预览版）](../sql-operations-studio/what-is.md)
+> * [SQL Server Operations Studio（预览版）](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
 > * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
-> * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+> * [mssql-cli（预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

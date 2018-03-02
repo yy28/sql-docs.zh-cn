@@ -1,27 +1,28 @@
 ---
 title: "使用基本数据类型 |Microsoft 文档"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0fe716f57850c4daf3e3f319376626bee3195b6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 66da5301a12427ed50a212abf74a0700d89e8668
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-basic-data-types"></a>使用基本数据类型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,25 +35,25 @@ ms.lasthandoff: 11/18/2017
 |SQL Server 类型|JDBC 类型 (java.sql.Types)|Java 语言类型|  
 |----------------------|-----------------------------------|-------------------------|  
 |bigint|bigint|long|  
-|binary|BINARY|byte[]|  
+|BINARY|BINARY|byte[]|  
 |bit|BIT|boolean|  
 |char|CHAR|字符串|  
 |date|DATE|java.sql.Date|  
-|datetime|timestamp|java.sql.Timestamp|  
-|datetime2|timestamp|java.sql.Timestamp|  
+|datetime|TIMESTAMP|java.sql.Timestamp|  
+|datetime2|TIMESTAMP|java.sql.Timestamp|  
 |datetimeoffset (2)|microsoft.sql.Types.DATETIMEOFFSET|microsoft.sql.DateTimeOffset|  
 |decimal|DECIMAL|java.math.BigDecimal|  
 |float|DOUBLE|double|  
 |图像|LONGVARBINARY|byte[]|  
 |int|整数|int|  
 |money|DECIMAL|java.math.BigDecimal|  
-|nchar|CHAR<br /><br /> NCHAR (Java SE 6.0)|字符串|  
+|NCHAR|CHAR<br /><br /> NCHAR (Java SE 6.0)|字符串|  
 |ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|字符串|  
 |numeric|NUMERIC|java.math.BigDecimal|  
 |nvarchar|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|字符串|  
 |nvarchar(max)|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|字符串|  
 |real|REAL|float|  
-|smalldatetime|timestamp|java.sql.Timestamp|  
+|smalldatetime|TIMESTAMP|java.sql.Timestamp|  
 |smallint|SMALLINT|short|  
 |smallmoney|DECIMAL|java.math.BigDecimal|  
 |text|LONGVARCHAR|字符串|  
@@ -66,12 +67,11 @@ ms.lasthandoff: 11/18/2017
 |varchar|VARCHAR|字符串|  
 |varchar(max)|VARCHAR|字符串|  
 |xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|字符串<br /><br /> SQLXML|  
+|sqlvariant|SQLVARIANT|对象|  
   
  （1） 到的时间使用 java.sql.Time[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]类型，必须设置**sendTimeAsDatetime**连接属性设置为 false。  
   
  （2） 你可以以编程方式访问的值**datetimeoffset**与[DateTimeOffset 类](../../connect/jdbc/reference/datetimeoffset-class.md)。  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Sqlvariant 数据类型不受当前的 JDBC 驱动程序。 如果使用查询从包含 sqlvariant 数据类型列的表中检索数据，则会发生异常。  
   
  以下几部分提供了如何使用 JDBC 驱动程序和基本数据类型的实例。 有关如何在 Java 应用程序中使用的基本数据类型的更多详细示例，请参阅[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)。  
   

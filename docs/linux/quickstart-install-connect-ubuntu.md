@@ -4,7 +4,7 @@ description: "本快速入门演示如何在 Ubuntu 上安装 SQL Server 2017 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,17 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: e0dc1d24963e1e00018d5b5ac1418d68a4a22577
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 9aa37f843d446357997bf553ca87d2d93b41bfb9
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>安装 SQL Server，并在 Ubuntu 上创建数据库
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门： 安装 SQL Server 并在 Ubuntu 上创建数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在本快速入门教程，你首先将安装 SQL Server 2017 Ubuntu 16.04。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
+在本快速入门教程，你首先将安装 SQL Server 2017 Ubuntu 16.04。 然后使用 **sqlcmd** 连接，以创建第一个数据库并运行查询。
 
 > [!TIP]
 > 本教程需要用户输入和 internet 连接。 如果你有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
@@ -126,9 +126,9 @@ ms.lasthandoff: 02/13/2018
 > [!TIP]
 > **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括：
 >
-> * [SQL Server 操作 Studio （预览版）](../sql-operations-studio/what-is.md)
+> * [SQL Server Operations Studio（预览版）](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
 > * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
-> * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+> * [mssql-cli（预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

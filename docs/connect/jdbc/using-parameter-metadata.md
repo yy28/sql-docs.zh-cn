@@ -1,27 +1,28 @@
 ---
 title: "使用参数元数据 |Microsoft 文档"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a046d61c95e4f687361939bed9b10be5ecd7746d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 812e8af3f3b08cf7cd25de64b157cb76657a6b6f
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-parameter-metadata"></a>使用参数元数据
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,9 +37,10 @@ ms.lasthandoff: 11/18/2017
     
 > [!NOTE]  
 已准备的语句中使用 SQLServerParameterMetaData 类时，有一些限制。 
-**与 Microsoft JDBC Driver 6.0 （或更高版本） for SQL Server**： 在使用 SQL Server 2008 或 2008 R2，JDBC 驱动程序支持选择、 DELETE、 INSERT 和 UPDATE 语句，只要这些语句不包含子查询和/或联接。 合并也不支持查询 SQLServerParameterMetaData 类时使用的 SQL Server 2008 或 2008 R2。 对于 SQL Server 2012 和较高版本，支持带有复杂查询的参数元数据。 不支持的加密列的参数元数据的检索。 **与 Microsoft JDBC Driver 4.0、 4.1 或 SQL Server 的 4.2**: JDBC 驱动程序还支持选择、 DELETE、 INSERT 和 UPDATE 语句，只要这些语句不包含子查询和/或联接。 此外 SQLServerParameterMetaData 类不支持合并查询。  
+**与 Microsoft JDBC Driver 6.0 （或更高版本） for SQL Server**： 在使用 SQL Server 2008 或 2008 R2，JDBC 驱动程序支持选择、 DELETE、 INSERT 和 UPDATE 语句，只要这些语句不包含子查询和/或联接。  
 
-## <a name="see-also"></a>另请参阅  
- [通过 JDBC 驱动程序处理元数据](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)  
+合并也不支持查询 SQLServerParameterMetaData 类时使用的 SQL Server 2008 或 2008 R2。 对于 SQL Server 2012 和较高版本，支持带有复杂查询的参数元数据。  
+
+不支持的加密列的参数元数据的检索。 **与 Microsoft JDBC Driver 4.1 或 SQL Server 的 4.2**: JDBC 驱动程序还支持选择、 DELETE、 INSERT 和 UPDATE 语句，只要这些语句不包含子查询和/或联接。 此外 SQLServerParameterMetaData 类不支持合并查询。  
   
   

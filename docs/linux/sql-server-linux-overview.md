@@ -4,7 +4,7 @@ description: "本主题介绍了 SQL Server 如何在 Linux 上运行和提供�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
-ms.translationtype: HT
+ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -54,12 +54,9 @@ SQL Server 2017 现在可以在 Linux 上运行。 它使用相同的 SQL Server
 
 SQL Server 2017 在所有支持的平台（包括 Linux）上具有相同的底层数据库引擎。 因此，在 Linux 上，许多现有功能的运行方式相同。 该部分的文档包含了从 Linux 角度展示的一些功能。 同时还介绍了 Linux 上的一些独特需求。
 
-如果你已熟悉 SQL Server，请查看 [发行说明](sql-server-linux-release-notes.md) 了解常规使用说明和此版本的已知问题。 然后查看 [Linux 上的 SQL Server 的新功能](sql-server-linux-whats-new.md) 以及 [SQL Server 2017 更新概览](../sql-server/what-s-new-in-sql-server-2017.md)。 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。
+如果你已熟悉 SQL Server，请查看 [发行说明](sql-server-linux-release-notes.md) 了解常规使用说明和此版本的已知问题。 然后查看 [Linux 上的 SQL Server 的新功能](sql-server-linux-whats-new.md) 以及 [SQL Server 2017 更新概览](../sql-server/what-s-new-in-sql-server-2017.md)。 
 
-##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) 与 SQL Server 工程团队合作
+> [!TIP]
+> 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。
 
-- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)： 咨询数据库管理相关问题
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)： 咨询开发问题
-- [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)： 咨询技术问题
-- [提交反馈](https://feedback.azure.com/forums/908035-sql-server)： 报告 bug 和请求功能
-- [Reddit](https://www.reddit.com/r/SQLServer/)： 讨论 SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

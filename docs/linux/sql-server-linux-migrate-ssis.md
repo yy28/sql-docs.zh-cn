@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 40699608d068895cdcee736c87aa4c2bd405b807
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 87c28ec845a59ea13acce0585bc9b249f100a4a5
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>提取、 转换和加载使用 SSIS 的 Linux 上的数据
 
@@ -111,7 +111,13 @@ SSIS 包括以下功能：
 
 若要开始使用 SSIS，下载最新版本[SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md)。
 
-## <a name="see-also"></a>另请参阅
+若要了解有关 SSIS 的详细信息，请参阅以下文章：
 - [了解有关 SQL Server Integration Services 的详细信息](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) 开发和管理工具](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services 教程](../integration-services/integration-services-tutorials.md)
+
+## <a name="related-content-about-ssis-on-linux"></a>有关在 Linux 上的 SSIS 的相关的内容
+-   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 ssis conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [限制和 Linux 上的 SSIS 的已知的问题](sql-server-linux-ssis-known-issues.md)
+-   [计划 SQL Server Integration Services 包执行在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)
