@@ -22,10 +22,7 @@
 ## [SQL Server 2017 说明](sql-server-2017-release-notes.md)
 ## [SQL Server 2016 说明](sql-server-2016-release-notes.md)
 ## [SQL Server 2014 说明](sql-server-2014-release-notes.md)
-## [SQL Server 2012 SP4 说明](sql-server-2012-sp4-release-notes.md)
-## [SQL Server 2012 SP3 说明](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 说明](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 说明](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 Service Pack 发行说明](sql-server-2012-sp4-release-notes.md)
 ## [SQL Server 2012 说明](sql-server-2012-release-notes.md)
 ## [SQL Server 2008 R2 SP2 说明](sql-server-2008-r2-sp2-release-notes.md)
 
