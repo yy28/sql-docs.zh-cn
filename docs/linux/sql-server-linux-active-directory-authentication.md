@@ -1,8 +1,8 @@
 ---
-title: "在 Linux 上的 SQL 服务器的 active Directory 身份验证 |Microsoft 文档"
+title: "在 Linux 上的 SQL Server 的 active Directory 身份验证教程 |Microsoft 文档"
 description: "本教程提供有关在 Linux 上的 SQL Server 的 AAD 身份验证的配置步骤。"
 author: meet-bhagdev
-ms.date: 01/30/2018
+ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
@@ -16,24 +16,17 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 8644c6e061b0c1cdcd80d8c7cb25b8662eb7ae26
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="active-directory-authentication-with-sql-server-on-linux"></a>在 Linux 上的 SQL 服务器的 active Directory 身份验证
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>在 Linux 上的 SQL 服务器的教程： 使用 Active Directory 身份验证
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本教程介绍如何配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]支持 Active Directory (AD) 身份验证，也称为集成身份验证的 linux 操作系统上。 AD 身份验证使在 Windows 或 Linux 进行身份验证到已加入域的客户端[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用其域凭据和 Kerberos 协议。
-
-AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证：
-
-* 用户进行身份验证通过单一登录，而不会提示输入密码。   
-* 通过创建的 AD 组的登录名，你可以管理访问和权限中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 组成员身份。  
-* 每个用户组织，具有单个标识，因此不必能够跟踪其[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登录名对应于哪些用户。   
-* AD，可在你的组织之间强制实施了集中式的密码策略。   
+本教程介绍如何配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]支持 Active Directory (AD) 身份验证，也称为集成身份验证的 linux 操作系统上。 有关概述，请参阅[在 Linux 上的 SQL Server 的 Active Directory 身份验证](sql-server-linux-active-directory-auth-overview.md)。
 
 本教程包括以下任务：
 
@@ -54,12 +47,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-> [!IMPORTANT]
-> 限制：
-> - 在此期间，数据库镜像终结点支持的唯一身份验证方法是证书。 将在未来版本中启用 WINDOWS 身份验证方法。
-> - 第三方 AD 工具类似 Centrify，Powerbroker，和不支持 Vintela 
-
-## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机到 AD 域
+## <a id="join"></a> 加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机到 AD 域
 
 使用以下步骤以加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到 Active Directory 域的主机：
 
@@ -179,7 +167,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 
 有关详细信息，请参阅的 Red Hat 文档[发现和加入标识域](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)。 
 
-## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>创建 AD 用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和设置 SPN
+## <a id="createuser"></a> 创建 AD 用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和设置 SPN
 
   > [!NOTE]
   > 下一个步骤使用你[完全限定的域名称](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果你在**Azure**，你必须**[创建一个](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在继续操作之前。
@@ -208,7 +196,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 
 3. 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。
 
-## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务 keytab
+## <a id="configurekeytab"></a> 配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务 keytab
 
 1. 在上一步中创建 AD 帐户，请检查密钥版本号 (kvno)。 它通常为 2，但它可能是另一个整数，如果您多次更改帐户的密码。 上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机计算机，运行以下命令：
 
@@ -249,7 +237,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
    sudo systemctl restart mssql-server
    ```
 
-## <a name="create-ad-based-logins-in-transact-sql"></a>在 TRANSACT-SQL 中创建基于 AD 的登录名
+## <a id="createsqllogins"></a> 在 TRANSACT-SQL 中创建基于 AD 的登录名
 
 1. 连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]并创建新的、 基于 AD 的登录名：
 
@@ -263,7 +251,7 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
    SELECT name FROM sys.server_principals;
    ```
 
-## <a name="connect-to-includessnoversionincludesssnoversion-mdmd-using-ad-authentication"></a>连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 身份验证
+## <a id="connect"></a> 连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 身份验证
 
 登录到客户端计算机使用域凭据。 现在你可以连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]无需你的密码，重新输入通过使用 AD 身份验证。 如果你创建的 AD 组的登录名，只要 AD 用户是该组的成员可以连接的方式相同。
 
