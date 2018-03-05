@@ -66,7 +66,7 @@ ms.lasthandoff: 02/15/2018
   
  \<路径>|\<路径>  
   
- 也可以用通配符指定多个文件或文件夹。 例如，若要引用 C 驱动器上的所有文本文件，可以将 **ConnectionString** 属性的值设置为 C:\\*.txt。  
+ 也可以用通配符指定多个文件或文件夹。 例如，若要引用 C 驱动器上的所有文本文件，可以将 **ConnectionString** 属性的值设置为 C:\\\*.txt。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
