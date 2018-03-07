@@ -8,25 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94d03448ee23c653864ad42f1893b821bbad0af7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1b580be2ada4c13541a9cad6eb037c62627337b1
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-master-data-services-database"></a>创建 Master Data Services 数据库
   在需要新数据库来支持 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序和 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务时，创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 -   有关承载该数据库的计算机的要求信息，请参阅[数据库要求 (Master Data Services)](../../master-data-services/install-windows/database-requirements-master-data-services.md)。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  完成 **“创建数据库”** 向导来创建和配置数据库。 有关向导中的用户界面 (UI) 选项的信息，请参阅[创建数据库向导（Master Data Services 配置管理器）](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
   
 -   为数据库和 Web 应用程序配置系统设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../../master-data-services/system-settings-master-data-services.md)。  
   

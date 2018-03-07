@@ -8,20 +8,21 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: smartysanthosh
-ms.author: nagavo
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8cd77bb7366fb1bb09d8f119a1b740bd8456344
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 
 WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一组独立的 Windows Server 实例以及在这些实例上运行的 Microsoft 故障转移群集服务组成。 这些 Windows Server 实例（或有时被称为节点）彼此连接，以实现相互通信，这样就可以进行故障检测。 WSFC 提供故障检测和故障转移功能。 如果群集中的某个节点或服务出现故障，则会检测到该故障，并且另一个节点将自动或手动开始提供托管在故障节点上的服务。 因此，用户仅遇到最小程度的服务中断，服务可用性得以提升。  
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 所有实例都已安装 Windows Server 操作系统，并且所有更新都已修补。
 
@@ -215,7 +216,7 @@ AG 可增强数据库级别的高可用性。 AG（一组用户数据库）及�
 FCI 可增强实例级别的高可用性。 SQL Server 服务及相关服务均在 WSFC 中注册为资源。 此外，FCI 解决方案需要对称的共享磁盘存储（例如 SAN 或 SMB 文件共享），这些存储必须适用于 WFC 群集中的所有节点。
 
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 -   在所有节点上安装 SQL Server。 有关详细信息，请参阅[安装 SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server)。
 
@@ -319,9 +320,9 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
 8.  在“指定副本”页上，单击“侦听器”选项卡，执行以下操作。 请参阅图 18。
 
-    a.  单击“创建可用性组侦听器”以设置 MDS 数据库连接的可用性组侦听器。
+    A.  单击“创建可用性组侦听器”以设置 MDS 数据库连接的可用性组侦听器。
 
-    b.  输入“侦听器 DNS 名称”，例如 MDSSQLServer。
+    B.  输入“侦听器 DNS 名称”，例如 MDSSQLServer。
 
     c.  在“端口”文本框中输入默认 SQL 端口 (1433)。
 

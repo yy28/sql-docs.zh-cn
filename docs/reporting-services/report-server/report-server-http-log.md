@@ -1,7 +1,7 @@
 ---
 title: "报表服务器 HTTP 日志 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: 
@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: HTTP [Reporting Services]
+helpviewer_keywords:
+- HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c05dfdbb99322caa42412c9d2bc2636625cf0b7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 705ec73a7198793754a70edfdc854a5c9c15e47c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   报表服务器 HTTP 日志记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="configuration-settings-for-report-server-http-log"></a>报表服务器 HTTP 日志的配置设置  
  若要配置报表服务器 HTTP 日志，请使用记事本来修改 ReportingServicesService.exe.config 文件。 此配置文件位于 \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin 文件夹。  
   
- 若要启用 HTTP 服务器，必须将 **http:4** 添加到 ReportingServicesService.exe.config 文件的 RStrace 部分。 所有其他 HTTP 日志文件项都是可选的。 下面的示例包括所有设置，因此您可以将整个内容都粘贴到 RStrace 部分，然后删除您不需要的设置。  
+ 若要启用 HTTP 服务器，必须将 **http:4** 添加到 ReportingServicesService.exe.config 文件的 RStrace 部分。 所有其他 HTTP 日志文件项都是可选的。 下面的示例包括所有设置，因此您可以将整个内容都粘贴到 RStrace 部分，然后删除您不需要的设置。
   
 ```  
    <RStrace>  
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/09/2018
          <add name="TraceListeners" value="debugwindow, file" />  
          <add name="TraceFileMode" value="unique" />  
          <add name="HttpTraceFileName" value="ReportServerService_HTTP_" />  
-         <add name="HttpTraceSwitches" value="date,time, clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
+         <add name="HttpTraceSwitches" value="date,time,clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
          <add name="Components" value="all:3,http:4" />  
    </RStrace>  
 ```  
