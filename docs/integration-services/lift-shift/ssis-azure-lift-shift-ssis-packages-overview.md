@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
 现在，可将 SQL Server Integration Services (SSIS) 包和工作负荷移到 Azure 云。
@@ -64,7 +65,7 @@ Azure 数据工厂为 Azure 上的 SSIS 包承载运行时引擎。 运行时引
 > [!NOTE]
 > 将包部署到 Azure 时，包部署向导始终将包升级到最新的包格式。
 
-有关 Azure 中先决条件的详细信息，请参阅[将 SQL Server Integration Services (SSIS) 包直接迁移到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+有关 Azure 中先决条件的详细信息，请参阅[将 SSIS 包部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
 
 ## <a name="ssis-features-on-azure"></a>Azure 上的 SSIS 功能
 
@@ -81,7 +82,7 @@ Azure 数据工厂为 Azure 上的 SSIS 包承载运行时引擎。 运行时引
 ## <a name="common-tasks"></a>常规任务
 
 ### <a name="provision"></a>预配
-需先设置 SSISDB 目录数据库和 Azure SSIS Integration Runtime，才能在 Azure 中部署和运行 SSIS 包。 按照后列文章中的设置步骤进行操作：[将 SQL Server Integration Services (SSIS) 包直接迁移到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+需先设置 SSISDB 目录数据库和 Azure SSIS Integration Runtime，才能在 Azure 中部署和运行 SSIS 包。 按照此文章中的预配步骤操作：[将 SSIS 包部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
 
 ### <a name="deploy-and-run-packages"></a>部署和运行包
 若要在 SQL 数据库上部署项目和运行包，可以使用以下多种熟悉的工具和脚本编写选项中的一种来实现：
@@ -105,5 +106,5 @@ Azure 数据工厂为 Azure 上的 SSIS 包承载运行时引擎。 运行时引
 
 ## <a name="next-steps"></a>后续步骤
 若要开始使用 Azure 上的 SSIS 工作负荷，请参阅以下文章：
--   [将 SQL Server Integration Services (SSIS) 包直接迁移到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [将 SSIS 包部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 -   [在 Azure 上部署、运行和监视 SSIS 包](ssis-azure-deploy-run-monitor-tutorial.md)

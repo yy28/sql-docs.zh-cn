@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], network load balancing
+helpviewer_keywords:
+- report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
   如果要将报表服务器扩展配置为在网络负载平衡 (NLB) 群集上运行，必须执行以下操作：  
@@ -49,27 +50,24 @@ ms.lasthandoff: 01/09/2018
 |7|验证能否通过指定的主机名来访问服务器。|本主题中的[验证报表服务器访问权限](#Verify) 。|  
   
 ##  <a name="ViewState"></a> 如何配置视图状态验证  
- 若要在 NLB 群集上运行扩展部署，必须配置视图状态验证，以便用户可以查看交互式 HTML 报表。 您必须针对报表服务器和报表管理器执行此操作。  
+ 若要在 NLB 群集上运行扩展部署，必须配置视图状态验证，以便用户可以查看交互式 HTML 报表。
   
  视图状态验证由 ASP.NET 控制。 默认情况下，将启用视图状态验证并使用 Web 服务的标识来执行验证。 但是，在 NLB 群集方案中，存在运行于不同计算机上的多个服务实例和 Web 服务标识。 因为每个节点的服务标识都各不相同，所以您无法依赖单个进程标识来执行验证。  
   
  若要解决此问题，可以生成一个任意验证密钥来支持视图状态验证功能，然后将每个报表服务器节点手动配置为使用同一密钥。 可以使用随机生成的十六进制序列。 十六进制序列的长度由验证算法（如 SHA1）确定。  
+
+1.  通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，必须具有单个 \<MachineKey> 条目，以便将该条目粘贴到扩展部署中每个报表服务器实例的 RSReportServer.config 文件中。
   
-1.  通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，必须具有单个 \<machineKey> 条目，以便将该条目粘贴到扩展部署中每个报表管理器实例的 Web.config 文件中。  
-  
-     下面的示例说明了您必须获得的值。 请不要将该示例复制到配置文件中，其中的密钥值是无效的。  
+     下面的示例说明了您必须获得的值。 请不要将该示例复制到配置文件中，其中的密钥值是无效的。 报表服务器需要正确的大小写。
   
     ```  
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    ```   
+2.  保存该文件。  
   
-2.  打开报表管理器的 Web.config 文件，并在 \<system.web> 部分粘贴所生成的 \<machineKey> 元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config 中。  
+3.  对扩展部署中的每个报表服务器重复上述步骤。  
   
-3.  保存该文件。  
-  
-4.  对扩展部署中的每个报表服务器重复上述步骤。  
-  
-5.  确保 \Reporting Services\Report Manager 文件夹中所有 Web.Config 文件的 \<system.web> 部分都包含相同的 \<machineKey> 元素。  
+4.  确保 \Reporting Services\Report Server 文件夹中所有 RSReportServer.Config 文件都包含相同的 \<MachineKey> 元素。  
   
 ##  <a name="SpecifyingVirtualServerName"></a> 如何配置 Hostname 和 UrlRoot  
  若要在 NLB 群集上配置报表服务器扩展部署，必须定义单个虚拟服务器名称，以提供服务器群集的单访问点。 然后向您的环境中的域名服务器 (DNS) 注册此虚拟服务器名称。  
