@@ -1,7 +1,7 @@
 ---
 title: "下载 SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 02/15/2018
+ms.date: 02/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc8fe6a41661acd176c43cdf1de2a857846a7b83
-ms.sourcegitcommit: 03021482208259e6c67599b47df23fbbe8f3a393
+ms.openlocfilehash: de6d0b4d679dab1f008ef53afef4a173311ea20e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -106,14 +106,12 @@ Showplan：
 
 
 
-
-
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
 * 此版本的 SSMS 适用于所有[受支持 SQL Server 版本 (SQL Server 2008 - SQL Server 2017)](https://support.microsoft.com/lifecycle?C2=1044)，并且在最大程度上支持与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能配合使用。
-* 没有显式阻止 SQL Server 2000 或 SQL Server 2005，但某些功能可能无法正常工作。
+* 使用 SSMS 17.x 连接到 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)。
 * 此外，SSMS 17.x 可与 SSMS 16.x 或 SQL Server 2014 SSMS 及早期版本并行安装。
-* SQL Server Integration Services (SSIS) - SSMS 版本 17.x 不支持连接到旧版 SQL Server Integration Services 服务。 要连接到早期版本的 Integration Services，请使用与 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 连接到旧版 SQL Server 2016 Integration Services 服务。 可以在同一台计算机上并行安装 SSMS 17.x 和 SSMS 16.x。 由于 SQL Server 2012 的发布，建议使用 SSIS 目录数据库 (SSISDB) 来存储、管理、运行和监视 Integration Services 包。
+* SQL Server Integration Services (SSIS) - SSMS 版本 17.x 不支持连接到旧版 SQL Server Integration Services 服务。 要连接到早期版本的 Integration Services，请使用与 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 连接到旧版 SQL Server 2016 Integration Services 服务。 可以在同一台计算机上并行安装 SSMS 17.x 和 SSMS 16.x。 由于 SQL Server 2012 的发布，建议使用 SSIS 目录数据库 (SSISDB) 来存储、管理、运行和监视 Integration Services 包。 有关详细信息，请参阅 [SSIS 目录](../integration-services/catalog/ssis-catalog.md)。
 
 ## <a name="supported-operating-systems"></a>受支持的操作系统
   

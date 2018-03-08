@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 757a6b2aebe68dc32ddc493c3e6649a8b589be3e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>课程 3-2 - 创建自定义模板
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 7.  在查询编辑器中，键入以下脚本以创建用于查找特定部分（在此事例中是 Blade）顺序的存储过程。 （您可以从“教程”窗口中复制和粘贴代码。）  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/17/2018
   
 8.  按 F5 执行此脚本，创建 **WorkOrdersForBlade** 过程。  
   
-9. 在对象资源管理器中，右键单击服务器，然后单击“新建查询”。 系统将打开新的“查询编辑器”窗口。  
+9. 在对象资源管理器中，右键单击“AdventureWorks2012”数据库，然后单击“新建查询”。 系统将打开新的“查询编辑器”窗口。  
   
 10. 在查询编辑器中，键入 **EXECUTE dbo.WorkOrdersForBlade**，然后按 F5 执行查询。 确认“结果”窗格返回 Blade 的工作订单列表。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 12. 现在脚本应该如下所示：  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

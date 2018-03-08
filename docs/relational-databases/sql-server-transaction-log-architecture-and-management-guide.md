@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd276306b5fd40dd41602a573a2eb152ef5a6dda
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c8d5917a0faed7d4861a03097a2072db3cfa0670
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -253,7 +253,9 @@ LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录�
 [事务日志 (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)    
 [管理事务日志文件的大小](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
 [事务日志备份 (SQL Server)](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+[数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)   
+[配置恢复间隔服务器配置选项](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [了解 SQL Server 中的日志记录和恢复（作者：Paul Randal）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
 [SQL Server 事务日志管理（作者：Tony Davis 和 Gail Shaw）](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
