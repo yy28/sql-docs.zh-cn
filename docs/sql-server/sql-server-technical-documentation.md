@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 文档 | Microsoft Docs"
-ms.date: 10/30/2017
+ms.date: 02/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -27,11 +27,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5e6b2ffe7735bf8c7cb2fe7e9f76b7d4b675ceef
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84c0a18929883f0a58e75ed5ce20900d0bdf09e7
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,21 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 |[SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)        |
 |[SQL Server 2014 中的新增功能](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
-   
+
+
 **试用 SQL Server！**
+> [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)[下载 SQL Server](http://go.microsoft.com/fwlink/?LinkID=829477)
+>
+> [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+>
+> [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+>
+> [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+## <a name="sql-server-technologies"></a>SQL Server 技术
+
 
 |||
-|-|-|
-|[![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477) | [![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [下载 SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) |
-|[![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [获取具有 SQL Server 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) |
-| [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | |
-
-    
-## <a name="sql-server-technologies"></a>SQL Server 技术    
-    
-|||    
 |-|-|    
 |![SQL 数据库引擎](../sql-server/media/sql-database-engine.png "SQL 数据库引擎")|**[数据库引擎](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> 数据库引擎是用于存储、处理和保护数据的核心服务。 数据库引擎提供了受控访问和快速事务处理，以满足企业内最苛刻的数据消费应用程序的要求。 数据库引擎还提供了大量的支持以保持高可用性。|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是一个生成高性能数据集成解决方案的平台，其中包括对数据仓库提供提取、转换和加载 (ETL) 处理的包。|    
@@ -74,13 +76,13 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 ## <a name="earlier-sql-server-versions"></a>早期 SQL Server 版本
 - [SQL Server 更新中心 - 链接和有关所有受支持版本的信息](https://msdn.microsoft.com/library/ff803383.aspx)
 - [SQL Server 2014 文档](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [SQL Server 2012 文档](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-- [SQL Server 2008 R2 文档](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-- [SQL Server 2008 文档](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
-- [SQL Server 2005 存档文档](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+- [SQL Server 2012 文档](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
+- [SQL Server 2008 R2 文档](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)
+- [SQL Server 2008 文档](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
+- [SQL Server 2005 存档文档](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
 ## <a name="samples"></a>示例  
-- [Wide World Importers 示例数据库](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+- [Wide World Importers 示例数据库](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [适用于 SQL Server 2016 的 AdventureWorks 示例数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502) 
 - [GitHub 上的 SQL Server 示例](https://github.com/Microsoft/sql-server-samples) 
    
