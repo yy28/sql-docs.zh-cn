@@ -1,4 +1,4 @@
----
+﻿---
 title: "有关在 Linux 上的 SQL Server 2017 发行说明 |Microsoft 文档"
 description: "本文包含的发行说明，并支持在 Linux 上运行的 SQL Server 2017 的功能。 发行说明也包括针对最新版本和多个以前的版本。"
 author: rothja
