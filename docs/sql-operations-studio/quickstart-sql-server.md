@@ -2,7 +2,7 @@
 title: "快速入门： 连接和查询 SQL Server 使用 SQL 操作 Studio （预览版） |Microsoft 文档"
 description: "本快速入门演示如何使用 SQL 操作 Studio （预览版） 以连接到 SQL Server 并运行查询"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,16 +14,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7588368dcd64316551a9eaa72aeb8ce1d2ea67a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门： 连接和查询 SQL Server 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门： 连接和查询 SQL Server 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门演示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到 SQL Server，然后使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>必要條件
 
 若要完成本快速入门教程，你需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，并且有权访问 SQL Server。
 
@@ -92,7 +92,10 @@ ms.lasthandoff: 12/21/2017
 
 
 
-1. 将以下代码段粘贴到查询窗口中：
+1. 将以下代码段粘贴到查询窗口并单击**运行**:
+
+   > [!NOTE]
+   > 可以追加到，也可以覆盖在编辑器中前面的查询。 请注意，单击**运行**执行所选查询。 如果未选择任何内容，则单击**运行**在编辑器中执行的所有查询。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +118,8 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="insert-rows"></a>插入行
 
-1. 将以下代码段粘贴到查询窗口中：
+- 将以下代码段粘贴到查询窗口并单击**运行**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -128,18 +132,17 @@ ms.lasthandoff: 12/21/2017
    GO
    ```
 
-1. 若要执行查询时，请单击**运行**。
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>查看由查询返回的数据
-1. 将以下代码段粘贴到查询窗口中：
+1. 将以下代码段粘贴到查询窗口并单击**运行**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. 若要执行查询时，请单击**运行**。
+1. 显示查询的结果：
 
    ![选择结果](media/quickstart-sql-server/select-results.png)
 

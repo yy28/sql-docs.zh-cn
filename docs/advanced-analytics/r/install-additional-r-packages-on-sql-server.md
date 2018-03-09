@@ -1,6 +1,6 @@
 ---
 title: "在 SQL Server 上安装其他 R 包 |Microsoft 文档"
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: a328b07027f61f50df7e3ca2b6ac12b92508688b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: acb1727c85cae1d8176703c93cc77c971980d394
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>在 SQL Server 上安装其他 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/28/2018
 
     使用传统的 R 命令从 Internet 安装包。 这是最简单的方法，但需要管理访问权限。
 
-    **适用于：**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]。     此外所需的实例[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]通过 Ddl 的包管理尚未启用。
+    **适用于：**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]。 此外所需的实例[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]通过 Ddl 的包管理尚未启用。
 
 + [使用的服务器上安装新的 R 包**没有**internet 访问权限](#bkmk_offlineInstall)
 
@@ -40,9 +40,9 @@ ms.lasthandoff: 02/28/2018
 
 + [使用创建外部库语句安装包](#bkmk_createlibrary) 
 
-    SQL Server 自 2017 年，以使 DBA 不直接运行 R 或 Python 代码的情况下创建包库中提供了创建外部库语句。 但是，此方法要求你事先准备所有必需的程序包。  
+    [创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)语句提供 SQL Server 自 2017 年，以使其可以创建无需运行 R 包库中或直接的 Python 代码。 但是，此方法要求你提前准备所有必需的程序包，并需要附加的数据库的权限。
 
-    **适用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 其他限制条件  
+    **适用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 其他限制条件
 
 ## <a name="bkmk_rInstall"></a> 安装新的 R 包，使用 Internet
 
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="bkmk_createlibrary"></a> 使用 DDL 语句要安装包 
 
-在 SQL Server 自 2017 年，你可以使用[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)语句以将包或组的包添加到特定数据库或实例。 此 DDL 语句和支持的数据库角色旨在促进安装和管理包通过 BA 而无需使用 R 或 Python 工具。
+在 SQL Server 自 2017 年，你可以使用[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)语句以将包或组的包添加到特定数据库或实例。 此 DDL 语句和支持的数据库角色旨在促进安装和管理包由数据库所有者无需使用 R 或 Python 工具。
 
 此过程需要一些准备工作，相比安装包使用常规的 R 或 Python 方法。
 
@@ -140,6 +140,8 @@ ms.lasthandoff: 02/28/2018
     如果在服务器上没有对文件系统的访问，你还可以传递一个完整的软件包作为变量，使用的二进制格式。 有关详细信息，请参阅[创建外部库](../../t-sql/statements/create-external-library-transact-sql.md)。
 
 + 如果所需包不可用，则语句将失败。 你必须分析你想要安装并确保包将上载到服务器和数据库的包的依赖关系。 我们建议使用**miniCRAN**或**igraph**用于分析包依赖关系。
+
++ 你必须在数据库上具有必需的权限。 有关详细信息，请参阅[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
 
 ### <a name="prepare-the-packages-in-archive-format"></a>准备存档格式中的包
 

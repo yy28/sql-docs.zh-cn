@@ -4,7 +4,7 @@ description: "本快速入门介绍如何使用 Docker 运行 SQL Server 2017 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 971f6ed4b728f4be127bf9a23e8a7499ec308d90
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>快速入门： 使用 Docker 运行 SQL Server 2017 容器映像
 
@@ -52,6 +52,8 @@ ms.lasthandoff: 02/24/2018
    ```
 
    前一个命令请求最新的 SQL Server 2017 容器映像。 如果想请求某个特定映像，需添加一个冒号和标记名称（例如 `microsoft/mssql-server-linux:2017-GA`。 要查看所有可用映像，请参阅 [mssql-server-linux Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+   
+   有关本文中中的 bash 命令`sudo`使用。 在 MacOS 上,`sudo`可能不需要。 在 Linux 上，如果你不想要使用`sudo`若要运行 Docker，你可以配置**docker**组并将用户添加到该组。 有关详细信息，请参阅[安装后步骤适用于 Linux](https://docs.docker.com/install/linux/linux-postinstall/)。
 
 1. 要使用 Docker 运行容器映像，可以从 Bash Shell (Linux/macOS) 或提升的 PowerShell 命令提示符使用以下命令。
 

@@ -1,10 +1,10 @@
 ---
-title: "在 Linux 上安装 SQL Server 自 2017 年 1 |Microsoft 文档"
+title: "在 Linux 上的 SQL Server 2017 的安装指南 |Microsoft 文档"
 description: "安装、 更新和卸载 Linux 上的 SQL Server。 本文介绍如何联机、 脱机和无人参与的方案。"
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,30 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-此文章介绍了如何安装、 更新和卸载 Linux 上的 SQL Server 2017。 Red Hat Enterprise Linux (RHEL)、 SUSE Linux 企业服务器 (SLES) 和 Ubuntu 支持 SQL Server 自 2017 年。 此外，还可以作为可在 Linux 或 Docker 为 Windows/mac。 上的 Docker 引擎运行的 Docker 映像
+本文提供有关安装、 更新和卸载 SQL Server 自 2017 年在 Linux 上的指导。
 
 > [!TIP]
-> 若要快速开始，跳转到为快速入门之一[RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)， [Ubuntu](quickstart-install-connect-ubuntu.md)，或[Docker](quickstart-install-connect-docker.md)。
+> 本指南 coves 几种部署方案。 如果你仅要寻找的分步安装说明，请跳转到快速入门之一：
+> - [RHEL 快速入门](quickstart-install-connect-red-hat.md)
+> - [SLES 快速入门](quickstart-install-connect-suse.md)
+> - [Ubuntu 快速入门](quickstart-install-connect-ubuntu.md)
+> - [Docker 快速入门](quickstart-install-connect-docker.md)
 
 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](../linux/sql-server-linux-faq.md)。
 
 ## <a id="supportedplatforms"></a> 支持的平台
 
-以下 Linux 平台上支持 SQL Server 2017:
+Red Hat Enterprise Linux (RHEL)、 SUSE Linux 企业服务器 (SLES) 和 Ubuntu 支持 SQL Server 自 2017 年。 它还支持作为可在 Linux 或 Docker 为 Windows/mac。 上的 Docker 引擎运行的 Docker 映像
 
 | 平台 | 支持的版本 | 获取
 |-----|-----|-----
@@ -69,6 +73,13 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 - 仅查找**/var/opt/mssql**上 NFS 装入的目录。 其他文件，如 SQL Server 系统二进制文件，不支持。
 - 确保安装对远程共享时，NFS 客户端，使用 nolock 选项。
 
+## <a id="repositories"></a> 配置源存储库
+
+当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server 自 2017 年。 快速入门使用**累积更新 (CU)**存储库。 但是可以改为配置**GDR**存储库。 存储库以及如何配置它们的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+
+> [!IMPORTANT]
+> 如果你以前安装的 CTP 或 RC 版本的 SQL Server 自 2017 年，你必须删除预览存储库并注册一个常规正式版 (GA)。 有关详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+
 ## <a id="platforms"></a> 安装 SQL Server
 
 从命令行，可以在 Linux 上安装 SQL Server。 有关说明，请参阅以下快速入门之一：
@@ -78,13 +89,6 @@ SQL Server 2017 具有以下适用于 Linux 的系统要求：
 - [在 Ubuntu 上安装](quickstart-install-connect-ubuntu.md)
 - [在 Docker 上运行](quickstart-install-connect-docker.md)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
-
-## <a id="repositories"></a> 配置源存储库
-
-当安装或升级 SQL Server 时，你从你配置的 Microsoft 存储库中获取最新版本的 SQL Server 自 2017 年。 快速入门使用**累积更新 (CU)**存储库。 但是可以改为配置**GDR**存储库。 存储库以及如何配置它们的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
-
-> [!IMPORTANT]
-> 如果你以前安装的 CTP 或 RC 版本的 SQL Server 自 2017 年，你必须删除预览存储库并注册一个常规正式版 (GA)。 有关详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 ## <a id="upgrade"></a> 更新 SQL Server
 
@@ -202,18 +206,16 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-## <a name="next-steps"></a>后续步骤
+## <a name="optional-sql-server-features"></a>可选的 SQL Server 功能
 
-安装完成后，你还可以安装其他可选的 SQL Server 包。
+安装完成后，也可以安装或启用可选的 SQL Server 功能。
 
 - [SQL Server 命令行工具](sql-server-linux-setup-tools.md)
 - [SQL Server 代理](sql-server-linux-setup-sql-agent.md)
 - [SQL Server 全文搜索](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-连接到 SQL Server 实例以开始创建和管理数据库。 若要开始，请参阅快速入门：
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
-- [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
-- [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)
-- [在 Ubuntu 上安装](quickstart-install-connect-ubuntu.md)
-- [在 Docker 上运行](quickstart-install-connect-ubuntu.md)
+> [!TIP]
+> 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。

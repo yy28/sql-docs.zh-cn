@@ -2,7 +2,7 @@
 title: "快速入门： 连接和查询 Azure SQL 数据库使用 SQL 操作 Studio （预览版） |Microsoft 文档"
 description: "本快速入门演示如何使用 SQL 操作 Studio （预览版） 来连接到 SQL 数据库和运行查询"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0e2d48ed411f883a904decce5d836dde7aaa41b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 82fbe7376d762940815c7739311e69672b7fbff6
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入门： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]来连接和查询 Azure SQL 数据库
 
 本快速入门演示如何使用 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 以连接到 Azure SQL 数据库，然后使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>必要條件
 
 若要完成本快速入门教程，你需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL 服务器。
 
@@ -41,17 +41,17 @@ ms.lasthandoff: 12/21/2017
 
 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]来建立与 Azure SQL 数据库服务器的连接。
 
-1. 首次运行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**连接**应打开页。 如果**连接**不打开页，单击**新连接**图标**服务器**侧栏：
+1. 首次运行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**连接**应打开页。 如果看不到**连接**页上，单击**添加连接**，或**新连接**图标**服务器**侧栏：
    
    ![新建连接图标](media/quickstart-sql-database/new-connection-icon.png)
 
-2. 本文章将使用*SQL 登录名*，但*Windows 身份验证*也支持。 如下所示填写字段：
+2. 本文章将使用*SQL 登录名*，但*Windows 身份验证*也支持。 填写字段，如下所示使用服务器名称、 用户名和密码*你*Azure SQL server:
 
    | 设置       | 建议的值 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器名称** | 完全限定的服务器名称 | 该名称应类似如下内容： **servername.database.windows.net，则** |
    | **身份验证** | SQL 登录名| 在本教程中使用 SQL 身份验证。 |
-   | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
+   | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
    | **是否保存密码？** | 是或否 | 如果你不想要每次都输入密码，请选择是。 |
    | **数据库名称** | *将保留为空* | 你想要连接到数据库的名称。 |
@@ -59,17 +59,19 @@ ms.lasthandoff: 12/21/2017
 
    ![新建连接图标](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 如果你遇到有关防火墙错误，你需要创建防火墙规则。 若要创建防火墙规则，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果你的服务器不具有的防火墙规则允许 SQL 操作 Studio 若要连接，**创建新的防火墙规则**窗体将打开。 完成表单创建新的防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
-4. 成功连接你的服务器将会出现在后*服务器*侧栏。
+   ![新的防火墙规则](media/quickstart-sql-database/firewall.png)  
+
+4. 在成功连接你的服务器打开后*服务器*侧栏。
 
 ## <a name="create-the-tutorial-database"></a>创建教程数据库
 
-*TutorialDB*数据库用于多种[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
+下列各节创建*TutorialDB*数据库用于多种[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
 
 1. 右键单击服务器边栏中的 Azure SQL 服务器上，然后选择**新查询。**
 
-1. 将以下代码段粘贴到查询编辑器。
+1. 下面的代码段粘贴到查询编辑器，然后单击**运行**:
 
    ```sql
    IF NOT EXISTS (
@@ -84,7 +86,6 @@ ms.lasthandoff: 12/21/2017
    GO
    ```
 
-1. 若要执行查询时，请单击**运行**。
 
 
 ## <a name="create-a-table"></a>创建表
@@ -97,7 +98,10 @@ ms.lasthandoff: 12/21/2017
 
 
 
-1. 将以下代码段粘贴到查询编辑器。
+1. 下面的代码段粘贴到查询编辑器，然后单击**运行**:
+
+   > [!NOTE]
+   > 可以追加到，也可以覆盖在编辑器中前面的查询。 请注意，单击**运行**执行所选查询。 如果未选择任何内容，则单击**运行**在编辑器中执行的所有查询。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,11 +119,12 @@ ms.lasthandoff: 12/21/2017
    );
    GO
    ```
-1. 若要执行查询时，请单击**运行**。
+
 
 ## <a name="insert-rows"></a>插入行
 
-1. 将以下代码段粘贴到查询编辑器中：
+- 下面的代码段粘贴到查询编辑器，然后单击**运行**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -132,17 +137,16 @@ ms.lasthandoff: 12/21/2017
    GO
    ```
 
-1. 若要执行查询时，请单击**运行**。
 
 ## <a name="view-the-result"></a>查看结果
-1. 将以下代码段粘贴到查询编辑器。
+1. 下面的代码段粘贴到查询编辑器，然后单击**运行**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. 若要执行查询时，请单击**运行**。
+1. 显示查询的结果：
 
    ![选择结果](media/quickstart-sql-database/select-results.png)
 
