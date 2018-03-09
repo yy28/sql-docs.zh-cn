@@ -1,4 +1,4 @@
----
+﻿---
 title: "Linux 上的 SQL Server 概述 |Microsoft Docs"
 description: "本主题介绍了 SQL Server 如何在 Linux 上运行和提供有关如何若要了解详细信息。"
 author: rothja

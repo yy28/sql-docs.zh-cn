@@ -1,4 +1,4 @@
----
+﻿---
 title: "在 Linux 上的 SQL Server 自 2017 年 1 的新增功能 |Microsoft 文档"
 description: "本文重点介绍什么是用于在 Linux 上的 SQL Server 2017 的新功能。"
 author: rothja
