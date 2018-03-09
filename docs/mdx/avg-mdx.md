@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: AVG
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 275eead8b9a05315b3c931bef238e092e3f6ccc1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4972d38cb5cd52d0da7d76c6eb771520a89fb896
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定一组空元组或一个空集，则**Avg**函数将返回空值。  
   
  **Avg**函数将首先计算跨交集中的单元格的值的总和，然后将计算的总和除以交集中的非空单元格的计数来计算指定集的单元格的非空值的平均值。  

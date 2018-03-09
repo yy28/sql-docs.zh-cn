@@ -2,15 +2,13 @@
 title: "关联模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - rules [Data Mining]
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec958a3d197bec1574d1264ff78c886cf746d3a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fbe96dfa6e17bda952dc2858c274df6dee231f02
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>关联模型的挖掘模型内容（Analysis Services – 数据挖掘）
-  本主题讲述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主题讲述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>了解关联模型的结构  
  关联模型结构非常简单。 每个模型均具有表示该模型及其元数据的单一父节点，且每个父节点均具有项集和规则的平面列表。 项集和规则不是按树组织的，它们的顺序是项集在先、规则在后，如下面的关系图所示。  
@@ -201,7 +200,7 @@ ms.lasthandoff: 11/17/2017
  空白。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [挖掘模型内容 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 关联算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)  
   

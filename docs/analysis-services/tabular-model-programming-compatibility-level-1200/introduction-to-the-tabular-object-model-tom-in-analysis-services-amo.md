@@ -2,34 +2,30 @@
 title: "在分析中的表格对象模型 (TOM) 简介服务 AMO |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4511f34d149494cd48a0ee52a94cc668bfdd8960
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO 中表格对象模型 (TOM) 简介
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  表格对象模型 (TOM) 是为支持的兼容性级别 1200年或更高版本生成的表格模型的编程方案创建的 Analysis Services 管理对象 (AMO) 客户端库的扩展。 使用 AMO，如 TOM 提供以编程方式处理管理功能，例如，创建模型、 导入和刷新数据，以及分配角色和权限。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+表格对象模型 (TOM) 是为支持的兼容性级别 1200年或更高版本生成的表格模型的编程方案创建的 Analysis Services 管理对象 (AMO) 客户端库的扩展。 使用 AMO，如 TOM 提供以编程方式处理管理功能，例如，创建模型、 导入和刷新数据，以及分配角色和权限。  
   
 TOM 公开本机表格元数据，如**模型**，**表**，**列**，和**关系**对象。  对象模型树中，下面提供的高级视图说明了如何关联组件的各部分。  
   
@@ -58,7 +54,7 @@ TOM 是基础 AMO 基础结构，其中还可容纳多维和表格数据库兼�
 
 ### <a name="tom-and-xmla"></a>TOM 和 XMLA
 
-在网络上 TOM 使用 XMLA 协议，与 Analysis Services 服务器进行通信并管理对象。 在管理非表格对象时，使用 TOM [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md)，XMLA Analysis Services 脚本语言扩展。 在管理表格对象时，TOM 使用 SSAS 表格协议，还 XMLA 的扩展。 请参阅[MS SSAS T SQL Server Analysis Services 表格协议文档](https://msdn.microsoft.com/library/mt719260.aspx)有关详细信息。
+在网络上 TOM 使用 XMLA 协议，与 Analysis Services 服务器进行通信并管理对象。 在管理非表格对象时，使用 TOM [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md)，XMLA Analysis Services 脚本语言扩展。 在管理表格对象时，TOM 使用 MS SSAS 表格协议，还 XMLA 的扩展。 请参阅[MS SSAS T SQL Server Analysis Services 表格协议文档](https://msdn.microsoft.com/library/mt719260.aspx)有关详细信息。
 
 ### <a name="tom-and-json"></a>TOM 和 JSON
 

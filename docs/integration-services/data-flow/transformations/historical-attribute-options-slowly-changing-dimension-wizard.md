@@ -1,5 +1,5 @@
 ---
-title: "历史属性选项 （渐变维度向导） |Microsoft 文档"
+title: "历史属性选项（渐变维度向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,24 +15,23 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2867e5173235520c521ca70952f50d1fa7bc8487
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c4a6e2702d214a7d5c4ab73cb4e226fb8e4c33dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>历史属性选项（渐变维度向导）
   可以使用 **“历史属性选项”** 对话框按开始日期和结束日期显示历史属性，或者将历史属性记录到专门的列中。  
   
  若要了解有关此向导的详细信息，请参阅 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **使用单独的列显示当前和过期记录**  
  如果您选择使用单独的列来记录历史属性的状态，则下列选项可用：  
   
@@ -55,4 +54,3 @@ ms.lasthandoff: 08/03/2017
  [使用渐变维度向导配置输出](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
-

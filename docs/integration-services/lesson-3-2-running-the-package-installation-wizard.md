@@ -1,11 +1,11 @@
 ---
-title: "步骤 2： 运行包安装向导 |Microsoft 文档"
+title: "步骤 2：运行包安装向导 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 953c78b59eeaf059a828964f26681cbbf28b89a7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lesson 3-2-运行包安装向导
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>第 3-2 课 — 运行包安装向导
 在此任务中，将运行包安装向导，将包从 Deployment Tutorial 项目部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例。 只能将包安装在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 sysssispackages 表中，而部署捆绑包括的支持文件将被部署到文件系统。  
   
 包安装向导将引导您完成安装和配置包的步骤。 将包安装到目标计算机（向其复制部署捆绑的计算机）上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 您还将创建文件夹 C:\DeploymentTutorialInstall，向导将在该文件夹中安装非包文件。  
@@ -63,7 +62,7 @@ ms.lasthandoff: 09/26/2017
     > [!IMPORTANT]  
     > 在配置所使用的环境变量的值中，将引用此名称。 文件夹的名称与引用必须匹配，否则包无法运行。  
   
-12. 单击 **“确定”**。  
+12. 单击“确定” 。  
   
 13. 在“选择安装文件夹”页上，验证“文件夹”框中是否包含 **C:\DeploymentTutorialInstall**，再单击“下一步”。  
   
@@ -75,14 +74,14 @@ ms.lasthandoff: 09/26/2017
   
 16. 在“配置文件”列表中，单击 **datatransferconfig.dtsconfig**，展开“配置”框的“路径”列中的“属性”，再用下列值更新“值”列：  
   
-    |属性|“值”|更新后的值|  
+    |“属性”|ReplTest1|更新后的值|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. 在“配置文件”列表中，单击 loadxmldataconfig.dtsconfig，展开“配置”框的“路径”列中的“属性”，再用下列值更新“值”列：  
   
-    |属性|“值”|更新后的值|  
+    |“属性”|ReplTest1|更新后的值|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>另请参阅  
 [Integration Services 服务（SSIS 服务）](../integration-services/service/integration-services-service-ssis-service.md)  
-

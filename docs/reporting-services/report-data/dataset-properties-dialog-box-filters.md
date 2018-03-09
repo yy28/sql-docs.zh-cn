@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,21 +17,21 @@ f1_keywords:
 - "10025"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09641c40b04ad3b4db2aa6449d7bd9227a0eae43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7df325a93902e8c1cd3414b562b30c27864dd372
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>“数据集属性”对话框 -&gt;“筛选器”
   在 **“数据集属性”** 对话框中选择 **“筛选器”** 可创建数据集的筛选器。  
   
-## <a name="options"></a>选项  
- **添加**  
+## <a name="options"></a>“常规”  
+ **“添加”**  
  向列表中添加新的筛选子句。  
   
  **删除**  
@@ -48,13 +46,13 @@ ms.lasthandoff: 12/05/2017
  **表达式**  
  键入或选择要对其应用筛选器的表达式。 单击“表达式”(**fx**) 按钮可编辑表达式。  
   
- **数据类型**  
+ **Data type**  
  为“值”选择数据类型。 如果可能，请选择与 **“表达式”**的数据类型匹配的数据类型。 有关详细信息，请参阅[筛选器公式示例（报表生成器和 SSRS）](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
  **“运算符”**  
  选择要用于比较表达式和值的运算符。  
   
- **值**  
+ **ReplTest1**  
  键入在计算“表达式”框中所指定的表达式时要使用的表达式或值。 单击“表达式”(**fx**) 按钮可编辑表达式。  
   
 ## <a name="see-also"></a>另请参阅  

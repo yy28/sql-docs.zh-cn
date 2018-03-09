@@ -1,5 +1,5 @@
 ---
-title: "catalog.add_data_tap |Microsoft 文档"
+title: catalog.add_data_tap | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 686b40e7e1ad7f7843bee5af3295fdf394538f63
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c1c4130b66a7c9c2011aaf1e2af30f799d753162
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,36 +41,36 @@ catalog.add_data_tap [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id =] *execution_id*  
- 包含包的执行 ID。 *Execution_id*是**bigint**。  
+ [ @execution_id = ] execution_id  
+ 包含包的执行 ID。 execution_id 为 bigint。  
   
- [ @task_package_path =] *task_package_path*  
- 数据流任务的包路径。 **PackagePath**数据流任务的属性指定的路径。 此路径区分大小写。 要在中查找包路径，[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]数据流任务中，右键单击，然后单击**属性**。 **PackagePath**属性将显示在**属性**窗口。  
+ [ @task_package_path = ] task_package_path  
+ 数据流任务的包路径。 数据流任务的 PackagePath 属性指定该路径。 此路径区分大小写。 若要查找包路径，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中右键单击数据流任务，然后单击“属性”。 将在“属性”窗口中显示 PackagePath 属性。  
   
- *Task_package_path*是**nvarchar (max)**。  
+ task_package_path 为 nvarchar(max)。  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- 数据流路径标识字符串。 一个路径连接两个数据流组件。 **IdentificationString**路径的属性指定的字符串。  
+ [ @dataflow_path_id_string = ] dataflow_path_id_string  
+ 数据流路径的标识字符串。 一个路径连接两个数据流组件。 路径的 IdentificationString 属性指定该字符串。  
   
- 要在中查找的标识字符串，[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]右键单击两个数据流组件，然后单击之间的路径**属性**。 **IdentificationString**属性将显示在**属性**窗口。  
+ 若要找到此标识字符串，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中右键单击两个数据流组件之间的路径，然后单击“属性”。 将在“属性”窗口中显示 IdentificationString 属性。  
   
- *Dataflow_path_id_string*是**nvarchar （4000)**。  
+ dataflow_path_id_string 为 nvarchar(4000)。  
   
- [ @data_filename =] *data_filename*  
+ [ @data_filename = ] data_filename  
  存储分流的数据的文件名称。 如果数据流任务在 Foreach 循环或 For 循环容器内执行，则用单独的文件存储该循环每次迭代的分流数据。 用与每次迭代对应的编号为每个文件加前缀。  
   
- 默认情况下，该文件存储在\<*驱动器*>: files\microsoft SQL Server\130\DTS\DataDumps 文件夹。  
+ 默认情况下，该文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps 文件夹中。  
   
- *Data_filename*是**nvarchar （4000)**。  
+ data_filename 为 nvarchar(4000)。  
   
- [ @max_rows =] *max_rows*  
- 在数据分流期间捕获的行数。 如果未指定此值，则捕获所有行。 *Max_rows*是**int**。  
+ [ @max_rows = ] max_rows  
+ 在数据分流期间捕获的行数。 如果未指定此值，则捕获所有行。 max_rows 为 int。  
   
- [ @data_tap_id =] *data_tap_id*  
- 返回数据分流点的 ID。 *Data_tap_id*是**bigint**。  
+ [ @data_tap_id = ] data_tap_id  
+ 返回数据分流点的 ID。 data_tap_id 为 bigint。  
   
 ## <a name="example"></a>示例  
- 在以下示例中，对数据流任务 `'Paths[OLE DB Source.OLE DB Source Output]` 中的数据流路径 `\Package\Data Flow Task` 创建一个数据分流点。 分流的数据存储在`output0.txt`DataDumps 文件夹中的文件 (\<*驱动器*>: files\microsoft SQL Server\130\DTS\DataDumps)。  
+ 在以下示例中，对数据流任务 `'Paths[OLE DB Source.OLE DB Source Output]` 中的数据流路径 `\Package\Data Flow Task` 创建一个数据分流点。 分流的数据存储在 DataDumps 文件夹的 `output0.txt` 文件中（即 \<drive>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps）。  
   
 ```sql
 Declare @execution_id bigint  
@@ -84,8 +83,8 @@ Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Dat
 Exec SSISDB.Catalog.start_execution @execution_id  
 ```  
   
-## <a name="remarks"></a>注释  
- 若要添加数据分流点，执行的实例必须在创建的状态 (值为 1 中**状态**列[catalog.operations &#40;SSISDB 数据库 &#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图)。 只要运行执行，状态值就会发生更改。 您可以创建执行时通过调用[catalog.create_execution &#40;SSISDB 数据库 &#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+## <a name="remarks"></a>Remarks  
+ 若要添加数据分流点，执行实例必须处于已创建状态（在 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图的 status 列中值为 1）。 只要运行执行，状态值就会发生更改。 可以通过调用 [catalog.create_execution（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)创建执行。  
   
  以下是 add_data_tap 存储过程的注意事项。  
   
@@ -93,7 +92,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
   
 -   如果包中包含名称相同的多个数据流任务，task_package_path 唯一标识包含分流的组件输出的数据流任务。  
   
--   在添加数据分流点时，它不会验证之前运行包。  
+-   添加数据分流点时，在运行包之前不进行验证。  
   
 -   建议限制在数据分流期间捕获的行数，以避免生成大型数据文件。 如果执行存储过程的计算机无法为数据文件提供足够的存储空间，包将停止运行并将错误消息写入日志。  
   
@@ -107,16 +106,16 @@ Exec SSISDB.Catalog.start_execution @execution_id
  存储过程失败时引发错误。  
   
 ## <a name="result-set"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对执行实例的 MODIFY 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下表说明了导致存储过程失败的情况。  
@@ -130,10 +129,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>要求  
   
 ## <a name="external-resources"></a>外部资源  
- 博客文章[SSIS 2012: 查看数据点击](http://go.microsoft.com/fwlink/?LinkId=239983)，rafael salas.com 上。  
+ rafael-salas.com 上的博客文章：[SSIS 2012：数据分流概览](http://go.microsoft.com/fwlink/?LinkId=239983)。  
   
 ## <a name="see-also"></a>另请参阅  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

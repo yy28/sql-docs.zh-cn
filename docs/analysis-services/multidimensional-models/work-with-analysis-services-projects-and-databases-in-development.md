@@ -2,16 +2,13 @@
 title: "使用 Analysis Services 项目和在开发过程中的数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Analysis Services, projects
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 26ffb60b07dad8af5d76304b7b58359e11bee8b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2315a46f017758da30f2973154bcd2fe451e1748
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="work-with-analysis-services-projects-and-databases-in-development"></a>使用 Analysis Services 项目和在开发过程中的数据库
-  可以在项目模式或联机模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 开发 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以开发[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过使用数据库[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在项目模式或联机模式。  
   
 ## <a name="single-developer"></a>一个开发人员  
  如果只有一个开发人员开发整个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库及其所有构成对象，则在商业智能解决方案生命周期中，开发人员可以随时在项目模式或联机模式下使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。 在一个开发人员进行开发的情况下，模式的选择不是特别重要。 维护与源代码管理系统集成的离线项目文件有许多优点，例如存档和回滚。 但是，对于一个开发人员，就不存在与其他开发人员交流更改的问题。  

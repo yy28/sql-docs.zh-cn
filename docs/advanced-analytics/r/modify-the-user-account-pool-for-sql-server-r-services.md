@@ -1,31 +1,34 @@
 ---
 title: "修改用户帐户池的 SQL Server 机器学习 |Microsoft 文档"
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1baa301134ea01aa5c13a579fdb1aac01b2dbcf5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>修改用户帐户池的 SQL Server 机器学习
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在安装 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 的过程中，将创建一个新的 Windows *用户帐户池*来支持 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服务的任务执行。 这些辅助帐户旨在隔离由不同的 SQL 用户的外部脚本的并发执行。
 
 本文介绍的默认配置、 安全性和工作人员帐户，以及如何更改默认配置的容量。
 
-**适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]， [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]， [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-accounts-used-for-external-script-execution"></a>用于外部脚本执行的工作帐户
 
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
 - [R Services 的 SQL Server 配置](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 -  [对于 R 服务的性能案例研究](../../advanced-analytics/r/performance-case-study-r-services.md)
 
-## <a name="security"></a>安全性
+## <a name="security"></a>Security
 
 每个用户组都与特定实例上的 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服务相关联，并且无法支持其他实例上运行的 R 作业。
 

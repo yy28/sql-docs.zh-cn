@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_configure
 - sp_syspolicy_configure_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_configure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40462cdd0cce0725bf9fbf42d3efb33480530a8c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e4ff49cd5be072fb288bb721b781474da93b7ba9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name =** ] *名称*  
+ [ **@name =** ] **'***name***'**  
  您要配置的设置的名称。 *名称*是**sysname**、 是必需的和不能为 NULL 或空字符串。  
   
  *名称*可以是任何以下值：  
@@ -55,7 +58,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - 指定基于策略的管理是否记录成功的策略评估。  
   
- [  **@value =** ]*值*  
+ [ **@value =** ] *value*  
  是与指定的值相关联的值*名称*。 *值*是**sql_variant**，和是必需的。  
   
 -   如果为指定 'Enabled'*名称*，你可以使用以下值：  
@@ -80,7 +83,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
  若要查看这些设置的当前值，请查询 msdb.dbo.syspolicy_configuration 系统视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
@@ -116,8 +119,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [基于策略的管理存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_enabled &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_set_log_on_success &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
+ [sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
+ [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
   
   

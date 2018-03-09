@@ -2,9 +2,12 @@
 title: "StorageBoundInMB 元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ab0965888661501f8a9a9b0f31a7edd6cb7e3bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
-  指定数据库引擎优化顾问优化建议（索引和分区集）可用的最大空间 (MB)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定的最大空间中可供数据库引擎优化顾问优化建议 （索引和分区集） 的兆字节。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,13 +44,13 @@ ms.lasthandoff: 11/09/2017
 |--------------------|-----------------|  
 |**数据类型和长度**|**unsignedInt**，长度没有限制。|  
 |**默认值**|无。|  
-|**出现次数**|可选。 仅能对 **TuningOptions** 元素使用一次。|  
+|**出现次数**|選擇性。 仅能对 **TuningOptions** 元素使用一次。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子元素**|无|  
   
 ## <a name="remarks"></a>注释  

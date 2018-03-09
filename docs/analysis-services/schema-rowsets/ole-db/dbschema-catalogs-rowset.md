@@ -2,15 +2,13 @@
 title: "DBSCHEMA_CATALOGS 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DBSCHEMA_CATALOGS
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e001700aab7f231e186576226ae97468572698d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 493ffd66eb4bcddd0e4aaef7c79c4c771520be92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dbschemacatalogs-rowset"></a>DBSCHEMA_CATALOGS 行集
-  标识可从数据库管理系统 (DBMS) 中访问的目录的关联物理属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]标识与从数据库管理系统 (DBMS) 可访问的目录关联的物理属性。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DBSCHEMA_CATALOGS**行集包含以下各列。  

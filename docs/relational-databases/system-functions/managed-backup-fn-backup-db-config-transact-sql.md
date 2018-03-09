@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - smart_admin.fn_backup_db_config_TSQL
 - fn_backup_db_config
 - fn_backup_db_config_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - smart_admin.fn_backup_db_config
 - fn_backup_db_config
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cf55a19a71c6c6cbd84f82f4fbbfa39b3f77f70
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d18a24bdf8021fd27df0ec51e4937e80ae9c0516
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (TRANSACT-SQL)
+# <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   返回 0 个、1 个或多个带有 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置的行。 返回指定数据库的 1 行，或返回实例上配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的所有数据库的信息。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
 ```  
   
@@ -67,9 +69,9 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |Encryptor_type|NCHAR(15)|返回加密程序设置：证书或非对称密钥。|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|证书或非对称密钥的名称。|  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求的成员身份**db_backupoperator**具有数据库角色**ALTER ANY CREDENTIAL**权限。 该用户不应被拒绝**VIEW ANY DEFINITION**权限。  
   
 ## <a name="examples"></a>示例  

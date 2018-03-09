@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
 - OPENROWSET
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data sources [SQL Server]
 - OPENROWSET function
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: "130"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3ef20711fc03d6dac95d62cb8b2bd4a8b0d69528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -221,7 +223,7 @@ FIELDQUOTE  **=**  field_quote
 指定将用作为 CSV 文件中的引号字符的字符。 如果未指定，引号字符 （"） 中定义将用作引号字符[RFC 4180](https://tools.ietf.org/html/rfc4180)标准。
 
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  `OPENROWSET`可以用于访问远程数据从 OLE DB 数据源时，才**DisallowAdhocAccess**注册表选项显式设置为 0 指定提供程序，并且高级配置选项即席分布式查询启用。 如果未设置这些选项，则默认行为不允许即席访问。  
   
  访问远程 OLE DB 数据源时，服务器不会自动委托可信连接的登录标识，客户端通过此登录标识才能连接到正在查询的服务器。 必须配置身份验证委托。  
@@ -273,7 +275,7 @@ FIELDQUOTE  **=**  field_quote
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式发送数据。|  
 |SQLBINARY 或 SQLVARYBIN|不经任何转换即发送数据。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  `OPENROWSET`权限决定被传递给 OLE DB 提供程序的用户名称的权限。 若要使用`BULK`选项需要`ADMINISTER BULK OPERATIONS`权限。  
   
 ## <a name="examples"></a>示例  
@@ -281,7 +283,7 @@ FIELDQUOTE  **=**  field_quote
 ### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. 将 OPENROWSET 与 SELECT 和 SQL Server Native Client OLE DB 访问接口一起使用  
  下面的示例使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序访问`HumanResources.Department`表中[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]远程服务器上的数据库`Seattle1`。 （使用 SQLNCLI 并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将重定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口的最新版本。）使用 `SELECT` 语句定义返回的行集。 访问接口字符串包含 `Server` 和 `Trusted_Connection` 关键字。 这些关键字所识别的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序。  
   
-```tsql  
+```sql  
 SELECT a.*  
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',  
      'SELECT GroupName, Name, DepartmentID  
@@ -295,7 +297,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!NOTE]  
 >  此示例假定已经安装了 Access。 若要运行该示例，则必须安装 Northwind 数据库。  
   
-```tsql  
+```sql  
 SELECT CustomerID, CompanyName  
    FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',  
       'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb';  
@@ -309,7 +311,7 @@ GO
 > [!NOTE]  
 >  此示例假定已经安装了 Access。 若要运行该示例，则必须安装 Northwind 数据库。  
   
-```tsql  
+```sql  
 USE Northwind  ;  
 GO  
 SELECT c.*, o.*  
@@ -324,7 +326,7 @@ GO
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. 使用 OPENROWSET 将文件数据大容量插入 varbinary(max) 列中  
  以下示例创建一个用于演示的小型表，并将名为 `Text1.txt` 的文件（位于 `C:` 根目录）中的文件数据插入 `varbinary(max)` 列中。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTable(FileName nvarchar(60),   
@@ -341,7 +343,7 @@ GO
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. 将 OPENROWSET BULK 访问接口用于格式化文件以检索文本文件中的行  
  以下示例使用格式化文件检索用制表符分隔的文本文件 `values.txt` 中的行，该文件包含下列数据：  
   
-```tsql  
+```sql  
 1     Data Item 1  
 2     Data Item 2  
 3     Data Item 3  
@@ -349,7 +351,7 @@ GO
   
  格式化文件 `values.fmt` 说明 `values.txt` 中的列：  
   
-```tsql  
+```sql  
 9.0  
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                SQL_Latin1_General_Cp437_BIN  
@@ -358,7 +360,7 @@ GO
   
  下面的语句是检索此数据的查询：  
   
-```tsql  
+```sql  
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
@@ -366,14 +368,14 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. 指定格式文件和代码页  
  下面的示例演示如何使用在同一时间的格式文件和代码页选项。  
   
-```tsql  
+```sql  
 INSERT INTO MyTable SELECT a.* FROM  
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. 从 CSV 文件格式文件访问数据  
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
-```tsql
+```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMATFILE = N'D:\XChange\test-csv.fmt', 
@@ -383,7 +385,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. 从 CSV 文件没有格式文件访问数据
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
@@ -393,7 +395,7 @@ SELECT * FROM OPENROWSET(
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 下面的示例使用外部数据源指向中将 Azure 存储帐户和数据库范围的凭据为共享的访问签名创建的容器。     
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',

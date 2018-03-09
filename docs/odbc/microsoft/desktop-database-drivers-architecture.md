@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面数据库驱动程序体系结构
 这些驱动程序旨在为使用在 Microsoft Windows 95 或更高版本，或 Windows NT 4.0 和 Windows 2000。 唯一的 32 位应用程序支持 Windows 95 或更高版本;在 Windows NT 4.0 和 Windows 2000 上支持 16 位和 32 位应用程序。  

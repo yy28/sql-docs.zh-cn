@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 67302564359a939f6ecd96ab9c38303fc9b18efc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d489c44611a716da78c2777b8455727ad11fae28
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
 
@@ -186,7 +184,7 @@ ms.lasthandoff: 12/05/2017
 |图表|为每个图表值呈现具有所有图表标签的记录。 来自系列和类别的标签采用平展的层次结构，并包含在图表值的行中。|  
 |数据条|像图表一样呈现。 通常，数据条并不包括层次结构或标签。|  
 |迷你图|像图表一样呈现。 通常，迷你图并不包括层次结构或标签。|  
-|仪表|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
+|测量|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
 |指示器|作为单个记录呈现，具有活动状态名称、可用状态以及数据值。|  
 |地图|为每个地图数据区域生成数据馈送。 如果多个地图层使用相同数据区域，数据馈送将包含所有层的数据。 该数据馈送包含一个记录，该记录包含地图层的每个地图成员的标签和值。|  
   

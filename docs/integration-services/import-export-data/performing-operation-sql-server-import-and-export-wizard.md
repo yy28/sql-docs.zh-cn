@@ -1,5 +1,5 @@
 ---
-title: "执行操作 （SQL Server 导入和导出向导） |Microsoft 文档"
+title: "执行操作（SQL Server 导入和导出向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75dc26699071ee88bb0c05368b4bf36ba677c35b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 69badf6d2ad956ba8379cb4b0b889386f6449ce0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在执行操作（SQL Server 导入和导出向导）
 查看在向导中所做的选择，并单击“完成向导”页中的“完成”之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将显示“执行操作”。 在此页上，会看到在前页配置的操作的进度和结果。 不必在此页上执行任何操作。
@@ -33,18 +32,18 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot---operation-in-progress"></a>屏幕截图 - 正在进行中的操作 
  以下屏幕快照显示操作进行过程中，向导的“执行操作”页  。  
   
- ![执行导入和导出向导的操作页上](../../integration-services/import-export-data/media/performing-operation1.png "的导入和导出向导的执行操作页")  
+ ![导入和导出向导的“执行操作”页](../../integration-services/import-export-data/media/performing-operation1.png "Performing operation page of the Import and Export Wizard")  
 
 ## <a name="screen-shot---operation-completed"></a>屏幕截图 - 已完成的操作 
  以下屏幕快照显示操作完成后，向导的“执行操作”页  。 单击“消息”列中的项  可获取有关相应步骤的详细信息。  
   
- ![执行导入和导出向导的操作页上](../../integration-services/import-export-data/media/performing-operation2.png "的导入和导出向导的执行操作页")  
+ ![导入和导出向导的“执行操作”页](../../integration-services/import-export-data/media/performing-operation2.png "Performing operation page of the Import and Export Wizard")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>监视操作的进度
  **操作**  
  显示操作的每个步骤。  
   
- **状态**  
+ **“状态”**  
  显示各步骤是成功还是失败。  
   
  **消息**  
@@ -64,6 +63,5 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>另请参阅
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_external_script_requests |Microsoft 文档"
+title: sys.dm_external_script_requests | Microsoft Docs
 ms.custom: 
 ms.date: 06/24/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +16,21 @@ f1_keywords:
 - sys.dm_external_script_requests_TSQL
 - dm_external_script_requests
 - dm_external_script_requests_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_external_script_requests dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27eb81c6e8a21f455a768129905d7411bfdbb652
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 55ac900238a49bcad4c0af31b7482b7381b1aadc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +44,12 @@ ms.lasthandoff: 11/17/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**唯一标识符**|发送外部脚本请求的进程的 ID。 由于由接收的这对应于的进程 ID[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**唯一标识符**|发送外部脚本请求的进程的 ID。 这对应于收到的进程 ID [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|表示支持的脚本语言的关键字。 当前仅支持 `R` 。|  
 |degree_of_parallelism|**int**|数字，指示已创建的并行进程数。 此值可能与请求的并行进程数不同。|  
 |external_user_name|**nvarchar**|在其下执行脚本的 Windows 工作线程帐户。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要针对服务器的 VIEW SERVER STATE 权限。  
   
 > [!NOTE]

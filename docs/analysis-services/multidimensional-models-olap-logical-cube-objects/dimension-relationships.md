@@ -2,18 +2,17 @@
 title: "维度关系 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - relationships [Analysis Services]
 - member groups [Analysis Services]
@@ -25,19 +24,20 @@ helpviewer_keywords:
 - fact dimensions [Analysis Services]
 - relationships [Analysis Services], dimensions
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: af8f55c0f3794f06873da3811642a75a590977c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ba0ea6e2797d15134dc6bfbf9a595a1ef83c583
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-relationships"></a>维度关系
-  维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 当你将数据库维度或度量值组添加到多维数据集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尝试通过检查多维数据集的数据源视图中的事实数据表与维度表之间的关系和通过检查确定维度用法维度中的属性之间的关系。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 当你将数据库维度或度量值组添加到多维数据集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尝试通过检查多维数据集的数据源视图中的事实数据表与维度表之间的关系和通过检查确定维度用法维度中的属性之间的关系。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
   
  维度与度量值组之间的关系包括参与该关系的维度和事实数据表以及一个指定特定度量值组中维度粒度的粒度属性。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
  ![逻辑架构/多对多维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-many-dimension1.gif "逻辑架构/多对多维度关系")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以定义维度和事实数据表之间的多对多关系。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 你可以定义维度和事实数据表之间的多对多关系。  
   
 > [!NOTE]  
 >  为了支持多对多维度关系，数据源视图必须在所涉及的所有表之间建立外键关系，如上面的关系图所示。 否则，你将无法建立的关系时选择正确的中间度量值组**维度用法**维度设计器选项卡。  
@@ -93,6 +93,6 @@ ms.lasthandoff: 11/17/2017
  有关多对多关系的详细信息，请参阅[定义多对多关系和多对多关系属性](../../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [维度（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [维度 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

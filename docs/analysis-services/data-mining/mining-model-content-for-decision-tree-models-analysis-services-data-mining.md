@@ -2,15 +2,13 @@
 title: "决策树模型的挖掘模型内容 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +16,20 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e44543e26d7e1ba9ec190334babe6e2c8a992281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）
-  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
   
 ##  <a name="bkmk_Top"></a> 了解决策树模型的结构  
  决策树模型具有表示该模型及其元数据的单一父节点。 父节点下是表示选择的可预测属性的独立树。 例如，如果设置决策树模型以预测客户是否将购买产品，并为性别和收入提供输入，该模型将为购买属性创建一个树，该树具有大量根据性别和收入相关条件进行划分的分支。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  Microsoft 决策树算法不允许使用连续数据类型作为输入；因此，如果任何列具有连续数值数据类型，将对该值进行离散化处理。 该算法在拆分点针对所有连续属性执行其自己的离散化处理。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]会自动选择一个用于存储桶的连续属性; 方法但是，可以控制如何连续输入中的值设置到的挖掘结构列的内容类型 discretized **Discretized** ，然后设置<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>或<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>属性。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动选择一个用于存储桶的连续属性; 方法但是，可以控制如何连续输入中的值设置到的挖掘结构列的内容类型 discretized **Discretized** ，然后设置<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>或<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>属性。  
   
  [Top](#bkmk_Top)  
   
@@ -174,7 +173,7 @@ ms.lasthandoff: 11/17/2017
   
  有关如何检索这些统计信息的示例，请参阅 [决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)。  
   
- [顶部](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ## <a name="example-of-decision-tree-structure"></a>决策树结构示例：  
  若要了解决策树的工作原理，请设想一个示例，例如 AdventureWorks 自行车购买者方案。 假定可预测属性是客户购买情况，决策树算法尝试在提供的所有输入中找出一列数据，该列数据可最有效地检测出可能购买和不可能购买自行车的客户。 例如，该模型可能会发现年龄是购买行为的最佳指标。 具体来说，30 岁以上的客户很可能购买自行车，而所有其他客户则不大可能购买自行车。 在这种情况下，该模型在 Age 属性上创建一个“拆分”  。 这表示树将划分成两个分支，其中一个分支包含 30 岁以上的客户，而另一个分支包含 30 岁以下的客户。 新分支在模型结构中表示为两个新的内部树 (NODE_TYPE = 3)。  
@@ -196,7 +195,7 @@ ms.lasthandoff: 11/17/2017
   
  如果可预测属性是连续数字，该算法则尝试创建对可预测属性和输入之间的关系进行建模的回归公式。  
   
- [顶部](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="NodeCaption"></a> 节点标题和节点说明  
  在决策树模型中，节点标题和节点说明包含类似信息。 但是，越接近叶节点，节点说明越完整，并且包含的信息越多。 节点标题和节点说明是已本地化的字符串。  
@@ -214,9 +213,9 @@ ms.lasthandoff: 11/17/2017
  XML 片段可以表示简单或复杂的属性。 简单属性包含模型列的名称以及属性的值。 如果模型列包含嵌套表，嵌套表属性则表示为串联在一起的表名称、键值和属性。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持 2.0 版本的 PMML 标准，并带有支持使用嵌套表的扩展插件。 如果数据包含嵌套表，并且生成 PMML 版本的模型，则模型中包括谓词的所有元素均被标记为扩展。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持 2.0 版本的 PMML 标准，使用扩展以支持使用嵌套表。 如果数据包含嵌套表，并且生成 PMML 版本的模型，则模型中包括谓词的所有元素均被标记为扩展。  
   
- [顶部](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> 离散属性的节点分布  
  在决策树模型中，NODE_DISTRIBUTION 表包含有用的统计信息。 但是，统计信息的类型取决于树是预测离散属性还是预测连续属性。 此部分说明离散属性的节点分布统计信息的含义。  
@@ -284,7 +283,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  如果创建的决策树模型同时具有连续可预测属性和离散可预测属性，表示每个树类型的“(全部)”节点中将显示完全不同的分数。 应单独考虑每个模型，并且对回归评分所使用的方法完全不同于对分类评分所使用的方法。 无法比较节点分数值。  
   
- [顶部](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_RegressionNodes"></a> 决策树模型中的回归节点  
  如果决策树模型包含带有连续数值数据的可预测属性，则 Microsoft 决策树算法查找被预测状态和输入变量之间存在线性关系的区域。 如果算法成功找到线性关系，则将创建表示线性回归的特殊树 (NODE_TYPE = 25)。 这些回归树节点比表示离散值的节点更复杂。  
@@ -302,7 +301,7 @@ ms.lasthandoff: 11/17/2017
  有关回归节点的详细信息，请参阅[线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [挖掘模型内容 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

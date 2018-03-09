@@ -1,5 +1,5 @@
 ---
-title: "OLE DB 源 |Microsoft 文档"
+title: "OLE DB 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-source"></a>OLE DB 源
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -104,11 +103,11 @@ ms.lasthandoff: 08/17/2017
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB 自定义属性](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [使用 OLE DB 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -132,7 +131,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  OLE DB 源的 **CommandTimeout** 属性未在 **“OLE DB 源编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 有关此属性的详细信息，请参阅 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)的“Excel 源”部分。  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>打开 OLE DB 源编辑器 （连接管理器页）  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>打开“OLE DB 源编辑器”（“连接管理器”页）  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，向 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]包添加 OLE DB 源。  
   
@@ -161,7 +160,7 @@ ms.lasthandoff: 08/17/2017
  通过使用“数据视图”对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
->  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 改为值\<值太大，无法显示 > 或 System.Byte [] 显示。 使用 SQL OLE DB 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
+>  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 SQL OLE DB 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
@@ -177,13 +176,13 @@ ms.lasthandoff: 08/17/2017
  **SQL 命令文本**  
  输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。  
   
- **参数**  
+ **Parameters**  
  如果已经在参数化查询文本中使用 ? 作为参数占位符输入了参数化查询，请使用 **“设置查询参数”** 对话框将查询输入参数映射到包变量。  
   
  **生成查询**  
  使用“查询生成器”对话框可直观地构造 SQL 查询。  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
@@ -196,7 +195,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="ole-db-source-editor-columns-page"></a>OLE DB 源编辑器（“列”页）
   可以使用“OLE DB 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -209,11 +208,11 @@ ms.lasthandoff: 08/17/2017
 ## <a name="ole-db-source-editor-error-output-page"></a>OLE DB 源编辑器（“错误输出”页）
   可以使用 **“OLE DB 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入/输出**  
  查看数据源的名称。  
   
- **Column**  
+ **列**  
  查看在“OLE DB 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
   
  **错误**  
@@ -235,8 +234,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [OLE DB 目标](../../integration-services/data-flow/ole-db-destination.md)   
- [Integration Services &#40;SSIS &#41;变量](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

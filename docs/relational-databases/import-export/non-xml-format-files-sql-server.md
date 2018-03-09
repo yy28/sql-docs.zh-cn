@@ -2,10 +2,14 @@
 title: "非 XML 格式化文件 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-caps.latest.revision: "63"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41b6275ea6a6b19b608104a898e2aff363ee9cc8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5248b62f5b027dcfa99a9bc5028cc88b3f6ef633
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式化文件 (SQL Server)
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，大容量导出和导入支持两种类型的格式化文件：非 XML 格式化文件和 XML 格式化文件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，大容量导出和导入支持两种类型的格式化文件：非 XML 格式化文件和 XML 格式化文件。  
   
  **本主题内容：**  
   
@@ -59,14 +64,14 @@ ms.lasthandoff: 11/09/2017
   
   “版本”和  “列数”字段仅出现一次。 下表对其意义进行了说明。  
   
-|格式化文件字段|说明|  
+|格式化文件字段|Description|  
 |------------------------|-----------------|  
 |版本|**bcp** 实用工具的版本号：<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 该版本号仅可由 **bcp**识别，而无法由 [!INCLUDE[tsql](../../includes/tsql-md.md)]识别。<br /><br /> <br /><br /> 注意：读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**生成的 10.0 版格式化文件，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 无法读取由 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**生成的 12.0 版格式化文件。|  
 |列数|数据文件中字段的数目。 该数目必须在所有行中都相同。|  
   
  其他格式化文件字段说明需要大容量导入或导出的数据字段。 每个数据字段都需在格式化文件中占单独一行。 每个格式化文件行均包含下表中说明的格式化文件字段的值。  
   
-|格式化文件字段|说明|  
+|格式化文件字段|Description|  
 |------------------------|-----------------|  
 |**宿主文件字段顺序**|用以表示数据文件中每个字段的位置的数字。 行中的第一个字段为 1，依此类推。|  
 |**宿主文件数据类型**|表示存储在数据文件的给定字段中的数据类型。 对于 ASCII 数据文件，使用 SQLCHAR；对于本机格式数据文件，使用默认的数据类型。 有关详细信息，请参阅 [使用 bcp 指定文件存储类型 (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)。|  

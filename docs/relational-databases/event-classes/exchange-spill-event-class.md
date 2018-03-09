@@ -2,27 +2,33 @@
 title: "Exchange Spill 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Exchange Spill event class
+helpviewer_keywords:
+- Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 542f3a89a81184fe78375fb987f6d7ceb9f7281f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 事件类
-  **Exchange Spill** 事件类指示并行查询计划中的通信缓冲区已暂时写入 **tempdb** 数据库。 这种情况发生的几率很小，仅当查询计划具有多次范围扫描时才会发生。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Exchange Spill** 事件类指示并行查询计划中的通信缓冲区已暂时写入 **tempdb** 数据库。 这种情况发生的几率很小，仅当查询计划具有多次范围扫描时才会发生。  
   
  一般情况下，生成此类范围扫描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询包含许多 BETWEEN 运算符，其中每个运算符会从表或索引中选择某一范围的行。 或者，可以使用表达式来获取多个范围，例如 (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120)。 此外，查询计划必须要求按顺序扫描这些范围，原因是对 T.a 应用了 ORDER BY 子句，或者计划中的迭代器要求它按排序顺序处理元组。  
   
@@ -49,7 +55,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="exchange-spill-event-class-data-columns"></a>Exchange Spill 事件类的数据列  
   
-|数据列名称|数据类型|说明|列 ID|可筛选|  
+|数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|主机为运行该客户端应用程序的进程分配的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -62,13 +68,13 @@ ms.lasthandoff: 11/09/2017
 |**HostName**|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |**LoginName**|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为“*\<域>\\<用户名\>*”）。|11|是|  
-|**LoginSid**|**image**|登录用户的安全标识号 (SID)。 您可以在 **master** 数据库的 **syslogins** 表中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
+|**LoginSid**|**图像**|登录用户的安全标识号 (SID)。 您可以在 **master** 数据库的 **syslogins** 表中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 用户名。|6|是|  
-|**ObjectID**|**int**|系统分配的对象 ID。 与 Showplan 中的节点 ID 对应。|22|是|  
+|**Exchange Spill**|**int**|系统分配的对象 ID。 与 Showplan 中的节点 ID 对应。|22|是|  
 |**RequestID**|**int**|包含该语句的请求的 ID。|49|是|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  

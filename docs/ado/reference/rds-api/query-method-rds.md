@@ -3,8 +3,9 @@ title: "查询方法 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Query method [ADO]
+helpviewer_keywords:
+- Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32233e74eece2de258223599a682c8fb27d46fe6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01174a253f5157cf43f577ebf495819f557f2d4a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="query-method-rds"></a>查询方法 (RDS)
 使用有效的 SQL 查询字符串来返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -39,7 +41,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *记录集*  
+ *Recordset*  
  表示的对象变量**记录集**对象。  
   
  *DataFactory*  

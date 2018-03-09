@@ -8,20 +8,20 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2946428883f9db43a3f00ac2f6cb5ebfa4191dcb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9920958902d2803c9135f1745be7c47f573c36fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>客户端连接中的服务主体名称 (SPN) (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="provider-initialization-string-keywords"></a>访问接口初始化字符串关键字  
  以下访问接口初始化字符串关键字支持 OLE DB 应用程序中的 SPN。 在以下表中，关键字列中的值用于 idbinitialize:: Initialize 的提供程序字符串。 使用 ADO 或 IDataInitialize::GetDataSource 进行连接时，说明列中的值是在初始化字符串中使用。  
   
-|关键字|Description|值|  
+|关键字|Description|“值”|  
 |-------------|-----------------|-----------|  
 |ServerSPN|服务器 SPN|服务器的 SPN。 默认值为空字符串，这会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
 |FailoverPartnerSPN|故障转移伙伴 SPN|故障转移伙伴的 SPN。 默认值为空字符串，这会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="data-source-initialization-properties"></a>数据源初始化属性  
  中的下列属性**dbpropset_sqlserverdbinit 限**属性集允许应用程序指定 Spn。  
   
-|Name|类型|用法|  
+|名称|类型|用法|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR，读/写|指定服务器的 SPN。 默认值为空字符串，这会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR，读/写|指定故障转移伙伴的 SPN。 默认值为空字符串，这会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="data-source-properties"></a>数据源属性  
  中的下列属性**DBPROPSET_SQLSERVERDATASOURCEINFO**属性集允许应用程序能够发现的身份验证方法。  
   
-|Name|类型|用法|  
+|名称|类型|用法|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR，只读|返回用于连接的身份验证方法。 返回到应用程序的值是 Windows 返回到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的值。 以下列出的是可能的值： <br />“NTLM”，使用 NTLM 身份验证打开连接时将返回该值。<br />“Kerberos”，使用 Kerberos 身份验证打开连接时将返回该值。<br /><br /> 如果已经打开连接但无法确定身份验证方法，将返回 VT_EMPTY。<br /><br /> 只能在已经初始化数据源时读取此属性。 如果你尝试在初始化数据源之前读取属性，IDBProperties::GetProperies 将返回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，视情况而定，并将在 DBPROPSET_PROPERTIESINERROR 中设置 DBPROPSTATUS_NOTSUPPORTED此属性。 此行为符合 OLE DB 核心规范。|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_ BOOL，只读|如果建立连接的服务器之间已通过相互身份验证，则返回 VARIANT_TRUE；否则返回 VARIANT_FALSE。<br /><br /> 只能在已经初始化数据源时读取此属性。 如果之前已初始化的数据源读取属性的尝试，IDBProperties::GetProperies 将返回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，视情况而定且 DBPROPSTATUS_NOTSUPPORTED 将设置在 DBPROPSET_此属性的 PROPERTIESINERROR。 此行为是根据 OLE DB 核心规范<br /><br /> 如果针对未使用 Windows 身份验证的连接查询此属性，将返回 VARIANT_FALSE。|  

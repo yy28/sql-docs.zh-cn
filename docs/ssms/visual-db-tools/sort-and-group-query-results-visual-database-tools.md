@@ -3,8 +3,11 @@ title: "对查询结果进行排序和分组 (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,16 +27,16 @@ ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0fac8b9afe78f60e6cc58a84269ef7d3144da27c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f1151b57f590a184c1152a6504949fadd1caeca3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>对查询结果进行排序和分组 (Visual Database Tools)
-您可以创建这样的一个查询结果，其中每个结果行都与来自原始数据的一整组行相对应。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以创建这样的一个查询结果，其中每个结果行都与来自原始数据的一整组行相对应。  
   
 若要了解有关创建这种查询的详细信息，请参阅下表中所列的主题：  
   

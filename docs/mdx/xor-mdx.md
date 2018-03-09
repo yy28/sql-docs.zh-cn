@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: XOR
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e2c87b1438d55f6b47ee03dc074c5c66e81be888
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: dfde684aa3b9de8403c16335247826f7d2ae4f29
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ Expression1 XOR Expression2
 ## <a name="return-value"></a>返回值  
  返回一个布尔值**true**如果一个且仅有一个自变量的计算结果为**true**; 否则为**false**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **XOR**运算符将两个参数视为布尔值 (0，0，作为**false**; 否则为**true**) 执行逻辑异或运算符之前。 下表说明了如何**XOR**执行逻辑异或运算符。  
   
 |*Expression1*|*Expression2*|返回值|  

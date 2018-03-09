@@ -2,29 +2,33 @@
 title: "数据库中 R 分析 SQL 开发人员 （教程） |Microsoft 文档"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f77ac9e6b57d4b904f67cfd5e6bb9d5760c0a3d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0062a75b92fc633e61b0aa73ae2c955ccd60cec5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>数据库中 R 分析 SQL 开发人员 （教程）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本教程的目标是 SQL 程序员提供生成机器学习在 SQL Server 中的解决方案的实践经验。 在本教程中，你将学习如何通过 R 代码包装在存储过程中将 R 合并到应用程序或 BI 解决方案。
 
@@ -68,7 +72,7 @@ ms.lasthandoff: 11/09/2017
 
 本教程使用的已知的公共数据集，基于在纽约出租车行程。 若要使示例代码更快速地运行，我们创建代表 1%采样的数据。 你将使用此数据来生成预测特定行程是否有可能收到一条提示，或不是，基于例如天、 距离和提取位置的时间的列的二元分类模型。
 
-### <a name="requirements"></a>要求
+### <a name="requirements"></a>需求
 
 本教程适用于用户已熟悉基本数据库操作，如创建数据库和表、 将数据导入表，以及创建 SQL 查询。 已提供所有 R 代码，因此不需要任何 R 开发环境。 有经验的 SQL 程序员应该能够通过使用来完成此示例[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，以及通过运行提供的 PowerShell 脚本。
 

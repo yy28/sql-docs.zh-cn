@@ -2,9 +2,12 @@
 title: "索引元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3da89d41eeb2c2ce6c859e3e5e93a76eb9e5ab1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>索引元素 (DTA)
-  包含为用户指定的配置创建或删除的索引的信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含有关索引想要创建或删除一个用户指定的配置信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +42,20 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="element-attributes"></a>元素属性  
   
-|索引属性|数据类型|说明|  
+|索引属性|数据类型|Description|  
 |---------------------|---------------|-----------------|  
-|**群集**|**boolean**|可选。 指定一个聚集索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Clustered="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
-|**唯一**|**boolean**|可选。 指定唯一索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Unique="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
-|**联机**|**boolean**|可选。 指定可在服务器联机时执行操作的索引，执行这些操作需要临时磁盘空间。 设置为“true”或“false”，例如：<br /><br /> `<Index Online="true">`<br /><br /> 默认情况下，此属性设置为“false”。<br /><br /> 有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。|  
-|**IndexSizeInMB**|**double**|可选。 以兆字节为单位指定索引的最大大小，例如：<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> 无默认设置。|  
-|**NumberOfRows**|**integer**|可选。 模拟不同的索引大小，这可有效地模拟不同的表大小，例如：<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> 无默认设置。|  
-|**QUOTED_IDENTIFIER**|**boolean**|可选。 使 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遵从关于引号分隔标识符和文字字符串的 ISO 规则。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。|  
-|**ARITHABORT**|**boolean**|可选。 在查询执行过程中发生溢出或被零除错误时终止查询。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)。|  
-|**CONCAT_NULL_YIELDS_**<br /><br /> **NULL**|**boolean**|可选。 控制是将串联结果视为空值还是空字符串值。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。|  
-|**ANSI_NULLS**|**boolean**|可选。 指定在与空值一起使用等于 (=) 和不等于 (<>) 比较运算符时，这些运算符遵从 ISO 标准的行为。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。|  
-|**ANSI_PADDING**|**boolean**|可选。 控制列对于长度比其定义大小短的值的存储方式。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ANSI_PADDING [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。|  
-|**ANSI_WARNINGS**|**boolean**|可选。 对几种错误情况指定 ISO 标准行为。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md)。|  
-|**NUMERIC_ROUNDABORT**|**boolean**|可选。 指定当表达式中的舍入导致精度损失时生成的错误报告级别。 如果索引位于计算列或视图上，则必须禁用此属性。<br /><br /> 以下语法将启用此属性：<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET NUMERIC_ROUNDABORT (Transact-SQL)](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)。|  
+|**群集**|**boolean**|選擇性。 指定一个聚集索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Clustered="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
+|**唯一**|**boolean**|選擇性。 指定唯一索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Unique="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
+|**联机**|**boolean**|選擇性。 指定可在服务器联机时执行操作的索引，执行这些操作需要临时磁盘空间。 设置为“true”或“false”，例如：<br /><br /> `<Index Online="true">`<br /><br /> 默认情况下，此属性设置为“false”。<br /><br /> 有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。|  
+|**IndexSizeInMB**|**double**|選擇性。 以兆字节为单位指定索引的最大大小，例如：<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> 无默认设置。|  
+|**NumberOfRows**|**integer**|選擇性。 模拟不同的索引大小，这可有效地模拟不同的表大小，例如：<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> 无默认设置。|  
+|**QUOTED_IDENTIFIER**|**boolean**|選擇性。 使 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遵从关于引号分隔标识符和文字字符串的 ISO 规则。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。|  
+|**ARITHABORT**|**boolean**|選擇性。 在查询执行过程中发生溢出或被零除错误时终止查询。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)。|  
+|**CONCAT_NULL_YIELDS_**<br /><br /> **NULL**|**boolean**|選擇性。 控制是将串联结果视为空值还是空字符串值。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)。|  
+|**ANSI_NULLS**|**boolean**|選擇性。 指定在与空值一起使用等于 (=) 和不等于 (<>) 比较运算符时，这些运算符遵从 ISO 标准的行为。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。|  
+|**ANSI_PADDING**|**boolean**|選擇性。 控制列对于长度比其定义大小短的值的存储方式。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ANSI_PADDING [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。|  
+|**ANSI_WARNINGS**|**boolean**|選擇性。 对几种错误情况指定 ISO 标准行为。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ANSI_WARNINGS (Transact-SQL)](../../t-sql/statements/set-ansi-warnings-transact-sql.md)。|  
+|**NUMERIC_ROUNDABORT**|**boolean**|選擇性。 指定当表达式中的舍入导致精度损失时生成的错误报告级别。 如果索引位于计算列或视图上，则必须禁用此属性。<br /><br /> 以下语法将启用此属性：<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET NUMERIC_ROUNDABORT (Transact-SQL)](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)。|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
@@ -66,8 +69,8 @@ ms.lasthandoff: 11/09/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[创建元素 (DTA)](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
-|**子元素**|[索引的名称元素 (DTA)](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引的列元素 (DTA)](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PartitionColumn** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> [索引的文件组元素 (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PercentUsage** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
+|**父元素**|[创建元素 &#40; DTA &#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
+|**子元素**|[索引 &#40; DTA &#41; 的名称元素](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [索引 &#40; DTA &#41; 的列元素](../../tools/dta/column-element-for-index-dta.md)<br /><br /> **PartitionScheme** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PartitionColumn** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> [索引的文件组元素 (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> **NumberOfReferences** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。<br /><br /> **PercentUsage** 元素。 有关详细信息，请参阅数据库引擎优化顾问 XML 架构。|  
   
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[使用用户指定配置 (DTA) 的 XML 输入文件示例](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)。  

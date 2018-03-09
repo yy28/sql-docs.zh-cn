@@ -2,35 +2,33 @@
 title: "创建会话作用域的命名集 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CREATE SET statement
 - session-scoped named sets [MDX]
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 87be5fc0a7e1c1afd663d70371342035ac0d1d1b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 372990a1016616c72768cd51cb8c6eedb2008a58
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>MDX 命名集的创建会话作用域的命名集
-  若要创建在整个多维表达式 (MDX) 会话期间都可用的命名集，请使用 [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) 语句。 直到 MDX 会话关闭后才会删除使用 CREATE SET 语句创建的命名集。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+若要创建在整个多维表达式 (MDX) 会话期间都可用的命名集，请使用 [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) 语句。 直到 MDX 会话关闭后才会删除使用 CREATE SET 语句创建的命名集。  
   
  如本主题中所介绍，WITH 关键字的语法很直观且易于使用。  
   
@@ -62,6 +60,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建查询作用域的命名集 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [创建查询作用域的命名集 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

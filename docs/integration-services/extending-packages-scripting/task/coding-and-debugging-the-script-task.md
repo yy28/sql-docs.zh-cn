@@ -1,5 +1,5 @@
 ---
-title: "编码和调试脚本任务 |Microsoft 文档"
+title: "脚本任务的编码和调试 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,50 +26,49 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: 81
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c706fc1db3e31130a7754b9e4c3d16f9a13eaf4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a3ff34e28c937c83e43860129f8185ae0ed1b1d6
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
-  后配置该脚本任务中**脚本任务编辑器**，在脚本任务开发环境中编写自定义代码。  
+  在“脚本任务编辑器”中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  
   
 ## <a name="script-task-development-environment"></a>脚本任务开发环境  
- 脚本任务使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 作为脚本本身的开发环境。  
+ 脚本任务将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作脚本自身的开发环境。  
   
- 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 通过设置指定的脚本语言**ScriptLanguage**中的属性**脚本任务编辑器**。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
+ 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
   
  您在脚本任务中创建的脚本存储在包定义中。 由于没有单独的脚本文件， 因此，使用脚本任务不会影响包部署。  
   
 > [!NOTE]  
 >  在设计包和调试脚本时，脚本代码将临时写入项目文件。 在文件中存储敏感信息会埋下安全隐患，因此建议您不要在脚本代码中包含敏感信息，如密码。  
   
- 默认情况下， **Option Strict**在 IDE 中禁用。  
+ 默认情况下，Option Strict 在 IDE 中处于禁用状态。  
   
 ## <a name="script-task-project-structure"></a>脚本任务项目结构  
  创建或修改包含在脚本任务中的脚本时，VSTA 会打开一个空的新项目或重新打开现有项目。 创建此 VSTA 项目不会影响包的部署，因为项目保存在包文件内；脚本任务不会创建其他文件。  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>脚本任务项目中的项目项和类  
- 默认情况下，在 VSTA 项目资源管理器窗口中显示的脚本任务项目包含单个项， **ScriptMain**。 **ScriptMain**项，反过来，包含一个也名为的单个类**ScriptMain**。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同：  
+ 默认情况下，显示在 VSTA 项目资源管理器窗口中的脚本任务项目包含单个项：**ScriptMain**。 **ScriptMain** 项又包含单个类，名称也为 **ScriptMain**。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同：  
   
--   在脚本任务配置为[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]编程语言， **ScriptMain**类具有公共子例程， **Main**。 **ScriptMain.Main**子例程是时运行脚本任务运行时调用的方法。  
+-   如果脚本任务配置为 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 编程语言，则 **ScriptMain** 类有一个公共子例程 **Main**。 **ScriptMain.Main** 子例程是运行脚本任务时运行时所调用的方法。  
   
-     默认情况下中的唯一代码**Main**子例程的新脚本是行`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 **Dts.TaskResult**属性已在[Returning Results from the Script Task](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)。  
+     默认情况下，新脚本的 **Main** 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 [从脚本任务返回结果](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)中介绍了 **Dts.TaskResult** 属性。  
   
--   如果脚本任务配置适用于 Visual C# 编程语言， **ScriptMain**类有一个公共方法， **Main**。 此方法在脚本任务运行时调用。  
+-   如果脚本任务配置为 Visual C# 编程语言，则 **ScriptMain** 类有一个公共方法：**Main**。 此方法在脚本任务运行时调用。  
   
-     默认情况下， **Main**方法包含行`Dts.TaskResult = (int)ScriptResults.Success`。 此代码行通知运行库任务运行成功。  
+     默认情况下，**Main** 方法包含一行代码：`Dts.TaskResult = (int)ScriptResults.Success`。 此代码行通知运行库任务运行成功。  
   
- **ScriptMain**项可以包含类以外**ScriptMain**类。 这些类仅在它们所在的脚本任务中可用。  
+ **ScriptMain** 项可包含 **ScriptMain** 类以外的类。 这些类仅在它们所在的脚本任务中可用。  
   
- 默认情况下， **ScriptMain**项目项包含以下自动生成代码。 该代码模板还提供脚本任务的概览以及有关如何检索和操作 SSIS 对象（如变量、事件和连接）的其他信息。  
+ 默认情况下，**ScriptMain** 项目项包含以下自动生成的代码。 该代码模板还提供脚本任务的概览以及有关如何检索和操作 SSIS 对象（如变量、事件和连接）的其他信息。  
   
 ```vb  
 ' Microsoft SQL Server Integration Services Script Task  
@@ -207,28 +206,28 @@ To open Help, press F1.
 ```  
   
 ### <a name="additional-project-items-in-the-script-task-project"></a>脚本任务项目中的其他项目项  
- 脚本任务项目可以包含非默认的项**ScriptMain**项。 您可以向项目添加类、模块和代码。 您还可以使用文件夹来组织项组。 您添加的所有项在包中都将持久化。  
+ 脚本任务项目可包含默认的 **ScriptMain** 项以外的项。 您可以向项目添加类、模块和代码。 您还可以使用文件夹来组织项组。 您添加的所有项在包中都将持久化。  
   
 ### <a name="references-in-the-script-task-project"></a>脚本任务项目中的引用  
- 可以通过右键单击中的脚本任务项目添加到托管程序集的引用**项目资源管理器**，然后单击**添加引用**。 有关详细信息，请参阅[脚本解决方案中引用其他程序集](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)。  
+ 在“项目资源管理器”中右键单击脚本任务项目，然后单击“添加引用”，可以添加对托管程序集的引用。 有关详细信息，请参阅[引用脚本解决方案中的其他程序集](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)。  
   
 > [!NOTE]  
->  你可以在 VSTA IDE 中查看项目引用**类视图**或**项目资源管理器**。 打开这些窗口阻止任一**视图**菜单。 你可以添加中的新引用**项目**菜单上，从**项目资源管理器**，或从**类视图**。  
+>  可以在“类视图”或“项目资源管理器”中查看 VSTA IDE 中的项目引用。 这些窗口都可以从“视图”菜单中打开。 可以从“项目”菜单、“项目资源管理器”或“类视图”添加新引用。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>在脚本任务中与包进行交互  
- 脚本任务使用全局**Dts**对象，它是实例的<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>类和其成员，以包含包和交互[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]运行时。  
+ 脚本任务使用全局 **Dts** 对象（<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类的一个实例）及其成员与包含包和 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时进行交互。  
   
- 下表列出的主体的公共成员<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>类，该类公开给脚本任务代码中通过全局**Dts**对象。 本节中的主题详细讨论这些成员的使用。  
+ 下表列出了 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类的主要公共成员，该类通过全局 **Dts** 对象向脚本任务代码公开。 本节中的主题详细讨论这些成员的使用。  
   
 |成员|用途|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|提供对包中定义的连接管理器的访问。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|提供事件接口，使脚本任务能够引发错误、警告和信息性消息。|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|提供一种简单的方法，以返回到运行时的单个对象 (除了**TaskResult**)，还可以使用的工作流分支。|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|提供一种向运行时返回单个对象（除 **TaskResult** 之外）的简单方法，该对象还可用于工作流分支跳转。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|向已启用的日志提供程序记录信息，如任务进度和结果。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|报告任务成功或失败。|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|提供任务的容器运行于的事务（如果有）。|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|提供对变量中列出的访问**ReadOnlyVariables**和**ReadWriteVariables**任务以在脚本中使用的属性。|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|提供对 **ReadOnlyVariables** 和 **ReadWriteVariables** 任务属性中列出的、在脚本中使用的变量的访问。|  
   
  <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 类还包含一些您可能不会使用的公共成员。  
   
@@ -240,7 +239,7 @@ To open Help, press F1.
  若要调试脚本任务中的代码，请在代码中设置至少一个断点，然后关闭 VSTA IDE 以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中运行包。 当包执行进入脚本任务时，VSTA IDE 会在只读模式下重新打开并显示您的代码。 包执行到达您的断点后，您可以检查变量值，并单步执行剩余代码。  
   
 > [!WARNING]  
->  可以在 64 位模式下运行包时调试脚本任务。  
+>  在 64 位模式下运行包时不能调试脚本任务。  
   
 > [!NOTE]  
 >  您必须执行包，以调试您的脚本任务。 如果您只执行单个任务，则脚本任务代码中的断点将被忽略。  
@@ -253,11 +252,10 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>外部资源  
   
--   博客文章[SSIS 2008 和 R2 安装的 VSTA 安装和配置问题](http://go.microsoft.com/fwlink/?LinkId=215661)，blogs.msdn.com 上的。  
+-   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](http://go.microsoft.com/fwlink/?LinkId=215661)。  
   
 ## <a name="see-also"></a>另请参阅  
- [引用在脚本的解决方案中的其他程序集](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
+ [引用脚本解决方案中的其他程序集](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
  [在脚本任务编辑器中配置脚本任务](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   
   
-

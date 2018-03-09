@@ -1,5 +1,5 @@
 ---
-title: "syscollector_execution_log (TRANSACT-SQL) |Microsoft 文档"
+title: syscollector_execution_log (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
 - syscollector_execution_log
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df1ddcc6306078075821af7cfd1a1176a2e31861
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5beb35aa769b1c4755481a187c765fa62068ae2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +48,13 @@ ms.lasthandoff: 11/17/2017
 |finish_time|**datetime**|已完成的包和收集组完成运行的时间。 可以为 Null。|  
 |runtime_execution_mode|**int**|指示收集组活动是收集数据还是上载数据。 可以为 Null。<br /><br /> 值为：<br /><br /> 0 = 收集<br /><br /> 1 = 上载|  
 |status|**int**|指示收集组或包的当前状态。 不可为 null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 完成<br /><br /> 2 = 失败|  
-|运算符后的表达式|**nvarchar （128)**|标识启动了收集组或包的用户。 不可为 null。|  
+|运算符后的表达式|**nvarchar(128)**|标识启动了收集组或包的用户。 不可为 null。|  
 |package_id|**uniqueidentifier**|标识生成此日志的收集组或包。 可以为 Null。|  
 |package_name|**nvarchar(4000)**|生成此日志的包的名称。 可以为 Null。|  
 |package_execution_id|**uniqueidentifier**|提供指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 日志表的链接。 可以为 Null。|  
 |failure_message|**nvarchar(2048)**|收集组或包失败时该组件的最新错误消息。 可以为 Null。 若要获取更详细的错误信息，请使用[fn_syscollector_get_execution_details &#40;Transact SQL &#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)函数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要拥有 dc_operator 的 SELECT 权限。  
   
 ## <a name="see-also"></a>另请参阅  

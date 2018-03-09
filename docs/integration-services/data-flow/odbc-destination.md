@@ -1,5 +1,5 @@
 ---
-title: "ODBC 目标 |Microsoft 文档"
+title: "ODBC 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="odbc-destination"></a>ODBC 目标
   ODBC 目标可以将数据大容量加载到支持 ODBC 的数据库表中。 ODBC 目标使用 ODBC DB 连接管理器来连接到数据源。  
@@ -70,11 +69,11 @@ ms.lasthandoff: 08/17/2017
   
  有关详细信息，请参阅下列主题之一：  
   
--   [ODBC 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [ODBC 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目标编辑器（“映射”页）](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目标编辑器（“错误输出”页）](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框包含可通过编程方式设置的属性。  
   
@@ -84,9 +83,9 @@ ms.lasthandoff: 08/17/2017
   
  有关可在“高级编辑器”对话框中设置的属性的详细信息，请参阅 [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
--   [通过使用 ODBC 目标加载数据](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [通过使用 ODBC 目标来加载数据](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [ODBC 目标自定义属性](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
@@ -103,12 +102,12 @@ ms.lasthandoff: 08/17/2017
   
 -   在 **“ODBC 目标编辑器”**中，单击 **“连接管理器”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
   
-#### <a name="connection-manager"></a>“ODBC 目标编辑器”  
+#### <a name="connection-manager"></a>“ODBC 源编辑器”  
  从列表中选择现有 ODBC 连接管理器，或单击“新建”创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
   
-#### <a name="new"></a>新建  
+#### <a name="new"></a>新版  
  单击 **“新建”**。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的连接管理器。  
   
 #### <a name="data-access-mode"></a>数据访问模式  
@@ -127,7 +126,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="odbc-destination-editor-mappings-page"></a>ODBC 目标编辑器（“映射”页）
   可以使用 **“ODBC 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
   
 #### <a name="available-input-columns"></a>可用输入列  
  可用输入列的列表。 将输入列拖放到某一可用目标列以映射这些列。  
@@ -136,7 +135,7 @@ ms.lasthandoff: 08/17/2017
  可用目标列的列表。 将目标列拖放到某一可用输入列以映射这些列。  
   
 #### <a name="input-column"></a>输入列  
- 查看选定的输入列。 你可以通过选择移除映射**\<忽略 >**输出中排除列。  
+ 查看选定的输入列。 可以通过选择“\<忽略>”以从输出中排除列来移除映射。  
   
 #### <a name="destination-column"></a>目标列  
  查看所有可用目标列（包括映射和未映射的列）。  
@@ -154,12 +153,12 @@ ms.lasthandoff: 08/17/2017
   
 -   在 **“ODBC 目标编辑器”**中，单击 **“错误输出”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
   
 #### <a name="inputoutput"></a>输入/输出  
  查看数据源的名称。  
   
-#### <a name="column"></a>列  
+#### <a name="column"></a>“列”  
  未使用。  
   
 #### <a name="error"></a>错误  
@@ -189,4 +188,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>重定向流  
  将引起错误或截断的行定向到 ODBC 目标的错误输出。 有关详细信息，请参阅 ODBC 目标。  
   
-

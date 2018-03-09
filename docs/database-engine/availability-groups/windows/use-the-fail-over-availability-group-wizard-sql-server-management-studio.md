@@ -2,10 +2,14 @@
 title: "使用故障转移可用性组向导 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: acb382c0fa58fe682e703701833bb8d99f8ef26d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f8d7a9a047bb1f60ea5e9c1d91d823af30ca35ff
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用故障转移可用性组向导 (SQL Server Management Studio)
-  本主题介绍了如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。 可用性组在可用性副本级别进行故障转移。 如果故障转移到一个处于 SYNCHRONIZED 状态的辅助副本，则向导将执行计划的手动故障转移（不会造成数据丢失）。 如果故障转移到一个处于 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 状态的次要副本，则向导将执行强制的手动故障转移（这也称为“强制故障转移”，可能造成数据丢失）。 这两种形式的手动故障转移均会将您所连接的辅助副本转换为主角色。 计划的手动故障转移当前会将先前的主副本转换为辅助角色。 在强制故障转移之后，一旦先前的主副本联机，它就会转换为辅助角色。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题介绍了如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。 可用性组在可用性副本级别进行故障转移。 如果故障转移到一个处于 SYNCHRONIZED 状态的辅助副本，则向导将执行计划的手动故障转移（不会造成数据丢失）。 如果故障转移到一个处于 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 状态的次要副本，则向导将执行强制的手动故障转移（这也称为“强制故障转移”，可能造成数据丢失）。 这两种形式的手动故障转移均会将您所连接的辅助副本转换为主角色。 计划的手动故障转移当前会将先前的主副本转换为辅助角色。 在强制故障转移之后，一旦先前的主副本联机，它就会转换为辅助角色。  
 
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  在你首次执行计划的手动故障转移之前，请参阅 [执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
@@ -48,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -62,7 +67,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  **“简介”** 页面所显示的信息取决于是否有任何辅助副本可用于计划的故障转移。 如果此页面显示“**执行此可用性组的计划故障转移**”，则您可在不造成数据丢失的情况下对可用性组进行故障转移。  
   
-5.  在“选择新主要副本”页上，在你选择将成为新的主要副本的次要副本（即故障转移目标）之前，你可查看当前主要副本和 WSFC 仲裁的状态。 对于计划的手动故障转移，确保选择其 **“故障转移就绪”** 值为“**无数据丢失**”的辅助副本。 对于强制故障转移的所有可能的故障转移目标，此值将为“**数据丢失，警告(***#***)**”，其中 *#* 指示给定次要副本存在的警告数。 若要查看给定故障转移目标的警告，请单击其“故障转移就绪”值。  
+5.  在“选择新主要副本”页上，在你选择将成为新的主要副本的次要副本（即故障转移目标）之前，你可查看当前主要副本和 WSFC 仲裁的状态。 对于计划的手动故障转移，确保选择其 **“故障转移就绪”** 值为“**无数据丢失**”的辅助副本。 对于强制故障转移的所有可能的故障转移目标，此值将为“数据丢失，警告(#)”，其中 # 指示给定次要副本存在的警告数。 若要查看给定故障转移目标的警告，请单击其“故障转移就绪”值。  
   
      有关详细信息，请参阅本主题后面的 [“选择新主副本”页](#SelectNewPrimaryReplica)。  
   
@@ -108,7 +113,7 @@ ms.lasthandoff: 11/09/2017
  **仲裁状态**  
  对于群集类型 WSFC，显示以下可用性副本的仲裁状态之一：  
   
-   |值|说明|  
+   |ReplTest1|Description|  
    |-----------|-----------------|  
    |**标准仲裁**|群集已开始标准仲裁。|  
    |**强制仲裁 (Forced quorum)**|群集已开始强制仲裁。|  
@@ -130,7 +135,7 @@ ms.lasthandoff: 11/09/2017
  **可用性模式**  
  显示服务器实例的以下可用性模式之一：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**同步提交**|在同步提交模式下，在提交事务之前，同步提交主副本要等待同步提交辅助副本确认它已完成硬化日志。 同步提交模式可确保在给定的辅助数据库与主数据库同步时，充分保护已提交的事务。|  
 |**异步提交**|在异步提交模式下，主副本无需等待确认异步提交辅助副本已硬化日志，便可提交事务。 异步提交模式可最大限度地减少辅助数据库上的事务滞后时间，但允许它们滞后于主数据库，因此可能会导致某些数据丢失。|  
@@ -140,7 +145,7 @@ ms.lasthandoff: 11/09/2017
  **故障转移模式**  
  显示服务器实例的以下故障转移模式之一：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**自动**|只要辅助副本与主副本进行同步，配置为进行自动故障转移的辅助副本也会支持计划的手动故障转移。|  
 |**Manual**|存在两种类型的手动故障转移：计划的（不会造成数据丢失）和强制的（可能造成数据丢失）。 对于给定的辅助副本，仅支持这两种类型中的一种，具体取决于可用性模式，而对于同步提交模式，则取决于辅助副本的同步状态。 若要确定给定的辅助副本当前所支持的手动故障转移的形式，请参阅此网格的 **“故障转移就绪”** 列。|  
@@ -150,7 +155,7 @@ ms.lasthandoff: 11/09/2017
  **“故障转移就绪”**  
  显示辅助副本的以下故障转移就绪情况之一：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**无数据丢失**|此辅助副本当前支持计划的故障转移。 只有当同步提交模式的辅助副本当前与主副本进行同步时，才会出现此值。|  
 |**数据丢失，警告(** *#* **)**|此辅助副本当前支持强制故障转移（可能造成数据丢失）。 只要辅助副本不与主副本进行同步，就会出现此值。 有关可能的数据丢失的信息，请单击数据丢失警告链接。|  

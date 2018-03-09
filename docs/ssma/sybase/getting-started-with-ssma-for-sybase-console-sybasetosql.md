@@ -3,8 +3,11 @@ title: "入门 Sybase 控制台 (SybaseToSQL) SSMA |Microsoft 文档"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4929815714162459d17dfea3d7129a13b79558e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 689cd4339d926cd4f8e20c799a0c074adb29b81f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Getting Started with SSMA Sybase 控制台 (SybaseToSQL)
 本部分介绍的过程启动并开始使用 SSMA for Sybase 控制台应用程序。 此处还列出将使用的约定在典型的 SSMA 控制台输出窗口。  

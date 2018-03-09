@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.sysoledbusers_TSQL
 - sysoledbusers
 - sysoledbusers_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysoledbusers system table
 - sys.sysoledbusers compatibility view
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b711395050bca928f018215eefd953f35389060f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 97cad6b87bbcad6bbc551ce675cf0c84850e7f3d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +46,9 @@ ms.lasthandoff: 11/27/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**int**|服务器的安全标识号 (SID)。|  
-|**rmtloginame**|**nvarchar (**128**)**|远程登录名， **loginsid**链接映射到**rmtservid**。|  
-|**rmtpassword**|**nvarchar (**128**)**|返回 NULL。|  
-|**loginsid**|**varbinary (**85**)**|要映射的本地登录 SID。|  
+|**rmtloginame**|**nvarchar(**128**)**|远程登录名， **loginsid**链接映射到**rmtservid**。|  
+|**rmtpassword**|**nvarchar(**128**)**|返回 NULL。|  
+|**loginsid**|**varbinary(**85**)**|要映射的本地登录 SID。|  
 |**status**|**int**|如果为 1，则映射应使用用户凭据。|  
 |**changedate**|**datetime**|最近更改映射信息的日期。|  
   

@@ -2,32 +2,30 @@
 title: "维度和分区的配置字符串存储空间 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b16b14e2fb2fd703905245f9e779fd83b7f35cb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>配置维度和分区的字符串存储
-  可以重新配置字符串存储，以在维度属性或分区中容纳超过 4 GB 文件大小的字符串存储限制的极大字符串。 如果你的维度或分区包含此大小的字符串存储，则对于本地和链接（本地或远程）对象，你可以通过在维度或分区级别更改“StringStoresCompatibilityLevel”属性来解决文件大小限制。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以重新配置字符串存储，以在维度属性或分区中容纳超过 4 GB 文件大小的字符串存储限制的极大字符串。 如果你的维度或分区包含此大小的字符串存储，则对于本地和链接（本地或远程）对象，你可以通过在维度或分区级别更改“StringStoresCompatibilityLevel”属性来解决文件大小限制。  
   
  请注意，你可以只在需要额外容量的对象上增加字符串存储空间。 在大多数的多维模型中，字符串数据与维度相关联。 但是，此设置对包含基于字符串的非重复计数度量值的分区也非常有用。 因为此设置针对字符串，所以数字数据不受影响。  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [用于处理的工具和方法 (Analysis Services)](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [处理选项和设置 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [维度存储](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

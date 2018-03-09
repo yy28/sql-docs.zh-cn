@@ -2,15 +2,13 @@
 title: "Microsoft 决策树算法技术参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +22,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81dd23b543d8791f9e68a15cfc8feaf58aade127
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
   
  本主题说明此算法的实现，介绍如何针对不同的任务自定义算法行为，并提供指向有关决策树模型查询的其他信息的链接。  
   
@@ -195,7 +194,7 @@ ms.lasthandoff: 11/17/2017
   
  例如，如果要将 **Income** 用作属性来预测客户的购买行为，并对列设置 REGRESSOR 建模标志，则算法将会先通过使用标准回归公式来尝试拟合 **Income** 值。 如果偏差过大，则会放弃回归公式，并根据其他属性对树进行拆分。 拆分完毕后，决策树算法将尝试拟合每个分支中的 Income 的回归量。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  一个决策树模型必须包含一个键列、若干输入列和至少一个可预测列。  
   
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
@@ -212,6 +211,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [决策树模型查询示例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [决策树模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

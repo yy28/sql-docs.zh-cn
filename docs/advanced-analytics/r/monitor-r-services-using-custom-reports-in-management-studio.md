@@ -2,25 +2,28 @@
 title: "使用 Management Studio 中的自定义报表监视 R Services | Microsoft Docs"
 ms.custom: 
 ms.date: 10/09/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 46ed619271b56d59085b131839e65cd02e27d8fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>监视在 Management Studio 中使用自定义报表的机器学习服务
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 若要更加轻松地管理用于机器学习的实例，产品团队提供了一些示例自定义报表，你可以将其添加到 SQL Server Management Studio。 在这些报表，你可以如查看详细信息：
 

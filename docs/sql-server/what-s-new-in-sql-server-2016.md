@@ -1,32 +1,38 @@
 ---
 title: "SQL Server 2016 中的新增功能"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "新建 sql server"
+keywords:
+- "新建 sql server"
 helpviewer_keywords:
 - new features [SQL Server]
 - SQL Server, what's new
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: "224"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8cbdc851a7b050f359bd473e8ea971587ff850b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
  通过 SQL Server 2016，可以使用可缩放的混合数据库平台生成任务关键型智能应用程序。此平台内置了需要的所有功能，包括内存中性能、高级安全性和数据库内分析。 SQL Server 2016 版本新增了安全功能、查询功能、Hadoop 和云集成、R 分析等功能，以及许多改进和增强功能。 
 
 此页面收录了摘要信息和链接，可方便读者详细了解 SQL Server 2016，以及每个 SQL Server 组件的最近更新。 

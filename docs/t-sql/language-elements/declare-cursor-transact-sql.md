@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CURSOR_TSQL
 - DECLARE CURSOR
 - CURSOR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DECLARE CURSOR statement
 - cursors [SQL Server], attributes
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0641f87c36d3dbed886dc7bb81aa1f179148a8cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 79bf3115ef4e1d929e3e4a1b3ff731a1977ba28e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -170,7 +172,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
  可作为的一部分使用变量*select_statement*声明一个游标。 游标变量值在声明游标后不发生更改。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，将 DECLARE CURSOR 权限授予对游标中所使用的视图、表和列具有 SELECT 权限的任何用户。
  
 ## <a name="limitations-and-restrictions"></a>限制和局限
@@ -256,9 +258,9 @@ DEALLOCATE vendor_cursor;
   
 ## <a name="see-also"></a>另请参阅  
  [@@FETCH_STATUS (Transact-SQL)](../../t-sql/functions/fetch-status-transact-sql.md)   
- [关闭 &#40;Transact SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [游标 (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   
- [释放 &#40;Transact SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [提取 &#40;Transact SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

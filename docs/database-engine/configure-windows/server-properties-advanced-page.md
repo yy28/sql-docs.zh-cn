@@ -2,33 +2,36 @@
 title: "服务器属性（“高级”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75f872cc60f59224bf874e9821348efa4bd22729
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e6fdf75cd720e6463a41475212beb07ee4a79819
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---advanced-page"></a>服务器属性 -“高级”页
-  使用此页可以查看或修改高级服务器设置。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以查看或修改高级服务器设置。  
   
  **查看“服务器属性”页**  
   
 -   [查看或更改服务器属性 (SQL Server)](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>包含  
+## <a name="containment"></a>Containment  
  启用包含的数据库  
  指示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是否允许包含数据库。 如果为 **True**，则可以创建、还原或附加包含数据库。 如果为 **False**，则包含数据库不能创建、还原或附加到此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 更改包含属性可能会对数据库的安全性造成影响。 启用包含数据库将使数据库所有者授予对此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的访问权限。 禁用包含数据库可以阻止用户进行连接。 若要了解包含属性的影响，请参阅 [Contained Databases](../../relational-databases/databases/contained-databases.md) 和 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  也可以使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option 操作来设置全文升级选项。  
   
- 将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加、还原或复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于**全文升级选项**服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+ 将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加、还原或复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于 **全文升级选项** 服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。 有关查看或更改“全文升级选项”属性设置的信息，请参阅[管理和监视服务器实例的全文搜索](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
  **最大文本复制大小**  
  指定使用单个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句可以向已复制列或已捕获列添加的 **text**、 **ntext**、 **varchar(max)**、 **nvarchar(max)**、 **xml**和 **image** 数据的最大大小（以字节为单位）。 对设置的更改将立即生效。 有关详细信息，请参阅 [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
@@ -102,7 +105,7 @@ ms.lasthandoff: 11/09/2017
   
  例如，2049 的默认设置表明：作为 '3/14/49' 输入的日期将被解释为 2049 年 3 月 14 日，而作为 '3/14/50' 输入的日期则将被解释为 1950 年 3 月 14 日。 有关详细信息，请参阅 [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。  
   
-## <a name="network"></a>Network  
+## <a name="network"></a>网络  
  **网络数据包大小**  
  设置整个网络使用的数据包大小（字节）。 默认数据包大小为 4096 个字节。 应用程序进行批量复制操作，或者发送或接收大量 **text** 或 **image** 数据时，数据包大小大于默认值可以提高效率，因为这样可以减少网络读写操作。 如果应用程序发送和接收的信息量很小，可以将数据包的大小设置为 512 个字节，这对于大多数数据传输来说已经足够了。 有关详细信息，请参阅 [Configure the network packet size Server Configuration Option](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md)。  
   

@@ -8,25 +8,27 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.COLUMNMASTERKEY.PAGE.F1
 - SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1
 - SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1
-helpviewer_keywords: Always Encrypted, configure with SSMS
+helpviewer_keywords:
+- Always Encrypted, configure with SSMS
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4181262d713918c834d7dc971444118f11fe623
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1eb393d92d3ca1beb3e7419706dec3bb4c8001f4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,7 +114,7 @@ Always Encrypted 参数化是 SQL Server Management Studio 中的一种功能，
   
 如果没有进行参数化，.NET Framework 数据提供程序会传递你在“查询编辑器”中编写的每个声明，作为非参数化查询。 如果查询包含文字或针对加密列的 Transact-SQL 变量，用于 SQL Server 的 .NET Framework 数据提供程序将无法在将查询发送到数据库之前，对它们进行检测和加密。 结果由于纯文本文字 Transact-SQL 变量和加密列之间的类型不匹配，查询将失败。 例如，假定 `SSN` 列已加密，如果没有参数化，以下查询将失败。   
 
-```tsql
+```sql
 DECLARE @SSN NCHAR(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN
@@ -127,15 +129,15 @@ WHERE [SSN] = @SSN
 1.  在主菜单中，选择“查询”  。   
 2.  选择“查询选项…”。   
 3.  导航到“执行” > “高级”。   
-4.  选择或取消选择“启用 Always Encrypted 参数化”。   
-5.  单击 **“确定”**。   
+4.  选择或取消选择“启用 Always Encrypted 参数化” 。   
+5.  单击“确定” 。   
 
 为以后的“查询编辑器”窗口启用/禁用 Always Encrypted 参数化：   
 1.  在主菜单中，选择“工具”  。   
 2.  选择“选项…”。   
 3.  导航到“查询执行” > “SQL Server” > “高级”。   
 4.  选择或取消选择“启用 Always Encrypted 参数化”。   
-5.  单击 **“确定”**。   
+5.  单击“确定” 。   
 
 如果在使用启用了 Always Encrypted 的数据库连接的“查询编辑器”窗口中执行查询，但是没有为“查询编辑器”窗口启用参数化，系统将提示你启用它。   
 >   [!NOTE]   
@@ -148,7 +150,7 @@ WHERE [SSN] = @SSN
 - 使用单个文字进行初始化。 使用包含任何运算符或函数的表达式进行初始化的变量将不会进行参数化。      
 
 下面是 SQL Server Management Studio 将对其进行参数化的变量的示例。   
-```tsql
+```sql
 DECLARE @SSN char(11) = '795-73-9838';
    
 DECLARE @BirthDate date = '19990104';
@@ -156,7 +158,7 @@ DECLARE @Salary money = $30000;
 ```
 
 而此处是几个 SQL Server Management Studio 将不会尝试对其进行参数化的变量的示例：   
-```tsql
+```sql
 DECLARE @Name nvarchar(50); --Initialization seperate from declaration
 SET @Name = 'Abel';
    
@@ -170,7 +172,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
 - 如果变量的声明类型是日期类型或时间类型，变量必须通过使用以下 ISO 8601 标准格式之一的字符串进行初始化。   
 
 下面是会导致参数化错误的 Transact-SQL 变量声明的示例：   
-```tsql
+```sql
 DECLARE @BirthDate date = '01/04/1999' -- unsupported date format   
    
 DECLARE @Number int = 1.1 -- the type of the literal does not match the type of the variable   
@@ -192,7 +194,7 @@ SQL Server Management Studio 使用 Intellisense 来通知你哪些参数可成�
 >   [!NOTE]
 >   Always Encrypted 支持有限子网的类型转换，在许多情况下，Transact-SQL 变量的数据类型都要求与其针对的目标数据库列的类型相同。 例如，假定 `SSN` 表中的 `Patients` 列是 `char(11)`，以下查询将失败，因为 `@SSN` 变量的类型为 `nchar(11)`，与列的类型不匹配。   
 
-```tsql
+```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
@@ -209,7 +211,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   如果没有进行参数化，整个查询（包括类型转换）将在 SQL Server/Azure SQL 数据库内进行处理。 如果启用了参数化，某些类型转换将由 SQL Server Management Studio 中的 .NET Framework 来执行。 由于 .NET Framework 类型系统和 SQL Server 类型系统之间存在差异（例如某些类型的精度不同，如 float），启用了参数化来执行的查询可产生不同于未启用参数化来执行的查询的结果。 
 
-#### <a name="permissions"></a>Permissions      
+#### <a name="permissions"></a>权限      
 
 若要对加密列运行任何查询（包括在加密文本中检索数据的查询），则需要具有数据库中的 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 权限。   
 若要对任何查询结果进行解密或对任何查询参数（通过对 Transact-SQL 变量进行参数化而生成）进行加密，除了上述权限，还需具有访问保护目标列的列主密钥的权限：   
@@ -256,12 +258,12 @@ SQL Server Management Studio 将在数据库中为列主密钥创建元数据。
 2.  右键单击“列加密密钥”  文件夹，然后选择“新建列加密密钥...” 。 
 3.  在“新建列加密密钥”  对话框中，输入列加密密钥元数据对象的名称。
 4.  在数据库中选择一个表示列主密钥的元数据对象。
-5.  单击 **“确定”**。 
+5.  单击“确定” 。 
 
 
 SQL Server Management Studio 将生成新的列加密密钥，然后它将从数据库中检索所选列主密钥的元数据。 然后，SQL Server Management Studio 将使用该列主密钥元数据访问包含列主密钥的密钥存储并对列加密密钥加密。 最后，将在数据库中为新的列加密密钥创建元数据。 该对话框通过生成并发出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 语句来实现此操作。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 需要数据库中的 *更改任意加密主密钥* 和 *查看任意列主密钥定义* 数据库权限，该对话框才能创建列加密密钥元数据和访问列主密钥元数据。
 若要访问密钥存储并使用列主密钥，可能需要密钥存储或/和密钥上的权限：
@@ -290,7 +292,7 @@ SQL Server Management Studio 将生成新的列加密密钥，然后它将从数
 2.  右键单击该列主密钥并选择“轮替”。
 3.  在“列主密钥轮替”对话框的“目标”字段中，选择在步骤 1 中创建的新列主密钥的名称。
 4.  查看现有列主密钥保护的列加密密钥的列表。 这些密钥将受到轮转的影响。
-5.  单击 **“确定”**。
+5.  单击“确定” 。
 
 SQL Server Management Studio 将获取使用旧列主密钥保护的列加密密钥的元数据，以及旧列主密钥和新列主密钥的元数据。 然后，SSMS 将使用列主密钥元数据来访问包含旧列主密钥的密钥存储并对列加密密钥解密。 随后，SSMS 将访问包含新列主密钥的密钥存储，以生成一组新的列加密密钥加密值，然后它会将新值添加到元数据中（生成并发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) 语句）。
 
@@ -322,7 +324,7 @@ SQL Server Management Studio 将获取使用旧列主密钥保护的列加密密
 1.  使用**对象资源管理器**导航到“安全”>“始终加密密钥”文件夹并找到要替换的现有列主密钥。
 2.  右键单击现有的列主密钥，然后选择“清理”。
 3.  查看要删除的列加密密钥值列表。
-4.  单击 **“确定”**。
+4.  单击“确定” 。
 
 SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) 语句，以删除用旧列主密钥加密的列加密密钥的加密值。
 
@@ -331,12 +333,12 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 如果你选择从数据库中删除旧列主密钥的定义，可使用以下步骤。 
 1.  使用**对象资源管理器**导航到“安全”>“始终加密密钥”>“列主密钥”文件夹，并找到要从数据库中删除的旧列主密钥。
 2.  右键单击旧列主密钥，然后选择“删除”。 （这将生成并发出 [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) 语句，以删除列主密钥元数据。）
-3.  单击 **“确定”**。
+3.  单击“确定” 。
 
 > [!NOTE]
 > 强烈建议你不要在轮换后永久地删除旧的列主密钥。 相反，应该在其当前密钥存储中保留旧的列主密钥，或将其存档在另一个安全位置。 如果在配置新的列主密钥之前，从备份文件将数据库还原到某个时间点，则需要使用旧密钥来访问数据。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 轮替列主密钥要求具备以下数据库权限：
 
@@ -371,7 +373,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 7.  在“摘要”页上，查看你选择的选项，单击“完成”，并在完成后关闭该向导。
 8.  使用**对象资源管理器**导航到“安全”/“始终加密密钥”/“列加密密钥”文件夹，并找到要从数据库中删除的旧列加密密钥。 右键单击该密钥，然后选择“删除” 。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 轮替列加密密钥需要以下数据库权限： **更改任意列主密钥** — 在使用自动生成的新列加密密钥（还将生成新的列主密钥及其新的元数据）时需要。
 **更改任意列加密密钥** — 在为新列加密密钥添加元数据时需要。
@@ -404,7 +406,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 > [!NOTE]
 > 如果为数据库或 DACPAC 中的列配置的列主密钥存储在 Azure 密钥保管库中，系统将提示你登录到 Azure（如果尚未登录）。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 若要在 DACPAC 或目标数据库中设置了始终加密的情况下执行 DAC 升级操作，则可能需要以下部分或所有权限，具体取决于 DACPAC 中的架构与目标数据库架构之间的差异。
 
@@ -427,7 +429,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 如果你的应用程序配置为修改或检索存储在源数据库（导出的数据库）中的加密数据，则无需执行任何特殊操作便可让应用程序查询目标数据库中的加密数据，因为这两个数据库中的密钥相同。
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 你需要源数据库上的 *更改任意列主密钥* 和 *更改任意列加密密钥* 。 你需要目标数据库上的 *更改任意列主密钥*、 *更改任意列加密密钥*、 *查看任意列主密钥定义*和 *查看任意列加密* 。
 
@@ -450,7 +452,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 |移动加密数据而不对其解密。<br><br>**注意：** 在迁移之前，必须存在包含加密列的目标表。| 数据提供程序/驱动程序： *任意*<br>列加密设置 = 已禁用<br><br>（如果使用用于 SQL Server 的 .Net Framework 数据提供程序和 .NET Framework 4.6 或更高版本。）| 数据提供程序/驱动程序： *任意*<br>列加密设置 = 已禁用<br><br>（如果使用用于 SQL Server 的 .Net Framework 数据提供程序和 .NET Framework 4.6 或更高版本。）<br><br>用户必须将 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 设置为 ON。<br><br>有关详细信息，请参阅 [迁移通过“始终加密”保护的敏感数据](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 若要 **加密** 或 **解密** 数据源中存储的数据，需要源数据库中的 *查看任意列主密钥定义* 和 *查看任意列加密密钥定义* 权限。
 

@@ -2,15 +2,13 @@
 title: "DISCOVER_LOCKS 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c65b85a3a9d48afea4db7993bdc31699fe573996
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS 行集
-  提供有关服务器上的当前持续锁定的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在服务器上提供有关当前持续锁的信息。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DISCOVER_LOCKS**行集包含以下各列。  
@@ -58,11 +56,11 @@ ms.lasthandoff: 11/17/2017
 |LOCK_TYPE|DBTYPE_I4|可选。|  
 |LOCK_MIN_TOTAL_MS|DBTYPE_I8|可选。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="lock-types"></a>锁类型  
   
-|锁名称|值|Description|  
+|锁名称|ReplTest1|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|无锁。|  
 |LOCK_SESSION_LOCK|0x0000001|不活动的会话；不影响其他锁。|  

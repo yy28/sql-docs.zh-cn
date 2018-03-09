@@ -2,18 +2,17 @@
 title: "多维数据集属性的多维模型编程 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Collation property
 - ID property
@@ -36,19 +35,20 @@ helpviewer_keywords:
 - ProcessingPriority property
 - ProactiveCaching property
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc44854185830f93ff672cae6a0ebc68a88aa80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>多维数据集属性的多维模型编程
-  可以在多维数据集中设置很多属性以影响整个多维数据集的行为。 下表总结了这些属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以在多维数据集中设置很多属性以影响整个多维数据集的行为。 下表总结了这些属性。  
   
 > [!NOTE]  
 >  某些属性是在创建多维数据集时自动设置的，不能更改。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**ScriptErrorHandlingMode**|确定错误处理。 选项**IgnoreNone**或**IgnoreAll**|  
 |**数据源**|显示用于多维数据集的数据源视图|  
 |**StorageLocation**|指定多维数据集的文件系统存储位置。 如果未指定任何位置，则从包含多维数据集对象的数据库中继承位置。|  
-|**StorageMode**|指定多维数据集的存储模式。 值为**MOLAP**， **ROLAP**，或**HOLAP * * *。**|  
+|**StorageMode**|指定多维数据集的存储模式。 值为**MOLAP**， **ROLAP**，或**HOLAP**。|  
 |**Visible**|确定多维数据集的可见性。|  
   
 > [!NOTE]  

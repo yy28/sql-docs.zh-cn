@@ -2,28 +2,33 @@
 title: "使用字符格式导入或导出数据 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5dd9155a7cc669a5f7a62036bb42410dced9c48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c3eff449d858ce95e1df141363571f73c0c5813d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 将数据批量导出到要在其他程序中使用的文本文件时，或从其他程序生成的文本文件批量导入数据时，建议使用字符格式。  
 
 采用字符格式后，所有列均应用字符数据格式。 如果要将数据用于其他程序（如电子表格程序），或需要通过其他数据库供应商（如 Oracle）将数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中，则以字符格式存储信息会非常有用。  
@@ -44,7 +49,7 @@ ms.lasthandoff: 11/09/2017
 ## 使用字符格式的注意事项<a name="considerations"></a>
 使用字符格式时，请考虑下列事项：  
   
--   默认情况下，[bcp 实用工具](../../tools/bcp-utility.md)使用制表符分隔字符数据字段，并用换行符终止记录。  有关如何指定替换终止符的详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
+-   默认情况下， [bcp 实用工具](../../tools/bcp-utility.md) 使用制表符分隔字符数据字段，并用换行符终止记录。  有关如何指定替换终止符的详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
 -   默认情况下，在批量导出或导入字符模式数据之前，将执行下列转换：  
   
@@ -64,7 +69,7 @@ ms.lasthandoff: 11/09/2017
   
 下列命令选项支持字符格式：  
   
-|Command|选项|说明|  
+|Command|选项|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|让 bcp 实用工具使用字符数据。*|  
 |BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  

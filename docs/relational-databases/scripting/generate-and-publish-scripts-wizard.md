@@ -2,10 +2,14 @@
 title: "生成和发布脚本向导 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,19 +45,19 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d10e5a92fe19da764d341039ed348f8297193a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a9e1ba4f4afadc27174f3dfd61b03005a33ef16
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
-  你可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
   
 1.  **开始之前：**  [发布到宿主服务](#PubHostSvc)， [权限](#Permissions)  
   
@@ -67,7 +71,7 @@ ms.lasthandoff: 11/09/2017
   
  若要将一个数据库发布到 Web 宿主服务，请在该向导的 **“设置脚本编写选项”** 页上选择 **“发布到 Web 服务”** 。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="Permissions"></a> Permissions  
  发布数据库的最小权限是原始数据库上 db_ddladmin 固定数据库角色中的成员身份。 将数据库脚本发布到位于宿主提供程序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最小权限是目标数据库上 db_ddladmin 固定数据库角色中的成员身份。  
   
  用户还必须提供用户名和密码来访问他们的宿主提供程序帐户，才能使用该向导进行发布。 必须先在宿主提供程序中创建目标数据库，然后才能发布源数据库。 发布将覆盖该现有数据库中的对象。  
@@ -348,7 +352,7 @@ ms.lasthandoff: 11/09/2017
 
 1. 单击“工具”，然后单击“选项”。  
 2. 在“常规脚本选项”中设置：  
-    1. 数据库引擎类型脚本：**Microsoft Azure SQL 数据库**。  
+    1. 数据库引擎类型脚本： **Microsoft Azure SQL 数据库**。  
     2. 数据库引擎版本脚本：**Microsoft Azure SQL 数据仓库版本**。  
 3. 单击“确定” 。
 
@@ -361,7 +365,7 @@ ms.lasthandoff: 11/09/2017
 3. 选择你要为其编写脚本的对象。  
 4. 在“脚本选项”中，单击“高级”。 在“常规”下设置：  
     1. 数据库引擎类型脚本：**Microsoft Azure SQL 数据库**。  
-    2. 数据库引擎版本脚本：**Microsoft Azure SQL 数据仓库版本**。  
+    2. 数据库引擎版本脚本： **Microsoft Azure SQL 数据仓库版本**。  
 5. 单击“保存或发布脚本”，然后单击“完成”。  
 
 步骤 4 中设置的选项将不会被记住。 如果想要记住这些选项，请按照 **如何将默认脚本选项设置为 SQL 数据仓库**中的说明进行操作。  

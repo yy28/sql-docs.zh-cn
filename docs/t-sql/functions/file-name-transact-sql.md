@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FILE_NAME_TSQL
 - FILE_NAME
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - viewing file names
 - file names [SQL Server], FILE_NAME
@@ -26,15 +28,15 @@ helpviewer_keywords:
 - FILE_NAME function
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b6478b5e9eb148dea799fb928384098712e4810d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 35b7f2b516227e00af629cadb5c1dccadad2b092
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,15 +56,15 @@ FILE_NAME ( file_id )
  要返回其文件名的文件的标识号。 *file_id*是**int**。  
   
 ## <a name="return-types"></a>返回类型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *file_ID*对应于在 sys.master_files 或 sys.database_files 目录视图的 file_id 列。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回的文件名`file_ID 1`和`file_ID`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
   
-```tsql  
+```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
 GO  
 ```  

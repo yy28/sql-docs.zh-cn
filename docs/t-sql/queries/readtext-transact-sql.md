@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - READTEXT_TSQL
 - READTEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - column reading [SQL Server]
 - READTEXT statement
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 02bf4a96756b8bf3a63a75dec97fe6f58abc8a6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c1659dfcc9ca8908ce756eb41b32fd30649decfa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +51,16 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *表* **。** *列*  
+ *表* **。** column  
  要对其执行读取操作的表和列的名称。 表和列名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 必须指定表名和列名。但是，可根据需要指定数据库名称和数据库所有者名称。  
   
  *text_ptr*  
  有效的文本指针。 *text_ptr*必须**binary （16)**。  
   
- *偏移量*  
+ *offset*  
  是的字节数 (时**文本**或**映像**使用数据类型) 或字符 (时**ntext**使用数据类型) 跳过在其开始读取之前**文本**，**映像**，或**ntext**数据。  
   
- *大小*  
+ size  
  是的字节数 (时**文本**或**映像**使用数据类型) 或字符 (时**ntext**使用数据类型) 的要读取数据。 如果*大小*为 0，读取的数据的 4 KB 字节。  
   
  HOLDLOCK  
@@ -71,7 +73,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
  值 @@TEXTSIZE函数取代如果小于指定大小的 READTEXT READTEXT 为指定的大小。 @@TEXTSIZE函数指定要由 SET TEXTSIZE 语句返回集的数据的字节数限制。 有关如何设置 TEXTSIZE 的会话设置的详细信息，请参阅[SET TEXTSIZE &#40;Transact SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  READTEXT 权限默认授予对指定的表具有 SELECT 权限的用户。 可在转移 SELECT 权限时转移权限。  
   
 ## <a name="examples"></a>示例  

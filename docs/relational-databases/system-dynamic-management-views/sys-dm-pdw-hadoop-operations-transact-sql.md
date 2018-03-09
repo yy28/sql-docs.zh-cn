@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_pdw_hadoop_operations (Transact SQL) |Microsoft 文档"
+title: sys.dm_pdw_hadoop_operations (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b735d4759d3164ae61da717ec18d54ab8661441
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8ccb851fc349e31206ca5e76f050a1413c8c7405
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (TRANSACT-SQL)
+# <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   个下推到 Hadoop 一部分运行的每个 map-reduce 作业中占一行[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]对外部 Hadoop 表的查询。 每个 map-reduce 作业均表示一个查询中的谓词。 谓词下推启用用于 Hadoop 外部表上的查询时才使用此选项。  

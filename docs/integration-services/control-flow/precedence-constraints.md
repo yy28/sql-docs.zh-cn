@@ -1,5 +1,5 @@
 ---
-title: "优先约束 |Microsoft 文档"
+title: "优先约束 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -22,30 +22,29 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 380c7e4c06b4baec2efcbad54000a009a93b93e1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 84b5d39132c85d7aa34dbb1e4bfb53d400d3cfa0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="precedence-constraints"></a>优先约束
   优先约束在控制流中链接包中的可执行文件、容器和任务，并指定决定可执行文件是否运行的条件。 可执行文件可以是 For 循环容器、Foreach 循环容器、序列容器、任务或事件处理程序。 事件处理程序也使用优先约束将其可执行文件链接为控制流。  
   
  优先约束链接两个可执行文件：优先可执行文件和受约束的可执行文件。 优先可执行文件先于受约束的可执行文件运行，而优先可执行文件的执行结果可能决定受约束的可执行文件是否运行。 下列关系图显示由优先约束链接的两个可执行文件。  
   
- ![可执行文件的优先约束连接](../../integration-services/control-flow/media/ssis-pcsimple.gif "由优先约束连接可执行文件")  
+ ![由优先约束连接的可执行文件](../../integration-services/control-flow/media/ssis-pcsimple.gif "Executables connected by a precedence constraint")  
   
  在线性控制流（即不分支的控制流）中，优先约束独自控制任务运行的顺序。 如果控制流有分支，则由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时引擎决定紧随分支之后的任务和容器的执行顺序。 运行时引擎还决定着控制流中未连接的工作流的执行顺序。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的嵌套容器体系结构使得所有容器（除仅封装单个任务的任务宿主容器之外）均可包含其他容器，且每个容器都有自己的控制流。 For 循环容器、Foreach 循环容器和序列容器可以包含多个任务和其他容器，而这些任务和容器又可以包含多个任务和容器，如此逐层嵌套。 例如，带有脚本任务和序列容器的包具有链接该脚本任务和序列容器的优先约束。 序列容器包含三个脚本任务，且容器的优先约束将此三个脚本任务链接为控制流。 下列关系图显示包中带有两级嵌套的优先约束。  
   
- ![在包中的优先约束](../../integration-services/control-flow/media/mw-dts-12.gif "包中的优先约束")  
+ ![包中的优先约束](../../integration-services/control-flow/media/mw-dts-12.gif "Precedence contraints in a package")  
   
  由于包位于 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 容器层次结构的顶部，因此优先约束不能链接多个包；但是可以向包添加执行包任务并间接地将其他包链接到控制流中。  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  优先约束必须为相同 **Precedence Constraint** 集合的成员，才能组成逻辑与条件。 例如，不能组合来自两个 Foreach 循环容器的优先约束。  
   
-## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>设置优先约束使用优先约束编辑器中的属性  
+## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>使用优先约束编辑器设置优先约束的属性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -116,15 +115,15 @@ ms.lasthandoff: 09/26/2017
 ## <a name="precedence-constraint-editor"></a>优先约束编辑器
 可以使用 **“优先约束编辑器”** 对话框配置优先约束。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **求值运算**  
  指定优先约束使用的求值运算。 运算包括： **“约束”**、 **“表达式”**、 **“表达式和约束”**和 **“表达式或约束”**。  
   
- **值**  
+ **ReplTest1**  
  指定约束值：“成功” 、“失败” 或“完成” 。  
   
 > [!NOTE]  
->  优先约束线含义： 绿色表示**成功**，突出显示表示**失败**，蓝色表示**完成**。  
+>  优先约束线的含义：绿色表示“成功”，突出显示表示“失败”，蓝色表示“完成”。  
   
  **表达式**  
  如果使用运算“表达式”、“表达式和约束”或“表达式或约束”，则键入一个表达式或启动表达式生成器来创建表达式。 表达式的计算结果必须为布尔值。  
@@ -144,7 +143,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  这种类型的优先约束显示为绿色、突出显示或蓝色点线。  
   
-## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>在属性窗口中设置的优先约束属性  
+## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>在“属性”窗口中设置优先约束的属性  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含要修改的包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -158,17 +157,17 @@ ms.lasthandoff: 09/26/2017
     |--------------------------|--------------------------|  
     |Description|提供说明。|  
     |EvalOp|选择一个求值运算。 如果选择了 **Expression**、 **ExpressionAndConstant**或 **ExpressionOrConstant** 运算，则可指定一个表达式。|  
-    |“表达式”|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
+    |表达式|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
     |LogicalAnd|设置 **LogicalAnd** ，以指定当有多个可执行文件优先于并且链接到受约束的可执行文件时，是否将此优先约束与其他优先约束一起计算。|  
-    |名称|更新优先约束的名称。|  
+    |“属性”|更新优先约束的名称。|  
     |ShowAnnotation|指定要使用的批注类型。 选择 **Never** 可以禁用批注；选择 **AsNeeded** 可以启用按需批注；选择 **ConstraintName** 可以使用 Name 属性的值自动进行批注；选择 **ConstraintDescription** 可以使用 Description 属性的值自动进行批注；选择 **ConstraintOptions** 可以使用 Value 和 Expression 属性的值自动进行批注。|  
-    |“值”|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
+    |ReplTest1|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
   
 5.  关闭“属性”窗口。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
-## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>设置优先约束使用的快捷菜单的值  
+## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>使用快捷菜单设置优先约束的值  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -181,17 +180,17 @@ ms.lasthandoff: 09/26/2017
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
 ## <a name="add-expressions-to-precedence-constraints"></a>将表达式添加到优先约束
- 优先约束可用表达式定义两个可执行文件之间的约束：优先可执行文件和受约束的可执行文件。 可执行文件可以是任务或容器。 表达式可以单独使用，也可以与优先可执行文件的执行结果结合使用。 可执行文件的执行结果或者为成功，或者为失败。 配置优先约束的执行结果时，可以将执行结果设置为 **Success**、 **Failure**或 **Completion**。 **Success** 要求优先可执行文件成功； **Failure** 要求优先可执行文件失败；而 **Completion** 则指示无论优先任务成功或失败，受约束的可执行文件都应运行。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 优先约束可用表达式定义两个可执行文件之间的约束：优先可执行文件和受约束的可执行文件。 可执行文件可以是任务或容器。 表达式可以单独使用，也可以与优先可执行文件的执行结果结合使用。 可执行文件的执行结果或者为成功，或者为失败。 配置优先约束的执行结果时，可以将执行结果设置为 **Success**、 **Failure**或 **Completion**。 **Success** 要求优先可执行文件成功； **Failure** 要求优先可执行文件失败；而 **Completion** 则指示无论优先任务成功或失败，受约束的可执行文件都应运行。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
  表达式的值必须为 **True** 或 **False** ，并且此表达式必须为有效的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式。 此表达式可以使用文字、系统变量和自定义变量以及 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 表达式语法提供的函数和运算符。 例如，表达式 `@Count == SQRT(144) + 10` 使用了变量 **Count**、SQRT 函数以及等号 (==) 和加号 (+) 运算符。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
  在下图中，使用一个执行结果和一个表达式的优先约束将任务 A 和任务 B 链接在一起。 此约束值设置为 **Success** ，表达式为  `@X >== @Z`。 仅当任务 A 成功完成且变量 **X** 的值大于或等于变量 **Z**的值时，受约束的任务 B 才运行。  
   
- ![两个任务之间的优先约束](../../integration-services/control-flow/media/mw-dts-03.gif "两个任务之间的优先约束")  
+ ![两个任务之间的优先约束](../../integration-services/control-flow/media/mw-dts-03.gif "Precedence constraint between two tasks")  
   
  也可以用包含不同表达式的多个优先约束来链接可执行文件。 例如，在下图中，使用执行结果和表达式的优先约束将任务 B 和任务 C 链接到任务 A。 这两个约束的值都设置为 **Success**。 ，一个优先约束包含表达式 `@X >== @Z`，而另一个优先约束包含表达式 `@X < @Z`。 变量 **X** 和变量 **Z**的值决定是任务 C 运行还是任务 B 运行。  
   
- ![优先约束表达式](../../integration-services/control-flow/media/mw-dts-04.gif "优先约束的表达式")  
+ ![优先约束表达式](../../integration-services/control-flow/media/mw-dts-04.gif "Expressions on precedence constraints")  
   
  可使用 **设计器中的** “优先约束编辑器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的“属性”窗口来添加或修改表达式。 但是，“属性”窗口不提供表达式语法验证。  
   
@@ -215,7 +214,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
  
-### <a name="combine-execution-values-and-expressions"></a>合并的执行值和表达式  
+### <a name="combine-execution-values-and-expressions"></a>将执行值和表达式组合起来  
  下表介绍把执行值约束和表达式组合在优先约束中的效果。  
   
 |求值运算|约束的计算结果为|表达式的计算结果为|受约束的可执行文件运行|  
@@ -234,12 +233,12 @@ ms.lasthandoff: 09/26/2017
 |约束或表达式|False|False|False|  
 
 
-## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>使用多个优先约束的复杂的约束方案 
+## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>具有多个优先约束的复杂约束方案 
 一个优先约束连接两个可执行文件：两个任务、两个容器或一个任务和一个容器。 它们被称为优先可执行文件和受约束的可执行文件。 受约束的可执行文件可具有多个优先约束。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
   
  对约束进行分组以组合成复杂的约束方案，可使您在包中实现复杂的控制流。 例如，在下图中，一个 **Success** 约束将任务 D 链接到任务 A，一个 **Failure** 约束将任务 D 链接到任务 B，而一个 **Success** 约束将任务 D 链接到任务 C。 任务 D 和任务 A 之间、任务 D 和任务 B 之间，以及任务 D 和任务 C 之间的优先约束参与逻辑与  关系。 因此，任务 A 必须运行成功，任务 B 必须失败，并且任务 C 必须运行成功才能运行任务 D。  
   
- ![任务链接的优先约束](../../integration-services/control-flow/media/precedenceconstraints.gif "任务链接的优先约束")  
+ ![按优先约束链接的任务](../../integration-services/control-flow/media/precedenceconstraints.gif "Tasks linked by precedence constraints")  
   
 ### <a name="logicaland-property"></a>LogicalAnd 属性  
  如果任务或容器具有多个约束，则 **LogicalAnd** 属性指定一个优先约束是单独计算还是与其他约束一起计算。  
@@ -259,7 +258,7 @@ ms.lasthandoff: 09/26/2017
   
 5.  在下拉列表中，选择“对新形状使用‘失败’约束”或“对新形状使用‘完成’约束”。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ## <a name="create-a-default-precedence-constraint"></a>创建默认优先约束  
   
@@ -272,4 +271,3 @@ ms.lasthandoff: 09/26/2017
 4.  在 **“控制流”** 选项卡的设计图面上，单击任务或容器，并将其连接线拖动到要将优先约束应用到其上的可执行文件。  
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
-

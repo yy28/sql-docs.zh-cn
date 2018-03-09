@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - transport security
 - database mirroring [SQL Server], security
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0488b8646d4b8c92d5f34f6b3148846f62b3f47f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff841106e99cd34bedd1d93e106fb04d452b411f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>传输安全性 - 数据库镜像 - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 -   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例基于不同的域帐户（在相同的域或受信任的域中）作为服务运行，则必须在其他每个服务器实例上的 **master** 中创建各帐户的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。  
   
--   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例作为网络服务帐户运行，则必须在其他每个服务器上的*master***\\***中创建各主机帐户 (*DomainName **ComputerName$** ) 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
+-   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例作为网络服务帐户运行，则必须在其他每个服务器上的 master 中创建各主机帐户 (DomainName\\ComputerName$) 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
   
 > [!NOTE]  
 >  有关使用 Windows 身份验证设置数据库镜像会话的示例，请参阅[示例：使用 Windows 身份验证设置数据库镜像 (Transact SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
  或者，您可以通过在 CREATE ENDPOINT 语句或 ALTER ENDPOINT 语句中为 ALGORITHM 选项指定下列值之一，控制端点所使用的加密算法：  
   
-|ALGORITHM 值|说明|  
+|ALGORITHM 值|Description|  
 |---------------------|-----------------|  
 |RC4|指定端点必须使用 RC4 算法。 这是默认设置。<br /><br /> **\*\* 警告 \*\*** 不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。|  
 |AES|指定端点必须使用 AES 算法。|  

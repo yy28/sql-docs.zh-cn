@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 表达式 |Microsoft 文档"
+title: "Integration Services (SSIS) 表达式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7dedaa6d36fb0618b6124b1d2b1014c32fb2f44c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 表达式
   表达式是生成单个数据值的符号（标识符、文字、函数和运算符）的组合。 简单的表达式可以是单个常量、变量或函数。 更多情况下，表达式较为复杂，会使用多个运算符和函数，并且引用多个列和变量。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，表达式可以用于定义 CASE 语句的条件，创建和更新数据列中的值，为变量赋值，在运行时更新或填充属性，定义优先约束中的约束，以及提供 For 循环容器所使用的表达式。  
@@ -51,9 +50,9 @@ ms.lasthandoff: 08/03/2017
   
 -   变量可以使用表达式来设置其值。 例如，GETDATE() 可以将变量的值设置为当前日期。  
   
--   优先约束可以使用表达式指定确定在包中运行约束任务还是容器的条件。 优先约束中使用的表达式的计算结果必须为 **true** 或 **false**。 例如，表达式@A>@B比较两个用户定义变量，以确定受约束的任务是否运行。  
+-   优先约束可以使用表达式指定确定在包中运行约束任务还是容器的条件。 优先约束中使用的表达式的计算结果必须为 **true** 或 **false**。 例如，表达式 @A > @B 比较两个用户定义的变量，以确定是否运行受约束任务。  
   
--   For 循环容器可以使用表达式来生成循环结构使用的初始化语句、计算语句、增量语句。 例如，表达式@Counter= 1 初始化循环计数器。  
+-   For 循环容器可以使用表达式来生成循环结构使用的初始化语句、计算语句、增量语句。 例如，表达式 @Counter = 1 初始化循环计数器。  
   
  表达式还可以用于更新包、容器（如 For 循环和 Foreach 循环）、任务、包和项目级连接管理器、日志提供程序以及 Foreach 枚举器的属性值。 例如，使用属性表达式，可以将字符串“Localhost.AdventureWorks”分配给执行 SQL 任务的 ConnectionName 属性。 有关详细信息，请参阅 [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/03/2017
   
  变量具有作用域，因此表达式生成器中的 **“变量”** 文件夹只列出处于作用域中并且可以使用的变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [在数据流组件中使用表达式](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>相关内容  
@@ -80,4 +79,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
 - OPENXML
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OPENXML statement
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b1fb1d28c4bddb679bd4aab8ce6cb11f21caca5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +55,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *rowpattern*  
  是用于标识节点的 XPath 模式 (其句柄传递中的 XML 文档中*idoc*参数) 作为行处理。  
   
- *标志*  
+ *flags*  
  指示应在 XML 数据和关系行集间使用映射以及应如何填充溢出列。 *标志*是可选的输入的参数，并且可以是以下值之一。  
   
 |字节值|Description|  
@@ -64,7 +66,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|可与 XML_ATTRIBUTES 或 XML_ELEMENTS 组合使用（逻辑或）。 在检索上下文中，此标志指示消耗的数据不应复制到溢出属性 **@mp:xmltext** 。|  
   
  *SchemaDeclaration*  
- 是窗体的架构定义： *ColName**ColType* [*ColPattern* | *元属性*] [*ColNameColType* [*ColPattern* | *元属性*]...]  
+ 是窗体的架构定义： *ColName * * ColType* [*ColPattern* | *元属性*] [**，* * *ColNameColType* [*ColPattern * |*元属性*]...]  
   
  *ColName*  
  行集中的列名。  
@@ -79,10 +81,10 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  指定为一个常规的 XPath 模式*ColPattern*还支持元属性。  
   
- *元属性*  
+ *MetaProperty*  
  由 OPENXML 提供的元属性之一。 如果*元属性*指定，则该列包含提供的元属性的信息。 使用元属性可以提取有关 XML 节点的信息（如相对位置和命名空间信息）。 它提供了比文本表示形式更详细的信息。  
   
- *表名*  
+ *TableName*  
  是可以提供的表名 (而不是*SchemaDeclaration*) 如果已存在具有所需的架构的表和不所需的任何列模式。  
   
 ## <a name="remarks"></a>注释  
@@ -90,7 +92,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  下表描述的结构**边缘**表。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|文档节点的唯一 ID。<br /><br /> 根元素具有的 ID 值 0。 保留负的 ID 值。|  
 |**parentid**|**bigint**|标识节点的父节点。 此 ID 所标识的父节点不一定是父元素，而是取决于此 ID 所标识节点的子节点的 NodeType。 例如，如果节点是文本节点，则其父节点可能是属性节点。<br /><br />  如果节点位于 XML 文档的顶层，则其 ParentID 为 NULL。|  

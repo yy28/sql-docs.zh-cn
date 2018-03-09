@@ -1,10 +1,13 @@
 ---
 title: "快捷键 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9582b4835093a359316c600cd8128d77e6b4e48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 94b156ee8349ce0ab98369c47ea30635f73e74bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortcut-keys-mysqltosql"></a>快捷键 (MySQLToSQL)
 键盘快捷方式可用于浏览 SSMA 应用程序。 有关详细信息，请参阅以下主题。  

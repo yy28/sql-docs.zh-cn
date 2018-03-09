@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - LIKE
 - ESCAPE_TSQL
 - LIKE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ESCAPE keyword
 - '% (wildcard - character(s) to match)'
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 4fa2299a1efade9f44de85d02c60286a25aad8d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +69,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的字符数据类型。  
   
- *模式*  
+ *pattern*  
  是要在中搜索的字符的特定字符串*match_expression*，并且可以包括下列有效的通配符。 *模式*最多为 8000 个字节。  
   
 |通配符|Description|示例|  
@@ -91,7 +93,7 @@ match_expression [ NOT ] LIKE pattern
   
  使用包含的模式的字符串比较**char**和**varchar**数据可能无法通过 LIKE 比较由于存储数据的方式。 您应当了解每种数据类型的存储方式以及导致 LIKE 比较失败的原因。 下面的示例传入本地**char**到存储的过程，然后使用模式匹配来找到所有员工具有一组指定的字符其最后一个名称开头的变量。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +111,7 @@ GO
   
  但是，下面的示例会成功，因为尾随空格不会添加到**varchar**变量。  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +139,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  下面的一系列示例显示 ASCII LIKE 模式匹配与 Unicode LIKE 模式匹配所返回的行之间的差异。  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +170,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  例如，以下查询显示 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的所有动态管理视图，因为它们全部以字母 `dm` 开始。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +209,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. 使用带 % 通配符的 LIKE  
  以下示例在 `415` 表中查找区号为 `PersonPhone` 的所有电话号码。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +243,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. 使用带 % 通配符的 NOT LIKE  
  以下示例在 `PersonPhone` 表中查找区号不是 `415` 的所有电话号码。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +274,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
  以下示例使用 `ESCAPE` 子句和转义符在 `10-15%` 表的列 `c1` 中查找精确字符串 `mytbl2`。  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +299,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. 使用 [ ] 通配符  
  下面的示例查找员工上`Person`的第一个同名的表`Cheryl`或`Sheryl`。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +310,7 @@ GO
   
  以下示例查找 `Person` 表中姓氏为 `Zheng` 或 `Zhang` 的员工所对应的行。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +325,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. 使用带 % 通配符的 LIKE  
  下面的示例查找中的所有员工`DimEmployee`开头的电话号码具有表`612`。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -333,9 +335,9 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. 使用带 % 通配符的 NOT LIKE  
- 下面的示例查找中的所有电话号码`DimEmployee`表不会启动与`612`。  实例时都提供 SQL Server 登录名。  
+ 下面的示例查找中的所有电话号码`DimEmployee`表不会启动与`612`。  。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +349,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. 使用如 _ 通配符字符  
  下面的示例查找所有具有区域代码开头的电话号码`6`和以`2`中`DimEmployee`表。 请注意，%通配符字符也包括在搜索模式的末尾由于区号是电话号码的第一部分，其他字符中的列值后存在。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -360,5 +362,5 @@ ORDER by LastName;
  [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  

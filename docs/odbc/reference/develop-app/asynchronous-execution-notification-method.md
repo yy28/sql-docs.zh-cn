@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56eadba88bc229b4d3f3560c60988124b54f33b9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea68f33ff231a9fb6f257e1cd681e25b3569721a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-execution-notification-method"></a>异步执行（通知方法）
 ODBC 允许连接和语句操作的异步的执行。 一个应用程序线程可以在异步模式调用 ODBC 函数，该函数可以返回在操作完成后，允许应用程序线程执行其他任务之前。 在 Windows 7 SDK 中，异步语句或连接操作，将该异步操作已完成使用轮询方法确定应用程序。 有关详细信息，请参阅[异步执行 （轮询方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)。 从 Windows 8 SDK 开始，你可以确定异步操作已完成使用通知方法。  
@@ -332,7 +332,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE 和 SQL_ATTR_ASYNC_DBC_EVENT 连接属性确定 ODBC 在异步模式的执行是否和 ODBC 中是否启用连接句柄的通知模式。 语句特性 SQL_ATTR_ASYNC_ENABLE 和 SQL_ATTR_ASYNC_STMT_EVENT 确定 ODBC 在异步模式的执行是否和 ODBC 中是否启用语句句柄的通知模式。  
   
-|SQL_ATTR_ASYNC_ENABLE 或 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT 或 SQL_ATTR_ASYNC_DBC_EVENT|模式|  
+|SQL_ATTR_ASYNC_ENABLE 或 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT 或 SQL_ATTR_ASYNC_DBC_EVENT|“模式”|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |启用|非 null|异步通知|  
 |启用|null|异步轮询|  

@@ -3,8 +3,11 @@ title: "“CHECK 约束表达式”对话框 (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 295948ceb25e7176bc821b01b78d586f7a07b152
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d7cf57c1f37b4a18cb43935e1f2108933a861233
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>“CHECK 约束表达式”对话框 (Visual Database Tools)
-向表或列附加 CHECK 约束时，必须包括 SQL 表达式。 在提供的框中键入 CHECK 约束表达式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 向表或列附加 CHECK 约束时，必须包括 SQL 表达式。 在提供的框中键入 CHECK 约束表达式。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
 表达式  

@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_xtp_control_proc_exec_stats (TRANSACT-SQL) |Microsoft 文档"
+title: sys.sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_control_proc_exec_stats
 - sys.sp_xtp_control_proc_exec_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_xtp_control_proc_exec_stats
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_xtp_control_proc_exec_stats
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 721c120c200bb3142b36e06beb6e45cab1ca0805
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8244febff8de5e87eb37ece4af7b32b98c23f131
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpcontrolprocexecstats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -42,18 +45,18 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ```  
   
 ## <a name="arguments"></a>参数  
- @new_collection_value=*值*  
+ @new_collection_value = *value*  
  决定打开 (1) 还是关闭 (0) 过程级统计信息收集。  
   
  @new_collection_value设置为零在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或数据库启动。  
   
- @old_collection_value=*值*  
+ @old_collection_value = *value*  
  返回当前状态。  
   
 ## <a name="return-code"></a>返回代码  
  0 表示成功。 非零表示失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求用户为固定 sysadmin 角色的成员。  
   
 ## <a name="code-samples"></a>代码示例  

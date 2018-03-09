@@ -2,15 +2,13 @@
 title: "ApplyCompression 元素 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ApplyCompression Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a0f3dc91f2d1755c537db51d4691d202c127230d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98dcbdc9224fe87ff03e0a487c7ed215d2462ebc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="applycompression-element-xmla"></a>ApplyCompression 元素 (XMLA)
-  确定是否父[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令压缩备份文件。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]确定是否父[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令压缩备份文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|Boolean|  
 |默认值|True|  
@@ -61,9 +59,9 @@ ms.lasthandoff: 11/17/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>另请参阅  
  [属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

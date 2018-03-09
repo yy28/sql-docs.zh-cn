@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC SHOWCONTIG
 - SHOWCONTIG
 - SHOWCONTIG_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - displaying defragmentation information
 - DBCC SHOWCONTIG statement
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 85822d9351e0f0ce5a8c5a7542fbd7df57d13d74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +70,7 @@ DBCC SHOWCONTIG
 ```  
   
 ## <a name="arguments"></a>参数  
- *table_name* | *针对 table_id 所* | *view_name* | *view_id*  
+ *table_name* | *table_id* | *view_name* | *view_id*  
  要检查碎片信息的表或视图。 如果未指定，则检查当前数据库中的所有表和索引视图。 若要获取表或查看 ID，使用[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)函数。  
   
  *index_name* | *index_id*  
@@ -122,7 +124,7 @@ DBCC SHOWCONTIG
 |**ObjectId**|对象名的 ID。|  
 |**IndexName**|处理的索引的名称。 堆的 IndexName 为 NULL。|  
 |**IndexId**|索引的 ID。 堆的 IndexId 为 0。|  
-|**Level**|索引的级别。 级别 0 是索引的叶（或数据）级。<br /><br /> 堆的级别为 0。|  
+|**级别**|索引的级别。 级别 0 是索引的叶（或数据）级。<br /><br /> 堆的级别为 0。|  
 |**页**|组成某个索引级别或整个堆的页数。|  
 |**行**|某个索引级别上的数据或索引记录数。 对于堆，此值是整个堆中的数据记录数。<br /><br /> 对于堆，此函数返回的记录数可能与通过对堆运行 SELECT COUNT(*) 返回的行数不匹配。 这是因为一行可能包含多个记录。 例如，在某些更新情况下，单个堆行可能由于更新操作而包含一条前推记录和一条被前推记录。 此外，多数大型 LOB 行在 LOB_DATA 存储中拆分为多个记录。|  
 |**MinimumRecordSize**|某个索引级别或整个堆中的最小记录大小。|  
@@ -141,7 +143,7 @@ DBCC SHOWCONTIG
   
 如果指定了 WITH TABLERESULTS 和 FAST，则结果集将与指定 WITH TABLERESULTS 时一样，但以下列的值将为 null：
 
-| 行| Extents |
+| “行”| Extents |
 |---|---|
 |**MinimumRecordSize**|**AverageFreeBytes**|  
 |**MaximumRecordSize**|**AveragePageDensity**|  
@@ -190,7 +192,7 @@ DBCC SHOWCONTIG 可确定表是否高度碎片化。 在对表进行数据修改
     > [!NOTE]  
     >  **扩展盘区扫描碎片**值会很高，如果索引跨越多个文件。 若要减小这些值，必须减少索引碎片。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 用户必须拥有某个表，或者是的成员**sysadmin**固定服务器角色、 **db_owner**固定数据库角色或**db_ddladmin**固定的数据库角色。
   
 ## <a name="examples"></a>示例  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 531989070a8e3f416fee19af797555284294e7da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff8a5cd7317b34e5f5cb09c5fc1b85b3580e7fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了始终加密的驱动程序（例如用于 SQL Server 的 .NET Framework 数据提供程序）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此目标。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [始终加密（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置了始终加密的数据库，请按照 [始终加密入门](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5)中的说明操作。
 - 确保在开发计算机上安装 .NET Framework 4.6 版或更高版本。 有关详细信息，请参阅 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)。 还需确保将 .NET Framework 4.6 版或更高版本配置为开发环境中的目标 .NET Framework 版本。 如果使用的是 Visual Studio，请参考 [如何：面向 .NET Framework 的某个版本](https://msdn.microsoft.com/library/bb398202.aspx)。 
@@ -283,7 +284,7 @@ cmd.ExecuteNonQuery();
 用于 SQL Server 的 .NET Framework 数据提供程序附带以下内置列主密钥存储提供程序，这些提供程序已使用特定的提供程序名称（用于查找该提供程序）进行预注册。
 
 
-| 类 | 说明 | 提供程序（查找）名称 |
+| 类 | Description | 提供程序（查找）名称 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider 类| 用于 Windows 证书存储的提供程序。 | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注意：** 此提供程序在 .NET Framework 4.6.1 及更高版本中可用。 |用于支持 [Microsoft 加密 API：下一代 (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)的密钥存储的提供程序。 这类存储通常是硬件安全模块 — 一种用于保护和管理数字密钥并提供加密处理的物理设备。  | MSSQL_CNG_STORE|
@@ -553,7 +554,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|名称|说明|在以下 .NET 版本中引入
+|“属性”|Description|在以下 .NET 版本中引入
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|用于 Windows 证书存储区的密钥存储提供程序。|  4.6
 |[SqlColumnEncryptionCngProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|用于 Microsoft 下一代加密 API (CNG) 的密钥存储提供程序。|  4.6.1
@@ -573,7 +574,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>另请参阅
 
-- [始终加密（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [始终加密博客](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL 数据库教程：使用始终加密保护敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

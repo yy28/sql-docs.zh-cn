@@ -3,8 +3,11 @@ title: "用于输入搜索值的规则 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde4d45d9b161c54a03051a76bc867136ac34128
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 979bc40803391e773624d9d7f2b9e43e3bad5ee6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>输入搜索值的规则 (Visual Database Tools)
-本主题讨论当为搜索条件输入以下类型的文本值时必须遵循的约定：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主题讨论当为搜索条件输入以下类型的文本值时必须遵循的约定：  
   
 -   文本值  
   

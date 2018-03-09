@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b45b0d87b846c50abc678692021c427006b3152e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 0b64dc761f5af95ab913291d6aa488ced8fba8cf
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   更改数据库属性范围的凭据。  
   
@@ -48,11 +49,11 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  指定正在更改的数据库范围凭据的名称。  
   
- 标识**=***identity_name*  
+ IDENTITY **='***identity_name***'**  
  指定从服务器外部进行连接时要使用的帐户名称。 若要从 Azure Blob 存储导入文件，标识名称必须是`SHARED ACCESS SIGNATURE`。  有关共享的访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。  
     
   
- 机密**=***机密*  
+ SECRET **='***secret***'**  
  指定发送身份验证所需的机密内容。 *机密*需从 Azure Blob 存储导入文件。 *机密*可能是可选的用于其他目的。   
 >  [!WARNING]
 >  SAS 密钥值可能会开始使用？（问号）。 如果你使用 SAS 密钥，你必须删除前导？。 否则可能会阻止你的工作。    
@@ -64,7 +65,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  有关数据库范围凭据的信息会显示在[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要`ALTER`凭据的权限。  
   
 ## <a name="examples"></a>示例  

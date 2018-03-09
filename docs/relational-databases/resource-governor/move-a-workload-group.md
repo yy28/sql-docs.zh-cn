@@ -2,9 +2,12 @@
 title: "移动工作负荷组 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,22 +17,22 @@ helpviewer_keywords:
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96ccc6c3215822bd19239cc781bb3f259fb6386f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9059139e5ccdc4327095a913752d55a84443d810
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-a-workload-group"></a>移动工作负荷组
-  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 将资源调控器工作负荷组移动到其他资源池。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 将 Resource Governor 工作负荷组移动到其他资源池。  
   
--   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **若要移动工作负荷组，请使用：**  [SQL Server Management Studio](#MoveWGSSMS)、 [Transact-SQL](#MoveWGTSQL)  
+-   **To move a workload group, using:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果存在挂起的资源调控器配置操作，则无法移动工作负荷组。  
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  如果存在挂起的资源调控器配置操作，则无法移动工作负荷组。 你可以通过查询 [sys.dm_resource_governor_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 动态管理视图来获取 is_configuration_pending 的当前状态以确定是否存在配置挂起。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="Permissions"></a> Permissions  
  移动工作负荷组需要 CONTROL SERVER 权限。  
   
 ##  <a name="MoveWGSSMS"></a> 使用 SQL Server Management Studio 移动工作负荷组  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
   
-2.  右键单击“资源调控器”，然后单击“属性”，这将打开“资源调控器属性”页。  
+2.  右键单击“资源调控器”  ，然后单击“属性” ，这将打开“资源调控器属性”页  。  
   
 3.  在 **“资源池”** 窗口中，单击包含要移动的工作负荷组的资源池。 此时， **“工作负荷组”** 窗口会列出该资源池中的工作负荷组。  
   
@@ -76,7 +79,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
+ [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [创建工作负荷组](../../relational-databases/resource-governor/create-a-workload-group.md)   

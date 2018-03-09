@@ -2,30 +2,29 @@
 title: "对挖掘结构的钻取 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfbedd4235f4409df31912df360cf192725f36e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac35e52322e82cff60dd9f62504db59f8f4b982e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-on-mining-structures"></a>对挖掘结构的钻取功能
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了两种不同的选项来钻取到事例数据中。 您可以钻取到用来挖掘模型的数据，也可以钻取到挖掘结构中的源数据。  
@@ -63,9 +62,9 @@ ms.lasthandoff: 11/17/2017
 |-|-|  
 |从挖掘模型查看器对结构使用钻取|[从模型查看器使用钻取](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |有关特定的模型类型，请参阅钻取查询的示例。|[数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)|  
-|获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予对数据挖掘结构和模型 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [对挖掘模型的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
+ [在挖掘模型的钻取](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
   

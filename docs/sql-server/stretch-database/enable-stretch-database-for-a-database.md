@@ -2,36 +2,38 @@
 title: "为数据库启用 Stretch Database | Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98f2b5c6f881989276a8728218a57118f44a47c5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 754e4cb8c56b3c118f7c3d0716b250b860fd73f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   若要为现有数据库配置 Stretch Database，请在 SQL Server Management Studio 中为数据库选择“任务 | Stretch | 启用”，以打开“为数据库启用 Stretch”向导。 你也可以使用 Transact-SQL 来为数据库启用 Stretch Database。  
   
- 如果你为单个表选择“任务 | Stretch | 启用”，且尚未为数据库启用 Stretch Database，向导将会为数据库配置 Stretch Database，并在此过程中让你配置表。 请遵循本主题中的步骤，而非 [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步骤。  
+ 如果你为单个表选择“任务 | Stretch | 启用”，且尚未为数据库启用 Stretch Database，向导将会为数据库配置 Stretch Database，并在此过程中让你配置表。 请执行本主题中的步骤，而非[为表启用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)中的步骤。  
   
  在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在数据库上启用 Stretch Database 也需要 CONTROL DATABASE 权限。  
 

@@ -1,5 +1,5 @@
 ---
-title: "sp_syspolicy_rename_condition (Transact SQL) |Microsoft 文档"
+title: sp_syspolicy_rename_condition (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_condition
 - sp_syspolicy_rename_condition_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_rename_condition
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_rename_condition
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8fe50a92fa2a149f7540aa1baba1b59ec3055dc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 01c2068335e439d5c669447d766a3a5c2a07349c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name=** ] *名称*  
+ [ **@name=** ] **'***name***'**  
  您要重命名的条件的名称。 *名称*是**sysname**，并且如果必须指定*condition_id*为 NULL。  
   
- [  **@condition_id=** ] *condition_id*  
+ [ **@condition_id=** ] *condition_id*  
  是你想要重命名的条件的标识符。 *condition_id*是**int**，并且如果必须指定*名称*为 NULL。  
   
- [  **@new_name=** ] *new_name*  
+ [ **@new_name=** ] **'***new_name***'**  
  是条件的新名称。 *new_name*是**sysname**，和是必需的。 不能为 NULL 或空字符串。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -61,7 +64,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
   
  必须为指定值*名称*或*condition_id*。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_conditions 系统视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  

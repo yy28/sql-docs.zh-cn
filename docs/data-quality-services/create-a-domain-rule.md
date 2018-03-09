@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9bdf255f25c8b23dc4a34e882716fe87a14a1c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-domain-rule"></a>创建域规则
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建域规则。 域规则是用于验证、更正和标准化域值的条件。 域规则必须在域中保持正确，这样才能认为域值是准确的并且符合业务要求。 域规则可以包含用于验证域值、但不用于更正数据质量项目中的数据的验证规则。 规则还包含应用于有效数据并用于数据更正的标准化规则。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建域规则。  
   
 ##  <a name="Build"></a> 生成域规则  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  单击 **“放弃所有更改”** 可取消对域规则进行的所有更改，并且还原为以前应用的规则，具有在规则的上次应用不再适用后任何更改产生的结果。 域中每个规则的有效性将按照以前应用的规则而非放弃的更改进行更新。  
   
-3.  单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
+3.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
 ##  <a name="FollowUp"></a> 跟进：创建域规则后  
  在创建域规则后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
  您还可以选择创建一个域值。 例如，若要验证值是否以字母 A、B 或 C 开头，则您可以创建一个具有复杂条件的简单规则（例如，具有竖线字符的正则表达式），或者可以创建包含若干简单条件的复杂规则。 第一个规则的一个例子是“Value contains regular expression (^A|^B|^C)”。 第二个规则的一个例子是“’Value begins with A’ OR ‘Value begins with B’ OR ‘Value begins with C’”。  
   
-|条件|说明|示例|  
+|条件|Description|示例|  
 |---------------|-----------------|-------------|  
 |长度等于|只有包含由操作数指定的字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1<br /><br /> 无效值：AA|  
 |长度大于或等于|只有包含由操作数指定的字符数或更多字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1、BBAA<br /><br /> 无效值：AA|  

@@ -1,10 +1,13 @@
 ---
 title: "使用 SSMA 项目 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94cb62f1a2c1088ce8666f3e58722016330badd9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b7fd7677d8194938fdc11dc364de8ceea9fe1414
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 项目 (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，必须首先创建的 SSMA 项目。 项目是一个文件，其中包含以下信息：  

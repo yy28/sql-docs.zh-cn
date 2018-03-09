@@ -3,8 +3,9 @@ title: "WillChangeField 和 FieldChangeComplete 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - WillChangeField event [ADO]
 - fieldchangecomplete event [ADO]
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d532aa3857e2a61bb5ec23fa9258f6d7aa1186f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98b5b27b9a6111768f2ef2c5e9470b4b87fa9acc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 和 FieldChangeComplete 事件 (ADO)
 **WillChangeField**挂起的操作更改一个或多个值之前，将调用事件[字段](../../../ado/reference/ado-api/field-object.md)中的对象[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **FieldChangeComplete**事件时调用一个或多个值后**字段**对象已更改。  
@@ -47,7 +48,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  A**长**，该值指示数**字段**中的对象*字段*。  
   
- *字段*  
+ *Fields*  
  有关**WillChangeField**、*字段*参数是数组的**变体**包含**字段**对象的原始值。 有关**FieldChangeComplete**、*字段*参数是数组的**变体**包含**字段**具有已更改的值的对象.  
   
  *pError*  

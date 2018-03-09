@@ -3,8 +3,9 @@ title: "ADO 集合 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b6bc8649cca88a6a132db440a3294989dfdcadb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0894c9d4e69000ad274b4b8a31b41ff0a2474900
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-collections"></a>ADO 集合
 在中表示这些集合的 ADO 对象之间的关系[ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)。  
@@ -34,8 +35,8 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |[错误](../../../ado/reference/ado-api/errors-collection-ado.md)|包含所有**错误**到单个提供程序相关的失败的响应中创建的对象。|  
-|[字段](../../../ado/reference/ado-api/fields-collection-ado.md)|包含所有**字段**的对象**记录集**对象。|  
-|[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)|包含所有**参数**的对象**命令**对象。|  
+|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|包含所有**字段**的对象**记录集**对象。|  
+|[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)|包含所有**参数**的对象**命令**对象。|  
 |[属性](../../../ado/reference/ado-api/properties-collection-ado.md)|包含所有**属性**对象的特定实例的对象。|  
   
 ## <a name="see-also"></a>另请参阅  

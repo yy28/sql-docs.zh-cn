@@ -3,8 +3,11 @@ title: "在数据库关系图设计器中导航 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,23 +19,23 @@ ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c07ed4430746956d41af750140d24066c49217f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6274d6f8e01833e850c5fedca92dcd18a769f784
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在数据库关系图设计器中导航 (Visual Database Tools)
-可以在数据库关系图设计器中使用键盘和鼠标来执行操作。 有关数据库关系图设计器中使用的特定方法，请参阅下表：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以在数据库关系图设计器中使用键盘和鼠标来执行操作。 有关数据库关系图设计器中使用的特定方法，请参阅下表：  
   
 |**若要**|**请按**|  
 |----------|-------------|  
 |访问“数据库关系图”菜单|Alt+M|  
 |在表和关系（如果可用）之间移动|Tab 或 Shift+Tab|  
 |在表中的列之间移动|箭头键|  
-|从关系图中移除选定的表|DELETE|  
+|从关系图中移除选定的表|删除|  
 |从数据库中删除表或关系|Shift+Delete|  
 |在关系图面上移动表|Ctrl+向上键或 Ctrl+向下键|  
 |向右/左和向上/下滚动|Page Up/Down 用于垂直滚动，Ctrl+Page Up/Down 用于水平滚动|  

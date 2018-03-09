@@ -29,15 +29,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85b344cdd5149c332d3cfd34638db668d49e88d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dcaa37454f30618c42c3cce8bf9f61b896303e90
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 查看优化建议  
   
-1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令行实用工具优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
+1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令行实用工具优化数据库。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
   
-2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化建议，请双击“会话监视器”窗口中的会话名称将会话打开。  
+2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化建议，请双击“会话监视器”窗口中的会话名称将会话打开。  
   
      在新的优化会话完成之后或工具加载了现有会话之后，将显示 **“建议”** 页。  
   
@@ -70,9 +70,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 查看优化摘要和报告  
   
-1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令行实用工具优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
+1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令行实用工具优化数据库。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
   
-2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化摘要和报告，可以双击“会话监视器”窗口中的会话名称将会话打开。  
+2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化摘要和报告，可以双击“会话监视器”窗口中的会话名称将会话打开。  
   
 3.  在新的优化会话完成之后或者工具加载了现有会话之后，单击 **“报告”** 选项卡。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令行实用工具优化数据库。 请确保在优化工作负荷时选中 **“常规”** 选项卡上的 **“保存优化日志”** 。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
   
-2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化摘要和报告，可以双击“会话监视器”窗口中的会话名称将会话打开。  
+2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要查看现有优化会话的优化摘要和报告，可以双击“会话监视器”窗口中的会话名称将会话打开。  
   
 3.  在新的优化会话完成之后或者工具加载了现有会话之后，单击 **“进度”** 选项卡。**“优化日志”** 窗格将显示日志的内容。 日志包含有关数据库引擎优化顾问无法分析的工作负荷事件的信息。  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 来手动实施优化建议  
   
-1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令提示符实用工具来优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
+1.  使用数据库引擎优化顾问 GUI 或 **dta** 命令提示符实用工具来优化数据库。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 如果希望使用现有优化会话，请跳过此步骤，转到步骤 2。  
   
-2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要在现有的优化会话中实施优化建议，请在“会话监视器”中双击会话名称将会话打开。  
+2.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要在现有的优化会话中实施优化建议，请在“会话监视器”中双击会话名称将会话打开。  
   
 3.  在新的优化会话完成之后，或者在工具加载了现有会话之后，在 **“操作”** 菜单上，单击 **“应用建议”** 。  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Analysis"></a> 执行探索性分析  
  数据库管理员可以通过用户指定的数据库引擎优化顾问配置功能执行探索性分析。 使用此功能，数据库管理员将所需物理数据库设计指定给数据库引擎优化顾问，然后就可以评估该设计的性能效果，而无需实施该设计。 数据库引擎优化顾问图形用户界面 (GUI) 和命令行实用工具都支持用户指定的配置。 但是，命令行实用工具提供的灵活性最大。  
   
- 如果您使用的是数据库引擎优化顾问 GUI，则可以评估实施部分数据库引擎优化顾问优化建议的效果，但无法向数据库引擎优化顾问添加假设物理设计结构来进行评估。  
+ 如果您使用的是数据库引擎优化顾问 GUI，则可以评估实施部分数据库引擎优化顾问优化建议的效果，但无法向数据库引擎优化顾问添加假设物理设计结构来进行评估。   
   
  以下过程说明如何在两个工具界面上使用用户指定的配置功能。  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
   
 ##### <a name="to-evaluate-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 评估优化建议  
   
-1.  使用数据库引擎优化顾问 GUI 优化数据库。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要评估现有优化会话，请在“会话监视器”中双击该会话。  
+1.  使用数据库引擎优化顾问 GUI 优化数据库。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。 若要评估现有优化会话，请在“会话监视器”中双击该会话。  
   
 2.  在 **“建议”** 选项卡上，清除那些已列出但您不想使用的物理设计结构。  
   
@@ -192,14 +192,14 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="ReviewEvaluateClone"></a> 查看、评估和克隆优化会话  
  每当用户开始分析工作负荷对数据库的影响时，数据库引擎优化顾问都会创建新的优化会话。 可以使用数据库引擎优化顾问 GUI 中的 **“会话监视器”** 查看或重新加载在指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上运行的所有优化会话。 能够查看所有现有优化会话后，就可以轻松实现以下操作：根据现有会话克隆会话，编辑现有优化建议、然后使用数据库引擎优化顾问来评估编辑的会话，或定期执行优化以监视数据库的物理设计。 例如，您可以按月优化数据库。  
   
- 必须先通过使用数据库引擎优化顾问优化工作负荷，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建优化会话，然后才能查看服务器实例的优化会话。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
+ 必须先通过使用数据库引擎优化顾问优化工作负荷，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建优化会话，然后才能查看服务器实例的优化会话。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
 ### <a name="review-existing-tuning-sessions"></a>查看现有优化会话  
  请按照以下步骤浏览指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的现有优化会话。  
   
 ##### <a name="to-review-existing-tuning-sessions"></a>查看现有优化会话  
   
-1.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
+1.  启动数据库引擎优化顾问 GUI。 有关详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
 2.  所有现有优化会话都显示在 **“会话监视器”** 窗口的上半部分。 显示的会话数取决于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上优化数据库的次数。 可以使用滚动条查看所有优化会话。  
   
@@ -273,11 +273,11 @@ ms.lasthandoff: 11/17/2017
  **分区数**  
  由建议的分区函数定义的分区数。 当此函数与方案一起使用并应用于表时，该值就是表中的数据被划分的分区数。  
   
- **“定义”**  
+ **定义**  
  “建议目标”的定义。 单击此列以打开“SQL 脚本预览”对话框，该对话框中包含建议操作的脚本。  
   
 ##### <a name="index-recommendations"></a>“索引建议”  
- **数据库名称**  
+ **Database Name**  
  包含建议修改的对象的数据库。  
   
  **Object Name**  
@@ -316,7 +316,7 @@ ms.lasthandoff: 11/17/2017
  **“安排以后执行”**  
  为该建议生成脚本，并将操作另存为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
   
- **日期**  
+ **Date**  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以应用建议的日期。  
   
  **Time**  
@@ -328,7 +328,7 @@ ms.lasthandoff: 11/17/2017
  **“优化摘要”**  
  显示数据库引擎优化顾问建议的摘要。  
   
- **日期**  
+ **Date**  
  数据库引擎优化顾问创建报告的日期。  
   
  **Time**  

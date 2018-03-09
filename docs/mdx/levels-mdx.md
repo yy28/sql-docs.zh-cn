@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: Levels
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 430577931bf30260a190e6541aa94ddc12b70435
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1898b87749b8ae2921e71d391f8bbae3374d893b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Name*  
  指定级别名称的有效字符串表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定级别号，则**级别**函数返回与指定的从零开始位置相关联的级别。  
   
  如果指定级别的名称，则**级别**函数将返回指定的级别。  
@@ -71,7 +71,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>字符串  
+### <a name="string"></a>String  
  以下示例返回国家（地区）级别：  
   
 ```  

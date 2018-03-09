@@ -3,10 +3,10 @@ title: "PDW 证书设置 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,16 +16,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
 caps.latest.revision: "22"
-ms.openlocfilehash: f0134ec239b938ee7ace6fc6dc05e130fb844b2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW 证书设置
 **PDW 证书预配**Analytics Platform System 页**Configuration Manager**导入或删除 PDW 区域使用的证书。 使用，对通信进行加密的证书有助于给控制节点通过 SQL Server 客户端，使用 SQL Server PDW 驱动程序的工具的安全通信[管理控制台](monitor-the-appliance-by-using-the-admin-console.md)，并 Integration Services 将加载。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
 然后再安装证书，请执行以下操作：  
   
 1.  获取安全证书。 如果你需要有关如何获取安全证书的详细信息，请联系 Microsoft 支持部门。  

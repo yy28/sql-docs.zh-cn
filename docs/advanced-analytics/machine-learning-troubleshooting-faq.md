@@ -2,23 +2,27 @@
 title: "故障排除和 SQL Server 中的机器学习的常见问题 |Microsoft 文档"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e110a2578d6663c2c7c4c2e0dd92957744b44f4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>解决机器学习
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文提供了与 SQL Server 中的机器学习功能的设置和配置相关的疑难解答信息。 这些信息包括设置指南、 已知的问题和发行说明的链接。 其他文章链接这篇文章中提供有关 SQL Server 中的计算机学习解决方案的性能优化建议。
 

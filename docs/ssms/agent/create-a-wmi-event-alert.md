@@ -3,8 +3,11 @@ title: "创建 WMI 事件警报 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c21397fcc5e279ed78d81b6d3cafecca80b4e87f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 389caca69e621c979c53e45d4289d72fe17fb3ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-wmi-event-alert"></a>创建 WMI 事件警报
-本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中创建 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 代理警报，以便在出现由 WMI Provider for Server Events 监视的特定 [!INCLUDE[tsql](../../includes/tsql_md.md)]事件时引发警报。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 [!INCLUDE[tsql](../../includes/tsql_md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报，以便在出现由 WMI Provider for Server Events 监视的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件时引发警报。  
   
 有关使用 WMI 提供程序监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件的详细信息，请参阅 [WMI Provider for Server Events 类和属性](http://msdn.microsoft.com/en-us/80767fe0-32ac-406a-81a0-8212cd6ce7e4)。 有关接收 WMI 事件警报通知的所需权限的信息，请参阅 [为 SQL Server 代理服务选择帐户](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)。 有关 WQL 的详细信息，请参阅 [将 WQL 与 WMI Provider for Server Events 结合使用](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)。  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
 8.  在 **“查询”** 框中，指定标识该警报所响应事件的 WQL 语句。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -85,7 +88,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- creates a WMI event alert that retrieves all event properties for any ALTER_TABLE event that occurs on table AdventureWorks2012.Sales.SalesOrderDetail  

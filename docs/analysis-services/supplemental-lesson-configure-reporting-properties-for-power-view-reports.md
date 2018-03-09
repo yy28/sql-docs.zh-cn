@@ -2,27 +2,28 @@
 title: "为 Power View 报表配置报表属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7cb95c9ee9699b888580383cfcbf70c229a99d03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bbc725ce1d2f5999486f46f4ab30f6e3fb98f42d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>补充课-为 Power View 报表配置报表属性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
 学完本课的估计时间： **30 分钟**  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必要條件  
 本补充课程是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，您应已完成所有之前的课程。  
 为了完成这一特定的补充课程，您还必须具备以下各项：  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="default-field-set"></a>默认字段集  
 默认字段集是预定义的列和表在报表字段列表中单击时自动添加到报表画布的表的度量值列表。 重要的是，您可以指定当在 Power View 报表中直观显示此表时，用户希望看到的默认列、度量值和字段排序方式。  对于 Internet Sales 模型，您将为 Customer 表、Geography 表和 Product 表定义一个默认字段集和顺序。 其中包含的只是当用户使用 Power View 报表分析 Adventure Works Internet Sales 数据时，希望看到的那些最常见的列。  
   
-有关默认字段集的详细信息，请参阅 SQL Server 联机丛书中的[配置 Power View 报表的默认字段集（SSAS 表格）](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)。  
+有关默认字段集的详细信息，请参阅[配置默认字段集为 Power View 报表](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)SQL Server 联机丛书中。  
   
 #### <a name="to-set-default-field-set-for-tables"></a>为表设置默认字段集  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="table-behavior"></a>表行为  
 通过使用“表行为”属性，您可以针对不同的可视化类型更改默认行为，并针对 Power View 报表中使用的表更改分组行为。 这样，就可以按图块、卡片和图表布局对标识信息（如名称、图像或标题）生成更好的默认位置。  
   
-有关表行为属性的详细信息，请参阅 SQL Server 联机丛书中的[为 Power View 报表配置表行为属性（SSAS 表格）](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)。  
+有关表行为属性的详细信息，请参阅[为 Power View 报表配置表行为属性](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)SQL Server 联机丛书中。  
   
 #### <a name="to-set-table-behavior"></a>若要设置表行为 
   
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="reporting-properties-for-columns"></a>列的报表属性  
 对于列而言，您可以设置许多基本列属性和特定的报表属性，以改善模型报表体验。 例如，用户可能不需要看到每个表中的每一列。 就像前面您通过使用列的“隐藏”属性隐藏 Product Category 表和 Product Subcategory 表一样，您可以隐藏表中原本应显示的特定列。 其他属性（如“数据格式”和“按列排序”）也可能影响列数据出现在报表中的方式。 您可以现在对特定的列设置上述某些属性。 其他列不要求您执行任何操作，下面也没显示它们。  
   
-您将只在此处设置一些不同的列属性，但其他属性还有很多。 有关列报表属性的详细信息，请参阅 SQL Server 联机丛书中的[列属性（SSAS 表格）](../analysis-services/tabular-models/column-properties-ssas-tabular.md)。  
+您将只在此处设置一些不同的列属性，但其他属性还有很多。 有关更多详细报表属性的列的相关信息，请参阅[列属性](../analysis-services/tabular-models/column-properties-ssas-tabular.md)SQL Server 联机丛书中。  
   
 #### <a name="to-set-properties-for-columns"></a>设置列的属性  
   
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/17/2017
     **日期**  
   
     > [!NOTE]  
-    > 因为我们在第 7 课“标记为日期表”中已经使用“标记为日期表”设置选择 Date 表作为模型日期表，并且选择 Date 表中的 Date 列作为要用作唯一标识符的列，所以，Date 列的“行标识符”属性将自动设置为 True 且无法更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅 SQL Server 联机丛书中的[指定“标记为日期表”以便用于时间智能（SSAS 表格）](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
+    > 因为我们在第 7 课“标记为日期表”中已经使用“标记为日期表”设置选择 Date 表作为模型日期表，并且选择 Date 表中的 Date 列作为要用作唯一标识符的列，所以，Date 列的“行标识符”属性将自动设置为 True 且无法更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅[指定标记为日期表用于时间智能](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server 联机丛书中。  
   
     |列|属性|“值”|  
     |----------|------------|---------|  

@@ -2,15 +2,13 @@
 title: "DMSCHEMA_MINING_MODELS 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_MODELS
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae35f0d1de25ed1551b4368009c4be28e2ea3ea5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS 行集
-  枚举当前目录中的数据挖掘模型。 **DMSCHEMA_MINING_MODELS**行集包括以下信息： 模型名称、 处理日期和与每个挖掘模型的挖掘算法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]枚举当前目录中的数据挖掘模型。 **DMSCHEMA_MINING_MODELS**行集包括以下信息： 模型名称、 处理日期和与每个挖掘模型的挖掘算法。  
   
  实例时都提供 SQL Server 登录名。 **DMSCHEMA_MINING_MODELS**架构行集是非常类似于[DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md)架构行集，并且可以用于相同的方式。  
   

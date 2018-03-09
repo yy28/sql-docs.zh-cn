@@ -1,10 +1,15 @@
 ---
 title: "全文搜索入门 | Microsoft Docs"
 ms.date: 08/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.custom: 
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +18,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01c9732a26e3e5e717de05a16e4c65b06c9cd358
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e87ac827013d4aa9abff8a0fb66ac3c8fc9bce62
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查询之前，必须先创建全文目录，然后在要搜索的表或索引视图中创建全文索引。
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>通过两个步骤设置全文搜索
@@ -46,7 +52,7 @@ SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查�
   
 1.  为了创建名为 `AdvWksDocFTCat`的全文目录，此示例使用了 [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) 语句：  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -55,13 +61,13 @@ SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查�
  
 2.  在对 Document 表创建全文索引之前，请确保该表具有唯一的、不可为 Null 的单列索引。 下面的 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 语句可对 Document 表的 DocumentID 列创建唯一索引 `ui_ukDoc`：  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  具有唯一键后，即可使用下面的 `Document` CREATE FULLTEXT INDEX [语句对](../../t-sql/statements/create-fulltext-index-transact-sql.md) 表创建全文索引。  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -104,14 +110,14 @@ SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查�
   
  例如，下面的 [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可通过从系统非索引字表进行复制来创建名为 myStoplist 的新全文非索引字表：  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  下面的 [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可更改名为 myStoplist 的非索引字表，首先为西班牙语添加词“en”，再为法语添加词“en”：  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  

@@ -3,8 +3,9 @@ title: "键集合 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Table::Keys
 - Keys
-helpviewer_keywords: Keys collection [ADOX]
+helpviewer_keywords:
+- Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d58a565fde1f4f1628d55293c401250529269a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31b99b28a878048a59b6fd5b79760a1b70c1cd56
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keys-collection-adox"></a>键集合 (ADOX)
 包含所有[密钥](../../../ado/reference/adox-api/key-object-adox.md)的对象[表](../../../ado/reference/adox-api/table-object-adox.md)。  

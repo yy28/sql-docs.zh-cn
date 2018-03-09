@@ -3,10 +3,10 @@ title: "防病毒软件 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
 caps.latest.revision: "29"
-ms.openlocfilehash: f1d5c81381b486ec89198fed6aa22ccff22a544a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1733ec6be50d839284fa147eb1cf5c1660b77190
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="antivirus-software"></a>防病毒软件
 如果你的数据中心要求防病毒软件，使用这些准则在分析平台系统上安装防病毒软件。 我们建议不安装防病毒软件，除非它是你的数据中心的硬性要求。  

@@ -2,27 +2,30 @@
 title: "减少 CPU 使用策略中的干扰（SQL Server 实用工具）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.SWB.UE.ReduceNoise.F1
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1c076cc3e503a1417cec2fd9704cae29e0bb8a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a391598d304ce2566d35b806e2a9894a81555b50
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>减少 CPU 使用策略中的干扰（SQL Server 实用工具）
-  使用以下策略可以减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源使用策略中报告的干扰和意外的策略违反情况。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用以下策略可以减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源使用策略中报告的干扰和意外的策略违反情况。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>违反处理器使用率策略的频度有多高后才应报告为使用过度？  
  评估时间段和违反百分比公差均可使用实用工具资源管理器的 **“实用工具管理”** 节点中的 **“策略”** 选项卡设置进行配置。 若要更改策略，请使用策略说明右侧的滑块控件，然后单击 **“应用”**。 您还可以使用显示底部的按钮还原默认值或放弃更改。  
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/09/2017
   
 -   以 1 为增量将违反策略百分比的公差增加到 30%。 1 小时中的单个策略违反情况将是示例大小 4 中的 1 个数据点。 在此情况下，该策略容忍每小时 1 个策略违反，但如果在 1 小时的收集期中有 2 个或更多的策略违反（>30% 的数据点），则会报告使用过度。  
   
--   增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例和数据层应用程序的处理器使用率的策略阈值。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序更改全局 CPU 使用策略的详细信息，请参阅[实用工具管理（SQL Server 实用工具）](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独实例更改 CPU 使用策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 有关如何为单独的数据层应用程序更改 CPU 使用策略的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+-   增加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管实例和数据层应用程序的处理器使用率的策略阈值。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例或数据层应用程序更改全局 CPU 使用策略的详细信息，请参阅 [实用工具管理（SQL Server 实用工具）](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 有关如何为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独实例更改 CPU 使用策略的详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 有关如何为单独的数据层应用程序更改 CPU 使用策略的详细信息，请参阅[已部署的数据层应用程序详细信息（SQL Server 实用工具）](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>违反处理器使用率策略的频度有多高后才应报告为使用不足？  
  评估时间段和违反百分比公差均可使用实用工具资源管理器的 **“实用工具管理”** 节点中的 **“策略”** 选项卡设置进行配置。 若要更改策略，请使用策略说明右侧的滑块控件，然后单击 **“应用”**。 您还可以使用显示底部的按钮还原默认值或放弃更改。  

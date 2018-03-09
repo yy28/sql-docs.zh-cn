@@ -2,9 +2,12 @@
 title: "SQL Server 代理 - Statistics 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - SQLAgent:Statistics
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e029925e4922b8a45c76957c412992835d71863
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4a7c220116116d77786eb958767fafff228b4676
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server 代理中的 Statistics 对象
-  SQL Server 代理中的 **Statistics** 性能对象包含报告 SQL Server 代理相关信息的性能计数器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQL Server 代理中的 Statistics 性能对象包含报告 SQL Server 代理相关信息的性能计数器。  
   
  下表列出了 **SQLAgent:Statistics** 计数器。  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |**SQL Server Restarted**|自从上次 SQL Server 代理启动后 SQL Server 代理成功重新启动 Microsoft SQL Server 的次数。|  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,18 +16,20 @@ helpviewer_keywords:
 - SMO [SQL Server], about SQL Server Management Objects
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d130ee73284c41c9a12bb43b364a00f67f1468b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6a445c54edd24685fd1e25eedc25615e2fb4121a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="getting-started-in-smo"></a>SMO 入门
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此页提供指向主题旨在帮助你开始使用 SQL Server 管理对象 (SMO)。 封面 SMO 对象层次结构，SMO、 SMO 和不同的编程语言和特定的编程任务中编写的程序列出的主题。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+此页提供指向主题旨在帮助你开始使用 SQL Server 管理对象 (SMO)。 封面 SMO 对象层次结构，SMO、 SMO 和不同的编程语言和特定的编程任务中编写的程序列出的主题。  
  
 ##<a name="installing-smo"></a>安装 SMO
 [安装 SMO](installing-smo.md)提供有关安装和引用 SMO 程序集的说明。

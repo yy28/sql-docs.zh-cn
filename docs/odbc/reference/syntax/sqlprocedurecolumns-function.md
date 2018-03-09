@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 03b9d05021f44df544715823fb984d72d87bdce7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c5d5ceb9f955d8eb583181d789847eeb79d1b0a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns Function（SQLProcedureColumns 函数）
 **一致性**  
@@ -158,7 +158,7 @@ SQLRETURN SQLProcedureColumns(
   
 |列名|列号|数据类型|注释|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|过程目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录有关的某些过程而不是其他人，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 对于这些没有目录的过程。|  
+|PROCEDURE_CAT (ODBC 2.0)|@shouldalert|Varchar|过程目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录有关的某些过程而不是其他人，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 对于这些没有目录的过程。|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|过程架构名称;如果不适用于数据源为 NULL。 如果驱动程序支持架构对于一些过程，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 对于这些没有架构的过程。|  
 |PROCEDURE_NAME (ODBC 2.0)|3|Varchar 不为 NULL|过程名。 有关没有名称的过程返回空字符串。|  
 |COLUMN_NAME (ODBC 2.0)|4|Varchar 不为 NULL|过程列名称。 该驱动程序返回过程列没有名称为空字符串。|  

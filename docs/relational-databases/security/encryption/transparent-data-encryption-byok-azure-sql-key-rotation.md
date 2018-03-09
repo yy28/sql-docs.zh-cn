@@ -7,23 +7,27 @@ documentationcenter:
 author: becczhang
 manager: jhubbard
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: quick start create, mvc
+ms.custom: 
+ms.component: security
 ms.workload: Inactive
-ms.tgt_pltfrm: portal
+ms.tgt_pltfrm: 
 ms.devlang: na
-ms.topic: hero-article
+ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.openlocfilehash: b682c9059d9a6365beebeff549d4c2840c04d477
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 85a1d74907dc3e6b887a172247850b9bc4452b31
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>使用 PowerShell 轮换透明数据加密 (TDE) 保护程序 
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 本操作指南介绍如何使用 Azure Key Vault 中的 TDE 保护程序对 Azure SQL 服务器的执行密钥轮换。 轮换 Azure SQL 服务器的 TDE 保护程序意味着切换到保护服务器上的数据库的新非对称密钥。 密钥轮换是一个联机操作，完成应只需几秒钟，因为该操作仅解密和重新加密数据库的数据加密密钥，而不是整个数据库。
 
@@ -37,11 +41,11 @@ ms.lasthandoff: 11/18/2017
 > 在滚动更新后不要删除以前版本的密钥。  密钥完成滚动更新后，某些数据仍使用以前的密钥加密，例如较旧的数据库备份。 
 >
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 本操作指南假定已使用 Azure Key Vault 的密钥作为 Azure SQL 数据库或数据仓库的 TDE 保护程序。 请参阅[使用 BYOK 支持的透明数据加密](transparent-data-encryption-byok-azure-sql.md)。
 - 必须安装和运行 Azure PowerShell 版本 3.7.0 或更高版本。 
-- [建议但可选]首先在硬件安全模块 (HSM) 或本地密钥存储中创建用于 TDE 保护程序的密钥材料，并将密钥材料导入 Azure Key Vault。 若要了解详细信息，请参照[有关使用硬件安全模块 (HSM) 和 Key Vault 的说明](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started)。
+- [建议但可选]首先在硬件安全模块 (HSM) 或本地密钥存储中创建用于 TDE 保护程序的密钥材料，并将密钥材料导入 Azure Key Vault。 若要了解详细信息，请参照[有关使用硬件安全模块 (HSM) 和 Key Vault 的说明](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)。
 
 ## <a name="option-1-auto-rotation"></a>选项 1：自动轮换
 

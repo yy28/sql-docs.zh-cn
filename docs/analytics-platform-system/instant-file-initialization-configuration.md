@@ -3,10 +3,10 @@ title: "即时文件初始化配置 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
 caps.latest.revision: "20"
-ms.openlocfilehash: af18d7da04c84f9cbc74b9b2974ef568098963ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b7dda4bb925e08f49409ea1950cfe3649b4db3e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="instant-file-initialization-configuration"></a>即时文件初始化配置
 即时文件初始化功能允许数据文件操作更快地运行 SQL Server 功能。 选中的复选框，以开启即时文件初始化会提高性能的 SQL Server PDW。 但是，如果这会带来安全风险为你的业务，然后选中框。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>若要打开或关闭的即时文件初始化  
   
-1.  启动 Configuration Manager。 有关详细信息，请参阅[启动 Configuration Manager & #40;分析平台系统 & #41;](launch-the-configuration-manager.md).  
+1.  启动 Configuration Manager。 有关详细信息，请参阅[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md).  
   
 2.  在配置管理器的左窗格中，单击**即时文件初始化**。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
     > [!WARNING]  
     > 时关闭即时文件初始化，上述功能的安全性注意事项可能仍将应用于启用即时文件初始化的同时删除的文件中。  
   
-4.  单击 **“应用”**。 下次重启设备服务，更改将传播到整个 SQL Server PDW 上的 SQL Server 实例。 若要立即重新启动设备服务，请参阅[PDW 服务状态 & #40;分析平台系统 & #41;](pdw-services-status.md).  
+4.  单击 **“应用”**。 下次重启设备服务，更改将传播到整个 SQL Server PDW 上的 SQL Server 实例。 若要立即重新启动设备服务，请参阅[PDW 服务状态 &#40;分析平台系统 &#41;](pdw-services-status.md).  
   
 5.  你可能需要重复为上面所述的步骤**备份帐户添加权限**删除**执行卷维护任务**权限。  
   

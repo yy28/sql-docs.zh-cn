@@ -1,5 +1,5 @@
 ---
-title: "catalog.event_message_context |Microsoft 文档"
+title: catalog.event_message_context | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b7aeb07c52f7ed00aa5a6a29cdd054258cb62d65
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 593931ad7aa343229cfac934cd2ce2648bdddb99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,17 +31,17 @@ ms.lasthandoff: 09/26/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|Context_id|bigint|错误上下文的唯一 ID。|  
-|Event_message_id|bigint|上下文与之相关的消息的唯一 ID。|  
-|Context_depth|int|随着深度的增加，上下文将进一步来自错误。 当错误发生时，上下文深度从 1 开始。 值为 0 指示执行开始前包的状态。|  
+|Context_id|BIGINT|错误上下文的唯一 ID。|  
+|Event_message_id|BIGINT|上下文与之相关的消息的唯一 ID。|  
+|Context_depth|ssNoversion|随着深度的增加，上下文将进一步来自错误。 当错误发生时，上下文深度从 1 开始。 值为 0 指示执行开始前包的状态。|  
 |Package_path|Nvarchar(max)|上下文源的包路径。|  
-|Context_type|smallint|作为上下文来源的对象的类型。 请参阅**备注**节的上下文类型的列表。|  
-|Context_source_name|Nvarchar （4000)|作为上下文来源的对象的名称。|  
+|Context_type|SMALLINT|作为上下文来源的对象的类型。 有关上下文类型的列表，请参阅“备注”部分。|  
+|Context_source_name|Nvarchar(4000)|作为上下文来源的对象的名称。|  
 |Context_source_id|Nvarchar(38)|作为上下文来源的对象的唯一 ID。|  
-|Property_name|Nvarchar （4000)|与上下文的源相关联的属性的名称。|  
+|Property_name|Nvarchar(4000)|与上下文的源相关联的属性的名称。|  
 |Property_value|Sql_variant|与上下文的源相关联的属性值。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下表列出了上下文类型。  
   
 ||||  
@@ -52,19 +51,18 @@ ms.lasthandoff: 09/26/2017
 |20|管道|错误来自管道组件：源、目标或转换组件。|  
 |30|序列|序列的状态。|  
 |40|For 循环|For 循环的状态。|  
-|50|Foreach 循环|Foreach 循环的状态。|  
+|50|ForEach 循环|Foreach 循环的状态。|  
 |60|“包”|出错时包的状态。|  
 |70|变量|变量值|  
-|80|“ODBC 目标编辑器”|连接管理器的属性。|  
+|80|“ODBC 源编辑器”|连接管理器的属性。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对操作的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色。  
+-   **ssis_admin** 数据库角色的成员资格。  
   
--   成员资格**sysadmin**服务器角色。  
+-   **sysadmin** 服务器角色的成员资格。  
   
   
-

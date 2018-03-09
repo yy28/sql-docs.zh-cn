@@ -3,8 +3,11 @@ title: "创建用户定义事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,16 +28,16 @@ ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8298bbe39bcaeada19b2a5b50b87a1f14a8a5f89
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b429325d0fe360f7d5ee324c681f785f6dd17f41
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-user-defined-event"></a>创建用户定义事件
-如果需要监视非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]预定义的事件，可以创建用户定义事件。 还可以为每个用户定义事件指定严重级别。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 如果需要监视非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 预定义的事件，可以创建用户定义事件。 还可以为每个用户定义事件指定严重级别。  
   
 > [!NOTE]  
 > 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 时，请为每个用户定义事件消息选择“写入 Windows 应用程序事件日志”选项，以确保记录该消息。 默认情况下，出现严重级别低于 19 的用户定义消息时，不会将其发送到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 应用程序日志。 因此严重级别低于 19 的用户定义消息不会触发 SQL Server 代理警报。  

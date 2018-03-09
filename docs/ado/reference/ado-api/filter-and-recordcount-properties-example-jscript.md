@@ -3,29 +3,31 @@ title: "筛选器和 RecordCount 属性示例 (JScript) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: JScript
+dev_langs:
+- JScript
 helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cef90353f6c91df6ce584c2470cf00b59e739208
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5347f486c516a131f9dc2103ecd5a037a916f8eb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>筛选器和 RecordCount 属性示例 (JScript)
 此示例打开**记录集**的 Northwind 数据库，然后使用公司表[筛选器](../../../ado/reference/ado-api/filter-property.md)以限制可见的记录这些位置的公司名称字段以字母开头的属性D.剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**FilterJS.asp**。  

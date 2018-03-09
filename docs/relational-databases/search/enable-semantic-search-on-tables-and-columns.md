@@ -2,27 +2,33 @@
 title: "对表和列启用语义搜索 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: semantic search [SQL Server], enabling
+helpviewer_keywords:
+- semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caca4cf61fe71392178f3243928888cd2ba51225
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0de385730d9999a2943f9599202d717fa7049152
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
-  介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
   
  统计语义搜索使用全文搜索创建的索引并创建其他索引。 作为全文搜索上的此依赖关系的结果，您可在定义新的全文索引或更改现有全文索引时创建一个新的语义索引。 可以按本主题中所述使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的全文索引向导和其他对话框创建新的语义索引。  
   
@@ -63,7 +69,7 @@ ms.lasthandoff: 11/09/2017
   
  以下示例创建一个默认全文目录 **ft**。然后，该示例对 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表的 **JobCandidateID** 列创建一个唯一索引。 需要将此唯一索引用作全文索引的键列。 然后，该示例在 **Resume** 列上创建一个全文索引和语义索引。  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -87,7 +93,7 @@ GO
   
  该示例还指定关闭更改跟踪并且不进行填充。 随后，在非峰值时间，该示例使用 **ALTER FULLTEXT INDEX** 语句对新索引开始进行完全填充，并启用自动更改跟踪。  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -110,7 +116,7 @@ GO
   
  随后，在非峰值时间，填充索引：  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -136,7 +142,7 @@ GO
   
  以下示例更改 AdventureWorks2012 示例数据库的 **Production.Document** 表的现有全文索引。 该示例对 **Production.Document** 表的 **Document** 列添加语义索引，该列已有全文索引。 该示例指定将不自动重新填充索引。  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -159,9 +165,9 @@ GO
 在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 删除语义索引  
-若要仅从一个或多个列删除语义索引，请使用 **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** **选项调用 ALTER FULLTEXT INDEX** 语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
+要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
 
@@ -171,9 +177,9 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-若要从一列同时删除全文索引和语义索引，请使用 **ALTER COLUMN** column_name **DROP***选项调用***ALTER FULLTEXT INDEX** 语句。  
+要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句。  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -199,7 +205,7 @@ GO
   
  返回值 1 表示为数据库启用了全文搜索和语义搜索；返回值 0 表示未启用它们。  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -223,7 +229,7 @@ GO
   
      返回值 1 表示为列启用了语义搜索；返回值 0 表示未启用它。  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -232,7 +238,7 @@ GO
   
      **statistical_semantics** 列中的值 1 表示除了启用全文索引编制外，还为指定的列启用了语义索引编制。  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -250,14 +256,14 @@ GO
   
  查询目录视图 [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  
   
  语义索引支持以下语言。 此列表按 LCID 列出了目录视图 [sys.fulltext_semantic_languages (Transact SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md) 的输出。  
   
-|语言|LCID|  
+|“报表”|LCID|  
 |--------------|----------|  
 |德语|1031|  
 |英语（美国）|2052|  

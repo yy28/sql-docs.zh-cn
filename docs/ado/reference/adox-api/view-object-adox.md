@@ -3,8 +3,9 @@ title: "查看对象 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: View
-helpviewer_keywords: View object [ADOX]
+f1_keywords:
+- View
+helpviewer_keywords:
+- View object [ADOX]
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74f53494e11f46432b57b07ad0d9f42d6c3773f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: af414c302459f093441f5f0f3fd0e60c1a95d973
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="view-object-adox"></a>视图对象 (ADOX)
 表示经过筛选的记录或一个虚拟表集。 用 ADO 结合使用时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，**视图**对象可以用于添加、 删除或修改视图。  

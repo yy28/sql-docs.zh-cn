@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 源编辑器 （连接管理器页） |Microsoft 文档"
+title: "SAP BW 源编辑器（“连接管理器”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0373c0142f2b466b12dd6c2ff1619f09b2b8b26f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“连接管理器”** 页，为 SAP BW 源选择 SAP BW 连接管理器。 在该页中，您还可选择用于从 SAP Netweaver BW 系统提取数据的执行模式和参数。  
@@ -98,7 +97,7 @@ ms.lasthandoff: 08/03/2017
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
- **“查找”**  
+ **查找**  
  使用“查找 RFC 目标”对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
 #### <a name="process-chain-options"></a>进程链选项  
@@ -107,7 +106,7 @@ ms.lasthandoff: 08/03/2017
  **进程链**  
  输入由源触发的进程链的名称。  
   
- **“查找”**  
+ **查找**  
  使用“查找进程链”对话框查找进程链。 有关此对话框的详细信息，请参阅 [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)。  
   
 ### <a name="execution-mode--w---wait-for-notify"></a>执行模式 = W - 等待通知  
@@ -124,7 +123,7 @@ ms.lasthandoff: 08/03/2017
  **程序 ID**  
  输入与 RFC 目标关联的程序 ID。  
   
- **“查找”**  
+ **查找**  
  使用“查找 RFC 目标”对话框查找 RFC 目标。 有关此对话框的详细信息，请参阅 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)。  
   
 ### <a name="execution-mode--e---extract-only"></a>执行模式 = E - 仅提取  
@@ -132,10 +131,9 @@ ms.lasthandoff: 08/03/2017
  输入与提取关联的请求 ID。  
   
 ## <a name="see-also"></a>另请参阅  
- [SAP BW 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [SAP BW 源编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [SAP BW 源编辑器（“列”页）](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [SAP BW 源编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [SAP BW 源编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

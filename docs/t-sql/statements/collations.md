@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COLLATE
 - COLLATE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4192928157e3f6e534b8fb50c34e349dac3f5b8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>排序规则
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +42,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
@@ -87,11 +88,11 @@ COLLATE { <collation_name> | database_default }
   
  COLLATE 使用*collate_name*来指代的 SQL Server 排序规则或要应用于表达式、 列定义或数据库定义的 Windows 排序规则的名称。 *collation_name*可以仅指定*Windows_collation_name*或*SQL_collation_name*和该参数必须包含一个文本值。 *collation_name*不能通过变量或表达式表示。  
   
- 排序规则一般由排序规则名称标识，安装过程中除外。 在安装过程中，您应该为 Windows 排序规则指定根排序规则指示符（排序规则区域设置），然后指定区分或不区分大小写或重音的排序选项。  
+ 排序规则一般由排序规则名称标识，安装过程中除外。 在设置中，你将改为指定 Windows 排序规则的根排序规则指示符 （排序规则区域设置），然后指定敏感或不区分大小写大小写或重音的排序选项。  
   
  你可以执行系统函数[fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)若要检索的 Windows 排序规则和 SQL Server 排序规则的所有有效的排序规则名称的列表：  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,16 +105,18 @@ FROM fn_helpcollations();
   
 -   当还原或附加数据库、 数据库的默认排序规则和任何的排序规则**char**， **varchar**，和**文本**列或数据库中的参数必须由操作系统支持。  
   
-     支持代码页转换**char**和**varchar**数据类型，但不是能为**文本**数据类型。 不报告代码页转换过程中的数据丢失。  
+> [!NOTE]
+> 支持代码页转换**char**和**varchar**数据类型，但不是能为**文本**数据类型。 不报告代码页转换过程中的数据丢失。  
   
- 如果指定的排序规则或者被引用的对象使用的排序规则使用 Windows，不支持代码页[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]显示错误。  
+> [!NOTE]
+> 如果指定的排序规则或者被引用的对象使用的排序规则使用 Windows，不支持代码页[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]显示错误。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specifying-collation-during-a-select"></a>A. 在选择过程中指定排序规则  
  下面的示例创建一个简单表并插入 4 行。 然后，该示例在从表中选择数据时应用了两个排序规则，演示 `Chiapas` 如何以不同方式排序。  
   
-```tsql  
+```sql  
 CREATE TABLE Locations  
 (Place varchar(15) NOT NULL);  
 GO  
@@ -132,39 +135,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- 这里是第一个查询的结果。  
+这里是第一个查询的结果。  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- 这里是第二个查询的结果。  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+这里是第二个查询的结果。  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>B. 其他示例  
- 有关使用的其他示例**COLLATE**，请参阅[CREATE DATABASE &#40;SQL Server Transact SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)示例**G.创建数据库并指定排序规则名称和选项**，和[ALTER TABLE &#40;Transact SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md)示例**V.更改列排序规则**。  
+ 有关使用的其他示例**COLLATE**，请参阅[CREATE DATABASE &#40;SQL Server Transact SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples)示例**G.创建数据库并指定排序规则名称和选项**，和[ALTER TABLE &#40;Transact SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column)示例**V.更改列排序规则**。  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
- [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)   
- [排序规则优先级 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [常量 &#40;Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [table &#40;Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
+ [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [排序规则优先级 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [常量 &#40;Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [table &#40;Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

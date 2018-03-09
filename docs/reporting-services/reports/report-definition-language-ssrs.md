@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 735811c38ce6073e9dee4dd5b35cf18645a74a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
   报表定义语言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义的 XML 表示形式。 报表定义包含报表的数据检索和布局信息。 RDL 由 XML 元素组成，这些元素符合为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建的 XML 语法。 通过访问报表定义文件中的代码程序集，可以添加您自己的自定义函数，以便控制报表项值、样式和格式。  
@@ -71,14 +69,14 @@ ms.lasthandoff: 12/05/2017
 |----------|-----------------|  
 |**二进制**|具有 Base-64 编码二进制值的属性。|  
 |**Boolean**|以 **true** 或 **false** 作为对象值的属性。 除非另行指定，否则未指定的可选布尔对象的值为 **False**。|  
-|**日期**|具有以 ISO8601 日期格式 YYYY-MM-DD[THH:MM[:SS[.S]]] 指定的完全指定日期或日期时间值的属性。|  
+|**Date**|具有以 ISO8601 日期格式 YYYY-MM-DD[THH:MM[:SS[.S]]] 指定的完全指定日期或日期时间值的属性。|  
 |**Enum**|具有字符串文本值的属性，该文本值必须是指定值列表中的某个值。|  
 |**Float**|具有浮点值的属性。 使用句号 (.) 作为可选的小数分隔符。|  
 |**Integer**|具有整数 (int32) 值的属性。|  
 |**语言**|具有包含语言和区域性代码（例如 "en-us" 表示“美国英语”）的文本值的属性。 该值必须是特定语言，或者是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中为其定义了默认语言的非特定语言。|  
 |**名称**|具有字符串文本值的属性。 名称在该项的命名空间中必须唯一。 如果未指定，则项的命名空间为具有名称的最内层包含对象。|  
 |**NormalizedString**|具有已规范化的字符串文本值的属性。|  
-|**Size**|大小元素必须包含数字（以句点字符作为可选的小数分隔符）。 数字后面必须是 CSS 长度单位（例如 cm、mm、in、pt 或 pc）的指示符。 数字和指示符之间的空格是可选的。 有关大小指示符的详细信息，请参阅 [CSS Length Units Reference](http://go.microsoft.com/fwlink/?LinkId=9257)（CSS 长度单位参考）。<br /><br /> 在 RDL 中， **Size** 的最大值为 160 in。 最小大小为 0 in。|  
+|**大小**|大小元素必须包含数字（以句点字符作为可选的小数分隔符）。 数字后面必须是 CSS 长度单位（例如 cm、mm、in、pt 或 pc）的指示符。 数字和指示符之间的空格是可选的。 有关大小指示符的详细信息，请参阅 [CSS Length Units Reference](http://go.microsoft.com/fwlink/?LinkId=9257)（CSS 长度单位参考）。<br /><br /> 在 RDL 中， **Size** 的最大值为 160 in。 最小大小为 0 in。|  
 |**String**|具有字符串文本值的属性。|  
 |**UnsignedInt**|具有无符号整数 (uint32) 值的属性。|  
 |**Variant**|具有任何简单 XML 类型的属性。|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/05/2017
 |Boolean|Boolean|  
 |DateTime、DateTimeOffset|DateTime|  
 |Int16、Int32、UInt16、Byte、SByte|Integer|  
-|Single、Double|Float|  
+|Single、Double|float|  
 |String、Char、GUID、Timespan|String|  
   
 ## <a name="see-also"></a>另请参阅  

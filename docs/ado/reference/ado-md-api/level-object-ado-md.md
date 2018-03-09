@@ -3,8 +3,9 @@ title: "级别对象 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Level
-helpviewer_keywords: Level object [ADO MD]
+f1_keywords:
+- Level
+helpviewer_keywords:
+- Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 540048b6ba889152089b39a77aa926a5c2fd61f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f690e2efc97b4da9ea588e5028055fb758b93a48
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="level-object-ado-md"></a>级别对象 (ADO MD)
 包含一组的成员，其中每个具有相同的排名层次结构中。  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
 |CubeName|多维数据集的名称。|  

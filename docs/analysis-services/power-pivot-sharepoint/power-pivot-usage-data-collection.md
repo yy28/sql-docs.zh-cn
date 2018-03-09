@@ -2,38 +2,36 @@
 title: "Power Pivot 使用情况数据收集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5fab455ddd2ea659f2269512a81c93df2962df2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="power-pivot-usage-data-collection"></a>Power Pivot 使用情况数据收集
-  使用情况数据收集是场级 SharePoint 功能。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
+# <a name="power-pivot-usage-data-collection"></a>PowerPivot 使用情况数据收集
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用情况数据收集是场级 SharePoint 功能。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
   
  有关 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理仪表板中使用情况数据的信息，请参阅 [PowerPivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
   
 ##  <a name="usagearch"></a> 使用情况数据收集和报告体系结构  
- [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]收集使用情况数据，存储和管理使用从 SharePoint 基础结构和 Power Pivot 服务器组件的功能的组合。 SharePoint 基础结构提供了集中的使用情况服务和内置的计时器作业。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 为你在 SharePoint 管理中心中查看的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 使用情况数据和报告添加了更长期的存储。  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 收集使用情况数据，存储和管理使用从 SharePoint 基础结构和 Power Pivot 服务器组件的功能的组合。 SharePoint 基础结构提供了集中的使用情况服务和内置的计时器作业。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint 为你在 SharePoint 管理中心中查看的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 使用情况数据和报告添加了更长期的存储。  
   
  在使用情况数据收集系统中，事件信息进入应用程序服务器或 Web 前端上的使用情况收集系统。 使用情况数据在系统中移动以便响应计时器作业，这些计时器作业导致数据从物理服务器上的临时数据文件移到数据库服务器上的永久存储区中。 下图说明了通过数据收集和报告系统移动使用情况数据的组件和过程。  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |连接|代表在 Excel 工作簿中查询 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据的用户进行的服务器连接。 连接事件标识打开了与 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿的连接的用户。 在报告中，该信息用于标识最连接频繁的用户、相同用户访问的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 数据源以及连接随时间变化的趋势。|你可以启用和禁用 [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
 |查询响应时间|基于完成时间的长短对查询进行分类的查询响应统计信息。 查询响应统计信息显示服务器响应查询请求的时间长度中的模式。|你可以启用和禁用 [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
 |数据加载|[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]执行的数据加载操作。 数据加载事件标识最常用的数据源。|你可以启用和禁用 [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
-|数据卸载|由 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序执行的数据卸载操作。 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]处于非活动状态的卸载[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]数据源，如果它未被使用，或当服务器处于内存压力之下，或需要额外内存来运行数据刷新作业。|你可以启用和禁用[配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
+|数据卸载|由 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序执行的数据卸载操作。 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]处于非活动状态的卸载[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]数据源，如果它未被使用，或当服务器处于内存压力之下，或需要额外内存来运行数据刷新作业。|你可以启用和禁用 [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
 |服务器运行状况|指示服务器运行状况的服务器操作，以 CPU 和内存使用率度量。 此数据是历史数据。 它不提供与服务器上的当前处理负载有关的实时信息。|否。 始终为此事件收集使用情况数据。|  
 |数据刷新|由 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务为计划的数据更新启动的数据刷新操作。 在应用程序级别收集有关数据刷新的使用情况历史记录以便生成操作报告，并且此历史记录反映在各个工作簿的“管理数据刷新”页中。<br /><br /> **注意：** 对于 [!INCLUDE[ssSQL11SP1_md](../../includes/sssql11sp1-md.md)] 和 SharePoint 2013 部署，数据刷新由 Excel Services 而不是 Analysis Services 服务器管理。|否。 如果你为 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序启用数据刷新，则始终收集数据刷新使用情况数据。|  
   

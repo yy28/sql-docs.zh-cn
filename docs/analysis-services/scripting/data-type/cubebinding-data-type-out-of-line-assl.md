@@ -2,15 +2,13 @@
 title: "CubeBinding 数据类型 （超的行） (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CubeBinding Data Type (out-of-line)
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d34b7f4ca7425c412497382842b6e29173a0f1d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c270c264bb018f499e36fc5b3f54e959d4838f20
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cubebinding-data-type-out-of-line-assl"></a>CubeBinding 数据类型（外部）(ASSL)
-  定义一个基元数据类型，表示之间的关系[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)元素和[数据源](../../../analysis-services/scripting/objects/datasource-element-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义一个基元数据类型，表示之间的关系[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)元素和[数据源](../../../analysis-services/scripting/objects/datasource-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,20 +46,20 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|基本数据类型|无|  
-|派生数据类型|无|  
+|基本数据类型|InclusionThresholdSetting|  
+|派生数据类型|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
+|父元素|InclusionThresholdSetting|  
 |子元素|[数据源](../../../analysis-services/scripting/objects/datasource-element-assl.md)， [DataSourceID](../../../analysis-services/scripting/properties/datasourceid-element-assl.md)， [ID](../../../analysis-services/scripting/properties/id-element-assl.md)，[度量值组](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|  
 |派生元素|[绑定](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md)([绑定](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md)集合[过程](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)或[批处理](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  有关扩展的行绑定的详细信息，请参阅[数据源和绑定 &#40;SSAS 多维 &#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>另请参阅  

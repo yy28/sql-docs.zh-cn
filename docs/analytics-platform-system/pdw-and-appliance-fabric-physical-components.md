@@ -3,10 +3,10 @@ title: "PDW 和装置 Fabric 物理组件 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
 caps.latest.revision: "17"
-ms.openlocfilehash: 93e4b1521b213c9d29f3cae9bcc900cad6c6a674
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>PDW 和装置 Fabric 物理组件
 名称和 PDW 和装置 fabric 物理组件的说明。 PDW 区域不包含所有这些组件。  

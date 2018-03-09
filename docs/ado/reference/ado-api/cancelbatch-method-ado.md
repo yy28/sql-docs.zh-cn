@@ -3,8 +3,9 @@ title: "执行方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_CancelBatch
 - Recordset15::CancelBatch
-helpviewer_keywords: CancelBatch method [ADO]
+helpviewer_keywords:
+- CancelBatch method [ADO]
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5dc5cc6d3047c7dc0804c42c7e8efcc80b64054
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e01ed9e58695af606d02a156aa83854746be83d0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancelbatch-method-ado"></a>执行方法 (ADO)
 取消挂起的批更新。  
@@ -40,7 +42,7 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Parameters  
  *AffectRecords*  
- 可选。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值指示多少个记录**执行**方法将会影响。  
+ 選擇性。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值指示多少个记录**执行**方法将会影响。  
   
 ## <a name="remarks"></a>注释  
  使用**执行**方法来取消任何挂起的更新中[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)在批处理更新模式下。 如果**记录集**处于立即更新模式，调用**执行**而无需**adAffectCurrent**生成错误。  

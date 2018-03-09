@@ -3,9 +3,13 @@ title: "删除 SQL Server 代理程序代理 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +17,19 @@ helpviewer_keywords:
 - proxies [SQL Server Agent], deleting
 - removing SQL Server Agent proxies
 ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad879c7fdbcb80fc52b680554c1dfab3cc7f38e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 79937166e8bbd119f2bb5d5e98b7a49dd969047b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>删除 SQL Server 代理程序代理
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中删除 [!INCLUDE[tsql](../../includes/tsql_md.md)]代理的代理帐户。  
   
 **本主题内容**  
@@ -45,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="Restrictions"></a>限制和局限  
   
--   删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户时，请确保该代理未引用任何活动的作业步骤。 若要检查是否有引用该代理的作业步骤，请右键单击该代理，选择“属性”，然后在“proxy_name 代理帐户属性”对话框中选择“引用”页。 如果删除某个代理，在 **“删除对象”** 对话框中会出现一个用于重新分配使用该代理的所有作业步骤的选项。  
+-   删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户时，请确保该代理未引用任何活动的作业步骤。 若要检查是否有引用该代理的作业步骤，请右键单击该代理，选择“属性”，然后在“proxy_name代理帐户属性”对话框中选择“引用”页。 如果删除某个代理，在 **“删除对象”** 对话框中会出现一个用于重新分配使用该代理的所有作业步骤的选项。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。 凭据中指定的用户必须对正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的计算机具有“以批处理作业登录”权限。  
   
@@ -74,7 +79,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  在 **“删除对象”** 对话框中，确认选择了正确的代理帐户。 选中 **“重新分配给”** 复选框以向其他帐户重新分配引用此代理帐户的作业步骤。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -84,7 +89,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- deletes the proxy "Catalog application proxy"  

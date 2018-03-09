@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b1a964e2d026f93ec26a34b2cb7ba5e114886ec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87034c1db40e5762441871cc347eaf37d2c56ea3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwaddnetworkcredentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,25 +42,25 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ```  
   
 ## <a name="arguments"></a>参数  
- *target_server_name*  
+ '*target_server_name*'  
  指定的目标服务器主机名或 IP 地址。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将通过使用传递到此存储过程的用户名和密码凭据访问此服务器。  
   
  若要通过 InfiniBand 网络连接，请使用目标服务器的 InfiniBand IP 地址。  
   
  *target_server_name*定义为 nvarchar(337)。  
   
- *user_name*  
+ '*user_name*'  
  指定有权访问目标服务器的用户名。 如果目标服务器的凭据已存在，则它们将更新到新的凭据。  
   
  *user_name*定义为 nvarchar (513)。  
   
- *密码*ꞌ  
+ '*password*ꞌ  
  指定的密码*user_name*。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**更改服务器状态**权限。  
   
 ## <a name="error-handling"></a>错误处理  

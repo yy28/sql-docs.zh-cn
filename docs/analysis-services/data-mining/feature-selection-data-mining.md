@@ -2,15 +2,13 @@
 title: "功能选择 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,19 +23,20 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>功能选择（数据挖掘）
-  *功能选择* 是机器学习的重要组成部分。 功能选择是指减少要处理和分析的输入或查找最有意义的输入的过程。 相关术语 *功能工程* （或 *功能提取*）是指从现有数据中提取有用信息或功能的过程。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  *功能选择*是机器学习的重要组成部分。 功能选择是指减少要处理和分析的输入或查找最有意义的输入的过程。 相关术语 *功能工程* （或 *功能提取*）是指从现有数据中提取有用信息或功能的过程。  
   
 ## <a name="why-do-feature-selection"></a>为何使用功能选择？  
  出于以下几个原因，功能选择对于生成一个好模型至关重要。 一个原因是，功能选择意味着某种程度的 *基数减少*，从而强制截断在生成模型时可能会考虑到的属性数量。 数据通常包含一些对生成模型毫无用处的信息或者错误的信息种类。 例如，你可能有一个数据集，其中包含用于描述客户特征的 500 列；但是，如果某些列中的数据非常稀疏，那么，将它们添加到模型后可获得的好处很少，而且如果某些列相互重复，使用这两个列可能会影响模型。  

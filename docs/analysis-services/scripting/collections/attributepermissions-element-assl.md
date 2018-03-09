@@ -2,15 +2,13 @@
 title: "AttributePermissions 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AttributePermissions Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad1249da34b33214fd6c5e0fee86c79af28a89d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e64e934d1664ccbdc08755db1eb4721d863c8e0c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributepermissions-element-assl"></a>AttributePermissions 元素 (ASSL)
-  包含单个属性权限的集合[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素上的特定维度[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含单个属性权限的集合[角色](../../../analysis-services/scripting/objects/role-element-assl.md)元素上的特定维度[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,10 +45,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -60,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |父元素|[CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md)， [DimensionPermission](../../../analysis-services/scripting/objects/dimensionpermission-element-assl.md)|  
 |子元素|[AttributePermission](../../../analysis-services/scripting/objects/attributepermission-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  有关**DimensionPermission**，此集合只能包含一个**AttributePermission**每个属性。  
   
  分析管理对象 (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AttributePermissionCollection>。  

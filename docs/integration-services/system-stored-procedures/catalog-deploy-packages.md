@@ -1,5 +1,5 @@
 ---
-title: "catalog.deploy_packages |Microsoft 文档"
+title: catalog.deploy_packages | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1839430dd7fb83ab16c4de46011819e3ce28e835
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f44775c2852c1d89c0549f2beab7fd903d66c4d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdeploypackages"></a>catalog.deploy_packages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  将一个或多个包部署到一个文件夹中[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]目录或更新以前已部署的现有包。  
+  将一个或多个包部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中的文件夹，或更新以前部署的现有包。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,39 +36,38 @@ ms.lasthandoff: 09/26/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
- 文件夹的名称。 *Folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] folder_name  
+ 文件夹的名称。 folder_name 为 nvarchar(128)。  
   
- [ @project_name =]*文件的内容*  
- 项目的文件夹中的名称。 *文件的内容*是**nvarchar （128)**。  
+ [ @project_name = ] *project_name*  
+ 文件夹中项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
- [ @packages_table =] *packages_table*  
- 二进制内容组成[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包 (.dtsx) 文件。 *Packages_table*是**[目录]。 [Package_Table_Type]**  
+ [ @packages_table = ] *packages_table*  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包 (.dtsx) 文件的二进制内容。 *packages_table* 为 **[catalog].[Package_Table_Type]**  
   
- [ @operation_id =] *operation_id*  
- 返回部署操作的唯一标识符。 *Operation_id*是**bigint**。  
+ [ @operation_id = ] operation_id  
+ 返回部署操作的唯一标识符。 operation_id 为 bigint。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
--   CREATE_OBJECTS 项目或包的修改权限，要更新的包上的权限。  
+-   对项目具有 CREATE_OBJECTS 权限或对包具有 MODIFY 权限才能更新包。  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
- 以下列表描述某些可能会导致此存储的过程以引发错误的情况：  
+ 下面的列表描述了一些可能导致此存储过程引发错误的情况：  
   
--   参数引用不存在的对象、 参数尝试创建一个对象，已存在，或以某种其他方式的参数无效。  
+-   参数引用的对象不存在，参数试图创建的对象已存在，或者参数在其他某个方面无效。  
   
 -   用户不具备足够的权限  
   
   
-

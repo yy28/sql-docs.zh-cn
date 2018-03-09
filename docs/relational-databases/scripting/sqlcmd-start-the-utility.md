@@ -2,26 +2,30 @@
 title: "启动 sqlcmd 实用工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a21662f3522e5fa6652f97aad88d68a1475d498a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f7e35bb04d5ff169800d837b05a63320640adeff
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - 启动实用工具
-  使用 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md) ，可以在命令提示符处、在 SQLCMD 模式下的查询编辑器中、在 Windows 脚本文件中或者在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业的操作系统 (Cmd.exe) 作业步骤中输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句、系统过程和脚本文件。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)，可以在命令提示符处、在 SQLCMD 模式下的查询编辑器中、在 Windows 脚本文件中或者在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的操作系统 (Cmd.exe) 作业步骤中输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、系统过程和脚本文件。
 > [!NOTE]  
 >  Windows 身份验证是 **sqlcmd**的默认身份验证模式。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须使用 **-U** 和 **-P** 选项指定用户名和密码。  
   
@@ -44,7 +48,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>启动 sqlcmd 实用工具并连接到 SQL Server 的命名实例  
   
-1.  打开“命令提示符”窗口，键入 **sqlcmd -S***myServer\instanceName*。 使用计算机名称和要连接的 *的实例替换* myServer\instanceName [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+1.  打开命令提示符窗口，键入 *sqlcmd -S***myServer\instanceName。 使用计算机名称和要连接的 *的实例替换* myServer\instanceName [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 2.  按 Enter。  
   

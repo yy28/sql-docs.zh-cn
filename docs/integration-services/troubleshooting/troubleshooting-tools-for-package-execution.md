@@ -1,5 +1,5 @@
 ---
-title: "包执行的故障排除工具 |Microsoft 文档"
+title: "包执行的疑难解答工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用于在包完成和部署以后的执行过程中进行故障排除的功能和工具。  
@@ -58,16 +57,16 @@ ms.lasthandoff: 09/27/2017
   
 -   **使用错误输出捕获错误数据**。 将包含错误的行发送到单独的目标（如错误表或文本文件）。 错误输出自动添加两个数值列（包含导致该行被拒绝的错误的编号）以及发生该错误的列的 ID。  
   
--   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，你还可以添加错误消息和列名称以便更容易分析错误输出。 有关如何通过使用脚本添加这两个附加列的示例，请参阅 [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+-   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，你还可以添加错误消息和列名称以便更容易分析错误输出。 有关如何通过使用脚本添加这两个附加列的示例，请参阅 [使用脚本组件增强错误输出](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
--   **或者，通过记录 DiagnosticEx 事件获取列名称**。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
+-   **或者，通过记录 DiagnosticEx 事件获取列名称**。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
      **DiagnosticEx** 的消息列的值是 XML 文本。 若要查看包执行的消息文本，请查询 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)视图。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>使用操作报告对包执行进行故障排除  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供标准操作报告，帮助您监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 这些包报告有助于您查看包状态和历史记录，并根据需要确定执行失败的原因。  
   
- 有关详细信息，请参阅 [Troubleshooting Reports for Package Execution](../../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md)。  
+ 有关详细信息，请参阅 [对包执行进行故障排除的报告](../../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md)。  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>使用 SSISDB 视图对包执行进行故障排除  
  提供了一些 SSISDB 数据库视图，您可以查询它们来监视包执行和其他操作信息。 有关详细信息，请参阅 [监视包运行和其他操作](../../integration-services/performance/monitor-running-packages-and-other-operations.md)。  
@@ -77,7 +76,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **启用日志记录**。 您可以只选择所要捕获的事件以及只选择所要捕获的信息项，以修改日志记录输出。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../performance/integration-services-ssis-logging.md)。  
   
--   **选择包的“诊断”事件对访问接口问题进行故障排除。** 一些日志记录消息可以帮助您对包与外部数据源的交互情况进行故障排除。 有关详细信息，请参阅 [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md)。  
+-   **选择包的“诊断”事件对访问接口问题进行故障排除。** 一些日志记录消息可以帮助您对包与外部数据源的交互情况进行故障排除。 有关详细信息，请参阅 [对包连接进行故障排除的工具](troubleshooting-tools-for-package-connectivity.md)。  
   
 -   **增强默认日志记录输出**。 通常，每次该包运行时日志记录都会向日志记录目标中追加行。 虽然日志记录输出的每一行都使用包的名称和唯一标识符来标识包，也通过唯一的 ExecutionID 来标识包的执行，但单一列表中的大量日志记录输出会使分析变得困难。  
   
@@ -85,14 +84,14 @@ ms.lasthandoff: 09/27/2017
   
     1.  **创建记录包的每次执行情况的父表**。 此父表只有一行用于包的每次执行，并使用 ExecutionID 链接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 日志记录表中的子记录。 您可以在每个包的开始使用一个执行 SQL 任务创建此新行并记录开始时间。 然后您可以在包的结尾使用另一个执行 SQL 任务，用结束时间、持续时间和状态来更新该行。  
   
-    2.  **将审核信息添加到数据流**。 您可以使用审核转换将有关创建或修改每一行的包执行的信息添加到数据流的行中。 审核转换可以提供九条信息，包括 PackageName 和 ExecutionInstanceGUID。 有关详细信息，请参阅 [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md)。 如果您希望在每一行中包括自定义信息以便审核，可以使用派生列转换将此信息添加到数据流的行中。 有关详细信息，请参阅 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
+    2.  **将审核信息添加到数据流**。 您可以使用审核转换将有关创建或修改每一行的包执行的信息添加到数据流的行中。 审核转换可以提供九条信息，包括 PackageName 和 ExecutionInstanceGUID。 有关详细信息，请参阅 [审核转换](../../integration-services/data-flow/transformations/audit-transformation.md)。 如果您希望在每一行中包括自定义信息以便审核，可以使用派生列转换将此信息添加到数据流的行中。 有关详细信息，请参阅 [派生列转换](../../integration-services/data-flow/transformations/derived-column-transformation.md)。  
   
     3.  **考虑捕获行计数数据**。 考虑另行创建一个表，用于存储行计数信息。其中，每个包执行实例均由其 ExecutionID 标识。 使用行计数转换在数据流的关键点将行计数保存到一系列变量中。 数据流结束后，请使用执行 SQL 任务将该系列值插入到表的行中，供以后分析和报告。  
   
      有关此方法的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮书 [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)（Project REAL：Business Intelligence ETL 设计实践）中的 "ETL Auditing and Logging"（ETL 审核和日志记录）一节。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用调试转储文件对包执行进行故障排除  
- 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，可以创建提供包执行信息的调试转储文件。 有关详细信息，请参阅 [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，可以创建提供包执行信息的调试转储文件。 有关详细信息，请参阅 [生成包执行的转储文件](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>针对运行时验证问题进行故障排除  
  有时在包中前一个任务执行完成之前，您也许不能连接到数据源，或者无法验证包的某些部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括以下功能，可帮助您避免由这些情况导致的验证错误：  
@@ -113,9 +112,8 @@ ms.lasthandoff: 09/27/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>无说明错误的故障排除  
  如果遇到了没有附带说明的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误，您可以根据其错误号在 [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md) 中查找错误来找到说明。 目前该列表中不包括故障排除信息。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [调试数据流](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>相关内容  
  dougbert.com 上的博客文章： [向错误输出中添加错误列名](http://go.microsoft.com/fwlink/?LinkId=261546)。  
-

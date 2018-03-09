@@ -2,27 +2,30 @@
 title: "添加或编辑联接 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ef3cc313a76a26f075ab295a5559792dd872e32
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d9aece9102787b048d9a46f32a17013ae057a9da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-join"></a>添加或编辑联接
-  可以使用 **“添加联接”** 和 **“编辑联接”** 对话框为合并发布添加和编辑联接筛选器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用“添加联接”和“编辑联接”对话框为合并发布添加和编辑联接筛选器。  
   
 > [!NOTE]  
 >  编辑现有发布中的筛选器需要为该发布创建新的快照。 如果发布有订阅，则必须重新初始化这些订阅。 有关属性更改的详细信息，请参阅[更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 >  联接筛选器可关联的表数量不受限制，但有大量表的筛选器会影响合并处理过程中的性能。 如果要生成五个或更多表的联接筛选器，请考虑其他解决方案：不筛选小表、不会发生更改的表或主要是查找表的表。 仅在必须跨订阅服务器分区的表之间使用联接筛选器。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  此对话框涉及三个步骤，用以在两个表之间创建联接筛选器。 创建一个以上的联接筛选器需要多次调用此对话框。  
   
 1.  **验证筛选的表并选择联接的表**  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)   
- [联接筛选器](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

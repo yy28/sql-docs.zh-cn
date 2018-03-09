@@ -17,15 +17,15 @@ helpviewer_keywords:
 - checksums [SQL Server]
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c363b96889bdf48710e4da2b930047d27ed3c26e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0120aab5e5615e12e4d15cd3a7d394817073037c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>在备份或还原期间启用或禁用备份校验和 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **开始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要启用或禁用备份校验和，请使用：**  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  BACKUP  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
@@ -71,13 +71,13 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-enable-or-disable-backup-checksum-for-a-backup-operation"></a>为备份操作启用或禁用备份校验和  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  若要启用备份校验和，请在 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 语句中指定 WITH CHECKSUM 选项。 若要禁用备份校验和，请指定 WITH NO_CHECKSUM 选项。 这是默认行为，但压缩备份除外。 下面的示例指定执行校验和。  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -86,13 +86,13 @@ GO
   
 #### <a name="to-enable-or-disable-backup-checksum-for-a-restore-operation"></a>为还原操作启用或禁用备份校验和  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  若要启用备份校验和，请在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句中指定 WITH CHECKSUM 选项。 这是压缩备份的默认行为。 若要禁用备份校验和，请指定 WITH NO_CHECKSUM 选项。 这是默认行为，但压缩备份除外。 下面的示例指定执行备份校验和。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  

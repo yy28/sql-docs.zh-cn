@@ -1,5 +1,5 @@
 ---
-title: "DBCC DBREINDEX (TRANSACT-SQL) |Microsoft 文档"
+title: DBCC DBREINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - DBREINDEX_TSQL
 - DBREINDEX
 - DBCC_DBREINDEX_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index rebuilding [SQL Server]
 - rebuilding indexes
 - dynamic index rebuilding [SQL Server]
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec9cbe9b5b8d7757c63b5dcca3b9011245ec0fd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 991c16eea9a651270ca299e72cafbc822465a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]重新生成指定的数据库的表中的一个或多个索引。
@@ -62,7 +64,7 @@ DBCC DBREINDEX
  *index_name*  
  要重新生成的索引名。 索引名称必须符合标识符规则。 如果*index_name*指定，则*table_name*必须指定。 如果*index_name*未指定或为""，重新生成所有索引的表。  
   
- *填充因子*  
+ *fillfactor*  
  在创建或重新生成索引时，每个索引页上用于存储数据的空间的百分比。 *填充因子*，则当创建索引，成为新的默认值为索引和重新生成因为重新生成聚集的索引的任何其他非聚集索引将填充因子。  
  当*fillfactor*为 0，DBCC DBREINDEX 使用上次为该索引指定填充因子值。 此值存储在**sys.indexes**目录视图。   
  如果*fillfactor*指定，则*table_name*和*index_name*必须指定。 如果*fillfactor*未指定，则使用默认的填充因子，100。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
@@ -92,7 +94,7 @@ DBCC DBREINDEX 可以在一条语句中重新生成表的所有索引。 这要�
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 调用方必须拥有某个表，或者是的成员**sysadmin**固定服务器角色、 **db_owner**固定数据库角色或**db_ddladmin**固定的数据库角色。
   
 ## <a name="examples"></a>示例  

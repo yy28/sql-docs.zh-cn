@@ -2,15 +2,13 @@
 title: "附加命令 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 995e77345c2770f59db620afb1ced2085eaeefa2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 24a0af4329f543c43087f902e959963384def662
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-command-tmsl"></a>附加命令 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  将 Analysis Services 文件附加到服务器。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]将 Analysis Services 文件附加到服务器。  
   
   
 ## <a name="request"></a>请求  
@@ -49,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 ||||  
 |-|-|-|  
 |**属性**|**Default**|**Description**|  
-|database|[必需]|要附加的数据库对象名称。|  
+|“数据库”|[必需]|要附加的数据库对象名称。|  
 |文件夹|[必需]|包含附加的数据库的文件夹。|  
 |password|Empty|要用于加密附加的数据库中的机密的密码。|  
 |readWriteMode|ReadWrite|一个枚举值，该值指示允许对数据库的访问模式。<br /><br /> **枚举值如下所示：**<br /><br /> 允许 readWrite – 读写访问。<br /><br /> readOnly – 允许只读访问。<br /><br /> 允许 readOnlyExclusive – 只读独占访问。|  

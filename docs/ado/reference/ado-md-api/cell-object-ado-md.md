@@ -3,8 +3,9 @@ title: "单元格对象 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Cell
-helpviewer_keywords: Cell object [ADO MD]
+f1_keywords:
+- Cell
+helpviewer_keywords:
+- Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35b30a2474f43ee1d46e23ae4a4323cca47f16b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a8b634548700a92a2524a50cbac7548eea871d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cell-object-ado-md"></a>单元格对象 (ADO MD)
 表示包含在单元集中的轴坐标的交叉点处的数据。  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |BackColor|显示该单元格时使用的背景色。|  
 |FontFlags|位掩码细节效果字体。|  

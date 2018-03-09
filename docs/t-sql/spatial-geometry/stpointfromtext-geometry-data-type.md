@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STPointFromText_TSQL
 - STPointFromText (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STPointFromText (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STPointFromText (geometry Data Type)
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a63ebffa22079c146593229e3525e5173c0531ec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 27c1fd27313ccff3bc1896bdc91b2d9709831ad2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
 ## <a name="arguments"></a>参数  
  *point_tagged_text*  
- 是的 WKT 表示形式**geometryPoint**您希望返回的实例。 *point_tagged_text*是**nvarchar (max)**表达式。  
+ 是的 WKT 表示形式**geometryPoint**您希望返回的实例。 *point_tagged_text* is an **nvarchar(max)** expression.  
   
  *SRID*  
  是**int**表达式表示空间引用标识符 (SRID) 的**geometryPoint**您希望返回的实例。  

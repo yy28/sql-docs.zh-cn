@@ -2,9 +2,12 @@
 title: "联机还原 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f17516a1a1ac2d07da67ee4688703ef0a5ee5611
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3500b144cc3afb10c5ac12ee76e49dc11953623
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
-  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机还原。 在此版本中，文件还原、页面还原或段落还原默认处于联机状态。 本主题与包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机还原。 在此版本中，文件还原、页面还原或段落还原默认处于联机状态。 本主题与包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
   
  数据库联机时还原数据的过程称为“联机还原” 。 只要主文件组处于联机状态，就将数据库视为联机，即使有一个或多个辅助文件组处于脱机状态。 在任何恢复模式下，您都可以在数据库联机时还原处于脱机状态的文件。 在完整恢复模式下，您还可以在数据库联机时还原页。  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  使用 WITH RECOVERY 还原最近的日志。 此操作将使还原的数据联机。  
   
- 有时，未提交的事务无法回滚，因为回滚所需的数据在启动时处于脱机状态。 在这种情况下，将延迟该事务。 有关详细信息，请参阅[延迟的事务 (SQL Server)](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。  
+ 有时，未提交的事务无法回滚，因为回滚所需的数据在启动时处于脱机状态。 在这种情况下，将延迟该事务。 有关详细信息，请参阅 [延迟的事务 (SQL Server)](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)中删除失效的文件组。  
   
 > [!NOTE]  
 >  如果数据库正在使用大容量日志恢复模式，建议您在开始执行联机还原之前切换到完整恢复模式。 有关详细信息，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  

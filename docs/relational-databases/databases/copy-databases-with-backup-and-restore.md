@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 61898f292e44da04152eeb3ebeb2e7221eb1bb68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5555b305edf4ac249959e77d4a68c07c72efef5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>通过备份和还原来复制数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
  在其他计算机上还原数据库时，启动还原操作的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录用户或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户将自动成为新数据库的所有者。 还原数据库时，系统管理员或新数据库所有者可以更改数据库所有权。 若要防止未经授权的数据库还原操作，请使用介质集或备份集密码。  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>还原到另一个服务器实例时管理元数据  
- 将数据库还原到另一个服务器实例上时，为了给用户和应用程序提供一致的体验，您可能需要在另一个服务器实例上为数据库重新创建部分或全部元数据（例如登录和作业）。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+ 将数据库还原到另一个服务器实例上时，为了给用户和应用程序提供一致的体验，您可能需要在另一个服务器实例上为数据库重新创建部分或全部元数据（例如登录和作业）。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
  **查看备份集中的数据文件和日志文件**  
   
@@ -143,6 +143,6 @@ ms.lasthandoff: 11/17/2017
  [将数据库复制到其他服务器](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

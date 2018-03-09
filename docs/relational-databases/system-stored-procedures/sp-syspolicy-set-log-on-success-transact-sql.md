@@ -1,5 +1,5 @@
 ---
-title: "sp_syspolicy_set_log_on_success (Transact SQL) |Microsoft 文档"
+title: sp_syspolicy_set_log_on_success (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_set_log_on_success_TSQL
 - sp_syspolicy_set_log_on_success
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_set_log_on_success
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_set_log_on_success
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95d79dfcd1e4942cb5604df98b8edc49eb4dc2da
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 30487c3c51534bbf7866a73f3eec016a9b2a8787
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicysetlogonsuccess-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@value=** ]*值*  
+ [ **@value=** ] *value*  
  确定是否记录成功的策略评估。 *值*是**sqlvariant**，和可以是以下值之一：  
   
 -   0 或 'false' = 不记录成功的策略评估。  
@@ -59,7 +62,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
   
  当*值*仅设置为 0 或 'false'，失败策略评估都会记录。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > **重要说明!!** 可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于凭据此可能提升，应仅向与控制的配置的受信任的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
@@ -75,6 +78,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [基于策略的管理存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_configure &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
+ [sp_syspolicy_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

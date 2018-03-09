@@ -1,11 +1,11 @@
 ---
-title: "Integration Services (SSIS) 查询 |Microsoft 文档"
+title: "Integration Services (SSIS) 查询 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -20,26 +20,25 @@ helpviewer_keywords:
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8f44c8ab71ecdd432364d6f7609d440fcddf015a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查询
   执行 SQL 任务、OLE DB 源、OLE DB 目标以及查找转换都可以使用 SQL 查询。 在执行 SQL 任务中，SQL 语句可以创建、更新和删除数据库对象与数据；运行存储过程以及执行 SELECT 语句。 在 OLE DB 源和查找转换中，SQL 语句通常为 SELECT 语句或 EXEC 语句。 后者经常用于运行可返回结果集的存储过程。  
   
  可以对查询进行分析，以确定它是否有效。 如果分析的查询使用到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的连接，则在分析、执行该查询后，执行结果（成功或失败）将分配给分析结果。 如果该查询使用的是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]之外的数据连接，则仅分析该语句。  
   
-你可以通过以下方式提供的 SQL 语句：
-1.   直接在设计器中输入它。
-2.   指定的文件连接包含的语句。
+可以使用以下方式提供 SQL 语句：
+1.   直接在设计器中输入该语句。
+2.   指定与包含该语句的文件之间的连接。
 3.   指定包含该语句的变量。  
   
 ## <a name="direct-input-sql"></a>直接输入 SQL  
@@ -90,26 +89,26 @@ ms.lasthandoff: 09/26/2017
   
  若要了解关于 Transact-SQL 语言及其语法的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../t-sql/transact-sql-reference-database-engine.md)。  
   
- 还可以在查询中使用变量，以便为输入参数提供值、捕获输出参数的值并存储返回代码。 若要了解有关在包使用的查询中使用变量的详细信息，请参阅[执行 SQL 任务](../integration-services/control-flow/execute-sql-task.md)， [OLE DB 源](../integration-services/data-flow/ole-db-source.md)，和[Integration Services &#40;SSIS &#41;查询](../integration-services/integration-services-ssis-queries.md)。 若要了解有关在执行 SQL 任务中使用变量的详细信息，请参阅 [执行 SQL 任务中的参数和返回代码](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 和 [执行 SQL 任务中的结果集](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)。  
+ 还可以在查询中使用变量，以便为输入参数提供值、捕获输出参数的值并存储返回代码。 若要了解包所使用的查询中使用变量的详细信息，请参阅[执行 SQL Task](../integration-services/control-flow/execute-sql-task.md)[OLE DB 源](../integration-services/data-flow/ole-db-source.md) 和 [Integration Services (SSIS) 查询](../integration-services/integration-services-ssis-queries.md)。 若要了解有关在执行 SQL 任务中使用变量的详细信息，请参阅 [执行 SQL 任务中的参数和返回代码](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 和 [执行 SQL 任务中的结果集](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)。  
   
  查找转换和模糊查找转换也可以使用带有参数和返回代码和变量。 有关 OLE DB 源的信息也适用于上述两种转换。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **工具栏**  
  使用工具栏可以管理数据集、选择要显示的窗格以及控制查询函数。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**显示/隐藏关系图窗格**|显示或隐藏 **“关系图”** 窗格。|  
 |**显示/隐藏网格窗格**|显示或隐藏 **“网格”** 窗格。|  
 |**显示/隐藏 SQL 窗格**|显示或隐藏 **SQL** 窗格。|  
-|**显示/隐藏结果窗格中**|显示或隐藏 **“结果”** 窗格。|  
+|**显示/隐藏结果窗格**|显示或隐藏 **“结果”** 窗格。|  
 |**运行**|运行查询。 结果将显示在结果窗格中。|  
 |**验证 SQL**|验证 SQL 语句是否有效。|  
 |**升序排序**|依据网格窗格中的所选列对输出行按升序排序。|  
 |**降序排序**|依据网格窗格中的所选列对输出行按降序排序。|  
 |**删除筛选器**|在网格窗格中选择列名，再单击 **“删除筛选器”** 可以删除列的排序条件。|  
-|**使用 Group By**|向查询中添加 GROUP BY 功能。|  
+|**使用分组依据**|向查询中添加 GROUP BY 功能。|  
 |**添加表**|向查询中添加新表。|  
   
  **查询定义**  
@@ -123,4 +122,3 @@ ms.lasthandoff: 09/26/2017
 |**“结果”** 窗格|在您单击工具栏上的 **“运行”** 时显示查询的结果。| 
 
   
-

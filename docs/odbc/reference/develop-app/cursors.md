@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursors"></a>游标
 应用程序会获取与数据*光标*。 一种不同于结果集： 结果集是与特定搜索条件匹配的行集，而一种软件，将返回这些行到应用程序。 名称*游标，*因为它应用到数据库，可能源自终端的计算机上闪烁的光标。 就像该游标指示当前位置屏幕和类型化的单词出现的位置下一步，结果集上的光标指示结果集和下一步将返回哪些行中的当前位置。  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66e897341fa06f2666969677f7a3a2305b52cf46
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 4ea7244857dcd25b1e36f3420811ef035d4ee3b2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transactions-sql-data-warehouse"></a>事务 （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -73,7 +75,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  设置 IMPLICIT_TRANSACTIONS {ON |**OFF** }  
  这会切换为设置自动提交的相同模式。 如果设置为 ON，SET IMPLICIT_TRANSACTIONS 将连接设置为隐式事务模式。 当关闭，它将连接返回到自动提交模式。  有关详细信息，请参阅[SET IMPLICIT_TRANSACTIONS &#40;Transact SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  运行与事务相关的语句需要不特定的权限。 运行事务内的语句所需的权限。  
   
 ## <a name="error-handling"></a>错误处理  
@@ -150,7 +152,7 @@ COMMIT;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [设置 IMPLICIT_TRANSACTIONS &#40;Transact SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+ [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [将事务隔离级别设置 &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT (Transact-SQL)](../../t-sql/functions/trancount-transact-sql.md)  
   

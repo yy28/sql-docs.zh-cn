@@ -3,29 +3,31 @@ title: "筛选器和 RecordCount 属性示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2308e32d81d9a3044bfe0583373fd54fdd93852
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2432adfdd2a4d4a66a3ccf0379a653ad4bb95f50
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>筛选器和 RecordCount 属性示例 （VC + +）
 此示例使用[筛选器](../../../ado/reference/ado-api/filter-property.md)属性以打开一个新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)基于指定条件应用于现有**记录集**。 它使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性，以在两个显示的记录数**记录集**。 有关运行此过程需要 FilterField 函数。  

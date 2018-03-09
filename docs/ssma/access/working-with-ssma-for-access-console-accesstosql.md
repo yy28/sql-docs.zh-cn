@@ -1,10 +1,13 @@
 ---
 title: "SSMA 使用的访问控制台 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: e09d438a0e53eaba4f461cfdf14b7447b85cf4ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a53f3cb5f05cff896bc03245c20f68a9050f5d1f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>SSMA 使用的访问控制台 (AccessToSQL)
 现可通过在命令行控制台应用程序访问 Microsoft SQL Server 迁移助手 (SSMA) 的访问。 脚本文件窗体的应用程序执行命令的输入。 作为控制台应用程序，SSMA 支持脚本级别进行连接、 减少迁移周期，并缩放迁移工作量。  

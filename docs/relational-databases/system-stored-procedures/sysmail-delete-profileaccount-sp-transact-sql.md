@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
 - sysmail_delete_profileaccount_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67c1f60356209a9f39d0ac902fea41b5f6ec2f2a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26daacbb43092e81ec4798d8199d69f67fe067f1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,23 +47,23 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  要删除的配置文件的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*可指定。  
   
- [  **@profile_name**  =] *profile_name*  
+ [ **@profile_name** = ] **'***profile_name***'**  
  要删除的配置文件的配置文件名。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*可指定。  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  要删除的帐户 ID。 *account_id*是**int**，默认值为 NULL。 任一*account_id*或*account_name*可指定。  
   
- [  **@account_name**  =] *account_name*  
+ [ **@account_name** = ] **'***account_name***'**  
  要删除的帐户的名称。 *account_name*是**sysname**，默认值为 NULL。 任一*account_id*或*account_name*可指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  如果指定的帐户与指定的配置文件不相关，则会返回错误。  
@@ -71,7 +74,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
  存储的过程**sysmail_delete_profileaccount_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称执行过程**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认为成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

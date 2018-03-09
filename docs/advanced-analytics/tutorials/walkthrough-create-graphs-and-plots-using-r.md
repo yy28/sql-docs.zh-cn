@@ -1,27 +1,32 @@
 ---
 title: "创建关系图和使用 SQL 和 R （演练） 的图形 |Microsoft 文档"
 ms.date: 11/10/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 2a1572cf1bc6f8e3f6aff99255e5805bf977978d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>创建关系图和使用 SQL 和 R （演练） 的图形
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在演练本部分，你了解用于生成图形和 R 使用 SQL Server 数据的地图的技术。 你创建简单的直方图，若要获取一些练习中，且无需开发更复杂的映射绘图。
 

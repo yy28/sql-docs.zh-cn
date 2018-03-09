@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_uncontained_entities_TSQL
 - sys.dm_db_uncontained_entities_TSQL
 - dm_db_uncontained_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_uncontained_entities dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2786493aeb75402eae5d7e91458e97436f3435a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 21a11895ad0d618f9466572edc213aa0d217d8ef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +43,9 @@ ms.lasthandoff: 11/27/2017
 ||||  
 |-|-|-|  
 |**列名**|**类型**|**Description**|  
-|*类*|**int**|1 = 对象或列（包括模块、XP、视图、同义词和表）。<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引（全文索引）<br /><br /> 12 = 数据库 DDL 触发器<br /><br /> 19 = 路由<br /><br /> 30 = 审核规范|  
+|class|**int**|1 = 对象或列（包括模块、XP、视图、同义词和表）。<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引（全文索引）<br /><br /> 12 = 数据库 DDL 触发器<br /><br /> 19 = 路由<br /><br /> 30 = 审核规范|  
 |*class_desc*|**nvarchar(120)**|对实体的类的说明。 下列其中一项以匹配的类：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|实体的 ID。<br /><br /> 如果*类*= 1，则 object_id<br /><br /> 如果*类*= 4，则 sys.database_principals.principal_id。<br /><br /> 如果*类*= 5，则 sys.assemblies.assembly_id。<br /><br /> 如果*类*= 6，则 sys.types.user_type_id。<br /><br /> 如果*类*= 7，则 sys.indexes.index_id。<br /><br /> 如果*类*= 12，则 sys.triggers.object_id。<br /><br /> 如果*类*= 19，则 sys.routes.route_id。<br /><br /> 如果*类*= 30，则 sys。 database_audit_specifications.databse_specification_id。|  
+|*major_id*|**int**|实体的 ID。<br /><br /> 如果*类*= 1，则 object_id<br /><br /> 如果*类*= 4，则 sys.database_principals.principal_id。<br /><br /> 如果*类*= 5，则 sys.assemblies.assembly_id。<br /><br /> 如果*类*= 6，则 sys.types.user_type_id。<br /><br /> 如果*类*= 7，则 sys.indexes.index_id。<br /><br /> 如果*类*= 12，则 sys.triggers.object_id。<br /><br /> 如果*类*= 19，则 sys.routes.route_id。<br /><br /> 如果*类*= 30，则 sys。 database_audit_specifications.databse_specification_id.|  
 |*statement_line_number*|**int**|如果此类是一个模块，则返回找到非包含使用所在的行号。  否则，值为 Null。|  
 |*statement_ offset_begin*|**int**|如果此类是一个模块，则指示非包含使用开始的起始位置（以字节表示，从 0 开始）。 否则，返回值为 Null。|  
 |*statement_ offset_end*|**int**|如果此类是一个模块，则指示非包含使用的结束位置（以字节表示，从 0 开始）。 值为 -1 指示模块的结尾。 否则，返回值为 Null。|  
@@ -67,9 +70,9 @@ ms.lasthandoff: 11/27/2017
   
 -   系统内置函数  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  sys.dm_db_uncontained_entities 只返回对其用户具有某种类型的权限对象。 若要完全评估高特权用户例如的成员时应使用此函数的数据库的包含关系**sysadmin**固定的服务器角色或**db_owner**角色。  
   
 ## <a name="examples"></a>示例  
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/27/2017
               **
               ** 此查询报告 P1 使用数据库之外的 sys.endpoints。  
   
-```tsql  
+```sql  
 CREATE DATABASE Test;  
 GO  
   

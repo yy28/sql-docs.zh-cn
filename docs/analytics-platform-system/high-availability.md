@@ -3,10 +3,10 @@ title: "分析平台系统的高可用性"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
 caps.latest.revision: "9"
-ms.openlocfilehash: 78b55161af9bfe8da16d7276bddc4e2f2cff9ee5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11733b45ba25f625ea2d3d601939973e9137b15d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analytics-platform-system-high-availability"></a>分析平台系统的高可用性
 介绍如何分析平台系统 (AP) 以实现高可用性而设计。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="high-availability-architecture"></a>高可用性体系结构  
 ![设备体系结构](media/appliance-architecture.png "设备体系结构")  
   
-## <a name="network"></a>Network  
+## <a name="network"></a>网络  
 对于网络可用性 AP 设备具有两个 InfiniBand 网络。 如果其中一个 InfiniBand 网络出现故障，另一个控制器是仍然可用。 此外，Active Directory 已复制域控制器为传入的请求解析到正确的 InfiniBand 网络。  
   
 有关详细信息，请参阅[配置无线带宽技术网络适配器](configure-infiniband-network-adapters.md)。  

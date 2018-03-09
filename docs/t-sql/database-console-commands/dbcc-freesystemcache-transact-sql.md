@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_FREESYSTEMCACHE_TSQL
 - DBCC FREESYSTEMCACHE
 - FREESYSTEMCACHE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - clearing unused cache entries
 - DBCC FREESYSTEMCACHE statement
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - freeing unused cache entries
 - cleaning unused cache entries
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad27fe58eb94b69f98603bc94694b6f0d09f8fc4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d5c6924da3ef9ac85683c857c786337b9d9b978b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +55,7 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>参数  
- ('ALL' [，*pool_name* ])  
+ ( 'ALL' [,*pool_name* ] )  
  ALL 指定所有受支持的缓存。  
  *pool_name*指定资源调控器池缓存。 只释放与此池关联的条目。  
   
@@ -69,7 +71,7 @@ DBCC FREESYSTEMCACHE
 ## <a name="result-sets"></a>结果集  
 DBCC FREESYSTEMCACHE 返回:"DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要对服务器的 ALTER SERVER STATE 权限。
   
 ## <a name="examples"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: "编辑 Oracle 数据库属性 |Microsoft 文档"
+title: "编辑 Oracle 数据库属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9a83a04c01a48b85395949c9277f77b3d1ede632
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="edit-the-oracle-database-properties"></a>编辑 Oracle 数据库属性
   使用属性编辑器中的“Oracle”选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
@@ -56,4 +55,3 @@ ms.lasthandoff: 08/03/2017
  [连接到 Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
   
-

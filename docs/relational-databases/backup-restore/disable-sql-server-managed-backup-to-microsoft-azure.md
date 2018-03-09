@@ -2,37 +2,41 @@
 title: "禁用 SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
-caps.latest.revision: "8"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f446cc29eb3ec4da06b9cc3a5924a574b44e5fb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3f462b0563e37d528808f43b180435fa75a15dc3
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>对 Microsoft Azure 禁用 SQL Server 托管备份
-  本主题介绍了如何在数据库级别和实例级别禁用或暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍了如何在数据库级别和实例级别禁用或暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
 ##  <a name="DatabaseDisable"></a> 为数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
  通过使用系统存储过程 [managed_backup.sp_backup_config_basic (Transact SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)，可以禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 设置。 *@enable_backup* 参数用于启用和禁用特定数据库的 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置；其中，1 启用配置设置，0 禁用配置设置。  
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>为特定数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
 ```  
 EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -47,11 +51,11 @@ GO
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-all-the-databases"></a>为所有数据库禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 下面的示例确定是否在实例级别配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，在实例上启用了所有 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，并且执行系统存储过程 **sp_backup_config_basic** 以便禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 下面的示例确定是否在实例级别配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，在实例上启用了所有 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，并且执行系统存储过程 **sp_backup_config_basic** 以便禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
 ```  
 -- Create a working table to store the database names  
@@ -74,7 +78,8 @@ SELECT db_name
        FROM   
   
        msdb.managed_backup.fn_backup_db_config (NULL)  
-       WHERE is_managed_backup_enabled = 1  
+       WHERE is_managed_backup_enabled = 1 
+       AND is_dropped = 0
   
        --Select DBName from @DBNames  
   
@@ -114,11 +119,11 @@ GO
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-default-configuration-settings"></a>禁用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 默认配置设置：  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -133,7 +138,7 @@ GO
   
 #### <a name="to-pause-includesssmartbackupincludesss-smartbackup-mdmd-services-using-transact-sql"></a>使用 Transact-SQL 暂停 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 服务：  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -149,7 +154,7 @@ Go
   
 #### <a name="to-resume-includesssmartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>使用 Transact-SQL 恢复 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ：  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1b24d8da86c779a9964d41921aa614bcd2d8d4f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aac00b2fd1ba5a5922c2618ccfadad6fc2d2b8ac
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (TRANSACT-SQL)
+# <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保存有关所有辅助进程完成 DMS 步骤的信息。  
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |dms_step_index|**int**|在此辅助进程正在运行 DMS 计划中的步骤。<br /><br /> request_id、 step_index 和 dms_step_index 窗体的密钥，此视图。||  
 |pdw_node_id|**int**|工作进程正在其运行的节点。|请参阅中的 node_id [sys.dm_pdw_nodes &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|如果有工作线程运行的分发。|请参阅中的 distribution_id [sys.pdw_distributions &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|类型|**nvarchar(32)**|此条目表示的 DMS 工作线程的类型。|DIRECT_CONVERTER、 DIRECT_READER、 FILE_READER、 HASH_CONVERTER、 HASH_READER、 ROUNDROBIN_CONVERTER、 EXPORT_READER、 EXTERNAL_READER、 EXTERNAL_WRITER、 PARALLEL_COPY_READER、 REJECT_WRITER、 写入器|  
+|type|**nvarchar(32)**|此条目表示的 DMS 工作线程的类型。|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
 |status|**nvarchar(32)**|DMS 辅助进程的状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|在最后一秒中读取或写入吞吐量。|大于或等于 0。 如果查询已取消或失败之前无法执行工作线程，则为 NULL。|  
 |bytes_processed|**bigint**|此工作线程处理的总字节数。|大于或等于 0。 如果查询已取消或失败之前无法执行工作线程，则为 NULL。|  

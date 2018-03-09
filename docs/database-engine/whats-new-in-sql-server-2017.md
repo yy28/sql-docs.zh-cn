@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eddd1edd812d9224e151960788f8f510f809fb27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f6f7d38bf06e453017b48108b5bda5594f0870c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>数据库引擎中的新增功能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 - 引入了新的 DMF [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)，用于公开摘要级别特性和有关事务日志文件的信息；对于监视事务日志的运行状况很有用。  
 - 可恢复的联机索引重新生成。 可恢复的联机索引重新生成可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作。 还可暂停操作，随后再恢复联机索引重新生成操作。 例如，可能需要暂时释放系统资源，以便执行高优先级任务或在其他维护时段完成索引重新生成操作（如果可用的维护时段太短，不足以处理大型表格）。 最后一点，可恢复的联机索引重新生成操作不需要大量的日志空间，因此可以在可恢复的重新生成操作运行时执行日志截断。 请参阅 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。
 - ALTER DATABASE SCOPED CONFIGURATION 的 IDENTITY_CACHE 选项。 向 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL 语句添加了新选项 IDENTITY_CACHE。 此选项设置为 `OFF` 时，如果服务器意外重启或故障转移到辅助服务器，数据库引擎可避免标识列的值中出现空白。 请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。   
--  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] 现在提供用于多对多关系建模的图形数据库功能。 包括用于创建节点和边界表的新 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 语法，以及用于查询的关键字 [MATCH](../t-sql/queries/match-sql-graph.md)。 有关详细信息，请参阅[使用 SQL Server 2017 进行图形处理](../relational-databases/graphs/sql-graph-overview.md)。   
+-  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] 现在提供图形数据库功能，可对更具意义的面向关系的数据建模。 包括用于创建节点和边界表的新 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 语法，以及用于查询的关键字 [MATCH](../t-sql/queries/match-sql-graph.md)。 有关详细信息，请参阅[使用 SQL Server 2017 进行图形处理](../relational-databases/graphs/sql-graph-overview.md)。   
 - 新一代的查询处理改进，将对应用程序工作负荷的运行时状况采用优化策略。 对于这款适应性查询处理功能系列初版，我们进行了 3 项新的改进：批处理模式自适应联接、批处理模式内存授予反馈，以及针对多语句表值函数的交错执行。  请参阅 [SQL 数据库中的自适应查询处理](../relational-databases/performance/adaptive-query-processing.md)。
 - 自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。 [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] 中的自动优化功能会在检测到潜在性能问题时发出通知，并允许应用更正措施或 [!INCLUDE[ssde-md](../includes/ssde-md.md)] 自动解决性能问题。 有关详细信息，请参阅[自动优化](../relational-databases/automatic-tuning/automatic-tuning.md)。
 - 针对内存优化表上的非群集索引生成的性能增强。 显著优化了数据库恢复期间 MEMORY_OPTIMIZED 表的 bwtree（非群集）索引重新生成的性能。 这一改进明显缩短了使用非群集索引时的数据库恢复时间。  

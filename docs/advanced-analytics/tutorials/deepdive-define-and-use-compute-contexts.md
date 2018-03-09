@@ -1,45 +1,51 @@
 ---
-title: "定义并使用计算上下文（对数据科学的深入探讨）| Microsoft Docs"
+title: "定义和使用计算上下文 （SQL 和 R 深入） |Microsoft 文档"
 ms.custom: 
-ms.date: 05/22/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- R
 ms.assetid: b13058d0-9c6a-44e1-849b-72189d9050ba
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9de0e06c73a91637735f7dc6855a3c14db1c7f10
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a5cf351eeccbfb6ed019bf330e1d236e8576c982
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="define-and-use-compute-contexts"></a>定义并使用计算上下文
+# <a name="define-and-use-compute-contexts-sql-and-r-deep-dive"></a>定义和使用计算上下文 （SQL 和 R 深入）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 
-假设你想要在服务器上（而不是本地计算机上）执行一些更复杂的计算。 为此，可以创建计算上下文，让 R 代码在服务器上运行。
+本课程介绍[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)函数，这样就可以为 SQL Server 定义计算上下文，然后在服务器上，而不是本地计算机上执行复杂计算。 
 
-**RxInSqlServer** 函数是 [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler) 包中提供的增强型 R 函数之一。 该函数处理以下任务：创建数据库连接，在本地计算机和远程执行上下文之间传递对象。
+RevoScaleR 支持多个计算上下文，以便你可以在 Hadoop、 Spark 中或数据库中运行 R 代码。 对于 SQL Server，你定义的服务器，并函数处理的任务的创建本地计算机和远程执行上下文之间的连接和传递对象的数据库。
 
-在此步骤中，将学习如何使用 **RxInSqlServer** 函数在 R 代码中定义计算上下文。
+创建 SQL Server 的函数计算上下文使用的以下信息：
 
-若要创建计算上下文，则需要以下与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关的基本信息：
-
-- 实例的连接字符串
-- 输出处理方式的规范
-- 用于启用跟踪或指定共享目录的可选参数
+- 连接字符串[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例
+- 应如何处理输出的规范
+- 启用跟踪，或指定跟踪级别的可选参数
+- 共享的数据目录的可选规范
 
 ## <a name="create-and-set-a-compute-context"></a>创建并设置计算上下文
 
-1. 为将执行计算的实例指定连接字符串。  这仅是为创建计算上下文而传递到 *RxInSqlServer* 函数的几个变量之一。 可以重复使用以前创建的连接字符串，或者创建一个不同的连接字符串（如果想要将计算移到另一个服务器或想要使用不同的标识）。
+1. 指定在其中执行计算实例的连接字符串。  你可以重新使用之前创建的连接字符串。 如果你想要将计算移动到不同的服务器，或使用不同的登录名执行某些任务，你可以创建不同的连接字符串。
 
     **使用 SQL 登录名**
 
@@ -61,23 +67,25 @@ ms.lasthandoff: 11/09/2017
   
     到 RxInSqlServer 的 wait 参数支持以下选项：
   
-    -   **TRUE**。 作业将为阻塞性且不会返回，直到它已完成或失败。  有关详细信息，请参阅[分布式和 Microsoft R 中的并行计算](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing)。
+    -   **TRUE**。 作业配置为阻止，并且不返回直到它已完成或失败。  有关详细信息，请参阅[分布式和机器学习 Server 中的并行计算](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
   
-    -   **FALSE**。 作业将为非阻塞性且会立即返回，你可以继续运行其他 R 代码。 但是，即使在非阻塞模式下，作业运行时，也必须维持客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接。
+    -   **FALSE**。 作业配置为非阻塞，并立即返回，允许你继续运行其他 R 代码。 但是，即使在非阻塞模式下，作业运行时，也必须维持客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接。
 
-3. 或者，可以指定本地 R 会话与远程  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机及其帐户共享使用的本地目录的位置。
+3. 或者，可以指定用于本地 R 会话进行的远程共享的本地目录的位置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算机和其帐户。
 
     ```R
     sqlShareDir <- paste("c:\\AllShare\\", Sys.getenv("USERNAME"), sep="")
     ```
     
-4. 如果你想要手动创建共享的特定目录，则可以添加如下所示的行。 若要确定哪个文件夹当前正在使用的共享，请运行`rxGetComputeContext`，这将返回有关当前的详细信息计算上下文。 有关详细信息，请参阅 [ScaleR 参考](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinsqlserver)。
+4. 如果你想要手动创建共享的特定目录，你可以添加类似于以下行：
 
     ```
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-4. 具有准备好所有变量，让他们为 RxInSqlServer 构造函数来创建的变量*计算上下文对象*。
+    若要确定哪个文件夹当前正在使用的共享，请运行`rxGetComputeContext()`，这将返回有关当前的详细信息计算上下文。 有关详细信息，请参阅 [ScaleR 参考](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/)。
+
+4. 具有准备好所有变量，作为自变量提供这些**RxInSqlServer**构造函数，来创建*计算上下文对象*。
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -86,11 +94,11 @@ ms.lasthandoff: 11/09/2017
          consoleOutput = sqlConsoleOutput)
     ```
     
-    你可能会发现 RxInSqlServer * 的语法是与你之前用来定义数据源的 RxSqlServerData 函数几乎完全相同。 但是，它们之间存在以下重要差异。
+    语法**RxInSqlServer**看起来几乎与的**RxSqlServerData**你之前用来定义数据源的函数。 但是，它们之间存在以下重要差异。
       
-    - 通过使用函数 RxSqlServerData，定义的数据源对象指定数据的存储位置。
+    - 使用函数 [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 定义的数据源对象指定数据的存储位置。
     
-    - 与此相反，（通过使用函数 RxInSqlServer 定义） 的计算上下文指示聚合和其他计算所在做好准备。
+    - 计算上下文中，通过使用函数的定义与此相反， [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)指示聚合和其他计算所在做好准备。
     
     定义计算上下文不会影响任何其他可能在工作站上执行的泛型 R 计算，也不会更改数据源。 例如，你可以将本地文本文件定义为数据源，但会将计算上下文更改为 SQL Server 并对 SQL Server 计算机上的数据执行所有的读取和汇总操作。
 
@@ -98,7 +106,7 @@ ms.lasthandoff: 11/09/2017
 
 有时操作在本地上下文中正常工作，但在远程计算上下文中运行时会有问题。 如果想要分析问题或监视性能，则可以在计算上下文中启用跟踪，支持运行时的疑难解答。
 
-1. 创建新的计算上下文，使用相同的连接字符串，但添加参数*traceEnabled*和*traceLevel*到*RxInSqlServer*构造函数。
+1. 创建新的计算上下文，使用相同的连接字符串，但添加参数*traceEnabled*和*traceLevel*到**RxInSqlServer**构造函数。
 
     ```R
     sqlComputeTrace <- RxInSqlServer(
@@ -112,7 +120,7 @@ ms.lasthandoff: 11/09/2017
   
     在此示例中，将 *traceLevel* 属性设置为 7，这意味着“显示所有跟踪信息”。
 
-2. 若要更改计算上下文，请使用 rxSetComputeContext 函数，并按名称指定的上下文。
+2. 若要更改计算上下文，请使用 [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) 函数，并按名称指定上下文。
 
     ```R
     rxSetComputeContext( sqlComputeTrace)
@@ -120,19 +128,16 @@ ms.lasthandoff: 11/09/2017
 
     > [!NOTE]
     > 
-    > 在本教程中，我们将使用未启用跟踪的计算上下文。 这是因为尚未经过启用跟踪的选项的性能测试的所有操作。
+    > 对于本教程，使用没有启用的跟踪的计算上下文。 
     > 
-    > 但是，如果你决定使用跟踪，请注意您的体验可能会受网络连接中的一种。
+    > 但是，如果你决定使用跟踪，请注意您的体验可能会受网络连接中的一种。 另请注意，因为尚未经过启用跟踪的选项的性能测试的所有操作。
 
-现在已创建了远程计算上下文，你将学习如何更改计算上下文，以便在服务器上或本地运行 R 代码。
+了解如何使用的下一步计算上下文中，若要运行的服务器上的 R 代码或本地。
 
 ## <a name="next-step"></a>下一步
 
-[创建和运行 R 脚本](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-
+[创建并运行 R 脚本](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
 
 ## <a name="previous-step"></a>上一步
 
 [查询和修改 SQL Server 数据](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
-
-

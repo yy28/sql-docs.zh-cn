@@ -2,27 +2,30 @@
 title: "备份设备（“介质内容”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.backupdevice.contents.f1
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2aeb7c0443f6409e71640c35b1aca5e194abbc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 530a6791c6c6b8353161f4dec1f8556b434ba761
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-device-media-contents-page"></a>备份设备（“介质内容”页）
-  使用 **“备份设备”** 对话框可以查看备份信息。 此信息描述设备、介质、介质集以及备份集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“备份设备”对话框可以查看备份信息。 此信息描述设备、介质、介质集以及备份集。  
   
  **使用 SQL Server Management Studio 查看备份设备的内容**  
   
@@ -30,7 +33,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  查看有关各个介质、介质集和备份集的信息。  
   
  **介质**  
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/09/2017
  **名称**  
  显示介质集的名称（如果有的话）。  
   
- **说明**  
+ **Description**  
  显示介质集的说明（如果有的话）。  
   
  **介质簇计数**  
@@ -63,10 +66,10 @@ ms.lasthandoff: 11/09/2017
 |**类型**|备份对象：数据库、文件或 *\<blank>*（用于事务日志）。|  
 |**组件**|执行的备份类型：完整备份、差异备份或事务日志备份。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
-|**数据库**|已备份数据库的名称。|  
+|**“数据库”**|已备份数据库的名称。|  
 |**位置**|备份集在卷中的位置。|  
-|**日期**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
-|**Size**|备份集的大小（字节）。|  
+|**Date**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
+|**大小**|备份集的大小（字节）。|  
 |**用户名**|执行备份操作的用户的名称。|  
 |**过期日期**|备份集的过期日期和时间。|  
   

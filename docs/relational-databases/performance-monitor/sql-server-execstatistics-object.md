@@ -2,9 +2,12 @@
 title: "SQL Server - ExecStatistics 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - ExecStatistics object
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44dc1c8df0385b61ce6b378caa15e3b63af23ab7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 837b52d5d457a4466a46d08df918e25616d14bff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server ExecStatistics 对象
-  Microsoft SQL Server 中的 **SQLServer:ExecStatistics** 对象提供了用于监视各种执行的计数器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft SQL Server 中的 SQLServer:ExecStatistics 对象提供了用于监视各种执行的计数器。  
   
  下表介绍了 SQL Server **Exec Statistics** 计数器。  
   
-|SQL Server Exec Statistics 计数器|说明|  
+|SQL Server Exec Statistics 计数器|Description|  
 |-----------------------------------------|-----------------|  
 |**Distributed Query**|与执行分布式查询相关的统计信息。|  
 |**DTC calls**|与执行 DTC 调用相关的统计信息。|  
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
   
  对象中的每个计数器均包含以下实例：  
   
-|项|说明|  
+|项|Description|  
 |----------|-----------------|  
 |**平均执行时间 (ms)**|所选执行类型的平均执行时间。|  
 |**每秒的累积执行时间 (ms)**|所选执行类型每秒的累积执行时间。|  

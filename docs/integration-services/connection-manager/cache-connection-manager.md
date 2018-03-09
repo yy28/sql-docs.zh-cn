@@ -1,5 +1,5 @@
 ---
-title: "缓存连接管理器 |Microsoft 文档"
+title: "缓存连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 481075f02dff2f4900eeca549835b990b50aee37
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f645f1e81965c0b39a63f7317fc660639df5d0e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cache-connection-manager"></a>缓存连接管理器
   缓存连接管理器从缓存转换或从缓存文件 (.caw) 中读取数据，并可将数据保存到缓存文件。 无论是否将缓存连接管理器配置为使用缓存文件，数据都会始终存储在内存中。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
  可以通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 设计器或以编程方式来设置属性。  
   
- 有关如何以编程方式配置连接管理器的信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[添加连接以编程方式](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关如何以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和[以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="cache-connection-manager-editor"></a>缓存连接管理器编辑器
   缓存连接管理器从缓存转换或缓存文件 (.caw) 中读取引用数据集，并且可以将数据保存到缓存文件中。 这些数据始终存储在内存中。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="generaltab"></a> “常规”选项卡  
  “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **连接管理器名称**  
  为工作流中的缓存连接提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中显示。  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="columnstab"></a> “列”选项卡  
  **“缓存连接管理器编辑器”** 对话框的 **“列”** 选项卡用于配置缓存中各列的属性。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **列**  
  指定列名。  
   
@@ -134,8 +133,7 @@ ms.lasthandoff: 08/09/2017
  **代码页**  
  指定列类型的代码页。 如果适用于该数据类型，则可更新 **Code Page**。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [在完全缓存模式下使用缓存连接管理器实现查找转换](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   
-

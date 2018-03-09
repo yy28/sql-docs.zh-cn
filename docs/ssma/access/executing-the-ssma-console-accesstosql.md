@@ -1,10 +1,13 @@
 ---
 title: "执行 SSMA 控制台 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 081772fe0e2101a50f1e6f66780a3ac790e9fbcc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 29f9c2bbce707aa08ce5cff918965e65f66d8370
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>执行 SSMA 控制台 (AccessToSQL)
 Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来执行和控制 SSMA 活动。 接下来的部分详细介绍相同。  
@@ -164,7 +167,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <load-access-database>  
@@ -198,7 +201,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
   metabase="<source/target>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <force-load>  
@@ -311,7 +314,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <generate-assessment-report  
@@ -383,7 +386,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <convert-schema  
@@ -443,7 +446,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 </migrate-data>  
 ```  
-或  
+或多个  
   
 ```xml  
 <migrate-data  
@@ -473,7 +476,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 </link-tables>  
 ```  
-或  
+或多个  
   
 ```xml  
 <link-tables>  
@@ -499,7 +502,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 </unlink-tables>  
 ```  
-或  
+或多个  
   
 ```xml  
 <unlink-tables>  
@@ -578,7 +581,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target  
@@ -587,7 +590,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
   object-type="category"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target>  
@@ -643,7 +646,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database  
@@ -652,7 +655,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
   object-type="category"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database>  
@@ -702,7 +705,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <save-as-script  

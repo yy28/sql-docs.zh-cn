@@ -2,15 +2,13 @@
 title: "连接到现有的 Analysis Services 表格服务器和数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df4fb2df60cf27c5a2f33676b9e34fdf1b255a34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f8282029d3f20075ed35b29e1af913a882075da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>连接到现有的 Analysis Services 表格服务器和数据库
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-在 SQL Server 2016 Analysis Services 管理对象 (AMO) 包括多个无法用于建立服务器连接的命名空间。 此文章介绍了如何建立服务器连接的模型和在 1200年创建的数据库使用的 Microsoft.AnalysisServices.Tabular 命名空间或更高版本的兼容性级别。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在 SQL Server 2016 Analysis Services 管理对象 (AMO) 包括多个无法用于建立服务器连接的命名空间。 此文章介绍了如何建立服务器连接的模型和在 1200年创建的数据库使用的 Microsoft.AnalysisServices.Tabular 命名空间或更高版本的兼容性级别。 
 
 若要连接到 Analysis Services 服务器，你的代码必须实例化服务器对象，然后对其调用连接方法。 连接后，该服务器对象的属性将反映当前的 Analysis Services 实例的设置。 
 

@@ -1,10 +1,13 @@
 ---
 title: "故障排除 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c9bcaadb2c2115558c6c31faa3a38e54d2d7351b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 71c44b5fb2ea394c076acc6f09c855fba4b967f4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-mysqltosql"></a>故障排除 (MySQLToSQL)
 并不少见运行迁移问题中途执行控制台脚本或命令。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  过程  
   
-3.  视图  
+3.  “查看”  
   
 4.  触发器  
   

@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 目标编辑器 （错误输出页） |Microsoft 文档"
+title: "SAP BW 目标编辑器（“错误输出”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.erroroutput.f1
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1b243b6fae68be78e20bbb87a18c16cb78d24f7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 45fc47e2c78e7548b7ae791037c1058c9708a219
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 目标编辑器（“错误输出”页）
   可以使用 **“SAP BW 目标编辑器”** 的 **“错误输出”** 页指定错误处理选项。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  在 **“SAP BW 目标编辑器”**中单击 **“错误输出”** ，以打开编辑器的 **“错误输出”** 页。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 > [!NOTE]  
 >  如果您不知道配置目标所需的所有值，可能需要询问您的 SAP 管理员。  
@@ -70,10 +69,9 @@ ms.lasthandoff: 08/03/2017
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>另请参阅  
- [SAP BW 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [SAP BW 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [SAP BW 目标编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [SAP BW 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 目标编辑器（“映射”页）](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 目标编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

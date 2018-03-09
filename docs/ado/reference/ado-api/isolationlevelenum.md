@@ -1,10 +1,11 @@
 ---
-title: "IsolationLevelEnum |Microsoft 文档"
+title: IsolationLevelEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: IsolationLevelEnum
-helpviewer_keywords: IsolationLevelEnum enumeration [ADO]
+f1_keywords:
+- IsolationLevelEnum
+helpviewer_keywords:
+- IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf31a3993c5c981b3f326b26cd2f1d1a56420692
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98a9f6213af3fbfb523701f0a8dda1de80cc2d93
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定的事务的隔离级别[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|指示提供程序正在使用不同的隔离级别，与指定，但无法确定级别。|  
 |**adXactChaos**|16|指示，挂起的更改程度更高的隔离级别事务中不能被覆盖。|  
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**adXactSerializable**|1048576|与相同**adXactIsolated**。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

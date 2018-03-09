@@ -17,23 +17,23 @@ f1_keywords:
 helpviewer_keywords: Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f4193b616fe1a333f95301356980b6f5f991245
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60f26433932c754a5aadbd79d9527d4e2638f75d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>“检查数据库完整性”任务（维护计划）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   通过运行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，使用“检查数据库完整性任务”对话框可以检查数据库中的用户和系统表以及索引的分配和结构完整性。 运行 `DBCC` 确保数据库中的任何完整性问题均能得到报告，以便系统管理员或数据库所有者在以后加以解决。  
   
-## <a name="options"></a>选项  
- **连接**  
+## <a name="options"></a>“常规”  
+ **“连接”**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **刷新**  
+ **“刷新”**  
  刷新可用服务器的列表。  
   
  **输入登录服务器所需的信息**  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
  **使用特定用户名和密码**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 此选项不可用。  
   
- **用户名**  
+ **User name**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  
   
  **密码**  

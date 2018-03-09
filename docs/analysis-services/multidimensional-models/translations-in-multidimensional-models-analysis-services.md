@@ -2,16 +2,13 @@
 title: "多维模型 (Analysis Services) 中的翻译 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97c2f9950f050c1e737eebfd0f684ad8cd1e5850
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0f767ae138a66bd1237bcac1cfc64ce5998a824
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多维模型中的翻译 (Analysis Services)
-  可以通过使用要翻译的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 对象的相应设计器，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中定义翻译。 定义翻译时，将创建一个与相应的 **对象关联的** 翻译 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象。对于关联的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的属性，被创建的对象具有以指定语言表示的指定的显式文字值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以定义中的翻译[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]通过使用适当的设计器中为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]要转换的对象。 定义翻译时，将创建一个与相应的 **对象关联的** 翻译 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象。对于关联的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的属性，被创建的对象具有以指定语言表示的指定的显式文字值。  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>多语言数据模型的元素  
  在多语言解决方案中使用的数据模型不只需要已翻译的标签（字段名称和说明）。 它还需要提供在各种语言脚本中清晰说明的数据值。 若要实现多语言解决方案，则需要你具有独立的属性，且这些属性要绑定到外部数据库中返回该数据的列。  

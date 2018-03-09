@@ -2,9 +2,12 @@
 title: "教程：使用基于策略的管理来管理服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - Policy-Based Management, tutorials
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a58c12e4a33510f2fc9242f0d762dfb877b84750
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ae72070feb083068eb173bd551773727d4a3528f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教程：使用基于策略的管理来管理服务器
-欢迎使用“使用基于策略的管理策略来管理服务器”教程。 本教程适用于熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但不熟悉基于策略的管理的用户。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]欢迎使用“使用基于策略的管理策略来管理服务器”教程。 本教程适用于熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但不熟悉基于策略的管理的用户。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
 本教程创建一个用于管理服务器的策略以及一个应用于单个数据库的策略。 根据需要，运行一个策略以测试是否符合要求。 另一个策略强制要求以后符合策略。  

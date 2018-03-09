@@ -2,15 +2,13 @@
 title: "Microsoft 聚类分析算法技术参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,23 +25,24 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fbf3b08a21782434702dad4383a797293156593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 聚类分析算法技术参考
-  本节说明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的实现，包括可用来控制聚类分析模型的行为的参数。 还提供关于在创建和处理聚类分析模型时如何提高性能的指南。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本节说明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的实现，包括可用来控制聚类分析模型的行为的参数。 还提供关于在创建和处理聚类分析模型时如何提高性能的指南。  
   
  有关如何使用聚类分析模型的其他信息，请参阅下列主题：  
   
--   [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [群集模型 &#40; 挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
@@ -189,6 +188,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 聚类分析算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [群集模型 &#40; 挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

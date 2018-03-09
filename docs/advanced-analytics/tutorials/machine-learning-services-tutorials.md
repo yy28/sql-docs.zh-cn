@@ -1,30 +1,34 @@
 ---
-title: "SQL Server 机器学习教程 |Microsoft 文档"
-ms.custom: SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+title: "SQL Server 机器学习服务教程 |Microsoft 文档"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: Python
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- Python
+- R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0547d809e73e13b7bedcc8ac960b00c7c8a9706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="sql-server-machine-learning-tutorials"></a>SQL Server 机学习教程
+# <a name="tutorials-for-sql-server-machine-learning-services"></a>有关 SQL Server 计算机学习 Services 教程
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文提供教程、 演示和示例应用程序使用 SQL Server 2016 或 SQL Server 2017 机器学习功能的完整的列表。 从这里开始，若要了解如何从 T-SQL 运行 R 或 Python、 如何使用远程和本地计算上下文和如何优化 SQL 生产环境中 R 和 Python 代码。
 
@@ -44,7 +48,7 @@ ms.lasthandoff: 11/09/2017
 
 + [解决方案](#bkmk_solutions) 
 
-    从 Microsoft 数据科学团队的模板是可自定义以帮助你快速入门机器学习。 每个解决方案适用于特定任务或行业问题;此外，大多数解决方案旨在 SQL Server 或 Azure 机器学习等云环境中运行。 其他解决方案可以通过使用 Microsoft R Server 或机器学习服务器运行在 Linux 上或在 Spark 或 Hadoop 群集中。
+    从 Microsoft 数据科学团队的模板是可自定义以帮助你快速入门机器学习。 每个解决方案量身定制的具体任务或行业问题。 大部分的解决方案用于 SQL Server 或 Azure 机器学习等云环境中运行。 其他解决方案可以通过使用 Microsoft R Server 或机器学习服务器运行在 Linux 上或在 Spark 或 Hadoop 群集中。
 
 ### <a name ="bkmk_samples"></a>SQL Server 产品示例
 
@@ -58,7 +62,7 @@ ms.lasthandoff: 11/09/2017
 
 + [新增功能！执行客户群集使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
-    了解如何使用 Kmeans 算法来执行无人监督聚类分析的客户。 此示例使用 Python 语言数据库中。 
+    了解如何使用 Kmeans 算法来执行无人监督聚类分析的客户。 此示例使用 Python 语言数据库中。
     
     适用于： SQL Server 自 2017 年 1
 
@@ -73,6 +77,10 @@ ms.lasthandoff: 11/09/2017
    生成 ski 租赁分析应用程序使用 Python，以帮助你规划将来的需求。 此示例使用新的 Python 库**revoscalepy**，若要创建线性回归模型。
    
    适用于： SQL Server 自 2017 年 1
+
++ [如何使用 SQL Server 计算机学习 Services Tableau](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/)
+
+    分析社交媒体和创建 Tableau 关系图，使用 SQL Server 和。
 
 ### <a name="bkmk_solutions"></a>解决方案模板
 
@@ -111,7 +119,7 @@ Microsoft 数据科学团队提供的解决方案模板，可以使用可快速�
 运行 SQL Server 安装程序之后, 不要忘记以下重要步骤：
 
 1. 通过运行启用外部脚本执行功能`sp_configure 'external scripts enabled', 1`。 按照说明重新配置并重新启动 SQL Server。
-2. 确保快速启动板服务正在运行，并且，工作人员使用的帐户它可以连接到 SQL Server 实例。
+2. 请确保： 快速启动板服务正在运行，且快速启动板辅助帐户可以连接到 SQL Server 实例。
 3. 查看与必须运行 R 或 Python 脚本的用户关联的权限。 无论使用 SQL 登录名或 Windows 用户帐户，用户必须有权运行 R 或 Python 脚本，并且必须能够连接到的实例。 根据教程中，用户可能还需要权限来写入数据、 创建数据库对象，或执行大容量导入的数据。
 
 有关详细信息，请参阅有关的一些常见问题设置和配置此文章：[疑难解答机器学习服务](../machine-learning-troubleshooting-faq.md)

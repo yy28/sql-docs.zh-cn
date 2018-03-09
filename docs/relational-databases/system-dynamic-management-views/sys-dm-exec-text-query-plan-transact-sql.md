@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_text_query_plan (Transact SQL) |Microsoft 文档"
+title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_text_query_plan_TSQL
 - dm_exec_text_query_plan_TSQL
 - sys.dm_exec_text_query_plan
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_text_query_plan dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bb3aa76b6d09b2a1c31f30c20fb4ce4374d48d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +60,7 @@ sys.dm_exec_text_query_plan
 ```  
   
 ## <a name="arguments"></a>参数  
-*plan_handle 收集*  
+*plan_handle*  
 为已缓存或当前正在执行的批查询唯一标识查询计划。 *plan_handle*是**varbinary(64)**。  
   
 可以从下列动态管理对象中获得计划句柄：  
@@ -68,7 +71,7 @@ sys.dm_exec_text_query_plan
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_start_offset* | 0 |默认值  
+*statement_start_offset* | 0 | DEFAULT  
 指示行所说明的查询在其批处理或持久性对象文本中的起始位置（字节）。 *statement_start_offset*是**int**。值 0 指示批处理的起始处。 默认值为 0。  
   
 可以从下列动态管理对象中获得语句起始偏移量：  
@@ -77,7 +80,7 @@ sys.dm_exec_text_query_plan
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*语句结束偏移量*|-1 |默认值  
+*statement_end_offset* | -1 | DEFAULT  
 指示行所说明的查询在其批处理或持久性对象文本中的结束位置（字节）。  
   
 *statement_start_offset*是**int**。  
@@ -90,8 +93,8 @@ sys.dm_exec_text_query_plan
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|在编译对应于此计划的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时有效的上下文数据库的 ID。 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。<br /><br /> 此列可为空值。|  
 |**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于即席和已准备好的批处理，此列为**null**。<br /><br /> 此列可为空值。|  
-|**数**|**int**|为存储过程编号的整数。 例如，一组过程**订单**应用程序可能名为**orderproc; 1**， **orderproc; 2**，依次类推。 对于即席和已准备好的批处理，此列为**null**。<br /><br /> 此列可为空值。|  
-|**加密**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
+|**number**|**int**|为存储过程编号的整数。 例如，一组过程**订单**应用程序可能名为**orderproc; 1**， **orderproc; 2**，依次类推。 对于即席和已准备好的批处理，此列为**null**。<br /><br /> 此列可为空值。|  
+|**encrypted**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
 |**query_plan**|**nvarchar(max)**|包含与指定的查询执行计划的编译时显示计划表示*plan_handle*。 显示计划采用文本格式。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
   
 ## <a name="remarks"></a>注释  
@@ -105,7 +108,7 @@ sys.dm_exec_text_query_plan
   
 当即席查询使用[简单](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)或[强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)、 **query_plan**列将包含仅语句文本，而不是实际查询计划。 若要返回查询计划，请调用**sys.dm_exec_text_query_plan**的已准备的参数化查询的计划句柄。 你可以确定查询是否已通过引用参数化**sql**列[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)视图或文本列[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)动态管理视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行**sys.dm_exec_text_query_plan**，用户必须是属于**sysadmin**固定服务器角色或服务器上具有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -118,7 +121,7 @@ sys.dm_exec_text_query_plan
   
  首先，使用 `sp_who` 存储过程检索正在执行查询或批查询的进程的服务器进程 ID (SPID)。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_who;  
@@ -127,7 +130,7 @@ GO
   
  由 `sp_who` 返回的结果集指示 SPID 为 `54`。 可以在 `sys.dm_exec_requests` 动态管理视图中使用该 SPID，以便使用以下查询来检索计划句柄：  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -137,7 +140,7 @@ GO
   
  通过返回的表**sys.dm_exec_requests**指示运行速度缓慢的查询或批处理的计划句柄是`0x06000100A27E7C1FA821B10600`。 以下示例返回指定计划句柄的查询计划，并使用默认值 0 和 -1 返回查询或批处理中的所有语句。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT query_plan   
@@ -148,7 +151,7 @@ GO
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. 从计划缓存中检索每个查询计划  
  若要检索驻留在计划缓存中的所有查询计划的快照，请通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_cached_plans` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 显示计划输出中的每个计划缓存中的当前计划个`query_plan`返回的表的列。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT *   
@@ -160,7 +163,7 @@ GO
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. 检索服务器从计划缓存中收集了查询统计信息的每个查询计划  
  若要检索服务器已收集了其当前驻留在计划缓存中的统计信息的所有查询计划的快照，请通过查询 `sys.dm_exec_query_stats` 动态管理视图来检索缓存中这些计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_query_stats` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 每个计划的显示计划输出位于返回的表的 `query_plan` 列中。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
@@ -171,7 +174,7 @@ GO
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. 检索有关前五个查询按平均 CPU 时间的信息  
  以下示例返回前五个查询的查询计划和平均 CPU 时间。 **Sys.dm_exec_text_query_plan**函数指定的默认值 0 和-1 以返回批处理中的所有语句，查询计划中。  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
@@ -181,4 +184,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_exec_query_plan &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

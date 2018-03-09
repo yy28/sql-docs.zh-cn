@@ -2,55 +2,55 @@
 title: "EntityType 元素 (CSDLBI) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5b62cad891d4d02120b3325d57e327e299ef1be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 元素 (CSDLBI)
-  **EntityType**元素是复杂类型，表示高级实体，例如客户或订单，在数据模型的结构。 **Bi: EntityType**元素扩展的定义[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)中使用[实体数据框架](http://msdn.microsoft.com/library/bb399567.aspx)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+**EntityType**元素是复杂类型，表示高级实体，例如客户或订单，在数据模型的结构。 **Bi: EntityType**元素扩展的定义[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)中使用[实体数据框架](http://msdn.microsoft.com/library/bb399567.aspx)。  
   
  必须为数据模型中包括的每个实体指定 EntityType 元素。 EntityType 的子元素描述表中的列和度量值。 在表之间的关系将包括在**EntityContainer**。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出的元素和特性定义**EntityType**元素。 另请参阅适用于属性[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)元素。  
   
-|Name|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|目录|是|一个包含列中可能的数据类型的字符串。 此值从数据模型中 DimensionAttributeTypeEnumType 的值派生。<br /><br /> 如果 DimensionAttributeTypeEnumType 的值为“ExtendedType”，则 Contents 的值从 DimensionAttribute 的 ExtendedType 元素派生。 客户端不需要对这些值进行回应。|  
-|DefaultDetails|是|表示表中一组列的属性引用的列表。<br /><br /> 请参阅[DefaultDetails 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
-|DefaultImage|是|对包含用来说明该实体的图像的列的引用。<br /><br /> 在多维模型中，此元素对应于维度属性上的一个二进制属性。 如果此属性存在，则此元素必须只包含一个 MemberRef 元素。<br /><br /> 请参阅[MemberRef 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DefaultMeasure|是|对实体中某个度量值的引用，当对该实体进行计算时，此度量值应用作默认值。 如果未指定，则默认值为 SUM。<br /><br /> 请参阅[MemberRef 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DisplayKey|是|对列或对角色方的引用列表，这构成了一个强标识符，此标识符可唯一标识实体实例。<br /><br /> 请参阅[DisplayKey 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
-|层次结构|是|模型中层次结构的列表。<br /><br /> 请参阅[层次结构元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
+|目录|否|一个包含列中可能的数据类型的字符串。 此值从数据模型中 DimensionAttributeTypeEnumType 的值派生。<br /><br /> 如果 DimensionAttributeTypeEnumType 的值为“ExtendedType”，则 Contents 的值从 DimensionAttribute 的 ExtendedType 元素派生。 客户端不需要对这些值进行回应。|  
+|DefaultDetails|否|表示表中一组列的属性引用的列表。<br /><br /> 请参阅[DefaultDetails 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
+|DefaultImage|否|对包含用来说明该实体的图像的列的引用。<br /><br /> 在多维模型中，此元素对应于维度属性上的一个二进制属性。 如果此属性存在，则此元素必须只包含一个 MemberRef 元素。<br /><br /> 请参阅[MemberRef 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DefaultMeasure|否|对实体中某个度量值的引用，当对该实体进行计算时，此度量值应用作默认值。 如果未指定，则默认值为 SUM。<br /><br /> 请参阅[MemberRef 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
+|DisplayKey|否|对列或对角色方的引用列表，这构成了一个强标识符，此标识符可唯一标识实体实例。<br /><br /> 请参阅[DisplayKey 元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
+|层次结构|否|模型中层次结构的列表。<br /><br /> 请参阅[层次结构元素 &#40;CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
 |ReferenceName|是|可用于在数据分析表达式 (DAX) 查询中引用此实体的标识符。<br /><br /> 如果此属性不存在，则使用此实体的完全限定字段名称。|  
-|SortMembers|是|要排序的属性列表。 SortDirection 属性指示是升序还是降序。|  
+|SortMembers|否|要排序的属性列表。 SortDirection 属性指示是升序还是降序。|  
   
 ## <a name="contents-element"></a>Contents 元素  
  **内容**元素是一个简单类型，描述实体中的数据的类型。  
   
  实体（列）的内容可以是以下任何值：  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |Regular|未定义。|  
 |Time|属性表示时间段（如年、半期、季度、月或天）。|  
@@ -130,6 +130,6 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [用于商业智能的 CSDL 注释技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [BI 批注的 CSDL 的技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2694383403923ad677ba680fcdaaa0a2e7e5138a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3671c010f2c17d4a7c0312a99312f6d0996e5735
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>启动、停止、暂停、继续、重启 SQL Server 服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [其他信息](#MoreInformation)  
   
-    -   [安全性](#Security)  
+    -   [Security](#Security)  
   
 -   **相关说明：**  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  默认情况下，只有本地管理员组的成员能够启动、停止、暂停、继续或重新启动服务。 若要向管理员之外的用户授予管理服务的权限，请参阅 [如何授予用户管理 Windows Server 2003 中的服务的权限](http://support.microsoft.com/kb/325349)。 （此过程在其他 Windows 版本上是类似的。）  
   
  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**命令停止** 需要 **sysadmin** 或 **serveradmin** 固定服务器角色的成员资格并且不可转让。  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="starting-includessnoversionincludesssnoversion-mdmd-configuration-manager"></a>启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器  
   
-1.  在“开始”  菜单上，依次指向“所有程序” 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具” ，然后单击“SQL Server 配置管理器” 。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
   
      因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。 以下是当 Windows 安装在 C 盘时最新的四个版本的路径。  
   
@@ -202,7 +202,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     - 或 -  
+     -或 -  
   
      **net start MSSQLSERVER**  
   
@@ -212,7 +212,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server (**instancename**)"**  
   
-     - 或 -  
+     -或 -  
   
      **net start MSSQL$** instancename  
   
@@ -222,7 +222,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     - 或 -  
+     -或 -  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -235,7 +235,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     - 或 -  
+     -或 -  
   
      **net start SQLSERVERAGENT**  
   
@@ -245,7 +245,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start “SQL Server 代理(**instancename**)”**  
   
-     - 或 -  
+     -或 -  
   
      **net start SQLAgent$** *instancename*  
   
@@ -257,7 +257,7 @@ ms.lasthandoff: 11/20/2017
   
      **net start "SQL Server Browser"**  
   
-     - 或 -  
+     -或 -  
   
      **net start SQLBrowser**  
   
@@ -276,13 +276,13 @@ ms.lasthandoff: 11/20/2017
   
 -   要等待当前运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和存储过程完成后停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，请执行以下语句：  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   要立即停止[!INCLUDE[ssDE](../../includes/ssde-md.md)]，请执行以下语句：  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 安装文档概述](http://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
- [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)   
  [以最小配置启动 SQL Server](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   
  [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  

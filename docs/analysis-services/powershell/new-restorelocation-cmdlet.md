@@ -2,32 +2,30 @@
 title: "新 RestoreLocation cmdlet |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11b5d0bd210d80698706751a3734f2e96810187e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocation cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  指定用来还原数据库的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+指定用来还原数据库的信息。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -44,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="parameters"></a>Parameters  
   
-### <a name="-file-string"></a>-文件\<字符串 >  
+### <a name="-file-string"></a>-File \<string>  
  指定要还原的备份文件的名称。  
   
 |||  
@@ -55,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-datasourceid-string"></a>-DataSourceId\<字符串 >  
+### <a name="-datasourceid-string"></a>-DataSourceId \<string>  
   
 |||  
 |-|-|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-connectionstring-string"></a>-ConnectionString\<字符串 >  
+### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
  指定远程 Analysis Services 实例的连接字符串。  
   
 |||  
@@ -76,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<。RestoreDataSourceType >  
+### <a name="-datasourcetype-asrestoredatasourcetype"></a>-DataSourceType \<AS.RestoreDataSourceType>  
  基于分区的位置，指定数据源是远程的还是本地的。  
   
 |||  
@@ -87,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-folders-asrestorefolder"></a>-文件夹\<。RestoreFolder >  
+### <a name="-folders-asrestorefolder"></a>-Folders \<AS.RestoreFolder>  
  指定本地或远程实例上的分区文件夹。  
   
 |||  
@@ -98,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter >  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter>  
  指定是否应在内存中创建并返回该对象。  
   
 |||  
@@ -109,7 +107,7 @@ ms.lasthandoff: 11/17/2017
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-server-string"></a>服务器\<字符串 >  
+### <a name="-server-string"></a>-Server \<string>  
  指定 cmdlet 要连接和执行的 Analysis Services 实例。 如果未提供服务器名称，将连接到本地主机。 对于默认实例，仅指定服务器名称。 对于命名实例，请使用格式 servername\instancename。 对于 HTTP 连接，请使用格式 http[s]://server[:port]/virtualdirectory/msmdpump.dll。  
   
 |||  

@@ -2,32 +2,35 @@
 title: "无人参与的安装的 Python 机器学习服务 （数据库） |Microsoft 文档"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: r-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6d7cba7c74eaef9e627b75972d3b6dd34ee5a6f1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>无人参与的安装的 Python 机器学习服务 （数据库）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题介绍如何在 SQL Server 2017 安装程序中使用命令行自变量使用机器学习服务和 Python，使用静默模式安装的 SQL Server 数据库引擎。
 
 > [!NOTE]
 > 不要忘记包含许可协议，一个用于 Python，一个用于 SQL Server 的命令行参数。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 在开始安装过程之前，请注意以下要求：
 

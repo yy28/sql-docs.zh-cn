@@ -2,44 +2,47 @@
 title: "使用修改后的版本的 Analysis Services Tutorial 项目 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd789a871d90169a726cbb1709e5de1f9275fa16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lesson 4-1-使用 Analysis Services 教程项目的修改的版本
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 本教程中的其余几节课基于您已在前三课中完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。 已向 **Adventure Works DW 2012[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源视图中添加了额外的表和命名计算；已向该项目添加了额外的维度，并且已将这些新维度添加到**  Tutorial 多维数据集内。 此外，还添加了另一个度量值组，该组包含另一个事实数据表中的度量值。 这一增强项目使您无需重复学习前面已了解的技能，即可继续学习如何在商业智能应用程序中添加功能。  
   
 在继续本教程之前，必须下载、解压缩、加载和处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。  请使用本课程中的说明以确保您已执行了所有步骤。  
   
 ## <a name="downloading-and-extracting-the-project-file"></a>下载并解压缩项目文件  
   
-1.  [单击此处](http://go.microsoft.com/fwlink/?LinkID=221866) 可以转到下载页，此页提供本教程随附的示例项目。 教程项目包括在 **Analysis Services 教程 SQL Server 2012** 下载中。  
+1.  [单击此处](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)可以转到下载页，此页提供本教程随附的示例项目。 教程的项目都将纳入**adventure 的工作原理的多维-教程-projects.zip**下载。  
   
-2.  单击“Analysis Services 教程 SQL Server 2012”可下载包含此教程项目的包。  
+2.  单击**adventure 的工作原理的多维-教程-projects.zip**若要下载本教程包含项目的包。  
   
     默认情况下，.zip 文件将保存到 Downloads 文件夹。 您必须将该 .zip 文件移到具有更短路径的位置（例如，创建一个 C:\Tutorials 文件夹以便存储这些文件）。  然后，您可以解压缩在该 .zip 文件中包含的文件。 如果您尝试从具有较长路径的 Downloads 文件夹解压缩这些文件，将只会获得课程 1。  
   
 3.  在根驱动器处或附近创建一个子文件夹，例如 C:\Tutorial。  
   
-4.  将 **Analysis Services Tutorial SQL Server 2012.zip** 文件移到子文件夹。  
+4.  移动**adventure 的工作原理的多维-教程-projects.zip**到的子文件夹的文件。  
   
 5.  右键单击该文件，然后选择“全部提取”。  
   

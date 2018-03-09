@@ -2,30 +2,35 @@
 title: "在文件中查找 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.findinfiles
 - vs.findinfiles
-helpviewer_keywords: Find in Files dialog box
+helpviewer_keywords:
+- Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f22b8bfc5abf0a4556f8221e9892b0a431d1175c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4c304f4d8012cafed4474c40fab26831bed3ae76
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="find-in-files"></a>在文件中查找
-  使用“查找和替换”窗口的 **“在文件中查找”** 选项卡，您可以在指定文件集的代码中搜索字符串或表达式。 在 **“结果选项”**中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“查找和替换”窗口的“在文件中查找”选项卡，可以在指定文件集的代码中搜索字符串或表达式。 在 **“结果选项”**中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  
   
  您也可使用工具栏按钮和快捷键打开 **“查找和替换”** 对话框。  
   
@@ -70,7 +75,7 @@ ms.lasthandoff: 11/09/2017
  **包括子文件夹**  
  指定将搜索在“查找范围”中指定的文件夹的子文件夹。 它需要指定自定义目录集。  
   
- **浏览**  
+ **“浏览”**  
  单击此按钮将显示“自定义目录集”对话框，在其中可以汇编、编辑、保存和选择要输入到“查找范围”框中的命名目录集。  
   
 ## <a name="find-options"></a>查找选项  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ea5a719b09f55de405593a29445824ba01902a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50e7a92d87b806a0eb26481cca92b89f932dfa9d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>内存优化表简介
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
 |问题|内存中 OLTP 影响|  
 |-----------|----------------------------|  
-|性能<br /><br /> 资源（CPU、I/O、网络或内存）使用率较高。|CPU<br /> 本机编译的存储过程可大幅降低 CPU 使用率，因为此类存储过程执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所需的指令比解释型存储过程少得多。<br /><br /> 内存中 OLTP 可以帮助减少扩展工作负荷时的硬件投资，因为一台服务器可提供五到十台服务器的吞吐量。<br /><br /> I/O<br /> 如果在处理数据或索引页方面遇到 I/O 瓶颈，则内存中 OLTP 可缓解瓶颈现象。 此外，内存中 OLTP 对象的检查点编号是连续的，不会导致 I/O 操作突然增多。 但是，如果对性能至关重要的表的工作集不能容纳于内存中，则内存中 OLTP 不会提高性能，因为它需要数据驻留在内存中。 如果在日志记录方面遇到 I/O 瓶颈，则内存中 OLTP 可缓解瓶颈现象，因为它进行的日志记录操作较少。 如果将一个或多个内存优化的表配置为非持久的表，您可以消除数据的日志记录。<br /><br /> 内存<br /> 内存中 OLTP 不会提供任何性能优势。 内存中 OLTP 可能会对内存产生额外的压力，因为这些对象需要驻留在内存中。<br /><br /> 网络<br /> 内存中 OLTP 不会提供任何性能优势。 数据需要从数据层传输到应用层。|  
+|“性能”<br /><br /> 资源（CPU、I/O、网络或内存）使用率较高。|CPU<br /> 本机编译的存储过程可大幅降低 CPU 使用率，因为此类存储过程执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所需的指令比解释型存储过程少得多。<br /><br /> 内存中 OLTP 可以帮助减少扩展工作负荷时的硬件投资，因为一台服务器可提供五到十台服务器的吞吐量。<br /><br /> I/O<br /> 如果在处理数据或索引页方面遇到 I/O 瓶颈，则内存中 OLTP 可缓解瓶颈现象。 此外，内存中 OLTP 对象的检查点编号是连续的，不会导致 I/O 操作突然增多。 但是，如果对性能至关重要的表的工作集不能容纳于内存中，则内存中 OLTP 不会提高性能，因为它需要数据驻留在内存中。 如果在日志记录方面遇到 I/O 瓶颈，则内存中 OLTP 可缓解瓶颈现象，因为它进行的日志记录操作较少。 如果将一个或多个内存优化的表配置为非持久的表，您可以消除数据的日志记录。<br /><br /> 内存<br /> 内存中 OLTP 不会提供任何性能优势。 内存中 OLTP 可能会对内存产生额外的压力，因为这些对象需要驻留在内存中。<br /><br /> 网络<br /> 内存中 OLTP 不会提供任何性能优势。 数据需要从数据层传输到应用层。|  
 |可伸缩性<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序中的大多数伸缩问题是由并发问题（如锁、闩锁和旋转锁中的争用）引起的。|闩锁争用<br /> 典型情况是按键顺序并发插入行时索引的最后一页上的争用。 由于内存中 OLTP 在访问数据时不采用闩锁，因此可完全消除与闩锁争用相关的可伸缩性问题。<br /><br /> 旋转锁争用<br /> 由于内存中 OLTP 在访问数据时不采用闩锁，因此可完全消除与旋转锁争用相关的可伸缩性问题。<br /><br /> 与锁定相关的争用<br /> 如果数据库应用程序遇到读操作与写操作之间的阻塞问题，则内存中 OLTP 可消除这些阻塞问题，因为它使用新的乐观并发控制形式来实现所有事务隔离级别。 内存中 OLTP 不使用 TempDB 来存储行版本。<br /><br /> 如果伸缩问题是由两个写操作之间的冲突（例如，两个并发事务尝试更新相同的行）引起的，则内存中 OLTP 会让其中一个事务成功，而让另一个事务失败。 必须显式或隐式重新提交失败的事务，从而重试该事物。 在任一情况下，您都需要对应用程序进行更改。<br /><br /> 如果应用程序遇到两个写操作之间的频繁冲突，则会减小乐观锁定的值。 该应用程序不适用于内存中 OLTP。 除非冲突是由锁升级引起的，否则大多数 OLTP 应用程序没有写冲突。|  
   
 ##  <a name="rls"></a> 内存优化表中的行级安全性  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52083d3b3d82f46f3248450b6242d5c66a213138
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>创建用户定义的类型的要求
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]创建用户定义类型 (UDT) 中安装时，必须进行一些重要的设计决策[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 对于大多数 UDT，建议将 UDT 作为结构创建，尽管也可以选择将其作为类创建。 UDT 定义必须符合用于创建 UDT 的规范，以使其能够注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+创建用户定义类型 (UDT) 中安装时，必须进行一些重要的设计决策[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 对于大多数 UDT，建议将 UDT 作为结构创建，尽管也可以选择将其作为类创建。 UDT 定义必须符合用于创建 UDT 的规范，以使其能够注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="requirements-for-implementing-udts"></a>实现 UDT 的要求  
  为了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中运行，您的 UDT 必须实现 UDT 定义中的以下要求：  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="native-serialization"></a>本机序列化  
  为您的 UDT 选择正确的序列化属性取决于您正尝试创建的 UDT 的类型。 **本机**序列化格式利用一个非常简单的结构，它使[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]UDT 的有效本机表示存储在磁盘上。 **本机**如果 UDT 很简单，仅包含以下类型的字段，建议使用格式：  
   
- **bool**，**字节**， **sbyte**，**短**， **ushort**， **int**， **uint**，**长**， **ulong**， **float**， **double**，**以**，**SqlInt16**， **SqlInt32**， **SqlInt64**， **SqlDateTime**，**以**， **SqlDouble**， **SqlMoney**， **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  值类型组成上述所有类型的字段的非常适合进行**本机**格式，如**结构**在 Visual C# 中，(或**结构**中称之为Visual Basic 中)。 例如，UDT 指定**本机**序列化格式可能包含的另一个还已使用指定的 UDT 字段**本机**格式。 如果在 UDT 定义更复杂且包含数据类型不是在上面的列表中，你必须指定**用户定制**改为序列化格式。  
   

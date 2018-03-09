@@ -2,18 +2,17 @@
 title: "用户层次结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
 - dimensions [Analysis Services], hierarchies
@@ -30,19 +29,20 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 069f68e31f516a7f90a07cd462b70e0b455ab800
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01f5e5b5a73a8888d24d3ee46127c67327ec75da
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-hierarchies"></a>用户层次结构
-  用户定义层次结构是用户定义的层次结构中使用的特性[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将维度的成员组织为分层结构并提供多维数据集中的导航路径。 例如，下表定义了时间维度的维度表。 维度表支持三个属性，即年份、季度和月份。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+用户定义层次结构是用户定义的层次结构中使用的特性[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将维度的成员组织为分层结构并提供多维数据集中的导航路径。 例如，下表定义了时间维度的维度表。 维度表支持三个属性，即年份、季度和月份。  
   
 |Year|季度|Month|  
 |----------|-------------|-----------|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
  在用户定义层次结构中，层次结构的级别数决定着最终用户所能看见的级别数，而与用户定义层次结构不同，父子层次结构是使用单个级别的属性层次结构定义的，并且此单个级别中的值将生成用户所能看见的多个级别。 存储成员键和父键的维度表列的内容将决定显示出的级别数目。 如果维度表中的数据发生更改，则级别数也会更改。 有关详细信息，请参阅[父-子维度](../../analysis-services/multidimensional-models/parent-child-dimension.md)，和[父-子层次结构中的特性](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建用户定义层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
+ [创建用户定义的层次结构](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [用户层次结构属性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   

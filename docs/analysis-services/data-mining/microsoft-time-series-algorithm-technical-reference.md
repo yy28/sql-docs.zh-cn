@@ -2,15 +2,13 @@
 title: "Microsoft Time Series Algorithm Technical Reference |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,19 +29,20 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1109ae6cf12199d9e38d231497b8126b8fa0ebe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 时序算法技术参考
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法包括两个用于分析时序的独立的算法：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法包括两个用于分析时序的独立的算法：  
   
 -   ARTXP 算法是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中引入的，针对预测序列中的下一个可能值进行了优化。  
   
@@ -177,6 +176,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 时序算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

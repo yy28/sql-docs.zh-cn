@@ -2,39 +2,41 @@
 title: "Analysis Services 脚本语言 XML 数据类型 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Analysis Services Scripting Language XML Data Types
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Analysis Services Scripting Language XML Data Types
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - ASSL, data types
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b15c0ffee8bc0217ec119d6d66ef446f7897c0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9baa60a57d8ef59bb7bb24afc82c0a3e5435a56d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Analysis Services 脚本语言 XML 数据类型 (ASSL)
-  本参考部分包含在 Analysis Services 脚本语言 (ASSL) 架构中作为类型的每个元素的语法和用法信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本参考部分包含在 Analysis Services 脚本语言 (ASSL) 架构中作为类型的每个元素的语法和用法信息。  
   
  尽管 ASSL 架构仅包含 XML 元素，从开发人员的角度来看，本部分中描述的元素对应于的类型，如**绑定**和**权限**，这是用于定义的子元素和其他对象的属性。  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |[ClrAssembly 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)|定义一个派生的数据类型，表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]与关联的程序集[数据库](../../../analysis-services/scripting/objects/database-element-assl.md)或[服务器](../../../analysis-services/scripting/objects/server-element-assl.md)元素|  
 |[ClrAssemblyFile 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)|定义一个基元数据类型，表示组成的文件之一[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]程序集 ([ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)元素)。|  
 |[ColumnBinding 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/columnbinding-data-type-assl.md)|定义一个派生的数据类型，表示到数据源视图中的列的绑定[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)元素。|  
-|[ComAssembly 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/comassembly-data-type-assl.md)|定义一个派生的数据类型，表示与关联的 COM 库[服务器](../../../analysis-services/scripting/objects/server-element-assl.md)或[数据库](../../../analysis-services/scripting/objects/database-element-assl.md)元素。|  
+|[ComAssembly 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/comassembly-data-type-assl.md)|定义一个派生数据类型，该类型表示与 [Server](../../../analysis-services/scripting/objects/server-element-assl.md) 或 [Database](../../../analysis-services/scripting/objects/database-element-assl.md) 元素关联的 COM 库。|  
 |[CubeAttribute 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattribute-data-type-assl.md)|定义一个基元数据类型，表示与关联的特性[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)元素。|  
 |[CubeAttributeBinding 数据类型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/cubeattributebinding-data-type-assl.md)|定义一个派生数据类型，该类型表示多维数据集维度中的属性与操作或挖掘结构列的绑定。|  
 |[CubeBinding 数据类型 &#40; 超行 &#41;&#40;ASSL &#41;](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md)|定义一个基元数据类型，表示之间的关系[多维数据集](../../../analysis-services/scripting/objects/cube-element-assl.md)元素和[数据源](../../../analysis-services/scripting/objects/datasource-element-assl.md)元素。|  

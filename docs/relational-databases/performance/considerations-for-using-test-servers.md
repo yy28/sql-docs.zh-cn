@@ -2,9 +2,12 @@
 title: "使用测试服务器的注意事项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31ae5e4f32eb2a6a2a5bd1e017b46937d70e8ef0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bb2515163afb01ece59d6d1dc7d681e67dfbbbd4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="considerations-for-using-test-servers"></a>使用测试服务器的注意事项
-  使用测试服务器优化生产服务器中的数据库是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的显著优势。 使用此功能，可以将优化开销转移到测试服务器，而无需将实际数据从生产服务器复制到测试服务器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用测试服务器优化生产服务器中的数据库是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的显著优势。 使用此功能，可以将优化开销转移到测试服务器，而无需将实际数据从生产服务器复制到测试服务器。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问图形用户界面 (GUI) 不支持测试服务器优化功能。  

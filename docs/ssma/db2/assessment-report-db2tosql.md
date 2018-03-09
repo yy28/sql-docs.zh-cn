@@ -1,10 +1,13 @@
 ---
 title: "评估报表 (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 008249c934c4f37782ba4dfc44055583d88a9344
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f33d360727df0ce9af5498ffaf26d049af8bf462
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessment-report-db2tosql"></a>评估报表 (DB2ToSQL)
 评估报表窗口中显示的数据库的对象添加到转换的结果[!INCLUDE[tsql](../../includes/tsql_md.md)]语法，并且还可以帮助您评估的复杂性和成本的迁移项目。  
   
 若要访问评估报表中，选择的对象将转换源元数据资源管理器中右键单击**架构**或**同义词**，然后选择**创建报表**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 |||  
 |-|-|  

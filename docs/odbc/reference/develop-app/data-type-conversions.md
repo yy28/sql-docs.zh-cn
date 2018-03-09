@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7742b8f95ba8fef61777e2cb106b6df12285ee3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 78edde90cc7103f87039bc1a357ea1d0357366a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversions"></a>数据类型转换
 数据可以转换从一种类型到另一个在四次之一： 时数据从一个应用程序变量时转移到另一个 (C 到 C)，应用程序变量中的数据发送到语句参数 (C to SQL) 中，在返回结果集列中的数据时在应用程序变量 (SQL 到 C)，并且当数据已转让从一个数据源列给另一个 (SQL to SQL)。  

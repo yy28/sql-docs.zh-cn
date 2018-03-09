@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ':'
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 698269bd47d9fb7fee4617246edeebc98bac5bb3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e9ca2a16a74ce772ce7737c6c30581522d6d30f1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="-range-mdx"></a>:（范围）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ Member_Expression : Member_Expression
 ## <a name="return-value"></a>返回值  
  包含指定成员以及指定成员之间的所有成员的集。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  两个参数所指定的成员必须位于给定维度的同一级别和层次结构中。 如果这两个参数指定相同的成员， **: （范围）**运算符将返回包含指定的成员的集。 如果第一个参数为 Null，则该集包含从第二个参数中指定的成员级别开始直到包括该成员的所有成员。 如果第二个参数为 Null，则该集包含从第一个参数中指定的成员开始直到包括同一级别最后一个成员的所有成员。  
   
  在 MDX 中没有与此集运算符功能相同的函数。  

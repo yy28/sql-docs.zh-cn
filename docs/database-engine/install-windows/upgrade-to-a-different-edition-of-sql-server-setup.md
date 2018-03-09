@@ -2,27 +2,32 @@
 title: "升级到 SQL Server 2016 的其他版本（安装程序）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 6dd36fb8359a26f887ccda3821cb8a1b93b8a4f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 976dc265c028061ee04d8188b8de4325ba335a69
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升级到 SQL Server 的其他版本（安装程序）
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持在各种版本的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 间进行版本升级。 有关支持的版本升级路径的信息，请参阅 [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。 在开始对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例执行版本升级前，请查看以下主题：  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持在各种版本的 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]间进行版本升级。 有关支持的版本升级路径的信息，请参阅 [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。 在开始对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例执行版本升级前，请查看以下文章：  
 
 - [版本和 SQL Server 2017 支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
 - [版本和 SQL Server 2016 支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)  
@@ -32,7 +37,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 > **故障转移群集实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：**在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的一个节点上运行版本升级就足够了。 此节点可以是主动节点或被动节点，并且在版本升级过程中引擎不会使资源脱机。 版本升级后需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或故障转移到其他节点。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  
   
 > [!IMPORTANT]  

@@ -3,8 +3,9 @@ title: "集合 (ADO-WFC 语法) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - collections [ADO], ADO/WFC syntax
 - ADO/WFC syntax index [ADO]
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1692b77f79e04451ba38814a0a629f260e22bf6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81a6c1f1c7ad0827b605e8e63c85a16efc1b51b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="collections-ado---wfc-syntax"></a>集合 (ADO-WFC 语法)
-**包 com.ms.wfc.data**  
+**package com.ms.wfc.data**  
   
 ## <a name="parameters"></a>Parameters  
   

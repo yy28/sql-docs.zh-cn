@@ -3,8 +3,11 @@ title: "选项（“环境”-“字体和颜色”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 522dd3d6c6428c722ced50d677543ae91ef545b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dce7af8a58cd0cfc486f21846df7a7bcb887b034
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>选项（“环境” - “字体和颜色”页）
-使用“选项”对话框可以为 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的各种用户界面元素建立自定义的字体和配色方案。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，然后选择“字体和颜色”。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“选项”对话框可以为 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的各种用户界面元素建立自定义的字体和配色方案。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，然后选择“字体和颜色”。  
   
 在更改配色方案的会话期间，更改不会生效。 您可以通过打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的另一个实例，并将其设置为您的更改要应用的环境，来评估颜色更改效果。  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 **字体(粗体表示等宽字体)**  
 列出系统上安装的所有字体。 如果第一次打开此下拉列表，则会选中“显示其设置”列表中所选元素的当前字体。 固定字体（更易于在编辑器中对齐）显示为粗体。  
   
-**Size**  
+**大小**  
 列出选定字体的可用磅值。 更改字体大小会影响选择的“显示其设置”的所有“显示项”。  
   
 **显示项**  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
 **项前景色**  
 列出可以为“显示项”中选定项的前景选择的可用颜色。 因为某些项是相关的，所以应该始终使用一致的显示方案；例如，更改文本的前景色也会更改“字符串”等元素的前景色。  
   
-**Custom**  
+**自定义**  
 显示“颜色”对话框，在其中可以为“显示项”列表中所选的项设置自定义颜色。  
   
 > [!NOTE]  

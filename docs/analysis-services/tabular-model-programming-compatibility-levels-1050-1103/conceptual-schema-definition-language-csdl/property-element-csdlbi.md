@@ -2,48 +2,48 @@
 title: "Property 元素 (CSDLBI) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b71657fa8ff566b36e93b8c2bacfe3fb05630d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="property-element-csdlbi"></a>Property 元素 (CSDLBI)
-  CSDLBI 中的 Property 元素是一种复杂类型，它向 CSDL 中的 Property 元素提供附加内容，以便支持商业智能数据模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+CSDLBI 中的 Property 元素是一种复杂类型，它向 CSDL 中的 Property 元素提供附加内容，以便支持商业智能数据模型。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 CSDLBI 的 Property 元素的元素和属性。  
   
-|Name|是否必需|Description|  
+|名称|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|目录|是|一个字符串，该字符串包含请求的 LCID。|  
+|目录|否|一个字符串，该字符串包含请求的 LCID。|  
 |DefaultAggregationFunction|是|一个字符串，当对属性执行计算且没有指定任何其他函数时，该字符串指定应使用的聚合函数。<br /><br /> 如果未指定，则使用模型的默认聚合，通常是 SUM。|  
-|GroupingBehavior|是|指定如何对查询结果进行分组的值。 属性的内容由 TGroupingBehavior 简单类型定义（请参阅下面的表）。|  
-|OrderBy|是|对模型内用于定义该属性值的排序顺序的其他属性的引用。<br /><br /> 这两个属性的值“应”具有 1 对 1 映射。 否则，未定义排序行为。<br /><br /> 如果忽略此元素，则基于属性的值对属性排序。|  
-|稳定性|是|一个指定刷新操作之间的属性值的稳定性的特性。<br /><br /> 此属性不是由用户设置，而是由设计时环境仅针对不稳定的值发出。 它始终应用于包含行号的列以及所包含的公式生成不确定结果的列，如 NOW() 或 RAND()。<br /><br /> 此属性的值在下面用于说明 Stabilitysimple 类型的表中定义。|  
+|GroupingBehavior|否|指定如何对查询结果进行分组的值。 属性的内容由 TGroupingBehavior 简单类型定义（请参阅下面的表）。|  
+|OrderBy|否|对模型内用于定义该属性值的排序顺序的其他属性的引用。<br /><br /> 这两个属性的值“应”具有 1 对 1 映射。 否则，未定义排序行为。<br /><br /> 如果忽略此元素，则基于属性的值对属性排序。|  
+|稳定性|否|一个指定刷新操作之间的属性值的稳定性的特性。<br /><br /> 此属性不是由用户设置，而是由设计时环境仅针对不稳定的值发出。 它始终应用于包含行号的列以及所包含的公式生成不确定结果的列，如 NOW() 或 RAND()。<br /><br /> 此属性的值在下面用于说明 Stabilitysimple 类型的表中定义。|  
   
 ## <a name="groupingbehavior"></a>GroupingBehavior  
  下表列出 GroupingBehavior 简单类型的值。  
   
-|值|Description|  
+|“值”|说明|  
 |-----------|-----------------|  
 |GroupOnValue|按属性的值分组。|  
 |GroupOnEntityKey|按实体键分组。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="stability"></a>稳定性  
  下表列出的值**稳定性**简单类型。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |Stable|属性在刷新操作之间保持不变。|  
 |RowNumber|属性包含行号。|  
@@ -135,6 +135,6 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [用于商业智能的 CSDL 注释技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [BI 批注的 CSDL 的技术参考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

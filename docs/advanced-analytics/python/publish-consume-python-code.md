@@ -1,47 +1,45 @@
 ---
-title: "发布和使用的 Python 代码 |Microsoft 文档"
+title: "发布和使用 Python 代码-SQL Server 计算机学习服务器 （独立） |Microsoft 文档"
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-server-2017
+ms.date: 03/07/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: cgronlund
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: b060d27376b17709bd0f3fc8f39b8e01a6702e6b
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 9a7e56d5f2726b627381d24e3cfd8e50ade325f6
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>发布和使用 Python web 服务
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-通过使用 Microsoft 机器学习 Server 中的操作化功能，可以将一个有效的 Python 解决方案部署到 web 服务。 本主题介绍成功发布，然后运行你的解决方案的步骤。
+你可以部署一个正常工作到 web 服务上使用的操作化功能的 Python 解决方案[SQL Server 计算机学习服务器 （独立）](../r/r-server-standalone.md)实例。 本文介绍成功发布，然后运行你的解决方案的步骤。
 
-本文的目标受众是数据科学家提供想要了解如何将 Python 代码或模型发布作为在 Microsoft 机器学习 Server 中托管的 web 服务。 本文还说明了如何应用程序可以使用代码或模型。 本文假定您已精通 Python。
+目标受众是数据科学家提供想要了解如何将 Python 代码或模型发布到机器学习服务器，以及如何使用代码或自定义应用程序中的模型。 
 
-> [!IMPORTANT]
->
-> 此示例开发用于所附带机器学习 Server （独立），并使用机器学习服务器版本中的功能的 Python 版本**9.1.0**。
- > 
- > 单击以下链接以查看相同的示例中，重新发布使用机器学习 Server 中的较新库。 请参阅[部署和管理 Python 中的 web 服务](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)。
-
-**适用于： Microsoft R Server （独立）**
+本文假定您已精通 Python。 你还应该一独立服务器，后者独立于其他 SQL Server 功能安装。 你的服务器必须是[为操作化配置](../operationalization-with-mrsdeploy.md)启用 web 服务承载。 
 
 ## <a name="overview-of-workflow"></a>工作流的概述
 
 从发布到使用 Python web 服务的工作流可以汇总为如下：
 
-1. 满足[先决条件](#prereq)的核心 API Swagger 文档从生成的 Python 客户端库。
-2. 将身份验证和标头逻辑添加到你的 Python 脚本。
-3. 创建 Python 会话、 准备环境，以及创建要保留环境快照。
-4. 发布 web 服务，并将嵌入此快照。
-5. 尝试通过使用在你的会话中的 web 服务。
-6. 管理这些服务。
+1. 验证具有独立服务器安装的计算机学习 Server 的 Python。
+2. 满足[先决条件](#prereq)的核心 API Swagger 文档从生成的 Python 客户端库。
+3. 将身份验证和标头逻辑添加到你的 Python 脚本。
+4. 创建 Python 会话、 准备环境，以及创建要保留环境快照。
+5. 发布 web 服务，并将嵌入此快照。
+6. 尝试通过使用在你的会话中的 web 服务。
+7. 管理这些服务。
 
 ![Swagger 工作流](./media/data-scientist-python-workflow.png)
 
@@ -49,9 +47,9 @@ ms.lasthandoff: 11/11/2017
 
 ## <a name="sample-code"></a>示例代码
 
-此代码示例假定你已经满足[先决条件](#prereq)若要从该 Swagger 生成 Python 客户端库使用文件和你已 Autorest。
+此代码示例假定你已具有[生成先决条件的 Python 客户端库](#prereq)从 Swagger 且已使用 Autorest。 在已为操作化配置的 SQL Server 计算机学习服务器 （独立） 实例上运行此代码。
 
-在代码块中之后, 你将找到更多详细说明的整个过程的分步的演练。
+若要浏览此代码中深度，跳到[分步演练](#walkthrough)更多详细说明的整个过程。
 
 > [!IMPORTANT]
 > 此示例使用本地`admin`帐户进行身份验证。 但是，你应将凭据和[身份验证方法](#python-auth)由管理员配置。
@@ -286,14 +284,16 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+<a name="walkthrough"></a>
+
 ## <a name="walkthrough"></a>演练
 
 本部分介绍代码如何运行更多详细信息。
 
 
-### <a name="prereq"></a>步骤 1。 创建库的先决条件的客户端
+### <a name="prereq"></a> 步骤 1。 创建库的先决条件的客户端
 
-在可以开始发布你 Python 代码和模型 thorugh Microsoft 机器学习服务器之前，必须生成一个客户端库使用对于此版本提供的 Swagger 文档。
+在可以开始发布你的 Python 代码和通过机器学习服务器模型之前，必须生成的客户端库使用对于此版本提供的 Swagger 文档。
 
 1. 在本地计算机上安装 Swagger 代码生成器，并自行熟悉它。 将用于在 Python 中生成的 API 客户端库。 常用工具包括[Azure AutoRest](https://github.com/Azure/autorest) （需要 Node.js） 和[Swagger Codegen](https://github.com/swagger-api/swagger-codegen)。 
 

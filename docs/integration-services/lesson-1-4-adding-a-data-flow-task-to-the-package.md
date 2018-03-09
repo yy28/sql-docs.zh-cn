@@ -1,11 +1,11 @@
 ---
-title: "步骤 4： 向包添加数据流任务 |Microsoft 文档"
+title: "步骤 4：将数据流任务添加到包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 870216159af6caf2bff04631d954cd4bb56cd7fa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 64411ebcd5362748e61c7e211798365285fe9968
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>课程 1-4-向包添加数据流任务
+# <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>第 1-4 课 - 将数据流任务添加到包
 为源数据和目标数据创建了连接管理器后，下一个任务是在包中添加一个数据流任务。 数据流任务将封装在源和目标之间移动数据的数据流引擎，并提供在移动数据时转换、清除和修改数据的功能。 大部分的数据提取、转换和加载 (ETL) 进程均在数据流任务中完成。  
   
 > [!NOTE]  
@@ -56,4 +55,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

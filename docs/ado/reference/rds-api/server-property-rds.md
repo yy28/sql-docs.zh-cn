@@ -1,27 +1,32 @@
 ---
 title: "服务器属性 (RDS) |Microsoft 文档"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RDS::IBindMgr21::Server
-helpviewer_keywords: Server property [RDS]
+f1_keywords:
+- RDS::IBindMgr21::Server
+helpviewer_keywords:
+- Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e1475b73658e9cbf5b1b1ebc393d2cf60bb6e5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8a81a3139892898b8468d73f53d22d8bd29c4b63
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="server-property-rds"></a>服务器属性 (RDS)
 指示 Internet 信息服务 (IIS) 名称和通信协议。  
@@ -112,7 +117,7 @@ DataControl.Server=""
  A**字符串**包含 Internet 或 intranet 路径或计算机名称，如果服务器是在远程计算机; 或空字符串，如果服务器是本地计算机上的值。  
   
  *port*  
- 可选。 用于连接到运行 IIS 的服务器端口。 Internet Explorer 中设置的端口号 (上**视图**菜单上，单击**选项**，然后选择**连接**选项卡上) 或在 IIS 中。  
+ 選擇性。 用于连接到运行 IIS 的服务器端口。 Internet Explorer 中设置的端口号 (上**视图**菜单上，单击**选项**，然后选择**连接**选项卡上) 或在 IIS 中。  
   
  *DataControl*  
  表示的对象变量**rds.DataControl**对象。  

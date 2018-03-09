@@ -1,5 +1,5 @@
 ---
-title: "sys.fn_my_permissions (TRANSACT-SQL) |Microsoft 文档"
+title: sys.fn_my_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - fn_my_permissions_TSQL
 - sys.fn_my_permissions
 - fn_my_permissions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2928be2c8d444283e54e4e4b5a305ca8671c02c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3c83af3c3c59b52a4a7c9fb2e127ab3bd03fb87d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +49,10 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *安全对象*  
+ *securable*  
  安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 *安全*是类型的标量表达式**sysname**。 *安全*可以是多部分名称。  
   
- *securable_class*  
+ '*securable_class*'  
  为其列出权限的安全对象的类的名称。 *securable_class*是**sysname**。 *securable_class*必须是以下之一： 应用程序角色、 程序集、 非对称密钥、 证书、 协定、 数据库、 终结点、 FULLTEXT CATALOG、 登录名、 消息类型、 对象、 REMOTE SERVICE BINDING、 角色、 路由、 架构、 服务器、 服务对称密钥、 类型、 用户、 XML 架构集合。  
   
 ## <a name="columns-returned"></a>返回的列  

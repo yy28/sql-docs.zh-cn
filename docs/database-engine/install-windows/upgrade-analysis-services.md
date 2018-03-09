@@ -2,12 +2,13 @@
 title: "升级 Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +22,20 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>升级 Analysis Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   可以将 Analysis Services 实例升级到具有相同服务器模式的 SQL Server 版本，以充分利用当前版本中引入的功能，如 [Analysis Services 中的新增功能](../../analysis-services/what-s-new-in-analysis-services.md)中所述。  
   
  你可以就地升级独立于在同一硬件上运行的其他实例的每个实例。 但是，大多数管理员选择在将生产工作负荷转移到新服务器上之前安装用于应用程序测试的新版本的新实例。 但对于开发或测试服务器来说，就地升级可能会更方便。  
@@ -75,7 +79,7 @@ ms.lasthandoff: 11/09/2017
   
  表格和多维数据库遵循不同的路径版本。 巧合的是多维和表格模型具有编号类似的兼容级别。  如果功能更改只影响一个模式，则其将以不同的速率前进。  
   
- 出于背景目的，下表总结了兼容性级别，但你应查看详细信息主题，以了解每个级别提供的内容。  
+ 为了提供参考，下表总结了兼容性级别，但还应查看详细信息文章，以了解每个级别提供的内容。  
   
 ||||  
 |-|-|-|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,22 +18,23 @@ f1_keywords:
 - Bitwise OR
 - bitwise
 - OR
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OR operator
 - bitwise OR (|)
 - '| (bitwise OR operator)'
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 47d4b177e93d028ccf0afffec6a9480928e11cb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: bb22a18a1d61857afbbc17cc82f444d6551083be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-or-transact-sql"></a>|（位或）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,12 +62,12 @@ expression | expression
 ## <a name="remarks"></a>注释  
  位运算符 | 取两个表达式的每个对应位，在两个表达式之间执行逻辑位或运算。 如果在输入表达式中有一个位为 1 或两个位均为 1（对于正在解析的当前位），那么结果中的位将被设置为 1；如果输入表达式中的两个位都不为 1，则结果中的位将被设置为 0。  
   
- 如果左侧和右侧表达式具有不同的整数数据类型 (例如，左侧*表达式*是**smallint**和右*表达式*是**int**)，较小的数据类型的自变量转换为更大的数据类型。 在此示例中， **smallint***表达式*转换为**int**。  
+ 如果左侧和右侧表达式具有不同的整数数据类型 (例如，左侧*表达式*是**smallint**和右*表达式*是**int**)，较小的数据类型的自变量转换为更大的数据类型。 在此示例中，**smallint * * * 表达式*转换为**int**。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个表，其中**int**数据类型显示的原始值和将表放入一行。  
   
-```tsql  
+```sql  
 CREATE TABLE bitwise  
 (   
  a_int_value int NOT NULL,  

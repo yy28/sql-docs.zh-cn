@@ -3,26 +3,28 @@ title: "连接到数据源 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: connections [ADO]
+helpviewer_keywords:
+- connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a05c4da49edef0635e95cc5aaf43976ff0753af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f09a5d0fb07b9af4db1f801252359f8b77039d74
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connecting-to-data-sources"></a>连接到数据源
 ADO**连接**对象表示与数据源，包括 DBMS、 文件存储区中或以逗号分隔的文本文件的唯一会话。 对于客户端/服务器数据库系统，ADO 连接可以是实际的网络连接到服务器。  

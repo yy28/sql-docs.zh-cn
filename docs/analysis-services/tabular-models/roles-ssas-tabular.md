@@ -1,33 +1,31 @@
 ---
-title: "角色 (SSAS 表格) |Microsoft 文档"
+title: "角色 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6bdb45605383bb567f8b3f1b313f5ac9b7600b81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="roles"></a>角色
-  在表格模型中，角色定义模型的成员权限。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在表格模型中，角色定义模型的成员权限。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。 
   
  对于 SQL Server Analysis Services，角色包含用户成员按 Windows 用户名或由 Windows 组和权限 （读取、 进程、 管理员）。 对于 Azure Analysis Services，用户必须在你的 Azure Active Directory 和用户名和指定组必须通过组织的电子邮件地址或 UPN。 
   
@@ -49,14 +47,14 @@ ms.lasthandoff: 11/17/2017
   
  默认情况下，当您创建某一新的表格模型项目时，该模型项目不具有任何角色。 可以通过使用 SSDT 中的角色管理器对话框定义角色。 在创作模型期间定义角色后，这些角色将应用于模型工作区数据库。 在部署模型时，相同的角色将应用于已部署的模型。 部署某一模型后，服务器角色 （[Analysis Services 管理员） 和数据库管理员的成员可以管理与模型关联的角色和使用 SSMS 关联与每个角色的成员。  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> 权限  
  每个角色都具有单个定义的数据库权限（合并的“读取和处理”权限除外）。 默认情况下，新角色将具有“无”权限。 也就是说，一旦将成员添加到具有“无”权限的角色，除非授予其他权限，否则，这些成员将无法修改数据库、运行处理操作、查询数据或查看数据库。  
   
  组或用户名可以是任意多个角色，每个具有不同的权限的角色的成员。 在某一用户是多个角色的成员时，为每个角色定义的权限将累积。 例如，如果某个用户是具有“读取”权限的角色的成员，并且还是具有“无”权限的角色的成员，则该用户将具有“读取”权限。  
   
  每个角色都可以定义下列权限之一：  
   
-|Permissions|Description|使用 DAX 进行行筛选|  
+|权限|Description|使用 DAX 进行行筛选|  
 |-----------------|-----------------|----------------------------|  
 |InclusionThresholdSetting|成员无法对模型数据库架构进行任何修改，也无法查询数据。|不应用行筛选器。 此角色中的用户无法看见数据|  
 |读取|允许成员查询数据（基于行筛选器），但是无法看到 SSMS 中的模型数据库，无法更改模型数据库架构，并且用户无法处理模型。|应用行筛选器。 用户仅能看见在行筛选器 DAX 公式中指定的数据。|  
@@ -125,7 +123,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_testroles"></a> Testing roles  
  在创作模型项目时，可以使用“在 Excel 中分析”功能来测试已定义的角色的效用。 从模型设计器中的 **“模型”** 菜单中，当您单击 **“在 Excel 中分析”**时，在打开 Excel 之前，将会出现 **“选择凭据和透视”** 对话框。 在此对话框中，您可以指定当前用户名、其他用户名、角色和一个用于连接作为数据源的工作区模型的透视。 若要了解详细信息，请参阅[在 Excel 中的分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
-##  <a name="bkmk_rt"></a> 相关任务  
+##  <a name="bkmk_rt"></a> Related tasks  
   
 |主题|Description|  
 |-----------|-----------------|  

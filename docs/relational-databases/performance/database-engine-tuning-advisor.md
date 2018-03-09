@@ -2,27 +2,30 @@
 title: "数据库引擎优化顾问 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec52b09547ab5a97d96709c20d8f125956d3c941
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 11720ea18ba01bd0cdaec11e4500dc5cba5ef24c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="database-engine-tuning-advisor"></a>数据库引擎优化顾问
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据库引擎优化顾问 (DTA) 分析数据库并对优化查询性能提出建议。 借助数据库引擎优化顾问，您不必精通数据库结构或深谙 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，即可选择和创建索引、索引视图和分区的最佳集合。 使用 DTA，您可以执行以下任务。  
+# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据库引擎优化顾问 (DTA) 分析数据库并对优化查询性能提出建议。 借助数据库引擎优化顾问，您不必精通数据库结构或深谙 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，即可选择和创建索引、索引视图和分区的最佳集合。 使用 DTA，您可以执行以下任务。  
   
 -   特定问题查询故障排除  
   

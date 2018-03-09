@@ -1,5 +1,5 @@
 ---
-title: "执行进程任务 |Microsoft 文档"
+title: "执行进程任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: 65
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 76ea783edab9673a720d5b95883caffff9d9a4d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-process-task"></a>执行进程任务
   执行进程任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中运行应用程序或批处理文件。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/11/2017
 |**ExecuteProcessVariableRouting**|提供有关哪些变量被路由到可执行文件的输入和输出的信息。 将为 stdin（输入）、stdout（输出）和 stderr（错误输出）写入日志条目。|  
   
 ## <a name="configuration-of-the-execute-process-task"></a>执行进程任务的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/11/2017
   
  可以使用表达式设置执行进程任务的各种属性。  
   
- 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [Console.ReadLine 方法](http://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ 当使用 **StandardInputVariable** 属性配置执行进程任务以提供输入时，请从该应用程序中调用 **Console.ReadLine** 方法来读取输入。 有关详细信息，请参阅 [Console.ReadLine 方法](http://go.microsoft.com/fwlink/?LinkId=129201)类库中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 主题。  
   
  当使用 **Arguments** 属性配置执行进程任务以提供输入时，请执行下列步骤之一以获得参数：  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 08/11/2017
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     有关详细信息，请参阅 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]参考中的[My.Application.CommandLineArgs 属性](http://go.microsoft.com/fwlink/?LinkId=129200) 这一主题。  
+     有关详细信息，请参阅 [参考中的](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs 属性 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 这一主题。  
   
 -   如果使用 Microsoft Visual C# 编写应用程序，请使用 **Main** 方法。  
   
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="execute-process-task-editor-general-page"></a>执行进程任务编辑器（“常规”页）
   可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为执行进程任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）
   可以使用 **“执行进程任务编辑器”** 对话框的 **“进程”** 页配置执行进程的选项。 这些选项包括要运行的可执行文件、该可执行文件的位置、命令提示符参数以及提供输入及捕获输出的变量。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **RequireFullFileName**  
  指示在指定位置未找到可执行文件时该任务是否应失败。  
   
@@ -120,15 +119,15 @@ ms.lasthandoff: 08/11/2017
  键入包含可执行文件的文件夹的路径，或单击浏览 **(…)** 按钮定位到该文件夹。  
   
  **StandardInputVariable**  
- 选择一个变量来提供输入到进程，或单击\<**新变量...**> 若要创建新变量：  
+ 选择为进程提供输入的变量，或单击“\<新建变量...>”创建一个新变量：  
   
  **相关主题：**[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- 选择要捕获的输出的过程中，或单击变量\<**新变量...**> 若要创建新变量。  
+ 选择用于捕获进程输出的变量，或单击“\<新建变量...>”创建一个新变量。  
   
  **StandardErrorVariable**  
- 选择要捕获的错误输出的处理器，或单击变量\<**新变量...**> 若要创建新变量。  
+ 选择用于捕获进程错误输出的变量，或单击“\<新建变量...>”创建一个新变量。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指示在进程退出代码与 **SuccessValue**中指定的值不同时任务是否失败。  
@@ -150,4 +149,3 @@ ms.lasthandoff: 08/11/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

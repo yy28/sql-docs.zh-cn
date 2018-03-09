@@ -1,12 +1,13 @@
 ---
 title: "Azure 中的数据库文件的文件快照备份 | Microsoft Docs"
-ms.custom:
-- IAAS
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +15,16 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51364693e9385333392ea96258e547b2c8fbea96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8970c703cc7b2af93cb29466f0b06c3d83cc1f56
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中的数据库文件的文件快照备份
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份使用 Azure 快照提供近乎即时的备份，并且更快速地还原使用 Azure Blob 存储服务存储的数据库文件。 此功能可用于简化备份和还原策略。 有关实时演示，请参阅 [时间点还原的演示](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 有关使用 Azure Blob 存储服务存储数据库文件的详细信息，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
+# <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中数据库文件的文件快照备份
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份使用 Azure 快照提供近乎即时的备份，并且更快速地还原使用 Azure Blob 存储服务存储的数据库文件。 此功能可用于简化备份和还原策略。 有关实时演示，请参阅 [时间点还原的演示](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。 有关使用 Azure Blob 存储服务存储数据库文件的详细信息，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。  
   
  ![快照备份体系结构关系图](../../relational-databases/backup-restore/media/snapshotbackups.PNG "快照备份体系结构关系图")  
   

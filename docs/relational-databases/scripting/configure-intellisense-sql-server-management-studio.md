@@ -2,10 +2,14 @@
 title: "配置 IntelliSense (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,19 @@ helpviewer_keywords:
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a4f61032e9cd11158a80b9e95d1d98c457b56be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a459fbc5ba1c1891d3583821b64d634a44fab859
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>配置 IntelliSense (SQL Server Management Studio)
-  默认情况下，大多数 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项处于启用状态。 您可以禁用 IntelliSense 选项，转而通过菜单命令或基键组合来调用该选项。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]默认情况下，大多数 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项处于启用状态。 您可以禁用 IntelliSense 选项，转而通过菜单命令或基键组合来调用该选项。  
   
 > [!IMPORTANT]  
 >  某些更改不会在当前编辑器会话中生效。  必须打开一个新的 Transact-SQL 编辑器会话，才能查看更改。

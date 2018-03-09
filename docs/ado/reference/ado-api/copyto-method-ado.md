@@ -3,8 +3,9 @@ title: "CopyTo 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_CopyTo
 - _Stream::CopyTo
-helpviewer_keywords: CopyTo method [ADO]
+helpviewer_keywords:
+- CopyTo method [ADO]
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e9f5d99069108e452c4ba4038d166ae3a59ef20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e929ff331d1bc99aac75018fa28e0da200f7f529
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
 将复制指定的字符或字节数 (具体取决于[类型](../../../ado/reference/ado-api/type-property-ado-stream.md)) 中[流](../../../ado/reference/ado-api/stream-object-ado.md)到另一个**流**对象。  
@@ -45,8 +47,8 @@ Stream.CopyTo DestStream, NumChars
 > [!NOTE]
 >  *DestStream*参数不可能的代理**流**对象，因为这需要访问权限的专用接口上**流**无法远程访问的对象客户端。  
   
- *Numchar*  
- 可选。 **整数**值，该值指定的字节或字符从当前源中的位置复制数**流**到目标**流**。 默认值为 1，它指定从当前位置复制所有字符或字节[EOS](../../../ado/reference/ado-api/eos-property.md)。  
+ *NumChars*  
+ 選擇性。 **整数**值，该值指定的字节或字符从当前源中的位置复制数**流**到目标**流**。 默认值为 1，它指定从当前位置复制所有字符或字节[EOS](../../../ado/reference/ado-api/eos-property.md)。  
   
 ## <a name="remarks"></a>注释  
  此方法会复制指定的字符或从当前指定的位置开始的字节数[位置](../../../ado/reference/ado-api/position-property-ado.md)属性。 如果指定的数量的可用之前的字节数超过了**EOS**，然后仅字符或字节从当前位置到**EOS**复制。 如果值*Numchar*为 1，或省略，所有复制的字符或从当前的位置开始的字节。  

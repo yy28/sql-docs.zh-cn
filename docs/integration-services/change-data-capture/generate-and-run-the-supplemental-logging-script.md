@@ -1,5 +1,5 @@
 ---
-title: "生成和运行补充日志记录脚本 |Microsoft 文档"
+title: "生成和运行补充日志记录脚本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 736b11e79235b38659e9fa4c13f06369bd8b335d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ee20cd83df04d4ec3929f9ee39068969c0d18950
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>生成和运行补充日志记录脚本
   使用“为捕获变更设置表”页可对 Oracle 源数据库运行一个将设置补充日志记录的脚本。  
@@ -49,4 +48,3 @@ ms.lasthandoff: 08/03/2017
  [查看和生成补充日志记录脚本](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
   
-

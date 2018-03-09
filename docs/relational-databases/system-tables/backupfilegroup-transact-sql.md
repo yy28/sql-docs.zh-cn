@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
 - backupfilegroup
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 244658ccae187622bf1d67b312867d7b41584182
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2787b6a012268378421017c0a2912385c669da17
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**名称**|**sysname**|文件组的名称。|  
 |**filegroup_id**|**int**|文件组的 ID；在数据库中唯一。 对应于**data_space_id**中**sys.filegroups**。|  
 |**filegroup_guid**|**uniqueidentifier**|文件组的全局唯一标识符。 可以为 NULL。|  
-|**type**|**char(2)**|内容类型，可为下列类型之一：<br /><br /> FG =“行”文件组<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件组|  
+|**类型**|**char(2)**|内容类型，可为下列类型之一：<br /><br /> FG =“行”文件组<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件组|  
 |**type_desc**|**nvarchar(60)**|函数类型的说明，可为下列值之一：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
 |**is_default**|**bit**|默认文件组，在 CREATE TABLE 或 CREATE INDEX 中未指定文件组时使用。|  
 |**is_readonly**|**bit**|1 = 文件组为只读文件组。|  

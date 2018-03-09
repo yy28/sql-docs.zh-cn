@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - ALTER BROKER PRIORITY
 - ALTER BROKER
 - ALTER_BROKER_PRIORITY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER BROKER PRIORITY statement
 - ssbdiagnose
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bd2cfd04ccc1de66fab7c518fdc31191955b24b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 833c0bed38d02905b3a260f50824825c9859484f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,12 +92,12 @@ FOR CONVERSATION
   
  如果未指定 LOCAL_SERVICE_NAME，则会话优先级的本地服务属性不会更改。  
   
- REMOTE_SERVICE_NAME = {*RemoteServiceName*|**ANY**}  
+ REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
  *RemoteServiceName*是类型的文字值**nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用逐字节比较，以匹配*RemoteServiceName*字符串。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
   
- *RemoteServiceName*  
+ '*RemoteServiceName*'  
  指定将会话优先级分配给以下各项：  
   
 -   相关联的目标服务名称与匹配任何发起方会话端点*RemoteServiceName*。  
@@ -117,7 +119,7 @@ FOR CONVERSATION
   
  有关详细信息，请参阅[CREATE BROKER PRIORITY &#40;Transact SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  权限创建的成员的默认值的会话优先级**db_ddladmin**或**db_owner**固定数据库角色的成员，并对其**sysadmin**固定的服务器角色。 需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -146,6 +148,6 @@ ALTER BROKER PRIORITY SimpleContractPriority
 ## <a name="see-also"></a>另请参阅  
  [创建 BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [删除 BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

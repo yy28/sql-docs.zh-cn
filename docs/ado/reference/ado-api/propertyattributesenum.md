@@ -1,10 +1,11 @@
 ---
-title: "PropertyAttributesEnum |Microsoft 文档"
+title: PropertyAttributesEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: PropertyAttributesEnum
-helpviewer_keywords: PropertyAttributesEnum enumeration [ADO]
+f1_keywords:
+- PropertyAttributesEnum
+helpviewer_keywords:
+- PropertyAttributesEnum enumeration [ADO]
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 853e63dcd520ab45a26f98091a3e48a816350d0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57c232c27dc538cbbdc8203855a27ee2ff56b7f8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 指定的属性[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|指示提供程序不支持该属性。|  
 |**adPropRequired**|1|指示数据源初始化之前，用户必须指定此属性的值。|  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |**adPropWrite**|1024|指示用户可以设置此属性。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

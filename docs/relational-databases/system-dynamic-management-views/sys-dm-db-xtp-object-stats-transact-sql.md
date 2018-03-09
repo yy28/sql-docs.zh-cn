@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - sys.dm_db_xtp_object_stats
 - dm_db_xtp_object_stats
 - sys.dm_db_xtp_object_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_object_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_object_stats dynamic management view
 ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdb57b1f90044605dc67fd3a41892df4bed8716c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7610e24b87a2a6dff0ffefbd5a786acf8191dca5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   报告自上次数据库重新启动以来对每个 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 对象进行的操作所影响的行数。 统计信息会在操作执行时更新（无论事务提交还是回滚）。  
   
- sys.dm_db_xtp_object_stats 可以帮助您标识更改最多的内存优化表。 您可以决定删除表中未使用或很少使用的索引，因为每个索引都会影响性能。 如果存在哈希索引，则您应定期重新计算桶计数。 有关详细信息，请参阅[确定正确的存储桶计数的哈希索引](http://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)。  
+ sys.dm_db_xtp_object_stats 可以帮助您标识更改最多的内存优化表。 您可以决定删除表中未使用或很少使用的索引，因为每个索引都会影响性能。 如果存在哈希索引，则您应定期重新计算桶计数。 有关详细信息，请参阅 [Determining the Correct Bucket Count for Hash Indexes](http://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)。  
   
  sys.dm_db_xtp_object_stats 可以帮助您标识引发写/写冲突（这可能会影响应用程序性能）的内存优化表。 例如，如果您有事务重试逻辑，则相同语句可能需要执行多次。 您还可以使用此信息标识需要写/写错误处理的表（以及因此得到的业务逻辑）。  
   
@@ -51,9 +54,9 @@ ms.lasthandoff: 11/27/2017
 |row_delete_attempts|**bigint**|自上次数据库重新启动以来由已提交和中止的事务从表中删除的行数。|  
 |write_conflicts|**bigint**|自上次数据库重新启动以来发生的写入冲突数。|  
 |unique_constraint_violations|**bigint**|自上次数据库重新启动以来发生的唯一约束冲突数。|  
-|object_address|**varbinary （8)**|仅限内部使用。|  
+|object_address|**varbinary(8)**|仅限内部使用。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对当前数据库拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a5679296dfc73dd4ff73efaa3a66b14d21fa1f50
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 553c3f464b5a14d578aa05bece939126f7251974
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-path-command"></a>SET 路径命令
 指定文件搜索的路径。 特定于驱动程序的信息，请参阅备注。  
@@ -38,7 +38,7 @@ SET PATH TO [Path]
  到 [*路径*]  
  指定您希望 Visual FoxPro 要搜索的目录。 使用逗号或分号分隔到单独的目录。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  设置路径，可指定可以在存储过程中调用其他 Visual FoxPro 程序用于搜索路径。 设置路径不会更改你为连接指定的数据源的路径。  
   
  将路径设置为而无需发出*路径*要还原到默认目录或文件夹的路径。  

@@ -8,24 +8,26 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: stored procedures [SMO]
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f7d9626c77cf07266ba732f6de6de437f4f6908
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22ab7b6ab6ee687a0d5dba1c37be5f72f308b117
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>创建、更改和删除存储过程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO)，由表示存储的过程<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理对象 (SMO)，由表示存储的过程<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象。  
   
  创建<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>中 SMO 对象需要设置<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>属性[!INCLUDE[tsql](../../../includes/tsql-md.md)]定义该存储的过程的脚本。 这些参数需要 @ 前缀，必须分别使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象创建并且将其添加到 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 对象的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合中。  
   

@@ -1,5 +1,5 @@
 ---
-title: "完成 |Microsoft 文档"
+title: "完成 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,19 +15,18 @@ ms.topic: article
 f1_keywords:
 - finish
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad32e59fc7003e16db64ff13520b3dbb02d742b8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 026b764cebe8c5eae6b26b1e908888ba2982cca8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="finish"></a>完成
+# <a name="finish"></a>“完成”
   **“完成”** 页总结了向导过程。 单击 **“完成”** 可关闭向导并且生成您在“创建 CDC 实例”向导中定义的所有表。  
   
 ## <a name="see-also"></a>另请参阅  
@@ -35,4 +34,3 @@ ms.lasthandoff: 08/03/2017
  [使用新建实例向导](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

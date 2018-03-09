@@ -3,8 +3,9 @@ title: "使用 ADO 的脚本语言 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>使用 ADO 的脚本语言
 在一个脚本编写环境 ADO 可以公开通过服务器端脚本的数据。 在此方案中，ADO，基础 OLE DB 提供程序，它使用，并引用给定的数据存储所需的任何其他组件安装在运行 Internet 信息服务 (IIS) 的服务器上。 使用 Active Server Pages (ASP)，ADO 是可以生成 HTML，例如脚本中引用的组件。 此 HTML 内容可以通过 HTTP 传递给客户端 Web 浏览器。 通过使用脚本，Web 页可以将操作发送回服务器端脚本，从而允许你更新、 遍历，或查看特定的数据。  
@@ -34,17 +35,17 @@ ms.lasthandoff: 11/17/2017
 |对象|用于脚本编写的安全？|  
 |------------|-------------------------|  
 |ADO 连接|是|  
-|ADO 命令|是|  
-|ADO 参数|是|  
+|ADO 命令|否|  
+|ADO 参数|否|  
 |ADO 记录集|是|  
 |ADO 记录|是|  
 |ADO 流|是|  
-|ADO 错误|是|  
-|ADOX 目录|是|  
-|ADOX 单元集|是|  
+|ADO 错误|否|  
+|ADOX 目录|否|  
+|ADOX 单元集|否|  
 |RDS DataControl|是|  
 |RDS DataSpace|是|  
-|RDS DataFactory|是|  
+|RDS DataFactory|否|  
   
  下表列出了包含与 Windows DAC/MDAC 的提供程序，并指示它们是否可安全执行脚本。  
   
@@ -53,8 +54,8 @@ ms.lasthandoff: 11/17/2017
 |形状|是|  
 |保留|是|  
 |Remote|是|  
-|OLE DB Provider for SQL Server (SQLOLEDB)|是|  
-|OLE DB Provider for ODBC （msdasql） 一起使用|是|  
+|OLE DB Provider for SQL Server (SQLOLEDB)|否|  
+|OLE DB Provider for ODBC （msdasql） 一起使用|否|  
   
 ## <a name="odbc-data-sources"></a>ODBC 数据源  
  脚本和非脚本 ADO 代码之间的一个显著区别是 ODBC 数据源，如果使用。 对于非脚本应用程序，你可以在 ODBC 数据源管理器中创建用户 DSN。 对于在 IIS 下运行的脚本，你必须创建系统 DSN;否则你的脚本将无法识别你创建的数据源。 这适用于使用 Microsoft OLE DB 访问接口，对于通过 Microsoft IIS ODBC 任何 ADO 脚本应用程序。  

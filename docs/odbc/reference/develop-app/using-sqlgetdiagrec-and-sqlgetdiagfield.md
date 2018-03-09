@@ -5,10 +5,11 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8a6df52b7dfdcc2fb4e47bb6d19afefe1fb4655
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db4a853206e402228eb9d76dca72a421444ed042
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
 应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索诊断信息。 这些函数接受一个环境、 连接、 语句或描述符句柄，并从上次使用该句柄的函数返回诊断。 使用该句柄调用新函数时，将被丢弃登录特定句柄的诊断。 如果该函数返回多个诊断记录，在应用程序调用这些函数多次;通过调用检索的状态记录总数**SQLGetDiagField** SQL_DIAG_NUMBER 选项的标头记录 （记录 0）。  
@@ -50,10 +51,12 @@ GetSQLStmt(SQLStmt);
   
 // Execute the SQL statement and return any errors or warnings.  
 rc1 = SQLExecDirect(hstmt, SQLStmt, SQL_NTS);  
-if ((rc1 == SQL_SUCCESS_WITH_INFO) || (rc1 == SQL_ERROR)) {  
-   // Get the status records.  
+if ((rc1 == SQL_SUCCESS_WITH_INFO) || (rc1 == SQL_ERROR)) {
+   SQLLEN numRecs = 0;
+   SQLGetDiagField(SQL_HANDLE_STMT, hstmt, 0, SQL_DIAG_NUMBER, &numRecs, 0, 0);
+   // Get the status records.
    i = 1;  
-   while ((rc2 = SQLGetDiagRec(SQL_HANDLE_STMT, hstmt, i, SqlState, &NativeError,  
+   while (i <= numRecs && (rc2 = SQLGetDiagRec(SQL_HANDLE_STMT, hstmt, i, SqlState, &NativeError,  
             Msg, sizeof(Msg), &MsgLen)) != SQL_NO_DATA) {  
       DisplayError(SqlState,NativeError,Msg,MsgLen);  
       i++;  

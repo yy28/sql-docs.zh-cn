@@ -9,28 +9,29 @@ ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, tsql reference
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale
-manager: jhubbard
+ms.author: shkale;barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a093d431510891d0bac9616aa1058134cb168ec7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>创建图形数据库并运行一些模式匹配使用 T-SQL 查询
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-本示例提供[!INCLUDE[tsql-md](../../includes/tsql-md.md)]脚本创建具有节点和边缘的关系图数据库，然后使用新的匹配子句匹配的一些模式，并遍历关系图。 此示例脚本将在这两个 Azure SQL 数据库上运行和[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+本示例提供[!INCLUDE[tsql-md](../../includes/tsql-md.md)]脚本创建具有节点和边缘的关系图数据库，然后使用新的匹配子句匹配的一些模式，并遍历关系图。 此示例脚本将在这两个 Azure SQL 数据库上运行和 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>示例架构  
 此示例创建了一个图形架构，如图 1 中显示的假设的社交网络有人员、 餐馆和城市节点的。 这些节点都连接到使用友元，相互喜欢 LivesIn 和 LocatedIn 边缘。 

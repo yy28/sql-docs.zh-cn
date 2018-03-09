@@ -8,28 +8,29 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 469b8008c1697f691c56f6d8893f1d637534c989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认设置或延迟的持久（也称作迟缓提交）。    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认设置或延迟的持久（也称作懒散提交）。    
     
  完全持久事务提交是同步的，仅在事务的日志记录写入磁盘后报告提交成功，并将控制权归还客户端。 延迟持久事务提交是异步的，并在事务的日志记录写入磁盘之前报告提交成功。 事务要成为持久事务，必须将事务日志条目写入磁盘。 当事务日志条目刷新到磁盘时，延迟持久事务成为持久事务。    
     
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/17/2017
     
         如果成功提交完全持久的事务或 sp_flush_log，则保证之前提交的所有延迟持续性事务都已成为持久事务。
         
-    - 即使所有事务都是延迟持久事务，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也会尝试基于日志生成和计时将日志刷新到磁盘。 如果 IO 设备保持正常运行，此操作通常可以成功。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供除持久事务和 sp_flush_log 以外的任何有力的持续性保证。      
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使所有事务都是延迟持久事务，也要基于日志生成和计时尝试将日志刷新到磁盘。 如果 IO 设备保持正常运行，此操作通常可以成功。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供除持久事务和 sp_flush_log 以外的任何有力的持续性保证。      
     
   
     
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_DbControl"></a> 数据库级别控制    
  您作为 DBA，可以控制用户是否可通过以下语句对数据库使用延迟事务持续性。 您必须使用 ALTER DATABASE 来设置延迟持续性设置。    
     
-```tsql    
+```sql    
 ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
@@ -114,7 +115,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 ###  <a name="CompiledProcControl"></a> 原子块级别控制 - 本机编译存储过程    
  下面的代码面向原子块内部。    
     
-```tsql    
+```sql    
 DELAYED_DURABILITY = { OFF | ON }    
 ```    
     
@@ -126,7 +127,7 @@ DELAYED_DURABILITY = { OFF | ON }
     
  **示例代码：**    
     
-```tsql    
+```sql    
 CREATE PROCEDURE <procedureName> …    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
@@ -149,7 +150,7 @@ END
 ###  <a name="bkmk_T-SQLControl"></a> 提交级别控制 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 语法已扩展，您可以强制实施延迟事务持续性。 如果 DELAYED_DURABILITY 在数据库级别设置为 DISABLED 或 FORCED（请参阅上文），则忽略此 COMMIT 选项。    
     
-```tsql    
+```sql    
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]    
     
 ```    

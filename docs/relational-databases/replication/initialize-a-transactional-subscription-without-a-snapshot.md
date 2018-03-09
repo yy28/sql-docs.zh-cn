@@ -2,9 +2,12 @@
 title: "初始化事务订阅（不使用快照）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 471ff7f62145dd3e6593ab449545f5ddb49612eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0c8e0d600647d81dde027bb053cfeabb83518ae7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>初始化事务订阅（不使用快照）
-  默认情况下，使用快照初始化对事务发布的订阅，此快照由快照代理生成并由分发代理应用。 在某些方案中，例如涉及大型初始数据集的方案中，最好用其他方法初始化订阅。 初始化订阅服务器的其他方法包括：  
+# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]默认情况下，使用快照初始化对事务发布的订阅，此快照由快照代理生成并由分发代理应用。 在某些方案中，例如涉及大型初始数据集的方案中，最好用其他方法初始化订阅。 初始化订阅服务器的其他方法包括：  
   
 -   指定备份。 还原订阅服务器上的备份，然后分发代理将复制任何所需的复制元数据和系统过程。 使用备份进行初始化是向订阅服务器传递数据最快的方法，而且也很方便，因为如果在启用发布以使用备份进行初始化之后取得备份，则可以使用任何最近的备份。  
   

@@ -1,11 +1,11 @@
 ---
-title: "第 2 课： 添加与 SSIS 循环 |Microsoft 文档"
+title: "第 2 课：使用 SSIS 添加循环 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 32
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 683a2db5f7af5292051b5ce5c4cec9d49d465c2e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>第 2 课：使用 SSIS 添加循环
 在 [第 1 课：使用 SSIS 创建项目包和基础包](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)中，创建了从单个平面文件源中提取数据的包，然后使用查找转换功能对数据进行了转换，最后将数据加载到 **AdventureWorksDW2012** 示例数据库的 **FactCurrency** 事实数据表中。  
@@ -78,4 +77,3 @@ Foreach 循环容器使包能够对指定枚举器的每个成员重复执行控
   
   
   
-

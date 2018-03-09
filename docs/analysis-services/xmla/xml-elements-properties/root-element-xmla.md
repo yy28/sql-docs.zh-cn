@@ -2,15 +2,13 @@
 title: "根元素 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Root Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71a112a9cbf086175eb7c11e628fb423add2f62d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="root-element-xmla"></a>root 元素 (XMLA)
-  包含返回的结果[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法或的 XML for Analysis (XMLA) 命令执行使用[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含返回的结果[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法或的 XML for Analysis (XMLA) 命令执行使用[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,10 +52,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|请参阅下表。|  
-|默认值|无|  
+|默认值|InclusionThresholdSetting|  
 |基数|1-n：可多次出现的必需元素。|  
   
 |Ancestor|数据类型|  
@@ -70,9 +68,9 @@ ms.lasthandoff: 11/17/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[结果](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)，[返回](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **根**元素包含在返回的信息[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)返回由单个元素**发现**方法调用，或在[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)返回单个 XMLA 命令执行的单个元素**执行**方法调用。  
   
 ## <a name="see-also"></a>另请参阅  

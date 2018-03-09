@@ -2,27 +2,34 @@
 title: "第 1 课：使用事务复制发布数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8f8ac15ba73eb8b1ea86d2f1e938c715fea8eed8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 49a9b7290e5f3253995f7bef0efd1390f74de5bf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 课：使用事务复制发布数据
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 在本课中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 **示例数据库中发布** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的筛选子集。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程 [准备用于复制的服务器](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)。  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
@@ -53,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
 10. 在“代理安全性”页上，清除“使用快照代理的安全设置”复选框。  
   
-11. 单击快照代理的“安全设置”，在“进程帐户”框中输入 \<*Machine_Name>***\repl_snapshot**，为此帐户提供密码，然后单击“确定”。  
+11. 单击快照代理的“安全设置”，在“进程帐户”框中输入 \<Machine_Name>\repl_snapshot，为此帐户提供密码，然后单击“确定”。  
   
 12. 重复上一步，将 repl_logreader 设置为日志读取器代理的进程帐户，然后单击“完成”。  
   
@@ -79,9 +86,9 @@ ms.lasthandoff: 11/09/2017
   
 3.  选择“发布访问列表”页，单击“添加”。  
   
-4.  \在“添加发布访问项”对话框中，选择 *<Machine_Name>***\repl_distribution**，再单击“确定”。 单击 **“确定”**。  
+4.  在“添加发布访问项”对话框中，选择“<Machine_Name>\repl_distribution”，再单击“确定”。 单击“确定” 。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 您已成功创建了事务发布。 接下来，您将订阅此发布。 请参阅 [第 2 课：创建事务发布的订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
   
 ## <a name="see-also"></a>另请参阅  

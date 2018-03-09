@@ -2,15 +2,13 @@
 title: "DMSCHEMA_MINING_MODEL_CONTENT 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_MODEL_CONTENT
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 110863a69d45ece85023e5dd3bbd8a554631ed43
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 行集
-  允许客户端应用程序浏览数据挖掘模型的内容。 客户端应用程序可使用本主题结尾处介绍的特殊树操作限制来浏览挖掘模型的内容。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]允许客户端应用程序浏览的数据挖掘模型内容。 客户端应用程序可使用本主题结尾处介绍的特殊树操作限制来浏览挖掘模型的内容。  
   
 ## <a name="rowset-columns"></a>行集列  
  **DMSCHEMA_MINING_MODEL_CONTENT**行集包含以下各列。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
  此限制， **TREE_OPERATION**，不在任何特定的列的**DMSCHEMA_MINING_MODEL_CONTENT**行集; 相反，它指定一个树运算符。 使用者可以指定**NODE_UNIQUE_NAME**限制和树运算符 (**上级**，**子级**，**同级**， **父**，**后代**，**自助**) 以获取请求的成员集。 **自助**运算符包括节点本身的行在列表中返回的行。 下表描述了构成的位图定义的常量**TREE_OPERATION**限制。 可以使用逻辑组合它们**或**运算符。  
   
-|常量|值|  
+|常量|ReplTest1|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|**0x00000020**|  
 |**DMTREEOP_CHILDREN**|**0x00000001**|  

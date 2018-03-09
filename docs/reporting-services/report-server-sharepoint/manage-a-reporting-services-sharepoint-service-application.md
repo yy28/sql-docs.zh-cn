@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddd945cd1ccd0ce85082c9d4a2a4d05a6eac626c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9c73f9685bd5f340376d95191730fecaf7e54dbf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
 
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
   
 |设置|注释|  
 |-------------|--------------|  
-|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 。 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)|  
+|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 实例时都提供 SQL Server 登录名。 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)|  
 |保留执行日志的天数|默认值为 60 天。|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 都支持 SharePoint ULS 日志记录。  有关详细信息，请参阅 [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -148,7 +146,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  有关详细信息，请参阅 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
 
-### <a name="options"></a>选项
+### <a name="options"></a>“常规”
 
  **指定执行帐户**  
  选择此选项可指定一个帐户。  
@@ -166,7 +164,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  使用此页可指定简单邮件传输协议 (SMTP) 设置，这些设置用于启用报表服务器的报表服务器电子邮件传递功能。 可使用报表服务器电子邮件传递扩展插件通过电子邮件订阅来分发报表或报表处理通知。 报表服务器电子邮件传递扩展插件需要使用 SMTP 服务器并在“发件人:”字段中使用电子邮件地址。  
 
-### <a name="options"></a>选项
+### <a name="options"></a>“常规”
 
  **使用 SMTP 服务器**  
  指定报表服务器电子邮件通过 SMTP 服务器进行路由。  

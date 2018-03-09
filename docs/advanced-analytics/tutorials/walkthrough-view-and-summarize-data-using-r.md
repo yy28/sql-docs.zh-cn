@@ -1,27 +1,32 @@
 ---
 title: "查看和使用 R （演练） 汇总数据 |Microsoft 文档"
 ms.date: 11/10/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 358e1431-8f47-4d32-a02f-f90e519eef49
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 90afd69ca0d447a92b557255fae93cd899eddc1b
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 91e936b3d972e0819622304fda2827d4f4674a82
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="view-and-summarize-data-using-r"></a>查看和使用 R 汇总数据
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 现在让我们使用相同的数据使用 R 代码。 在本课程中，您将学习如何使用中的函数**RevoScaleR**包。
 

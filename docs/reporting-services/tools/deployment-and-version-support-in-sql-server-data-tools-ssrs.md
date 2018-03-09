@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4889d5aabf66b97c4dfaae3c59117f678da4f6a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的部署和版本支持 (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支持以下方案：  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_SupportedVersions"></a> 支持的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，是 32 位报表服务器项目开发环境，根据设计，它不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的计算机上运行，也不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 的服务器上安装。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，是 32 位报表服务器项目开发环境，根据设计，它不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的计算机上运行，也不能在基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的服务器上安装。 但是，基于 x64 的计算机可提供对 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的支持。  
   
  下表说明了可在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创作和发布报表的支持版本。  
   
@@ -69,11 +67,11 @@ ms.lasthandoff: 12/05/2017
   
 |项目或文件类型|版本|创作报表|发布报表|说明|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|报表服务器项目<br /><br /> 或<br /><br /> 报表服务器向导项目|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 架构|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|报表服务器项目<br /><br /> 或<br /><br /> 报表服务器向导项目|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 架构|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|报表服务器项目<br /><br /> 或<br /><br /> 报表服务器向导项目|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 架构|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|报表服务器项目<br /><br /> 或<br /><br /> 报表服务器向导项目|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 架构|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|报表服务器项目<br /><br /> 或<br /><br /> 报表服务器向导项目|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 架构|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器|在本地将 2003 RDL 和 2005 RDL 升级到 2008 RDL 架构。|  
+|报表服务器项目<br /><br /> 或多个<br /><br /> 报表服务器向导项目|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL 架构|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|报表服务器项目<br /><br /> 或多个<br /><br /> 报表服务器向导项目|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL 架构|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|报表服务器项目<br /><br /> 或多个<br /><br /> 报表服务器向导项目|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 架构|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|报表服务器项目<br /><br /> 或多个<br /><br /> 报表服务器向导项目|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 架构|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|报表服务器项目<br /><br /> 或多个<br /><br /> 报表服务器向导项目|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 架构|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器|在本地将 2003 RDL 和 2005 RDL 升级到 2008 RDL 架构。|  
   
  有关在以前版本的报表定义架构中打开报表的详细信息，请参阅 [升级报表](../../reporting-services/install-windows/upgrade-reports.md)。 有关特定报表定义架构的详细信息，请参阅 [Report Definition Language Specification](http://go.microsoft.com/fwlink/?linkid=116865)（报表定义语言规范）。  
   

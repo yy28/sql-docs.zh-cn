@@ -2,9 +2,12 @@
 title: "DropOnlyMode 元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ac3f3b750a5c2c5e9395900163a1db4e07c3691
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6c30ec1f3a06e0bb2142dd889852ddb071b68d96
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
-  指定数据库引擎优化顾问在优化会话过程中只应考虑删除现有的索引、索引视图或分区。 如果指定了此优化选项，则不考虑任何新物理设计结构。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定数据库引擎优化顾问应只考虑在优化会话过程中删除现有索引、 索引的视图或分区。 如果指定了此优化选项，则不考虑任何新物理设计结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,9 +45,9 @@ ms.lasthandoff: 11/09/2017
   
  **出现次数**：可选。 对于每个 **TuningOptions** 元素只能使用一次。 如果在 **TuningOptions** 元素中指定了下列元素，则不能使用此元素：  
   
--   [FeatureSet 元素 (DTA)](../../tools/dta/featureset-element-dta.md)  
+-   [FeatureSet 元素 &#40; DTA &#41;](../../tools/dta/featureset-element-dta.md)  
   
--   [分区元素 (DTA)](../../tools/dta/partitioning-element-dta.md)  
+-   [分区元素 &#40; DTA &#41;](../../tools/dta/partitioning-element-dta.md)  
   
 -   将 [KeepExisting 元素 (DTA)](../../tools/dta/keepexisting-element-dta.md) 设置为 **ALL**  
   

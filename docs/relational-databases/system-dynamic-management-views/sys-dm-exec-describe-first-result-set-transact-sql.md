@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_describe_first_result_set (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set
 - sys.dm_exec_describe_first_result_set_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_describe_first_result_set catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c7db2d6b9af5bf47f0019ec5e20336edad2a744
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 05555f2e64b191a43738c145e9c3029f8afe8cd5
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ```  
   
-sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)  
+sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_information)  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -50,9 +53,9 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar (max)**。  
   
  *@params*  
- @params为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar （n)**或**nvarchar (max)**。  
+ @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar （n)**或**nvarchar (max)**。  
   
- 一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是一个占位符，表示附加参数定义。 必须在定义在 stmt 中指定的每个参数@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 NULL 是此参数的默认值。  
+ 一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n* 是一个占位符，表示附加参数定义。 必须在定义在 stmt 中指定的每个参数@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 NULL 是此参数的默认值。  
   
  *@include_browse_information*  
  如果设置为 1，则分析每个查询，就好像它在查询中使用 FOR BROWSE 选项。 将返回其他键列和源表信息。  
@@ -70,7 +73,7 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
 |**system_type_name**|**nvarchar(256)**|包含为列数据类型指定的名称和参数（例如，length、precision、scale）。<br /><br /> 如果数据类型是用户定义的别名类型，请在此处指定的基础系统类型。<br /><br /> 如果数据类型是 CLR 用户定义类型，则此列中返回 NULL。|  
 |**max_length**|**int**|列的最大长度（字节）。<br /><br /> 为-1 = 的列数据类型为**varchar （max)**， **nvarchar (max)**， **varbinary （max)**，或**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16 或设置的值**sp_tableoption 'text in row**。|  
 |**精度**|**tinyint**|如果为基于数值的列，则为该列的精度。 否则，返回 0。|  
-|**缩放**|**tinyint**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
+|**小数位数**|**tinyint**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
 |**collation_name**|**sysname**|如果列包含的是字符，则为该列的排序规则的名称。 否则返回 NULL。|  
 |**user_type_id**|**int**|对于 CLR 和别名类型，包含在 sys.types 中指定的列数据类型的 user_type_id。 否则为 NULL。|  
 |**user_type_database**|**sysname**|对于 CLR 和别名类型，包含在其中定义相应类型的数据库的名称。 否则为 NULL。|  
@@ -125,7 +128,7 @@ sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)
 |12|OBJECT_TYPE_NOT_SUPPORTED|@object_id传递给函数不是支持 （即不是存储的过程）|  
 |13|OBJECT_DOES_NOT_EXIST|@object_id传递到系统目录中找不到函数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要有权执行@tsql自变量。  
   
 ## <a name="examples"></a>示例  
@@ -173,8 +176,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_describe_first_result_set &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

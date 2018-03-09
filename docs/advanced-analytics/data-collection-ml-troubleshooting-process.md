@@ -2,25 +2,30 @@
 title: "解决 SQL Server 的用于机器学习的数据收集"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
-caps.latest.revision: "1"
+dev_langs:
+- R
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f8a476372f97251ae3cf075e69cf7baf55ba0649
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>解决机器学习的数据收集
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文讨论尝试解决安装程序、 配置或 SQL Server 中的机器学习的性能问题时，应收集的数据的类型。 此类数据包括日志、 错误消息和系统信息。
 

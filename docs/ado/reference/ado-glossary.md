@@ -8,25 +8,26 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+manager: craigg
+ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
   
-## <a name="a"></a>仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，  
+## <a name="a"></a>指向  
  绝对 URL  
  指定 Internet 或 intranet 的资源的驻留位置完全限定的 URL。 另请参阅*URL*和*相对 URL*。  
   
@@ -186,7 +187,7 @@ ms.lasthandoff: 11/17/2017
  层次结构 (hierarchy)  
  一般情况下，层次结构是一个带有 top 的排名的结构级别并从属级别。 在 ADO 中，分层**记录集**用于表示一条记录和章节的父-子关系。 此外会在 ADO，**记录**和**流**对象可以用于访问层次结构树的结构，例如，文件夹和文档。 ADO MD 还包括**层次结构**对象来表示 OLAP 多维数据集中的维度的级别之间的关系。 另请参阅分层记录集、 父-子关系、 章节和树。  
   
-## <a name="i-l"></a>我-L  
+## <a name="i-l"></a>I-L  
  ISAPI （Internet 服务器应用程序编程接口）  
  一组函数的 Internet 服务器，如运行 Microsoft® Internet 信息服务 (IIS) 的 Windows NT® Server/Windows 2000 服务器。  
   
@@ -250,7 +251,7 @@ ms.lasthandoff: 11/17/2017
  ProgID （编程标识符）  
  唯一的名称映射到 Windows 注册表 COM 应用程序。 ADO 连接的 ProgID 为"ADODB。连接"。 另请参阅 CLSID，com。  
   
- 代理  
+ proxy  
  一个接口特定对象，其中提供的参数封送处理和通信所需的客户端能够调用运行在不同的执行环境中，如在另一个线程或另一个进程中的应用程序对象。 代理位于与客户端，并与相应的存根位于与调用的应用程序对象进行通信。 另请参阅存根 （stub）。  
   
 ## <a name="r"></a>R  
@@ -282,17 +283,17 @@ ms.lasthandoff: 11/17/2017
  存储过程  
  预编译的代码，例如 SQL 语句和可选的流控制语句的集合的名称存储，并作为一个单元处理。 存储的过程存储在一个数据库;它们可以通过从应用程序的一次调用执行，并且允许用户声明的变量、 条件执行和其他功能强大的编程功能。  
   
- 存根 （stub)  
+ stub  
  一个接口特定对象，其中提供的参数封送处理和通信所需的应用程序对象从运行在不同的执行环境中，如在另一个线程或另一个进程中的客户端接收调用。 存根 （stub） 位于与应用程序对象，并与相应的代理，它位于调用它的客户端进行通信。 另请参阅代理服务器。  
   
- 子节点  
+ sub-node  
  请参阅子级。  
   
  同步操作  
  启动完成之前可能会启动下一步操作的代码的操作。 另请参阅异步操作。  
   
 ## <a name="t-z"></a>T-Z  
- 树  
+ trEE  
  表示元素 （节点） 之间的层次结构关系的结构。 树 （根） 的最高层没有一个节点。 根目录下, 可以有多个子级。 每个子节点又可以是其他的子级，因此如一个树分支的父级。 包含文档和其他文件夹的文件夹是树状结构的典型示例。 另请参阅层次结构、 节点、 根、 子和父级。  
   
  Web 服务器  

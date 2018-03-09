@@ -2,15 +2,13 @@
 title: "DISCOVER_CALC_DEPENDENCY 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 39e8c2f6aa89e83de104862a22d8b8fefcab5fd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 行集
-  报告计算之间的依赖关系以及这些计算中引用的对象。 您可以在客户端应用程序中使用这些信息来报告与复杂公式相关的问题，或者在删除或修改相关对象时发出警告。 您还可以使用行集提取在度量值或计算列中使用的 DAX 表达式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]报告计算之间的依赖关系以及这些计算中引用的对象。 您可以在客户端应用程序中使用这些信息来报告与复杂公式相关的问题，或者在删除或修改相关对象时发出警告。 您还可以使用行集提取在度量值或计算列中使用的 DAX 表达式。  
   
  **适用于：** 表格模型  
   
@@ -126,7 +124,7 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|ReplTest1|  
 |--------------|-----------|  
 |GUID|a07ccd46-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|DependencyGraph|  

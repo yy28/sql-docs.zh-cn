@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e8bd2822a1892c967a23e3cdf62753f43952c1c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4602d02a25740ce296a059a0f3f1fd82a9a3db47
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-and-freeing-buffers"></a>分配和释放缓冲区
 所有缓冲区分配和释放应用程序。 如果不延迟的缓冲区，它需要仅存在于对函数调用的持续时间。 例如， **SQLGetInfo**返回指向的缓冲区中的特定选项与关联的值*InfoValuePtr*自变量。 可以在调用之后立即释放此缓冲区**SQLGetInfo**，下面的代码示例中所示：  

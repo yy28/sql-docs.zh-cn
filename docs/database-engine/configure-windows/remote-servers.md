@@ -2,10 +2,14 @@
 title: "远程服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2508d809528cd73f5e478b4ad76cf987918d9d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remote-servers"></a>远程服务器
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
   
  远程服务器配置使客户端能够连接到一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便在没有建立单独的连接的情况下在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行存储过程。 此时，客户端所连接的服务器接受客户端的请求，并代表客户端将该请求发送到远程服务器。 远程服务器处理请求，并将所有结果返回到原始的服务器。 服务器再将那些结果传递给客户端。 当设置远程服务器配置时，还应考虑如何建立安全性。  
   
@@ -60,7 +65,7 @@ ms.lasthandoff: 11/09/2017
 >  请尽可能使用 Windows 身份验证。  
   
 ### <a name="remote-server-security-example"></a>远程服务器安全性示例  
- 以下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装为例： **serverSend** 和 **serverReceive**。 配置 **serverReceive** 以将传入登录名从 **serverSend**（称为 **Sales_Mary**）映射到 **serverReceive**（称为 **Alice**）中的经过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。 将另一个传入帐户从 **serverSend**（称为 **Joe**）映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serverReceive *（称为* Joe **）中的经过**身份验证的登录帐户。  
+ 以下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装为例： **serverSend** 和 **serverReceive**。 配置 **serverReceive** 以将传入登录名从 **serverSend**（称为 **Sales_Mary**）映射到 **serverReceive**（称为 **Alice**）中的经过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。 将另一个来自于 serverSend（称为 Joe）的传入登录名映射到 serverReceive（称为 Joe）中经过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。  
   
  下面的 Transact-SQL 代码示例将 `serverSend` 配置为对 `serverReceive` 执行 RPC。  
   
@@ -98,7 +103,7 @@ GO
 ## <a name="viewing-local-or-remote-server-properties"></a>查看本地或远程服务器属性  
  可以使用 **xp_msver** 扩展存储过程来查看本地或远程服务器属性。 这些属性包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本号、计算机中的处理器类型和数目以及操作系统的版本。 从本地服务器可以查看远程服务器的数据库、文件、登录和工具。 有关详细信息，请参阅 [xp_msver (Transact-SQL)](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>相关内容  

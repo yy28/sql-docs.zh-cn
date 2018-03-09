@@ -3,10 +3,10 @@ title: "配置 PolyBase 连接到外部数据 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: "43"
-ms.openlocfilehash: 7d486992f688b5bc914508ef000f23209b4bde89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+ms.openlocfilehash: d9777fb2bbfd9af2598a422fc072877ff0b78959
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>配置 PolyBase 连接到外部数据
 说明如何在 SQL Server PDW 连接到外部 Hadoop 或 Microsoft Azure 存储 blob 数据源中配置 PolyBase。 使用 PolyBase 将运行集成来自多个源，包括 Hadoop、 Azure blob 存储和 SQL Server PDW 的数据的查询。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
     RECONFIGURE;  
     ```  
   
-    运行 sp_configure 以及重新配置设置的配置值。 需要重新启动区域设置的运行的值。 重新启动后需要，则下一步停止还，因为你不必执行之前在下一步的步骤，这会更改 core-site.xml 完成之后重新启动。  
+    运行 sp_configure 以及重新配置设置的配置值。 需要重新启动区域设置的运行的值。 重新启动后需要，则下一步停止还，因为你不必执行在下一步，这会更改 core-site.xml 之前重新启动。  
   
 4.  若要启用 Microsoft Azure blob 存储作为外部数据源，将一个或多个 Microsoft Azure 存储帐户访问密钥添加到 PDW core-site.xml 文件中。 若要添加的键：  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
         ```  
   
         > [!CAUTION]  
-        > 存储访问密钥存储在 core-site.xml 中之前采取安全预防措施。 任何具有 CONTROL SERVER 或 ALTER ANY EXTERNAL DATA SOURCE 权限用户都可以创建外部数据源可访问此帐户。 创建外部数据源后，所有 SQL Server PDW 用户有权都创建表可以都创建外部表访问此存储帐户。 然后，用户将能够访问帐户数据和使用的帐户中的资源。  
+        > 存储访问密钥存储在 core-site.xml 中之前采取安全预防措施。 任何具有 CONTROL SERVER 或 ALTER ANY EXTERNAL DATA SOURCE 权限用户都可以创建外部数据源可访问此帐户。 创建外部数据源后，使用 CREATE TABLE 权限的所有 SQL Server PDW 用户可以都创建外部表访问此存储帐户。 然后，用户可以访问帐户数据并使用该帐户中的资源。  
   
     6.  将所做的更改保存到 core-site.xml 中。  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  重新启动 PDW 区域。 若要执行此操作，请使用 Configuration Manager 工具。 请参阅[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md).  
   
-7.  验证 Hadoop 连接的安全设置。 如果**弱的身份验证**端通过使用 Hadoop 上的启用`dfs.permission = true`，必须创建 Hadoop 用户**pdw_user**和授予完全读取并写入到此用户的权限。 SQL Server PDW 和来自 SQL Server PDW 的相应调用始终作为发出**pdw_user**其是固定的用户名且不能在此版本的 Hadoop 连接和 SQL Server PDW 发布更改。 如果通过禁用在 Hadoop 上的安全性`dfs.permission = false`，则不需要进行任何进一步操作。  
+7.  验证 Hadoop 连接的安全设置。 如果**弱的身份验证**端通过使用 Hadoop 上的启用`dfs.permission = true`，必须创建 Hadoop 用户**pdw_user**和授予完全读取并写入到此用户的权限。 SQL Server PDW 和来自 SQL Server PDW 的相应调用始终作为发出**pdw_user**。  这是固定的用户名，无法在此版本的 Hadoop 连接和 SQL Server PDW 发布更改。 如果通过禁用在 Hadoop 上的安全性`dfs.permission = false`，则不需要进行任何进一步操作。  
   
 8.  决定哪些用户可以创建到 Microsoft Azure blob 存储的外部数据源。 为每个这些用户提供的存储帐户名称以及**ALTER ANY EXTERNAL DATA SOURCE**或**CONTROL SERVER**权限。  
   
@@ -132,7 +132,37 @@ ms.lasthandoff: 11/17/2017
 10. 连接到 WASB 还需要在设备上配置的 DNS 转发。 若要配置 DNS 转发，请参阅[使用 DNS 转发器来解决非设备 DNS 名称 &#40;分析平台系统 &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 外部数据源、 外部文件格式和外部表，现在可以创建授权的用户。 它们可以使用它们来将数据从多个源，包括 Hadoop、 集成 Microsoft Azure blob 存储和 SQL Server PDW。  
+
+## <a name="kerberos-configuration"></a>Kerberos 配置  
+请注意，当 PolyBase 向 Kerberos 安全群集身份验证，hadoop.rpc.protection 设置必须设置为身份验证。 这将以未加密状态的 Hadoop 节点之间使数据通信。 
+
+ 若要连接到 [使用 MIT KDC] 的 Kerberos 保护的 Hadoop 群集：
+   
   
+1.  在管理节点上的安装路径中查找 Hadoop 配置目录：  
+  
+    ```  
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```  
+  
+2.  查找表中列出的配置密钥 Hadoop 端配置值。 （对于 Hadoop 计算机，在 Hadoop 配置目录中查找文件。）  
+  
+3.  将配置值复制到的值属性中的控件节点上的相应文件。  
+  
+    |**#**|**配置文件**|**配置密钥**|**操作**|  
+    |------------|----------------|---------------------|----------|   
+    |1|core-site.xml|polybase.kerberos.kdchost|指定 KDC 主机名。 例如：kerberos.your-realm.com。|  
+    |2|core-site.xml|polybase.kerberos.realm|指定 Kerberos 领域。 例如：YOUR-REALM.COM|  
+    |3|core-site.xml|hadoop.security.authentication|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如：KERBEROS<br></br>**安全说明：** KERBEROS 必须采用大写形式。 如果采用小写，则可能不会打开。|   
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如： hdfs/_HOST@YOUR-REALM.COM|  
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如： mapred/_HOST@YOUR-REALM.COM|  
+    |6|mapred-site.xml|mapreduce.jobhistory.address|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如：10.193.26.174:10020|  
+    |7|yarn-site.xml yarn。|yarn.resourcemanager.principal|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如： yarn/_HOST@YOUR-REALM.COM|  
+  
+4. 创建数据库范围内的凭据对象，以指定每个 Hadoop 用户的身份验证信息。 请参阅 [PolyBase T-SQL 对象](../relational-databases/polybase/polybase-t-sql-objects.md)。  
+
+5. 重新启动 PDW 区域。 若要执行此操作，请使用 Configuration Manager 工具。 请参阅[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md).
+ 
 ## <a name="see-also"></a>另请参阅  
 [设备配置 &#40;分析平台系统 &#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

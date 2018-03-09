@@ -1,33 +1,31 @@
 ---
-title: "工作区数据库 (SSAS 表格) |Microsoft 文档"
+title: "工作区数据库 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/21/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0d10c2fab9cb3a613446015e8bd3dbe3dbdce868
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="workspace-database-ssas-tabular"></a>工作区数据库（SSAS 表格）
-  当您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的表格模型项目时，将创建在模型创作期间使用的表格模型工作区数据库。
+# <a name="workspace-database"></a>工作区数据库 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+当您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的表格模型项目时，将创建在模型创作期间使用的表格模型工作区数据库。
   
 ## <a name="specifying-a-workspace-instance"></a>指定工作区实例  
   在 SSDT 中创建新的表格模型项目时，可以指定一个 Analysis Services 实例，以便在创作项目时使用。 从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 2016 年 9 月版 (14.0.60918.0) 开始，将引入用于在创建新的表格模型项目时指定工作区实例的两种模式。 
@@ -35,8 +33,6 @@ ms.lasthandoff: 11/17/2017
 **集成工作区** - 利用 SSDT 自身内部的 Analysis Services 实例。
 
 **工作区服务器** - 在显式 Analysis Services 实例中创建工作区数据库，通常在 SSDT 所在的同一台计算机或同一网络中的另一台计算机上。
-
-
   
 ### <a name="integrated-workspace"></a>集成工作区
 通过集成工作区，使用 SSDT 自身的隐式 Analysis Services 实例在内存中创建工作数据库。 集成工作区模式显著降低了在 SSDT 中创作表格项目的复杂性，因为无需单独显式安装 SQL Server Analysis Services。
@@ -59,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  使用表导入向导或使用“复制/粘贴”功能将数据添加到模型项目后，在模型设计器中查看表、列和数据时，即在查看工作区数据库。 如果添加其他表、列和关系等，将更改工作区数据库。  
   
- 部署表格模型项目时，在“部署服务器”属性中指定的 Analysis Services 服务器实例上创建部署的模型数据库（基本上是工作区数据库的副本）。 有关“部署服务器”属性的详细信息，请参阅[项目属性（SSAS 表格）](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)。  
+ 部署表格模型项目时，在“部署服务器”属性中指定的 Analysis Services 服务器实例上创建部署的模型数据库（基本上是工作区数据库的副本）。 有关部署服务器属性的详细信息，请参阅[项目属性](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)。  
   
  模型工作区数据库通常驻留在 localhost 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器的本地命名实例上。 您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的远程实例来承载工作区数据库，但是由于数据查询滞后和其他限制，不推荐使用此配置。 承载工作区数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例最好与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]在同一计算机上。 创建模型项目的计算机与承载工作区数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的计算机相同可以提高性能。  
   
@@ -85,7 +81,7 @@ ms.lasthandoff: 11/17/2017
  工作区数据库属性包含在模型属性中。 若要查看模型属性，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **“解决方案资源管理器”**中，单击 **Model.bim** 文件。 可以使用 **“属性”** 窗口配置模型属性。 工作区数据库特定属性包括：  
   
 > [!NOTE]  
->  创建新模型项目时，“集成工作区模式”、“工作区服务器”、“工作区保持期”和“数据备份”属性将应用默认设置。 可以在“数据建模”页上（位于“工具\选项”对话框的“分析服务器”设置中）更改新模型项目的默认设置。 可以在 **“属性”** 窗口中为每个模型项目设置这些属性以及其他属性。 更改默认设置不会应用到已创建的模型项目。 有关详细信息，请参阅[配置默认数据建模和部署属性（SSAS 表格）](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
+>  创建新模型项目时，“集成工作区模式”、“工作区服务器”、“工作区保持期”和“数据备份”属性将应用默认设置。 可以在“数据建模”页上（位于“工具\选项”对话框的“分析服务器”设置中）更改新模型项目的默认设置。 可以在 **“属性”** 窗口中为每个模型项目设置这些属性以及其他属性。 更改默认设置不会应用到已创建的模型项目。 有关详细信息，请参阅[配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
 |属性|默认设置|Description|  
 |--------------|---------------------|-----------------|  
@@ -98,6 +94,6 @@ ms.lasthandoff: 11/17/2017
  可以使用 SQL Server Management Studio (SSMS) 连接到托管工作区数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 通常，无需对工作区数据库进行管理；例外的情况是分离或删除工作区数据库，这必须从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]执行。 在模型设计器中打开项目时，不要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来管理工作区数据库。 这样做可能导致数据丢失。
    
 ## <a name="see-also"></a>另请参阅  
-[模型属性（SSAS 表格）](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+[模型属性](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

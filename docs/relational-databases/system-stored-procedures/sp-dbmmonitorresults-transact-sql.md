@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
 - sp_dbmmonitorresults_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9dd87ba18696c5787c3ee2220846a3dde857b660
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ce88354c3d378dbfa2e7bc71acd57ed52aaf5131
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +83,7 @@ sp_dbmmonitorresults database_name
  1 = 数据库的状态更新通过调用**sp_dbmmonitorupdate**之前计算结果。 但是，如果已更新状态表在前 15 秒或用户不是成员的**sysadmin**固定服务器角色、 **sp_dbmmonitorresults**运行而不更新的状态。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
  返回指定数据库的所请求行数的历史记录状态。 每一行包含以下信息：  
@@ -107,7 +109,7 @@ sp_dbmmonitorresults database_name
 ## <a name="remarks"></a>注释  
  **sp_dbmmonitorresults**可以仅在上下文中执行**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定的服务器角色或在**dbm_monitor**中的固定的数据库角色**msdb**数据库。 **Dbm_monitor**角色可让其成员，若要查看数据库镜像状态，但不是更新它，但不是查看或配置数据库镜像事件。  
   
 > [!NOTE]  

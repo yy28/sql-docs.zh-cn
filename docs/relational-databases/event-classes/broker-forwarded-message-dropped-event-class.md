@@ -2,31 +2,37 @@
 title: "Broker:Forwarded Message Dropped 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Broker:Forwarded Message Dropped event class
+helpviewer_keywords:
+- Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ee4d1edd96ee99a8d2ce93513b7d1423811d5b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b64db8b03faa5a21cc0644d58cac76df13483511
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件类
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当 Service Broker 删除要用于转发的消息时，将生成 Broker:Forwarded Message Dropped 事件。  
   
 ## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Broker:Forwarded Message Dropped 事件类的数据列  
   
-|数据列|类型|说明|列号|可筛选|  
+|数据列|类型|Description|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BigintData1|**bigint**|消息序列号。|52|是|  
@@ -57,7 +63,7 @@ ms.lasthandoff: 11/09/2017
 |成功|**int**|消息处于活动状态的时间长度。 如果此值大于或等于生存时间，则删除该消息。|23|是|  
 |TargetLoginName|**nvarchar**|消息本应已转发到的网络地址。|42|是|  
 |TargetUserName|**nvarchar**|启动消息的服务的名称。|39|是|  
-|TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的原因说明。|1|是|  
+|TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的原因说明。|@shouldalert|是|  
 |Transaction ID|**bigint**|系统为事务分配的 ID。|4|是|  
   
  此事件的 TextData 列包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 删除消息的原因说明。  

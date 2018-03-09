@@ -2,33 +2,39 @@
 title: "数据库镜像监视器（“警告”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.warningsandalerts.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da1fb8bd1af9fee7be317e940eae7fc9bc2db455
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f150d44a28915741ffd45b4e8c4506deb41a5a51
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>数据库镜像监视器（警告页）
-  显示数据库镜像事件所支持警告的只读列表和指定的警告阈值（如果有）。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+显示数据库镜像事件所支持警告的只读列表和指定的警告阈值（如果有）。  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="columns"></a>列  
+## <a name="columns"></a>“列”  
  **警告**  
  可以定义阈值的警告包括：  
   
@@ -49,8 +55,8 @@ ms.lasthandoff: 11/09/2017
   
  有关详细信息，请参阅本主题后面的“备注”。  
   
-## <a name="remarks"></a>注释  
- 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则在每个单元格中，网格都将根据实例是默认实例还是命名实例来显示“未连接到*<SYSTEM_NAME>*”或“未连接到 *<SYSTEM_NAME>***\\***<instance_name>*”。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示 **“等待数据...”** 。  
+## <a name="remarks"></a>Remarks  
+ 如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 <SYSTEM_NAME>”或“未连接到 <SYSTEM_NAME>\\<instance_name>”。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示 **“等待数据...”** 。  
   
  当信息可用时，每个警告的单元格将会显示指定的阈值（和度量单位）或“未启用”。  
   

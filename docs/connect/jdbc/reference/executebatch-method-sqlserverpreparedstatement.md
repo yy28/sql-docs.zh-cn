@@ -8,23 +8,26 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: SQLServerPreparedStatement.executeBatch
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.executeBatch
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a459eef327f162e362cf5f86fbba1c2a726e78af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 774a382c6e026094261ec562f21e11ba80dc85fb
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>executeBatch 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,9 +51,7 @@ public int[] executeBatch()
   
 ## <a name="remarks"></a>注释  
  由 java.sql.Statement 接口中的 executeBatch 方法指定此 executeBatch 方法。  
-  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 是符合 JDBC 4.0 建议如果存储的过程接受 OUT 或 INOUT （从 PreparedStatement 继承） CallableStatement.executeBatch 方法的调用，将引发 BatchUpdateException参数或返回内容以外的更新计数。  
-  
+    
  此方法将替代[SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)。  
   
 ## <a name="see-also"></a>另请参阅  

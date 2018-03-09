@@ -2,10 +2,14 @@
 title: "删除或禁用 DML 触发器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-dml
+ms.suite: sql
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - deleting DML triggers
 - DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c2b6a47c174145c8e308613245427a61411e9aa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 29d5bb89d7d5ffc59bbe62051a92066829172842
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-or-disable-dml-triggers"></a>删除或禁用 DML 触发器
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除或禁用 DML 触发器。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除或禁用 DML 触发器。  
   
  **本主题内容**  
   
@@ -36,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
      [建议](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要删除或禁用 DML 触发器，请使用：**  
   
@@ -56,7 +61,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  若要删除 DML 触发器，要求对要定义触发器的表或视图具有 ALTER 权限。  
   
  若要禁用或启用 DML 触发器，用户必须至少对为其创建触发器的表或视图具有 ALTER 权限。  
@@ -87,13 +92,13 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-delete-a-dml-trigger"></a>删除 DML 触发器  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  复制以下示例并将其粘贴到查询窗口中。 执行 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 语句以创建 `Sales.bonus_reminder` 触发器。 若要删除该触发器，请执行 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 语句。  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -109,7 +114,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -121,13 +126,13 @@ GO
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>禁用和启用 DML 触发器  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  复制以下示例并将其粘贴到查询窗口中。 执行 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 语句以创建 `Sales.bonus_reminder` 触发器。 若要禁用和启用该触发器，请分别执行 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 语句和 [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) 语句。  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -143,7 +148,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -152,7 +157,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  

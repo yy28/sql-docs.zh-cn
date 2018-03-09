@@ -5,24 +5,26 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.mds.configmanager.dbmailprofileacct.f1
+f1_keywords:
+- sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5eea1f635fcd1080bf85fe0d45c689ef883181a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99221347b323c5353d681c372865616083bdbd5b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>“创建数据库邮件配置文件和帐户”对话框
   使用 **“创建数据库邮件配置文件和帐户”** 对话框可为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库创建数据库邮件配置文件和数据库邮件帐户。 此配置文件将用于在业务规则验证失败时通过电子邮件通知用户和组。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 |**电子邮件地址**|键入帐户电子邮件地址的名称。 这是发送该电子邮件的地址，该地址必须采用 *email_name*@*domain_name*的格式。 电子邮件地址示例为 sales@contoso.com。|  
 |**显示名称**|可选设置。 键入由此帐户发送的电子邮件上显示的名称。 显示名称的一个例子是 Contoso Sales Group。|  
 |**答复电子邮件地址**|可选设置。 键入用于答复由此帐户发送的电子邮件的电子邮件地址。 一个示例答复电子邮件地址为 admin@contoso.com。|  
-|**SMTP 服务器**|键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 SMTP 服务器格式示例：**smtp.***<company_name>***.com**。如需相关帮助，请询问您的邮件管理员。|  
+|**SMTP 服务器**|键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 SMTP 服务器格式示例：smtp.<company_name>.com。如需相关帮助，请询问您的邮件管理员。|  
 |**端口号**|键入此帐户的 SMTP 服务器的端口号。 默认 SMTP 端口为 25。|  
 |**此服务器要求安全连接(SSL)**|使用安全套接字层 (SSL) 加密通信。|  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |**使用数据库引擎服务凭据的 Windows 身份验证**|指定数据库邮件应该使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 服务帐户的凭据来用于 SMTP 服务器上的身份验证。|  
 |**基本身份验证**|指定数据库邮件应使用特定的用户名和密码在 SMTP 服务器上进行身份验证。 此信息仅用于针对电子邮件服务器的身份验证，并且帐户不需要与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户或者运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的计算机上的用户相对应。|  
-|**用户名**|键入数据库邮件登录到 SMTP 服务器所用的用户帐户的名称。 如果 SMTP 服务器要求基本身份验证，则需要提供用户名。|  
+|**User name**|键入数据库邮件登录到 SMTP 服务器所用的用户帐户的名称。 如果 SMTP 服务器要求基本身份验证，则需要提供用户名。|  
 |**密码**|键入数据库邮件登录到 SMTP 服务器所用的密码。 如果 SMTP 服务器要求基本身份验证，则需要提供密码。|  
 |**确认密码**|再次输入密码以进行确认。|  
 |**匿名身份验证**|指定 SMTP 服务器不要求身份验证。 数据库邮件将不使用任何凭据在 SMTP 服务器上进行身份验证。|  

@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 02/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: drivers
+ms.component: php
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abf75fb674ea8da86c84c3605dadef61db8b3913
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="php-driver-for-sql-server-support-for-localdb"></a>PHP Driver for SQL Server 对 LocalDB 的支持
 
@@ -26,7 +28,7 @@ ms.lasthandoff: 11/09/2017
 
 从[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]的轻量版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 称为 LocalDB、 将可用。 本主题介绍如何连接到 LocalDB 实例中的数据库。
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
 有关 LocalDB，包括如何安装 LocalDB 和配置 LocalDB 实例，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]上的联机丛书主题[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express LocalDB。
 

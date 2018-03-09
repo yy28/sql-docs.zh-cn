@@ -2,9 +2,12 @@
 title: "修改统计信息 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,24 +16,24 @@ helpviewer_keywords:
 - modifying statistics
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 559c777cd50f1a3564fc70194f852736751cc275
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 00114f6c9d691ed00b71c9d640fa57d7676c3426
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-statistics"></a>修改统计信息
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的现有统计信息。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 修改 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的现有统计信息。  
   
  **本主题内容**  
   
 -   **开始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要修改统计信息，请使用：**  
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求：  
   
 -   用户对表或视图具有 ALTER 权限。  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  在“统计信息属性 -”*statistics_name* 对话框中的“常规页”上，单击“添加”“删除”“上移”“下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在 **“统计信息列”** 网格内的位置可能会显著影响统计信息的有用性。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改统计信息**  

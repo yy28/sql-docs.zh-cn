@@ -2,18 +2,17 @@
 title: "多维数据集单元格 (Analysis Services-多维数据) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storing data [Analysis Services], cells
 - hierarchies [Analysis Services], cells
@@ -31,19 +30,20 @@ helpviewer_keywords:
 - leaf members
 - leaf cells
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96d7b596c1434dce62dfd9013f277b182f5ff4c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6542727b42e98fa73f2e485f0bf88426c442df2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>多维数据集单元（Analysis Services - 多维数据）
-  多维数据集由单元组成，单元按度量值组和维度进行组织。 单元表示多维数据集中来自多维数据集内每个维度的一个成员的唯一逻辑交集。 例如，以下关系图说明的多维数据集包含了一个有两个度量值的度量值组，它们通过三个名为“源”、“路线”和“时间”的维度组织在一起。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+多维数据集由单元组成，单元按度量值组和维度进行组织。 单元表示多维数据集中来自多维数据集内每个维度的一个成员的唯一逻辑交集。 例如，以下关系图说明的多维数据集包含了一个有两个度量值的度量值组，它们通过三个名为“源”、“路线”和“时间”的维度组织在一起。  
   
  ![标识一个单元格的多维数据集关系图](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro5.gif "标识单个单元格的多维数据集关系图")  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，空单元格是具有特殊质量一个单元格。 因为空单元可扭曲交叉联接、计数等的结果，因此为了进行计算，许多 MDX 函数都提供了忽略空单元的功能。 有关详细信息，请参阅[多维表达式 &#40;MDX &#41;引用](../../mdx/multidimensional-expressions-mdx-reference.md)，和[MDX &#40; 中的重要概念Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  对单元数据的访问是在角色级别通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来进行管理的，并且可以使用 MDX 表达式进行严格控制。 有关详细信息，请参阅[授予维度数据 &#40; 的自定义访问权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)，和[授予单元数据 &#40; 的自定义访问权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   
 ## <a name="see-also"></a>另请参阅  

@@ -2,25 +2,28 @@
 title: "SQL Server 配置 (R Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>与 R 一起使用的 SQL Server 配置
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是介绍 R 服务基于两个案例研究的性能优化的一系列中第二个。  本文提供了有关用于运行 SQL Server R Services 的计算机的硬件和网络配置的指导。 它还包含有关如何配置 SQL Server 实例、 数据库或表的解决方案中使用的信息。 因为使用的 SQL Server 中的 NUMA 模糊硬件和数据库优化之间的行，第三个部分将讨论详细的 CPU 关联和资源管理。
 
@@ -70,7 +73,7 @@ Windows 操作系统使用分页文件来管理故障转储和存储虚拟内存
 
 存储页面文件的磁盘的速度也会影响性能。 将页面文件存储在 SSD 中或者在多个 SSD 上使用多个页面文件可以提高性能。
 
-有关大小调整页面文件的信息，请参阅[如何确定合适的页面文件大小为 64 位版本的 Windows](https://support.microsoft.com/en-us/kb/2860880)。
+有关大小调整页面文件的信息，请参阅[如何确定合适的页面文件大小为 64 位版本的 Windows](https://support.microsoft.com/kb/2860880)。
 
 ## <a name="optimizations-at-instance-or-database-level"></a>在实例或数据库级别的优化
 
@@ -167,7 +170,7 @@ SQL Server 启用 SOFT-NUMA 后，为你; 的节点自动管理但是，若要�
 
 **其他资源：**
 
-+ [SQL Server 中的软件 NUMA](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [SQL Server 中的软件 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     如何将软件 NUMA 节点映射到 Cpu
 

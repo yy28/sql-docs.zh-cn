@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ab4e7d426e3923956af385bc11df8bd31df47b2e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4e1d6146d2f88265593a36709a39f8a770316f6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---avg-function"></a>报表生成器函数 - Avg 函数
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的平均值。  
@@ -51,7 +49,7 @@ Avg(expression, scope, recursive)
 ## <a name="return-type"></a>返回类型  
  对于十进制表达式，返回 **Decimal** ；对于所有其他类型的表达式，返回 **Double** 。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  表达式中指定的数据集必须具有相同的数据类型。 若要将具有多个数值数据类型的数据转换为同一数据类型，请使用类似 **CInt**、 **CDbl** 或 **CDec**的转换函数。 有关详细信息，请参阅 [Type Conversion Functions](http://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
   
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  

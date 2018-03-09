@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31122122cdb7a6f940dd1ba91eeb8caef8ac9d0c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3bb3278fe83922aee29aa8348d32b3fbc757511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-data"></a>Unicode 数据
 SQL Unicode 数据类型用于描述驻留在本机上 DBMS 为 Unicode 的数据。 C Unicode 数据类型可用于允许应用程序将数据绑定到 Unicode 缓冲区。 驱动程序管理器可以将数据转换从 Unicode C 类型 (SQL_C_WCHAR) 以使其带有 ANSI 驱动程序的函数。  

@@ -1,14 +1,15 @@
 ---
 title: "计算列上的索引 | Microsoft Docs"
 ms.custom: 
-ms.date: 02/17/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,37 +19,33 @@ helpviewer_keywords:
 - persisted computed columns
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea21b5b7cab5a9da6c107c3b54d9e156c0b38196
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17eefea966232b9ef297477efae843e556098ba8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="indexes-on-computed-columns"></a>计算列上的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  只要满足下列要求就可以为计算列定义索引：  
+只要满足下列要求就可以为计算列定义索引：  
   
 -   所有权要求  
-  
 -   确定性要求  
-  
 -   精度要求  
-  
 -   数据类型要求  
-  
 -   SET 选项要求  
   
- **Ownership Requirements**  
+**Ownership Requirements**  
   
- 计算列中的所有函数引用必须与表具有相同的所有者。  
+计算列中的所有函数引用必须与表具有相同的所有者。  
   
- **Determinism Requirements**  
+**Determinism Requirements**  
   
 > [!IMPORTANT]  
 >  如果对于一组指定的输入表达式始终返回相同的结果，则说明表达式具有确定性。 **COLUMNPROPERTY** 函数的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 属性报告 *computed_column_expression* 是否具有确定性。  
@@ -63,24 +60,29 @@ ms.lasthandoff: 11/17/2017
   
 -   *computed_column_expression* 没有系统数据访问或用户数据访问。  
   
- 任何包含公共语言运行时 (CLR) 表达式的计算列都必须具有确定性并标记为 PERSISTED，这样才能为该列创建索引。 允许在计算列定义中使用 CLR 用户定义类型的表达式。 类型为 CLR 用户定义类型的计算列只要其类型是可比较的，就可以在该列上创建索引。 有关详细信息，请参阅 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
+任何包含公共语言运行时 (CLR) 表达式的计算列都必须具有确定性并标记为 PERSISTED，这样才能为该列创建索引。 允许在计算列定义中使用 CLR 用户定义类型的表达式。 类型为 CLR 用户定义类型的计算列只要其类型是可比较的，就可以在该列上创建索引。 有关详细信息，请参阅 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
-> [!NOTE]  
->  如果您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内的索引计算列中引用 date 数据类型的字符串文字，则建议使用确定性日期格式样式将该文字显式转换为所需的日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST and CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。 除非数据库兼容级别设置为 80 或更低，否则涉及字符串到 date 数据类型的隐式转换的表达式将被视为具有不确定性。 这是因为结果取决于服务器会话的 [LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和 [DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 设置。 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`30 listopad 1996`在不同语言中表示不同的月份。 同样，在表达式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 基于 DATEFORMAT 设置解释字符串 `'2000-12-01'` 。  
+> [!IMPORTANT]  
+>  如果您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内的索引计算列中引用 date 数据类型的字符串文字，则建议使用确定性日期格式样式将该文字显式转换为所需的日期类型。 有关确定性日期格式样式的列表，请参阅 [CAST and CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
+
+> [!NOTE]
+> 除非数据库兼容级别设置为 80 或更低，否则涉及字符串到 date 数据类型的隐式转换的表达式将被视为具有不确定性。 这是因为结果取决于服务器会话的 [LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和 [DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 设置。 
+>
+> 例如，表达式 `CONVERT (datetime, '30 listopad 1996', 113)` 的结果取决于 LANGUAGE 设置，因为字符串`30 listopad 1996`在不同语言中表示不同的月份。 
+> 同样，在表达式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 基于 DATEFORMAT 设置解释字符串 `'2000-12-01'` 。  
 >   
->  非 Unicode 字符数据在排序规则间的隐式转换也被视为具有不确定性，除非兼容级别设置为 80 或更低。  
+> 非 Unicode 字符数据在排序规则间的隐式转换也被视为具有不确定性，除非兼容级别设置为 80 或更低。  
 >   
->  当数据库兼容级别设置为 90 时，不能对包含这些表达式的计算列创建索引。 但在已升级的数据库中，包含这些表达式的现有计算列是可以维护的。 如果使用包含字符串到日期的隐式转换的索引计算列，则为了避免损坏索引，请确保数据库和应用程序中的 LANGUAGE 和 DATEFORMAT 设置一致。  
+> 当数据库兼容级别设置为 90 时，不能对包含这些表达式的计算列创建索引。 但在已升级的数据库中，包含这些表达式的现有计算列是可以维护的。 如果使用包含字符串到日期的隐式转换的索引计算列，则为了避免损坏索引，请确保数据库和应用程序中的 LANGUAGE 和 DATEFORMAT 设置一致。  
   
  **Precision Requirements**  
   
  *computed_column_expression* 必须精确。 如果下列一项或多项为真，则 *computed_column_expression* 是精确的：  
   
 -   表达式的数据类型不是 **float** 或 **real** 。  
-  
 -   表达式定义中没有使用 **float** 或 **real** 数据类型。 例如，在下列语句中，列 `y` 为 **int** 且具有确定性，但不精确。  
   
-    ```  
+    ```sql  
     CREATE TABLE t2 (a int, b int, c int, x float,   
        y AS CASE x   
              WHEN 0 THEN a   
@@ -90,44 +92,38 @@ ms.lasthandoff: 11/17/2017
     ```  
   
 > [!NOTE]  
->  任何 **float** 或 **real** 表达式都被认为是不精确的，不能作为索引键； **float** 或 **real** 表达式可以在索引视图中使用，但不能作为键使用。 对于计算列同样如此。 如果任何函数、表达式或用户定义函数包含任何 **float** 或 **real** 表达式，则被认为是不精确的。 这也包括逻辑表达式（比较）。  
+> 任何 **float** 或 **real** 表达式都被认为是不精确的，不能作为索引键； **float** 或 **real** 表达式可以在索引视图中使用，但不能作为键使用。 对于计算列同样如此。 如果任何函数、表达式或用户定义函数包含任何 **float** 或 **real** 表达式，则被认为是不精确的。 这也包括逻辑表达式（比较）。  
   
- COLUMNPROPERTY 函数的 **IsPrecise** 属性报告 *computed_column_expression* 是否精确。  
+COLUMNPROPERTY 函数的 **IsPrecise** 属性报告 *computed_column_expression* 是否精确。  
   
- **Data Type Requirements**  
+**Data Type Requirements**  
   
 -   为计算列定义的 *computed_column_expression* 不能求值为 **text**、 **ntext**或 **image** 数据类型。  
-  
 -   只要计算列的数据类型可以作为索引键列，从 **image**、 **ntext**、 **text**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**和 **xml** 数据类型派生的计算列上就可以创建索引。  
-  
 -   只要计算列的数据类型可以作为非键索引列，从 **image**、 **ntext**和 **text** 数据类型派生的计算列就可以作为非聚集索引中的非键（包含性）列。  
   
- **SET Option Requirements**  
+**SET Option Requirements**  
   
 -   执行定义计算列的 CREATE TABLE 或 ALTER TABLE 语句时，必须将 ANSI_NULLS 连接级选项设置为 ON。 [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md) 函数通过 **IsAnsiNullsOn** 属性报告此选项是否设置为 ON。  
-  
 -   对于在其中创建索引的连接和所有尝试执行 INSERT、UPDATE 或 DELETE 语句（将更改索引中的值）的连接，必须将六个 SET 选项设置为 ON，将一个选项设置为 OFF。 如果不具有上述选项设置的连接执行了任何 SELECT 语句，优化器将忽略计算列的索引。  
   
     -   NUMERIC_ROUNDABORT 选项必须设置为 OFF，且下列选项必须设置为 ON：  
-  
     -   ANSI_NULLS  
-  
     -   ANSI_PADDING  
-  
     -   ANSI_WARNINGS  
-  
     -   ARITHABORT  
-  
     -   CONCAT_NULL_YIELDS_NULL  
-  
     -   QUOTED_IDENTIFIER  
   
-     当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。  
+> [!NOTE]
+> 当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。  
   
-##  <a name="BKMK_persisted"></a> 对持久化计算列创建索引  
- 如果计算列使用确定性但不精确的表达式定义，但在 CREATE TABLE 或 ALTER TABLE 语句中标记为 PERSISTED，则可以在该列上创建索引。 这意味着 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在表中存储计算值，并且在计算列所依赖的任何其他列发生更新时更新这些值。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对列创建了索引并且该索引由某查询引用，则会使用这些持久值。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不能准确证明返回计算列表达式的函数（特别是在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中创建的 CLR 函数）是否既具有确定性又精确时，使用此选项可以对计算列创建索引。  
+## <a name="BKMK_persisted"></a> 对持久化计算列创建索引  
+如果计算列使用确定性但不精确的表达式定义，但在 CREATE TABLE 或 ALTER TABLE 语句中标记为 PERSISTED，则可以在该列上创建索引。 这意味着 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在表中存储计算值，并且在计算列所依赖的任何其他列发生更新时更新这些值。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对列创建了索引并且该索引由某查询引用，则会使用这些持久值。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不能准确证明返回计算列表达式的函数（特别是在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中创建的 CLR 函数）是否既具有确定性又精确时，使用此选项可以对计算列创建索引。  
   
 ## <a name="related-content"></a>相关内容  
- [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)  
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)    
+ [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
   
   

@@ -1,11 +1,11 @@
 ---
-title: "Integration Services (SSIS) 项目和解决方案 |Microsoft 文档"
+title: "Integration Services (SSIS) 项目和解决方案 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -21,22 +21,21 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 63
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 246a6df702e323d57d21e9e014aa059db31b300e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b1d5948bbcd6531b5a69cc85699cbdf06d87c662
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 项目和解决方案
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 用于开发 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包驻留在项目中。 若要创建和使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，必须安装 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 环境。 有关详细信息，请参阅 [安装 Integration Services](../integration-services/install-windows/install-integration-services.md)。  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包驻留在项目中。 若要创建和使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，必须安装 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 环境。 有关详细信息，请参阅 [安装 Integration Services](../integration-services/install-windows/install-integration-services.md)。  
   
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建新的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目时， **“新建项目”** 对话框包含一个 **“Integration Services 项目”** 模板。 此项目模板创建包含一个包的新项目。  
   
@@ -44,7 +43,7 @@ ms.lasthandoff: 09/26/2017
  项目存储在解决方案中。 可以先创建解决方案，然后向该解决方案添加 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 如果不存在解决方案， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将在您首次创建项目时自动创建解决方案。 解决方案可以包含多个不同类型的项目。  
   
 > [!TIP]  
->  默认情况下，当你创建新项目中的[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，解决方案中不会显示**解决方案资源管理器**窗格。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”**。 在 **“选项”** 对话框中，展开 **“项目和解决方案”**，然后单击 **“常规”**。 在 **“常规”** 页上，选择 **“总是显示解决方案”**。  
+>  默认情况下，在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中创建新项目时，“解决方案资源管理器”窗格不会显示该解决方案。 若要更改此默认行为，请在 **“工具”** 菜单上单击 **“选项”**。 在 **“选项”** 对话框中，展开 **“项目和解决方案”**，然后单击 **“常规”**。 在 **“常规”** 页上，选择 **“总是显示解决方案”**。  
 
 ## <a name="solutions-contain-projects"></a>解决方案包含项目  
  解决方案是对开发端到端商业解决方案时所使用的项目进行分组和管理的容器。 使用解决方案，您可以将多个项目作为一个单元处理，并将构成商业解决方案的一个或多个相关项目组合在一起。  
@@ -92,7 +91,7 @@ ms.lasthandoff: 09/26/2017
   
  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”以打开该项目的属性页。 在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
- ![在项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion 属性在项目属性对话框中")  
+ ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
  
 ## <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目  
   
@@ -120,15 +119,15 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>选择项目的目标版本及其包  
   
-1.  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”以打开该项目的属性页。  
+1.  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。  
   
 2.  在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
   
-     ![在项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion 属性在项目属性对话框中")  
+     ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
   
  你可以创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。  
 
-## <a name="import-an-existing-project-with-the-import-project-wizard"></a>导入具有导入项目向导的现有项目
+## <a name="import-an-existing-project-with-the-import-project-wizard"></a>使用导入项目向导导入现有项目
   
 1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的“文件”菜单上，单击“新建” > “项目”。  
   
@@ -160,7 +159,7 @@ ms.lasthandoff: 09/26/2017
   
 12. 单击 **“关闭”** 以关闭 **“Integration Services 导入项目向导”** 对话框。  
 
-## <a name="add-a-project-to-a-solution"></a>将项目添加到解决方案 
+## <a name="add-a-project-to-a-solution"></a>向解决方案添加项目 
  在添加项目时，可以让 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 创建新的空白项目，或者你可以添加已为其他解决方案创建的项目。 仅当现有解决方案在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中可见时，才能向该解决方案中添加项目。  
   
 ### <a name="add-a-new-project-to-a-solution"></a>向解决方案添加新项目  
@@ -175,7 +174,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  或者，编辑项目的名称和位置。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
 ### <a name="add-an-existing-project-to-a-solution"></a>向解决方案添加现有项目  
   
@@ -211,7 +210,7 @@ ms.lasthandoff: 09/26/2017
 3.  新项即出现在解决方案资源管理器的相应文件夹中。  
 
 ## <a name="copy-project-items"></a>复制项目项  
-你可以复制中的对象[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]项目之间或者[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]项目。 您还可以在其他类型的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目（ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]）之间复制对象。 若要在项目之间进行复制，则项目必须是同一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 解决方案的一部分。
+可以在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目内或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目之间复制对象。 您还可以在其他类型的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目（ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]）之间复制对象。 若要在项目之间进行复制，则项目必须是同一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 解决方案的一部分。
 
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开希望处理的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目或解决方案。  
   
@@ -223,4 +222,3 @@ ms.lasthandoff: 09/26/2017
   
      这些项会自动复制到正确的文件夹中。 如果将项复制到不是包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中，则该项将复制到 **“杂项”** 文件夹中。  
      
-

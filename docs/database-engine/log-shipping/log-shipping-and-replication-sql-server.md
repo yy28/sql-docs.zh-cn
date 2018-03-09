@@ -2,9 +2,12 @@
 title: "日志传送和复制 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc7c67f47d535a639f1862cc1bc8be92855f6567
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>日志传送和复制 (SQL Server)
-  日志传送涉及单个数据库的两个副本，而这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主数据库。 通过日志传送将客户端对主数据库所做的更新传播到数据库的另一副本（称为辅助数据库）。 日志传送涉及将由主数据库上执行的每个插入、更新或删除所组成的事务日志应用到辅助数据库上。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]日志传送涉及单个数据库的两个副本，而这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主数据库。 通过日志传送将客户端对主数据库所做的更新传播到数据库的另一副本（称为辅助数据库）。 日志传送涉及将由主数据库上执行的每个插入、更新或删除所组成的事务日志应用到辅助数据库上。  
   
  日志传送可以与复制一起使用，具有以下行为：  
   

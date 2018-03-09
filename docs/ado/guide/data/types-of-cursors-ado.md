@@ -3,26 +3,28 @@ title: "类型的游标 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: cursors [ADO], types
+helpviewer_keywords:
+- cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c8ab039bfe5754587e3f7adda36c0b715138d65
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ec8ccca017236a8f6aa784d92e8304a98452f02
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="types-of-cursors-ado"></a>类型的游标 (ADO)
 作为一般规则，你的应用程序应使用的最简单的光标，提供所需的数据访问。 （只进、 只读的、 静态、 滚动、 未缓冲） 的基础知识以外的每个其他游标特征都有价格-在客户端内存、 网络负载或性能。 在许多情况下，默认游标选项生成的更复杂的游标不是你的应用程序则实际上需要。  

@@ -2,23 +2,26 @@
 title: "用于与 SQL Server 的 Python 集成组件 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a23acdc0c39e0325f31050b299b883616912be71
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>在 SQL Server 以支持 Python 集成的组件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 机器学习服务从 SQL Server 自 2017 年开始，支持作为一种外部的语言，可以从 T-SQL 的执行或远程作为计算上下文中使用 SQL Server 执行的 Python。
 
@@ -114,7 +117,7 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 
 已为存储过程中嵌入脚本后，任何应用程序可以调用存储的过程可以启动 Python 代码的执行。  此后[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]管理执行代码，如下图中进行了总结。
 
-![脚本中 db python](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. 由参数指示 Python 运行时的请求`@language='Python'`传递给存储过程。 SQL Server 将此请求发送到快速启动板服务。
 2. 在快速启动板服务启动了适当的启动器;在此情况下，PythonLauncher。
@@ -122,7 +125,7 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 4. BxlServer 协调与要管理的数据交换和工作结果的存储的 Python 运行时。
 5. SQL 卫星管理相关任务有关的通信和处理[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。
 6. BxlServer 使用 SQL Satellite 向 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 传递状态和结果。
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 获取结果并关闭相关任务和进程。
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 获取结果并关闭相关的任务和进程。
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>从远程客户端执行的 Python 脚本
 
@@ -133,7 +136,7 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 
 从远程计算机发送脚本时下, 图总结了整个工作流。
 
-![远程 sqlcc 从 python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. 中支持的函数**revoscalepy**，Python 运行时调用的链接的函数，又会调用 BxlServer。
 2. BxlServer 附带机器学习服务 （数据库），并在单独的进程中运行 Python 运行时中。
@@ -143,7 +146,7 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 6. PythonLauncher 调用的实例安装 Python[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]计算机。
 7. 将结果返回到 BxlServer。
 8. SQL Satellite 管理与 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 之间的通信并清理相关的作业对象。
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将结果传回客户端。
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将结果传递回客户端。
 
 ## <a name="next-steps"></a>后续步骤
 

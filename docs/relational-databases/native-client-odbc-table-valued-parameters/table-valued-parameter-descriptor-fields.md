@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89dbb26c6562e696e9cb6fa461f1b32607fedd70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfea7aa106988fc0b188dd1f1eb9da0efb206b33
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>表值参数描述符字段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="remarks"></a>注释  
   
-|Name|位置|类型|Description|  
+|名称|位置|类型|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|表值参数的服务器类型名称。<br /><br /> 当在 SQLBindParameter 调用指定的表值参数类型名称时，它必须始终指定为 Unicode 值，即使在应用程序生成为 ANSI 应用程序。 用于参数的值*StrLen_or_IndPtr*应 sql_nts 以或乘以 sizeof(WCHAR) 的名称的字符串长度。<br /><br /> 指定时，表值参数类型名称 SQLSetDescField，通过它可以指定通过使用生成的方式符合应用程序的文本。 ODBC 驱动程序管理器将执行任何所需的 Unicode 转换。|  
 |SQL_CA_SS_TYPE_CATALOG_NAME（只读）|IPD|SQLTCHAR*|定义该类型的目录。|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  如果将参数焦点设置为表值参数，则以下语句属性和描述符标头字段将应用于表值参数：  
   
-|Name|位置|类型|Description|  
+|名称|位置|类型|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> （这等同于 APD 中的 SQL_DESC_ARRAY_SIZE。）|APD|SQLUINTEGER|用于表值参数的缓冲区数组的数组大小。 这是缓冲区将容纳的最大行数或缓冲区的行数大小；表值参数值本身所具有的行数可能大于或小于缓冲区可以容纳的行数。 默认值为 1。<br /><br /> 注意： 如果： SQL_SOPT_SS_PARAM_FOCUS 设置为其默认值为 0，SQL_ATTR_PARAMSET_SIZE 指语句和指定的参数集数量。 如果将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号，则它引用该表值参数，并为该表值参数指定每个参数集具有的行数。|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|默认值是 SQL_PARAM_BIND_BY_COLUMN。<br /><br /> 若要选择按行绑定，则该字段将设置为将要绑定到一组表值参数行的结构或缓冲区实例的长度。 此长度必须包括所有绑定列的空间以及结构或缓冲区的任何填充大小。 这将确保当绑定列的地址按指定长度递增时，结果将指向下一行中相同列的开头。 使用时**sizeof** ANSI C 中的运算符，此行为保证。|  

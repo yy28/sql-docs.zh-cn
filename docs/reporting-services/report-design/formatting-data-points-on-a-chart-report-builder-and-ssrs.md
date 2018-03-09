@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef5d6f5c0abbe09505de7608ec18d309a112d0c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -68,21 +66,21 @@ ms.lasthandoff: 12/05/2017
   
 |图表关键字|Description|适用的图表类型|等效的简单表达式的示例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|数据点的 Y 值。|全部|`=Fields!MyDataField.Value`|  
-|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|无|  
-|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|无|  
-|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|无|  
-|#SERIESNAME|序列名称。|全部|无|  
-|#LABEL|数据点标签。|全部|无|  
+|#VALY|数据点的 Y 值。|All|`=Fields!MyDataField.Value`|  
+|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|InclusionThresholdSetting|  
+|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|InclusionThresholdSetting|  
+|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|InclusionThresholdSetting|  
+|#SERIESNAME|序列名称。|All|InclusionThresholdSetting|  
+|#LABEL|数据点标签。|All|InclusionThresholdSetting|  
 |#AXISLABEL|轴数据点标签。|形状|`=Fields!MyDataField.Value`|  
-|#INDEX|数据点索引。|全部|无|  
-|#PERCENT|数据点 Y 值的百分比。|全部|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|序列中所有 Y 值的总计。|全部|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|对应于图例项文本的文本。|全部|无|  
-|#AVG|序列中所有 Y 值的平均值。|全部|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|数据点索引。|All|InclusionThresholdSetting|  
+|#PERCENT|数据点 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|序列中所有 Y 值的总计。|All|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|对应于图例项文本的文本。|All|InclusionThresholdSetting|  
+|#AVG|序列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|序列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|序列中所有 Y 值的最大值。|全部|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|序列中所有 Y 值第一个值。|全部|`=First(Fields!MyDataField.Value)`|  
+|#MAX|序列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|序列中所有 Y 值第一个值。|All|`=First(Fields!MyDataField.Value)`|  
   
  若要设置关键字格式，请将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串用括号括起来。 例如，若要在工具提示中将数据点的值指定为具有两个小数位数的数字，请将格式字符串“N2”放置到大括号中，例如序列上 **“工具提示”** 属性的“#VALY{N2}”。 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串的详细信息，请参阅 MSDN 上的 [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) （为类型设置格式）。 有关在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中设置数字格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   

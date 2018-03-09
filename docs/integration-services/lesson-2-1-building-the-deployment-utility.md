@@ -1,11 +1,11 @@
 ---
-title: "步骤 1： 生成部署实用工具 |Microsoft 文档"
+title: "步骤 1：生成部署实用工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 227ebbba4190ff05ebdc04f988beafec4edc8a37
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ad64bdaf8424da073dff170761eab0d7bacac750
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-1---building-the-deployment-utility"></a>课程 2-1-生成部署实用工具
+# <a name="lesson-2-1---building-the-deployment-utility"></a>第 2-1 课 — 生成部署实用工具
 在此任务中，将为 Deployment Tutorial 项目配置和生成部署实用工具。  
   
 必须先修改 Deployment Tutorial 项目的属性，才能生成部署实用工具。 使用“Deployment Tutorial 属性页”对话框配置这些属性。 在此对话框中，您必须允许在部署期间更新配置，并指定生成进程将生成部署实用工具。 在设置属性后，将生成项目。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 09/26/2017
   
 5.  在“Deployment Tutorial 属性页”对话框的右窗格中，确认“AllowConfigurationChanges”设为“true”，将“CreateDeploymentUtility”设为“true”，并更新“DeploymentOutputPath”的默认值（可选）。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ### <a name="to-build-the-deployment-utility"></a>生成部署实用工具  
   
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 发行说明 | Microsoft Docs"
-ms.date: 10/30/2017
+ms.date: 02/27/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -8,51 +8,42 @@ ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: "276"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3979b28e6b530ba08641731f811e259168975004
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]本主题介绍 SQL Server 2016 版本的限制和问题。    
-    
- **进行试用：**    
-   
-[![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)从**[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)下载 SQL Server 2016**    
-    
-[![Azure 虚拟机小](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** ，启动装有 SQL Server 2016 SP1 的虚拟机。
-    
-![下载 SSMS](../includes/media/download2.png)**SSMS：**若要获取最新版本的 SQL Server Management Studio，请参阅**[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**。   
-    
- 有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)（SQL Server 2016 的新增功能）。
-    
-##  <a name="bkmk_top"></a>本文章节：    
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+本主题介绍 SQL Server 2016 版本的限制和问题。 有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)（SQL Server 2016 的新增功能）。
 
--   [SQL Server 2016 Service Pack 1 (SP1) 可用](#bkmk_2016sp1)    
--   [SQL Server 2016 正式发布版 (GA)](#bkmk_2016_ga) 
--   [SQL Server 2016 候选发布版 3 (RC3)](#bkmk_2016_rc3)     
+> [![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)从**[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)下载 SQL Server 2016**
+>
+> [![Azure 虚拟机小](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) 是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** ，启动装有 SQL Server 2016 SP1 的虚拟机。
+>
+> [![下载 SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 若要获取最新版本的 Management Studio，请参阅**[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**。
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) 可用
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 会将 SQL Server 2016 所有版本和服务级别升级到 SQL Server 2016 SP1。 除了本文中列出的修补程序，SQL Server 2016 SP1 还包括 SQL Server 2016 累积更新 1 (CU1) 到 SQL Server 2016 CU3 中的修补程序。
-    
+
 - [SQL Server 2016 SP1 下载页](https://www.microsoft.com/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545) （SQL Server 2016 Service Pack 1 发布信息） 列出了 SP1 中修复或更改的单个 bug #s 和问题。
- - ![info_tip](../sql-server/media/info-tip.png) 有关所有受支持版本的链接和信息（包括 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的服务包），请参阅 [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx) 
-    
-    
+ - ![info_tip](../sql-server/media/info-tip.png) 有关所有受支持版本的链接和信息（包括 SQL Server 的服务包），请参阅 [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [数据库引擎 (GA)](#bkmk_ga_instalpatch) 
 -   [Stretch Database (GA)](#bkmk_ga_stretch)

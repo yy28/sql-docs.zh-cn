@@ -1,5 +1,5 @@
 ---
-title: "列映射 （SQL Server 导入和导出向导） |Microsoft 文档"
+title: "列映射（SQL Server 导入和导出向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -15,57 +15,56 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1ed879f21396c3c8d588307eaf087daea8c44c3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d4658903e7454c5a001f27b3bda781be34e6a55b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>列映射（SQL Server 导入和导出向导）
-  选择现有表和视图进行复制或查看提供的查询之后，如果单击“编辑映射” ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“列映射”  对话框。 此页上，你指定和配置要接收来自源列中复制的数据的目标列。 通常，你不必更改此页上的任何内容。
+  选择现有表和视图进行复制或查看提供的查询之后，如果单击“编辑映射” ，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“列映射”  对话框。 在此页上，可指定并配置目标列以接收从源列复制的数据。 通常无需在此页上进行任何更改。
   
-如果你不想要将所有列都复制所选的表中，你可以在此页执行的一点是排除不需要的列。 选择**忽略**中**目标**列**映射**你不想要复制的列的列表。
+如果不想复制所选的表中的所有列，可以在此页上排除不需要的列。 对于不想复制的列，选择“映射”列表“目标”列中的“忽略”。
  
 ## <a name="screen-shot-of-the-column-mappings-page"></a>“列映射”页的屏幕截图 
- 以下屏幕截图显示的示例**列映射**对话框中的向导。 
+ 以下屏幕截图显示向导的“列映射”对话框的示例。 
  
- 在此示例中，由于已选中“创建目标表”  ，因此可看到向导将创建新的目标表。 默认情况下，该向导为相应的源列中为每个新的目标表相同的名称中的列、 数据类型和属性。 
+ 在此示例中，由于已选中“创建目标表”  ，因此可看到向导将创建新的目标表。 默认情况下，向导为新目标表中的每个列提供与对应源列相同的名称、数据类型和属性。 
   
- ![导入和导出向导的列映射页](../../integration-services/import-export-data/media/column-mappings.png "导入和导出向导的列映射页")  
+ ![导入和导出向导的“列映射”页](../../integration-services/import-export-data/media/column-mappings.png "Column mappings page of the Import and Export Wizard")  
   
 ## <a name="review-the-source-and-destination"></a>查看源和目标 
-![列映射页、 源和目标部分](../../integration-services/import-export-data/media/column-mappings-page-source-and-destination-section.png)
+![列映射页、源和目标部分](../../integration-services/import-export-data/media/column-mappings-page-source-and-destination-section.png)
 
  **数据源**  
- 所选的源表、 视图或查询。  
+ 所选的源表、视图或查询。  
   
  **目标**  
  所选的目标表或视图。  
 
-## <a name="optionally-create-a-new-destination-table"></a>（可选） 创建一个新的目标表
-![列映射页，新表部分](../../integration-services/import-export-data/media/column-mappings-page-new-table-section.png)
+## <a name="optionally-create-a-new-destination-table"></a>（可选）创建新目标表
+![列映射页、新表部分](../../integration-services/import-export-data/media/column-mappings-page-new-table-section.png)
 
  **创建目标表/文件**  
- 如果不存在，请创建目标表。    
+ 如果不存在目标表，则创建目标表。    
   
  **编辑 SQL**  
-单击“编辑 SQL”  以打开“Create Table SQL 语句”  对话框。 使用自动生成 CREATE TABLE 语句，或对其进行修改您的要求。 如果手动更改此语句，则必须确保列映射的列表可识别更改。 有关详细信息，请参阅 [Create Table SQL 语句](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)。  
+单击“编辑 SQL”  以打开“Create Table SQL 语句”  对话框。 使用自动生成的 CREATE TABLE 语句或根据用途修改它。 如果手动更改此语句，则必须确保列映射的列表可识别更改。 有关详细信息，请参阅 [Create Table SQL 语句](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)。  
 
-### <a name="sometimes-these-options-are-disabled"></a>有时禁用了这些选项
-**创建目标表/文件**选项和**编辑 SQL**按钮自动启用连接，或者自动禁用。
+### <a name="sometimes-these-options-are-disabled"></a>有时会禁用这些选项
+不会自动启用或自动禁用“创建目标表/文件”选项和“编辑 SQL”按钮。
 
--   **启用。** 如果你指定**新**上的目标表**选择源表和源视图**页上，**创建目标表**会自动选择选项和**编辑 SQL**按钮处于启用状态。
+-   **已启用。** 如果指定了“选择源表和视图”页上的新的目标表，则将自动选择“创建目标表”，以及启用“编辑 SQL”按钮。
 
--   **已禁用。** 如果你选择**现有**上的目标表**选择源表和源视图**页上，**创建目标表**选项和**编辑 SQL**按钮被禁用。 如果你想要创建新的目标表，请返回到**选择源表和源视图**页上，输入名称**新**表中**目标**列。  
+-   **已禁用。** 如果选择了“选择源表和视图”页上的现有的目标表，则将禁用“创建目标表”选项和“编辑 SQL”按钮。 如果要创建目标表，可后退到“选择源表和源视图”页，在“目标”列中输入新表的名称。  
 
 ## <a name="what-about-existing-data-in-the-destination"></a>目标中的现有数据呢？
-![列映射页，选项部分](../../integration-services/import-export-data/media/column-mappings-page-options-section.png)
+![列映射页、选项部分](../../integration-services/import-export-data/media/column-mappings-page-options-section.png)
 
  **删除目标表/文件中的行**  
  指定在加载新数据之前是否清除现有表的数据。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 09/26/2017
  指定是否将新数据追加到现有表的已存在数据中。  
   
  **删除并重新创建目标表**  
- 选择此选项可以覆盖目标表。 当向导用于创建目标表时，此选项才可用。 仅当保存的是向导创建的包，然后再次运行该包时，才能删除并重新创建目标表。 当你想要多次测试你的设置时，该选项非常方便。
+ 选择此选项可以覆盖目标表。 只有在使用该向导创建目标表时，该选项才可用。 仅当保存的是向导创建的包，然后再次运行该包时，才能删除并重新创建目标表。 当你想要多次测试你的设置时，该选项非常方便。
   
  **启用标识插入**  
  选择此选项可以将源数据中的现有标识值插入到目标表中的标识列。 默认情况下，通常不允许对目标标识列执行此操作。  
@@ -83,10 +82,10 @@ ms.lasthandoff: 09/26/2017
 > 如果现有主键位于标识列、自动编号列或等效列中，则通常必须选择此选项以保留现有主键值。  否则目标标识列通常会分配新值。  
 
 ## <a name="keep-your-autonumber-or-identity-values"></a>保留自动编号或标识值
-如果你要将数据导出具有 autonumber 列或标识列的数据例如，如果你要将数据导出从 Microsoft Access-请确保选择**启用标识插入**上文所述立即。
+如果正在导出具有自动编号列或标识列的数据 — 例如，如果正在从 Microsoft Access 导出 — 请确保选择上述的“启用标识插入”。
 
-## <a name="review-column-mappings"></a>检查列映射
-![列映射页，映射部分](../../integration-services/import-export-data/media/column-mappings-page-mappings-section.png)
+## <a name="review-column-mappings"></a>查看列映射
+![列映射页、映射部分](../../integration-services/import-export-data/media/column-mappings-page-mappings-section.png)
 
  **映射**  
  显示数据源映射中的每个列如何映射到目标中列。
@@ -99,7 +98,7 @@ ms.lasthandoff: 09/26/2017
 -   **目标**  
     查看映射的目标列或选择不同的列。
     
-    你无需从源表中复制的所有列。 选择**忽略**列你想要跳过此列中。 在映射列之前，必须忽略所有不会被映射的列。  
+    不必从源表复制所有列。 针对要跳过的列，选中此列中的“忽略”。 在映射列之前，必须忽略所有不会被映射的列。  
   
 -   **类型**  
     查看目标列的数据类型或选择不同的数据类型。
@@ -111,18 +110,17 @@ ms.lasthandoff: 09/26/2017
     指定目标列中的字符数（如果适用）。  
   
 -    **精度**  
-    指定在目标列的即的数字位数的数字数据的精度，如果适用。  
+    指定目标列中的数值数据的精度（即数字位数）（如果适用）。  
   
  -   **小数位数**  
-    指定在目标列的即的小数位数的数值数据的小数位数，如果适用。  
+    指定目标列中的数值数据的小数位数（即小数点后的位数）（如果适用）。  
   
 ## <a name="whats-next"></a>下一步是什么？  
- 查看并配置目标列，以接收来自源列中复制的数据，并单击后**确定**、**列映射**对话框中将返回到**选择源表和视图**页或**配置平面文件目标**页。 有关详细信息，请参阅 [选择源表和源视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 或 [配置平面文件目标](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
+ 查看目标列并将其配置为接收从源列复制的数据之后，单击“确定”，从“列映射”对话框返回“选择源表和视图”页或返回到“配置平面文件目标”页。 有关详细信息，请参阅 [选择源表和源视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 或 [配置平面文件目标](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)。  
   
  如果在“映射”  列表中指定了一个可能无法成功的映射，则“列映射”  对话框会使你进入“查看数据类型映射”  页。 在此页上，可查看警告、指定转换选项以及指定如何处理错误。 有关详细信息，请参阅 [查看数据类型映射](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)。  
  
  ## <a name="see-also"></a>另请参阅
 [SQL Server 导入和导出向导中的数据类型映射](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)  
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 

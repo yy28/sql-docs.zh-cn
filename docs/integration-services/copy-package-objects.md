@@ -1,11 +1,11 @@
 ---
-title: "复制包对象 |Microsoft 文档"
+title: "复制包对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 853125dfe07491f361086e1bdf3b536cf86a7274
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="copy-package-objects"></a>复制包对象
   此主题介绍如何在包内或包之间复制控制流项、数据流项和连接管理器。  
@@ -70,10 +69,9 @@ ms.lasthandoff: 08/03/2017
 6.  右键单击“连接管理器”区域，并单击“粘贴”。  
   
 ## <a name="see-also"></a>另请参阅  
- [控制流](../integration-services/control-flow/control-flow.md)   
+ [“控制流”](../integration-services/control-flow/control-flow.md)   
  [数据流](../integration-services/data-flow/data-flow.md)   
- [Integration Services &#40;SSIS &#41;连接](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services (SSIS) 连接](../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [复制项目项](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   
-

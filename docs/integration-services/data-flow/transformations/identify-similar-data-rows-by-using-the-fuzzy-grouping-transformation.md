@@ -1,5 +1,5 @@
 ---
-title: "通过使用模糊分组转换标识相似数据行 |Microsoft 文档"
+title: "使用模糊分组转换标识相似数据行 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6d11c2474853586930e5cd46fde8f61526cd6ed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 138dc14412f8d0b3f6ea20dbb8fb5bfa09101649
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>使用模糊分组转换标识相似数据行
   若要添加和配置模糊分组转换，包必须已包含至少一个数据流任务和一个源。  
@@ -83,15 +82,14 @@ ms.lasthandoff: 08/03/2017
   
 18. 还可以清除标记分隔符复选框以忽略数据中的分隔符。  
   
-19. 单击 **“确定”**。  
+19. 单击“确定” 。  
   
 20. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [模糊分组转换](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

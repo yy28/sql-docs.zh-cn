@@ -2,29 +2,33 @@
 title: "代码大纲显示 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], outlining code
 - Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff78745f8bede935b07a5affcfd5bf1f5f1e6e21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a0aa528dd30f068d74f708c064fd8a8812abdae9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="code-outlining"></a>代码大纲显示
-  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中的大纲显示功能可在编辑查询时有选择地隐藏代码， 从而可以更加方便地查看您正在处理的代码，尤其是大型查询文件中的代码。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中的大纲显示功能在编辑查询时有选择地隐藏代码。 从而可以更加方便地查看您正在处理的代码，尤其是大型查询文件中的代码。  
   
 ## <a name="outlining-overview"></a>大纲显示概述  
  默认情况下，打开查询编辑器窗口时所有代码均可见。 可将代码区域折叠起来以便在视图中隐藏该区域。 编辑器窗口左侧边缘的竖线使用一个方块和一个减号 (-) 来标识每个可折叠代码区域的起点。 单击减号时，代码区域的文本将更换为一个含有三个句点 ( ) 的框，且减号将变为加号 (+)。 单击加号时，将显示折叠的代码，且加号将变为减号。 将指针移动到含有三个句点的框上方时，该处出现工具提示，显示折叠部分包含的代码。  

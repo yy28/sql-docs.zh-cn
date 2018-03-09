@@ -2,25 +2,28 @@
 title: "在 Azure 虚拟机上安装 SQL Server 机器学习功能 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 08c3434ec120003de6d62bc61da3637e9177bb88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>安装 SQL Server 机器学习 Azure 虚拟机上的功能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 如果你部署 Azure 虚拟机包含[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，现在可以选择机器学习，作为一项功能时创建的 VM 要添加到的实例。
 
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/09/2017
 
 + 启用命名管道
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 对客户端与服务器计算机之间的连接以及某些内部连接使用命名管道协议。 如果未启用命名管道，必须同时在 Azure 虚拟机以及连接到服务器的任何数据科学客户端上安装并启用命名管道。
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 客户端和服务器计算机之间的连接，以及对某些内部连接，请使用命名管道协议。 如果未启用命名管道，必须同时在 Azure 虚拟机以及连接到服务器的任何数据科学客户端上安装并启用命名管道。
   
 + 启用 TCP/IP
 

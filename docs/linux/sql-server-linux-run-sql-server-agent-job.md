@@ -3,27 +3,27 @@ title: "创建并在 Linux 上运行 SQL Server 作业 |Microsoft 文档"
 description: "本教程演示如何在 Linux 上运行 SQL Server 代理作业。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
-ms.openlocfilehash: 93fd18e532605d4ce9dfe0ee705d05297136cbd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上创建和运行 SQL Server 代理作业
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列。 本教程提供了如何在 Linux 上创建的 SQL Server 代理作业的一个示例使用 Transact SQL 和 SQL Server Management Studio (SSMS)。
 
@@ -35,7 +35,7 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
 
 有关在 Linux 上的 SQL Server 代理使用的已知问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 完成本教程所需的以下先决条件：
 
@@ -47,23 +47,22 @@ SQL Server 作业用于定期执行 SQL Server 数据库中相同的命令序列
 * 使用 SSMS 的 Windows 计算机：
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)有关可选 SSMS 步骤。
 
-## <a name="install-sql-server-agent"></a>安装 SQL Server 代理
+## <a name="enable-sql-server-agent"></a>启用 SQL Server 代理
 
-若要在 Linux 上使用 SQL Server 代理，必须首先安装**mssql server 代理**已安装的 SQL Server 2017 的计算机上的包。
+若要在 Linux 上使用 SQL Server 代理，必须首先在已安装的 SQL Server 2017 的计算机上启用 SQL Server 代理。
 
-1. 安装**mssql server 代理**使用适合于您的 Linux 操作系统的命令。
-
-   | 平台 | 安装命令 |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. 若要启用 SQL Server 代理，请执行下列步骤。
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. 使用以下命令重新启动 SQL Server:
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> 从 SQL Server 自 2017 年 CU4 开始，SQL Server 代理是附带**mssql server**打包并默认处于禁用状态。 为代理之前 CU4 访问设置[在 Linux 上安装 SQL Server 代理](sql-server-linux-setup-sql-agent.md)。
 
 ## <a name="create-a-sample-database"></a>创建示例数据库
 

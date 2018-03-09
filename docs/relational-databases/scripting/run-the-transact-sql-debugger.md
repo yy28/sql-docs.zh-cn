@@ -2,10 +2,14 @@
 title: "运行 Transact-SQL 调试器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +25,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d633d2f9a2e1a9ab407384338b4e9e0da34557b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9f67818832da03faacf25adee23a1261ce44f430
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
-  在打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器窗口之后，即可启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试器。 然后，您可在调试模式下运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，直到您停止调试器。 您可以设置选项以自定义调试器的运行方式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在打开 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口之后，即可启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器。 然后，您可在调试模式下运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，直到您停止调试器。 您可以设置选项以自定义调试器的运行方式。  
   
 ## <a name="starting-and-stopping-the-debugger"></a>启动和停止调试器  
  启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的要求如下：  
@@ -92,7 +96,7 @@ ms.lasthandoff: 11/09/2017
 |**Continue**|不可用|**Continue**|Alt+F5|运行到下一个断点。 在将焦点放在处于调试模式的查询编辑器窗口上之前，**“继续”** 处于不活动状态。|  
 |**“调试”**|不可用|**“调试”**|Alt+F5|将查询编辑器窗口置于调试模式，并运行到第一个断点。 如果将焦点放在处于调试模式的查询编辑器窗口上，则 **“启动调试”** 将由 **“继续”**替代。|  
 |**全部中断**|不可用|**全部中断**|Ctrl+Alt+Break|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不使用此功能。|  
-|**“停止调试”**|不可用|**“停止调试”**|Shift+F5|使查询编辑器窗口脱离调试模式，并将其恢复到常规模式。|  
+|**停止调试**|不可用|**“停止调试”**|Shift+F5|使查询编辑器窗口脱离调试模式，并将其恢复到常规模式。|  
 |**菜单上单击**|不可用|不可用|不可用|停止调试模式，但在查询编辑器窗口中执行剩余的语句。|  
 |**逐语句**|不可用|**逐语句**|F11|运行下一个语句，如果下一个语句运行存储过程、触发器或函数，还将打开处于调试模式的新查询编辑器窗口。|  
 |**逐过程**|不可用|**逐过程**|F10|与 **“逐语句”**相同，只不过它不会调试函数、存储过程或触发器。|  

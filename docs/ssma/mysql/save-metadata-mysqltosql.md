@@ -1,10 +1,13 @@
 ---
 title: "保存元数据 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,22 +20,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6515e7747aa5137849acab0bfc3540d3ecc59996
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e62fcd6b41208b1cf17c9f611da8a7af5454ab45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-metadata--mysqltosql"></a>保存元数据 (MySQLToSQL)
 **保存元数据**对话框会提示您以在保存它之前将元数据加载到你的 SSMA 项目。 这样，你已可以脱机使用，还可以发送给他人，请与技术支持人员如完成的项目文件。  
   
 访问**保存元数据**对话框中，保存该项目。 如果缺少任何元数据时，将显示 SSMA**保存元数据**对话框。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **名称**  
 在项目中的每个数据库的名称。  
   
-**状态**  
+**“状态”**  
 指示如果元数据加载到 SSMA 项目中，或缺少元数据时。  
   
 SSMA 将元数据加载到根据项目。 当您浏览元数据和转换架构时，将自动加载元数据。  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4bb349dd9bc791659dc518aa66cbc40e958dbe66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-long-data"></a>获取长整型数据
 Dbms 定义*长整型数据*作为任何字符或通过某些大小，例如 255 个字符的二进制数据。 此数据可能已经足够小，无法存储在单个缓冲区中，例如有几个千位字符的一部分描述。 但是，它可能太长，无法存储在内存中，如长文本文档或位图。 由于此类数据不能存储在单个缓冲区，可从使用部件中的驱动程序检索**SQLGetData**已提取的行中的其他数据之后。  

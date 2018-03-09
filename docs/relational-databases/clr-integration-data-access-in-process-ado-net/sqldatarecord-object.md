@@ -8,26 +8,27 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - SqlDataRecord object
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 024728944c5f8978243f42158d374f0aea0f201b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9fa7d4465af4de1534e220ffa06d39cf854c3b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SqlDataRecord**对象表示一行数据，以及其相关的元数据。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**SqlDataRecord**对象表示一行数据，以及其相关的元数据。  
   
  托管的存储的过程可能会向不是来自的客户端结果集发送**SqlDataReader**。 **SqlDataRecord**类，以及与**SendResultsStart**， **SendResultsRow**，和**SendResultsEnd** 方法**SqlPipe**对象，允许要发送到客户端的自定义结果集的存储的过程。  
   

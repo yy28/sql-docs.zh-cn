@@ -3,8 +3,11 @@ title: "选项（“环境”-“帮助”-“联机”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e48c89f058af257e0f375e4493d3066804a7e73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1a985f6e2796708bcea47178380974d18895218d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---help---online-page"></a>选项（“环境”-“帮助”-“联机”页）
-使用“选项”对话框，可以指定用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 搜索的帮助源，包括 F1 帮助。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，选择“帮助”，再单击“联机”。 如果列表中没有显示“联机”页，请在“选项”对话框中选中“显示所有设置”复选框。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“选项”对话框，可以指定用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 搜索的帮助源，包括 F1 帮助。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，选择“帮助”，再单击“联机”。 如果列表中没有显示“联机”页，请在“选项”对话框中选中“显示所有设置”复选框。  
   
 **当载入帮助内容时**  
 设置在 F1 帮助中使用帮助源的顺序，并指定使用哪些帮助源。  

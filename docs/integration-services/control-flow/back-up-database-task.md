@@ -1,5 +1,5 @@
 ---
-title: "备份数据库任务 |Microsoft 文档"
+title: "“备份数据库”任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a71821c8fc7710d86d819d65ef35878a2594f997
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a78526022b2d3cc16adb8f4706d30a8f430da8f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="back-up-database-task"></a>“备份数据库”任务
   “备份数据库”任务可执行不同类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库备份。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
@@ -41,11 +40,11 @@ ms.lasthandoff: 08/03/2017
 ## <a name="supported-recover-models-and-backup-types"></a>支持的恢复模式和备份类型  
  下表列出了“备份数据库”任务支持的恢复模式和备份类型。  
   
-|恢复模式|数据库|数据库差异|事务日志|文件或文件差异|  
+|恢复模式|“数据库”|数据库差异|事务日志|文件或文件差异|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Simple|必需|可选|不支持|不支持|  
-|Full|必需|可选|必需|可选|  
-|大容量日志|必需|可选|必需|可选|  
+|Simple|Required|可选|不支持|不支持|  
+|完全|Required|可选|Required|可选|  
+|大容量日志|Required|可选|Required|可选|  
   
  “备份数据库”任务封装 Transact-SQL BACKUP 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   
@@ -61,4 +60,3 @@ ms.lasthandoff: 08/03/2017
 -   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   
-

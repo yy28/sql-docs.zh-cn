@@ -2,13 +2,13 @@
 title: "第 3 课： 重命名列 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -19,11 +19,13 @@ ms.author: owend
 manager: kfile
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: e872107cf9ac05a6fb779c5ab7cadfadacb40410
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2cfc73728765784c3471c3bfcc0e68382b54b845
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="rename-columns"></a>重命名列
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
 正在删除本课程。 

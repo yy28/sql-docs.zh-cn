@@ -3,8 +3,9 @@ title: "附录 d: ADO 示例 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff7338cdb0b935eac3c227d45d1f0f0083e442a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ebaa64517591b9ea89700557f02c9e17dfa3c72e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Windows SDK 中的附录 d: ADO 示例
 Windows SDK 包含几个示例演示应用程序使用 ADO 和 RDS 的代码。 这些示例旨在帮助你了解如何使用 ADO 和 RDS，但不是应在生产服务器上部署。

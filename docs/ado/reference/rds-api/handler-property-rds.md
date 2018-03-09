@@ -3,8 +3,9 @@ title: "处理程序属性 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Handler property [ADO]
+helpviewer_keywords:
+- Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15fa49306bf566b27f0d5e688a16050c9656032c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa363b9fa9761eb764a7bf2aa7b9d4eb992ec65b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handler-property-rds"></a>处理程序属性 (RDS)
 指示扩展的功能的服务器端自定义程序 （处理程序） 名称[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，和使用的任何参数*处理程序*。  
@@ -54,7 +56,7 @@ DataControl.Handler = String
   
  默认处理程序的名称是**MSDFMAP。处理程序**，其默认参数就是一个名为的自定义文件和**MSDFMAP。INI**。 使用此属性来调用由服务器管理员创建的备用自定义项文件。  
   
- 设置的替代**处理程序**属性是一个处理程序和中的使用参数指定[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性; 也就是说，"**处理程序 =** *handlerName，parameter1、 parameter2...;*".  
+ 设置的替代**处理程序**属性是一个处理程序和中的使用参数指定[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性; 也就是说，"**处理程序 = * * * handlerName，parameter1，parameter2...;*".  
   
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

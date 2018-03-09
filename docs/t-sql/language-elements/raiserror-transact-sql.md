@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
 - RAISERROR_TSQL
 - RAISEERROR_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sysmessages system table
 - errors [SQL Server], RAISERROR statement
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,11 +80,11 @@ RAISERROR ( { msg_str | @local_variable }
   
  *msg_str*是使用可选的嵌入的转换规范的字符的字符串。 每个转换规范定义如何格式化和放入一个字段中的转换规范位置自变量列表中的值是*msg_str*。 转换规格的格式如下：  
   
- %[[*标志*] [*宽度*] [。 *精度*] [{h | l}]]*类型*  
+ % [[*flag*] [*width*] [. *精度*] [{h | l}]]*类型*  
   
  可以在中使用的参数*msg_str*是：  
   
- *标志*  
+ *flag*  
   
  用于确定被替换值的间距和对齐的代码。  
   
@@ -94,7 +96,7 @@ RAISERROR ( { msg_str | @local_variable }
 |#（数字）|对 x 或 X 的十六进制类型使用 0x 前缀|当使用 o、x 或 X 格式时，数字符号 (#) 标志在任何非零值的前面分别加上 0、0x 或 0X。 当 d、i 或 u 的前面有数字符号 (#) 标志时，将忽略该标志。|  
 |' '（空白）|空格填充|如果输出值有符号且为正，则在该值前加空格。 如果包含在加号（+）标志中，则忽略该标志。|  
   
- *宽度*  
+ *width*  
   
  定义放置参数值的字段的最小宽度的整数。 如果参数值的长度是等于还是长于*宽度*，没有空白打印值。 如果值为短于*宽度*，值填充到中指定的长度*宽度*。  
   
@@ -126,10 +128,10 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  若要将值转换为[!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint**数据类型，指定**%i64d**。  
   
- **@***local_variable*  
- 是任何有效的字符数据类型，包含与相同的方式在设置格式的字符串变量*msg_str*。 **@***local_variable*必须**char**或**varchar**，或能够隐式转换为这些数据类型。  
+ **@** *local_variable*  
+ 是任何有效的字符数据类型，包含与相同的方式在设置格式的字符串变量*msg_str*。 **@ * * * local_variable*必须**char**或**varchar**，或能够隐式转换为这些数据类型。  
   
- *严重性*  
+ severity  
  用户定义的与该消息关联的严重级别。 使用时*msg_id*引发使用 sp_addmessage 创建用户定义消息，RAISERROR 上指定的严重性替代 sp_addmessage 中指定的严重性。  
   
  任何用户都可以指定 0 到 18 之间的严重级别。 只能由 sysadmin 固定服务器角色或用户具有 ALTER TRACE 权限的成员指定的严重性级别从 19 到 25。 若要使用 19 到 25 之间的严重级别，必须选择 WITH LOG 选项。 将小于 0 的严重级别解释为 0。 将大于 25 的严重级别解释为 25。  
@@ -150,18 +152,18 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *状态*  
+ State  
  0 到 255 之间的整数。 负值默认为 1。 不应使用值大于 255。 
   
  如果在多个位置引发相同的用户定义错误，则针对每个位置使用唯一的状态号有助于找到引发错误的代码段。  
   
- *自变量*  
+ *argument*  
  是用于替换中定义的变量的参数*msg_str*或对应于的消息*msg_id*。 可以有 0 个或更多个替换参数，但替换参数的总数不能超过 20。 每个替换参数可以是本地的变量或任何这些数据类型： **tinyint**， **smallint**， **int**， **char**， **varchar**， **nchar**， **nvarchar**，**二进制**，或**varbinary**。 不支持其他数据类型。  
   
  *option*  
  错误的自定义选项，可以是下表中的任一值。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |LOG|错误日志和实例的应用程序日志中记录错误[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 记录到错误日志的错误目前被限定为最多 440 字节。 只有 sysadmin 固定的服务器角色或具有 ALTER TRACE 权限的用户的成员可以指定 WITH LOG。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|将消息立即发送给客户端。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
@@ -289,7 +291,7 @@ GO
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   
- [sp_addmessage &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_dropmessage &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [xp_logevent &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   

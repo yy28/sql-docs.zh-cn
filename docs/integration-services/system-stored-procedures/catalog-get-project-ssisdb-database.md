@@ -1,5 +1,5 @@
 ---
-title: "catalog.get_project （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.get_project（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: adb3542d50db426d5908aa8786145406d7263ad6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8a121ff43135e79da3e02ede0d2e67e0290f225
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,35 +36,34 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
- 包含项目的文件夹的名称。 *folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] folder_name  
+ 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
   
- [ @project_name =]*文件的内容*  
- 项目的名称。 *文件的内容*是**nvarchar （128)**。  
+ [ @project_name = ] project_name  
+ 项目的名称。 project_name 为 nvarchar(128)。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 作为返回项目的二进制流**varbinary （max)**。 如果找不到文件夹或项目，则不返回任何结果。  
+ 该项目的二进制流作为 varbinary(MAX) 返回。 如果找不到文件夹或项目，则不返回任何结果。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
--   读取权限项目  
+-   针对项目的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
- 下面介绍了一些条件会导致引发错误的 get_project 存储过程：  
+ 下面的列表描述了一些可能导致 get_project 存储过程引发错误的情况：  
   
 -   项目不存在。  
   
 -   文件夹不存在  
   
--   用户没有适当的权限  
+-   用户没有相应的权限  
   
   
-

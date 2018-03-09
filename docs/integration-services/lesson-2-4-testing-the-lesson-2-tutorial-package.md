@@ -1,11 +1,11 @@
 ---
-title: "步骤 4： 测试第 2 课教程包 |Microsoft 文档"
+title: "步骤 4：测试第 2 课教程包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b767baea5d3979763b2e7bfb741cb1fd6589ebfd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 98f4b32fd8575a33f2b7a074ab3fe04e043d7777
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>课程 2-4-测试第 2 课教程包
+# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>第 2-4 课 - 测试第 2 课教程包
 使用现在配置的 Foreach 循环容器和平面文件连接管理器，Lesson 2 包可以迭代遍历示例数据文件夹中由 14 个平面文件组成的集合。 每次找到与指定的文件名条件匹配的文件名时，Foreach 循环容器都将用该文件名填充用户定义的变量。 该变量又会更新平面文件连接管理器的 ConnectionString 属性，并与新平面文件建立连接。 然后，在连接到文件夹中的下一个文件之前，Foreach 循环容器将对新平面文件中的数据运行未修改的数据流任务。  
   
 使用以下过程可以测试已添加到包中的新循环功能。  
@@ -40,11 +39,11 @@ ms.lasthandoff: 09/26/2017
   
 **控制流**  
   
-![控制包中的流](../integration-services/media/task4lesson2control.gif "控制包中的流")  
+![包中的控制流](../integration-services/media/task4lesson2control.gif "Control flow in package")  
   
 **数据流**  
   
-![包中的数据流](../integration-services/media/task9lesson1data.gif "包中的数据流")  
+![包中的数据流](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>测试第 2 课教程包  
   
@@ -62,5 +61,4 @@ ms.lasthandoff: 09/26/2017
   
   
   
-
 

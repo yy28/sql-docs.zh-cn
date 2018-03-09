@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fn_validate_plan_guide_TSQL
 - fn_validate_plan_guide
 - fn_validate_plan_guide_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fbca0ca02e994a3c286cea445965edd9cd53bfcf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4fa68874317f4e5b92b0bca57112e5abf9f27a72
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +62,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |state|**int**|错误的状态号，用于指示发生错误的代码位置。|  
 |message|**nvarchar(2048)**|错误的消息正文。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  OBJECT 作用域的计划指南要求对被引用的对象具有 VIEW DEFINITION 或 ALTER 权限，并要求具有编译计划指南中提供的查询或批处理的权限。 例如，如果批处理包含 SELECT 语句，则需要具有对被引用对象的 SELECT 权限。  
   
  SQL 或 TEMPLATE 作用域的计划指南要求对数据库具有 ALTER 权限，并要求具有编译计划指南中提供的查询或批处理的权限。 例如，如果批处理包含 SELECT 语句，则需要具有对被引用对象的 SELECT 权限。  
@@ -70,7 +72,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 ### <a name="a-validating-all-plan-guides-in-a-database"></a>A. 验证数据库中的所有计划指南  
  下面的示例检查当前数据库中所有计划指南的有效性。 如果返回一个空结果集，则所有计划指南都是有效的。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
@@ -82,7 +84,7 @@ GO
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. 在对数据库实施更改前测试计划指南的有效性  
  下面的示例使用显式事务删除索引。 `sys.fn_validate_plan_guide`函数执行，以确定数据库中的任何计划指南将使此操作无效。 基于此函数的结果，将提交 `DROP INDEX` 语句或回滚事务，并且不删除索引。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN TRANSACTION;  

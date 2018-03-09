@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - table-valued functions [CLR integration]
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: "88"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41d9217d8bbee3f961ccc019f2b8b8dd65eb6fcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b39532e93eba5784bbc9925f3140c26ced977ede
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-table-valued-functions"></a>CLR 表值函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]表值函数是用户定义的函数，返回一个表。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+表值函数是返回表的用户定义函数。  
   
  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过允许您在任何托管语言中定义表值函数以扩展表值函数的功能。 从通过表值函数返回数据**IEnumerable**或**IEnumerator**对象。  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/17/2017
  CLR 表值函数的详细信息，请查看 MSSQLTips 的[简介 SQL Server CLR 表值的函数 ！](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL 与 CLR 表值函数之间的差异  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值函数将调用此函数的结果具体化到某个中间表中。 由于它们使用中间表，因此它们可以对于结果支持约束和唯一索引。 当返回大型结果时，这些功能极其有用。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值函数具体化中间表到调用函数的结果。 由于它们使用中间表，因此它们可以对于结果支持约束和唯一索引。 当返回大型结果时，这些功能极其有用。  
   
  相比较而言，CLR 表值函数表示一种流替代方法。 此时，不要求在单个表中具体化整个结果集。 **IEnumerable**调用表值函数，该查询的执行计划由直接调用托管函数返回的对象，并且以增量方式使用结果。 这种流模型可确保在第一行可用之后立即使用结果，而不是等待填充整个表。 如果返回的行非常多，则这还是一个更好的替代方法，因为它们不必在内存中作为一个整体进行具体化。 例如，可以使用托管表值函数分析文本文件并将其中的每行作为一行返回。  
   

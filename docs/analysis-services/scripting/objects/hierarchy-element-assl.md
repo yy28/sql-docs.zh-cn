@@ -2,15 +2,13 @@
 title: "层次结构元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Hierarchy Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 49265caaf75b32c5ebf7c69fb84e7a7dab69fc57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c826dcf5fd63e1bdc4af4a98ae7039b5868ba06a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchy-element-assl"></a>Hierarchy 元素 (ASSL)
-  定义维度中的层次结构。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]维度中定义的层次结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,10 +49,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|请参阅下表。|  
-|默认值|无|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 |祖先或父级|数据类型|  
@@ -69,9 +67,9 @@ ms.lasthandoff: 11/17/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[层次结构](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在 Analysis Management Objects (AMO) 对象模型中，对应的元素为 <xref:Microsoft.AnalysisServices.Hierarchy>、<xref:Microsoft.AnalysisServices.CubeHierarchy> 和 <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>。  
   
 ## <a name="see-also"></a>另请参阅  

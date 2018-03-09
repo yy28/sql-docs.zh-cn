@@ -1,37 +1,37 @@
 ---
 title: "管理使用 PowerShell 的 Linux 上的 SQL Server |Microsoft 文档"
-description: "本主题概述了在 Linux 上使用 SQL Server 的 Windows 上使用 PowerShell。"
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+description: "本文概述了在 Linux 上使用 SQL Server 的 Windows 上使用 PowerShell。"
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: 4a81c1c41a0d87f5248277c59947344d79457a91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本主题介绍[SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)并指导您完成几个示例如何将它用于在 Linux 上的 SQL Server 2017。 Windows 上目前支持适用于 SQL Server 的 PowerShell，因此当 Windows 计算机连接到 Linux 上的远程 SQL Server 实例时，可以使用 PowerShell。
+本文介绍[SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)并指导您完成几个示例如何将它用于在 Linux 上的 SQL Server 2017。 Windows 上目前支持适用于 SQL Server 的 PowerShell，因此当 Windows 计算机连接到 Linux 上的远程 SQL Server 实例时，可以使用 PowerShell。
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>在 Windows 上安装最新版本的 SQL PowerShell
 
 [SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx)在 Windows 上是附带[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。 使用 SQL Server 时，应始终使用最新版本的 SSMS 和 SQL PowerShell。 最新版本的 SSMS 不断更新和优化并且当前适用于 SQL Server 2017 on Linux。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。
 
-## <a name="before-you-begin"></a>开始之前
+## <a name="before-you-begin"></a>開始之前
 
 读取[已知问题](sql-server-linux-release-notes.md)在 Linux 上的 SQL server 自 2017 年。
 
@@ -57,7 +57,7 @@ Import-Module SqlServer
 Get-Module -Name SqlServer
 ```
 
-PowerShell 应显示与下面相似的信息：
+PowerShell 应显示类似于下面的输出的信息：
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -70,7 +70,7 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 使用 Windows 上的 PowerShell 连接到 Linux 上的 SQL Server 2017 实例，并显示几个服务器属性。
 
-复制以下命令并在 PowerShell 提示符处粘贴。 运行这些命令时，PowerShell 将：
+复制并粘贴以下命令在 PowerShell 提示符。 运行这些命令时，PowerShell 将：
 - 显示*Windows PowerShell 凭据请求*提示你输入凭据的对话框 (*SQL 用户名*和*SQL 密码*) 连接到你的 SQL Server 2017在 Linux 上的实例
 - 加载 SQL Server 管理对象 (SMO) 程序集
 - 创建的实例[服务器](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx)对象
@@ -97,7 +97,7 @@ $server.Information | Select-Object Edition, HostPlatform, HostDistribution | Fo
 # done
 ```
 
-PowerShell 应显示与下面相似的信息：
+PowerShell 应显示类似于下面的输出的信息：
 
 ```
 Edition          : Developer Edition (64-bit)
@@ -111,7 +111,7 @@ HostDistribution : Ubuntu
 
 使用 Windows 上的 PowerShell 检查连接到 Linux 上 SQL Server 2017 实例的错误日志。 我们还将使用**Out-gridview** cmdlet 来显示信息从错误日志中的网格视图显示。
 
-复制以下命令并在 PowerShell 提示符处粘贴。 它们可能会运行几分钟。 这些命令执行以下操作：
+复制并粘贴以下命令在 PowerShell 提示符。 它们可能会运行几分钟。 这些命令执行以下操作：
 - 显示*Windows PowerShell 凭据请求*提示你输入凭据的对话框 (*SQL 用户名*和*SQL 密码*) 连接到你的 SQL Server 2017在 Linux 上的实例
 - 使用**Get SqlErrorLog** cmdlet 来连接到 Linux 上的 SQL Server 2017 实例并检索错误日志以来**昨天**
 - 将输出发送到通过管道传递**Out-gridview** cmdlet

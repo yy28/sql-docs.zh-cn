@@ -2,9 +2,12 @@
 title: "为合并项目实现自定义冲突解决程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c92415b0558fbfe57212b139c6f927ec657e5ab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 66a0716665f2f8df2be0df258392aeb8ea4531dc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
-  本主题说明如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)] [或基于 COM 的自定义冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) 在中为合并项目实现自定义冲突解决程序。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或[基于 COM 的自定义解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为合并项目实现自定义冲突解决程序。  
   
  **本主题内容**  
   

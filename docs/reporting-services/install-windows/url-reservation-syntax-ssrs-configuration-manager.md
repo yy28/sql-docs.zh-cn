@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88f5408801551be37142c616644a6cb114834cd4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd6d5bba933195190823357c52d6ced1b8a7158e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 保留语法（SSRS 配置管理器）
   本主题介绍报表服务器 Web 服务和报表管理器的 URL 字符串的各部分。 该内部存储的 URL 字符串的结构不同于在浏览器窗口的地址栏中键入的 URL 的结构。 URL 保留项字符串会在您配置 URL 时显示在 Reporting Services 配置工具的“结果”窗口中，也会出现在 RSReportServer.config 文件中。 如果要解决 URL 保留项中存在的问题，或者要查询 HTTP.SYS 以查看服务器上定义的内部 URL 保留项，则了解该 URL 字符串的定义方式会很有用。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
  下表说明了每个属性及其有效值。  
   
-|属性|有效值|说明|  
+|“属性”|有效值|Description|  
 |--------------|------------------|-----------------|  
 |Scheme|http 或 https|针对非 SSL 连接和 SSL 连接的前缀。|  
 |Hostname|(+) 强通配符，相当于 IP 地址的值为“(所有已分配的)”。<br /><br /> (\*) 弱通配符，相当于 IP 地址为“(所有未分配的)”。<br /><br /> 完全限定域名<br /><br /> 计算机名称<br /><br /> IP 地址 (IPV4)<br /><br /> IP 地址 (IPV6)|标识网络上的服务器。<br /><br /> (+) 强通配符是默认值。 HTTP.SYS 将接受给定端口和虚拟目录组合的所有网络适配器上的所有请求。 报表服务器将接受该端口上的任何请求。<br /><br /> (\*) 弱通配符。 HTTP.SYS 接受给定端口和虚拟目录组合的所有网络适配器上未由其他 URL 保留项处理的所有请求。<br /><br /> 计算机名称是网络上计算机的 NETBIOS 名称。<br /><br /> 完全限定域名包含域地址和服务器名，如域控制器或公共域名服务器中所注册的那样。<br /><br /> IP 地址 (IPV4) 是采用 IPV4 格式 *nnn.nnn.nnn.nnn*的计算机网络适配器的 IP 地址。<br /><br /> IP 地址 (IPV6) 是采用 IPV6 格式的、计算机网络适配器的 IP 地址：\<header>:\<header>:*nnn.nnn.nnn.nnn*。|  

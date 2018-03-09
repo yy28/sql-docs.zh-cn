@@ -1,11 +1,11 @@
 ---
-title: "集成的常规页 Services 设计器选项 |Microsoft 文档"
+title: "Integration Services 设计器选项的“常规”页 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 599665d49b8512ec772ac5ca522cb4e0b7a521ec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c9ba20c680534988a8112b9621f68155304020c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 设计器选项的“常规”页
   使用 **“选项”** 对话框中 **“Integration Services 设计器”** 页的 **“常规”** 页，可以指定用于加载、显示和升级包的选项。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="options"></a>“常规”  
  **加载包时检查数字签名**  
- 选择让 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在加载包时检查数字签名。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]仅将检查是否数字签名是否存在、 是否有效，并且是从受信任的源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]不会检查包是否已更改由于包进行签名。  
+ 选择让 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在加载包时检查数字签名。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 仅会检查数字签名是否存在、是否有效，并且是否来自可靠来源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 不会检查包经过签名后是否发生过更改。  
   
  如果你设置 **BlockedSignatureStates** 注册表值，则此注册表值会替代“加载包时检查数字签名”  选项。 有关详细信息，请参阅[通过设置注册表值实现签名策略](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)。  
   
@@ -50,9 +49,9 @@ ms.lasthandoff: 08/03/2017
  选择新脚本任务和脚本组件的默认脚本语言。  
   
  **更新连接字符串以使用新的提供程序名称**  
- 打开或升级时[!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)]包更新连接字符串的名称的以下提供程序，用于当前版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
+ 对于当前版本的 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] ，打开或升级 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包时，请将连接字符串更新为使用下列提供程序的名称：  
   
--   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]OLE DB 访问接口  
+-   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB 访问接口  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
@@ -62,8 +61,7 @@ ms.lasthandoff: 08/03/2017
  升级 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 包时，为包的升级版本创建新的包 ID。  
   
 ## <a name="see-also"></a>另请参阅  
- [安全概述 &#40; Integration Services &#41;](../integration-services/security/security-overview-integration-services.md)   
- [使用脚本扩展包](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [安全性概述 (Integration Services)](../integration-services/security/security-overview-integration-services.md)   
+ [用脚本扩展包](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   
-

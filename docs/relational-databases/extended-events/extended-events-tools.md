@@ -17,16 +17,16 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91fd4695d0b68aabf95f3ba43d2cb30c18595bb8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cff6cc262957d8bffbdc0955a3d276b92b1094f6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="extended-events-tools"></a>扩展事件工具
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序。 这是一个强大的工具，可用于创建、更改和管理扩展事件会话。 有关详细信息，请参阅 [对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 该工具可用于创建和执行在扩展事件主题中提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例时都提供 SQL Server 登录名。 该工具可用于创建和执行在扩展事件主题中提供的代码示例。 有关详细信息，请参阅 [对象资源管理器](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。  
   
  除了您创建的会话之外，在服务器上存在一个默认的系统运行状况会话。 该会话收集的系统数据可用于帮助解决性能问题。 有关详细信息，请参阅 [使用 system_health 会话](../../relational-databases/extended-events/use-the-system-health-session.md)。  
   
 ## <a name="ddl-statements"></a>DDL 语句  
  请以下 DDL 语句可以创建、更改和删除扩展事件会话。  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)|创建用于标识事件源、事件会话目标和事件会话参数的扩展事件会话对象。|  
 |[ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)|启动或停止事件会话，或更改事件会话配置。|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="catalog-views"></a>目录视图  
  使用下面的目录视图可获取创建事件会话时所创建的元数据。  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|列出所有事件会话定义。|  
 |[sys.server_event_session_actions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|对事件会话中每个事件的每个操作都返回一行。|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  直到会话启动，这些视图中才会包含会话数据。  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|返回有关会话调度程序池的信息。|  
 |[sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|对事件包显示的每个对象都返回一行。|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="system-tables"></a>系统表  
  使用下面的系统表可以获取与 SQL 跟踪事件类和列的扩展事件等效项有关的信息。  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[trace_xe_event_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|映射到 SQL 跟踪事件类的每个扩展事件各占一行。|  
 |[trace_xe_action_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|映射到 SQL 跟踪列 ID 的每个扩展事件操作各占一行。|  

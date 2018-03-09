@@ -1,5 +1,5 @@
 ---
-title: "Azure Blob 目标 |Microsoft 文档"
+title: "Azure Blob 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2016
 ms.prod: sql-non-specified
@@ -8,32 +8,30 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpblobdest.f1
 - sql14.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 152d92859c2f4ce96d0cc1ba9b02ffb412d18fde
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 13d8b271c758d9424f99fe2a366ea7d1fd34d034
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="azure-blob-destination"></a>Azure blob 目标
  “Azure blob 目标”  组件允许 SSIS 包将数据写入 Azure blob。 支持的文件格式：CSV 和 AVRO。 
    
  将“Azure blob 目标”拖放到数据流设计器中，然后双击该组件打开编辑器。  
   
- **Azure Blob 目标**的组成部分[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
+ “Azure blob 目标”是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。  
   
 1.  对于“Azure 存储空间连接管理器”  字段，请指定一个现有的 Azure 存储空间连接管理器，或新建一个引用 Azure 存储空间帐户的连接管理器。  
   
@@ -48,4 +46,3 @@ ms.lasthandoff: 08/03/2017
 6.  指定连接信息后，切换到“列”  页，将源列映射到 SSIS 数据流的目标列。  
   
   
-

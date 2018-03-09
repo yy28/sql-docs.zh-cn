@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29ba7f266a86e53f95668b8bf8ca4ce879bb62f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。  
   
     > [!NOTE]  
-    >  至少需要 16 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+    > 至少需要 16 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
 2.  在“数据库属性”  对话框中，选择“查询存储”  页。  
   
@@ -49,18 +50,18 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 语句  
   
-1.  使用 **ALTER DATABASE** 语句来启用查询存储。 例如：  
+使用 **ALTER DATABASE** 语句来启用查询存储。 例如：  
   
-    ```tsql  
-    ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
-    ```  
+```sql  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+```  
   
-     有关与查询存储相关的语法选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
+有关与查询存储相关的语法选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
 > [!NOTE]  
 >  无法为 **master** 或 **tempdb** 数据库启用查询存储。  
  
-##  <a name="About"></a>查询存储中的信息  
+## <a name="About"></a>查询存储中的信息  
  由于统计信息更改、架构更改、索引的创建/删除等多种不同原因，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查询的执行计划通常会随着时间而改进。过程缓存（其中存储了缓存的查询计划）仅存储最近的执行计划。 还会由于内存压力从计划缓存中逐出计划。 因此，执行计划更改造成的查询性能回归可能非常重大，且长时间才能解决。  
   
  由于查询存储会保留每个查询的多个执行计划，因此它可以强制执行策略，以引导查询处理器对某个查询使用特定执行计划。 这称为“计划强制”。 查询存储中的计划强制是通过使用类似于 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) 查询提示的机制来提供的，但它不需要在用户应用程序中进行任何更改。 计划强制可在非常短的时间内解决由计划更改造成的查询性能回归。  
@@ -70,32 +71,28 @@ ms.lasthandoff: 11/17/2017
  使用查询存储功能的常见方案为：  
   
 -   快速查找并修复通过强制使用先前查询计划而造成的计划性能回归。 修复近期由于执行计划更改而出现性能回归的查询。  
-  
 -   确定在给定时间窗口中查询执行的次数，从而帮助 DBA 对性能资源问题进行故障排除。  
-  
 -   标识过去 *n* 小时内的前 *n* 个查询（按执行时间、内存占用等）。  
-  
 -   审核给定查询的查询计划历史记录。  
-  
 -   分析特定数据库的资源（CPU、I/O 和内存）使用模式。  
 -   确定资源上正在等待的前 n 个查询。 
 -   了解特定查询或计划的等待性质。
   
 查询存储包含三个存储：
-- 计划存储：用于保存执行计划信息。
-- 运行时统计信息存储：用于保存执行统计信息。
-- 等待统计信息存储：用于保存等待统计信息。
+- 计划存储：用于保存执行计划信息。     
+- 运行时统计信息存储：用于保存执行统计信息。    
+- 等待统计信息存储：用于保存等待统计信息。     
  
- **max_plans_per_query** 配置选项限制了计划存储中查询可存储的唯一计划数。 为增强性能，通过异步方式向存储写入信息。 为尽量减少空间使用量，将在按固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 可通过查询查询存储目录视图来查看这些存储中的信息。  
+**max_plans_per_query** 配置选项限制了计划存储中查询可存储的唯一计划数。 为增强性能，通过异步方式向存储写入信息。 为尽量减少空间使用量，将在按固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 可通过查询查询存储目录视图来查看这些存储中的信息。  
   
- 以下查询返回查询存储中查询和计划的相关信息。  
+以下查询返回查询存储中查询和计划的相关信息。  
   
-```tsql  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
-JOIN sys.query_store_query AS Qry  
+INNER JOIN sys.query_store_query AS Qry  
     ON Pl.query_id = Qry.query_id  
-JOIN sys.query_store_query_text AS Txt  
+INNER JOIN sys.query_store_query_text AS Txt  
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
@@ -111,7 +108,7 @@ JOIN sys.query_store_query_text AS Txt
  若要强制执行某一计划，请选择查询和计划，然后单击“强制计划” 。 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。  
 ##  <a name="Waiting"></a>查找等待查询
 
-从 SQL Server 2017 CTP 2.0 开始和在 Azure SQL 数据库上，查询存储客户在一段时间之后都可使用每个查询的等待统计信息。 在查询存储中，等待类型将合并到等待类别中。 此处提供了完整映射：[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
+从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 开始，查询存储中将提供随时间变化每个查询的等待统计信息。 在查询存储中，等待类型将合并到等待类别中。 [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).中提供从等待类别到等待类型的映射。
 
 等待类别可将不同等待类型按性质合并为类似的桶。 不同的等待类别需要不同的后续分析才能解决此问题，但相同类别的等待类型可引起非常相似的故障排除体验，并假定基于等待的受影响的查询会成为用于成功完成此类调查的大部分内容的缺少的部分。
 
@@ -129,38 +126,38 @@ JOIN sys.query_store_query_text AS Txt
 
 以下选项可用于配置查询存储参数。
 
- `OPERATION_MODE`  
- 可以为 READ_WRITE（默认）或 READ_ONLY。  
+OPERATION_MODE  
+可以为 READ_WRITE（默认）或 READ_ONLY。  
   
- `CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)`  
- 配置 STALE_QUERY_THRESHOLD_DAYS 参数，以指定数据在查询存储保留的天数。 默认值为 30。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天。
+CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)  
+配置 `STALE_QUERY_THRESHOLD_DAYS` 参数，以指定数据在查询存储中保留的天数。 默认值为 30。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天。
   
- `DATA_FLUSH_INTERVAL_SECONDS`  
- 确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 通过 DATA_FLUSH_INTERVAL_SECONDS 配置此异步传输发生的频率。 默认值为 900（15 分钟）。  
+DATA_FLUSH_INTERVAL_SECONDS  
+确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 此异步传输发生的频率通过 `DATA_FLUSH_INTERVAL_SECONDS` 进行配置。 默认值为 900（15 分钟）。  
   
- `MAX_STORAGE_SIZE_MB`  
- 配置查询存储的最大大小。 如果查询存储中的数据命中 MAX_STORAGE_SIZE_MB 限制，则查询存储会自动从读写状态更改为只读状态，并停止收集新数据。  默认值为 100 Mb。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 GB，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 10 MB。
+MAX_STORAGE_SIZE_MB  
+配置查询存储的最大大小。 如果查询存储中的数据达到 `MAX_STORAGE_SIZE_MB` 限制，查询存储会自动从读写状态更改为只读状态，并停止收集新数据。  默认值为 100 MB。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 GB，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 10 MB。
   
- `INTERVAL_LENGTH_MINUTES`  
- 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口通过 INTERVAL_LENGTH_MINUTES 进行配置。 默认值是 **60**秒。 
+INTERVAL_LENGTH_MINUTES  
+确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口通过 `INTERVAL_LENGTH_MINUTES` 进行配置。 默认值是 **60**秒。 
   
- `SIZE_BASED_CLEANUP_MODE`  
- 控制当数据总量接近最大大小时是否自动激活清除进程。 可为“AUTO”（默认）或“OFF”。  
+SIZE_BASED_CLEANUP_MODE  
+控制当数据总量接近最大大小时是否自动激活清除进程。 可为“AUTO”（默认）或“OFF”。  
   
- `QUERY_CAPTURE_MODE`  
- 指定查询存储是捕获所有查询，还是基于执行计数和资源消耗捕获相关查询，或是停止添加新查询且仅跟踪当前查询。 可以是 ALL（捕获所有查询）、AUTO（忽略不太频繁的查询以及编译和执行持续时间不长的查询。）或 NONE（停止捕获新查询）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）上的默认值为 ALL，而 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]上的默认值为 AUTO。
+QUERY_CAPTURE_MODE  
+指定查询存储是捕获所有查询，还是基于执行计数和资源消耗捕获相关查询，或是停止添加新查询且仅跟踪当前查询。 可以是 ALL（捕获所有查询）、AUTO（忽略频率较低的查询以及编译和执行持续时间较短的查询）或 NONE（停止捕获新查询）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）上的默认值为 ALL，而 Azure 上的默认值为 AUTO[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
- `MAX_PLANS_PER_QUERY`  
- 一个整数，表示为每个查询保留的最大计划数。 默认值为 200。  
+MAX_PLANS_PER_QUERY  
+一个整数，表示为每个查询保留的最大计划数。 默认值为 200。  
  
- `WAIT_STATS_CAPTURE_MODE`  
- 控制查询存储是否捕获等待统计信息。 可以为“OFF”或“ON”（默认）。  
+WAIT_STATS_CAPTURE_MODE  
+控制查询存储是否捕获等待统计信息。 可以为“OFF”或“ON”（默认）。  
  
- 查询 **sys.database_query_store_options** 视图以确定查询存储的当前选项。 有关值的详细信息，请参阅 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
+查询 **sys.database_query_store_options** 视图以确定查询存储的当前选项。 有关值的详细信息，请参阅 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
   
- 若要深入了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来设置选项，请参阅 [选项管理](#OptionMgmt)。  
+若要深入了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来设置选项，请参阅 [选项管理](#OptionMgmt)。  
   
-##  <a name="Related"></a> 相关视图、功能和过程  
+## <a name="Related"></a> 相关视图、功能和过程  
  通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用以下视图和过程来查看和管理查询存储。  
 
 ### <a name="query-store-functions"></a>查询存储函数  
@@ -200,7 +197,7 @@ JOIN sys.query_store_query_text AS Txt
   
  查询 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) ，以确定当前查询存储是否可用，以及当前是否在收集运行时状态。  
   
-```tsql  
+```sql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
@@ -213,7 +210,7 @@ FROM sys.database_query_store_options;
   
  若要了解查询存储状态的相关详细信息，请在用户数据库中执行以下操作。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -221,7 +218,7 @@ SELECT * FROM sys.database_query_store_options;
   
  你可以覆盖用于聚合查询运行时统计信息的时间间隔（默认值为 60 分钟）。  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
@@ -235,14 +232,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  若要检查当前的查询存储大小和限制，请在用户数据库中执行以下语句。  
   
-```tsql  
+```sql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  如果查询存储已满，请使用以下语句来扩展存储。  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -251,7 +248,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  你可以使用单个 ALTER DATABASE 语句同时设置多个查询存储选项。  
   
-```tsql  
+```sql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
@@ -270,7 +267,7 @@ SET QUERY_STORE (
   
  查询存储时间间隔表是在数据库创建期间在 PRIMARY 文件组中创建的，且之后不可更改此配置。 如果空间不足，你可以要使用以下语句来清理旧的查询存储数据。  
   
-```tsql  
+```sql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -278,7 +275,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
   “删除临时查询”会删除只执行了一次且已超过 24 小时的查询。  
   
-```tsql  
+```sql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -311,9 +308,8 @@ DEALLOCATE adhoc_queries_cursor;
   
  以上示例使用 **sp_query_store_remove_query** 扩展存储过程来删除不必要的数据。 还可以使用：  
   
--   **sp_query_store_reset_exec_stats** – 清除给定计划的运行时统计信息。  
-  
--   **sp_query_store_remove_plan** – 删除单个计划。  
+-   sp_query_store_reset_exec_stats 用于清除给定计划的运行时统计信息。  
+-   sp_query_store_remove_plan 用于删除单个计划。  
  
   
 ###  <a name="Peformance"></a> 性能审核和疑难解答  
@@ -321,7 +317,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  **在数据库上执行的最后 n 个查询？**  
   
-```tsql  
+```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -336,7 +332,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **每个查询的执行数量？**  
   
-```tsql  
+```sql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -352,7 +348,7 @@ ORDER BY total_execution_count DESC;
   
  **过去一小时内具有最长平均执行时间的查询数量？**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -369,7 +365,7 @@ ORDER BY rs.avg_duration DESC;
   
  **在相应的平均行计数和执行计数下，过去 24 小时内具有最大平均物理 IO 读取数的查询数量？**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -388,7 +384,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **具有多个计划的查询？** 这些查询特别有趣，因为计划选择更改可能造成它们的性能回归。 以下查询将这些查询和所有计划一同进行了标识：  
   
-```tsql  
+```sql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -417,7 +413,7 @@ ORDER BY query_id, plan_id;
   
  **最近性能回归的查询（对比不同时间点）？** 以下查询示例返回了其执行时间因计划选择更改而在过去 48 小时内翻倍的所有查询。 并排查询所有的运行时统计信息时间间隔。  
   
-```tsql  
+```sql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -457,7 +453,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  **等待时间最长的查询？**
 此查询将返回等待最多的前 10 个查询。 
  
- ```tsql 
+ ```sql 
   SELECT TOP 10
     qt.query_text_id,
     q.query_id,
@@ -473,7 +469,7 @@ ORDER BY sum_total_wait_ms DESC
  
  **最近性能回归的查询（对比近期执行和历史执行）？** 下一查询会根据执行时间段来比较查询执行。 在此特定示例中，查询对比了最近时期（1 小时）和历史时期（过去一天）中的执行，并标识了引入 `additional_duration_workload`的查询。 此度量的计算方式是最近平均执行和历史平均执行之差，再乘以最近执行数量。 它实际上表示相对于历史记录，引入了多少额外的持续时间最近执行：  
   
-```tsql  
+```sql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -554,7 +550,6 @@ ORDER BY additional_duration_workload DESC
 OPTION (MERGE JOIN);  
 ```  
  
-  
 ###  <a name="Stability"></a> 维护查询性能稳定性  
  对于执行多次的查询，你可能注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用了会导致不同资源利用率和持续时间的不同计划。 借助查询存储，可以检测到查询性能何时回归，并确定在感兴趣的时间段内的最优计划。 然后你可以对未来的查询执行强制执行此最优计划。  
   
@@ -562,7 +557,7 @@ OPTION (MERGE JOIN);
   
  **强制执行或计划查询（应用强制策略）。** 当向某一查询强制执行某个计划时，每次查询开始执行时其强制执行的计划都会随同一起执行。  
   
-```tsql  
+```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -570,7 +565,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **删除强制执行查询的计划。** 若要再次依靠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器来计算最佳查询计划，请使用 **sp_query_store_unforce_plan** 来取消强制执行为查询选定的计划。  
   
-```tsql  
+```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   

@@ -1,10 +1,13 @@
 ---
 title: "菜单命令和其他快捷键 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 040f770f568e7dacf3d378415f227742e70935f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cd2d8321fb6fe50e952bf9a92ee07e1d97f29bc6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>菜单命令和其他快捷键 (MySQLToSQL)
 以下各节描述了用于访问菜单命令和其他的 SSMA 的各种对话框中为 MySQL 应用程序使用键盘快捷方式的键盘快捷键。  

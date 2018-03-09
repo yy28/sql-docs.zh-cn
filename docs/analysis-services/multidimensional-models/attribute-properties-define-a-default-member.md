@@ -2,16 +2,13 @@
 title: "定义默认成员 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - members [Analysis Services], default
 - DefaultMember property
 ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 436a1983bfee05a6deb3d998e42f2d126682dc51
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a457e54c1653cfc996de2040a09e8b22578307f0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---define-a-default-member"></a>特性属性-定义默认成员
-  在查询中不包括特性层次结构的情况下，可以使用特性层次结构的默认成员来计算表达式。 如果查询包括的特性层次结构或用户层次结构包含产生特性层次结构的特性，那么将忽略默认成员。 这是因为将使用查询中指定的成员。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在查询中不包括特性层次结构的情况下，可以使用特性层次结构的默认成员来计算表达式。 如果查询包括的特性层次结构或用户层次结构包含产生特性层次结构的特性，那么将忽略默认成员。 这是因为将使用查询中指定的成员。  
   
  通过将某个特性成员指定为特性层次结构的 **DefaultMember** 属性值，可设置特性层次结构的默认成员。 可以在维度设计器的“维度结构”选项卡上，或在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中多维数据集设计器的“计算”选项卡上多维数据集计算脚本中设置该属性。 在定义维度安全性时，还可以在“维度数据”选项卡上指定安全性角色的 **DefaultMember** 属性（覆盖维度的默认成员设置）。 若要避免名称解析问题，可在下列情况下在多维数据集的 MDX 脚本里定义该默认成员：如果多维数据集多次引用某个数据库维度，如果多维数据集内的维度名称与数据库内的维度名称不同，或者如果希望在不同的多维数据集内有不同的默认成员。  
   
@@ -53,6 +51,6 @@ ms.lasthandoff: 11/17/2017
  当层次结构中的各级别自然聚合时，您可以为层次结构中的任意属性定义默认成员，而不考虑该层次结构中的其他属性。 例如，在层次结构“国家（地区）- 省市自治区 - 市县”中，您可以在不定义“省市自治区”或“国家（地区）”的默认成员的情况下为“市县”（例如，[市县].[蒙特利尔]）定义默认成员。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置属性层次结构的“(全部)”级别](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [配置 &#40;所有 &#41;属性层次结构的级别](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_xtp_hash_index_stats_TSQL
 - dm_db_xtp_hash_index_stats
 - dm_db_xtp_hash_index_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_hash_index_stats (dynamic management view)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2952f937268ea71a60c87b9bbf766000c5b5a92
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 00716b0d86e0f59c4b7a904ef682f92d41566742
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,11 +44,12 @@ ms.lasthandoff: 11/17/2017
   
 -   如果空存储桶的数目较高，或最大链长度比平均链长度高，则可能许多行具有重复的索引键值，或者键值存在偏斜。 索引键相同的所有行都将哈希处理至同一个存储桶，因而，该存储桶有较长的链长度。  
   
- 链长度较长可能会显著影响针对各单独行的所有 DML 操作的性能，包括 SELECT 和 INSERT。 链长度较短以及空存储桶计数较高指示 bucket_count 过高。 这将降低索引扫描的性能。  
+链长度较长可能会显著影响针对各单独行的所有 DML 操作的性能，包括 SELECT 和 INSERT。 链长度较短以及空存储桶计数较高指示 bucket_count 过高。 这将降低索引扫描的性能。  
   
- **sys.dm_db_xtp_hash_index_stats**扫描整个表。 因此，如果你数据库中有大型表**sys.dm_db_xtp_hash_index_stats**可能需要很长时间运行。  
+> [!WARNING]
+> **sys.dm_db_xtp_hash_index_stats**扫描整个表。 因此，如果你数据库中有大型表**sys.dm_db_xtp_hash_index_stats**可能需要很长时间运行。  
   
- 有关详细信息，请参阅[内存优化表的哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
+有关详细信息，请参阅[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
   
 |列名|类型|Description|  
 |-----------------|----------|-----------------|  
@@ -58,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 |max_chain_length|**bigint**|哈希存储桶中的最大行链长度。|  
 |xtp_object_id|**bigint**|对应于内存优化表的内存中 OLTP 对象 ID。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
 
 ## <a name="examples"></a>示例  
@@ -67,37 +71,35 @@ ms.lasthandoff: 11/17/2017
 
 以下查询可以用于对现有表的哈希索引桶计数进行故障排除。 查询返回对用户表的空存储桶，并为所有哈希索引的链长度百分比有关的统计信息。
 
-```Transact-SQL
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [table],   
     i.name                   as [index],   
     h.total_bucket_count,  
     h.empty_bucket_count,  
-      
     FLOOR((  
       CAST(h.empty_bucket_count as float) /  
         h.total_bucket_count) * 100)  
                              as [empty_bucket_percent],  
     h.avg_chain_length,   
     h.max_chain_length  
-  FROM  
-         sys.dm_db_xtp_hash_index_stats  as h   
-    JOIN sys.indexes                     as i  
+  FROM sys.dm_db_xtp_hash_index_stats as h   
+  INNER JOIN sys.indexes as i  
             ON h.object_id = i.object_id  
            AND h.index_id  = i.index_id  
-    JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
-    JOIN sys.tables t on h.object_id=t.object_id
+    INNER JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
+    INNER JOIN sys.tables t on h.object_id=t.object_id
   WHERE ia.type=1
   ORDER BY [table], [index];  
 ``` 
 
-有关如何解释此查询的结果的详细信息，请参阅[内存优化表的哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
+有关如何解释此查询的结果的详细信息，请参阅[内存优化表的故障排除哈希索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 内部表的哈希索引统计信息
 
 某些功能使用内部利用哈希索引，例如内存优化表上的列存储索引的表。 下面的查询返回对链接到用户表的内部表的哈希索引的统计信息。
 
-```Transact-SQL
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [user_table],
     ia.type_desc as [internal_table_type],
@@ -106,13 +108,12 @@ ms.lasthandoff: 11/17/2017
     h.empty_bucket_count,  
     h.avg_chain_length,   
     h.max_chain_length  
-  FROM  
-         sys.dm_db_xtp_hash_index_stats  as h   
-    JOIN sys.indexes                     as i  
+  FROM sys.dm_db_xtp_hash_index_stats as h   
+  INNER JOIN sys.indexes as i  
             ON h.object_id = i.object_id  
            AND h.index_id  = i.index_id  
-    JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
-    JOIN sys.tables t on h.object_id=t.object_id
+    INNER JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
+    INNER JOIN sys.tables t on h.object_id=t.object_id
   WHERE ia.type!=1
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
@@ -121,7 +122,7 @@ ms.lasthandoff: 11/17/2017
 
 此查询不需要返回任何行，除非你使用的功能，可利用内部表上的哈希索引。 以下内存优化表包含列存储索引。 创建此表后，你将在内部表上看到哈希索引。
 
-```Transact-SQL
+```sql
   CREATE TABLE dbo.table_columnstore
   (
     c1 INT NOT NULL PRIMARY KEY NONCLUSTERED,

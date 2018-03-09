@@ -2,10 +2,14 @@
 title: "在 OPENXML 中指定元属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0d2eed1cb054c76e7f6e4d816ec98ce60c36f0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 968f1a5b32bbc6c2e6f2f955083e8fd247e3fc82
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定元属性
-  XML 文档中的元属性特性用于描述 XML 项（例如元素节点、属性节点或其他任何 DOM 节点）的属性。 这些特性并不实际存在于 XML 文档文本中。 但是，OPENXML 将为所有 XML 项提供这些元属性。 通过这些元属性可以提取 XML 节点的信息（例如本地定位和命名空间信息）。 这些信息将提供比文字表现形式更加详细的信息。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+XML 文档中的元属性特性用于描述 XML 项（例如元素节点、属性节点或其他任何 DOM 节点）的属性。 这些特性并不实际存在于 XML 文档文本中。 但是，OPENXML 将为所有 XML 项提供这些元属性。 通过这些元属性可以提取 XML 节点的信息（例如本地定位和命名空间信息）。 这些信息将提供比文字表现形式更加详细的信息。  
   
  可以使用 *ColPattern* 参数将这些元属性映射到 OPENXML 语句中的行集列。 这些列将包含它们所映射到的元属性的值。 有关 OPENXML 语法的详细信息，请参见 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  
   
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  不能在任何 XPath 导航中引用这些元属性。  
   
-|元属性特性|说明|  
+|元属性特性|Description|  
 |----------------------------|-----------------|  
 |**@mp:id**|提供由系统生成的、文档范围的 DOM 节点标识符。 只要文档未被重新分析，此 ID 就会引用同一个 XML 节点。<br /><br /> XML ID 为 **0** 表明该元素是根元素。 其父 XML ID 为 NULL。|  
 |**@mp:localname**|存储节点名的本地部分。 与前缀及命名空间 URI 一起用于命名元素节点或属性节点。|  
@@ -51,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
  下表显示了使您得以检索关于层次结构的信息的其他父属性。  
   
-|父元属性特性|说明|  
+|父元属性特性|Description|  
 |-----------------------------------|-----------------|  
 |**@mp:parentid**|与 **../@mp:id**|  
 |**@mp:parentlocalname**|与 **../@mp:localname**|  

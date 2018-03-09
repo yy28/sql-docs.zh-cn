@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
 - sp_help_fulltext_components
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_system_components
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f529fcb0130479ef30af742fe58fd05b4bc4d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,10 +51,10 @@ sp_help_fulltext_system_components
  'all'  
  返回所有全文组件的信息。  
   
- [  **@component_type=** ] *component_type*  
+ [ **@component_type=** ] *component_type*  
  指定组件的类型。 *component_type*可以是以下之一：  
   
--   **断字符**  
+-   **wordbreaker**  
   
 -   **filter**  
   
@@ -61,7 +64,7 @@ sp_help_fulltext_system_components
   
  如果指定完整路径， *param*还必须使用组件 DLL 的完整路径指定或返回一条错误消息。  
   
- [  **@param=** ] *param*  
+ [ **@param=** ] *param*  
  根据组件类型，此参数可以是：区域设置标识符 (LCID)、带“.”前缀的文件扩展名、协议处理程序的完整组件名称或组件 DLL 的完整路径。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -76,8 +79,8 @@ sp_help_fulltext_system_components
 |**componentname**|**sysname**|组件的名称。|  
 |**clsid**|**uniqueidentifier**|组件的类标识符。|  
 |**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 不是的成员的调用方**serveradmin**固定的服务器角色。|  
-|**version**|**nvarchar (30)**|组件的版本。|  
-|**制造商**|**sysname**|组件制造商的名称。|  
+|**version**|**nvarchar(30)**|组件的版本。|  
+|**manufacturer**|**sysname**|组件制造商的名称。|  
   
  以下结果集才会返回一个或多个全文目录存在，则使用*component_type*。  
   
@@ -86,7 +89,7 @@ sp_help_fulltext_system_components
 |**dbid**|**int**|数据库 ID。|  
 |**ftcatid**|**int**|全文目录的 ID。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**公共**角色; 但是，用户只能看到他们具有 VIEW DEFINITION 权限的全文目录有关的信息。 只有的成员**serveradmin**固定的服务器角色，可以看到中的值**fullpath**列。  
   
 ## <a name="remarks"></a>注释  

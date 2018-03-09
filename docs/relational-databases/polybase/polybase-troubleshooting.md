@@ -18,28 +18,27 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 故障排除
-
-  若要对 PolyBase 进行故障排除，请使用本主题中介绍的技术。  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+若要对 PolyBase 进行故障排除，请使用本主题中介绍的技术。  
   
 ## <a name="catalog-views"></a>目录视图  
  使用此处列出的目录视图来管理 PolyBase 操作。  
   
 |||  
 |-|-|  
-|视图|说明|  
+|“查看”|Description|  
 |[sys.external_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|标识外部表。|  
 |[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|标识外部数据源。|  
 |[sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|标识外部文件格式。|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 10/12/2017
   
      记录运行时间最长的查询的执行 ID。  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -91,7 +90,7 @@ ms.lasthandoff: 10/12/2017
   
     -   DMS：表示 PolyBase 数据移动服务操作。 继续执行步骤 3b。  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/12/2017
   
          使用上一步中记录的执行 ID 和步骤索引。 使用上一步中记录的执行 ID 和步骤索引。  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -120,7 +119,7 @@ ms.lasthandoff: 10/12/2017
   
          使用上一步中记录的执行 ID 和步骤索引。  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -134,7 +133,7 @@ ms.lasthandoff: 10/12/2017
   
      使用上一步中记录的执行 ID 和步骤索引。  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   
@@ -248,4 +247,3 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="see-also"></a>另请参阅
 [PolyBase Kerberos 连接疑难解答](polybase-troubleshoot-connectivity.md)
-

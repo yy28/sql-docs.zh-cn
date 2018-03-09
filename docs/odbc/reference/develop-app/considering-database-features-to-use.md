@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="considering-database-features-to-use"></a>考虑到使用的数据库功能
 基本级别的互操作性知道后，必须考虑应用程序使用的数据库功能。 例如，哪些 SQL 语句将应用程序执行？ 将应用程序使用可滚动游标？ 事务？ 过程？ Long 数据？ 有关哪些功能的建议可能不支持所有的 Dbms，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函数描述，以及[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 应用程序所需的功能可以消除一些 Dbms 从目标 Dbms 的列表。 它们还可能会显示应用程序可以轻松地针对许多 Dbms。  

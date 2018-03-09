@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,13 +21,13 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 642ad2cf385ce5d880e5f62d58694ce1f79d34fd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4ba511d35e7358093839df3daa415d767fd2c550
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
  下表描述了  “状态”列的可能的值。  
   
-|状态|Description|  
+|“登录属性”|Description|  
 |------------|-----------------|  
 |新建订阅|在您首次创建订阅时显示。|  
 |Inactive|无法处理订阅时显示。 有关详细信息，请参阅本主题后面的“管理不活动订阅”部分。|  
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/05/2017
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|日期|处理|区域|类别|Level|Correlation|消息|  
+|date|处理|区域|类别|级别|Correlation|消息|  
 |5/21/2014 14:34:06:15|应用池：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|报表服务器电子邮件扩展插件|意外|（空）|**发送邮件时出错。** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 监视订阅  

@@ -3,8 +3,9 @@ title: "Find 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords: Find method [ADO]
+helpviewer_keywords:
+- Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)满足指定的条件的行。 （可选） 可以指定的搜索、 起始行和与起始行的偏移量的方向。 如果满足条件，则在找到记录; 设置当前行位置否则，该位置设置为的终点 （或起点）**记录集**。  
@@ -43,13 +45,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A**字符串**值，该值包含在搜索中指定要使用的列名称、 比较运算符和值的语句。  
   
  *SkipRows*  
- 可选*。* A**长**值，其默认值为零，用于指定从当前行的行偏移量或*启动*书签以开始执行搜索。 默认情况下，搜索将开始在当前行。  
+ Optional*.* A**长**值，其默认值为零，用于指定从当前行的行偏移量或*启动*书签以开始执行搜索。 默认情况下，搜索将开始在当前行。  
   
  *SearchDirection*  
- 可选*。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，该值指定是否应在当前行或搜索方向的下一步可用行上开始的搜索。 结尾处停止时的不成功的搜索**记录集**如果值为**adSearchForward**。 在开始时停止失败搜索**记录集**如果值为**adSearchBackward**。  
+ Optional*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，该值指定是否应在当前行或搜索方向的下一步可用行上开始的搜索。 结尾处停止时的不成功的搜索**记录集**如果值为**adSearchForward**。 在开始时停止失败搜索**记录集**如果值为**adSearchBackward**。  
   
- *启动*  
- 可选。 A **Variant**充当搜索的起始位置的书签。  
+ *开始*  
+ 選擇性。 A **Variant**充当搜索的起始位置的书签。  
   
 ## <a name="remarks"></a>注释  
  可以以指定仅包含单个列名称*条件*。 此方法不支持多列搜索。  

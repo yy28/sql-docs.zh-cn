@@ -3,8 +3,11 @@ title: "创建插入结果查询 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7728baf26863015b323cd3841b0f9dfb898ea897
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 77d9cd92950ddecc334fd5d75c3092bc5b3b4214
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>创建插入结果查询 (Visual Database Tools)
-您可以使用“插入结果”查询将行从一个表复制到另一个表或在同一个表内复制行。 例如，在 `titles` 表中，您可使用“插入结果”查询将某个出版商的所有书名信息复制到另一个可用于该出版商的表中。 “插入结果”查询与“生成表”查询类似，但前者是将行复制到现有表中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以使用“插入结果”查询将行从一个表复制到另一个表或在同一个表内复制行。 例如，在 `titles` 表中，您可使用“插入结果”查询将某个出版商的所有书名信息复制到另一个可用于该出版商的表中。 “插入结果”查询与“生成表”查询类似，但前者是将行复制到现有表中。  
   
 > [!TIP]  
 > 您也可以使用剪切和粘贴功能将行从一个表复制到另一个表中。 还可以为每个表创建一个查询，然后运行这些查询。 将所需的行从一个结果网格复制到另一个结果网格中。  

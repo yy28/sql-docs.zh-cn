@@ -8,20 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>备份数据库 （并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -63,7 +64,7 @@ BACKUP DATABASE database_name
  *database_name*  
  要在其中创建备份数据库的名称。 数据库可以是 master 数据库或用户数据库。  
   
- 到磁盘 =\\\\*UNC_path*\\*backup_directory*  
+ TO DISK = '\\\\*UNC_path*\\*backup_directory*'  
  网络路径和到目录[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]将写入备份的文件。 例如，\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup。  
   
 -   备份目录名称的路径必须已存在，并且必须指定为一个完全限定的通用命名约定 (UNC) 路径。  
@@ -76,12 +77,12 @@ BACKUP DATABASE database_name
   
 -   必须为 IP 地址指定的服务器或主机。  你无法指定它为主机或服务器名称。  
   
- 说明 = *文本*  
+ DESCRIPTION = **'***text***'**  
  指定备份的文本说明。 文本的最大长度为 255 个字符。  
   
  该描述存储在元数据，并且使用 RESTORE HEADERONLY 还原备份标头时，将显示。  
   
- 名称 = *备份 _name*  
+ 名称 = *****备份 _name*****  
  指定的备份的名称。 备份名称可以是数据库名称不同。  
   
 -   名称最长可达 128 个字符。  
@@ -103,7 +104,7 @@ BACKUP DATABASE database_name
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**BACKUP DATABASE**权限或中的成员身份**db_backupoperator**固定的数据库角色。 无法备份 master 数据库，但通过常规用户已添加到**db_backupoperator**固定的数据库角色。 Master 数据库可以仅备份的**sa**，构造管理员联系或成员的**sysadmin**固定的服务器角色。  
   
  需要有权访问、 创建和写入备份目录的 Windows 帐户。 你还必须存储的 Windows 帐户名称和密码在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 若要添加到这些网络凭据[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用[sp_pdw_add_network_credentials &#40;SQL 数据仓库 &#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)存储过程。  
@@ -160,11 +161,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>元数据  
  这些动态管理视图包含有关所有备份、 还原的信息和加载操作。 信息将在系统重新启动后持久保存。  
   
--   [sys.pdw_loader_backup_runs &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>性能  
  若要执行备份，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]第一个备份元数据，然后执行并行备份存储在计算节点上的数据库数据。 数据会直接从每个计算节点复制到的备份目录。 若要实现最佳性能将数据从计算节点移至备份的目录中，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]控制要同时复制数据的计算节点数。  

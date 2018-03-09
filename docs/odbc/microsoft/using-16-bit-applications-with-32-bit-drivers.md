@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cdfeea078774f5261bdeca25123a4743b1c874b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>16 位应用程序使用 32 位驱动程序
 > [!IMPORTANT]  
@@ -49,10 +49,10 @@ ms.lasthandoff: 11/20/2017
   
  在 Windows 中 （形式转换为 32 位的 16 位） 的 Windows 上，名为 Ds32gt.dll 转换为 16 位自变量值传递 32 位安装程序的其他形式转换 DLL DLL 回 16 位。  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>组件  
  MDAC 2.8 SP1 SDK 的 ODBC 组件包括以下文件运行 32 位驱动程序的 16 位应用程序。 这些组件是 \Redist 目录中。  
   
-|文件名|Description|  
+|File name|Description|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 位 ODBC 泛型形式转换 DLL|  
 |Odbc32gt.dll|32 位 ODBC 泛型形式转换 DLL|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
  此外，不是 ODBC 3.51 的一部分，以及 16 位 ODBC 2.10 驱动程序管理器中的以下文件所需的并且应与 16 位应用程序安装。  
   
-|文件名|Description|  
+|File name|Description|  
 |---------------|-----------------|  
 |Odbc.dll|16 位驱动程序管理器|  
 |Odbcinst.dll|16 位安装程序 DLL|  

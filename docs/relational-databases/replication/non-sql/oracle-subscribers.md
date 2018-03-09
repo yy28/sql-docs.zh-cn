@@ -2,9 +2,12 @@
 title: "Oracle 订阅服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,25 +19,25 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7f47f316449b6048dc826dcfbf265c1bc85877e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eeef79d24cf2409dd44544a9668cfd926adedfb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="oracle-subscribers"></a>Oracle 订阅服务器
-  从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就可通过 Oracle 提供的 Oracle OLE DB 访问接口支持到 Oracle 的推送订阅。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就可通过 Oracle 提供的 Oracle OLE DB 访问接口支持到 Oracle 的推送订阅。  
   
 ## <a name="configuring-an-oracle-subscriber"></a>配置 Oracle 订阅服务器  
  若要配置 Oracle 订阅服务器，请按照以下步骤进行：  
   
 1.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装和配置 Oracle 客户端网络软件和 Oracle OLE DB 访问接口，以便分发服务器可以连接到 Oracle 订阅服务器。 Oracle 客户端网络软件应是可用的最新版本。 Oracle 建议用户安装最新版本的客户端软件。 因此，客户端软件的版本通常比数据库软件更高。 安装此软件的最直接方法是使用 Oracle Client 光盘上的 Oracle Universal Installer。 在 Oracle Universal Installer 中，您需要提供以下信息：  
   
-    |信息|说明|  
+    |信息|Description|  
     |-----------------|-----------------|  
     |Oracle 主目录|这是 Oracle 软件的安装目录的路径。 接受默认路径（C:\oracle\ora90 或类似路径），或输入另一个路径。 有关 Oracle 主目录的详细信息，请参阅本主题后面的“Oracle 主目录注意事项”部分。|  
     |Oracle 主目录名称|Oracle 主目录路径的别名。|  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
      完成 Oracle Universal Installer 之后，使用 Net Configuration Assistant 配置网络连接。 必须提供四部分信息以配置网络连接。 在设置数据库和侦听器时，Oracle 数据库管理员将配置网络。如果您没有此信息，应由数据库管理员提供此信息。 必须执行以下操作：  
   
-    |操作|说明|  
+    |操作|Description|  
     |------------|-----------------|  
     |标识数据库|标识数据库的方法有两种。 第一种方法是使用 Oracle 系统标识符 (SID)，该方法在所有 Oracle 版本中均可用。 第二种方法是使用服务名称，该名称从 Oracle 8.0 版本开始才可用。 这两种方法都使用一个在创建数据库时所配置的值，并且要注意，客户端网络配置所使用的命名方法要与管理员在配置数据库的侦听器时使用的命名方法相同。|  
     |标识数据库的网络别名|必须指定网络别名，该别名将用来访问 Oracle 数据库。 实际上，网络别名是指向在创建数据库时所配置的远程 SID 或服务名称的指针。在不同的 Oracle 版本和产品中存在多种引用名称，包括 Net 服务名称和 TNS 别名。 在登录时，SQL*Plus 将提示您输入此别名来作为“Host String”参数。|  
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/09/2017
 |**地理**|BLOB|  
 |**geometry**|BLOB|  
 |**hierarchyid**|BLOB|  
-|**image**|BLOB|  
+|**图像**|BLOB|  
 |**int**|NUMBER(10,0)|  
 |**money**|NUMBER(19,4)|  
 |**nchar(1-1000)**|CHAR(1-1000)|  
@@ -126,9 +129,9 @@ ms.lasthandoff: 11/09/2017
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
-|**real**|REAL|  
+|**real**|real|  
 |**smalldatetime**|DATE|  
-|**smallint**|NUMBER(5,0)|  
+|**int**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
 |**sql_variant**|N/A|  
 |**sysname**|VARCHAR2(128)|  

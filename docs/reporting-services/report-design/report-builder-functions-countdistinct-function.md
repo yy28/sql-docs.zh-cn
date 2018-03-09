@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e8fd8fd42f2c9ee41562062b846c95f4b192b71
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 302974548c3f57cf9e700c1a995929463d34604d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>报表生成器函数 - CountDistinct 函数
   返回在给定作用域上下文中计算的，由表达式指定的所有非重复的非 Null 值计数。  
@@ -51,7 +49,7 @@ CountDistinct(expression, scope, recursive)
 ## <a name="return-type"></a>返回类型  
  返回 **Integer**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  
   
  *Expression* 可以包含对嵌套聚合函数的调用，但具有以下例外和条件：  

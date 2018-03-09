@@ -1,11 +1,11 @@
 ---
-title: "步骤 3： 添加和配置 OLE DB 连接管理器 |Microsoft 文档"
+title: "步骤 3：添加和配置 OLE DB 连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 252ca86357f628b5b859c248bf13b1fea5bfcf75
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 86d3e42b79efd2f2541c575b2c860b0a5cb4f41b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>课程 1-3-添加和配置 OLE DB 连接管理器
+# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>第 1-3 课 - 添加和配置 OLE DB 连接管理器
 添加了用于连接到数据源的平面文件连接管理器以后，下一个任务是添加用于连接到目标的 OLE DB 连接管理器。 通过 OLE DB 连接管理器，包可以在任何 OLE DB 兼容的数据源中提取数据或加载数据。 使用 OLE DB 连接管理器，可以为连接指定服务器、身份验证方法和默认数据库。  
   
 在本课中，将创建使用 Windows 身份验证的 OLE DB 连接管理器，以连接到 **AdventureWorksDB2012**的本地实例。 本教程以后要创建的其他组件（如查找转换和 OLE DB 目标）也将引用此处创建的 OLE DB 连接管理器。  
@@ -48,13 +47,13 @@ ms.lasthandoff: 09/26/2017
   
 6.  单击“测试连接”，验证指定的连接设置是否有效。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 9. 在“配置 OLE DB 连接管理器”对话框的“数据连接”窗格中，确认选择了“localhost.AdventureWorksDW2012”。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [步骤 4：将数据流任务添加到包](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>另请参阅  
 [OLE DB 连接管理器](../integration-services/connection-manager/ole-db-connection-manager.md)  
   
-

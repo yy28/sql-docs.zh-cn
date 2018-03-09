@@ -3,8 +3,11 @@ title: "“位置”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6534a08d327b7cd88cdf86320daea2c4a6b78cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b813bc94aa5afcd2cb537de0bfc8cba9d925d034
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>“位置”对话框（可视化数据库工具）
-使用此对话框可以找到并选择包含所需文件的文件夹。 此对话框将选定文件夹的路径返回到调用对话框。 可通过以下方式访问此对话框：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以定位并选择包含所需文件的文件夹。 此对话框将选定文件夹的路径返回到调用对话框。 可通过以下方式访问此对话框：  
   
 -   在“文件”菜单中选择“新建”，再选择“项目”。 显示“新建项目”对话框时，选择“浏览”。 将打开“位置”对话框，其标题为“项目位置”。  
   

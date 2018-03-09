@@ -1,27 +1,28 @@
 ---
 title: "了解 Java EE 支持 |Microsoft 文档"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f692489b6d8e701e13c6700d63de6df0b9607a5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cb98529d22b17ad21bfcab786064a8c8882f3b5b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支持
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/18/2017
  首先，确保您的 Java 环境（JDK、JRE）包含 javax.sql 包。 这是使用可选 API 的任何 JDBC 应用程序所必需的包。 JDK 1.5 和更高版本已包含此包，因此你不需要单独安装它。  
   
 ## <a name="driver-name"></a>驱动程序名称  
- 驱动程序类名称是**com.microsoft.sqlserver.jdbc.SQLServerDriver**。 JDBC 驱动程序 4.0、 4.1、 4.2 和 6.0，该驱动程序包含在 sqljdbc.jar、 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar 文件中。 JDBC 驱动程序 6.2，有关该驱动程序包含在 mssql jdbc 6.2.1.jre7.jar 或 mssql jdbc 6.2.1.jre8.jar。
+ 驱动程序类名称是**com.microsoft.sqlserver.jdbc.SQLServerDriver**。 为 JDBC 驱动程序 4.1 4.2，和 6.0，驱动程序包含 sqljdbc.jar、 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar 文件中。 JDBC 驱动程序 6.2，有关该驱动程序包含在 mssql jdbc 6.2.1.jre7.jar 或 mssql jdbc 6.2.1.jre8.jar。 用于 JDBC 驱动程序 6.4、 驱动程序包含在 mssql jdbc 6.4.0.jre7.jar、 mssql jdbc 6.4.0.jre8.jar 或 mssql jdbc 6.4.0.jre9.jar。
   
  每当加载与 JDBC 驱动程序管理器类驱动程序，则使用类名称。 另外，只要你在任何驱动程序配置中必须指定驱动程序的类名称，则也将用到它。 例如，配置 Java EE 应用程序服务器内的数据源可能要求您输入驱动程序类名称。  
   

@@ -2,15 +2,13 @@
 title: "列元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Column Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e167d15f411d25dab360c4673b076f90af002383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60a0c8bd38d280d267b85148e3d40f2bac4967cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="column-element-assl"></a>Column 元素 (ASSL)
-  描述与父元素关联的列集合中的一列。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述与父元素关联的列集合中的列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[列](../../../analysis-services/scripting/collections/columns-element-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
 ## <a name="see-also"></a>另请参阅  
  [对象 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  

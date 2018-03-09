@@ -2,9 +2,12 @@
 title: "注册 SQL Server 的实例（SQL Server 实用工具）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ f1_keywords:
 helpviewer_keywords: Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 510cda640de67fa7aa5c9e32f8e2cd820e533f68
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2f9da7c9a59a50974dbfeed860db63a513719fc6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>注册 SQL Server 的实例（SQL Server 实用工具）
-  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例注册到现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中，以便将其性能和配置作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例进行监视。 实用工具控制点 (UCP) 每隔 15 分钟从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例收集配置和性能信息。 此信息存储在 UCP 上的实用工具管理数据仓库 (UMDW) 中；该 UMDW 文件名是 sysutility_mdw。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能数据与策略进行比较，以便帮助标识资源使用瓶颈和整合机会。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例注册到现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中，以便将其性能和配置作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例进行监视。 实用工具控制点 (UCP) 每隔 15 分钟从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例收集配置和性能信息。 此信息存储在 UCP 上的实用工具管理数据仓库 (UMDW) 中；该 UMDW 文件名是 sysutility_mdw。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能数据与策略进行比较，以便帮助标识资源使用瓶颈和整合机会。  
   
  在此版本中，UCP 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有托管实例必须满足以下要求：  
   
@@ -197,7 +200,7 @@ ms.lasthandoff: 11/09/2017
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [SQL Server 实用工具的功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [在 SQL Server 实用工具中监视 SQL Server 的实例](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   

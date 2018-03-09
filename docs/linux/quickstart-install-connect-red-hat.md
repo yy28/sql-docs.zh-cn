@@ -1,38 +1,38 @@
 ---
 title: "要开始使用 Red Hat Enterprise Linux 上的 SQL Server 2017 |Microsoft 文档"
-description: "此快速入门教程演示如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。"
+description: "本快速入门演示如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 然后创建并查询使用 sqlcmd 数据库。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 213cabec248c9f293944904a1909f51484fcdf4a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6919cdbb506ccbe36ed3e8c167be4321b5ee2a27
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="install-sql-server-and-create-a-database-on-red-hat"></a>安装 SQL Server 和 Red Hat 上创建数据库
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门： 安装 SQL Server 和 Red Hat 上创建数据库
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在此快速入门教程中，你首先安装 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 7.3 +。 然后通过连接**sqlcmd**创建第一个数据库和运行查询。
+在本快速入门教程，你首先安装 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 7.3 +。 然后使用 **sqlcmd** 连接，以创建第一个数据库并运行查询。
 
 > [!TIP]
 > 本教程需要用户输入和 internet 连接。 如果你有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
-你必须 RHEL 7.3 或 7.4 机**至少 3.25 GB**的内存。
+你必须 RHEL 7.3 或 7.4 机**至少 2 GB**的内存。
 
 若要在您自己的计算机上安装 Red Hat Enterprise Linux，请转到[http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 你还可以在 Azure 中创建 RHEL 虚拟机。 请参阅[创建和使用 Azure CLI 管理 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并使用`--image RHEL`对的调用中`az vm create`。
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
    ```
 
    > [!NOTE]
-   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[更改源存储库](sql-server-linux-setup.md#repositories)。
+   > 这是累积更新 (CU) 存储库。 有关你的存储库选项和它们之间的差异的详细信息，请参阅[为在 Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 1. 运行以下命令，安装 SQL Server：
 
@@ -117,6 +117,11 @@ ms.lasthandoff: 11/20/2017
    ```
 
 > [!TIP]
-> **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)和[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+> **Sqlcmd**只是一个用于连接到 SQL Server 并运行查询和执行管理及开发任务的工具。 其他工具包括：
+>
+> * [SQL Server Operations Studio（预览版）](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+> * [mssql-cli（预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

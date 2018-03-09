@@ -2,31 +2,37 @@
 title: "TM: Promote Tran Completed 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: 'TM: Promote Tran Completed event class'
+helpviewer_keywords:
+- 'TM: Promote Tran Completed event class'
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fee51b178ec257fd6be4e200a4c35dee75fcdb1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 974b69a9771aecc02e9d916499f9fe7262f41f79
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed 事件类
-  TM: Promote Tran Completed 事件类指示 PROMOTE TRANSACTION 请求已完成。 将通过事务管理接口从客户端发送请求。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+TM: Promote Tran Completed 事件类指示 PROMOTE TRANSACTION 请求已完成。 将通过事务管理接口从客户端发送请求。  
   
 ## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM: Promote Tran Completed 事件类的数据列  
   
-|数据列名称|数据类型|说明|列 ID|可筛选|  
+|数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BinaryData|**图像**|DTC Xact 标记。|2|是|  

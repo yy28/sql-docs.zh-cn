@@ -1,11 +1,11 @@
 ---
-title: "变量窗口 |Microsoft 文档"
+title: "“变量”窗口 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a9e602fb4caf9487246e13607f8f925e416a90b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variables-window"></a>“变量”窗口
   可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  **Name** 和 **Namespace** 属性的值必须以 Unicode 标准 2.0 定义的字母字符或下划线 (_) 开头。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
   
-## <a name="options"></a>“变量”  
+## <a name="options"></a>“常规”  
  **添加变量**  
  添加用户定义变量。  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  如果为变量指定表达式，则无法更改数据类型。  
   
- **“值”**  
+ **ReplTest1**  
  查看变量值。 您可以更新用户定义变量的值。 此值可以是文字或表达式，还可以是多线串。 若要为变量指定表达式，请单击 **“变量”** 窗口中的 **“表达式”** 列旁边的省略号按钮。  
   
  **Namespace**  
@@ -86,7 +85,7 @@ ms.lasthandoff: 09/26/2017
   
  如果为变量指定了表达式，该变量旁边将显示特殊的图标标记。 这个特殊的图标标记还显示在设置有表达式的连接管理器和任务旁边。  
 
-## <a name="variable-grid-options-dialog-box"></a>变量网格选项对话框
+## <a name="variable-grid-options-dialog-box"></a>“变量网格选项”对话框
  使用 **“变量网格选项”** 对话框，可以选择将在 **“变量”** 窗口中显示的列并选择要应用于变量列表的筛选器。 有关相应变量属性的详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)。  
   
 ### <a name="options-for-filter"></a>筛选器选项  
@@ -107,21 +106,20 @@ ms.lasthandoff: 09/26/2017
   
 -   **Data type**  
   
--   **“值”**  
+-   **ReplTest1**  
   
--   **命名空间**  
+-   **Namespace**  
   
 -   **变量值更改时引发事件**  
   
 -   **Description**  
   
--   **“变量”**  
+-   **表达式**  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)   
  [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services &#40;SSIS &#41;表达式](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services (SSIS) 表达式](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [生成包执行的转储文件](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

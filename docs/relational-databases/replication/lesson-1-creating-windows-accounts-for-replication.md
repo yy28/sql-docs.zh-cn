@@ -2,9 +2,12 @@
 title: "第 1 课：为复制创建 Windows 帐户 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bae87c03d6bfe5048c397055e2a8695637af6c65
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 422f5bc66dc5b31889d4f790d61b5b95abf2fa7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 课：为复制创建 Windows 帐户
-在本课中，将创建 Windows 帐户以运行复制代理。 您将在本地服务器上为以下代理创建一个单独的 Windows 帐户：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在本课中，创建 Windows 帐户以运行复制代理。 您将在本地服务器上为以下代理创建一个单独的 Windows 帐户：  
   
 |代理|位置|帐户名|  
 |---------|------------|----------------|  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  单击 **“关闭”**。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 您已经成功地为复制代理创建了 Windows 帐户。 接下来，您将配置快照文件夹。 请参阅 [第 2 课：准备快照文件夹](../../relational-databases/replication/lesson-2-preparing-the-snapshot-folder.md)。  
   
 ## <a name="see-also"></a>另请参阅  

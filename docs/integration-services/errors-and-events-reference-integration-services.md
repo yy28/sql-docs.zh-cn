@@ -1,11 +1,11 @@
 ---
-title: "错误和事件参考 (Integration Services) |Microsoft 文档"
+title: "错误和事件参考 (Integration Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cecb7c7bf6210f1c4c343f168af650f454322d64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="errors-and-events-reference-integration-services"></a>错误和事件参考 (Integration Services)
   本节包含与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]有关的多个错误和事件的相关信息。 其中包括错误消息的原因和解决方法信息。  
@@ -88,4 +87,3 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 错误和消息引用](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords: sql13.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords: Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e38dcb5203dc4d09a24f53ec380f5af724b1bde
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e6b37d9f8cd174be9cd70339217e6dba4c7cffc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
 
@@ -35,8 +33,8 @@ ms.lasthandoff: 12/05/2017
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
-## <a name="options"></a>选项  
- **配置**  
+## <a name="options"></a>“常规”  
+ **Configuration**  
  选择要编辑的配置。 最初，可使用以下配置： **Debug**、 **DebugLocal**和 **Release**。 首先显示活动配置，例如 **Active(Debug)**。  
   
  若要同时查看多个配置的属性，请选择 **“所有配置”** 或 **“多个配置”**。  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
  发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如： 
 + `http:\\<servername>`、 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`。  
++ `http:\\<servername>\<site>\<subsite>`的用户。  
 
 ## <a name="next-steps"></a>后续步骤
 

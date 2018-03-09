@@ -2,9 +2,12 @@
 title: "SQL Server 故障转移群集安装 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec10103d7282d00ba0b6631eb12d552d639a4916
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 045f941ca5f5de2703bbd315f862ecf2c1985902
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 故障转移群集安装
-  若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，您必须通过运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来创建并配置一个故障转移群集实例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，你必须通过运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来创建并配置一个故障转移群集实例。  
   
 ## <a name="installing-a-failover-cluster"></a>安装故障转移群集  
  若要安装故障转移群集，您必须使用具有本地管理员权限的域帐户，拥有作为服务登录的权限，并且拥有在故障转移群集的所有节点上作为操作系统的一部分进行操作的权限。 若要通过使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来安装故障转移群集，请执行以下步骤：  

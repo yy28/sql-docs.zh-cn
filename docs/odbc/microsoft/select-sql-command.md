@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9b8b9b4b5b69d257dccafc2567ebb59eab5bba2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select---sql-command"></a>选择的 SQL 命令
 从一个或多个表中检索数据。  
@@ -276,7 +276,7 @@ WHERE customer.cust_id NOT IN ;
   
  如果你没有使用 ORDER BY 指定订单，查询结果将显示未排序。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  选择是像任何其他 Visual FoxPro 命令内置于 Visual FoxPro 一个 SQL 命令。 当你使用选择引起查询、 Visual FoxPro 解释查询和检索表中指定的数据。 你可以创建 SELECT 查询从命令提示符窗口或 Visual FoxPro 程序中的 （与任何其他 Visual FoxPro 命令）。  
   
 > [!NOTE]  

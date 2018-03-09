@@ -2,15 +2,13 @@
 title: "属性 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ad143a8832224d0b8964aec3c10d504bf4ff5de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38f0983ae4f840ac0addf4e30439ff57a679e30e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---properties"></a>XML 元素的属性
-  XML for Analysis (XMLA) 协议使用 XML 元素表示 XMLA 标头、方法、对象、命令和数据类型的属性信息和值。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]XML for Analysis (XMLA) 协议使用 XML 元素来表示属性信息和 XMLA 标头、 方法、 对象、 命令和数据类型的值。  
   
 ## <a name="topic-list"></a>主题列表  
  下面的主题介绍 [!INCLUDE[ssAS](../../../includes/ssas-md.md)] 实现的 XMLA 元素。  

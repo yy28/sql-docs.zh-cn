@@ -3,8 +3,9 @@ title: "State 属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - State
 - Cellset::State
-helpviewer_keywords: State property [ADO MD]
+helpviewer_keywords:
+- State property [ADO MD]
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7508f54af89f445c1d4171f53917721430d82c3f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1886dae43bdb764a67fa5e44b1e8fe9744c0cb5f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="state-property-ado-md"></a>State 属性 (ADO MD)
 指示单元集的当前状态。  

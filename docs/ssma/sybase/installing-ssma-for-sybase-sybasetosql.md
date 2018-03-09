@@ -3,8 +3,11 @@ title: "安装适用于 SAP ASE (SybaseToSQL) SSMA |Microsoft 文档"
 ms.custom: 
 ms.date: 11/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 282dacb356df5a7956e9f30852193b54f37961e7
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: 508af2c209711c6063ee58243a29066323b641f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>安装适用于 SAP ASE (SybaseToSQL) SSMA
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 的 SAP 自适应 Server Enterprise (ASE) 包含的客户端应用程序用于从 SAP ASE 来执行迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库。 它还包含已迁移数据库中支持数据迁移和 ASE 系统函数的使用的扩展包。  

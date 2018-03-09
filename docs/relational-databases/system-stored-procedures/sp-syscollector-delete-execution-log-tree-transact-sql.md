@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_execution_log_tree_TSQL
 - sp_syscollector_delete_execution_log_tree
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_delete_execution_log_tree
 - data collector [SQL Server], stored procedures
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 485d035263d8921209b36a11087d34d351b33070
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c02f490c3bbb604088001e9efd24ae4cadaee96a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +48,16 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@log_id =** ] *log_id*  
+ [ **@log_id =** ] *log_id*  
  收集组日志的唯一标识符。 *log_id*是**int**。  
   
- [  **@from_collection_set =** ] *from_collection_set*  
+ [ **@from_collection_set =** ] *from_collection_set*  
  收集组的标识符。 *from_collection_set*是**位 = 1**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**dc_operator** （拥有 EXECUTE 权限） 固定的数据库角色来执行此过程。  
   
 ## <a name="see-also"></a>另请参阅  

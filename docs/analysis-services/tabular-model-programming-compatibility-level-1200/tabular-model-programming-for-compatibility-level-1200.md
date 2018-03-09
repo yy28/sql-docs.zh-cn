@@ -2,33 +2,29 @@
 title: "兼容级别 1200年的表格模型编程 |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2a2b814f4944c0e135c345d8f78970a1d08c8918
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>表格模型编程的兼容性级别 1200年及更高版本
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 从开始兼容级别 1200年，用于使用表格元数据描述模型结构，作为表格模型对象的描述符替换历史多维元数据。 表、 列和关系的元数据是表、 列中，和关系，而不是多维的等效项 （维度和属性）。  
   
 你可以创建新模型的兼容性级别 1200年或更高版本通过使用 Microsoft.AnalysisServices.Tabular Api，最新版本的 SQL Server Data Tools (SSDT)，或通过更改**CompatibilityLevel**的现有表格若要升级它 （也在 SSDT 中完成） 的模型。 这样将模型绑定到较新版本的服务器、 工具和编程接口。   
@@ -62,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 开发人员文档](../../analysis-services/analysis-services-developer-documentation.md)   
  [表格模型编程的兼容性级别 1050年通过 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [技术参考 &#40;SSAS &#41;](../../analysis-services/powershell/technical-reference-ssas.md)[升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [技术参考](../../analysis-services/powershell/technical-reference-ssas.md)[升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [表格模型和数据库的兼容级别](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

@@ -2,10 +2,14 @@
 title: "查看存储过程的依赖关系 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - displaying stored procedure dependencies
 - viewing stored procedure dependencies
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8c5e1da112ed5cb2f39c96fc0f570128e1c3d77c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e353ad945f88b477997f92638cd4612a9663b168
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>查看存储过程的依赖关系
-  本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看存储过程依赖关系。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看存储过程依赖关系。  
   
 ##  <a name="Top"></a>   
 -   **准备工作：**[限制和局限](#Restrictions)、[安全性](#Security)  
@@ -38,7 +43,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  系统函数： **sys.dm_sql_referencing_entities**  
  要求对被引用的实体拥有 CONTROL 权限，并且对 sys.dm_sql_referencing_entities 拥有 SELECT 权限。 当被引用的实体是分区函数时，要求对数据库拥有 CONTROL 权限。 默认情况下，SELECT 权限授予 public。  
   
@@ -68,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  查看过程所依赖的对象的列表。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中查看过程的依赖关系**  

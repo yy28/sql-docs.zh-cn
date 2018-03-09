@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483b31cf84a5933bac88744612c5c95fa7ceae56
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 连接器维护与故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      导入新的非对称密钥。  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE ASYMMETRIC KEY [MASTER_KEY2]   
     FROM PROVIDER [EKM]   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
      创建要与新的非对称密钥关联的新登录名（如 TDE 说明中所示）。  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE LOGIN TDE_Login2   
     FROM ASYMMETRIC KEY [MASTER_KEY2]  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
      创建要映射到登录名的新凭据。  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
        SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
@@ -86,14 +86,14 @@ ms.lasthandoff: 11/21/2017
   
      选择你要重新加密其数据库加密密钥的数据库。  
   
-    ```tsql  
+    ```sql  
     USE [database]  
     GO  
     ```  
   
      重新加密数据库加密密钥。  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE ENCRYPTION KEY   
     ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];  
     GO  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  运行以下语句来更改 EKM 提供程序，以便开始使用最新版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器。 请确保文件路径指向你所下载的最新版本的位置。 （如果新版本将安装在与初始版本相同的位置，则可跳过此步骤。） 
   
-    ```tsql  
+    ```sql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE =   
     'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
@@ -207,10 +207,10 @@ SQL Server 连接器需要哪些终结点的访问权限？ 该连接器与两�
 ##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的错误代码说明  
  **提供程序错误代码：**  
   
-错误代码  |符号  |说明    
+错误代码  |符号  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | 操作已成功执行。    
-1 | scp_err_Failure | 操作失败。    
+@shouldalert | scp_err_Failure | 操作失败。    
 2 | scp_err_InsufficientBuffer | 该错误通知引擎为缓冲区分配更多内存。    
 3 | scp_err_NotSupported | 此操作不受支持。 例如，EKM 提供程序不支持指定的密钥类型或算法。    
 4 | scp_err_NotFound | EKM 提供程序找不到指定的密钥或算法。    

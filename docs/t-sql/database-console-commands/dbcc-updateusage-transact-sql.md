@@ -1,5 +1,5 @@
 ---
-title: "DBCC UPDATEUSAGE (Transact SQL) |Microsoft 文档"
+title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - UPDATEUSAGE_TSQL
 - DBCC_UPDATEUSAGE_TSQL
 - DBCC UPDATEUSAGE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - inaccurate page or row counts [SQL Server]
 - space [SQL Server], usage reports
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - row count accuracy [SQL Server]
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ec93792384ae43aa20fcf887fd0af6d12b5a34f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 12a05d112f55fd4323b5f6e4278c6134f581f4ae
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +68,7 @@ DBCC UPDATEUSAGE
 *database_name* | *database_id* | 0  
 要对其空间使用统计信息进行报告和更正的数据库的名称或 ID。 如果指定 0，则使用当前数据库。 数据库名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
-*table_name* | *针对 table_id 所* | *view_name* | *view_id*  
+*table_name* | *table_id* | *view_name* | *view_id*  
 要对其空间使用统计信息进行报告和更正的表或索引视图的名称或 ID。 表和视图的名称必须符合有关标识符的规则。  
   
 *index_id* | *index_name*  
@@ -96,7 +98,7 @@ DBCC UPDATEUSAGE 返回（值可能有所不同）：
   
 `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。
   
 ## <a name="examples"></a>示例  
@@ -135,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_spaceused &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+[sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)
   
   

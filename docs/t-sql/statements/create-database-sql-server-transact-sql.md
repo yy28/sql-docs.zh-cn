@@ -1,5 +1,5 @@
 ---
-title: "创建数据库 (SQL Server TRANSACT-SQL) |Microsoft 文档"
+title: CREATE DATABASE (SQL Server Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - CONTAINS_FILESTREAM_TSQL
 - CONTAINS FILESTREAM
 - CONTAINMENT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], creating
 - databases [SQL Server], creating
@@ -36,16 +38,16 @@ helpviewer_keywords:
 - moving databases
 - attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-caps.latest.revision: "212"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 7c6e52f8e36ed40e18c2aeab162a75c39f186c97
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +57,10 @@ ms.lasthandoff: 11/21/2017
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
-  
+
+创建数据库    
+
 ```  
-  
-      Create a database  
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -113,10 +115,10 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 }  
   
 ```  
-  
+ 
+附加数据库    
+
 ```  
-  
-      Attach a database  
 CREATE DATABASE database_name   
     ON <filespec> [ ,...n ]   
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }  
@@ -128,13 +130,12 @@ CREATE DATABASE database_name
       <service_broker_option>  
     | RESTRICTED_USER  
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )  
-}  
-  
+}   
 ```  
   
+创建数据库快照    
+
 ```  
-  
-      Create a database snapshot  
 CREATE DATABASE database_snapshot_name   
     ON   
     (  
@@ -183,14 +184,14 @@ CREATE DATABASE database_snapshot_name
 >  包含数据库的排序方式不同于非包含数据库。 请参阅[Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)有关详细信息。  
   
  与\<选项 >  
- -   **\<filestream_options >** 
+ -   **\<filestream_options>** 
   
      NON_TRANSACTED_ACCESS = { **OFF** |READ_ONLY |完整}  
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
      指定对数据库的非事务性 FILESTREAM 访问的级别。  
   
-    |值|说明|  
+    |“值”|Description|  
     |-----------|-----------------|  
     |OFF|禁用非事务性访问。|  
     |READONLY|可以通过非事务性进程读取此数据库中的 FILESTREAM 数据。|  
@@ -214,13 +215,13 @@ CREATE DATABASE database_snapshot_name
   
      See [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) for a full description of this option.  
   
--   **NESTED_TRIGGERS = {OFF |ON}**  
+-   **NESTED_TRIGGERS = { OFF | ON}**  
   
 **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the nested triggers Server Configuration Option](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) for a full description of this option.  
   
--   **TRANSFORM_NOISE_WORDS = {OFF |ON}**  
+-   **TRANSFORM_NOISE_WORDS = { OFF | ON}**  
   
 **适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -296,14 +297,15 @@ CREATE DATABASE database_snapshot_name
 -   如果将数据库附加到不同的服务器实例，无论何种版本，则必须执行[sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)附加操作完成后删除复制。  
   
 > [!NOTE]  
->  附加使用**vardecimal**存储格式，但[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]必须至少升级到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2。 无法将使用 Vardecimal 存储格式的数据库附加到早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息**vardecimal**存储格式，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
+> 附加使用**vardecimal**存储格式，但[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]必须至少升级到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]SP2。 无法将使用 Vardecimal 存储格式的数据库附加到早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息**vardecimal**存储格式，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
  当数据库第一次附加或还原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，数据库主密钥（由服务主密钥加密）的副本尚未存储在服务器中。 必须使用 **OPEN MASTER KEY** 语句解密数据库主密钥 (DMK)。 一旦 DMK 解密后，通过使用 **ALTER MASTER KEY REGENERATE** 语句向服务器提供 DMK（使用服务主密钥 (SMK) 加密）的副本，即可拥有将来启用自动解密的选项。 当数据库已从较早版本升级后，应重新生成 DMK 以使用更新的 AES 算法。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新生成 DMK 密钥以升级到 AES 所需的时间取决于 DMK 保护的对象数。 重新生成 DMK 密钥以升级到 AES 只在必需时执行一次，不影响将来作为密钥循环策略的一部分而重新生成的过程。 有关如何通过使用升级数据库的信息将附加，请参阅[升级数据库使用分离和附加 &#40;Transact SQL &#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).  
   
- **安全说明**建议请不要从未知或不受信任的源附加数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 在使用来自未知或不受信任源的数据库之前，运行[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)的数据库上的非生产服务器，然后检查的代码，例如存储的过程或其他用户定义的代码，在数据库中。  
+> [!IMPORTANT]  
+> 建议您不要附加未知或不可信源中的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 在使用来自未知或不受信任源的数据库之前，运行[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)的数据库上的非生产服务器，然后检查的代码，例如存储的过程或其他用户定义的代码，在数据库中。  
   
 > [!NOTE]  
->  **TRUSTWORTHY**和**DB_CHAINING**选项附加数据库时有任何影响。  
+> **TRUSTWORTHY**和**DB_CHAINING**选项附加数据库时有任何影响。  
   
  FOR ATTACH_REBUILD_LOG  
  指定通过附加一组现有的操作系统文件来创建数据库。 该选项只限于读/写数据库。 必须有 *\<filespec >*指定主文件项。 如果缺少一个或多个事务日志文件，将重新生成日志文件。 ATTACH_REBUILD_LOG 自动创建一个新的 1 MB 的日志文件。 此文件放置于默认的日志文件位置。 有关此位置的信息，请参阅[查看或更改默认位置获得数据和日志文件 &#40;SQL Server Management Studio &#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
@@ -318,7 +320,7 @@ CREATE DATABASE database_snapshot_name
 -   所有数据文件（MDF 和 NDF）都必须可用。  
   
 > [!IMPORTANT]  
->  该操作会中断日志备份链。 建议在完成该操作后执行完整数据库备份。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
+> 该操作会中断日志备份链。 建议在完成该操作后执行完整数据库备份。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   
  通常，FOR ATTACH_REBUILD_LOG 用于将具有大型日志的可读/写数据库复制到另一台服务器，在这台服务器上，数据库副本频繁使用，或仅用于读操作，因而所需的日志空间少于原始数据库。  
   
@@ -326,19 +328,19 @@ CREATE DATABASE database_snapshot_name
   
  有关附加和分离数据库的详细信息，请参阅[数据库分离和附加 &#40;SQL server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
- \<filespec >  
+ \<filespec>  
  控制文件属性。  
   
- 名称*logical_file_name*  
+ NAME *logical_file_name*  
  指定文件的逻辑名称。 指定 FILENAME 时，需要使用 NAME，除非指定 FOR ATTACH 子句之一。 无法将 FILESTREAM 文件组命名为 PRIMARY。  
   
  *logical_file_name*  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引用文件时所用的逻辑名称。 *Logical_file_name*必须在数据库中是唯一且符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 名称可以是字符或 Unicode 常量，也可以是常规标识符或分隔标识符。  
   
- FILENAME { *os_file_name* | *filestream_path* **'** }  
+ FILENAME { *****os_file_name***** | *****filestream_path***** }  
  指定操作系统（物理）文件名称。  
   
-  *os_file_name*   
+ **'** *os_file_name* **'**  
  是创建文件时由操作系统使用的路径和文件名。 文件必须驻留在下列一种设备中：安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地服务器、存储区域网络 [SAN] 或基于 iSCSI 的网络。 执行 CREATE DATABASE 语句前，指定路径必须存在。 有关详细信息，请参阅“备注”部分的“数据库文件和文件组”。  
   
  如果为该文件指定了 UNC 路径，则可以设置 SIZE、MAXSIZE 和 FILEGROWTH 参数。  
@@ -347,19 +349,19 @@ CREATE DATABASE database_snapshot_name
   
  不应将数据文件放在压缩文件系统中，除非这些文件是只读的辅助文件或数据库是只读的。 日志文件一定不要放在压缩文件系统中。  
   
-  *filestream_path*   
+ **'** *filestream_path* **'**  
  对于 FILESTREAM 文件组，FILENAME 指向将存储 FILESTREAM 数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 C:\MyFiles\MyFilestreamData、C:\MyFiles 必须存在才能运行 ALTER DATABASE，但 MyFilestreamData 文件夹不能存在。  
   
  必须在同一语句中创建文件组和文件 (`<filespec>`)。  
   
  SIZE 和 FILEGROWTH 属性不适用于 FILESTREAM 文件组。  
   
- 大小*大小*  
+ SIZE *size*  
  指定文件的大小。  
   
  大小不能时指定*os_file_name*指定为 UNC 路径。 SIZE 不适用于 FILESTREAM 文件组。  
   
- *大小*  
+ size  
  文件的初始大小。  
   
  当*大小*对于主文件中，未提供[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用模型数据库中的主文件的大小。 模型的默认大小为 8 MB (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 或 （对于早期版本） 的 1 MB。 当指定了辅助数据文件或日志文件时，但*大小*没有为文件中，指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]使文件成为 8 MB (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 或 （对于早期版本） 的 1 MB。 为主文件指定的大小至少应与 model 数据库的主文件大小相同。  
@@ -376,7 +378,7 @@ CREATE DATABASE database_snapshot_name
  指定文件将增长到磁盘充满。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定为不限制增长的日志文件的最大大小为 2 TB，而数据文件的最大大小为 16 TB。  
   
 > [!NOTE]  
->  为 FILESTREAM 容器指定此选项时，没有最大大小。 它将继续增大，直到磁盘已满。  
+> 为 FILESTREAM 容器指定此选项时，没有最大大小。 它将继续增大，直到磁盘已满。  
   
  FILEGROWTH *growth_increment*  
  指定文件的自动增量。 文件的 FILEGROWTH 设置不能超过 MAXSIZE 设置。 FILEGROWTH 不能为时指定*os_file_name*指定为 UNC 路径。 FILEGROWTH 不适用于 FILESTREAM 文件组。  
@@ -393,13 +395,13 @@ CREATE DATABASE database_snapshot_name
 |版本|默认值|  
 |-------------|--------------------|  
 |开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|数据 64 MB。 日志文件 64 MB。|  
-|开始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|数据 1 MB。 10%的日志文件。|  
-|之前[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|数据 10%。 10%的日志文件。|  
+|开始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|数据 1 MB。 日志文件 10%。|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|数据 10%。 日志文件 10%。|  
   
- \<文件组 >  
+ \<filegroup>  
  控制文件组属性。 不能对数据库快照指定文件组。  
   
- 文件组*filegroup_name*  
+ FILEGROUP *filegroup_name*  
  文件组的逻辑名称。  
   
  *filegroup_name*  
@@ -420,13 +422,13 @@ CREATE DATABASE database_snapshot_name
  *database_snapshot_name*  
  新数据库快照的名称。 数据库快照名称必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中唯一，并且必须符合标识符规则。 *database_snapshot_name*最多 128 个字符。  
   
- ON **(**名称 **=**  *logical_file_name***，** FILENAME **=** *os_file_name***)** [ **，**...*n* ]  
+ ON **(**名称 **= ***logical_file_name***，** FILENAME **=***os_file_name***)** [**,**...*n* ]  
  若要创建数据库快照，请在源数据库中指定文件列表。 若要使快照工作，必须分别指定所有数据文件。 但是，日志文件不允许用于数据库快照。 数据库快照不支持 FILESTREAM 文件组。 如果在 CREATE DATABASE ON 子句中包含了 FILESTREAM 数据文件，该语句将失败，并且会引发错误。  
   
  有关的名称、 文件名和它们的值的说明，请参阅等效的说明\<filespec > 值。  
   
 > [!NOTE]  
->  当创建数据库快照，其他\<filespec > 选项和关键字主不允许。  
+> 当创建数据库快照，其他\<filespec > 选项和关键字主不允许。  
   
  AS SNAPSHOT OF *source_database_name*  
  指定正在创建的数据库为指定的源数据库的数据库快照*source_database_name*。 快照和源数据库必须位于同一实例中。  
@@ -468,7 +470,7 @@ CREATE DATABASE database_snapshot_name
  你可以使用 CREATE DATABASE 语句创建的只读静态视图，*数据库快照*的*源数据库*。 当创建快照时，源数据库已存在，所以数据库快照在事务上与源数据库一致。 源数据库可以具有多个快照。  
   
 > [!NOTE]  
->  创建数据库快照时，CREATE DATABASE 语句不能引用日志文件、脱机文件、还原文件和不存在的文件。  
+> 创建数据库快照时，CREATE DATABASE 语句不能引用日志文件、脱机文件、还原文件和不存在的文件。  
   
  如果创建数据库快照失败，快照便成为可疑快照，必须将其删除。 有关详细信息，请参阅[DROP DATABASE &#40;Transact SQL &#41;](../../t-sql/statements/drop-database-transact-sql.md).  
   
@@ -489,14 +491,14 @@ CREATE DATABASE database_snapshot_name
 ## <a name="viewing-database-information"></a>查看数据库信息  
  可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 CREATE DATABASE、CREATE ANY DATABASE 或 ALTER ANY DATABASE 权限。  
   
  为了控制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机上的磁盘使用，通常只有少数登录帐户才有创建数据库的权限。  
   
  以下示例向数据库用户 Fay 提供创建数据库的权限。  
   
-```  
+```sql  
 USE master;  
 GO  
 GRANT CREATE DATABASE TO [Fay];  
@@ -515,14 +517,14 @@ GO
  如果这些文件位于具有打开权限的目录中，那么以上权限可以防止文件被意外篡改。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 不设置数据文件和日志文件权限。  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 不设置数据文件和日志文件权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-database-without-specifying-files"></a>A. 创建未指定文件的数据库  
  以下示例创建名为 `mytest` 的数据库，并创建相应的主文件和事务日志文件。 因为该语句没有\<filespec > 项，主数据库文件是模型数据库主文件的大小。 事务日志将设置为下列值中的较大者：512 KB 或主数据文件大小的 25%。 因为没有指定 MAXSIZE，文件可以增大到填满所有可用的磁盘空间为止。 此示例演示如何在创建 `mytest` 数据库之前删除名为 `mytest` 的数据库（如果它存在）。  
   
-```  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'mytest') IS NOT NULL
@@ -535,13 +537,12 @@ SELECT name, size, size*1.0/128 AS [Size in MBs]
 FROM sys.master_files  
 WHERE name = N'mytest';  
 GO  
-  
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 创建指定数据和事务日志文件的数据库  
  下面的示例创建数据库`Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 创建、修改或删除用户数据库后，应备份 `Sales_log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -563,7 +564,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 通过指定多个数据和事务日志文件创建数据库  
  以下示例创建数据库 `Archive`，该数据库具有三个 `100-MB` 数据文件和两个 `100-MB` 事务日志文件。 主文件是列表中的第一个文件，并使用 `PRIMARY` 关键字显式指定。 事务日志文件在 `LOG ON` 关键字后指定。 请注意用于 `FILENAME` 选项中各文件的扩展名：`.mdf` 用于主数据文件，`.ndf` 用于辅助数据文件，`.ldf` 用于事务日志文件。 此示例将数据库放置于 `D:` 驱动器上，而非 `master` 数据库中。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -609,7 +610,7 @@ GO
   
  此示例将数据和日志文件放置于不同的磁盘上，以便提高性能。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -658,7 +659,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. 附加数据库  
  以下示例分离在示例 D 中创建的数据库 `Archive`，然后使用 `FOR ATTACH` 子句附加该数据库。 `Archive` 定义为具有多个数据和日志文件。 但是，由于文件的位置自创建后没有发生更改，所以只需在 `FOR ATTACH` 子句中指定主文件。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，要附加的数据库中包含的所有全文文件也将随数据库一起附加。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -674,7 +675,7 @@ GO
   
  该示例的源数据库是在示例 D 中创建的 `Sales` 数据库。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -691,7 +692,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. 创建数据库并指定排序规则名称和选项  
  下面的示例创建数据库`MyOptionsTest`。 指定了排序规则名称，并将 `TRUSTYWORTHY` 和 `DB_CHAINING` 选项设置为 `ON`。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -706,13 +707,12 @@ SELECT name, collation_name, is_trustworthy_on, is_db_chaining_on
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 附加已移动的全文目录  
  以下示例同时附加全文目录 `AdvWksFtCat` 以及 `AdventureWorks2012` 数据和日志文件。 在该示例中，将全文目录从其默认位置移动到新位置 `c:\myFTCatalogs`。 数据和日志文件保留在其默认位置。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -737,7 +737,7 @@ GO
   
 -   `FileStreamResumes` 包含 FILESTREAM 数据。 它包含一个位于位于 `FSResumes` 中的 FILESTREAM 数据容器 `C:\MyFSfolder\Resumes`。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -789,7 +789,7 @@ GO
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 创建一个数据库，该数据库具有含多个文件的 FILESTREAM 文件组  
  下面的示例将创建数据库 `BlobStore1`。 该数据库在创建之时包含一个行文件组和一个 FILESTREAM 文件组 `FS`。 该 FILESTREAM 文件组包含两个文件：`FS1` 和 `FS2`。 然后，通过将第三个文件 `FS3` 添加到 FILESTREAM 文件组来改变该数据库。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   
@@ -841,8 +841,8 @@ GO
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_changedbowner &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_detach_db &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_removedbreplication &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [移动数据库文件](../../relational-databases/databases/move-database-files.md)   
  [数据库](../../relational-databases/databases/databases.md)   

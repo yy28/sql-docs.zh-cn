@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 caps.latest.revision: "16"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42aec0fe42676198a447c71dc62dad1143b364f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b0816a50ed99684848ddb3cc890080cf305440e8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="delete-catalog-items-management-studio"></a>删除目录项 (Management Studio)
   使用此页可以删除共享计划和角色定义。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/05/2017
   
  不能撤消删除操作。 若要恢复已删除的项，必须重新创建该项或还原报表服务器数据库的备份副本。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **名称**  
  指定要删除的项的名称。  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
  **所有者**  
  显示所有者的名称。 在大多数情况下，此名称为 System。  
   
- **状态**  
+ **“状态”**  
  显示删除操作的进度信息。  
   
  **错误**  

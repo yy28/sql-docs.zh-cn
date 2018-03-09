@@ -2,29 +2,34 @@
 title: "设置用于全文筛选器后台程序启动器的服务帐户 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f25dd338c1492afe66bdb4ecb0bf98e0b92a2da7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4f77e69ed4950e71302ef55d161fea96970789ea
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>设置用于全文筛选器后台程序启动器的服务帐户
- 本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器为 SQL 全文筛选器后台程序启动器服务 (MSSQLFDLauncher) 设置或更改服务帐户。 SQL Server 安装程序使用的默认服务帐户是 `NT Service\MSSQLFDLauncher`。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器为 SQL 全文筛选器后台程序启动器服务 (MSSQLFDLauncher) 设置或更改服务帐户。 SQL Server 安装程序使用的默认服务帐户是 `NT Service\MSSQLFDLauncher`。
   
   
 ## <a name="about-the-sql-full-text-filter-daemon-launcher-service"></a>关于 SQL 全文筛选器后台程序启动器服务。
@@ -36,7 +41,7 @@ SQL 全文筛选器后台程序启动器服务是可识别实例的服务，它�
   
 1.  在“开始”菜单上，指向“所有程序”、展开 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，再单击“SQL Server 2016 配置管理器”。  
   
-2.  在“SQL Server 配置管理器”中，单击“SQL Server 服务”，右键单击“SQL 全文筛选器后台程序启动器”**（***实例名称***）**，然后单击“属性”。  
+2.  在“SQL Server 配置管理器”中，单击“SQL Server 服务”，右键单击“SQL 全文筛选器守护程序启动器”（实例名称），然后单击“属性”。  
   
 3.  单击此对话框的“登录”选项卡，选择或输入一个帐户，该帐户用于运行由 SQL 全文筛选器后台程序启动器服务启动的每个进程。  
   

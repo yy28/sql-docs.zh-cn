@@ -1,11 +1,11 @@
 ---
 title: "版本和支持的功能的 SQL Server 2017 ~ Linux |Microsoft 文档"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -31,17 +31,19 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: "121"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本和支持的功能在 Linux 上的 SQL Server 2017
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文提供了各种版本的 SQL Server 自 2017 年在 Linux 上支持的功能的详细信息。 有关版本和 Windows 上的 SQL Server 支持的功能，请参阅[SQL Server 2017-Windows](../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
@@ -63,22 +65,22 @@ ms.lasthandoff: 11/20/2017
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定义|  
 |---------------------------------------|----------------|  
 |Enterprise|高级版产品， [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition 与超快的性能，让任务关键型工作负荷的高服务级别提供全面的高端数据中心功能。|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]Standard edition 提供部门和小型组织能够运行其应用程序的基本数据管理和支持常见的开发工具用于在本地和云 — 启用用极少的 IT 资源的有效的数据库管理。|  
-|Web|对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 版本是一项总拥有成本较低的选择。|  
-|开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建和测试应用程序的人员的理想之选。|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition 提供部门和小型组织能够运行其应用程序的基本数据管理和支持常见的开发工具用于在本地和云 — 启用用极少的 IT 资源的有效的数据库管理。|  
+|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，Web 版本是一项总拥有成本较低的选择。|  
+|开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建和测试应用程序的人员的理想之选。|  
 |Express Edition|Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 无缝升级到其他更高端的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于客户端/服务器应用程序  
 
 在运行直接连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的客户端/服务器应用程序的计算机上，只能安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]客户端组件。 如果要在数据库服务器上管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，或者打算开发 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 应用程序，那么客户端组件安装也是一个不错的选择。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]组件  
+## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件  
 
 在 Linux 上的 SQL Server 2017 支持的 SQL Server 数据库引擎。 下表介绍在数据库引擎功能。   
   
 |服务器组件|Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]包括[!INCLUDE[ssDE](../includes/ssde-md.md)]，存储、 处理和保护数据、 复制、 全文搜索、 用于管理关系的工具和 XML 数据，并在数据分析集成的核心服务。|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包括[!INCLUDE[ssDE](../includes/ssde-md.md)]，存储、 处理和保护数据、 复制、 全文搜索、 用于管理关系的工具和 XML 数据，并在数据分析集成的核心服务。|  
 
 **开发人员、 企业核心和 Evaluation 版本**  
 有关支持的开发人员的功能，企业核心和评估版，请参阅下表中的 SQL Server Enterprise 版本列出的功能。
@@ -91,9 +93,9 @@ ms.lasthandoff: 11/20/2017
 |-------------|----------------|--------------|---------|------------------------|
 |单个实例使用的最大计算能力 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|操作系统支持的最大值|限制为 4 个插槽或 24 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值| 
 |单个实例使用的最大计算能力 - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|操作系统支持的最大值|限制为 4 个插槽或 24 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|
-|每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的缓冲池的最大内存|操作系统支持的最大值|128 GB|64 GB|1410 MB|
-|每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的列存储段缓存的最大内存|不受限制的内存| 32 GB| 16 GB| 352 MB|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中每个数据库的最大内存优化数据大小|不受限制的内存| 32 GB| 16 GB| 352 MB|
+|每个实例的缓冲池的最大内存 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|操作系统支持的最大值|128 GB|64 GB|1410 MB|
+|列存储段缓存的每个实例的最大内存 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|不受限制的内存| 32 GB| 16 GB| 352 MB|  
+|每个数据库中的最大内存优化数据大小 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|不受限制的内存| 32 GB| 16 GB| 352 MB|
 |最大关系数据库大小|524 PB|524 PB|524 PB|10 GB|  
   
 <sup>1</sup> Enterprise edition 服务器 + 客户端访问许可证 (CAL) 基于授权 （不可用于新协议） 被限制为每个 SQL Server 实例的 20 个内核的最大值。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅[版本的 SQL Server 计算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
@@ -102,23 +104,23 @@ ms.lasthandoff: 11/20/2017
   
 |功能|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|日志传送|是|是|是|是|  
-|备份压缩|是|是|“否”|是| 
-|数据库快照|是|“否”|“否”|是|
-|Always On 故障转移群集实例<sup>1</sup>|是|是|“否”|是| 
-|Alwayson 可用性组<sup>2</sup>|是|“否”|“否”|是|
-|基本可用性组<sup>3</sup>|是|是|“否”|是|
-|最小副本提交可用性组|是|是|“否”|是|
-|无群集的可用性组|是|是|“否”|是|
-|联机页面和文件还原|是|“否”|“否”|是|
-|联机索引|是|“否”|“否”|是|
-|可恢复的联机索引重新生成|是|“否”|“否”|是|
-|联机架构更改|是|“否”|“否”|是|
-|快速恢复|是|“否”|“否”|是|
-|镜像备份|是|“否”|“否”|是|
-|热插拔内存和 CPU|是|“否”|“否”|是|
-|加密备份|是|是|“否”|是|
-|Microsoft Azure 的混合备份（URL 的备份）|是|是|“否”|是|
+|日志传送|是|用户帐户控制|用户帐户控制|否|  
+|备份压缩|是|用户帐户控制|是|否| 
+|数据库快照|是|是|“否”|否|
+|Always On 故障转移群集实例<sup>1</sup>|是|用户帐户控制|是|否| 
+|Alwayson 可用性组<sup>2</sup>|是|是|“否”|否|
+|基本可用性组<sup>3</sup>|否|是|是|否|
+|最小副本提交可用性组|是|用户帐户控制|是|否|
+|无群集的可用性组|是|用户帐户控制|是|否|
+|联机页面和文件还原|是|是|“否”|否|
+|联机索引|是|是|“否”|否|
+|可恢复的联机索引重新生成|是|是|“否”|否|
+|联机架构更改|是|是|“否”|否|
+|快速恢复|是|是|“否”|否|
+|镜像备份|是|是|“否”|否|
+|热插拔内存和 CPU|是|是|“否”|否|
+|加密备份|是|用户帐户控制|是|否|
+|Microsoft Azure 的混合备份（URL 的备份）|是|用户帐户控制|是|否|
   
 <sup>1</sup> Enterprise edition 上的节点数是最大的操作系统。 Standard 版本中支持两个节点。 
 
@@ -130,23 +132,23 @@ ms.lasthandoff: 11/20/2017
   
 |功能|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
-|列存储 <sup>1</sup>|是|是|是|是|  
-|聚集列存储索引中的大型对象二进制文件|是|是|是|是|  
-|联机非聚集列存储索引重新生成|是|“否”|“否”|是|
-|内存中 OLTP <sup>1</sup>|是|是|是|是|
-|永久性主内存|是|是|是|是|
-|表和索引分区|是|是|是|是|  
-|数据压缩|是|是|是|是|
-|资源调控器|是|“否”|“否”|是|  
-|已分区表并行度|是|“否”|“否”|是|
-|NUMA 感知、大型页内存和缓冲区数组分配|是|“否”|“否”|是|
-|IO 资源调控|是|“否”|“否”|是|  
-|延迟持续性|是|是|是|是|
-|自动优化|是|“否”|“否”|是|
-|批处理模式自适应联接|是|“否”|“否”|是|
-|批处理模式内存授予反馈|是|“否”|“否”|是|
-|多语句表值函数的交错执行|是|是|是|是|
-|大容量插入改进|是|是|是|是|
+|列存储 <sup>1</sup>|是|用户帐户控制|用户帐户控制|是|  
+|聚集列存储索引中的大型对象二进制文件|是|用户帐户控制|用户帐户控制|是|  
+|联机非聚集列存储索引重新生成|是|是|“否”|否|
+|内存中 OLTP <sup>1</sup>|是|用户帐户控制|用户帐户控制|是|
+|永久性主内存|是|用户帐户控制|用户帐户控制|是|
+|表和索引分区|是|用户帐户控制|用户帐户控制|是|  
+|数据压缩|是|用户帐户控制|用户帐户控制|是|
+|资源调控器|是|是|“否”|否|  
+|已分区表并行度|是|是|“否”|否|
+|NUMA 感知、大型页内存和缓冲区数组分配|是|是|“否”|否|
+|IO 资源调控|是|是|“否”|否|  
+|延迟持续性|是|用户帐户控制|用户帐户控制|是|
+|自动优化|是|是|“否”|否|
+|批处理模式自适应联接|是|是|“否”|否|
+|批处理模式内存授予反馈|是|是|“否”|否|
+|多语句表值函数的交错执行|是|用户帐户控制|用户帐户控制|是|
+|大容量插入改进|是|用户帐户控制|用户帐户控制|是|
 
 
 <sup>1</sup> 内存中 OLTP 数据大小和列存储段缓存限制为“规模限制”部分中的版本所指定的内存量。 最大并行度是有限的。 索引生成的处理并行度 (DOP) 度仅限于 2 DOP Standard edition 和 1 DOP 的 Web 和 Express 版本。 这是指在基于磁盘的表和内存优化表上创建的列存储索引。
@@ -155,52 +157,52 @@ ms.lasthandoff: 11/20/2017
   
 |功能|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
-|行级安全性|是|是|是|是|  
-|始终加密|是|是|是|是| 
-|动态数据屏蔽|是|是|是|是|   
-|基本审核|是|是|是|是| 
-|精细审核|是|是|是|是| 
-|透明数据库加密|是|“否”|“否”|是|   
-|用户定义的角色|是|是|是|是| 
-|包含的数据库|是|是|是|是| 
-|备份加密|是|是|“否”|是|  
+|行级安全性|是|用户帐户控制|用户帐户控制|是|  
+|始终加密|是|用户帐户控制|用户帐户控制|是| 
+|动态数据屏蔽|是|用户帐户控制|用户帐户控制|是|   
+|基本审核|是|用户帐户控制|用户帐户控制|是| 
+|精细审核|是|用户帐户控制|用户帐户控制|是| 
+|透明数据库加密|是|是|“否”|否|   
+|用户定义的角色|是|用户帐户控制|用户帐户控制|是| 
+|包含的数据库|是|用户帐户控制|用户帐户控制|是| 
+|备份加密|是|用户帐户控制|是|否|  
 
 ##  <a name="RDBMSM"></a>RDBMS 可管理性  
   
 |功能|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|专用管理连接|是|是|是|支持（使用跟踪标志）|支持（使用跟踪标志）|   
-|PowerShell 脚本支持|是|是|是|是| 
-|支持数据层应用程序组件操作 - 提取、部署、升级、删除|是|是|是|是| 
-|策略自动执行（检查计划和更改）|是|是|是|“否”|是|   
-|性能数据收集器|是|是|是|“否”|是| 
-|标准性能报表|是|是|是|“否”|是| 
-|计划指南和计划指南的计划冻结|是|是|是|“否”|是|   
-|使用 NOEXPAND 提示的索引视图的直接查询|是|是|是|是| 
-|自动索引视图维护|是|是|是|“否”|是| 
-|分布式分区视图|是|“否”|“否”|是| 
-|并行索引操作|是|“否”|“否”|是|  
-|查询优化器自动使用索引视图|是|“否”|“否”|是| 
-|并行一致性检查|是|“否”|“否”|是| 
-|SQL Server 实用工具控制点|是|“否”|“否”|是|    
+|专用管理连接|是|用户帐户控制|是|支持（使用跟踪标志）|支持（使用跟踪标志）|   
+|PowerShell 脚本支持|是|用户帐户控制|用户帐户控制|是| 
+|支持数据层应用程序组件操作 - 提取、部署、升级、删除|是|用户帐户控制|用户帐户控制|是| 
+|策略自动执行（检查计划和更改）|是|用户帐户控制|用户帐户控制|是|否|   
+|性能数据收集器|是|用户帐户控制|用户帐户控制|是|否| 
+|标准性能报表|是|用户帐户控制|用户帐户控制|是|否| 
+|计划指南和计划指南的计划冻结|是|用户帐户控制|用户帐户控制|是|否|   
+|使用 NOEXPAND 提示的索引视图的直接查询|是|用户帐户控制|用户帐户控制|是| 
+|自动索引视图维护|是|用户帐户控制|用户帐户控制|是|否| 
+|分布式分区视图|是|是|“否”|否| 
+|并行索引操作|是|是|“否”|否|  
+|查询优化器自动使用索引视图|是|是|“否”|否| 
+|并行一致性检查|是|是|“否”|否| 
+|SQL Server 实用工具控制点|是|是|“否”|否|    
 
 ##  <a name="Programmability"></a> Programmability  
   
 |功能|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
-|JSON|是|是|是|是|   
-|查询存储|是|是|是|是|   
-|临时|是|是|是|是|   
-|本机 XML 支持|是|是|是|是| 
-|XML 索引|是|是|是|是| 
-|MERGE 和 UPSERT 功能|是|是|是|是|   
-|日期和时间数据类型|是|是|是|是|  
-|国际化支持|是|是|是|是| 
-|全文和语义搜索|是|是|是|是|是| 
-|查询中的语言规范|是|是|是|是|是|   
+|JSON|是|用户帐户控制|用户帐户控制|是|   
+|查询存储|是|用户帐户控制|用户帐户控制|是|   
+|临时|是|用户帐户控制|用户帐户控制|是|   
+|本机 XML 支持|是|用户帐户控制|用户帐户控制|是| 
+|XML 索引|是|用户帐户控制|用户帐户控制|是| 
+|MERGE 和 UPSERT 功能|是|用户帐户控制|用户帐户控制|是|   
+|日期和时间数据类型|是|用户帐户控制|用户帐户控制|是|  
+|国际化支持|是|用户帐户控制|用户帐户控制|是| 
+|全文和语义搜索|是|用户帐户控制|用户帐户控制|用户帐户控制|否| 
+|查询中的语言规范|是|用户帐户控制|用户帐户控制|用户帐户控制|否|   
 |Service Broker（消息传递）|是|是|不支持（仅客户端）|不支持（仅客户端）|不支持（仅客户端）|   
-|Transact-SQL 端点|是|是|是|“否”|是| 
-|图形|是|是|是|是|  
+|Transact-SQL 端点|是|用户帐户控制|用户帐户控制|是|否| 
+|图形|是|用户帐户控制|用户帐户控制|是|  
 
 
 <sup>1</sup> 具有多个计算节点的 Scale out 需要一个头节点。
@@ -213,10 +215,10 @@ ms.lasthandoff: 11/20/2017
   
 |功能名称|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
-|空间索引|是|是|是|是|   
-|平面和大地测量数据类型|是|是|是|是| 
-|高级空间库|是|是|是|是|   
-|导入/导出业界标准的空间数据格式|是|是|是|是|   
+|空间索引|是|用户帐户控制|用户帐户控制|是|   
+|平面和大地测量数据类型|是|用户帐户控制|用户帐户控制|是| 
+|高级空间库|是|用户帐户控制|用户帐户控制|是|   
+|导入/导出业界标准的空间数据格式|是|用户帐户控制|用户帐户控制|是|   
 
   
 ## <a name="next-steps"></a>后续步骤 

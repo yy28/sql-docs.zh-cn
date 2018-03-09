@@ -1,27 +1,28 @@
 ---
 title: "SQLServerDataSource 成员 |Microsoft 文档"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6feb87ad1bb5054b800a001a30af6b94679e977a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d046db6ae560e0384d3966286952069e940a189b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,9 +31,9 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="constructors"></a>构造函数  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
-|[SQLServerDataSource （)](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|初始化的新实例[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)类。|  
+|[SQLServerDataSource ()](../../../connect/jdbc/reference/sqlserverdatasource-constructor.md)|初始化的新实例[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)类。|  
   
 ## <a name="fields"></a>字段  
  无。  
@@ -42,12 +43,14 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="methods"></a>方法  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|返回的值**applicationIntent**连接属性。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|返回应用程序名称。|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|尝试建立连接的数据源此[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)对象所表示。|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|返回数据库名称。|  
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|返回的值**disableStatementPooling**连接属性。 此设置可控制是否启用语句池或不适用于此连接。|  
+|[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|返回的值**enablePrepareOnFirstPreparedStatementCall**连接属性。|  
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|返回**布尔**值，该值指示是否启用加密属性。|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|返回数据源的说明。|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|返回在数据库镜像配置中使用的故障转移服务器名称。|  
@@ -66,6 +69,10 @@ ms.lasthandoff: 11/18/2017
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|返回**布尔**值，该值指示是否启用发送到服务器以 UNICODE 格式的字符串参数。|  
 |[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|返回的设置**SendTimeAsDatetime**连接属性。|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|返回运行的计算机的名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。|  
+|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|返回的值**serverPreparedStatementDiscardThreshold**连接属性。|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverdatasource.md)|返回此连接的已准备的语句缓存的大小。|  
+|[getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)|返回 TrustManagerClass 连接属性的字符串值。|  
+|[getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md)|返回 TrustManagerConstructorArg 连接属性的字符串值。|  
 |[getTrustServerCertificate](../../../connect/jdbc/reference/gettrustservercertificate-method-sqlserverdatasource.md)|返回**布尔**值，该值指示是否启用 trustServerCertificate 属性。|  
 |[getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md)|返回指向证书 trustStore 文件的路径（包括文件名）。|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)|返回用于连接到数据源的 URL。|  
@@ -79,6 +86,8 @@ ms.lasthandoff: 11/18/2017
 |[setAuthenticationScheme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|指示您的应用程序要使用的集成安全性类型。|  
 |[setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md)|设置要连接到的数据库名称。|  
 |[setDescription](../../../connect/jdbc/reference/setdescription-method-sqlserverdatasource.md)|设置数据源的说明。|  
+|[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverdatasource.md)|设置为 true 或 false 池语句。|  
+|[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|指定的新值**enablePrepareOnFirstPreparedStatementCall**连接属性。|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|集**布尔**值，该值指示是否启用加密属性。|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|设置在数据库镜像配置中使用的故障转移服务器名称。|  
 |[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|设置要用于验证 SQL Server 安全套接字层 (SSL) 证书的主机名。|  
@@ -97,6 +106,10 @@ ms.lasthandoff: 11/18/2017
 |[setSendStringParametersAsUnicode](../../../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md)|集**布尔**值，该值指示是否启用发送到服务器以 UNICODE 格式的字符串参数。|  
 |[setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)|指定如何将 java.sql.Time 值发送到服务器。|  
 |[setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)|设置运行的计算机的名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。|  
+|[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|设置的新值**serverPreparedStatementDiscardThreshold**连接属性。|  
+|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverdatasource.md)|设置此连接的已准备的语句缓存的大小。|  
+|[setTrustManagerClass](../../../connect/jdbc/reference/settrustmanagerclass-method-sqlserverdatasource.md)|设置 TrustManagerClass 连接属性的字符串值。|  
+|[setTrustManagerConstructorArg](../../../connect/jdbc/reference/settrustmanagerconstructorarg-method-sqlserverdatasource.md)|设置 TrustManagerConstructorArg 连接属性的字符串值。|  
 |[setTrustServerCertificate](../../../connect/jdbc/reference/settrustservercertificate-method-sqlserverdatasource.md)|集**布尔**值，该值指示是否启用 trustServerCertificate 属性。|  
 |[setTrustStore](../../../connect/jdbc/reference/settruststore-method-sqlserverdatasource.md)|设置指向证书 trustStore 文件的路径（包括文件名）。|  
 |[setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)|设置用于检查 trustStore 数据完整性的密码。|  

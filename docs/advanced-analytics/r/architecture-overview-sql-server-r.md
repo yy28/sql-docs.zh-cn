@@ -2,25 +2,28 @@
 title: "体系结构概述 (SQL Server R Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 2fb02e5c71ae74afb4dd48e6a02e36a1c7dce9b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server 中的 R 的体系结构概述
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本部分概述了 SQL Server 2016 R services 和 SQL Server 自 2017 年 1 机器学习服务的体系结构。
 
@@ -46,7 +49,7 @@ SQL Server 2016 R Services 和 SQL Server 自 2017 年 1 机器学习 Services �
 
 有关支持 R，如的组件的详细说明[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]和 RLauncher，请参阅[新组件](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)。
 
-## <a name="security"></a>安全性
+## <a name="security"></a>Security
 
 使用机器学习服务或 SQL Server R Services 的 R 代码运行时，所有 R 脚本都执行外部 SQL Server 过程中，以提供安全和更高版本的可管理性。 这种隔离的进程如此无论你是否作为存储过程的一部分运行 R 脚本或从远程计算机连接到 SQL Server 计算机作业并开始使用服务器作为计算上下文的作业。
 

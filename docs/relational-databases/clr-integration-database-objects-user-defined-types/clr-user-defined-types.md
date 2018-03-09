@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -34,19 +34,20 @@ helpviewer_keywords:
 - invoking UDT methods
 - indexes [CLR integration]
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
-caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a083805e95f9a7243767af436249ffb0858cae10
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79f5a6c9c827d3502cf7c636ffb5e49bd16f0b13
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-user-defined-types"></a>CLR 用户定义类型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使你能够创建针对的.net Framework 公共语言运行时 (CLR) 中创建程序集进行编程的数据库对象。 数据库对象包括触发器、存储过程、函数、聚合函数和类型，它们可以利用 CLR 提供的丰富的编程模型。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于创建基于以 .NET Framework 公共语言运行时 (CLR) 创建的程序集而编写的数据库对象。 数据库对象包括触发器、存储过程、函数、聚合函数和类型，它们可以利用 CLR 提供的丰富的编程模型。  
   
 > [!NOTE]  
 >  默认情况下，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中关闭了执行 CLR 代码的功能。 可以使用启用 CLR **sp_configure**系统存储过程。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  **创建表、 变量或参数使用 UDT**开头[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的用户定义的类型可以用作表的列定义为中的变量[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，或作为自变量的[!INCLUDE[tsql](../../includes/tsql-md.md)]函数或存储过程。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [创建的用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
  描述如何创建 UDT。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/17/2017
  [使用 SQL Server 中的用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
  描述如何使用 UDT 创建查询。  
   
- [在 ADO.NET 中访问用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [在 ADO.NET 中访问的用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
  描述如何在 ADO.NET 中使用用于 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来处理 UDT。  
   
   

@@ -3,8 +3,9 @@ title: "Open 方法 （ADO 记录集） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Open
 - Recordset15::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3f223702a882910354d69fbcbfe5920e444000f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74e6fc58d5b32313806301467ca48b9f033b083b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 （ADO 记录集）
 上打开一个游标[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -40,19 +42,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Parameters  
  *数据源*  
- 可选。 A **Variant**计算结果为有效[命令](../../../ado/reference/ado-api/command-object-ado.md)对象、 SQL 语句、 表名、 存储的过程调用、 URL 或文件的名称或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象，其中包含永久存储[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+ 選擇性。 A **Variant**计算结果为有效[命令](../../../ado/reference/ado-api/command-object-ado.md)对象、 SQL 语句、 表名、 存储的过程调用、 URL 或文件的名称或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象，其中包含永久存储[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
  *ActiveConnection*  
- 可选。 任一**Variant**计算结果为有效[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象变量名称，或**字符串**包含[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)参数。  
+ 選擇性。 任一**Variant**计算结果为有效[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象变量名称，或**字符串**包含[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)参数。  
   
- *游标类型*  
- 可选。 A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值，该值确定的提供程序打开时应使用的游标类型**记录集**。 默认值是**adOpenForwardOnly**。  
+ *CursorType*  
+ 選擇性。 A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)值，该值确定的提供程序打开时应使用的游标类型**记录集**。 默认值是**adOpenForwardOnly**。  
   
  *LockType*  
- 可选。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，该值确定哪种类型的锁定 （并发） 提供程序应使用打开时**记录集**。 默认值是**adLockReadOnly**。  
+ 選擇性。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，该值确定哪种类型的锁定 （并发） 提供程序应使用打开时**记录集**。 默认值是**adLockReadOnly**。  
   
- *选项*  
- 可选。 A**长**值，该值指示提供程序应如何评估*源*参数如果以外表示的一些东西**命令**对象，或**记录集**应从以前已保存的文件还原。 可以是一个或多个[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)可以使用按位 OR 运算符组合的值。  
+ *Options*  
+ 選擇性。 A**长**值，该值指示提供程序应如何评估*源*参数如果以外表示的一些东西**命令**对象，或**记录集**应从以前已保存的文件还原。 可以是一个或多个[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)可以使用按位 OR 运算符组合的值。  
   
 > [!NOTE]
 >  如果你打开**记录集**从**流**包含持久化**记录集**，使用[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 值**adAsyncFetchNonBlocking**不会有影响; 提取将同步和阻塞。  

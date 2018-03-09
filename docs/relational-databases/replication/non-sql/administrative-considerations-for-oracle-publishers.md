@@ -2,9 +2,12 @@
 title: "Oracle 发布服务器的管理注意事项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - administering replication, Oracle publishing
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80e61dbe67613d0ca7fecb6d39746812203a5d11
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c4e7330c7b1b6f0220d2cc40d50be71885cedfd1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 发布服务器的管理注意事项
-  在配置 Oracle 发布服务器并实施复制更改跟踪机制后，Oracle 数据库系统管理员仍然可以使用标准 Oracle 数据库实用工具并执行典型的系统管理任务。 但是，应该了解执行某些管理任务对已发布数据的影响。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在配置 Oracle 发布服务器并实施复制更改跟踪机制后，Oracle 数据库系统管理员仍然可以使用标准 Oracle 数据库实用工具并执行典型的系统管理任务。 但是，应该了解执行某些管理任务对已发布数据的影响。  
   
  除了删除或修改为复制发布的列或者任意复制对象，这些注意事项不适用于快照发布。  
   
@@ -68,6 +71,6 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle 发布服务器的设计注意事项和限制](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle 发布概述](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

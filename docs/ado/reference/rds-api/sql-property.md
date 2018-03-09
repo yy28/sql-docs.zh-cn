@@ -1,26 +1,30 @@
 ---
 title: "SQL 属性 |Microsoft 文档"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: SQL property [RDS]
+helpviewer_keywords:
+- SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1c6dfe09bf48ca48a9df29d066ef100403f7703
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 406d5cd5fcf159d9354ef0af0b7036e3ebd24bab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-property"></a>SQL 属性
 指示用于检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -39,7 +43,7 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *查询字符串*  
+ *QueryString*  
  A**字符串**包含有效的 SQL 数据请求的值。  
   
  *DataControl*  

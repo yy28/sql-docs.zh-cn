@@ -2,32 +2,32 @@
 title: "KpiGoal 元素 (CSDLBI) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: fd8afbe7-b57d-4b47-862d-eb7b2489c327
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce46d320976820c8be80e23a19a8168b1f0c90b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e15a18c55318373b41c8a4fabe7377aad5d9f00
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="kpigoal-element-csdlbi"></a>KpiGoal 元素 (CSDLBI)
-  KpiGoal 元素提供对某列的引用，而该列用于定义关键绩效指标 (KPI) 的目标。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+KpiGoal 元素提供对某列的引用，而该列用于定义关键绩效指标 (KPI) 的目标。  
   
  在 CSDLBI 中，KPI 基于度量值，Measure 元素包含公式（如果有），而与 KPI 关联的其他元数据被定义为此 [KPI 元素 (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md) 的一部分。  Kpigoal 元素是 Kpi 元素的子类型。  
   

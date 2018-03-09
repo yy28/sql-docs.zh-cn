@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 48ab1d80a01cbcaf74f5ba11850ab61f358b24fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a20f02bf8c2e0c39c15e3b8209c43673fe697f28
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="data-cleansing"></a>数据清理
+# <a name="data-cleansing"></a>Data Cleansing
   数据清理是在数据源中分析数据质量的过程，在其中手动批准/拒绝系统的建议并将对数据进行更改。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据清理包括计算机辅助的过程和交互式过程，前者分析数据与知识库中知识的符合程度，后者允许数据专员查看和修改计算机辅助过程的结果，确保数据清理符合自己的要求。  
   
  数据专员还可以在 Integration Services 包装过程中执行数据清理。 在这种情况下，数据专员将通过 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 使用现有的知识库来自动执行数据清理。 有关详细信息，请参阅 [DQS 清除转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)。  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
  在清理数据质量项目向导的 **“导出”** 页中导出已清理的数据时，您通过选中 **“标准化输出”** 复选框来指定是否要以标准化格式导出已清理的数据。 默认情况下，以标准化格式导出已清理的数据，即选中该复选框。 有关导出已清理的数据的详细信息，请参阅[使用 DQS（内部）知识清理数据](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)。  
   
-##  <a name="Related"></a> 相关任务  
+##  <a name="Related"></a>相关任务  
   
 |任务说明|主题|  
 |----------------------|-----------|  

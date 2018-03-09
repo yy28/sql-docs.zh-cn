@@ -3,10 +3,10 @@ title: "并行数据仓库的透明数据加密"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
 caps.latest.revision: "22"
-ms.openlocfilehash: b0544f5dee735b8444ce68d25e3be288be214202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transparent-data-encryption"></a>透明数据加密
 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，如果遇到物理介质（如驱动器或备份磁带）被盗的情况，恶意破坏方只需还原或附加数据库即可浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
@@ -139,7 +139,7 @@ TDE 证书必须使用数据库主密钥加密才能被下列语句接受。
 |[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|显示数据库中的证书的目录视图。|  
 |[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|为每个节点中，提供有关数据库和数据库加密状态中使用的加密密钥信息的动态管理视图。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 如上表中所述，TDE 的每项功能和每个命令都有各自的权限要求。  
   
 查看 TDE 所涉及的元数据需要`CONTROL SERVER`权限。  

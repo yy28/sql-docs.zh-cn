@@ -1,5 +1,5 @@
 ---
-title: "CDC 拆分器 |Microsoft 文档"
+title: "CDC 拆分器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.cdcsplitter.f1
+f1_keywords: sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e2bee6609acacd6c9d441eae62d178818aea27a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 19b09b99c30e0dffd81b1778c3df25596d455110
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="cdc-splitter"></a>CDC 拆分器
   CDC 拆分器将更改行的单个流从 CDC 源数据流拆分到多个不同的数据流中以便用于插入、更新和删除操作。 基于必需的列 `__$operation` 及其在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中的标准值来拆分数据流。  
   
-|操作的值|输出|Description|  
+|操作的值|“输出”|Description|  
 |------------------------|------------|-----------------|  
-|1|删除|删除的行|  
+|@shouldalert|DELETE|删除的行|  
 |2|Insert|插入的行（使用“净值且具有合并”CDC 模式时不可用）|  
 |3|Update|更新前的行（仅在使用“全部且具有旧值”CDC 模式时可用）|  
 |4|Update|更新后的行（与更新前相同）|  
@@ -66,7 +63,6 @@ ms.lasthandoff: 08/03/2017
 -   在您的 **项目的** “数据流” [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 屏幕上，右键单击 CDC 拆分器，然后选择 **“显示高级编辑器”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [定向 CDC 流根据更改的类型](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
+ [根据更改的类型定向 CDC 流](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   
-

@@ -2,13 +2,13 @@
 title: "调用 ProcessCube cmdlet |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: b10ba7c1-8f10-4e72-9626-f9285e4341fd
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9fe5420b6d226f030d1fd31dfbd42b06a6836f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5564256b3953c9173f433201506204d7ca24677e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processcube-cmdlet"></a>Invoke-ProcessCube cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  使用特定的处理类型变量处理多维数据集。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]处理多维数据集使用一个特定的处理类型变量。  
   
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -59,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |必需？|true|  
-|位置？|1|  
+|位置？|@shouldalert|  
 |默认值||  
 |接受管道输入？|false|  
 |接受通配符？|false|  

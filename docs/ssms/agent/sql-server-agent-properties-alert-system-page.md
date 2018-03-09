@@ -3,8 +3,11 @@ title: "SQL Server 代理属性（“警报系统”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2645355a8d79e728a5fa6d0a5d9dabf92be0e19a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbef6fd5cdc500b80da926dae50942ddf252aa68
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server 代理属性（“警报系统”页）
-使用此页可以查看和修改由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报所发送的消息的设置。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此页可以查看和修改由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报所发送的消息的设置。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **邮件会话**  
 此部分中的选项用于配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理邮件。  
   
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/09/2017
 **启用防故障操作员**  
 指定防故障操作员。  
   
-**运算符**  
+**“运算符”**  
 设置要接收防故障通知的操作员的名称。  
   
 **通知方式**  

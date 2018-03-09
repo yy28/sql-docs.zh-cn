@@ -2,26 +2,31 @@
 title: "使用 SysPrep 安装 SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1f13a80130626df2fe09ff37d566395d23e3b952
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: e538fc7315661cf76dc807cb54cbd0d518cb8603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安装 SQL Server
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相关的安装操作可以通过安装中心来访问。 “安装中心”的“高级”页具有两个选项 -“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”和“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”。 [准备](#prepare) 和 [完成](#complete) 部分将详细说明安装过程。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。 
   
 还可以使用命令提示符或配置文件准备和完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 有关详细信息，请参阅：  
@@ -30,8 +35,8 @@ ms.lasthandoff: 11/09/2017
   
 - [使用配置文件安装 SQL Server](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>先决条件  
-安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，请查阅 [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的主题。 
+## <a name="prerequisites"></a>必备条件  
+安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，请查阅[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的文章。 
   
 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本及硬件和软件要求的详细信息，请参阅[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 
     
@@ -104,7 +109,7 @@ ms.lasthandoff: 11/09/2017
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制<br /><br /> 全文功能<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下的<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可再发行的功能<br /><br /> 共享功能|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制<br /><br /> 全文功能<br /><br /> “数据库引擎服务”<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下的<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可再发行的功能<br /><br /> 共享功能|  
   
      突出显示功能名称时，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。 
   
@@ -171,7 +176,7 @@ ms.lasthandoff: 11/09/2017
   
      **已安装的实例** — 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 
   
-10. 本主题中的其余工作流取决于在准备步骤中已选择的功能。 您可能不会看到所有的页面，具体取决于进行的选择。 
+10. 本文中的其余工作流取决于在准备步骤中已选择的功能。 您可能不会看到所有的页面，具体取决于进行的选择。 
   
 11. 在 **“服务器配置 - 服务帐户”** 页上指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。 
   
@@ -204,7 +209,7 @@ ms.lasthandoff: 11/09/2017
   
 15. 使用“ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置 - FILESTREAM”页对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例启用 FILESTREAM。 有关详细信息，请参阅 [数据库引擎配置 - 文件流](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)。 
   
-16. 使用“[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页指定要创建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装类型。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置模式的详细信息，请参阅 [Reporting Services 配置选项 (SSRS)](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391)。 
+16. 使用“ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页指定要创建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装类型。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置模式的详细信息，请参阅 [Reporting Services 配置选项 (SSRS)](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391)。 
   
 17. 在 **“错误报告”** 页上，指定要发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 以帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的信息。 默认情况下，将启用用于错误报告的选项。 
   
@@ -299,7 +304,7 @@ ms.lasthandoff: 11/09/2017
 10. 重复步骤 1 到 9，直到删除所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件。 
   
 ##  <a name="bk_Modifying_Uninstalling"></a> 修改或卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已完成实例。 
- 添加或删除功能或者卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成实例的过程类似于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已安装实例的过程。 有关详细信息，请参阅以下主题：  
+ 添加或删除功能或者卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成实例的过程类似于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已安装实例的过程。 有关详细信息，请参阅以下文章：  
   
 - [向 SQL Server 实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   

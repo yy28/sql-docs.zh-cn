@@ -2,16 +2,13 @@
 title: "配置服务帐户 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 43be205737ddf16cd329598646cb60a8cebbe8e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
-  产品范围的帐户设置在 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+产品范围的帐户设置在[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
   
  该主题提供了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的补充信息，包括表格和群集安装的必要附加权限。 它也介绍了支持服务器操作所需的权限。 例如，你可以配置要在服务账户下执行的处理和查询操作，在这种情况下，你需要授予附加权限使其运作。  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="logon-account-recommendations"></a>登录帐户推荐  
  在故障转移群集中，Analysis Services 的所有实例应配置为使用 Windows 域用户帐户。 将相同帐户分配给所有实例。 有关详情，请参见 [如何群集 Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) 。  
   
- 单独的实例应使用默认虚拟帐户，针对默认实例使用 **NT Service\MSSQLServerOLAPService** ，或针对命名实例使用 **NT Service\MSOLAP$***instance-name* 。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
+ 独立实例应使用默认虚拟帐户， **NT Service\MSSQLServerOLAPService**对于默认实例中，或 **NT Service\MSOLAP$ * * * 实例名称*对于命名实例。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>向 Analysis Services 授予权限  
  此部分阐释了 Analysis Services 用于本地、内部操作所需的权限，例如，启动可执行程序、读取配置文件和从数据目录加载数据库。 若要查找关于设置外部数据访问的权限以及与其他服务和应用程序的互操作性的指南，请进一步参阅此主题中的 [授予特定服务器操作的其他权限](#bkmk_tasks) 。  
@@ -105,7 +103,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_FilePermissions"></a> 分配给 Analysis Services 服务帐户的文件系统权限  
   
 > [!NOTE]  
->  有关与每个程序文件夹关联的权限的列表，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
+>  有关与每个程序文件夹关联的权限的列表，请参阅[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
 >   
 >  有关与 IIS 配置和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 相关的文件权限信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
@@ -159,8 +157,8 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server 服务帐户和每个服务 SID （博客）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server 使用服务 SID 来提供服务隔离 （知识库文章）](http://support.microsoft.com/kb/2620201)   
+ [SQL Server 服务帐户和 Per-Service SID（博客）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server 使用服务 SID 来提供服务隔离（知识库文章）](http://support.microsoft.com/kb/2620201)   
  [访问令牌 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
  [安全标识符 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [访问令牌 (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   

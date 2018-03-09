@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - DBCC_USEROPTIONS_TSQL
 - USEROPTIONS_TSQL
 - USEROPTIONS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DBCC USEROPTIONS statement
 - active SET options
 - SET statement, active SET options
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b13afafecb58316e679928fe06d8269c3c739572
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f3bf507ff174822e5133326555e8a9d2ab25f6e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +80,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="remarks"></a>注释  
 当数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON 并且事务隔离级别设置为 'read committed' 时，DBCC USEROPTIONS 会报告 'read committed snapshot' 的隔离级别。 实际的隔离级别是已提交读。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求 **公共** 角色具有成员身份。
   
 ## <a name="examples"></a>示例  

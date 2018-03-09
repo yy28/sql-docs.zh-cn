@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - DIALOG_TSQL
 - BEGIN DIALOG
 - BEGIN DIALOG CONVERSATION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - conversations [Service Broker]
 - beginning dialogs
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - encryption [SQL Server], conversations
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4ca1959c247aedd2e49c38a870621d440a089f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: a2ece31010207b6044504f099c11443a2fec0fa2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +72,10 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  **@***dialog_handle*  
  一个变量，用于为 BEGIN DIALOG CONVERSATION 语句返回的新对话存储系统生成的对话句柄。 变量必须为类型**uniqueidentifier**。  
   
- 从服务*initiator_service_name*  
+ FROM SERVICE *initiator_service_name*  
  指定启动对话的服务。 指定的名称必须是当前数据库中的服务的名称。 为发起方服务指定的队列将接收由目标服务返回的消息，以及 Service Broker 为此会话创建的消息。  
   
- 到服务*target_service_name*  
+ TO SERVICE **'***target_service_name***'**  
  指定启动对话时的目标服务。 *Target_service_name*属于类型**nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用逐字节比较，以匹配*target_service_name*字符串。 换言之，比较时将区分大小写，且不考虑当前的排序规则。  
   
  *service_broker_guid*  
@@ -96,13 +98,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  指定此会话遵循的约定。 当前数据库中必须有该约定。 如果目标服务不接受遵循指定约定的新会话，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将返回针对该会话的错误消息。 当省略此子句时，对话所遵循的名为的协定**默认**。  
   
- RELATED_CONVERSATION  **=**  *related_conversation_handle*  
+ RELATED_CONVERSATION **=***related_conversation_handle*  
  指定将新对话添加到的现有会话组。 新建对话框时存在此子句，则属于与对话框中指定相同的会话组*related_conversation_handle*。 *Related_conversation_handle*必须是隐式转换的类型键入**uniqueidentifier**。 如果语句将失败*related_conversation_handle*不引用现有的对话框。  
   
- RELATED_CONVERSATION_GROUP  **=**  *related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
  指定将新对话添加到的现有会话组。 新建对话框时存在此子句，则将添加到指定的会话组*related_conversation_group_id*。 *Related_conversation_group_id*必须是隐式转换的类型键入**uniqueidentifier**。 如果*related_conversation_group_id*不引用现有会话组，service broker 创建新的会话组具有指定*related_conversation_group_id*和与该会话组的新建对话框。  
   
- 生存期 **=**  *dialog_lifetime*  
+ LIFETIME **=***dialog_lifetime*  
  指定对话将保持打开状态的最长时间。 为使对话成功完成，两个端点都必须在生存期内显式结束对话。 *Dialog_lifetime*值必须以秒为单位。 生存期属于类型**int**。指定没有生存期子句后，对话框生存期将的最大值**int**数据类型。  
   
  ENCRYPTION  
@@ -126,7 +128,7 @@ WHERE database_id = DB_ID() ;
   
  BEGIN DIALOG CONVERSATION 在用户定义函数中无效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要启动对话，则当前的用户对于在该命令的 FROM 子句中指定的服务的队列必须有 RECEIVE 权限，对于指定的约定有 REFERENCES 权限。  
   
 ## <a name="examples"></a>示例  
@@ -219,6 +221,6 @@ BEGIN DIALOG CONVERSATION @dialog_handle
  [开始会话定时器 &#40;Transact SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [移动对话 &#40;Transact SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c1057911b1443b5d83777ec7a6e7fff90d73ece
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eb7d195139e3fd34ad6ac749bf0e09e7b13e0d3d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>设置已发布报表的参数 - SharePoint 集成模式
   参数化报表可以在运行报表时接受用于筛选数据的输入值。 参数是在创建报表时定义的。 根据报表定义中报表参数的定义方式，参数可以接受单值、多值或者根据上一选择而变化的动态值（例如，选择产品类别后，下一选择可能是该类别中的特定产品）。 参数可以具有默认值，该值可用于自动运行经过筛选的报表，也可以由不同的值来代替。  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
      指定的值组合可能无法让您获得所需的结果。 如果您无法获得所需信息，则报表作者可能需要修改报表。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 ### <a name="to-set-parameter-properties"></a>设置参数属性  
   

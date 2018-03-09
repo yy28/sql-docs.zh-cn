@@ -2,29 +2,32 @@
 title: "第 3 课： 修改度量值、 属性和层次结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a4d500a76930c46f15b36f352787edf4e01199f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 692d6b3567f9f9ea3e3fe404a85f8d9e09f44c5f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 课：修改度量值、属性和层次结构
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 在定义初始多维数据集后，即可开始提高多维数据集的有用性和友好性。 您可以通过添加在不同级别支持导航和聚合的层次结构、通过将格式应用于特定的度量值以及通过定义计算和关系，实现上述目的。  
   
 > [!NOTE]  
@@ -35,13 +38,13 @@ ms.lasthandoff: 11/17/2017
 [修改度量值](../analysis-services/lesson-3-1-modifying-measures.md)  
 在此任务中，您将为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的货币和百分比度量值指定格式设置属性。  
   
-[修改“客户”维度](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
+[修改客户维度](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
 在该任务中，将定义用户层次结构，创建命名计算，修改属性以使用命名计算并将属性和用户层次结构分组到显示文件夹中。  
   
-[修改“产品”维度](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
+[修改产品维度](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
 在该任务中，将定义用户层次结构，创建命名计算、定义所有“全部”级别成员名称并定义显示文件夹。  
   
-[修改“日期”维度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
+[修改日期维度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
 在该任务中，将定义用户层次结构，修改属性成员名称并使用组合键指定唯一的属性成员。  
   
 [浏览已部署的多维数据集](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多维建模（Adventure Works 教程）](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多维建模 &#40;Adventure Works 教程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

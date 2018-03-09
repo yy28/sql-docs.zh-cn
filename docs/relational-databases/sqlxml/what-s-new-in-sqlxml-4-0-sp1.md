@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - SQL Server Native Client, SQLXML
 - side-by-side installations [SQLXML]
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af77ef0c4dde5bcd029f3774ac48abdd56cbc47e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9772e6f1325fd603a655f37ae361977b1e6a8658
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>什么 &#39; s 中的新增功能 SQLXML 4.0 SP1
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 包括各种更新和增强功能。 本主题简要总结这些更新，并提供一些介绍详细信息的链接供您查看。 SQLXML 4.0 SP1 提供附加的增强功能，以便支持 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的新数据类型。 本主题包括以下内容：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 包括各种更新和增强功能。 本主题简要总结这些更新，并提供一些介绍详细信息的链接供您查看。 SQLXML 4.0 SP1 提供附加的增强功能，以便支持 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的新数据类型。 本主题包括以下内容：  
   
 -   安装 SQLXML 4.0 SP1  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端  
   
--   支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的数据类型  
+-   中引入的数据类型支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
 -   SQLXML 4.0 的 XML 大容量加载更改  
   
@@ -90,15 +92,15 @@ ms.lasthandoff: 11/17/2017
 ## <a name="support-for-sql-server-native-client"></a>支持 SQL Server Native Client  
  SQLXML 4.0 支持这两个 SQLOLEDB 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端提供程序。 建议你使用相同版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 访问接口和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]因为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端开发可以支持任何新的数据类型，如在服务器中，提供**日期、 时间**， **DateTime2**，和**dateTimeOffset**中的数据类型[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，并且支持[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]本机客户端。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的一种数据访问技术。 它将 SQLOLEDB 访问接口和 SQLODBC 驱动程序合并到一个本机动态链接库 (DLL)，同时还提供一项从 Microsoft 数据访问组件 (MDAC) 分离出来并有所不同的新功能。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端是一种数据访问技术中引入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 它将 SQLOLEDB 访问接口和 SQLODBC 驱动程序合并到一个本机动态链接库 (DLL)，同时还提供一项从 Microsoft 数据访问组件 (MDAC) 分离出来并有所不同的新功能。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可用于创建新的应用程序，也可以用于增强需要利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引入的新功能但 MDAC 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 中的 SQLOLEDB 和 SQLODBC 不支持的现有应用程序。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端，才能使用客户端 SQLXML 功能，如 FOR XML 中，若要使用**xml**数据类型。 有关详细信息，请参阅[客户端的 XML 格式 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)，[使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)，和[SQL Server Native Client 编程](../../relational-databases/native-client/sql-server-native-client-programming.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端可以用于创建新的应用程序或增强现有应用程序需要利用中引入的功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持通过 SQLOLEDB 并在 MDAC SQLODBC 和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端，才能使用客户端 SQLXML 功能，如 FOR XML 中，若要使用**xml**数据类型。 有关详细信息，请参阅[客户端的 XML 格式 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)，[使用 ADO 执行 SQLXML 4.0 查询](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)，和[SQL Server Native Client 编程](../../relational-databases/native-client/sql-server-native-client-programming.md)。  
   
 > [!NOTE]  
 >  SQLXML 4.0 不完全向后兼容 SQLXML 3.0。 由于一些 bug 修复和其他功能更改，特别是删除了 SQLXML ISAPI 支持，您不能将 SQLXML 4.0 与 IIS 虚拟目录一起使用。 虽然大多数应用程序稍加修改即可运行，但将它们放到生产环境中随 SQLXML 4.0 一起运行之前，必须先进行测试。  
   
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>支持 SQL Server 2005 和 SQL Server 2008 中引入的数据类型  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引入**xml**数据类型和 SQLXML 4.0 支持**xml**数据类型。 有关详细信息，请参阅[xml SQLXML 4.0 中的数据类型支持](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入**xml**数据类型和 SQLXML 4.0 支持**xml**数据类型。 有关详细信息，请参阅[xml SQLXML 4.0 中的数据类型支持](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)。  
   
  有关如何使用的示例**xml**数据时映射 XML 视图在 SQLXML 中键入、 大容量加载 XML 或执行 XML updategram，请参阅以下主题中提供的示例。  
   
@@ -108,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [大容量加载 XML 文档的示例](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入**日期和时间**， **DateTime2**，和**DateTimeOffset**数据类型。 如果将 SQLXML 4.0 SP1 与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中随附的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI11) 一起使用，SQLXML 4.0 SP1 会将这四种新数据类型作为内置标量类型来使用。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入**日期和时间**， **DateTime2**，和**DateTimeOffset**数据类型。 如果将 SQLXML 4.0 SP1 与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中随附的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI11) 一起使用，SQLXML 4.0 SP1 会将这四种新数据类型作为内置标量类型来使用。  
   
 ## <a name="xml-bulk-load-changes-for-sqlxml-40-sp1"></a>SQLXML 4.0 SP1 的 XML 大容量加载更改  
   

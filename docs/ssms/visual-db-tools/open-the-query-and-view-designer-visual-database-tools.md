@@ -3,8 +3,11 @@ title: "打开查询和视图设计器 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a884c10eb96fbab9a9202427643cb3d1262e6477
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4a43d235654ecf521917643654b0491239f58265
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>打开查询和视图设计器 (Visual Database Tools)
-当您打开视图的定义、显示查询或视图的结果或者创建或打开查询时，查询和视图设计器将会打开。 它由四个不同的窗格组成：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 当打开视图的定义、显示查询或视图的结果或者创建或打开查询时，查询和视图设计器将会打开。 它由四个不同的窗格组成：  
   
 -   “关系图”窗格以图形形式显示了您通过数据连接选择的表或表值对象。 同时也会显示它们之间的联接关系。  
   

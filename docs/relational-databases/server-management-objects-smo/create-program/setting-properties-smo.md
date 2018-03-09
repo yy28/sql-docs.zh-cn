@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,33 +17,35 @@ helpviewer_keywords:
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5174b61d138f94c795da64be18556258c53ad3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cd919d2a53a2731e348c1570ef80ffe1714ff0e5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="setting-properties---smo"></a>设置属性-SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]属性是存储有关对象的描述性信息的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所表示的配置选项<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>对象的属性。 使用属性集合可以直接或间接访问属性。 直接访问属性使用以下语法：  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  属性是存储有关对象的说明性信息的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所表示的配置选项<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>对象的属性。 使用属性集合可以直接或间接访问属性。 直接访问属性使用以下语法：  
   
  `objInstance.PropertyName`  
   
  可以修改或检索属性值，具体取决于该属性是拥有读/写访问权限还是只读访问权限。 此外，还必须在创建对象之前设置某些特定属性。 有关详细信息，请参阅特定对象的 SMO 参考资料。  
   
 > [!NOTE]  
->  某一对象的子对象集合显示为该对象的属性。 例如， **Tables** 集合是 **Server** 对象的属性。 有关详细信息，请参阅[使用集合](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)。  
+>  某一对象的子对象集合显示为该对象的属性。 例如， **Tables** 集合是 **Server** 对象的属性。 有关详细信息，请参阅 [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)。  
   
  对象的属性是属性集合的成员。 属性集合可用于遍历对象的每个属性。  
   
  有时某一属性不可用，其原因如下：  
   
--   服务器版本不支持该属性，例如当尝试在旧版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上访问表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 新功能的属性时。  
+-   服务器版本不支持该属性，例如当尝试在旧版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上访问表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]新功能的属性时。  
   
--   服务器不提供的数据对于属性，例如，如果你尝试访问该属性表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]未安装的组件。  
+-   服务器未提供该属性的相应数据，例如当尝试访问表示尚未安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组件的属性时。  
   
  通过捕获 <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> 和 <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> SMO 异常，可以处理上述情况。  
   

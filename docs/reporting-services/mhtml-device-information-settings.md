@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - MHTML [Reporting Services]
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 caps.latest.revision: "39"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 19d7b75ac8f2a8ad1835e649dd7746335fcfa397
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99c9e78b843f57c127983b0ae0f1928a95dca535
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 设备信息设置
   下表列出的是以 Web 存档 (MHTML) 格式呈现报表时的设备信息设置。  
   
-|设置|“值”|  
+|设置|ReplTest1|  
 |-------------|-----------|  
 |**JavaScript**|指示是否在所呈现报表中支持 JavaScript。|  
 |**OutlookCompat**|指示是否呈现可改善报表在 Outlook 中的外观的额外元数据。 默认值为 **true**。|  

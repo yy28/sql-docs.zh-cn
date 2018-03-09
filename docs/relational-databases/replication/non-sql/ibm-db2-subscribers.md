@@ -19,17 +19,17 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: "74"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14680465db9798d198685b3e9a556816a33057a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 402675d8725ca5e571261e700b9eb8ec2a035a90
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="ibm-db2-subscribers"></a>IBM DB2 订阅服务器
+# <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server 附带的 OLE DB 访问接口对 IBM DB2/AS 400、DB2/MVS 和 DB2/通用数据库进行的推送订阅。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 -   如果表中有一个或多个主键列的数据类型为 DECIMAL(32-38, 0-38) 或 NUMERIC(32-38, 0-38)，请勿使用事务复制向 DB2 订阅服务器发布表。 事务复制使用主键标识行，这可能会导致失败，因为这些数据类型在订阅服务器上均映射为 VARCHAR(41)。 可以使用快照复制发布包含使用这些数据类型的主键的表。  
   
--   如果要在订阅服务器上预创建表，而不是让复制创建这些表，请使用“仅支持复制”选项。 有关详细信息，请参阅[在没有快照的情况下初始化事务订阅](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
+-   如果要在订阅服务器上预创建表，而不是让复制创建这些表，请使用“仅支持复制”选项。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
 -   与 DB2 相比，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许使用更长的表名称和列名称：  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
 |**char(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
 |**date**|DATE|  
-|**datetime**|TIMESTAMP|  
+|**datetime**|timestamp|  
 |**datetime2(0-7)**|VARCHAR(27)|  
 |**datetimeoffset(0-7)**|VARCHAR(34)|  
 |**decimal(1-31, 0-31)**|DECIMAL(1-31, 0-31)|  
@@ -134,9 +134,9 @@ ms.lasthandoff: 11/17/2017
 |**numeric(32-38, 0-38)**|VARCHAR(41)|  
 |**nvarchar(1-4000)**|VARCHAR(1-4000)|  
 |**nvarchar(max)**|VARCHAR(0)*|  
-|**real**|REAL|  
-|**smalldatetime**|TIMESTAMP|  
-|**smallint**|SMALLINT|  
+|**real**|real|  
+|**smalldatetime**|timestamp|  
+|**int**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
 |**sql_variant**|N/A|  
 |**sysname**|VARCHAR(128)|  

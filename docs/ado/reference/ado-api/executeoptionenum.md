@@ -1,10 +1,11 @@
 ---
-title: "ExecuteOptionEnum |Microsoft 文档"
+title: ExecuteOptionEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ExecuteOptionEnum
-helpviewer_keywords: ExecuteOptionEnum enumeration [ADO]
+f1_keywords:
+- ExecuteOptionEnum
+helpviewer_keywords:
+- ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8357988f5082498114c435f899e898552fca1707
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e4d901326e801d9c6724dfd05d7a14bb7acd8b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 指定如何提供程序应执行的命令。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|指示应以异步方式执行该命令。<br /><br /> 此值不能与组合[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**。|  
 |**adAsyncFetch**|0x20|指示的剩余行中指定的初始数量后[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)应以异步方式检索属性。|  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**adOptionUnspecified**|-1|指示该命令未指定。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

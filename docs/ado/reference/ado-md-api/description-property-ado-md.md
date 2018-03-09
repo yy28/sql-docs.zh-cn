@@ -3,8 +3,9 @@ title: "Description 属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,18 +20,19 @@ f1_keywords:
 - Hierarchy::Description
 - Description
 - Dimension::Description
-helpviewer_keywords: Description property [ADO MD]
+helpviewer_keywords:
+- Description property [ADO MD]
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8acff61da1e6a8a6f73f9f10eb8941c109f75d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f3052ab5b0ad05c1a792ff348e77ea0b32c7484
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="description-property-ado-md"></a>Description 属性 (ADO MD)
 返回当前对象的文本说明。  

@@ -1,49 +1,38 @@
 ---
-title: "创建和管理 Kpi (SSAS 表格) |Microsoft 文档"
+title: "创建和管理 Kpi |Microsoft 文档"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.kpi.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1eec54bdb45111be19536f598990d1e6889140bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b16307f79552529c2afc0c1d298c68a85ff1f2a1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-kpis-ssas-tabular"></a>创建和管理 KPI（SSAS 表格）
-  本主题介绍如何在表格模型中创建、编辑或删除 KPI（关键绩效指标）。 若要创建一个 KPI，请选择计算结果为该 KPI 的基础值的度量值。 然后使用“关键绩效指标”对话框选择计算结果为某一目标值的第二个度量值或绝对值。 之后可以定义状态阈值，这些状态阈值度量基础度量值和目标度量值之间的性能。  
-  
- 本主题包括以下任务：  
-  
--   [创建 KPI](#bkmk_create_KPI)  
-  
--   [编辑 KPI](#bkmk_edit_KPI)  
-  
--   [删除 KPI 和基础度量值](#bkmk_delete)  
-  
--   [删除 KPI 但保留基础度量值](#bkmk_delete_KPI)  
+# <a name="create-and-manage-kpis"></a>创建和管理 Kpi 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文介绍如何创建、 编辑或删除 KPI （关键绩效指标） 表格模型中。 若要创建一个 KPI，请选择计算结果为该 KPI 的基础值的度量值。 然后使用“关键绩效指标”对话框选择计算结果为某一目标值的第二个度量值或绝对值。 之后可以定义状态阈值，这些状态阈值度量基础度量值和目标度量值之间的性能。  
   
 ## <a name="tasks"></a>“任务”  
   
 > [!IMPORTANT]  
->  在创建 KPI 前，您必须首先创建一个求值的基础度量值。 然后，您将该基础度量值扩展到 KPI。 另一主题 [创建和管理度量值（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)中有描述如何创建度量值。 KPI 也要求目标值。 该值可来自另一个预定义的度量值或绝对值。 一旦您将基础度量值扩展到 KPI 后，可以选择目标值并且在“关键绩效指标”对话框中定义状态阈值。  
+>  在创建 KPI 前，您必须首先创建一个求值的基础度量值。 然后，您将该基础度量值扩展到 KPI。 如何创建度量值另一个主题中所述[创建和管理度量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)。 KPI 也要求目标值。 该值可来自另一个预定义的度量值或绝对值。 一旦您将基础度量值扩展到 KPI 后，可以选择目标值并且在“关键绩效指标”对话框中定义状态阈值。  
   
 ###  <a name="bkmk_create_KPI"></a> 创建 KPI  
   
@@ -62,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 5.  单击 **“说明”**，然后为“KPI”、“值”、“状态”和“目标”键入说明。  
   
 > [!TIP]  
->  您可以使用“在 Excel 中分析”功能测试您的 KPI。 有关详细信息，请参阅本主题后面的 [在 Excel 中分析（SSAS 表格）](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)中的“角色管理器”对话框定义角色的表格模型作者。  
+>  您可以使用“在 Excel 中分析”功能测试您的 KPI。 有关详细信息，请参阅[在 Excel 中的分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
 ###  <a name="bkmk_edit_KPI"></a> 编辑 KPI  
   
@@ -91,8 +80,8 @@ ms.lasthandoff: 11/17/2017
 |走向|ALT+T|  
   
 ## <a name="see-also"></a>另请参阅  
- [KPI（SSAS 表格）](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [度量值（SSAS 表格）](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [创建和管理度量值（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [创建和 managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   

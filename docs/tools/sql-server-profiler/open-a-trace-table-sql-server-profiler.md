@@ -2,27 +2,30 @@
 title: "打开跟踪表 （SQL Server 事件探查器） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92f5308ad7278bd29a04ad3c701fd083d506b6c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f251fd08716dcacef95f5af1f5dffcb2788243c3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>打开跟踪表 (SQL Server Profiler)
-  本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]打开现有跟踪表。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何通过打开现有跟踪表[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
   
 ### <a name="to-open-a-trace-table"></a>打开跟踪表  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/09/2017
 4.  从 **“表”** 列表中选择表名。 单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 SQL Server Profiler 查看和分析跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)   
+ [查看和分析使用 SQL Server Profiler 跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)   
  [保存跟踪和跟踪模板](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

@@ -1,34 +1,34 @@
----
+﻿---
 title: "在 Linux 上的 SQL Server 自 2017 年 1 的新增功能 |Microsoft 文档"
-description: "本主题重点介绍什么是用于在 Linux 上的 SQL Server 2017 的新功能。"
+description: "本文重点介绍什么是用于在 Linux 上的 SQL Server 2017 的新功能。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 11/28/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: cdc32cffd67c794f5ec2d04ac7410892475f4f7f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
+ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的新增功能
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文介绍在 Linux 上运行的 SQL Server 2017 的主要功能和可用服务。
 
 > [!NOTE]
-> 除了本文中的这些功能外, 在 GA 发布之后, 还会定期发布累积更新。这些累积更新提供了许多改进和修补程序。有关最新CU版本的信息，请参阅[http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)。有关包下载和已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
+> 除了这些功能在本文中，累积更新定期发布后 GA 版。 这些累积更新提供许多改进和修复。 有关最新 CU 版本的信息，请参阅[http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)。 包下载和已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 ## <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
 
@@ -70,8 +70,9 @@ ms.lasthandoff: 11/29/2017
 - [在 Docker 上运行](quickstart-install-connect-docker.md)
 - [在 Azure 中预配 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-有关 Linux 上的 SQL Server 的其他信息，请参阅[概述](sql-server-linux-overview.md)。有关包下载以及不支持的功能和已知问题的列表，请参阅[发行说明](sql-server-linux-release-notes.md)。
-
 若要查看在 SQL Server 2017 中引入的其他改进，请参阅[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。
+
+> [!TIP]
+> 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

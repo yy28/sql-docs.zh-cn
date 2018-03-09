@@ -2,9 +2,12 @@
 title: "优化 SQL 跟踪 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 385a5a642b5554f42d4d40bea712bfd6181ee18b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-sql-trace"></a>优化 SQL 跟踪
-  尽管运行 SQL 跟踪会导致性能损失（因为它使用系统资源收集数据），但是您可以通过多种方法将性能损失降到最低。 若要将跟踪引起的性能损失降到最低，可以尝试下列解决方法：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]尽管运行 SQL 跟踪会导致性能损失（因为它使用系统资源收集数据），但是可以通过多种方法将性能损失降到最低。 若要将跟踪引起的性能损失降到最低，可以尝试下列解决方法：  
   
 -   请考虑使用命令提示运行跟踪。 使用图形用户界面会影响性能。 有关详细信息，请参阅 [sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。  
   

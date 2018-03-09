@@ -2,15 +2,13 @@
 title: "XML for Analysis (XMLA) 参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 826536d6f28df078b3ca0899176303cbe1a06865
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8f79164c48c388ca55fbd39b45aa572f01d0a1b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>XML for Analysis (XMLA) 引用
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML for Analysis (XMLA) 协议用于处理客户端应用程序和 Analysis Services 实例之间的所有通信。 在通信的最基本一级，其他客户端库（如 ADOMD.NET 和 AMO）采用 XMLA 构造请求并对响应解码，充当完全使用 XMLA 的 Analysis Services 实例的中介。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XML for Analysis (XMLA) 协议用于处理客户端应用程序和 Analysis Services 实例之间的所有通信。 在通信的最基本一级，其他客户端库（如 ADOMD.NET 和 AMO）采用 XMLA 构造请求并对响应解码，充当完全使用 XMLA 的 Analysis Services 实例的中介。  
   
  若要在多维和表格格式支持发现和操作数据，XMLA 规范定义了两个通常访问的方法，[发现](../../analysis-services/xmla/xml-elements-methods-discover.md)和[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)，和一个XML 元素和数据类型的集合。 由于 XML 可用于松散耦合客户端和服务器体系结构，因此这两种方法都可处理 XML 格式的传入和传出信息。 Analysis Services 符合 XMLA 1.1 规范中，但也使之包括数据定义和操作功能，在上以批注的形式实现了扩展**发现**和**执行**方法。 扩展的 XML 语法被称为 Analysis Services 脚本语言 (ASSL)。 ASSL 构建在 XMLA 规范之上并且完全符合该规范。 不管您单独使用 XMLA 还是结合使用 XMLA 和 ASSL，都确保基于 XMLA 的互操作性。  
   

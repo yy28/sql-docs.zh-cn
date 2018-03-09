@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET IMPLICIT_TRANSACTIONS
 - IMPLICIT_TRANSACTIONS_TSQL
 - SET_IMPLICIT_TRANSACTIONS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - implicit transactions
 - transactions [SQL Server], implicit
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - SET IMPLICIT_TRANSACTIONS statement
 - IMPLICIT_TRANSACTIONS option
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: c86a7a8108e94d07341f5b6ced498b56ab934405
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  时，系统处于*隐式*事务模式。 这意味着，如果 @@TRANCOUNT = 0，任何以下 TRANSACT-SQL 语句开始新事务。 它相当于正在执行第一次而无法看见 BEGIN TRANSACTION:  
   
 ||||  
@@ -56,7 +58,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT（参见下面的例外情况。）|  
 |CREATE|Insert|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
+|删除|OPEN|UPDATE|  
 |DROP|实例时都提供 SQL Server 登录名。|实例时都提供 SQL Server 登录名。|  
   
  当关闭，每个前面的 T-SQL 语句被受不可见的 BEGIN TRANSACTION 和不可见的 COMMIT TRANSACTION 语句。 当关闭，我们说的事务模式是*自动提交*。 如果你的 T-SQL 代码这发出 BEGIN TRANSACTION，我们说的事务模式是*显式*。  
@@ -86,7 +88,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## <a name="examples"></a>示例  
  下面的 TRANSACT-SQL 脚本运行几个不同的测试用例。 此外提供的文本输出，它显示的详细的行为，并从每个测试用例结果。  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -169,7 +171,7 @@ go
   
  接下来是前面的 TRANSACT-SQL 脚本的文本输出。  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

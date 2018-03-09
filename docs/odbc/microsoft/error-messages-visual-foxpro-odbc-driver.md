@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27a6df2276d2d474137038fdbe0b42fdf2b05e5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4ec1cbc18c952c4394f16123c76a32330116d5af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>错误消息 （Visual FoxPro ODBC 驱动程序）
 发生错误时，Visual FoxPro 驱动程序将返回以下信息：  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  方括号 ([]) 中的前缀确定下表中定义的错误根源。  
   
-|数据源|前缀|值|  
+|数据源|Prefix|ReplTest1|  
 |-----------------|------------|-----------|  
 |驱动程序管理器|[供应商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驱动程序管理器]<br />N/A|  
 |Visual FoxPro 驱动程序|供应商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro 驱动程序]<br />N/A|  

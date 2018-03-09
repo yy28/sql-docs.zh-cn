@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ROLLBACK
 - ROLLBACK_TSQL
 - ROLLBACK_TRANSACTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction rollbacks [SQL Server]
 - ROLLBACK TRANSACTION statement
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: be1bbb9e63ccb710b42e007c91c1c588a1e8ae1d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0df2fdf3d3e4aa7915fbfef3ff921d12b2851044
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -57,13 +59,13 @@ ROLLBACK { TRAN | TRANSACTION }
  *transaction_name*  
  是为 BEGIN TRANSACTION 上的事务分配的名称。 *transaction_name*必须符合标识符规则，但使用只有事务名称的前 32 个字符。 当嵌套事务， *transaction_name*必须是从最外面的 BEGIN TRANSACTION 语句的名称。 *transaction_name*始终是区分大小写，即使实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不区分大小写。  
   
- **@***tran_name_variable*  
+ **@** *tran_name_variable*  
  用户定义的、含有有效事务名称的变量的名称。 必须使用声明变量**char**， **varchar**， **nchar**，或**nvarchar**数据类型。  
   
  *savepoint_name*  
  是*savepoint_name*从 SAVE TRANSACTION 语句。 *savepoint_name*必须符合标识符的规则。 使用*savepoint_name*条件回滚时应影响仅事务的一部分。  
   
- **@***savepoint_variable*  
+ **@** *savepoint_variable*  
  是用户定义的、包含有效保存点名称的变量的名称。 必须使用声明变量**char**， **varchar**， **nchar**，或**nvarchar**数据类型。  
   
 ## <a name="error-handling"></a>错误处理  
@@ -104,7 +106,7 @@ ROLLBACK 对游标的影响由下面三个规则定义：
 ## <a name="locking-behavior"></a>锁定行为  
  ROLLBACK TRANSACTION 语句指定*savepoint_name*释放超出的保存点，但升级和转换除外获取任何锁。 这些锁不会被释放，而且不会转换回先前的锁模式。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

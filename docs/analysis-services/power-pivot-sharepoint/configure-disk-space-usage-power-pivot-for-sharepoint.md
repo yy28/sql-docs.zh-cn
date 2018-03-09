@@ -2,32 +2,30 @@
 title: "配置磁盘空间使用情况 (Power Pivot for SharePoint) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>配置磁盘空间使用情况 (Power Pivot for SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署使用主机上的磁盘空间来缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库以便更快地重新加载。 在内存中加载的每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库首先缓存到磁盘，以便以后可以更快地重新加载来支持新请求。 默认情况下， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用所有可用磁盘空间来缓存其数据库，但是可以通过设置限制磁盘空间使用量的属性来修改此行为。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署使用主机上的磁盘空间来缓存 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库以便更快地重新加载。 在内存中加载的每个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库首先缓存到磁盘，以便以后可以更快地重新加载来支持新请求。 默认情况下， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用所有可用磁盘空间来缓存其数据库，但是可以通过设置限制磁盘空间使用量的属性来修改此行为。  
   
  本主题介绍了如何设置磁盘空间使用限制。  
   

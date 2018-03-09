@@ -3,8 +3,9 @@ title: "层次结构集合 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Dimension::Hierarchies
 - Hierarchies
-helpviewer_keywords: Hierarchies collection [ADO MD]
+helpviewer_keywords:
+- Hierarchies collection [ADO MD]
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a8401f274cef9c470d680a5df7c54ec97473e9f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baba9403af996c936c65f102ae769376ccf69311
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchies-collection-ado-md"></a>层次结构集合 (ADO MD)
 包含的一套[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)从维度的对象。  

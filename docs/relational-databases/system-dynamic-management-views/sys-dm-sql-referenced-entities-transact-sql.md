@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_sql_referenced_entities (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referenced_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 -   分区函数  
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -125,26 +128,26 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
 |视图|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
-|CLR 存储过程|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
-|CLR 用户定义函数|是|是|  
-|CLR 触发器（DML 和 DDL）|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|是|  
-|扩展存储过程|是|是|  
-|队列|是|是|  
-|同义词|是|是|  
-|类型（别名和 CLR 用户定义类型）|是|是|  
-|XML 架构集合|是|是|  
-|分区函数|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程 * *|是|是|  
+|CLR 存储过程|否|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数 (user-defined function)|是|是|  
+|CLR 用户定义函数|否|是|  
+|CLR 触发器（DML 和 DDL）|否|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器 (DML trigger)|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|扩展存储过程|否|是|  
+|队列|否|是|  
+|同义词|否|是|  
+|类型（别名和 CLR 用户定义类型）|否|是|  
+|XML 架构集合|否|是|  
+|分区函数|否|是|  
   
  \*仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型时或定义中的计算的列、 CHECK 约束或默认约束的 XML 架构集合。  
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对 sys.dm_sql_referenced_entities 拥有 SELECT 权限并对引用实体拥有 VIEW DEFINITION 权限。 默认情况下，SELECT 权限授予 public。 要求对数据库拥有 VIEW DEFINITION 权限或 ALTER DATABASE DDL TRIGGER 权限（当引用实体为数据库级 DDL 触发器时）。 当引用实体为服务器级 DDL 触发器时，要求对服务器拥有 VIEW ANY DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
@@ -152,7 +155,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. 返回数据库级 DDL 触发器引用的实体  
  下面的示例返回数据库级 DDL 触发器 `ddlDatabaseTriggerLog` 引用的实体（表和列）。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +167,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. 返回对象引用的实体  
  下面的示例返回用户定义函数 `dbo.ufnGetContactInformation` 引用的实体。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +179,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>C. 返回列依赖关系  
  下面的示例创建具有定义为列 `Table1` 与 `c` 之和的计算列 `a` 的表 `b`。 然后 `sys.dm_sql_referenced_entities` 视图被调用。 该视图返回两行，每行针对计算列中定义的一列。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +208,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. 返回非绑定到架构的列依赖关系  
  下面的示例删除 `Table1` 并创建 `Table2` 和存储过程 `Proc1`。 该过程引用 `Table2` 以及不存在的表 `Table1`。 视图 `sys.dm_sql_referenced_entities` 和指定为引用实体的存储过程一起运行。 结果集对于 `Table1` 显示一行，对于 `Table2` 显示 3 行。 因为 `Table1` 不存在，所以列依赖关系无法解析，并返回错误 2020。 `is_all_columns_found` 列为 `Table1` 返回 0，指示存在无法发现的列。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +242,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. 演示动态依赖关系维护  
  下面的示例扩展了示例 D，以显示依赖关系的动态维护。 该示例首先重新创建在示例 D 中删除的 `Table1`。然后 `sys.dm_sql_referenced_entities` 与指定为引用实体的存储过程一起再次运行。 结果集显示返回了两个表及其各自在存储过程中定义的列。 此外，`is_all_columns_found` 列为所有对象和列返回 1。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +275,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   

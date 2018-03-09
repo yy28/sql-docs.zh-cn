@@ -1,5 +1,5 @@
 ---
-title: "定向 CDC 流根据更改类型 |Microsoft 文档"
+title: "根据更改的类型定向 CDC 流 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c520920a94c6c53a577953b313837aee0f7d584
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 37a861b25d578d6c7d7b94b3a2072b7242a5bb51
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>根据更改的类型定向 CDC 流
   若要添加并配置 CDC 拆分器转换，包必须包含至少一个数据流任务和一个 CDC 源。  
@@ -64,4 +63,3 @@ ms.lasthandoff: 08/03/2017
  [CDC 拆分器](../../integration-services/data-flow/cdc-splitter.md)  
   
   
-

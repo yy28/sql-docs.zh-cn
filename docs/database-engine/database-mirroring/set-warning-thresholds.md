@@ -2,27 +2,33 @@
 title: "设置警告阈值 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.setwarningthreshold.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e43b17175889f598f01e841f22b87adea5abc9f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-warning-thresholds"></a>设置警告阈值
-  使用该对话框可为在 **“数据库镜像监视器”** 对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+使用该对话框可为在 **“数据库镜像监视器”** 对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
   
  该对话框尝试连接到两个服务器实例上。 将异步建立这两个连接。 对话框显示每个伙伴的连接状态。 如果伙伴没有连接，则可单击 **“连接”**。  
   
@@ -30,9 +36,9 @@ ms.lasthandoff: 11/09/2017
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  *服务器实例及其连接状态*  
- 伙伴服务器实例的名称（格式为 *SYSTEM***\\***INSTANCE_NAME*）。 对于默认服务器实例，只显示系统名。  
+ 伙伴服务器实例的名称格式为 SYSTEM\\INSTANCE_NAME。 对于默认服务器实例，只显示系统名。  
   
  该字段还指示当前监视器是否连接至该服务器实例。 可能的连接状态为：  
   
@@ -67,7 +73,7 @@ ms.lasthandoff: 11/09/2017
  **警告**  
  列出所支持的警告：  
   
-|警告|说明|  
+|警告|Description|  
 |-------------|-----------------|  
 |**如果未发送日志超出了阈值，则发出警告**|该阈值指示在主体服务器的发送队列中未发送日志的 KB 值。|  
 |**如果未还原日志超出了阈值，则发出警告**|该阈值指示在镜像服务器实例中重做队列的 KB 值。|  
@@ -82,10 +88,10 @@ ms.lasthandoff: 11/09/2017
   
  未启用警告时，该字段将处于不活动状态。  
   
- **“确定”**  
+ **确定**  
  单击“确定”可关闭此对话框，并显示当前在“警告”选项卡式页的“阈值”网格中指定的警告阈值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在同一时间阈值只适用于一个伙伴，但我们建议您在两个伙伴上都为给定事件设置阈值，以确保数据库进行故障转移时，警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。  
   
  更新状态表时，只有在性能值处于或高于阈值的情况下，才会将事件写入性能的事件日志。 如果峰值在两次状态更新之间瞬间达到阈值，峰值将丢失。  

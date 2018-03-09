@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
 - Table Hint
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SERIALIZABLE table hint
 - UPDLOCK table hint
@@ -37,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---table"></a>提示 (TRANSACT-SQL) 的表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,7 +129,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- 与**(** \<table_hint > **)** [[**，** ]...*n* ]  
+ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
  存在一些例外情况：只有在使用 WITH 关键字指定表提示时，才支持在 FROM 子句中使用这些提示。 指定表提示时必须使用括号。  
   
 > [!IMPORTANT]  
@@ -153,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  指定查询优化器处理查询时，不扩展任何索引视图来访问基础表。 查询优化器将视图当成包含聚集索引的表处理。 NOEXPAND 仅适用于索引视图。 有关详细信息，请参阅“备注”。  
   
- 索引**(***index_value* [**，**...*n* ] ) |索引 = ( *index_value***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  INDEX() 语法指定供查询优化器在处理该语句时使用的一个或多个索引的名称或 ID。 另一供选择的 INDEX = 语法指定单个索引值。 只能为每个表指定一个索引提示。  
   
  如果存在聚集索引，则 INDEX(0) 强制执行聚集索引扫描，INDEX(1) 强制执行聚集索引扫描或查找。 如果不存在聚集索引，则 INDEX(0) 强制执行表扫描，INDEX(1) 被解释为错误。  
@@ -184,7 +186,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  有关在 INSERT ...选择 * FROM openrowset （bulk） 语句，请参阅[保留 Null 或使用默认值在大容量导入 &#40;SQL server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **，**...*n* ] **))** ]  
+ FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
  指定查询优化器仅使用索引查找操作作为表或视图中的数据的访问途径。 从 SQL Server 2008 R2 SP1 开始，还可以指定索引参数。 在这种情况下，查询优化器仅考虑通过指定的索引（至少使用指定的索引列）执行索引查找操作。  
   
  *index_value*  
@@ -442,7 +444,7 @@ GO
 ## <a name="using-a-table-hint-as-a-query-hint"></a>将表提示用作查询提示  
  *表提示*还可以指定通过使用 OPTION (TABLE HINT) 子句为查询提示。 我们建议作为查询提示的上下文中仅使用表提示[计划指南](../../relational-databases/performance/plan-guides.md)。 对于即席查询，请将这些提示仅指定为表提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要具有对表的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -450,7 +452,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. 使用 TABLOCK 提示指定锁定方法  
  下面的示例指定对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `Production.Product` 表采用共享锁，并保持到 UPDATE 语句结束。  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +476,7 @@ GO
   
  以下示例使用指定索引的 FORCESEEK 提示强制查询优化器对指定的索引和索引列执行索引查找操作。  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +491,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. 使用 FORCESCAN 提示指定索引扫描操作  
  以下示例使用 FORCESCAN 提示强制查询优化器对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `Sales.SalesOrderDetail` 表执行扫描操作。  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   

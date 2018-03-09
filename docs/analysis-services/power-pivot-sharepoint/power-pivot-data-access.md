@@ -2,32 +2,30 @@
 title: "Power Pivot 数据访问 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 386df5d2dfc9443b07352a0f30e30d74bdf6ff7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7783dd3fabfe32359b8d2da35ad9eda25a91057f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-access"></a>Power Pivot 数据访问
-  本主题介绍从发布到 SharePoint 库的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿检索数据的方法。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主题介绍从发布到 SharePoint 库的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿检索数据的方法。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据存储于 Excel 工作簿中。 连接字符串是指向 SharePoint 站点上的工作簿的 URL。  
   

@@ -2,9 +2,12 @@
 title: "还原数据库（“文件”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,20 +16,20 @@ f1_keywords:
 - sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba9c9c5c060122e4b0d0ee1e1bc33084951a20c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dff6aada8273e1e994ce321213cee66ae0b0bbb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-files-page"></a>还原数据库（“文件”页）
-  使用 **“还原数据库”** 对话框的 **“文件”** 页可以管理数据库中您选择要还原的特定文件。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“还原数据库”对话框的“文件”页以管理数据库中已选择要还原的特定文件。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ### <a name="restore-database-files-as"></a>将数据库文件还原为  
  用来向还原的文件分配新文件路径并进行管理。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
  **将所有文件重新定位到文件夹**  
  重新定位还原的文件。  
   
-|选项|说明|  
+|选项|Description|  
 |------------|-----------------|  
 |**数据文件的文件夹**|输入或搜索应将还原的数据文件重新定位到的数据文件的文件夹名称。|  
 |**日志文件的文件夹**|输入或搜索应将还原的日志文件文件重新定位到的日志文件的文件夹。|  

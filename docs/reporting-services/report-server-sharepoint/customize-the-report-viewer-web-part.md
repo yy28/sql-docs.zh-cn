@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1b43b9caff7c01c9e95249a18a2fe5c13bdbf3b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 234f87e2bcb222e318a5c935a7d8addca1d8c2fc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自定义报表查看器 Web 部件
 
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
  下面列出了报表查看器 Web 部件的自定义属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |报告|SharePoint 站点或同一 Web 应用程序或场内站点上的报表的完全限定路径。 为了在设置其他属性时能够获得最佳结果，请在指定报表 URL 后单击“应用”。|  
 |超链接目标|标准 HTML，用于指定显示当前文档内链接内容的目标框架。 对于包含指向外部网站的超链接的报表，可以指定是用目标文档替换当前窗口中的现有报表还是在新浏览器窗口中打开目标文档。 有效值包括“_Top”、“_Blank”和“_Self”。 “_Top”使用当前窗口，“_Blank”在新浏览器窗口中加载文档，而“_Self”在当前框架内打开文档。 尽管“_Parent”是 HTML 中“目标”属性的有效值，但请勿对嵌入页面的报表查看器 Web 部件使用此值。|  

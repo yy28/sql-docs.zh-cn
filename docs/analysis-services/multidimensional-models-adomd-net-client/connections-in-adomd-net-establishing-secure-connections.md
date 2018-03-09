@@ -1,33 +1,32 @@
 ---
 title: "建立安全 Connections in ADOMD.NET |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a4545dc84372ae73ba90ac0c90a8586e92afe8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connections in ADOMD.NET-建立安全连接
   当在 ADOMD.NET 中使用连接时，用于连接的安全方法取决于的值**ProtectionLevel**在调用时使用的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
@@ -39,8 +38,8 @@ ms.lasthandoff: 11/17/2017
   
 |安全级别|ProtectionLevel 值|  
 |--------------------|---------------------------|  
-|*未经身份验证的连接*<br /> 不要求身份验证的连接不会进行任何形式的身份验证。 这种连接是最普遍支持的连接，但同时也是最不安全的连接。|**无**|  
-|*经过身份验证的连接*<br /> 要求身份验证的连接会对进行连接的用户进行身份验证，但是不保证其他通信的安全。 这种连接颇为有用，因为您可为连接到分析数据源的用户或应用程序建立标识。|**Connect**|  
+|*未经身份验证的连接*<br /> 不要求身份验证的连接不会进行任何形式的身份验证。 这种连接是最普遍支持的连接，但同时也是最不安全的连接。|**InclusionThresholdSetting**|  
+|*经过身份验证的连接*<br /> 要求身份验证的连接会对进行连接的用户进行身份验证，但是不保证其他通信的安全。 这种连接颇为有用，因为您可为连接到分析数据源的用户或应用程序建立标识。|**连接**|  
 |*签名的连接*<br /> 签名连接会对请求连接的用户进行身份验证，而且确保传输不会被修改。 在必须验证传输数据的真实性时，这种连接非常有用。 但签名连接仅可防止数据包的内容被修改。 在传递的过程中仍可查看这些内容。<br /><br /><br /><br /> 请注意，签名的连接仅支持通过 XML for Analysis 提供程序提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|**Pkt 完整性**或**PktIntegrity**|  
 |*加密的连接*<br /> 加密连接是 ADOMD.NET 使用的默认连接类型。 这种连接会对请求连接的用户进行身份验证，还会对所传输的数据进行加密。 加密连接是 ADOMD.NET 可创建的最安全的连接形式。 数据包的内容不能被查看或修改，因而可以使数据在传输过程中得到保护。<br /><br /><br /><br /> XML for Analysis 提供程序提供仅支持的加密的连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|**Pkt 隐私**或**PktPrivacy**|  
   
@@ -57,8 +56,8 @@ ms.lasthandoff: 11/17/2017
   
 |ProtectionLevel 值|是否用于 TCP 连接？|结果|  
 |---------------------------|------------------------------|-------------|  
-|**无**|是|指定不要求身份验证的连接。<br /><br /> TCP 流从访问接口请求，但是不会对请求该流的用户执行任何形式的身份验证。|  
-|**Connect**|是|指定要求身份验证的连接。<br /><br /> 从提供程序，请求 TCP 流，然后请求流的用户的安全上下文已进行身份验证服务器： 如果身份验证成功，不执行任何其他操作。 如果验证失败，则 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象会与多维数据源断开连接，并引发异常。<br /><br /> 验证成功或失败后，会释放用于验证该连接的安全上下文。|  
+|**InclusionThresholdSetting**|是|指定不要求身份验证的连接。<br /><br /> TCP 流从访问接口请求，但是不会对请求该流的用户执行任何形式的身份验证。|  
+|**连接**|是|指定要求身份验证的连接。<br /><br /> 从提供程序，请求 TCP 流，然后请求流的用户的安全上下文已进行身份验证服务器： 如果身份验证成功，不执行任何其他操作。 如果验证失败，则 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象会与多维数据源断开连接，并引发异常。<br /><br /> 验证成功或失败后，会释放用于验证该连接的安全上下文。|  
 |**Pkt 完整性**或**PktIntegrity**|是|指定签名连接。<br /><br /> 如果从提供程序，请求 TCP 流，然后请求流的用户的安全上下文已进行身份验证服务器：<br /><br /> <br /><br /> 如果验证成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象会关闭现有 TCP 流，然后打开已签名的 TCP 流来处理所有请求。 对数据或元数据的每一请求都会使用打开连接时所用的安全上下文进行身份验证。 另外，对每个包都进行数字签名，以确保 TCP 包的负载没有经过任何方式的更改。<br /><br /> <br /><br /> 如果验证失败，则 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象会与多维数据源断开连接，并引发异常。|  
 |**Pkt 隐私**或**PktPrivacy**|是|指定加密连接。<br /><br /> <br /><br /> 请注意，还可以通过不设置指定的加密的连接**ProtectionLevel**连接字符串中的属性。<br /><br /> <br /><br /> TCP 流从访问接口请求，然后在服务器上对请求该流的用户的安全上下文进行身份验证：<br /><br /> <br /><br /> 如果验证成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象会关闭现有 TCP 流，然后打开已加密的 TCP 流来处理所有请求。 对数据或元数据的每一请求都会使用打开连接时所用的安全上下文进行身份验证。 另外，每一 TCP 包的负载都会使用该访问接口和多维数据源都支持的最高级别加密方法进行加密。<br /><br /> <br /><br /> 如果验证失败，则 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象会与多维数据源断开连接，并引发异常。|  
   
@@ -81,9 +80,9 @@ ms.lasthandoff: 11/17/2017
   
 |ProtectionLevel 值|用于 HTTP 还是 HTTPS|  
 |---------------------------|----------------------------|  
-|**无**|是|  
-|**Connect**|HTTP|  
-|**Pkt 完整性**或**PktIntegrity**|是|  
+|**InclusionThresholdSetting**|否|  
+|**连接**|HTTP|  
+|**Pkt 完整性**或**PktIntegrity**|否|  
 |**Pkt 隐私**或**PktPrivacy**|HTTPS|  
   
 ### <a name="opening-a-secure-http-connection"></a>打开安全 HTTP 连接  

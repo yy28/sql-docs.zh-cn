@@ -3,8 +3,11 @@ title: "在聚合查询中使用列 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed7d22169cafdc01fc129191bf2a0fffac4a8ec3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d0baf031eb2757f9df899c871f983e231b3f96e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在聚合查询中使用列 (Visual Database Tools)
-创建聚合查询时， [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 将进行某些假设以便可以构造有效的查询。 例如，如果创建聚合查询并将某个数据列标记为输出，则查询和视图设计器将自动将该列包含在 GROUP BY 子句中，以避免无意中试图在汇总中显示个别行的内容。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 创建聚合查询时，[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将进行某些假设以便可以构造有效的查询。 例如，如果创建聚合查询并将某个数据列标记为输出，则查询和视图设计器将自动将该列包含在 GROUP BY 子句中，以避免无意中试图在汇总中显示个别行的内容。  
   
 ## <a name="using-group-by"></a>使用“分组依据”  
 查询和视图设计器在处理列时使用以下原则：  

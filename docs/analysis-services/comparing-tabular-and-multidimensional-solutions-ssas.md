@@ -2,31 +2,30 @@
 title: "比较表格和多维解决方案 (SSAS) |Microsoft 文档"
 ms.custom: 
 ms.date: 06/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: b4ebbabc5925f42a377be5b54ff9d5c5c5605c49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比较表格和多维解决方案
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
   SQL Server Analysis Services 提供用于创建商业智能语义模型的几种方法： 表格、 多维和 Power Pivot for SharePoint。
   
  可以使用多种方法来实现针对不同业务和用户需求量身定制的建模体验。 “多维”是建立在开放标准基础之上的成熟技术，已由 BI 软件的众多供应商采用，但难以驾驭。 “表格”提供一种关系建模方法，很多开发人员认为它更加直观。 PowerPivot 更简单，它在 Excel 中提供可视化数据建模，并通过 SharePoint 提供服务器支持。  
@@ -60,23 +59,23 @@ ms.lasthandoff: 11/17/2017
 |||| 
 |-|-|-|
 ||多维|表格|
-|操作|是|是|
-|Aggregations|是|是|
-|计算列|是|是|  
+|操作|是|否|
+|Aggregations|是|否|
+|计算列|否|是|  
 |计算度量值|是|是| 
-|计算表|是|是<sup>1</sup>|  
-|自定义程序集|是|是|
-|自定义汇总|是|是| 
-|默认成员|是|是|  
+|计算表|否|是<sup>1</sup>|  
+|自定义程序集|是|否|
+|自定义汇总|是|否| 
+|默认成员|是|否|  
 |显示文件夹|是|是<sup>1</sup>|  
 |Distinct Count|是|是（通过 DAX）|
 |钻取|是|是 （取决于客户端应用程序）|
 |层次结构|是|是|
 |KPI|是|是| 
 |链接对象|是|是（链接表）|
-|M 表达式|是|是<sup>1</sup>|
+|M 表达式|否|是<sup>1</sup>|
 |多对多关系|是|否 (但没有[双向交叉筛选器](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)1200年和更高版本的兼容性级别)| 
-|命名集|是|是| 
+|命名集|是|否| 
 |不规则层次结构|是|是<sup>1</sup>|  
 |父子层次结构|是|是（通过 DAX）|
 |分区|是|是| 
@@ -86,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 |半累加性度量值|是|是| 
 |翻译|[是](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|是| 
 |用户定义的层次结构|是|是|
-|写回|是|是| 
+|写回|是|否| 
   
  <sup>1</sup>请参阅[中 Analysis Services 模型 Compatibility Level for Tabular](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)有关兼容性级别之间的功能差异信息。  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
  若要查看可导入到各模型中的外部数据源的列表，请参阅以下主题：  
   
--   [支持的数据源（SSAS 表格）](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+-   [支持的数据源](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
 
 -   [支持的数据源（SSAS - 多维）](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
@@ -145,16 +144,16 @@ ms.lasthandoff: 11/17/2017
  所有数据库都支持 XML/A。 有关详细信息，请参阅[查询和表达式语言参考 (Analysis Services)](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527) 和 [Analysis Services 开发人员文档](../analysis-services/analysis-services-developer-documentation.md)。  
   
 ##  <a name="bkmk_sec"></a>安全功能  
- 可在数据库级别保护所有 Analysis Services 解决方案。 更精细的安全选项会随模式的不同而不同。 如果解决方案需要精细的安全设置，则请查看以下列表以确保要生成的解决方案类型中支持所需的安全级别。  
+ 可在数据库级别保护所有 Analysis Services 解决方案。 更精细的安全选项会随模式的不同而不同。 如果解决方案需要精细的安全设置，则请查看以下列表以确保要生成的解决方案类型中支持所需的安全级别：  
 
   
 -   表格模型数据库可以使用行级安全性，使用基于角色的权限。  
   
 -   多维模型数据库可以使用维度和单元格级安全性，使用基于角色的权限。  
 
--   使用 SharePoint 权限在文件级别保护[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿。  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿。  
   
- [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿可还原到表格模式服务器。 一旦还原该文件，它被脱离 SharePoint，让你能够使用所有表格建模功能，包括行级别安全性。  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿还原到表格模式服务器。 一旦还原该文件，它被脱离 SharePoint，让你能够使用所有表格建模功能，包括行级别安全性。  
   
 ##  <a name="bkmk_designer"></a> 设计工具  
  对于需要生成分析模型的用户，数据建模技能和专业技术可能会大不相同。 如果您的解决方案需要考虑工具熟悉程度或用户专业技术，请比较以下模型创建体验。  

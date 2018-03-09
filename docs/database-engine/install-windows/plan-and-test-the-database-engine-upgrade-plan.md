@@ -2,37 +2,42 @@
 title: "计划并测试数据库引擎升级计划 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/20/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: cbe7bceca06dd5eef19b56433a8054c20d2e88d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: a10e7d35aa5a72f9dcc7ba34b11b6486fb9ac1cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>计划并测试数据库引擎升级计划
-  若要成功执行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 升级，无论使用何种方法，都需要进行相应规划。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ 若要成功执行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 升级，无论使用何种方法，都需要进行相应规划。  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>发行说明和已知升级问题  
  升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之前，请先查看：
 
 - [SQL Server 2017 发行说明](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 发行说明](../../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 数据库引擎的后向兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)主题。  
+- [SQL Server 数据库引擎的后向兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)文章。  
   
 ## <a name="pre-upgrade-planning-checklist"></a>升级前规划清单  
- 升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，请先查看以下清单和相关主题。 这些主题适用于所有升级（无论使用何种升级方法），将帮助你确定最合适的升级方法：滚动升级、新安装升级或就地升级。 例如，如果从 SQL Server 2005 或从 SQL Server 的 32 位版本升级操作系统，可能无法执行就地升级或滚动升级。 有关决策树的信息，请参阅 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
+ 升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，请先查看以下清单和相关文章。 这些文章适用于所有升级（无论使用何种升级方法），有助于确定最合适的升级方法：滚动升级、新安装升级或就地升级。 例如，如果从 SQL Server 2005 或从 SQL Server 的 32 位版本升级操作系统，可能无法执行就地升级或滚动升级。 有关决策树的信息，请参阅 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
   
 -   **硬件和软件要求：** 请查看安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的硬件和软件要求。 可在以下位置找到这些要求：[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 任何升级计划周期都应考虑升级硬件（较新硬件速度更快，并且由于减少了处理器或合并了数据库和服务器，可以减少授权）和升级操作系统。 这些硬件和软件更改的类型将影响你选择的升级方法类型。  
   
@@ -60,7 +65,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  在从 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] Enterprise 版的之前版本升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，请在“Enterprise Edition：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
--   **向后兼容性：** 查看 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 数据库向后兼容性主题，了解 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 和你要从其开始升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之间的行为变化。 请参阅 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)。  
+-   **向后兼容性：** 查看 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 数据库引擎向后兼容性文章，了解 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 和要从其开始升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之间的行为变化。 请参阅 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)。  
   
 -   **升级顾问：**  运行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 升级顾问，以帮助诊断可能会阻止升级过程或由于重大更改而需要修改现有脚本或应用程序的问题。 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 包含升级顾问的新版本，可帮助客户准备升级现有系统。  此工具的功能还包括在升级完成后检查你的现有数据库以查看它们能否利用新功能（例如“拉伸表格”）。   
     可从 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]此处  [下载](https://www.microsoft.com/en-us/download/details.aspx?id=48119)升级顾问。  

@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: OLE DB, how-to topics
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91c4af134eb1421507b4505d395dcbe0038238b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a8332117457dd90f5eb6210ac03b55401ac8b3b
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 操作指南主题
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [使用增强的日期和时间功能 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
--   [文件流和 OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
+-   [Filestream 和 OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
 -   [将 BLOB 数据发送到 SQL SERVER 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   

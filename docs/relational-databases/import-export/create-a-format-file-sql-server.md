@@ -2,27 +2,33 @@
 title: "创建格式化文件 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: format files [SQL Server], creating
+helpviewer_keywords:
+- format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-caps.latest.revision: "57"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fee14b47a0d667d593257f356776291407a1955f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 39e7e7d14ab96b696ac5b849b413544f1de24c14
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
-  当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持两种类型的格式化文件：非 XML 格式和 XML 格式。 非 XML 格式是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本支持的原始格式。  
   
@@ -63,7 +69,7 @@ ms.lasthandoff: 11/09/2017
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|说明|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|指定非 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
@@ -93,7 +99,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|说明|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|指定非 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
@@ -192,7 +198,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|说明|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|指定 XML 格式化文件。|  
 |**-c**|指定字符数据。|  
@@ -232,7 +238,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  **bcp** 命令包含以下限定符。  
   
-|限定符|说明|  
+|限定符|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|指定 XML 格式化文件。|  
 |**-n**|指定本机数据类型。|  
@@ -276,7 +282,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 -   [使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [使用格式化文件将表列映射到数据文件字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [使用格式化文件跳过表列 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

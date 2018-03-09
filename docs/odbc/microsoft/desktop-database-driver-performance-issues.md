@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: beb888ab7920bdac942c60d26980a71a34a54800
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 67379ee540aecb691122d91b42776b0c9d990b1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="desktop-database-driver-performance-issues"></a>桌面数据库驱动程序的性能问题
 若要确保与现有 ANSI 应用程序的兼容性，SQL_WCHAR、 SQL_WVARCHAR 和 SQL_WLONGVARCHAR 数据类型作为公开 SQL_CHAR、 SQL_VARCHAR 和 SQL_LONGVARCHAR Microsoft 访问 4.0 或更高版本的数据源。 数据源不会返回宽 CHAR 数据类型，但仍必须将数据发送到 Jet 宽 Char 窗体中。 请务必了解，转换将发生是否 SQL_C_CHAR 参数或结果列被绑定到 SQL_CHAR ANSI 应用程序中的数据类型。  

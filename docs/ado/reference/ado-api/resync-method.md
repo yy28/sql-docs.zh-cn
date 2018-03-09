@@ -3,8 +3,9 @@ title: "重新同步方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,18 +18,19 @@ f1_keywords:
 - Fields::Resync
 - Recordset20::Resync
 - Fields::raw_Resync
-helpviewer_keywords: Resync method [ADO]
+helpviewer_keywords:
+- Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fe3a2a123061cd0fc4de31d2b08ab82d41f7542
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68c8642b778f6fe73f30096101308328b7b46ebc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resync-method"></a>重新同步方法
 刷新当前中的数据[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，或[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，从基础数据库。  
@@ -42,10 +44,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parameters  
  *AffectRecords*  
- 可选。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值确定多少个记录**重新同步**方法将会影响。 默认值是**adAffectAll**。 此值不可用**重新同步**方法**字段**集合**记录**对象。  
+ 選擇性。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，该值确定多少个记录**重新同步**方法将会影响。 默认值是**adAffectAll**。 此值不可用**重新同步**方法**字段**集合**记录**对象。  
   
  *ResyncValues*  
- 可选。 A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)值，该值指定是否覆盖基础值。 默认值是**adResyncAllValues**。  
+ 選擇性。 A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)值，该值指定是否覆盖基础值。 默认值是**adResyncAllValues**。  
   
 ## <a name="remarks"></a>注释  
   

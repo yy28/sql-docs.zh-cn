@@ -2,15 +2,13 @@
 title: "测量元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Measure Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9942b67b7877e337f34667b90a49bd7c33595592
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6d06c77f5f0c5ce91ec6805f9c289c19a2db576
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measure-element-assl"></a>Measure 元素 (ASSL)
-  定义一个度量值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义的度量值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,16 +67,16 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|请参阅下表。|  
-|默认值|无|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 |祖先或父级|数据类型|  
 |------------------------|---------------|  
 |[AggregationInstance](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)|[AggregationInstanceMeasure](../../../analysis-services/scripting/data-type/measurebinding-data-type-assl.md)|  
-|[度量值组](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|无|  
+|[度量值组](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|InclusionThresholdSetting|  
 |[MeasureGroupBinding （外部）](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md)|[MeasureBinding](../../../analysis-services/scripting/data-type/measurebinding-data-type-assl.md)|  
 |[PerspectiveMeasureGroup](../../../analysis-services/scripting/data-type/perspectivemeasuregroup-data-type-assl.md)|[度量值](../../../analysis-services/scripting/data-type/perspectivemeasure-data-type-assl.md)|  
   
@@ -92,9 +90,9 @@ ms.lasthandoff: 11/17/2017
 |祖先或父级|子元素|  
 |------------------------|--------------------|  
 |[度量值组](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|[AggregateFunction](../../../analysis-services/scripting/properties/aggregatefunction-element-assl.md)，[批注](../../../analysis-services/scripting/collections/annotations-element-assl.md)， [BackColor](../../../analysis-services/scripting/properties/backcolor-element-assl.md)， [DataType](../../../analysis-services/scripting/properties/datatype-element-assl.md)，[说明](../../../analysis-services/scripting/properties/description-element-assl.md)， [DisplayFolder](../../../analysis-services/scripting/properties/displayfolder-element-assl.md)， [FontFlags](../../../analysis-services/scripting/properties/fontflags-element-assl.md)，[字体名称](../../../analysis-services/scripting/properties/fontname-element-assl.md)， [FontSize](../../../analysis-services/scripting/properties/fontsize-element-assl.md)， [ForeColor](../../../analysis-services/scripting/properties/forecolor-element-assl.md)， [FormatString](../../../analysis-services/scripting/properties/formatstring-element-assl.md)， [ID](../../../analysis-services/scripting/properties/id-element-assl.md)， [MeasureExpression](../../../analysis-services/scripting/properties/measureexpression-element-assl.md)，[名称](../../../analysis-services/scripting/properties/name-element-assl.md)，[源](../../../analysis-services/scripting/properties/source-element-measure-assl.md)，[翻译](../../../analysis-services/scripting/collections/translations-element-assl.md)，[可见](../../../analysis-services/scripting/properties/visible-element-assl.md)|  
-|其他|无|  
+|其他|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以为度量值提供绑定详细信息。 这些详细信息可用作每个分区的默认值。  
   
  在较大的多维数据集中，可能有几百个度量值和层次结构。 **DisplayFolder**属性定义客户端上的用户外观。 值**DisplayFolder**属性可以包含以下选项之一：  

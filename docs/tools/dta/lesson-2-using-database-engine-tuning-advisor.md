@@ -2,9 +2,12 @@
 title: "第 2 课： 使用数据库引擎优化顾问 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ applies_to: SQL Server 2016
 helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69b49f9eac49203b0cb9f0ffad70d03bef225e6e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9a3cdd13f27f832bf2370115cd553c2943ed4b4c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>第 2 课：使用数据库引擎优化顾问
-通过数据库引擎优化顾问，您可以优化数据库、管理优化会话并查看优化建议。 对物理设计结构很熟悉的用户可使用此工具执行探索性数据库优化分析。 数据库优化初学者也可使用此工具为其优化的工作负荷找到最佳物理设计结构配置。 本课程为那些对于数据库引擎优化顾问图形用户界面陌生的数据库管理员和不太熟悉物理设计结构的系统管理员提供了基本练习。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库引擎优化顾问可以优化数据库、 管理优化会话，并查看优化建议。 对物理设计结构很熟悉的用户可使用此工具执行探索性数据库优化分析。 数据库优化初学者也可使用此工具为其优化的工作负荷找到最佳物理设计结构配置。 本课程为那些对于数据库引擎优化顾问图形用户界面陌生的数据库管理员和不太熟悉物理设计结构的系统管理员提供了基本练习。  
   
 本节包含以下主题：  
   

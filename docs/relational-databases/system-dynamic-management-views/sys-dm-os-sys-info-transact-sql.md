@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_os_sys_info (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/24/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_os_sys_info
 - dm_os_sys_info_TSQL
 - sys.dm_os_sys_info
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_os_sys_info dynamic management view
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7cc99a6d0f31d19909d41bde4dcd354d1e045215
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -84,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 |**cores_per_socket** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定在系统上的每个可用的插槽的处理器数。 |  
 |**numa_node_count** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定在系统上可用的 numa 节点数。 此列包含物理 numa 节点，以及软 numa 节点。 |  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要`VIEW SERVER STATE`服务器上的权限。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  

@@ -2,26 +2,31 @@
 title: "SQL Server 属性 （启动参数选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
-  使用此对话框可以添加或删除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的启动参数。 启动参数可能会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生很大影响。 在添加或更改启动参数前，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的主题“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+使用此对话框可以添加或删除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的启动参数。 启动参数可能会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生很大影响。 在添加或更改启动参数前，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的主题“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”。  
   
 ## <a name="options"></a>选项  
  **指定启动参数**  
@@ -33,7 +38,7 @@ ms.lasthandoff: 11/09/2017
  若要删除某一参数，请选择该参数，然后单击 **“删除”**。  
   
 ## <a name="parameter-format"></a>参数格式  
- 不要在参数之间输入分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器会自动添加分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器将强制以下参数要求。  
+ 不要在参数之间输入分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器会自动添加分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器将强制以下参数要求。  
   
 -   前导空格和尾随空格将会从任何启动参数中删除。  
   

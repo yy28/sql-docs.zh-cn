@@ -10,24 +10,28 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 497735f83cd43844661f7f13e754c4821d193181
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>使用 ssis conf 在 Linux 上配置 SQL Server Integration Services
 
-你运行`ssis-conf`配置脚本时为 Red Hat Enterprise Linux 和 Ubuntu 安装 SQL Server Integration Services (SSIS)。 此实用程序可用于配置以下属性：
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+你运行`ssis-conf`配置脚本时为 Red Hat Enterprise Linux 和 Ubuntu 安装 SQL Server Integration Services (SSIS)。 有关安装 SSIS 的详细信息，请参阅[安装 SQL Server Integration Services (SSIS) 在 Linux 上](sql-server-linux-setup-ssis.md)。
+
+你还可以使用`ssis-conf`实用工具以配置以下属性：
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|
-| 集版本 | 设置 SQL Server 的版本                                       |
+| set-edition | 设置 SQL Server 的版本                                       |
 | 遥测   | 启用或禁用 SQL Server Integration Services 遥测服务 |
 | 安装       | 初始化并设置 Microsoft SQL Server Integration Services      |
 |||
@@ -114,7 +118,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 
 若要运行`setup`命令提示的语言与您希望在你可以指定区域设置。 例如，若要在中文收到提示，请运行以下命令： `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`。
 
-## <a name="ssisconf-format"></a>ssis.conf 格式
+## <a name="ssisconf-format"></a>ssis.conf format
 
 以下`/var/opt/ssis/ssis.conf`文件提供了为每个设置的一个示例。
 
@@ -141,3 +145,9 @@ enabled = Y
                        
 lcid = 2052
 ```
+
+## <a name="related-content-about-ssis-on-linux"></a>有关在 Linux 上的 SSIS 的相关的内容
+-   [提取、 转换和加载使用 SSIS 的 Linux 上的数据](sql-server-linux-migrate-ssis.md)
+-   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [限制和 Linux 上的 SSIS 的已知的问题](sql-server-linux-ssis-known-issues.md)
+-   [计划 SQL Server Integration Services 包执行在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)

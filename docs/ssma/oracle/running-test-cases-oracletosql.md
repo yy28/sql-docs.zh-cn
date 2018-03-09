@@ -1,10 +1,13 @@
 ---
 title: "运行测试用例 (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ff5baf3dadeee06d33f5d75f0c62a1ee339ba2b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-oracletosql"></a>运行测试用例 (OracleToSQL)
 SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创建报告，有关验证结果。 如果在这两个平台上完全相同结果，测试成功。 Oracle 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -36,7 +39,7 @@ SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有先决条件。 如果未满足某些条件，则将显示一条错误消息。  
   
 ### <a name="initialization"></a>初始化  
@@ -46,10 +49,10 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 ||||  
 |-|-|-|  
-|Name|类型|Description|  
+|“属性”|类型|Description|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
-|USER_TABLE$ AUD|table|保存已删除并覆盖的行的表。|  
-|USER_TABLE$ AUDID|table|保存新的和已更改行的表。|  
+|USER_TABLE$ AUD|表|保存已删除并覆盖的行的表。|  
+|USER_TABLE$ AUDID|表|保存新的和已更改行的表。|  
 |USER_TABLE|view|简化的表示形式的表修改。|  
 |新 USER_TABLE $|view|简化的表示形式插入的和被覆盖的行。|  
 |USER_TABLE$ NEW_ID|view|插入的和已更改行的标识。|  
@@ -59,16 +62,16 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 ||||  
 |-|-|-|  
-|Name|类型|Description|  
+|“属性”|类型|Description|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
   
 和以下对象创建在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb 数据库中。  
   
 ||||  
 |-|-|-|  
-|Name|类型|Description|  
-|USER_TABLE$ Aud|table|保存已删除并覆盖的行的表。|  
-|USER_TABLE$ AudID|table|保存新的和已更改行的表。|  
+|“属性”|类型|Description|  
+|USER_TABLE$ Aud|表|保存已删除并覆盖的行的表。|  
+|USER_TABLE$ AudID|表|保存新的和已更改行的表。|  
 |USER_TABLE|view|简化的表示形式的表修改。|  
 |新的 USER_TABLE $|view|简化的表示形式插入的和被覆盖的行。|  
 |USER_TABLE$ new_id|view|插入的和已更改行的标识。|  

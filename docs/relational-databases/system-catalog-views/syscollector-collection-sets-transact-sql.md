@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_sets_TSQL
 - syscollector_collection_sets
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cae894932382f86d9eb6663bb7072a4c655bffaf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9f33a49eef6a80e058a12ff032322bb9060c7af
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |dump_on_any_error|**bit**|(1) 打开或关闭的 (0)，以指示是否创建[!INCLUDE[ssIS](../../includes/ssis-md.md)]转储文件在有任何错误。 不可为 null。|  
 |dump_on_codes|**nvarchar(max)**|包含用于触发转储文件的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 错误代码的列表。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求拥有 dc_operator 和 dc_proxy 的 SELECT 权限。  
   
 ## <a name="remarks"></a>注释  

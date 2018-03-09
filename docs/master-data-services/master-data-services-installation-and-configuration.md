@@ -5,23 +5,24 @@ ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: "44"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1d909039eb43c65358515cd4c3891b20a9a2b7e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e539d5a06f53fd4b79530031c8f1dec9dd493aae
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
   本文介绍了如何在 Windows Server 2012 R2 计算机上安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 、设置 MDS 数据库和网站，以及部署示例模型和数据。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 使你的组织能够管理数据的受信任版本。   
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
 > **下载**  
 >-   若要下载 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请转到  **[评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**。  
->-   是否拥有 Azure 帐户？  然后转到[此处](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)，启动已安装 SQL Server 的虚拟机。  
+>-   已经拥有 Azure 帐户？  然后转到[此处](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)，启动已安装 SQL Server 的虚拟机。  
  
 > **无法创建 MDS 网站？**
 >>请查看此 Microsoft 支持文章以获取有关如何解决此问题的说明。
@@ -130,14 +131,14 @@ ms.lasthandoff: 11/20/2017
   
 2.  单击“创建数据库”，然后在“创建数据库向导”中单击“下一步”。  
   
-3.  在“数据库服务器”页上，选择“身份验证类型”，然后单击“测试连接”，以确认可以使用所选的身份验证类型的凭据连接到数据库。 单击 **“下一步”**。
+3.  在“数据库服务器”页上，选择“身份验证类型”，然后单击“测试连接”，以确认可以使用所选的身份验证类型的凭据连接到数据库。 单击“下一步” 。
   
     > [!NOTE]  
     >  选择“当前用户 - 集成安全性”作为身份验证类型时，“用户名”框为只读，并且显示登录到计算机的 Windows 用户帐户的名称。 如果在 Azure 虚拟计算机 (VM) 上运行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，“用户名”框显示 VM 名称以及该 VM 上本地管理员帐户的用户名。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 单击 **“下一步”**。
+4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 单击“下一步” 。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   

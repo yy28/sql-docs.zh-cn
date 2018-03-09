@@ -2,35 +2,33 @@
 title: "自动执行 Analysis Services Administrative Tasks with SSIS |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43277dfa53b449da914ec32f35f1263f3082f9b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>使用 SSIS 自动执行 Analysis Services 管理任务
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持您自动执行 DDL 脚本、多维数据集和挖掘模型处理任务以及数据挖掘查询任务。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可被视为控制流和维护任务（这些任务可链接起来以形成顺序和并行执行的数据处理作业）的集合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使你能够自动执行 DDL 脚本、 多维数据集和挖掘模型处理任务，以及数据挖掘查询任务。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可被视为控制流和维护任务（这些任务可链接起来以形成顺序和并行执行的数据处理作业）的集合。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 用于在数据处理任务期间执行清除操作并将数据从不同的数据源集合到一起。 使用多维数据集和挖掘模型时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以将非数值数据转换为数值数据，并且可以确保数据值处于期望的范围内，如此便创建了用来填充事实数据表和维度的干净数据。  
   

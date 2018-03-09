@@ -1,5 +1,5 @@
 ---
-title: "使用渐变维度向导配置输出 |Microsoft 文档"
+title: "使用渐变维度向导配置输出 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0aa62acd9470c1d1d5e2764046ab3302f8edc46a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用渐变维度向导配置输出
   渐变维度向导所起作用相当于渐变维度转换的编辑器。 为渐变维度数据生成和配置数据流可能是一项复杂的任务。 渐变维度向导提供了为渐变维度转换输出生成数据流的最简便方法，指导您逐步完成映射列、选择业务键列、设置列更改属性以及配置对推断维度成员的支持。  
@@ -82,7 +81,7 @@ ms.lasthandoff: 08/03/2017
   
      下列关系图所示的示例数据流支持固定的属性更改、变化的属性更改以及历史属性更改、推断成员和对匹配记录的更改。  
   
-     ![渐变维度向导中的数据流](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "渐变维度向导从数据流")  
+     ![渐变维度向导的数据流](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Data flow from Slowly Changing Dimension Wizard")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>更新渐变维度输出  
  更新渐变维度转换输出配置的最简单方法就是重新运行渐变维度向导并从向导页修改属性。 也可以使用 **“高级编辑器”** 对话框或以编程方式更新渐变维度转换。  
@@ -91,4 +90,3 @@ ms.lasthandoff: 08/03/2017
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   
-

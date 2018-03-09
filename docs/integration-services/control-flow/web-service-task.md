@@ -1,5 +1,5 @@
 ---
-title: "Web 服务任务 |Microsoft 文档"
+title: "Web 服务任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: 57
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 4cadb534bd6ddfca7df61e316c6d6cabc669a9c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="web-service-task"></a>Web 服务任务
   Web 服务任务执行 Web 服务方法。 可以将 Web 服务任务用于下列目的：  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/11/2017
 |**WSTaskInfo**|有关任务的说明性信息。|  
   
 ## <a name="configuration-of-the-web-service-task"></a>Web 服务任务的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
@@ -89,9 +88,9 @@ ms.lasthandoff: 08/11/2017
 ## <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
   使用“Web 服务任务编辑器”对话框的“常规”页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **HTTPConnection**  
- 在列表中，选择连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+ 在列表中选择一个连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
@@ -136,7 +135,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="web-service-task-editor-input-page"></a>Web 服务任务编辑器（“输入”页）
   可以使用 **“Web 服务任务编辑器”** 对话框的 **“输入”** 页，指定 Web 服务、Web 方法和作为输入提供给 Web 方法的值。 可通过直接在“值”列中键入字符串或在“值”列中选择变量来提供这些值。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **服务**  
  从列表中选择用来执行 Web 方法的 Web 服务。  
   
@@ -158,7 +157,7 @@ ms.lasthandoff: 08/11/2017
  **变量**  
  选中该复选框以使用变量来提供输入。  
   
- **“值”**  
+ **ReplTest1**  
  如果选中了“变量”复选框，则请在列表中选择要提供输入的变量；否则，请键入要在输入中使用的值。  
   
 ## <a name="web-service-task-editor-output-page"></a>Web 服务任务编辑器（“输出”页）
@@ -168,7 +167,7 @@ ms.lasthandoff: 08/11/2017
  **OutputType**  
  选择存储结果时所使用的存储类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**文件连接**|将结果存储在文件中。 选择此值将显示动态选项 **File**。|  
 |**变量**|将结果存储在变量中。 选择此值将显示动态选项 **Variable**。|  
@@ -176,17 +175,16 @@ ms.lasthandoff: 08/11/2017
 ### <a name="outputtype-dynamic-options"></a>OutputType 动态选项  
   
 #### <a name="outputtype--file-connection"></a>OutputType = 文件连接  
- **文件**  
- 选择列表中的文件连接管理器或单击\<**新的连接...**> 创建新的连接管理器。  
+ **File**  
+ 从列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 变量  
  **变量**  
- 在列表中选择变量，或单击\<**新变量...**> 若要创建新变量。  
+ 在列表中选择一个变量，或单击“\<新建变量...>”创建一个新变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相关内容  
  technet.microsoft.com 上的视频 [如何：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=259642)。  
-

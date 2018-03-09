@@ -1,5 +1,5 @@
 ---
-title: "FLOOR （SSIS 表达式） |Microsoft 文档"
+title: "FLOOR（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - largest integer less than or equal to expression
 - FLOOR function [SSIS]
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a4c5ee6351735c7f133cc93c082f7497b9b0dc1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 69e498a3c182cb15f1acf53cc16720088af9b65f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="floor-ssis-expression"></a>FLOOR（SSIS 表达式）
   返回小于或等于数值表达式的最大整数。  
@@ -45,7 +44,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  参数表达式的数值数据类型。 结果是与 *numeric_expression*数据类型相同的计算所得值的整数部分。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果该参数为空，则 FLOOR 返回的结果为空。  
   
 ## <a name="expression-examples"></a>表达式示例  
@@ -70,8 +69,7 @@ FLOOR(0.00)
  返回 0.00  
   
 ## <a name="see-also"></a>另请参阅  
- [上限 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/ceiling-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [CEILING（SSIS 表达式）](../../integration-services/expressions/ceiling-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

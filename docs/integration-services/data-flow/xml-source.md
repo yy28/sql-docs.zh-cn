@@ -1,5 +1,5 @@
 ---
-title: "XML 源 |Microsoft 文档"
+title: "XML 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 47
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-source"></a>XML 源
   XML 源读取 XML 数据文件，并用数据填充源输出中的列。  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  XML 源并不根据 XSD 来验证 XML 文件中的数据。  
   
-## <a name="xml-source-editor"></a>“XML 源编辑器”  
+## <a name="xml-source-editor"></a>XML 源编辑器  
  XML 文件中的数据常常包含层次结构关系。 **“XML 源编辑器”** 对话框使用指定的架构生成 XML 源输出。 您可以指定 XSD 文件，使用内联架构或根据指定的 XML 数据文件生成 XSD。 该架构必须在设计时可用。  
   
  XML 源通过为 XML 文件中每个包含其他元素的元素创建一个输出，以便根据 XML 数据生成表格结构。 例如，如果 XML 数据表示目录和目录中的项，则 XML 源将为目录创建一个输出，而且为目录包含的每种类型的项都创建一个输出。 每项的输出将包含该项的属性的输出列。  
@@ -82,11 +81,11 @@ ms.lasthandoff: 08/17/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含“XML 源编辑器”对话框，可用于配置 XML 源。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [XML 源自定义属性](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -101,7 +100,7 @@ ms.lasthandoff: 08/17/2017
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |XML 文件位置|从 XML 文件检索数据。|  
 |来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息：** [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -113,7 +112,7 @@ ms.lasthandoff: 08/17/2017
  **XSD 位置**  
  键入 XSD 架构文件的路径和文件名，或者可以单击“浏览”定位该文件。  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框定位到 XSD 架构文件。  
   
  **生成 XSD**  
@@ -125,7 +124,7 @@ ms.lasthandoff: 08/17/2017
  **XML 位置**  
  键入 XML 数据文件的路径和文件名，或者通过单击“浏览”查找文件。  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框定位到 XML 数据文件。  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>数据访问模式 = 来自变量的 XML 文件  
@@ -139,7 +138,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="xml-source-editor-columns-page"></a>XML 源编辑器（“列”页）
   可以使用“XML 源编辑器”对话框的“列”节点，将输出列映射到外部（源）列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -152,7 +151,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="xml-source-editor-error-output-page"></a>XML 源编辑器（“错误输出”页）
   可以使用 **“XML 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项，以及设置错误输出列的属性。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入/输出**  
  查看数据源的名称。  
   
@@ -176,6 +175,5 @@ ms.lasthandoff: 08/17/2017
  **应用**  
  将错误处理选项应用到选定的单元格。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [使用 XML 源提取数据](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
-

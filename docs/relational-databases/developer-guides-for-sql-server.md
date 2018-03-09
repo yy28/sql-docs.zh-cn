@@ -1,10 +1,14 @@
 ---
 title: "SQL Server 开发人员指南 | Microsoft Docs"
 ms.date: 10/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, analysis-services, integration-services, reporting-services, master-data-services
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.portal.DevRef.f1
@@ -14,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cae0c9873a900fc5a5cb180a01e912b9f4dd61cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eac97b7988a9e929578863e97fad9ecd8c20070f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developer-guides-for-sql-server"></a>SQL Server 开发人员指南
-  使用编程模型和接口通过自定义代码集成几乎任何 SQL Server 功能。 每个功能领域都包括用于数据收集、数据访问、服务器管理或数据可视化的本机和托管 API。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]使用编程模型和接口通过自定义代码集成几乎任何 SQL Server 功能。 每个功能领域都包括用于数据收集、数据访问、服务器管理或数据可视化的本机和托管 API。  
   
 ## <a name="sql-server-developer-edition-free"></a>SQL Server Developer Edition（免费！）
 

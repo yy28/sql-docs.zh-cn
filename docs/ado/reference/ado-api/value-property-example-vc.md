@@ -3,27 +3,30 @@ title: "值属性示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Value property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af8d8c9342f20f08c1877ea86700348d096dfc0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f8e13c408d08daafcb397314c9635f1578fe9ab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="value-property-example-vc"></a>值属性示例 （VC + +）
 此示例演示[值](../../../ado/reference/ado-api/value-property-ado.md)具有属性[字段](../../../ado/reference/ado-api/field-object.md)和[属性](../../../ado/reference/ado-api/property-object-ado.md)通过显示的字段和属性值的对象***员工***表。  

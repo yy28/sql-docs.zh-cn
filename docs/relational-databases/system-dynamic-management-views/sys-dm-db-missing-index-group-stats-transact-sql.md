@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_missing_index_group_stats (Transact SQL) |Microsoft 文档"
+title: sys.dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_missing_index_group_stats
 - dm_db_missing_index_group_stats_TSQL
 - dm_db_missing_index_group_stats
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 938f1e4d13b001899a0695c2141cbaac35a7d7bb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 62088e8f8f331748e9af63641c89039d38c80ed8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>注释  
  返回的信息**sys.dm_db_missing_index_group_stats**会更新每个查询执行而不是每个查询编译或重新编译。 使用情况统计信息不会持久保留，并且只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留使用情况统计信息，则应该定期制作缺失索引信息的备份副本。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要查询此动态管理视图，必须授予用户 VIEW SERVER STATE 权限或隐含 VIEW SERVER STATE 权限的任何权限。  
   
 ## <a name="examples"></a>示例  
@@ -90,9 +92,9 @@ WHERE migs.group_handle = 24;
  此查询提供缺失索引的数据库、架构和表的名称。 它还提供应该用于索引键的列的名称。 在 ON 中写入 CREATE INDEX DDL 语句以实现缺失索引，请先列出相等列，然后不等列时\< *table_name*> 子句的 CREATE INDEX 语句。 应该在 CREATE INDEX 语句的 INCLUDE 子句中列出包含列。 若要确定相等列的有效顺序，请基于其选择性排序，首先列出选择性最强的列（列列表中的最左侧）。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_db_missing_index_columns &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
   
   

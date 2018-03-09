@@ -3,8 +3,11 @@ title: "在“关系图”窗格中显示列名 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13c8e65e4358e721d027c55eba99b890d486a5e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ba1c5f9aa55e8f7a0fccde5ac94491d53b157043
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>在“关系图”窗格中显示列名 (Visual Database Tools)
-可以在查询和视图设计器的“关系图”窗格中隐藏或显示表的列名。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以在查询和视图设计器的“关系图”窗格中隐藏或显示表的列名。  
   
 ### <a name="show-column-names"></a>显示列名称  
   

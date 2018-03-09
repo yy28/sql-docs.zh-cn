@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 499f62ecd8e053ef0776873dcdf4fe20cac1fa96
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c1198607b5a664b14fe6da31c9ebdc4f82bdb8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handles"></a>控点
 句柄都是不透明的 32 位值，标识特定的项;ODBC，在此项可以环境、 连接、 语句或描述符。 在应用程序调用**SQLAllocHandle**、 驱动程序管理器或驱动程序创建指定类型的新项并对应用程序返回的句柄。 应用程序更高版本使用句柄来在调用 ODBC 函数时标识该项。 驱动程序管理器和驱动程序使用该句柄找到项目的信息。  

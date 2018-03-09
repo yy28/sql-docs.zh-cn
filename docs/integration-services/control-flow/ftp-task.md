@@ -1,5 +1,5 @@
 ---
-title: "FTP 任务 |Microsoft 文档"
+title: "FTP 任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ftp-task"></a>FTP 任务
   FTP 任务可以下载和上载数据文件，并管理服务器上的目录。 例如，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中，包可以从远程服务器或 Internet 位置下载数据文件。 可以将 FTP 任务用于下列用途：  
@@ -77,8 +76,8 @@ ms.lasthandoff: 08/11/2017
 |**FTPConnectingToServer**|指示任务已启动与 FTP 服务器的连接。|  
 |**FTPOperation**|报告任务所执行的 FTP 操作的开始及其类型。|  
   
-## <a name="related-tasks"></a>相关任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+## <a name="related-tasks"></a>Related Tasks  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，请参阅 [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
@@ -87,9 +86,9 @@ ms.lasthandoff: 08/11/2017
 ## <a name="ftp-task-editor-general-page"></a>FTP 任务编辑器（“常规”页）
   使用 **“FTP 任务编辑器”** 对话框的 **“常规”** 页可以指定连接到与任务通信的 FTP 服务器的 FTP 连接管理器。 您还可以命名和描述 FTP 任务。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **FtpConnection**  
- 选择一个现有的 FTP 连接管理器，或单击\<**新的连接...**> 若要创建连接管理器。  
+ 选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
 > [!IMPORTANT]  
 >  FTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
@@ -111,11 +110,11 @@ ms.lasthandoff: 08/11/2017
 ## <a name="ftp-task-editor-file-transfer-page"></a>FTP 任务编辑器（“文件传输”页）
   可以使用 **“FTP 任务编辑器”** 对话框的 **“文件传输”** 页配置任务执行的 FTP 操作。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **IsRemotePathVariable**  
  指示远程路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **RemoteVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **RemotePath**。|  
@@ -126,7 +125,7 @@ ms.lasthandoff: 08/11/2017
  **IsLocalPathVariable**  
  指示本地路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **LocalVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **LocalPath**。|  
@@ -134,7 +133,7 @@ ms.lasthandoff: 08/11/2017
  **运算**  
  选择要执行的 FTP 操作。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**发送文件**|发送文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收文件**|接收文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
@@ -152,33 +151,32 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- 选择一个现有的用户定义变量，或单击\<**新变量...**> 若要创建用户定义的变量。  
+ 选择现有的用户定义变量，或单击“\<新建变量...>”以创建用户定义变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- 选择一个现有的 FTP 连接管理器，或单击\<**新的连接...**> 若要创建连接管理器。  
+ 选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
- **相关主题**：[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相关主题** [FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 动态选项  
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- 选择一个现有的用户定义变量，或单击\<**新变量...**> 创建变量。  
+ 选择现有的用户定义变量，或单击“\<新建变量...>”以创建变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- 选择一个现有的文件连接管理器，或单击\<**新的连接...**> 若要创建连接管理器。  
+ 选择现有文件连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
- **相关主题**:[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ 相关主题：[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

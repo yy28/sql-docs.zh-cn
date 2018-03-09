@@ -2,15 +2,13 @@
 title: "在挖掘模型上创建内容查询 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: content queries [DMX]
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cff8211d13fe5ddf5fd1128f0fd53a0ab013ae1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77cca4b8462befde098dc522067b44131a009fc8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
-  使用 AMO 或 XML/A 可以采用编程方式查询挖掘模型内容，但是使用 DMX 创建查询更简单。 您还可以通过建立与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]你可以以编程方式查询挖掘模型内容使用 AMO 或 XML/A，但很容易地创建使用 DMX 查询。 您还可以通过建立与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
   
  下面的过程介绍如何使用 DMX 针对挖掘模型创建查询以及如何查询数据挖掘架构行集。  
   

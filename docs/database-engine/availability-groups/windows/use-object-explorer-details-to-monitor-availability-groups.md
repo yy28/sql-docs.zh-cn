@@ -2,9 +2,12 @@
 title: "使用“对象资源管理器详细信息”来监视可用性组 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,19 +20,19 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdfc53f0a3e497e95a4c987531ebdff9d3fcb236
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
-  本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器详细信息”窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器详细信息”窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
   
 > [!NOTE]  
->  有关使用“对象资源管理器详细信息”窗格的信息，请参阅[对象资源管理器详细信息窗格](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47)。  
+>  有关使用“对象资源管理器详细信息”窗格的信息，请参阅 [对象资源管理器详细信息窗格](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47)。  
   
 -   **准备工作：**  [先决条件](#Prerequisites)  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
   
  可能的值如下：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**禁止连接**|当此可用性副本充当辅助副本时，不允许直接连接到可用性数据库。 辅助数据库不可用于读访问。|  
 |**只允许读意向连接**|当此副本充当辅助副本时，仅允许直接只读连接。 副本中的所有数据库都可用于读访问。|  
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/09/2017
  **连接状态**  
  指示辅助副本当前是否连接到主副本。 可能的值如下：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**已断开连接**|对于远程可用性副本，指示它与本地可用性副本已断开连接。 本地副本对于“已断开连接”状态的响应取决于它的角色，如下所示：<br /><br /> 在主副本上，如果辅助副本已断开连接，辅助数据库将在主副本上标记为 **“未同步”** ，主副本等待辅助副本重新连接。<br /><br /> 在辅助副本上，一旦检测到其未连接，辅助副本会尝试重新连接主副本。|  
 |**已连接**|远程可用性副本当前连接到本地副本。|  
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/09/2017
  **同步状态**  
  指示辅助副本当前是否与主副本同步。 可能的值如下：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**“未同步”**|该数据库未同步或尚未联接到可用性组。|  
 |**已同步**|该数据库与当前主副本（如果有）或上一个主副本上的主数据库同步。<br /><br /> 注意：在性能模式中，数据库从不处于“已同步”状态。|  
@@ -127,15 +130,15 @@ ms.lasthandoff: 11/09/2017
   
  可能的同步状态如下所示：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式中，同步状态始终是“正在同步”。|  
+|正在同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式中，同步状态始终是“正在同步”。|  
 |||  
   
  **已挂起**  
  指示可用性数据库当前是否联机。 可能的值如下：  
   
-|值|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**已挂起**|此状态指示该数据库在本地挂起，需要手动恢复。<br /><br /> 在主副本上，该值对于辅助数据库是不可靠的。 若要确认辅助数据库是否挂起，请在承载该数据库的辅助副本上进行查询。|  
 |**未联接**|指示辅助数据库要么未联接到可用性组，要么已从该组中删除。|  

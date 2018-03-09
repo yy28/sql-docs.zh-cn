@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4752ac55673b7c208a2d051da928fee1404693f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0dd47857407e353a3b6208554625f29126615da7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>设置文本框中文本的格式（报表生成器和 SSRS）
   可以单独设置文本框中任何一部分文本的格式，并在一个文本框中混合使用占位符文本和静态文本。 这种混合格式并添加占位符文本的功能可使您能够为报表中的文本创建邮件合并或模板。 使用占位符可以单独定义任何表达式并设置其格式。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
          **HTML**  ：将所选文本显示为 HTML。 如果占位符的表达式值包含有效的 HTML 标记，则这些标记将呈现为 HTML。 有关详细信息，请参阅[将 HTML 导入报表（报表生成器和 SSRS）](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  对要为其设置格式的其余文本，重复步骤 2 到步骤 5。  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
      要获得更多格式设置选项，请右键单击占位符文本，然后单击“占位符属性”。  
   
-6.  单击 **“确定”**。 在报表设计视图中，文本框应包含“**My Field**: [*FieldName*]”，其中 *FieldName* 是你的字段的名称。  
+6.  单击“确定” 。 在报表设计视图中，文本框应包含“**My Field**: [*FieldName*]”，其中 *FieldName* 是你的字段的名称。  
   
 7.  单击 **“运行”**。  
   

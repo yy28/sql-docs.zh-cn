@@ -2,10 +2,14 @@
 title: "类型化的 XML 与非类型化的 XML 的比较 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +28,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80233d9013231c07cb1f9236f357f2ca30622995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b40976e2a8efdaf0b41ede4f79786060b7e1163c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
-  您可以创建 **xml** 类型的变量、参数和列。 您也可以将 XML 架构的集合与 **xml** 类型的变量、参数或列关联起来。 在这种情况下， **xml** 数据类型实例称作“类型化” 的实例。 否则，XML 实例称作“非类型化” 的实例。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+您可以创建 **xml** 类型的变量、参数和列。 您也可以将 XML 架构的集合与 **xml** 类型的变量、参数或列关联起来。 在这种情况下， **xml** 数据类型实例称作“类型化” 的实例。 否则，XML 实例称作“非类型化” 的实例。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正确的 XML 和 xml 数据类型  
  **xml** 数据类型可实现 ISO 标准的 **xml** 数据类型。 因此，它可以在非类型化的 XML 列中存储格式正确的 XML 1.0 版的文档以及具有文本节点和任意数量顶级元素的所谓的 XML 内容片段。 系统将检查数据格式是否正确，但不要求将列绑定到 XML 架构，并且拒绝在扩展意义上格式不正确的数据。 对于非类型化的 XML 变量和参数也是如此。  
@@ -71,7 +76,7 @@ ms.lasthandoff: 11/09/2017
  在下列示例中，使用由两部分组成的名称命名约定指定 XML 架构集合名称。 第一部分是架构名称，第二部分是 XML 架构集合名称。  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>示例：将架构集合与 xml 类型变量关联起来  
- 下面的示例创建一个**xml** 类型变量并将架构集合与其关联起来。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
+ 下面的示例将创建一个 xml 类型变量并将架构集合与其关联。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
@@ -160,7 +165,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## <a name="see-also"></a>另请参阅  
  [创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
+ [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
  [XML 数据修改语言 (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   

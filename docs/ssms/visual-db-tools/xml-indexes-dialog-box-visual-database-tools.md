@@ -3,8 +3,11 @@ title: "“XML 索引”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52f966e4e4ea42595fa93c83b608a18ae5a0b863
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f47274fe87b23da05550d05b28af1b003fa9a2bc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>“XML 索引”对话框 (Visual Database Tools)
-使用“XML 索引”对话框可为 XML 数据类型的列创建索引，这些列不能使用“索引/键”对话框创建索引。 每个 XML 列都可以有多个 XML 索引，但最先创建的索引（主索引）将成为其他索引（二级索引）的基础。 删除主 XML 索引后，二级索引也会随之删除。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“XML 索引”对话框可为 XML 数据类型的列创建索引，这些列不能使用“索引/键”对话框进行索引。 每个 XML 列都可以有多个 XML 索引，但最先创建的索引（主索引）将成为其他索引（二级索引）的基础。 删除主 XML 索引后，二级索引也会随之删除。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **选定的 XML 索引**  
 列出现有的 XML 索引。 选择一个索引即可在右侧网格中显示其属性。 如果该列表为空，则表示尚未为该表定义任何 XML 索引。  
   
-**添加**  
+**“添加”**  
 创建新的 XML 索引。  
   
 **删除**  
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
 **常规类别**  
 展开此项可显示“列”、“是主要的”和“类型”的属性字段。  
   
-**列**  
+**“列”**  
 显示此索引按升序排序。  
   
 **是主要的**  

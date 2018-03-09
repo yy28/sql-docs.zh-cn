@@ -2,9 +2,12 @@
 title: "SQL Server 监视器概述 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ f1_keywords: sql13.swb.sqlservermonitor.main.f1
 helpviewer_keywords: SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0812e4793d195ddf56a57af4aef1b2c404f35157
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7799381dbbcaf57dd0d02d01bc4c27a5c21f624c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 监视器概述
-  SQL Server 监视器不执行监视功能，但它可以承载执行此功能的模块。 SQL Server 监视器模块包括复制监视器和数据库镜像监视器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQL Server 监视器不执行监视功能，但它可以承载执行此功能的模块。 SQL Server 监视器模块包括复制监视器和数据库镜像监视器。  
   
  若要使用其中的一个模块，请在 **“转到”** 菜单上选择该模块。 当前选择的模块拥有导航窗格和详细信息窗格的内容、详细信息窗格中的用户交互以及对内容和状态的查询。  
   
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
   
  以下菜单选项适用于 SQL Server 监视器。  
   
- **文件**  
+ **File**  
  此菜单包含“退出”命令。  
   
  **操作**  

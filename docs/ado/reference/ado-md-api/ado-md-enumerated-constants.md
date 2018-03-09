@@ -3,26 +3,28 @@ title: "ADO MD 枚举常量 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: enumerated constants [ADO MD]
+helpviewer_keywords:
+- enumerated constants [ADO MD]
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0775023eefc9fd4a9533c9f99076e44a5ce14794
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7432aa483a8c47f441538cd9246745e0623c501c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 枚举常量
 若要帮助调试，ADO MD 枚举常量，请列出每个常量的值。 但是，此值是纯粹是参考性的并且可以从一个版本的 ADO MD 更改为另一个。 你的代码应仅依赖于的名称，而不是实际值的枚举常数。  

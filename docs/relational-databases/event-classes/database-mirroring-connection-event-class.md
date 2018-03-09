@@ -2,30 +2,35 @@
 title: "Database Mirroring Connection 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
-caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df43c7db71a2d289948b9ee432b96d4d38ad8c66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d26accbe02ac42a01dbb4c8bf832facec5b1b99e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mirroring-connection-event-class"></a>数据库镜像连接事件类
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **数据库镜像连接** 事件以便报告数据库镜像管理的传输连接的状态。  
   
 ## <a name="database-mirroringconnection-event-class-data-columns"></a>Database Mirroring:Connection 事件类的数据列  
   
-|数据列|类型|说明|列号|可筛选|  
+|数据列|类型|Description|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
@@ -45,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
-|**TextData**|**ntext**|与事件相关的错误消息的文本。 对于不报告错误的事件，此字段为空。 错误消息可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息，也可以是 Windows 错误消息。|1|是|  
+|**TextData**|**ntext**|与事件相关的错误消息的文本。 对于不报告错误的事件，此字段为空。 错误消息可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息，也可以是 Windows 错误消息。|@shouldalert|是|  
 |**TransactionID**|**bigint**|系统为事务分配的 ID。|4|是|  
   
   

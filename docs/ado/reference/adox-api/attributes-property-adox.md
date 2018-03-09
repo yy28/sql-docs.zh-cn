@@ -3,8 +3,9 @@ title: "Attributes 属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Column::PutAttributes
 - _Column::get_Attributes
 - _Column::GetAttributes
-helpviewer_keywords: Attributes property [ADOX]
+helpviewer_keywords:
+- Attributes property [ADOX]
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f96dd1109015a95013640551578089bebe24955f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5502bb8b4bac9945ec21aa1fc9c4e94c2636156d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-adox"></a>Attributes 属性 (ADOX)
 描述列的特征。  

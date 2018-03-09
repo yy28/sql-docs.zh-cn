@@ -1,5 +1,5 @@
 ---
-title: "大容量插入任务 |Microsoft 文档"
+title: "批量插入任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: f0cf4aaff6e1108572000af08ad233038adf29b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-insert-task"></a>大容量插入任务
   大容量插入任务为将大量的数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图提供了有效的方法。 例如，假定贵公司在大型主机系统上存储了数百万行的产品列表，但公司的电子商务系统却使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来填充网页。 您必须每晚都用大型机的主产品列表更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品表。 若要更新表，请以制表符分隔格式保存产品列表，并使用大容量插入任务将数据直接复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/11/2017
   
  如果大容量插入任务使用平面文件连接管理器访问源文件，则该任务不使用在平面文件连接管理器中指定的格式。 相反，大容量插入任务将使用在格式化文件中指定的格式，或者使用该任务的 RowDelimite 和 ColumnDelimiter 属性的值。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
@@ -111,7 +110,7 @@ ms.lasthandoff: 08/11/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>相关内容  
@@ -127,11 +126,11 @@ ms.lasthandoff: 08/11/2017
   
  若要了解大容量插入，请参阅[大容量插入任务](../../integration-services/control-flow/bulk-insert-task.md)和[用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
-### <a name="options"></a>选项  
- **连接**  
- 在列表中，选择一个 OLE DB 连接管理器，或单击\<**新的连接...**> 若要创建新的连接。  
+### <a name="options"></a>“常规”  
+ **“连接”**  
+ 在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接。  
   
- **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **相关主题：**[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **DestinationTable**  
  键入目标表或视图的名称，或在列表中选择表或视图。  
@@ -139,19 +138,19 @@ ms.lasthandoff: 08/11/2017
  **格式**  
  选择大容量插入任务的格式源。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**使用文件**|选择包含格式规范的文件。 选择此选项将显示动态选项 **FormatFile**。|  
 |**指定**|指定格式。 选择此选项将显示动态选项 **RowDelimiter** 和 **ColumnDelimiter**。|  
   
- **文件**  
- 在列表中，选择文件或平面文件连接管理器，或单击\<**新的连接...**> 若要创建新的连接。  
+ **File**  
+ 在列表中选择一个文件或平面文件连接管理器，或单击“\<新建连接…>”，创建一个新连接。  
   
  文件位置与在此任务的连接管理器中指定的 SQL Server 数据库引擎有关。 该文本文件必须可被服务器本地硬盘上的 SQL Server 数据库引擎访问，或可通过 SQL Server 的共享驱动器或映射的驱动器访问。 SSIS 运行时不访问该文件。  
   
  如果通过使用平面文件连接管理器来访问源文件，则大容量插入任务不会使用在平面文件连接管理器中指定的格式。 相反，大容量插入任务将使用在格式化文件中指定的格式，或者使用该任务的 RowDelimite 和 ColumnDelimiter 属性的值。  
   
- **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)，[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **刷新表**  
  刷新表和视图的列表。  
@@ -172,7 +171,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="bulk-insert-task-editor-general-page"></a>大容量插入任务编辑器（“常规”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“常规”** 页，对大容量插入任务进行命名和说明。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为大容量插入任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -187,7 +186,7 @@ ms.lasthandoff: 08/11/2017
   
  若要了解如何使用大容量插入，请参阅[大容量插入任务](../../integration-services/control-flow/bulk-insert-task.md)和 [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **CodePage**  
  指定数据文件中数据的代码页。  
   
@@ -221,4 +220,3 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  大容量加载操作不能导入的每一行都被计为一个错误。  
   
-

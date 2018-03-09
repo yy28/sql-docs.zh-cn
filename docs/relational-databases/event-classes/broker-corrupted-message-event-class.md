@@ -2,31 +2,37 @@
 title: "Broker:Corrupted 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Broker:Corrupted Message event class
+helpviewer_keywords:
+- Broker:Corrupted Message event class
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec1e4e2b0f1375221ac2ffba5e180da7aa7d6ff7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0da6275497d4b073329e07bd16540e6b6153f1a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件类
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将创建一个 **Broker:Corrupted Message** 事件。  
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Broker:Corrupted Message 事件类的数据列  
   
-|数据列|类型|说明|列号|可筛选|  
+|数据列|类型|Description|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**BigintData1**|**bigint**|此消息的序列号。|52|是|  
@@ -51,7 +57,7 @@ ms.lasthandoff: 11/09/2017
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|是|  
 |**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|是|  
-|**TextData**|**ntext**|检测到的损坏说明。|1|是|  
+|**TextData**|**ntext**|检测到的损坏说明。|@shouldalert|是|  
 |**Transaction ID**|**bigint**|系统为事务分配的 ID。|4|是|  
   
  此事件的 **TextData** 列包含一条描述消息问题的消息。  

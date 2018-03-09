@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP_AVAILABILITY_GROUP_TSQL
 - DROP AVAILABILITY GROUP
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], removing
 - Availability Groups [SQL Server], Transact-SQL statements
 - DROP AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], dropping
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d097f90cfabc250921c3212ed0a89e85362c0f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 82fdb4b104a0be0aa0d6469ccdd23f361f55618b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,12 +55,12 @@ DROP AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *组名*  
+ *group_name*  
  指定要删除的可用性组的名称。  
   
 ## <a name="limitations-and-recommendations"></a>限制和建议  
   
--   执行**DROP AVAILABILITY GROUP**需要的服务器实例上是否启用了 Alwayson 可用性组功能。 有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+-   执行**DROP AVAILABILITY GROUP**需要的服务器实例上是否启用了 Alwayson 可用性组功能。 有关详细信息，请参阅：[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 -   **DROP AVAILABILITY GROUP**不能作为一部分的批处理或事务内执行。 此外，不支持表达式和变量。  
   
@@ -69,9 +71,9 @@ DROP AVAILABILITY GROUP group_name
   
 -   在辅助副本上， **DROP AVAILABILITY GROUP**只应仅用于紧急目的。 这是因为删除可用性组会使该可用性组脱机。 如果从辅助副本中删除该可用性组，则主副本无法确定是否**脱机**出现状态因为仲裁丢失，强制故障转移，或**DROP AVAILABILITY GROUP**命令。 主副本转换为**RESTORING**状态以避免可能的裂脑情况。 有关详细信息，请参阅 [工作方式：DROP AVAILABILITY GROUP 行为](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) （CSS SQL Server 工程师博客）。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要**ALTER AVAILABILITY GROUP**可用性组中，权限**CONTROL AVAILABILITY GROUP**权限， **ALTER ANY AVAILABILITY GROUP**权限，或**CONTROL SERVER**权限。 若要删除并非由你需要在本地服务器实例承载可用性组**CONTROL SERVER**权限或**控件**针对该可用性组的权限。  
   
 ## <a name="examples"></a>示例  
@@ -87,7 +89,7 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [删除可用性组 (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+ [创建可用性组 &#40;Transact SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [删除可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   

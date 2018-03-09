@@ -3,8 +3,9 @@ title: "ADO 基础知识 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,16 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9eb2a8ddce4813a0738fc73dd4f54d6b015d30c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 76892d6ae394b41c64852cd721e22f494aee51af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-fundamentals"></a>ADO 基础知识
 ADO 提供开发人员的功能强大、 逻辑对象模型来以编程方式访问、 编辑和更新数据的各种通过 OLE DB 系统接口的数据源。 ADO 的最常见用法是查询表或关系数据库中的表、 检索和显示结果的应用程序，并可能使用户能够进行和将更改保存到数据。 其他任务包括：  

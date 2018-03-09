@@ -2,16 +2,13 @@
 title: "不规则层次结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: ragged hierarchies [Analysis Services]
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: df06dbfc368310427d1359f78de557c910b94af9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>用户定义的层次结构的不规则层次结构
-  不规则层次结构是一种具有不规则级别数目的用户定义层次结构。 常见示例包括高级别经理将部门经理人员和非经理人员作为直接下属的组织图或是由“国家-地区-城市”组成的地理层次结构（其中某些城市没有父级“州”或“省”，如“华盛顿特区”、“梵蒂冈城”或“新德里”）。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]不规则层次结构是用户定义层次结构，具有不均匀的级别数目。 常见示例包括高级别经理将部门经理人员和非经理人员作为直接下属的组织图或是由“国家-地区-城市”组成的地理层次结构（其中某些城市没有父级“州”或“省”，如“华盛顿特区”、“梵蒂冈城”或“新德里”）。  
   
  对于某一维度中的大多数层次结构，每个级别上面的成员数与同一级别中任何其他成员上面的成员数相同。 不规则层次结构的不同之处在于，至少一个成员的逻辑父级不在该成员的直接上一级别中。 如果出现这种情况，则层次结构会降至其他级别以寻找其他深化路径。 在客户端应用程序中，这会让深化路径变得异常复杂。  
   

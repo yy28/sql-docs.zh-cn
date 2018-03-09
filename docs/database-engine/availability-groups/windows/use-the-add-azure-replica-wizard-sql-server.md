@@ -2,9 +2,12 @@
 title: "使用“添加 Azure 副本向导”(SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7aa33a5adbf14beb92175e030df68fad5227d09b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 66f52afb6c52c426be6cc6470d3e628b4c010a7a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
-  通过使用“添加 Azure 副本向导”，你可以在混合 IT 环境中创建新的 Windows Azure VM，将它配置为新的或现有 Always On 可用性组的辅助副本。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过使用“添加 Azure 副本向导”，你可以在混合 IT 环境中创建新的 Windows Azure VM，将它配置为新的或现有 Always On 可用性组的辅助副本。  
   
 -   **开始之前：**  
   
      [先决条件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **要添加副本，请使用：**  [添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
   
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  请参阅 [Security](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
 ##  <a name="SSMSProcedure"></a> 使用“添加 Azure 副本向导”(SQL Server Management Studio)  
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/09/2017
      域用户名  
      用于将 Windows Azure 虚拟机联接到域的 AD 用户名  
   
-     密码  
+     Password  
      用于将 Windows Azure 虚拟机联接到域的密码  
   
 5.  单击 **“确定”** 提交设置并退出“添加 Azure 副本向导”。  

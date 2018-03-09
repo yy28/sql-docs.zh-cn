@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4def71d523f76476c331b8ab63421ccae794077
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad5d4f5c7d28dda4191a3e45bbf991bfbdc4644d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>报表生成器函数 - RunningValue 函数
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的运行聚合。  
@@ -51,7 +49,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>返回类型  
  由 *function* 参数中指定的聚合函数确定。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  作用域的每个新实例 **RunningValue** 的值都会重置为 0。 如果指定组，则会在更改组表达式时重置该运行值。 如果指定数据区域，则会为该数据区域的每个新实例重置该运行值。 如果指定数据集，则不会在整个数据集中重置该运行值。  
   
  **RunningValue** 不能在筛选器或排序表达式中使用。  

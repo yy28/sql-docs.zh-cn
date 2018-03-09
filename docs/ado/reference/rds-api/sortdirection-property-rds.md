@@ -1,26 +1,30 @@
 ---
 title: "SortDirection 属性 (RDS) |Microsoft 文档"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: SortDirection property [RDS]
+helpviewer_keywords:
+- SortDirection property [RDS]
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d1b07bebfd6b047e13c394a070757b26bd0c354
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9fa72c903861d2471032218738165be474224aaa
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 属性 (RDS)
 指示是按升序还是降序排序顺序。  
@@ -39,7 +43,7 @@ DataControl.SortDirection = value
  *DataControl*  
  表示的对象变量[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
- *值*  
+ *Value*  
  A**布尔**值，当设置为**True**，指示升序排序方向。 **False**指示降序排序。  
   
 ## <a name="remarks"></a>注释  

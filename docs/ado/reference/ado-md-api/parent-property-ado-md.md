@@ -3,8 +3,9 @@ title: "父属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Parent
 - Member::Parent
-helpviewer_keywords: Parent property [ADO MD]
+helpviewer_keywords:
+- Parent property [ADO MD]
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f07be3b319d11a42567f98dc9223716eeb78de85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7079b2e3c5871c8f048632fd854266a08dcf672e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parent-property-ado-md"></a>父属性 (ADO MD)
 指示是当前的父级的成员[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)层次结构中。  

@@ -1,10 +1,13 @@
 ---
 title: "项目设置 （迁移） (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: dbe432d2df571eef49610ccb9611e5d88a85d1a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c22868d8db0b223b297f2b719040cecffe0cc732
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-oracletosql"></a>项目设置 （迁移） (OracleToSQL)
 迁移页的**项目设置**对话框中包含自定义如何 SSMA 会将数据迁移到的 Oracle 从设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

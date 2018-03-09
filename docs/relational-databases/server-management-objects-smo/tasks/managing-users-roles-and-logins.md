@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +17,20 @@ helpviewer_keywords:
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eeda3dc5a30031545b7a6e500c378d6d4c190a6c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47c2cf548bdc703f86a7ff90f2e32e44fceb9a7f
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-users-roles-and-logins"></a>管理用户、角色和登录名
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 SMO 中，登录名由表示<xref:Microsoft.SqlServer.Management.Smo.Login>对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中存在登录名时，可将其添加到服务器角色中。 服务器角色由<xref:Microsoft.SqlServer.Management.Smo.ServerRole>对象。 数据库角色由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> 对象表示，而应用程序角色由 <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 对象表示。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  在 SMO 中，登录名由 <xref:Microsoft.SqlServer.Management.Smo.Login> 对象表示。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中存在登录名时，可将其添加到服务器角色中。 服务器角色由<xref:Microsoft.SqlServer.Management.Smo.ServerRole>对象。 数据库角色由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> 对象表示，而应用程序角色由 <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 对象表示。  
   
  与服务器级别关联的权限被列为属性<xref:Microsoft.SqlServer.Management.Smo.ServerPermission>对象。 服务器级别特权可以对各个登录帐户授予、拒绝或从各个登录帐户撤消。  
   

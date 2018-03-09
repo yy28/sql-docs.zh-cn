@@ -2,29 +2,30 @@
 title: "配置 Power Pivot 和部署解决方案 (SharePoint 2016) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0e3fa74aed98e00a64a155a8fb43d2cc6db3e1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2016)
-  本主题介绍如何部署和配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 功能的中间层增强功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理面板和数据提供程序。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置** 工具以便完成以下任务：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本主题介绍如何部署和配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 功能的中间层增强功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 库、计划数据刷新、管理面板和数据提供程序。 运行 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 配置** 工具以便完成以下任务：  
   
 -   部署 SharePoint 解决方案文件。  
   
@@ -33,18 +34,6 @@ ms.lasthandoff: 11/17/2017
 -   有关后端服务和在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式下安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器的信息，请参阅 [在 PowerPivot 模式下安装 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
  有关安装信息[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2016 配置工具，请参阅[安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)。  
-  
- 本主题包含以下各节：  
-  
- [运行 Power Pivot for SharePoint 2016 配置](#bkmk_run_configuration_tool)  
-  
- [验证 Power Pivot 配置](#bkmk_verify_powerpivot)  
-  
- [解决问题](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> 运行 Power Pivot for SharePoint 2016 配置  
  **注意：** 若要完成下列步骤，您必须是场管理员。 如果您看到与以下内容类似的错误消息：  
@@ -135,7 +124,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  选择“确定”。  
   
- 有关解决数据刷新问题的详细信息，请参阅[解决 Power Pivot 数据刷新问题](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 有关解决数据刷新问题的详细信息，请参阅 [解决 Power Pivot 数据刷新问题](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
  有关配置工具的详细信息，请参阅 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

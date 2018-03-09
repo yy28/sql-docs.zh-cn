@@ -2,9 +2,12 @@
 title: "增强常规复制性能 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,18 +24,18 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23abb406368b5a5a038af7542f36ae9f2a2f8c42
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 72c807961694b90e0a987385c5a0fad4a38bd184
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
-  按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
   
 ## <a name="server-and-network"></a>服务器和网络  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/09/2017
   
      通过将数据子集发布到每个订阅服务器或者让应用程序将给定行的更改定向到给定的节点，可以对更改进行分区：  
   
-    -   合并复制支持对单个发布使用参数化筛选器发布数据子集。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+    -   合并复制支持对单个发布使用参数化筛选器发布数据子集。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
     -   事务复制支持对多个发布使用静态筛选器发布数据子集。 有关详细信息，请参阅[筛选已发布数据](../../../relational-databases/replication/publish/filter-published-data.md)。  
   
@@ -119,7 +122,7 @@ ms.lasthandoff: 11/09/2017
   
      当需要将大量更改发送到订阅服务器时，用新快照重新初始化这些更改可能比使用复制分别移动每个更改要快。 有关详细信息，请参阅 [重新初始化订阅](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
-     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅[为与订阅关联的代理查看信息和执行任务（复制监视器）](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
 ## <a name="snapshot-considerations"></a>快照注意事项  
   
@@ -149,7 +152,7 @@ ms.lasthandoff: 11/09/2017
   
 -   考虑手动初始化订阅。  
   
-     在某些方案中，如涉及大型初始数据集的方案，使用快照以外的其他方法来初始化订阅更可取。 有关详细信息，请参阅[初始化事务订阅（不使用快照）](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)。  
+     在某些方案中，如涉及大型初始数据集的方案，使用快照以外的其他方法来初始化订阅更可取。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
 ## <a name="agent-parameters"></a>代理参数  
   

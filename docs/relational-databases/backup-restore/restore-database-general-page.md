@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31fc3012f234601db7d24b80b4499b78138e709c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db20fb80e64e3ffecee629dd5fc9310755ff58b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-general-page"></a>还原数据库（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,23 @@ ms.lasthandoff: 11/17/2017
   
  从加密的备份进行还原需要对在备份期间用于加密的证书或非对称密钥具有 **VIEW DEFINITION** 权限。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ### <a name="source"></a>数据源  
  “还原自” 面板中的选项可标识数据库的备份集的位置以及要还原的备份集。  
   
 |术语|定义|  
 |----------|----------------|  
-|**数据库**|从下拉列表中选择要还原的数据库。 此列表仅包含已根据 **msdb** 备份历史记录进行备份的数据库。|  
+|**“数据库”**|从下拉列表中选择要还原的数据库。 此列表仅包含已根据 **msdb** 备份历史记录进行备份的数据库。|  
 |**设备**|选择包含要还原的一个或多个备份的逻辑或物理备份设备（磁带、URL 或文件）。 如果在另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上执行数据库备份，则此选项是必需的。<br /><br /> 若要选择一个或多个逻辑或物理备份设备，请单击浏览按钮，这将打开 **“选择备份设备”** 对话框。 在此，最多可以选择属于一个介质集的 64 个设备。 磁带机必须与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机进行物理连接。 备份文件可以位于本地或远程磁带设备上。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)实例上执行数据库备份，则此选项是必需的。 还可以选择 **“URL”** 作为 Windows Azure 存储中所存储备份文件的设备类型。<br /><br /> 退出“选择备份设备”对话框时，选择的设备将在“设备”列表中显示为只读值。|  
-|**数据库**|从下拉列表中选择要从其还原备份的数据库名称。<br /><br /> 注意：此列表仅在选择了“设备”  时才可用。 只有已在所选设备上备份的数据库才可用。|  
+|**“数据库”**|从下拉列表中选择要从其还原备份的数据库名称。<br /><br /> 注意：此列表仅在选择了“设备”  时才可用。 只有已在所选设备上备份的数据库才可用。|  
   
 ### <a name="destination"></a>目标  
  **“还原到”** 面板中的选项可标识数据库和还原点。  
   
 |术语|定义|  
 |----------|----------------|  
-|**数据库**|在该列表中输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb**之外的所有数据库。<br /><br /> 注意：若要还原带有密码保护的备份，必须使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句。|  
+|**“数据库”**|在该列表中输入要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。 该列表包含了服务器上除系统数据库 **master** 和 **tempdb**之外的所有数据库。<br /><br /> 注意：若要还原带有密码保护的备份，必须使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句。|  
 |**“还原到”**|默认情况下， **“还原到”** 框将设置为“至最近一次进行的备份”。 您还可以单击 **“时间线”** 以便显示 **“备份时间线”** 对话框，该对话框将以时间线的形式显示数据库备份历史记录。 单击 **“时间线”** 可以指定您要将数据库还原到的特定 **datetime** 。 然后，数据库将还原到它在此指定时间点时所处的状态。 请参阅 [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md)。|  
   
 ### <a name="restore-plan"></a>还原计划  

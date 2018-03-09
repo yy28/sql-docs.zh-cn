@@ -1,32 +1,36 @@
 ---
 title: "管理和监视计算机学习解决方案 |Microsoft 文档"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f7b5737f9b8713688d654a0b1b286162e8f38929
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 248b3b27a8df1320eb809c4cd537a12cefe4eacb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理和监视计算机学习解决方案
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍在 SQL Server 计算机学习 Services 与数据库管理员需要若要开始使用 R 和 Python 解决方案相关的功能。
 
 **适用于：** SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务
 
-## <a name="security"></a>安全性
+## <a name="security"></a>Security
 
 数据库管理员必须提供数据访问，而不仅仅是对数据科学家但为各类报表开发人员、 业务分析人员和业务数据使用者。 R （与现在 Python） 到 SQL Server 的集成提供支持数据科学角色的数据库管理员提供许多好处。
 

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2250158376315b0eb05dc0b95bc7cd78a333aec9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
 在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教程中，将了解可用于在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中针对地理背景显示数据的地图功能。 
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
   
-7.  单击 **“下一步”**。  
+7.  单击“下一步” 。  
   
 8.  在“选择空间数据和地图视图选项”页上，接受默认值，然后按“下一步”。 
  
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     > 只要您具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 7.  在 **“设计查询”** 页中，单击 **“编辑为文本”**。  
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 12/05/2017
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
-10. 单击 **“下一步”**。  
+10. 单击“下一步” 。  
   
     此时，将会为您创建一个名为 DataSet1 的报表数据集。 在完成向导后，可以在“报表数据”窗格中看到它的字段集合。  
   
@@ -196,9 +196,9 @@ ms.lasthandoff: 12/05/2017
   
     地图视图显示圆圈，这些圆圈标记每个商店的位置。  
   
-12. 单击 **“下一步”**。  
+12. 单击“下一步” 。  
   
-13. 在“选择地图可视化”页上，单击“气泡图”地图类型，该地图类型根据数据显示不同大小的标记。 单击 **“下一步”**。  
+13. 在“选择地图可视化”页上，单击“气泡图”地图类型，该地图类型根据数据显示不同大小的标记。 单击“下一步” 。  
   
 14. 在“选择分析数据集”页上，单击“DataSet1”，然后单击“下一步”。 此数据集同时包含分析数据和空间数据，它将显示在新的点层上。   
   
@@ -251,7 +251,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  在“选择与 SQL Server 空间数据源的连接”中，选择在第一步中使用的数据源。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 7.  在 **“设计查询”** 页中，单击 **“编辑为文本”**。 查询设计器切换到基于文本的模式。  
   
@@ -264,7 +264,7 @@ ms.lasthandoff: 12/05/2017
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. 单击 **“下一步”**。  
+9. 单击“下一步” 。  
   
     此时，地图上将显示一条连接三个商店的路径。  
   
@@ -272,7 +272,7 @@ ms.lasthandoff: 12/05/2017
   
     地图视图显示一条从位于纽约州北部的商店到位于纽约州南部商店的路径。  
   
-11. 单击 **“下一步”**。  
+11. 单击“下一步” 。  
   
 12. 在“选择地图可视化”页上，单击“基本线条图”，然后单击“下一步”。  
   
@@ -545,7 +545,7 @@ ms.lasthandoff: 12/05/2017
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 到此为止，我们结束了有关如何向报表添加地图的演练。  
   
 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  

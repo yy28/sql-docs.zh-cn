@@ -18,15 +18,15 @@ helpviewer_keywords:
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb8267d4e8549f377da83d48e0c6b27ac71379f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 641c3e3916cced8ce6ee995111f75f6865731fdc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  如果为表指定了主键约束， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将通过为主键列自动创建唯一索引来强制数据的唯一性。 当在查询中使用主键时，此索引还允许对数据进行快速访问。 如果对多列定义了主键约束，则一列中的值可能会重复，但来自主键约束定义中所有列的值的任何组合必须唯一。  
   
- 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 **ProductVendor** 表中的每个行都具有 **ProductID** 和 **VendorID**的一个唯一组合。 这样可以防止插入重复的行。  
+ 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 ProductVendor 表中的每个行都具有 ProductID 和 VendorID 的一个唯一组合。 这样可以防止插入重复的行。  
   
  ![组合主键约束](../../relational-databases/tables/media/fund04.gif "组合主键约束")  
   

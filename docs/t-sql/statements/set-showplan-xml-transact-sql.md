@@ -27,13 +27,13 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2b51e19f70b0ff2119cfe3f89404fe61accf4656
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bd4e6309f65bea4a71cc9e2de7d5bb5b806ab005
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET SHOWPLAN_XML { ON | OFF }
 > [!NOTE]  
 >  如果**包括实际的执行计划**中选择[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，则此设置选项不会生成 XML 显示计划输出。 清除**包括实际的执行计划**按钮之前使用此设置选项。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  必须对执行 SET SHOWPLAN_XML 的语句具有足够的执行权限，必须对包含被引用对象的所有数据库具有 SHOWPLAN 权限。  
   
  为 SELECT、 INSERT、 UPDATE、 DELETE、 EXEC *stored_procedure*，和 EXEC *user_defined_function*语句，以便生成的 Showplan 用户必须：  

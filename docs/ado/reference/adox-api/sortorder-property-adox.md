@@ -3,8 +3,9 @@ title: "SortOrder 属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Column::put_SortOrder
 - _Column::get_SortOrder
 - _Column::GetSortOrder
-helpviewer_keywords: SortOrder property [ADOX]
+helpviewer_keywords:
+- SortOrder property [ADOX]
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afa1d7b930fd17568eb242149d4cc19d7226e37a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5505596de79392b6974afa8f1282008707da3309
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 属性 (ADOX)
 指示列 （仅限索引列） 的排序顺序。  

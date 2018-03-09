@@ -2,25 +2,28 @@
 title: "R Services-数据优化的性能 |Microsoft 文档"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 57cd083ac721f94eba1135c4d5b34147015700d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-数据优化的性能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是介绍 R 服务基于两个案例研究的性能优化的一系列中的第三。 本文讨论的 R 性能优化或 Python 脚本在 SQL Server 中运行。 它还介绍了可用于更新你的 R 代码，同时以提升性能并避免已知的问题的方法。
 
@@ -166,7 +169,7 @@ RevoScaleR 优化的其他指南，请参阅以下文章：
 
 + 函数的参考[rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
-### <a name="use-microsoftml"></a>使用 MicrosoftML
+### <a name="use-microsoftml"></a>Use MicrosoftML
 
 我们还建议你查看到新**MicrosoftML**包，其中提供计算上下文和提供的 RevoScaleR 的转换可以使用的可缩放的机器学习算法。
 

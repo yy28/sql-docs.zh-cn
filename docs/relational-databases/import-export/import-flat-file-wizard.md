@@ -16,11 +16,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27099048dc1d89d94489898a501ebec4d39ff36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,6 +32,10 @@ ms.lasthandoff: 11/17/2017
 创建此向导的目的在于利用称为 Program Synthesis using Examples 的智能框架改善当前的导入体验 ([PROSE](https://microsoft.github.io/prose/))。 对于没有专业领域知识的用户来说，导入数据通常是一项复杂、易于出错并且乏味的任务。 此向导尽可能简化导入流程，只需要选择输入文件和唯一的表名称，PROSE 框架就会处理剩余的事情。
 
 PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔符等信息。 此框架了解文件的结构，完成所有复杂的工作，因此用户无需再做这些工作。
+
+若要进一步了解导入平面文件向导的用户体验改进，请观看以下视频：
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
 ## <a name="prerequisites"></a>先决条件
 此功能仅在 SQL Server Management Studio (SSMS) v17.3 或更高版本中可用。 请确保使用最新版本。 可以在[此处](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。

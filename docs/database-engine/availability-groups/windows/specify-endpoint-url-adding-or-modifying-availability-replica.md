@@ -2,10 +2,14 @@
 title: "指定终结点 URL - 添加或修改可用性副本 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43bfc29045efc22d72becb20dbd4d4441c97baa2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 81d0af19646a19135d6d52b2e6384b84cf23a5e2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>指定终结点 URL - 添加或修改可用性副本
-  若要为某一可用性组承载可用性副本，服务器实例必须拥有数据库镜像端点。 该服务器实例使用此端点来侦听来自其他服务器实例承载的可用性副本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 消息。 若要为某一可用性组定义可用性副本，您必须指定将承载该副本的服务器实例的端点 URL。 “端点 URL”  标识数据库镜像端点的传输协议 — TCP、服务器实例的系统地址以及与端点关联的端口号。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+若要为某一可用性组承载可用性副本，服务器实例必须拥有数据库镜像端点。 该服务器实例使用此端点来侦听来自其他服务器实例承载的可用性副本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 消息。 若要为某一可用性组定义可用性副本，您必须指定将承载该副本的服务器实例的端点 URL。 “端点 URL”  标识数据库镜像端点的传输协议 — TCP、服务器实例的系统地址以及与端点关联的端口号。  
   
 > [!NOTE]  
 >  “端点 URL”一词是“服务器网络地址”一词的同义词，由数据库镜像的用户界面和文档使用。  
@@ -42,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="SyntaxOfURL"></a> 端点 URL 的语法  
  端点 URL 的语法采用以下形式：  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP*://\<system-address>:\<port>  
   
  其中  
   
@@ -50,7 +55,7 @@ ms.lasthandoff: 11/09/2017
   
     -   因为 Windows Server 故障转移群集 (WSFC) 群集的节点处于相同的域，所以，您可以使用计算机系统的名称，例如 `SYSTEM46`。  
   
-    -   若要使用 IP 地址，则该地址在您环境中必须是唯一的。 建议只使用静态的 IP 地址。 IP 地址可以是 IP 版本 4 (IPv4) 或 IP 版本 6 (IPv6)。 必须用方括号将 IPv6 地址括起，例如：**[***<IPv6_address>***]**。  
+    -   若要使用 IP 地址，则该地址在您环境中必须是唯一的。 建议只使用静态的 IP 地址。 IP 地址可以是 IP 版本 4 (IPv4) 或 IP 版本 6 (IPv6)。 必须用方括号将 IPv6 地址括起，例如：[<IPv6_address>]。  
   
          若要了解系统的 IP 地址，则在 Windows 命令提示符处，输入 **ipconfig** 命令。  
   
@@ -58,7 +63,7 @@ ms.lasthandoff: 11/09/2017
   
          *computer_name* **。** *domain_segment*[...**.***domain_segment*]  
   
-         其中， *computer_name*是运行服务器实例的计算机的网络名称， *domain_segment*[...**.***domain_segment*] 是服务器的其余域信息；例如： `localinfo.corp.Adventure-Works.com`。  
+         其中， computer_name 是运行服务器实例的计算机的网络名称，domain_segment[....domain_segment] 是服务器的其余域信息；例如：`localinfo.corp.Adventure-Works.com`。  
   
          在公司或组织内确定域段的内容和数量。 有关详细信息，请参阅本主题后面的 [查找完全限定域名](#Finding_FQDN)。  
   

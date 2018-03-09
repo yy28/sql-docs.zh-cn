@@ -1,5 +1,5 @@
 ---
-title: "关闭 (Transact SQL) |Microsoft 文档"
+title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SHUTDOWN_TSQL
 - SHUTDOWN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SQL Server, stopping
 - shutting down SQL Server
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - stopping SQL Server
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 10a6b2c5bf093eaee3eacf183f98ecb644d2fc68
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: df8ef0a3cfe0ac4adb6f45bddb0bef650fea6ff3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 ## <a name="arguments"></a>参数  
  WITH NOWAIT  
- 可选。 在不对每个数据库执行检查点操作的情况下关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在尝试终止全部用户进程后退出。 服务器重新启动时，将针对未完成事务执行回滚操作。  
+ 選擇性。 在不对每个数据库执行检查点操作的情况下关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在尝试终止全部用户进程后退出。 服务器重新启动时，将针对未完成事务执行回滚操作。  
   
 ## <a name="remarks"></a>注释  
  除非使用 WITHNOWAIT 选项，则关闭关闭[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过：  
@@ -69,7 +71,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
--   通过运行**net 停止 mssqlserver**在命令提示符下，对于默认实例，或通过运行**net stop mssql$***instancename*从命令提示符对于命名实例。  
+-   通过运行**net 停止 mssqlserver**在命令提示符下，对于默认实例，或通过运行 **net stop mssql$ * * * instancename*从命令提示符对于命名实例。  
   
 -   使用“控制面板”中的“服务”应用程序。  
   
@@ -78,13 +80,13 @@ SHUTDOWN [ WITH NOWAIT ]
 > [!NOTE]  
 >  使用上述任何方法停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送 `SERVICE_CONTROL_STOP` 消息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  关闭权限分配给的成员**sysadmin**和**serveradmin**固定的服务器角色，并且它们不可转让。  
   
 ## <a name="see-also"></a>另请参阅  
- [检查点 (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)   
- [sp_lock &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sp_who &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [检查点 &#40;Transact SQL &#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sqlservr 应用程序](../../tools/sqlservr-application.md)   
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   

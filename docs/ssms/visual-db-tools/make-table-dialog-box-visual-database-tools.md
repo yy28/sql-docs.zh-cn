@@ -3,8 +3,11 @@ title: "“生成表”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 813c9846bd0662a454df2a197192da90dcc17ae4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c7c6efce5afa21a2caa06d3fb9edf6922e7c2db4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>“生成表”对话框 (Visual Database Tools)
-使用此对话框可以命名通过复制行而创建的表。 当您将查询类型更改为“生成表”查询时，将显示此对话框。 若要更改查询类型，请在“查询设计器”菜单中指向“更改类型”，再单击“生成表”。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以命名向其复制行的已创建的表。 当您将查询类型更改为“生成表”查询时，将显示此对话框。 若要更改查询类型，请在“查询设计器”菜单中指向“更改类型”，再单击“生成表”。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **表名**  
 键入要创建的表的名称。 查询和视图设计器不检查该名称是否已在使用，也不检查您是否有权创建表。  
   

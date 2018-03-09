@@ -1,11 +1,11 @@
 ---
-title: "步骤 5： 添加和配置平面文件源 |Microsoft 文档"
+title: "步骤 5：添加并配置平面文件源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c56b634f36e69e06e03e0206cd70d841f4682ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8f12346caf8cee8dfbcdb6f20d4f4afa00dfd7d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>课程 1-5-添加和配置平面文件源
+# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>第 1-5 课 - 添加并配置平面文件源
 在此任务中，将向包中添加一个平面文件源并对其进行配置。 平面文件源是一个数据流组件，它使用平面文件连接管理器定义的元数据来指定转换过程要从此平面文件中提取的数据的格式和结构。 可以通过使用平面文件连接管理器提供的文件格式定义将平面文件源配置为从单个平面文件提取数据。  
   
 对于本教程，你将把平面文件源配置为使用以前创建的 **Sample Flat File Source Data** 连接管理器。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  单击“列”并验证列名是否正确。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 8.  右键单击“平面文件源”并单击“属性”。  
   
@@ -61,4 +60,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

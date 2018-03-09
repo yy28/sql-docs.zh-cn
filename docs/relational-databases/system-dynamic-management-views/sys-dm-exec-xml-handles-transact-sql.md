@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_xml_handles_TSQL
 - sys.dm_exec_xml_handles_TSQL
 - sys.dm_exec_xml_handles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_xml_handles dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_xml_handles dynamic management function
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 739e9b9fb8f95f4e2be0331d8efa01917ac05320
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a8d9b94690a487911414fdceeb9cd173116ea9c0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -43,7 +46,7 @@ dm_exec_xml_handles (session_id | 0 )
 ```  
   
 ## <a name="arguments"></a>参数  
- *session_id* | 0，  
+ *session_id* | 0,  
  会话的 ID。 如果*session_id*指定，则此函数在指定的会话中返回有关 XML 句柄的信息。  
   
  如果指定 0，该函数将返回所有会话中的所有 XML 句柄的信息。  
@@ -55,9 +58,9 @@ dm_exec_xml_handles (session_id | 0 )
 |**session_id**|**int**|持有 XML 文档句柄的会话的会话 ID。|  
 |**document_id**|**int**|返回 XML 文档句柄 ID **sp_xml_preparedocument**。|  
 |**namespace_document_id**|**int**|为关联的命名空间文档已传递的第三个参数的使用的内部句柄 ID **sp_xml_preparedocument**。 如果没有命名空间文档，则为 NULL。|  
-|**sql 句柄**|**varbinary(64)**|定义句柄所在的 SQL 代码的文本句柄。|  
+|**sql_handle**|**varbinary(64)**|定义句柄所在的 SQL 代码的文本句柄。|  
 |**statement_start_offset**|**int**|在当前正在执行的字符数批处理或存储的过程从该处**sp_xml_preparedocument**调用时发生。 可以使用连同**sql 句柄**、**语句结束偏移量**，和**sys.dm_exec_sql_text**动态管理函数以检索当前执行请求的语句。|  
-|**语句结束偏移量**|**int**|在当前正在执行的字符数批处理或存储的过程从该处**sp_xml_preparedocument**调用时发生。 可以使用连同**sql 句柄**、 **statement_start_offset**，和**sys.dm_exec_sql_text**动态管理函数以检索当前执行请求的语句。|  
+|**statement_end_offset**|**int**|在当前正在执行的字符数批处理或存储的过程从该处**sp_xml_preparedocument**调用时发生。 可以使用连同**sql 句柄**、 **statement_start_offset**，和**sys.dm_exec_sql_text**动态管理函数以检索当前执行请求的语句。|  
 |**creation_time**|**datetime**|时间戳时**sp_xml_preparedocument**调用。|  
 |**original_document_size_bytes**|**bigint**|未分析的 XML 文档的大小（字节）。|  
 |**original_namespace_document_size_bytes**|**bigint**|未分析的 XML 命名空间文档的大小（字节）。 如果没有命名空间文档，则为 NULL。|  
@@ -68,7 +71,7 @@ dm_exec_xml_handles (session_id | 0 )
 ## <a name="remarks"></a>注释  
  生存期**sql_handles**用于检索执行调用的 SQL 文本**sp_xml_preparedocument**长于高速缓存的计划用于执行查询。 如果查询文本在缓存中不可用，则无法使用函数结果中提供的信息来检索数据。 如果您正在运行多个大型批处理，则可能出现上述情况。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 VIEW SERVER STATE 权限，以查看不归调用者所有的全部会话或会话 ID。 调用者始终可以查看自己的当前会话 ID 的数据。  
   
 ## <a name="examples"></a>示例  

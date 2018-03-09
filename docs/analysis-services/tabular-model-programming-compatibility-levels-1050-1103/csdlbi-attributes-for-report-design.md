@@ -2,35 +2,32 @@
 title: "报表设计的 CSDLBI 属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>用于报表设计的 CSDLBI 属性
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  本节介绍用于表格建模的 CSDL 扩展插件中将会影响 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查询设计的属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本节介绍用于表格建模的 CSDL 扩展插件中将会影响 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查询设计的属性。  
   
 ## <a name="model-attributes"></a>模型属性  
  子元素的 CSDL 定义了这些属性[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)元素。  
@@ -55,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |**DefaultDetails**|MemberRef[]|表示默认值的字段的已排序的列表设置的详细信息显示给业务用户实体实例有关的信息。如果省略，则使用实体中的第一次五 （5） 字段，但不包括那些已被引用**密钥**， **DisplayKey**，或**DefaultImage**。|  
 |**SortProperties**|MemberRef[]|实体实例通常按其排序的字段的排序列表。 当对这些字段进行排序时**SortDirection**上每个指定使用字段。 如果省略， **DisplayKey**使用字段|  
 |**DefaultMeasure**|MemberRef|对在模型中定义的度量值的引用，或者对具有默认聚合函数的数值字段的引用，以便指示该度量值或字段应该用作实体的多个实例的默认表示形式。 如果省略，则使用实体实例的计数。|  
-|**位置**|MemberRef|对其值表示与实体实例相关联的默认位置的字段的引用。 如果省略，则使用实体中的第一个位置字段（如果有）。|  
+|**DefaultLocation**|MemberRef|对其值表示与实体实例相关联的默认位置的字段的引用。 如果省略，则使用实体中的第一个位置字段（如果有）。|  
   
 ## <a name="field-attributes"></a>字段属性  
  这些属性定义的 CSDL 属性的子元素上或[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)元素。  
@@ -75,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 |**SortDirection**|Enum|指示通常如何对字段值进行排序的一个值。 可能的值为**默认**，**升序**，**降序**。 如果省略，则分配排序方向的默认值将基于字段的数据类型。|  
 |**IsRightToLeft**|Boolean|指示字段是否包含应该从右向左读取的文本。 如果省略，则假定采用模型设置。|  
 |**OrderBy**|MemberRef|对模型内用于定义该字段值的排序顺序的其他字段的引用。 这两个字段的值必须具有 1:1 映射，否则排序行为是未定义的。 如果省略，则基于字段自己的值对字段进行排序。|  
-|**目录**|Enum|描述字段的子类型或内容的枚举。 如果省略，则假定没有特定的子类型，除非该字段的数据类型为 Binary，在此情况下，假定为 Image。 有关支持的内容类型的完整列表，请参阅 AMO 文档。|  
+|**内容**|Enum|描述字段的子类型或内容的枚举。 如果省略，则假定没有特定的子类型，除非该字段的数据类型为 Binary，在此情况下，假定为 Image。 有关支持的内容类型的完整列表，请参阅 AMO 文档。|  
 |**DefaultAggregateFunction**|Enum|一个值，指示通常用于对此字段进行聚合的默认函数（如果有）。 可能的值为**无**，**总和**，**平均**，**计数**， **Min**，**最大**. 如果省略，**总和**对于数字字段，假定**无**为所有其他字段。|  
 |**IsSimpleMeasure**|Boolean|指示度量值是否仅为数值字段的简单聚合。 此类聚合可以根据需要在查询中轻松地定义，因此，应该从模型定义中省略此类聚合以便提高性能。 如果省略， **false**假定。|  
 |**Kpi**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|子元素|指示度量值元素要用作 KPI。 该 KPI 子元素使用 KpiGoal 和 KpiStauts 元素定义关联的显示图像和目标范围。|  

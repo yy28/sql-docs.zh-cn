@@ -2,32 +2,30 @@
 title: "计划数据刷新和数据源-无 Windows 身份验证 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9dadc46f53cff296a0332069165a9faa876e6180
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>计划数据刷新和数据源-无 Windows 身份验证
-  本主题介绍当数据源 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 不 **支持 Windows 身份验证时，让** for SharePoint 计划数据刷新能够使用该数据源的工作流。 例如 Oracle 或 IDM DB2 数据源。 本主题中的图示和步骤引用 Oracle 数据源，但此工作流也适用于其他数据源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主题介绍当数据源 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 不 **支持 Windows 身份验证时，让** for SharePoint 计划数据刷新能够使用该数据源的工作流。 例如 Oracle 或 IDM DB2 数据源。 本主题中的图示和步骤引用 Oracle 数据源，但此工作流也适用于其他数据源。  
   
 ||  
 |-|  
@@ -39,13 +37,13 @@ ms.lasthandoff: 11/17/2017
   
 -   **(1) PowerPivotDatarefresh：** 此安全存储区目标应用程序 ID 使用 Windows 身份验证进行设置。  
   
--   **(2) OracleAuthentication：** 此安全存储区目标应用程序 ID 使用 Oracle 凭据进行设置。  
+-   **(2) OracleAuthentication：**此安全存储区目标应用程序 ID 使用 Oracle 凭据进行设置。  
   
 -   **(3)** 对于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**“无人参与的数据刷新帐户”，将**服务应用程序配置为使用目标应用程序“PowerPivotDataRefresh”。  
   
 -   **(4)** PowerPivot 工作簿使用 Oracle 数据。 工作簿刷新设置指定数据源连接以使用凭据的目标应用程序 **(2)** 。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必要條件  
   
 -   存在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。  
   

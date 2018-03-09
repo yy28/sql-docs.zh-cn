@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,23 +21,23 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a01cda7280ec0a6a70bca8cf7f9fdec503c92d7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf33666d0bf8c02b91b26d94f72ec2883e4cba9d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-subkey"></a>ODBC 子项
 ODBC 子项下的值指定 ODBC 跟踪选项。 通过 ODBC 数据源管理器中显示的对话框的跟踪选项卡来设置这些选项**SQLManageDataSources**。 ODBC 子项本身是可选的。 下表中所示，将为这些值的格式。  
   
-|Name|数据类型|data|  
+|“属性”|数据类型|data|  
 |----------|---------------|----------|  
 |跟踪|REG_SZ|**0** &#124; **1**|  
 |TraceFile|REG_SZ|*tracefile 路径*|  
   
  值具有下表中描述的含义。  
   
-|值|含义|  
+|ReplTest1|含义|  
 |-----------|-------------|  
 |跟踪|如果跟踪值设置为 1 时应用程序调用**SQLAllocHandle**使用 SQL_HANDLE_ENV 选项中，对调用应用程序启用跟踪。<br /><br /> 如果跟踪关键字设置为 0 时应用程序调用**SQLAllocHandle** SQL_HANDLE_ENV 选项后，调用应用程序禁用跟踪。 这是默认值。<br /><br /> 应用程序可以启用或禁用与 SQL_ATTR_TRACE 连接属性的跟踪。 但是，这样做因此不会更改此值的数据。|  
 |TraceFile|如果启用了跟踪，驱动程序管理器将写入 TraceFile 值指定的跟踪文件。<br /><br /> 如果不指定任何跟踪文件，则驱动程序管理器将写入当前的驱动器上的 Sql.log 文件。 这是默认值。<br /><br /> 跟踪应仅用于单个应用程序，或每个应用程序应指定一个不同的跟踪文件。 否则，两个或多个应用程序将尝试打开相同的跟踪文件在同一时间，从而导致错误。<br /><br /> 应用程序可以使用 SQL_ATTR_TRACEFILE 连接属性指定新的跟踪文件。 但是，这样做因此不会更改此值的数据。|  

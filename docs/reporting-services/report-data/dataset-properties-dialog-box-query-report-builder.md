@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,15 +17,15 @@ f1_keywords:
 - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03a8561e921834373686c6582f6630c8047417b4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f733d1c6013bb6f8110a52007e1a3cfa682bfecd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>“数据集属性”对话框 -&gt;“查询”（报表生成器）
   选择 **“数据集属性”** 对话框中的 **“查询”** 可以从报表服务器选择共享数据集或创建嵌入数据集。 对于嵌入数据集，必须选择一个数据源并生成查询。  
@@ -44,14 +42,14 @@ ms.lasthandoff: 12/05/2017
   
  有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **名称**  
  为数据集键入名称。 该名称不能与报表中的任何数据区域或组的名称相同。  
   
  **使用共享数据集**  
  选择此选项可以使用报表服务器中的预定义数据集。  
   
- **浏览**  
+ **“浏览”**  
  找到报表服务器或 SharePoint 站点上的文件夹，然后选择一个共享数据集 (.rsd)。  
   
  **在我的报表中使用嵌入数据集**  

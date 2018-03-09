@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d7cfdacb91ff3963a1bf77343c171e8f9d3fec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 676ab0116fa14af4d2f29c2620a4f6e15f17cdc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>使用 Oracle ODBC 驱动程序随 SQLConfigDatasource
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 |设置|最大长度|默认值|有效值|Description|  
 |-------------|-------------|-------------------|------------------|-----------------|  
 |BufferSize|7|65535|1000|最小提取缓冲区大小最多 65535 字节|  
-|CatalogCap|2|1|0 或 1|如果为 1，nonquoted 的标识符将转换为大写形式在目录中的函数。|  
+|CatalogCap|2|@shouldalert|0 或 1|如果为 1，nonquoted 的标识符将转换为大写形式在目录中的函数。|  
 |ConnectString|128|""|A/N|连接字符串。 所需的指定服务器名称使用 Msorcl10.dll 驱动程序的方法。|  
 |Description|256|""|A/N|说明。|  
 |DSN|33|""|A/N|数据源名称。|  
@@ -48,10 +48,10 @@ ms.lasthandoff: 11/20/2017
 |NumberFloat|2|""|0 或 1|如果为 0，FLOAT 列视为 SQL_FLOAT。 如果为 1，FLOAT 列视为 SQL_DOUBLE。|  
 |PWD|30|""|A/N|密码。|  
 |RDOSupport|2|""|0 或 1|允许 RDO 调用 Oracle 过程。|  
-|注释|2|0|0 或 1|包含目录函数中的备注。|  
+|Remarks|2|0|0 或 1|包含目录函数中的备注。|  
 |RowLimit|4|""|0 到 99|由 SELECT 语句返回的行的最大数量。 长度为零的字符串表示应用没有限制。|  
-|Server|128|""|A/N|Oracle 服务器名称。|  
-|SynonymColumns|2|1|0 或 1|SQLColumns 中包括的同义词。|  
+|“服务器”|128|""|A/N|Oracle 服务器名称。|  
+|SynonymColumns|2|@shouldalert|0 或 1|SQLColumns 中包括的同义词。|  
 |SystemTable|2|""|0 或 1|如果为 0，则不会显示系统表。 如果为 1，则将显示系统表。|  
 |TranslationDLL|33|""|A/N|转换.dll 的名称。|  
 |TranslationName|33|""|A/N|转换的名称。|  

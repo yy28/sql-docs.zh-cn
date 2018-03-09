@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 75a3ae82313f5dcf1486d60ddc747b109ae1fecd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4e159f7c4fa846e30fbd1ca8f43b5c18df44d4c5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>MSRS 2011 Web Service 性能对象的性能计数器
   本主题介绍 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 性能对象的性能计数器。 这些对象是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 本机模式部署的组成部分。  

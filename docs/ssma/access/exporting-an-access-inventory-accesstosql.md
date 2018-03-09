@@ -1,10 +1,13 @@
 ---
 title: "导出访问清单 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d4c6fb051f37d02875070eeef6709cba84ae452
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>导出访问清单 (AccessToSQL)
 如果有多个访问数据库，并且你不确定要将迁移到哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以将导出的项目中的所有访问数据库的清单。 然后，你可以查看和查询的清单元数据，以确定哪些数据库和要迁移这些数据库中的对象。 此清单，它使你能够快速地查找诸如以下问题的答案：  
@@ -97,7 +100,7 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
   
     你可以使用**选择所有**和**清除所有**要选中或清除所有数据库的列表顶部的按钮。 你还可以按住 CTRL 键来选择多个行，或按住 SHIFT 键以选择范围的行。  
   
-7.  单击 **“下一步”**。  
+7.  单击“下一步” 。  
   
 8.  在验证页上，单击**完成**。  
   

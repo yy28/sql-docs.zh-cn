@@ -1,11 +1,11 @@
 ---
-title: "步骤 2： 创建损坏的文件 |Microsoft 文档"
+title: "步骤 2：创建损坏的文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7760a481839ec7bd33aeeefd4b066f3d7750020d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 62350fd26606de512d982b66ff7f114addc3eb39
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-4-2---creating-a-corrupted-file"></a>Lesson 4-2-创建损坏的文件
+# <a name="lesson-4-2---creating-a-corrupted-file"></a>第 4-2 课 - 创建损坏的文件
 为阐释如何配置和处理转换错误，必须创建一个在处理时导致组件失败的示例平面文件。  
   
 在本任务中，将创建现有示例平面文件的一个副本。 然后，用记事本打开该文件，编辑 **CurrencyID** 列，以确保该列在转换查找期间无法生成匹配项。 处理新文件时，查找失败将导致 Currency Key 查找转换失败，因此，包的剩余部分将失败。 创建了损坏的示例文件后，将运行包以查看包失败的情况。  
@@ -70,9 +69,8 @@ ms.lasthandoff: 09/26/2017
     > [!NOTE]  
     > 数字 27 为组件的 ID。 该值在生成数据流时进行分配，可能与包中的值不同。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 [步骤 3：添加错误流重定向](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   
   
-

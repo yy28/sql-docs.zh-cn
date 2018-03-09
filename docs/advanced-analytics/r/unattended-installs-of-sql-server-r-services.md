@@ -2,27 +2,28 @@
 title: "无人参与的安装的机器学习服务 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c58bbb4a7277b37c9ef479b79ba4809a02218908
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>机器学习服务 （数据库） 的无人参与的安装
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何使用命令行自变量包含 SQL Server 安装程序来安装机器学习组件。
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/09/2017
 
 **适用于： SQL Server 自 2017 年 1 机器学习服务 （数据库中），SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 + 你必须在你将在其中使用机器学习每个实例上安装数据库引擎。
 
@@ -48,9 +49,9 @@ ms.lasthandoff: 11/09/2017
 
 > [!IMPORTANT]
 > 
-> 在完成安装程序以启用该功能后，则需要其他步骤。 其中包括重新配置和重新启动的实例。 确保来检查 [安装后步骤] (#bkmk_PostInstall) 部分中的所有项，以确定操作需要在安装完成后。
+> 在完成安装程序以启用该功能后，则需要其他步骤。 其中包括重新配置和重新启动的实例。 请务必查看上一节中的所有项[安装后步骤](#bkmk_PostInstall)以确定需要在安装完成后的操作。
 
-## <a name="bkmk_NewInstall"></a>有关 SQL Server 自 2017 年的命令行安装
+## <a name="bkmk_NewInstall"></a>  有关 SQL Server 自 2017 年的命令行安装
 
 下面的示例包括**最小**的功能要求。
 
@@ -72,7 +73,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR 
 
 + `ADVANCEDANALYTICS`
 + `SQL_INST_MR`
-+ `IACCEPTROPENLICENSETERMS`。
++ `IACCEPTROPENLICENSETERMS`中创建已分区表或索引。
 
 ### <a name="install-python-only"></a>仅安装 Python
 
@@ -96,7 +97,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MPY
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>SQL Server 2016 命令行安装
+## <a name="OldInstall"></a> SQL Server 2016 命令行安装
  
 下面的示例演示使用添加 R 语言安装的 SQL Server 2016 的所需执行无提示，无人参与的参数。
 

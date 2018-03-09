@@ -1,11 +1,11 @@
 ---
-title: "步骤 1： 复制第 4 课包 |Microsoft 文档"
+title: "步骤 1：复制第 4 课包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54328f5769560ca6710ed7df6ebe8de9509b8316
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9977afd1f47c9ea6b6747bac0ddc81348942ce65
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-5-1---copying-the-lesson-4-package"></a>Lesson 5-1-复制第 4 课包
+# <a name="lesson-5-1---copying-the-lesson-4-package"></a>第 5-1 课 - 复制第 4 课包
 在本任务中，将为第 4 课中创建的 Lesson 4.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 4 包添加到项目中，然后再对其进行复制。 将使用这一新副本来完成第 5 课剩余部分。  
   
 ### <a name="to-copy-the-lesson-4-package"></a>复制 Lesson 4 包  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [步骤 2：启用和配置包配置](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
-

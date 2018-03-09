@@ -1,16 +1,14 @@
 ---
 title: "命令在表格模型脚本语言 (TMSL) |Microsoft 文档"
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 4eb07192-6f53-4426-830a-d63a945dbcab
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71b44ae1e5f8e5db2859bb4d3b2457c752de4dc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 39959a86e064da782097ddc75d9d3651b4d436fa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tmsl-reference---commands"></a>TMSL 参考-命令
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  你可以执行命令 XMLA 终结点上, 构建 JSON 使用表格模型脚本语言 (TMSL)，对表格模型数据库中的对象定义。   请参阅[对象定义中表格模型脚本语言 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)有关使用以下命令使用的对象的列表。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]你可以执行命令 XMLA 终结点上, 构建 JSON 使用表格模型脚本语言 (TMSL)，对表格模型数据库中的对象定义。   请参阅[对象定义中表格模型脚本语言 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)有关使用以下命令使用的对象的列表。  
   
 ## <a name="object-operations"></a>对象操作  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fb717a151e6917d49e164cfeba9b3df3507d46e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a2378a7e84b62102666985f3166bd9c8586837e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-sql"></a>动态 SQL
 尽管静态 SQL 适用于许多情况下，但是没有该数据访问无法预先确定的应用程序的类。 例如，假设电子表格，用户可以输入一个查询，后者电子表格随后发送到 DBMS 中检索数据。 此查询的内容显然无法知道向程序员写入电子表格程序时。  

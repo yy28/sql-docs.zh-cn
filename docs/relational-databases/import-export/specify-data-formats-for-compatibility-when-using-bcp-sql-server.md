@@ -2,10 +2,14 @@
 title: "在使用 bcp 时指定数据格式以获得兼容性 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 92a08de69c1ab4db893a2d14b6c4fffd3d350b59
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: af46687cb2c5d387063dc86fa0373b8262b74ca9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)
-  本主题说明数据格式属性、特定于字段的提示，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** 命令的非 xml 格式化文件中逐个字段地存储数据。 在您大容量导出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据以便大容量导入到其他程序（例如其他数据库程序）时，理解上述概念可能会对您很有帮助。 源表中的默认数据格式（本机、字符或 Unicode）可能与其他程序所需的数据布局不兼容。如果存在不兼容，则导出数据时，必须说明数据布局。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主题说明数据格式属性、特定于字段的提示，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** 命令的非 xml 格式化文件中逐个字段地存储数据。 在您大容量导出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据以便大容量导入到其他程序（例如其他数据库程序）时，理解上述概念可能会对您很有帮助。 源表中的默认数据格式（本机、字符或 Unicode）可能与其他程序所需的数据布局不兼容。如果存在不兼容，则导出数据时，必须说明数据布局。  
   
 > [!NOTE]  
 >  如果不熟悉导入或导出数据的数据格式，请参阅 [用于批量导入或导出的数据格式 (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)。  
@@ -42,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
 -   前缀长度  
   
-     当以本机格式将数据批量导出到数据文件时，为使文件存储空间最为紧凑， **bcp** 命令将在每个字段前面使用一个或多个字符来指示字段的长度。 这些字符称为“长度前缀字符” 。 有关详细信息，请参阅[使用 bcp 指定数据文件中的前缀长度 (SQL Server)](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)。  
+     当以本机格式将数据批量导出到数据文件时，为使文件存储空间最为紧凑， **bcp** 命令将在每个字段前面使用一个或多个字符来指示字段的长度。 这些字符称为“长度前缀字符” 。 有关详细信息，请参阅 [使用 bcp 指定数据文件中的前缀长度 (SQL Server)](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)。  
   
 -   字段长度  
   
@@ -92,7 +97,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  指定所有的表列后， **bcp** 命令将提示你选择生成非 XML 格式化文件，以存储刚刚提供的逐个字段信息（请参阅上述示例）。 如果选择生成格式化文件，则可以随时从表中导出数据，也可以将结构类似的数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
->  可以使用格式化文件将数据文件中的数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中，也可以使用格式化文件从表中大容量导出数据，而无需重新指定格式。 有关详细信息，请参阅[用于导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
+>  可以使用格式化文件将数据文件中的数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中，也可以使用格式化文件从表中大容量导出数据，而无需重新指定格式。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
  以下示例创建一个名为 `myFormatFile.fmt` 的非 XML 格式化文件：  
   
@@ -106,7 +111,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 >  对于使用单一数据格式（如字符或本机格式）作为文件存储类型的数据文件，可以快速创建格式化文件，而无需使用 **格式** 选项导出或导入数据。 这种方法的优点在于操作简单以及允许用户创建 XML 格式化文件或非 XML 格式化文件。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)。  
   
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [使用 bcp 指定文件存储类型 (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   

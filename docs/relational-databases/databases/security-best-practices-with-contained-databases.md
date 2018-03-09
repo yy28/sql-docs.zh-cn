@@ -8,24 +8,26 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: contained database, threats
+helpviewer_keywords:
+- contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c18410a29b500b3fd4fadfac987b1e94503ec7bb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>针对包含数据库的安全性最佳方法
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   包含的数据库面临着一些独有的威胁， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 管理员应该了解并缓解这些威胁。 大部分威胁与 **USER WITH PASSWORD** 身份验证过程相关，该过程会将身份验证的范围从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 级别转到数据库级别。  
   
@@ -61,7 +63,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>创建复制登录名的用户  
  如果创建了一个有密码的包含数据库用户，所使用的名称与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名相同，而且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进行连接时将包含的数据库指定为初始目录，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名将无法连接。 该连接将被判定为包含数据库上的具有密码主体的包含数据库用户发起，而不是基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户发起。 这可能导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名遭遇到拒绝服务。  
   
--   最佳做法是， **sysadmin** 固定服务器角色的成员应该始终考虑在连接时不使用初始目录选项。 这样会使登录名连接到 master 数据库，并可避免数据库所有者滥用登录名的可能性。 然后，管理员可以通过使用 **USE***\<数据库>* 语句更改为包含的数据库。 您也可以将登录操作的默认数据库设置为包含的数据库，这样会先登录到 **master**数据库，然后再转而登录到包含的数据库。  
+-   最佳做法是， **sysadmin** 固定服务器角色的成员应该始终考虑在连接时不使用初始目录选项。 这样会使登录名连接到 master 数据库，并可避免数据库所有者滥用登录名的可能性。 然后，管理员可以通过使用 USE\<database> 语句更改为包含的数据库。 您也可以将登录操作的默认数据库设置为包含的数据库，这样会先登录到 **master**数据库，然后再转而登录到包含的数据库。  
   
 -   最佳做法是，创建有密码的包含数据库用户时，其名称不得与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名相同。  
   

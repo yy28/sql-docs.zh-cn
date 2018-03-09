@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c302282bb88761b4e24d4e3efcd51b22ffe31c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3a2c62dc7ec2da7c8df5683feab469ecd99a22c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete---sql-command"></a>删除的 SQL 命令
 将标记为删除的记录。  
@@ -48,7 +48,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *FilterCondition*指定记录标记为要删除所必须满足的条件。 可以包含任意数量的筛选条件所需将它们连接使用 AND 或 OR 运算符。 你还可以使用 NOT 运算符颠倒的逻辑表达式时，值或可以使用**空**（) 检查是否有一个空的字段。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果设置删除设置为 ON，标记为删除的记录将忽略由包含作用域的所有命令。  
   
  删除-SQL 使用记录锁定时将标记为删除表中的多个记录打开以进行共享访问。 这将减少在多用户情况下记录争用，但会降低性能。 为获得最佳性能，打开以供独占使用的表。  

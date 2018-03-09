@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2af7ec87b34ba6b2a8482d9321905f409dd9dd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 00ec992c87cce93eb95cd85314743a109183c51f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-interval-structure"></a>C 间隔结构
 每个 C interval 数据类型中列出[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)部分使用相同的结构来包含该间隔数据。 当**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**是调用，该驱动程序到 SQL_INTERVAL_STRUCT 结构返回的数据，使用指定的值应用程序，C 数据类型 (在调用**SQLBindCol**， **SQLGetData**，或**SQLBindParameter**) 来解释 SQL_INTERVAL_STRUCT 的内容并填充*interval_type*字段具有结构*枚举*与 C 类型相对应的值。 请注意，不读取驱动程序*interval_type*字段以确定间隔的类型; 它们检索 SQL_DESC_CONCISE_TYPE 描述符字段的值。 当结构用于参数数据时，该驱动程序使用 APD SQL_DESC_CONCISE_TYPE 字段中的应用程序指定的值来解释的内容 SQL_INTERVAL_STRUCT，即使应用程序设置的值*interval_type*字段为不同的值。  

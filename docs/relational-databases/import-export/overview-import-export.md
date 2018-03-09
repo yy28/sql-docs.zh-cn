@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>在 SQL Server 和 Azure SQL 数据库中导入和导出数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]可通过多种方法在 SQL Server 和 Azure SQL 数据库中导入和导出数据。 这些方法包括 Transact-SQL 语句、命令行工具和向导。
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 可使用多种格式导入和导出数据，包括平面文件或多种其他文件格式、关系数据库和云服务。 要详细了解特定工具的这些选项，请参阅以下主题
 -   对于 SQL Server 导入和导出向导，请参阅[使用 SQL Server 导入和导出向导连接到数据源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。
 -   对于 SQL Server Integration Services，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。
--   对于 Azure 数据工厂，请参阅 [Azure 数据工厂连接器](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector)。
+-   对于 Azure 数据工厂，请参阅 [Azure 数据工厂连接器](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector)。
 
 ### <a name="commonly-used-data-formats"></a>常用的数据格式
 

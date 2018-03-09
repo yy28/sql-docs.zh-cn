@@ -2,27 +2,28 @@
 title: "从命令行安装机器学习 Server （独立） 或 Microsoft R Server （独立） |Microsoft 文档"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>从命令行安装机器学习 Server （独立） 或 Microsoft R Server （独立）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何使用 SQL Server 命令行自变量以通过使用命令行安装以下 SQL Server 功能：
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/09/2017
 
 对于 **静默** 安装，提供相同的参数并添加 **/q** 切换。 不提供任何提示，无需交互即可。 如果省略任何所需的参数，但是，安装程序将失败。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 你应知道如何执行 SQL Server 的命令行安装，并熟悉其脚本的自变量。
 
@@ -95,8 +96,8 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 默认情况下，所有 SQL server 安装日志和摘要，并在以下文件夹中创建相关的功能：
 
-+ SQL Server 自 2017 年 1:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 为你安装每项功能创建一个单独的子文件夹。
 

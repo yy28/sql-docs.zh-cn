@@ -1,11 +1,15 @@
 ---
 title: "实时查询统计信息 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/28/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,24 +18,25 @@ helpviewer_keywords:
 - debugging [SQL Server], live query stats
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5381ceb39baa1e81001d9d80c9171545038a09b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1351bb65779cd53bc87fbbe1f6e1ce2f29beddc0
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 能够查看活动查询的实时执行计划。 此实时查询计划作为控制流，能够实时了解从一个查询计划操作员到另一个操作员的查询执行过程。 实时查询计划显示总体查询进度和操作员级运行时执行统计信息（例如处理的行数、经过的时间、操作员进度等）。由于此数据是实时可用的，无需等待完成查询，因此这些执行统计信息对于调试查询性能问题非常有用。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]开始支持此功能，但它可以与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 配合使用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 能够查看活动查询的实时执行计划。 此实时查询计划作为控制流，能够实时了解从一个[查询计划操作员](../../relational-databases/showplan-logical-and-physical-operators-reference.md)到另一个操作员的查询执行过程。 实时查询计划显示总体查询进度和操作员级运行时执行统计信息（例如处理的行数、经过的时间、操作员进度等）。由于此数据是实时可用的，无需等待完成查询，因此这些执行统计信息对于调试查询性能问题非常有用。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]开始支持此功能，但它可以与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]配合使用。  
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
 > [!WARNING]  
->  此功能主要用于故障排除。 使用此功能会明显降低整体查询性能。 此功能可与 [Transact-SQL 调试器](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)配合使用。  
+> 此功能主要用于故障排除。 使用此功能会明显降低整体查询性能。 此功能可与 [Transact-SQL 调试器](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)配合使用。  
   
 #### <a name="to-view-live-query-statistics"></a>查看实时查询统计信息  
   
@@ -39,7 +44,7 @@ ms.lasthandoff: 11/09/2017
   
      ![工具栏上的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatstoolbar.png "工具栏上的“实时查询统计信息”按钮")  
   
-     还可以查看实时查询执行计划，方法是在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击所选查询，然后单击“包含实时查询统计信息” 。  
+     还可以查看实时查询执行计划，方法是在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击所选查询，然后单击“包含实时查询统计信息”。  
   
      ![弹出菜单上的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsmenu.png "弹出菜单上的“实时查询统计信息”按钮")  
   
@@ -51,14 +56,14 @@ ms.lasthandoff: 11/09/2017
   
  ![活动监视器中的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsactmon.png "活动监视器中的“实时查询统计信息”按钮")  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  必须启用统计信息配置文件基础结构，实时查询统计信息才能捕获查询进度的相关信息。 在 **中指定“包含实时查询统计信息”**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以启用当前查询会话的统计信息基础结构。 
  
 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可通过另外两种方法启用统计信息基础结构，从而查看其他会话（如活动监视器）中的实时查询统计信息：  
   
 -   在目标会话中执行 `SET STATISTICS XML ON;` 或 `SET STATISTICS PROFILE ON;` 。  
   
- 或  
+ 或多个  
   
 -   启用 **query_post_execution_showplan** 扩展事件。 这是一个服务器级设置，用于启用所有会话中的实时查询统计信息。 若要启用扩展事件，请参阅 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
 
@@ -66,7 +71,7 @@ ms.lasthandoff: 11/09/2017
 
 -   使用全局跟踪标志 7412。  
   
- 或  
+ 或多个  
   
 -   启用 **query_thread_profile** 扩展事件。 这是一个服务器级设置，用于启用所有会话中的实时查询统计信息。 若要启用扩展事件，请参阅 [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。
   
@@ -77,11 +82,12 @@ ms.lasthandoff: 11/09/2017
  需要数据库级别 **SHOWPLAN** 权限来填充“实时查询统计信息”  结果页，需要服务器级别 **VIEW SERVER STATE** 权限来查看实时统计信息，还需要执行查询所需的所有权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
- [打开活动监视器 (SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
- [活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)   
- [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)   
- [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)   
- [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+ [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
+ [打开活动监视器 (SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
+ [活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)     
+ [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
+ [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
+ [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
+ [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)

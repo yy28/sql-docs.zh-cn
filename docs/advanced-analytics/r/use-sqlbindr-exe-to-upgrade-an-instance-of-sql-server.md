@@ -2,28 +2,30 @@
 title: "升级 SQL Server 实例中的机器学习组件 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016 CTP3)
+applies_to:
+- SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升级 SQL Server 实例中的机器学习组件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍的过程_绑定_，可以用于升级机器学习在 SQL Server 中使用的组件。 绑定的进程锁定服务器到基于在版本的机器学习服务器上的更新频率、 而不是使用 SQL Server 版本和更新计划。
 
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/09/2017
 
 升级机器学习组件的过程中被称为**绑定**，因为它将更改要使用新的现代软件生命周期策略的 SQL Server 计算机学习组件支持模型。 
 
-一般情况下，切换到新的授权模型可确保数据科学家可以始终使用最新版本的 R 或 Python。 有关现代的生命周期策略的条款的详细信息，请参阅[Microsoft R Server 的支持时间线](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
+一般情况下，切换到新的维护模式可确保数据科学家可以始终使用最新版本的 R 或 Python。 有关现代的生命周期策略的条款的详细信息，请参阅[Microsoft R Server 的支持时间线](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)。
 
 > [!NOTE]
 > 升级不会更改 SQL Server 数据库的支持模型，并不会更改 SQL Server 的版本。

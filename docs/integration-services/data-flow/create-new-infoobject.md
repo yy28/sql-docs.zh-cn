@@ -1,5 +1,5 @@
 ---
-title: "创建新的 InfoObject |Microsoft 文档"
+title: "新建 InfoObject | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0135f5cbbe81cbe8d4a8c530a1d63c84a27f7d2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 50f319341ba89890f67b77f698ff3411c9ab820e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-new-infoobject"></a>新建 InfoObject
   使用 **“新建 InfoObject”** 对话框在 SAP Netweaver BW 系统中创建新的 InfoObject。  
@@ -137,7 +136,7 @@ ms.lasthandoff: 08/03/2017
  **InfoObject 类型**  
  查看 InfoObject 的类型。 下表列出了该类型的可能值。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |CHA|特征|  
 |KYF|关键数字|  
@@ -147,7 +146,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="attributes-options"></a>属性选项  
  使用以下选项添加和删除所创建的 InfoObject 的属性：  
   
- **添加**  
+ **“添加”**  
  添加现有的 InfoObject 作为属性。  
   
  要添加现有 InfoObject，请单击“添加”，然后使用 **“查找 InfoObject”** 对话框查找 InfoObject。 有关此对话框的详细信息，请参阅 [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md)。  
@@ -161,11 +160,10 @@ ms.lasthandoff: 08/03/2017
  从“属性”列表删除选择的 InfoObject。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建事务数据的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
- [创建 InfoSource](../../integration-services/data-flow/create-infosource.md)   
+ [“创建事务数据的 InfoCube”](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
+ [“创建 InfoSource”](../../integration-services/data-flow/create-infosource.md)   
  [创建事务数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [创建主数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

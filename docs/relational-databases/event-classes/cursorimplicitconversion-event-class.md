@@ -2,27 +2,33 @@
 title: "CursorImplicitConversion 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: CursorImplicitConversion event class
+helpviewer_keywords:
+- CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0df0c49826717dbfedc3875f91e634c4ae0b8d87
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 62c9ff7500944f749523a2aa42f01d8106bf54d5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 事件类
-  **CursorImplicitConversion** 事件类描述了应用程序编程接口 (API) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标中发生的游标隐式转换事件。 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 执行所请求类型的服务器游标不支持的 Transact-SQL 语句时，就会发生游标隐式转换事件。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回一个指示游标类型已更改的错误。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**CursorImplicitConversion** 事件类描述了应用程序编程接口 (API) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标中发生的游标隐式转换事件。 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 执行所请求类型的服务器游标不支持的 Transact-SQL 语句时，就会发生游标隐式转换事件。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回一个指示游标类型已更改的错误。  
   
  将 **CursorImplicitConversion** 事件类包括在记录游标性能的跟踪内。  
   
@@ -30,7 +36,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="cursorimplicitconversion-event-class-data-columns"></a>CursorImplicitConversion 事件类的数据列  
   
-|数据列名称|数据类型|说明|列 ID|可筛选|  
+|数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |**BinaryData**|**图像**|得到的游标类型。 值为：<br /><br /> 1 = 键集<br /><br /> 2 = 动态<br /><br /> 4 = 只进<br /><br /> 8 = 静态<br /><br /> 16 = 快进|2|是|  
@@ -50,7 +56,7 @@ ms.lasthandoff: 11/09/2017
 |**NTUserName**|**nvarchar**|Windows 用户名。|6|是|  
 |**RequestID**|**int**|隐式转换的请求标识符。|49|是|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  

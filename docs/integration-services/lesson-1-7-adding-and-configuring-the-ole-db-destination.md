@@ -1,11 +1,11 @@
 ---
-title: "步骤 7： 添加和配置 OLE DB 目标 |Microsoft 文档"
+title: "步骤 7：添加和配置 OLE DB 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e50d2f6d1622cc124cf8b55fbd1ae14811d5cc9c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 125045500038af764f10ec3746ade7e7069a4817
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>课程 1-7-添加和配置 OLE DB 目标
+# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>第 1-7 课 - 添加和配置 OLE DB 目标
 现在，您的包可以从平面文件源中提取数据，并将数据转换为与目标兼容的格式。 下一个任务是将已转换的数据实际加载到目标。 若要加载数据，您必须将 OLE DB 目标添加到数据流。 OLE DB 目标可以使用数据库表、视图或 SQL 命令将数据加载到各种 OLE DB 兼容的数据库中。  
   
 在此过程中，您将添加和配置 OLE DB 目标以使用以前创建的 OLE DB 连接管理器。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  在“表或视图的名称”框中，键入或选择 **[dbo].[FactCurrencyRate]**。  
   
-8.  单击“新建”按钮以创建新表。  将脚本中表的名称更改为 **NewFactCurrencyRate**。  单击 **“确定”**。  
+8.  单击“新建”按钮以创建新表。  将脚本中表的名称更改为 **NewFactCurrencyRate**。  单击“确定” 。  
   
 9. 单击“确定”后，该对话框将关闭，“表或视图的名称”将自动更改为 **NewFactCurrencyRate**。  
   
@@ -56,7 +55,7 @@ ms.lasthandoff: 09/26/2017
   
 11. 验证 **AverageRate**、**CurrencyKey**、**EndOfDayRate** 以及 **DateKey** 输入列是否已正确映射到目标列。 如果映射了同名列，则说明映射正确。  
   
-12. 单击 **“确定”**。  
+12. 单击“确定” 。  
   
 13. 右键单击 **Sample OLE DB Destination** 目标，再单击“属性”。  
   
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

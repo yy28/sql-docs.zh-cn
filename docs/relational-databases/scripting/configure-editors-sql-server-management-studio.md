@@ -2,26 +2,30 @@
 title: "配置编辑器 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 490371ad28d81368a3cd4fad5246285094545c54
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6085dc6fe12622915eca8f01ff10df020e69bbde
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>配置编辑器 (SQL Server Management Studio)
-  您可以通过为每个编辑器配置选项，自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器的操作。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]可以通过为每个编辑器配置选项，自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器的操作。  
   
 ## <a name="settng-editor-options"></a>设置编辑器选项  
  通过使用 **“工具”** 菜单，然后选择 **“选项…”** 以便显示 **“选项”** 对话框，可设置大多数编辑器选项。 在 **“选项”** 对话框中，打开左侧窗格中的 **“文本编辑器”** 节点，以便设置代码和文本编辑选项。 “文本编辑器”下方的节点适用于特定编辑器：  

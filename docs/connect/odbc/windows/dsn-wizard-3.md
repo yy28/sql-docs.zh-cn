@@ -8,20 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8803b1a18ce1a0987c9ebfcbd718345cfc3ef60
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-source-wizard-screen-3"></a>数据源向导屏幕 3
 
@@ -82,6 +83,10 @@ WHERE "LastName" = 'O''Brien'
 ### <a name="column-encryption"></a>列加密。
 
 启用自动解密和加密的数据传输到和使用加密的列从[始终加密](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)位于 SQL Server 2016 及更高版本的功能。
+
+### <a name="use-fmtonly-metadata-discovery"></a>使用 FMTONLY 元数据发现：
+
+在连接到 SQL Server 2012 或更高版本时，请使用旧的 SET FMTONLY 元数据发现方法。 只有在使用不支持的查询时，才启用此[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，例如那些包含临时表。 
 
 ### <a name="next"></a>Next
 

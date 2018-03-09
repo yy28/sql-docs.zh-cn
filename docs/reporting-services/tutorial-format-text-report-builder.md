@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ef86f150b0fdbc1184ed4e54752bcd50af584fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5791f58be1674011744036de4c6ddd5c5c90754
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
 
@@ -323,7 +323,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  在“常规”选项卡上的“标记类型”下，单击“HTML - 将 HTML 标记解释为样式”。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 8.  单击“运行” (**!**) 以预览报表。  
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  单击 **“保存”**。  
 
-## <a name="next-steps"></a>后续步骤
+## <a name="next-steps"></a>Next Steps
 
 有许多方式可以在报表生成器中设置文本的格式。 [教程：创建自由格式的报表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)中提供了更多示例。  
 

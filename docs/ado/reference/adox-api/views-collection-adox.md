@@ -3,8 +3,9 @@ title: "查看集合 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Catalog::Views
 - Views
-helpviewer_keywords: Views collection [ADOX]
+helpviewer_keywords:
+- Views collection [ADOX]
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11a8bad0bb61e0f0256b31a24eaf3f283d645a45
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1eabbf43dbfffaf3304b72b18adc15cce4e75e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-collection-adox"></a>视图集合 (ADOX)
 包含所有[视图](../../../ado/reference/adox-api/view-object-adox.md)的目录对象。  

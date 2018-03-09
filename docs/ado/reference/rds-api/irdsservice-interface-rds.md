@@ -3,8 +3,9 @@ title: "IRDSService 接口 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: IRDSService interface [ADO]
+helpviewer_keywords:
+- IRDSService interface [ADO]
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eea463bcaf2131605170ccfe10a6c724fb27474b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e360c609905f7983de95c704fe49ca72d043f71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 接口 (RDS)
 公开[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)方法，用于将指针返回到所请求的接口，该对象的功能更强大版本上。  

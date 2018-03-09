@@ -3,9 +3,13 @@ title: "处理多个作业步骤 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - SQL Server Agent jobs, job steps
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dbdbaa5f10ef2903793628e0b8b4adbd57b575c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d193665f6d46a1e21ed397e3fe33c22afa95cc8b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="handle-multiple-job-steps"></a>处理多个作业步骤
-如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为流控制。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为“流控制”。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
   
 ![SQL Server 代理作业步骤控制流](../../ssms/agent/media/dbflow01.gif "SQL Server 代理作业步骤控制流")  
   
@@ -41,7 +46,7 @@ ms.lasthandoff: 11/09/2017
 作业步骤必须自包含。 也就是说，作业不能在作业步骤之间传递布尔值、数据或数值。 但可以使用永久表或全局临时表在 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤之间传递值。 可以使用文件在运行可执行程序的作业步骤之间传递值。 例如，一个作业步骤运行的可执行程序向一个文件写入数据，后续作业步骤运行的可执行程序读取该文件。  
   
 > [!NOTE]  
-> 如果创建循环作业步骤（作业步骤 1 后面跟着作业步骤 2，然后作业步骤 2 又返回到作业步骤 1），则在使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]创建作业时会出现警告消息。  
+> 如果创建循环作业步骤（作业步骤 1 后面跟着作业步骤 2，然后作业步骤 2 又返回到作业步骤 1），则在使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 创建作业时会出现警告消息。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在作业历史记录中记录作业和作业步骤信息。  
   

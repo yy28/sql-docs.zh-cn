@@ -1,25 +1,28 @@
 ---
 title: "机器学习 Python 服务 |Microsoft 文档"
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: af81754d0e6b87546432ea864098da4615522670
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7051781664efd2924dcb187d456197bc9bc88686
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="machine-learning-services-with-python"></a>机器学习服务与 Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python 是机器的一种语言提供极大的灵活性和各种不同学习任务的能力。 For Python 开放源代码库包含多个平台的可自定义神经网络，以及用于自然语言处理的常用库。 现在，SQL Server 自 2017 年 1 CTP 2.0 及更高版本支持此广泛使用的语言。
 

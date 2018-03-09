@@ -3,8 +3,11 @@ title: "目标服务器（“下载指令”选项卡）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0970096232b11b1a63fa3a5bee8a9fae846c9d5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: efcff48660ec1ac7e29954e85ebd01408956b7cb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="target-servers-download-instructions-tab"></a>目标服务器（“下载指令”选项卡）
-使用此页可以显示和更新一个或多个目标服务器的下载指令。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此页可以显示和更新一个或多个目标服务器的下载指令。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **目标服务器**  
 选择要查看或修改其指令的服务器。  
   

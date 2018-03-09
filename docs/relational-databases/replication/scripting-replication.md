@@ -2,9 +2,12 @@
 title: "编写复制脚本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - transactional replication, scripting
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 572e3be190b2743cdbb28893796a89c3b4bdac32
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8e4748752f96591ef331f3740d3b4529f5e1f456
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="scripting-replication"></a>编写复制脚本
-  制订灾难恢复计划时，应要求对拓扑中的所有复制组件编写脚本，另外，脚本还可以用来自动处理重复性的任务。 脚本包含为实现要为其编写脚本的复制组件所需的 Transact-SQL 系统存储过程，如发布或订阅。 创建完组件后，可以在向导（如新建发布向导）或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建脚本。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**查看、修改和运行脚本。 脚本可以与备份文件存储在一起，以便在必须重新配置复制拓扑时使用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]制订灾难恢复计划时，应要求对拓扑中的所有复制组件编写脚本，另外，脚本还可以用来自动处理重复性的任务。 脚本包含为实现要为其编写脚本的复制组件所需的 Transact-SQL 系统存储过程，如发布或订阅。 创建完组件后，可以在向导（如新建发布向导）或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建脚本。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**查看、修改和运行脚本。 脚本可以与备份文件存储在一起，以便在必须重新配置复制拓扑时使用。  
   
  如果更改了属性，便需要为组件重新编写脚本。 如果对事务复制使用自定义存储过程，则应与脚本一起存储每个过程的副本。如果过程发生更改，应更新相应的副本（通常会由于架构更改或应用程序要求的更改而更新过程）。 有关自定义过程的详细信息，请参阅[指定如何传播事务项目的更改](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   

@@ -3,34 +3,34 @@ title: "为 SQL Server 配置 Red Hat Enterprise Linux 共享的群集 |Microsof
 description: "通过为 SQL Server 配置 Red Hat Enterprise Linux 共享的磁盘群集实现高可用性。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本指南介绍如何为 Red Hat Enterprise Linux 上的 SQL Server 创建两节点共享磁盘群集。 聚类分析层基于 Red Hat Enterprise Linux (RHEL) 上[HA 外接程序](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)基础上构建[Pacemaker](http://clusterlabs.org/)。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
 
 > [!NOTE] 
 > Red Hat HA 外接程序和文档的访问要求一个订阅。 
 
-如下图所示，存储将呈现给两个服务器。 群集组件 - Corosync 和 Pacemaker - 协调通信和资源管理。 一台服务器具有到存储资源和 SQL Server 的活动连接。 当 Pacemaker 检测到故障时，群集组件负责管理将资源移到另一个节点。  
+下图所示，到两个服务器提供存储。 群集组件 - Corosync 和 Pacemaker - 协调通信和资源管理。 一台服务器具有到存储资源和 SQL Server 的活动连接。 当 Pacemaker 检测到故障时，群集组件负责管理将资源移到另一个节点。  
 
 ![Red Hat Enterprise Linux 7 共享磁盘 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -39,13 +39,13 @@ ms.lasthandoff: 11/20/2017
 
 > [!NOTE] 
 > 这种情况下，SQL Server 与 Pacemaker 的集成不及与 Windows 版的 WSFC 集成的耦合性高。 在 SQL 内部，无法了解到群集是否存在，所有业务流程都是由外至内，并且 Pacemaker.将该服务作为一个独立实例控制。 此外例如，群集 dmv sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 将任何记录。
-为了使用指向字符串服务器名称的连接字符串，且不使用 IP，它们需要在其 DNS 服务器中注册用于创建使用选定服务器名称的虚拟 IP 资源的 IP（如下文所述）。
+若要使用的连接字符串指向字符串服务器的名称，并不使用该 IP，他们将需要在中注册其 DNS 服务器用来创建虚拟 IP 资源 （如以下各节中所述） 的 IP 选的服务器名称。
 
 以下各部分介绍了设置故障转移群集解决方案的步骤。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
-若要完成以下端到端方案需要两台计算机部署两个节点群集和另一台服务器配置 NFS 服务器。 以下步骤概述了如何配置这些服务器。
+若要完成以下的端到端方案，你需要两台计算机部署两个节点群集和另一台服务器配置 NFS 服务器。 以下步骤概述了如何配置这些服务器。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>在每个群集节点上安装和配置操作系统
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每个群集节点上安装和配置 SQL Server
 
-1. 在两个节点上安装和设置 SQL Server。  有关详细说明请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
+1. 在两个节点上安装和设置 SQL Server。  有关详细说明，请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
 
 1. 出于配置目的，请将一个节点指定为主要节点，而将另一个指定为辅助节点。 使用以下术语，按照此指南操作。  
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE] 
 > 在安装时，服务器主密钥是生成的 SQL Server 实例和放在`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
 
-1. 在主节点上，为 Pacemaker 创建的 SQL server 登录名和授予登录权限运行`sp_server_diagnostics`。 Pacemaker 将用此帐户验证哪个节点正在运行 SQL Server。 
+1. 在主节点上，为 Pacemaker 创建的 SQL server 登录名和授予登录权限运行`sp_server_diagnostics`。 Pacemaker 使用此帐户来验证哪些节点正在运行 SQL Server。 
 
    ```bash
    sudo systemctl start mssql-server
@@ -125,25 +125,25 @@ ms.lasthandoff: 11/20/2017
 
 NFS 服务器上执行以下操作：
 
-1. 安装`nfs-utils`
+1. 安装 `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
    ```
 
-1. 启用和开始`rpcbind`
+1. 启用和开始 `rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. 启用和开始`nfs-server`
+1. 启用和开始 `nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  编辑`/etc/exports`导出您想要共享的目录。 每个所需共享需要 1 行。 例如： 
+1.  编辑`/etc/exports`导出您想要共享的目录。 你需要为所需的每个共享的 1 行。 例如： 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -180,7 +180,7 @@ NFS 服务器上执行以下操作：
 
 执行以下步骤在所有群集节点上。
 
-1.  从 NFS 服务器中，安装`nfs-utils`
+1.  安装 `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -203,7 +203,7 @@ NFS 服务器上执行以下操作：
 
 1. 对所有群集节点重复这些步骤。
 
-有关如何使用 NFS 的详细信息，请参阅以下资源：
+有关使用 NFS 的详细信息，请参阅以下资源：
 
 * [NFS 服务器和 firewalld |堆栈 Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [装载 NFS 卷 |Linux 网络管理员指南](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
@@ -214,7 +214,7 @@ NFS 服务器上执行以下操作：
 1.  **在主节点上**，将数据库文件保存到临时位置。以下脚本，创建新的临时目录、 将数据库文件复制到新的目录中，并删除旧的数据库文件。 以本地用户 mssql 身份运行 SQL Server 时，需要确保将数据传输到装载的共享后，本地用户对共享具有读写权限。 
 
    ``` 
-   $ su mssql
+   $ sudo su mssql
    $ mkdir /var/opt/mssql/tmp
    $ cp /var/opt/mssql/data/* /var/opt/mssql/tmp
    $ rm /var/opt/mssql/data/*
@@ -233,16 +233,16 @@ NFS 服务器上执行以下操作：
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->如果按照下面的建议使用文件系统 (FS) 资源，则无需保留 /etc/fstab 中的装载命令。 Pacemaker 将负责在启动 FS 群集资源时装载文件夹。 借助隔离，可确保永远不会装载 FS 两次。 
+>如果使用文件系统 (FS) 资源根据建议此处，，则无需保留 /etc/fstab 中的安装命令。 Pacemaker 将负责在启动 FS 群集资源时装载文件夹。 帮助隔离的情况下，它将确保 FS 永远不会两次挂载。 
 
 1.  运行`mount -a`若要更新的安装的路径，使系统命令。  
 
 1.  将保存到数据库和日志文件复制`/var/opt/mssql/tmp`到新已装载的共享`/var/opt/mssql/data`。 此操作仅需进行**的主节点上**。 请确保为 mssql 本地用户提供读的写权限。
 
    ``` 
-   $ chown mssql /var/opt/mssql/data
-   $ chgrp mssql /var/opt/mssql/data
-   $ su mssql
+   $ sudo chown mssql /var/opt/mssql/data
+   $ sudo chgrp mssql /var/opt/mssql/data
+   $ sudo su mssql
    $ cp /var/opt/mssql/tmp/* /var/opt/mssql/data/
    $ rm /var/opt/mssql/tmp/*
    $ exit
@@ -265,8 +265,8 @@ NFS 服务器上执行以下操作：
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+   echo '<loginName>' | sudo tee -a /var/opt/mssql/secrets/passwd
+   echo '<loginPassword>' | sudo tee -a /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
@@ -332,10 +332,9 @@ NFS 服务器上执行以下操作：
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. 为 SQL Server、文件系统和虚拟 IP 资源配置群集资源，并将配置推送到群集。 你将需要以下信息：
+2. 为 SQL Server、文件系统和虚拟 IP 资源配置群集资源，并将配置推送到群集。 你需要以下信息：
 
    - **SQL Server 资源名称**： 群集的 SQL Server 资源的名称。 
-   - **超时值**： 超时值是群集等待的时间量时将资源联机。 对于 SQL Server，这是希望 SQL Server 以使所需的时间`master`数据库联机。  
    - **浮动 IP 资源名称**： 虚拟 IP 地址资源的名称。
    - **IP 地址**： 客户端将用于连接到 SQL Server 的群集实例的 IP 地址。 
    - **文件系统资源名称**： 文件系统资源的名称。
@@ -343,11 +342,11 @@ NFS 服务器上执行以下操作：
    - **设备**： 装载此共享的本地路径
    - **fstype**： 文件共享类型 (即 nfs)
 
-   通过以下脚本更新环境的值。 在一个节点上运行，以配置并启动群集服务。  
+   更新你的环境的以下脚本中的值。 在一个节点上运行，以配置并启动群集服务。  
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg resource create <fileShareResourceName> Filesystem device=<networkPath> directory=<localPath>         fstype=<fileShareType>
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
@@ -359,7 +358,7 @@ NFS 服务器上执行以下操作：
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha

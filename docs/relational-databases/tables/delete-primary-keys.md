@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - deleting primary keys
 - primary keys [SQL Server], deleting
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d323df73b07a65b7415aa1967d480436c997e30
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 185ab2d26ef049e211ae42624dae3e1517361cca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="delete-primary-keys"></a>删除主键
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **开始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **使用以下工具删除主键：**  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  若要撤消此操作，请关闭该表而不保存更改。 若要撤消删除主键操作，就无法避免丢失对表做出的所有其他更改。  
   
-3.  在“文件”菜单上，单击“保存”以保存表名。  
+3.  在“文件”菜单上，单击“保存table name”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 该示例首先标识主键约束的名称，然后删除该约束。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例首先标识主键约束的名称，然后删除该约束。  
   
     ```  
     USE AdventureWorks2012;  

@@ -1,10 +1,13 @@
 ---
-title: "FTP 连接管理器 |Microsoft 文档"
+title: "FTP 连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,16 +19,16 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 051dc7db2ef8aa475fa8739b097edd93d8286524
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 25fa55ddb7dc23df266460732e78712551230b26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
   FTP 连接管理器使得包可以连接到文件传输协议 (FTP) 服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 FTP 任务使用此连接管理器。  
@@ -57,11 +60,11 @@ ms.lasthandoff: 08/09/2017
  FTP 连接管理器可以使用主动模式或被动模式发送和接收文件。 在主动模式下，由服务器初始化数据连接；而在被动模式下，由客户端初始化数据连接。  
   
 ## <a name="configuration-of-the-ftp-connection-manager"></a>FTP 连接管理器的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请参阅 [TP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)。  
   
- 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
 ## <a name="ftp-connection-manager-editor"></a>FTP 连接管理器编辑器
   使用 **“FTP 连接管理器编辑器”** 对话框可以指定用于连接到 FTP 服务器的属性。  
@@ -71,21 +74,21 @@ ms.lasthandoff: 08/09/2017
   
  若要了解有关 FTP 连接管理器的详细信息，请参阅 [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **服务器名称**  
  提供 FTP 服务器的名称。  
   
  **服务器端口**  
  指定用来连接的 FTP 服务器的端口号。 此属性的默认值为 **21**。  
   
- **用户名**  
+ **User name**  
  提供用于访问 FTP 服务器的用户名。 此属性的默认值为“匿名”。   
   
  **密码**  
  提供用于访问 FTP 服务器的密码。  
   
  **超时值(秒)**  
- 指定任务超时之前经过的秒数。 如果值为 **0** ，则表示不限制时间。 此属性的默认值为 **60**。  
+ 指定任务超时之前经过的秒数。如果值为 **0** ，则表示不限制时间。 此属性的默认值为 **60**。  
   
  **使用被动模式**  
  指定是由服务器还是由客户端启动连接。 服务器使用主动模式启动连接，客户端使用被动模式启动连接。 此属性的默认值为“主动模式”。   
@@ -99,8 +102,8 @@ ms.lasthandoff: 08/09/2017
  **测试连接**  
  在配置 FTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [FTP 任务](../../integration-services/control-flow/ftp-task.md)   
- [Integration Services &#40;SSIS &#41;连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

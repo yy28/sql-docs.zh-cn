@@ -3,8 +3,9 @@ title: "流 （Visual c + + 语法索引与 #import） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
-helpviewer_keywords: Stream collection [ADO]
+dev_langs:
+- C++
+helpviewer_keywords:
+- Stream collection [ADO]
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8591b484861c1ce7a9549c0cefa1fedeef78ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8adb3a741d04184e313df146ffaacb0f3b4e5e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>流 （Visual c + + 语法索引与 #import）
 ## <a name="methods"></a>方法  

@@ -1,27 +1,27 @@
 ---
 title: "排除 Reporting Services 安装故障 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: "16"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a1e9828a77aac1449f7dbd273ec8deecddf4384a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d71e0f0bfd70ec17552a6114c4378bd79bdfff25
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
 
@@ -274,12 +274,12 @@ ms.lasthandoff: 12/05/2017
 >  错误编辑注册表会严重损坏您的系统。 更改注册表之前，应当备份计算机中的所有重要数据。  
   
 ##  <a name="bkmk_additional"></a> 其他资源  
- 下面是可以查阅的用来帮助您解决问题的其他资源：  
+ 可以查阅以下资源，帮助解决问题：  
   
--   TechNet Wiki：故障排除主题 [排除 SharePoint 集成模式下的 SQL Server Reporting Services (SSRS) 问题](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   TechNet Wiki：[排除 SharePoint 2010 集成模式下的 SQL Server Reporting Services (SSRS) 问题](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
 -   [论坛：SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置") [通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)。  
+-   获得反馈或提出更多问题？ 请访问 [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server)。  
   
   

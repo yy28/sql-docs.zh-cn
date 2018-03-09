@@ -1,5 +1,5 @@
 ---
-title: "创建自定义连接管理器 |Microsoft 文档"
+title: "创建自定义连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,17 +16,16 @@ applies_to:
 helpviewer_keywords:
 - custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c617741134c19c012f487bc00263c2e4b071810
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4475be5ca48df7445fd92780258f41c9f059b84c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-custom-connection-manager"></a>创建自定义连接管理器
   创建自定义连接管理器时必须遵循的步骤与创建任何其他 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 自定义对象的步骤相似。  
@@ -46,16 +44,16 @@ ms.lasthandoff: 08/03/2017
 ## <a name="getting-started-with-a-custom-connection-manager"></a>自定义连接管理器入门  
   
 ### <a name="creating-projects-and-classes"></a>创建项目和类  
- 由于所有托管连接管理器都派生自 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基类，因此创建自定义连接管理器的第一步是以您首选的托管编程语言创建一个类库项目，然后创建一个从该基类继承的类。 在此派生类中，你将重写的方法和属性的基类，来实现自定义功能。  
+ 由于所有托管连接管理器都派生自 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基类，因此创建自定义连接管理器的第一步是以您首选的托管编程语言创建一个类库项目，然后创建一个从该基类继承的类。 在此派生类中重写基类的属性和方法可实现自定义功能。  
   
  在同一解决方案中，创建另一个类库项目，用于自定义用户界面。 为便于部署，建议对用户界面使用单独的程序集，因为这可使您分别更新和重新部署连接管理器或其用户界面。  
   
  将这两个项目配置为使用强名称密钥文件对在生成时产生的程序集进行签名。  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>应用 DtsConnection 属性  
- 对已创建的类应用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性，以将其标识为连接管理器。 此属性提供设计时信息，例如连接管理器的名称、说明和连接类型。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A>和**说明**属性对应于**类型**和**说明**中显示的列**添加 SSIS 连接管理器**对话框中，配置中的包的连接时显示[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。  
+ 对已创建的类应用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性，以将其标识为连接管理器。 此属性提供设计时信息，例如连接管理器的名称、说明和连接类型。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> 和 **Description** 属性与“添加 SSIS 连接管理器”对话框中显示的“类型”和“说明”列相对应，该对话框在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中为包配置连接时显示。  
   
- 使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 属性将连接管理器链接到其自定义用户界面。 若要获取此属性，你使用需要的公钥令牌**sn.exe-t**以显示从你想要用于对用户接口程序集进行签名的密钥对 (.snk) 文件的公钥令牌。  
+ 使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 属性将连接管理器链接到其自定义用户界面。 要获取此属性所需的公钥令牌，可使用 sn.exe -t 来显示要用于对用户界面程序集签名的密钥对 (.snk) 文件中的公钥令牌。  
   
 ```vb  
 <DtsConnection(ConnectionType:="SQLVB", _  
@@ -81,11 +79,10 @@ ConnectionManagerBase
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>生成、部署和调试自定义连接管理器  
- 在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中生成、部署和调试自定义连接管理器的步骤与其他自定义对象类型所需的步骤相似。 有关详细信息，请参阅[构建，Deploying，and Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。    
+ 在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中生成、部署和调试自定义连接管理器的步骤与其他自定义对象类型所需的步骤相似。 有关详细信息，请参阅[生成、部署和调试自定义对象](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。    
   
 ## <a name="see-also"></a>另请参阅  
- [编码自定义连接管理器](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
- [开发的自定义连接管理器的用户界面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [编写自定义连接管理器代码](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
+ [为自定义连接管理器开发用户界面](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

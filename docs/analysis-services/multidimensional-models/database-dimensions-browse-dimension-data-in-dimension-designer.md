@@ -2,32 +2,33 @@
 title: "浏览维度设计器中的维度数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dimensions [Analysis Services], browsing
 - browsing dimensions [Analysis Services]
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12705a8050d395925dd5345802b9c6b11d9925b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2dcff92682a8e860d5c63bdf3dcf1e6b4518b732
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>数据库维度的维度设计器中浏览维度数据
-  可以使用维度设计器中的 **“浏览器”** 视图浏览维度中的数据，可通过 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问维度设计器。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以使用维度设计器中的 **“浏览器”** 视图浏览维度中的数据，可通过 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问维度设计器。  
   
  为使维度数据能够在 **“浏览器”** 视图中显示，维度必须处于已处理状态。 有关详细信息，请参阅[处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/17/2017
     >  该维度中必须有一个以选定的语言定义的翻译。  
   
 ## <a name="see-also"></a>另请参阅  
- [维度简介（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
+ [维度 &#40; 简介Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
  [多维模型中的维度](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

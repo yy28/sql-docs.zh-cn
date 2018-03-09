@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_filestream_file_io_handles
 - dm_filestream_file_io_handles_TSQL
 - sys.dm_filestream_file_io_handles_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_filestream_file_io_handle catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46b8bd6e5696cf9a2e1b3d1f460e5f1885ed2009
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5a683718e8e87aa44ac4049684b5095fe2a47abb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +40,18 @@ ms.lasthandoff: 11/17/2017
   
 |列|类型|Description|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary （8)**|显示与客户端的句柄相关联的内部 NSO 结构的地址。 可以为 Null。|  
+|**handle_context_address**|**varbinary(8)**|显示与客户端的句柄相关联的内部 NSO 结构的地址。 可以为 Null。|  
 |**creation_request_id**|**int**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 不可为 null。|  
 |**creation_irp_id**|**int**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 不可为 Null。|  
 |**handle_id**|**int**|显示驱动程序分配给此句柄的唯一 ID。 不可为 null。|  
-|**creation_client_thread_id**|**varbinary （8)**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 可以为 Null。|  
-|**creation_client_process_id**|**varbinary （8)**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 可以为 Null。|  
+|**creation_client_thread_id**|**varbinary(8)**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 可以为 Null。|  
+|**creation_client_process_id**|**varbinary(8)**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 可以为 Null。|  
 |**filestream_transaction_id**|**varbinary(128)**|显示与给定句柄相关联的事务的 ID。 这是返回的值**get_filestream_transaction_context**函数。 使用此字段来将联接到**sys.dm_filestream_file_io_requests**视图。 可以为 Null。|  
 |**access_type**|**nvarchar(60)**|不可为 null。|  
-|**logical_path 收集**|**nvarchar(256)**|显示此句柄打开的文件的逻辑路径名。 这是通过返回的同一路径名称**。路径名**方法**varbinary**(**max**) filestream。 可以为 Null。|  
-|**physical_path 收集**|**nvarchar(256)**|显示文件的实际 NTFS 路径名。 这是通过返回的同一路径名称**。PhysicalPathName**方法**varbinary**(**max**) filestream。 它由跟踪标志 5556 启用。 可以为 Null。|  
+|**logical_path**|**nvarchar(256)**|显示此句柄打开的文件的逻辑路径名。 这是通过返回的同一路径名称**。路径名**方法**varbinary**(**max**) filestream。 可以为 Null。|  
+|**physical_path**|**nvarchar(256)**|显示文件的实际 NTFS 路径名。 这是通过返回的同一路径名称**。PhysicalPathName**方法**varbinary**(**max**) filestream。 它由跟踪标志 5556 启用。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  

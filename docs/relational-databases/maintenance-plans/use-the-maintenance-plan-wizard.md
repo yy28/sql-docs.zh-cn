@@ -1,9 +1,13 @@
 ---
 title: "使用维护计划向导 | Microsoft Docs"
 ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -33,18 +37,18 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 64d2ad2fb4f75d69244ffad6e76c3cef6274309d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
-  本主题介绍了如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍了如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用维护计划向导创建单服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
     
  
 ##  <a name="Restrictions"></a> 限制和局限  
@@ -55,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 
 若要防止在运行维护计划、数据收集组和其它 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时提升特权，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为具有有限特权的代理帐户，或仅将 **sysadmin** 成员添加到 **db_ssisadmin** 和 **dc_admin** 角色。  
 
-##  <a name="Prerequisite"></a> 先决条件 
+##  <a name="Prerequisite"></a> Prerequisites 
 必须启用 [“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)。
   
   
@@ -156,7 +160,7 @@ ms.lasthandoff: 11/09/2017
  “数据库”列表  
  指定受此任务影响的数据库。  
   
- -  **所有数据库**  
+ -  **“所有数据库”**  
   
 生成的维护计划将对除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases except **tempdb**.  
   
@@ -503,7 +507,7 @@ ms.lasthandoff: 11/09/2017
      **操作**  
      指定每个操作的类型和名称。  
   
-     **状态**  
+     **“状态”**  
      指示向导操作作为一个整体返回的值是“成功”还是“失败”。  
   
      **消息**  

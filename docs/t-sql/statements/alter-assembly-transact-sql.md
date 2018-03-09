@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ASSEMBLY_TSQL
 - ALTER ASSEMBLY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - assemblies [CLR integration], modifying
 - refreshing assemblies
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - adding files
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1a0a6da27bc534e22da2995fa592d6b430d418
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,10 +75,10 @@ ALTER ASSEMBLY assembly_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *程序集 _ 名称*  
+ *assembly_name*  
  要修改的程序集的名称。 *程序集 _ 名称*必须已存在于数据库。  
   
- 从\<client_assembly_specifier > |\<assembly_bits >  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  将程序集更新到保存其实现的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本。 仅当没有与指定程序集关联的文件时才能使用此选项。  
   
  \<client_assembly_specifier > 指定的网络或正在刷新的程序集所在的位置的本地位置。 网络位置包括计算机名称、共享名称和该共享中的路径。 *manifest_file_name*指定包含程序集清单的文件的名称。  
@@ -115,7 +117,7 @@ ALTER ASSEMBLY assembly_name
   
  有关详细信息，请参阅[实现的程序集](../../relational-databases/clr-integration/assemblies-implementing.md)。  
   
- [删除文件 { *file_name*[ **，***...n*] |ALL}]  
+ [删除文件 { *file_name*[**，* * *...n*] |ALL}]  
  从数据库中删除与程序集关联的文件名，或与该程序集关联的所有文件。 如果与下面的 ADD FILE 一起使用，则 DROP FILE 首先执行。 这样可以用相同的文件名替换文件。  
   
 > [!NOTE]  
@@ -169,7 +171,7 @@ ALTER ASSEMBLY assembly_name
   
  如果执行了没有 UNCHECKED 数据子句的 ALTER ASSEMBLY，则执行检查以验证新数据集版本是否影响表中的现有数据。 根据需要检查的数据量，这可能影响性能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对程序集具有 ALTER 权限。 其他要求如下：  
   
 -   若要更改其现有权限的程序集组是 EXTERNAL_ACCESS，需要**EXTERNAL ACCESS ASSEMBLY**服务器上的权限。  

@@ -2,9 +2,12 @@
 title: "合并复制的 Web 同步 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f84d20d62fc33f25203cf947423951954d9ca13
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 95942267f871946f402f2261d4a5dc0cd1873256
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合并复制的 Web 同步
-  对过进行合并复制的 Web 同步，可以使用 HTTPS 协议复制数据，这对于以下情况非常有用：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 用于合并复制的 Web 同步可以使用 HTTPS 协议复制数据，并对以下情况非常有用：  
   
 -   通过 Internet 同步移动用户数据。  
   
@@ -84,7 +87,7 @@ ms.lasthandoff: 11/09/2017
 3.  然后，订阅服务器上的合并代理将接受 HTTPS 响应，并将下载更改应用于订阅数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

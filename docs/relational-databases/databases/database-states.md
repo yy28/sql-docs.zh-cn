@@ -2,9 +2,12 @@
 title: "数据库状态 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,18 +28,18 @@ helpviewer_keywords:
 - restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 997df06a840d50669a643dd4d662d00ec896eaa2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e6acde3a545115bc189da2cfdad0297789fea6a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-states"></a>数据库状态
-  数据库总是处于一个特定的状态中， 例如，这些状态包括 ONLINE、OFFLINE 或 SUSPECT。 若要确认数据库的当前状态，请选择 **sys.databases** 目录视图中的 [state_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列或 **DATABASEPROPERTYEX** 函数中的 [Status](../../t-sql/functions/databasepropertyex-transact-sql.md) 属性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 数据库总是处于一个特定的状态中。 例如，这些状态包括 ONLINE、OFFLINE 或 SUSPECT。 若要确认数据库的当前状态，请选择 **sys.databases** 目录视图中的 [state_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列或 **DATABASEPROPERTYEX** 函数中的 [Status](../../t-sql/functions/databasepropertyex-transact-sql.md) 属性。  
   
 ## <a name="database-state-definitions"></a>数据库状态定义  
  下表定义了数据库的状态。  

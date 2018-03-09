@@ -1,39 +1,34 @@
 ---
 title: "在 Analysis Services 表格模型中受支持的数据类型 |Microsoft 文档"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79512ded963b6568346c261b69c100b77e03bc74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79cb9eb46d0561ab6dd94ba6e001b97fe3ae801f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>在表格模型中受支持的数据类型
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  本文说明可在表格模型中使用的数据类型，并且论述在数据分析表达式 (DAX) 公式中计算或使用数据时数据类型的隐式转换。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文说明可在表格模型中使用的数据类型，并且论述在数据分析表达式 (DAX) 公式中计算或使用数据时数据类型的隐式转换。  
 
   
-##  <a name="bkmk_data_types"></a>在表格模型中使用的数据类型  
+##  <a name="bkmk_data_types"></a> 在表格模型中使用的数据类型  
 当您在公式中导入数据或者使用某一值时，即使原始数据源包含不同的数据类型，该数据也转换为以下数据类型之一。 从公式得出的值也使用这些数据类型。  
   
  通常，实施这些数据类型以便在计算列中实现精确的计算，并且相同的限制将应用于模型中的其余数据以便保持一致性。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
 |N/A|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
- \*如果你尝试导入具有较大的数字值的数据，导入可能会失败并出现以下错误：  
+ \* 如果你尝试导入具有较大的数字值的数据，导入可能会失败并出现以下错误：  
   
  内存中数据库错误：\<列名 >' 的列\<表名 > 表包含一个值，1.7976931348623157 e + 308，这不受支持。 已取消该操作。  
   
@@ -73,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="table-data-type"></a>Table data type（表数据类型）  
  此外，DAX 使用“表”  数据类型。 DAX 在许多函数中都使用此数据类型，如在聚合和时间智能计算中。 某些函数要求对表的引用；其他函数返回可用作对其他函数的输入的表。 在要求表作为输入的某些函数中，您可以指定计算结果为表的表达式；对于某些函数，要求对基表的引用。 有关特定函数的要求的信息，请参阅 [DAX 函数引用](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)。  
   
-##  <a name="bkmk_implicit"></a>DAX 公式中的隐式和显式数据类型转换
+##  <a name="bkmk_implicit"></a> DAX 公式中的隐式和显式数据类型转换
   
  每个 DAX 函数都对用作输入和输出的数据类型具有特定的要求。 例如，某些函数要求将整数用于某些参数，将日期用于其他参数；其他一些函数则要求文本或表。  
   
@@ -150,7 +145,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="comparison-operators"></a>比较运算符  
 支持仅将有限的一组混合的数据类型的比较运算的组合。 若要了解详细信息，请参阅 [DAX 运算符参考](https://msdn.microsoft.com/library/ee634237.aspx)。  
   
-## <a name="bkmk_hand_blanks"></a>空白、 空字符串和零值的处理  
+## <a name="bkmk_hand_blanks"></a> 空白、 空字符串和零值的处理  
  下表总结了空白的处理方式的差异 DAX 之间和在 Microsoft Excel 中：  
   
 ||||  
@@ -167,7 +162,7 @@ ms.lasthandoff: 11/17/2017
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|空白|错误|  
-|BLANK AND BLANK|空白|错误|  
+|BLANK AND BLANK|BLANK|错误|  
   
  有关特定函数或运算符如何处理空白的详细信息，请参阅 [DAX 函数引用](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)一节中关于各 DAX 函数的单独主题。  
   

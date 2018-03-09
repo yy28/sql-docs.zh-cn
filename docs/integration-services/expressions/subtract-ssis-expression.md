@@ -1,5 +1,5 @@
 ---
-title: "- （减）（SSIS 表达式） |Microsoft 文档"
+title: "- （减）（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-caps.latest.revision: 32
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d185d99f8ebd22d05446eadb556bd7ebcb95cb2f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: db4e68bbba91309b7ab46889d88e79a5c230a5b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--subtract-ssis-expression"></a>-（减）（SSIS 表达式）
   从第一个数值表达式的值中减去第二个数值表达式的值。  
@@ -46,10 +45,10 @@ numeric_expression1 – numeric_expression2
 ## <a name="result-types"></a>结果类型  
  由两个参数的数据类型决定。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  用括号将减法一元表达式括起来，以便确保按正确顺序对该表达式进行求值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果任意一个操作数为 Null，则结果为 Null。  
   
 ## <a name="expression-examples"></a>表达式示例  
@@ -73,7 +72,6 @@ ListPrice - (ListPrice * @[Discount%])
   
 ## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

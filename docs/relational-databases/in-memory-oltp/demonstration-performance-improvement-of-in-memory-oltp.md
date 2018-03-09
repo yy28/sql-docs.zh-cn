@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 19c04ed5c67cc2f661ed0774b3941082dec07d81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c482c0a7e79f2732e98594eccdd1da57e3d5d37d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存中 OLTP 的性能改进
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  运行短 T-SQL 以创建数据库及其内存优化的文件组。  
   
-```tsql  
+```sql  
 go  
 CREATE DATABASE imoltp;    --  Transact-SQL  
 go  
@@ -79,7 +80,7 @@ go
   
 2.  在数据库中运行以下 T-SQL。  
   
-```tsql  
+```sql  
 go  
 DROP PROCEDURE IF EXISTS ncsp;  
 DROP TABLE IF EXISTS sql;  
@@ -131,7 +132,7 @@ go
   
 2.  同样，使用 SSMS.exe 在数据库中重新运行以下 T-SQL。  
   
-```tsql  
+```sql  
 go  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
@@ -194,7 +195,7 @@ go
   
  接下来是我们的第二次测试运行所生成的输出时间统计信息。  
   
-```tsql  
+```sql  
 10453 ms , A: Disk-based table and interpreted Transact-SQL.  
 5626 ms , B: memory-optimized table with hash index and interpreted Transact-SQL.  
 3937 ms , C: memory-optimized table with hash index and native SP.  

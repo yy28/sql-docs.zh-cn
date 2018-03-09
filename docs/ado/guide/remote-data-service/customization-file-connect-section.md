@@ -3,8 +3,9 @@ title: "自定义文件连接部分 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe0012f287536d015e1086d02833a0f6651194f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 859324a8cbf2f08bfae2ac18e86525a9e65914d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-connect-section"></a>自定义文件连接部分
 处理程序的默认行为是拒绝所有连接。 **连接**节指定该行为的例外情况。 例如，如果所有**连接**节都不存在或为空，则默认情况下无法不建立任何连接。  
@@ -61,10 +62,10 @@ connectionString
   
 |组成部分|Description|  
 |----------|-----------------|  
-|**Connect**|一个文本字符串，指示这是连接字符串条目。|  
+|**连接**|一个文本字符串，指示这是连接字符串条目。|  
 |***connectionString***|一个字符串，将整个客户端的连接字符串。|  
 |**访问**|一个文本字符串，指示这是访问条目。|  
-|***种***|以下的访问权限之一：<br /><br /> -   **NoAccess** -用户将无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
+|***accessRight***|以下的访问权限之一：<br /><br /> -   **NoAccess** -用户将无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
   
  如果你想要允许任何连接 （实际上，禁用默认处理程序行为），在中设置的访问项**连接默认**部分到`Access=ReadWrite`，并删除或注释掉任何其他**连接***标识符*部分。  
   

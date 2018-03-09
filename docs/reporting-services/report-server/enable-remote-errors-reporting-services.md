@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: afdb8a3c8dbd683853f5cc7a129fa52009d13764
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 71d8664ab522a8e33bafaf4fd6916c0721a1713b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
   可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果错误消息中包含文本“有关此错误的详细信息，请导航到本地服务器上的报表服务器或启用远程错误”，则可以将 **EnableRemoteErrors** 属性设置为访问可帮助您解决问题的其他信息。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 报表服务器系统属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  在 **“安全性”** 部分，单击 **“启用远程错误”** 。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 #### <a name="enable-remote-errors-for-a-sharepoint-site"></a>为 SharePoint 站点启用远程错误  
   

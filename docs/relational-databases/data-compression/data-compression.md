@@ -25,15 +25,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 996f547876031c29f975d85949d2ff300afdee5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### <a name="performance"></a>性能  
+### <a name="performance"></a>“性能”  
  使用存档压缩对列存储索引进行压缩，导致索引执行速度慢于未进行存档压缩的列存储索引。 仅在您能够付出额外的时间和 CPU 资源来压缩和检索数据时，才使用存档压缩。  
   
  存档压缩的优点在于可减少存储，这对于不经常访问的数据很有用。 例如，如果您对每个月的数据都具有一个分区，并且您的大多数活动是针对最近月份的，则可以将较早月份的数据存档以便降低存储要求。  

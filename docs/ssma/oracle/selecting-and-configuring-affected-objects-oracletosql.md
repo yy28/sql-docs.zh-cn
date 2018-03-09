@@ -1,10 +1,13 @@
 ---
 title: "选择并配置受影响的对象 (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8679e3f18c8352b1a10f110354af6dafc0c7e81c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>选择并配置受影响的对象 (OracleToSQL)
 在此页中，你可以选择表和外键，在其中更改与其进行比较，如果 SSMA 验证上一步中选择的对象的执行结果。 此外，还可以自定义验证参数。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
 -   规则  
   
--   默认  
+-   ，则“默认”  
   
 -   标识  
   

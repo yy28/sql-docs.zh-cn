@@ -10,20 +10,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 70b13a0deae8f12715488d81b44fb660f76decd0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制和 Linux 上的 SSIS 的已知的问题
 
-本主题介绍当前限制和已知的问题的 SQL Server Integration Services (SSIS) 在 Linux 上。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+本指南介绍了当前限制和已知的问题的 SQL Server Integration Services (SSIS) 在 Linux 上。
 
 ## <a name="general-limitations-and-known-issues"></a>常规限制和已知的问题
 
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 
 其他限制和 Linux 上的 SSIS 的已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md#ssis)。
 
-## <a name="components"></a>支持和不支持组件
+## <a name="components"></a> 支持和不支持组件
 
 在 Linux 上支持以下内置 Integration Services 组件。 下表中所述，其中一些具有 Linux 平台上的限制。
 
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 - 表达式任务
 - FTP 任务
 - Web 服务任务
-- XML 任务
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>支持限制的控制流任务
 
@@ -108,7 +110,7 @@ ms.lasthandoff: 11/20/2017
 - 透视
 - 行计数
 - 渐变维度
-- Sort
+- 排序
 - 字词查找
 - Union All
 - 逆透视
@@ -130,3 +132,8 @@ SSIS 日志提供程序为文本文件、 XML 文件和 SQL Server 事件探查�
 -   如果不提供的路径，日志提供程序写入到主机的当前目录。 如果当前用户没有写入到主机的当前目录的权限，日志提供程序将引发错误。
 -   不能使用环境变量中的文件路径。 如果你指定环境变量，你指定的文字文本将出现在文件路径中。 例如，如果你指定`%TMP%/log.txt`，日志提供程序将文本的文本追加`/%TMP%/log.txt`到当前的主机目录。
 
+## <a name="related-content-about-ssis-on-linux"></a>有关在 Linux 上的 SSIS 的相关的内容
+-   [提取、 转换和加载使用 SSIS 的 Linux 上的数据](sql-server-linux-migrate-ssis.md)
+-   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 ssis conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [计划 SQL Server Integration Services 包执行在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)

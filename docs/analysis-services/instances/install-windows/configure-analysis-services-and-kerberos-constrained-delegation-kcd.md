@@ -2,33 +2,30 @@
 title: "配置 Analysis Services 和 Kerberos 约束委派 (KCD) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>配置 Analysis Services 和 Kerberos 约束委派 (KCD)
-  Kerberos 约束委派 (KCD) 是一种身份验证协议，你可以使用 Windows 身份验证进行配置，使其在整个环境的服务之间委派客户端凭据。 KCD 需要附加基础结构（例如域控制器）和你环境中的其他配置。 在某些通过 SharePoint 2016 涉及 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的方案中，要求使用 KCD。 在 SharePoint 2016 中，Excel Services 已从 SharePoint 场移出到单独的新服务器，即 **Office Online Server**。 由于 Office Online Server 是独立的服务器，因此在两个典型的跃点方案中更加需要委派客户端凭据的方法。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Kerberos 约束委派 (KCD) 是一种身份验证协议，你可以使用 Windows 身份验证进行配置，使其在整个环境的服务之间委派客户端凭据。 KCD 需要附加基础结构（例如域控制器）和你环境中的其他配置。 在某些通过 SharePoint 2016 涉及 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的方案中，要求使用 KCD。 在 SharePoint 2016 中，Excel Services 已从 SharePoint 场移出到单独的新服务器，即 **Office Online Server**。 由于 Office Online Server 是独立的服务器，因此在两个典型的跃点方案中更加需要委派客户端凭据的方法。  
   
 ## <a name="overview"></a>概述  
  KCD 可以使一个帐户模拟另一个帐户，从而提供对资源的访问权限。 模拟帐户可以是分配给 Web 应用程序的服务帐户或 Web 服务器的计算机帐户，被模拟帐户可以是需要资源访问权限的用户帐户。 由于 KCD 在服务层进行操作，因此可通过模拟帐户对服务器上的选定服务授予访问权限，而同一服务器上的其他服务或其他服务器上的服务将被拒绝访问。  

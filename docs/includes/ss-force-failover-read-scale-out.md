@@ -1,6 +1,22 @@
-每个可用性组仅有一个主要副本。 主要副本允许读取和写入操作。 若要更改哪个副本是主，可以故障转移。 在高可用性的可用性组中，群集管理器自动执行故障转移过程。 在读取缩放可用性组中，故障转移过程为手动操作。 
+---
+title: "SQL Server 强制可用性组故障转移"
+description: "对于群集类型为 NONE 的可用性组强制故障转移"
+services: 
+author: MikeRayMSFT
+ms.service: 
+ms.topic: include
+ms.date: 02/05/2018
+ms.author: mikeray
+ms.custom: include file
+ms.openlocfilehash: 10a2af2cb5bc9e98605a3ee988439e3c3be60c1e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/09/2018
+---
+每个可用性组具有一个主副本。 主要副本允许读取和写入操作。 若要更改哪个副本是主，可以故障转移。 在高可用性 AG，群集管理器自动执行故障转移过程。 在与群集类型 NONE AG，故障转移过程为手动。 
 
-有两种故障转移中读取缩放可用性组的主副本的方法：
+有两种方法群集类型 NONE 一起故障转移可用性组中的主副本：
 
 - 强制手动故障转移（会丢失数据）
 - 手动故障转移（无数据丢失）
@@ -25,7 +41,7 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        MODIFY REPLICA ON N'**<node2>*' 
+        MODIFY REPLICA ON N'<node2>' 
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
@@ -46,7 +62,7 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
 3. 更新`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`为 1。
 
-   以下脚本集`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`对可用性组的 1 到名为`ag1`。 运行以下脚本之前，将`ag1`替换为你的可用性组的名称：
+   以下脚本集`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`上名为可用性组的 1 到`ag1`。 运行以下脚本之前，将`ag1`替换为你的可用性组的名称：
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -69,4 +85,4 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
    ```  
 
    > [!NOTE] 
-   > 若要删除某一可用性组，使用[DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)。 对于使用 CLUSTER_TYPE NONE 或外部创建可用性组，必须在将可用性组的一部分的所有副本上执行该命令。
+   > 若要删除可用性组，使用[DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)。 有关使用群集创建可用性组键入一个或外部，该命令必须在属于可用性组的所有副本上执行。

@@ -2,15 +2,13 @@
 title: "数据库对象 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ae5c046b-8242-4046-ae76-2c070503fd93
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 239c6e21a7c0e05f52fa00c17d11c5ff81d8a216
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e67dfe62b23e08a675fbb93833c9383091198629
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-object-tmsl"></a>数据库对象 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  定义表格数据库兼容级别 1200年或更高版本，基于相同级别的模型。 本主题介绍了数据库，提供负载的请求的创建、 alter、 删除和执行数据库管理任务的对象定义。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定义表格数据库兼容级别 1200年或更高版本，基于相同级别的模型。 本主题介绍了数据库，提供负载的请求的创建、 alter、 删除和执行数据库管理任务的对象定义。  
   
 > [!NOTE]  
 >  在任何脚本中，可以引用次只有一个数据库。 对于数据库本身之外的任何对象，数据库属性是可选如果你指定的模型。 没有模型可以用于推导的数据库名称，如果未显式提供的数据库之间的一对一映射。   

@@ -1,27 +1,32 @@
 ---
 title: "为 SQL Server 和 R 数据科学演练先决条件 |Microsoft 文档"
 ms.date: 11/10/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 127957f5a2838efb9d2dfa2829cb33909c490571
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 6ac8e646c93c0371f959afc212601e5abe0de213
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>为 SQL Server 和 R 数据科学演练的先决条件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 我们建议你本演练在便携式计算机或其他计算机上已安装的 Microsoft R 库。 你必须能够连接，在同一网络上为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]机器学习服务并启用的 R 语言的计算机。
 

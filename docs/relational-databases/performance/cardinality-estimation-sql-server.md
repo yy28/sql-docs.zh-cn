@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: "11"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b1c53b09fe118de3a90c78bd1393da90a915385b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c87819c3d2802e6ded39885e540b0a3fd050aae8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  **兼容性级别：** 通过使用以下 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的 Transact-SQL 代码，可以确保数据库位于特定级别。  
 
-```tsql  
+```sql  
 SELECT ServerProperty('ProductVersion');  
 go  
   
@@ -65,7 +66,7 @@ go
   
  旧版 CE：对于在兼容级别 120 及以上设置的 SQL Server 数据库，CE 版本 70 可通过在数据库级别使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 来激活。
   
-```tsql  
+```sql  
 ALTER DATABASE
     SCOPED CONFIGURATION  
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
@@ -78,7 +79,7 @@ SELECT name, value
  
  或者从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1，[查询提示](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` 开始。
  
- ```tsql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01'; 
@@ -87,7 +88,7 @@ SELECT CustomerId, OrderAddedDate
  
  查询存储：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询存储是用于检查查询性能的一种方便的工具。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点。  
   
-```tsql  
+```sql  
 ALTER DATABASE <yourDatabase>  
     SET QUERY_STORE = ON;  
 go  
@@ -109,7 +110,7 @@ ALTER DATABASE <yourDatabase>
   
  跟踪基数估计过程的另一种方法是使用名为 query_optimizer_estimate_cardinality 的扩展事件。 以下 T-SQL 代码示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行。 它将 .xel 文件写入 C:\Temp\（尽管可以更改路径）。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中打开此 .xel 文件时，其详细信息将以用户友好的方式显示。  
   
-```tsql  
+```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
@@ -234,10 +235,10 @@ go
   
 如果 OrderAddedDate 的最大值为 2016-04-30，则假设为 OrderTable 收集统计信息的最近日期为 2016-04-30。 兼容性级别为 120（和更高级别）的 CE 认为数据按升序排序的 OrderTable 中的列的值可能大于由统计信息记录的最大值。 这种假设改进了 SQL SELECT 语句的查询计划，如下所示。  
   
-```tsql  
+```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01';  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01';  
 ```  
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>示例 B. CE 认为同一个表的筛选谓词通常是相关的  
@@ -246,32 +247,29 @@ SELECT CustomerId, OrderAddedDate
   
 级别 120 的 CE 认为同一表中 Model 和 ModelVariant 两列之间存在相关性。 CE 对于查询将返回多少行进行更准确的估计，并且查询优化器将生成更优的计划。  
   
-```tsql  
+```sql  
 SELECT Model, Purchase_Price  
-    FROM dbo.Hardware  
-    WHERE  
-        Model  = 'Xbox'  AND  
-        ModelVariant = 'One';  
+FROM dbo.Hardware  
+WHERE Model  = 'Xbox'  AND  
+      ModelVariant = 'One';  
 ```  
   
-### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>示例 C. CE 不再假设不同表的筛选谓词之间存在任何相关性 
+### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>示例 C. CE 不再假设不同表的筛选谓词之间存在任何相关性 
 对现代工作负荷和实际业务数据的延伸性的新研究表明，从不同表中筛选的谓词通常没有相互关联性。 在下面的查询中，CE 假设 s.type 与 r.date 之间没有相关性。 因此，CE 对于返回的行数有一个偏低的估计值。  
   
-```tsql  
+```sql  
 SELECT s.ticket, s.customer, r.store  
-    FROM  
-                   dbo.Sales    AS s  
-        CROSS JOIN dbo.Returns  AS r  
-    WHERE  
-        s.ticket = r.ticket  AND  
-        s.type   = 'toy'     AND  
-        r.date   = '2016-05-11';  
+FROM dbo.Sales    AS s  
+CROSS JOIN dbo.Returns  AS r  
+WHERE s.ticket = r.ticket  AND  
+      s.type   = 'toy'     AND  
+      r.date   = '2016-05-11';  
 ```  
   
   
 ## <a name="see-also"></a>另请参阅  
- [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  [使用 SQL Server 2014 基数估算器优化查询计划](http://msdn.microsoft.com/library/dn673537.aspx)  
- [查询提示](../../t-sql/queries/hints-transact-sql-query.md)  
- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)
+ [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [使用 SQL Server 2014 基数估算器优化查询计划](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [查询提示](../../t-sql/queries/hints-transact-sql-query.md)    
+ [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)   

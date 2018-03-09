@@ -1,11 +1,11 @@
 ---
-title: "Integration Services 向后兼容性 |Microsoft 文档"
+title: "Integration Services 的后向兼容性 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/14/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 84
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b9303874bc5b9fd769063e89caa982f211cca0c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6a68afe88221975bd616c96976684e42640e6884
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 的向后兼容性
   本主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的不同版本之间的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/03/2017
 本节介绍 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的行为更改。 与早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 相比，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的当前版本中的功能的工作或交互方式会受到行为更改的影响。  
   
 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中没有针对 Integration Services 功能的行为更改。  
-

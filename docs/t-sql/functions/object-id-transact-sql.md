@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OBJECT_ID
 - OBJECT_ID_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - objects [SQL Server], IDs
 - identification numbers [SQL Server], database objects
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9abb4a4556ca8ab83e638768ac95b9d7d637935
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 4978a07401fa33e0244a61181e29cfd6146b695e
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +73,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 OBJECT_ID）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当该参数对系统函数可选时，则采用当前数据库、主机、服务器用户或数据库用户。 内置函数后面必须跟括号。  
   
  除非当前数据库是指定一个临时表名时，数据库名称必须出现在临时表名之前**tempdb**。 例如： `SELECT OBJECT_ID('tempdb..#mytemptable')`。  
@@ -133,7 +135,7 @@ GO
  以下示例返回 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库中 `FactFinance` 表的对象 ID。  
   
 ```  
-SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
+SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   
 ## <a name="see-also"></a>另请参阅  

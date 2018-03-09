@@ -1,43 +1,34 @@
 ---
 title: "已更新-Analysis Services 的 SQL Server 文档 |Microsoft 文档"
 description: "显示有关最近更改中的文档，Analysis services for Microsoft SQL Server 的更新内容的代码段。"
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: kfile
-editor: 
-ms.service: 
-ms.component: misc
-ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: 
-ms.workload: analysis-services
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
 ms.author: genemi
-ms.openlocfilehash: 53124d807c0573263041389e1c879f4da10c06e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssas
+ms.date: 02/03/2018
+ms.openlocfilehash: 35da9b00567ea338a764bf1d1b3bc390bd9a88db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>新的和最近的更新： SQL Server 的 Analysis Services
 
 
 
-Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft.com/) 文档网站上的一些现有文章。 本文显示从最近更新的文章中摘录的内容。 可能还会列出新文章的链接。
+几乎每日 Microsoft 及其现有的文章的一些上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文档网站。 这篇文章显示摘录最近已更新的文章。 可能还会列出链接到新的文章。
 
-本文由定期重新运行的程序生成。 摘录内容偶尔会有格式问题，还可能以源文的 markdown 格式显示。 此处不会显示任何图像。
+定期重新运行程序生成这篇文章。 有时摘录可使用不完善格式，或出现 markdown 源文章中的说明。 此处永远不会显示图像。
 
-最新的更新报告涵盖以下日期范围和主题：
+报告的以下日期范围和主题的新的更新：
 
 
 
-- 更新日期范围：从 2017-09-11 到 2017-09-27&nbsp;&nbsp;&nbsp;
+- *日期范围的更新：* &nbsp; **自 2017 年 1-12-03** &nbsp;到&nbsp; **2018年-02-03**
 - *主题区域：* &nbsp; **Analysis Services for SQL Server**。
 
 
@@ -45,7 +36,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>最近创建的新文章
+## <a name="new-articles-created-recently"></a>最近创建的新项目
 
 单击以下链接可跳转到最近添加的新文章。
 
@@ -56,13 +47,13 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>包含摘录内容的已更新文章
+## <a name="updated-articles-with-excerpts"></a>与摘录更新的文章
 
 此部分摘录了最近大幅更新的文章中的更新内容。
 
-此处显示的摘录与其对应的语义上下文脱离。 此外，有时摘录会与实际文章中此摘录周围的重要 markdown 语法元素脱离。 因此，这些摘录仅可用于一般指导。 摘录只是帮助你确定自己是否有兴趣花时间点击并访问实际文章。
+此处显示的摘自其正确的语义上下文的来自分隔。 此外，有时摘录分开环绕在实际的文章中的重要的 markdown 语法。 因此这些摘录适用于一般性指导原则。 摘录仅使你能够知道您的兴趣是否值得花些时间后，单击，访问实际的文章。
 
-鉴于以上原因及其他原因，请不要复制这些摘录中的代码，也不要将摘录当作确切事实。 请转而访问实际文章。
+有关这些和其他原因，不从这些摘录中，复制代码并不会为确切真实任何文本摘录。 相反，请访问实际的文章。
 
 
 
@@ -72,111 +63,62 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>最近更新的文章的紧凑列表
+### <a name="compact-list-of-articles-updated-recently"></a>Compact 的最近更新的文章的列表
 
 此紧凑列表中的链接指向“摘录”部分中列出的所有更新后文章。
 
-1. [什么 &#39; SQL Server 自 2017 年 Analysis Services 中的新增功能](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-what39s-new-in-sql-server-2017-analysis-serviceswhat-s-new-in-sql-server-analysis-services-2017md"></a>1.&nbsp;[什么 &#39; SQL Server 自 2017 年 Analysis Services 中的新增功能](what-s-new-in-sql-server-analysis-services-2017.md)
-
-*更新时间： 2017年-09-22* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 143.  ms.author= "owend".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 c8d75883f07e6e32859728d09139920eb9bf65c5 d206e83413d15a6e6116120e4a98dda9c8ce81d8  (PR=3278  ,  Filename=what-s-new-in-sql-server-analysis-services-2017.md  ,  Dirpath=docs\analysis-services\  ,  MergeCommitSha40=656e62f36446db4ef5b232129130a0253d2aebdf) -->
-
-
-
-**对象级安全性**
-
-此版本引入了 [对象级安全.../ analysis-services/tabular-models/object-level-security.md) 的表和列。 除了限制对表和列的数据的访问，可以保护敏感的表和列名称。 这有助于防止恶意用户发现此类表的存在。
-
-必须使用基于 JSON 的元数据、 表格模型脚本语言 (TMSL) 或表格对象模型 (TOM) 设置对象级安全。
-
-例如，通过将“TablePermission”  类的“MetadataPermission”  属性设置为“无” ，以下代码可帮助保护示例 Adventure Works 表格模型中的产品表。
-
-```
-//Find the Users role in Adventure Works and secure the Product table
-ModelRole role = db.Model.Roles.Find("Users");
-Table productTable = db.Model.Tables.Find("Product");
-if (role != null && productTable != null)
-{
-    TablePermission tablePermission;
-    if (role.TablePermissions.Contains(productTable.Name))
-    {
-        tablePermission = role.TablePermissions[productTable.Name];
-    }
-    else
-    {
-        tablePermission = new TablePermission();
-        role.TablePermissions.Add(tablePermission);
-        tablePermission.Table = productTable;
-    }
-    tablePermission.MetadataPermission = MetadataPermission.None;
-}
-db.Update(UpdateOptions.ExpandFull);
-```
-
-**动态管理视图 (Dmv)**
-
-[Dmv.../ analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md） 都是 SQL Server 事件探查器将返回有关本地服务器操作和服务器运行状况信息的查询。
-此版本包括对改进[动态管理视图](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services)(DMV) 用于在 1200年和 1400年兼容性级别的表格模型。
+***此区域中的没有项目已更新最近，这一次。***
 
 
 
 
 
 
-
-## <a name="similar-articles"></a>类似文章
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>有关新的或更新的文章的类似文章
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
-- [新文章和更新的文章 (0+1)：SQL 高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章和更新的文章 (0+1)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
-- [新文章和更新的文章 (4+1)：SQL 数据库引擎文档](../database-engine/new-updated-database-engine.md)
-- [新文章和更新的文章 (17+0)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
-- [新文章和更新的文章 (3+0)：Linux for SQL 文档](../linux/new-updated-linux.md)
-- [新文章和更新的文章 (1+1)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
-- [新文章和更新的文章 (2+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
-- [新文章和更新的文章 (0+1)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
-- [新文章和更新的文章 (0+1)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域的*执行*新或最近已更新的文章
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>没有新的或最近更新文章的主题区域
 
-- [新的和更新的文章 (0+0)：ActiveX Data Objects (ADO) for SQL 文档](../ado/new-updated-ado.md)
-- [新文章和更新的文章 (0+0)：连接到 SQL 文档](../connect/new-updated-connect.md)
-- [新的和更新的文章 (0+0)：Data Quality Services for SQL 文档](../data-quality-services/new-updated-data-quality-services.md)
-- [新的和更新的文章 (0+0)：SQL 数据挖掘扩展插件 (DMX) 文档](../dmx/new-updated-dmx.md)
+- [新 + 更新 (1 + 3):&nbsp; **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新 + 更新 (0 + 1):&nbsp; **SQL 的分析平台系统**文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新 + 更新 (0 + 1):&nbsp; **连接到 SQL**文档](../connect/new-updated-connect.md)
+- [新 + 更新 (0 + 1):&nbsp; **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
+- [新 + 更新 (12 + 1): **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
+- [新 + 更新 (6 + 2):&nbsp; **sql Linux**文档](../linux/new-updated-linux.md)
+- [新 + 更新 (15 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
+- [新 + 更新 (2 + 9):&nbsp; **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
+- [新 + 更新 (1 + 0):&nbsp; **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
+- [新 + 更新 (1 + 1):&nbsp; **SQL 操作 Studio**文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新 + 更新 (1 + 1):&nbsp; **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
+- [新 + 更新 (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)**文档](../ssdt/new-updated-ssdt.md)
+- [新 + 更新 (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)**文档](../ssms/new-updated-ssms.md)
+- [新 + 更新 (0 + 2):&nbsp; **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>使用者执行的区域*不*有任何新最近更新或文章
+
+
+- [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
+- [新 + 更新 (0 + 0): **ActiveX 数据对象 (ADO) sql**文档](../ado/new-updated-ado.md)
+- [新文章和更新的文章 (0+0)：SQL Analysis Services 文档](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (0 + 0): **sql Data Quality Services**文档](../data-quality-services/new-updated-data-quality-services.md)
+- [新 + 更新 (0 + 0):**数据挖掘扩展插件 (DMX) sql**文档](../dmx/new-updated-dmx.md)
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
-- [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
-- [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新的和更新的文章 (0+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
-- [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
-- [新文章和更新的文章 (0+0)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
-- [新的和更新的文章 (0+0)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
-- [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
+- [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
+- [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）**文档](../odbc/new-updated-odbc.md)
+- [新 + 更新 (0 + 0): **SQL 的示例**文档](../sample/new-updated-sample.md)
+- [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)**文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
-- [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
+- [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
 
 

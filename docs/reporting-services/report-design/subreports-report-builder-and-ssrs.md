@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 41f4a2d11e3eb3200ddd992c6321cca242c8bb2c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b60e6a1156fb9b00b2c74bb4c23a18e2da56b93b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>子报表（报表生成器和 SSRS）
   子报表是在主报表的表体中显示其他报表的报表项。 从概念上说，报表中的子报表类似于网页中的框架。 子报表用于在报表中嵌入另一个报表。 任何报表都可以用作子报表。 显示为子报表的报表存储在报表服务器上，通常与父报表在同一文件夹中。 您可以设计父报表，以便向子报表传递参数。 可以在数据区域中重复子报表，使用参数在子报表的每个实例中筛选数据。  

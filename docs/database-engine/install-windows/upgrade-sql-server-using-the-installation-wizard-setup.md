@@ -2,29 +2,34 @@
 title: "使用安装向导升级 SQL Server（安装程序）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c2dd37cf69f59d90d1f9e271ef4c41e602d8c5e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安装向导升级 SQL Server（安装程序）
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用来将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件就地升级到最新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能树。  
   
 >[!WARNING]  
@@ -42,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 > * [升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [升级 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
 您必须以管理员身份运行安装程序。 如果从远程共享位置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须使用对该远程共享位置具有读取和执行权限的域帐户且是本地管理员。  
   
 > [!WARNING]  
@@ -108,7 +113,7 @@ ms.lasthandoff: 11/09/2017
   
      **已安装的实例**  - 该网格显示安装程序正在其中运行的计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果计算机上已经安装了一个默认实例，则必须安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的命名实例。  
   
-13. 本主题中的其余工作流取决于要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择。  
+13. 本文中的其余工作流取决于要安装的功能。 您可能不会看到所有的页面，具体取决于您进行的选择。  
   
 14. 在“服务器配置 - 服务帐户”页上，显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的默认服务帐户。 此页上配置的实际服务取决于要升级的功能。  
   
@@ -132,7 +137,7 @@ ms.lasthandoff: 11/09/2017
   
 20. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后，请完成下列任务：  
   
 -   **注册服务器** - 升级会删除早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的注册表设置。 升级之后，必须重新注册服务器。  

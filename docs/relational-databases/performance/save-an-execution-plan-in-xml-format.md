@@ -2,9 +2,12 @@
 title: "以 XML 格式保存执行计划 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - saving execution plans
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc3f2b3a6efd75a97ca8e4198b0b375b55d598fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: caa43dba8d4ce0abdd5dc14f113a5fbfcf58d3ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式保存执行计划
-  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以将执行计划保存为 XML 文件，也可以打开这些执行计划进行查看。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以将执行计划保存为 XML 文件，也可以打开这些执行计划进行查看。  
   
  若要使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的执行计划功能或使用 XML 显示计划的 SET 选项，用户必须具有执行（要为其生成执行计划的） [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的相应权限，还必须获得对该查询所引用的所有数据库的 SHOWPLAN 权限。  
   
@@ -37,14 +40,14 @@ ms.lasthandoff: 11/09/2017
   
 2.  使用以下语句打开 [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)：  
   
-    ```t-sql  
+    ```sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
      若要打开 [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)，请使用以下语句：  
   
-    ```t-sql  
+    ```sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  执行查询。 例如：  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  

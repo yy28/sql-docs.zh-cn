@@ -1,5 +1,5 @@
 ---
-title: "连接字符串关键字和数据源名称 (Dsn) |Microsoft 文档"
+title: "连接到 SQL Server |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,36 +17,28 @@ helpviewer_keywords:
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2020ce16f722354b49a7e35e4a3f1e1706b6a2d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="connection-string-keywords-and-data-source-names-dsns"></a>连接字符串关键字和数据源名称 (DSN)
+# <a name="connecting-to-sql-server"></a>连接到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 本主题讨论如何创建连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库。  
   
 ## <a name="connection-properties"></a>连接属性  
-对于此版本的[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 Linux 或 macOS 上，你可以使用以下连接关键字：  
-  
-||||||  
-|-|-|-|-|-|  
-|`Addr`|`Address`|`ApplicationIntent`|`AutoTranslate`|`Database`|
-|`Driver`|`DSN`|`Encrypt`|`FileDSN`|`MARS_Connection`|  
-|`MultiSubnetFailover`|`PWD`|`Server`|`Trusted_Connection`|`TrustServerCertificate`|  
-|`UID`|`WSID`|`ColumnEncryption`|`TransparentNetworkIPResolution`||  
+
+请参阅[DSN 和连接字符串关键字和特性](../../../connect/odbc/dsn-connection-string-attribute.md)所有的连接字符串关键字和支持在 Linux 和 Mac 上的属性
 
 > [!IMPORTANT]  
 > 当连接到使用数据库镜像（有一个故障转移伙伴）的数据库时，不要在连接字符串中指定数据库名称。 相反，发送**使用** *database_name*命令以在执行查询之前连接到数据库。  
-  
-有关这些关键字的详细信息，请参阅 [将连接字符串关键字用于 SQL Server Native Client](http://go.microsoft.com/fwlink/?LinkID=126696)的 ODBC 部分。  
   
 传递给值**驱动程序**关键字可以是以下之一：  
   
@@ -85,10 +78,10 @@ Server = [protocol:]server[,port]
 
 无论 **Encrypt** 和 **TrustServerCertificate**的设置如何，服务器登录凭据（用户名和密码）都始终处于加密状态。 下表显示了 **Encrypt** 和 **TrustServerCertificate** 设置的效果。  
 
-||**TrustServerCertificate = 否**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
-|**加密 = 否**|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据没有加密。|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据没有加密。|  
-|**加密 = yes**|检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。<br /><br />在使用者公用名 (CN) 或使用者备用名称 (SAN) 中的名称 （或 IP 地址） [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 证书应与连接字符串中指定的服务器名称 （或 IP 地址） 完全匹配。|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。|  
+|**Encrypt=no**|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据没有加密。|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据没有加密。|  
+|**Encrypt=yes**|检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。<br /><br />在使用者公用名 (CN) 或使用者备用名称 (SAN) 中的名称 （或 IP 地址） [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 证书应与连接字符串中指定的服务器名称 （或 IP 地址） 完全匹配。|不检查服务器证书。<br /><br />在客户端和服务器之间发送的数据已加密。|  
 
 默认情况下，加密的连接会始终验证服务器的证书。 但是，如果你连接到了自签名的证书的服务器，还添加`TrustServerCertificate`绕过检查的针对受信任的证书颁发机构的列表的证书的选项：  
 
@@ -100,15 +93,18 @@ SSL 使用 OpenSSL 库。 下表显示了 OpenSSL 的受支持的最低版本和
 
 |平台|最低的 OpenSSL 版本|默认证书信任存储位置|  
 |------------|---------------------------|--------------------------------------------|
-|Debian 8.71 |1.0.1t|/etc/ssl/certs|
-|macOS 10.12|1.0.2k|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2j|/usr/local/etc/openssl/certs|
-|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|  
-|Red Hat Enterprise Linux 7|1.0.1e|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1i|/etc/ssl/certs|
-|Ubuntu 15.10 |1.0.2d|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2g|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2g|/etc/ssl/certs|
+|Debian 9|1.1.0|/etc/ssl/certs|
+|Debian 8.71 |1.0.1|/etc/ssl/certs|
+|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
+|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
+|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
+|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
+|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
 你还可以指定在连接字符串中使用加密`Encrypt`选项时使用**SQLDriverConnect**连接。
 

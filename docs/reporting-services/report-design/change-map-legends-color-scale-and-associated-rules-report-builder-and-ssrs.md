@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -40,13 +38,13 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 685edba6f15b60f990de198784834f142ef2e2c8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f252d1bc68c8b9f9e44b2d1741c88060210d90e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>更改地图图例、色阶和关联的规则（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图中可以包含地图图例、色阶和距离刻度。 地图的这些部分可帮助用户解释地图上的数据可视化。  
@@ -288,7 +286,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  单击 **“图例”**。  
   
-4.  **“图例文本”** 显示指定要在图例中显示的数据的关键字。 使用地图关键字和自定义格式可帮助控制图例文本的格式。 例如，#FROMVALUE {C2} 指定一个具有两个小数位的货币格式。 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+4.  **“图例文本”** 显示指定要在图例中显示的数据的关键字。 使用地图关键字和自定义格式可帮助控制图例文本的格式。 例如，#FROMVALUE {C2} 指定一个具有两个小数位的货币格式。 有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

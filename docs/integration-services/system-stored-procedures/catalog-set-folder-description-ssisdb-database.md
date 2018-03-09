@@ -1,5 +1,5 @@
 ---
-title: "catalog.set_folder_description （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.set_folder_description（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f707687b62be599d74bde892f86ff50754185ff8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1e0da072a1023d46740f9dd49e314c5b13cb6d6d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetfolderdescription-ssisdb-database"></a>catalog.set_folder_description（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,27 +37,26 @@ catalog.set_folder_description [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name =] *folder_name*  
- 文件夹的名称。 *Folder_name*是**nvarchar （128)**。  
+ [ @folder_name = ] folder_name  
+ 文件夹的名称。 folder_name 为 nvarchar(128)。  
   
- [ @folder_description =] *folder_description*  
- 文件夹的说明。 *Folder_description*是**nvarchar (max)**。  
+ [ @folder_description = ] folder_description  
+ 文件夹的说明。 folder_description 为 nvarchar(MAX)。  
   
 ## <a name="return-code-value"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  存储过程返回一条消息，以确认新文件夹说明的设置。  
   
   
-

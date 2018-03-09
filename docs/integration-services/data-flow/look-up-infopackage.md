@@ -1,5 +1,5 @@
 ---
-title: "查找 Infopackage |Microsoft 文档"
+title: "查找 InfoPackage | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 603f32bbcf61ce562b0e8f6645e0384bb4dccdf2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b576561f0d49a6a3008fe59176fe2ec2c1368fa3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="look-up-infopackage"></a>查找 InfoPackage
   使用 **“查找 InfoPackage”** 对话框查找在 SAP Netweaver BW 系统中定义的 InfoPackage。 当 InfoPackage 列表显示时，选择您需要的 InfoPackage，然后目标将使用需要的值填充关联的选项。  
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/03/2017
  **类型**  
  显示 InfoPackage 的类型。 下表列出了该类型的可能值。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |Trans.|事务数据。|  
 |Attr.|属性数据。|  
@@ -89,4 +88,3 @@ ms.lasthandoff: 08/03/2017
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

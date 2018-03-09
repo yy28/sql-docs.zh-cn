@@ -1,5 +1,5 @@
 ---
-title: "以编程方式选择输入的列 |Microsoft 文档"
+title: "以编程方式选择输入列 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-caps.latest.revision: 49
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2ead17945bc9a6d2d3baeb73c07c86fad0e8cf1f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 37610e7a14cef8512059929ac1ea04faa79bed38
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="selecting-input-columns-programmatically"></a>以编程方式选择输入列
   以编程方式连接组件后，可从上游组件选择将要转换或传递到下游组件的列。 如果不为组件选择输入列，则组件将不会接收任何来自数据流任务的行。  
@@ -220,8 +218,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [以编程方式保存包](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
   
   
-

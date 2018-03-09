@@ -1,10 +1,11 @@
 ---
-title: "RDS 方案 |Microsoft 文档"
+title: RDS Scenario | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ec44d4f339b515bd02f153fde2d3e53874fcd05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>RDS 方案
 > [!IMPORTANT]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  此方案假定你知道如何使用 ActiveX 控件的基本的 HTML 布局标记、 使用 DHTML 数据绑定技术和程序。  
   
- 如果已安装 SDK，可以在 samples\dataaccess\rds\AddressBook\AddressBook.asp 的 SDK 目录中找到通讯簿示例应用程序的完整源代码。 若要查看的通讯簿方案，Internet Explorer 4.0 版或更高版本中，键入 **http://*web 服务器*/RDS/AddressBook/AddressBook.asp** 其中*web 服务器*是的名称提供给正在运行 Internet Information Services (IIS) 和 ASP 你 Windows NT 4.0 或 Windows 2000 Web 服务器计算机。  
+ 如果已安装 SDK，可以在 samples\dataaccess\rds\AddressBook\AddressBook.asp 的 SDK 目录中找到通讯簿示例应用程序的完整源代码。 若要查看的通讯簿方案，Internet Explorer 4.0 版或更高版本中，键入**http://*web 服务器*/RDS/AddressBook/AddressBook.asp**其中*web 服务器*是提供的名称到你在 Windows NT 4.0 或 Windows 2000 Web 服务器计算机，正在运行 Internet Information Services (IIS) 和 ASP。  
   
 ## <a name="introduction-to-address-book"></a>通讯簿简介  
  通讯簿示例应用程序提供的简单 online 的通讯簿，可用于通过 intranet 中发布的可搜索的目录。 通讯簿进行设计，以便用户可以请求有关员工的信息的一个或多个字段中输入搜索字符串。 若要显示远程数据服务的基本功能，示例应用程序有意保持较小，带有最少的对象和搜索字段。  

@@ -2,12 +2,12 @@
 title: "设置 SQL Server 计算机学习 Services （数据库） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/15/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
@@ -16,18 +16,19 @@ keywords:
 - "设置 R Services"
 - "安装 SQL 机器学习"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 3a32560422e8fc5f1a2e4284702d2cb28562f01f
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>设置 SQL Server 计算机学习 Services （数据库）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题介绍如何安装和配置以下机器学习支持在 SQL Server 中的数据库中分析的功能：
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/16/2017
 
 + 具有的机器学习服务器**没有**SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序还包括机器学习组件，不需要数据库引擎，并且不会运行在 SQL Server 中的"独立"版本安装的选项。  我们通常建议你安装而不是托管 SQL Server 计算机的其他计算机上的此选项。
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序还包括机器学习组件，不需要数据库引擎，并且不会运行在 SQL Server 中的"独立"版本安装的选项。  我们通常建议你安装而不是托管 SQL Server 计算机的其他计算机上的此选项。
     
     [设置独立机器学习服务器](create-a-standalone-r-server.md)。
 
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/16/2017
 6. 上**已准备好安装**页上，验证以下各项都包括在内，然后选择**安装**。
 
    + 数据库引擎服务
-   + R Services (数据库中)
+   + R Services（数据库内）
 
 7. 安装完成后，重新启动计算机。
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/16/2017
 > * 所需安装后步骤： 启用机器学习中，并重新启动
 > * 可选的安装后步骤： 添加防火墙规则、 添加用户、 更改或配置服务帐户设置远程数据科学客户端。
 
-**入门**
+**要开始**
 
 1. 运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。
   

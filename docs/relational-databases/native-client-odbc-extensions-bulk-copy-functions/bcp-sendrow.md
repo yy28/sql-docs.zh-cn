@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_sendrow function
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0caf3ad75ae1362252d23b1fc0489e5fcf5bdc32
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4312fedbd01082501faec1efd89a2cb1cd5161e
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpsendrow"></a>bcp_sendrow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ RETCODE bcp_sendrow (
   
  之前调用**bcp_sendrow**，您必须对进行调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)以指定包含行数据的程序变量。  
   
- 如果**bcp_bind**指定 long、 可变长度数据类型，例如，调用*eDataType* SQLTEXT 和非空参数*pData*参数、 **bcp_sendrow**发送 entiredata 值，就像任何其他数据类型。 如果是，但是， **bcp_bind**具有 NULL *pData*参数， **bcp_sendrow**将控制返回给应用程序，所有列与指定的数据都发送到后立即[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 然后，应用程序可以调用[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)重复以 long、 可变长度数据发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，一次一个块。 有关详细信息，请参阅[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)。  
+ 如果**bcp_bind**指定 long、 可变长度数据类型，例如，调用*eDataType* SQLTEXT 和非 NULL 参数*pData*参数、 **bcp_sendrow**发送整个数据值，就像任何其他数据类型。 如果是，但是， **bcp_bind**具有 NULL *pData*参数， **bcp_sendrow**将控制返回给应用程序，所有列与指定的数据都发送到后立即[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 然后，应用程序可以调用[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)重复以 long、 可变长度数据发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，一次一个块。 有关详细信息，请参阅[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)。  
   
  当**bcp_sendrow**用于大容量复制行从程序变量到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，行提交只有当有用户调用[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). 用户可以选择调用**bcp_batch**后每个 *n* 行或在传入数据的时间段之间没有减缓时。 如果**bcp_batch**是永远不会调用，行时，将提交**bcp_done**调用。  
   

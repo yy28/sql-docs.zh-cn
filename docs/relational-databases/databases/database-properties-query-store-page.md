@@ -2,33 +2,36 @@
 title: "数据库属性（“查询存储”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 11/09/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1049e37ab25fc7b76856a94c9c3ac091ab4403d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 903eb21e82dc2b5e3a04f0b48b4f17365a0eac99
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-query-store-page"></a>数据库属性（查询存储页）
-  从主体数据库访问此页面，并用它来配置和修改数据库查询存储的属性。 这些选项也可使用 [ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)进行更改。 有关查询存储的信息，请参阅 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]从主体数据库访问此页面，并用它来配置和修改数据库查询存储的属性。 这些选项也可使用 [ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)进行更改。 有关查询存储的信息，请参阅 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   
 ||  
 |-|  
 |**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  操作模式  
  有效值为 OFF、READ_ONLY 和 READ_WRITE。 OFF 禁用 Query Store。 在 READ_WRITE 模式下，查询存储将收集并保留查询计划和运行时执行统计信息。 在 READ_ONLY 模式下，可以从查询存储读取信息，但不会添加新信息。 如果已用尽查询存储的最大分配空间，查询存储的操作模式将更改为 READ_ONLY。  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
  右侧图表显示了目前已占用了哪部分的查询存储配额。 请注意，左侧图表未显示配额。 配额可能超过数据库的当前大小。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可使用此查询存储数据库属性页面，或者使用 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 选项来配置查询存储。 查询存储通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 对话框来呈现信息。 有关查询存储的详细信息，请参阅 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   
 ## <a name="see-also"></a>另请参阅  

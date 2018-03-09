@@ -2,32 +2,35 @@
 title: "4-6-指定用户定义层次结构中的属性关系 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8db9cd243cb27505bfda4eb2342802b8bb588ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-指定用户定义层次结构中的属性关系
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 您已了解本教程中的内容，现在可以将属性层次结构组织到用户层次结构内的级别中，以便在多维数据集中为用户提供导航路径。 用户层次结构可以表示自然层次结构（如市/县、州/省/自治区和国家/地区），或者可以只表示导航路径（如雇员姓名、职务和部门名称）。 对于在层次结构中导航的用户而言，这两类用户层次结构应相同。  
   
-使用自然层次结构时，如果定义了组成级别的属性之间的属性关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用某个属性的聚合来获取相关属性的结果。 如果属性之间没有定义的关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将根据键属性聚合所有非键属性。 因此，如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可改进维度、分区和查询处理性能。 有关详细信息，请参阅 [定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md) 和 [属性关系](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+使用自然层次结构时，如果定义了组成级别的属性之间的属性关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用某个属性的聚合来获取相关属性的结果。 如果属性之间没有定义的关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将根据键属性聚合所有非键属性。 因此，如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可改进维度、分区和查询处理性能。 有关详细信息，请参阅[定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md)和[属性关系](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 在定义属性关系时，可以指定此关系是弹性的还是刚性的。 如果您将关系定义为刚性，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会在更新维度时保留聚合。 如果实际过程更改了定义为刚性的关系，那么除非维度得到完全处理，否则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将在处理过程中生成错误。 指定适当的关系和关系属性，可提高查询和处理性能。 有关详细信息，请参阅 [定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md)和 [用户层次结构属性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
   
@@ -188,7 +191,7 @@ ms.lasthandoff: 11/17/2017
 14. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[定义未知成员和 Null 处理属性](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+[定义未知的成员和 Null 处理属性](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [定义属性关系](../analysis-services/multidimensional-models/attribute-relationships-define.md)  

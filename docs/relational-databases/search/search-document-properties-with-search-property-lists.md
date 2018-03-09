@@ -2,10 +2,14 @@
 title: "使用搜索属性列表搜索文档属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9d409de5e77c8cb684cb74d821bb9b7d6a45eef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24c1ffc5cc5f68271343a078cd02296b9d6b42c3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
-  文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 **varbinary**、**varbinary(max)**（包括 **FILESTREAM**）或 **image** 二进制数据列中支持的文档类型，你可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索” 。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 **varbinary**、**varbinary(max)**（包括 **FILESTREAM**）或 **image** 二进制数据列中支持的文档类型，你可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索” 。  
   
  关联的[筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) 确定能否针对指定的文档类型进行属性搜索。 对于某些文档类型，关联的 IFilter 提取为该类型文档定义的某些或所有属性，以及文档正文的内容。 您可以对全文索引进行配置，以便仅对全文索引期间 IFilter 提取的属性支持属性搜索。 在提取若干文档属性的 IFilter 中，包括用于提取 Microsoft Office 文档类型（如 .docx、.xlsx 和.pptx）的 IFilter。 另一方面，XML IFilter 不发出属性。  
   
@@ -53,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
  ![使用搜索属性列表的全文检索](../../relational-databases/search/media/ifts-spl-and-fti.gif "使用搜索属性列表的全文检索")  
   
- Title 属性中的搜索词（“Favorite”、“Biking”和“Trails”）与分配给此索引的 Title 的内部属性 ID (1) 相关联。 Keywords 属性中的搜索词（“biking”和“mountain”）与分配给此索引的 Tags 的内部属性 ID (2) 相关联。 对于 Author 属性（“Jane”和“Doe”）的搜索词 n 以及文档正文中的搜索词，该内部属性 ID 为 0。 请注意，“biking”一词在 Title 属性、Keywords (Tags) 属性以及文档正文中出现。 针对 Title 或 Keywords (Tags) 属性中“biking”的属性搜索将在结果中返回此文档。 针对“biking”的一般全文查询也将返回此文档，就像没有为属性搜索配置索引。 在 Author 属性中针对“biking”的属性搜索将不返回此文档。  
+ Title 属性中的搜索词（“Favorite”、“Biking”和“Trails”）与分配给此索引的 Title 的内部属性 ID (1) 相关联。 Keywords 属性中的搜索词（“biking”和“mountain”）与分配给此索引的 Tags 的内部属性 ID (2) 相关联。 对于 Author 属性（“Jane”和“Doe”）的搜索词 n 以及文档正文中的搜索词，该内部属性 ID 为 0。 “biking”一词在 Title 属性、Keywords (Tags) 属性以及文档正文中出现。 针对 Title 或 Keywords (Tags) 属性中“biking”的属性搜索将在结果中返回此文档。 针对“biking”的一般全文查询也返回此文档，就像没有为属性搜索配置索引。 在 Author 属性中针对“biking”的属性搜索将不返回此文档。  
   
  属性范围的全文查询使用向全文索引的当前搜索属性列表注册的内部属性 ID。  
   
@@ -102,7 +107,7 @@ ms.lasthandoff: 11/09/2017
   
 -   属性整数标识符  
   
-     每个搜索属性都拥有在属性集内唯一的标识符。 请注意，对于某一给定属性，该标识符可以是整数或字符串，但全文搜索仅支持整数标识符。  
+     每个搜索属性都拥有在属性集内唯一的标识符。 对于某一给定属性，该标识符可以是整数或字符串，但全文搜索仅支持整数标识符。  
   
 -   属性名称  
   
@@ -127,7 +132,7 @@ ms.lasthandoff: 11/09/2017
   
  **使用 Transact-SQL 将属性添加到搜索属性列表中**  
   
- 通过借助主题中介绍的方法之一获得的值使用 [ALTER SEARCH PROPERTY LIST (Transact SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md) 语句，[查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。  
+ 通过借助[查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) 一文中介绍的方法之一获得的值使用 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) 语句。  
   
  下面的示例演示在将属性添加到搜索属性列表时这些值的用法：  
   
@@ -160,7 +165,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> 使用 CONTAINS 查询搜索属性  
  针对属性范围的全文查询的基本 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 语法如下：  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  

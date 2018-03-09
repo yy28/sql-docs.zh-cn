@@ -2,10 +2,14 @@
 title: "运行 TSQL 调试器之前配置防火墙规则 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +24,19 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43a0926518f6a5f1f8751389db274f27c9da6993
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c1196f3195b1b54844a5420a8a9322265a1efa8
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>运行 TSQL 调试器之前配置防火墙规则
-  必须配置 Windows 防火墙规则，以便在连接到[!INCLUDE[tsql](../../includes/tsql-md.md)]实例（运行该实例的计算机不同于运行[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器的计算机）时启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 必须配置 Windows 防火墙规则，以便在连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例（运行该实例的计算机不同于运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的计算机）时启用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试。  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>配置 Transact-SQL 调试器  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器包括服务器端和客户端组件。 服务器端调试器组件与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) 或更高版本中的每个数据库引擎实例一起安装。 包括客户端调试器组件：  

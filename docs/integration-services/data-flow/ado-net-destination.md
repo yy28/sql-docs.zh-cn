@@ -1,5 +1,5 @@
 ---
-title: "ADO NET 目标 |Microsoft 文档"
+title: "ADO NET 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 11/08/2017
-
+ms.openlocfilehash: 29e1fd8ede6cc943b1ee41a3b0030b2942169abc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
   ADO NET 目标可将数据加载到各种使用数据库表或视图的兼容 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]的数据库中。 你可以选择将这些数据加载到现有表或视图中，或者先创建一个新表，然后将这些数据加载到新表中。  
@@ -47,14 +46,14 @@ ms.lasthandoff: 11/08/2017
  ADO NET 目标包括输入列和目标数据源中的列之间的映射。 不必将输入列映射到所有目标列。 但是，某些目标列的属性可能需要输入列的映射。 否则，可能会发生错误。 例如，如果目标列不允许出现空值，则必须将输入列映射到该目标列。 另外，映射的列的数据类型必须是兼容的。 例如，如果 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口不支持将数据类型为字符串的输入列映射到数据类型为数值的目标列，则不能进行此映射。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持将文本插入到列数据类型设置为图像。 有关值数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持将文本插入到数据类型设置为图像的列中。 有关值数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
 > [!NOTE]  
 >  ADO NET 目标不支持将数据类型设置为 DT_DBTIME 的输入列映射到数据类型设置为 datetime 的数据库列。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  ADO NET 目标具有一个常规输入和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -101,15 +100,15 @@ ms.lasthandoff: 11/08/2017
   
  可使用 SQL Server 的 .NET 数据提供程序 (SqlClient) 连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关详细信息**错误**选项，请参阅[ADO NET 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
+ 如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关“错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
   
 > [!NOTE]  
->  如果 SQL Server 或 Sybase 源表包含标识列，你必须使用执行 SQL 任务，来启用 IDENTITY_INSERT 在 ADO NET 目标之前和之后再次禁用。 （标识列属性指定的列的增量值。 集 IDENTITY_INSERT 语句允许源表中的显式值插入到目标表中的标识列）。  
+>  如果 SQL Server 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标之前使用“执行 SQL 任务”来启用 IDENTITY_INSERT，并在之后再次禁用它。 （标识列属性为列指定一个增量值。 使用 SET IDENTITY_INSERT 语句，可将源表中的显式值插入目标表中的标识列。）  
 >   
->   若要运行的 SET IDENTITY_INSERT 语句和成功加载的数据，你必须执行以下操作。 
->       1. 针对执行 SQL 任务和 ADO.NET 目标，请使用相同的 ADO.NET 连接管理器。 
->       2. 在连接管理器中，将设置**RetainSameConnection**属性和**MultipleActiveResultSets**属性为 True。 
->       3. 在 ADO.NET 目标，将设置**UseBulkInsertWhenPossible**属性设置为 False。 
+>   若要成功运行 SET IDENTITY_INSERT 语句和加载数据，须执行以下操作。  
+>       1.对“执行 SQL 任务”和 ADO NET 目标使用相同的 ADO.NET 连接管理器。  
+>       2.在连接管理器上，将“RetainSameConnection”属性和“MultipleActiveResultSets”属性设置为“True”。  
+>       3.在 ADO.NET 目标上，将“UseBulkInsertWhenPossible”属性设置为“False”。   
 >
 >  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY（属性）(Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
@@ -127,7 +126,7 @@ ms.lasthandoff: 11/08/2017
   
 3.  在 **“ADO NET 目标编辑器”**中，单击 **“映射”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
   
@@ -135,7 +134,7 @@ ms.lasthandoff: 11/08/2017
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 你可以通过选择移除映射**\<忽略 >**输出中排除列。  
+ 查看选定的输入列。 可以通过选择“\<忽略>”以从输出中排除列来移除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  
@@ -151,7 +150,7 @@ ms.lasthandoff: 11/08/2017
   
 3.  在 **“ADO NET 目标编辑器”**中，单击 **“错误输出”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入或输出**  
  查看输入的名称。  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 11/08/2017
  将错误处理选项应用到选定的单元格。  
   
   
-

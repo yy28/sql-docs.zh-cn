@@ -1,36 +1,38 @@
 ---
 title: "更新统计信息 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE STATISTICS
 - UPDATE_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - updating statistics
 - query optimization statistics [SQL Server], updating
 - UPDATE STATISTICS statement
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96ace864a1cff7724451b521db4b184323db6d8e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 7c69949773ff1dae533c98d087780a2f4b436b62
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +67,8 @@ UPDATE STATISTICS table_or_indexed_view_name
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ] 
     ] ;  
   
 <update_stats_stream_option> ::=  
@@ -131,7 +134,7 @@ PERSIST_SAMPLE_PERCENT = {ON |关闭}
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)和[sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)公开选定的统计数据的持久化的示例百分比值。
  
- **适用于**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。  
+ **适用于**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 CU4) 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU1)。  
  
  ON PARTITIONS ({ \<partition_number > |\<范围 >}[，… n])] 强制涵盖 ON PARTITIONS 子句重新计算，并然后合并，以生成全局统计信息中指定的分区的叶级统计信息。 需要 WITH RESAMPLE，因为使用不同抽样率生成的分区统计信息不能合并在一起。  
   
@@ -156,32 +159,46 @@ PERSIST_SAMPLE_PERCENT = {ON |关闭}
  如果不支持每个分区统计信息，将生成错误。 对于以下统计信息类型，不支持增量统计信息：  
   
 -   使用未与基表的分区对齐的索引创建的统计信息。  
-  
 -   对 Always On 可读辅助数据库创建的统计信息。  
-  
 -   对只读数据库创建的统计信息。  
-  
 -   对筛选的索引创建的统计信息。  
-  
 -   对视图创建的统计信息。  
-  
 -   对内部表创建的统计信息。  
-  
 -   使用空间索引或 XML 索引创建的统计信息。  
   
 **适用于**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+MAXDOP = *max_degree_of_parallelism*  
+**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3)。  
+  
+ 重写**最大并行度**统计信息操作的持续时间的配置选项。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+  
+ *max_degree_of_parallelism*可以是：  
+  
+ @shouldalert  
+ 取消生成并行计划。  
+  
+ \>1  
+ 限制最大并行统计信息操作为指定的数或更少基于当前的系统工作负荷中使用的处理器数。  
+  
+ 0（默认值）  
+ 根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。  
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
-  
-## <a name="remarks"></a>注释  
+
+## <a name="remarks"></a>Remarks  
   
 ## <a name="when-to-use-update-statistics"></a>何时使用 UPDATE STATISTICS  
  有关何时使用更新统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
-  
+
+## <a name="limitations-and-restrictions"></a>限制和局限  
+* 外部表不支持更新统计信息。 若要更新对外部表的统计信息，请除去并重新创建统计信息。  
+* MAXDOP 选项不兼容与 STATS_STREAM、 行计数和 PAGECOUNT 选项。
+
 ## <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 更新所有统计信息  
  有关如何为数据库中的所有用户定义表和内部表更新统计信息的信息，请参阅存储过程 [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，以下命令调用 sp_updatestats 来更新数据库的所有统计信息。  
   
-```t-sql  
+```sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -191,27 +208,27 @@ EXEC sp_updatestats;
 ## <a name="pdw--sql-data-warehouse"></a>PDW / SQL 数据仓库  
  下面的语法不受 PDW / SQL 数据仓库  
   
-```t-sql  
+```sql  
 update statistics t1 (a,b);   
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with sample 10 rows;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with NORECOMPUTE;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with INCREMENTAL=ON;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对表或视图具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -219,7 +236,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ### <a name="a-update-all-statistics-on-a-table"></a>A. 更新表的所有统计信息  
  下面的示例更新上的所有索引的统计信息`SalesOrderDetail`表。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -229,7 +246,7 @@ GO
 ### <a name="b-update-the-statistics-for-an-index"></a>B. 更新索引的统计信息  
  以下示例更新 `AK_SalesOrderDetail_rowguid` 表的 `SalesOrderDetail` 索引的统计信息。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -239,7 +256,7 @@ GO
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. 通过使用 50% 抽样更新统计信息  
  以下示例将创建并更新 `Name` 表中的 `ProductNumber` 和 `Product` 列的统计信息。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -253,7 +270,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. 通过使用 FULLSCAN 和 NORECOMPUTE 更新统计信息  
  以下示例更新 `Products` 表中的 `Product` 统计信息，强制对 `Product` 表中的所有行进行完全扫描，并关闭 `Products` 统计信息的自动统计信息功能。  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -266,21 +283,21 @@ GO
 ### <a name="e-update-statistics-on-a-table"></a>E. 表中更新统计信息  
  下面的示例更新`CustomerStats1`统计信息`Customer`表。  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. 通过使用完全扫描更新统计信息  
  下面的示例更新`CustomerStats1`基于扫描的所有行中的统计信息`Customer`表。  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### <a name="g-update-all-statistics-on-a-table"></a>G. 更新表的所有统计信息  
  下面的示例将更新所有统计信息上`Customer`表。  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer;  
 ```  
   
@@ -293,7 +310,7 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 
 

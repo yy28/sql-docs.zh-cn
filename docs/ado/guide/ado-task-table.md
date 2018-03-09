@@ -8,23 +8,23 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23ba1090608287b5ce397a160cc103c0b06f8932
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0a245945c5dbe9262d251af67a138739b1888da
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-programming-task-table"></a>ADO 编程任务表
 下表列出了中包含的编程任务*ADO 程序员指南*并为每个任务提供的引用。 这些引用可以是文本的说明或在其中你可以找到有关执行任务的 ADO 功能信息的代码示例。

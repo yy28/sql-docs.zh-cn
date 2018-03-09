@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@ERROR'
 - '@@ERROR_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '@@ERROR function'
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5481957e399f072e400a042825c2966f06d2e782
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;错误 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 使用 @@ERROR 有条件地退出过程  
- 下面的示例使用`IF...ELSE`语句来测试`@@ERROR`后`INSERT`存储过程中的语句。 `@@ERROR` 变量的值将确定发送给调用程序的返回代码，以指示此过程的成功与失败。  
+ 下面的示例使用`IF...ELSE`语句来测试`@@ERROR`后`DELETE`存储过程中的语句。 `@@ERROR` 变量的值将确定发送给调用程序的返回代码，以指示此过程的成功与失败。  
   
 ```  
 USE AdventureWorks2012;  

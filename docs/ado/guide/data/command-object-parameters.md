@@ -3,26 +3,28 @@ title: "命令对象参数 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Command object [ADO], parameters
+helpviewer_keywords:
+- Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e72e3f17a661d64602c1ede26e8fbaf77d4d6b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 527ed7c9e6e3a3f250fd559b479637414be3989f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-object-parameters"></a>命令对象参数
 上一个主题中讨论[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 一个更有趣用于[命令](../../../ado/reference/ado-api/command-object-ado.md)对象显示在下一步的示例中，已在其中参数化 SQL 命令。 此修改，使可以再次使用该命令，将传递不同的值为参数每次。 因为[准备属性](../../../ado/reference/ado-api/prepared-property-ado.md)属性**命令**对象设置为**true**，ADO 将需要提供商联系以编译中指定的命令[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)之前执行第一次。 它还将保留在内存中编译后的命令。 这会稍稍命令的执行第一次执行由于准备，但导致的性能有所提高每次之后调用该命令所需的开销。 因此，仅当它们将使用不止一次，则应准备命令。  

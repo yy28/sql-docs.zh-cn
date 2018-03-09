@@ -2,32 +2,30 @@
 title: "配置为使用情况数据收集 (Power Pivot for SharePoint |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d074eb99de5c97bb9df38d6f2305fb906370f64a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>配置使用情况数据收集 (Power Pivot for SharePoint)
-  使用情况数据收集是场级 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用情况数据收集是场级 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用并扩展此系统以便在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中提供显示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的使用情况数据。  
   
  有关 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理仪表板中使用情况数据的信息，请参阅 [PowerPivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
@@ -190,7 +188,7 @@ ms.lasthandoff: 11/17/2017
   
 |设置|默认值|类型|有效范围|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用事件** （连接、加载、卸载、请求）|\<启用 >|Boolean|这些值可以启用或禁用。|  
+|**Analysis Services 使用事件** （连接、加载、卸载、请求）|\<enabled>|Boolean|这些值可以启用或禁用。|  
 |**查询报告间隔**|300（以秒为单位）|Integer|1 到任意正整数。 默认为 5 分钟。|  
 |**Usage data history**|365（以天为单位）|Integer|0 指定无限制，但您也可以设置使历史数据过期并将自动删除它的上限。 有限保留期的有效值为 1 到 5000（单位为天）。|  
 |一般响应上限|500（以毫秒为单位）|Integer|设置定义一般请求-响应交换的上限。 在 0 到 500 毫秒之间完成的任何请求都是一般请求，并且出于报告目的将被忽略。|  

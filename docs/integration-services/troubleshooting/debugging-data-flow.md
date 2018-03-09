@@ -1,5 +1,5 @@
 ---
-title: "调试数据流 |Microsoft 文档"
+title: "调试数据流 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3491077486daf90c414a00eec3d382ae1537284a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-data-flow"></a>调试数据流
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器包含可用于解决 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流问题的功能和工具。  
@@ -159,7 +158,7 @@ order by source_component_name desc
   
 6.  为每列设置 **“截断”** 选项。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
   
@@ -176,7 +175,7 @@ order by source_component_name desc
   
 4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”。  
   
-5.  单击**输入和输出属性**卡，展开**\<组件名称 > 错误输出**然后展开**输出列**。  
+5.  单击“输入和输出属性”选项卡并展开“\<组件名称> 错误输出”，然后展开“输出列”。  
   
 6.  单击某列，然后更新其属性。  
   
@@ -219,7 +218,7 @@ order by source_component_name desc
     > [!NOTE]  
     >  在网格中，表示 DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值显示为 ISO 8601 格式字符串，空间分隔符将替代 **T** 分隔符。 表示 DT_DATE 和 DT_FILETIME 数据类型的值包括七位秒小数。 因为 DT_FILETIME 数据类型仅存储三位秒小数，网格会将其余四位显示为零。 表示 DT_DBTIMESTAMP 数据类型的值包含三位秒小数。 对于表示 DT_DBTIME2、DT_DBTIMESTAMP2 和 DT_DBTIMESTAMPOFFSET 数据类型的值，秒小数的数字位数与为列数据类型指定的小数位数对应。 有关 ISO 8601 格式的详细信息，请参阅 [Date and Time Formats](http://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)。 有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
 
 ## <a name="data-flow-taps"></a>数据分流
  运行时，可在包的数据流路径上添加数据分流点，并将数据分流点的输出定向到外部文件。 若要使用此功能，您必须使用项目部署工具将 SSIS 项目部署到 SSIS 服务器。 将包部署到服务器之后，需要对 SSISDB 数据库执行 T-SQL 脚本，以便在执行该包之前添加数据分流点。 下面是一个示例方案：  
@@ -253,7 +252,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap 存储过程的 dataflow_path_id_string 参数对应于您要添加数据分流点的数据流路径的 IdentificationString 属性。 若要获取 dataflow_path_id_string，请单击数据流路径（数据流中任务间的箭头），并记下“属性”窗口中 **IdentificationString** 属性的值。  
   
- 当执行脚本时，输出文件存储在\<程序文件 > \Microsoft SQL Server\110\DTS\DataDumps。 如果已存在同名文件，则将创建带有后缀的新文件（例如：output[1].txt）。  
+ 执行脚本时，输出文件存储在 \<程序文件>\Microsoft SQL Server\110\DTS\DataDumps 中。 如果已存在同名文件，则将创建带有后缀的新文件（例如：output[1].txt）。  
   
  如前所述，也可使用 [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)存储过程代替使用 add_data_tap 存储过程。 此存储过程将数据流任务的 ID 用作参数，而不使用 task_package_path。 您可以从 Visual Studio 中的属性窗口获取数据流任务的 ID。  
   
@@ -283,4 +282,3 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

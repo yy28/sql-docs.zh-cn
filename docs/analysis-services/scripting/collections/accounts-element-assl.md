@@ -2,15 +2,13 @@
 title: "帐户元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Accounts Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 00d2c1edfe91f2c0223df776ff90b4c9a33bb34b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68975a4da8425a423f38bed174c180ea5d27299b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accounts-element-assl"></a>Accounts 元素 (ASSL)
-  包含在中定义的帐户类型的集合[数据库](../../../analysis-services/scripting/objects/database-element-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含在中定义的帐户类型的集合[数据库](../../../analysis-services/scripting/objects/database-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|无（集合）|  
 |默认值|无（集合）|  
@@ -59,10 +57,10 @@ ms.lasthandoff: 11/17/2017
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|[数据库](../../../analysis-services/scripting/objects/database-element-assl.md)|  
+|父元素|[“数据库”](../../../analysis-services/scripting/objects/database-element-assl.md)|  
 |子元素|[帐户](../../../analysis-services/scripting/objects/account-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  维度，其[类型](../../../analysis-services/scripting/properties/type-element-dimension-assl.md)元素设置为*帐户*、 可以具有一个属性，指定的帐户类型，例如收入，支出，等等，表示由维度中的成员。 然后使用的帐户类型[度量值](../../../analysis-services/scripting/objects/measure-element-assl.md)元素，其[AggregationFunction](../../../analysis-services/scripting/properties/aggregatefunction-element-assl.md)元素设置为*ByAccount*，以确定时要使用的聚合函数聚合该维度的成员。 **Accounts** 元素包含表示帐户类型和应应用于每个帐户类型的聚合函数的 **Account** 元素的集合。  
   
  如果聚合函数不同于使用的默认值，则必须列出帐户类型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]为各种帐户类型。  

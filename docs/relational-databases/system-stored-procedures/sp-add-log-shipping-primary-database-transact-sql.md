@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
 - sp_add_log_shipping_primary_database_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_shipping_primary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_shipping_primary_database
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75e63b606ab3fb2c06a05221a83e8b28ad85bd49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 24a1158b85bc9c53070c0c6cd16f2b6b36dcfe92
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,56 +62,56 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@database=** ]*数据库*  
+ [ **@database=** ] '*database*'  
  日志传送主数据库的名称。 *数据库*是**sysname**，无默认值，并不能为 NULL。  
   
- [  **@backup_directory=** ]*backup_directory*  
+ [ **@backup_directory=** ] '*backup_directory*'  
  主服务器上备份文件夹的路径。 *backup_directory*是**nvarchar(500)**，无默认值，并不能为 NULL。  
   
- [  **@backup_share=** ]*backup_share*  
+ [ **@backup_share=** ] '*backup_share*'  
  主服务器上备份目录的网络路径。 *backup_share*是**nvarchar(500)**，无默认值，并不能为 NULL。  
   
- [  **@backup_job_name=** ]*backup_job_name*  
+ [ **@backup_job_name=** ] '*backup_job_name*'  
  主服务器上用于将备份复制到备份文件夹中的 SQL Server 代理作业的名称。 *backup_job_name*是**sysname**和不能为 NULL。  
   
- [  **@backup_retention_period=** ] *backup_retention_period*  
+ [ **@backup_retention_period=** ] *backup_retention_period*  
  在主服务器上的备份目录中保留日志备份文件的时间长度（分钟）。 *backup_retention_period*是**int**，无默认值，并不能为 NULL。  
   
- [  **@monitor_server=** ]*monitor_server*  
+ [ **@monitor_server=** ] '*monitor_server*'  
  监视服务器的名称。 *Monitor_server*是**sysname**，无默认值，并不能为 NULL。  
   
- [  **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
+ [ **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
  用于连接到监视服务器的安全模式。  
   
  1 = Windows 身份验证。  
   
  0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 *monitor_server_security_mode*是**位**和不能为 NULL。  
   
- [  **@monitor_server_login=** ]*monitor_server_login*  
+ [ **@monitor_server_login=** ] '*monitor_server_login*'  
  访问监视服务器所用的帐户的用户名。  
   
- [  **@monitor_server_password=** ]*monitor_server_password*  
+ [ **@monitor_server_password=** ] '*monitor_server_password*'  
  用于访问监视服务器的帐户的密码。  
   
- [  **@backup_threshold=** ] *backup_threshold*  
+ [ **@backup_threshold=** ] *backup_threshold*  
  是的总时间，以分钟为单位之前, 在上次备份后*threshold_alert*引发错误。 *backup_threshold*是**int**，默认值为 60 分钟。  
   
- [  **@threshold_alert=** ] *threshold_alert*  
+ [ **@threshold_alert=** ] *threshold_alert*  
  是在超出备份阈值时发出警报。 *threshold_alert*是**int**，默认值为 14,420。  
   
- [  **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
+ [ **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
  指定是否将是警报时引发*backup_threshold*超出。 默认值零 (0) 表示警报被禁用，将不会引发警报。 *threshold_alert_enabled*是**位**。  
   
- [  **@history_retention_period=** ] *history_retention_period*  
+ [ **@history_retention_period=** ] *history_retention_period*  
  历史记录的保留时间长度（分钟）。 *history_retention_period*是**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
   
- [  **@backup_job_id=** ] *backup_job_id*输出  
+ [ **@backup_job_id=** ] *backup_job_id* OUTPUT  
  与主服务器上的备份作业相关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业 ID。 *backup_job_id*是**uniqueidentifier**和不能为 NULL。  
   
- [  **@primary_id=** ] *primary_id*输出  
+ [ **@primary_id=** ] *primary_id* OUTPUT  
  日志传送配置的主数据库 ID。 *primary_id*是**uniqueidentifier**和不能为 NULL。  
   
- [  **@backup_compression** =] *backup_compression_option*  
+ [ **@backup_compression**= ] *backup_compression_option*  
  指定是否使用日志传送配置[备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 只有 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）支持此参数。  
   
  0 = 禁用。 从不压缩日志备份。  
@@ -121,7 +124,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  **sp_add_log_shipping_primary_database**必须从运行**master**主服务器上的数据库。 此存储过程可执行以下功能：  
@@ -136,7 +139,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 5.  如果不同于主服务器监视服务器，将添加中的监视器记录**log_shipping_monitor_primary**监视器使用 server 提供自变量。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  
@@ -166,7 +169,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

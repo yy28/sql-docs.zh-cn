@@ -3,27 +3,30 @@ title: "MarshalOptions 属性示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: MarshalOptions property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- MarshalOptions property [ADO], VC++ example
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7a0d6aea70f2a1ff44e0d9817f436c889992180
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0aa8adad99b9451fb6aeaea7864152ea683297e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 属性示例 （VC + +）
 此示例使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)属性来指定哪些行发送回服务器 — 所有行或仅修改的行。  

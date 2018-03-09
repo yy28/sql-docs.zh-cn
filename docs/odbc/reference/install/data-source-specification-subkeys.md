@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,20 +21,20 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5a33c92d5762702f7e309d70ef48f076ecc0b2b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-specification-subkeys"></a>数据源规范子项
 在 ODBC 数据源的子项列出每个数据源都有自己的子项。 此子项具有同名的 ODBC 数据源子项下的相应值。 此子项下的值必须列出驱动程序 DLL，并可能会列出数据源的说明。 如果驱动程序支持转换器，值可能会列出默认转换器、 默认转换 DLL 和默认转换选项的名称。 值还可以列出连接到数据源所需的驱动程序的其他信息。 例如，该驱动程序可能需要服务器名称、 数据库名称或架构名称。  
   
  值的格式为下表中所示。 仅将驱动程序值是必需的。  
   
-|Name|数据类型|data|  
+|“属性”|数据类型|data|  
 |----------|---------------|----------|  
-|Description|REG_SZ|*说明*|  
+|Description|REG_SZ|*description*|  
 |驱动程序|REG_SZ|*驱动程序的 DLL 的路径*|  
 |TranslationDLL|REG_SZ|*转换器的 DLL 的路径*|  
 |TranslationName|REG_SZ|*转换器名称*|  

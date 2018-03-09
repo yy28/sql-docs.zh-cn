@@ -1,5 +1,5 @@
 ---
-title: "sys.pdw_loader_run_stages (Transact SQL) |Microsoft 文档"
+title: sys.pdw_loader_run_stages (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,23 +8,25 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d209fff76a89f84b67e351864b102ebf8ecbcd5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b8545cb5104122950869d3aa4975be403d06755
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwloaderrunstages-transact-sql"></a>sys.pdw_loader_run_stages (TRANSACT-SQL)
+# <a name="syspdwloaderrunstages-transact-sql"></a>sys.pdw_loader_run_stages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   包含正在进行的和已完成的负载中的操作信息[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 信息将在系统重新启动后持久保存。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|-|  
 |列名|数据类型|Description|范围|  
 |run_id|**int**|运行加载程序的唯一标识符。||  
-|阶段 (stage)|**nvarchar (30)**|运行当前阶段。|CREATE_STAGING、 DMS_LOAD、 LOAD_INSERT、 LOAD_CLEANUP|  
+|阶段 (stage)|**nvarchar(30)**|运行当前阶段。|CREATE_STAGING、 DMS_LOAD、 LOAD_INSERT、 LOAD_CLEANUP|  
 |request_id|**nvarchar(32)**|运行此阶段的请求的 ID。||  
 |status|**nvarchar(16)**|此阶段的状态。||  
 |start_time|**datetime**|阶段开始时间。||  

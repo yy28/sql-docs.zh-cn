@@ -1,5 +1,5 @@
 ---
-title: "实现外部元数据 |Microsoft 文档"
+title: "实现外部元数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96d413bca20ec171d515ac6d0ad81b5b994bd854
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8c3c5b7a6d9aa9eb87c80d5a5937b3d26d6c33d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="implementing-external-metadata"></a>实现外部元数据
   组件与其数据源断开连接后，可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> 接口，针对组件的外部数据源中的列验证输入和输出列集合中的列。 使用此接口可以保留一份外部数据源中的列的快照，并可以将这些列映射到组件的输入和输出列集合中的列。  
@@ -85,12 +83,12 @@ End Sub
  对于保留外部元数据列集合的组件，验证还需要完成其他步骤，因为必须验证附加的列集合。 验证可分为连接下的验证和断开连接下的验证。  
   
 ### <a name="connected-validation"></a>连接下的验证  
- 组件与外部数据源处于连接状态时，输入或输出集合中的列是直接与外部数据源相验证的。 另外，还必须验证外部元数据集合中的列。 这是必需的因为可以使用修改外部元数据集合**高级编辑器**中[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]，并对集合所做的更改不能检测到。 因此，处于连接状态时，组件必须确保外部元数据列集合中的列始终反映外部数据源中的列。  
+ 组件与外部数据源处于连接状态时，输入或输出集合中的列是直接与外部数据源相验证的。 另外，还必须验证外部元数据集合中的列。 如此要求的原因是，外部元数据集合可使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的“高级编辑器”来修改，而且对该集合所做的更改是无法检测的。 因此，处于连接状态时，组件必须确保外部元数据列集合中的列始终反映外部数据源中的列。  
   
- 你可以选择隐藏中的外部元数据集合**高级编辑器**通过设置<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A>属性集合的**false**。 但是这还会隐藏**列映射**的编辑器中，它可使用户映射到外部元数据列集合中的列的输入或输出集合中的列的选项卡。 此属性设置为**false**不会阻止开发人员以编程方式修改该集合，但它提供一种外部元数据列集合的一个组件，在以独占方式使用的保护级别[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。  
+ 可以选择在“高级编辑器”中隐藏外部元数据集合，方法是将该集合的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> 属性设置为 **false**。 但这也会隐藏编辑器的“列映射”选项卡，该选项卡允许用户将输入或输出集合中的列映射到外部元数据列集合中的列。 将此属性设置为 **false** 不会阻止开发人员以编程方式修改外部元数据列集合，而会为在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中独占使用的组件的外部元数据列集合提供一定程度的保护。  
   
 ### <a name="disconnected-validation"></a>断开连接下的验证  
- 组件与外部数据源断开连接后，验证即可简化，因为输入或输出集合中的列将直接与外部元数据集合中的列相验证，而不会验证外部源。 组件应执行断开连接的验证，当未建立到其外部数据源的连接，或者当<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>属性是**false**。  
+ 组件与外部数据源断开连接后，验证即可简化，因为输入或输出集合中的列将直接与外部元数据集合中的列相验证，而不会验证外部源。 如果组件与其外部数据源之间的连接尚未建立，或者 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性为 **false**，则组件应执行断开连接下的验证。  
   
  下面的代码示例演示了执行与其外部元数据列集合相验证的组件的实现。  
   
@@ -118,8 +116,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)  
   
   
-

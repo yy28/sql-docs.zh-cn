@@ -1,10 +1,13 @@
 ---
 title: "生成报表 (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a5ec42216bf7aaad67fcdb40d2462ae069aaf953
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 77bca9dfb3bb5ff1f2d12fc112ae39a4dda4ed15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-db2tosql"></a>生成报表 (DB2ToSQL)
 使用命令执行特定活动的报告中在对象树级别的 SSMA 控制台中生成。  
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/09/2017
     ||||  
     |-|-|-|  
     |**Sl。不。**|**Command**|**报表标题**|  
-    |1|生成评估报表|AssessmentReport&lt;n&gt;。XML|  
+    |@shouldalert|生成评估报表|AssessmentReport&lt;n&gt;。XML|  
     |2|转换架构|SchemaConversionReport&lt;n&gt;。XML|  
     |3|迁移数据|DataMigrationReport&lt;n&gt;。XML|  
     |4|转换 sql 语句|ConvertSQLReport&lt;n&gt;。XML|  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/09/2017
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|详细 ="false"|生成的活动汇总的报告。|  
+    |@shouldalert|详细 ="false"|生成的活动汇总的报告。|  
     |2|详细 ="true"|生成每个活动的摘要和详细状态报表。|  
   
     > [!NOTE]  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|报告错误 ="false"|没有错误的详细信息 / 警告 / 信息消息。|  
+    |@shouldalert|报告错误 ="false"|没有错误的详细信息 / 警告 / 信息消息。|  
     |2|报告错误 ="true"|详细的错误 / 警告 / 信息消息。|  
   
     > [!NOTE]  

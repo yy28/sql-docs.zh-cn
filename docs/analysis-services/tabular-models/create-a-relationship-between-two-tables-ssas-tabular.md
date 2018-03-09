@@ -1,35 +1,34 @@
 ---
-title: "创建两个表 (SSAS 表格) 之间的关系 |Microsoft 文档"
+title: "创建关系 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.createrelatdb.f1
 - sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7580e80413bc84d67ae6cc65c9a6c3d86f3f1603
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3936d29e4d547db75e7a92020c82d8c5c5854503
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>创建两个表之间的关系（SSAS 表格）
-  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用关系的详细信息，请参阅 [关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
+# <a name="create-a-relationship"></a>创建关系 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用的关系的信息，请参阅[关系](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>创建两个表之间的关系  
   
@@ -78,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 6.  单击 **“创建”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [删除关系（SSAS 表格）](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
- [关系（SSAS 表格）](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
+ [删除关系](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
+ [关系](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   

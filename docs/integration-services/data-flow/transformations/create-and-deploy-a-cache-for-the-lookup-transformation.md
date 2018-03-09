@@ -1,5 +1,5 @@
 ---
-title: "创建并部署为查找转换缓存 |Microsoft 文档"
+title: "为查找转换创建和部署缓存 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 76b6c9efffe9f87dc9bae67958b8ccf85a79bd76
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>为查找转换创建和部署缓存
   可以为查找转换创建和部署缓存文件 (.caw)。 引用数据集存储在缓存文件中。  
@@ -94,12 +93,11 @@ ms.lasthandoff: 08/03/2017
   
 4.  配置项目以创建一个部署实用工具，再生成项目。 有关详细信息，请参阅 [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)。  
   
-     清单文件， \<*项目名称*>。SSISDeploymentManifest.xml，将创建一个列出的杂项文件项目、 包和包配置中。  
+     将创建清单文件 \<项目名称>.SSISDeploymentManifest.xml，其中列出了项目、包及包配置中的杂项文件。  
   
 5.  将包部署到文件系统。 有关详细信息，请参阅 [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建部署实用工具](../../../integration-services/packages/create-a-deployment-utility.md)  
+ [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   
-

@@ -2,27 +2,30 @@
 title: "发布属性 - 筛选行 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30b632ee39ae16233a66ef4985ce018e0ef8b9d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9f279d06d1be056edf486e0a9a8c4ee0184a9bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-filter-rows"></a>发布属性，筛选行
-  可以使用 **“发布属性”** 对话框的 **“筛选行”** 页，执行添加、编辑或删除操作：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可以使用“发布属性”对话框的“筛选行”页执行添加、编辑或删除操作：  
   
 -   将静态行筛选器应用于快照发布、事务发布和合并发布中的表项目。  
   
@@ -47,11 +50,11 @@ ms.lasthandoff: 11/09/2017
   
 -   避免传输敏感数据。 行筛选器和列筛选器可以用于限制订阅服务器对数据的访问。 对于合并复制，如果使用包括 HOST_NAME() 的参数化筛选器，则需要考虑安全问题。 有关详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“使用 HOST_NAME() 进行筛选”部分。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **筛选的表**  
  此窗格使用您向发布中的表项目添加的筛选器进行填充。 带行筛选器的表在窗格中显示为顶级节点。 对于合并发布，筛选操作通过联接筛选器扩展到的表显示为子节点。  
   
- **添加**  
+ **“添加”**  
  单击 **“添加”** 可以启动一个用于对表项目进行筛选的对话框。 对于快照发布或事务发布，单击 **“添加”** 将立即启动对话框。 对于合并发布，单击 **“添加”** 将会显示三个选项： **“添加筛选器”**、 **“添加联接以扩展所选筛选器”**和 **“自动生成筛选器”**。  
   
 -   选择 **“添加筛选器”** 将启动 **“添加筛选器”** 对话框。 使用此对话框可以将行筛选器应用于表项目。 例如，在 **“添加筛选器”** 对话框中，可以指定在将包含客户数据的表复制到订阅服务器时，该表应只包含法国客户的相关数据。  
@@ -79,7 +82,7 @@ ms.lasthandoff: 11/09/2017
   
  在窗格中选择快捷方式节点并单击 **“查找表”** 。窗格将展开并突出显示该表。 如果单击 **“查找表”** 而没有选定快捷方式节点，将会启动 **“查找表”** 对话框。  
   
- **筛选**  
+ **Filter**  
  包含筛选器窗格中选定筛选器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。  
   
 ## <a name="see-also"></a>另请参阅  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/09/2017
  [重新初始化订阅](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)   
- [联接筛选器](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

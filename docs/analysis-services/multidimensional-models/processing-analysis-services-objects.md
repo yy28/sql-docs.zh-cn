@@ -2,35 +2,33 @@
 title: "处理 Analysis Services 对象 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b9d17eac58d4ae287f71e924d9c012f63484c21
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-analysis-services-objects"></a>处理 Analysis Services 对象
-  处理影响下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象类型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、多维数据集、维度、度量值组、分区、数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+处理影响下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象类型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、多维数据集、维度、度量值组、分区、数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
  应注意处理行为的后果以减少负面影响。 例如，完全处理某个维度会将所有依赖于此维度的分区自动设置为未处理状态。 这将使受影响的多维数据集在依赖分区得到处理之前变得无法查询。  
   

@@ -2,15 +2,13 @@
 title: "查询元素 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Query Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8502824a41e2193a31e0e2b34b41e9ffb3515eaa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 230141d3a6fd5d3b2e02c1dce8e397d3f9bdce3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="query-element-xmla"></a>Query 元素 (XMLA)
-  包含在查询[查询](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)集合使用[DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)命令在基于使用情况的优化过程。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含在查询[查询](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)集合使用[DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)命令在基于使用情况的优化过程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,10 +48,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|字符串|  
-|默认值|无|  
+|数据类型和长度|String|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -61,9 +59,9 @@ ms.lasthandoff: 11/17/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[查询](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **DesignAggregations** 命令通过在该命令的 **Query** 集合中包含一个或多个 **Queries** 元素来支持基于使用情况的优化。 每个 **Query** 元素表示一个目标查询，设计进程使用这些查询定义以最常用的查询为目标的聚合。 你可以指定您自己的目标查询，也可以使用存储的实例的信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在要检索信息是最常用的查询日志中使用查询。  
   
  以迭代方式设计聚合，如果你只需在第一个传递目标查询**DesignAggregations**命令因为[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例将存储这些目标查询，并在后续期间使用这些查询**DesignAggregations**命令。 在迭代进程的第一个 **DesignAggregations** 命令中传递目标查询后，任何在 **DesignAggregations** 属性中包含目标查询的后续 **Queries** 命令都会生成错误。  

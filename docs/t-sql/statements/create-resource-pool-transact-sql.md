@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - RESOURCE POOL
 - CREATE_RESOURCE_POOL_TSQL
 - RESOURCE_POOL_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CREATE RESOURCE POOL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0d6f56e80b0a28dffab2311df3ecce3b2ac76cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +73,13 @@ CREATE RESOURCE POOL pool_name
  *pool_name*  
  资源池的用户定义名称。 *pool_name*是字母数字，可以是最多为 128 个字符，必须是唯一的实例内[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，且必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
- MIN_CPU_PERCENT =*值*  
+ MIN_CPU_PERCENT =*value*  
  指定在出现 CPU 争用时资源池中的所有请求保证能接收的平均 CPU 带宽。 *值*是一个整数，它默认设置为 0。 所允许的范围*值*是从 0 到 100 之间。  
   
- MAX_CPU_PERCENT =*值*  
+ MAX_CPU_PERCENT =*value*  
  指定出现 CPU 争用时资源池中的所有请求将都收到的最大平均 CPU 带宽。 *值*是一个整数，它默认设置为 100。 所允许的范围*值*是从 1 到 100 之间。  
   
- CAP_CPU_PERCENT =*值*  
+ CAP_CPU_PERCENT =*value*  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定资源池中的所有请求都将收到的 CPU 带宽硬性上限。 将 CPU 最大带宽级别限制为与指定值相同。 *值*是一个整数，它默认设置为 100。 所允许的范围*值*是从 1 到 100 之间。  
@@ -97,18 +100,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*值*  
+ MIN_MEMORY_PERCENT =*value*  
  指定为此资源池保留的、不能与其他资源池共享的最小内存量。 *值*是所允许的范围的默认设置 0 整数*值*是从 0 到 100。  
   
- MAX_MEMORY_PERCENT =*值*  
+ MAX_MEMORY_PERCENT =*value*  
  指定此资源池中的请求可使用的总服务器内存量。 *值*是一个整数，它默认设置为 100。 所允许的范围*值*是从 1 到 100 之间。  
   
- MIN_IOPS_PER_VOLUME =*值*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 所允许的范围*值*为 0 到 2 ^31-1 (2,147,483,647)。 指定 0 表示池没有最小值阈值。 默认值为 0。  
   
- MAX_IOPS_PER_VOLUME =*值*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 所允许的范围*值*为 0 到 2 ^31-1 (2,147,483,647)。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
@@ -124,7 +127,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  每个关联组件（计划程序或 NUMA 节点）的总 CPU 百分比不应超过 100%。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

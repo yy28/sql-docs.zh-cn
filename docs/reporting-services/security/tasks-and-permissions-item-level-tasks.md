@@ -8,23 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3abea80a4ddfee5eddd4c4070b79b338d4b398ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a824675df700ba1910d21acea217061acb0879d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>任务和权限 - 项级任务
   项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)。  
@@ -37,14 +35,14 @@ ms.lasthandoff: 12/05/2017
   
  共享数据集使用与报表相同的权限集。 报表部件使用与资源相同的权限集。  
   
-|任务|应用到的项|Permissions|  
+|任务|应用到的项|权限|  
 |----------|---------------------|-----------------|  
 |使用报表|报表|读取内容<br /><br /> 读取报表定义<br /><br /> 读取属性|  
 |使用报表|共享数据集|读取内容<br /><br /> 读取报表定义<br /><br /> 读取属性|  
 |创建链接报表|报表|创建链接<br /><br /> 读取属性|  
 |管理所有订阅|报表|读取属性<br /><br /> 读取任何订阅<br /><br /> 创建任何订阅<br /><br /> 删除任何订阅<br /><br /> 更新任何订阅|  
 |管理数据源|文件夹|创建数据源|  
-|管理数据源|数据源|更新属性<br /><br /> 删除更新内容<br /><br /> 读取属性|  
+|管理数据源|“数据源”|更新属性<br /><br /> 删除更新内容<br /><br /> 读取属性|  
 |管理文件夹|文件夹|创建文件夹<br /><br /> 删除更新属性<br /><br /> 读取属性|  
 |管理单独的订阅|报表|读取属性<br /><br /> 创建订阅<br /><br /> 删除订阅<br /><br /> 读取订阅<br /><br /> 更新订阅|  
 |管理模型|文件夹|创建模型|  

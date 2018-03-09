@@ -16,13 +16,13 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: "58"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd38308eb0e3b02b331b8b6503138f942f6c113b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e4fc8470f88e41444f4d30578c32c3f5c2c32ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>建立数据库镜像会话 - Windows 身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
      如果创建镜像数据库，则需要还原镜像服务器实例上的主体数据库的最近备份（使用 WITH NORECOVERY）。 它还需要在完整备份之后执行一个或多个日志备份并将其依次还原到镜像数据库（使用 WITH NORECOVERY）。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
--   如果服务器实例使用不同的域用户帐户运行，则每个实例还需要在其他实例的 **master** 数据库中具有登录名。 如果登录名不存在，则必须在配置镜像之前创建登录名。 有关详细信息，请参阅[允许使用 Windows 身份验证对数据库镜像终结点进行网络访问 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)。  
+-   如果服务器实例使用不同的域用户帐户运行，则每个实例还需要在其他实例的 **master** 数据库中具有登录名。 如果登录名不存在，则必须在配置镜像之前创建登录名。 有关详细信息，请参阅 [允许使用 Windows 身份验证对数据库镜像终结点进行网络访问 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)。  
   
 ### <a name="to-configure-database-mirroring"></a>配置数据库镜像  
   

@@ -2,34 +2,30 @@
 title: "撰写 MergePartitions 命令 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d83ab2bae56fb7d38bf5c091ae57e6ddf592e3af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fce99eb78e6e5a40b825d13b81def4a87deb48b5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mergepartitions-command-tmsl"></a>撰写 MergePartitions 命令 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  将一个或多个源分区的数据合并到目标分区，，然后删除源分区。 目标分区的 SQL 查询将不会更新作为 merge 的一部分。 若要确保后续处理分区检索到的所有数据，应修订查询，以便它选择合并分区中的所有数据。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+将一个或多个源分区的数据合并到目标分区，，然后删除源分区。 目标分区的 SQL 查询将不会更新作为 merge 的一部分。 若要确保后续处理分区检索到的所有数据，应修订查询，以便它选择合并分区中的所有数据。  
   
 ## <a name="request"></a>请求  
  必须指定数据库、 表和分区源和目标分区。 你只能合并同一表中的分区。  
@@ -77,6 +73,6 @@ ms.lasthandoff: 11/17/2017
 
 ## <a name="see-also"></a>另请参阅  
  [表格模型脚本语言 (TMSL) 参考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [创建和管理表格模型分区（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

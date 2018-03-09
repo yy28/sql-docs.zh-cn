@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - management data warehouse, data collector stored procedures
 - data collector [SQL Server], stored procedures
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 674968b7b981755ea0f67f8657116537d2a5791c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +54,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_set_uid =] '*collection_set_uid*  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
  收集组的 GUID。 *collection_set_uid*是**uniqueidentifier**无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collection_sets 视图。  
   
- [ @collector_type_uid =] '*collector_type_uid*  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collector_types 视图。  
   
- [ @machine_name=] '*machine_name*  
+ [ @machine_name= ] '*machine_name*'  
  收集组所在的服务器的名称。 *machine_name*是**sysname**，无默认值。  
   
  [ @named_instance=] '*named_instance*  
  收集组实例的名称。 *named_instance*是**sysname**，无默认值。  
   
- [ @log_id =] *log_id*  
+ [ @log_id = ] *log_id*  
  映射到收集数据的服务器上的收集组事件日志的唯一标识符。 *log_id*是**bigint**无默认值。 若要获取的值*log_id*，查询在 msdb 数据库 dbo.syscollector_execution_log 视图。  
   
- [ @snapshot_id =] *snapshot_id*  
+ [ @snapshot_id = ] *snapshot_id*  
  插入到 core.snapshots 视图行的唯一标识符。 *snapshot_id*是**int**和返回作为输出。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -84,7 +86,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
  如果未通过上述任一检查，该过程将失败并返回一个错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**mdw_writer** （拥有 EXECUTE 权限） 固定的数据库角色。  
   
 ## <a name="examples"></a>示例  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57c9413ed5a962c9bc2422e007d92ce88ffbebca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d756f34ea2ac9e5bf2803dc27b80a374ab9cd56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stored-procedures---calling"></a>存储的过程的调用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
  使用 ODBC CALL 转义序列调用过程的常用语法是：  
   
- {[**？ =**]**调用***procedure_name*[**(**[*参数*] [**，**[*参数*]]...**)**]}  
+ {[**?=**]**call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
   
  例如：  
   
@@ -135,6 +135,6 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [存储过程](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [存储的过程](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

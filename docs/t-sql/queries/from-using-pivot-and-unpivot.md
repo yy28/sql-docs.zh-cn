@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: PIVOT_TSQL
+f1_keywords:
+- PIVOT_TSQL
 helpviewer_keywords:
 - FROM clause, UNPIVOT operator
 - unpivoting tables
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - FROM clause, PIVOT operator
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4555a892c55ae8ef40e8fd0c3658412e3641d973
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1feee91c251b5c1f326e8e69569186c049007d9e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="from---using-pivot-and-unpivot"></a>从-使用数据透视和逆透视
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -210,7 +212,7 @@ VendorID    Employee    Orders
  `Sales.vSalesPersonSalesByFiscalYears`中查看[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]示例数据库使用`PIVOT`要为每个会计年度中返回每个销售人员的总销售额。 若要编写脚本中的视图[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中**对象资源管理器**，找到下的视图**视图**文件夹[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库。 右键单击该视图名称，然后选择**视图脚本为**。  
   
 ## <a name="see-also"></a>另请参阅  
- [从 (Transact SQL)](../../t-sql/queries/from-transact-sql.md)   
- [用例 (Transact SQL)](../../t-sql/language-elements/case-transact-sql.md)  
+ [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   

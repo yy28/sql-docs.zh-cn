@@ -8,21 +8,22 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d74e5d7e56704515bb6f1c97e26e47802583279
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
 该 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教程介绍了如何使用包含常用函数和运算符的表达式创建功能强大且灵活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     > 只要具有足够的权限，则选择哪一个数据源并不重要。 您将不会从数据源中获取数据。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
-7.  单击 **“下一步”**。  
+7.  单击“下一步” 。  
   
 8.  在“设计查询”页上，单击“编辑为文本”。  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 12/05/2017
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. 单击 **“下一步”**。  
+11. 单击“下一步” 。  
   
 12. 在“排列字段”页上，将以下字段按指定顺序从“可用字段”列表拖到“值”列表。  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 12/05/2017
     
     ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. 单击 **“下一步”**。  
+15. 单击“下一步” 。  
   
 16. 在“选择布局”页上，保留所有默认设置，然后单击“下一步”。  
 

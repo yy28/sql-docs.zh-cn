@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_plan_attributes (Transact SQL) |Microsoft 文档"
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_plan_attributes_TSQL
 - dm_exec_plan_attributes
 - sys.dm_exec_plan_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_plan_attributes dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c9a90a964bd8c1fce911e62ac9081b47d349e0a5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +47,14 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ```  
   
 ## <a name="arguments"></a>参数  
- *plan_handle 收集*  
+ *plan_handle*  
  用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划。 *plan_handle*是**varbinary(64)**。 可以从获取的计划句柄[sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)动态管理视图。  
   
 ## <a name="table-returned"></a>返回的表  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|属性|**varchar （128)**|与此计划关联的属性的名称。 立即下此表列出了可能的属性，其数据类型，及其说明。|  
+|属性|**varchar(128)**|与此计划关联的属性的名称。 立即下此表列出了可能的属性，其数据类型，及其说明。|  
 |值|**sql_variant**|与此计划关联的属性的值。|  
 |is_cache_key|**bit**|指示此属性是否用作计划的缓存查找密钥的一部分。|  
 
@@ -83,7 +86,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |sql_handle|**varbinary**(64)|批处理的 SQL 句柄。|  
 |merge_action_type|**int**|用作 MERGE 语句结果的触发器执行计划的类型。<br /><br /> 0 表示非触发器计划，或者不会作为 MERGE 语句结果来执行的触发器计划，或者作为仅指定 DELETE 操作的 MERGE 语句结果执行的触发器计划。<br /><br /> 1 表示作为 MERGE 语句结果运行的 INSERT 触发器计划。<br /><br /> 2 表示作为 MERGE 语句结果运行的 UPDATE 触发器计划。<br /><br /> 3 表示一个作为包含对应的 INSERT 或 UPDATE 操作的 MERGE 语句结果运行的 DELETE 触发器计划。<br /><br /> 对于由级联操作运行的嵌套触发器，此值是导致级联的 MERGE 语句的操作。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
@@ -96,7 +99,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>计算 Set 选项  
  转换中返回的值**set_options**到编译计划所用的选项，将值相减从**set_options**值，最大可能值，直到你从开始达到 0。 所减去的每个值对应于查询计划中所用的一个选项。 例如，如果中的值**set_options** 251，编译计划所使用的选项是 ANSI_NULL_DFLT_ON (128)、 QUOTED_IDENTIFIER (64)、 ANSI_NULLS(32)、 ANSI_WARNINGS (16)、 CONCAT_NULL_YIELDS_NULL (8)、 并行 Plan(2)和 ANSI_PADDING (1)。  
   
-|选项|值|  
+|选项|“值”|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -116,7 +119,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> 指示编译计划时数据库选项 PARAMETERIZATION 设置为 FORCED。|131072|  
-|ROWCOUNT|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>游标  
  不活动游标缓存在编译的计划中，以便游标的并发用户可以重用存储游标所使用的内存。 例如，假设某批处理声明并使用了一个游标，但未释放该游标。 如果有两个用户执行同一个批处理，将有两个活动游标。 游标释放（可能在不同批处理中）后，用于存储该游标的内存就会缓存但不释放。 此不活动游标列表保存在编译的计划中。 下次用户执行该批处理时，缓存的游标内存将重用并相应地初始化为活动游标。  
@@ -124,9 +127,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>计算游标选项  
  转换中返回的值**required_cursor_options**和**acceptable_cursor_options**到编译计划所用的选项，减去从列的值，开头的值最大可能值，直到达到 0。 所减去的每个值对应于查询计划中所用的一个游标选项。  
   
-|选项|值|  
+|选项|“值”|  
 |------------|-----------|  
-|无|0|  
+|InclusionThresholdSetting|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -148,7 +151,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. 返回特定计划的属性  
  下例将返回指定计划的所有计划属性。 将首先查询 `sys.dm_exec_cached_plans` 动态管理视图以获得指定计划的计划句柄。 在第二次查询中，用第一次查询中的计划句柄值替换 `<plan_handle>`。  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +163,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. 返回编译计划的 SET 选项和缓存计划的 SQL 句柄  
  下例将返回代表编译每个计划时所用选项的值。 此外，还将返回所有缓存计划的 SQL 句柄。  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   
@@ -174,9 +177,9 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

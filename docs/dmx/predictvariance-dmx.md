@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PredictVariance
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: db699ed158838f0d259d5aaf6fdf163542b94d65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 813ac2c1ffa1f937bdb5115c6f1bf6a2c558355c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ PredictVariance(<scalar column reference>)
 ## <a name="return-type"></a>返回类型  
  由指定类型的标量值*\<标量列引用 >*。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果列引用为离散， **PredictVariance**返回 0，因为无法从离散值计算方差。  
   
 ## <a name="examples"></a>示例  

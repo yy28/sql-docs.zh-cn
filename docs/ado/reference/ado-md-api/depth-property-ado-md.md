@@ -3,8 +3,9 @@ title: "深度属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Level::Depth
 - Depth
-helpviewer_keywords: Depth property [ADO MD]
+helpviewer_keywords:
+- Depth property [ADO MD]
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cac1a30dcd710686186d9d6db4f215aebb7eab41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c84c7bf380e80177dd8dab9c9a80db86dc67af6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="depth-property-ado-md"></a>深度属性 (ADO MD)
 指示之间级别数[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)和层次结构的根。  

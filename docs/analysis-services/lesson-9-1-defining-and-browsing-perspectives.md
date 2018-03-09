@@ -2,29 +2,32 @@
 title: "定义和浏览透视 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07e244c89cc130619f1464427a0f8e31dbafa162
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9250e25f4e874c40ec9e400850707f30c8e1930
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lesson 9-1-定义和浏览透视
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 透视可以出于特定目的简化多维数据集的视图。 默认情况下，用户可以查看多维数据集内对其具有查看权限的所有元素。 用户查看整个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集时所看到的内容是该多维数据集的默认透视。 对于导航视图的用户，尤其对于只需与多维数据集的一小部分交互就能满足其商业智能和报表需求的用户来说，整个多维数据集的视图将是非常复杂的。  
   
 若要降低多维数据集明显的复杂性，可以创建多维数据集的可查看子集，这称为“透视”，透视可以只向用户显示多维数据集内的度量值组、度量值、维度、属性、层次结构、关键绩效指标 (KPI)、操作和计算成员的一部分。 在使用针对以前版本的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 编写的客户端应用程序时，这种做法可能特别有用。 例如，这些客户端不具有显示文件夹或透视的概念，但对于较早的客户端，透视的显示方式类似于多维数据集。 有关详细信息，请参阅 [透视](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)和 [多维模型中的透视](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)。  

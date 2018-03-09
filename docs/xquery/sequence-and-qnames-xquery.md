@@ -3,32 +3,38 @@ title: "序列和 QNames (XQuery) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - sequence [XQuery]
 - XQuery, sequence
 - QName [XQuery]
 - predefined namespaces [XML in SQL Server]
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2414607a95b28aeba61bded3d9898ac25cb720a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f75694958ca453d1b630a0c02c422d35c6ff4c34
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequence-and-qnames-xquery"></a>序列和 QName (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本主题介绍以下 XQuery 基本概念：  
   
@@ -135,7 +141,7 @@ WHERE ProductModelID=7;
   
  已经预定义了下列命名空间，以便与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 支持一起使用。  
   
-|前缀|URI|  
+|Prefix|URI|  
 |------------|---------|  
 |xs|http://www.w3.org/2001/XMLSchema|  
 |xsi|http://www.w3.org/2001/XMLSchema-instance|  

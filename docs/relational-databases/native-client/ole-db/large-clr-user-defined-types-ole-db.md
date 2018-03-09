@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e016e0f7d6250f25f1c92d3f2527f68dc91c69e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/17/2017
   
  下表显示了参数和行集中的数据类型映射：  
   
-|SQL Server 数据类型|OLE DB 数据类型|内存布局|值|  
+|SQL Server 数据类型|OLE DB 数据类型|内存布局|“值”|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR UDT|DBTYPE_UDT|BYTE [] （字节数组\)|132 (oledb.h)|  
+|CLR UDT|DBTYPE_UDT|BYTE[](byte array\)|132 (oledb.h)|  
   
  UDT 值表示为字节数组。 支持与十六进制字符串之间的转换。 文字值表示为带有“0x”前缀的十六进制字符串。 十六进制字符串是以 16 为基数的二进制数据的文本表示形式。 一个示例是从服务器类型的转换**varbinary(10)**到 DBTYPE_STR，这将导致在 20 个字符的字符的每个对其中表示单字节的十六进制表示形式。  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
 |DBTYPE_BSTR|支持 (2)、(5)|N/A|支持 (3)，(5)|N/A|  
 |DBTYPE_STR|支持 (2)、(5)|N/A|支持 (3)，(5)|N/A|  
 |DBTYPE_IUNKNOWN|支持 (6)|N/A|支持 (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124;VT_ARRAY)|支持 (5)|N/A|支持 (3)，(5)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|N/A|支持 (3)，(5)|N/A|  
 |DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|N/A|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>符号含义  

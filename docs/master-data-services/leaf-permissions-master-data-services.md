@@ -5,10 +5,11 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,23 +19,23 @@ helpviewer_keywords:
 - leaf members [Master Data Services], attribute permissions
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18a5a0b1d3309d58cda54387fe228010ca11d831
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3a59acad5d9eb7e24aa8fa33a9c6633ddc52f0a1
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="leaf-permissions-master-data-services"></a>叶权限（主数据服务）
   叶权限应用到实体的所有叶成员的属性值。  
   
  对于未启用显式层次结构的实体，将权限分配给 **“叶”** 等同于将权限分配给实体。  
   
- **注意：**  
+ **说明：**  
   
 -   叶权限仅应用到用户界面的 **“资源管理器”** 功能区域。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="example"></a>示例  
  对于 Product 实体，将 **“更新”** 权限分配给 Subcategory 属性。 向所有其他属性分配“拒绝”权限。  
   
-|Name|Code|Subcategory（更新）|  
+|“属性”|代码|Subcategory（更新）|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|\{5\} Mountain Bikes|  
 |Mountain-100|BK-M201|\{5\} Mountain Bikes|  

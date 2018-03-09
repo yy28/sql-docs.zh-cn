@@ -1,5 +1,5 @@
 ---
-title: "数据进行转换 |Microsoft 文档"
+title: "使用转换对数据进行转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d7feb12fd7b258fb876ff1ed554159e54a7ac33
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c3bd6e635fb364619933d23699f99da85591df31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transform-data-with-transformations"></a>使用转换对数据进行转换
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括三种类型的数据流组件：源、转换和目标。  
@@ -74,4 +73,3 @@ ms.lasthandoff: 08/03/2017
  [数据流](../../../integration-services/data-flow/data-flow.md)  
   
   
-

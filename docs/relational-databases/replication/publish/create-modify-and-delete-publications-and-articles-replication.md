@@ -2,9 +2,12 @@
 title: "创建、修改和删除发布和项目（复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f467bc9010932f0d29304dc004dc7d4fc9d1777c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ee95ce967637c9b1be05d0ee4de552b1cb7ea4e4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>创建、修改和删除发布和项目（复制）
-  本节包含有关与创建发布和定义项目相关的任务的过程信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本节包含有关与创建发布和定义项目相关的任务的过程信息。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -84,7 +87,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [为事务项目的数据更改设置传播方法](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)  
   
--   [对事务发布启用更新订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [允许更新事务发布的订阅](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 -   [设置排队更新冲突解决选项 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   

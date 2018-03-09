@@ -2,9 +2,12 @@
 title: "安全部署（复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - deployment security [SQL Server replication]
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24d325ec91abebba16dc39ee28f8c1a45ae8e03b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 91887cd8440fbe7427d4bdba3c50fda151e80ee3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-deployment-replication"></a>安全部署（复制）
-  本节提供的信息可帮助您更好地进行安全复制。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本节提供的信息可帮助更好地进行安全复制。  
   
 ## <a name="in-this-section"></a>本节内容  
  [保护分发服务器](../../../relational-databases/replication/security/secure-the-distributor.md)  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
  [保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
  介绍访问快照文件夹所需的权限、定义文件夹位置的最佳方法和通过 FTP 传递快照的注意事项。  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [保护通过 Internet 进行的复制](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
  包括有关虚拟专用网络和 Web 同步的信息。  
   
  [SQL Server Compact 复制安全注意事项](../../../relational-databases/replication/security/security-considerations-for-sql-server-compact-replication.md)  

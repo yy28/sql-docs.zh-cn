@@ -1,32 +1,208 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6a1531fb335269f3b02b512a75750ebb188c82c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a87476c668bcbf8226348349d6886c39ce8563bf
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
 
 
-## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+
+## <a name="ssms-175download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.5](download-sql-server-management-studio-ssms.md)
+
+正式发布版 | 内部版本号：14.0.17224.0
+
+### <a name="whats-new"></a>新增功能
+
+**常规 SSMS**
+
+数据发现和分类：
+
+- 添加了新的 SQL 数据发现和分类功能，可用于发现数据库中的敏感数据并对其进行分类、标记和报告。 
+- 自动发现最敏感的数据（如商业、金融、医疗和 PII 等）并对其进行分类在组织的信息保护中可起到关键作用。
+- 详细了解 [SQL 数据发现和分类](../relational-databases/security/sql-data-discovery-and-classification.md)。
+
+查询编辑器：
+
+- 为 Azure SQL DW 的带分隔符的文本外部文件格式添加了 SkipRows 选项的支持。 此功能允许用户在将带分隔符的文本文件加载到 SQL DW 时，跳过指定的行数。 还为 FIRST_ROW 关键字添加了相应的 IntelliSense/SMO 支持。 
+
+Showplan：
+
+- 为 SQL 数据仓库启用了“显示估计计划”按钮
+- 添加了新显示计划属性 EstimateRowsWithoutRowGoal；还向 QueryTimeStats: UdfCpuTime 和 UdfElapsedTime 添加了新显示计划属性。 有关详细信息，请参阅 [SQL Server 2017 CU3 中添加的查询执行计划中的优化器行目标信息](http://support.microsoft.com/help/4051361)。
+
+
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**常规 SSMS**
+
+Showplan：
+
+- 修复了实时查询统计信息运行时间，以显示引擎执行时间（而非 LQS 连接运行时间）。
+- 修复了显示计划无法识别应用逻辑运算符（如 GbApply 和 InnerApply）的问题。
+- 修复了与 ExchangeSpill 相关的问题。
+
+查询编辑器：
+
+- 修复了在执行由“SET SHOWPLAN_ALL ON”开头的简单查询时，与 SPID 相关的问题， 例如 SSMS 无法引发“输入字符串格式不正确。(mscorlib)”等错误。 
+
+
+SMO：
+
+- 修复了当服务器排序规则区分大小写时，SMO 无法提取 AvailabilityReplica 属性的问题（修复后，SSM 可显示错误消息，例如“无法绑定多部分标识符 a.delimited。”）
+- 修复了 DatabaseScopedConfigurationCollection 类中无法正确处理排序规则的问题（修复后，右键单击在具有区分大小写排序规则的服务器中运行的数据库时，在区域设置为土耳其语的 ma 计算机上运行的 SSMS 可显示错误，如“旧版基数估计不是有效范围配置”）。
+- 修复了 JobServer 类中 SMO 无法在 SQL 2005 服务器上提取 SQL 代理属性的问题（修复后，SSMS 可引发如“无法向局部变量分配默认值。 必须声明标量变量 @ServiceStartMode”的错误，此外，SSMS 不会在对象资源管理器中显示 SQL 代理节点）。
+
+模板： 
+
+- “数据库邮件”：修复了一些拼写错误 [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512)。  
+
+对象资源管理器：
+- 修复了托管压缩无法进行索引的问题 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o)。
+
+审核：
+- 修复了“合并审核文件”功能的问题。
+<br>
+
+### <a name="known-issues"></a>已知问题
+
+数据分类：
+- 如果删除一个分类并为相同的列手动添加一个新分类，则旧信息类型和敏感标签将被分配给主视图中的该列。<br>
+解决方法：在将分类添加回主视图之后且在保存之前，先分配新信息类型和敏感标签。
+
+
+
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
+
+
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![download](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
+正式发布版 | 内部版本号：14.0.17213.0
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
+
+### <a name="whats-new"></a>新增功能
+
+**常规 SSMS**
+
+漏洞评估：
+- 添加了一个新的 SQL 漏洞评估服务，以扫描数据库的潜在漏洞和最佳方案偏差，如配置错误、权限过多和敏感数据公开。 
+- 评估结果包括旨在解决每个问题的可操作步骤，并提供自定义修正脚本（若适用）。 可以为每个环境自定义评估报表并进行调整以满足特定需求。 访问 [SQL 漏洞评估](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)了解详细信息。
+
+SMO：
+- 修复了 HasMemoryOptimizedObjects 在 Azure 上引发异常的问题。
+- 添加了对新 CATALOG_COLLATION 功能的支持。
+
+AlwaysOn 仪表板：
+- 可用性组中的延迟分析有所改进。
+- 添加了两个新报表：AlwaysOn\_Latency\_Primary 和 AlwaysOn\_Latency\_Secondary。
+
+Showplan：
+- 已更新指向正确文档的链接。
+- 允许直接从生成的实际计划进行单个计划分析。
+- 新图标集。
+- 添加了对识别 GbApply、InnerApply 等“应用逻辑运算符”的支持。
+        
+XE 探查器：
+- 更名为 XEvent 探查器。
+- 默认情况下，停止/启动菜单命令会立即停止/启动会话。
+- 已启用键盘快捷方式（例如，用于搜索的 CTRL-F）。
+- 向 XEvent 探查器会话中的相应事件添加了 database\_name 和 client\_hostname 操作。 为了使更改生效，你可能需要删除服务器上现有 QuickSessionStandard 或 QuickSessionTSQL 会话实例 - [连接 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+命令行：
+- 添加了新的命令行选项 (“-G”)，可以用于自动将 SSMS 连接到使用 Active Directory 身份验证（“集成”或“密码”）的服务器/数据库。 有关详细信息，请参阅 [Ssms 实用工具](ssms-utility.md)。
+
+导入平面文件向导：
+- 添加了一种方式，以在创建表时选择默认名称 (“dbo”) 以外的架构名称。
+
+查询存储：
+- 在展开查询存储可用报表列表时，还原了“回归查询”报表。
+
+**Integration Services (IS)**
+- 在部署向导中添加了包验证函数，可帮助用户找出 SSIS 包内在 Azure SSIS IR 中不受支持的组件。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**常规 SSMS**
+
+- 对象资源管理器：
+    - 修复了表值函数节点未显示在数据库快照中的问题 - [连接 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161)。
+    - 在服务器具有 autoclose 数据库的情况下，提高了在展开“数据库”节点时的性能。
+- 查询编辑器：
+    - 修复了 IntelliSense 对于无权访问 master 数据库的用户不可用的问题。
+    - 修复在远程计算机连接关闭时导致 SSMS 在某些情况下崩溃的问题 - [连接 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557)。
+- XEvent 查看器：
+    - 重新启用了该功能，以便导出到 XEL。
+    - 修复了在某些情况下用户无法加载整个 XEL 文件的问题。
+- XEvent 探查器：
+    - 修复了在用户没有“查看服务器状态”权限时，导致 SSMS 崩溃的问题。
+    - 修复了在关闭 XE 探查器实时数据窗口时未停止基础会话的问题。
+- 已注册的服务器：
+    - 修复了“移动到...” 命令停止工作的问题 - [连接 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 和[连接 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
+- SMO：
+    - 修复了 Transfer 对象上 TransferData 方法不工作的问题。
+    - 修复了 Server 数据库引发暂停 SQL DW 数据库异常的问题。
+    - 修复了在编写针对 SQL DW 的 SQL 数据库脚本时生成了不正确的 T-SQL 参数值的问题。
+    - 修复了在编写延伸 DB 脚本时，错误发出“DATA\_COMPRESSION”选项的问题。
+- 作业活动监视器：
+    - 修复了在用户尝试按类别进行筛选时收到“索引已超出范围。 必须为非负数且小于集合大小。 
+        参数名称：索引 (System.Windows.Forms)”错误的问题 - [连接 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691)。
+- 连接对话框：
+    - 修复了对读/写域控制器不具备访问权限的域用户无法使用 SQL 身份验证登录到 SQL Server 的问题 - [连接 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381)。
+- 复制：
+    - 修复了在查看 SQL Server 中的请求订阅属性时，显示一个类似于“无法将值 'null' 应用到属性 ServerInstance”的错误的问题。
+- SSMS 安装：
+    - 修复了 SSMS 安装错误导致计算机上所有已安装产品都要进行重新配置的问题。
+- 用户设置：
+   - 美国政府 sovereign 云用户可以利用此修复，通过通用身份验证和 Azure Active Directory 登录，使用 SSMS 不间断地访问其 Azure SQL 数据库和 ARM 资源。  使用以前版本 SSMS 的用户将需要打开“工具”|“选项”|“Azure 服务”并在“资源管理”下，将“Active Directory 颁发机构”属性的配置更改为 https://login.microsoftonline.us。
+
+**Analysis Services (AS)**
+
+- 探查器：修复了尝试使用 Window 身份验证连接 Azure AS 时的问题。
+- 修复了在取消有关 1400 模型的连接详细信息时可能会导致崩溃的问题。
+- 刷新凭据时，在连接属性对话框中设置 Azure blob 密钥，它将被直观屏蔽。
+- 修复了在搜索时，Azure Analysis Services 用户选择对话框显示应用程序 ID guid 而不是对象 ID 的问题。
+- 修复了浏览数据库\MDX 查询设计器工具栏中导致图标不正确地映射到某些按钮的问题。
+- 修复了阻止通过 msmdpump IIS http/https 地址连接到 SSAS 的问题。
+- Azure Analysis Services 用户选取器对话框中的多个字符串现在均已转换为其他语言。
+- MaxConnections 属性现对表格模型中的数据源可见。
+- 现在，部署向导将为 Azure AS 角色成员生成正确的 JSON 定义。
+- 修复了在 SQL 探查器中当选择针对 Azure AS 的 Windows 身份验证时仍会提示登录的问题。
+
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![下载](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 正式发布版 | 内部版本号：14.0.17199.0
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
+
 
 ### <a name="enhancements"></a>增强功能
 
@@ -116,12 +292,10 @@ ms.lasthandoff: 11/09/2017
 - 对于 Scale Out 中的包执行，[catalog].[event_messagea] 中的 [execution_path] 不正确。[execution_path] 以“\Package”开头，而不是以包可执行文件的对象名称开头。 在 SSMS 中查看包执行的概述报表时，执行概述中“执行路径”的链接不起作用。 解决方法是，在概述报表上单击“查看消息”，检查所有事件消息。
 
 
-## <a name="previous-ssms-releases"></a>SSMS 的早期版本
-
-通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
-
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![download](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 公开发布 | 版本号：14.0.17177.0
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
 ### <a name="enhancements"></a>增强功能
 
@@ -248,8 +422,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 修复了无法显示 SSISDB 目录的执行信息报表的问题
 - 修复了 SSMS 中与大量项目/包性能不佳相关的问题
 
-## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![下载](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
+## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=799832)
 公开发布 | 内部版本号：14.0.17119.0
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 ### <a name="enhancements"></a>增强功能
 
@@ -273,8 +449,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 脚本：通过禁用选项，暂时阻止了 SSMS 尝试编写删除脚本时误删 Azure 数据库对象的问题。  即将发布的 SSMS 版本中将提供正式修复。
 - 对象资源管理器：修复了使用“AS COPY”将“数据库”节点连接到创建的 Azure 数据库时此节点无法展开的问题
 
-## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![下载](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=799832)
 公开发布 | 内部版本号：14.0.17099.0
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 ### <a name="enhancements"></a>增强功能 
 
@@ -441,6 +619,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![下载](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 公开发布 | 内部版本号 ：13.0.16106.4
 
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
+
 此版本已解决以下问题：
 
 * 解决了 SSMS 16.5.2 中引入的问题，即当表具有多个稀疏列时，导致“表”节点扩展。
@@ -478,8 +658,11 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * 修复了单击查询计划 XML 时不能打开相应 SSMS UI 的问题。
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid832812"></a>![下载](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
+## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=799832)
 公开发布 | 版本号：13.0.16000.28
+
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * 修复了当单击具有包含“;:”的表名称的数据库时可能发生故障的问题。
 * 修复了在“AS 表格数据库属性”窗口中对“模型”页所做的更改将编写原始定义的脚本的问题。 
@@ -502,8 +685,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * 修复了在关闭应用程序或 SSMS 尝试显示错误对话框时发生故障的问题。
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>![下载](../ssdt/media/download.png) [SSMS 16.4.1（2016 年 9 月）](http://go.microsoft.com/fwlink/?LinkID=828615)
+## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [SSMS 16.4.1（2016 年 9 月）](http://go.microsoft.com/fwlink/?LinkID=799832)
 公开发布 | 版本号：13.0.15900.1
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 *  解决了尝试更改/修改存储过程失败的问题：  
 [Microsoft Connect 项目 #3103831](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
@@ -564,14 +749,17 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid824938"></a>![下载](../ssdt/media/download.png) [SSMS 16.3（2016 年 8 月）](http://go.microsoft.com/fwlink/?LinkID=824938)
+## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [SSMS 16.3（2016 年 8 月）](http://go.microsoft.com/fwlink/?LinkID=799832)
 公开发布 | 版本号：13.0.15700.28
+
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * SSMS 月度版本目前以数字命名。
 
 * [新身份验证选项**“Active Directory 通用身份验证”**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 这是一种由 Azure Active Directory 驱动的基于令牌的身份验证机制，支持多重身份验证、密码身份验证和集成身份验证机制。
 
-* 新扩展事件模板匹配 SQL Server Profiler 模板的功能 [（Microsoft Connect 项目 #2543925）。](../tools/sql-server-profiler/sql-server-profiler-templates.md)。
+* 新扩展事件模板匹配 SQL Server Profiler 模板的功能[（Microsoft Connect 项目 #2543925）。](../tools/sql-server-profiler/sql-server-profiler-templates.md)
 
 * Azure SQL 数据库的新的“创建数据库和数据库属性”对话框。
 
@@ -619,8 +807,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 
 ---
-## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>![下载](../ssdt/media/download.png) [SSMS 2016 年 7 月修补程序更新](http://go.microsoft.com/fwlink/?LinkID=822301)
+## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [SSMS 2016 年 7 月修补程序更新](http://go.microsoft.com/fwlink/?LinkID=799832)
 公开发布 | 版本号：13.0.15600.2
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * **SSMS 中的 Bug 修复，用于启用缺失的右键菜单项**。  
 *链接的客户 Bug 请求：*  
@@ -689,6 +879,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ----
 ## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>![下载](../ssdt/media/download.png) [SSMS 2016 年 6 月版本](http://go.microsoft.com/fwlink/?LinkID=799832)
 公开发布 | 版本号：13.0.15000.23
+
+[中文（中国大陆）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中文（中国台湾）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * SSMS 与 2016 年 6 月版本一起开始公开发布。
 

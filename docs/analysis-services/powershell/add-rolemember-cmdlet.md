@@ -2,13 +2,13 @@
 title: "添加了 cmdlet |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 827c8bbc-d48f-4e49-9ea5-abb1380f7623
@@ -17,15 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d10c7c9db41ec9e6f6f6e779b12e62f62e3b3b36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9aabb7cd07ad5864373e566766c7980dd00f9b0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-rolemember-cmdlet"></a>Add-RoleMember cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   将成员添加到 Analysis Services 表格或多维数据库的指定角色。  
 
@@ -61,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |必需？|true|  
-|位置？|1|  
+|位置？|@shouldalert|  
 |默认值||  
 |接受管道输入？|false|  
 |接受通配符？|false|  

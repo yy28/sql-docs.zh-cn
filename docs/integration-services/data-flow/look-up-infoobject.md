@@ -1,5 +1,5 @@
 ---
-title: "查找 Infoobject |Microsoft 文档"
+title: "查找 InfoObject | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f25c00406ce375a2a7a380859ca0eaa5031b54d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9dfd4fa6aecb1769a5e7ed2838cc1fb0b39f04f1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="look-up-infoobject"></a>查找 InfoObject
   使用 **“查找 InfoObject”** 对话框查找在 SAP Netweaver BW 系统中定义的 InfoObject。 当可用 InfoObject 列表显示时，选择您需要的 InfoObject，然后 SAP BW 目标将使用需要的值填充关联的选项。  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/03/2017
  **Description**  
  输入说明，或输入部分说明加上星号通配符 (*)。 或者，仅使用星号通配符以包括所有 InfoObject（而无论说明是什么）。  
   
- **“查找”**  
+ **查找**  
  查找在 SAP Netweaver BW 系统中定义的匹配 InfoObject。  
   
 ## <a name="lookup-results"></a>查找结果  
@@ -87,13 +86,12 @@ ms.lasthandoff: 08/03/2017
  当可用 InfoObject 列表显示时，选择您需要的 InfoObject，然后目标将使用需要的值填充关联的选项。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建事务数据的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
- [创建 InfoSource](../../integration-services/data-flow/create-infosource.md)   
+ [“创建事务数据的 InfoCube”](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
+ [“创建 InfoSource”](../../integration-services/data-flow/create-infosource.md)   
  [创建事务数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [创建主数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [创建新的 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
- [SAP BW 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [新建 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
+ [SAP BW 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

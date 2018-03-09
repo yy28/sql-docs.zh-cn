@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - CREATE ASSEMBLY
 - CREATE_ASSEMBLY_TSQL
 - ASSEMBLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - assemblies [CLR integration], validating
 - validating assemblies
 - CREATE ASSEMBLY statement
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,18 +63,18 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>参数  
- *程序集 _ 名称*  
+ *assembly_name*  
  程序集的名称。 名称必须是唯一在数据库和有效[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
  授权*owner_name*  
  指定作为程序集所有者的用户或角色的名称。 *owner_name*必须要么是的角色的当前用户是成员，或者当前用户必须具有 IMPERSONATE 权限的名称*owner_name*。 如果未指定，则所有权授予当前用户。  
   
- \<client_assembly_specifier >  
+ \<client_assembly_specifier>  
 指定正在上载的程序集所在的本地路径或网络位置，以及与程序集对应的清单文件名。  \<client_assembly_specifier > 可以表示为一个固定的字符串或表达式评估结果为固定的字符串，使用变量。 CREATE ASSEMBLY 不支持加载多模块程序集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还将在同一位置查找此程序集的所有相关程序集，并使用与根级别程序集相同的所有者将其上载。 如果没有找到这些相关程序集且它们尚未加载到当前数据库中，则 CREATE ASSEMBLY 失败。 如果相关程序集已加载到当前数据库中，则这些程序集的所有者必须与新创建的程序集的所有者相同。
   
  \<client_assembly_specifier > 不能指定是否被模拟登录的用户。  
   
- \<assembly_bits >  
+ \<assembly_bits>  
  组成程序集和依赖程序集的二进制值的列表。 列表中的第一个值将视为根级程序集。 与相关程序集对应的值可以按任意顺序提供。 所有与根程序集的依赖项不相对应的值都将忽略。  
   
 > [!NOTE]  
@@ -149,7 +151,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  有关详细信息，请参阅[设计程序集](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CREATE ASSEMBLY 权限。  
   
  如果的 PERMISSION_SET = EXTERNAL_ACCESS 指定，则需要**EXTERNAL ACCESS ASSEMBLY**服务器上的权限。 如果的 PERMISSION_SET = UNSAFE 指定，则需要**UNSAFE ASSEMBLY**服务器上的权限。  
@@ -199,7 +201,7 @@ WITH PERMISSION_SET = SAFE;
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
- [创建聚合 &#40;Transact SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [使用方案和示例的公共语言运行时 &#40;CLR &#41;集成](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   

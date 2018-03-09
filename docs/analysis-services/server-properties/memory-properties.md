@@ -1,14 +1,14 @@
 ---
 title: "内存属性 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.date: 01/23/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,23 +25,26 @@ helpviewer_keywords:
 - HighMemoryPrice property
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3c8b8f8e94f95174b2d4038454d834b1427cb56c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memory-properties"></a>内存属性
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可在启动时预分配适量内存，以便可立即处理请求。 可随着查询和处理工作负荷增加而分配更多内存。 
   
   通过指定配置设置，可以控制释放内存时的阈值。 例如， **HardMemoryLimit** 设置指定自行强制实施的内存不足条件（默认情况下，此阈值未启用），在此条件下会彻底拒绝新请求，直到有更多资源可用。
+
+若要了解有关每个 Analysis Services 实例利用由版本的最大内存的详细信息，请参阅[版本和 SQL Server 支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)。
   
- **适用于：** 多维和表格服务器模式，除非另外说明。  
+ 以下设置适用于这两种多维和表格服务器模式，除非另外说明。  
  
 ## <a name="default-memory-configuration"></a>默认内存配置
 
@@ -146,5 +149,3 @@ HardMemoryLimit | 这是另一个阈值，达到该阈值时，由于内存压�
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)
-  

@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_rda_reconcile_columns (Transact SQL) |Microsoft 文档"
+title: sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_reconcile_columns
 - sys.sp_rda_reconcile_columns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_reconcile_columns stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce87847a891e04548a3da30c2f07238d27e7aa24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ac447329552758ad6070cf4a22489c9d1ed44e64
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (TRANSACT-SQL)
+# <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   协调远程 Azure 表中的列中的列已启用延伸的 SQL Server 表。  
@@ -55,7 +58,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
    
 ## <a name="remarks"></a>注释  
@@ -64,7 +67,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="example"></a>示例  
  若要对帐的列在远程 Azure 表中，运行以下语句。  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  
 ```  
   

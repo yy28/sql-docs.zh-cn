@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], deleting
 - deleting stored procedures
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6334d38dd066fc5980851ebf02116c3b96568991
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41143ff91f5b3ebc5f32178f5d75af1b8cdc90b9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="delete-a-stored-procedure"></a>删除存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  需要拥有对该过程所属架构的 ALTER 权限，或对该过程的 CONTROL 权限。  
   
 ##  <a name="Procedures"></a> 如何删除存储过程  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  获取要在当前数据库中删除的存储过程的名称。 从对象资源管理器，展开 **“可编程性”** ，再展开 **“存储过程”**。 或者，在查询编辑器中，运行以下语句：  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  将以下示例复制并粘贴到查询编辑器，然后插入要从当前数据库中删除的存储过程名称。  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  

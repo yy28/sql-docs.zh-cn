@@ -2,10 +2,14 @@
 title: "使用嵌套 FOR XML 查询 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53864aece4894c0aa72bf886f087ef76d5b4f9c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 53640114803f1dc03a10a0ed79edaaf09e08f638
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-nested-for-xml-queries"></a>使用嵌套 FOR XML 查询
-  **xml** 数据类型和 [FOR XML 查询中的 TYPE 指令](../../relational-databases/xml/type-directive-in-for-xml-queries.md) 可实现在服务器以及客户端上处理由 FOR XML 查询返回的 XML。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+**xml** 数据类型和 [FOR XML 查询中的 TYPE 指令](../../relational-databases/xml/type-directive-in-for-xml-queries.md) 可实现在服务器以及客户端上处理由 FOR XML 查询返回的 XML。  
   
 ## <a name="processing-with-xml-type-variables"></a>使用 xml 类型变量进行处理  
  您可以将 FOR XML 查询结果分配给 **xml** 类型变量，或使用 XQuery 查询结果，将该结果分配给 **xml** 类型变量以进行进一步处理。  

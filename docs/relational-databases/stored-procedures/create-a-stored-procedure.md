@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], creating
 - creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0cc9ed462b52c79f792852a1b6b1d380cae3e182
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36ca0485ec35bcfd14ee1da0d01ac66c0a40c886
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-stored-procedure"></a>创建存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **要创建存储过程，请使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  需要在数据库中有 CREATE PROCEDURE 权限，对在其中创建过程的架构有 ALTER 权限。  
   
 ##  <a name="Procedures"></a> 如何创建存储过程  
@@ -61,11 +62,11 @@ ms.lasthandoff: 11/17/2017
   
 5.  在 **“指定模板参数的值”** 对话框中，输入下列所示的参数值。  
   
-    |参数|值|  
+    |参数|ReplTest1|  
     |---------------|-----------|  
     |作者|*您的姓名*|  
     |创建日期|*今天的日期*|  
-    |说明|返回雇员数据。|  
+    |Description|返回雇员数据。|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  在 **“查询编辑器”**中，使用以下语句替换 SELECT 语句：  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -101,11 +102,11 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中创建过程**  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  从 **“文件”** 菜单中，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 该示例将使用其他过程名称创建与上述相同的存储过程。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将使用其他过程名称创建与上述相同的存储过程。  
   
     ```  
     USE AdventureWorks2012;  

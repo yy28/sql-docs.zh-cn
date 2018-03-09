@@ -2,9 +2,12 @@
 title: "tablediff 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: tabledif
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d424e7c3b7e59d0bd80f4c02a020ffea7f62024
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
-  **tablediff** 实用工具用于比较两个非收敛表中的数据，它对于排除复制拓扑中的非收敛故障非常有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff**实用工具用于比较两个非收敛表中的数据和进行故障排除复制拓扑中的非收敛特别有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
   
 -   在充当复制发布服务器的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的源表与充当复制订阅服务器的一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的目标表之间进行逐行比较。  
   
@@ -82,7 +85,7 @@ tablediff
  返回支持参数的列表。  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 源服务器的名称。 指定 *默认实例的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 *命名实例的***\\***source_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 源服务器的名称。 指定 *默认实例的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*source_server_name***\\***instance_name*对于命名实例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-sourcedatabase** *source_database*  
  源数据库的名称。  
@@ -106,7 +109,7 @@ tablediff
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定源表。  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 *命名实例的***\\***destination_server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*destination_server_name***\\***instance_name*对于命名实例的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-destinationdatabase** *subscription_database*  
  目标数据库的名称。  
@@ -167,7 +170,7 @@ tablediff
   
 ## <a name="return-value"></a>返回值  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|严重错误|  
@@ -183,15 +186,15 @@ tablediff
 |源数据类型|目标数据类型|  
 |----------------------|---------------------------|  
 |**tinyint**|**smallint**、 **int**或 **bigint**|  
-|**smallint**|**int** 或 **bigint**|  
+|**int**|**int** 或 **bigint**|  
 |**int**|**bigint**|  
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**图像**|  
+|**varbinary(max)**|**image**|  
 |**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
-|**图像**|**varbinary(max)**|  
+|**image**|**varbinary(max)**|  
   
  使用 **-strict** 选项可禁止这些映射，并执行严格验证。  
   
@@ -213,7 +216,7 @@ tablediff
   
 -   **ntext**  
   
--   **图像**  
+-   **image**  
   
 ## <a name="permissions"></a>权限  
  若要比较表，您必须有要比较的表对象的 SELECT ALL 权限。  

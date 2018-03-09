@@ -4,27 +4,27 @@ ms.custom:
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, built-in functions
 - functions (JSON)
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3a398f0ab3fec7da5ef914fe1a94f949bc71942
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6803992992cf2a62afe741df536c0fa87a5fe2d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用内置函数 (SQL Server) 验证、查询和更改 JSON 数据
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,11 +116,11 @@ ORDER BY LastName
 |**$**|NULL 或错误|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL 或错误|  
 |**$.b**|NULL 或错误|[1,2]|  
-|**$.b[0]**|1|NULL 或错误|  
+|**$.b[0]**|@shouldalert|NULL 或错误|  
 |**$.c**|hi|NULL 或错误|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>使用 AdventureWorks 示例数据库测试 JSON_VALUE 和 JSON_QUERY  
-通过使用 AdventureWorks 示例数据库运行以下示例，对本主题中所述的内置函数进行测试。 有关何处获取 AdventureWorks 的信息，以及如何通过运行脚本添加用于测试的 JSON 数据，请参阅[测试驱动的内置 JSON 支持](json-data-sql-server.md#test-drive-built-in-json-support)。
+通过使用 AdventureWorks 示例数据库运行以下示例，对本主题中所述的内置函数进行测试。 有关何处获取 AdventureWorks 的信息，以及如何通过运行脚本添加用于测试的 JSON 数据，请参阅[测试驱动的内置 JSON 支持](json-data-sql-server.md#test-drive-built-in-json-support-with-the-adventureworks-sample-database)。
   
 在下面的示例中，`SalesOrder_json` 表中的 `Info` 列包含了 JSON 文本。  
   
@@ -168,10 +168,23 @@ JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 J
 SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')    
 ```  
   
- 有关详细信息，请参阅 [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)。  
+ 有关详细信息，请参阅 [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)。  
   
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
-若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>详细了解 SQL Server 和 Azure SQL 数据库中的 JSON  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft 博客文章  
+  
+若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
+
+### <a name="microsoft-videos"></a>Microsoft 视频
+
+有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)（SQL Server 2016 和 JSON 支持）
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)（在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON）
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)（JSON 充当 NoSQL 和关系环境之间的桥梁）
   
 ## <a name="see-also"></a>另请参阅  
  [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)   

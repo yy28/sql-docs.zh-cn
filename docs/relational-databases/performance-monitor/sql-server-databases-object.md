@@ -2,9 +2,12 @@
 title: "SQL Server - Databases 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,24 +18,24 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a54b7a036e38d1a34649bf25f9e0b4cb670bf71d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c92dc55eedaf801ad283ecb18bb55a25ba49f4b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
-  SQL Server 中的 **SQLServer:Databases** 对象提供了计数器，来监视大容量复制操作、备份和还原吞吐量以及事务日志活动。 监视事务及事务日志确定数据库中进行的用户活动数量及事务日志的饱满程度。 用户活动数量可以确定数据库的性能并影响日志大小、锁和复制。 监视低级日志活动以测量用户活动和资源使用情况，有助于查明性能瓶颈。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQL Server 中的 SQLServer:Databases 对象提供计数器来监视大容量复制操作、备份和还原吞吐量以及事务日志活动。 监视事务及事务日志确定数据库中进行的用户活动数量及事务日志的饱满程度。 用户活动数量可以确定数据库的性能并影响日志大小、锁和复制。 监视低级日志活动以测量用户活动和资源使用情况，有助于查明性能瓶颈。  
   
  可以同时监视 **Databases** 对象的多个实例，每个实例代表一个数据库。  
   
  下表说明了 SQL Server **Databases** 计数器。  
   
-|SQL Server Databases 计数器|说明|  
+|SQL Server Databases 计数器|Description|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|数据库的活动事务数。|  
 |**Avg Dist From EOL/LP Request**|对于最后一个 VLF 中的请求，每日志池请求与日志结尾的平均距离（字节）。| 

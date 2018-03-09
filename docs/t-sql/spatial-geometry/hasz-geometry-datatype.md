@@ -8,22 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-helpviewer_keywords: HasZ geometry
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- HasZ geometry
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f89746864ad41f38553c05535db4dd99ec734c30
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c5fb865f0cb9e93c51f70fd895e144492393b622
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="examples"></a>示例  
   
-```tsql  
+```sql  
 DECLARE @p GEOMETRY = 'Point(1 1 1 1)'  
 SELECT @p.HasZ   
 --Returns: 1 (true)  

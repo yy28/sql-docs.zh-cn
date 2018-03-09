@@ -2,9 +2,12 @@
 title: "dta 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3600ea7d01e3dfd7963198433c37ad05a9b68315
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dta-utility"></a>dta 实用工具
-  **dta** 实用工具是数据库引擎优化顾问的命令提示符版。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Dta**实用工具是数据库引擎优化顾问的命令提示符版。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
   
  与数据库引擎优化顾问一样， **dta** 实用工具可以分析工作负荷，并可为该工作负荷推荐可改进服务器性能的物理设计结构。 工作负荷可以是计划缓存、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件或跟踪表，也可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 物理设计结构包括索引、索引视图和分区。 分析了工作负荷后， **dta** 实用工具将生成数据库物理设计结构建议，并可生成实现该建议所需的脚本。 可以在命令提示符处，使用 **-if** 或 **-it** 参数指定工作负荷。 也可以在命令提示符处，使用 **-ix** 参数指定 XML 输入文件。 在这种情况下，在 XML 输入文件中指定工作负荷。  
   
@@ -155,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|使用*database_name* 选项指定的 **database_name** ||  
 |*owner_name*|**dbo**|*owner_name* 必须为 **dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
-|*table_name*|无||  
+|*table_name*|InclusionThresholdSetting||  
   
  如果使用文件，则指定 .xml 作为其扩展名。 例如，TuningLog.xml。  
   
@@ -168,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  指定 **dta** 应在建议中包括的物理设计结构的类型。 下表列出并说明了可为此参数指定的值。 未指定任何值时， **dta** 将使用默认值 **-fa****IDX**。  
   
-|值|说明|  
+|“值”|Description|  
 |-----------|-----------------|  
 |IDX_IV|索引和索引视图。|  
 |IDX|仅限索引。|  
@@ -189,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  指定 **dta** 在生成其建议时必须保留的现有物理设计结构。 下表列出并介绍了可以为此参数指定的值：  
   
-|值|说明|  
+|“值”|Description|  
 |-----------|-----------------|  
 |无|无现有结构|  
 |ALL|所有现有结构|  
@@ -200,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  指定 **dta** 建议的新物理设计结构（索引和索引视图）是否应进行分区以及如何进行分区。 下表列出并介绍了可以为此参数指定的值：  
   
-|值|说明|  
+|“值”|Description|  
 |-----------|-----------------|  
 |无|不分区|  
 |FULL|完全分区（选择该值可增强性能）|  
@@ -228,7 +231,7 @@ dta -d AdventureWorks2012 ...
  指定用作优化输入的工作负荷文件的路径和文件名。 该文件必须采用下列格式之一：.trc（SQL Server Profiler 跟踪文件）、.sql（SQL 文件）或 .log（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 跟踪文件）。 必须指定一个工作负荷文件或一个工作负荷表。  
   
  **-it** *workload_trace_table_name*  
- 指定包含用于优化的工作负荷跟踪的表名。 如果使用表，则用以下格式指定其名称：[*database_name*]**.**[*owner_name*]**.***table_name*。  
+ 指定包含用于优化的工作负荷跟踪的表名。 按以下格式指定该名称: [*database_name*]**。**[*owner_name*] **。 * * * table_name*。  
   
  下表显示了每个参数的默认值：  
   
@@ -250,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  指定是否联机创建物理设计结构。 下表列出并说明了可为此参数指定的值：  
   
-|值|说明|  
+|“值”|Description|  
 |-----------|-----------------|  
 |OFF|建议的物理设计结构都无法联机创建。|  
 |ON|所有建议的物理设计结构都可以联机创建。|  
@@ -303,7 +306,7 @@ dta -iq -I 48
  **-rl** *analysis_report_list*  
  指定要生成的分析报告列表。 下表列出并说明了可为此参数指定的值：  
   
-|值|报告|  
+|“值”|报告|  
 |-----------|------------|  
 |ALL|所有分析报告|  
 |STMT_COST|语句开销报告|  
@@ -385,7 +388,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
   
  **C.限制优化的查询数**  
   
- 此示例将从 orders_wkld.sql 文件读取的最大查询数限定为 10 (`-n 10`)，并将运行时间设为 15 分钟 (`-A 15`)，以先完成的为准。 要确保所有 10 个查询都得到优化，请用 `-A 0`指定不受限制的优化时间。 如果时间紧迫，则通过用 `-A` 参数指定用于优化的分钟数来指定适当的时间限制，如本例所示。  
+ 此示例将从 orders_wkld.sql 文件读取的最大查询数限定为 10 (`-n 10`)，并将运行时间设为 15 分钟 (`-A 15`)，以先完成的为准。 要确保所有 10 个查询都得到优化，请用 `-A 0` 指定不受限制的优化时间。 如果时间紧迫，则通过用 `-A` 参数指定用于优化的分钟数来指定适当的时间限制，如本例所示。  
   
 ```  
 dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  

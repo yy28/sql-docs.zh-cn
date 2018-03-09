@@ -1,14 +1,15 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,35 +24,31 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This 语句使多个数据库配置设置在**单个数据库**级别。 此语句是中均提供[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]并在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 这些设置是：  
+  This 语句使多个数据库配置设置在**单个数据库**级别。 此语句可用于[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]并在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 这些设置是：  
   
 - 清除过程缓存。  
-  
-- 根据最适合特定主数据库的情况，将 MAXDOP 参数设置为该数据库的任意值（1、2、…），为使用的所有辅助数据库（例如，针对报告查询）设置不同的值（例如 0）。  
-  
+- 将 MAXDOP 参数设置为任意值 (1，2，...)，主数据库是基于什么最适合于该特定数据库的设置不同的值 (例如 0) 的所有辅助数据库使用 （例如，用于报表查询）。  
 - 设置独立于数据库兼容级别的查询优化器基数估计模型。  
-  
 - 在数据库级别启用或禁用参数探查。
-  
 - 在数据库级别启用或禁用查询优化修补程序。
-
 - 启用或禁用在数据库级别标识缓存。
+- 启用或禁用了编译的计划存根，在首次编译批处理时要存储在缓存中。    
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -71,6 +68,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 }  
 ```  
   
@@ -81,11 +79,11 @@ ALTER DATABASE SCOPED CONFIGURATION
 指定 （所有辅助数据库必须具有相同的值） 的辅助数据库的设置。  
   
 MAXDOP  **=**  {\<值 > |主}  
-**\<值 >**  
+**\<value>**  
   
 指定 MAXDOP 设置应用于语句的默认。 0 是默认值，该值指示在将改为使用服务器配置。 （除非它已设置为 0），将重写在数据库范围内 MAXDOP**最大并行度**由 sp_configure 设置在服务器级别。 查询提示仍可以重写数据库范围 MAXDOP，以便优化需要不同的设置的特定查询。 所有这些设置的工作负荷组设置 MAXDOP 受限制。   
 
-您可以使用 max degree of parallelism 选项来限制并行计划执行时所用的处理器数。 SQL Server 将并行执行计划的查询、 索引数据定义语言 (DDL) 操作、 并行插入、 联机更改列、 并行统计信息 collectiion 和静态和键集驱动游标填充。
+您可以使用 max degree of parallelism 选项来限制并行计划执行时所用的处理器数。 SQL Server 将并行执行计划的查询、 索引数据定义语言 (DDL) 操作、 并行插入、 联机更改列、 并行统计信息集合和静态和键集驱动游标填充。
  
 若要在实例级别设置此选项，请参阅[配置 max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 
 
@@ -94,7 +92,7 @@ MAXDOP  **=**  {\<值 > |主}
   
 PRIMARY  
   
-只能设置为辅助数据库，对主要主机和中的数据库时，表示配置将一组的主站点。 如果主更改，辅助数据库上的值的配置将更改相应地而无需设置辅助副本的值明确。 **主**是辅助数据库的默认设置。  
+只能设置为辅助数据库，对主要主机和中的数据库时，表示配置将一组的主站点。 如果主更改，辅助数据库上的值的配置将更改相应地而无需设置辅助副本值显式。 **主**是辅助数据库的默认设置。  
   
 LEGACY_CARDINALITY_ESTIMATION  **=**  {ON |**OFF** |主}  
 
@@ -116,7 +114,7 @@ PARAMETER_SNIFFING  **=**  { **ON** |关闭 |主}
   
 PRIMARY  
   
-此值才有效时，在主计算机上的数据库中的辅助副本上，指定在所有辅助副本上的此设置的值将为主设置的值。 如果使用主计算机上的配置[参数探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)更改，在辅助副本上的值将更改相应地而无需设置辅助副本值明确。 这是辅助数据库的默认设置。  
+此值才有效时，在主计算机上的数据库中的辅助副本上，指定在所有辅助副本上的此设置的值将为主设置的值。 如果使用主计算机上的配置[参数探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)更改，在辅助副本上的值将更改相应地而无需设置辅助副本值显式。 这是辅助数据库的默认设置。  
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |主}  
 
@@ -127,7 +125,7 @@ QUERY_OPTIMIZER_HOTFIXES  **=**  {ON |**OFF** |主}
   
 PRIMARY  
   
-此值才有效时，在主计算机上的数据库中的辅助副本上，指定在所有辅助副本上的此设置的值将为主设置的值。 如果主更改，辅助数据库上的值的配置将更改相应地而无需设置辅助副本的值明确。 这是辅助数据库的默认设置。  
+此值才有效时，在主计算机上的数据库中的辅助副本上，指定在所有辅助副本上的此设置的值是用于主设置的值。 如果在配置为使主更改，辅助数据库上的值发生更改相应地而无需设置辅助副本值显式。 这是辅助数据库的默认设置。  
   
 清除 PROCEDURE_CACHE  
 
@@ -142,6 +140,12 @@ IDENTITY_CACHE  **=**  { **ON** |关闭}
 > [!NOTE] 
 > 仅可以为主设置此选项。 有关详细信息，请参阅[标识列](create-table-transact-sql-identity-property.md)。  
 
+OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON |**OFF** }  
+
+适用于：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+启用或禁用了编译的计划存根，在首次编译批处理时要存储在缓存中。 默认为 OFF。 第一次编译后的数据库范围的配置为数据库，编译的计划存根启用 OPTIMIZE_FOR_AD_HOC_WORKLOADS 将存储在缓存时一批。 计划存根 （stub） 具有相比完全编译的计划的大小较小的内存需求量。  如果批处理被编译，或再次执行，则将删除编译的计划存根，并将其替换为完全编译的计划。
+
 ##  <a name="Permissions"></a> 权限  
  需要更改任何数据库作用域配置   
 对数据库中。 可以通过具有数据库拥有 CONTROL 权限的用户授予此权限。  
@@ -149,11 +153,13 @@ IDENTITY_CACHE  **=**  { **ON** |关闭}
 ## <a name="general-remarks"></a>一般备注  
  虽然您可以配置辅助数据库能够从其主不同的作用域的配置设置，所有辅助数据库将使用相同的配置。 无法为单个辅助数据库配置不同的设置。  
   
- 执行此语句将清除在当前数据库中，这意味着所有的查询将需要重新编译过程缓存。  
+ 执行此语句清除在当前数据库中，这意味着所有查询都需要重新编译过程缓存。  
   
- 对于 3 部分组成的名称查询，查询当前的数据库连接的设置将会得到，以外的其他 SQL 模块 （如过程、 函数和触发器） 的当前数据库上下文中进行编译，因此将使用的选项它们驻留在其中的数据库。  
+ 对于 3 部分组成的名称查询，查询当前的数据库连接的设置会认可，以外的其他有关当前数据库上下文中进行编译的 SQL 模块 （如过程、 函数和触发器），并因此而使用的选项它们驻留在其中的数据库。  
   
  ALTER_DATABASE_SCOPED_CONFIGURATION 事件被添加为一个可用于激发 DDL 触发器的 DDL 事件。 这是 ALTER_DATABASE_EVENTS 触发器组的子级。  
+ 
+ 数据库范围的设置，将转入与数据库的配置。 这意味着，给定的数据库还原或附加，现有配置设置会保留。
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
 **MAXDOP**  
@@ -162,7 +168,7 @@ IDENTITY_CACHE  **=**  { **ON** |关闭}
   
 -   查询提示重写 sp_configure 和数据库作用域设置。 如果在资源组的工作负荷组设置 MAXDOP:  
   
-    -   如果查询提示设置为 0 会将它重写通过资源调控器设置。  
+    -   如果查询提示设置为 0，它被覆盖的设置的资源调控器。  
   
     -   如果查询提示都是不为 0，它会受设置的资源调控器。  
   
@@ -172,15 +178,15 @@ IDENTITY_CACHE  **=**  { **ON** |关闭}
   
 **QUERY_OPTIMIZER_HOTFIXES**  
   
- 当 QUERYTRACEON 提示用于启用旧的查询优化器或查询优化器修补程序时，它将查询提示和数据库范围的配置设置，这意味着如果启用了其中一个，将应用的选项之间 OR 条件。  
+ 当 QUERYTRACEON 提示用于启用旧的查询优化器或查询优化器修补程序时，它将查询提示和数据库范围的配置设置，这意味着如果启用了其中一个应用的选项之间 OR 条件。  
   
 **GeoDR**  
   
- 可读辅助数据库，例如 Alwayson 可用性组和 GeoReplication，使用通过检查数据库的状态的次数的值。 即使在发生故障转移，我们不重新编译并从技术上讲新的主已使用的辅助设置的查询，其理念是主服务器和辅助数据库之间的设置时，工作负载不同并且因此缓存的查询是仅将会不同使用最佳的设置，而新的查询会选取适用于它们的新设置。  
+ 可读辅助数据库，例如 Alwayson 可用性组和 GeoReplication，使用通过检查数据库的状态的次数的值。 即使在故障转移时，重新编译不会发生，并且从技术上讲新的主已使用的辅助设置的查询，其理念是，仅当工作负荷是不同，并且因此缓存的查询时，主服务器和辅助数据库之间的设置仅会有所不同使用最佳的设置，而新查询选取新的设置适用于它们。  
   
 **DacFx**  
   
- 由于 ALTER DATABASE SCOPED CONFIGURATION 是会影响数据库架构的 SQL Server 2016 和 Azure SQL 数据库中的新功能，导出的架构 （带有或不包含数据） 将不能导入到较旧版本的 SQL Server 例如[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 <c2 1> [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 。 例如，导出到[DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)或[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)从[!INCLUDE[ssSDS](../../includes/sssds-md.md)]或[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]使用此新功能的数据库将不能导入到的下级服务器。  
+ 由于 ALTER 数据库范围的配置是架构的 Azure SQL 数据库和 SQL Server 开头，影响数据库架构，导出 （带有或不包含数据） 是架构的不能将其导入 SQL Server 的较旧版本的 SQL Server 2016 中的新增功能例如[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，导出到[DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3)或[BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)从[!INCLUDE[ssSDS](../../includes/sssds-md.md)]或[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]使用此新功能的数据库将不能导入到的下级服务器。  
   
 ## <a name="metadata"></a>元数据  
 
@@ -194,7 +200,7 @@ IDENTITY_CACHE  **=**  { **ON** |关闭}
 此示例将执行 ALTER DATABASE SCOPED CONFIGURATION 所需的权限授予     
 为用户 [Joe]。  
   
-```tsql  
+```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
@@ -202,14 +208,14 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 此示例将 MAXDOP 设置 = 主数据库和 MAXDOP 1 = 4 异地复制方案中的辅助数据库。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
 此示例将辅助数据库的 MAXDOP 会相同，因为它已设置为与其在异地复制方案中的主数据库设置。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
@@ -217,13 +223,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 
 此示例会将 LEGACY_CARDINALITY_ESTIMATION 的异地复制方案中的辅助数据库设置为开中。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 此示例将 LEGACY_CARDINALITY_ESTIMATION 设置辅助数据库，因为它是用于在异地复制方案中其主数据库。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
@@ -231,29 +237,27 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 
 此示例会将 PARAMETER_SNIFFING 的异地复制方案中的主数据库设置为 OFF 中。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;  
 ```  
   
 此示例会将 PARAMETER_SNIFFING 的异地复制方案中的主数据库设置为 OFF 中。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
-此示例将按原样主数据库上的辅助数据库设置 PARAMETER_SNIFFING   
-在异地复制方案。  
+此示例将 PARAMETER_SNIFFING 设置为辅助数据库，因为它是在异地复制方案中的主数据库上。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. 设置 QUERY_OPTIMIZER_HOTFIXES  
 
-针对主数据库设置为 ON 的 QUERY_OPTIMIZER_HOTFIXES   
-在异地复制方案。  
+异地复制方案中的主数据库上 QUERY_OPTIMIZER_HOTFIXES 设为 ON。  
 
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
 ```  
   
@@ -261,7 +265,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 
 此示例中清除过程缓存 （可能仅对主数据库）。  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
 
@@ -271,8 +275,18 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 此示例将禁用标识缓存。
 
-```tsql 
+```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
+```
+
+### <a name="h-set-optimizeforadhocworkloads"></a>H. 设置 OPTIMIZE_FOR_AD_HOC_WORKLOADS
+
+适用于：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+此示例将启用了编译的计划存根，在首次编译批处理时要存储在缓存中。
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ## <a name="additional-resources"></a>其他资源
@@ -290,13 +304,12 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * ["我闻参数"！](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 资源    
-* [跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+* [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server 查询优化器修补程序跟踪标志 4199 维护服务模型](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>详细信息  
- [sys.database_scoped_configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [数据库和文件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [服务器配置选项 &#40;SQL server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
-  
-  
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [数据库和文件目录视图](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [服务器配置选项](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ 

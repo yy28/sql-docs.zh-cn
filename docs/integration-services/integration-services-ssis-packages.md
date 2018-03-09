@@ -1,11 +1,11 @@
 ---
-title: "Integration Services (SSIS) 包 |Microsoft 文档"
+title: "Integration Services (SSIS) 包 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 54d83a301d72577eadd7e042977b572c7f8f1a57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 包
   包是一个有组织的集合，其中可包括连接、控制流元素、数据流元素、事件处理程序、变量、参数和配置，您可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形设计工具将这些对象组合到包中，或以编程方式生成包含这些对象的包。  然后将完成的包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区或文件系统中，还可以将 ssISnoversion 项目部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器。 包是可被检索、执行和保存的工作单元。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  以下关系图显示了一个简单包，其中包含一个带有数据流任务的控制流，而数据流任务中又包含数据流。  
   
- ![控制流和数据流的包](../integration-services/media/ssis-package.gif "控制流和数据流的包")  
+ ![具有控制流和数据流的包](../integration-services/media/ssis-package.gif "A package with a control flow and a data flow")  
   
  创建基本包后，可添加高级功能（如日志记录和变量）来扩展包功能。 有关详细信息，请参阅“扩展包功能的对象”部分。  
   
@@ -112,14 +111,13 @@ ms.lasthandoff: 08/03/2017
   
  若要更改包 GUID，需要在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的“属性”窗口中的“ID”属性内重新生成 GUID。 若要更改包名称，可以在“属性”窗口中更新 **Name** 属性的值。 还可以使用 **dtutil** 命令提示符，或通过编程更新 GUID 和名称。 有关详细信息，请参阅 [设置包属性](../integration-services/set-package-properties.md) 和 [dtutil 实用工具](../integration-services/dtutil-utility.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型之外， [!INCLUDE[ssIS](../includes/ssis-md.md)] 还包含了两个图形工具： [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 设计器和 [!INCLUDE[ssIS](../includes/ssis-md.md)] 导入和导出向导。 有关详细信息，请参阅下列主题。  
   
--   [导入和导出数据时包含的 SQL Server 导入和导出向导](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [使用 SQL Server 导入和导出向导导入和导出数据](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
 -   [在 SQL Server Data Tools 中创建包](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   请参阅[以编程方式生成包](../integration-services/building-packages-programmatically/building-packages-programmatically.md)开发人员指南中。 
+-   请参阅开发者指南中的[以编程方式生成包](../integration-services/building-packages-programmatically/building-packages-programmatically.md)。 
   
   
-

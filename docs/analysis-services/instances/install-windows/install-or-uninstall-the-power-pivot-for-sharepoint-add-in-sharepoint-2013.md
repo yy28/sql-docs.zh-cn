@@ -2,28 +2,29 @@
 title: "安装或卸载 Power Pivot 有关 SharePoint 外接程序 (SharePoint 2013) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a94b1c1aceedeba319b4d3ededc34d8de7f38c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7066ed9aafe287f5ed4a2bb5ed2981d27bd0e35f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 是在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 场中提供 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 数据访问的应用程序服务器组件和后端服务的集合。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerpivot.msi**) 是用于安装应用程序服务器组件的安装程序包。  
   
 -   该外接程序对于 SharePoint 2010 部署不是必需的。  
@@ -34,31 +35,13 @@ ms.lasthandoff: 11/17/2017
   
  有关如何下载 **spPowerPivot.msi**的信息，请参阅 [Microsoft® SQL Server® 2014 Power Pivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854)。  
   
- **本主题内容：**  
-  
--   [背景](#bkmk_background)  
-  
--   [spPowerPivot.msi 的安装位置](#bkmk_where_to_install)  
-  
--   [要求和先决条件](#bkmk_prereq)  
-  
--   [安装 Power Pivot for SharePoint](#bkmk_install)  
-  
--   [使用 Power Pivot for SharePoint 2013 配置工具部署 SharePoint 解决方案文件](#bkmk_deploy_solution)  
-  
--   [卸载或修复外接程序](#bkmk_remove_addin)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ##  <a name="bkmk_background"></a> 背景  
   
 -   **应用程序服务器：** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能包括将工作簿用作数据源、计划数据刷新以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理仪表板。  
   
      [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 是一个 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 安装程序包 (**spPowerpivot.msi**)，用于部署 Analysis Services 客户端库和将 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 安装文件复制到计算机。 此安装程序不会在 SharePoint 中部署或配置 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能。 默认情况下将安装下列组件：  
   
-    -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013.此组件包括 PowerShell 脚本（.ps1 文件）、SharePoint 解决方案包 (.wsp) 和 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 配置工具，用于在 SharePoint 2013 服务器场中部署 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]。  
+    -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013。此组件包括 PowerShell 脚本（.ps1 文件）、SharePoint 解决方案包 (.wsp) 和 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 配置工具，用于在 SharePoint 2013 服务器场中部署 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]。  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Analysis Services OLE DB 访问接口 (MSOLAP)。  
   
@@ -150,7 +133,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
 ```  
   
-|选项|说明|  
+|选项|Description|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 配置|  
 |SQL_OLAPDM|MSOLAP|  

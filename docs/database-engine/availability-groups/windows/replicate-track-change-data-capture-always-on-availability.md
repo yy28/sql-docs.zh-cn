@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf871f0b6353d569106768deeeb5cc3e6d65b12d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4980545b408bde4c30047eae60e000f2518eb107
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助于提供高可用性和附加数据库恢复功能。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助于提供高可用性和附加数据库恢复功能。  
   
 ##  <a name="Overview"></a>可用性组的复制概述  
   
@@ -196,7 +197,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Prereqs"></a> 有关使用复制的先决条件、限制和注意事项  
  本节介绍使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]部署复制时的注意事项，包括先决条件、限制和建议。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
   
 -   在使用事务复制并且发布数据库位于可用性组中时，发布服务器和分发服务器都必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 订阅服务器可以使用较低级别的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
@@ -215,11 +216,11 @@ ms.lasthandoff: 11/20/2017
   
 |||||  
 |-|-|-|-|  
-||**发布服务器**|**分发服务器***\*|**订阅服务器**|  
-|**事务性**|是<br /><br /> 注意：不包括对双向和相互事务复制的支持。|“否”|是|  
-|**P2P**|“否”|“否”|“否”|  
-|**合并**|是|“否”|是*|  
-|**快照**|是|“否”|是*|  
+||**发布服务器**|**Distributor***\*|**订阅服务器**|  
+|**事务性**|是<br /><br /> 注意：不包括对双向和相互事务复制的支持。|是|是|  
+|**P2P**|是|是|是|  
+|**合并**|是|是|是*|  
+|**快照**|是|是|是*|  
   
  *故障转移到副本数据库是一个手动过程。 不提供自动故障转移。  
   

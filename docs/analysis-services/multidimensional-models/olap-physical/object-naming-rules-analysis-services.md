@@ -2,15 +2,13 @@
 title: "对象命名规则 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1493d5236d4c44fe4a496a67a2c435aab703daa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
-  本主题介绍对象命名约定，以及不能在任何对象名称、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的代码或脚本中使用的保留字和字符。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]本主题介绍对象命名约定，以及保留的字和字符，不能在任何对象名称，在代码中的或在脚本[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ##  <a name="bkmk_Names"></a>命名约定  
  每个对象具有**名称**和**ID**在父集合的作用域必须是唯一的属性。 例如，只要两个维度分别驻留在不同的数据库中，这两个维度就能具有相同的名称。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
  下表列出了特定对象的无效字符。  
   
-|对象|无效字符|  
+|Object|无效字符|  
 |------------|------------------------|  
 |**Server**|在对服务器对象进行命名时，请遵循 Windows 服务器命名约定。 请参阅[命名约定 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx)有关详细信息。|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  

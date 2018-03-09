@@ -5,27 +5,29 @@ ms.date: 02/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: what is master data
+keywords:
+- what is master data
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: "28"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: beb17b82f5dc7ce522403d7d32a71e52a497bd2e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概述 (MDS)
   本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的关键数据组织和管理功能。 
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  在定义了数据的基本结构后，可以开始使用导入功能来添加数据记录（成员）。 将数据加载到临时表、使用业务规则验证数据并将数据加载到 MDS 表。  业务规则还可用于设置属性值。  
   
- 下表概述了关键 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 任务。 除非另有说明，否则，所有以下过程都要求您是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+ 下表概述了关键 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 任务。 除非另有说明，否则，所有以下过程都要求您是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 > [!NOTE]  
 >  您最好在测试环境中完成以下任务并且使用在按照 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时提供的示例数据。 有关详细信息，请参阅[部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)。  

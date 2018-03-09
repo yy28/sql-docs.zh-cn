@@ -3,8 +3,9 @@ title: "序号属性 （ADO MD 位置） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Position::Ordinal
 - Ordinal
-helpviewer_keywords: Ordinal property [ADO MD]
+helpviewer_keywords:
+- Ordinal property [ADO MD]
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb6e1c16c0315232c022a08ad53430c5adf8bc08
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06763eff76230a28bf2bf76c47cf0bdb032c8205
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ordinal-property-ado-md-position"></a>序号属性 （ADO MD 位置）
 唯一标识[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)沿 x 轴。  

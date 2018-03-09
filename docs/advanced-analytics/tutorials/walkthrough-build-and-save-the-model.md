@@ -2,27 +2,32 @@
 title: "生成 R 模型并将保存到 SQL Server |Microsoft 文档"
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3220613177bac30abfc1705ae8c41a82fc287add
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>生成 R 模型并将保存到 SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在此步骤中，您将学习如何生成机器学习模型，并将保存在模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
@@ -46,9 +51,7 @@ ms.lasthandoff: 11/09/2017
 
      *结果*
 
-     *逻辑回归结果： 附属式 ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*数据： featureDataSource （RxSqlServerData 数据源）*
+     *逻辑回归结果： 附属式 ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance *   <br/>*数据： featureDataSource （RxSqlServerData 数据源）*
      <br/>*Dependent variable(s)： 附属式*
      <br/>*自变量的总： 5*
      <br/>*有效的观测值的数目： 17068*
@@ -56,11 +59,11 @@ ms.lasthandoff: 11/09/2017
      <br/>*-2\*LogLikelihood: 23540.0602 （残留偏差 17063 自由度上）*
      <br/>*系数：*
      <br/>*Estimate Std.错误 z 值 Pr (> | z |)*
-     <br/>*（截获）-2.509e-03 3.223e-02-0.078 0.93793*
-     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1.23 e-07\*\*\**
-     <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786\*\**
-     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06\*\*\**
-     <br/>*direct_distance 6.156e-02 2.076e-02 2.966 0.00302\*\**
+     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
+     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
+     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’0.1 ‘ ’ 1*
      <br/>*条件的最终的方差协方差矩阵数： 48.3933*
@@ -205,7 +208,7 @@ ms.lasthandoff: 11/09/2017
     将模型保存到表仅需要 INSERT 语句。 但是，很容易时包装在存储过程中，如_PersistModel_。
 
     > [!NOTE]
-    > 如果你收到如下错误"的 EXECUTE 权限拒绝了对对象 PersistModel"，请确保你的登录名具有的权限。 可以通过运行类似的 T-SQL 语句授予显式权限，只需对存储过程：`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > 如果你收到如下错误"的 EXECUTE 权限拒绝了对对象 PersistModel"，请确保你的登录名具有的权限。 可以通过运行类似的 T-SQL 语句授予显式权限，只需对存储过程： `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. 创建模型并将其保存在数据库中，你可以调用它直接从后[!INCLUDE[tsql](../../includes/tsql-md.md)]代码，使用系统存储过程中， [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 

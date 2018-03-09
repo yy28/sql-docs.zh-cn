@@ -1,36 +1,37 @@
 ---
 title: "列存储索引 - 设计指南 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/27/2017
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2166cfa2f5ab944ac302916085c7abbebb687457
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 879b9942203bdf6d889fa649c1888335335d2d64
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 有关设计列存储索引的概要建议。 做出少量明智的决策，就能帮助实现较高的数据压缩率和查询性能，列存储索引的目标就在于此。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-本文假设读者熟悉列存储的体系结构和术语。 有关详细信息，请参阅[列存储索引 - 概述](../../relational-databases/indexes/columnstore-indexes-overview.md)和[列存储索引 - 体系结构](../../relational-databases/indexes/columnstore-indexes-architecture.md)。
+本文假设读者熟悉列存储的体系结构和术语。 有关详细信息，请参阅[列存储索引 - 概述](../../relational-databases/indexes/columnstore-indexes-overview.md)和[列存储索引体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)。
 
 ### <a name="know-your-data-requirements"></a>了解数据要求
 在设计列存储索引之前，应该尽可能充分地了解数据要求。 例如，仔细考虑如下所述问题的答案：
@@ -52,10 +53,9 @@ ms.lasthandoff: 11/17/2017
 | 列存储选项 | 使用时机的建议 | 压缩 |
 | :----------------- | :------------------- | :---------- |
 | 聚集列存储索引 | 用于：<br></br>1) 采用星型或雪花型架构的传统数据仓库工作负荷<br></br>2) 在执行极少量更新和删除操作的条件下插入大量数据的物联网 (IOT) 工作负荷。 | 10 倍平均值 |
-| 基于聚集列存储索引的非聚集 B 树索引 | 用于：<br></br>    1) 针对聚集列存储索引实施主键和外键约束。<br></br>    2) 加速搜索特定值或小范围值的查询。<br></br>    3) 加速特定行的更新和删除。| 10 倍平均值加上 NCI 的某些附加存储。|
+| 基于聚集列存储索引的非聚集 B 树索引 | 用于：<br></br>    1.针对聚集列存储索引实施主键和外键约束。<br></br>    2.加速搜索特定值或小范围值的查询。<br></br>    3.加速特定行的更新和删除。| 10 倍平均值加上 NCI 的某些附加存储。|
 | 以基于磁盘的堆或 B 树索引为基础的非聚集列存储索引 | 用于： <br></br>1) 包含某些分析查询的 OLTP 工作负荷。 可以删除针对分析创建的 B 树索引，然后将其替换为一个非聚集列存储索引。<br></br>2) 许多执行提取、转换和加载 (ETL) 操作，以便将数据移到单独数据仓库的传统 OLTP 工作负荷。 可以通过在某些 OLTP 表中创建非聚集列存储索引来消除 ETL 和单独的数据仓库。 | NCCI 是一个附加的索引，所需的存储平均要多出 10%。|
 | 基于内存中表的列存储索引 | 与针对以基于磁盘的表为基础的非聚集列存储索引提供的建议相同，不过，基础表是一个内存中表。 | 列存储索引是一个附加索引。|
-
 
 ## <a name="use-a-clustered-columnstore-index-for-large-data-warehouse-tables"></a>为大型数据仓库表使用聚集列存储索引
 聚集列存储索引不仅仅是一个索引，而且是主表存储。 它可以实现较高的数据压缩率，大幅提高大型数据仓库事实表和维度表的查询性能。 聚集列存储索引最适合用于分析查询而不是事务查询，因为分析查询往往针对大范围值执行操作，而不是查找特定的值。 
@@ -75,17 +75,17 @@ ms.lasthandoff: 11/17/2017
 
 有关详细信息，请参阅[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)。
 
-## <a name="add-btree-nonclustered-indexes-for-efficient-table-seeks"></a>添加 B 树非聚集索引以提高表查找的效率
+## <a name="add-b-tree-nonclustered-indexes-for-efficient-table-seeks"></a>添加 B 树非聚集索引以提高表查找的效率
 
-从 SQL Server 2016 开始，可以创建非聚集 b 树索引作为聚集列存储索引中的辅助索引。 当列存储索引发生更改时，非聚集 B 树索引将会更新。 这是一个可以带来优势的强大功能。 
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以创建非聚集 B 树索引作为聚集列存储索引中的辅助索引。 当列存储索引发生更改时，非聚集 B 树索引会更新。 这是一个可以带来优势的强大功能。 
 
-使用辅助 B 树索引可以有效搜索特定的行，而无需全面扫描所有行。  其他选项也可供使用。 例如，可以通过在 B 树索引中使用 UNIQUE 约束来实施主键或外键约束。 由于不唯一的值无法插入 B 树索引，SQL Server 无法将值插入列存储。 
+使用辅助 B 树索引可以有效搜索特定的行，而无需全面扫描所有行。  其他选项也可供使用。 例如，可以通过在 B 树索引中使用唯一约束来实施主键或外键约束。 由于不唯一的值无法插入 B 树索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法将值插入列存储。 
 
 对于以下情况，请考虑使用基于列存储索引的 B 树索引：
 * 运行搜索特定值或小范围值的查询。
 * 实施主键约束或外键约束等约束。
 * 有效执行更新和删除操作。 使用 B 树索引可以快速找到需要更新和删除的特定行，而无需扫描整个表或表分区。
-* 你可以获得额外的存储用于存储 B 树索引。
+* 可以获得额外的存储用于存储 B 树索引。
 
 ## <a name="use-a-nonclustered-columnstore-index-for-real-time-analytics"></a>使用非聚集列存储索引进行实时分析
 
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/17/2017
   
 *   不再需要单独的数据仓库。 在传统上，公司会在行存储表中运行事务，然后将数据载入单独的数据仓库以运行分析。 对于许多工作负载，可以通过在事务表中创建非聚集列存储索引，来消除加载过程和单独的数据仓库。
 
-  SQL Server 2016 提供多种策略来保持这种方案的高性能。 试用该方案的过程非常简单，因为无需更改 OLTP 应用程序即可启用非聚集列存储索引。 
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供多种策略来保持这种方案的高性能。 试用该方案的过程非常简单，因为无需更改 OLTP 应用程序即可启用非聚集列存储索引。 
 
 若要添加更多的处理资源，可以针对可读的辅助副本运行分析。 使用可读的辅助副本可将事务工作负荷与分析工作负荷的处理分隔开来。 
 
@@ -148,14 +148,14 @@ ms.lasthandoff: 11/17/2017
 
 ## <a name="use-optimizations-when-you-convert-a-rowstore-table-to-a-columnstore-index"></a>将行存储表转换为列存储索引时使用优化
 
-如果数据已在行存储表中，你可以使用 [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) 将该表转换为聚集列存储索引。 转换表后，可以使用多种优化方法来提高查询性能。
+如果数据已在行存储表中，你可以使用 [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) 将该表转换为聚集列存储索引。 转换表后，可以使用多种优化方法来提高查询性能，如下文所述。
 
 ### <a name="use-maxdop-to-improve-rowgroup-quality"></a>使用 MAXDOP 提高行组质量
 可以配置最大数目的处理器，用于将堆或聚集 B 树索引转换为列存储索引。 若要配置处理器，请使用最大并行度选项 (MAXDOP)。 
 
-若要处理大量的数据，MAXDOP 1 的速度可能太慢。  将 MAXDOP 提高到 4 即可正常工作。 如果这样做导致某些行组不包含最佳行数，可以运行 [ALTER INDEX REORG](../../t-sql/statements/alter-index-transact-sql.md)，在后台将这些行合并在一起。
+若要处理大量的数据，MAXDOP 1 的速度可能太慢。  将 MAXDOP 提高到 4 即可正常工作。 如果这样做导致某些行组不包含最佳行数，可以运行 [ALTER INDEX REORGANIZE](../../t-sql/statements/alter-index-transact-sql.md)，在后台将这些行合并在一起。
 
-### <a name="keep-the-sorted-order-of-a-btree-index"></a>保留 B 树索引的排序顺序
+### <a name="keep-the-sorted-order-of-a-b-tree-index"></a>保留 B 树索引的排序顺序
 由于 B 树索引已按排序顺序存储行，将行压缩到列存储索引中时保留这种顺序可以提高查询性能。
 
 列存储索引不会将数据排序，但会使用元数据来跟踪每个行组中每个列段的最小值和最大值。  扫描一系列值时，它可以快速计算何时要跳过行组。 将数据排序后，可以跳过其他行组。 
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/17/2017
 若要在转换期间保留排序顺序，请执行以下操作：
 * 结合 DROP_EXISTING 子句使用 [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)。 这也会保留索引的名称。 如果已有脚本使用行存储索引的名称，你不需要更新这些脚本。 
 
-    此示例将名为 ```MyFactTable``` 的表中的聚集行存储索引转换到聚集列存储索引。 索引名称 ```ClusteredIndex_d473567f7ea04d7aafcac5364c241e09``` 保持不变。
+    此示例将名为 `MyFactTable` 的表中的聚集行存储索引转换到聚集列存储索引。 索引名称 `ClusteredIndex_d473567f7ea04d7aafcac5364c241e09` 保持不变。
 
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
     WITH (DROP_EXISTING = ON);  
     ```
 
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
 下面是用于创建和维护列存储索引的任务。 
   
 |任务|参考主题|说明|  
@@ -181,10 +181,10 @@ ms.lasthandoff: 11/17/2017
 |将行存储表转换为列存储。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|将现有堆集或二进制树转换为列存储。 示例演示了如何在执行此转换时处理现有的索引以及索引的名称。|  
 |将列存储表转换为行存储。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|通常这不需要这样做，但有时需要执行此转换。 示例演示如何将列存储转换为堆或聚集索引。|  
 |在行存储表中创建列存储索引。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|一个行存储表可以有一个列存储索引。  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，列存储索引可以包含筛选条件。 示例演示了基本语法。|  
-|为操作分析创建高性能索引。|[开始使用列存储适进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|介绍如何创建互补性列存储索引和 btree 索引，以便 OLTP 查询使用 btree 索引，分析查询使用列存储索引。|  
-|为数据仓库创建高性能列存储索引。|[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|介绍如何使用列存储表上的 btree 索引来创建高性能数据仓库查询。|  
-|使用 btree 索引对列存储索引强制主键约束。|[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|演示如何合并 btree 和列存储索引，以便对列存储索引强制主键约束。|  
-|删除列存储索引|[DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)|删除列存储索引使用 btree 索引所用的标准 DROP INDEX 语法。 删除聚集列存储索引会将列存储表转换为堆。|  
+|为操作分析创建高性能索引。|[开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|介绍如何创建互补性列存储索引和 B 树索引，以便 OLTP 查询使用 B 树索引，分析查询使用列存储索引。|  
+|为数据仓库创建高性能列存储索引。|[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|介绍如何使用列存储表上的 B 树索引来创建高性能数据仓库查询。|  
+|使用 B 树索引对列存储索引强制实施主键约束。|[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|演示如何合并 B 树和列存储索引，以便对列存储索引强制实施主键约束。|  
+|删除列存储索引|[DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)|删除列存储索引使用 B 树索引所用的标准 DROP INDEX 语法。 删除聚集列存储索引会将列存储表转换为堆。|  
 |从列存储索引中删除行|[DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|使用 [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) 删除行。<br /><br /> **列存储** 行： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将它标记为已逻辑删除但是未回收行的物理存储空间，直到重新生成索引。<br /><br /> **增量存储** 行： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以逻辑和物理方式删除该行。|  
 |更新列存储索引中的行|[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)|使用 [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) 更新行。<br /><br /> **列存储** 行：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将它标记为已逻辑删除，然后将更新的行插入增量存储中。<br /><br /> **增量存储** 行： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在增量存储中更新它。|  
 |强制增量存储中的所有行进入列存储。|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) ...REBUILD<br /><br /> [列存储索引 - 碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|结合 REBUILD 选项的 ALTER INDEX 会强制所有行进入列存储。|  
@@ -195,19 +195,8 @@ ms.lasthandoff: 11/17/2017
 ## <a name="next-steps"></a>后续步骤
 若要为以下服务创建空的列存储索引：
 
-* 对于 SQL Server，请参考 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
-* 对于 SQL 数据库，请参考 [CREATE TABLE on Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)（针对 Azure SQL 数据库的 CREATE TABLE）
-* 对于 SQL 数据仓库，请参考 [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)（CREATE TABLE（Azure SQL 数据仓库））
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，请参阅 [CREATE TABLE（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。
 
-若要将现有行存储堆或 B 树索引转换为聚集列存储索引，或者要创建非聚集列存储索引，请参考：
-
-* [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
-
-
-
-
-
-
-
-  
+有关如何将现有行存储堆或 B 树索引转换为聚集列存储索引，或创建非聚集列存储索引的详细信息，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
 

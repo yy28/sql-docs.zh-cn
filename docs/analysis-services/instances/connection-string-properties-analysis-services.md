@@ -2,32 +2,30 @@
 title: "连接字符串属性 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>连接字符串属性 (Analysis Services)
-  本主题介绍的是连接字符串属性，您可能需要在某个设计器或管理工具中设置这些属性，也可能在连接到并查询 Analysis Services 数据的客户端应用程序所生成的连接字符串中看到这些属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本主题介绍的是连接字符串属性，您可能需要在某个设计器或管理工具中设置这些属性，也可能在连接到并查询 Analysis Services 数据的客户端应用程序所生成的连接字符串中看到这些属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
   
  在应用程序代码中生成自定义连接字符串的开发人员应查看 ADOMD.NET 客户端的 API 文档，以查看更详细的列表： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -57,11 +55,11 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_common"></a>常用的连接参数  
  下表介绍在生成连接字符串时最常用的那些属性。  
   
-|属性|说明|示例|  
+|属性|Description|示例|  
 |--------------|-----------------|-------------|  
 |**Data Source** 或 **DataSource**|指定服务器实例。 此属性对于所有连接都是必需的。 有效值包括服务器的网络名称或 IP 地址、local 或 localhost（对本地连接）、URL（如果针对 HTTP 或 HTTPS 访问配置了服务器）或本地多维数据集 (.cub) 文件的名称。|对于默认实例和端口 (TCP 2383) 为`Data source=AW-SRV01` 。<br /><br /> 对于命名实例 ($Finance) 和固定端口为`Data source=AW-SRV01$Finance:8081` 。<br /><br /> 对于采用默认实例和端口的完全限定的域名为`Data source=AW-SRV01.corp.Adventure-Works.com` 。<br /><br /> 对于服务器的 IP 地址为`Data source=172.16.254.1` ，它绕过 DNS 服务器查找，对于解决连接问题很有用。|  
 |**Initial Catalog** 或 **Catalog**|指定要连接到的 Analysis Services 数据库的名称。 该数据库必须部署在 Analysis Services 上，并且您必须有权连接到它。 此属性对于 AMO 连接是可选的，但是对于 ADOMD.NET 是必需的。|`Initial catalog=AdventureWorks2016`|  
-|**提供程序**|有效值包括 MSOLAP。\<版本 >，其中\<版本 > 是 4、 5、 6 或 7。<br /><br /> -   MSOLAP.4 已在 SQL Server 2008 中发布并再次在 SQL Server 2008 R2 中发布（对于 SQL Server 2008 和 2008 R2，文件名为 msolap100.dll）<br />-   MSOLAP.5 已在 SQL Server 2012 中发布（文件名为 msolap110.dll）<br />-   MSOLAP.6 已在 SQL Server 2014 中发布（文件名为 msolap1200.dll）<br />-   MSOLAP.7 已在 SQL Server 2016 中发布（文件名为 msolap130.dll）<br /><br /> 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据提供程序时才需要设置此属性，例如要连接到 SQL Server 2012 实例。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，有时需要在 SharePoint 服务器上手动安装。 要区分这些版本，您必须检查访问接口的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击 **“详细信息”**。 查看文件版本信息。 版本应包括 10.50。\<buildnumber > SQL Server 2008 r2。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [用于 Analysis Services 连接的数据提供程序](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)。|`Provider=MSOLAP.7` 用于需要 SQL Server 2016 版本的 Analysis Services OLE DB 提供程序的连接。|  
+|**提供程序**|有效值包括 MSOLAP。\<版本 >，其中\<版本 > 是 4、 5、 6 或 7。<br /><br /> -   MSOLAP.4 已在 SQL Server 2008 中发布并再次在 SQL Server 2008 R2 中发布（对于 SQL Server 2008 和 2008 R2，文件名为 msolap100.dll）<br />-   MSOLAP.5 已在 SQL Server 2012 中发布（文件名为 msolap110.dll）<br />-   MSOLAP.6 已在 SQL Server 2014 中发布（文件名为 msolap1200.dll）<br />-   MSOLAP.7 已在 SQL Server 2016 中发布（文件名为 msolap130.dll）<br /><br /> 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据提供程序时才需要设置此属性，例如要连接到 SQL Server 2012 实例。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，有时需要在 SharePoint 服务器上手动安装。 要区分这些版本，您必须检查访问接口的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击**“详细信息”**。 查看文件版本信息。 版本应包括 10.50。\<buildnumber > SQL Server 2008 r2。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [用于 Analysis Services 连接的数据提供程序](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)。|`Provider=MSOLAP.7` 用于需要 SQL Server 2016 版本的 Analysis Services OLE DB 提供程序的连接。|  
 |**Cube**|多维数据集名称或透视名称。 一个数据库可以包含多个多维数据集和透视。 可以使用多个目标时，在连接字符串上包括多维数据集或透视名称。|`Cube=SalesPerspective` 显示你可以使用 Cube 连接字符串属性指定多维数据集名称或透视名称。|  
   
 ##  <a name="bkmk_auth"></a> 身份验证和安全  
@@ -69,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  按字母顺序列出属性。  
   
-|属性|说明|  
+|属性|Description|  
 |--------------|-----------------|  
 |**EffectiveUserName**|必须在服务器上模拟最终用户标识时使用。 按“域\用户”格式指定帐户。 要使用此属性，调用方在 Analysis Services 中必须具有管理权限。 有关在 SharePoint 的 Excel 工作簿中使用此属性的详细信息，请参阅 [在 SharePoint Server 2013 中使用 Analysis Services EffectiveUserName](http://go.microsoft.com/fwlink/?LinkId=311905)。 有关如何将此属性用于 Reporting Services 的说明，请参阅 [使用 EffectiveUserName 在 SSAS 中模拟](http://go.microsoft.com/fwlink/?LinkId=301385)。<br /><br /> 在**for SharePoint 安装中使用** EffectiveUserName [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 来捕获使用情况信息。 将用户标识提供给服务器以便可以在日志文件中记录包含用户标识的事件或错误。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中，它不用于授权目的。|  
 |**Encrypt Password**|指定是否使用本地密码来加密本地多维数据集。 有效值为 True 或 False。 默认值为 False。|  
@@ -82,14 +80,14 @@ ms.lasthandoff: 11/17/2017
 |**Roles**|指定逗号分隔的预定义的角色列表，以使用该角色具有的权限连接到服务器或数据库。 如果忽略此属性，则使用所有角色且有效权限为所有角色的组合权限。 如果将此属性设置为空值（例如 Roles=’ ‘），则客户端连接没有角色成员身份。<br /><br /> 管理员使用此属性通过角色具有的权限进行连接。 如果角色的权限不足，一些命令可能失败。|  
 |**SSPI**|显式指定将 **Integrated Security** 设置为 **SSPI**时要将哪个安全包用于客户端身份验证。 SSPI 支持多个包，但是您可以使用此属性指定特定的包。 有效值为“协商”、Kerberos、NTLM 和“匿名用户”。 如果未设置此属性，则所有包可用于连接。|  
 |**Use Encryption for Data**|加密数据传输。 有效值为 True 和 False。|  
-|**User ID**=…; **Password**=|将**User ID** 和 **Password** 一起使用。 Analysis Services 模拟通过这些凭据指定的用户标识。 在 Analysis Services 连接上，仅当为 HTTP 访问配置了服务器并且您在 IIS 虚拟目录上指定了基本身份验证替代集成安全性时才在命令行上列出凭据。 直接连接到服务器时，将忽略 **UserID** 和 **Password** 连接字符串参数并使用已登录用户的上下文进行连接。 <br /><br />用户名和密码必须是 Windows 标识（本地用户帐户或域用户帐户）的凭据。 请注意 **User ID** 包含嵌入的空格。 此属性的其他别名包括 **UserName** （无空格）和 **UID**。 **Password** 的别名为 **PWD**。|  
+|**User ID**=…; **Password**=|将 **User ID** 和 **Password** 一起使用。 Analysis Services 模拟通过这些凭据指定的用户标识。 在 Analysis Services 连接上，仅当为 HTTP 访问配置了服务器并且您在 IIS 虚拟目录上指定了基本身份验证替代集成安全性时才在命令行上列出凭据。 直接连接到服务器时，将忽略 **UserID** 和 **Password** 连接字符串参数并使用已登录用户的上下文进行连接。 <br /><br />用户名和密码必须是 Windows 标识（本地用户帐户或域用户帐户）的凭据。 请注意 **User ID** 包含嵌入的空格。 此属性的其他别名包括 **UserName** （无空格）和 **UID**。 **Password** 的别名为 **PWD**。|  
   
 ##  <a name="bkmk_special"></a> 特殊用途的参数  
  本节介绍其余连接字符串参数。 这些参数用于确保应用程序所需的特定连接行为。  
   
  按字母顺序列出属性。  
   
-|属性|说明|  
+|属性|Description|  
 |--------------|-----------------|  
 |**Application Name**|设置与连接关联的应用程序的名称。 当监视跟踪事件，特别是您具有访问同一数据库的几个应用程序时，此值很有用。 例如，将 Application Name=’test’ 添加到连接字符串将导致 ‘test’ 在 SQL Server Profiler 跟踪中显示，如以下屏幕快照中所示：<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 此属性的别名包括 **sspropinitAppName**、 **AppName**。 有关详细信息，请参阅 [连接到 SQL Server 时使用 Application Name 参数](http://go.microsoft.com/fwlink/?LinkId=301699)。|  
 |**AutoSyncPeriod**|设置客户端和服务器缓存同步的频率（毫秒）。 ADOMD.NET 为具有最小内存开销的常用对象提供客户端缓存。 这有助于减少到服务器的往返次数。 默认值为 10000 毫秒（或 10 秒钟）。 设置为 null 或 0 时，关闭自动同步功能。|  

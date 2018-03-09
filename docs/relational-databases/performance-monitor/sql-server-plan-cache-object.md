@@ -2,9 +2,12 @@
 title: "SQL Server - Plan Cache 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87782a0bf224fbc570f8bec97572ab3278d1fd6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 68fafc8b215fa71f07cae30b0c19839fdd7261ab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server Plan Cache 对象
-  **Plan Cache** 对象提供用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用内存来存储对象（例如存储过程、即席和准备的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及触发器）的计数器。 可同时监视 **Plan Cache** 对象的多个实例，每个实例代表一个要监视的不同类型的计划。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Plan Cache 对象提供用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用内存来存储对象（例如存储过程、即席和准备的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及触发器）的计数器。 可同时监视 **Plan Cache** 对象的多个实例，每个实例代表一个要监视的不同类型的计划。  
   
  下表介绍了 **SQLServer:Plan Cache**计数器。  
   
-|SQL Server Plan Cache 计数器|说明|  
+|SQL Server Plan Cache 计数器|Description|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|高速缓存命中次数和查找次数的比率。|  
 |**Cache Hit Ratio Base**|仅限内部使用。| 
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
  对象中的每个计数器均包含以下实例：  
   
-|Plan Cache 实例|说明|  
+|Plan Cache 实例|Description|  
 |-------------------------|-----------------|  
 |**_Total**|所有类型的缓存实例的信息。|  
 |**Sql 计划**|由一个临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（包括自动参数化查询）生成的查询计划，或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **或** sp_cursorprepare **预备的**语句生成的查询计划。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的计划存入缓存，以便将来需要执行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时再次使用。 用户参数化的查询（即使未显式准备）也作为准备好的 SQL 计划监视。|  

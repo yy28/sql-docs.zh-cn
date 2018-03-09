@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bf66d7aa47b9f15428b08943638dac0cd905fde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/17/2017
  **允许 Null**  
  显示组成索引键的列是否允许在表或视图列中存储 Null 值。  
   
- **添加**  
+ **“添加”**  
  向索引键添加列。 从单击“添加”时出现的“从 \<table name> 选择列”对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
   
  **删除**  
@@ -188,7 +189,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="bounding-box"></a>边界框  
  “边界框”  为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
   
- 面板将显示边界框的 **（***X-min***、***Y-min***）** 和 **（***X-max***、***Y-max***）** 坐标。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
+ 面板将显示边界框的（X-min、Y-min）和（X-max、Y-max）坐标。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
   
  **X-min**  
  边界框左下角的 X 坐标。  

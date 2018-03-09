@@ -2,15 +2,13 @@
 title: "建模标志 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,19 +24,20 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ce08e6cf57aa2ca49aea8834b96a69aa69362e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="modeling-flags-data-mining"></a>建模标志（数据挖掘）
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，可以使用建模标志为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，可以使用建模标志为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
   
  某些建模标志是在挖掘结构级别定义的，而其他标志则是在挖掘模型列级别定义的。 例如，可以将 **NOT NULL** 建模标志与挖掘结构列一起使用。 您可以根据用于创建模型的算法，在挖掘模型列上定义其他建模标志。  
   
@@ -61,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Missing 是算法所使用的一种特殊状态，不同于列中文本值 “Missing”。 有关详细信息，请参阅 [缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)预定义的这些标志以外，第三方插件还可能具有其他建模标志。  
   
- **REGRESSOR**  
+ **回归量**  
  指示该列在处理期间适合用作回归量。 该标志是在挖掘模型列中定义的，只能将其应用于具有连续数值数据类型的列。 有关使用此标志的详细信息，请参阅本主题中的 [使用 REGRESSOR 建模标志](#bkmk_UseRegressors)这一部分。  
   
 ## <a name="viewing-and-changing-modeling-flags"></a>查看和更改建模标志  
@@ -112,13 +111,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |任务|主题|  
 |----------|-----------|  
-|使用数据挖掘设计器编辑建模标志|[查看或更改建模标志（数据挖掘）](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|指定算法的提示以建议可能的回归量|[在模型中指定用作回归量的列](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|请参阅特定算法支持的建模标志（在每个算法参考主题的“建模标志”部分中）|[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|使用数据挖掘设计器编辑建模标志|[查看或更改建模标志 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|指定算法的提示以建议可能的回归量|[指定要用作回归量模型中的列](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|请参阅特定算法支持的建模标志（在每个算法参考主题的“建模标志”部分中）|[数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |了解有关挖掘结构列以及可对其设置的属性的更多信息|[挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |了解可在模型级别应用的挖掘模型列和建模标志|[挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)|  
 |请参阅用于在 DMX 语句中使用建模标志的语法|[建模标志 (DMX)](../../dmx/modeling-flags-dmx.md)|  
-|了解缺失值以及如何处理它们|[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|了解缺失值以及如何处理它们|[缺失值 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |了解如何管理模型和结构以及设置用法属性|[移动数据挖掘对象](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

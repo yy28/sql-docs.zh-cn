@@ -2,10 +2,14 @@
 title: "备份设备 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: "93"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2decbc706e1bbc8ee6bb1057684ae0e643f129c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，将备份的数据（“备份”）写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个媒体集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，将备份的数据（“备份”）写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个媒体集。  
    
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
  备份磁盘 (backup disk)  
@@ -84,7 +89,7 @@ GO
   
  FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- 例如：  
+ 例如，  
   
 ```  
 RESTORE DATABASE AdventureWorks2012   
@@ -118,7 +123,7 @@ GO
     > **重要说明！** 在网络上备份数据可能受网络错误的影响；因此，建议在使用远程磁盘时，完成备份后验证备份操作。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>指定通用命名约定 (UNC) 名称  
- 若要在备份或还原命令中指定网络共享，应针对备份设备使用文件的完全限定通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：**\\\\***系统名称***\\***共享名称***\\***路径***\\***文件名*。  
+ 若要在备份或还原命令中指定网络共享，应针对备份设备使用文件的完全限定通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：*\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName*。  
   
  例如：  
   
@@ -180,7 +185,7 @@ GO
 ###  <a name="OpenTapes"></a> 管理打开的磁带  
  若要查看打开的磁带设备列表以及装入请求状态，请查询 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 动态管理视图。 此视图显示了所有打开的磁带。 其中包括正在使用的磁带，它们等待下一个 BACKUP 或 RESTORE 操作时暂时处于空闲状态。  
   
- 如果意外使磁带处于打开状态，则释放磁带的最快方式是使用以下命令：RESTORE REWINDONLY FROM TAPE **=***backup_device_name*。 有关详细信息，请参阅 [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)。  
+ 如果意外使磁带处于打开状态，则释放磁带的最快方式是使用以下命令：RESTORE REWINDONLY FROM TAPE = backup_device_name。 有关详细信息，请参阅 [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)。  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>使用 Windows Azure Blob 存储服务  
@@ -251,7 +256,7 @@ GO
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
--   [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
+-   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **查看有关备份设备的信息**  
   
@@ -272,7 +277,7 @@ GO
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
  [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sys.dm_io_backup_tapes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)   

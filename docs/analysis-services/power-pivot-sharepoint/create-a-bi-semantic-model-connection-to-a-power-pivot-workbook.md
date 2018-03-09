@@ -2,32 +2,30 @@
 title: "创建与 Power Pivot 工作簿的 BI 语义模型连接 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 111dd53e993bc5797e8fae34ee9b02eee707aa3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abf47bc1e00a810eb82dfc2e34a95a60d05e84c4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>创建与 Power Pivot 工作簿的 BI 语义模型连接
-  使用本主题中的信息可设置一个 BI 语义模型连接，该连接重定向到同一个场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用本主题中的信息可设置一个 BI 语义模型连接，该连接重定向到同一个场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。  
   
  在您创建了 BI 语义模型连接并且配置了 SharePoint 权限后，可以将其用作 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表的数据源。  
   

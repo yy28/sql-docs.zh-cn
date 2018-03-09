@@ -3,8 +3,9 @@ title: "DrilledDown 属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - DrilledDown
 - Member::DrilledDown
-helpviewer_keywords: DrilledDown property [ADO MD]
+helpviewer_keywords:
+- DrilledDown property [ADO MD]
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5148ba1d2b349ff23af4961445d73348772cd088
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97ec87e699cd25027a7e09a37d46fa384e24d27b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="drilleddown-property-ado-md"></a>DrilledDown 属性 (ADO MD)
 该值指示是否立即跟随子级[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)在轴上。  

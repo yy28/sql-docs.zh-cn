@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 960845d3101157b3e263230e51bd2b3b5ac05ef5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 898bbdbf15cec2e583d9fa55a82ec8b0caa32d18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>使用 SQLSetPos 更新的行集中的行
 更新操作的**SQLSetPos**使更新一个或多个选定的行的表，使用数据的应用程序缓冲区中的每个绑定列 （除非长度/指示器缓冲区中的值是 SQL_COLUMN_IGNORE） 的数据源。 未绑定的列将不会更新。  

@@ -2,16 +2,13 @@
 title: "授予自定义单元数据访问权限 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.celldata.f1
@@ -28,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f199fb9b23b2837c4d886c2c5721c6cd762b7fad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f4c45a7e342a11fa7d235654581cad5b462877a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授予单元数据的自定义访问权限 (Analysis Services)
-  单元安全性用于允许或拒绝对多维数据集中度量值数据的访问。 下图显示了作为其角色仅允许访问特定度量值的用户进行连接时，数据透视表中允许和拒绝的度量值的组合。 此示例中， **分销商销售额** 和 **分销商总产品成本** 是通过此角色仅可访问的度量值。 所有其他度量值均被隐式拒绝（以下的下一节“允许访问特定度量值”中提供了用于获得此结果的步骤。）  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]单元安全性用于允许或拒绝访问集中多维数据集度量值数据。 下图显示了作为其角色仅允许访问特定度量值的用户进行连接时，数据透视表中允许和拒绝的度量值的组合。 此示例中， **分销商销售额** 和 **分销商总产品成本** 是通过此角色仅可访问的度量值。 所有其他度量值均被隐式拒绝（以下的下一节“允许访问特定度量值”中提供了用于获得此结果的步骤。）  
   
  ![数据透视表显示允许和拒绝的单元格](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "数据透视表显示允许和拒绝的单元格")  
   
@@ -54,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="allow-access-to-specific-measures"></a>允许对特定度量值的访问  
  你可以使用单元安全性显式地选择哪些度量值可访问。 一旦专门标识了允许访问哪些成员，则所有其他度量值均变为不可访问。 这可能是通过 MDX 脚本实施的最简单的方案，如以下步骤所示。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，选择一个数据库，打开“角色”文件夹，然后单击一个数据库角色（或创建一个新数据库角色）。 应该已指定成员身份，且该角色应具有对多维数据集的 **Read** 权限。 如果需要此步骤的帮助信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，选择一个数据库，打开“角色”文件夹，然后单击一个数据库角色（或创建一个新数据库角色）。 应该已指定成员身份，且该角色应具有对多维数据集的 **Read** 权限。 有关详细信息，请参阅 [授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) 。  
   
 2.  在“单元数据” 中，检查多维数据集选择，确保选择正确，然后选择“启用读取权限” 。  
   

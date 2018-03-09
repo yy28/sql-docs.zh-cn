@@ -1,25 +1,30 @@
 ---
 title: "SQL Server 中的外部脚本执行的常见问题 |Microsoft 文档"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9432ce24c94aab73862e8d1460f62e17bbc3f36c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部脚本执行的常见问题
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文包含已知的问题和常见问题的 SQL Server 中运行 R 或 Python 代码的列表。
 
@@ -314,9 +319,9 @@ EXEC sp_execute_external_script @language = N'R',
 
 *STDOUT message(s) from external script:*
 
-*[1]"c:\\程序文件\\Microsoft SQL Server\\MSSQL13。SQL2016\\R_SERVICES"*
+*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
 
-*[1]"c: / Program 文件/Microsoft SQL Server/MSSQL13。SQL2016/R_SERVICES/库"*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 
 若要解决此问题，你必须重新安装 SQL Server 实例库的程序包。
 

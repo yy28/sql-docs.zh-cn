@@ -19,13 +19,13 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e5bb5c28e35464ef46641d33600a53c2d4cb79cc
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: f4df88a913bd97cfdc632fe8e1fb365c5d8e81c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的计划手动故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题说明如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行手动故障转移而不丢失数据（计划的手动故障转移）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移类似于所有 AlwaysOn 可用性组的故障转移，将次要副本转换为主要角色。 故障转移同时会将先前的主要副本转换为次要角色。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/28/2017
   
 ###  <a name="Security"></a> 安全性 
   
-####  <a name="Permissions"></a> 权限 
+####  <a name="Permissions"></a> Permissions 
  需要具有针对可用性组的 ALTER AVAILABILITY GROUP 权限。 还要求具备 CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。 
   
 ##  <a name="SSMSProcedure"></a>使用 SQL Server Management Studio 

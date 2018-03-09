@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13ca99cdb38d8fced0eae2b655f1d1b2df7b9b03
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0443061d55f18dca07cf6f7c193995bda271419
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="importing-and-exporting-knowledge"></a>导入和导出知识
   您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中直接创建知识库和域，也可以将知识导入到知识库中或从知识库中导出知识。 在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中，您可以使用某一数据文件执行导入和导出操作，也可以使用 Excel 文件执行导入操作。 使用的数据文件是由 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 创建的扩展名为 .dqs 的加密文件。 由 Microsoft Excel 创建的文件可以具有 .xlsx、.xls 或 .csv 扩展名。 这些操作使您可以更灵活地生成和共享用于执行数据清理和匹配的知识。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |将域从 Excel 文件中导入到知识库中|[从知识发现中的 Excel 文件导入域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |将在清理过程中收集的知识导入到知识库中|[将清理项目值导入域](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  

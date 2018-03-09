@@ -1,5 +1,5 @@
 ---
-title: "catalog.check_schema_version |Microsoft 文档"
+title: catalog.check_schema_version | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 56eacb6ed209f34f65ae406fe4dd520284b79e5b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 10ec93a390173e089965e6f984c3725fb675748e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +40,15 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @use32bitruntime=] *use32bitruntime*  
- 当该参数设置为**True**，调用的 dtexec 的 32 位版本。 *Use32bitruntime*是**Bool**。  
+ [ @use32bitruntime= ] *use32bitruntime*  
+ 当此参数设置为 **True** 时，将调用 32 位版本的 dtexec。 *use32bitruntime* 为 **Bool**。  
   
 ## <a name="result-set"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要以下权限：  
   
--   成员资格**ssis_admin**数据库角色。  
+-   **ssis_admin** 数据库角色的成员资格。  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "查询 Active Directory 与脚本任务 |Microsoft 文档"
+title: "使用脚本任务查询 Active Directory | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee5a82829785e78554b105e1f3bf3bd24f05b778
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9eb991a2cd5fa7da5e60d761b8618534a99c9dd6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>使用脚本任务查询 Active Directory
-  企业数据处理应用程序（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包）通常需要根据 Active Directory 中存储的雇员的级别、职务或其他特征来以不同方式处理数据。 Active Directory 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]提供集中式的存储的元数据，不仅在内的用户信息，也关于其他组织的资产，例如计算机和打印机的 Windows 目录服务。 **System.DirectoryServices** Microsoft.NET Framework 中的命名空间提供用于使用 Active Directory，以帮助你直接数据处理工作流根据它存储的信息的类。  
+  企业数据处理应用程序（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包）通常需要根据 Active Directory 中存储的雇员的级别、职务或其他特征来以不同方式处理数据。 Active Directory 是一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 目录服务，它不仅提供集中存储有关用户的元数据，还可以提供集中存储有关其他组织资产（如计算机和打印机）的元数据。 Microsoft .NET Framework 中的 System.DirectoryServices 命名空间提供使用 Active Directory 的类，以帮助根据 Active Directory 中存储的信息来定向数据处理工作流。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
@@ -47,13 +45,13 @@ ms.lasthandoff: 09/26/2017
   
 1.  创建三个字符串变量：`email`、`name` 和 `title`。 输入一个有效的企业电子邮件地址作为 `email` 变量的值。  
   
-2.  上**脚本**页**脚本任务编辑器**，添加`email`变量**ReadOnlyVariables**属性。  
+2.  在“脚本任务编辑器”的“脚本”页，将 `email` 变量添加到 ReadOnlyVariables 属性中。  
   
-3.  添加`name`和`title`到变量**ReadWriteVariables**属性。  
+3.  将 `name` 和 `title` 变量添加到 ReadWriteVariables 属性中。  
   
-4.  在脚本项目中，添加对的引用**System.DirectoryServices**命名空间。  
+4.  在脚本项目中，添加对 System.DirectoryServices 命名空间的引用。  
   
-5.  实例时都提供 SQL Server 登录名。 在代码中，使用**导入**用于导入语句**DirectoryServices**命名空间。  
+5.  实例时都提供 SQL Server 登录名。 在代码中，使用 Imports 语句导入 DirectoryServices 命名空间。  
   
 > [!NOTE]  
 >  若要成功运行此脚本，您的企业必须在其网络中使用 Active Directory，并在其中存储此示例使用的雇员信息。  
@@ -118,7 +116,6 @@ public void Main()
   
 ## <a name="external-resources"></a>外部资源  
   
--   技术文章[中 SSIS 处理 Active Directory 信息](http://go.microsoft.com/fwlink/?LinkId=199588)，social.technet.microsoft.com 上  
+-   social.technet.microsoft.com 上的技术文章，[在 SSIS 中处理 Active Directory 信息](http://go.microsoft.com/fwlink/?LinkId=199588)。  
   
   
-

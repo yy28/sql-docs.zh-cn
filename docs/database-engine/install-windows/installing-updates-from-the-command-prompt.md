@@ -2,26 +2,31 @@
 title: "从命令提示符安装更新 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/08/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1fe67da5b3be2804b802e68927a6e7b48090de7f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: ba512e9f78ab42ddcfd46d0945c4763e02e1f39e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>从命令提示符安装更新
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 请根据您所在单位的需要测试并修改安装脚本。 
  
 ## <a name="sample-syntax-for-installation"></a>安装的示例语法 
@@ -32,7 +37,7 @@ ms.lasthandoff: 11/09/2017
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    或 
+    或多个 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 - 安装程序可以将最新的产品更新与主安装相集成，以便可以同时安装主产品及其适用的更新。 可以准备安装数据库引擎实例，以包括产品更新： 
 
     ```
-    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
+    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
     ```
 
 - 仅更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和管理工具）： 
@@ -75,7 +80,7 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT] 
 > 请尽可能在运行时提供安全凭据。 如果必须将凭据存储在脚本文件中，请确保该文件的安全以防受到未经授权的访问。 
  
-|开关|说明| 
+|开关|Description| 
 |------------|-----------------| 
 |**/?**|显示无人参与安装命令提示符帮助| 
 |**/action=Patch 或 /action=RemovePatch**|指定安装操作：Patch 或 RemovePatch。| 

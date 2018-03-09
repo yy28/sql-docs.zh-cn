@@ -1,10 +1,13 @@
 ---
 title: "创建脚本文件 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: 2945b7fac5aeb464511d38b6130c747c8ce95abc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d39055374caa0697c073b6abfc8d99e87ed42bb1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-accesstosql"></a>创建脚本文件 (AccessToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建的变量值文件和服务器连接文件。  
   
-脚本文件可分为三部分组成，viz。。，：  
+脚本文件可分为三部分组成，viz..,:  
   
 1.  **配置：**使用户能够设置控制台应用程序的配置参数。  
   

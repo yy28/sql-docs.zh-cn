@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a1981e538d5ea3a8730547544f99bcbf96d0e9c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 72884da8498b5e0ccb3533c353e676dee2517795
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的转义序列
 大量的语言功能，如外部联接和标量函数调用，通常被实现的 Dbms。 但是，为这些功能语法往往是特定于 DBMS 的即使标准语法定义的各种标准正文。 因此，ODBC 定义包含以下语言功能的标准语法的转义序列：  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  转义序列是识别，并且由驱动程序，将替换为特定于 DBMS 的语法的转义序列进行分析。 有关转义序列语法的详细信息，请参阅[ODBC 转义序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附录 c: SQL 语法中。  
   
 > [!NOTE]  

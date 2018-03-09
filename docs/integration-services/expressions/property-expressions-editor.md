@@ -1,5 +1,5 @@
 ---
-title: "属性表达式编辑器 |Microsoft 文档"
+title: "属性表达式编辑器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dffc58ddd7cae6136f22a8d9db8126730071e990
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 35043f343fe16ac5c848d0c7dd2f9b21b95b18a5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="property-expressions-editor"></a>属性表达式编辑器
   可以使用 **“属性表达式编辑器”** 对话框创建、编辑或删除用于更新属性值的属性表达式。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **属性**  
  从列表中选择对象属性。  
   
@@ -49,11 +48,10 @@ ms.lasthandoff: 08/03/2017
  选择一个属性，再单击“删除”。  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式页](../../integration-services/expressions/expressions-page.md)   
- [Integration Services &#40;SSIS &#41;变量](../../integration-services/integration-services-ssis-variables.md)   
+ [“表达式”页](../../integration-services/expressions/expressions-page.md)   
+ [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [系统变量](../../integration-services/system-variables.md)   
- [Integration Services &#40;SSIS &#41;表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)  
   
   
-

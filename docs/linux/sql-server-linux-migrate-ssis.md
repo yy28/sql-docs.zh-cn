@@ -5,33 +5,33 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 71e082bf6c2f7c5bad518f7c521767172e6265bd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 87c28ec845a59ea13acce0585bc9b249f100a4a5
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>提取、 转换和加载使用 SSIS 的 Linux 上的数据
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本主题介绍如何在 Linux 上运行 SQL Server Integration Services (SSIS) 包。 SSIS 从多个源和格式，提取数据，从而解决了复杂的数据集成问题转换和清理数据，并将数据加载到多个目标。 
+本文介绍如何在 Linux 上运行 SQL Server Integration Services (SSIS) 包。 SSIS 从多个源和格式，提取数据，从而解决了复杂的数据集成问题转换和清理数据，并将数据加载到多个目标。 
 
 在 Linux 上运行的 SSIS 包可以连接到 Windows 本地或云中，在 Linux 上，或在 Docker 中运行的 Microsoft SQL Server。 它们还可以连接到 Azure SQL 数据库、 Azure SQL 数据仓库、 ODBC 数据源、 平面文件和其他数据源，包括 ADO.NET 源、 XML 文件和 OData 服务。
 
 关于 SSIS 的功能的详细信息，请参阅[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 若要在 Linux 计算机上运行 SSIS 包，你首先需要安装 SQL Server Integration Services。 SSIS 不包括在为 Linux 计算机安装 SQL Server。 有关安装说明，请参阅[安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)。
 
@@ -47,17 +47,45 @@ ms.lasthandoff: 11/20/2017
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="other-common-ssis-tasks"></a>其他常见的 SSIS 任务
+## <a name="run-an-encrypted-password-protected-package"></a>运行加密 （受密码保护） 包
+有三种方法可以运行使用密码进行加密的 SSIS 包：
 
--   **设计包**。
+1.  设置环境变量的值`SSIS_PACKAGE_DECRYPT`，下面的示例中所示：
 
-    -   **连接到 ODBC 数据源**。 借助上 Linux CTP 2.1 刷新及更高版本的 SSIS，SSIS 包可以在 Linux 上使用 ODBC 连接。 此功能已测试 SQL Server 和 MySQL ODBC 驱动程序，但还需要使用任何 Unicode ODBC 驱动程序观察到 ODBC 规范。 在设计时，你可以提供一个 DSN 或连接字符串以连接到 ODBC 数据中;你还可以使用 Windows 身份验证。 有关详细信息，请参阅[博客文章在 Linux 上的宣布推出的 ODBC 支持](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
 
-    -   **路径**。 提供 Windows 样式在 SSIS 包的路径。 在 Linux 上的 SSIS 不支持 Linux 样式路径，但在运行时将 Windows 样式路径映射到 Linux 样式路径。 然后，例如，在 Linux 上的 SSIS 映射 Windows 样式路径`C:\test`到 Linux 样式路径`/test`。
+2.  指定`/de[crypt]`选项输入密码以交互方式，如下面的示例中所示：
 
--   **部署包**。 仅可以在此版本在 Linux 上文件系统中存储包。 SSIS 目录数据库和旧的 SSIS 服务不在 Linux 上可用于包部署和存储。
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
+    
+    Enter decryption password:
+    ```
 
--   **计划包**。 你可以使用计划工具，如 Linux 系统`cron`计划包。 不能使用在 Linux 上的 SQL 代理用于计划在此版本的包执行。 有关详细信息，请参阅[计划 SSIS 包在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)。
+3.  指定`/de`选项在命令行上提供的密码，如下面的示例中所示。 不推荐使用此方法，因为它将使用命令的解密密码存储中的命令历史记录。
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
+    
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
+    ```
+
+## <a name="design-packages"></a>设计包
+
+**连接到 ODBC 数据源**。 借助上 Linux CTP 2.1 刷新及更高版本的 SSIS，SSIS 包可以在 Linux 上使用 ODBC 连接。 此功能已测试 SQL Server 和 MySQL ODBC 驱动程序，但还需要使用任何 Unicode ODBC 驱动程序观察到 ODBC 规范。 在设计时，你可以提供一个 DSN 或连接字符串以连接到 ODBC 数据中;你还可以使用 Windows 身份验证。 有关详细信息，请参阅[博客文章在 Linux 上的宣布推出的 ODBC 支持](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
+
+**路径**。 提供 Windows 样式在 SSIS 包的路径。 在 Linux 上的 SSIS 不支持 Linux 样式路径，但在运行时将 Windows 样式路径映射到 Linux 样式路径。 然后，例如，在 Linux 上的 SSIS 映射 Windows 样式路径`C:\test`到 Linux 样式路径`/test`。
+
+## <a name="deploy-packages"></a>部署包
+仅可以在此版本在 Linux 上文件系统中存储包。 SSIS 目录数据库和旧的 SSIS 服务不在 Linux 上可用于包部署和存储。
+
+## <a name="schedule-packages"></a>计划包
+你可以使用计划工具，如 Linux 系统`cron`计划包。 不能使用在 Linux 上的 SQL 代理用于计划在此版本的包执行。 有关详细信息，请参阅[计划 SSIS 包在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)。
 
 ## <a name="limitations-and-known-issues"></a>限制和已知的问题
 
@@ -83,7 +111,13 @@ SSIS 包括以下功能：
 
 若要开始使用 SSIS，下载最新版本[SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md)。
 
-## <a name="see-also"></a>另请参阅
+若要了解有关 SSIS 的详细信息，请参阅以下文章：
 - [了解有关 SQL Server Integration Services 的详细信息](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) 开发和管理工具](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services 教程](../integration-services/integration-services-tutorials.md)
+
+## <a name="related-content-about-ssis-on-linux"></a>有关在 Linux 上的 SSIS 的相关的内容
+-   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 ssis conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [限制和 Linux 上的 SSIS 的已知的问题](sql-server-linux-ssis-known-issues.md)
+-   [计划 SQL Server Integration Services 包执行在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)

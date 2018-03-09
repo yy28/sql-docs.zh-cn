@@ -2,10 +2,14 @@
 title: "复制合并代理 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 347348a43528881c76615fd348ba94130210ce93
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d28310275dd8df9e8e0ee205322291098ea4a626
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="replication-merge-agent"></a>复制合并代理
-  复制合并代理是一个将数据库表中保存的初始快照应用于订阅服务器的实用工具可执行文件。 它还合并自初始快照创建后发布服务器上发生的增量数据更改，并根据配置的规则或通过使用创建的自定义冲突解决程序来协调冲突。  
+# <a name="replication-merge-agent"></a>Replication Merge Agent
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+复制合并代理是一个将数据库表中保存的初始快照应用于订阅服务器的实用工具可执行文件。 它还合并自初始快照创建后发布服务器上发生的增量数据更改，并根据配置的规则或通过使用创建的自定义冲突解决程序来协调冲突。  
   
 > [!NOTE]  
 >  可以按任意顺序指定参数。 如果未指定可选参数，将使用本地计算机上预定义的注册表设置中的值。  
@@ -115,7 +120,7 @@ replmerg [-?]
  输出所有可用的参数。  
   
  **-Publisher** *server_name*[**\\***instance_name*]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  **-PublisherDB** *publisher_database*  
  发布服务器数据库的名称。  
@@ -124,7 +129,7 @@ replmerg [-?]
  发布的名称。 只有将发布设置为总是使快照可用于新订阅或重新初始化的订阅时，此参数才有效。  
   
  **-Subscriber** *server_name*[**\\***instance_name*]  
- 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  **-SubscriberDB** *subscriber_database*  
  订阅服务器数据库的名称。  
@@ -142,7 +147,7 @@ replmerg [-?]
  代理定义文件的路径。 代理定义文件中包含代理的命令提示符参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 对于分发服务器（推送）分发，名称默认为本地计算机上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例的名称。  
+ 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 对于分发服务器（推送）分发，名称默认为本地计算机上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例的名称。  
   
  **-DistributorLogin** *distributor_login*  
  分发服务器登录名。  
@@ -168,7 +173,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  建立连接时合并代理使用的安全套接字层 (SSL) 加密的级别。  
   
-|EncryptionLevel 值|说明|  
+|EncryptionLevel 值|Description|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -178,11 +183,11 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 **@subscriber_upload_options** 的 **sp_addmergearticle** 。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 sp_addmergearticle 的 @subscriber_upload_options。  
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
   
-|ExchangeType 值|说明|  
+|ExchangeType 值|Description|  
 |------------------------|-----------------|  
 |**1**|代理应将订阅服务器上的数据更改上载到发布服务器。|  
 |**2**|代理应将发布服务器上的数据更改下载到订阅服务器。|  
@@ -201,7 +206,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合并代理应使用的收敛级别，可以为以下值之一：  
   
-|ForceConvergenceLevel 值|说明|  
+|ForceConvergenceLevel 值|Description|  
 |---------------------------------|-----------------|  
 |**0** （默认值）|默认值。 执行不具有附加收敛的标准合并。|  
 |**1**|强制所有生成进行收敛。|  
@@ -222,7 +227,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  指定在合并操作期间记录的历史记录数量。 选择 **1**可将历史日志记录对性能的影响减至最小。  
   
-|HistoryVerboseLevel 值|说明|  
+|HistoryVerboseLevel 值|Description|  
 |-------------------------------|-----------------|  
 |**0**|记录最终的代理状态消息、最终的会话详细信息和任何错误。|  
 |**1**|记录每个会话状态的增量会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。|  
@@ -327,7 +332,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  指定是否存在现有的订阅服务器数据库。  
   
-|SubscriberDBAddOption 值|说明|  
+|SubscriberDBAddOption 值|Description|  
 |---------------------------------|-----------------|  
 |**0**|使用现有数据库（默认值）。|  
 |**1**|创建一个新的空订阅服务器数据库。|  
@@ -373,7 +378,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  指定是否应在合并会话结束时执行验证，以及如果要执行验证，应执行哪种类型的验证。 建议值为 **3** 。  
   
-|Validate 值|说明|  
+|Validate 值|Description|  
 |--------------------|-----------------|  
 |**0** （默认值）|不执行验证。|  
 |**1**|只验证行计数。|  
@@ -386,7 +391,7 @@ replmerg [-?]
  **-ValidateInterval** *validate_interval*  
  在连续模式下对订阅进行验证的频率（单位为分钟）。 默认值为 **60** 分钟。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  如果您安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理是通过本地系统帐户而非域用户帐户（默认值）运行，则该服务只能访问本地计算机。 如果以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理身份运行的合并代理已配置为在登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用 Windows 身份验证模式，则合并代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。  

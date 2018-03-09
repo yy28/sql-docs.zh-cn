@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 目标 |Microsoft 文档"
+title: "SAP BW 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28d86db3fac9d5230fa554369bccd7a23304d63c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47b31595b327e762f4710ffbfd85f1c3ccf894c9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目标
   SAP BW 目标是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的目标组件。 因此，SAP BW 目标将来自 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中数据流的数据加载到 SAP Netweaver BW 版本 7 系统。  
@@ -96,23 +95,23 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>使用 SSIS 设计器配置目标  
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的 SAP BW 目标属性的详细信息，请单击以下主题之一进行了解：  
   
--   [SAP BW 目标编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 目标编辑器 &#40;映射页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 目标编辑器（“映射”页）](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 目标编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 目标编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 目标编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 目标编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  在配置 SAP BW 目标的同时，您还可使用各种对话框查找或创建 SAP Netweaver BW 对象。 有关这些对话框的详细信息，请单击以下主题之一进行了解：  
   
--   [查找 Infopackage](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [查找 InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
   
--   [创建新的 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
+-   [新建 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   
 -   [创建事务数据的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [查找 Infoobject](../../integration-services/data-flow/look-up-infoobject.md)  
+-   [查找 InfoObject](../../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [创建 InfoSource](../../integration-services/data-flow/create-infosource.md)  
   
@@ -126,4 +125,3 @@ ms.lasthandoff: 08/03/2017
  [Microsoft Connector for SAP BW 组件](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

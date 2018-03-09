@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4b993a3e2c45709e1095bfeb54919f5261bf6a12
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8c6a475c37a953394fa51023dccdd9d80e5cb32
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
 
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 
 若要打开此页，请启动 SQL Server Management Studio，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”。 选择“高级”打开此页。
 
-## <a name="options"></a>选项
+## <a name="options"></a>“常规”
 
 **EnableMyReports**  
 指示是否启用“我的报表”功能。 值为 **true** 表示已启用该功能。  

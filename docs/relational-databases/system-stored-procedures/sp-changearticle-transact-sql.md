@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,11 +63,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|Description|  
+|“属性”|值|Description|  
 |--------------|------------|-----------------|  
 |**creation_script**||用于创建目标表的项目架构脚本的路径和名称。 默认值为 NULL。|  
 |**del_cmd**||要执行的 DELETE 语句，否则从日志构造。|  
-|**说明**||项目的新说明项。|  
+|**description**||项目的新说明项。|  
 |**dest_object**||提供该列是为了向后兼容。 使用**dest_table**。|  
 |**dest_table**||新目标表。|  
 |**destination_owner**||目标对象所有者的名称。|  
@@ -139,7 +139,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||用于生成同步输出文件的表或视图的名称。 默认值为 NULL。 Oracle 发布服务器不支持。|  
 |**表空间**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
 |**阈值**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
-|**type**||Oracle 发布服务器不支持。|  
+|**类型**||Oracle 发布服务器不支持。|  
 ||**logbased**|基于日志的项目。|  
 ||**logbased manualboth**|具有手动筛选器和手动视图并且基于日志的项目。 此选项需要*sync_object*和*筛选器*属性也进行设置。 Oracle 发布服务器不支持。|  
 ||**logbased manualfilter**|具有手动筛选器并且基于日志的项目。 此选项需要*sync_object*和*筛选器*属性也进行设置。 Oracle 发布服务器不支持。|  
@@ -178,7 +178,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_changearticle**快照复制和事务复制中使用。  
   
  当项目所属的发布，支持对等事务复制时，可以仅更改**说明**， **ins_cmd**， **upd_cmd**，和**del_cmd**属性。  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  在现有发布，你可以使用**sp_changearticle**可以更改项目，而无需删除并重新创建整个发布。  
   
 > [!NOTE]  
->  更改的值时*schema_option*，系统不执行按位的更新。 这意味着，当你设置*schema_option*使用**sp_changearticle**、 现有位设置可能已关闭。 若要保留现有的设置，你应执行[（& a) （按位和）](../../t-sql/language-elements/bitwise-and-transact-sql.md)你设置的值和当前值之间*schema_option*，其可以通过执行确定[sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。  
+>  更改的值时*schema_option*，系统不执行按位的更新。 这意味着，当你设置*schema_option*使用**sp_changearticle**、 现有位设置可能已关闭。 若要保留现有的设置，你应执行[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)你设置的值和当前值之间*schema_option*，其可以通过执行确定[sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。  
   
 ## <a name="valid-schema-options"></a>有效架构选项  
  下表描述了允许的值的*schema_option*基于 （横跨顶部显示） 的复制类型和项目类型 （显示的第一列）。  
@@ -246,7 +246,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changearticle**。  
   
 ## <a name="see-also"></a>另请参阅  

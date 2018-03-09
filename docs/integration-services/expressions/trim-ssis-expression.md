@@ -1,5 +1,5 @@
 ---
-title: "TRIM （SSIS 表达式） |Microsoft 文档"
+title: "TRIM（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - TRIM function
 - trailing blanks
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b543848947186903eddfe6bad310697fb513ad24
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5df021d0f872330c55833d68b575878b0a4290e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="trim-ssis-expression"></a>TRIM（SSIS 表达式）
   返回删除了前导空格和尾随空格的字符表达式。  
@@ -49,7 +48,7 @@ TRIM(character_expression)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果该参数为空，则 TRIM 返回的结果为空。  
   
  TRIM 只可用于 DT_WSTR 数据类型。 如果 *character_expression* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 TRIM 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
@@ -68,9 +67,8 @@ TRIM(FirstName + " "+ LastName)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [LTRIM &#40;SSIS 表达式 &#41;](../../integration-services/expressions/ltrim-ssis-expression.md)   
- [RTRIM &#40;SSIS 表达式 &#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [LTRIM（SSIS 表达式）](../../integration-services/expressions/ltrim-ssis-expression.md)   
+ [RTRIM（SSIS 表达式）](../../integration-services/expressions/rtrim-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

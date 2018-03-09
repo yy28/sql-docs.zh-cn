@@ -2,44 +2,35 @@
 title: "升级工作簿和计划的数据刷新 (SharePoint 2013) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: setup-install
+ms.suite: pro-bi
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffec3fb3ec6abd9d6fd1779ae8e8f434894e68b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
-  本主题说明了在以前的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 环境中创建的工作簿的用户体验，以及如何升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿以便你可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [Power Pivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本主题说明了在以前的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 环境中创建的工作簿的用户体验，以及如何升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿以便你可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [Power Pivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  
   
 > [!WARNING]  
 >  对于在服务器上自动升级的工作簿，不能回滚升级。 一旦升级某一工作簿后，它就将保持升级状态。 若要使用以前的版本，可以将以前的工作簿重新发布到 SharePoint，还原以前的版本，或者回收工作簿。 有关在 SharePoint 中还原或回收文档的详细信息，请参阅 [通过使用回收站和版本控制计划保护内容](http://go.microsoft.com/fwlink/?LinkId=238669)。  
   
- 本主题包含以下各节：  
-  
--   [升级工作簿的概述](#bkmk_overview)  
-  
--   [从 2008 R2 工作簿升级到 SQL Server 2012 Service Pack 1 (SP1) 工作簿](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [从通过使用适用于 Excel 的 2012 Power Pivot 外接程序创建的版本升级到 Office 2013 工作簿](#bkmk_to_2012sp1_from_2012)  
-  
--   [从通过使用用于 Excel 2010 的 2008 R2 Power Pivot 外接程序创建的版本升级到 SQL Server 2012 工作簿](#bkmk_to_2012_from_2008R2)  
-  
--   [在较新版本的服务器上运行多个工作簿版本](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> 升级工作簿的概述  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿是包含嵌入的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据的 Excel 工作簿。 升级工作簿有两个好处：  

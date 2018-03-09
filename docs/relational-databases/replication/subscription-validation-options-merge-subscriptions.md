@@ -2,9 +2,12 @@
 title: "订阅验证选项（合并订阅）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,20 +15,20 @@ f1_keywords: sql13.rep.validate.mergeoptions.f1
 helpviewer_keywords: Subscription Validation Options dialog box
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b073c50763e64d4fe8bb602f1be90ccc31e1d78d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90c5d99900c05986e049546b376789db5963dab6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>订阅验证选项（合并订阅）
-  可以使用 **“订阅验证选项”** 对话框指定是仅使用行计数进行验证，还是使用行计数和二进制校验和进行验证。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]使用“订阅验证选”对话框可以指定是仅使用行计数进行验证，还是使用行计数和二进制校验和进行验证。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **仅验证行计数**  
  选择此选项可以验证订阅服务器上的表是否与发布服务器上的表具有相同的行数。 此方法不会验证行的内容是否匹配。 行计数验证是一种简易验证方法，可帮助您了解数据是否存在问题。  
   

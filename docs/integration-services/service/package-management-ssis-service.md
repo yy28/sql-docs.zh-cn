@@ -1,5 +1,5 @@
 ---
-title: "包管理 （SSIS 服务） |Microsoft 文档"
+title: "包管理（SSIS 服务）| Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -30,31 +30,30 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51d6e32f04d470c7f4ddfc8d3c4b6d994e0bd764
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
-  管理包包含监视、 管理、 导入和导出包。  
+  包管理包括监视、管理、导入和导出包。  
  
  ## <a name="package-store"></a>包存储区  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供用于访问包的两个顶层文件夹： 
- - **运行包** 
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供两个用于访问包的顶层文件夹： 
+ - **“正在运行的包”** 
  - **“已存储的包”**
 
  **“正在运行的包”** 文件夹列出当前正在服务器上运行的包。 **“已存储的包”** 文件夹列出包存储区中保存的包。 这些只是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务所管理的包。 包存储区可以同时包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置文件中列出的 msdb 数据库和文件系统文件夹或只包含其中的一项。 配置文件指定要管理的 msdb 数据库和文件系统文件夹。 您也可以将包存储在文件系统中不受 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务管理的其他位置。  
   
- 你将保存到 msdb 的包存储在名为 sysssispackages 的表中。 将包保存到 msdb 中时，你可以将它们分组在逻辑文件夹中。 使用逻辑文件夹可帮助你通过目的，来组织包或筛选 sysssispackages 表中的包。 创建新的逻辑文件夹中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 默认情况下，任何添加到 msdb 的逻辑文件夹将自动包括在包存储区中。  
+ 保存到 msdb 的包存储在名为 sysssispackages 的表中。 将包保存到 msdb 时，可以按逻辑文件夹对包分组。 使用逻辑文件夹有助于按用途整理包，或者筛选 sysssispackages 表中的包。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建新的逻辑文件夹。 默认情况下，任何添加到 msdb 的逻辑文件夹将自动包括在包存储区中。  
   
- 你创建的逻辑文件夹表示为 msdb 中 sysssispackagefolders 表中的行。 sysssispackagefolders 中的 folderid 列和 parentfolderid 列定义文件夹层次结构。 在 msdb 中的根逻辑文件夹是在 sysssispackagefolders 与 parentfolderid 列中 null 值的行。 有关详细信息，请参阅[sysssispackages &#40;Transact SQL &#41;](../../relational-databases/system-tables/sysssispackages-transact-sql.md)和[sysssispackagefolders (Transact SQL &)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)。  
+ 所创建的逻辑文件夹表示为 msdb 中 sysssispackagefolders 表的行。 sysssispackagefolders 中的 folderid 列和 parentfolderid 列定义文件夹层次结构。 msdb 中的根逻辑文件夹是 sysssispackagefolders 中 parentfolderid 列为 null 值的行。 有关详细信息，请参阅 [sysssispackages (Transact-SQL)](../../relational-databases/system-tables/sysssispackages-transact-sql.md) 和 [sysssispackagefolders (Transact-SQL)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)。  
   
  在打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]时，你将看到在“已存储的包”文件夹中列出的由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务管理的 msdb 文件夹。 如果配置文件指定根文件系统文件夹，则“已存储的包”文件夹还会列出保存到文件系统的这些文件夹和所有子文件夹中的包。  
   
@@ -66,12 +65,12 @@ ms.lasthandoff: 08/03/2017
   
  若要查看包存储区中的包列表，必须打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
-## <a name="monitor-running-packages"></a>正在运行的包的监视器  
- **正在运行的包**文件夹列出当前正在运行的包。 若要在 **的** “摘要” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]页上查看当前包的信息，请单击 **“正在运行的包”** 文件夹。 **“摘要”** 页上列有正在运行的包的执行持续时间等信息。 您可以选择刷新该文件夹，以显示最新的信息。  
+## <a name="monitor-running-packages"></a>监视正在运行的包  
+ “正在运行的包”文件夹列出当前正在运行的包。 若要在 **的** “摘要” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]页上查看当前包的信息，请单击 **“正在运行的包”** 文件夹。 **“摘要”** 页上列有正在运行的包的执行持续时间等信息。 您可以选择刷新该文件夹，以显示最新的信息。  
   
  若要查看 **“摘要”** 页上某个正在运行的包的信息，请单击此包。 **“摘要”** 页显示包的版本和说明等信息。  
   
-停止正在运行的包从**正在运行的包**通过右键单击包，然后单击文件夹**停止**。  
+右键单击“正在运行的包”文件夹中某个正在运行的包，然后单击“停止”，可以使该包停止运行。  
   
 ## <a name="view-packages-in-ssms"></a>在 SSMS 中查看包
     
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     >  如果无法连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务可能未运行。 若要了解该服务的状态，请单击 **“开始”**，依次指向 **“所有程序”**、 **Microsoft SQL Server**和 **“配置工具”**，再单击 **“SQL Server 配置管理器”**。 在左窗格中，单击 **“SQL Server 服务”**。 在右窗格中，查找 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 如果该服务尚未运行，请启动该服务。  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将打开。 默认情况下，会打开对象资源管理器窗口并定位在 SQL Server Management Studio 左下角。 如果对象资源管理器未打开，请单击 **“视图”** 菜单上的 **“对象资源管理器”** 。  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 默认情况下，会打开对象资源管理器窗口并定位在 SQL Server Management Studio 左下角。 如果对象资源管理器未打开，请单击 **“视图”** 菜单上的 **“对象资源管理器”** 。  
   
 ### <a name="to-view-the-packages-that-integration-services-service-manages"></a>查看 Integration Services 服务管理的包  
   
@@ -108,7 +107,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使你能够导入和导出包，并通过执行此操作更改存储格式和的包的位置。 使用导入和导出功能，您可以将包添加到文件系统、包存储区或 msdb 数据库，然后将包从一种存储格式复制为另一种存储格式。 例如，保存在 msdb 中的包可以复制到文件系统中，反之亦然。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了导入和导出包的功能，通过此功能可以更改包的存储格式和位置。 使用导入和导出功能，您可以将包添加到文件系统、包存储区或 msdb 数据库，然后将包从一种存储格式复制为另一种存储格式。 例如，保存在 msdb 中的包可以复制到文件系统中，反之亦然。  
   
  还可以使用 **dtutil** 命令提示实用工具 (dtutil.exe) 将包复制为其他格式。 有关详细信息，请参阅 [dtutil Utility](../../integration-services/dtutil-utility.md)。  
   
@@ -134,7 +133,7 @@ ms.lasthandoff: 08/03/2017
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
   
-    -   在**服务器名称**框中，提供服务器名称或单击**\<浏览更多...>**并找到要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击 \<“浏览更多...”>，定位要使用的服务器。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
   
@@ -170,7 +169,7 @@ ms.lasthandoff: 08/03/2017
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
   
-    -   在**服务器名称**框中，提供服务器名称或单击**\<浏览更多...>**并找到要使用的服务器。  
+    -   在“服务器名称”框中，提供服务器名称，或者单击 \<“浏览更多...”>，定位要使用的服务器。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
   
@@ -199,7 +198,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="import-package-dialog-box-ui-reference"></a>“导入包”对话框 UI 参考
   可以使用 **中的** “导入包” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框，导入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包以及设置或修改包的保护级别。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **包位置**  
  选择要向其中导入包的存储位置的类型。 可用选项包括：  
   
@@ -221,7 +220,7 @@ ms.lasthandoff: 08/03/2017
  **身份验证类型**  
  选择身份验证类型。  
   
- **用户名**  
+ **User name**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供用户名。  
   
  **密码**  
@@ -239,13 +238,13 @@ ms.lasthandoff: 08/03/2017
 ## <a name="export-package-dialog-box-ui-reference"></a>“导出包”对话框 UI 参考
   可以使用 **中的** “导出包” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框，将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包导出到其他位置并根据需要修改包的保护级别。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **包位置**  
  选择要将包导出到的存储区的类型。 可用选项包括：  
   
  **SQL Server**  
   
- **文件系统**  
+ **“文件系统”**  
   
  **SSIS 包存储**  
   
@@ -261,7 +260,7 @@ ms.lasthandoff: 08/03/2017
  **身份验证类型**  
  选择身份验证类型。  
   
- **用户名**  
+ **User name**  
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请提供用户名。  
   
  **密码**  
@@ -295,4 +294,3 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   
-

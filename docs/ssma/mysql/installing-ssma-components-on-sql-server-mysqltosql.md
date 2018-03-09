@@ -1,10 +1,13 @@
 ---
 title: "在 SQL Server (MySQLToSql) 上安装 SSMA 组件 |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 190c3cfcb9d41af357bfffe2a247aa353e2676e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>在 SQL Server (MySQLToSql) 上安装 SSMA 组件
 除了安装 SSMA，你还必须安装组件正在运行的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 这些组件包括 SSMA 扩展包，它支持数据迁移和 MySQL 提供程序以启用服务器到服务器的连接。  
@@ -32,7 +35,7 @@ SSMA 扩展包增加了一个数据库， **sysdb**，到的指定实例[!INCLUD
   
 此外，当你将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理作业，当服务器端数据迁移引擎用于将数据迁移。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 在上安装 MySQL 服务器组件 SSMA 之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请确保计算机满足以下要求：  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  

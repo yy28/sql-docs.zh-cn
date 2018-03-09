@@ -3,26 +3,28 @@ title: "RDS 使用 ODBC 连接池 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: connection pooling in RDS [ADO]
+helpviewer_keywords:
+- connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e06c138bc3eec4c9ece503f98b0d4951ffdaea6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40a7469e2d5a264138b108d4ba8ea274b3c0b7ae
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS 使用 ODBC 连接池
 如果你使用 ODBC 数据源，你可以使用连接池选项在 Internet 信息服务 (IIS) 来完成的客户端负载的高性能处理。 连接池是资源管理器对于连接，维护经常使用的连接的打开状态。  
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="to-specify-the-tcpip-socket-network-library-on-the-sql-server-computer"></a>若要指定 SQL Server 计算机上的 TCP/IP 套接字网络库  
   
-### <a name="in-microsoft-sql-server-65"></a>在 Microsoft SQL Server 6.5:  
+### <a name="in-microsoft-sql-server-65"></a>In Microsoft SQL Server 6.5:  
   
 1.  从开始菜单中，依次指向程序，指向 Microsoft SQL Server 6.5，，然后单击 SQL 安装程序。  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  单击继续完成，然后退出安装程序。  
   
-### <a name="in-microsoft-sql-server-70"></a>在 Microsoft SQL Server 7.0:  
+### <a name="in-microsoft-sql-server-70"></a>In Microsoft SQL Server 7.0:  
   
 1.  从开始菜单中，依次指向程序，指向 Microsoft SQL Server 7.0，，然后单击服务器网络实用工具。  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="to-configure-the-web-server-all-sql-servers"></a>若要配置 Web 服务器 (所有 SQL Server)  
   
-### <a name="for-microsoft-sql-server-65"></a>对于 Microsoft SQL Server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>For Microsoft SQL Server 6.5:  
   
 1.  从开始菜单中，依次指向程序，指向 Microsoft SQL Server 6.5，，然后单击 SQL 客户端配置实用工具。  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  单击完成以保存更改并退出实用程序。  
   
-### <a name="for-microsoft-sql-server-70"></a>对于 Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  从开始菜单中，依次指向程序，指向 Microsoft SQL Server 7.0，，然后单击客户端网络实用工具。  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="to-configure-the-web-server-a-specific-sql-server"></a>若要配置 Web 服务器 (特定的 SQL Server)  
   
-### <a name="for-microsoft-sql-server-65"></a>对于 Microsoft SQL Server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>For Microsoft SQL Server 6.5:  
   
 1.  从开始菜单中，依次指向程序，指向 Microsoft SQL Server 6.5，，然后单击 SQL 客户端配置实用工具。  
   
@@ -116,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  单击完成。  
   
-### <a name="for-microsoft-sql-server-70"></a>对于 Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
   
 1.  从开始菜单中，依次指向程序，指向 Microsoft SQL Server 7.0，，然后单击客户端配置实用工具。  
   

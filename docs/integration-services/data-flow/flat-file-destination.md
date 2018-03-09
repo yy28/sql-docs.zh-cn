@@ -1,5 +1,5 @@
 ---
-title: "平面文件目标 |Microsoft 文档"
+title: "平面文件目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: f793d3da885afc7a0b344e3f020cf455fee130a4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-destination"></a>平面文件目标
   平面文件目标将数据写入文本文件。 文本文件可以为带分隔符格式、固定宽度格式、固定宽度并使用行分隔符格式或右边未对齐格式。  
@@ -50,21 +49,21 @@ ms.lasthandoff: 08/17/2017
  此目标具有一个输出。 它不支持错误输出。  
   
 ## <a name="configuration-of-the-flat-file-destination"></a>配置平面文件目标  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [平面文件自定义属性](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  有关如何设置数据流组件属性的信息，请参阅 [设置数据流组件属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="flat-file-destination-editor-connection-manager-page"></a>平面文件目标编辑器（“连接管理器”页）
   可以使用 **“平面文件目标编辑器”** 对话框的 **“连接管理器”** 页为目标选择平面文件连接，以及指定是覆盖现有目标文件还是追加到现有目标文件。 平面文件目标可以将数据写入文本文件。 该文本文件可以采用带分隔符、固定宽度、带有行分隔符的固定宽度或右边未对齐的格式。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **平面文件连接管理器**  
  使用列表框选择现有的连接管理器，或单击“新建”创建新的连接管理器。  
   
@@ -87,7 +86,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="flat-file-destination-editor-mappings-page"></a>平面文件目标编辑器（“映射”页）
   可以使用 **“平面文件目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作将可用输入列映射到目标列。  
   
@@ -95,14 +94,13 @@ ms.lasthandoff: 08/17/2017
  查看可用目标列的列表。 使用拖放操作将可用目标列映射到输入列。  
   
  **输入列**  
- 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”**列表来更改映射。 选择**\<忽略 >**来排除输出中的列。  
+ 查看本主题中以前选择的输入列。 可以通过使用 **“可用输入列”**列表来更改映射。 选择“\<ignore>”可以将该列排除在输出之外。  
   
  **目标列**  
  查看每个可用的目标列，包括已映射或未映射的目标列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [平面文件源](../../integration-services/data-flow/flat-file-source.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

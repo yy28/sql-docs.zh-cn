@@ -3,26 +3,28 @@ title: "了解自定义文件 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: customization file in RDS [ADO]
+helpviewer_keywords:
+- customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个部分标头包含方括号 (**[]**) 包含的类型和参数。 文字字符串由指示四个部分类型**连接**， **sql**， **userlist**，或**日志**。 该参数是文字字符串、 默认值、 用户指定的标识符，或执行任何操作。  
@@ -48,18 +50,18 @@ identifier
   
 |组成部分|Description|  
 |----------|-----------------|  
-|**连接**|修改连接字符串的文本字符串。|  
+|**connect**|修改连接字符串的文本字符串。|  
 |**sql**|修改的命令字符串的文本字符串。|  
-|**用户列表**|修改的特定用户的访问权限的文本字符串。|  
-|**日志**|一个文本字符串，指定录制操作的错误日志文件。|  
-|**默认值**|如果没有标识符指定或未找到，则使用一个文本字符串。|  
-|*标识符*|与中的字符串匹配的字符串**连接**或**命令**字符串。<br /><br /> -使用本部分，如果部分标头包含**连接**和连接字符串中找到的标识符字符串。<br />-使用本部分，如果部分标头包含**sql**和命令字符串中找到的标识符字符串。<br />-使用本部分，如果部分标头包含**userlist**和标识符字符串匹配**连接**部分标识符。|  
+|**userlist**|修改的特定用户的访问权限的文本字符串。|  
+|**logs**|一个文本字符串，指定录制操作的错误日志文件。|  
+|**default**|如果没有标识符指定或未找到，则使用一个文本字符串。|  
+|*identifier*|与中的字符串匹配的字符串**连接**或**命令**字符串。<br /><br /> -使用本部分，如果部分标头包含**连接**和连接字符串中找到的标识符字符串。<br />-使用本部分，如果部分标头包含**sql**和命令字符串中找到的标识符字符串。<br />-使用本部分，如果部分标头包含**userlist**和标识符字符串匹配**连接**部分标识符。|  
   
  **DataFactory**调用处理程序，传递客户端参数。 处理程序搜索整个字符串中匹配相应的部分标头中的标识符的客户端参数。 如果找到匹配项，则该节的内容应用于客户端参数。  
   
  在下列情况下使用特定的部分：  
   
--   A**连接**如果客户端的值部分连接字符串关键字，使用部分"**数据源 =***值*"，与匹配**连接**部分标识符*。*  
+-   A**连接**如果客户端的值部分连接字符串关键字，使用部分"**数据源 = * * * 值*"，与匹配**连接**部分标识符*.*  
   
 -   **Sql**如果客户端命令字符串包含与匹配的字符串，则使用部分**sql**部分标识符。  
   

@@ -3,8 +3,11 @@ title: "“保存更改脚本”对话框 (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,23 +18,23 @@ ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a10e76496a5dfcb781c6153cfb787b6e3232de1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 33081b924b39c921304ed2de2648cea202d0c96a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>“保存更改脚本”对话框 (Visual Database Tools)
-此对话框可显示您在上次保存表以后所做更改的 [!INCLUDE[tsql](../../includes/tsql_md.md)] 脚本。 使用该对话框还可以将脚本保存到位于所选位置的文本文件中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 此对话框可显示用户在上次保存表以后所做更改的 [!INCLUDE[tsql](../../includes/tsql_md.md)] 脚本。 使用该对话框还可以将脚本保存到位于所选位置的文本文件中。  
   
 当您在表设计器中对表进行的更改尚未保存时，则可访问此对话框。 在“表设计器”菜单上，单击“生成更改脚本”。  
   
 > [!NOTE]  
 > Visual Database Tools 提供的更改脚本没有包含错误处理功能。 这些脚本假设在工具打开后数据库对象没有发生更改，因此不会发生与更改相关的问题。 运行更改脚本之前，您应在脚本中包括适当的错误处理语句。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **每次保存时自动生成更改脚本**  
 如果选择此选项，则在每次保存对表的更改时都会显示“保存更改脚本”对话框。  
   

@@ -2,29 +2,34 @@
 title: "复制管理员常见问题解答 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f8734ed310e261351a30e6ce3f629ee6ef0467e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c4514baae490912c82b2c8b8b34e7f5f780570a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
-  下列问题和解答就复制数据库管理员所面临的多种任务提供指导。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+下列问题和解答就复制数据库管理员所面临的多种任务提供指导。  
   
 ## <a name="configuring-replication"></a>配置复制  
   
@@ -136,7 +141,7 @@ ms.lasthandoff: 11/09/2017
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过**项目属性 - \<***项目***>**对话框和以下存储过程更改对象所有者：**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 可通过“项目属性 - \<项目>”对话框和以下存储过程更改对象所有者：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle。 有关详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定义项目](../../../relational-databases/replication/publish/define-an-article.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>如何配置订阅数据库上的授权，以使其与发布数据库上的授权相匹配？  
  默认情况下，复制不在订阅数据库上执行 GRANT 语句。 如果希望订阅数据库上的权限与发布数据库上的权限相匹配，请使用下列方法之一：  

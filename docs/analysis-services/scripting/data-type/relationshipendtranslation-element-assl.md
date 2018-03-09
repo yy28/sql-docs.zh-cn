@@ -2,34 +2,34 @@
 title: "RelationshipEndTranslation 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1f259270e917978d7fe63a04515292ebadc12ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d679235d66f38366dc4fe1a5aad03e360e15fc9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="relationshipendtranslation-element-assl"></a>RelationshipEndTranslation 元素 (ASSL)
-  定义一个基元数据类型，表示的本地化的翻译[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+定义一个基元数据类型，表示的本地化的翻译[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)元素。  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>語法  
   
 ```xml  
   

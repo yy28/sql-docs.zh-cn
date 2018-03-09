@@ -2,15 +2,13 @@
 title: "备份命令 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: fae1b267-0750-4dc5-9bf0-80ac4d8487a3
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba078752949c491b017ceb75546ac694eab67765
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50e6f8e6f5b01fce2eb0bb6a5dbcd84dd631d994
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-command-tmsl"></a>备份命令 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  备份到.abf 备份文件的 Analysis Services 数据库时。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]备份到.abf 备份文件的 Analysis Services 数据库时。  
   
 ## <a name="request"></a>请求  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ||||  
 |-|-|-|  
 |**属性**|**Default**|**Description**|  
-|database|[必需]|要备份的数据库对象的名称。|  
+|“数据库”|[必需]|要备份的数据库对象的名称。|  
 |文件|[必需]|备份文件名称/路径。|  
 |password|Empty|要用于加密备份文件的密码。|  
 |allowOverwrite|False|一个布尔值，如果为 true，指示已存在的备份文件将被覆盖;否则为 false。|  

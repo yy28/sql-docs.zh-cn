@@ -3,8 +3,9 @@ title: "参数集合 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Command15::get_Parameters
 - Command15::Parameters
 - Command15::GetParameters
-helpviewer_keywords: Parameters collection [ADO]
+helpviewer_keywords:
+- Parameters collection [ADO]
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9544c12738c3c6f3e4d22a62e26c2654c9ac0edb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96d30086b4c05455ef7d4fd5fdd82674979c205d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameters-collection-ado"></a>参数集合 (ADO)
 包含所有[参数](../../../ado/reference/ado-api/parameter-object.md)的对象[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  

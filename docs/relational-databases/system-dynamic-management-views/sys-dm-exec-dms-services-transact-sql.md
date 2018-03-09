@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_dms_services (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_exec_dms_services (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_DMS_SERVICES_TSQL
 - SYS.DM_EXEC_DMS_SERVICES_TSQL
 - DM_EXEC_DMS_SERVICES
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 - dm_exec_dms_services management view
 - sys.dm_exec_dms_services management view
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c4a8bbdafc5674cd2257fa151ae24683d5d8a69
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e01987a59cf44d68421e6e99bd2b1869dfd3830
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (TRANSACT-SQL)
+# <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保存有关 PolyBase 计算节点上运行的 DMS 服务的所有信息。 它列出每个服务实例的一行。  

@@ -2,15 +2,13 @@
 title: "Microsoft 关联算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,19 +32,20 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 关联算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是常用于建议引擎的算法。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐项。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是常用于建议引擎的算法。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐项。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。   
   
  关联模型基于包含各事例的标识符及各事例所包含项的标识符的数据集生成。 事例中的一组项称为“项集 ”。 关联模型由一系列项集和说明这些项在事例中如何分组的规则组成。 算法标识的规则可用于根据客户购物车中已有的项来预测客户将来可能购买的产品。 以下关系图显示了项集中的一系列规则。  
   
@@ -78,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="viewing-an-association-model"></a>查看关联模型  
  若要浏览该模型，可以使用 **Microsoft 关联查看器**。 查看关联模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会从各个角度展示相关性，从而您可以更好地理解数据中所找到的关系和规则。 查看器中的 **“项集”** 窗格提供最常见组合或项集的详细明细。 **“规则”** 窗格显示从数据中生成的规则列表，添加概率的计算，并根据关联重要性对规则进行排名。 通过依赖关系网络查看器，您可以用可视方式浏览连接各个不同项的方式。 有关详细信息，请参阅 [使用 Microsoft 分类查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)。  
   
- 如果需要查找有关任一项集和规则的更多详细信息，可以在 [Microsoft 一般内容树查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中浏览模型。 为模型存储的内容包括对每个项集的支持，每个规则的分数以及其他统计信息。 有关详细信息，请参阅 [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)。  
+ 如果需要查找有关任一项集和规则的更多详细信息，可以在 [Microsoft 一般内容树查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中浏览模型。 为模型存储的内容包括对每个项集的支持，每个规则的分数以及其他统计信息。 有关详细信息，请参阅[关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)。  
   
 ## <a name="creating-predictions"></a>创建预测  
  处理完模型后，可以使用规则和项集来做出预测。 在关联模型中，如果有指定项存在，预测将告诉您有可能发生的项，而且预测可以包含诸如概率、支持或重要性等信息。 有关如何创建针对关联模型的查询的示例，请参阅 [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)。  
@@ -105,7 +104,7 @@ ms.lasthandoff: 11/17/2017
 -   支持创建数据挖掘维度。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [使用 Microsoft 关联规则查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [关联模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft 关联算法技术参考](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   

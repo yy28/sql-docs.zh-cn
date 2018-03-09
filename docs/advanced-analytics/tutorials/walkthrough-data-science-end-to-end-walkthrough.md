@@ -2,26 +2,31 @@
 title: "R 和 SQL Server 的端到端数据科学演练 |Microsoft 文档"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: eee99c95b17438fa810501b653a83538e658b205
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>R 和 SQL Server 的端到端数据科学演练
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在本演练中，你将开发基于 Microsoft R 与 SQL Server 2016 或 SQL Server 自 2017 年的预测性建模的端到端解决方案。
 
@@ -55,7 +60,7 @@ ms.lasthandoff: 11/09/2017
 + 将包含所有 SQL 和 R 脚本。
 + 你可能需要修改脚本，在你的环境中运行中的字符串。 你可以使用任何代码编辑器，如[Visual Studio Code](https://code.visualstudio.com/Download)。
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必要條件
 
 + 你必须有权的 SQL Server 2016 实例或 SQL Server 自 2017 年的评估版。
 + 在 SQL Server 计算机上必须至少有一个实例已安装 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。

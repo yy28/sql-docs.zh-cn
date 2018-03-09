@@ -2,29 +2,34 @@
 title: "管理和监视语义搜索 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d3fd6231c0067f6536d9ff2c06b4a62a8bd3bd5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4a2a8b7d3dff23fe580da64ec083815b897b947
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理和监视语义搜索
-  说明语义索引编制过程以及与管理和监视索引相关的任务。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+说明语义索引编制过程以及与管理和监视索引相关的任务。  
   
 ##  <a name="HowToMonitorStatus"></a> 检查语义索引编制的状态  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>语义索引编制的第一阶段是否已完成？
@@ -32,7 +37,7 @@ ms.lasthandoff: 11/09/2017
   
  索引编制的第一阶段包括填充全文关键字索引和语义关键短语索引，以及提取文档相似性数据。  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -59,7 +64,7 @@ GO
   
  以索引页数显示该逻辑大小。  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -70,7 +75,7 @@ GO
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>全文目录的全文索引和语义索引的总大小是多少？  
  查询 [FULLTEXTCATALOGPROPERTY (Transact SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 元数据函数的 **IndexSize** 属性 。  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -78,7 +83,7 @@ GO
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>有多少项编入全文目录的全文索引和语义索引？  
  查询 [FULLTEXTCATALOGPROPERTY (Transact SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 元数据函数的 **ItemCount** 属性 。  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -106,7 +111,7 @@ GO
   
  禁用和挂起语义索引编制时，可以继续成功进行针对语义数据的查询并返回以前的索引数据。 此行为与全文搜索的行为不一致。  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  

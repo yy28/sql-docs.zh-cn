@@ -3,8 +3,11 @@ title: "代理帐户属性（“引用”选项卡）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb915bc6da9e11e07fbebc3e55331a2dfca26b72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ce3bdf9b642888886162f18f102086fa843b300c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="proxy-account-properties-references-tab"></a>代理帐户属性（“引用”选项卡）
-此只读页列出了引用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户的作业步骤。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此只读页列出了引用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的代理帐户的作业步骤。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **作业名称**  
 使用此代理帐户的作业的名称。  
   

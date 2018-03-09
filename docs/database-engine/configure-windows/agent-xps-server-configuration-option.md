@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], SQL Server Agent
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 290696ab631e76cca038799cde6973d568f50c0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0abd44bb6bfd0d8cf20525c6a0d6e9ee55b20bde
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="agent-xps-server-configuration-option"></a>“代理 XP”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ ms.lasthandoff: 11/20/2017
 
 2.  在标准工具栏上，单击“新建查询”。
 
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 
   
-```tsql 
+```sql 
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  

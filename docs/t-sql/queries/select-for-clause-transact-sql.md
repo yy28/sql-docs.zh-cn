@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - FOR CLAUSE
 - FOR_TSQL
 - FOR_CLAUSE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - XML option [SQL Server]
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0cb4b3936aa78f22958c28351d2dad523a6d9932
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 085a9c7f6422c70cc43086d2174a5c7aa485040e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT-FOR 子句 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +199,7 @@ JSON
 > [!IMPORTANT]  
 >  不推荐使用 XMLDATA 指令。 如果是 RAW 和 AUTO 模式，请使用 XSD 生成。 在 EXPLICIT 模式下，没有 XMLDATA 指令的替代项。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- XMLSCHEMA [ **(***TargetNameSpaceURI***)** ]  
+ XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
  返回内联 XSD 架构。 如果指定该指令（用于返回架构中指定的命名空间），则可以选择指定目标命名空间 URI。 有关详细信息，请参阅 [生成内联 XSD 架构](../../relational-databases/xml/generate-an-inline-xsd-schema.md)。  
   
  ELEMENTS  
@@ -218,7 +220,7 @@ JSON
  TYPE  
  指定查询返回的结果与**xml**类型。 有关详细信息，请参阅 [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md)。  
   
- 根 [ **(***RootName***)** ]  
+ ROOT [ **('***RootName***')** ]  
  指定将一个顶级元素添加到结果 XML 中。 可以选择指定要生成的根元素名称。 如果未指定可选的根名称，默认值\<根 > 元素添加。  
   
  有关详细信息，请参阅[FOR XML &#40;SQL server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
@@ -253,7 +255,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  在 JSON 输出中包括 null 值，通过指定**INCLUDE_NULL_VALUES**选项与**FOR JSON**子句。 如果未指定此选项，输出不包括在查询结果中 null 值的 JSON 属性。 有关详细信息和示例，请参阅[使用 INCLUDE_NULL_VALUES 选项 &#40; 的 JSON 输出中包括 Null 值SQL server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
   
- 根 [ **(***RootName***)** ]  
+ ROOT [ **('***RootName***')** ]  
  将单个顶层元素添加到 JSON 输出中，通过指定**根**选项与**FOR JSON**子句。 如果没有指定 **ROOT** 选项，则 JSON 输出不会包括根元素。 有关详细信息和示例，请参阅[将根节点添加到使用 ROOT 选项 &#40; 的 JSON 输出SQL server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  

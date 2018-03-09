@@ -1,28 +1,30 @@
 ---
 title: "在 Linux 上的 SQL Server 的性能最佳实践 |Microsoft 文档"
-description: "本主题提供有关在 Linux 上运行 SQL Server 2017 性能最佳实践和准则。"
+description: "这篇文章提供有关在 Linux 上运行 SQL Server 2017 性能最佳实践和指南。"
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: d6fb9839ee1ba7f583eca9445599422469212083
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>性能最佳实践和 SQL Server 自 2017 年在 Linux 上的配置指南
 
-本主题提供最佳做法和建议以最大化连接到 Linux 上的 SQL Server 的数据库应用程序的性能。 这些建议是特定于 Linux 平台上运行。 所有正常的 SQL Server 建议，如索引设计仍适用。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+本文提供了最佳做法和建议以最大化连接到 Linux 上的 SQL Server 的数据库应用程序的性能。 这些建议是特定于 Linux 平台上运行。 所有正常的 SQL Server 建议，如索引设计仍适用。
 
 以下准则包含配置 SQL Server 和 Linux 操作系统的建议。
 
@@ -55,7 +57,6 @@ ms.lasthandoff: 11/20/2017
 请考虑使用以下 Linux 操作系统配置设置体验安装 SQL Server 的最佳性能。
 
 ### <a name="kernel-settings-for-high-performance"></a>为了获得高性能的内核设置
-
 这些是建议的 Linux 操作系统设置为高相关的性能和吞吐量的 SQL Server 安装。 请参阅你的 Linux 操作系统文档，了解过程配置这些设置。
 
 
@@ -65,16 +66,16 @@ ms.lasthandoff: 11/20/2017
 
 下表提供了建议的 CPU 设置：
 
-| 设置 | 值 | 详细信息 |
+| 设置 | “值” | 详细信息 |
 |---|---|---|
 | CPU 频率调控器 | 性能 | 请参阅**cpupower**命令 |
 | ENERGY_PERF_BIAS | 性能 | 请参阅**x86_energy_perf_policy**命令 |
 | min_perf_pct | 100 | 请参阅 intel p 状态的文档 |
-| C 状态 | 仅 C1 | 请参阅如何确保 C 状态设置为 C1 仅 Linux 或系统文档 |
+| C-States | 仅 C1 | 请参阅如何确保 C 状态设置为 C1 仅 Linux 或系统文档 |
 
 下表提供了磁盘设置的建议：
 
-| 设置 | 值 | 详细信息 |
+| 设置 | “值” | 详细信息 |
 |---|---|---|
 | 磁盘执行提前读 | 4096 | 请参阅**blockdev**命令 |
 | sysctl 设置 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 请参阅**sysctl**命令 |
@@ -92,7 +93,7 @@ sysctl -w kernel.numa_balancing=0
 默认设置**vm.max_map_count** （这是 65536） 可能不是足够高的 SQL Server 安装。 将此值 （这是一个上限） 更改为 256k。
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>禁用上次访问的日期/时间的文件系统上的 SQL Server 数据和日志文件

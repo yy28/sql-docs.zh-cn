@@ -2,9 +2,12 @@
 title: "备份概述 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/15/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,18 +25,18 @@ helpviewer_keywords:
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: "84"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4889445404ebce0a1d3ac74a4e8f49d9fe73f980
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2dbe987e0ac96162423d461c848f59e6a354e27c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-  本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
   
   
 ## <a name="terms"></a>术语
@@ -174,7 +177,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：将 SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="and-more"></a>以及更多！ 
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   

@@ -1,5 +1,5 @@
 ---
-title: "通过使用 Union All 转换来合并数据 |Microsoft 文档"
+title: "通过使用 Union All 转换来合并数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2f9933f48083b0849ba01312979911bacb4fd86
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e171fc263daa72d8cea4c9e21b05c1ad452817e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>通过使用 Union All 转换来合并数据
   若要添加和配置 Union All 转换，包必须至少已包含一个数据流任务和两个数据源。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  双击 Union All 转换。  
   
-5.  在 **“Union All 转换编辑器”**中，通过单击行然后在输入列表中选择列，将输入中的列映射到 **“输出列的名称”** 列表中的列。 选择**\<忽略 >**要跳过列映射的输入列表中。  
+5.  在 **“Union All 转换编辑器”**中，通过单击行然后在输入列表中选择列，将输入中的列映射到 **“输出列的名称”** 列表中的列。 在输入列表中选择“\<ignore>”以跳过对该列的映射。  
   
     > [!NOTE]  
     >  两列间的映射要求各列的元数据相匹配。  
@@ -58,15 +57,14 @@ ms.lasthandoff: 08/03/2017
   
 7.  对每个输入中的每一列重复第 5 和第 6 步。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 9. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [Union All 转换](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

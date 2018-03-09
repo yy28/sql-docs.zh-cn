@@ -3,8 +3,9 @@ title: "InfoMessage 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Connection::InfoMessage
 - InfoMessage
-helpviewer_keywords: InfoMessage event [ADO]
+helpviewer_keywords:
+- InfoMessage event [ADO]
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dbc9c38c01036c6f04f706a8599753e69304bc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 307ed28d6e4d6e305e44155ff1c8e7b2c2fdf5ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 事件 (ADO)
 **InfoMessage**每当期间出现警告时就会调用事件**ConnectionEvent**操作。  

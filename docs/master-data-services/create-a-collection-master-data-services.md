@@ -5,31 +5,32 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - creating collections [Master Data Services]
 - collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e6acdeb39c0401e7f4f54f99b38a14b25a66c43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e50ae47feac5155731fa2f58bd6a530b43cc6bad
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-collection-master-data-services"></a>创建集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要创建叶成员和合并成员的平面列表时，可以创建集合。 集合无需包括来自实体的所有成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 2.   从“版本”列表中，选择某一版本。  
   
-3.  单击“资源管理器”。  
+3.  单击 **“资源管理器”**。  
   
 4.  从菜单栏中，指向“集合”，然后单击“entity_name”。  
   
@@ -54,9 +55,9 @@ ms.lasthandoff: 11/20/2017
   
 8.  还可以在 **“说明”** 框中键入对集合的说明。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
   
 -   [将成员添加到集合 (Master Data Services)](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   

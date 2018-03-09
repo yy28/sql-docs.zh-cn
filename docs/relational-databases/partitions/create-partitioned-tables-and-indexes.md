@@ -2,9 +2,12 @@
 title: "创建已分区表和已分区索引 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -28,18 +31,18 @@ helpviewer_keywords:
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2f674dc211dd8c4611234cca4cdb6755a577f0a5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: df57d6fa660d806b38deb6730dd2152099873f15
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>创建已分区表和已分区索引
-  可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建已分区表或索引。 已分区表和索引中的数据水平划分到可分散到数据库的多个文件组的单元中。 分区可以使大型表和索引更易于管理并且更灵活。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建已分区表或索引。 已分区表和索引中的数据水平划分到可分散到数据库的多个文件组的单元中。 分区可以使大型表和索引更易于管理并且更灵活。  
   
  创建已分区表或索引通常包含四个操作：  
   
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **创建已分区表或索引，使用：**  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  创建已分区表需要在数据库中具有 CREATE TABLE 权限，对在其中创建表的架构具有 ALTER 权限。 创建已分区索引需要对要创建索引的表或视图具有 ALTER 权限。 创建已分区表或索引需要以下附加权限之一：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -236,7 +239,7 @@ ms.lasthandoff: 11/09/2017
      **操作**  
      指定每个操作的类型和名称。  
   
-     **状态**  
+     **“状态”**  
      指示向导操作作为一个整体返回的值是“成功”还是“失败”。  
   
      **消息**  
@@ -265,11 +268,11 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-create-a-partitioned-table"></a>创建已分区表  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 该示例将创建新的文件组、分区函数和分区方案。 将创建一个新表，该表具有指定为存储位置的分区方案。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建新的文件组、分区函数和分区方案。 将创建一个新表，该表具有指定为存储位置的分区方案。  
   
     ```  
     USE AdventureWorks2012;  

@@ -1,32 +1,31 @@
 ---
-title: "关系 (SSAS 表格) |Microsoft 文档"
+title: "关系 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="relationships-ssas-tabular"></a>关系（SSAS 表格）
-  在表格模型中，关系是两个数据表之间的连接。 该关系确立两个表中的数据应该如何相关。 例如，Customers 表和 Orders 表可以彼此相关，以便显示与每个订单关联的客户名称。  
+# <a name="relationships"></a>关系 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在表格模型中，关系是两个数据表之间的连接。 该关系确立两个表中的数据应该如何相关。 例如，Customers 表和 Orders 表可以彼此相关，以便显示与每个订单关联的客户名称。  
   
  当使用“表导入向导”从相同数据源导入时，选择要导入的表（数据源中）中已存在的关系将在模型中重新创建。 通过使用关系图视图中的模型设计器或使用“管理关系”对话框，可以查看检测到的关系和自动重新创建的关系。 还可以通过使用关系图视图中的模型设计器或使用“创建关系”或“管理关系”对话框，手动创建表之间的新关系。  
   
@@ -36,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 >  如果您的模型包含多个关系，则关系图视图可以更好地展现表之间的关系和创建新关系。  
   
   
-##  <a name="what"></a> 优势  
+##  <a name="what"></a> 优点  
  关系是两个数据表之间的连接，它基于每个表中的一列或多列。 要理解关系为何有用，可以想像一下在业务中跟踪客户订单数据。 可以在具有以下结构的一个表中跟踪所有数据：  
   
 |CustomerID|名称|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
@@ -47,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  这种方法可以用，但会存储大量冗余数据，如每个订单的客户电子邮件地址。 存储成本低廉，但如果电子邮件地址发生更改，就必须确保更新该客户的每一行数据。 针对这一问题，一种解决方法是将数据拆分到多个表中，然后在这些表之间定义关系。 这是中使用的方法*关系数据库*如 SQL Server。 例如，导入模型的某个数据库可以使用三个相关表来表示订单数据：  
   
-### <a name="customers"></a>Customers  
+### <a name="customers"></a>客户  
   
 |[CustomerID]|名称|EMail|  
 |--------------------|----------|-----------|  
@@ -105,7 +104,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="single-active-relationship-between-tables"></a>表之间的单个活动关系  
  多个关系会导致表之间存在不明确的依赖关系。 若要创建准确的计算，需要从一个表到下一个表的单一路径。 因此，每对表之间只能存在一个活动关系。 例如，在 AdventureWorks DW 2012 中，表 DimDate 包含一个列 DateKey，该列与表 FactInternetSales 中的以下三个不同列相关：OrderDate、DueDate 和 ShipDate。 如果您试图导入这些表，则会成功创建第一个关系，但是在创建涉及相同列的后续关系时会接收到下面的错误：  
   
- \*关系： 表 [列 1]-> 表 [列 2] 的状态： 错误的原因： 无法表之间创建关系\<表 1 > 和\<表 2 >。 在两个表之间只能存在一个直接或间接关系。  
+ \* 关系： 表 [列 1]-> 表 [列 2] 的状态： 错误的原因： 无法表之间创建关系\<表 1 > 和\<表 2 >。 在两个表之间只能存在一个直接或间接关系。  
   
  如果您有两个表并且这两个表之间存在多个关系，则需要导入包含查找列的表的多个副本，并在每对表之间创建一个关系。  
   

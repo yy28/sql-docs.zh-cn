@@ -1,5 +1,5 @@
 ---
-title: "catalog.operation_messages （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.operation_messages（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 235e9896cbf075bdc26e3df120b23091b8e82d6d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a095bff8fd8feec5a278ed8dc7de648babaa7c2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +40,14 @@ ms.lasthandoff: 09/26/2017
 |message_type|**int**|所显示的消息的类型。|  
 |message_source_type|**int**|消息源类型的 ID。|  
 |message|**nvarchar(max)**|消息的文本。|  
-|extended_info_id|**bigint**|在中找到的其他操作消息中，与相关的信息 ID [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)视图。|  
+|extended_info_id|**bigint**|与在 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 视图中找到的操作消息相关的附加信息的 ID。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图对于在目录中执行操作期间记录的每条消息显示一行。 此消息可以由服务器、包执行进程或执行引擎生成。  
   
  此视图显示下列消息类型：  
   
-|**message_type**值|Description|  
+|**message_type** Value|Description|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|错误|  
@@ -79,17 +78,16 @@ ms.lasthandoff: 09/26/2017
 |50|控制流容器|  
 |60|数据流任务|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对操作的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  
   
   
-

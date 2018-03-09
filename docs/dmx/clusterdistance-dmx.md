@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ClusterDistance
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 93886f21fcb829d735be8fa00e1a7b446400adb1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0a3f0d8b9167a399249cce2183b5a03ae0995473
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **ClusterDistance**函数返回输入的事例与具有的最高概率的输入用例的群集之间的距离。  
   
  在 K-Means 聚类分析中，由于所有事例只能属于一个分类，并且成员身份权值为 1.0，因此分类距离始终是 0。 但是，在 K-Means 中，假定每个分类有一个中点。 您可以通过查询或浏览挖掘模型内容中的 NODE_DISTRIBUTION 嵌套表来获取中点的值。 有关详细信息，请参阅[聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)。  

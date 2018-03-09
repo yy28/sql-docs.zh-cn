@@ -1,5 +1,5 @@
 ---
-title: "创建自定义日志提供程序 |Microsoft 文档"
+title: "创建自定义日志提供程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - custom log providers [Integration Services], creating
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
-caps.latest.revision: 58
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4e98f1b5a032353c27ffa1438eb7d01bd517892a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ae1f8508d0160eb81c612392b9b8349114bae3d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-custom-log-provider"></a>创建自定义日志提供程序
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时环境具有广泛的日志记录功能。 日志可使您捕获在包执行期间发生的事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各种日志提供程序，可用于创建日志并以诸如 XML、文本、数据库或 Windows 事件日志的格式存储这些日志。 如果这些提供程序或输出格式不能满足您的需要，您可以创建自定义日志提供程序。  
@@ -41,9 +39,9 @@ ms.lasthandoff: 08/03/2017
   
 -   将标识对象类型的属性应用于该类。 对于日志提供程序，该属性为 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>。  
   
--   重写基类的方法和属性的实现。 对于日志提供程序，所涉及的属性和方法包括 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 属性以及 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A> 方法。  
+-   替代基类的方法和属性的实现。 对于日志提供程序，所涉及的属性和方法包括 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 属性以及 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A> 方法。  
   
--   未实现自定义日志提供程序的自定义用户界面[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。  
   
 ## <a name="getting-started-with-a-custom-log-provider"></a>自定义日志提供程序入门  
   
@@ -53,10 +51,10 @@ ms.lasthandoff: 08/03/2017
  将此项目配置为使用强名称密钥文件对将要生成的程序集进行签名。  
   
 > [!NOTE]  
->  许多[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]日志提供程序具有实现的自定义用户界面<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并替换**配置**文本框中**配置 SSIS 日志**与筛选的下拉列表的可用连接管理器的对话框。 但是，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。  
+>  许多 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 日志提供程序都有一个自定义用户界面，该界面实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并用已筛选的可用连接管理器下拉列表替换“配置 SSIS 日志”对话框中的“配置”文本框。 但是，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。  
   
 ### <a name="applying-the-dtslogprovider-attribute"></a>应用 DtsLogProvider 属性  
- 将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性应用于您创建的类以将其标识为日志提供程序。 此属性提供设计时信息，如日志提供程序的名称和说明。 **DisplayName**和**说明**的属性的属性对应于**名称**和**说明**中显示的列**配置 SSIS 日志**编辑器中，配置中的包的日志记录时才会显示[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。  
+ 将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性应用于您创建的类以将其标识为日志提供程序。 此属性提供设计时信息，如日志提供程序的名称和说明。 此属性的 DisplayName 和 Description 属性与“配置 SSIS 日志”对话框中显示的“名称”和“说明”列相对应，该对话框在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中为包配置日志记录时显示。  
   
 > [!IMPORTANT]  
 >  不使用此特性的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> 属性。 但是，必须为该属性输入一个值，否则自定义日志提供程序将不会显示在可用日志提供程序列表中。  
@@ -81,11 +79,10 @@ public class MyLogProvider : LogProviderBase
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-log-provider"></a>生成、部署和调试自定义日志提供程序  
- 在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中生成、部署和调试自定义日志提供程序的步骤与其他自定义对象类型所需的步骤非常相似。 有关详细信息，请参阅[构建，Deploying，and Debugging Custom Objects](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。  
+ 在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中生成、部署和调试自定义日志提供程序的步骤与其他自定义对象类型所需的步骤非常相似。 有关详细信息，请参阅[生成、部署和调试自定义对象](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [编码的自定义日志提供程序](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)   
- [开发的自定义日志提供程序的用户界面](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
+## <a name="see-also"></a>另请参阅  
+ [编写自定义日志提供程序代码](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)   
+ [为自定义日志提供程序开发用户界面](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

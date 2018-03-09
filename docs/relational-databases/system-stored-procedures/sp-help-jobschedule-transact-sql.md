@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
 - sp_help_jobschedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobschedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f111a04bfe27fad284157082ec1bbbeadfb92c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +50,21 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [  **@job_name=** ] *job_name*  
+ [ **@job_name=** ] **'***job_name***'**  
  作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > **注意：**任一*job_id*或*job_name*必须指定，但不能同时指定。  
   
- [  **@schedule_name=** ] *schedule_name*  
+ [ **@schedule_name=** ] **'***schedule_name***'**  
  作业的计划项的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
- [  **@schedule_id=** ] *schedule_id*  
+ [ **@schedule_id=** ] *schedule_id*  
  作业的计划项的标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
- [  **@include_description=** ] *include_description*  
+ [ **@include_description=** ] *include_description*  
  指定是否在结果集中包含计划的说明。 *include_description*是**位**，默认值为**0**。 当*include_description*是**0**，计划说明未包含在结果集。 当*include_description*是**1**，在结果集中包括的计划的说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -73,8 +76,8 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|计划标识号。|  
 |**schedule_name**|**sysname**|计划名称。|  
-|**启用**|**int**|是否启用了计划 (**1**) 或未启用 (**0**)。|  
-|**freq_type**|**int**|指示何时执行作业的值。<br /><br /> **1** = 一次<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32**相对于 = 每月、 **freq_interval**<br /><br /> **64** = 运行时**SQLServerAgent**服务启动。|  
+|**enabled**|**int**|是否启用了计划 (**1**) 或未启用 (**0**)。|  
+|**freq_type**|**int**|指示何时执行作业的值。<br /><br /> **1** = Once<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32**相对于 = 每月、 **freq_interval**<br /><br /> **64** = 运行时**SQLServerAgent**服务启动。|  
 |**freq_interval**|**int**|执行作业的天数。 值的值取决于**freq_type**。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|单位**freq_subday_interval**。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_interval**|**int**|数**freq_subday_type**期间发生的作业的每个执行之间。 有关详细信息，请参阅[sp_add_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -91,12 +94,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|计划的标识符。|  
 |**job_count**|**int**|返回的作业数。|  
   
-> **注意：****sp_help_jobschedule**返回值从**dbo.sysjobschedules**和**dbo.sysschedules**系统中的表**msdb**.   **sysjobschedules**更新每隔 20 分钟。 这可能会影响此存储过程返回的值。  
+> **注意：****sp_help_jobschedule**返回值从**dbo.sysjobschedules**和**dbo.sysschedules**系统中的表**msdb**. **sysjobschedules**更新每隔 20 分钟。 这可能会影响此存储过程返回的值。  
   
 ## <a name="remarks"></a>注释  
  参数**sp_help_jobschedule**可仅在某些组合。 如果*schedule_id*指定，则两者*job_id*也不*job_name*可以指定。 否则为*job_id*或*job_name*参数可与*schedule_name*。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -151,9 +154,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_update_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -2,28 +2,34 @@
 title: "“调用堆栈”窗口 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.callstack
-helpviewer_keywords: Call Stack Window [Transact-SQL]
+f1_keywords:
+- vs.debug.callstack
+helpviewer_keywords:
+- Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c0f984d7e59d71f46843dc8a2bef1295943fb3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d9199cb8513afbd02c2cd7e656100b5375ec04e9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL 调试器 -“调用堆栈”窗口
-  **“调用堆栈”** 窗口显示调用堆栈中的模块以及传递给这些模块的任意参数的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块包括存储过程、函数和触发器。 只有在调试模式下才可以显示调用堆栈。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]“调用堆栈”窗口显示调用堆栈中的模块以及传递给这些模块的任意参数的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块包括存储过程、函数和触发器。 只有在调试模式下才可以显示调用堆栈。  
   
 ## <a name="task-list"></a>任务列表  
  **访问“调用堆栈”窗口**  
@@ -47,7 +53,7 @@ ms.lasthandoff: 11/09/2017
   
  **“局部变量”**、 **“监视”**和 **“快速监视”** 窗口中的所有表达式都是基于当前堆栈帧求值的。 查询编辑器窗口显示当前帧的代码。 默认情况下，当前堆栈帧是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器暂停执行时所在的帧。 如果使另一个帧成为当前堆栈帧，则 **“局部变量”**、 **“监视”**和 **“快速监视”** 窗口中的表达式将在新帧环境下重新求值，且查询编辑器窗口中显示此新帧的源代码。  
   
-## <a name="columns"></a>列  
+## <a name="columns"></a>“列”  
  **名称**  
  显示有关调用堆栈中某个模块的信息。  
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa1b2d225847952e39d5f28ee095dedb551cdc6f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d73b3b84f1a2c2fb8a9427cde1deba7a8745c90e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 连接类型 (SSRS)
 
@@ -79,7 +77,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  基于文本的查询设计器支持 [文本](#QueryText) 模式，在此模式下，可以键入 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令，选择来自数据源的数据。  
   
--   [文本](#QueryText)  
+-   [Text](#QueryText)  
   
  将 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 用于 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]；将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用于 SQL Server。 SQL 语言的这两种方言非常相似。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源连接类型编写的查询通常可以用于 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 数据源连接类型。  
   
@@ -127,7 +125,7 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- 默认情况下，各个报表参数的数据类型均为“Text”，并具有自动创建的数据集，以提供可用值的下拉列表。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)类型的报表数据源的数据集。  
+ 默认情况下，各个报表参数的数据类型均为“Text”，并具有自动创建的数据集，以提供可用值的下拉列表。 创建报表参数后，您可能需要更改默认值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
   
 ##  <a name="Remarks"></a> 注释  

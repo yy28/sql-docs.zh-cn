@@ -1,10 +1,13 @@
 ---
 title: "将 DB2 架构映射到 SQL Server 架构 (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e422c99f45b5da02214aee96bb0520dc8c851e74
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 19abc8a901b2241a4fa7d6c69da2ffd90b77afb9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>将 DB2 架构映射到 SQL Server 架构 (DB2ToSQL)
 在 DB2，每个数据库都有一个或多个架构。 默认情况下，SSMA 将迁移到 DB2 架构中的所有对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构名为的数据库。 但是，你可以自定义 DB2 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。  
@@ -65,7 +68,7 @@ DB2 数据库包含架构。 实例[!INCLUDE[ssNoVersion](../../includes/ssnover
   
 1.  在架构映射的选项卡上，选择任何行，然后单击**重置为默认**若要还原到的默认数据库和架构。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 如果你想要分析的 DB2 对象转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，你可以[（SSMA 常见） 的数据迁移报告](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)。  
   
 ## <a name="see-also"></a>另请参阅  

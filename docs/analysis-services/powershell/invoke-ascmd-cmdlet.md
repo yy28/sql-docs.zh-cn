@@ -2,13 +2,13 @@
 title: "调用 ASCmd cmdlet |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6e5d1fba56fd4cee4c736a583d8af2fe8ec6f986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dd40b6d9f777fbea8d12f804b01b537d0ad846ce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Invoke-ASCmd cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  使数据库管理员能够执行 XMLA 脚本、多维表达式 (MDX) 或数据挖掘扩展 (DMX) 语句或表格模型脚本语言 (TMSL) 脚本。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]使数据库管理员能够执行 XMLA 脚本、 多维表达式 (MDX)、 数据挖掘扩展插件 (DMX) 语句或表格模型脚本语言 (TMSL) 脚本。  
   
  只有在 SQL Server 2016 Analysis Services 实例上的表格服务器模式下才支持 TMSL。  
   
@@ -207,7 +204,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |输入|PSObject|  
-|输出|字符串|  
+|输出|String|  
   
 ## <a name="example-1-xmla-input-file"></a>示例 1（XMLA 输入文件）  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE LOGIN
 - LOGIN_TSQL
 - LOGIN
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - passwords [SQL Server], logins
 - mapping logins [SQL Server]
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +179,7 @@ WINDOWS
   
  指定将与此登录名关联的非对称密钥的名称。 此密钥必须已存在于 master 数据库中。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  密码是区分大小写的。  
   
  只有创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名时，才支持对密码预先进行哈希运算。  
@@ -196,6 +198,8 @@ WINDOWS
  传输登录名的脚本，请参阅[如何传输登录名和密码的 SQL Server 2005 的实例和 SQL Server 2008 之间](http://support.microsoft.com/kb/918992)。  
   
  自动创建登录名启用新登录名并授予该登录名的服务器级别**CONNECT SQL**权限。  
+ 
+ 服务器的[身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)必须匹配登录名类型以允许访问。
   
  有关设计权限系统的信息，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
@@ -212,14 +216,14 @@ WINDOWS
   
  有关详细信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)]登录名，请参阅[管理数据库和 Windows Azure SQL 数据库中的登录名](http://msdn.microsoft.com/library/ee336235.aspx)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，需要**ALTER ANY LOGIN**中的成员身份在服务器上的权限**securityadmin**固定的服务器角色。  
   
  在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，只有服务器级主体（由设置过程创建）或 master 数据库中的 `loginmanager` 数据库角色成员可以创建新登录名。  
   
  如果**凭据**选项时，还需要**ALTER ANY CREDENTIAL**服务器上的权限。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  创建登录名后, 登录名可连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]或[!INCLUDE[ssSDS](../../includes/sssds-md.md)]但只有授予的权限，而**公共**角色。 考虑执行以下一些活动。  
   
 -   要连接到数据库，请创建登录名对应的数据库用户。 有关详细信息，请参阅 [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)。  
@@ -228,7 +232,7 @@ WINDOWS
   
 -   使用**sp_addsrvrolemember**若要添加到固定的服务器角色的登录名。 有关详细信息，请参阅[服务器级角色](../../relational-databases/security/authentication-access/server-level-roles.md)和[sp_addsrvrolemember &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
--   使用**授予**语句，以授予服务器级权限到新登录名或包含该登录名的角色。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)。  
+-   使用**授予**语句，以授予服务器级权限到新登录名或包含该登录名的角色。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)的信息。  
   
 ## <a name="examples"></a>示例  
   
@@ -314,7 +318,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. 使用密码创建的 SQL Server 身份验证登录名  
  下面的示例将创建登录名`Mary7`使用密码`A2c3456`。  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
@@ -342,6 +346,6 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [DROP LOGIN &#40;Transact SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [创建一个登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [创建登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

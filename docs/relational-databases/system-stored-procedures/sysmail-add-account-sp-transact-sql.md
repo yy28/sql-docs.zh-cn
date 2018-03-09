@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_account_sp
 - sysmail_add_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_account_sp
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e24d90b20c91ab6dfb510faad46ceb2b5f8cc19b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 837e8e5035e69b3e8a35d14acce71d02d549d6a7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,43 +58,43 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@account_name**  =] *account_name*  
+ [ **@account_name** = ] **'***account_name***'**  
  要添加的帐户的名称。 *account_name*是**sysname**，无默认值。  
   
- [  **@email_address**  =] *email_address*  
+ [ **@email_address** = ] **'***email_address***'**  
  要将从消息发送的电子邮件地址。 该地址必须是 Internet 电子邮件地址。 *电子邮件地址*是**nvarchar （128)**，无默认值。 例如，帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可能会发送电子邮件发件人地址 **SqlAgent@Adventure-Works.com** 。  
   
- [  **@display_name**  =] *display_name*  
+ [ **@display_name** = ] **'***display_name***'**  
  在从该帐户发出的电子邮件中使用的显示名称。 *display_name*是**nvarchar （128)**，默认值为 NULL。 例如，帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可能会显示名称**SQL Server Agent Automated Mailer**上电子邮件。  
   
- [  **@replyto_address**  =] *replyto_address*  
+ [ **@replyto_address** = ] **'***replyto_address***'**  
  对于来自此帐户的邮件发送答复的地址。 *replyto_address*是**nvarchar （128)**，默认值为 NULL。 例如，回复的帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可能会发送给数据库管理员 **danw@Adventure-Works.com** 。  
   
- [  **@description**  =] *说明*  
+ [ **@description** = ] **'***description***'**  
  帐户说明。 *说明*是**nvarchar(256)**，默认值为 NULL。  
   
- [  **@mailserver_name**  =] *server_name*  
+ [ **@mailserver_name** = ] **'***server_name***'**  
  此帐户所用 SMTP 邮件服务器的名称或 IP 地址。 运行的计算机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须能够解析*server_name*为 IP 地址。 *server_name*是**sysname**，无默认值。  
   
- [  **@mailserver_type**  =] '*server_type*  
+ [ **@mailserver_type** = ] '*server_type*'  
  电子邮件服务器的类型。 *server_type*是**sysname**，默认值为**SMTP**...  
   
- [  **@port**  =] *port_number*  
+ [ **@port** = ] *port_number*  
  电子邮件服务器端口号。 *port_number*是**int**，默认值为 25。  
   
- [  **@username**  =] *用户名*  
+ [ **@username** = ] **'***username***'**  
  用于登录到电子邮件服务器的用户名。 *用户名*是**nvarchar （128)**，默认值为 NULL。 如果此参数为 NULL，则数据库电子邮件不对此帐户进行身份验证。 如果邮件服务器不要求身份验证，则使用 NULL 作为用户名。  
   
- [  **@password**  =] *密码*  
+ [ **@password** = ] **'***password***'**  
  用于登录电子邮件服务器的密码。 *密码*是**nvarchar （128)**，默认值为 NULL。 除非指定了用户名，否则无需提供密码。  
   
- [  **@use_default_credentials**  =] use_default_credentials  
+ [ **@use_default_credentials** = ] use_default_credentials  
  指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials**位，默认值为 0。 当此参数为 1 时，数据库邮件使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]的凭据。 当此参数为 0 时，数据库邮件将发送 **@username** 和 **@password** 参数，如果存在，否则会发送邮件，而无需 **@username** 和 **@password** 参数。  
   
- [  **@enable_ssl**  =] enable_ssl  
+ [ **@enable_ssl** = ] enable_ssl  
  指定数据库邮件是否使用安全套接字层对通信进行加密。 **Enable_ssl**位，默认值为 0。  
   
- [  **@account_id**  =] *account_id*输出  
+ [ **@account_id** = ] *account_id* OUTPUT  
  返回新帐户的帐户 ID。 *account_id*是**int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -106,7 +109,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
   
  存储的过程**sysmail_add_account_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称执行过程**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认为成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

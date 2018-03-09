@@ -3,8 +3,9 @@ title: "编写方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_Write
 - _Stream::Write
-helpviewer_keywords: Write method [ADO]
+helpviewer_keywords:
+- Write method [ADO]
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd956d5ff536105dc889e89d8f2d80f22db0e9c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e89d24e276e8d8e4cf442c713501f721612a47ff
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="write-method"></a>编写方法
 写入二进制数据保存到[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -39,7 +41,7 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *缓冲区*  
+ *Buffer*  
  A **Variant** ，其中包含要写入的字节数组。  
   
 ## <a name="remarks"></a>注释  

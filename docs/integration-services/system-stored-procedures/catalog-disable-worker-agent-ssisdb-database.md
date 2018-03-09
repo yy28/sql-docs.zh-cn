@@ -1,5 +1,5 @@
 ---
-title: "catalog.disable_worker_agent （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.disable_worker_agent（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66
-caps.latest.revision: 3
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8f4a8cd24278742ffb13d16791ce5f1f3a95f301
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: e24b479fbc6205a63efd86371a3ee4e3119b01ee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogdisableworkeragent-ssisdb-database"></a>catalog.disable_worker_agent （SSISDB 数据库）
+# <a name="catalogdisableworkeragent-ssisdb-database"></a>catalog.disable_worker_agent（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-禁用与此工作 Master 出缩放的横向扩展辅助进程[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]目录。
+为使用此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的 Scale Out Master 禁用 Scale Out Worker。
 
 ## <a name="syntax"></a>语法
 
@@ -36,10 +35,10 @@ ms.lasthandoff: 10/20/2017
 catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>参数
-[@WorkerAgentId =] *WorkerAgentId*辅助代理 ID 的横向扩展辅助。 *WorkerAgentId*是**uniqueidentifier**。
+[@WorkerAgentId =] WorkerAgentId Scale Out Worker 的辅助角色代理 ID。 WorkerAgentId 为 uniqueidentifier。
 
 ## <a name="example"></a>示例
-此示例将禁用缩放出工作线程上可用。
+此示例在 MachineA 上禁用 Scale Out Worker。
 
 ```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
@@ -56,15 +55,14 @@ GO
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色 
+-   sysadmin 服务器角色的成员资格 
 
 ## <a name="errors-and-warnings"></a>错误和警告
-如果辅助角色的代理 ID 不是有效的则存储的过程将返回错误。
-
+如果辅助角色代理 ID 无效，则存储过程返回错误。

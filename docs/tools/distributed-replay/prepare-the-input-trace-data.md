@@ -2,26 +2,29 @@
 title: "准备输入的跟踪数据 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b71de5782de713c1c672c527b0c4f495aa865674
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7cda1a0a932a914e85618359cb067b2e4da2a0f7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="prepare-the-input-trace-data"></a>准备输入跟踪数据
-  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能开始分布式重播之前，必须先从分布式重播管理工具启动预处理阶段以准备输入跟踪数据。 在预处理阶段，分布式重播控制器处理跟踪数据并生成一个中间文件：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在可以开始分布式的重播之前[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分布式重播功能启动分布式的重播管理工具从预处理阶段上，你必须准备输入的跟踪数据。 在预处理阶段，分布式重播控制器处理跟踪数据并生成一个中间文件：  
   
  ![分布式重播预处理阶段](../../tools/distributed-replay/media/preprocess.gif "分布式重播预处理阶段")  
   
@@ -61,9 +64,9 @@ ms.lasthandoff: 11/09/2017
 3.  预处理阶段完成后，中间文件将存储在控制器的工作目录中。 若要启动事件重播阶段，必须使用 **replay** 选项运行管理工具。 有关详细信息，请参阅 [重播跟踪数据](../../tools/distributed-replay/replay-trace-data.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed 的 Replay 要求](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令行选项 &#40; 分布式的重播实用工具 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

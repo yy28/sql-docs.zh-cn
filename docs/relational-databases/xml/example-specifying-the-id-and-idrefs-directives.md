@@ -2,29 +2,34 @@
 title: "示例：指定 ID 和 IDREFS 指令 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3d3a336797c486b533f5ca0869e5676d6ec23d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 43bc62b8d8753a4f1ce03b44fc9a318a700db708
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>示例：指定 ID 和 IDREFS 指令
-  可以将元素属性指定为 **ID** 类型属性，然后就可以使用 **IDREFS** 属性来引用它。 这将启用文档内链接，与关系数据库中主键和外键关系类似。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+可以将元素属性指定为 **ID** 类型属性，然后就可以使用 **IDREFS** 属性来引用它。 这将启用文档内链接，与关系数据库中主键和外键关系类似。  
   
  此示例说明如何使用 **ID** 和 **IDREFS** 指令来创建 **ID** 和 **IDREFS** 类型的属性。 因为 ID 不能是整数值，所以对此示例中的 ID 值进行了转换。 也就是说，它们进行了类型转换。 ID 值中使用了前缀。  
   

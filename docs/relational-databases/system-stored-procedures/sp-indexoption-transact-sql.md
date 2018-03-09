@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87af188936ad4c7b2101760b7b18ca63c90db9b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8b5b63c7f76695853ab216aee1aaab63a3139cc2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
  [  **@OptionName =**] *option_name*  
  索引选项名。 *option_name*是**varchar （35)**，无默认值。 *option_name*可以具有以下值之一。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**AllowRowLocks**|如果为 TRUE，则访问索引时允许使用行锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用行锁。 如果为 FALSE，则不使用行锁。 默认值为 TRUE。|  
 |**AllowPageLocks**|如果为 TRUE，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。 如果为 FALSE，则不使用页锁。 默认值为 TRUE。|  
@@ -69,7 +69,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或大于 0（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  不支持 XML 索引。 如果指定 XML 索引，或指定了不包含索引名的表名，且该表包含 XML 索引，则该语句将失败。 若要设置这些选项，使用[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)相反。  
   
  若要显示的当前行和页锁定属性，请使用[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)或[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。  
@@ -86,7 +86,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 -   当**AllowPageLocks**选项设置 FALSE 或**DisAllowPageLocks**是设置为 TRUE，该设置完全应用于非聚集索引。 也就是说，对非聚集索引禁用所有页锁。 在堆上，只允许对页禁用共享 (S) 锁、更新 (U) 锁和排他 (X) 锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]仍然可以获取意向页锁（IS、IU 或 IX），供内部使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对表的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -94,7 +94,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. 对特定索引设置选项  
  下面的示例在不允许页锁`IX_Customer_TerritoryID`对索引`Customer`表。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',  
@@ -104,7 +104,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
 ### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>B. 对表的所有索引设置选项  
  以下示例对与 `Product` 表关联的所有索引禁用行锁。 在执行 `sys.indexes` 过程的前后，通过查询 `sp_indexoption` 目录视图来显示语句的结果。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options for all indexes on the table.  
@@ -126,7 +126,7 @@ GO
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. 对不包含聚集索引的表设置选项  
  以下示例对不包含聚集索引的表（堆）禁用页锁。 `sys.indexes`之前和之后查询目录视图`sp_indexoption`执行过程可显示该语句的结果。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options of the table.   

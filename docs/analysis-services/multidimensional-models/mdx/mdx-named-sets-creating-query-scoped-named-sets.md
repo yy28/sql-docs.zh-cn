@@ -2,35 +2,33 @@
 title: "创建查询作用域的命名集 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - query-scoped named sets [MDX]
 - WITH keyword
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a05d52185020b6906469f3244e3ae1a6b1fc7a2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee0964b6db7b8443d22ba850b84d451e14972937
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>MDX 命名集的创建查询作用域的命名集
-  如果某个命名集仅用于单个多维表达式 (MDX) 查询，则可以使用 WITH 关键字来定义该命名集。 使用 WITH 关键字创建的命名集在执行完查询之后就不再存在。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+如果某个命名集仅用于单个多维表达式 (MDX) 查询，则可以使用 WITH 关键字来定义该命名集。 使用 WITH 关键字创建的命名集在执行完查询之后就不再存在。  
   
  如本主题中所述，WITH 关键字的语法非常灵活，甚至允许使用函数来定义命名集。  
   
@@ -102,7 +100,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SELECT 语句 (MDX)](../../../mdx/mdx-data-manipulation-select.md)   
+ [SELECT 语句 &#40;MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [创建会话作用域的命名集 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

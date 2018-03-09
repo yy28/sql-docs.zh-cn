@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eb86009bf940857788425afd4781ca79ab3686
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,16 +68,16 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**名称**|**nchar(128)**|逻辑文件名称。|  
 |**fileid**|**int**|文件 ID。|  
 |**文件名**|**nchar(260)**|操作系统文件名（物理文件名称）。|  
-|**文件组**|**nvarchar （128)**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
-|**大小**|**nvarchar(18)**|文件大小 (MB)。|  
+|**文件组**|**nvarchar(128)**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
+|size|**nvarchar(18)**|文件大小 (MB)。|  
 |**最大大小**|**nvarchar(18)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**增长**|**nvarchar(18)**|文件的增量。 这表示添加到每个时间新空间所需的文件的空间量。|  
 |**使用情况**|**varchar(9)**|文件用法。 对于数据文件，则这是**仅限数据**和日志文件的值是**'仅 log'**。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **状态**结果中的列集哪些选项已设置为 ON 的数据库中的报表。 所有数据库选项不会都报告通过**状态**列。 若要查看当前的数据库选项设置的完整列表，请使用**sys.databases**目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  如果指定单个数据库，中的成员身份**公共**数据库中的角色是必需的。 当不指定任何数据库时中的成员身份**公共**中的角色**master**数据库是必需的。  
   
  如果无法访问数据库， **sp_helpdb**因为它可以显示错误消息 15622 和尽可能有关数据库的信息。  
@@ -87,14 +87,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### <a name="a-returning-information-about-a-single-database"></a>A. 返回有关单个数据库的信息  
  以下示例显示有关 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的信息。  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### <a name="b-returning-information-about-all-databases"></a>B. 返回有关所有数据库的信息  
  以下示例显示有关运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器上所有数据库的信息。  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

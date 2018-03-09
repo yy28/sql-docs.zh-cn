@@ -2,32 +2,30 @@
 title: "性能计数器 (SSAS) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7da59897426d459371d44b637dfda97183cca3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performance-counters-ssas"></a>性能计数器 (SSAS)
-  使用性能监视器，您可以通过性能计数器监视 Microsoft SQL Server Analysis Services (SSAS) 实例的性能。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用性能监视器，您可以通过性能计数器监视 Microsoft SQL Server Analysis Services (SSAS) 实例的性能。  
   
  性能监视器是用于跟踪资源使用情况的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制 (MMC) 管理单元。 您可以通过以下方式启动此 MMC 管理单元：在命令提示符下键入 **PerfMon** ，或从“控制面板”依次单击 **“管理工具”**和 **“性能监视器”**。 性能监视器使您可以通过使用预定义对象和计数器来跟踪服务器和进程的性能和活动，以及通过使用用户定义的计数器来监视事件。 性能监视器收集有关事件的计数而非数据，例如，内存使用量、活动事务数或 CPU 活动。 您还可以对特定计数器设置阈值以生成通知操作员的警报。  
   
@@ -136,20 +134,20 @@ ms.lasthandoff: 11/17/2017
 |Number of calculation covers|由 MDX 执行计划生成的求值节点的总数（包括活动求值节点和缓存求值节点）。|  
 |Current number of evaluation nodes|由 MDX 执行计划生成的求值节点（包括活动求值节点和缓存求值节点）的当前（近似）数量。|  
 |Number of Storage Engine evaluation nodes|由 MDX 执行计划生成的存储引擎求值节点的总数。|  
-|Number of cell-by-cell evaluation nodes|由 MDX 执行计划生成的逐单元求值节点的总数。|  
+|单元格逐单元求值节点的数目|由 MDX 执行计划生成的逐单元求值节点的总数。|  
 |Number of bulk-mode evaluation nodes|由 MDX 执行计划生成的批量模式求值节点的总数。|  
 |Number of evaluation nodes that covered a single cell|由 MDX 执行计划生成的仅涵盖一个单元的求值节点的总数。|  
-|Number of evaluation nodes with calculations at the same granularity|由 MDX 执行计划生成的、其计算与该求值节点位于同一粒度的求值节点的总数。|  
+|与计算位于同一粒度的求值节点的数目|由 MDX 执行计划生成的、其计算与该求值节点位于同一粒度的求值节点的总数。|  
 |Current number of cached evaluation nodes|由 MDX 执行计划生成的缓存求值节点的当前（近似）数量。|  
 |Number of cached Storage Engine evaluation nodes|由 MDX 执行计划生成的缓存的存储引擎求值节点的总数。|  
 |Number of cached bulk-mode evaluation nodes|由 MDX 执行计划生成的缓存的批量模式求值节点的总数。|  
 |Number of cached 'other' evaluation nodes|由 MDX 执行计划生成的、既不是存储引擎求值节点也不是批量模式求值节点的缓存的求值节点的总数。|  
 |Number of evictions of evaluation nodes|由于冲突而产生的求值节点的缓存逐出总数。|  
-|Number of hash index hits in the cache of evaluation nodes|该哈希索引满足的求值节点缓存中的命中总次数。|  
-|Number of cell-by-cell hits in the cache of evaluation nodes|求值节点缓存中逐单元命中总次数。|  
-|Number of cell-by-cell misses in the cache of evaluation nodes|求值节点缓存中逐单元未命中总次数。|  
-|Number of subcube hits in the cache of evaluation nodes|求值节点缓存中子多维数据集命中总次数。|  
-|Number of subcube misses in the cache of evaluation nodes|求值节点缓存中子多维数据集未命中总次数。|  
+|求值节点缓存中的哈希索引命中次数|该哈希索引满足的求值节点缓存中的命中总次数。|  
+|求值节点缓存中的单元格逐单元命中次数|求值节点缓存中逐单元命中总次数。|  
+|求值节点缓存中逐单元格未命中数|求值节点缓存中逐单元未命中总次数。|  
+|求值节点缓存中的子多维数据集命中次数|求值节点缓存中子多维数据集命中总次数。|  
+|求值节点缓存中的子多维数据集未命中次数|求值节点缓存中子多维数据集未命中总次数。|  
 |Total Sonar subcubes|查询优化器所生成的子多维数据集的总数。|  
 |Total cells calculated|所计算单元属性的总数。|  
 |Total recomputes|由于错误而重新计算的单元总数。|  

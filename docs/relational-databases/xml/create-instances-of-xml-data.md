@@ -2,10 +2,14 @@
 title: "创建 XML 数据的实例 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 289962e12bcff765908e1fa088ad8caa867a636d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-instances-of-xml-data"></a>创建 XML 数据的实例
-  本主题说明了如何生成 XML 实例。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+本主题说明了如何生成 XML 实例。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，可以按照下列方式生成 XML 实例：  
   
@@ -70,7 +75,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  默认情况下，在 XML 分析器将字符串数据转换为 XML 时，如果存在下列任何一种情况，则 XML 分析器将丢弃无关紧要的空格：  
   
--   `The xml:space` 属性。  
+-   未对元素或其上级元素定义 `xml:space` 属性。  
   
 -   某元素或其某一祖先元素上有效的 `xml:space` 属性具有默认值。  
   
@@ -212,7 +217,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|Description|  
 |-----------|-----------------|  
 |[检索和查询 XML 数据](../../relational-databases/xml/retrieve-and-query-xml-data.md)|介绍了当 XML 实例存储在数据库中时未保留的部分。|  
   

@@ -1,5 +1,5 @@
 ---
-title: "加载和以编程方式运行本地包 |Microsoft 文档"
+title: "以编程方式加载和运行本地包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -25,28 +24,27 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 07ceb460488ca1973295b6b8e991948efe8b9d2a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 604c25de1d6ca478612bd3a83f79e35b969e5d8c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以编程方式加载和运行本地包
-  你可以运行[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包根据需要或在预定时间通过使用中所述的方法[正在运行的包](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx)。 但是，也可以只用几行代码，从自定义应用程序（如 Windows 窗体应用程序、控制台应用程序、ASP.NET Web 窗体或 Web 服务、Windows 服务）运行包。  
+  可以使用[运行包](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx)中介绍的方法，根据需要或在预定时间运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 但是，也可以只用几行代码，从自定义应用程序（如 Windows 窗体应用程序、控制台应用程序、ASP.NET Web 窗体或 Web 服务、Windows 服务）运行包。  
   
  本主题讨论：  
   
--   以编程方式加载的包  
+-   以编程方式加载包  
   
 -   以编程方式运行包  
   
- 本主题中用于加载和运行包的方法的所有需要引用**Microsoft.SqlServer.ManagedDTS**程序集。 添加新项目中的引用后, 导入<xref:Microsoft.SqlServer.Dts.Runtime>具有命名空间**使用**或**导入**语句。  
+ 本主题中用于加载和运行包的所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集。 在新项目中添加引用之后，使用 using 或 Imports 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
 ## <a name="loading-a-package-programmatically"></a>以编程方式加载包  
  若要以编程方式在本地计算机中加载包，无论包是本地存储还是远程存储，都可以调用以下方法之一：  
@@ -67,9 +65,9 @@ ms.lasthandoff: 08/03/2017
   
 1.  启动 Visual Studio 开发环境，以您首选的开发语言创建新的应用程序。 本示例使用的是控制台应用程序；但您也可以从 Windows 窗体应用程序、ASP.NET Web 窗体或 Web 服务或者 Windows 服务运行包。  
   
-2.  上**项目**菜单上，单击**添加引用**并添加对引用**Microsoft.SqlServer.ManagedDTS.dll**。 单击 **“确定”**。  
+2.  在“项目”菜单上，单击“添加引用”，向 Microsoft.SqlServer.ManagedDTS.dll 添加一个引用。 单击“确定” 。  
   
-3.  使用 Visual Basic**导入**语句或 C#**使用**用于导入语句**Microsoft.SqlServer.Dts.Runtime**命名空间。  
+3.  使用 Visual Basic Imports 语句或 C# using 语句来导入 Microsoft.SqlServer.Dts.Runtime 命名空间。  
   
 4.  在主例程中添加以下代码。 完成的控制台应用程序应类似于下面的示例。  
   
@@ -234,9 +232,8 @@ namespace RunFromClientAppWithEventsCS
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [了解本地和远程执行之间的差异](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [加载和以编程方式运行远程包](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
+ [了解本地和远程执行之间的区别](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [以编程方式加载和运行远程包](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [加载本地包的输出](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

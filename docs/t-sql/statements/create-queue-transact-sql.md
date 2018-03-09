@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE QUEUE
 - QUEUE
 - CREATE_QUEUE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE QUEUE statement
 - internal activation [Service Broker]
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 168ba93fdfbf999cb325d985c3c29601cc21b4ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +83,7 @@ CREATE QUEUE <object>
  *database_name* （对象）  
  要在其中创建新队列的数据库的名称。 *database_name*必须指定现有的数据库的名称。 当*database_name*未提供当前数据库中创建的队列。  
   
- *schema_name* （对象）  
+ *schema_name* (object)  
  新队列所属架构的名称。 默认情况下，该架构为执行该语句的用户的默认架构。 如果创建队列语句由 sysadmin 固定的服务器角色的成员或属于 db_dbowner 或 db_ddladmin 固定数据库角色中指定的数据库*database_name*， *schema_name*可以指定不是与当前连接的登录名关联的架构。 否则为*schema_name*必须执行语句的用户的默认架构。  
   
  *queue_name*  
@@ -102,16 +104,16 @@ CREATE QUEUE <object>
  STATUS（激活）  
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 是否启动存储过程。 当 STATUS = ON 时，如果当前运行的过程数小于 MAX_QUEUE_READERS，并且消息抵达队列的速度比存储过程接收消息的速度快，则队列启动用 PROCEDURE_NAME 指定的存储过程。 当 STATUS = OFF 时，队列不启动存储过程。 如果未指定该子句，则默认为 ON。  
   
- PROCEDURE_NAME =\<过程 >  
+ PROCEDURE_NAME = \<procedure>  
  指定处理此队列中的消息时要启动的存储过程的名称。 此值必须是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
   
- *database_name*（过程）  
+ *database_name*(procedure)  
  包含存储过程的数据库的名称。  
   
- *schema_name*（过程）  
+ *schema_name*(procedure)  
  包含存储过程的架构的名称。  
   
- *过程名称*  
+ *procedure_name*  
  是存储过程的名称。  
   
  MAX_QUEUE_READERS =*max_readers*  
@@ -123,7 +125,7 @@ CREATE QUEUE <object>
  SELF  
  指定存储过程以当前用户身份执行。 （执行该 CREATE QUEUE 语句的数据库主体。）  
   
- *user_name*  
+ '*user_name*'  
  执行存储过程时所用的用户名。 *User_name*参数必须为有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户指定为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符。 当前用户必须具有 IMPERSONATE 权限*user_name*指定。  
   
  OWNER  
@@ -134,7 +136,7 @@ CREATE QUEUE <object>
   
  将有害消息处理设置为 OFF 的队列在五个连续的事务回滚之后不会被禁用。 这样，应用程序就可以定义自定义的有害消息处理系统。  
   
- ON*文件组 |*[**默认**]  
+ ON *filegroup |* [**DEFAULT**]  
  指定从中创建此队列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件组。 你可以使用*文件组*参数来标识文件组，或使用默认标识符的默认文件组用于 service broker 数据库。 在此子句的上下文中，DEFAULT 不是关键字，必须作为标识符进行分隔。 如果未指定文件组，该队列使用数据库的默认文件组。  
   
 ## <a name="remarks"></a>注释  
@@ -168,11 +170,11 @@ CREATE QUEUE <object>
 |service_contract_id|**int**|会话遵循的约定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象标识符。|  
 |message_type_name|**nvarchar(256)**|对消息进行说明的消息类型的名称。|  
 |message_type_id|**int**|对消息进行说明的消息类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象标识符。|  
-|validation|**nchar(2)**|对消息所用的验证。<br /><br /> E = 空<br /><br /> N = None<br /><br /> X = XML|  
+|validation|**nchar(2)**|对消息所用的验证。<br /><br /> E = 空<br /><br /> N=None<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|消息的内容。|  
 |message_id|**uniqueidentifier**|消息的唯一标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建队列的权限。  
   
  默认情况下，队列所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有队列的 REFERENCES 权限。  

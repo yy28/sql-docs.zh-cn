@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12d0e4edc34ceb02f9b902016eb82b489c4ca71d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db7c9b02f885c09df1eccbdc27ef2fd895168848
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="embedded-sql"></a>嵌入式的 SQL
 将 SQL 语句发送到 DBMS 的第一个技术嵌入 SQL。 因为 SQL 不使用变量和控制的流语句，它通常用于为数据库子语言，可以添加到在传统的编程语言中，例如 C 或 COBOL 编写的程序。 这是一个中央的嵌入式 SQL 了解： 置于主机编程语言中编写的程序的 SQL 语句。 简言之，以下方法用于在主机语言中嵌入的 SQL 语句：  

@@ -2,27 +2,30 @@
 title: "数据库属性（“文件组”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f255edfb8c5a07df31622cc19c1484d36ccd24a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b5059c901a9b2dc517b765a642ddbe16bb926471
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-filegroups-page"></a>数据库属性（“文件组”页）
-  使用此页可以查看文件组，或为所选数据库添加新的文件组。 文件组类型分为行 文件组、FILESTREAM 数据和内存优化文件组。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以查看文件组，或为所选数据库添加新的文件组。 文件组类型分为行 文件组、FILESTREAM 数据和内存优化文件组。  
   
  行文件组包含常规数据和日志文件。 FILESTREAM 数据文件组包含 FILESTREAM 数据文件。 这些数据文件存储有关在使用 FILESTREAM 存储时二进制大型对象 (BLOB) 数据在文件系统中的存储方式的信息。 两种类型的文件组具有相同的选项。  
   
@@ -42,10 +45,10 @@ ms.lasthandoff: 11/09/2017
  **只读**  
  选中此项可以将文件组设为只读状态。  
   
- **默认**  
+ **Default**  
  选中此项可以将此文件组设为默认文件组。 您可以有一个用于行的默认文件组和一个用于 FILESTREAM 数据的默认文件组。  
   
- **添加**  
+ **“添加”**  
  向列出数据库文件组的网格中添加新的空白行。  
   
  **删除**  
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
  **Filestream 文件**  
  显示内存优化数据文件组中文件（容器）的数量。 可以在 **“文件”** 页面添加容器。  
   
- **添加**  
+ **“添加”**  
  向列出数据库文件组的网格中添加新的空白行。  
   
  **删除**  

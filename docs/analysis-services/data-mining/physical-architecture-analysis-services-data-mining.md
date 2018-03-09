@@ -2,33 +2,32 @@
 title: "物理体系结构 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - server architecture [Analysis Services]
 - architecture [Analysis Services]
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 772d9a4b58c199ce34a6b85b710519c344fd8deb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8a4319e77588c13a06a6c648bcfafa11fb7c92b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>物理体系结构（Analysis Services - 数据挖掘）
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用服务器组件和客户端组件为商业智能应用程序提供数据挖掘功能：  
   
 -   服务器组件作为 Microsoft Windows 服务来实现。 可以在同一台计算机上具有多个实例，每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例均作为单独的 Windows 服务实例实现。  
@@ -59,6 +58,6 @@ ms.lasthandoff: 11/17/2017
  客户端与 Analysis Services 服务器之间的所有通信都使用与平台和语言无关的 XMLA 协议。 从客户端那里收到请求后，Analysis Services 确定该请求是与 OLAP 相关还是与数据挖掘相关，并相应地路由请求。 有关详细信息，请参阅 [OLAP 引擎服务器组件](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [逻辑体系结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [逻辑体系结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
 - CREATE EXTERNAL TABLE
 - PolyBase, T-SQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: e9ee131e1c4bb09ae19c90d84b78a7d6fc662ae8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -159,12 +161,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|Single|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|字符串<br /><br /> Char]|string|text||  
+|NCHAR|字符串<br /><br /> Char]|string|text||  
 |nvarchar|字符串<br /><br /> Char]|string|Text||  
 |char|字符串<br /><br /> Char]|string|Text||  
 |varchar|字符串<br /><br /> Char]|string|Text||  
-|binary|Byte[]|binary|BytesWritable|适用于 Hive 0.8 及更高版本。|  
-|varbinary|Byte[]|binary|BytesWritable|适用于 Hive 0.8 及更高版本。|  
+|BINARY|Byte[]|BINARY|BytesWritable|适用于 Hive 0.8 及更高版本。|  
+|varbinary|Byte[]|BINARY|BytesWritable|适用于 Hive 0.8 及更高版本。|  
 |date|DateTime|timestamp|TimestampWritable||  
 |smalldatetime|DateTime|timestamp|TimestampWritable||  
 |datetime2|DateTime|timestamp|TimestampWritable||  
@@ -172,7 +174,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |time|TimeSpan|timestamp|TimestampWritable||  
 |decimal|Decimal|decimal|BigDecimalWritable|适用于 Hive0.11 和更高版本。|  
   
- 位置 = '*folder_or_filepath*  
+ LOCATION =  '*folder_or_filepath*'  
  在 Hadoop 或 Azure blob 存储中指定文件夹或文件路径和实际数据的文件名称。 从根文件夹中; 开始的位置根文件夹是外部数据源中指定的数据位置。  
   
  如果你指定要为文件夹位置，从外部表中选择的 PolyBase 查询将检索文件从文件夹和所有子文件夹。 一样 Hadoop，PolyBase 不返回隐藏的文件夹。 它也不返回的文件的文件名称开头的下划线 (_) 或句点 （.）。  
@@ -192,7 +194,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  拒绝选项  
  你可以指定拒绝参数，以确定 PolyBase 如何处理*脏*记录它从外部数据源的检索。 数据记录被视为脏是否它实际数据类型或列数与外部表的列定义不匹配。  
   
- 当你不指定或更改拒绝值时，PolyBase 将使用默认值。 使用 CREATE EXTERNAL TABLE 语句创建外部表时，作为其他元数据存储的拒绝参数此信息。   在将来的 SELECT 语句或选择到 SELECT 语句从外部表中选择数据，PolyBase 将使用拒绝选项来确定的数值或百分比的实际查询在失败之前可以被拒绝的行。 实例时都提供 SQL Server 登录名。 该查询将返回 （部分） 结果，直到超出拒绝阈值;然后失败并出现相应的错误消息。  
+ 当你不指定或更改拒绝值时，PolyBase 将使用默认值。 使用 CREATE EXTERNAL TABLE 语句创建外部表时，作为其他元数据存储的拒绝参数此信息。   在将来的 SELECT 语句或选择到 SELECT 语句从外部表中选择数据，PolyBase 将使用拒绝选项来确定的数值或百分比的实际查询在失败之前可以被拒绝的行。 。 该查询将返回 （部分） 结果，直到超出拒绝阈值;然后失败并出现相应的错误消息。  
   
  REJECT_TYPE =**值**| 百分比  
  阐明了是否 REJECT_VALUE 选项指定为文字值或百分比。  
@@ -249,9 +251,9 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  OBJECT_NAME 子句提供的功能将外部表定义映射到具有远程数据库上的不同名称的表。 用于消除之间存在于本地和远程数据库的对象名称的歧义。  
   
  分发  
- 可选。 这只是仅对数据库的类型于包含 SHARD_MAP_MANAGER 必需的。 此参数控制表被视为分片表或复制的表。 与**SHARDED** (*列名*) 表，不同的表中的数据不重叠。 **复制**指定表的每个分片上具有相同的数据。 **ROUND_ROBIN**指示应用程序特定的方法用于将数据分布。  
+ 選擇性。 这只是仅对数据库的类型于包含 SHARD_MAP_MANAGER 必需的。 此参数控制表被视为分片表或复制的表。 与**SHARDED** (*列名*) 表，不同的表中的数据不重叠。 **复制**指定表的每个分片上具有相同的数据。 **ROUND_ROBIN**指示应用程序特定的方法用于将数据分布。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要以下用户权限：  
   
 -   **CREATE TABLE**  
@@ -295,6 +297,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE 和 DROP TABLE  
   
 -   创建统计信息和 DROP STATISTICS  
+注意： 创建和 Azure SQL 数据库中不支持删除外部表的统计信息。 
   
 -   创建视图和删除视图  
   
@@ -316,7 +319,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ## <a name="locking"></a>锁定  
  共享 SCHEMARESOLUTION 对象上的锁。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  外部表的数据文件存储在 Hadoop 或 Azure blob 存储中。 这些数据文件创建和管理你自己的进程。 它由你负责管理的外部数据的安全。  
   
 ## <a name="examples"></a>示例  
@@ -365,7 +368,7 @@ WITH (
   
 CREATE EXTERNAL FILE FORMAT myfileformat_rc  
 WITH (  
-    FORMAT = RCFILE,  
+    FORMAT_TYPE = RCFILE,  
     SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
 )  
 ;  

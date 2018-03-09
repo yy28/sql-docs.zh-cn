@@ -3,8 +3,11 @@ title: "在“结果”窗格中添加新行 (Visual Database Tools) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fc68d3e19e5c962ed805ce8b8bb50fe3e918f2c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7e6585253bd81c11059d8021cf972ca57129730a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中添加新行 (Visual Database Tools)
-若要添加新数据，既可以在其中键入数据也可以从其他程序（如“记事本”或 Excel）粘贴数据。 要粘贴的行必须与要粘贴到的表中列的数目和类型完全一致。 可以在“结果”窗格中一次粘贴多行。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 要添加新数据，既可以在其中键入数据也可以从其他程序（如“记事本”或 Excel）粘贴数据。 要粘贴的行必须与要粘贴到的表中列的数目和类型完全一致。 可以在“结果”窗格中一次粘贴多行。  
   
 有关如何输入数据的信息，请参阅[更新结果的规则 (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)。  
   

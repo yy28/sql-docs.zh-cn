@@ -2,30 +2,38 @@
 title: "设置或更改数据库排序规则 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - collations [SQL Server], database
 - database collations [SQL Server]
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c893e02b8cf77bd8f1d43335919d89e86285c34c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 025bfc5512c9e53569077749a852191a76e8b7dd
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置和更改数据库排序规则。 如果未指定排序规则，则使用服务器排序规则。  
-  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置和更改数据库排序规则。 如果未指定排序规则，则使用服务器排序规则。  
+ 
+> [!NOTE]
+> 为 Azure SQL 数据库创建排序规则后，无法更改该排序规则。
+
  **本主题内容**  
   
 -   **开始之前：**  
@@ -34,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
      [建议](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要设置或更改数据库排序规则，请使用：**  
   
@@ -66,7 +74,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  CREATE DATABASE  
  需要对 **master** 数据库的 CREATE DATABASE 权限，或者需要 CREATE ANY DATABASE 或 ALTER ANY DATABASE 权限。  
   
@@ -89,13 +97,13 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-set-the-database-collation"></a>设置数据库排序规则  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例演示如何使用 [COLLATE](~/t-sql/statements/collations.md) 子句来指定排序规则名称。 此示例创建使用 `MyOptionsTest` 排序规则的数据库 `Latin1_General_100_CS_AS_SC` 。 在创建数据库后，执行 `SELECT` 语句以验证设置。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何使用 [COLLATE](~/t-sql/statements/collations.md) 子句来指定排序规则名称。 此示例创建使用 `MyOptionsTest` 排序规则的数据库 `Latin1_General_100_CS_AS_SC` 。 在创建数据库后，执行 `SELECT` 语句以验证设置。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -115,13 +123,13 @@ GO
   
 #### <a name="to-change-the-database-collation"></a>更改数据库排序规则  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例说明如何在 [ALTER DATABASE](~/t-sql/statements/collations.md) 语句中使用 [COLLATE](../../t-sql/statements/alter-database-transact-sql.md) 子句来更改排序规则名称。 执行 `SELECT` 语句以验证更改。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何在 [ALTER DATABASE](~/t-sql/statements/collations.md) 语句中使用 [COLLATE](../../t-sql/statements/alter-database-transact-sql.md) 子句来更改排序规则名称。 执行 `SELECT` 语句以验证更改。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE MyOptionsTest  

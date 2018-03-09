@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 537267b15a65dca3035ba79e6bbecb9f7bc4a51c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>结果集  
 **sp_server_diagnostics**返回以下信息  
   
-|列|数据类型|Description|  
+|“列”|数据类型|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|指示行创建的时间戳。 单个行集中的每一行都具有相同的时间戳。|  
 |**component_type**|**sysname**|指示行是否包含信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例组件或 Always On 可用性组级别：<br /><br /> instance<br /><br /> Alwayson: AvailabilityGroup|  
 |**组件**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性组的名称 >*|  
-|**状态**|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|State|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0： 未知<br /><br /> 1： 干净<br /><br /> 2： 警告<br /><br /> 3： 错误|  
-|**数据**|**varchar (max)**|指定特定于组件的数据。|  
+|**data**|**varchar (max)**|指定特定于组件的数据。|  
   
  下面是对五个组件的说明：  
   
@@ -84,12 +84,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<可用性组的名称 >**： 收集数据的指定的可用性组 (如果 component_type ="始终上： AvailabilityGroup")。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 从故障角度而言，系统、资源和 query_processing 组件可用于故障检测，而 io_subsystem 和事件组件只能用于诊断用途。  
   
 下表将组件映射到其关联的运行状态。  
   
-|Components|干净 (1)|警告 (2)|错误 (3)|未知 (0)|  
+|组件|干净 (1)|警告 (2)|错误 (3)|未知 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |system|x|x|x||  
 |resource|x|x|x||  
@@ -102,12 +102,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 > [!NOTE]
 > 在以高优先级 preemptive 线程上执行时 sp_server_diagnostics 内部过程的执行。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
 最好使用扩展会话捕获运行状态信息并将其保存到位于 SQL Server 之外的文件中。 因此，在出现故障时仍然可以访问。 以下示例将事件会话的输出保存到文件：  
-```tsql  
+```sql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -119,7 +119,7 @@ GO
 ```  
   
 下面的示例查询读取扩展会话日志文件：  
-```tsql  
+```sql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -142,7 +142,7 @@ ORDER BY time;
 ```  
   
 以下示例以非重复模式将 sp_server_diagnostics 的输出捕获到一个表中：  
-```tsql  
+```sql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  
@@ -156,16 +156,16 @@ INSERT INTO SpServerDiagnosticsResult
 EXEC sp_server_diagnostics; 
 ```  
 
-下面的示例查询显示输出表中的摘要如下：  
-```tsql  
+下面的示例查询读取表格的摘要输出：  
+```sql  
 SELECT create_time,
        component_name,
        state_desc 
 FROM SpServerDiagnosticsResult;  
 ``` 
 
-下面的示例查询从表中的每个组件中读取一些详细的输出：  
-```tsql  
+下面的示例查询读取表格中每个组件的部分详细输出：  
+```sql  
 -- system
 select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
    data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',

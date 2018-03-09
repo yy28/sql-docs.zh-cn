@@ -2,26 +2,32 @@
 title: "空间索引概述 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-spatial
+ms.suite: sql
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: spatial indexes [SQL Server]
+helpviewer_keywords:
+- spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae93cf0e3211b9068de0b3dc512f7a59a3f0fd9c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 97c9aa05a5dc7eba5a47a616f15ba5e4faca0b16
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引”  是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 **geometry** 或 **geography**）的数据的表列。  
   
 > [!IMPORTANT]  
@@ -64,7 +70,7 @@ ms.lasthandoff: 11/09/2017
 >  当数据库兼容级别设置为 100 或更低时，空间索引的网格密度显示在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目录视图的 level_1_grid、level_2_grid、level_3_grid 和 level_4_grid 列中。 **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** 分割方案选项不会填充这些列。 使用自动网格选项时，sys.spatial_index_tessellations 目录视图对这些列使用 **NULL** 值。  
   
 ###  <a name="tessellation"></a> 分割  
- 将索引空间分解成网格层次结构后，空间索引将逐行读取空间列中的数据。 读取空间对象（或实例）的数据后，空间索引将为该对象执行 分割过程。 分割过程通过将对象与其接触的网格单元集（接触单元）相关联使该对象适合网格层次结构。 从网格层次结构的第 1 级开始，分割过程以“广度优先”  方式对整个级别进行处理。 在可能的情况下，此过程可以连续处理所有四个级别，一次处理一个级别。  
+ 将索引空间分解成网格层次结构后，空间索引将逐行读取空间列中的数据。 读取空间对象（或实例）的数据后，空间索引将为该对象执行 分割过程。 分割过程通过将对象与其接触的网格单元集（“接触单元”）相关联使该对象适合网格层次结构。 从网格层次结构的第 1 级开始，分割过程以“广度优先”  方式对整个级别进行处理。 在可能的情况下，此过程可以连续处理所有四个级别，一次处理一个级别。  
   
  分割过程的输出为对象的空间索引中所记录的接触单元集。 通过引用这些已记录单元，空间索引可以确定该对象在空间中相对于空间列中也存储在索引中的其他对象的位置。  
   
@@ -101,7 +107,7 @@ ms.lasthandoff: 11/09/2017
   
  例如，上图显示了一个完全适合第 1 级网格的单元 15 的八边形。 在此图中，单元 15 已进行分割，将八边形分成了九个二级单元。 此图假定每对象单元数限制为 9 或更大。 然而，如果每对象单元数限制为 8 或更小，则单元 15 将不进行分割，而只为该对象对单元 15 进行计数。  
   
- 默认情况下，每对象单元数限制为每个对象 16 个单元，这将在大多数空间索引的空间和精度之间提供一个令人满意的折中方案。 然而， [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句支持 CELLS_PER_OBJECT**=***n* 子句，使用该子句可以指定介于 1 和 8192（包含这两者）之间的每对象单元数限制。  
+ 默认情况下，每对象单元数限制为每个对象 16 个单元，这将在大多数空间索引的空间和精度之间提供一个令人满意的折中方案。 然而， [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句支持 CELLS_PER_OBJECT=***n 子句，使用该子句可以指定介于 1 和 8192（包含这两者）之间的每对象单元数限制。  
   
 > [!NOTE]  
 >  空间索引的 **cells_per_object** 设置显示在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目录视图中。  
@@ -130,7 +136,7 @@ ms.lasthandoff: 11/09/2017
 >  可以使用 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句显式指定此分割方案。  
   
 ##### <a name="the-bounding-box"></a>边界框  
- 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” 。 该边界框由四个坐标 **(***x-min***，***y-min***)** 和 **(***x-max***，***y-max***)**定义，这些坐标存储为空间索引的属性。 这些坐标所表示的意义如下：  
+ 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” 。 该边界框由四个坐标（x-min、y-min）和（x-max、y-max）定义，这些坐标存储为空间索引的属性。 这些坐标所表示的意义如下：  
   
 -   x-min 是边界框左下角的 x 坐标。  
   
@@ -143,11 +149,11 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  这些坐标通过 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 BOUNDING_BOX 子句指定。  
   
- **(***x-min***，***y-min***)** 和 **(***x-max***，***y-max***)** 坐标确定边界框的位置和尺寸。 边界框的外部空间视作一个编号为 0 的单元。  
+ （x-min、y-min）和（x-max、y-max）坐标确定边界框的位置和尺寸。 边界框的外部空间视作一个编号为 0 的单元。  
   
  空间索引将分解边界框的内部空间。 网格层次结构的第 1 级网格将填充边界框。 若要在网格层次结构中放置几何对象，空间索引会将该对象的坐标与边界框的坐标进行比较。  
   
- 下图显示了由边界框的 **(***x-min***，***y-min***)** 和 **(***x-max***，***y-max***)** 坐标定义的点。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。  
+ 下图显示了由边界框的（x-min、y-min）和（x-max、y-max）坐标定义的点。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。  
   
  ![显示坐标和单元 0 的边界框。](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "显示坐标和单元 0 的边界框。")  
   

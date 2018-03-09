@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - syslogins
 - sys.syslogins
 - sys.syslogins_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea9ceaa622c6ad7b39bed9c3e3d2439e56a57210
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b5b0d9ec9b28236816062fefdb0d022a0c9a498
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +55,11 @@ ms.lasthandoff: 11/17/2017
 |**totio**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**spacelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**结果**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**名称**|**sysname**|用户登录名。|  
 |**dbname**|**sysname**|建立连接时，用户的默认数据库名。|  
-|**密码**|**nvarchar （128)**|返回 NULL。|  
-|**语言**|**sysname**|默认的用户语言。|  
+|**password**|**nvarchar(128)**|返回 NULL。|  
+|**language**|**sysname**|默认的用户语言。|  
 |**denylogin**|**int**|1 = 登录名是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组且已被拒绝访问。|  
 |**hasaccess**|**int**|1 = 已授权登录名访问服务器。|  
 |**isntname**|**int**|1 = 登录名是 Windows 用户或组。<br /><br /> 0 = 登录名是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。|  
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**diskadmin**|**int**|1 = 登录名为属于**diskadmin**固定的服务器角色。|  
 |**dbcreator**|**int**|1 = 登录名为属于**dbcreator**固定的服务器角色。|  
 |**bulkadmin**|**int**|1 = 登录名为属于**bulkadmin**固定的服务器角色。|  
-|**loginname**|**nvarchar （128)**|用户登录名。 提供该列是为了向后兼容。|  
+|**loginname**|**nvarchar(128)**|用户登录名。 提供该列是为了向后兼容。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

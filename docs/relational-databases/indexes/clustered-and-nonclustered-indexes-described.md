@@ -1,36 +1,36 @@
 ---
 title: "描述的聚集索引和非聚集索引 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 55498dc339c081da3e9c5fbeca1c464a93b2395e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fdf3562dbfbc4482d888f2e5e955b7941e2a6c76
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>描述的聚集索引和非聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > 有关与以前版本的 SQL Server 相关的内容，请参阅[描述的聚集索引和非聚集索引](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx)。
-
 
   索引是与表或视图关联的磁盘上结构，可以加快从表或视图中检索行的速度。 索引包含由表或视图中的一列或多列生成的键。 这些键存储在一个结构（B 树）中，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以快速有效地查找与键值关联的行。  
   
@@ -68,9 +68,12 @@ ms.lasthandoff: 11/17/2017
   
  查询优化器在执行查询时通常会选择最有效的方法。 但如果没有索引，则查询优化器必须扫描表。 您的任务是设计并创建最适合您的环境的索引，以便查询优化器可以从多个有效的索引中选择。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md) 以帮助分析数据库环境并选择适当的索引。  
   
-## <a name="related-tasks"></a>相关任务  
+> [!IMPORTANT] 
+> 要深入了解索引设计指南和内部机制，请参阅 [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)。
+
+## <a name="related-content"></a>相关内容  
+ [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)     
  [创建聚集索引](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [创建非聚集索引](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "sys.pdw_nodes_column_store_segments (Transact SQL) |Microsoft 文档"
+title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79944f54d12681ab7a430362ec0204a8d54bf477
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5982fa99effc211d23c7e92557d96e20d131ad4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (TRANSACT-SQL)
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   对于 columnstore 索引中的每列包括一行。  
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |**row_count**|**int**|行组中的行数。|  
 |**has_nulls**|**int**|1 如果列段具有 Null 值。|  
 |**base_id**|**bigint**|如果编码类型 1 正在使用的基础值 id。  如果编码类型 1 未使用，base_id 设置为 1。|  
-|**量值**|**float**|如果使用的编码类型 1 的量值。  如果编码类型 1 未使用，则将量值设置为 1。|  
+|**magnitude**|**float**|如果使用的编码类型 1 的量值。  如果编码类型 1 未使用，则将量值设置为 1。|  
 |**primary__dictionary_id**|**int**|主字典的 ID。|  
 |**secondary_dictionary_id**|**int**|辅助字典的 ID。 如果没有辅助字典，则返回 -1。|  
 |**min_data_id**|**bigint**|列段中的最小数据 ID。|  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下查询返回有关列存储索引各段的信息。  
   
-```tsql  
+```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
     COUNT(*) AS number_of_segments  
 FROM sys.column_store_segments AS s   
@@ -81,14 +83,14 @@ JOIN sys.objects AS o
 ORDER BY css.hobt_id, css.column_id;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW SERVER STATE**权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [创建列存储索引 &#40;Transact SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_row_groups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   
 

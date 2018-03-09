@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - GRANT statement, XML schema collections
 - XML schema collections [SQL Server], permissions
 - granting permissions [SQL Server], XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16014643fc638cf9c9422694f44627487d2d6d89
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 9bd3cf031a884da51cd15b0e78c8d2c242c3f9e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT XML 架构集合权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +61,7 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ *permission*  
  指定可对 XML 架构集合授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  ON XML 架构集合:: [ *schema_name*。 ] *XML_schema_collection_name*  
@@ -110,7 +112,7 @@ GRANT permission  [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  
   
  若要使用 AS 选项，还必须满足以下附加要求：  
@@ -138,7 +140,7 @@ GRANT permission  [ ,...n ] ON
 ## <a name="see-also"></a>另请参阅  
  [拒绝 XML 架构集合权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
  [撤消 XML 架构集合权限 &#40;Transact SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
- [sys.xml_schema_collections &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [创建 XML 架构集合 &#40;Transact SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Update （) (Transact SQL) |Microsoft 文档"
+title: "UPDATE() (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE()_TSQL
 - UPDATE()
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - INSERT statement [SQL Server], UPDATE function
 - testing column updates
@@ -26,18 +28,18 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6d5b93a4f98e382ccb6504e1d20d6e974a031f86
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="update---trigger-functions-transact-sql"></a>更新-触发器函数 (TRANSACT-SQL)
+# <a name="update---trigger-functions-transact-sql"></a>UPDATE-触发器函数 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回一个布尔值，指示是否尝试对表或视图的指定列执行 INSERT 或 UPDATE 操作。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体中的任意位置使用 UPDATE()，以测试触发器是否应执行某些操作。  

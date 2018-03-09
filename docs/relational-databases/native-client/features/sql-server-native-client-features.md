@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a4bdab61611f392315c06eefa15b0830b12968b6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 42eb24a2536f388e13e04892246e917f277ef408
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 
   除公开 Windows（以前为 Microsoft）数据访问组件 (WDAC) 的功能以外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 还实现诸多其他功能以公开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [处理字符转换时 ODBC 驱动程序行为的变化](../../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
  介绍从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client 开始的行为变化。  
   
@@ -50,10 +50,10 @@ ms.lasthandoff: 11/17/2017
  [使用 XML 数据类型](../../../relational-databases/native-client/features/using-xml-data-types.md)  
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持 XML 数据类型，此基于 XML 的数据类型可用作列类型、变量类型、参数类型或函数返回类型。  
   
- [使用用户定义类型](../../../relational-databases/native-client/features/using-user-defined-types.md)  
+ [使用用户定义的类型](../../../relational-databases/native-client/features/using-user-defined-types.md)  
  讨论如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端支持用户定义类型 (UDT)，它扩展，它允许你存储对象和自定义数据结构中的 SQL 类型系统[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库。  
   
- [使用大值类型](../../../relational-databases/native-client/features/using-large-value-types.md)  
+ [使用较大的值类型](../../../relational-databases/native-client/features/using-large-value-types.md)  
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持大值数据类型，该类型是大型对象数据类型 (LOB)。  
   
  [以编程方式更改密码](../../../relational-databases/native-client/features/changing-passwords-programmatically.md)  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
  [SQL Server Native Client 11.0 中的 UTF-16 支持](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
  讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 如果绑定列结果或输出参数时提供固定长度缓冲区，并且如果**wchar**字符写入到缓冲区之前终止字符是一个高代理项码位的代理项对，并且如果下一步**wchar**字符是一个低代理项码位，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将不向缓冲区添加的高代理项码位。  
   
- [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+ [对高可用性、 灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  讨论如何配置你的应用程序以充分利用添加功能的高可用性、 灾难恢复[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
  [访问扩展事件日志中的诊断信息](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  

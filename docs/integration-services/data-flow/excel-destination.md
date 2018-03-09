@@ -1,5 +1,5 @@
 ---
-title: "Excel 目标 |Microsoft 文档"
+title: "Excel 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 49
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 69a0a8b907fcb45cf6ecd0576fb6fba04775d237
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: be3ad15259560b7b69a9a375affab2940376a22e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-destination"></a>Excel 目标
   Excel 目标将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿中的工作表或范围中。  
@@ -88,17 +87,17 @@ ms.lasthandoff: 08/17/2017
   
  Excel 目标具有一个常规输入和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  **“高级编辑器”** 对话框反映了所有能以编程方式设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel 自定义属性](../../integration-services/data-flow/excel-custom-properties.md)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
@@ -165,7 +164,7 @@ ms.lasthandoff: 08/17/2017
  **生成查询**  
  使用“查询生成器”对话框可直观地构造 SQL 查询。  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
@@ -174,7 +173,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="excel-destination-editor-mappings-page"></a>Excel 目标编辑器（“映射”页）
   可以使用 **“Excel 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
   
@@ -190,7 +189,7 @@ ms.lasthandoff: 08/17/2017
 ## <a name="excel-destination-editor-error-output-page"></a>Excel 目标编辑器（“错误输出”页）
   可以使用 **“Excel 目标编辑器”** 对话框的 **“高级”** 页指定错误处理选项。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入或输出**  
  查看数据源的名称。  
   
@@ -216,9 +215,8 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Excel 源](../../integration-services/data-flow/excel-source.md)   
- [Integration Services &#40;SSIS &#41;变量](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)   
- [Working with Excel Files with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [使用脚本任务处理 Excel 文件](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   
-

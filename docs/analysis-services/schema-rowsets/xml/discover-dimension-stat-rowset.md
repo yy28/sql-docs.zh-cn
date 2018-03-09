@@ -2,32 +2,32 @@
 title: "DISCOVER_DIMENSION_STAT 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed2707a9ee417f8e019137034e90f1a9132948e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 行集
-  提供有关维度的信息，包括维度所在的数据库的名称、维度名称、维度的属性以及每个属性的成员计数。 在表格模型中，这对应于表中的列和每个列中的值数。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+提供有关维度的信息，包括维度所在的数据库的名称、维度名称、维度的属性以及每个属性的成员计数。 在表格模型中，这对应于表中的列和每个列中的值数。  
   
  **适用于：**表格模型、 多维模型  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |**DATABASE_NAME**|**DBTYPE_WSTR**|必需|包含维度的数据库的名称。<br /><br /> 此列在限制列表中是必需的。|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**|必需|维度的名称。<br /><br /> 此列在限制列表中是必需的。|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||维度中的属性的名称。|  
-|**ATTRIBUTE_COUNT**|**是 DBTYPE_I8**||命名属性中的值的计数。 对于表格模型，该值始终等于表中的行数值。|  
+|**ATTRIBUTE_COUNT**|**DBTYPE_I8**||命名属性中的值的计数。 对于表格模型，该值始终等于表中的行数值。|  
   
  未对此架构行集进行排序。  
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_policy_TSQL
 - sp_syspolicy_rename_policy
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_rename_policy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_rename_policy
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd1296c5d0a7fc4d1798b88fc1bb8f34c9b09b0b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5d82827cfd7a0d7ceaf9988e4fb8fa6a26d11976
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name=** ] *名称*  
+ [ **@name=** ] **'***name***'**  
  您要重命名的策略的名称。 *名称*是**sysname**，并且如果必须指定*policy_id*为 NULL。  
   
- [  **@policy_id=** ] *policy_id*  
+ [ **@policy_id=** ] *policy_id*  
  您要重命名的策略的标识符。 *policy_id*是**int**，并且如果必须指定*名称*为 NULL。  
   
- [  **@new_name=** ] *new_name*  
+ [ **@new_name=** ] **'***new_name***'**  
  是为策略的新名称。 *new_name*是**sysname**，和是必需的。 不能为 NULL 或空字符串。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -62,7 +65,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
   
  必须为指定值*名称*或*policy_id*。 两者不能均为 NULL。 若要获取这些值，请查询 msdb.dbo.syspolicy_policies 系统视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: master database [SQL Server], restoring
+helpviewer_keywords:
+- master database [SQL Server], restoring
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b78a32fec05225fc178cda86a844c0d46404013c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bdcb8f41a3eb6abd20f905f573f84fb1b426f014
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-the-master-database-transact-sql"></a>还原 master 数据库 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  下面的示例将在默认服务器实例上还原 `master` 数据库。 该示例假定服务器实例是在单用户模式下运行。 该示例启动 `sqlcmd` 并执行 `RESTORE DATABASE` 语句，以便从磁盘设备 `master` 还原 `Z:\SQLServerBackups\master.bak`的完整数据库备份。  
   
 > [!NOTE]  
->  对于命名实例，**sqlcmd** 命令必须指定 **-S***\<ComputerName>*\\*\<InstanceName>* 选项。  
+>  对于命名实例，sqlcmd 命令必须指定 -S\<ComputerName\\\<InstanceName> 选项。  
   
 ```  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/17/2017
  [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
  [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)   
  [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [在单用户模式下启动 SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
   
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29c8fb3232abfc81eb41e9e3ec67ceb7e96de7ea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a101cf26b66f3556330354c0fa9ded4c6d9ad583
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sequence-of-status-records"></a>状态记录的序列
 如果返回了两个或多个状态记录，驱动程序管理器和驱动程序它们设置级别根据以下规则。 具有最高级别的记录是第一条记录。 记录 （驱动程序管理器、 驱动程序、 网关，等） 的源不会被视为时排名记录。  

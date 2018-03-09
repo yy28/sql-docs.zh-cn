@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: "40"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 751e6e715cc660cadb66c927d24b63d01361f581
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7645b04a492c182283c79c814be0c59baa23fbc6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>并行安装 Reporting Services 和 Internet Information Services
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 
 可以在同一台计算机上安装和运行 SQL Server Reporting Services (SSRS) 和 Internet Information Services (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
   
-|IIS 版本|问题|说明|  
+|IIS 版本|问题|Description|  
 |-----------------|------------|-----------------|  
 |8.0，8.5|一个应用程序收到发往另一个应用程序的请求。<br /><br /> HTTP.SYS 强制实施了 URL 保留的优先规则。 在向多个具有相同虚拟目录名称且共同监视端口 80 的应用程序发出请求时，如果目标应用程序的 URL 保留相对于另一个应用程序的 URL 保留较弱，则这些请求可能无法到达预期的目标。|在某些情况下，取代 URL 保留方案中另一个 URL 端点的已注册端点可能会收到发往其他应用程序的 HTTP 请求。<br /><br /> 为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 使用唯一的虚拟目录名有助于避免发生这种冲突。<br /><br /> 本主题中提供了有关此方案的详细信息。|  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>用于带有 SQL Server Reporting Services 的 IIS 8.0、8.5 的 URL 保留项  
  使用上一节中概述的优先规则，即可以开始了解为 Reporting Services 和 IIS 定义的 URL 保留是如何提高互操作性的。 Reporting Services 接收为其应用程序明确指定了虚拟目录名的请求；IIS 接收所有的剩余请求，这些请求随后可定向到运行于 IIS 进程模型中的应用程序。  
   
-|应用程序|URL 保留|说明|请求接收情况|  
+|应用程序|URL 保留|Description|请求接收情况|  
 |-----------------|---------------------|-----------------|---------------------|  
 |报表服务器|`http://+:80/ReportServer`|针对端口 80 使用强通配符，带有报表服务器虚拟目录。|接收端口 80 上指定了报表服务器虚拟目录的所有请求。 报表服务器 Web 服务接收针对 http://\<computername>/reportserver 的所有请求。|  
 |Web 门户|`http://+:80/Reports`|针对端口 80 使用强通配符，带有 Reports 虚拟目录。|接收端口 80 上指定了 reports 虚拟目录的所有请求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 接收针对 http://\<computername>/reports 的所有请求。|  

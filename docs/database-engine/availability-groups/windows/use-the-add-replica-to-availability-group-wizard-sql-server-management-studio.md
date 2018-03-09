@@ -2,9 +2,12 @@
 title: "使用“将副本添加到可用性组向导”(SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: "24"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3f5ca7fd6f963133374760a4c0dd7468462867
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 769bd6348bf2b9c49990009f6ff6b6545c299f43
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>使用“将副本添加到可用性组向导”(SQL Server Management Studio)
-  使用“将副本添加到可用性组向导”可帮助你将新的次要副本添加到现有 AlwaysOn 可用性组。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“将副本添加到可用性组向导”可帮助你将新的次要副本添加到现有 AlwaysOn 可用性组。  
   
 > [!NOTE]  
 >  有关使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 将辅助副本添加到可用性组的详细信息，请参阅 [将辅助副本添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
  如果要允许“将副本添加到可用性组向导”管理数据库镜像端点，还需要 CONTROL ON ENDPOINT 权限。  
@@ -85,7 +88,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  如果所选的副本包含具有数据库主密钥的数据库，请在  “输入密码”页中输入数据库主密钥的密码。  “状态”列指示具有数据库主密钥的数据库  “所需的密码”。 输入密码后，请单击 “刷新”。 如果你正确输入了密码，“状态”列指示“输入的密码” 。  
   
-7.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择以下选项之一：  
+7.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
   
     -   **Full**  
   
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/09/2017
   
     -   **跳过初始数据同步**  
   
-         如果要使用您自己的数据库和主数据库的日志备份，请选择此选项。 有关详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
+         如果要使用您自己的数据库和主数据库的日志备份，请选择此选项。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
 8.  **“验证”** 页验证在此向导中指定的值是否满足“将副本添加到可用性组向导”的要求。 若要进行更改，请单击 **“上一页”** 以返回前面的向导页，更改一个或多个值。 单击 **“下一步”** 返回到 **“验证”** 页，然后单击 **“重新运行验证”**。  
   

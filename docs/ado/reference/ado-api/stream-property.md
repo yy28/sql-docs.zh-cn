@@ -3,8 +3,9 @@ title: "流属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - ADOStreamConstruction::put_Stream
 - ADOStreamConstruction::Stream
 - ADOStreamConstruction::get_Stream
-helpviewer_keywords: Stream property
+helpviewer_keywords:
+- Stream property
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d55d9d2619f3739db97570e8195c7a199425252
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc56c9a655c4e85f76cae877579b9a344c11ff4d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stream-property"></a>流属性
 获取或设置 OLE DB**流**对象从/上**ADOStreamConstruction**对象。  
@@ -43,7 +45,7 @@ HRESULT get_Stream([out, retval] IUnknown** ppStream);
 HRESULT put_Stream([in] IUnknown* pStream);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>參數  
  *ppStream*  
  指向 OLE DB**流**对象。  
   

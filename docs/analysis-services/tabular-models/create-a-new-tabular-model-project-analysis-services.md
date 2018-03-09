@@ -1,33 +1,31 @@
 ---
 title: "创建新的表格模型项目 (Analysis Services) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c63f5ceb89e975cf320d9e84419d34a5fe4ecfc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65a4f062cb8ddc70c62853a448393e21607ec0ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-a-new-tabular-model-project-analysis-services"></a>创建新的表格模型项目 (Analysis Services)
-  本主题介绍如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的空白表格模型项目。 在创建新模型项目后，您可以通过从数据源导入数据来开始创作模型项目。  
+# <a name="create-a-new-tabular-model-project"></a>创建新的表格模型项目
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本文介绍如何创建新的空白表格模型项目中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 在创建新模型项目后，您可以通过从数据源导入数据来开始创作模型项目。  
   
 #### <a name="to-create-a-new-blank-tabular-model-project"></a>创建新的空白表格模型项目  
   
@@ -37,10 +35,10 @@ ms.lasthandoff: 11/17/2017
   
 3.  在 **“名称”**中，键入项目的名称，然后指定位置和解决方案名称，再单击 **“确定”**。  
   
- 创建新项目后，请务必设置项目和模型属性。 有关详细信息，请参阅 [项目属性（SSAS 表格）](../../analysis-services/tabular-models/project-properties-ssas-tabular.md) 和 [模型属性（SSAS 表格）](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)中创建新的空白表格模型项目。  
+ 创建新项目后，请务必设置项目和模型属性。 有关详细信息，请参阅[项目属性](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)和[模型属性](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [项目属性（SSAS 表格）](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [模型属性（SSAS 表格）](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
+ [项目属性](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
+ [模型属性](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
   
   

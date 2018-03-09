@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: GENERATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4ef13a4355c73458023c7d11663587a771d71c23
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *分隔符*  
  以字符串表达式表示的有效分隔符。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定第二个集，则**生成**函数返回通过将第二组中的元组应用到每个元组中的第一组生成一组*，* ，然后联接生成由联合设置。 如果**所有**指定，则函数将保留在结果集中的重复项。  
   
  如果指定的字符串表达式，则**生成**函数返回由针对每个元组中的第一组指定的字符串表达式求值生成一个字符串*，* ，然后串联结果。 根据需要，可以分隔字符串，从而分隔得到的串联字符串中的每个结果。  
@@ -115,7 +115,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>字符串  
+### <a name="string"></a>String  
  下面的示例演示如何使用**生成**以返回字符串：  
   
 ```  

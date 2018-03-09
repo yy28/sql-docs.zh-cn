@@ -2,26 +2,30 @@
 title: "表和存储过程的本机编译 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 39f35a44ed05d820352f1b699363c5dddb9cec84
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f9cbe1802a5a4a353ad4af72abcb092187aa8e0a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>表和存储过程的本机编译
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 内存中 OLTP 引入了本机编译的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以本机编译访问内存优化表的存储过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以本机编译内存优化表。 与解释型（传统） [!INCLUDE[tsql](../../includes/tsql-md.md)]相比，本机编译可提高访问数据的速度和执行查询的效率。 表和存储过程的本机编译生成 DLL。
 
 还支持内存优化表类型的本机编译。 有关详细信息，请参阅 [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)（通过使用内存优化更快获得临时表和表变量）。
@@ -37,7 +41,7 @@ ms.lasthandoff: 11/09/2017
 
 以下查询显示当前在服务器上的内存中加载的所有表和存储过程 DLL：
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -61,7 +65,7 @@ SELECT
 
 请考虑下面的示例脚本，它创建一个数据库和一个内存优化的表：
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -154,7 +158,7 @@ GO
 
 考虑下面的示例存储过程，它在前一示例的表 t1 中插入行：
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,
@@ -213,6 +217,6 @@ native_sp 的 DLL 可直接与 t1 的 DLL 以及内存中 OLTP 存储引擎交�
 
 ## <a name="see-also"></a>另请参阅
 
-[内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

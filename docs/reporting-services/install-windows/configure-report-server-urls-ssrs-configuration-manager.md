@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 87c3c32e3068d9b3d1303697b846664d2e5cadb0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4128ec3ec665dc5dff90b6d82b7aa7838d4e5d99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>配置报表服务器 URL（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 用于访问报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 在可以使用任一应用程序之前，必须分别为 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]至少配置一个 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为这两个应用程序 URL 提供了默认值，默认值在大多数部署方案中都能正常使用，包括与其他 Web 服务和应用程序的并行部署。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="defining-a-report-server-url"></a>定义报表服务器 URL  
  URL 精确标识了网络上报表服务器应用程序实例的位置。 创建报表服务器 URL 时，必须指定以下部分。  
   
-|组成部分|说明|  
+|组成部分|Description|  
 |----------|-----------------|  
 |主机名|TCP/IP 网络使用 IP 地址来唯一标识网络上的设备。 计算机中安装的每个网络适配器都有一个物理 IP 地址。 如果 IP 地址解析为主机标头，则可以指定主机标头。 如果要将报表服务器部署到企业网络上，则可以使用计算机的网络名称。|  
 |端口|TCP 端口是设备上的端点。 报表服务器将侦听指定端口上的请求。|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/05/2017
   
  下表中显示了使这些 URL 可用的设置。 该表显示了通过包含主机名的 URL 来启用报表服务器连接的默认值：  
   
-|组成部分|值|解释|  
+|组成部分|ReplTest1|解释|  
 |----------|-----------|-----------------|  
 |IP 地址|所有已分配的值|网络上的域名服务将 URL 上的主机名解析为计算机的 IP 地址。 只要定义的 URL 中指定了 IP 地址，发送到特定主机的请求便将到达其预期目标。|  
 |端口|80|端口 80 是计算机上进行 TCP/IP 连接的默认端口。 因为报表服务器侦听的是端口 80，所以可以忽略 URL 中的端口号。 如果指定另一个端口，则必须在 URL 中指定该端口。|  

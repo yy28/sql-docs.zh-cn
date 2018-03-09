@@ -3,26 +3,26 @@ title: "配置故障转移群集实例存储 SMB-在 Linux 上的 SQL Server |Mi
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 11300c84bd7453845176d179ea69d3ea3ba0f437
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>配置 SMB-在 Linux 上的 SQL Server 的故障转移群集实例-
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 此文章介绍了如何在 Linux 上配置的故障转移群集实例 (FCI) 的 SMB 存储。 
  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 - SMB 共享应将高度可用。
 - 必须将安全性设置正确在 SMB 共享上。 下面是从 /etc/samba/smb.conf，示例 SQLData1 其中是共享的名称。
 
-![05 smbsource][1]
+![05-smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
     mkdir <TempDir>
     ```
 
-    <TempDir>是文件夹的名称。 下面的示例创建一个名为 /var/opt/mssql/tmp 文件夹。
+    <TempDir> 是文件夹的名称。 下面的示例创建一个名为 /var/opt/mssql/tmp 文件夹。
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -209,7 +209,7 @@ ms.lasthandoff: 11/20/2017
     mkdir <FolderName>
     ```
 
-    \<文件夹名称 > 是文件夹的名称。 该文件夹的完整路径将需要指定如果不在正确的位置。 下面的示例创建一个名为 /var/opt/mssql/userdata 文件夹。
+    \<文件夹名称 > 是文件夹的名称。 该文件夹的完整路径，需要指定如果不在正确的位置。 下面的示例创建一个名为 /var/opt/mssql/userdata 文件夹。
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -239,7 +239,7 @@ ms.lasthandoff: 11/20/2017
  
    * 键入 exit 以不再是超级用户。
 
-   * 若要测试，请在该文件夹中创建数据库。 下面所示的示例使用 sqlcmd 创建数据库，将上下文切换到它，验证文件中的操作系统级别中，存在，然后删除的临时位置。 你可以使用 SSMS。
+   * 若要测试，请在该文件夹中创建数据库。 下面的示例使用 sqlcmd 创建数据库，将上下文切换到它，验证文件中的操作系统级别中，存在，然后删除的临时位置。 你可以使用 SSMS。
  
    * 卸载共享 
 

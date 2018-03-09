@@ -17,13 +17,13 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52d4b09e46adcaeb65bedd0cb9dc7c5b28e27016
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ed0b8fbda7545d801c88b672bf352957256d0aef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>可用性副本不具有运行状况良好的角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |**类别**|**严重**|  
 |**方面**|可用性副本|  
   
-## <a name="description"></a>说明  
+## <a name="description"></a>Description  
  此策略检查可用性副本的角色的状态。 在可用性副本的角色既不是主副本也不是辅助副本时，该策略将处于不正常状态。 否则，该策略处于正常状态。  
   
 > [!NOTE]  

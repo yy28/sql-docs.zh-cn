@@ -3,8 +3,11 @@ title: "删除查询 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b3c61f8905a7625ccedc00153bf02eca62287b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e9ca26d7fd7245b1d2c3d40935becb0e8a9345ae
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-queries-visual-database-tools"></a>删除查询 (Visual Database Tools)
-可以通过将查询从项目中移除并从文件系统中永久删除来删除查询。 使用以下过程删除的查询不会发送到“回收站”，因此不能恢复。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以通过将查询从项目中移除并从文件系统中永久删除来删除查询。 使用以下过程删除的查询不会发送到“回收站”，因此不能恢复。  
   
 ### <a name="to-permanently-delete-a-query"></a>永久删除查询  
   

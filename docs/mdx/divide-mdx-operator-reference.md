@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: /
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e4c4a1d6b4a71cca9671b397189d817b1ec349ab
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5cc93d1be3e91fc42fdd5e0d579321106c9375b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="divide---mdx-operator-reference"></a>除-MDX 运算符参考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ Dividend / Divisor
 ## <a name="return-value"></a>返回值  
  具有与优先级较高的参数相同的数据类型的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  返回的实际值**/ （除）**运算符表示除以第二个表达式的第一个表达式的商。  
   
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一个表达式的数据类型。 如果*除数*计算结果为 null 值，运算符引发错误。 如果这两个*除数*和*被除数*计算结果为 null 值，该运算符将返回 null 值。  

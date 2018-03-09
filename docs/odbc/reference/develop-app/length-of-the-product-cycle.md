@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d58e64c6d53863c52d0e2194755e5d45ff1e99ae
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ddd48de7b988cf16fb8c3ce5d3bc33088f487308
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="length-of-the-product-cycle"></a>在产品周期的长度
 关于互操作性最后一个问题是时间。 通常在开发可互操作应用程序时，所用时间长于开发一个 noninteroperable。 原因是应用程序必须检查 DBMS 功能、 为不同 Dbms 以不同的方式执行相同的任务、 解决某些 Dbms 而非任何其他支持的功能和等。  

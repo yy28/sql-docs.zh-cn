@@ -3,30 +3,36 @@ title: "涉及层次结构的 XQueries |Microsoft 文档"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - hierarchies [XQuery]
 - XQuery, hierarchies
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e27b8715a426ce4ad2b19fa10a0172a48b8ec67c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c77b4dfc656ad55f6ca36301df04d65c506f3434
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xqueries-involving-hierarchy"></a>涉及层次结构的 XQuery
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   大多数**xml**类型中的列**AdventureWorks**数据库是半结构化的文档。 因此，每行中存储的文档可能看起来不同。 本主题中的查询示例说明如何从这些不同的文档提取信息。  
   
@@ -116,7 +122,7 @@ WHERE ContactID = 1
   
  若要只检索顶级电话号码（即 <`AdditionalContactInfo`> 的 <`telephoneNumber`> 子元素），查询中的 FOR 表达式应变为  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`。  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`中创建已分区表或索引。  
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)   

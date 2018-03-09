@@ -2,27 +2,30 @@
 title: "复制监视器，主页 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.monitor.main.f1
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ea7953ff3052c4880564ab566b549336d542345
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 384e72c84aedde0ecbeaf88e1345c6e2c175e36e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-monitor-main-page"></a>复制监视器，主页
-  使用复制监视器，可以跨复制拓扑跟踪发布和订阅的状态及性能。 有关详细信息，请参阅以下主题：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用复制监视器，可以跨复制拓扑跟踪发布和订阅的状态及性能。 有关详细信息，请参阅以下主题：  
   
 -   有关复制监视器的概述，请参阅[监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)。  
   

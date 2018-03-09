@@ -3,8 +3,9 @@ title: "Close 方法 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Close
 - Cellset::Close
-helpviewer_keywords: Close method [ADO MD]
+helpviewer_keywords:
+- Close method [ADO MD]
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 187d525cf0795457c87c540d68b62c03661e56b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0607ee2889b32906968a5948138191d1fc67bb4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="close-method-ado-md"></a>Close 方法 (ADO MD)
 关闭打开的单元集。  

@@ -1,26 +1,31 @@
 ---
 title: "R Server（独立版）| Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 06/22/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 1812dc6b60e5f5ee4547810a591b37643be17096
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-server-standalone"></a>R Server (Standalone)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft 发布了 SQL Server 2016 中**R Server （独立）**，作为其平台，用于支持企业级的分析的一部分。  Microsoft R Server R 语言中，提供可伸缩性和安全性和地址的内存中限制的开放源代码。SQL Server R Services，如 Microsoft R Server （独立） 提供了并行和分块处理的数据，使 R 用户能够使用比适合在内存中得更大的数据。
 

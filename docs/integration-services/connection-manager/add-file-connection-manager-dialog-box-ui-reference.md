@@ -1,5 +1,5 @@
 ---
-title: "添加文件连接管理器对话框 UI 参考 |Microsoft 文档"
+title: "“添加文件连接管理器”对话框 UI 参考 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d4f3ee30eb310bdf109914dbdfb7dd0b56fb94c7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>“添加文件连接管理器”对话框 UI 参考
   可以使用 **“添加文件连接管理器”** 对话框定义与一组文件或文件夹的连接。  
@@ -37,11 +36,11 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的内置任务和数据流组件不使用多文件连接管理器。 但是，可以在脚本任务或脚本组件中使用此连接管理器。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **使用类型**  
  指定要用于多个文件连接管理器的文件类型。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**创建文件**|连接管理器将创建文件。|  
 |**现有文件**|连接管理器将使用现有文件。|  
@@ -67,4 +66,3 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

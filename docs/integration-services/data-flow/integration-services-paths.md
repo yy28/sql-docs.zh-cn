@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 路径 |Microsoft 文档"
+title: "Integration Services 路径 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -23,24 +23,23 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541c8faa4c878922411680646f3fa7a557eefe0f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
   路径将一个数据流组件的输出连接到另一个组件的输入，以此连接数据流中的两个组件。 路径具有源和目标。 例如，如果路径连接一个 OLE DB 源和一个排序转换，那么 OLE DB 源就是路径的源，而排序转换就是路径的目标。 源是路径开始处的组件，而目标是路径结束处的组件。  
   
  如果在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中运行包，您可以将数据查看器附加到一个路径，以此来查看数据流中的数据。 数据查看器可配置为在网格中显示数据。 数据查看器是个很有用的调试工具。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-## <a name="configure-the-path"></a>配置的路径  
+## <a name="configure-the-path"></a>配置路径  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供 **“数据流路径编辑器”** 对话框，用于设置路径属性、查看通过该路径的数据列的元数据以及配置数据查看器。  
   
  可配置的路径属性有路径的名称、说明和批注。 还可以用编程的方式配置路径。 有关详细信息，请参阅 [以编程方式连接数据流组件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/26/2017
   
  元数据显示前一组件的输出中每一列的名称、数据类型、精度、小数位数、长度、代码页和源组件。 源组件是创建此列的数据流组件。 这可能是数据流中的第一个组件，也可能不是。 例如，Union All 和排序转换创建自己的列，并且是其输出列的源。 反之，复制列转换则可以不加更改地传递列，或者通过复制输入列来创建新列。 复制列转换仅是新列的源组件。  
 
-## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>设置路径与数据流路径编辑器的属性
+## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>使用数据流路径编辑器设置路径属性
 路径连接两个数据流组件。 数据流必须包含至少两个已连接的数据流组件，才能设置路径属性。
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
@@ -60,16 +59,16 @@ ms.lasthandoff: 09/26/2017
   
 4.  在 **“数据流路径编辑器”**中，单击 **“常规”**。 然后，可以编辑默认的路径名称并提供路径说明。 还可以修改 PathAnnotation 属性。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
-## <a name="general-page---data-flow-path-editor"></a>常规页-数据流路径编辑器
+## <a name="general-page---data-flow-path-editor"></a>“常规”页 - 数据流路径编辑器
 可以使用 **“数据流路径编辑器”** 对话框设置路径属性，查看列元数据以及管理附加到路径的数据查看器。  
   
  使用 **“数据流路径编辑器”** 对话框的 **“常规”** 节点可以对路径进行命名和说明以及指定路径批注选项。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为路径提供唯一的名称。  
   
@@ -91,10 +90,10 @@ ms.lasthandoff: 09/26/2017
  **SourceName**  
  显示作为路径开头的输出。  
  
-## <a name="metadata-page---data-flow-path-editor"></a>元数据页-数据流路径编辑器
+## <a name="metadata-page---data-flow-path-editor"></a>“元数据”页 - 数据流路径编辑器
 可以使用 **“数据流路径编辑器”** 对话框的 **“元数据”** 页查看路径列的元数据。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **路径元数据**  
  列出列元数据。 单击列标题可以对列数据进行排序。  
   
@@ -131,17 +130,17 @@ ms.lasthandoff: 09/26/2017
  **复制到剪贴板**  
  将列的元数据复制到剪贴板。 默认情况下，按当前显示的顺序复制所有元数据行。  
  
-## <a name="data-viewers-page---data-flow-path-editor"></a>数据查看器页-数据流路径编辑器
+## <a name="data-viewers-page---data-flow-path-editor"></a>“数据查看器”页 - 数据流路径编辑器
 可以使用 **“数据流路径编辑器”** 对话框的 **“数据查看器”** 页管理附加到路径的数据查看器。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  列出数据查看器。  
   
  **数据查看器类型**  
  列出数据查看器的类型。  
   
- **添加**  
+ **“添加”**  
  单击此项可使用“配置数据查看器”对话框来添加数据查看器。  
   
  **删除**  
@@ -165,4 +164,3 @@ ms.lasthandoff: 09/26/2017
 |PathAnnotation|Integer（枚举）|用于指示在设计器图面上显示路径时是否应显示批注的值。 可能的值为 **AsNeeded**、 **SourceName**、 **PathName**和 **Never**。 默认值为 **AsNeeded**。|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|与路径关联的输入。|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|与路径关联的输出。|  
-

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e027eb6b5c5afdf361854892a22ad5dd69a9d646
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specific-connection-information"></a>特定于驱动程序的连接信息
 **SQLConnect**假定数据源名称、 用户 ID 和密码是不足以连接到数据源，并且，可以在系统上存储的所有其他连接信息。 这不经常这种情况。 例如，驱动程序可能需要一个用户 ID 和密码登录到服务器以及其他用户 ID 和密码登录到 DBMS。 因为**SQLConnect**接受单个用户 ID 和密码，这意味着，其他用户 ID 和密码必须存储在系统上的数据源信息如果**SQLConnect**要使用。 这是潜在的安全违规行为，除非密码经过加密应当避免。  

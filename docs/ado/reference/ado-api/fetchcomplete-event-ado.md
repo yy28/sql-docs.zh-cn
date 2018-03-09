@@ -3,8 +3,9 @@ title: "FetchComplete 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords: FetchComplete event [ADO]
+helpviewer_keywords:
+- FetchComplete event [ADO]
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1754cb26eb381e056ba818958593cda40722c7c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8332a6332f27a8e2022975a80814be9c28cf4da
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 事件 (ADO)
 **FetchComplete**较长的异步操作中的所有记录已经都检索到后，将调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

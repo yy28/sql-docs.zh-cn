@@ -3,30 +3,32 @@ title: "执行、 重新执行查询，并清除方法示例 (VB) |Microsoft 文
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Requery method [ADO], Visual Basic example
 - Clear method [ADO], Visual Basic example
 - Execute method [ADO], Visual Basic example
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8012ed2438f55d7d278484e35508a15b3d6a46d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1549486e1dc4efc0325f935ce80d25627aeb72df
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>执行、 重新执行查询，并清除方法示例 (VB)
 此示例演示**执行**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法来检索当前数据中的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 (**错误**通过访问集合**连接**对象[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。)ExecuteCommand 和 PrintOutput 过程所需运行此过程。  

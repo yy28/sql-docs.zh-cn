@@ -2,28 +2,33 @@
 title: "将搜索功能所使用的断字符还原到以前的版本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4380c25d02f6fd6d05f41c030691738f3715d6e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>将搜索功能所使用的断字符还原到以前的版本
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 对于全文搜索支持的所有语言（朝鲜语除外），安装并启用一个版本的断字符和词干分析器。 本主题说明如何在这些组件的此版本和以前的版本间切换。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 对于全文搜索支持的所有语言（朝鲜语除外），安装并启用一个版本的断字符和词干分析器。 本文说明如何在这些组件的此版本和以前的版本间切换。  
   
- 本主题不讨论以下语言：  
+ 本文不讨论以下语言：  
   
 -   **英语**。 若要恢复或还原英语组件，请参阅 [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
   
@@ -36,7 +41,7 @@ ms.lasthandoff: 11/09/2017
  有关断字符和词干分析器的一般信息，请参阅 [配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
 ##  <a name="overview"></a> 恢复和还原断字符和词干分析器概述  
- 还原和恢复断字符和词干分析器的说明取决于语言。 下表总结了还原为以前的组件版本可能需要的 3 组操作。  
+ 还原和恢复断字符和词干分析器的说明取决于语言。 下表总结了还原为以前的组件版本可能需要的三组操作。  
   
 |当前文件|以前的文件|受影响语言的数目|针对文件的操作|针对注册表项的操作|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
@@ -47,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 > [!WARNING]  
 >  如果您使用其他版本替换文件 NaturalLanguage6.dll 的当前版本，则使用此文件的所有语言的行为都将受到影响。  
   
- 本主题中所述的文件是在 `MSSQL\Binn` 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件夹中安装的 DLL 文件。 完整路径通常是以下路径：  
+ 本文中所述的文件是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 `MSSQL\Binn` 文件夹中安装的 DLL 文件。 完整路径通常是以下路径：  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -59,7 +64,7 @@ ms.lasthandoff: 11/09/2017
   
  **受影响的语言的列表**  
   
-|语言|缩写<br />用于<br />注册表|LCID|  
+|“报表”|缩写<br />用于<br />注册表|LCID|  
 |--------------|---------------------------------------|----------|  
 |孟加拉语|ben|1093|  
 |保加利亚语|bgr|1026|  
@@ -130,7 +135,7 @@ ms.lasthandoff: 11/09/2017
   
  **受影响的语言的列表**  
   
-|语言|缩写<br />用于<br />注册表|LCID|  
+|“报表”|缩写<br />用于<br />注册表|LCID|  
 |--------------|---------------------------------------|----------|  
 |阿拉伯语|ara|1025|  
 |德语|deu|1031|  
@@ -215,8 +220,8 @@ ms.lasthandoff: 11/09/2017
 |---------------|------------------|-------------|  
 |以前的 CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|当前的 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|无|  
-|当前文件名|MSWB7.dll|无|  
+|当前的 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|InclusionThresholdSetting|  
+|当前文件名|MSWB7.dll|InclusionThresholdSetting|  
   
  **德语 (deu)，LCID 1031**  
   
@@ -225,7 +230,7 @@ ms.lasthandoff: 11/09/2017
 |以前的 CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |当前的 CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|当前文件名|MSWB7.dll|MSWB7.dll|  
+|当前文件名|MsWb7.dll|MSWB7.dll|  
   
  **日语 (jpn)，LCID 1041**  
   
@@ -233,8 +238,8 @@ ms.lasthandoff: 11/09/2017
 |---------------|------------------|-------------|  
 |以前的 CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|当前的 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|无|  
-|当前文件名|MsWb70011.dll|无|  
+|当前的 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|InclusionThresholdSetting|  
+|当前文件名|MsWb70011.dll|InclusionThresholdSetting|  
   
  **荷兰语 (nld)，LCID 1043**  
   
@@ -243,7 +248,7 @@ ms.lasthandoff: 11/09/2017
 |以前的 CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |当前的 CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|当前文件名|MSWB7.dll|MSWB7.dll|  
+|当前文件名|MsWb7.dll|MSWB7.dll|  
   
  **俄语 (rus)，LCID 1049**  
   
@@ -252,14 +257,14 @@ ms.lasthandoff: 11/09/2017
 |以前的 CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |以前的文件名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |当前的 CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|当前文件名|MSWB7.dll|MSWB7.dll|  
+|当前文件名|MsWb7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> 当前和以前的文件名均不是 NaturalLanguage6.dll 的语言  
  对于下表中的语言，以前的断字符和词干分析器的文件名不同于新版本的文件名。 当前和以前的文件名均不是 NaturalLanguage6.dll。 您不必替换任何文件，因为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。 但是，您必须更改一组注册表项以便指定组件的以前或当前版本。  
   
  **受影响的语言的列表**  
   
-|语言|缩写<br />用于<br />注册表|LCID|  
+|“报表”|缩写<br />用于<br />注册表|LCID|  
 |--------------|---------------------------------------|----------|  
 |简体中文|chs|2052|  
 |繁体中文|cht|1028|  
@@ -349,8 +354,8 @@ ms.lasthandoff: 11/09/2017
 |---------------|------------------|-------------|  
 |以前的 CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |以前的文件名|Thawbrkr.dll|Thawbrkr.dll|  
-|当前的 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|无|  
-|当前文件名|MsWb7001e.dll|无|  
+|当前的 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|InclusionThresholdSetting|  
+|当前文件名|MsWb7001e.dll|InclusionThresholdSetting|  
   
  **繁体中文 (zh-hk)，LCID 3076**  
   

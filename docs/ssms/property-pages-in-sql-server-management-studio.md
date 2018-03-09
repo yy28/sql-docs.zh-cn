@@ -3,8 +3,11 @@ title: "SQL Server Management Studio 中的属性页 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94c531a2fa9fd1c654329c6120906dda1abe7c46
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3a74c0a9090936fc172642e06d3608c407718712
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的属性页
-[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中的属性页对话框均使用可展开和折叠类别的通用格式显示信息。 显示的字段取决于具体的属性。 显示为灰色的属性为只读属性。 “按分类顺序”和“字母顺序”按钮位于每个属性页的顶部附近。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中的属性页对话框均使用可展开和折叠类别的通用格式显示信息。 显示的字段取决于具体的属性。 显示为灰色的属性为只读属性。 “按分类顺序”和“字母顺序”按钮位于每个属性页的顶部附近。  
   
 下表对 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 属性页对话框的常用元素进行了说明。  
   

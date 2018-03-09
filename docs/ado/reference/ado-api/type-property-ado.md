@@ -3,8 +3,9 @@ title: "类型属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Parameter::Type
 - Field20::Type
-helpviewer_keywords: Type property [ADO]
+helpviewer_keywords:
+- Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdc4aa735c131b800b77086c76902dbe688e9399
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9ffca02966eb67bda45dd9edf35451e85dd1e02
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-ado"></a>类型属性 (ADO)
 指示的操作的类型或数据类型[参数](../../../ado/reference/ado-api/parameter-object.md)，[字段](../../../ado/reference/ado-api/field-object.md)，或[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  

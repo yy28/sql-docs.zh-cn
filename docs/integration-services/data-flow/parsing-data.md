@@ -1,5 +1,5 @@
 ---
-title: "分析数据 |Microsoft 文档"
+title: "分析数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,22 +16,21 @@ helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 48579e225f90fe074aaaffa22f6424f1fe90dddd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="parsing-data"></a>分析数据
   包中的数据流在异类数据存储区之间提取和加载数据，这些存储区可能使用多种标准数据类型和自定义数据类型。 在数据流中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源完成提取数据、分析字符串数据以及将数据转换成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的工作。 后续转换可以分析数据，以将其转换为不同的数据类型，或者创建不同数据类型的列副本。 在组件中使用的表达式还可以将参数和操作数转换为不同的数据类型。 最后，在将数据加载到数据存储区时，目标可以分析该数据，以将其转换为目标所使用的数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## <a name="two-types-of-parsing"></a>两种类型的分析  
+## <a name="two-types-of-parsing"></a>两种分析类型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了两种用于转换数据的分析类型：快速分析和标准分析。  
   
 -   快速分析是一组简单快捷的分析例程，不支持区域设置特定的数据类型转换，仅支持最常用的日期和时间格式。 
@@ -52,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
  快速分析在列级指定。 在平面文件源和数据转换中，可以指定对输出列进行快速分析。 输入和输出可以同时包含受区域设置影响的列和不受区域设置影响的列。  
  
-## <a name="numeric-data-formats-fast-parse"></a>数字数据格式 （快速分析）
+## <a name="numeric-data-formats-fast-parse"></a>数字数据格式（快速分析）
 快速分析提供了一组简单、快捷、不受区域设置影响的数据分析例程。 快速分析仅支持有限的一组整数数据类型格式。  
   
 ### <a name="integer-data-type"></a>整数数据类型
@@ -84,7 +83,7 @@ ms.lasthandoff: 09/26/2017
   
 -   一位或多位阿拉伯数字 (0-9)。  
 
-## <a name="date-and-time-formats-fast-parse"></a>日期和时间格式 （快速分析）
+## <a name="date-and-time-formats-fast-parse"></a>日期和时间格式（快速分析）
 快速分析提供一组快速、简单的数据分析例程。 快速分析支持下列日期和时间数据类型格式。  
   
 ### <a name="date-data-type"></a>Date 数据类型 
@@ -94,7 +93,7 @@ ms.lasthandoff: 09/26/2017
   
 -   ISO 8601 格式，如下表中所示：  
   
-    |格式|Description|  
+    |“格式”|Description|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|用四位数表示年、两位数表示月和两位数表示日的基本和扩展格式。 在扩展格式中，日期部分以连字符 (-) 分隔。|  
     |YYYY-MM|用四位数表示年和两位数表示月的基本和扩展简化精度格式。 在扩展格式中，日期部分以连字符 (-) 分隔。|  
@@ -125,7 +124,7 @@ ms.lasthandoff: 09/26/2017
   
 -   ISO 8601 时间格式，如下表中所示：  
   
-    |格式|Description|  
+    |“格式”|Description|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|用两位数表示小时、两位数表示分钟和两位数表示秒的基本和扩展格式。 在扩展格式中，时间部分以冒号 (:) 分隔。|  
     |HHMI<br /><br /> HH:MI|用两位数表示小时和两位数表示分钟的基本和扩展截断格式。 在扩展格式中，时间部分以冒号 (:) 分隔。|  
@@ -134,7 +133,7 @@ ms.lasthandoff: 09/26/2017
   
 -   指定时区的时间格式，如下表所示：  
   
-    |格式|Description|  
+    |“格式”|Description|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|指示为得出本地时间而在协调世界时 (UTC) 基础上加上的小时和分钟数的基本和扩展格式。|  
     |-HH:MI<br /><br /> -HHMI|指示为得出本地时间而从 UTC 减去的小时和分钟数的基本和扩展格式。|  
@@ -152,7 +151,7 @@ ms.lasthandoff: 09/26/2017
   
 -   包含小数的时间格式，如下表所示：  
   
-    |格式|Description|  
+    |“格式”|Description|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n 是介于 0 和 9999999 之间的值，表示小时的小数部分。 方括号表明该值是可选的。<br /><br /> 例如，值 12.750 表示 12:45。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n 是介于 0 和 9999999 之间的值，表示分钟的小数部分。 方括号表明该值是可选的。<br /><br /> 例如，值 1220.500 表示 12:20:30。|  
@@ -203,11 +202,10 @@ ms.lasthandoff: 09/26/2017
   
 4.  在“属性”窗口中，展开 **“自定义属性”** 节点，然后将 **FastParse** 属性设置为 **True**。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
 
 ## <a name="standard-parse"></a>Standard Parse
 标准分析是一组受区域设置影响的分析例程，这些例程支持 Oleaut32.dll 和 Ole2dsip.dll 中可用的自动数据类型转换 API 所提供的全部数据类型转换。 标准分析相当于 OLE DB 分析 API。  
   
  标准分析支持国际数据的数据类型转换，且快速分析不支持数据格式时应使用标准分析。 有关自动化数据类型转换 API 的详细信息，请参阅 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427)中的“Data Type Conversion APIs”（数据类型转换 API）。 
  
-

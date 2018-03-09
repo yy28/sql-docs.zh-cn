@@ -1,10 +1,13 @@
 ---
 title: "查找数据库向导 （选择位置） (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,19 +21,19 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f23fb0084b9fc0570b5dbc9d551833be171251c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 069e14ae3babfb3961042edaf0d99e24367df85d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导 （选择位置） (AccessToSQL)
 在查找数据库向导的选择位置页上，您输入的搜索参数用于查找 Access 数据库。  
   
 若要打开查找数据库向导中，在**文件**菜单上，单击**查找数据库**。 有关如何使用此对话框中的详细信息，请参阅[添加和删除访问数据库文件](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-## <a name="options"></a>选项  
-**浏览**  
+## <a name="options"></a>“常规”  
+**“浏览”**  
 单击以浏览计算机或网络。 选择的文件夹或位置以搜索，然后单击**确定**。 单击**添加**若要将此位置添加到列表。  
   
 **路径框**  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/09/2017
 **位置框**  
 列出 SSMA 将扫描的位置。 当你单击**添加**按钮，指定的路径添加到此框。  
   
-**添加**  
+**“添加”**  
 将在路径文本框中的位置添加到的位置的列表。  
   
 **替换**  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/09/2017
 **上次更新的日期**  
 若要查找在特定日期范围内上次更新的数据库，请输入中的开始日期**从**框和结束日期在**到**框。  
   
-**Size**  
+**大小**  
 若要查找与大小条件匹配的数据库，在第一个框中选择一个比较字符，对于大小，输入一个数字，然后从第三个框中选择字节、 千字节为单位或兆字节为单位。  
   
 **“所有者”**  

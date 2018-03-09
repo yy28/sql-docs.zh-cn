@@ -3,8 +3,11 @@ title: "管理使用编码的文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3d33e9f7372b8d855ce0fce8da857bec6003409
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 76e453879de3505e2a7234d8b6ae69b7627dda4e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-files-with-encoding"></a>管理使用编码的文件
-为便于以特定语言显示代码以及在特定平台中显示代码，可以将特定的字符编码与文件关联。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 为便于以特定语言显示代码以及在特定平台中显示代码，可以将特定的字符编码与文件关联。  
   
 ## <a name="opening-files"></a>打开文件  
 可以选择用于编辑文件的编辑器。  

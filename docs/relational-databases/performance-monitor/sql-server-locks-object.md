@@ -2,9 +2,12 @@
 title: "SQL Server - Locks 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9a60e5e072a0c6b5d9d769aa07b57a921f678c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 159bb57b8f8798a0e6043d57b0c033374482d079
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-locks-object"></a>SQL Server Locks 对象
-  Microsoft **中的** SQLServer:Locks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供了有关各种资源类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁的信息。 锁加在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源上（如在一个事务中读取或修改的行），以防止各种事务并发使用资源。 例如，如果一个排它 (X) 锁被一个事务加在某一表的某一行上，在这个锁被释放前，其他事务都不可以修改这一行。 尽可能少使用锁可提高并发性，从而改善性能。 可以同时监视 **Locks** 对象的多个实例，每个实例代表一个资源类型上的一个锁。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft 中的 SQLServer:Locks 对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了有关各种资源类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁的信息。 锁加在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源上（如在一个事务中读取或修改的行），以防止各种事务并发使用资源。 例如，如果一个排它 (X) 锁被一个事务加在某一表的某一行上，在这个锁被释放前，其他事务都不可以修改这一行。 尽可能少使用锁可提高并发性，从而改善性能。 可以同时监视 **Locks** 对象的多个实例，每个实例代表一个资源类型上的一个锁。  
   
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 计数器。  
   
-|SQL Server Locks 计数器|说明|  
+|SQL Server Locks 计数器|Description|  
 |-------------------------------|-----------------|  
 |**Average Wait Time (ms)**|每个导致等待的锁请求的平均等待时间（毫秒）。|  
 |**Average Wait Time Base**|仅限内部使用。|
@@ -41,14 +44,14 @@ ms.lasthandoff: 11/09/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以锁定下列这些资源。  
   
-|项|说明|  
+|项|Description|  
 |----------|-----------------|  
 |**_Total**|所有锁的信息。|  
 |**分配单元**|分配单元的锁。|  
 |**应用程序**|锁定指定了应用程序的资源。|  
-|**数据库**|锁定数据库（包括数据库中的所有对象）。|  
+|**“数据库”**|锁定数据库（包括数据库中的所有对象）。|  
 |**扩展盘区**|锁定由连续的 8 个页构成的一组。|  
-|**文件**|锁定数据库文件。|  
+|**File**|锁定数据库文件。|  
 |**堆/B 树**|堆或 B 树 (HOBT)。 锁定数据页堆，或索引的 B 树结构。|  
 |**Key**|锁定索引中的某行。|  
 |**元数据**|锁定一些目录信息（又称为元数据）。|  

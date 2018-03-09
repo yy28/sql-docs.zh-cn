@@ -3,8 +3,11 @@ title: "打开数据库关系图 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdc67f6f17ac210462c7ba634f3bc9a6e4b24a1e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d96421cdb127c87165fef692e94265ffaf2d3f51
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>打开数据库关系图 (Visual Database Tools)
-可以打开数据库关系图以查看或编辑关系图的结构。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以打开数据库关系图以查看或编辑关系图的结构。  
   
 ### <a name="to-open-a-database-diagram"></a>打开数据库关系图  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  双击要打开的数据库关系图的名称。  
   
-    - 或 -  
+    -或 -  
   
     右键单击要打开的数据库关系图的名称，然后选择“设计数据库关系图”。  
   

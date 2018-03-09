@@ -3,27 +3,30 @@ title: "状态属性示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: State property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- State property [ADO], VC++ example
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0889515a8d76399c9f85e20d1963e89eedda3478
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6bdb7823ed43d251105330ef235fe16537037ac5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="state-property-example-vc"></a>State 属性示例 （VC + +）
 此示例使用[状态](../../../ado/reference/ado-api/state-property-ado.md)属性在异步连接打开和异步执行命令时显示一条消息。  

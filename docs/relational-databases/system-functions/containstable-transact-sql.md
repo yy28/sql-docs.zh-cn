@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
 - CONTAINSTABLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - fuzzy (less precise) word or phrase search [full-text search]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be9da8f4e10f299844f5ea6895f189c5c4fe4c3c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,7 +124,7 @@ CONTAINSTABLE
   
  *表*不能指定服务器名称和不能用在针对链接服务器查询。  
   
- *column_name*  
+ column_name  
  是为进行全文搜索而编制了索引的一个或多个列的名称。 列可以是类型**char**， **varchar**， **nchar**， **nvarchar**，**文本**， **ntext**，**映像**， **xml**， **varbinary**，或**varbinary （max)**。  
   
  *column_list*  
@@ -134,7 +136,7 @@ CONTAINSTABLE
  语言*language_term*  
  是其资源将用于断字、 词干分析，和同义词库和干扰词的语言 (或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 作为查询的一部分删除。 此参数是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果*language_term*指定，它表示的语言将应用到的搜索条件的所有元素。 如果未指定值，则使用该列的全文语言。  
   
- 如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在查询这样的列时，指定*语言**language_term*可以增加很好的匹配项的概率。  
+ 如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在查询这样的列时，指定*语言 * * language_term*可以增加很好的匹配项的概率。  
   
  当指定为一个字符串， *language_term*对应于**别名**中的列值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图。  在情况下，字符串必须括在单引号中，*language_term*。 如果为一个整数，指定*language_term*是实际标识的语言的 LCID。 当指定为十六进制值， *language_term* 0x 后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
   
@@ -168,7 +170,7 @@ FROM table AS FT_TBL INNER JOIN
   
 -   在选择列表中查看分配给每一行的排名值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有对表或被引用表的列具有适当 SELECT 权限的用户才具有执行权限。  
   
 ## <a name="examples"></a>示例  

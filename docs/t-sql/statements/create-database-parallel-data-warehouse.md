@@ -8,20 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-parallel-data-warehouse"></a>创建数据库 （并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -55,21 +56,21 @@ WITH (
   
  自动增长是所有大小的 ON 或 OFF 所有大小的。 例如，不能设置为自动增长 ON 为*log_size*，但未设置为*replicated_size*。  
   
- *replicated_size* [GB]  
+ *replicated_size* [ GB ]  
  一个正数。 设置分配给复制的表和相应的数据的总空间大小 （以整数或小千兆字节为单位）*每个计算节点上*。 最小值和最大值*replicated_size*要求，请参阅中的"最小和最大值" [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
   
  如果自动增长为 ON 时，将允许复制的表增长超过此限制。  
   
  如果自动增长为 OFF，将的插入到现有的复制数据的表，或更新现有用户尝试创建新复制的表，如果复制表会增加超出大小的方式返回错误*replicated_size*.  
   
- *distributed_size* [GB]  
+ *distributed_size* [ GB ]  
  一个正数。 大小，以整数或小千兆字节，为分配给分布式的表 （和相应的数据） 的总空间*跨设备*。 最小值和最大值*distributed_size*要求，请参阅中的"最小和最大值" [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
   
  如果自动增长为 ON 时，将允许分布式的表增长超过此限制。  
   
  如果用户尝试创建一个新的分布式的表，将数据插入到现有的分布式表，或更新现有分布式的表会增加超出大小的方式，如果自动增长为 OFF，将返回错误*distributed_size*.  
   
- *log_size* [GB]  
+ *log_size* [ GB ]  
  一个正数。 事务日志大小 （以整数或小千兆字节为单位）*跨设备*。  
   
  最小值和最大值*log_size*要求，请参阅中的"最小和最大值" [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
@@ -78,7 +79,7 @@ WITH (
   
  如果自动增长为 OFF，将向用户提供的任何操作都将增加超出单个计算节点上的日志大小返回错误*log_size*。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**CREATE ANY DATABASE** master 数据库中或中的成员身份中的权限**sysadmin**固定的服务器角色。  
   
  以下示例向数据库用户 Fay 提供创建数据库的权限。  

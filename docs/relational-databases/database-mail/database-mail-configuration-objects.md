@@ -2,10 +2,14 @@
 title: "数据库邮件配置对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,19 +35,20 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ac7e0e7080ac55f1c871499b7c43b8e0a3d0d3d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5cb2f1d2c6a21ddcc6b36c4c357da8cc380348cc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail-configuration-objects"></a>数据库邮件配置对象
-  数据库邮件具有两种配置对象：数据库配置对象提供了一种方法，您可以使用此方法配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+数据库邮件具有两种配置对象：数据库配置对象提供了一种方法，您可以使用此方法配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
   
 -   数据库邮件帐户  
   
@@ -130,14 +135,14 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="database-mail-settings"></a>数据库邮件设置  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|更改数据库邮件的配置设置。|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|显示数据库邮件的配置设置。|  
   
 ### <a name="accounts-and-profiles"></a>帐户和配置文件  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|将邮件帐户添加到数据库邮件配置文件中。|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|删除数据库邮件帐户。|  
@@ -150,9 +155,9 @@ ms.lasthandoff: 11/09/2017
 |[sysmail_update_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql.md)|更改数据库邮件配置文件的说明或名称。|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|更新数据库邮件配置文件中帐户的序列号。|  
   
-### <a name="security"></a>安全性  
+### <a name="security"></a>Security  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|授予数据库主体使用数据库邮件配置文件的权限。|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|删除数据库用户使用公共或专用数据库邮件配置文件的权限。|  
@@ -161,7 +166,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="system-state"></a>系统状态  
   
-|名称|说明|  
+|“属性”|Description|  
 |----------|-----------------|  
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|启动数据库邮件外部程序和关联的 SQL Service Broker 队列。|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|停止数据库邮件外部程序和关联的 SQL Service Broker 队列。|  

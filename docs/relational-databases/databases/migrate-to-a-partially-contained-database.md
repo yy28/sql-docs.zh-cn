@@ -2,27 +2,30 @@
 title: "迁移到部分包含的数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb9e9e7b1e5fc3dd47259f92314fb10c9f5fb262
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4c2bad59ca0fb052d9adcfd15f41efc7c995db08
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="migrate-to-a-partially-contained-database"></a>迁移到部分包含的数据库
-  本主题讨论要更改为部分包含的数据库模型的准备工作，接着提供了迁移步骤。  
+# <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题讨论要更改为部分包含的数据库模型的准备工作，接着提供了迁移步骤。  
   
  **本主题内容：**  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="enabling-contained-databases-using-transact-sql"></a>使用 Transact-SQL 启用包含的数据库  
  下面的示例对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -77,7 +80,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>使用 Transact-SQL 将数据库转换为部分包含的数据库  
  下面的示例将名为 `Accounting` 的数据库转换为部分包含的数据库。  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -96,7 +99,7 @@ GO
 ##  <a name="users"></a> 将用户迁移为包含的数据库用户  
  以下示例将所有基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户迁移到具有密码的包含数据库用户。 该示例不包括未启用的登录名。 必须在包含的数据库中执行该示例。  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

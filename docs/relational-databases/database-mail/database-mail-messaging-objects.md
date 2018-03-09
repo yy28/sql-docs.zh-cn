@@ -2,10 +2,14 @@
 title: "数据库邮件消息处理对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - mail host databases [SQL Server]
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09a2cf5e1516b6783ae82226766919ce32391f57
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8de888cea76c64cf8c5356b68ac8d852bd46bd1f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail-messaging-objects"></a>数据库邮件消息处理对象
-  **msdb** 数据库是数据库邮件主机数据库。 此数据库包含数据库邮件的存储过程和消息处理对象。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中带有数据库邮件配置向导，可用来启用数据库邮件、创建和管理配置文件和帐户以及配置数据库邮件选项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**msdb** 数据库是数据库邮件主机数据库。 此数据库包含数据库邮件的存储过程和消息处理对象。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中带有数据库邮件配置向导，可用来启用数据库邮件、创建和管理配置文件和帐户以及配置数据库邮件选项。  
   
 ##  <a name="ComponentsAndConcepts"></a>**msdb** 数据库中的对象  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] msdb **msdb** 。 不过，数据库邮件不使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 网络。 因此，用户不必创建 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点即可使用数据库邮件。 外部数据库邮件进程使用标准的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信。  
@@ -35,14 +40,14 @@ ms.lasthandoff: 11/09/2017
   
  这些对象是数据库邮件在邮件主机数据库内的接口。 还会安装其他对象以执行上面列出的对象所提供的功能， 但是这些对象仅供内部使用。  
   
-|名称|类型|说明|  
+|“属性”|类型|Description|  
 |----------|----------|-----------------|  
-|[sysmail_allitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**视图**|列出已提交到数据库邮件的所有邮件。|  
-|[sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**视图**|列出有关 [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)行为的邮件。|  
-|[sysmail_faileditems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**视图**|有关数据库邮件无法发送的邮件的信息。|  
-|[sysmail_mailattachments (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**视图**|有关数据库邮件附件的信息。|  
+|[sysmail_allitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**“视图”**|列出已提交到数据库邮件的所有邮件。|  
+|[sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**“视图”**|列出有关 [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)行为的邮件。|  
+|[sysmail_faileditems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**“视图”**|有关数据库邮件无法发送的邮件的信息。|  
+|[sysmail_mailattachments (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**“视图”**|有关数据库邮件附件的信息。|  
 |[sysmail_sentitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**视图**|有关已使用数据库邮件发送的邮件的信息。|  
-|[sysmail_unsentitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**视图**|有关数据库邮件当前正在尝试发送的邮件的信息。|  
+|[sysmail_unsentitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**“视图”**|有关数据库邮件当前正在尝试发送的邮件的信息。|  
 |[sp_send_dbmail (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)|**存储过程**|使用数据库邮件发送电子邮件。|  
 |[sysmail_delete_log_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|**存储过程**|从数据库邮件日志中删除邮件。|  
 |[sysmail_delete_mailitems_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)|**存储过程**|从数据库邮件队列中删除邮件项。|  

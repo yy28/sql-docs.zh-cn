@@ -1,5 +1,5 @@
 ---
-title: "表达式任务 |Microsoft 文档"
+title: "表达式任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be307c3568b28ecf30e590d32e02748e494caf4e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a2040034f97bc9ffb1007ac2344654e42b112a97
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expression-task"></a>表达式任务
   表达式任务使用表达式生成器创建和计算在运行时设置变量值的表达式。 在您编辑该任务时， [Expression Builder](../../integration-services/expressions/expression-builder.md) 将启动。  
@@ -37,11 +36,10 @@ ms.lasthandoff: 08/03/2017
   
  有关使用表达式设置属性的示例，请参阅 **Use Property Expressions in Packages** 中的 [示例属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)部分。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [在数据流组件中使用表达式](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>相关内容  
  pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=746575)。  
   
   
-

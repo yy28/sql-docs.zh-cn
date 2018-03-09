@@ -2,15 +2,13 @@
 title: "HoldoutSeed 元素 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 751e18d05897651d0996232f8b4c5c590985a5b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 910372435e504efb7afabfe245bba65e430fe1d4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 元素
-  指定包含的测试集的可重复维持分区的种子[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)元素。 此种子可确保模型内容在处理过程中保持不变。 如果未指定或设置为 0，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]创建挖掘结构名称使用哈希算法的种子。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定包含的测试集的可重复维持分区的种子[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)元素。 此种子可确保模型内容在处理过程中保持不变。 如果未指定或设置为 0，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]创建挖掘结构名称使用哈希算法的种子。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|Long|  
 |默认值|0|  
@@ -56,9 +54,9 @@ ms.lasthandoff: 11/17/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  首次创建挖掘结构时，ID 和名称是相同的。 但是，您可以更改挖掘结构的名称。 因此，若要确保分区可重复使用，则不应依赖基于名称创建的种子，而应对种子进行显式设置。  
   
  此外，当你创建挖掘结构的副本使用**导出**语句，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]将保留新的挖掘结构的名称，但将自动生成新的 id。 因此，两个挖掘结构可以共享相同的名称但具有不同的 ID。 任何两个名称相同的挖掘结构都将具有相同的种子。 但是，由于数据的分区还依赖于源数据，因此每个结构中分区的实际内容可能不同。  

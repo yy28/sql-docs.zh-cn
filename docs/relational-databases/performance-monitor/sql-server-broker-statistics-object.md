@@ -2,9 +2,12 @@
 title: "SQL Server - Broker Statistics 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 261b9a59cc8ba61b7ad2b2dbadbfd252b1474255
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dfb78d1b381649353ef872ed22e0bb4725d65cc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server Broker Statistics 对象
-  SQLServer:Broker Statistics 性能对象包含为 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例报告常规 [!INCLUDE[ssDE](../../includes/ssde-md.md)]信息的性能计数器。 下表列出了此对象包含的计数器：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQLServer:Broker Statistics 性能对象包含为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例报告常规 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 信息的性能计数器。 下表列出了此对象包含的计数器：  
   
-|SQL Server Broker Statistics 计数器|说明|  
+|SQL Server Broker Statistics 计数器|Description|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 激活存储过程因出现错误而退出的次数。|  
 |**Broker Transaction Rollbacks**|包含与 [!INCLUDE[ssSB](../../includes/sssb-md.md)]相关的 DML 语句（如 SEND 和 RECEIVE）的已回滚事务数。|  

@@ -1,5 +1,5 @@
 ---
-title: "百分比抽样转换 |Microsoft 文档"
+title: "百分比抽样转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: be38451e2fc359949ad71d143c5eaea6a1eaf41b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="percentage-sampling-transformation"></a>百分比抽样转换
   百分比抽样转换通过选择转换输入行的百分比来创建样本数据集。 样本数据集是从转换输入中随机选择的行，这使得结果样本可以代表输入。  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="percentage-sampling-transformation-editor"></a>百分比抽样转换编辑器
   可以使用 **“百分比抽样转换编辑器”** 对话框，使用指定的行百分比将部分输入拆分成样本。 此转换将输入分成两个单独的输出。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **行百分比**  
  指定输入中要用作样本的行百分比。  
   
@@ -84,4 +83,3 @@ ms.lasthandoff: 08/19/2017
  指定随机数生成器的抽样种子，转换将使用该种子来创建样本。 建议只在开发和测试过程中使用此选项。 如果未指定随机种子，转换将使用 Microsoft Windows 的时钟周期计数。  
   
   
-

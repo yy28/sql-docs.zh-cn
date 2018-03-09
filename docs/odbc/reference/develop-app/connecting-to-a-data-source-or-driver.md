@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea46d3abfcf9d9e4db9b4cef6a1a604ccc8b9674
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b5df6514242930ea23fd08350ccc41e027b431a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>连接到数据源或驱动程序
 应用程序可以连接到任意数量的驱动程序和数据源。 这可能是各种驱动程序和数据源、 相同的驱动程序和不同的数据源或甚至多个连接到相同的驱动程序和数据源。  

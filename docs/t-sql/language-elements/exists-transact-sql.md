@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - EXISTS_TSQL
 - EXISTS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - existence testing [SQL Server]
 - testing existence
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - NOT EXISTS keyword
 - row existence testing [SQL Server]
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 37e61f88a9b687e335aa7b45f32861abed462580
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 40abe8ec35a89a51ecfb3d2100ffb47a40c58f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +52,7 @@ EXISTS ( subquery )
 ```  
   
 ## <a name="arguments"></a>参数  
- *子查询*  
+ *subquery*  
  受限制的 SELECT 语句。 不允许使用 INTO 关键字。 有关详细信息，请参阅有关中的子查询的信息[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="result-types"></a>结果类型  
@@ -333,7 +335,7 @@ WHERE NOT EXISTS
 ## <a name="see-also"></a>另请参阅  
  [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

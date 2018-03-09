@@ -2,9 +2,12 @@
 title: "可用性组 - 将数据库添加到可用性组向导 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba447d05c338960146037e38d1f142637962cc02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e7a24cc777a0b13329c38fe4a276fae1c8b22d36
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>可用性组 - 将数据库添加到可用性组向导
-  使用“将数据库添加到可用性组向导”可帮助你将一个或多个数据库添加到现有的 Always On 可用性组。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“将数据库添加到可用性组向导”可帮助你将一个或多个数据库添加到现有的 Always On 可用性组。  
   
 > [!NOTE]  
 >  有关使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 将次要副本添加到数据库的信息，请参阅 [将数据库添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)。  
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
      [先决条件和限制](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要添加数据库，请使用：**[将数据库添加到可用性组向导 (SQL Server Management Studio)](#SSMSProcedure)  
   
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用“将数据库添加到可用性组向导”(SQL Server Management Studio)  
@@ -75,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
      如果数据库包含数据库主密钥，则请在“密码”列中输入数据库主密钥的密码。   
   
-5.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择以下选项之一：  
+5.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
   
     -   **Full**  
   
@@ -94,7 +97,7 @@ ms.lasthandoff: 11/09/2017
   
     -   **跳过初始数据同步**  
   
-         如果要使用您自己的数据库和主数据库的日志备份，请选择此选项。 有关详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
+         如果要使用您自己的数据库和主数据库的日志备份，请选择此选项。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
      有关详细信息，请参阅[“选择初始数据同步”页（Always On 可用性组向导）](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)。  
   
@@ -122,7 +125,7 @@ ms.lasthandoff: 11/09/2017
   
      有关详细信息，请参阅[“结果”页（AlwaysOn 可用性组向导）](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)。  
   
-11. 如果在所有辅助数据库上未自动启动初始数据同步，则需要配置任何尚未加入的辅助数据库。 有关详细信息，请参阅 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
+11. 如果在所有辅助数据库上未自动启动初始数据同步，则需要配置任何尚未加入的辅助数据库。 有关详细信息，请参阅本主题后面的 [启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   

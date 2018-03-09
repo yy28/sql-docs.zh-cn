@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_mirroring_connections (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_mirroring_connections
 - sys.dm_db_mirroring_connections_TSQL
 - dm_db_mirroring_connections_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_mirroring_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a41dda4348e565a62b18349f301dd29102ff7a5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 11d696315b97009d86ff19f850064cd8ce71ebb1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringconnections"></a>数据库镜像的 sys.dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +46,9 @@ ms.lasthandoff: 11/17/2017
 |**state_desc**|**nvarchar(60)**|连接的当前状态。 可能的值：<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|打开连接的日期和时间。|  
 |**login_time**|**datetime**|连接登录成功的日期和时间。|  
-|**authentication_method**|**nvarchar （128)**|Windows 身份验证方法的名称，如 NTLM 或 KERBEROS。 该值由 Windows 提供。|  
-|**principal_name**|**nvarchar （128)**|验证其连接权限的登录的名称。 对于 Windows 身份验证，此值为远程用户名。 对于证书身份验证，该值为证书所有者。|  
-|**remote_user_name**|**nvarchar （128)**|Windows 身份验证所使用的来自其他数据库的对等方用户名。|  
+|**authentication_method**|**nvarchar(128)**|Windows 身份验证方法的名称，如 NTLM 或 KERBEROS。 该值由 Windows 提供。|  
+|**principal_name**|**nvarchar(128)**|验证其连接权限的登录的名称。 对于 Windows 身份验证，此值为远程用户名。 对于证书身份验证，该值为证书所有者。|  
+|**remote_user_name**|**nvarchar(128)**|Windows 身份验证所使用的来自其他数据库的对等方用户名。|  
 |**last_activity_time**|**datetime**|上次使用连接发送或接收信息的日期和时间。|  
 |**is_accept**|**bit**|指示连接是否源自远程端。<br /><br /> 1 = 连接是从远程实例接受的请求。<br /><br /> 0 = 连接由本地实例启动。|  
 |**login_state**|**int**|此连接的登录进程状态。 可能的值：<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = 联机<br /><br /> 13 = ERROR|  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**total_receives**|**bigint**|此连接发出的网络接收请求总数。|  
 |**peer_arbitration_id**|**uniqueidentifier**|端点的内部标识符。 可以为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="physical-joins"></a>物理联接  

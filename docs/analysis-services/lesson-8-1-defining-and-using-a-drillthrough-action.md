@@ -2,29 +2,32 @@
 title: "定义和使用钻取操作 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d516ff89abaf74f340737d470094d84add1f101c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d15da8a4d463cbe2e8b0b05abf163400dc354749
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>课程 8-1-定义和使用钻取操作
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 如果按事实维度来维度化事实数据，而不正确筛选查询返回的数据，则可能导致查询速度变慢。 若要避免出现这种情况，可以定义对返回的总行数进行限制的钻取操作。 这将极大地提高查询性能。  
   
 在本主题的任务中，将定义钻取操作，以返回通过 Internet 对客户进行销售的订单详细信息。  
@@ -150,7 +153,7 @@ ms.lasthandoff: 11/17/2017
     ![Adam Powell 发往订单](../analysis-services/media/l8-action8.gif "到 Adam Powell 已发货的订单")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 9 课：定义透视和翻译](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[Lesson 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [操作（Analysis Services - 多维数据）](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  

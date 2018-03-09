@@ -1,34 +1,33 @@
 ---
-title: "表格模型分区 (SSAS 表格) |Microsoft 文档"
+title: "表格模型分区 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
+f1_keywords:
+- sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9a72ff2ba4080c2d3a9797d805c94bc01472c545
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: daaca1355790577310419ad5a48395cd9cb8ff34
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="tabular-model-partitions-ssas-tabular"></a>表格模型分区 (SSAS 表格）
-  分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 在已部署的模型中将重复在模型创作过程中为模型定义的分区。 部署完成后，您可以通过使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框或使用脚本来管理这些分区和创建新分区。 本主题提供的信息描述已部署的表格模型数据库中的分区。 有关模型创作期间创建和管理分区的详细信息，请参阅[分区（SSAS 表格）](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+# <a name="tabular-model-partitions"></a>表格模型分区 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 在已部署的模型中将重复在模型创作过程中为模型定义的分区。 部署完成后，您可以通过使用 **中的** “分区” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框或使用脚本来管理这些分区和创建新分区。 本主题提供的信息描述已部署的表格模型数据库中的分区。 有关创建和管理模型创作期间的分区的详细信息，请参阅[分区](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
  本主题的内容：  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |处理|读取、处理|  
 |只读|读取|  
   
- 若要了解有关使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在模型创作期间创建角色的详细信息，请参阅[角色（SSAS 表格）](../../analysis-services/tabular-models/roles-ssas-tabular.md)。 若要了解有关使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理已部署表格模型角色的角色成员的详细信息，请参阅[表格模型角色（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)  
+ 若要了解有关使用模型创作期间创建角色的详细信息[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，请参阅[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)。 若要深入了解管理角色成员，通过使用部署表格模型角色[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，请参阅[表格模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
   
 ##  <a name="bkmk_parallelProc"></a> 并行处理  
 Analysis Services 包括对于包含两个或多个分区的表的并行处理，从而提升处理性能。 对于并行处理，没有相应的配置设置（请参阅注释）。 当你处理表或为相同的表和进程选择多个分区时，并行处理会默认发生。 仍可以选择单独处理表的分区。  
@@ -96,7 +95,7 @@ Analysis Services 包括对于包含两个或多个分区的表的并行处理�
   
 |任务|Description|  
 |----------|-----------------|  
-|[创建和管理表格模型分区（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在已部署的表格模型中创建和管理分区。|  
-|[处理表格模型分区（SSAS 表格）](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在已部署的表格模型中处理分区。|  
+|[创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在已部署的表格模型中创建和管理分区。|  
+|[处理表格模型分区](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在已部署的表格模型中处理分区。|  
   
   

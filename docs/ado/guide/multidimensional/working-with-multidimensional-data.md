@@ -3,26 +3,28 @@ title: "使用多维数据 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: multidimensional data [ADO]
+helpviewer_keywords:
+- multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2f0cdb5d3cad2bda529ff2abf5393701c7221a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
 A*单元集*是对多维数据进行查询的结果。 它包含的轴，通常不超过四个轴，通常只有两个或三个集合。 *轴*是用于查找或筛选多维数据集中的特定值的一个或多个维度中的成员集合。  
@@ -35,7 +37,7 @@ A*单元集*是对多维数据进行查询的结果。 它包含的轴，通常�
   
  例如，多维数据集具有以下六个维度 (请注意此多维数据集架构给出的示例会稍有不同[概述多维架构和数据](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   销售人员  
+-   Salesperson  
   
 -   Geography （自然层次结构）-洲、 国家/地区、 州等  
   
@@ -45,7 +47,7 @@ A*单元集*是对多维数据进行查询的结果。 它包含的轴，通常�
   
 -   度量值-销售，PercentChange，BudgetedSales  
   
--   Products  
+-   产品  
   
  以下单元集的所有产品的 1991年表示销售：  
   

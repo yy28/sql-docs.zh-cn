@@ -2,27 +2,33 @@
 title: "创建中央管理服务器和服务器组 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: configuration server
+helpviewer_keywords:
+- configuration server
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 712440c9f508da793757ba2f4097eef46426df91
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d3c3a723a63959bb5c1e6b154cf47f64eb81d1db
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>创建中央管理服务器和服务器组
-  本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 指定一个 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例作为中央管理服务器。 中央管理服务器存储组织到一个或多个中央管理服务器组中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例列表。 使用中央管理服务器组执行的操作将作用于服务器组中的所有服务器。 这包括使用对象资源管理器连接到服务器以及在多个服务器上同时执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和基于策略的管理策略。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 指定一个 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例作为中央管理服务器。 中央管理服务器存储组织到一个或多个中央管理服务器组中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例列表。 使用中央管理服务器组执行的操作将作用于服务器组中的所有服务器。 这包括使用对象资源管理器连接到服务器以及在多个服务器上同时执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和基于策略的管理策略。  
   
 > [!NOTE]  
 >  不能将早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 指定为中央管理服务器。  
@@ -31,7 +37,7 @@ ms.lasthandoff: 11/09/2017
   
 -   **开始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要创建中央管理服务器和服务器组，请使用：**  
   
@@ -41,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  msdb 数据库中有两个数据库角色可授予对中央管理服务器的访问权限。 只有 ServerGroupAdministratorRole 角色的成员能够管理中央管理服务器。 若要连接到中央管理服务器，需要具有 ServerGroupReaderRole 角色的成员身份。  
   
  由于中央管理服务器维护的连接是在用户的上下文中使用 Windows 身份验证执行的，因此对注册的服务器的有效权限可能有所不同。 例如，用户可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 实例上 sysadmin 固定服务器角色的成员，但仅具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 实例的有限权限。  

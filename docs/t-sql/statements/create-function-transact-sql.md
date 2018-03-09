@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE FUNCTION
 - CREATE_FUNCTION_TSQL
 - FUNCTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - invoking functions
 - extended stored procedures [SQL Server], functions
@@ -36,16 +38,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: "162"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e570da6faf04bb8aef58829911cdf19e7f5951c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -346,15 +348,15 @@ RETURNS return_data_type
  指定创建的函数名称应引用的程序集和方法。  
   
 -   *程序集 _ 名称*-必须与匹配中的值`name`的列   
-    `SELECT * FROM sys.assemblies;`。  
+    `SELECT * FROM sys.assemblies;`的用户。  
     这是曾在 `CREATE ASSEMBLY` 语句中使用的名称。  
   
 -   *class_name* -必须与匹配中的值`assembly_name`的列  
-    `SELECT * FROM sys.assembly_modules;`。  
+    `SELECT * FROM sys.assembly_modules;`的用户。  
     此值通常包含嵌入的句点或圆点。 在这种情况下 TRANSACT-SQL 语法需要使用一对直接方括号 []，或使用一对双引号括起来的情况下限制值""。  
   
 -   *method_name* -必须与匹配中的值`method_name`的列   
-    `SELECT * FROM sys.assembly_modules;`。  
+    `SELECT * FROM sys.assembly_modules;`的用户。  
     该方法必须是静态方法。  
   
  在典型示例中，对于 MyFood.DLL（其中所有类型都位于 MyFood 命名空间中），`EXTERNAL NAME` 值可以是：   
@@ -436,7 +438,7 @@ RETURNS return_data_type
   
  定义表数据类型。 表声明包含列定义和约束。 对于 CLR 函数，仅*column_name*和*data_type*可以指定。  
   
- *column_name*  
+ column_name  
  表中列的名称。 列名称必须遵循标识符的规则，且在表中必须唯一。 *column_name*可以包含 1 至 128 个字符。  
   
  *data_type*  
@@ -498,7 +500,7 @@ RETURNS return_data_type
   
  指定计算列。 有关计算列的详细信息，请参阅[CREATE TABLE &#40;Transact SQL &#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
- *column_name*  
+ column_name  
  计算列的名称。  
   
  *computed_column_expression*  
@@ -573,7 +575,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>计算列互操作性  
  函数具有下列属性。 这些属性的值确定了函数是否可用于持久化计算列或索引计算列。  
   
-|属性|Description|说明|  
+|“属性”|Description|说明|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|函数是确定性函数还是不确定性函数。|确定性函数中允许本地数据访问。 例如，如果每次使用一组特定输入值和相同数据库状态调用函数时，函数都返回相同结果，则该函数将被标记为确定性函数。|  
 |**IsPrecise**|函数是精确函数还是不精确函数。|不精确函数包含浮点运算之类的运算。|  
@@ -656,7 +658,7 @@ RETURNS return_data_type
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|显示用户定义函数中定义的参数的有关信息。|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|显示函数所引用的基础对象。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要在数据库中具有 CREATE FUNCTION 权限，并对创建函数时所在的架构具有 ALTER 权限。 如果函数指定用户定义类型，则需要对该类型具有 EXECUTE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -668,7 +670,7 @@ RETURNS return_data_type
   
  下面是函数调用。 请注意，`DATEFIRST` 设置为 `1`。  
   
-```tsql
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -703,7 +705,7 @@ ISO Week
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. 创建内联表值函数  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中返回内联表值函数。 它返回三列`ProductID`，`Name`和由存储为年度截止到现在总计的聚合`YTD Total`的形式销售给存储每个产品。  
   
-```tsql  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -722,14 +724,14 @@ GO
 
  若要调用该函数，请运行此查询。    
 
-```tsql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>C. 创建多语句表值函数  
  下面的示例在 AdventureWorks2012 数据库中创建表值函数 `fn_FindReports(InEmpID)`。 如果提供一个有效雇员 ID，该函数将返回一个表，该表对应于直接或间接向该雇员报告的所有雇员。 该函数使用递归公用表表达式 (CTE) 来生成雇员的层次结构列表。 有关递归 Cte 的详细信息，请参阅[使用 common_table_expression &#40;Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -779,7 +781,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```tsql  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -803,7 +805,7 @@ GO
   
 ### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. 显示的定义[!INCLUDE[tsql](../../includes/tsql-md.md)]用户定义函数  
   
-```tsql  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   

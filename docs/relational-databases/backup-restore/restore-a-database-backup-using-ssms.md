@@ -22,15 +22,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: "79"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d0c0f0112eee81379e2c1548dd9938e27088dea8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>使用 SSMS 还原数据库备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
     
 3.  在 **“常规”** 页上，使用 **“源”** 部分指定要还原的备份集的源和位置。 选择以下选项之一：    
     
-    -   **数据库**    
+    -   **“数据库”**    
     
          从下拉列表中选择要还原的数据库。 此列表仅包含已根据 **msdb** 备份历史记录进行备份的数据库。    
     
@@ -80,10 +80,10 @@ ms.lasthandoff: 11/17/2017
             **“添加”**  
             根据在“备份介质类型”下拉列表中选择的介质类型，单击“添加”将打开下列对话框之一。 （如果“备份介质”列表框中的列表已满，则“添加”按钮不可用。）
 
-            |介质类型|对话框|说明|    
+            |介质类型|对话框|Description|    
             |----------------|----------------|-----------------|    
-            |**文件**|**定位备份文件**|在此对话框中，您可以从树中选择一个本地文件，或使用完全限定的通用命名约定 (UNC) 名称指定一个远程文件。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|    
-            |**“设备”**|**选择备份设备**|在此对话框中，您可以从服务器实例中定义的逻辑备份设备列表中进行选择。|    
+            |**File**|**定位备份文件**|在此对话框中，您可以从树中选择一个本地文件，或使用完全限定的通用命名约定 (UNC) 名称指定一个远程文件。 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|    
+            |**设备**|**选择备份设备**|在此对话框中，您可以从服务器实例中定义的逻辑备份设备列表中进行选择。|    
             |**磁带**|**选择备份磁带**|在此对话框中，您可以从与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机物理连接的磁带机列表中进行选择。|    
             |**URL**|**选择备份文件位置**|在该对话框中可以选择现有 SQL Server 凭据/Azure 存储容器、添加具有共享访问签名的新 Azure 存储容器或为现有存储容器生成共享访问签名和 SQL Server 凭据。  另请参阅 [《Connect to a Microsoft Azure Subscription》](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)（连接到 Microsoft Azure 订阅）。|  
          
@@ -247,7 +247,7 @@ ms.lasthandoff: 11/17/2017
     15. 在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。
     16. 在“结尾日志备份”部分中，取消选中“还原前执行结尾日志备份”。
     17. 在“服务器连接”部分，选中“关闭目标数据库的现有连接”。
-    18. 单击 **“确定”**。
+    18. 单击“确定” 。
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2. 共享访问签名不存在**
     在本示例中数据库 `Sales` 当前不在服务器上。
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/17/2017
     10. 展开“容器”并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
     11. 选择备份文件，再单击“确定”。
     12. 单击“确定”以返回到“常规”页。
-    13. 单击 **“确定”**。
+    13. 单击“确定” 。
 
 #### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F. 将本地备份还原到 Microsoft Azure 存储 (URL)**
 将从位于 `Sales` 的备份中将 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 数据库还原到 Microsoft Azure 存储容器 `E:\MSSQL\BAK`。  已创建 Azure 容器的 SQL Server 凭据。  必须已存在目标容器的 SQL Server 凭据，因为不能通过创建 **还原** 任务创建该凭据。  `Sales` 数据库当前不在服务器上。
@@ -282,7 +282,7 @@ ms.lasthandoff: 11/17/2017
  [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [将数据库还原到新位置 (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     
  [还原事务日志备份 (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)     
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)     
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
  [还原数据库（“选项”页）](../../relational-databases/backup-restore/restore-database-options-page.md)     
  [还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)    
     

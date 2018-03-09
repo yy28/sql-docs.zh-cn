@@ -13,20 +13,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 03db65550c330a1cf51d2158c660a6f5e7b511c1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 受版本控制的功能摘要
-
+[!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/appliesto-ss2016-asdb-asdw-pdw-md.md)]
 可用于 SQL Server 产品和服务的 PolyBase 功能摘要。  
   
 ## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)  
   
   
-

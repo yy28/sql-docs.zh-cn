@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sysdac_instances
 - sysdac_instances_TSQL
 - dbo.sysdac_instances
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 197eb0d8887f56d77c5851403f2914712a757bbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1db50ced8cdff2f69b5dd3e8541b8c76e99cdae3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>数据层应用程序视图-dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>注释  
  DAC 包括 DAC 类型，该类型是应用程序使用的逻辑数据层对象（例如表和视图）的定义。 DAC 包是用于部署 DAC 的文件。 DAC 包包含在 DAC 类型中包含的所有逻辑对象的表示形式。 DAC 包可用于将 DAC 的一个或多个副本或实例部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。 从同一 DAC 包部署的各 DAC 实例共享相同的类型，但分配有唯一的实例名称和标识符。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色的成员身份以便查看所有列。 公共角色的成员可以查看 instance_name、description 和 type_version 列。  
   
 ## <a name="see-also"></a>另请参阅  

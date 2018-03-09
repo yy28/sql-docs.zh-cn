@@ -2,9 +2,12 @@
 title: "复制代理配置文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba2b5e4cb56cc8134a3febebb5c84ff8935a235d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 97d62a00f1d59bd71eb27e55fac11890821940ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-profiles"></a>复制代理配置文件
-  在配置复制时，将在分发服务器上安装一组代理配置文件。 代理配置文件包含一组在代理每次运行时都要使用的参数：在代理启动过程中，每个代理都会登录到分发服务器，并查询其配置文件中的参数。 对于使用 Web 同步的合并订阅，配置文件会下载并存储在订阅服务器中。 如果配置文件发生了更改，订阅服务器中的配置文件将在合并代理下次运行时更新。 有关 Web 同步的详细信息，请参阅 [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在配置复制时，将在分发服务器上安装一组代理配置文件。 代理配置文件包含一组在代理每次运行时都要使用的参数：在代理启动过程中，每个代理都会登录到分发服务器，并查询其配置文件中的参数。 对于使用 Web 同步的合并订阅，配置文件会下载并存储在订阅服务器中。 如果配置文件发生了更改，订阅服务器中的配置文件将在合并代理下次运行时更新。 有关 Web 同步的详细信息，请参阅 [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
   
  复制为每个代理提供一个默认的配置文件，同时还为日志读取器代理、分发代理和合并代理提供附加的预定义配置文件。 除了所提供的配置文件之外，您还可以创建符合自己应用程序要求的配置文件。 使用代理配置文件可以轻松地更改与该配置文件关联的所有代理的键参数。 例如，如果您有 20 个快照代理并且需要更改查询超时值（ **-QueryTimeout** 参数），则可以更新这些快照代理使用的配置文件，这样该此类型的所有代理将在下次运行时自动开始使用新值。  
   
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
 ||默认值|详细历史记录|  
 |-|-------------|---------------------|  
-|**-HistoryVerboseLevel**|1|2|  
+|**-HistoryVerboseLevel**|@shouldalert|2|  
 |**-LoginTimeout**|15|15|  
 |**-LogScanThreshold**|500000|500000|  
 |**-PollingInterval**|5|5|  
@@ -74,10 +77,10 @@ ms.lasthandoff: 11/09/2017
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
 |**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
-|**-HistoryVerboseLevel**|1|2|1|1|1|  
+|**-HistoryVerboseLevel**|@shouldalert|2|@shouldalert|@shouldalert|@shouldalert|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|  
-|**-MaxBcpThreads**|1|1|1|1|1|  
+|**-MaxBcpThreads**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
 |**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
 |**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
@@ -94,28 +97,28 @@ ms.lasthandoff: 11/09/2017
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
-|**-DestThreads**|2|1|1|1|1|1|4|  
-|**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
+|**-DestThreads**|2|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|4|  
+|**-DownloadGenerationsPerBatch**|50|50|50|50|50|@shouldalert|500|  
 |**-DownloadReadChangesPerBatch**|100|100|100|100|100|100|100|  
 |**-DownloadWriteChangesPerBatch**|100|100|100|100|100|100|100|  
-|**-FastRowCount**|1|1|1|1|1|1|1|  
-|**-HistoryVerboseLevel**|2|3|1|1|2|1|2|  
+|**-FastRowCount**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**-HistoryVerboseLevel**|2|3|@shouldalert|@shouldalert|2|@shouldalert|2|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|15|15|  
 |**-MaxDownloadChanges**|0|0|0|0|0|0|0|  
 |**-MaxUploadChanges**|0|0|0|0|0|0|0|  
-|**-MetadataRetentionCleanup**|1|1|1|1|1|1|1|  
+|**-MetadataRetentionCleanup**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
 |**-NumDeadlockRetries**|5|5|5|5|5|5|5|  
-|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|1|  
+|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|@shouldalert|  
 |**-PollingInterval**|60|60|60|60|60|60|60|  
 |**-QueryTimeout**|300|300|300|300|300|300|600|  
 |**-QueueSizeMultiplier**|NULL|NULL|NULL|NULL|NULL|NULL|5|  
-|**-SrcThreads**|2|2|2|2|2|1|3|  
+|**-SrcThreads**|2|2|2|2|2|@shouldalert|3|  
 |**-StartQueueTimeout**|0|0|0|0|0|0|0|  
-|**-UploadGenerationsPerBatch**|50|50|50|50|50|1|500|  
+|**-UploadGenerationsPerBatch**|50|50|50|50|50|@shouldalert|500|  
 |**-UploadReadChangesPerBatch**|100|100|100|100|100|100|100|  
 |**-UploadWriteChangesPerBatch**|100|100|100|100|100|100|100|  
-|**-Validate**|0|0|0|1|3|0|0|  
+|**-Validate**|0|0|0|@shouldalert|3|0|0|  
 |**-ValidateInterval**|60|60|60|60|60|60|60|  
   
 ## <a name="queue-reader-agent-profiles"></a>队列读取器代理配置文件  
@@ -123,7 +126,7 @@ ms.lasthandoff: 11/09/2017
   
 ||默认值|  
 |-|-------------|  
-|**-HistoryVerboseLevel**|1|  
+|**-HistoryVerboseLevel**|@shouldalert|  
 |**-LoginTimeout**|15|  
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  

@@ -2,27 +2,30 @@
 title: "其他非 SQL Server 订阅服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: non-SQL Server Subscribers, other types
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e74b0f805e69fd9608594af85646640776f0c2de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 035bddbc96126c98d48ac599db9307f565f1d38a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 订阅服务器
-  有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]订阅服务器列表，请参阅 [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 本主题包含有关 ODBC 驱动程序和 OLE DB 访问接口要求的信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]有关 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 支持的非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器列表，请参阅[非 SQL Sever 订阅服务器](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 本主题包含有关 ODBC 驱动程序和 OLE DB 访问接口要求的信息。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC 驱动程序要求  
  ODBC 驱动程序：  

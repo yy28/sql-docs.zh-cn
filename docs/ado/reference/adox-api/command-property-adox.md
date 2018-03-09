@@ -3,8 +3,9 @@ title: "命令属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Procedure::Command
 - View::Command
-helpviewer_keywords: Command property [ADOX]
+helpviewer_keywords:
+- Command property [ADOX]
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57d15d47deaa7a0c150c90b5fe6612fb0a75ffbc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e79747bb655b5074b393cec0ad2e867740d7b5a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-property-adox"></a>命令属性 (ADOX)
 指定 ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)可以用于创建或执行该过程的对象。  

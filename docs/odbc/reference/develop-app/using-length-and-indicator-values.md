@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6012ca2f1b307f475839c7357e813817e222051e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-length-and-indicator-values"></a>使用长度和指示器值
 长度/指示器缓冲区用于传递的字节长度的数据缓冲区或如 SQL_NULL_DATA，指示数据为 NULL 的特殊指示器中的数据。 根据使用它的函数，定义长度/指示器缓冲区为 SQLINTEGER 或 SQLSMALLINT。 因此，单个自变量需要对其进行描述。 数据缓冲区是否 nondeferred 输入的缓冲区，该参数将包含的字节长度的数据本身或指示器值。 通常名为*StrLen_or_Ind*或类似的名称。 例如，下面的代码调用**SQLPutData**传递缓冲区的数据的完整; 字节长度 (*ValueLen*) 被直接传递，因为数据缓冲区 (*ValuePtr*) 是输入的缓冲区。  

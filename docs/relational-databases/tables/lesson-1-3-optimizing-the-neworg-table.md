@@ -2,9 +2,12 @@
 title: "优化 NewOrg 表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ applies_to: SQL Server 2016
 helpviewer_keywords: optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7765d8f8a4953f428cae4843d0f89aaa92678a8a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e2526b0a159349655b68f6364e6a070e4661e422
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-3---optimizing-the-neworg-table"></a>第 1-3 课 - 优化 NewOrg 表
-在 **使用现有层次结构数据填充表** 任务中创建的 [NewOrd](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 表包含所有雇员的信息，该表使用 **hierarchyid** 数据类型表示层次结构。 此任务添加了新的索引，以便支持对“hierarchyid”列的搜索。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]在[使用现有层次结构数据填充表](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)任务中创建的“NewOrd”表包含所有雇主信息，该表使用 hierarchyid 数据类型表示层次结构。 此任务添加了新的索引，以便支持对“hierarchyid”列的搜索。  
   
 ## <a name="clustered-index"></a>聚集索引  
 “hierarchyid”列 (**OrgNode**) 是“NewOrg”表的主键。 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  

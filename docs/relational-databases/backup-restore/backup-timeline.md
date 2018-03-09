@@ -2,9 +2,12 @@
 title: "备份时间线 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ f1_keywords:
 helpviewer_keywords: Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4d67a3f93d492888ee5e42318d7c352abe9c17c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d3a58978a14d96a772675db69ab2fe425608987e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-timeline"></a>备份时间线
-  使用“备份时间线”对话框可以查找和指定备份以便将数据库还原到某个时间点。 通过单击“还原数据库（“常规”页）”窗格上的“时间线”可以访问“备份时间线”对话框。 通过此对话框，您可以查看对数据库执行的还原操作的时间线。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“备份时间线”对话框可查找和指定备份以便将数据库还原到某个时间点。 通过单击“还原数据库（“常规”页）”窗格上的“时间线”可以访问“备份时间线”对话框。 通过此对话框，您可以查看对数据库执行的还原操作的时间线。  
   
  数据库恢复顾问确保仅选择需要恢复到该时点的那些备份。 这些选定的备份构成了为您的还原操作建议的还原计划。 您应仅使用选定的备份。 有关数据库恢复顾问的信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
   

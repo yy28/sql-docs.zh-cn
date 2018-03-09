@@ -1,14 +1,15 @@
 ---
 title: "集 ARITHABORT (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - ARITHABORT
 - SET ARITHABORT
 - SET_ARITHABORT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - terminating queries
 - queries [SQL Server], terminating
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - ending queries [SQL Server]
 - stopping queries
 ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 977cf066d10f3318497720da7b32b1caad16e0fc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 372e4ff2a6f1c89395f30a7e1d6a000ec5ebea7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,19 +49,17 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-SET ARITHABORT { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHABORT ON   
-[ ; ]  
-```  
+SET ARITHABORT { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ARITHABORT ON
+```
   
 ## <a name="remarks"></a>注释  
  在登录会话中，应始终将 ARITHABORT 设置为 ON。 设置 ARITHABORT 为 OFF 可以产生负面影响查询优化的性能问题。  
@@ -82,13 +82,13 @@ SET ARITHABORT ON
   
  如果 SET ARITHABORT 或 SET ARITHIGNORE 为 OFF，而 SET ANSI_WARNINGS 为 ON，则遇到被零除或溢出错误时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会返回错误消息。  
   
- 如果 SET ARITHABORT 设置为 OFF，并且对 IF 语句的 Boolean 条件求值过程中发生中止错误，则将执行 FALSE 分支。  
+ 如果 SET ARITHABORT 设置为 OFF 并且 IF 语句的布尔条件评估过程中发生中止错误，则执行 FALSE 的分支。
   
- 在对计算列或索引视图创建或更改索引时，SET ARITHABORT 必须为 ON。 如果 SET ARITHABORT 为 OFF，则对包含计算列或索引视图索引的表执行 CREATE、UPDATE、INSERT 和 DELETE 语句时将失败。  
+ 在对计算列或索引视图创建或更改索引时，SET ARITHABORT 必须为 ON。 如果 SET ARITHABORT 为 OFF，则对包含计算列或索引视图索引的表执行 CREATE、UPDATE、INSERT 和 DELETE 语句时将失败。
   
  SET ARITHABORT 的设置是在执行或运行时设置的，而不是在分析时设置的。  
   
- 要查看此设置的当前设置，请运行以下查询。  
+ 若要查看此设置的当前设置，请运行以下查询：
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  

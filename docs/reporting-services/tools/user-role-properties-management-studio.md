@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 caps.latest.revision: "27"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c6aac4f204d63b6b07a0f84615bb2a37669a781
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f5f631a74f1dfe77e5b7ee8c1f42f7335523576
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="user-role-properties-management-studio"></a>用户角色属性 (Management Studio)
   使用此页，可以查看项级角色定义中所包含的任务， 还可以更改任务列表或修改角色说明。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  用户角色分配仅适用于在本机模式下运行的报表服务器。 如果将报表服务器配置为 SharePoint 集成，则该页显示有关在 SharePoint 站点上定义的角色和权限级别的只读信息。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **名称**  
  指定角色定义的名称。  
   

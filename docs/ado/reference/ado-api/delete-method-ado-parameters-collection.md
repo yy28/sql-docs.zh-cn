@@ -3,8 +3,9 @@ title: "Delete 方法 （ADO 参数集合） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _DynaCollection::Delete
 - _DynaCollection::raw_Delete
-helpviewer_keywords: Delete method [ADO]
+helpviewer_keywords:
+- Delete method [ADO]
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b58c32020f5a73f293fe0bd679e253e3bcad0ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a5b7aff01cf3bb0dd34c53986a586aeae7b499a6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 方法 （ADO 参数集合）
 删除从对象[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  

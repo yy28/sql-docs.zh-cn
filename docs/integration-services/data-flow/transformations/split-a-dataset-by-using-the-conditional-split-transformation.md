@@ -1,5 +1,5 @@
 ---
-title: "通过使用有条件拆分转换拆分数据集 |Microsoft 文档"
+title: "使用有条件拆分转换拆分数据集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8248e068541c6bd72b21f78d121811f4851850bb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1dfc5673dca0a8109e02b76107ad85e8e19324cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用有条件拆分转换拆分数据集
   若要添加和配置有条件拆分转换，包必须已包含至少一个数据流任务和一个源。  
@@ -63,17 +62,16 @@ ms.lasthandoff: 08/03/2017
   
 10. 若要配置错误输出，请单击 **“配置错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [有条件拆分转换](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
+ [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   
  [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)   
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services &#40;SSIS &#41;表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

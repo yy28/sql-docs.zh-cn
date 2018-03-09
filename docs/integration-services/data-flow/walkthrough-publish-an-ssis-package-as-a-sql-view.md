@@ -1,5 +1,5 @@
 ---
-title: "演练： 将 SSIS 包作为 SQL 视图发布 |Microsoft 文档"
+title: "演练：将 SSIS 包作为 SQL 视图发布 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,22 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9677c3e5b4985006371a89544842383029431335
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
   本演练提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中将 SSIS 包作为 SQL 视图发布的详细步骤。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行本演练，必须先在计算机上安装以下软件。  
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的更高版本。  
@@ -70,14 +69,14 @@ ms.lasthandoff: 09/27/2017
   
         |ID|FirstName|LastName|  
         |--------|---------------|--------------|  
-        |1|John|Doe|  
+        |@shouldalert|John|Doe|  
         |2|Jane|Doe|  
   
     4.  将“OLE DB 源”组件从“SSIS 工具箱”拖到“数据流设计器”。  
   
     5.  将组件配置为从 **TestDB** 数据库中的 **Employee** 表提取数据。 为“OLE DB 连接管理器”选择“(local).TestDB”，为“数据访问模式”选择“表或视图”，为“表或视图的名称”选择“[dbo].[Employee]”。  
   
-         ![数据流目标的 OLE DB 连接](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "流式处理目标的 OLE DB 连接的数据")  
+         ![数据流目标 - OLE DB 连接](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Data Streaming Destination - OLE DB Connection")  
   
 6.  现在，将“数据流目标”从工具箱拖到数据流。  应该可以在工具箱的“常用”部分中找到此组件。  
   
@@ -100,17 +99,17 @@ ms.lasthandoff: 09/27/2017
   
 2.  在“简介”页上，单击“下一步”。  
   
-     ![数据馈送发布向导的简介页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "数据馈送发布向导的简介页")  
+     ![数据馈送发布向导 -“简介”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Data Feed Publishing Wizard - Introduction Page")  
   
 3.  在“包设置”页上执行以下任务：   
   
     1.  键入包含 SSIS 目录的的 SQL Server 实例的 **名称** ，或单击“浏览”选择服务器。   
   
-         ![数据馈送发布向导-包设置页的链接。](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "数据馈送发布向导-包设置页的链接。")  
+         ![数据馈送发布向导 -“包设置”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Data Feed Publishing Wizard - Package Settings Pag")  
   
     2.  单击“路径”字段旁边的“浏览”，浏览 SSIS 目录，选择要发布的 SSIS 包（例如：**SSISDB**->**SSISPackagePublishing**->**Package.dtsx**），然后单击“确定”。  
   
-         ![数据馈送发布向导-浏览包](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "数据馈送发布向导-浏览包")  
+         ![数据馈送发布向导 - 浏览包](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Data Feed Publishing Wizard - Browse for Package")  
   
     3.  使用页面底部的“包参数”、“项目参数”和“连接管理器”选项卡，输入包的任何包参数、项目参数或连接管理器设置的值。 还可以指定要用于包执行的环境引用，并将项目/包参数绑定到环境变量。  
   
@@ -122,7 +121,7 @@ ms.lasthandoff: 09/27/2017
   
     1.  选择要创建的视图的 **数据库** 。  
   
-         ![数据馈送发布向导-发布设置页的链接。](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "数据馈送发布向导的发布设置页的链接。")  
+         ![数据馈送发布向导 -“发布设置”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Data Feed Publishing Wizard - Publish Settings Pag")  
   
     2.  输入 **视图** 的 **名称**。 也可以从下拉列表中选择一个现有视图。  
   
@@ -144,7 +143,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  在“验证”页上，检查验证所有设置的值后返回的结果。  在以下示例中，你将看到针对链接服务器存在状态的 **警告** ，因为选定的 SQL Server 实例上不存在链接服务器。 如果你看到“结果”中包含“错误”，请将鼠标悬停在“错误”，这样便可以查看有关该错误的详细信息。 例如，如果你尚未启用“允许对 SSISOLEDB 提供程序使用 inprocess 选项”，则在执行链接服务器配置操作时会收到错误。  
   
-     ![数据馈送发布向导的验证页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "数据馈送发布向导的验证页")  
+     ![数据馈送发布向导 -“验证”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Data Feed Publishing Wizard - Validation Page")  
   
 6.  若要将此报告保存为 XML 文件，请单击“保存报告”。  
   
@@ -152,7 +151,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  在“摘要”页中检查所做的选择，然后单击“发布”启动发布过程。这将会创建链接服务器（如果服务器上没有链接服务器），然后使用链接服务器创建视图。  
   
-     ![数据馈送发布向导的摘要页面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "数据馈送发布向导的摘要页")  
+     ![数据馈送发布向导 -“摘要”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Data Feed Publishing Wizard - Summary Page")  
   
      现在，可以针对 TestDB 数据库执行以下 SQL 语句，来查询包的输出数据：SELECT * FROM [SSISPackageView]。  
   
@@ -168,9 +167,9 @@ ms.lasthandoff: 09/27/2017
   
 1.  启动 SQL Server Management Studio。  
   
-2.  展开\<**计算机名称**>，**数据库**， \<**在向导中选择的数据库**>，和**视图**。  
+2.  展开“\<计算机名称>”、“数据库”、“\<你在向导中选择的数据库>”和“视图”。  
   
-3.  右键单击\<**由向导创建的视图**> 由该向导并单击创建**选择前 1000年行**。  
+3.  右键单击向导创建的“\<向导创建的视图>”，然后单击“选择前 1000 行”。  
   
 4.  确认能够看到 SSIS 包的结果。  
   
@@ -278,4 +277,3 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
  [配置数据流目标](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "以编程方式保存包 |Microsoft 文档"
+title: "以编程方式保存包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,37 +17,35 @@ helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: f6b99377f6eaf720b9511b560e5cf563ede2b869
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fe0df5129ab0ca7b1b6e89501dbf6007997249f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="saving-a-package-programmatically"></a>以编程方式保存包
   以编程方式生成新包或修改现有包后，通常要保存更改。  
   
- 本主题中的使用以保存包的方法的所有需要引用**Microsoft.SqlServer.ManagedDTS**程序集。 新项目中添加引用后，导入<xref:Microsoft.SqlServer.Dts.Runtime>具有命名空间**使用**或**导入**语句。  
+ 本主题中用于保存包的所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集。 在新项目中添加引用后，请使用 using 或 Imports 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
 ## <a name="saving-a-package-programmatically"></a>以编程方式保存包  
- 若要以编程方式保存包，请调用以下方法之一[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]<xref:Microsoft.SqlServer.Dts.Runtime.Application>类：  
+ 若要以编程方式保存包，可调用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类的以下方法之一：  
   
 |存储位置|调用的方法|  
 |----------------------|--------------------|  
 |文件|<xref:Microsoft.SqlServer.Dts.Runtime.Application.SaveToXml%2A>|  
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.SaveToDtsServer%2A>|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.SaveToSqlServer%2A><br /><br /> 或<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.Application.SaveToSqlServerAs%2A>|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.SaveToSqlServer%2A><br /><br /> 或多个<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.Application.SaveToSqlServerAs%2A>|  
   
 > [!IMPORTANT]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于处理 SSIS 包存储区的方法只支持“.”或本地服务器的服务器名称。 不能使用“(local)”或“localhost”。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [保存包](../../integration-services/save-packages.md)  
   
   
-

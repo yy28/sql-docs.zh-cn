@@ -2,29 +2,34 @@
 title: "监视数据库镜像 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 873b3fe6f7bcfa321f9a6b05473b57b9fb2030cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>监视数据库镜像 (SQL Server)
-  本节介绍数据库镜像监视器和 **sp_dbmmonitor** 系统存储过程，说明数据库镜像监视的工作方式（包括“数据库镜像监视器作业”），并概括介绍可以监视的有关数据库镜像会话的信息。 此外，本节还介绍如何为一组预定义数据库镜像事件定义警告阈值，以及如何设置有关任意数据库镜像事件的警报。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本节介绍数据库镜像监视器和 **sp_dbmmonitor** 系统存储过程，说明数据库镜像监视的工作方式（包括“数据库镜像监视器作业”），并概括介绍可以监视的有关数据库镜像会话的信息。 此外，本节还介绍如何为一组预定义数据库镜像事件定义警告阈值，以及如何设置有关任意数据库镜像事件的警报。  
   
  可以在镜像会话期间监视镜像数据库，以验证数据是否流动以及流动的情况。 若要对服务器实例上的一个或多个镜像数据库进行监视设置和管理，可以使用数据库镜像监视器或 **sp_dbmmonitor** 系统存储过程。  
   
@@ -85,7 +90,7 @@ ms.lasthandoff: 11/09/2017
   
      下表介绍了管理和使用数据库镜像监视的存储过程，它们独立于数据库镜像监视器工作。  
   
-    |过程|说明|  
+    |过程|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|创建定期更新服务器实例上每个镜像数据库的状态信息的作业。|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|更改数据库镜像监视参数的值。|  
@@ -115,7 +120,7 @@ ms.lasthandoff: 11/09/2017
   
  创建 **“数据库镜像监视器作业”** 之后，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在运行，则默认情况下，每分钟调用一次作业。 然后，作业会调用 **sp_dbmmonitorupdate** 系统存储过程。  
   
- 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理每分钟调用一次“数据库镜像监视器作业”，而作业随即调用 sp_dbmmonitorupdate 以更新状态表。 系统管理员可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程更改更新持续时间，他们还可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程查看当前的更新持续时间。 有关详细信息，请参阅 [sp_dbmmonitoraddmonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 和 [sp_dbmmonitorchangemonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认情况下，代理每分钟调用一次“数据库镜像监视器作业”，而作业随即调用 **sp_dbmmonitorupdate** 以更新状态表。 系统管理员可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程更改更新持续时间，他们还可以使用 **sp_dbmmonitorchangemonitoring** 系统存储过程查看当前的更新持续时间。 有关详细信息，请参阅 [sp_dbmmonitoraddmonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 和 [sp_dbmmonitorchangemonitoring (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)。  
   
 #### <a name="monitoring-database-mirroring-status-by-system-administrators"></a>监视数据库镜像状态（由系统管理员执行）  
  **sysadmin** 固定服务器角色成员可以查看和更新状态表。  
@@ -144,7 +149,7 @@ ms.lasthandoff: 11/09/2017
  数据库镜像监视器的 **“状态”** 页描述了镜像伙伴以及镜像会话的状态。 状态信息包括性能指标（如事务日志的状态）以及在会话没有同步时，有助于当前对完成故障转移所需时间和潜在数据丢失进行评估的其他信息。 此外， **“状态”** 页还概略显示有关镜像会话的状态和信息。  
   
 > [!NOTE]  
->  有关数据库镜像监视器和**“状态”**页的说明，请参阅本主题前面的[数据库镜像状态监视工具](#tools_for_monitoring_dbm_status)。  
+>  有关数据库镜像监视器和“状态”页的说明，请参阅本主题前面的[数据库镜像状态监视工具](#tools_for_monitoring_dbm_status)。  
   
  下面将介绍上述各内容的概要。  
   
@@ -169,11 +174,11 @@ ms.lasthandoff: 11/09/2017
   
     -   Unknown  
   
-    -   同步  
+    -   正在同步  
   
     -   已同步  
   
-    -   已挂起  
+    -   挂起  
   
     -   已断开连接  
   

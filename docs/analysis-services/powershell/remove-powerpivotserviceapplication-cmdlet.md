@@ -1,33 +1,31 @@
 ---
-title: "删除 PowerPivotServiceApplication cmdlet |Microsoft 文档"
+title: Remove-PowerPivotServiceApplication cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1333667175ea137687188c97e3664450586cc21e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7078a7733c7764b77667628071c66c8313aae85a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Remove-PowerPivotServiceApplication cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -47,7 +45,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
   
 ## <a name="parameters"></a>Parameters  
   
-### <a name="-identity-spgeminiserviceapplicationpipebind"></a>标识\<SPGeminiServiceApplicationPipeBind >  
+### <a name="-identity-spgeminiserviceapplicationpipebind"></a>-Identity \<SPGeminiServiceApplicationPipeBind>  
  指定场中单个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序的 GUID。 如果您要仅删除一个应用程序，保持其他服务应用程序不变，则必须指定 GUID。  
   
 |||  
@@ -58,7 +56,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |接受管道输入？|true|  
 |接受通配符？|false|  
   
-### <a name="-confirm-switch"></a>确认\<切换 >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  在执行命令前提示您进行确认。 默认情况下将启用该值。 若要在命令中跳过确认响应，请在命令中指定 Confirm:$false。  
   
 |||  
@@ -80,7 +78,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="-removedata-switch"></a>-RemoveData\<切换 >  
+### <a name="-removedata-switch"></a>-RemoveData \<switch>  
  删除包含数据刷新计划、工作簿使用情况数据、用于跟踪加载的数据库的实例映射和其他内部数据的服务应用程序数据库。  
   
 |||  
@@ -91,7 +89,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  此 cmdlet 支持以下常用参数：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  

@@ -2,9 +2,12 @@
 title: "分发服务器设置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,24 +15,24 @@ f1_keywords: sql13.rep.monitor.DistributorSettings.f1
 helpviewer_keywords: Distributor Settings dialog box
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dfd2c4bad135aaf87e9a9ce34c07dd1facb0f7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 29a5ba0a5fa0d731938c8d62fc53e209ab979b95
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-settings"></a>分发服务器设置
-  使用 **“分发服务器设置”** 对话框，可以更改已添加到复制监视器左窗格中的分发服务器的设置。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“分发服务器设置”对话框，可以更改已添加到复制监视器左窗格中的分发服务器的设置。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **复制监视器启动时自动连接**  
  选择此选项可以允许复制监视器连接到分发服务器并检索状态信息。  
   
- **连接**  
+ **“连接”**  
  单击此选项可以显示 **“连接到服务器”** 对话框。 通过该对话框可以查看和更改复制监视器用来连接分发服务器的连接属性和凭据。  
   
  **自动刷新此分发服务器及其发布的状态**  

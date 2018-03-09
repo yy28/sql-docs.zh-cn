@@ -2,9 +2,12 @@
 title: "故障转移到日志传送辅助服务器 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ecab7acaedde247abc727149f93942da3ea4be61
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6358e0fe4be60bcb57441a864b30e036147e5eed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>故障转移到日志传送辅助服务器 (SQL Server)
-  如果主服务器实例失败或需要维护，则在出现故障时转移到日志传送辅助服务器将十分有用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果主服务器实例失败或需要维护，则在出现故障时转移到日志传送辅助服务器将十分有用。  
   
 ## <a name="preparing-for-a-controlled-failover"></a>为受控故障转移做准备  
  通常，主数据库与辅助数据库不同步，因为主数据库在其最新的备份作业后会继续更新。 此外，在某些情况下，最新的事务日志备份尚未复制到辅助服务器实例中，或者某些已复制的日志备份可能尚未应用到辅助数据库中。 建议如有可能，首先将所有辅助数据库与主数据库同步。  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 4.  同步辅助服务器之后，可以根据您的首选，通过恢复任一辅助数据库并将客户端重定向到该服务器实例来故障转移该辅助服务器。 恢复操作将使数据库处于一致的状态并使其联机。  
   
     > [!NOTE]  
-    >  辅助数据库可用时，应确保其元数据与原始主数据库的元数据一致。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+    >  辅助数据库可用时，应确保其元数据与原始主数据库的元数据一致。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 5.  恢复辅助数据库之后，可以将其重新配置为其他辅助数据库的主数据库。  
   

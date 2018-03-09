@@ -2,9 +2,12 @@
 title: "筛选跟踪 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53f0f6ea6b12c702cadcacebe8deb87f45b48aa7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a53a67bdd997f3daa8168f445ce8eada527b5608
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
-  筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 例如，如果将跟踪中的 Windows 用户名限定为特定用户，将仅输出与那些用户相关的数据。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 例如，如果将跟踪中的 Windows 用户名限定为特定用户，将仅输出与那些用户相关的数据。  
   
  并不一定要为跟踪设置筛选器。 但是，筛选器会将跟踪过程中的开销降到最低。 筛选器将返回有针对性的数据，这样会使性能分析和审核变得更容易。  
   
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
   
  筛选器可用性取决于数据列。 某些数据列无法筛选。 可筛选的数据列只能使用部分关系运算符进行筛选，如下表所示。  
   
-|关系运算符|运算符|说明|  
+|关系运算符|运算符|Description|  
 |-------------------------|---------------------|-----------------|  
 |Like|Like|指定跟踪事件数据必须类似于输入文本。 允许使用多个值。|  
 |不类似于|不类似于|指定跟踪事件数据不能与输入文本类似。 允许使用多个值。|  
@@ -109,7 +112,7 @@ ms.lasthandoff: 11/09/2017
 |**NestLevel**|=, <>, >=, <=|  
 |**NTDomainName**|LIKE、NOT LIKE|  
 |**NTUserName**|LIKE、NOT LIKE|  
-|**ObjectID**|=, <>, >=, <=|  
+|**Exchange Spill**|=, <>, >=, <=|  
 |**ObjectID2**|=, <>, >=, <=|  
 |**ObjectName**|LIKE、NOT LIKE|  
 |**ObjectType**|=, <>, >=, <=|  

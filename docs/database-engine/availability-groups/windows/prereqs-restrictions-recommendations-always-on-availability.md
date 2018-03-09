@@ -24,13 +24,13 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: "151"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d54b7d77cb265f2ba8ee79ce993ce30ce8fdf441
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d127b3479e6bb38483d39556884d1498d9c662c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>先决条件、限制、建议 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="PrerequisitesSI"></a> 清单：先决条件（服务器实例）  
   
-||前提条件|链接|  
+||先决条件|链接|  
 |-|------------------|-----------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|主机必须是一个 WSFC 节点。 托管给定可用性组的可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例驻留在单独的群集节点上。 迁移到其他群集时，一个可用性组可能会暂时跨两个群集。 SQL Server 2016 引入了分布式可用性组。 在分布式可用性组中，两个可用性组驻留在不同的群集上。|[Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分布式可用性组（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您希望将可用性组与 Kerberos 一起使用：<br /><br /> 承载可用性组的可用性副本的所有服务器实例都必须使用相同的 SQL Server 服务帐户。<br /><br /> 域管理员需要在可用性组侦听器的虚拟网络名称 (VNN) 的 SQL Server 服务帐户上使用 Active Directory 手动注册服务主体名称 (SPN)。 如果在 SQL Server 服务帐户之外的帐户上注册 SPN，则身份验证将失败。<br /><br /> <br /><br /> **\*\* 重要提示 \*\*** 如果你更改 SQL Server 服务帐户，则域管理员必须重新手动注册 SPN。|[为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **简要说明：**<br /><br /> Kerberos 和 SPN 强制实施相互身份验证。 SPN 将映射到启动 SQL Server 服务的 Windows 帐户。 如果未正确注册 SPN 或注册失败，则 Windows 安全层将无法确定与 SPN 关联的帐户，因而无法使用 Kerberos 身份验证。<br /><br /> <br /><br /> 注意：NTLM 没有此要求。|  
@@ -237,7 +237,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="PrerequisitesFCI"></a> 清单：先决条件 (FCI)  
   
-||前提条件|链接|  
+||先决条件|链接|  
 |-|------------------|----------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|请确保每个 SQL Server 故障转移群集实例 (FCI) 都拥有标准 SQL Server 故障转移群集实例安装所要求的共享存储。||  
   
@@ -290,7 +290,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="RequirementsAG"></a> 先决条件（可用性组）  
  在创建或重新配置可用性组配置时，请确保您遵守以下要求。  
   
-||前提条件|Description|  
+||先决条件|Description|  
 |-|------------------|-----------------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您计划使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 承载可用性副本，则请确保您理解 FCI 限制并且满足 FCI 要求。|[有关使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和限制](#FciArLimitations) （本主题的前面予以介绍）|  
   

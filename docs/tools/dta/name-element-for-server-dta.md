@@ -2,9 +2,12 @@
 title: "服务器 (DTA) 的名称元素 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a5db241528d6fbb75a30af055b6a7682d3e465e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d7feb4a5dc420b10bfb8db5b41d425645534080b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-server-dta"></a>服务器的名称元素 (DTA)
-  包含要优化的数据库所在服务器的名称。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含要优化的数据库所在的服务器的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,11 +49,11 @@ ms.lasthandoff: 11/09/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[服务器元素 (DTA)](../../tools/dta/server-element-dta.md)|  
+|**父元素**|[服务器元素 &#40; DTA &#41;](../../tools/dta/server-element-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  
- 有关如何使用该 **Name** 元素的示例，请参阅 [服务器元素 (DTA)](../../tools/dta/server-element-dta.md)。  
+ 有关如何使用该 **Name** 元素的示例，请参阅[服务器元素 (DTA)](../../tools/dta/server-element-dta.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  

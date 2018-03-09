@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: "44"
-author: MightyPen
-ms.author: genemi
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 826f59f9b61e95091edf8a0c47c528f8cc83b488
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bfca544879559953ed3c70d5137edd17ae9d89e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure 的 SQL Server 托管备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Prereqs"></a> 先决条件  
  Microsoft Azure 存储空间是 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 用于存储备份文件的存储区。 需要以下先决条件：  
   
-|前提条件|说明|  
+|先决条件|Description|  
 |------------------|-----------------|  
 |**Microsoft Azure 帐户**|可以在浏览 [购买选项](http://azure.microsoft.com/pricing/free-trial/) 之前，使用 [免费试用版](http://azure.microsoft.com/pricing/purchase-options/)开始使用 Azure。|  
 |**Azure 存储帐户**|备份存储在与 Azure 存储帐户相关的 Azure Blob 存储中。 有关创建存储帐户的分步说明，请参阅 [About Azure Storage Accounts](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/)（关于 Azure 存储帐户）。|  
@@ -51,14 +51,14 @@ ms.lasthandoff: 11/17/2017
 |**共享访问签名 (SAS)**|对目标容器的访问由共享访问签名 (SAS) 控制。 有关 SAS 的概述，请参阅 [Shared Access Signatures, Part 1: Understanding the SAS Model（共享访问签名，第 1 部分：了解 SAS 模型）](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 可以使用 **New-AzureStorageContainerSASToken** PowerShell 命令在代码中创建一个 SAS 令牌。 有关简化此过程的 PowerShell 脚本，请参阅 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）。 SAS 令牌可以存储在 **SQL 凭据** 中，供 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用。|  
 |**SQL Server 代理**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 必须运行 SQL Server 代理以进行工作。 考虑将启动选项设置为自动。|  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>组件  
  Transact-SQL 是与 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]交互的主要界面。 系统存储过程用于启用、配置和监视 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 系统函数用于检索现有配置设置、参数值和备份文件信息。 扩展事件用于呈现错误和警告。 警报机制通过 SQL 代理作业和 SQL Server 基于策略的管理启用。 以下列表列出了与 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相关的对象及其功能的说明。  
   
  也有 PowerShell cmdlet 可用于配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 SQL Server Management Studio 支持还原由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 使用 **“还原数据库”** 任务创建的备份  
   
 |||  
 |-|-|  
-|系统对象|说明|  
+|系统对象|Description|  
 |**MSDB**|存储由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建的所有备份的元数据和备份历史记录。|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
 |[managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置高级设置，如加密。|  

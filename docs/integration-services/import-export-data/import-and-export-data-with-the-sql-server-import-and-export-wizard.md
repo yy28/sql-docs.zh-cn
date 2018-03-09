@@ -1,5 +1,5 @@
 ---
-title: "导入和导出数据与 SQL Server 导入和导出向导 |Microsoft 文档"
+title: "使用 SQL Server 导入和导出向导导入和导出数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2017
 ms.prod: sql-non-specified
@@ -26,49 +26,48 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-caps.latest.revision: 160
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 6cd388215de02072522011b149a9cecc3239b64c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: b2a3d6c1968c0e8d2a2463dedf6a9050590c2bbd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导导入和导出数据
 
- > 与以前版本的 SQL Server 相关的内容，请参阅[运行 SQL Server 导入和导出向导](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[运行 SQL Server 导入和导出向导](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx)。
 
- 利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导，可轻松将数据从源复制到目标。 本概述介绍该向导可以将源和目标，用作数据源，以及你要运行该向导所需的权限。
+ 利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导，可轻松将数据从源复制到目标。 本概述介绍向导可用作源和目标的数据源，以及运行向导所需的权限。
 
-## <a name="get-the-wizard"></a>获得向导
+## <a name="get-the-wizard"></a>获取向导
 如果想要运行向导，但是尚未在计算机上安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以通过安装 SQL Server Data Tools (SSDT) 来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 有关详细信息，请参阅 [下载 SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。
 
-## <a name="what-happens-when-i-run-the-wizard"></a>在运行向导时，会发生什么情况？
--    **请参阅步骤的列表。** 有关向导中的步骤的说明，请参阅[的 SQL Server 导入和导出向导中的步骤](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 此外没有单独的页的向导的每一页的文档。  
-    \-或\-
--   **请参阅示例。** 快速查看你在典型的会话中看到多个屏幕，看一看这个简单的示例在一页-[开始导入和导出向导的这个简单的示例使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。  
+## <a name="what-happens-when-i-run-the-wizard"></a>运行向导时会发生什么情况？
+-    **查看步骤列表。** 有关向导中步骤的介绍，请参阅 [SQL Server 导入和导出向导中的步骤](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 还为向导的每一页专门设有一页文档信息页。  
+    \- 或 \-
+-   **查看示例。** 若要快速浏览典型会话中常见的多个屏幕，请查看此仅占用一页的简单示例 — [开始使用这一简单的导入和导出向导示例](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。  
 
 ##  <a name="wizardSources"></a>我可以使用哪些源和目标？  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导可以将数据复制到和从下表中列出的数据源。 若要连接到的某些这些数据源，你可能必须下载并安装其他文件。
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导可以将数据复制到下表中列出的数据源以及从中复制数据。 若要连接其中某些数据源，可能需要下载并安装其他文件。
  
 | 数据源 | 是否必须下载其他文件？ |
 |-------------|-----------------------------------------|
-|**企业数据库**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle、 DB2，及其他类型。|SQL Server 或 SQL Server Data Tools (SSDT) 安装文件，你需要连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但 SSDT 不安装需要连接到其他企业数据库，例如 Oracle 或 IBM DB2 的所有文件。<br/><br/>若要连接到企业数据库，你通常需要具有以下两项操作：<br/><br/>1.**客户端软件**。 如果已经为企业数据库系统安装了客户端软件，则通常会有建立连接所需的文件。 如果尚未安装客户端软件，请询问数据库管理员如何安装获得许可的副本。<br/><br/>2.**驱动程序或提供程序**。 Microsoft 安装驱动程序和提供程序连接到 Oracle。 要连接到 IBM DB2，获取 Microsoft® OLEDB Provider for DB2 5.0 版 for Microsoft SQL Server 从[Microsoft SQL Server 2016 功能包](https://www.microsoft.com/download/details.aspx?id=52676)。<br/><br/>有关详细信息，请参阅[连接到 SQL Server 数据源](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)或[连接到 Oracle 数据源](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)。|
+|**企业数据库**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、DB2 等。|SQL Server 或 SQL Server Data Tools (SSDT) 安装连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时所需的文件。 但 SSDT 不安装连接到其他企业数据库（如 Oracle 或 IBM DB2）时所需的所有文件。<br/><br/>若要连接企业数据库，通常需要具有以下两项内容：<br/><br/>1.**客户端软件**。 如果已经为企业数据库系统安装了客户端软件，则通常会有建立连接所需的文件。 如果尚未安装客户端软件，请询问数据库管理员如何安装获得许可的副本。<br/><br/>2.**驱动程序或提供程序**。 Microsoft 安装用于连接 Oracle 的驱动程序和提供程序。 若要连接到 IBM DB2，请从 [Microsoft SQL Server 2016 功能包](https://www.microsoft.com/download/details.aspx?id=52676)中获取用于 Microsoft SQL Server DB2 v5.0 的 Microsoft® OLEDB 提供程序。<br/><br/>有关详细信息，请参阅[连接到 SQL Server 数据源](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)或[连接到 Oracle 数据源](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)。|
 |**文本文件**（平面文件）|无需任何其他文件。<br/><br/>有关详细信息，请参阅[连接到平面文件数据源](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)。|
-|**Microsoft Excel 和 Microsoft Access 文件**|Microsoft Office 并不会安装连接到作为数据源的 Excel 和 Access 文件所需的所有文件。 获取以下下载- [Microsoft Access 数据库引擎 2016年可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。<br/><br/>有关详细信息，请参阅[连接到 Excel 数据源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)或[连接到 Access 数据源](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)。|
-|**Azure 数据源**<br/>目前仅限 Azure Blob 存储。|SQL Server Data Tools 不安装你需要连接到 Azure Blob 存储作为数据源的文件。 获取以下下载 — [用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>有关详细信息，请参阅[连接到 Azure Blog 存储](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)。|
-|**打开源数据库**<br/>PostgreSQL、 MySql 和其他人。|若要连接到这些数据源，你必须下载其他文件。<br/><br/>-为**PostgreSQL**，请参阅[连接 PostgreSQL 数据源](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)。<br/>-为**MySql**，请参阅[连接到 MySQL 数据源](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)。|
-|**为其任何其他数据源驱动程序或提供商时可用**|通常必须下载其他文件才能连接到以下类型的数据源。<br/><br/>- 提供 **ODBC 驱动程序** 的任何源。 有关详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。<br/>- 提供 **.Net Framework 数据提供程序** 的任何源。<br/>- 提供 **OLE DB 提供程序** 的任何源。<br/><br/>对于其他数据源提供源和目标的功能的第三方组件是有时销售作为附加产品的 SQL Server Integration Services (SSIS)。|
+|**Microsoft Excel 和 Microsoft Access 文件**|Microsoft Office 并不会安装连接到作为数据源的 Excel 和 Access 文件所需的所有文件。 获取下载：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。<br/><br/>有关详细信息，请参阅[连接到 Excel 数据源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)或[连接到 Access 数据源](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)。|
+|**Azure 数据源**<br/>目前仅限 Azure Blob 存储。|SQL Server Data Tools 不会安装需要作为数据源连接到 Azure Blob 存储的文件。 获取以下下载 — [用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)。<br/><br/>有关详细信息，请参阅[连接到 Azure Blob 存储](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)。|
+|**打开源数据库**<br/>PostgreSQL、MySql 等。|必须下载其他文件才能连接到这些数据源。<br/><br/>- 对于 PostgreSQL，请参阅[连接到 PostgreSQL 数据源](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)。<br/>- 对于 MySql，请参阅[连接到 MySQL 数据源](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)。|
+|**提供驱动程序或提供程序的其他任何数据源**|通常必须下载其他文件才能连接到以下类型的数据源。<br/><br/>- 提供 **ODBC 驱动程序** 的任何源。 有关详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。<br/>- 提供 **.Net Framework 数据提供程序** 的任何源。<br/>- 提供 **OLE DB 提供程序** 的任何源。<br/><br/>有时，为其他数据源提供源和目标功能的第三方组件被标记为 SQL Server Integration Services (SSIS) 的附加产品。|
 
 ## <a name="how-do-i-connect-to-my-data"></a>如何连接到我的数据？
-有关如何连接到常用的数据源的信息，请参阅以下页面之一：
+有关如何连接到常用数据源的信息，请参阅以下页面之一：
 -   [连接到 SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [连接到 Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
--   [连接到平面文件 （文本文件）](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
+-   [连接到平面文件（文本文件）](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [连接到 Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [连接到 Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [连接到 Azure Blob 存储](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
@@ -77,12 +76,12 @@ ms.lasthandoff: 10/18/2017
 -   [连接到 MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 
-有关如何连接到未在此处列出的数据源的信息，请参阅[该连接字符串引用](https://www.connectionstrings.com/)。 此第三方站点包含示例连接字符串以及有关数据提供程序的详细信息和它们需要的连接信息。
+有关如何连接到此处未列出的数据源的信息，请参阅[连接字符串参考](https://www.connectionstrings.com/)。 该第三方站点包含示例连接字符串、关于数据提供程序的详细信息以及它们需要的连接信息。
 
-## <a name="what-permissions-do-i-need"></a>我需要什么权限？  
+## <a name="what-permissions-do-i-need"></a>我需要哪些权限？  
  若要成功运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导，必须至少具有下列权限。 如果已使用数据源和目标，则可能已具有所需的权限。
   
-|执行这些操作时需要权限|如果您正在连接到 SQL Server，则需要这些特定的权限 |  
+|执行这些操作时需要权限|如果要连接到 SQL Server，则需要这些特定权限 |  
 |-------------------------|----------------------------------------------------|  
 |连接到源数据库和目标数据库或文件共享。|服务器和数据库的登录权限。|  
 |从源数据库或文件中导出或读取数据。|对源表和源视图具有 SELECT 权限。|  
@@ -109,6 +108,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="see-also"></a>另请参阅
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [SQL Server 导入和导出向导中的数据类型映射](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-
 
 

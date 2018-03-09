@@ -2,13 +2,18 @@
 title: "注册服务器 |Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.sqlserverregisteredserver.dhelp
+f1_keywords:
+- sql13.swb.sqlserverregisteredserver.dhelp
 helpviewer_keywords:
 - connections [SQL Server], registered servers
 - registering servers
@@ -16,19 +21,20 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb40b9101e963e3ba7c712f9911f2963178bcf82
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4770ad54ceef6901c28a3d71bfde4370dd01e301
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="register-servers"></a>注册服务器
-  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册服务器使您可以存储服务器连接信息，以供将来连接时使用。有三种方法可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中注册服务器。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册服务器使您可以存储服务器连接信息，以供将来连接时使用。有三种方法可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中注册服务器。  
   
 1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之后首次启动它时，将自动注册 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的本地实例。  
   
@@ -61,10 +67,10 @@ ms.lasthandoff: 11/09/2017
   
 -   查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机或脱机实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  参考以下主题可以开始使用注册服务器：  
   
-|**说明**|**主题**|  
+|**Description**|**主题**|  
 |---------------------|---------------|  
 |注册本地服务器实例|[注册连接的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)|  
 |注册服务器|[创建新的已注册的服务器 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)|  

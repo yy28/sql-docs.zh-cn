@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SUBSTRING
 - SUBSTRING_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - portion of expression returned [SQL Server]
 - part of expression returned [SQL Server]
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4407538e956f268f4d9bb868c1fcb70c2447cf6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +54,7 @@ SUBSTRING ( expression ,start , length )
  *expression*  
  是**字符**，**二进制**，**文本**， **ntext**，或**映像**[表达式](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *启动*  
+ *start*  
  是一个整数或**bigint**指定返回的字符的起始位置的表达式。 （编号是 1 基于，表示在表达式中的第一个字符为 1）。 如果*启动*小于 1，则返回的表达式将在中指定的第一个字符开始*表达式*。 在这种情况下，返回的字符数是的总和的最大值*启动* + *长度*-1 或 0。 如果*启动*大于数中的字符的值表达式，返回一个零长度表达式。  
   
  *length*  
@@ -63,9 +65,9 @@ SUBSTRING ( expression ,start , length )
   
 |指定的表达式|返回类型|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**文本**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
-|**二进制**/**varbinary**/**映像**|**varbinary**|  
+|**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>注释  
  值*启动*和*长度*中的字符数必须指定**ntext**， **char**，或**varchar**数据类型和字节**文本**，**映像**，**二进制**，或**varbinary**数据类型。  
@@ -222,6 +224,12 @@ bcd
 ```  
   
 ## <a name="see-also"></a>另请参阅  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [右 &#40;Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

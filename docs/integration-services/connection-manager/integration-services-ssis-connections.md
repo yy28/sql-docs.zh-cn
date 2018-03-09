@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 连接 |Microsoft 文档"
+title: "Integration Services (SSIS) 连接 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,17 +26,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: 2f257448e90c82a2cd29e082fe6321401c889e37
-ms.contentlocale: zh-cn
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: 1fb279220f0ec15cc81613d2dfcc3c0bb68a3b1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -82,7 +81,7 @@ ms.lasthandoff: 11/07/2017
 > [!NOTE]  
 >  如果您要使用包中的数据源，需要将项目转换为包部署模型。  
 >   
->  两个模型，以及有关将项目转换为项目部署模型的详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。
+>  有关两个模型以及将项目转换为项目部署模型的详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。
 
 ### <a name="built-in-connection-managers"></a>内置连接管理器  
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的连接管理器类型。  
@@ -117,9 +116,9 @@ ms.lasthandoff: 11/07/2017
   
 |类型|Description|主题|  
 |----------|-----------------|-----------|  
-|ORACLE|连接到 Oracle\<版本信息\>服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|ORACLE|连接到 Oracle \<版本信息\> 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)。|  
 |SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](http://go.microsoft.com/fwlink/?LinkId=262016)。|  
-|TERADATA|连接到 Teradata\<版本信息\>服务器。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|TERADATA|连接到 Teradata \<版本信息\> 服务器。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)。|  
   
 ### <a name="custom-connection-managers"></a>自定义连接管理器  
  您还可以编写自定义连接管理器。 有关详细信息，请参阅 [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)。  
@@ -138,7 +137,7 @@ ms.lasthandoff: 11/07/2017
   
  以下关系图显示 **设计器的** “控制流” **选项卡上的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域。  
   
- ![与包的控制流设计器的屏幕截图](../../integration-services/connection-manager/media/samplecontrolflow.gif "与包的控制流设计器的屏幕截图")    
+ ![具有包的控制流设计器的屏幕快照](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot of control flow designer with package")    
   
 ### <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>用于连接管理器的 32 位和 64 位提供程序  
  连接管理器所使用的很多提供程序都有 32 位和 64 位版本。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 设计环境是 32 位环境，设计包时您只能看到 32 位提供程序。 因此，如果还安装了同一个提供程序的 32 位版本，则只能将连接管理器配置为使用特定的 64 位提供程序。  
@@ -148,13 +147,13 @@ ms.lasthandoff: 11/07/2017
   两种版本的提供程序都有相同的 ID。 若要指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 运行时是否使用可用的 64 位版本的提供程序，需要设置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 Run64BitRuntime 属性。 如果将 Run64BitRuntime 属性设置为 **true**，运行时将发现并使用该 64 位提供程序；如果 Run64BitRuntime 为 **false**，则运行时将发现并使用 32 位提供程序。 有关可以对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目进行设置的属性的详细信息，请参阅 [Integration Services (SSIS) 与 Studio 环境](https://msdn.microsoft.com/library/ms140028.aspx)。   
 
 ## <a name="add-a-connection-manager"></a>添加连接管理器
-###  <a name="wizard"></a>在创建包时添加连接管理器  
+###  <a name="wizard"></a> 创建包时添加连接管理器  
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导  
   
      除了创建和配置连接管理器之外，该向导还有助于创建和配置使用该连接管理器的源和目标。 有关详细信息，请参阅 [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md)。  
   
-###  <a name="package"></a>向现有包中添加连接管理器  
+###  <a name="package"></a> 向现有包中添加连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -166,13 +165,13 @@ ms.lasthandoff: 11/07/2017
   
     -   单击要添加到包中的连接管理器类型。  
   
-         - 或 -  
+         — 或 —  
   
     -   如果没有列出您要添加的类型，请单击 **“新建连接”** 打开 **“添加 SSIS 连接管理器”** 对话框，选择某种连接管理器类型，然后单击 **“确定”**。  
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
-    |“ODBC 目标编辑器”|选项|  
+    |“ODBC 源编辑器”|“常规”|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -198,7 +197,7 @@ ms.lasthandoff: 11/07/2017
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-###  <a name="project"></a>在项目级别添加连接管理器  
+###  <a name="project"></a> 在项目级别添加连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -208,7 +207,7 @@ ms.lasthandoff: 11/07/2017
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
-    |“ODBC 目标编辑器”|选项|  
+    |“ODBC 源编辑器”|“常规”|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -240,21 +239,21 @@ ms.lasthandoff: 11/07/2017
   
  若要了解有关连接管理器的详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **连接管理器类型**  
  选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。  
   
- **添加**  
+ **“添加”**  
  使用与各连接类型相应的编辑器指定连接属性。  
    
-##  <a name="parameter"></a>创建连接管理器属性的参数  
+##  <a name="parameter"></a> 创建连接管理器属性的参数  
   
 1.  在“连接管理器”区域中，右键单击要为其创建参数的连接管理器，然后单击“参数化”。  
   
 2.  在 **“参数化”** 对话框中配置参数设置。 有关详细信息，请参阅 [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)。  
 
 ## <a name="delete-a-connection-manager"></a>删除连接管理器 
-###  <a name="DeletePackageLevel"></a>从包中删除连接管理器  
+###  <a name="DeletePackageLevel"></a> 从包中删除连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -274,9 +273,9 @@ ms.lasthandoff: 11/07/2017
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-###  <a name="DeleteProjectLevel"></a>删除共享的连接管理器 （项目级别连接管理器）  
+###  <a name="DeleteProjectLevel"></a> 删除共享连接管理器（项目级别连接管理器）  
   
-1.  若要删除项目级别的连接管理器，请在“解决方案资源管理器”窗口的“连接管理器”节点下，右键单击连接管理器，然后单击“删除”。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]显示以下警告消息：  
+1.  若要删除项目级别的连接管理器，请在“解决方案资源管理器”窗口的“连接管理器”节点下，右键单击连接管理器，然后单击“删除”。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 显示下面的警告消息：  
   
     > [!WARNING]  
     >  在您删除某一项目连接管理器后，使用该连接管理器的包可能会不运行。 不能撤消此操作。 是否要删除该连接管理器?  
@@ -289,9 +288,9 @@ ms.lasthandoff: 11/07/2017
 ## <a name="set-the-properties-of-a-connection-manager"></a>设置连接管理器的属性
 所有连接管理器都可以使用 **“属性”** 窗口进行配置。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]此外提供用于修改连接管理器中的不同类型的自定义对话框[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 对话框中所包含的选项集将因连接管理器类型的不同而变化。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还提供了用于在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中修改不同类型的连接管理器的自定义对话框。 对话框中所包含的选项集将因连接管理器类型的不同而变化。  
   
-### <a name="modify-a-connection-manager-using-the-properties-window"></a>修改连接管理器属性窗口  
+### <a name="modify-a-connection-manager-using-the-properties-window"></a>使用“属性”窗口修改连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -303,11 +302,11 @@ ms.lasthandoff: 11/07/2017
   
 5.  在 **“属性”** 窗口中，编辑属性值。 **“属性”** 窗口提供对在连接管理器的标准编辑器中无法配置的一些属性的访问。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 7.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
-### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>修改连接管理器使用连接管理器对话框中  
+### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>使用连接管理器对话框修改连接管理器  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -317,7 +316,7 @@ ms.lasthandoff: 11/07/2017
   
 4.  在“连接管理器”区域中，双击连接管理器以打开“连接管理器”对话框。 有关特定连接管理器类型以及每种类型可用的选项的信息，请参阅下表。  
   
-    |“连接管理器”|选项|  
+    |“连接管理器”|“常规”|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -352,4 +351,3 @@ ms.lasthandoff: 11/07/2017
 -   support.microsoft.com 上的技术文章 [在 SSIS 中使用 Oracle 连接管理器时收到“DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER”错误消息](http://go.microsoft.com/fwlink/?LinkId=233696)。  
   
   
-

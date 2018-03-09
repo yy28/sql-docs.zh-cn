@@ -2,27 +2,30 @@
 title: "添加或编辑筛选器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b488f571aee2fcbe68a228489e078ccdc32e9ba2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0461e699bbf3593f87567d3972aa7e260bca3111
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-filter"></a>添加或编辑筛选器
-  使用 **“添加筛选器”** 和 **“编辑筛选器”** 对话框，可以添加和编辑静态行筛选器和参数化行筛选器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“添加筛选器”和“编辑筛选器”对话框，可以添加和编辑静态行筛选器和参数化行筛选器。  
   
 > [!NOTE]  
 >  编辑现有发布中的筛选器需要为该发布创建新的快照。 如果发布有订阅，则必须重新初始化这些订阅。 有关属性更改的详细信息，请参阅[更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
@@ -31,7 +34,7 @@ ms.lasthandoff: 11/09/2017
   
  通过使用行筛选器，可以指定要从表中发布的行的子集。 可以将行筛选器用于隐藏用户不需要查看的行（例如，包含敏感信息或机密信息的行），或用于创建发送到不同订阅服务器的不同数据分区。 将不同的数据分区发布到不同的订阅服务器，还有助于避免由于多个订阅服务器更新相同的数据而导致的冲突。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  对于事务发布和快照发布，此对话框涉及的过程分为两个步骤；对于合并分布，此对话框涉及的过程分为三个步骤。 所有发布类型都要求您选择要筛选的表以及要包含在筛选器中的一列或多列，并将筛选器定义为标准的 WHERE 子句。  
   
 1.  **选择要筛选的表**  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/09/2017
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)   
- [联接筛选器](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

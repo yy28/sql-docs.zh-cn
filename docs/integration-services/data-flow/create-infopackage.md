@@ -1,5 +1,5 @@
 ---
-title: "创建 InfoPackage |Microsoft 文档"
+title: "创建 InfoPackage | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fae3a5c0b43d90fcc85b48db97e23fc444aaf7f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4e893ddd6b0461a3f6b3e20146a79e63c7fcc1c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infopackage"></a>创建 InfoPackage
   使用 **“创建 InfoPackage”** 对话框在 SAP Netweaver BW 系统中创建新的 InfoPackage。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  在 **“连接管理器”** 页中，找到 **“创建 SAP BW 对象”** 组框，选择 **“InfoPackage”**，然后单击 **“创建”**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **InfoSource**  
  输入新 InfoPackage 应基于的 InfoSource 的名称。  
   
@@ -69,4 +68,3 @@ ms.lasthandoff: 08/03/2017
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f498c79b8b523df72db40d689e609a45c8616b0c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e848cffab72a3523d0a63617f5ebbb5bb5717559
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 配置文件
  ||  
@@ -93,7 +91,7 @@ ReportingServicesService.exe.config 文件包含配置跟踪的设置信息。
 |**Prefix**|指定一个生成的值，该值可将日志实例彼此区分开。 默认情况下，跟踪日志文件名后面将附加时间戳值。 此值设置为“ tid, time ”。 请不要修改此设置。|  
 |**TraceListeners**|指定输出跟踪日志内容的目标。 您可以通过使用逗号进行分隔来指定多个目标。 有效值包括：<br /><br /> DebugWindow（默认值）<br /><br /> File（默认值）<br /><br /> StdOut|  
 |**TraceFileMode**|指定跟踪日志是否包含 24 小时时段内的数据。 每天应当为每个组件设置唯一的跟踪日志。 此值设置为“Unique”（默认值）。 不要修改此值。|  
-|**Components**|指定为其创建跟踪日志的组件。 默认值是 **all**秒。 此设置的其他有效值包括内部组件名。 不要修改此值。|  
+|**组件**|指定为其创建跟踪日志的组件。 默认值是 **all**秒。 此设置的其他有效值包括内部组件名。 不要修改此值。|  
 |**运行时**|指定支持与早期版本的向后兼容性的配置设置。 运行时设置用于将指向早期版本的 Microsoft.ReportingServices.Interfaces 的请求重定向到新版本。<br /><br /> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 产品文档对本节中的所有配置设置都进行了说明。 有关详细信息，请在 MSDN 网站上或在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文档中搜索“运行时架构设置”。|  
   
 ## <a name="see-also"></a>另请参阅  

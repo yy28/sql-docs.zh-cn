@@ -1,5 +1,5 @@
 ---
-title: "数据挖掘查询任务 |Microsoft 文档"
+title: "数据挖掘查询任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-query-task"></a>数据挖掘查询任务
   数据挖掘查询任务根据 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]内置的数据挖掘模型运行预测查询。 预测查询通过使用挖掘模型来创建对新数据的预测。 例如，预测查询可以预测夏季可能销售多少帆板，或生成可能购买帆板的预期客户列表。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="configuration-of-the-data-mining-query-task"></a>配置数据挖掘查询任务  
  数据挖掘查询任务需要两个连接。 第一个连接是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例或包含挖掘结构和挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 第二个连接是 OLE DB 连接管理器，连接到包含任务要向其写入的表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 有关详细信息，请参阅 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) 和 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
 > [!NOTE]  
 >  数据挖掘查询编辑器没有“表达式”页。 它使用 **“属性”** 窗口来访问工具，以便创建和管理数据挖掘查询任务的属性的属性表达式。  
@@ -88,7 +87,7 @@ ms.lasthandoff: 08/11/2017
  键入数据挖掘查询任务的说明。  
   
 ### <a name="mining-model-tab-options"></a>挖掘模型选项卡选项  
- **连接**  
+ **“连接”**  
  从列表中选择 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，或单击“新建”创建新的连接管理器。  
   
  **相关主题：**[Analysis Services 连接管理器](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
@@ -137,7 +136,7 @@ ms.lasthandoff: 08/11/2017
  **“变量名称”**  
  在列表中选择变量以将其映射到参数。  
   
- **添加**  
+ **“添加”**  
  将参数添加到列表。  
   
  **删除**  
@@ -155,7 +154,7 @@ ms.lasthandoff: 08/11/2017
  **结果类型**  
  指示是返回单行还是返回完整结果集。  
   
- **添加**  
+ **“添加”**  
  向列表中添加结果集。  
   
  **删除**  
@@ -176,7 +175,7 @@ ms.lasthandoff: 08/11/2017
  键入数据挖掘查询任务的说明。  
   
 ### <a name="output-tab-options"></a>“输出”选项卡选项  
- **连接**  
+ **“连接”**  
  从列表中选择连接管理器，或单击“新建”以创建新的连接管理器。  
   
  **新建**  
@@ -188,4 +187,3 @@ ms.lasthandoff: 08/11/2017
  **删除并重新创建该输出表**  
  指示预测查询是否应通过删除表后再重新创建表来覆盖目标表中的内容。  
   
-

@@ -3,27 +3,30 @@ title: "状态属性示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Status property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d94baa3a1de7a84ce6997577b6f1c820d2698fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: efdf9d280a499832c2995a44000b227e17deb4fd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-example-vc"></a>状态属性示例 （VC + +）
 此示例使用[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示之前发生的批处理更新批处理操作中修改的记录。  

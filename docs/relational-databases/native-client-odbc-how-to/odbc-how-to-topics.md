@@ -8,20 +8,20 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e3d7e997048778822e6bf8baafc3e697f2b77ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f1332812cc70853fc095e506b43c45aa637cec6c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 操作指南主题
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
 
   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 驱动程序，你必须能够创建 ODBC 数据源并确保服务器具有正确版本的目录存储过程。 若要为使用 SQL Server 的 ODBC 应用程序编码，您必须了解如何分配 ODBC 句柄、设置属性、连接到 SQL Server 实例、执行查询和处理结果。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [配置 SQL Server ODBC 驱动程序操作指南主题](http://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
   

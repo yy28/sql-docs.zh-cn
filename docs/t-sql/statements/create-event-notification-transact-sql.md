@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,22 +19,23 @@ f1_keywords:
 - NOTIFICATION
 - CREATE EVENT NOTIFICATION
 - EVENT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CREATE EVENT NOTIFICATION statement
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48d7a50927d6fc3e193b54e85dd534aa859d13fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +107,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 包括事件通知专用的消息类型和约定。 所以，无需创建 Service Broker 启动服务，因为已存在指定以下约定名称的启动服务：`http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  接收事件通知的目标服务必须使用此预先存在的约定。  
@@ -121,7 +123,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  将记录发送事件通知时的所有失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要创建以数据库为作用域 (ON DATABASE) 的事件通知，需要在当前数据库中具有 CREATE DATABASE DDL EVENT NOTIFICATION 权限。  
   
  若要对以服务器为作用域 (ON SERVER) 的 DDL 语句创建事件通知，需要在该服务器中具有 CREATE DDL EVENT NOTIFICATION 权限。  
@@ -140,7 +142,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. 创建服务器范围的事件通知  
  以下示例创建使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 设置目标服务时所需的对象。 该目标服务引用专用于事件通知的启动服务的消息类型和约定。 然后对该目标服务创建一个事件通知，只要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例发生 `Object_Created` 跟踪事件，便会发送一个通知。  
   
-```tsql  
+```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
@@ -167,7 +169,7 @@ TO SERVICE 'NotifyService',
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. 创建以数据库为作用域的事件通知  
  以下示例将在上例所涉及的同一目标服务上创建事件通知。 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库上发生 `ALTER_TABLE` 事件后会激发该事件通知。  
   
-```tsql  
+```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
 ON DATABASE  
 FOR ALTER_TABLE  
@@ -186,7 +188,7 @@ WHERE name = 'log_ddl1';
 ### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D. 获取有关以数据库为作用域的事件通知的信息  
  以下示例查询 `sys.event_notifications` 目录视图，以获取以数据库为作用域创建的事件通知 `Notify_ALTER_T1` 的元数据。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.event_notifications  
 WHERE name = 'Notify_ALTER_T1';  
 ```  

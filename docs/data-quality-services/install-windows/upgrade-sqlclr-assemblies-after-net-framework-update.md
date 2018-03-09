@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c9384a279be88705da26000e9ed39c17d675f28b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f234417f1e1148a0edce88df46835f63ef22625
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 更新后升级 SQLCLR 程序集
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是引用 Microsoft .NET Framework 4 程序集的 SQL 公共语言运行时 (SQLCR) 例程的集合。 如果在计算机上安装的任何 .NET Framework 更新影响任何此类引用的 .NET Framework 程序集，则将导致全局程序集缓存 (GAC) 中的程序集的模块版本 ID (MVID) 发生更改。 这样会导致 GAC 中的引用程序集与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的程序集之间的 MVID 不匹配。  
@@ -34,7 +34,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
  若要修复此问题，必须升级 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中受影响的 SQLCLR 程序集。 为此，您可以使用 **upgradedlls** 命令行参数运行 DQSInstaller.exe 文件，以跳过重新创建 DQS 数据库，而只升级受影响的程序集。 这样可确保保留您的知识库、数据质量项目以及 DQS 中的任何其他数据。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 -   您必须作为 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 计算机上 Administrators 组的成员登录。  
   

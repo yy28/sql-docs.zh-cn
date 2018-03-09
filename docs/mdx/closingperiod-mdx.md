@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: CLOSINGPERIOD
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fe7c4c827706f45b5258b5c2738ada30d131a4c4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4fa2207edb9ea3e732807a3d4ac0783334c361c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数主要用于具有 Time 类型的维度，但也可用于任何维度。  
   
 -   如果指定一个级别表达式，则**ClosingPeriod**函数使用包含指定的级别，并返回最后一个同级的后代中的指定级别的默认成员的维度。  
@@ -56,7 +56,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
   
  **ClosingPeriod**函数等同于以下的 MDX 语句：  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`。  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`的用户。  
   
 > [!NOTE]  
 >  [OpeningPeriod](../mdx/openingperiod-mdx.md)函数是类似于**ClosingPeriod**函数，只不过**OpeningPeriod**函数将返回而不是最后一个同级的第一个同级。  

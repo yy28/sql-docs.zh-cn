@@ -2,9 +2,12 @@
 title: "灵活的自动故障转移策略 - 可用性组 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f80c2603b7b67908a4c3e0d7bdea8c48c0582ab2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d7860f367b7bf23aa3e2e58654633b5567625d37
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>灵活的自动故障转移策略 - 可用性组
-  灵活的故障转移策略提供了对导致可用性组 [自动执行故障转移](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 的条件的精确控制。 通过更改触发自动故障转移的失败条件和运行状况检查的频率，可增大或减小自动进行故障转移来支持高可用性 SLA 的可能性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]灵活的故障转移策略提供了对导致可用性组[自动执行故障转移](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)的条件的精确控制。 通过更改触发自动故障转移的失败条件和运行状况检查的频率，可增大或减小自动进行故障转移来支持高可用性 SLA 的可能性。  
   
  可用性组的灵活的故障转移策略是由其失败条件级别和运行状况检查超时阈值定义的。 在检测到某个可用性组已超出其失败条件级别或其运行状况检查超时阈值时，该可用性组的资源 DLL 会响应 Windows Server 故障转移群集 (WSFC) 群集。 之后，WSFC 群集会启动到辅助副本的自动故障转移。  
   
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
 |级别|失败条件|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|PowerShell 值|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|一级|当服务器关闭时。 指定在发生以下某种情况时启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。<br /><br /> <br /><br /> 这是限制最少的级别。|1|**OnServerDown**|  
+|一级|当服务器关闭时。 指定在发生以下某种情况时启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。<br /><br /> <br /><br /> 这是限制最少的级别。|@shouldalert|**OnServerDown**|  
 |二级|当服务器无响应时。 指定在发生以下某种情况时启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的运行状况检查超时阈值。<br /><br /> 可用性副本处于失败状态。|2|**OnServerUnresponsive**|  
 |三级|出现严重服务器错误时。 指定在发生了严重的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时启动自动故障转移。<br /><br /> 这是默认级别。|3|**OnCriticalServerError**|  
 |四级|出现严重服务器错误时。 指定在发生了中等 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部错误（在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时启动自动故障转移。|4|**OnModerateServerError**|  

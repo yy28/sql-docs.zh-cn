@@ -1,11 +1,11 @@
 ---
-title: "使用控制流包部件在包之间重用控制流 |Microsoft 文档"
+title: "使用控制流包部件来在包之间重用控制流 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dfe873284d448a53d4c094b622a5411261039e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ce2aeb6c2900004ea99d6bfeb9d9ff06f8a81114
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>通过控制流包部件在包之间重用控制流
   将常用控制流任务或容器保存到单独的部件文件“.dtsxp”中，然后即可通过控制流包部件在一个或多个包中多次重复使用它。 这种可重用性使得 SSIS 包更容易进行设计和维护。  
@@ -36,18 +35,18 @@ ms.lasthandoff: 08/03/2017
 ## <a name="create-a-new-control-flow-package-part"></a>创建新的控制流包部件  
  若要创建新的控制流包部件，请在解决方案资源管理器中，展开“包部件”文件夹。  右键单击“控制流”，然后选择“新建控制流包部件”。  
   
- ![创建新的控制流模板](../integration-services/media/control-flow-templates-create-new.png "创建新的控制流模板")  
+ ![创建新的控制流模板](../integration-services/media/control-flow-templates-create-new.png "Create a new control flow template")  
   
  此时会在“包部件 | 控制流”文件夹中创建扩展名为“.dtsxp”的新的部件文件。 同时，还会向 SSIS 工具箱添加具有相同名称的新项目。 （仅当你有一个包含该部件的项目且该项目在 Visual Studio 中处于打开状态时，该工具箱项目才可见。）  
   
- ![控制流模板工具箱中的](../integration-services/media/control-flow-templates-in-toolbox.png "控件工具箱中的流模板")  
+ ![工具箱中的控制流模板](../integration-services/media/control-flow-templates-in-toolbox.png "Control flow templates in toolbox")  
   
 ## <a name="design-a-control-flow-package-part"></a>设计控制流包部件  
  若要打开包部件编辑器，请在解决方案资源管理器中双击部件文件。 你可以像设计包一样设计该部件。  
   
- ![步骤 1 的控制流模板设计](../integration-services/media/control-flow-template-design-step-1.png "的控制流模板设计的步骤 1")  
+ ![控制流模板设计步骤 1](../integration-services/media/control-flow-template-design-step-1.png "Step 1 of control flow template design")  
   
- ![步骤 2 的控制流模板设计](../integration-services/media/control-flow-template-design-step-2.png "的控制流模板设计的步骤 2")  
+ ![控制流模板设计步骤 2](../integration-services/media/control-flow-template-design-step-2.png "Step 2 of control flow template design")  
   
  控制流包部件具有以下限制。  
   
@@ -65,9 +64,9 @@ ms.lasthandoff: 08/03/2017
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>拖放控制流包部件  
  若要重用项目中的部件，请直接在工具箱中拖放该部件项目，就像对任何其他任务或容器进行操作一样。 可以多次将部件拖放到包中，以便在包的多个位置重用逻辑。 通过此方法可以重用属于当前项目的部件。  
   
- ![将控制流模板添加到包](../integration-services/media/control-flow-templates-add-to-package.png "将控制流模板添加到包")  
+ ![将控制流模板添加到包](../integration-services/media/control-flow-templates-add-to-package.png "Add a control flow template to a package")  
   
- ![具有多个控制流模板包](../integration-services/media/control-flow-templates-in-package.png "与多个控制流模板的包")  
+ ![具有多个控制流模板的包](../integration-services/media/control-flow-templates-in-package.png "Package with multiple control flow templates")  
   
  保存包时，SSIS 设计器会检查包中是否有任何部件实例。  
   
@@ -75,16 +74,16 @@ ms.lasthandoff: 08/03/2017
   
 -   如果包不使用部件，设计器会删除任何以前为包创建的 .dtsx.designer 文件（即任何名称与包相同的 .dtsx.designer 文件）。  
   
- ![具有控制流模板的解决方案资源管理器](../integration-services/media/control-flow-templates-in-solution-explorer.png "具有控制流模板的解决方案资源管理器")  
+ ![具有控制流模板的解决方案资源管理器](../integration-services/media/control-flow-templates-in-solution-explorer.png "Solution Explorer with control flow templates")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>添加现有控制流包部件的副本或现有部件的引用  
  若要将文件系统中现有部件的副本添加到某个包，请在解决方案资源管理器中展开“包部件”文件夹。  右键单击“控制流”，然后选择“添加现有控制流包部件”。  
   
- ![从菜单中添加新的控制流模板](../integration-services/media/control-flow-templates-add-from-menu.png "从菜单中添加新的控制流模板")  
+ ![从菜单中添加新的控制流模板](../integration-services/media/control-flow-templates-add-from-menu.png "Add a new control flow templates from the menu")  
   
- ![添加现有模板的副本对话框](../integration-services/media/control-flow-templates-add-copy-dialog.png "添加现有模板复制对话框")  
+ ![“添加现有模板副本”对话框](../integration-services/media/control-flow-templates-add-copy-dialog.png "Add Copy of Existing Templates dialog box")  
   
- **Options**  
+ **选项**  
   
  **包部件路径**  
  键入部件文件的路径或单击浏览按钮 (…)，找到要复制或引用的部件文件。  
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="properties-tab"></a>“属性”选项卡  
  使用“包部件配置”对话框的“属性”选项卡指定部件的属性。  
   
- ![模板配置对话框中的属性选项卡](../integration-services/media/template-configuration-properties-tab.png "的模板配置对话框中的属性选项卡")  
+ ![“模板配置”对话框的“属性”选项卡](../integration-services/media/template-configuration-properties-tab.png "Properties tab of the Template Configuration dialog box")  
   
  左窗格中的树视图层次结构列出了部件实例的所有可配置属性。  
   
@@ -125,7 +124,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="connection-managers-tab"></a>“连接管理器”选项卡  
  使用“包部件配置”对话框的“连接管理器”选项卡指定部件实例的连接管理器的属性。  
   
- ![连接管理器选项卡上的模板配置对话框中](../integration-services/media/template-configuration-connection-managers-tab.png "的模板配置对话框中的连接管理器选项卡")  
+ ![模板配置对话框的“连接管理器”选项卡](../integration-services/media/template-configuration-connection-managers-tab.png "Connection Managers tab of the Template Configuration dialog box")  
   
  左窗格中的表列出了在控制流部件中定义的所有连接管理器。 选择要配置的连接管理器。  
   
@@ -156,7 +155,6 @@ ms.lasthandoff: 08/03/2017
   
  下图演示了部件（“.dtsxp”文件）、SSIS 设计器和 SSIS 运行时之间的关系。  
   
- ![控制流模板文件和流](../integration-services/media/control-flow-templates-intro.png "控制流模板文件和流")  
+ ![控制流模板文件和流](../integration-services/media/control-flow-templates-intro.png "Control flow templates files and flow")  
   
   
-

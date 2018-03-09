@@ -2,27 +2,30 @@
 title: "还原数据库（“选项”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b4290a3e3a3a43e09dc4837542185e7256962ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0bdd383335126a36265bc917c1679dbd5ab0dc3e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
-  使用 **“还原数据库”** 对话框的 **“选项”** 页可修改还原操作的行为和结果。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“还原数据库”对话框的“选项”页可修改还原操作的行为和结果。  
   
  **使用 SQL Server Management Studio 还原数据库备份**  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]指定还原任务时，您可以为此还原操作生成一个包含 RESTORE 语句的对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 若要生成该脚本，请单击 **“脚本”** ，然后为脚本选择一个目标。 有关 RESTORE 语法的信息，请参阅 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
-## <a name="options"></a>“还原数据库”  
+## <a name="options"></a>“常规”  
   
 ### <a name="restore-options"></a>还原选项  
  若要修改还原操作行为的各个方面，请使用使用 **“还原选项”** 面板中的选项。  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/09/2017
  若要在完成存储操作后确定数据库的状态，则必须选择 **“恢复状态”** 面板中的选项之一。  
   
  **RESTORE WITH RECOVERY**  
- 在还原了在[“常规”](../../relational-databases/backup-restore/restore-database-general-page.md)页的**“用于还原的备份集”**网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
+ 在还原了在[“常规”](../../relational-databases/backup-restore/restore-database-general-page.md)页的“用于还原的备份集”网格中选中的最后一个备份之后，恢复数据库。 这是默认选项，等效于在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
   
 > [!NOTE]  
 >  在完整恢复模式或大容量日志恢复模式下，只有在需要还原所有日志文件时才选择此选项。  

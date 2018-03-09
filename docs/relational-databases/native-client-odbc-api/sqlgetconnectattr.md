@@ -1,5 +1,5 @@
 ---
-title: "SQLGetConnectAttr |Microsoft 文档"
+title: SQLGetConnectAttr | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,22 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords: SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c2a8e5c05177ae4a69c69a0776af333d96575c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a075d06b4425a5f07e3e805fdefe73b1c5eabba
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  标准 ODBC 连接属性 SQL_ATTR_CONNECTION_DEAD 返回连接的最近状态。 这可能不是当前连接状态。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|与服务器的连接已丢失。|  
 |SQL_CD_FALSE|连接已打开，可以用于执行语句处理。|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  有关详细信息，请参阅[访问扩展事件日志中的诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|连接失败。|  
 |SQL_SUCCESS|连接成功。 将在输出缓冲区中找到客户端连接 ID。|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 属性返回包含当前驱动程序性能统计信息的 SQLPERF 结构的指针。 **SQLGetConnectAttr**如果性能日志记录未启用，将返回 NULL。 驱动程序不会动态更新 SQLPERF 结构中的统计信息。 调用**SQLGetConnectAttr**性能统计信息需要刷新每次。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |NULL|未启用性能记录。|  
 |任何其他值|SQLPERF 结构的指针。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 属性检索用户数据指针。 用户数据存储在客户端拥有的内存中，并在每次连接时进行记录。 如果尚未设置用户数据指针，则返回 SQL_UD_NOTSET（NULL 指针）。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|未设置用户数据指针。|  
 |任何其他值|用户数据的指针。|  

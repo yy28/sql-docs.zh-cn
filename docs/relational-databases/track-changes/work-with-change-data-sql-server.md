@@ -2,10 +2,14 @@
 title: "处理变更数据 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d46d8364dafb218035e3e9c7d828833f9c604375
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 643ba52d666c9661d66a8a7e8039dba5e7f38549
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="work-with-change-data-sql-server"></a>处理变更数据 (SQL Server)
-  可通过表值函数 (TVF) 为变更数据捕获使用者提供更改数据。 这些函数的所有查询均需要使用两个参数来定义日志序列号 (LSN) 范围，在开发返回的结果集时需要考虑这些序列号。 限定这一间隔的较高和较低 LSN 值均包含在间隔中。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+可通过表值函数 (TVF) 为变更数据捕获使用者提供更改数据。 这些函数的所有查询均需要使用两个参数来定义日志序列号 (LSN) 范围，在开发返回的结果集时需要考虑这些序列号。 限定这一间隔的较高和较低 LSN 值均包含在间隔中。  
   
  系统提供了几个函数，以帮助确定用于查询 TVF 的相应 LSN 值。 [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 函数返回与捕获实例有效性间隔关联的最小 LSN。 有效性间隔是指更改数据当前可供其捕获实例使用的时间间隔。 [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 函数返回有效性间隔中的最大 LSN。 [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 和 [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 函数可帮助将 LSN 值置于常规时间线上。 由于变更数据捕获使用闭合查询间隔，因此，有时需要按顺序生成下一个 LSN 值，以确保在连续查询窗口中不会出现重复更改。 [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) 和 [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) 函数在需要对 LSN 值进行增量调整时非常有用。  
   

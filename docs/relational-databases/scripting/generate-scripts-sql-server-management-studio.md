@@ -2,26 +2,30 @@
 title: "生成脚本 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f103708c1720d7a08e2e9690e298701102c17f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d1afb1297566bb7f203956d24b0ea62b56817d28
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用 **“生成和发布脚本向导”**为多个对象创建脚本。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”**菜单为单个对象或多个对象生成脚本。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用 **“生成和发布脚本向导”**为多个对象创建脚本。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”**菜单为单个对象或多个对象生成脚本。  
   
 1.  **选择一种方法：**  [生成和发布脚本向导](#GenPubScriptWiz)、 [对象资源管理器“编写脚本为”菜单](#OEScriptAsMenu)  
   

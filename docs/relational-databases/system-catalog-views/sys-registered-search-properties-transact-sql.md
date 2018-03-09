@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - registered_search_properties
 - sys.registered_search_properties_TSQL
 - registered_search_properties_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search properties [SQL Server]
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], viewing registered properties
 - sys.registered_search_properties catalog view
 ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a52fb947477e4a25cf5784ed4861071e21ba769c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3aee06ae6a5be4cf7c0aa6e37288dc71aee8a108
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>注释  
  搜索属性列表的详细信息，请参阅[使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  搜索属性的元数据可见性仅限于在您拥有或已向您授予部分 REFERENCE 权限的搜索属性列表中的属性。  
   
 > [!NOTE]  

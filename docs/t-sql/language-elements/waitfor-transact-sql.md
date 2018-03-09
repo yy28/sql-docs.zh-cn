@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WAITFOR
 - WAITFOR_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - TIME option
 - delaying executions [SQL Server]
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - WAITFOR statement
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a434aeca7601637ae5e0231497ad07293d6d83ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 2a1453c5d7beaf9d4ab9d140a0414e730c9d651a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,13 +64,13 @@ WAITFOR
  DELAY  
  可以继续执行批处理、存储过程或事务之前必须经过的指定时段，最长可为 24 小时。  
   
- *time_to_pass*  
+ '*time_to_pass*'  
  等待的时段。 *time_to_pass*可以中的可接受格式之一指定**datetime**数据，也可以指定为本地变量。 不能指定日期;因此，日期部分的**datetime**不允许值。  
   
  TIME  
  指定的运行批处理、存储过程或事务的时间。  
   
- *time_to_execute*  
+ '*time_to_execute*'  
  WAITFOR 语句完成的时间。 *time_to_execute*可以中的可接受格式之一指定**datetime**数据，也可以指定为本地变量。 不能指定日期;因此，日期部分的**datetime**不允许值。  
   
  *receive_statement*  

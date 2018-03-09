@@ -2,16 +2,13 @@
 title: "配置度量值组属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: properties [Analysis Services], measure groups
@@ -21,19 +18,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce67fa290953d89353fb1031fc0ca1ddfd5ea72f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7cf2328a6f93ed1c7fe17034af1b42b53baaa39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-measure-group-properties"></a>配置度量值组属性
-  通过使用度量值组属性，您可以定义度量值组的工作方式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]度量值组具有使您能够定义度量值组的工作的属性。  
   
 ## <a name="measure-group-properties"></a>度量值组属性  
  度量值组属性确定整个度量值组的行为，并设置度量值组内度量值的某些属性的默认行为。  
   
-|属性|定义|  
+|“属性”|定义|  
 |--------------|----------------|  
 |**AggregationPrefix**|适用于 ROLAP 存储。 将公共前缀分配给 SQL Server 中的索引视图，用于为与此度量值组关联的分区存储聚合。|  
 |**DataAggregation**|此属性是保留供将来使用，当前不起任何作用。 因此，建议你不要修改此设置。|  

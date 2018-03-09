@@ -3,8 +3,9 @@ title: "群集属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Index::GetClustered
 - _Index::Clustered
 - _Index::get_Clustered
-helpviewer_keywords: Clustered property [ADOX]
+helpviewer_keywords:
+- Clustered property [ADOX]
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 594c36ab02aed389226909e4737e2421b6b71728
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff996467ecc3bb0d5fc1f84d370e3b6287e70866
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clustered-property-adox"></a>Clustered 的属性 (ADOX)
 指示索引是否聚集索引。  

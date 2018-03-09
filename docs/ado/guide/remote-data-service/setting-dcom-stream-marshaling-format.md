@@ -3,26 +3,28 @@ title: "设置 DCOM 流封送处理格式 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: dcom stream marshaling format in rds [ADO]
+helpviewer_keywords:
+- dcom stream marshaling format in rds [ADO]
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5addd2044189538b95e4023230653e6011e087b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29bef8d1d0bf72dbb818a75387eb8c33f7001981
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>设置 DCOM 流格式封送处理
 使用组件从 RDS 1.5 或更早版本的客户端计算机不符合使用组件从 RDS 2.0 或更高版本的服务器。 用作基础协议使用 DCOM，RDS 2.0 或更高版本的支持时，更高效地传输[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 如果你的客户端运行组件从 RDS 1.5 或更早版本，则可以设置服务器以使用以前的 RDS 支持 （称为 RDS 1.0） 或更高版本的 RDS 支持 (称为 RDS 2.0 或更高版本)。 设置以下注册表项之一：  

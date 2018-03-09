@@ -1,21 +1,23 @@
 ---
 title: "搜索条件 (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - search
 - Search Condition
 - condition
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - OR operator [Transact-SQL]
 - CONTAINS predicate (Transact-SQL)
@@ -37,16 +39,16 @@ helpviewer_keywords:
 - logical operators [SQL Server], precedence
 - LIKE comparisons
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eaacb26fe7c402b17206ecf3a0e05af709170f97
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: aff1f4010182b601111ed2ba892bb06b6e82b71d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="search-condition-transact-sql"></a>搜索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- \<search_condition >  
+ \<search_condition>  
  指定要在 SELECT 语句、查询表达式或子查询的结果集中返回的行的条件。 对于 UPDATE 语句，指定要更新的行。 对于 DELETE 语句，指定要删除的行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句搜索条件中可以包含任意多个谓词。  
   
  NOT  
@@ -117,7 +119,9 @@ ms.lasthandoff: 11/17/2017
  列名、常量、函数、变量、标量子查询，或者是通过运算符或子查询连接的列名、常量和函数的任意组合。 表达式还可以包含 CASE 表达式。  
   
 > [!NOTE]  
->  引用的 Unicode 字符数据类型时**nchar**， **nvarchar**，和**ntext**，expression 应前缀为大写字母 ' N '。 如果未指定“N”，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将字符串转换为与数据库或列的默认排序规则相对应的代码页。 此代码页中没有的字符都将丢失。  
+>  非 Unicode 字符串常量和变量使用对应于数据库的默认排序规则代码页。 代码页转换可以发生，使用仅非 Unicode 字符数据时，并引用非 Unicode 字符数据类型**char**， **varchar**，和**文本**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将非 Unicode 字符串常量和变量转换为对应于被引用列的排序规则或使用指定的排序规则，则该代码页不同于对应于数据库的默认排序规则代码页时的代码页。 在新的代码页中找不到任何字符将转换为类似的字符，如果[最佳的映射](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)可以找到，否则将转换为默认替换字符的"？"。  
+>  
+> 字符常量时使用多个代码页，可以使用大写字母作为前缀 ' N '，和 Unicode 变量可用，以避免代码页转换。  
   
  =  
  用于测试两个表达式是否相等的运算符。  
@@ -152,7 +156,7 @@ ms.lasthandoff: 11/17/2017
  [ NOT ] LIKE  
  指示后续字符串使用时要进行模式匹配。 有关详细信息，请参阅[如 &#40;Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md).  
   
- 转义*escape_ 字符*  
+ 转义*****escape_ 字符*****  
  允许在字符串中搜索通配符，而不是将其作为通配符使用。 *escape_character*是放置要指明此特殊用途的通配符字符的前面的字符。  
   
  [ NOT ] BETWEEN  
@@ -168,9 +172,9 @@ ms.lasthandoff: 11/17/2017
  在包含基于字符的数据的列中，搜索与谓词中的词的含义相符而非精确匹配的值，从而提供一种形式简单的自然语言查询。 此选项只能与 SELECT 语句一起使用。 有关详细信息，请参阅[FREETEXT &#40;Transact SQL &#41;](../../t-sql/queries/freetext-transact-sql.md).  
   
  [ NOT ] IN  
- 根据是在列表中包含还是排除某表达式，指定对该表达式的搜索。 搜索表达式可以是常量或列名，而列表可以是一组常量，更常用的是子查询。 将一组值用圆括号括起来。 有关详细信息，请参阅[IN &#40;Transact SQL &#41;](../../t-sql/language-elements/in-transact-sql.md).  
+ 根据是在列表中包含还是排除某表达式，指定对该表达式的搜索。 搜索表达式可以是常量或列名，而列表可以是一组常量，更常用的是子查询。 将一组值用圆括号括起来。 有关详细信息，请参阅 [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)。  
   
- *子查询*  
+ *subquery*  
  就被认为是受限制的 SELECT 语句，它类似于\<query_expresssion > SELECT 语句中。 不允许使用 ORDER BY 子句和 INTO 关键字。 有关详细信息，请参阅[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
@@ -237,7 +241,7 @@ WHERE LastName LIKE N'%and%';
   
 ## <a name="see-also"></a>另请参阅  
  [聚合函数 &#40;Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [用例 &#40;Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [游标 (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   

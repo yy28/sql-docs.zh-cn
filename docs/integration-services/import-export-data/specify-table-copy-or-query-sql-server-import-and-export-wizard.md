@@ -1,5 +1,5 @@
 ---
-title: "指定表复制或查询 （SQL Server 导入和导出向导） |Microsoft 文档"
+title: "指定表复制或查询（SQL Server 导入和导出向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -15,22 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 59820083a0a092fc6704bebd491f1bfc0827732d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 56babe19727ca9ac7e0f364f64c91716508f4dfc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定表复制或查询（SQL Server 导入和导出向导）
   提供有关数据目标以及有关如何连接到它的信息之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“指定表复制或查询” 。 在此页上，可选择以下选项之一。
--   **复制一个或多个表或视图的数据**。 你想要选取一个表或从列表的表。
--   **编写查询以指定要传输的数据**。 你想要输入或粘贴 SQL 查询文本中。
+-   **复制一个或多个表或视图的数据**。 想要从列表中选取一个或多个表。
+-   **编写查询以指定要传输的数据**。 想要在 SQL 查询的文本中输入或粘贴。
     
 > [!TIP]
 > 如果必须复制多个数据库或数据库对象（而非表和视图），请使用复制数据库向导，而不是使用导入和导出向导。 有关详细信息，请参阅 [使用复制数据库向导](../../relational-databases/databases/use-the-copy-database-wizard.md)。     
@@ -38,11 +37,11 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>“指定表复制或查询”页的屏幕截图    
  以下屏幕截图显示向导的“指定表复制或查询”  页。    
     
- ![表复制或查询页上的导入和导出向导](../../integration-services/import-export-data/media/table-copy-or-query.png "表复制或查询页上的导入和导出向导")    
+ ![导入和导出向导的“表复制或查询”页](../../integration-services/import-export-data/media/table-copy-or-query.png "Table copy or query page of the Import and Export Wizard")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>指定是否复制整个表或编写查询 
  **复制一个或多个表或视图的数据**    
- 如果你想要将数据从源分片复制而不筛选或对记录进行排序，请选择此选项。   
+ 如果要在不对记录进行筛选或排序的情况下复制源中的数据，请选择此选项。   
 
 选择“复制一个或多个表或视图的数据 时，可以从一个表或视图复制到一个目标表，或从多个表或视图复制到多个目标表。
 
@@ -58,10 +57,10 @@ ms.lasthandoff: 09/26/2017
 ## <a name="why-isnt-the-copy-option-available"></a>为何复制选项不可用？    
  当向导使用 **数据提供程序连接到数据源时，“复制一个或多个表或视图的数据”**[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 选项可能不可用。 当向导没有关于数据提供程序的足够信息用于从数据源请求表和视图列表时，会发生这种情况。 
  
-你仍然可以使用**编写查询**选项，即使你通常不编写 SQL 查询，只要你知道你想要导出的表的名称。 在**提供源查询**后你看到的对话框中单击**下一步**，输入形式的查询`SELECT * FROM <name of table>`。 如果表的名称包含空格或其他特殊字符，将名称括起来用方括号- `SELECT * FROM [<name of table>]`。
+只要知道要导出的表的名称，仍可使用“编写查询”选项，即便通常不编写 SQL 查询也是如此。 在“提供源查询”对话框（单击“下一步”后看到）中，以 `SELECT * FROM <name of table>` 形式输入查询。 如果表名称包含空格或其他特殊字符，使用方括号将名称括起来，如 `SELECT * FROM [<name of table>]`。
 
 ### <a name="more-info"></a>详细信息
- “复制一个或多个表或视图的数据”  选项仅对在 ProviderDescriptors.xml 文件中有 ProviderDescription 部分的信息的那些访问接口可用。 (默认情况下，此文件位于\<*驱动器*>: files\microsoft SQL Server\130\DTS\ProviderDescriptors。)此文件中的每个 ProviderDescription 部分都包含从相应访问接口检索元数据所需的信息。    
+ “复制一个或多个表或视图的数据”  选项仅对在 ProviderDescriptors.xml 文件中有 ProviderDescription 部分的信息的那些访问接口可用。 （默认情况下，此文件位于 \<drive>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors 中。）此文件中的每个 ProviderDescription 部分都包含从相应访问接口检索元数据所需的信息。    
     
  默认情况下，ProviderDescriptors.xml 文件仅包含用于以下列表中的访问接口的 ProviderDescription 部分。    
     
@@ -88,6 +87,5 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>另请参阅
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

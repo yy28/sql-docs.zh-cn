@@ -2,23 +2,26 @@
 title: "资源调控 for Python |Microsoft 文档"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1fff94725d1e564b4fe9eb286ea6bf1e390a3179
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-python"></a>Python 的资源调控
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 因为通过启用 Python 的相同扩展性体系结构，为 SQL Server 2016 中的 R 语言实现的你可以使用现有工具 SQL Server 中例如资源调控器、 Dmv，和扩展的事件监视其执行的 PythonSQL Server 中的脚本。
 

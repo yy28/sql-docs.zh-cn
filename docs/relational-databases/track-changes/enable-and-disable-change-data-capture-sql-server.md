@@ -2,10 +2,14 @@
 title: "启用和禁用变更数据捕获 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 77002b107ffcd26066850394b5d713d020919bd0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c19f08347185ee6ea46977df74d0317041beb020
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>启用和禁用变更数据捕获 (SQL Server)
-  本主题说明如何对数据库和表启用和禁用变更数据捕获。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+本主题说明如何对数据库和表启用和禁用变更数据捕获。  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>对数据库启用变更数据捕获  
  在为各个表创建捕获实例之前，必须先由 **sysadmin** 固定服务器角色的成员对数据库启用变更数据捕获。 通过在数据库上下文中运行 [sys.sp_cdc_enable_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) 存储过程可实现这一点。 若要确定数据库是否已启用此项功能，请在 **sys.databases** 目录视图中查询 **is_cdc_enabled** 列。  
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 >  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”**，单击 **“模板资源管理器”**，然后选择 **“SQL Server 模板”**。 **Change Data Capture** 为一个子文件夹。 在此文件夹下，您会找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -60,7 +65,7 @@ GO
 > [!IMPORTANT]  
 >  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”**，单击 **“模板资源管理器”**，然后单击 **“SQL Server 模板”**。 **“变更数据捕获”** 为子文件夹，在该文件夹中您将找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -83,7 +88,7 @@ GO
   
  默认情况下，更改表位于数据库的默认文件组中。 希望控制各个更改表放置位置的数据库所有者可以使用 *@filegroup_name* 参数为与该捕获实例相关的更改表指定一个特定的文件组。 指定的文件组必须已存在。 通常建议将更改表置于独立于源表的文件组中。 有关演示 *@filegroup_name* 参数使用方法的示例，请参阅**通过指定文件组选项启用表**模板。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -105,7 +110,7 @@ GO
   
  如果不想使用访问控制角色，请将 *@role_name* 参数显式设置为 NULL。 有关如何在没有访问控制角色的情况下启用表的示例，请参阅 **Enable a Table Without Using a Gating Role** 模板。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -130,7 +135,7 @@ GO
   
  有关演示如何创建同时具有这两个查询函数的捕获实例的示例，请参阅 **Enable a Table for All and Net Changes Queries** 模板。  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -154,7 +159,7 @@ GO
   
  有关禁用表的示例，请参阅 Disable a Capture Instance for a Table 模板。  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

@@ -2,24 +2,27 @@
 title: "设置用于在 Azure 上的机器学习的虚拟机 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a57f9d0e392818ec1198f3d0a19106e9db9c7810
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>设置用于在 Azure 上的机器学习的虚拟机
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 Azure 上的虚拟机是一个方便的选项，用于快速配置用于机器学习解决方案的完整的服务器环境。
 
@@ -83,9 +86,7 @@ ms.lasthandoff: 11/09/2017
 
 ### <a name="using-machine-learning-in-azure-sql-database"></a>使用 Azure SQL 数据库中的机器学习
 
-中的开始在 2017 年，Azure SQL 数据库支持使用 R 来训练模型并将其用于预测。 
-
-R Services 数据库中可作为预览功能仅，并具有与 SQL Server 的本地版本相比某些限制。 有关详细信息，请参阅[Azure SQL DB](../r/using-r-in-azure-sql-database.md)。
+目前，Azure SQL 中的 R 支持预览已挂起，正在进行的开发工作。 有关详细信息，请参阅[Azure SQL DB](../r/using-r-in-azure-sql-database.md)。
 
 ### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>可以升级虚拟机上的 SQL Server 版本？
 
@@ -133,17 +134,17 @@ R Services 数据库中可作为预览功能仅，并具有与 SQL Server 的本
 
 目前，以下虚拟机是可用于机器学习与 SQL Server:
 
-|Name| 注释|
+|名称| 注释|
 |----|----|----|
 | **SQL Server 2016**| ***  |
-|在 Windows 上的 SQL Server 2016 SP1 Enterprise|集成的高级分析的 R Services。|
+|SQL Server 2016 SP1 Enterprise on Windows|集成的高级分析的 R Services。|
 |Windows Server 上的 BYOL SQL Server 2016 SP1 Enterprise |集成的高级分析的 R Services。 |
 |Windows Server 2016 上的可用许可证： SQL Server 2016 SP1 开发人员 |集成的高级分析的 R Services。 |
 | 数据科学虚拟机的 Windows 2012|包含用于数据科学，。 包括 Microsoft R Server Developer Edition、 SQL Server 2016 开发人员版、 Anaconda Python 分发，Julia 专业开发人员版和 Jupyter 笔记本的常用工具| 
 | 数据科学虚拟机-Windows 2016|包含 SQL Server 2016 Developer Edition，具有对数据库中 R 分析的支持。|
 |**SQL Server 2017**| ***   |
-|SQL Server 自 2017 年企业 Windows Server 2016| 具有 Python 和 R 语言支持的机器学习服务。|
-|BYOL SQL Server 自 2017 年企业 Windows Server 2016|具有 Python 和 R 语言支持的机器学习服务。|
+|SQL Server 2017 Enterprise Windows Server 2016| 具有 Python 和 R 语言支持的机器学习服务。|
+|BYOL SQL Server 2017 Enterprise Windows Server 2016|具有 Python 和 R 语言支持的机器学习服务。|
 | Windows Server 上可用的 SQL Server 许可证： SQL Server 自 2017 年 Developer|具有 Python 和 R 语言支持的机器学习服务。|
 | **其他**| *** |
 | 机器学习服务器唯一的 SQL Server 自 2017 年 Enterprise|类似于 SQL Server 2016 Enterprise 映像，但包含的机器学习服务器的独立版本，但核心 ScaleR 和操作化功能优化适用于 Windows 环境。|

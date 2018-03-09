@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |text in row 表选项|遇到对“text in row”表选项的引用。 请改用 sp_tableoption 'large value types out of row'。 每次查询时发生。|  
 |TEXTPTR|遇到对 TEXTPTR 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
 |TEXTVALID|遇到对 TEXTVALID 函数的引用。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
-|TIMESTAMP|在 DDL 语句中遇到不推荐使用的 **timestamp** 数据类型的总次数。 请改用 **rowversion** 数据类型。|  
+|timestamp|在 DDL 语句中遇到不推荐使用的 **timestamp** 数据类型的总次数。 请改用 **rowversion** 数据类型。|  
 |UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 语句。 请重写应用程序以使用 **varchar(max)** 数据类型和已删除的 **text**、 **ntext**和 **image** 数据类型语法。 每次查询时发生。|  
 |USER_ID|遇到对 USER_ID 函数的引用。 请改用 DATABASE_PRINCIPAL_ID 函数。 每次编译时发生。|  
 |对链接服务器使用 OLEDB||  

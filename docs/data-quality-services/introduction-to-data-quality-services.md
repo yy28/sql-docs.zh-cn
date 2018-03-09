@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bfe4bfd1accf4291a2e8a6cc5974c81bc669f46d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33d3b1ce22b6cf81b6d38b2644b4bd021e29e3fc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 简介
   使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的数据质量解决方案，数据专员或 IT 专业人员可以维护数据的质量并确保数据满足业务使用的要求。 DQS 是一种知识驱动型解决方案，该解决方案通过计算机辅助方式和交互方式来管理数据源的完整性和质量。 使用 DQS 可以发现、生成和管理有关您数据的知识。 然后可以使用该知识执行数据清理、匹配和事件探查。 还可以在 DQS 数据质量项目中利用引用数据访问接口的基于云的服务。  

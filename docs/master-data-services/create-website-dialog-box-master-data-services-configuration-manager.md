@@ -5,24 +5,26 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.mds.configmanager.createsite.f1
+f1_keywords:
+- sql13.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e828a16a51b3a5744703fc08cf79abaeb489d2e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cbb31101e60f32070abdde870fb7dfcd2c497b9
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>“创建网站”对话框（Master Data Services 配置管理器）
   使用 **“创建网站”** 对话框可以在本地计算机上创建新网站。 在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中创建网站时，该网站将添加到本地计算机上的 Internet Information Services (IIS)，并且具有配置为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的根应用程序。 还将创建一个新的应用程序池，并且 Web 应用程序将放置在该应用程序池中。  
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 |控件名称|Description|  
 |------------------|-----------------|  
 |**名称**|为新的应用程序池键入唯一的友好名称，或者使用提供的默认名称。 此网站的根 Web 应用程序在此应用程序池中运行。<br /><br /> 应用程序池提供的边界可防止一个应用程序池中的应用程序影响另一个应用程序池中的应用程序。|  
-|**用户名**|键入来自 Active Directory 的域名和用户名。 此帐户是 Web 应用程序运行所在的应用程序池的标识。<br /><br /> 此帐户添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 mds_exec 数据库角色，以便访问数据库。 有关详细信息，请参阅[数据库登录、用户和角色 (Master Data Services)](../master-data-services/database-logins-users-and-roles-master-data-services.md)。 它还会被添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows 组 **MDS_ServiceAccounts**，该组有权访问文件系统中的临时编译目录 **MDSTempDir**。 有关详细信息，请参阅[文件夹和文件权限 (Master Data Services)](../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
+|**User name**|键入来自 Active Directory 的域名和用户名。 此帐户是 Web 应用程序运行所在的应用程序池的标识。<br /><br /> 此帐户添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 mds_exec 数据库角色，以便访问数据库。 有关详细信息，请参阅[数据库登录、用户和角色 (Master Data Services)](../master-data-services/database-logins-users-and-roles-master-data-services.md)。 它还会被添加到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows 组 **MDS_ServiceAccounts**，该组有权访问文件系统中的临时编译目录 **MDSTempDir**。 有关详细信息，请参阅[文件夹和文件权限 (Master Data Services)](../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
 |**密码**|键入指定用户帐户的密码。|  
 |**确认密码**|重新键入指定用户帐户的密码。 **“密码”** 字段和 **“确认密码”** 字段必须包含相同的密码。|  
   

@@ -23,13 +23,13 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: "55"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab5346433b15163cf6bf9a757923e06d32d0985
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99a526a432e0e7567022891e28129a12d5b09ef3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>数据库镜像的前提条件、限制和建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 -   镜像会话中的所有服务器实例都应该使用相同的主代码页和排序规则。 如果使用不同的主代码页和排序规则，则在镜像设置期间可能会出现问题。  
   
--   （可选）估计故障转移数据库的时间，以确保系统配置能提供所需性能。 有关详细信息，请参阅[估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。  
+-   （可选）估计故障转移数据库的时间，以确保系统配置能提供所需性能。 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。  
   
 -   为获得最佳性能，请为镜像使用专用网络适配器（网络接口卡）。  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  在确信异步操作符合您的业务需要之后，您可能希望尝试同步操作来提高数据保护能力。 当测试同步镜像在您环境中的工作方式时，建议首先测试不带自动故障转移功能的高安全性模式。 此测试的主要目的是了解同步操作如何影响数据库的性能。 有关详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
-3.  等到确信不带自动故障转移功能的高安全性模式满足您的业务需要并且网络错误不会导致故障时再启用自动故障转移。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+3.  等到确信不带自动故障转移功能的高安全性模式满足您的业务需要并且网络错误不会导致故障时再启用自动故障转移。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。  
   
   
 ## <a name="see-also"></a>另请参阅  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeaff84574eaa0f535596efe8c03b2b14b640ba1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df70e2b5fce0983fa3501b6bd53376f75d10d900
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>计划和执行还原顺序（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  也可以还原基于这些完整备份的最新差异备份。  
   
-     对于计划还原的每个完整备份，确定它是否是任何差异备份的基础。 如果是，还原最新的差异备份（如果可以）。 有关详细信息，请参阅[差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
+     对于计划还原的每个完整备份，确定它是否是任何差异备份的基础。 如果是，还原最新的差异备份（如果可以）。 有关详细信息，请参阅 [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
 3.  通过按顺序还原日志备份、完成包含恢复点的备份来前滚数据库。 是否必须应用所有日志备份取决于日志备份包含什么样的目标恢复点，如下所示：  
   

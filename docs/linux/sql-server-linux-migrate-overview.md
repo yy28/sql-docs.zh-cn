@@ -1,29 +1,29 @@
 ---
 title: "将数据库迁移到 SQL Server on Linux |Microsoft 文档"
-description: "本主题介绍在 Linux 上的迁移数据库和数据迁移到 SQL Server 的不同选项。"
+description: "本文介绍在 Linux 上的迁移数据库和数据迁移到 SQL Server 的不同选项。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: dc3182262a297df176e8c8ca28b2e8273cb809ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 18970e7a18f635dbceac9fbbaa8b2d26aef7df94
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>将数据库和结构化数据迁移到 Linux 上的 SQL Server 
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 你可以将你的数据库和数据迁移到运行在 Linux 上的 SQL Server 2017。 选用的方法取决于源数据和特定方案。 以下部分提供多种迁移方案的最佳做法。
 

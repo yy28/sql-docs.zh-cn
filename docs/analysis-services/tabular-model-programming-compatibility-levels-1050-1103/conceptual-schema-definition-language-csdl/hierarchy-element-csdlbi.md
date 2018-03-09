@@ -2,32 +2,32 @@
 title: "层次结构元素 (CSDLBI) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: acffabef75c9d62bc0f28c993c12577c03bbb434
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 230e5438e9494a873a0045eebb2870597834b5be
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 元素 (CSDLBI)
-  Hierarchy 元素是表中可彼此链接以形成层次结构的各个字段的逻辑容器。 Hierarchy 元素派生自 CSDL 的 Member 元素，并已扩展为支持在商业智能数据模型中创建的层次结构。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Hierarchy 元素是表中可彼此链接以形成层次结构的各个字段的逻辑容器。 Hierarchy 元素派生自 CSDL 的 Member 元素，并已扩展为支持在商业智能数据模型中创建的层次结构。  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
  下表列出了用于定义 Hierarchy 元素的元素和属性。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 |级别|是|定义层次结构中使用的列的一个或多个 Level 元素。<br /><br /> 请参阅 [Level 元素 (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md)。|  
   
 ## <a name="remarks"></a>注释  
- 在表格模型中，层次结构是通过在同一个表的各列间指定父子关系来创建的。 有关详细信息，请参阅[层次结构（SSAS 表格）](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
+ 在表格模型中，层次结构是通过在同一个表的各列间指定父子关系来创建的。 有关详细信息，请参阅[层次结构](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
   
 ## <a name="example"></a>示例  
  **表格**  

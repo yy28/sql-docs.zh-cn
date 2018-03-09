@@ -2,9 +2,12 @@
 title: "同步推送订阅 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - push subscriptions [SQL Server replication], synchronizing
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07f67a81de136cadb4b95bb0b71dc690f430e84d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00becd2c1e202ec06aa3f47b2d8bc2f9325c44ab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="synchronize-a-push-subscription"></a>同步推送订阅
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]复制代理 [或复制管理对象 (RMO) 在](../../relational-databases/replication/agents/replication-agents-overview.md)中同步推送订阅。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[复制代理](../../relational-databases/replication/agents/replication-agents-overview.md)或复制管理对象 (RMO) 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中同步推送订阅。  
   
  **本主题内容**  
   
@@ -64,7 +67,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  右键单击要同步的订阅，然后单击 **“查看同步状态”**。  
   
-4.  将显示一条消息，指示建立与分发服务器的连接。 单击 **“确定”**。  
+4.  将显示一条消息，指示建立与分发服务器的连接。 单击“确定” 。  
   
 5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。 完成同步后，将显示消息 **“同步完成”** 。  
   

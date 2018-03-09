@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a938efe16493d55ea2f4b5d7fab739ee0ba1ab02
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 33794866aa7969947253dc13f6076f978129a080
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio 中报表服务器的 F1 帮助
   本节包含有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可用于管理报表服务器的对话框的主题。  

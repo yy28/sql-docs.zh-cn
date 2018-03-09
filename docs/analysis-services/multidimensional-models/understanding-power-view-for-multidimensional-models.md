@@ -2,32 +2,30 @@
 title: "了解多维模型的 Power View |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35ac97b27348e930bdf69a7aaf0d15c3f2728de6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
-  本文介绍 SQL Server 中用于多维模型的 Power View 功能，并为希望在组织中实施多维模型的 Power View 的 BI 专业人员和管理员提供重要信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+本文介绍 SQL Server 中用于多维模型的 Power View 功能，并为希望在组织中实施多维模型的 Power View 的 BI 专业人员和管理员提供重要信息。  
   
  多维模型提供业界领先的 OLAP 数据建模、存储和分析解决方案。 SQL Server 中的多维模型通过使用 Microsoft Power View 支持即席数据分析、探索和可视化。  
   
@@ -37,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  ![Power View 的多维模型体系结构](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "的 Power View 的多维模型体系结构")  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必要條件  
  **服务器要求**  
   
 -   在多维模式下运行的 Microsoft SQL Server 2016 Analysis Services。  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.availability_group_listeners
 - sys.availability_group_listeners_TSQL
 - availability_group_listeners
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_group_listeners catalog view
 - Availability Groups [SQL Server], listeners
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0859d9390f2a424b18f175b8fb6749f92426037d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 48b54435e7737198bd3fd6084ad67ed253d29809
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +52,15 @@ ms.lasthandoff: 11/17/2017
 |**is_conformant**|**bit**|此 IP 配置是否符合标准，可为下列值之一：<br /><br /> 1 = 侦听器符合标准。 在其 Internet 协议 (IP) 地址之间仅存在“OR”关系。 *符合的*包含每个 IP 配置，由[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 此外，如果 IP 配置是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外创建的（例如通过使用 WSFC 故障转移群集管理器），但可以通过 ALTER AVAILABILITY GROUP tsql 语句修改，该 IP 配置也符合标准。<br /><br /> 0 = 侦听器不符合标准。 通常，这表示无法通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令配置的 IP 地址可以直接在 WSFC 群集中定义。|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|该侦听器的群集 IP 配置字符串（如果有）。 NULL = 侦听器没有虚拟 IP 地址。 例如：<br /><br /> IPv4 地址：`65.55.39.10`。<br /><br /> IPv6 地址：`2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [AlwaysOn 可用性组目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [监视可用性组 (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [监视可用性组 &#40;Transact SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

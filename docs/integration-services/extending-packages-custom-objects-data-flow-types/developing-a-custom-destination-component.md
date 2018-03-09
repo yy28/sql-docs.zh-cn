@@ -1,5 +1,5 @@
 ---
-title: "开发自定义的目标组件 |Microsoft 文档"
+title: "开发自定义目标组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -25,30 +24,29 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b579a17ba5095e3864148abaff75880da9fed108
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4a1bc365dba16da4dc4735469988815416d3f804
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-destination-component"></a>开发自定义目标组件
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]为开发人员提供用于编写自定义的目标组件，可以连接到和在任何自定义数据源中存储数据的功能。 自定义目标组件在您需要连接到无法通过使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包含的现有源组件来访问的数据源时非常有用。  
+  开发人员可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到任意自定义数据源并在其中存储数据的自定义目标组件。 自定义目标组件在您需要连接到无法通过使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包含的现有源组件来访问的数据源时非常有用。  
   
  目标组件有一个或多个输入，没有输出。 在设计时，目标组件创建和配置连接并从外部数据源读取列元数据。 在执行过程中，它们连接到外部数据源并将从数据流上游组件收到的行添加到外部数据源中。 如果外部数据源在组件执行之前就存在，则目标组件还必须确保组件收到的列的数据类型与外部数据源中列的数据类型相匹配。  
   
- 本节详细介绍如何开发目标组件，并提供阐明重要概念的代码示例。 有关数据数据流组件开发的一般概述，请参阅[开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
+ 本节详细介绍如何开发目标组件，并提供阐明重要概念的代码示例。 有关数据流组件开发的一般概述，请参阅[开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
 ## <a name="design-time"></a>设计时  
  实现目标组件的设计时功能包括指定与外部数据源的连接以及验证该组件已经正确配置。 根据定义，目标组件有一个输入，可能有一个错误输出。  
   
 ### <a name="creating-the-component"></a>创建组件  
- 目标组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 目标组件指示连接管理器对其要求[!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器中，并向该组件，通过添加到一个元素的用户<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>集合<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>。 此集合有两个用途：首先，告知 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器它需要连接管理器；然后，在用户选择或创建完连接管理器后，保存对组件正在使用的包中的连接管理器的引用。 当<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>添加到集合，**高级编辑器**显示**连接属性**选项卡，以提示用户选择或组件用于包中创建的连接。  
+ 目标组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 目标组件通过将元素添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器和组件用户指明自己需要连接管理器。 此集合有两个用途：首先，告知 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器它需要连接管理器；然后，在用户选择或创建完连接管理器后，保存对组件正在使用的包中的连接管理器的引用。 将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”将显示“连接属性”选项卡，以提示用户在包中选择或创建连接以供组件使用。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的实现，该实现添加一个输入，然后将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 对象添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。  
   
@@ -111,7 +109,7 @@ End Namespace
 ```  
   
 ### <a name="connecting-to-an-external-data-source"></a>连接外部数据源  
- 连接添加到后<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>，则重写<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>方法来建立与外部数据源的连接。 此方法在设计时和运行时调用。 组件应先建立与连接管理器（由运行时连接指定）的连接，再建立与外部数据源的连接。 连接建立后，组件就应在内部缓存该连接并在调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 时释放该连接。 开发人员可重写此方法，释放在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 过程中由组件建立的连接。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法都在设计时和运行时调用。  
+ 将连接添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 后，请重写 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法以建立与外部数据源的连接。 此方法在设计时和运行时调用。 组件应先建立与连接管理器（由运行时连接指定）的连接，再建立与外部数据源的连接。 连接建立后，组件就应在内部缓存该连接并在调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 时释放该连接。 开发人员可重写此方法，释放在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 过程中由组件建立的连接。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法都在设计时和运行时调用。  
   
  下面的代码示例演示在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法中连接到 ADO.NET 连接，然后在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 中关闭该连接的组件。  
   
@@ -174,9 +172,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>验证组件  
- 目标组件开发人员应执行验证中所述[组件验证](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)。 此外，还应该验证组件的输入列集合中定义的列的数据类型属性是否与外部数据源中的列匹配。 有时候，根据外部数据源验证输入列是不可能或不希望的，例如组件或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器处于断开连接状态时，或者与服务器之间的往返通信不可接受时。 在这些情况下，仍然可以使用输入对象的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> 来验证输入列集合中的列。  
+ 目标组件开发人员应按照[组件验证](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)中所述执行验证。 此外，还应该验证组件的输入列集合中定义的列的数据类型属性是否与外部数据源中的列匹配。 有时候，根据外部数据源验证输入列是不可能或不希望的，例如组件或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器处于断开连接状态时，或者与服务器之间的往返通信不可接受时。 在这些情况下，仍然可以使用输入对象的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> 来验证输入列集合中的列。  
   
- 此集合同时存在于输入对象和输出对象中，必须由组件开发人员从外部数据源的列来填充。 此集合可以用于验证的输入的列时[!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器处于脱机状态，当组件已断开连接，或者当<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>属性是**false**。  
+ 此集合同时存在于输入对象和输出对象中，必须由组件开发人员从外部数据源的列来填充。 此集合可用于 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器处于离线状态、组件断开连接或 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性为“false”时验证输入列。  
   
  下面的示例代码根据现有输入列添加外部元数据列。  
   
@@ -213,8 +211,8 @@ Private Sub AddExternalMetaDataColumn(ByVal input As IDTSInput100, ByVal inputCo
 End Sub  
 ```  
   
-## <a name="run-time"></a>运行时间  
- 在执行过程中，每次上游组件中有了完整的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 时，目标组件都会收到对 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 方法的调用。 直到有可用的更多的缓冲区重复调用此方法与<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>属性是**true**。 在此方法中，目标组件读取缓冲区中的列和行，并将其添加到外部数据源。  
+## <a name="run-time"></a>运行时  
+ 在执行过程中，每次上游组件中有了完整的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 时，目标组件都会收到对 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 方法的调用。 此方法会被重复调用，直到再没有缓冲区可用且 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 属性为“true”。 在此方法中，目标组件读取缓冲区中的列和行，并将其添加到外部数据源。  
   
 ### <a name="locating-columns-in-the-buffer"></a>在缓冲区中查找列  
  组件的输入缓冲区包含数据流中该组件的上游组件的输出列集合中定义的所有列。 例如，如果源组件在其输出中提供三列，下一个组件添加了另外一个输出列，则为目标组件提供的缓冲区中将包含四列，即使目标组件将只写入两列。  
@@ -496,4 +494,3 @@ End Namespace
  [使用脚本组件创建目标](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   
-

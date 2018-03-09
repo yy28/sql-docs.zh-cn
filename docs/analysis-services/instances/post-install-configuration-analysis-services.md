@@ -2,35 +2,32 @@
 title: "安装后配置 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining - "setup-install"
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
-- setup-install
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a87a4995e5b7776012e81f9cf908949dbc9339a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>安装后配置 (Analysis Services)
-  安装 Analysis Services 后，需要进行进一步配置以使服务器正常运行并可供常规使用。 本节介绍完成安装后的附加任务。 根据连接要求，还可能需要配置身份验证（请参阅 [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)）。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+安装 Analysis Services 后，需要进行进一步配置以使服务器正常运行并可供常规使用。 本节介绍完成安装后的附加任务。 根据连接要求，还可能需要配置身份验证（请参阅 [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)）。  
   
- 您具有可供部署的数据库后，需要完成一些额外工作。 换句话说，您需要在数据库上配置角色成员身份以授予用户对数据的访问权限、设计数据库备份和恢复策略，以及确定是否需要预定处理工作负荷以定期刷新数据。 有关数据库部署和管理的详细信息，请访问以下链接：[多维模型数据库 (SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)和[表格模型数据库（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
+ 您具有可供部署的数据库后，需要完成一些额外工作。 换句话说，您需要在数据库上配置角色成员身份以授予用户对数据的访问权限、设计数据库备份和恢复策略，以及确定是否需要预定处理工作负荷以定期刷新数据。 可以在这些链接中找到有关数据库部署和管理的详细信息：[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)和[表格模型数据库](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
   
 ## <a name="instance-configuration"></a>实例配置  
  Analysis Services 是可复制的服务，这意味着您可以在单个服务器上安装该服务的多个实例。 使用 SQL Server 安装程序将每个其他实例作为命名实例单独安装，并单独进行配置以实现预定用途。 例如，开发服务器可能运行网络流量记录器或将默认值用于数据存储，您可能在支持生产工作负荷的服务器上对这些值进行更改。 需要调整系统配置的另一示例是在由其他服务共享的硬件上安装 Analysis Services 实例。 在同一硬件上承载多个包含大量数据的应用程序时，您可能需要配置用于降低内存阈值的服务器属性，以优化所有应用程序之间的可用资源。  

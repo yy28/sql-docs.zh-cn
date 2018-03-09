@@ -2,15 +2,13 @@
 title: "交叉验证报表中的度量值 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +18,20 @@ helpviewer_keywords:
 - log score [data mining]
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 306a2c189f4c53a388572d64df7a07c733baca3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a98814c3b71a8a39b1f77bdeaf1de7eb4758e54
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉验证报表中的度量值
-  在交叉验证过程中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构中的数据划分为多个交叉部分，然后对该结构和任何关联的挖掘模型反复进行测试。 基于此分析，它将为该结构和每个模型输出一组标准的准确性度量值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在交叉验证过程中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构中的数据划分为多个交叉部分，然后对该结构和任何关联的挖掘模型反复进行测试。 基于此分析，它将为该结构和每个模型输出一组标准的准确性度量值。  
   
  该报表包含有关数据中折叠数以及每个折叠中的数据量的一些基本信息，还包含描述数据分布的一组一般性的指标。 通过比较各交叉部分的一般性的指标，您可以评估该结构或模型的可靠性。  
   
@@ -63,6 +62,6 @@ ms.lasthandoff: 11/17/2017
 ||**标准偏差**:<br />                      一个模型的所有分区中相对于特定度量值平均值的偏差的平均值。<br /><br /> 对于交叉验证，此分数值越高，则意味着折叠之间的差异越大。|  
   
 ## <a name="see-also"></a>另请参阅  
- [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

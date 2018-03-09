@@ -8,7 +8,8 @@ ms.service:
 ms.component: collations
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,19 +30,20 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ef3f7949bbccdc46f59bcb74de76cf395c09885c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c7e1e6997db9f93ea0145169a1f40b79ca93ea1
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 **char** 和 **varchar** 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符。 无论你是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解正在处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)。    
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 **char** 和 **varchar** 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符。 无论你是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解正在处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)。    
     
  在为你的服务器、数据库、列或表达式选择排序规则时，也在向你的数据分配某些特征，这些特征会影响数据库中许多操作的结果。 例如，使用 ORDER BY 构造查询时，结果集的排序顺序可能取决于应用于该数据库的排序规则或 COLLATE 子句中在查询的表达式级别规定的排序规则。    
     
@@ -60,11 +62,11 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Collation_Defn"></a> 排序规则    
  排序规则指定表示数据集中每个字符的位模式。 排序规则还确定数据的排序和比较规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在单个数据库中存储具有不同排序规则的对象。 对于非 Unicode 列，排序规则设置指定数据的代码页以及可以表示哪些字符。 必须将在非 Unicode 列间移动的数据从源代码页转换到目标代码页。    
     
- 当[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在具有不同排序规则设置的不同数据库上下文中运行时，其运行结果可能会不同。 如果可能，请为您的组织使用标准化排序规则。 这样就不必显式指定每个字符或 Unicode 表达式中的排序规则。 如果必须使用具有不同排序规则和代码页设置的对象，请对查询进行编码，以考虑排序规则的优先顺序规则。 有关详细信息，请参阅 [排序规则优先顺序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。    
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在具有不同排序规则设置的不同数据库上下文中运行时，其运行结果可能会不同。 如果可能，请为您的组织使用标准化排序规则。 这样就不必显式指定每个字符或 Unicode 表达式中的排序规则。 如果必须使用具有不同排序规则和代码页设置的对象，请对查询进行编码，以考虑排序规则的优先顺序规则。 有关详细信息，请参阅 [排序规则优先顺序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。    
     
  与排序规则关联的选项区分大小写、区分重音、区分假名、区分全半角以及区分变体选择符。 指定这些选项的方法是将它们追加到排序规则名称。 例如，排序规则 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 区分大小写、区分重音、区分假名以及区分全半角。 再举一例，此排序规则 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 就不区分大小写、不区分重音、区分假名、区分全半角以及区分变体选择符。  下表描述了与这些不同选项关联的行为。    
     
-|选项|说明|    
+|选项|Description|    
 |------------|-----------------|    
 |区分大小写 (_CS)|区分大写字母和小写字母。 如果选择此项，排序时小写字母将在其对应的大写字母之前。 如果未选择此选项，则排序规则将不区分大小写。 即 SQL Server 在排序时将大写字母和小写字母视为相同。 通过指定 _CI，可以显式选择不区分大小写。|    
 |区分重音 (_AS)|区分重音字符和非重音字符。 例如，“a”和“ấ”视为不同字符。 如果未选择此选项，则排序规则将不区分重音。 即 SQL Server 在排序时将重音字符和非重音字符视为相同。 通过指定 _AI，可以显式选择不区分重音。|    
@@ -146,7 +148,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  下表提供有关以 Unicode 和非 Unicode 服务器的各种组合使用多语言数据的信息。    
     
-|Server|客户端|优点或局限性|    
+|“服务器”|客户端|优点或局限性|    
 |------------|------------|-----------------------------|    
 |Unicode|Unicode|因为 Unicode 数据在整个系统中使用，所以此方案可提供最佳的性能并可保护检索到的数据免受破坏。 ActiveX 数据对象 (ADO)、OLE DB 和 ODBC 3.7 版或更高版本都采用这样的配置。|    
 |Unicode|非 Unicode|在这种情况下，尤其对于正在运行新操作系统的服务器与正在运行旧版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或基于旧操作系统的客户端之间的连接，当您向客户端计算机移动数据时，会受到限制或出现错误。 服务器上的 Unicode 数据尝试映射到非 Unicode 客户端的对应代码页，以转换数据。|    

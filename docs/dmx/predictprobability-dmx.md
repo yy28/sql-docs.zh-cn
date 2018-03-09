@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PredictProbability
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a48d9a8460d4e8d84a0089b5f15a43306f78fd67
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7b990b0c695e0502924796ce51ec6bd0bab26814
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果省略预测状态，则将使用概率最大的状态，不包括“缺失状态”存储桶。 若要包含的缺失的状态存储桶，设置\<预测状态 > 到**INCLUDE_NULL**。 若要返回 missing 状态的概率，设置\<预测状态 > 为 NULL。  
   
 > [!NOTE]  
@@ -73,7 +71,7 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Bike Buyer = Yes|Bike Buyer = No|  
 |----------------|-----------------------|----------------------|  
-|1|0.867074195848097|0.132755556974282|  
+|@shouldalert|0.867074195848097|0.132755556974282|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40; DMX &#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   

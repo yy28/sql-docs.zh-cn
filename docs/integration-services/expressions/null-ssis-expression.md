@@ -1,5 +1,5 @@
 ---
-title: "NULL （SSIS 表达式） |Microsoft 文档"
+title: "NULL（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-caps.latest.revision: 30
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c3be5273bd31a2a812c96fac458b8b173e14b3b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5b8b9f8e703b402b55bef24b30977b086b75d1f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="null-ssis-expression"></a>NULL（SSIS 表达式）
   返回请求的数据类型的 Null 值。  
@@ -45,7 +44,7 @@ NULL(typespec)
 ## <a name="result-types"></a>结果类型  
  任何包含 Null 值的有效数据类型。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果参数为 Null，则 NULL 返回的结果为 Null。  
   
  请求某些数据类型的 Null 值时需要提供参数。 下表列出了这些数据类型及其参数。  
@@ -69,8 +68,7 @@ NULL(DT_BOOL)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ISNULL &#40;SSIS 表达式 &#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [ISNULL（SSIS 表达式）](../../integration-services/expressions/isnull-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

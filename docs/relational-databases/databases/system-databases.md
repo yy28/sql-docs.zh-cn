@@ -2,10 +2,14 @@
 title: "系统数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,26 +18,30 @@ helpviewer_keywords:
 - modifying system data
 - viewing system database data
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: 9ed6df401b8bdac3926c919d4dda039c2b4a1fa6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb1953a20292a1b56766861479699faed049bb18
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="system-databases"></a>系统数据库
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含以下系统数据库。  
   
-|系统数据库|说明|  
+|系统数据库|Description|  
 |---------------------|-----------------|  
 |[master 数据库](../../relational-databases/databases/master-database.md)|记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的所有系统级信息。|  
 |[msdb 数据库](../../relational-databases/databases/msdb-database.md)|用于 SQL Server 代理计划警报和作业。|  
 |[model 数据库](../../relational-databases/databases/model-database.md)|用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建的所有数据库的模板。 对 **model** 数据库进行的修改（如数据库大小、排序规则、恢复模式和其他数据库选项）将应用于以后创建的所有数据库。|  
 |[Resource 数据库](../../relational-databases/databases/resource-database.md)|一个只读数据库，包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包括的系统对象。 系统对象在物理上保留在 **Resource** 数据库中，但在逻辑上显示在每个数据库的 **sys** 架构中。|  
 |[tempdb 数据库](../../relational-databases/databases/tempdb-database.md)|一个工作空间，用于保存临时对象或中间结果集。|  
+
+> [!IMPORTANT]
+> 对于 Azure SQL 数据库，仅 master 数据库和 tempdb 数据库可用。 有关逻辑服务器和逻辑 master 数据库的相关概念，请参阅[什么是 Azure SQL 逻辑服务器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)。 有关 Azure SQL 数据库上下文中关于 tempdb 的讨论，请参阅 [Azure SQL 数据库中的 tempdb 数据库](tempdb-database.md#tempdb-database-in-sql-database)。
   
 ## <a name="modifying-system-data"></a>修改系统数据  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持用户直接更新系统对象（如系统表、系统存储过程和目录视图）中的信息。 实际上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一整套管理工具，用户可以使用这些工具充分管理他们的系统以及数据库中的所有用户和对象。 其中包括：  
@@ -64,7 +72,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 系统存储过程和内置函数。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [在对象资源管理器中隐藏系统对象](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  

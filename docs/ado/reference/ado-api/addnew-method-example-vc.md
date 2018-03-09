@@ -3,27 +3,30 @@ title: "AddNew 方法示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: AddNew method [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- AddNew method [ADO], VC++ example
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6658d31453d43918167112dc7b1209e44cf7840
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f0d21735e8def12818c037e554aaab4050fb7be4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="addnew-method-example-vc"></a>AddNew 方法示例 （VC + +）
 此示例使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法具有指定名称创建一条新记录。  

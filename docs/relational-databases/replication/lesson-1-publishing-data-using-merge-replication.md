@@ -2,27 +2,34 @@
 title: "第 1 课：使用合并复制发布数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e60a79a2a0526ad5401e13798d1a311547e1b73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b30cc7798d28ce9b13f9448f583891170f7309fd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 课：使用合并复制发布数据
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 在本课中，你将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建合并复制以在 **示例数据库中发布**Employee **、**SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的子集。 这些表用参数化行筛选器进行筛选，以便每个订阅都包含唯一的数据分区。 你还要将合并代理使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到发布访问列表 (PAL) 中。 本教程要求你完成上一个教程， [准备用于复制的服务器](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)的学习。  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
@@ -86,7 +93,7 @@ ms.lasthandoff: 11/09/2017
   
 21. 选中“立即创建快照”，清除“计划在以下时间运行快照代理”，然后单击“下一步”。  
   
-22. 在“代理安全性”页上，单击“安全设置”，在“进程帐户”框中键入 \<*Machine_Name>***\repl_snapshot**，为此帐户提供密码，然后单击“确定”。 单击 **“完成”**。  
+22. 在“代理安全性”页上，单击“安全设置”，在“进程帐户”框中键入 \<Machine_Name>\repl_snapshot，为此帐户提供密码，然后单击“确定”。 单击 **“完成”**。  
   
 23. 在“完成该向导”页的“发布名称”框中，输入 **AdvWorksSalesOrdersMerge**，然后单击“完成”。  
   
@@ -110,9 +117,9 @@ ms.lasthandoff: 11/09/2017
   
 3.  选择“发布访问列表”页，单击“添加”。  
   
-4.  在“添加发布访问项”对话框中，选择 Machine_Name**\repl_merge**，然后单击“确定”。 单击 **“确定”**。  
+4.  在“添加发布访问项”对话框中，选择“<Machine_Name>\repl_merge”，然后单击“确定”。 单击“确定” 。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 您已成功创建了合并发布。 接下来，您将订阅此发布。 请参阅 [第 2 课：创建合并发布订阅](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
   
 ## <a name="see-also"></a>另请参阅  

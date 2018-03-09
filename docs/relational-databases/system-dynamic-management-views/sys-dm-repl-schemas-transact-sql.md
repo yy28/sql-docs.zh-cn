@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_schemas
 - sys.dm_repl_schemas_TSQL
 - sys.dm_repl_schemas
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_schemas dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fef5dd298e56cb1560562db1003e255244ca8fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e4ed91b38fc7175b6e3eff96f1e65415022834d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_schema_address**|**varbinary （8)**|已发布的表项目的缓存架构结构的内存中地址。|  
+|**artcache_schema_address**|**varbinary(8)**|已发布的表项目的缓存架构结构的内存中地址。|  
 |**tabid**|**bigint**|已复制的表的 ID。|  
 |**indexid**|**int**|已发布的表上的聚集索引的 ID。|  
 |**idSch**|**bigint**|表架构的 ID。|  
@@ -86,7 +89,7 @@ ms.lasthandoff: 11/17/2017
 |**se_computed**|**int**|指定列是否为计算列。|  
 |**se_nullBitInLeafRows**|**int**|指定列值是否为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW DATABASE STATE 权限的发布数据库上调用**dm_repl_schemas**。  
   
 ## <a name="remarks"></a>注释  

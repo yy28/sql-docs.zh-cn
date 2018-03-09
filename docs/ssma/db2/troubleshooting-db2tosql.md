@@ -1,10 +1,13 @@
 ---
 title: "故障排除 (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3aa6878b47923bc57a921c0fd56fb9d5b345590
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a81fecde8ebf12e9b32128c8a4121788af9144a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-db2tosql"></a>故障排除 (DB2ToSQL)
 并不少见运行迁移问题中途执行控制台脚本或命令。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  过程  
   
-3.  视图  
+3.  “查看”  
   
 4.  触发器  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c8de922f602a743fb0c2cdf6a247355f3794ef01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d8b0e4051da1cbcfc2ae641c2eb99102a13ac45
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
 在本教程中，将参数添加到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，使报表读者可以筛选报表数据的一个或多个值。 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  在“选择数据源的连接”页上，从列表中选择一个数据源或浏览到报表服务器进行选择。 选择任何类型为 **SQL Server**的数据源。  
       
-8.  单击 **“下一步”**。  
+8.  单击“下一步” 。  
 
     可能需要输入凭据。    
      
@@ -110,13 +110,13 @@ ms.lasthandoff: 12/05/2017
   
     已将销售量值组织到了按子类别分组的行中，一家商店一列。  
   
-4.  单击 **“下一步”**。  
+4.  单击“下一步” 。  
   
 5.  在“选择布局”页的“选项”下，确保已选择“显示小计和总计”。  
   
     当您运行报表时，最后一列将显示所有商店的每个子类别的总数量，而最后一行将显示每个商店的所有子类别的总数量。  
   
-6.  单击 **“下一步”**。  
+6.  单击“下一步” 。  
   
 8.  单击 **“完成”**。  
   
@@ -505,7 +505,7 @@ ms.lasthandoff: 12/05/2017
   
 报表即已保存至报表服务器。 您连接的报表服务器将显示在窗口底部的状态栏中。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 到此为止，我们结束了有关如何向报表添加参数的演练。 要了解有关参数的详细信息，请参阅[报表参数（报表生成器和报表设计器）](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 ## <a name="see-also"></a>另请参阅  

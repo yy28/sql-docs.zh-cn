@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - EXECUTE_TSQL
 - EXECUTE
 - EXEC_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - remote stored procedures [SQL Server]
 - command strings [SQL Server]
@@ -31,16 +33,16 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: "104"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c8099f3a7e05a2cce9acc6186c4311ab0f3fc061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e974faeb95631f73cd8f902194329c6eb54e825f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +187,7 @@ Execute a character string
   
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
@@ -206,12 +208,12 @@ Execute a character string
   
  当用于调用标量值用户定义函数，@*return_status*变量可以是任何标量数据类型。  
   
- *模块名*  
+ *module_name*  
  是要调用的存储过程或标量值用户定义函数的完全限定或者不完全限定名称。 模块名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 无论服务器的排序规则如何，扩展存储过程的名称总是区分大小写。  
   
  用户可以执行在另一数据库中创建的模块，只要运行模块的用户拥有此模块或具有在该数据库中执行该模块的适当权限。 用户可以在另一台运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器中执行模块，只要该用户有相应的权限使用该服务器（远程访问），并能在数据库中执行该模块。 如果指定了服务器名称但没有指定数据库名称，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会在用户的默认数据库中查找该模块。  
   
- ;*数*  
+ ;*number*  
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  是可选整数，用于对同名的过程分组。 该参数不能用于扩展存储过程。  
@@ -226,7 +228,7 @@ Execute a character string
   
  这可以是函数的变量包含本机编译的标量用户定义的名称。  
   
- @*参数*  
+ @*parameter*  
  是的参数*模块名*，如在模块中定义。 参数名称前必须加上符号 (@)。 如果用于 @*parameter_name*=*值*窗体、 参数名称和常量不需要的模块中定义的顺序提供。 但是，如果 @*parameter_name*=*值*窗体用于任何参数，它必须用于所有后续的参数。  
   
  默认情况下，参数可为空值。  
@@ -242,7 +244,7 @@ Execute a character string
   
  默认值也可以为 NULL。 通常，模块定义会指定当参数值为 NULL 时应该执行的操作。  
   
- @*变量*  
+ @*variable*  
  是用来存储参数或返回参数的变量。  
   
  OUTPUT  
@@ -262,10 +264,10 @@ Execute a character string
  @*string_variable*  
  局部变量的名称。 @*string_variable*可以是任何**char**， **varchar**， **nchar**，或**nvarchar**数据类型。 其中包括**(max)**数据类型。  
   
- [N]*tsql_string*  
+ [N] '*tsql_string*'  
  常量字符串。 *tsql_string*可以是任何**nvarchar**或**varchar**数据类型。 如果包括 N，则将字符串解释为**nvarchar**数据类型。  
   
- AS \<context_specification >  
+ AS \<context_specification>  
  指定执行语句的上下文。  
   
  Login  
@@ -273,31 +275,31 @@ Execute a character string
   
  指定要模拟的上下文是登录名。 模拟范围为服务器。  
   
- User  
+ USER  
  指定要模拟的上下文是当前数据库中的用户。 模拟范围只限于当前数据库。 对数据库用户的上下文切换不会继承该用户的服务器级别权限。  
   
 > [!IMPORTANT]  
 >  当到数据库用户的上下文切换处于活动状态时，任何对数据库外部资源的访问尝试都会导致语句失败。 这包括使用*数据库*语句、 分布式的查询和通过使用三个-或四部分部分组成的标识符引用另一个数据库的查询。  
   
- *名称*  
+ '*name*'  
  有效的用户或登录名。 *名称*必须是 sysadmin 固定的服务器角色的成员，或者作为中的主体存在[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)或[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)分别。  
   
  *名称*不能是内置帐户，如 NT AUTHORITY\LocalService、 NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   
  有关详细信息，请参阅[指定用户或登录名](#_user)本主题中更高版本。  
   
- [N]*command_string*  
+ [N] '*command_string*'  
  常量字符串，包含要传递给链接服务器的命令。 如果包括 N，则将字符串解释为**nvarchar**数据类型。  
   
  [?]  
  指示在为其提供值的参数\<arg 列表 > 的 EXEC('...', \<arg-list>) 在中使用的传递命令\<linkedsrv > 语句。  
   
- 在*linked_server_name*  
+ AT *linked_server_name*  
 **适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定*command_string*针对执行*linked_server_name*和结果，如果有的话，将返回到客户端。 *linked_server_name*本地服务器中现有的链接的服务器定义必须引用。 链接的服务器定义使用[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。  
   
- 与\<execute_option >  
+ WITH \<execute_option>  
  可能的执行选项。 不能在 INSERT…EXEC 语句中指定 RESULT SETS 选项。  
   
 |术语|定义|  
@@ -305,7 +307,7 @@ Execute a character string
 |RECOMPILE|执行模块后，强制编译、使用和放弃新计划。 如果该模块存在现有查询计划，则该计划将保留在缓存中。<br /><br /> 如果所提供的参数为非典型参数或者数据有很大的改变，使用该选项。 该选项不能用于扩展存储过程。 建议尽量少使用该选项，因为它消耗较多系统资源。<br /><br /> **注意：**时，可以不使用 WITH RECOMPILE 调用存储的过程使用 OPENDATASOURCE 语法。 如果指定由四个部分组成的对象名，则忽略 WITH RECOMPILE 选项。<br /><br /> **注意：**本机编译标量用户定义函数不支持重新编译。 如果你需要重新编译，使用[sp_recompile &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**未定义的结果集**|**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 此选项不保证将返回任何结果（如果有），并且不提供任何定义。 如果返回任何结果，则说明语句正常执行而没有发生错误，否则，不会返回任何结果。 如果未提供 result_sets_option，则 RESULT SETS UNDEFINED 是默认行为。<br /><br /> 有关解释标量用户定义函数，而本机编译标量用户定义函数，因为这些函数永远不会返回结果集不可操作此选项。|  
 |RESULT SETS NONE|**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保证执行语句不返回任何结果。 如果返回任何结果，则会中止批处理。<br /><br /> 有关解释标量用户定义函数，而本机编译标量用户定义函数，因为这些函数永远不会返回结果集不可操作此选项。|  
-|*\<result_sets_definition >*|**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保证返回 result_sets_definition 中指定的结果。 语句返回多个结果集，提供多个*result_sets_definition*部分。 将每个括*result_sets_definition*在括号中，用逗号分隔。 有关详细信息，请参阅\<result_sets_definition > 本主题中更高版本。<br /><br /> 此选项始终将产生错误的本机编译标量用户定义函数，因为函数永远不会返回结果集。|
+|*\<result_sets_definition>*|**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]， [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保证返回 result_sets_definition 中指定的结果。 语句返回多个结果集，提供多个*result_sets_definition*部分。 将每个括*result_sets_definition*在括号中，用逗号分隔。 有关详细信息，请参阅\<result_sets_definition > 本主题中更高版本。<br /><br /> 此选项始终将产生错误的本机编译标量用户定义函数，因为函数永远不会返回结果集。|
   
 \<result_sets_definition >**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -356,7 +358,7 @@ Execute a character string
   
  数据库上下文的更改只在 EXECUTE 语句结束前有效。 例如，运行下面这条语句中的 `EXEC` 之后，数据库上下文将为 master。  
   
-```tsql  
+```sql  
 USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
@@ -375,7 +377,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>最佳实践  
  指定具有执行语句或模块中定义的操作所需的最低权限的登录名或用户。 例如，如果只需数据库级别权限，则不要指定拥有服务器级别权限的登录名；如果不需要相应权限，也不要指定数据库所有者帐户。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  运行 EXECUTE 语句无需权限。 但是，需要对 EXECUTE 字符串内引用的安全对象具有权限。 例如，如果字符串包含 INSERT 语句，则 EXECUTE 语句的调用方对目标表必须具有 INSERT 权限。 在遇到 EXECUTE 语句时，即使 EXECUTE 语句包含于模块内，也将检查权限。  
   
  模块的 EXECUTE 权限默认授予该模块的所有者，该所有者可以将此权限转让给其他用户。 当运行一个执行字符串的模块时，系统会在执行该模块的用户上下文中而不是在创建该模块的用户上下文中检查权限。 但是，如果同一用户拥有调用模块和被调用模块，则不对后者执行 EXECUTE 权限检查。  
@@ -467,7 +469,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
 ### <a name="e-using-execute-with-a-stored-procedure-variable"></a>E. 使用带存储过程变量的 EXECUTE 语句  
  以下示例创建一个代表存储过程名称的变量。  
   
-```tsql  
+```sql  
 DECLARE @proc_name varchar(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  
@@ -734,12 +736,12 @@ GO
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [还原 &#40;Transact SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
- [SUSER_NAME &#40;Transact SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [-b](../../tools/sqlcmd-utility.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [USER_NAME &#40;Transact SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [OPENDATASOURCE &#40;Transact SQL &#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [针对内存中 OLTP 的标量用户定义函数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   

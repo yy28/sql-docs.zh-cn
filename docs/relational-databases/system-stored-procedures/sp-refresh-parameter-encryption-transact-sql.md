@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31dd44920c1bc814985cd0391f52e035621de89f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0（成功）或非零数字（失败）
 
 
-## <a name="remarks"></a>注释
+## <a name="remarks"></a>Remarks
 
 模块的参数加密元数据将变得过期，，如果：   
 * 加密属性的模块引用，已更新的表中的列。 例如，某一列已被删除，已添加具有相同的名称，但不同的加密类型、 加密密钥或加密算法的新列。  
@@ -77,7 +77,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 >  [!NOTE]   
 >  在运行时，将删除与对象关联的任何签名`sp_refresh_parameter_encryption`。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要`ALTER`模块上的权限和`REFERENCES`任何 CLR 用户定义类型和 XML 架构集合引用的对象的权限。   
 
@@ -92,7 +92,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 下面的示例创建一个表和引用表的过程、 配置始终加密，然后演示更改表和运行`sp_refresh_parameter_encryption`过程。  
 
 首先创建初始表和引用表的存储的过程。
-```tsql
+```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
     [FirstName] [nvarchar](50) NULL,
@@ -121,7 +121,7 @@ GO
 ```
 
 然后设置始终加密密钥。
-```tsql
+```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
 (
@@ -143,7 +143,7 @@ GO
 
 
 最后我们将替换为加密的列，然后运行 SSN 列`sp_refresh_parameter_encryption`过程更新的始终加密组件。
-```tsql
+```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
 

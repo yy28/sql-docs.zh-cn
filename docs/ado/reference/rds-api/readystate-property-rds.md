@@ -1,26 +1,30 @@
 ---
 title: "ReadyState 属性 (RDS) |Microsoft 文档"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: ReadyState property [ADO]
+helpviewer_keywords:
+- ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d5533fd471b6aee697825d2251c84adbcdfccfa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c5496f5b5c98efa6f4754d131d74627f9ab75984
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="readystate-property-rds"></a>ReadyState 属性 (RDS)
 指示进度的[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象，如它检索到的数据及其[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -31,7 +35,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回下列值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|仍在执行当前的查询和已提取的任何行。 **DataControl**对象的**记录集**不是可供使用。|  
 |**adcReadyStateInteractive**|已存储在由当前的查询检索的行的初始集**DataControl**对象的**记录集**和可供使用。 仍在获取剩余行。|  

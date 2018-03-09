@@ -1,30 +1,35 @@
 ---
 title: "管理和监视服务器实例的全文搜索 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d6f184f66b02ef2f92c9593001edc3364f4d62a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e1dbd4fe6152e7318da0267d25c5900ec10c4814
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
-  针对服务器实例的全文管理包括：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+针对服务器实例的全文管理包括：  
   
 -   诸如管理 FDHOST Launcher 服务 (MSSQLFDLauncher)、重新启动筛选器后台程序宿主进程（如果您更改服务帐户凭据）、配置服务器范围内的全文属性以及备份全文目录之类的系统管理任务。 例如，在服务器级，您可以指定在整体上与服务器实例的默认语言不同的默认全文语言。  
   
@@ -75,7 +80,7 @@ ms.lasthandoff: 11/09/2017
   
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器实例全文属性及其相关的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数。  
   
-|属性|说明|函数|  
+|“属性”|Description|函数|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|全文组件是否安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例中。|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

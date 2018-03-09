@@ -3,26 +3,28 @@ title: "查看对象属性、 方法和事件 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: View object [ADOX], members
+helpviewer_keywords:
+- View object [ADOX], members
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb0eb16f56c1137363643d2352826744d313d241
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d066ab04292a2155b0472907090943f9c77296e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="view-object-properties-methods-and-events"></a>查看对象属性、 方法和事件
 ## <a name="properties"></a>属性  

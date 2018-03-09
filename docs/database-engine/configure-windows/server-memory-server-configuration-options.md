@@ -24,15 +24,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: "78"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f3d5134098013c95051fc38f634461d00718e2f8
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 45a6ecb0861d15f0f4eb26855af46759a7db86ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/28/2017
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>配置固定内存量的过程（不推荐）  
 设置固定内存量：  
   
-1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
+1.  在对象资源管理器中，右键单击服务器并选择 **“属性”**。  
   
 2.  单击 **“内存”** 节点。  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/28/2017
 ### <a name="example-a"></a>示例 A  
  以下示例将 `max server memory` 选项设置为 4 GB：  
   
-```t-sql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -145,7 +145,7 @@ GO
 ### <a name="example-b-determining-current-memory-allocation"></a>示例 B. 确定当前内存分配  
  以下查询返回有关当前分配内存的信息。  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 

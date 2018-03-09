@@ -1,11 +1,11 @@
 ---
-title: "步骤 1： 复制 Lesson 1 包 |Microsoft 文档"
+title: "步骤 1：复制第 1 课包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b3b601049b8904d439136a1fdc9af7cd84a86b5b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 258d3c72ce8207a55aa9587a1c2db9261b8b23dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-1---copying-the-lesson-1-package"></a>课程 2-1-复制 Lesson 1 包
+# <a name="lesson-2-1---copying-the-lesson-1-package"></a>第 2-1 课 - 复制第 1 课包
 在本任务中，将为第 1 课中创建的 Lesson 1.dtsx 包创建一个副本。 如果未完成第 1 课的学习，则可以向项目添加本教程中附带的已完成 Lesson 1 包，然后再对其进行复制。 将使用这一新副本来完成第 2 课剩余部分。  
   
 ### <a name="to-create-the-lesson-2-package"></a>创建 Lesson 2 包  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [步骤 2：添加和配置 Foreach 循环容器](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
-

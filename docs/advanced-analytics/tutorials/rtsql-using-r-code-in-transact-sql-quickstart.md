@@ -1,28 +1,34 @@
 ---
 title: "使用 TRANSACT-SQL (SQL 快速入门中的 R) 中的 R 代码 |Microsoft 文档"
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d0915986d39aa6fb376063bf6a2a31a5c5953aa9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>使用 TRANSACT-SQL (SQL 快速入门中的 R) 中的 R 代码
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本教程将带你演练从 T-SQL 存储过程调用 R 脚本的基础技术。
 
@@ -37,7 +43,7 @@ ms.lasthandoff: 11/09/2017
 
 30 分钟，不包括安装
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 你必须访问 SQL Server 的实例与已安装下列项之一：
 
@@ -48,7 +54,7 @@ SQL Server 实例可以是 Azure 虚拟机或本地。 只需注意，外部脚�
 
 若要运行包含 R 脚本的 SQL 查询，可以使用任何其他应用程序可以连接到数据库并运行 T-SQL 代码。 SQL 专业人员可以使用 SQL Server Management Studio (SSMS) 或 Visual Studio。
 
-对于本教程，以显示运行在 SQL Server，R 是多么容易，我们使用新**mssql 扩展 Visual Studio Code**。 VS Code 是一个免费的开发环境，可以在 Linux、 macOS 或 Windows 上运行。 **Mssql*** 扩展是一个轻型的运行 SLq 查询扩展。 若要安装该开发环境，请参阅以下文章：[使用用于 Visual Studio Code 的 mssql 扩展](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
+对于本教程，以显示运行在 SQL Server，R 是多么容易，我们使用新**mssql 扩展 Visual Studio Code**。 VS Code 是一个免费的开发环境，可以在 Linux、 macOS 或 Windows 上运行。 **Mssql**扩展是一个轻型的运行 T-SQL 查询扩展。 若要安装该开发环境，请参阅以下文章：[使用用于 Visual Studio Code 的 mssql 扩展](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>连接到数据库并运行 Hello World 测试脚本
 

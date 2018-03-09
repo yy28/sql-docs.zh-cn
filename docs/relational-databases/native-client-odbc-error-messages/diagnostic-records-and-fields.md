@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-error-messages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4f1f7c5f8eb78ce45d380cc337ca0ab3c6796d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b2c800550b992735c0af6854a83d5ea28a2c597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="diagnostic-records-and-fields"></a>诊断记录和字段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  状态记录中的字段包含关于 ODBC 驱动程序管理器、驱动程序或数据源返回的特定错误或警告的信息，包括 SQLSTATE、本机错误号、诊断消息、列号和行号。 仅当函数返回 SQL_ERROR, SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA 或 SQL_STILL_EXECUTING 时，才会创建状态记录。 中的状态记录的字段的完整列表，请参阅**SQLGetDiagField**。  
   
- **SQLGetDiagRec**检索以及其 ODBC SQLSTATE、 本机错误号和诊断消息字段的单个诊断记录。 此功能是类似于 ODBC 2。*x***SQLError**函数。 ODBC 3 中的最简单的错误处理函数。*x*是重复调用**SQLGetDiagRec**开头*RecNumber*参数设置为 1 和递增*RecNumber*直到 1**SQLGetDiagRec**返回 SQL_NO_DATA。 这相当于 ODBC 2。*x*应用程序调用**SQLError**直到它返回 SQL_NO_DATA_FOUND。  
+ **SQLGetDiagRec**检索以及其 ODBC SQLSTATE、 本机错误号和诊断消息字段的单个诊断记录。 此功能是类似于 ODBC 2。*x * * * SQLError** 函数。 ODBC 3 中的最简单的错误处理函数。*x*是重复调用**SQLGetDiagRec**开头*RecNumber*参数设置为 1 和递增*RecNumber*直到 1**SQLGetDiagRec**返回 SQL_NO_DATA。 这相当于 ODBC 2。*x*应用程序调用**SQLError**直到它返回 SQL_NO_DATA_FOUND。  
   
  ODBC 3。*x*支持比 ODBC 2 的更多诊断信息。*x*。 此信息存储在中使用检索到的诊断记录的附加字段**SQLGetDiagField**。  
   

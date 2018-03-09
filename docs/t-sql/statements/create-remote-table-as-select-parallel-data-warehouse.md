@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>创建远程 TABLE AS SELECT （并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -81,18 +82,18 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  *user_name*  
  一个有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录名。 最大字符数为 128。  
   
- *密码*  
+ *password*  
  登录密码。 最大字符数为 128。  
   
  *batch_size*  
  最大每批的行数。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]将在批处理中的行发送到目标服务器。 *Batch_size*是一个正整数 > = 0。 默认值为 0。  
   
- 与*common_table_expression*  
+ WITH *common_table_expression*  
  指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 有关详细信息，请参阅[使用 common_table_expression &#40;Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  选择\<select_criteria > 指定的数据将填充新的远程表的查询谓词。 SELECT 语句的信息，请参阅[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要：  
   
 -   SELECT 子句中的每个对象的 SELECT 权限。  
@@ -129,7 +130,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 ## <a name="metadata"></a>元数据  
  使用[sys.dm_pdw_dms_workers &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)若要查看将所选的数据复制到远程 SMP 服务器的进度。 与类型 PARALLEL_COPY_READER 的行包含此信息。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  CREATE REMOTE TABLE 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证连接到远程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例; 它不使用 Windows 身份验证。  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]必须防火墙外部的面向网络发生异常，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]端口、 管理端口和管理端口。  

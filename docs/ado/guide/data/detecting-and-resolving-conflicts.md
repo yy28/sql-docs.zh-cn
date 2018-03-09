@@ -3,8 +3,9 @@ title: "检测和解决冲突 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ac1ca3e4cd6e9047f6a3f47e8067efc6143ba5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 61f54b700be8ec03e56bf63999dc7f93b8d5fcdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
 如果你处理的记录集，在即时模式中，则要少得多的并发问题发生的机会。 另一方面，如果你的应用程序使用批处理模式更新，可能有一个不错的概率一个用户将更改的记录，然后再将保存所做的另一个用户编辑同一个记录的更改。 在这种情况下，你需要应用程序，用于正常处理冲突。 它可能是您所希望的最后一个人将更新发送到服务器"wins"。 或者，你可能想要让最新的用户来决定哪种更新应优先通过向他提供两个冲突值之间进行选择。  

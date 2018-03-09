@@ -1,33 +1,41 @@
 ---
 title: "配置服务器启动选项（SQL Server 配置管理器）| Microsoft Docs"
-ms.custom: SQL2016_New_Updated
-ms.date: 01/06/2016
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 11/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parameters [SQL Server], startup options
 - SQL Server, startup options
+- SQL Server, startup parameters
 - single-user mode [SQL Server], starting in
 - startup options [SQL Server]
+- startup parameters [SQL Server]
 - SQL Server services, setting startup options
+- SQL Server services, setting startup parameters
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a7e0b4cc64f8b2e2d283549b7ec53a1f35fb7be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff11f5d2ec4c086733793ebb13e54ab5448b9dd3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 服务 - 配置服务器启动选项
-  本主题介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次启动时将使用的启动选项。 有关启动选项列表，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次启动时将使用的启动选项。 有关启动选项列表，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -38,7 +46,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  只有可以更改注册表中的相关项的用户才能配置服务器启动选项。 其中包括以下用户。  
   
 -   本地管理员组的成员。  
@@ -56,12 +64,12 @@ ms.lasthandoff: 11/09/2017
     >   
     >  -   **Windows 10**：  
     >          要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“起始页” 中键入 SQLServerManager13.msc（适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）。 对于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请将 13 替换为较小的数字。 单击“SQLServerManager13.msc”可打开配置管理器。 要将配置管理器固定到“起始页”或“任务栏”，请右键单击“SQLServerManager13.msc”，然后单击“打开文件位置” 。 在“Windows 文件资源管理器”中，右键单击“SQLServerManager13.msc”，然后单击“固定到‘开始’屏幕”  或“固定到任务栏” 。  
-    > -   **Windows 8**：  
+    >  -   **Windows 8**：  
     >          若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager\<version>.msc（例如 SQLServerManager13.msc），然后按“Enter”。  
   
 2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“SQL Server 服务”**。  
   
-3.  在右侧窗格中，右键单击 **“SQL Server (***<instance_name>***)”**，然后单击**“属性”**。  
+3.  在右侧窗格中，右键单击 “SQL Server (<instance_name>)”，然后单击“属性”。  
   
 4.  在 **“启动参数”** 选项卡上的 **“指定启动参数”** 框中，键入该参数，然后单击 **“添加”**。  
   
@@ -77,6 +85,6 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>另请参阅  
  [在单用户模式下启动 SQL Server](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [在系统管理员被锁定时连接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)   
- [启动、停止或暂停 SQL Server 代理服务](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
-  
+ [启动、停止或暂停 SQL Server 代理服务](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md) 
   

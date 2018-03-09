@@ -2,27 +2,30 @@
 title: "使用模板配置资源调控器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb31cc4264a29160ce392d2056ff6f01918c2742
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: df7896e10efd804a93ea6ef76254df60c3845e67
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用模板配置资源调控器
-  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的模板配置资源调控器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的模板配置 Resource Governor。  
   
 -   **开始之前：**  [权限](#Permissions)  
   
@@ -31,13 +34,13 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  使用下列步骤可打开和修改创建资源池和资源池的工作负荷组的模板。 此外，该模板还可以创建分类器用户定义函数，以将新的连接传送到默认组或用户创建的工作负荷组。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="Permissions"></a> Permissions  
  模板中的资源调控器 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句需要 CONTROL SERVER 权限。  
   
 ##  <a name="ConfRGTemplate"></a> 使用模板配置资源调控器  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“视图”** 菜单上，单击 **模板资源管理器**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器” 。  
   
 2.  在**模板资源管理器**中，展开“资源调控器”，然后双击“配置资源调控器”。  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 6.  若要运行查询，请单击 **“执行”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
+ [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
  [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

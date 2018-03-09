@@ -3,8 +3,11 @@ title: "“结果”窗格 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,16 +27,16 @@ ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d363fd63a32e338558e67ca86d5ed155e48a72c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 462f9996dfc57b92e1388c58adbe198a1154032a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="results-pane-visual-database-tools"></a>“结果”窗格 (Visual Database Tools)
-“结果”窗格显示最近执行的 SELECT 查询的结果。 （其他类型查询的结果会在消息框中显示。）若要打开“结果”窗格，请打开或创建一个查询或视图，或者返回某个表的数据。 如果默认情况下不显示“结果”窗格，请在 **“查询设计器”** 菜单中，指向 **“窗格”**，再单击 **“结果”**。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]“结果”窗格显示最近执行的“选择”查询的结果。 （其他类型查询的结果会在消息框中显示。）若要打开“结果”窗格，请打开或创建一个查询或视图，或者返回某个表的数据。 如果默认情况下不显示“结果”窗格，请在 **“查询设计器”** 菜单中，指向 **“窗格”**，再单击 **“结果”**。  
   
 ## <a name="what-you-can-do-in-the-results-pane"></a>可以在“结果”窗格中执行的操作  
   

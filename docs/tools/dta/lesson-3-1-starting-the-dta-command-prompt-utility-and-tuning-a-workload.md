@@ -2,9 +2,12 @@
 title: "启动命令提示符实用工具 dta 和优化工作负荷 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ applies_to: SQL Server 2016
 helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02d4e4276953d0e9ff54ac49fda434cb2509e7f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lesson 3-1-启动命令提示符实用工具 dta 和优化工作负荷
-此任务指导你如何从命令提示符下启动 **dta** 实用工具，查看其帮助，以及使用它优化工作负荷。 此任务将使用在数据库引擎优化顾问图形用户界面 (GUI) 练习 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的工作负荷 MyScript.sql。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]此任务将引导您完成启动**dta**实用程序，查看其帮助，然后使用它来优化的工作负荷从命令提示符。 此任务将使用在数据库引擎优化顾问图形用户界面 (GUI) 练习 [优化工作负荷](../../tools/dta/lesson-1-1-tuning-a-workload.md)中创建的工作负荷 MyScript.sql。  
   
 本教程使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库。 出于安全原因，默认情况下不安装该示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](http://sqlserversamples.codeplex.com)。  
   

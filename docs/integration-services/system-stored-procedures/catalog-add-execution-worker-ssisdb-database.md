@@ -1,44 +1,46 @@
 ---
-title: "catalog.add_execution_worker （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.add_execution_worker（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8ce83f2678a1f3dcae6539f33beb33070b8e771b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 42d1332c727f26b6850c7fd7227c3a124ebc50a9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker （SSISDB 数据库）
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+# <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker（SSISDB 数据库）
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-将添加[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]缩放出辅助到向外扩展中执行的实例。
+将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker 添加到 Scale Out 中的一个执行实例。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>语法
 
 ```sql
 catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
 ```
 
 ## <a name="arguments"></a>参数
-[ @execution_id =] *execution_id*  
- 执行实例的唯一标识符。 *Execution_id*是**bigint**。  
+[ @execution_id = ] execution_id  
+ 执行实例的唯一标识符。 execution_id 为 bigint。  
  
-[@workeragent_id =] *workeragent_id*  
-横向扩展辅助进程工作代理 id。 *Workeragent_id*是**uniqueIdentifier**。
+[@workeragent_id = ] workeragent_id  
+Scale Out Worker 的辅助角色代理 ID。 workeragent_id 为 uniqueIdentifier。
 
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -51,22 +53,21 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
   
 -   针对执行实例的 READ 和 MODIFY 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
  
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
  
 - 用户不具备适当的权限。
 
-- 执行标识符不是有效的。
+- 执行标识符无效。
 
-- 辅助代理 id 不是有效的。
+- 辅助角色代理 ID 无效。
 
-- 执行不在向外扩展。
+- 执行不在 Scale Out 中进行。
 
 ## <a name="see-also"></a>另请参阅
-[在向外扩展中执行包](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)。
-
+[在 Scale Out 中执行包](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)。
 

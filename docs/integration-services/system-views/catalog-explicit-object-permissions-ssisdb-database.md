@@ -1,5 +1,5 @@
 ---
-title: "catalog.explicit_object_permissions （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.explicit_object_permissions（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ce92a61241cb70f5e1c6d1bab8db8264d6228bd2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e941a6a1f460039964579b1c58fe7011502eda5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,14 +31,14 @@ ms.lasthandoff: 09/26/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|object_type|**int**|安全对象类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`） 和操作 (`4`)。|  
+|object_type|**int**|安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`） 和操作 (`4`)。|  
 |object_id|**bigint**|安全对象的唯一标识符 (ID) 或主键。|  
 |principal_id|**int**|数据库主体的 ID。|  
 |permission_type|**int**|权限的类型。|  
 |is_deny|**bit**|指示是已拒绝还是授予了该权限。 如果值为 `1`，则已拒绝此权限。 如果值为 `0`，则未拒绝此权限。|  
 |grantor_id|**int**|授予该权限的主体的 ID。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图显示下表中所列的权限类型：  
   
 |permission_type 值|权限名称|权限说明|适用对象类型|  
@@ -54,8 +53,7 @@ ms.lasthandoff: 09/26/2017
 |`103`|EXECUTE_OBJECTS|允许主体执行文件夹中所有项目的所有包。|文件夹|  
 |`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|文件夹|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图并不显示当前主体的完整权限视图。 用户还必须检查主体是否为已分配了权限的角色和组的成员。  
   
   
-

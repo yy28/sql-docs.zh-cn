@@ -1,41 +1,41 @@
 ---
 title: "使用 Azure SQL 数据库中的 R |Microsoft 文档"
 ms.custom: 
-ms.date: 11/16/2017
-ms.prod: sql-server-2017
+ms.date: 01/08/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 4562dc3490f4790a31b4b32e06b9e5133a151c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0443f23518e0630dfde862d141d622cc2b978bfb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-in-azure-sql-database"></a>在 Azure SQL Database 中使用 R
-
-自 2017 年 10 月，就是在 SQL Server 开发团队宣布计划来支持的 R 代码数据库中使用类似于 SQL Server 2016 中的 R Services 的存储的过程的执行。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!IMPORTANT]
-> 已宣布的初始预览版本已适用于测试和仅浏览。 目前，该功能是**禁用**进一步支持开发 Azure SQL 数据库中。 
+> 目前，R 支持预览已挂起，正在进行的开发工作。 更广泛的预览版本即将推出。 请继续关注 ！
 
-保持最新上在公开发行计划和即将到来的事件，请参阅[SQL Server 博客](https://blogs.technet.microsoft.com/dataplatforminsider/)或[Microsoft R Server 博客](https://blogs.msdn.microsoft.com/rserver/)。
+若要保持最新公开发布的版本计划和即将到来的事件，请参阅[SQL Server 博客](https://blogs.technet.microsoft.com/dataplatforminsider/)或[Microsoft R Server 博客](https://blogs.msdn.microsoft.com/rserver/)。
 
-**Azure 资源**
+## <a name="related-resources"></a>相关资源
 
-在此期间，我们建议你使用在 Azure 应用商店都可用的 SQL Server 2017 虚拟机之一： 
+Azure 应用商店提供包括 SQL Server 自 2017 年的多个虚拟机：
 
 + [设置用于在 Azure 上的机器学习的虚拟机](provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
-同时查看这些 Vm，但这与各种受欢迎的机器学习工具都被预配置：
+这些虚拟机都被预配置了大量的常用机器学习工具：
 
 + [数据科学虚拟机](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)
-+ [深入学习虚拟机](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview)， 
-
++ [深入学习虚拟机](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview)

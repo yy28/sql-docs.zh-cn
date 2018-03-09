@@ -1,5 +1,5 @@
 ---
-title: "添加自定义任务中进行调试的支持 |Microsoft 文档"
+title: "在自定义任务中添加对调试的支持 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,33 +25,32 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f6e3d95b834bf64cb4dd4201658e0905d3e3ed46
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0f8aa78d097e2e0810c62d45189ca6959b194504
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>在自定义任务中添加对调试的支持
   使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时引擎可以通过断点在执行过程中将包、任务和其他类型的容器挂起。 通过断点可以检查和纠正那些导致应用程序或任务不能正常运行的错误。 断点体系结构使客户端能够在任务处理被挂起的同时在定义的执行点评估包中对象的运行时值。  
   
  自定义任务开发人员可利用此体系结构，使用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口及其父接口 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 创建自定义断点目标。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口定义运行时引擎与用于创建和管理自定义断点位置或目标的任务之间的交互。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口提供由运行时引擎调用以通知任务挂起或继续执行的方法和属性。  
   
- 断点位置或目标是任务执行过程中可挂起处理的点。 用户选择从可用断点站点**设置断点**对话框。 例如，除了默认断点选项以外，Foreach 循环容器还提供“在每次循环迭代开始时断开”选项。  
+ 断点位置或目标是任务执行过程中可挂起处理的点。 用户可以从“设置断点”对话框中可用的断点位置中选择。 例如，除了默认断点选项以外，Foreach 循环容器还提供“在每次循环迭代开始时断开”选项。  
   
- 当任务在执行过程中到达一个断点目标时，它会评估该断点目标，以确定是否已启用断点。 启用断点表明用户希望执行在该断点处停止。 如果启用了断点，则任务会向运行时引擎引发 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件。 运行时引擎响应该事件通过调用**挂起**的当前运行的包中的每个任务的方法。 任务的执行恢复时运行时将调用**ResumeExecution**的挂起任务的方法。  
+ 当任务在执行过程中到达一个断点目标时，它会评估该断点目标，以确定是否已启用断点。 启用断点表明用户希望执行在该断点处停止。 如果启用了断点，则任务会向运行时引擎引发 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件。 运行时引擎通过调用包中正在运行的每个任务的 **Suspend** 方法来响应该事件。 当运行时调用挂起任务的 **ResumeExecution** 方法时，任务将继续执行。  
   
  不使用断点的任务仍应实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 和 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口。 这可确保当包中的其他对象引发 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件时可正确挂起任务。  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>IDTSBreakpointSite 接口和 BreakpointManager  
- 任务通过调用 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 方法，并提供一个整数 ID 和一个字符串说明作为参数来创建断点目标。 当任务在其代码中到达包含断点目标的点时，它会使用 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> 方法评估断点目标，以确定是否已启用断点。 如果**true**，该任务将通过引发来通知运行时引擎<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>事件。  
+ 任务通过调用 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 方法，并提供一个整数 ID 和一个字符串说明作为参数来创建断点目标。 当任务在其代码中到达包含断点目标的点时，它会使用 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A> 方法评估断点目标，以确定是否已启用断点。 如果为 **true**，则任务通过引发 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 事件来通知运行时引擎。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口定义了单个方法 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>，运行时引擎在创建任务的过程中调用它。 此方法提供 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 对象作为参数，任务可使用它来创建和管理自己的断点。 任务应存储<xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>本地以便在使用**验证**和**执行**方法。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口定义了单个方法 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>，运行时引擎在创建任务的过程中调用它。 此方法提供 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 对象作为参数，任务可使用它来创建和管理自己的断点。 任务应将 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 存储在本地，以便在使用 **Validate** 和 **Execute** 方法期间使用。  
   
  下面的示例代码演示了如何使用 <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> 创建断点目标。 该示例调用 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> 方法引发相应的事件。  
   
@@ -97,11 +95,11 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend 接口  
- <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口定义了运行时引擎在暂停或继续执行任务时调用的方法。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>接口由实现<xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>接口，并将其**挂起**和**ResumeExecution**方法通常由自定义任务。 当运行时引擎收到**OnBreakpointHit**从任务的事件，它将调用**挂起**的每个正在运行的任务，通知用于暂停的任务的方法。 当客户端重新开始执行时，则运行时引擎调用**ResumeExecution**都将被挂起的任务的方法。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口定义了运行时引擎在暂停或继续执行任务时调用的方法。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 接口由 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 接口实现，其 **Suspend** 和 **ResumeExecution** 方法通常由自定义任务重写。 当运行时引擎收到任务的 **OnBreakpointHit** 事件时，它会调用每个正在运行的任务的 **Suspend** 方法，通知任务暂停执行。 当客户端继续执行时，运行时引擎会调用挂起的任务的 **ResumeExecution** 方法。  
   
- 挂起和继续执行任务涉及暂停和继续任务的执行线程。 在托管代码中，你执行此操作使用**ManualResetEvent**类**System.Threading**的.NET framework 的命名空间。  
+ 挂起和继续执行任务涉及暂停和继续任务的执行线程。 在托管代码中，使用 .NET Framework 的 **System.Threading** 命名空间中的 **ManualResetEvent** 类来实现此操作。  
   
- 下面的代码示例演示任务执行的挂起和继续。 请注意，**执行**方法已从前面的代码示例中，更改并触发断点时暂停执行线程。  
+ 下面的代码示例演示任务执行的挂起和继续。 请注意，**Execute** 方法与上面的代码示例中的该方法不同，触发断点时，它会暂停执行线程。  
   
 ```csharp  
 private ManualResetEvent m_suspended = new ManualResetEvent( true );  
@@ -354,4 +352,3 @@ End Sub
  [调试控制流](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   
-

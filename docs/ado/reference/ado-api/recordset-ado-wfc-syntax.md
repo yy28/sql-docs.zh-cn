@@ -3,8 +3,9 @@ title: "记录集 (ADO-WFC 语法) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,21 +13,22 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Recordset collection [ADO], ADO/WFX syntax
+helpviewer_keywords:
+- Recordset collection [ADO], ADO/WFX syntax
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2367dbf9a1e4d2fcb78cefbe9094a8ef8398cb60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e48ab076eba835f09d9c336fbe7a5b16b95b9c8b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-ado---wfc-syntax"></a>记录集 (ADO-WFC 语法)
-## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructors"></a>构造函数  
   

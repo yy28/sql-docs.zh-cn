@@ -2,29 +2,34 @@
 title: "加载 XML 数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c8df65cb6701c6f05e86cc9f3e16dfd834ddd35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 441a0e2050acc61575ecf7386302b731d31090b8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="load-xml-data"></a>加载 XML 数据
-  您可以采用多种方式将 XML 数据传输到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中。 例如：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+您可以采用多种方式将 XML 数据传输到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中。 例如：  
   
 -   如果您的数据位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 [n]text 或 image 列中，则可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]导入表。 使用 ALTER TABLE 语句将列类型更改为 XML。  
   

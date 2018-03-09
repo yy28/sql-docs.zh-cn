@@ -2,29 +2,35 @@
 title: "FileTable 架构 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], table schema
+helpviewer_keywords:
+- FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e86fc5ce302105336b51ba0baaa100f55002fba9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e19f00c854bdbc79acc2d83f3d3c8095166ce5a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-schema"></a>FileTable 架构
-  说明 FileTable 的预定义固定架构。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+说明 FileTable 的预定义固定架构。  
   
-|文件属性名称|type|Size|默认|说明|文件系统可访问性|  
+|文件属性名称|type|Size|，则“默认”|Description|文件系统可访问性|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|变量|一个标识此项的位置的 **hierarchyid** 。|此节点在分层 FileNamespace 中的位置。<br /><br /> 表的主键。|可通过设置 Windows 路径值来创建和修改。|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||由 **NEWID()** 函数返回的值。|FILESTREAM 数据的唯一 ID。|不适用。|  

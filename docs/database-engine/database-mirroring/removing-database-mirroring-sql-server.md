@@ -2,9 +2,12 @@
 title: "删除数据库镜像 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96fe011906470e0fed04913f168f5f7cc622c072
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dcfb8099213533ca37c467a758d63f456d993a67
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="removing-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
-  数据库所有者可以在任一伙伴上随时手动停止数据库镜像会话。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]数据库所有者可以在任一伙伴上随时手动停止数据库镜像会话。  
   
 ## <a name="impact-of-removing-mirroring"></a>删除镜像的影响  
  删除镜像时，将发生以下情况：  

@@ -16,17 +16,17 @@ helpviewer_keywords:
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe41947778c33988b354f2ed61643e8dd39893f4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6e9c100866e8a73e890d3c32e9abf7ad560aa18
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="row-compression-implementation"></a>行压缩的实现
+# <a name="row-compression-implementation"></a>Row Compression Implementation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本主题概述了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是如何实现行压缩的。 此摘要提供了有助于您规划数据所需存储空间的基本信息。  
@@ -45,10 +45,10 @@ ms.lasthandoff: 11/17/2017
 ## <a name="how-row-compression-affects-storage"></a>行压缩影响存储的方式  
  下表介绍了行压缩是如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]中的现有类型的。 此表不包括通过使用页压缩可以节省的空间。  
   
-|数据类型|是否影响存储？|说明|  
+|数据类型|是否影响存储？|Description|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|是|1 个字节是所需的最小存储单位。|  
-|**smallint**|是|如果值使用 1 个字节即可存储，则将只使用 1 个字节。|  
+|**int**|是|如果值使用 1 个字节即可存储，则将只使用 1 个字节。|  
 |**int**|是|只使用所需字节数。 例如，如果值可以用 1 个字节存储，则将只占用 1 个字节的存储空间。|  
 |**bigint**|是|只使用所需字节数。 例如，如果值可以用 1 个字节存储，则将只占用 1 个字节的存储空间。|  
 |**decimal**|是|此存储与 vardecimal 存储格式完全相同。|  

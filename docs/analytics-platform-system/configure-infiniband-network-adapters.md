@@ -3,10 +3,10 @@ title: "配置分析平台系统 (AP) 的无线带宽技术网络适配器"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -14,17 +14,17 @@ description: "描述如何在要连接到控制节点上 SQL Server 并行数据
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>为分析平台系统配置无线带宽技术网络适配器
 描述如何在要连接到控制节点上 SQL Server 并行数据仓库 (PDW) 的非设备客户端服务器上配置无线带宽技术网络适配器。 基本连接性和高可用性，以便加载、 备份、 和其他进程将自动连接到活动的 InfiniBand 网络内容，请使用这些说明。  
   
-## <a name="Basics"></a>说明  
+## <a name="Basics"></a>Description  
 这些说明显示了如何查找，然后正确 InfiniBand IP 地址和子网掩码服务器上设置 InfiniBand 连接。 它们还介绍了如何设置你的服务器以使用 AP 设备 DNS，以便你的连接将解析为活动的 InfiniBand 网络。  
   
 对于高可用性，AP 具有两个 InfiniBand 网络、 1 个活动和一个被动。 每个 InfiniBand 网络有控制节点有关的其他 IP 地址。 如果活动的 InfiniBand 网络出现故障，被动 InfiniBand 网络将成为活动的网络。 当发生这种情况的脚本或进程自动连接到活动的 InfiniBand 网络而无需更改脚本参数。  
@@ -53,12 +53,12 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="BeforeBegin"></a>开始之前  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>需求  
 你需要登录到 AD01 节点 AP 设备域帐户。 例如，F12345 * \Administrator。  
   
 你需要有权配置的网络适配器的客户端服务器上的 Windows 帐户。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必要條件  
 这些说明假定客户端服务器已架装并连接好电缆，到设备 InfiniBand 网络。 有关安装和电缆连接说明，请参阅[获取和配置加载服务器](acquire-and-configure-loading-server.md)。  
   
 ### <a name="general-remarks"></a>一般备注  
@@ -77,9 +77,9 @@ ms.lasthandoff: 11/17/2017
   
     ![无限带宽连接的管理节点上](media/network-teamib.png "InfiniBand 连接的管理节点上")  
   
-4.  从 Internet 协议版本 4 (TCP/IPv4) 属性窗口中，记下的值**IP 地址**和**子网掩码**。  IP 地址 ***appliance_domain*-AD01**节点是分析平台系统 DNS 服务器的 IP 地址。  
+4.  从 Internet 协议版本 4 (TCP/IPv4) 属性窗口中，记下的值**IP 地址**和**子网掩码**。  IP 地址 ***appliance_domain *-AD01**节点是分析平台系统 DNS 服务器的 IP 地址。  
   
-5.  上重复步骤 1-5 上述 TeamIB1 适配器 ***appliance_domain*-AD02**服务器。  
+5.  上重复步骤 1-5 上述 TeamIB1 适配器 ***appliance_domain *-AD02**服务器。  
   
     ![PDW 管理节点 InfiniBand 1 属性](media/network-ip1-properties.png "PDW 管理节点 InfiniBand 1 属性")  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  单击高级... 按钮。  
   
-3.  在高级 TCP/IP 设置窗口中，如果追加这些 DNS 后缀 （按顺序） 选项并不灰显，复选框称为追加这些 DNS 后缀 （按顺序）:，选择设备域后缀，然后单击添加... 将设备域后缀`appliance_domain.local`  
+3.  在高级 TCP/IP 设置窗口中，如果追加这些 DNS 后缀 （按顺序） 选项并不灰显，复选框称为追加这些 DNS 后缀 （按顺序）:，选择设备域后缀，然后单击添加... 将设备域后缀 `appliance_domain.local`  
   
 4.  如果附加这些 DNS 后缀 （按顺序）： 选项灰显，你可以通过修改注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient AP 域添加到此服务器。  
   
@@ -182,10 +182,10 @@ ms.lasthandoff: 11/17/2017
   
     对于名为的装置的示例名 MyAPS 为与 MyPDW PDW 区域：  
   
-    -   MyPDW SQLCTL01.MyAPS.local  
+    -   MyPDW-SQLCTL01.MyAPS.local  
   
-    -   MyPDW SQLCTL01  
+    -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>另请参阅  
-[获取和配置加载服务器](acquire-and-configure-loading-server.md)  
+[获取和配置加载服务器 ](acquire-and-configure-loading-server.md)  
   

@@ -3,27 +3,30 @@ title: "计数属性示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Count property [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Count property [ADO], VC++ example
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09a9152a29e096dc97fed3ee3b9ff2aeef9ae45b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98d9f5223e5ed264ce2cc901f31d387211e10f4b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="count-property-example-vc"></a>计数属性示例 （VC + +）
 此示例演示[计数](../../../ado/reference/ado-api/count-property-ado.md)具有两个集合中属性***员工***数据库。 属性获取的每个集合中的对象数，并设置枚举这些集合的循环的上限。  

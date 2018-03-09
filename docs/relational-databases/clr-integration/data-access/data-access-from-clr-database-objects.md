@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,19 +25,20 @@ helpviewer_keywords:
 - SqlClient provider
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8f9f76427b6202850daa2ac18705c5111c4461a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a1132744c7d58581c1d5d60b5fca1cbd5e9fc66
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-access-from-clr-database-objects"></a>从 CLR 数据库对象进行数据访问
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]一个公共语言运行时 (CLR) 例程可以方便地访问数据的实例中存储[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在其中运行，以及远程实例中存储的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 通过使用.NET Framework 数据提供程序访问从 CLR 数据库对象中的数据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，也称为**SqlClient**。 这是由从托管客户端和中间层应用程序访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据的开发人员使用的相同访问接口。 因此，你可以利用您的 ADO.NET 知识和**SqlClient**在客户端和中间层应用程序。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+一个公共语言运行时 (CLR) 例程可以方便地访问数据的实例中存储[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在其中运行，以及远程实例中存储的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 通过使用.NET Framework 数据提供程序访问从 CLR 数据库对象中的数据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，也称为**SqlClient**。 这是由从托管客户端和中间层应用程序访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据的开发人员使用的相同访问接口。 因此，你可以利用您的 ADO.NET 知识和**SqlClient**在客户端和中间层应用程序。  
   
 > [!NOTE]  
 >  默认情况下，不允许用户定义类型方法和用户定义函数执行数据访问。 必须设置**DataAccess**属性**SqlMethodAttribute**或**sqlfunctionattribute 注释**到**DataAccessKind.Read**以启用从用户定义类型 (UDT) 方法或用户定义函数的只读数据访问。 不允许从 UDT 或用户定义函数执行数据修改操作，否则，将在执行时引发异常。  

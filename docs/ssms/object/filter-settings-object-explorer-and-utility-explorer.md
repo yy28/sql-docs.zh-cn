@@ -3,8 +3,11 @@ title: "筛选设置（对象资源管理器和实用工具资源管理器）| M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,22 +18,22 @@ ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17bccb5ad0fe065699f2aed56d276568473ea56b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 049d826cfe7170462ed3942202f208a621362613
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>筛选设置（对象资源管理器和实用工具资源管理器）
-使用此对话框可以指定筛选器。 使用筛选器，可以将对象资源管理器和实用工具资源管理器配置为仅显示符合特定条件的项。 例如，可以使用筛选器仅显示名称中包含词语“维护”的作业。 “筛选设置”对话框的标题包含服务器的名称，还可能包含数据库的名称。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可以指定筛选器。 使用筛选器，可以将对象资源管理器和实用工具资源管理器配置为仅显示符合特定条件的项。 例如，可以使用筛选器仅显示名称中包含词语“维护”的作业。 “筛选设置”对话框的标题包含服务器的名称，还可能包含数据库的名称。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
 **属性**  
 显示要筛选的属性。  
   
-**运算符**  
+**“运算符”**  
 选择筛选器将值应用于属性的方式。 下面是可用的选项：  
   
 -   **等于**  
@@ -69,7 +72,7 @@ ms.lasthandoff: 11/09/2017
   
     此筛选器适用于日期，将显示日期不介于指定的两个日期之间的项。 选择“不介于”并按 Tab 移出“运算符”列，即可添加另一行，用于指定第二个日期。  
   
-**Value**  
+**ReplTest1**  
 键入要与属性进行比较的值。 对于日期，请单击下箭头显示日历，以选择日期。  
   
 **清除筛选器**  

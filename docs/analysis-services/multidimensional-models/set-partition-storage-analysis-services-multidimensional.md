@@ -2,16 +2,13 @@
 title: "设置分区存储 (Analysis Services-多维) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,19 +27,20 @@ helpviewer_keywords:
 - ROLAP
 - medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4610c996aa58fc71090c5a724447cfe733ede5d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 42823cdd118d3fb52df6265671eaca0fd25be96c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>设置分区存储（Analysis Services - 多维）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为存储模式和缓存选项提供了几种标准存储配置。 它们为更新通知、滞后时间和重新生成数据提供了常用的配置。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供多种标准存储配置的存储模式和缓存选项。 它们为更新通知、滞后时间和重新生成数据提供了常用的配置。  
   
  您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中多维数据集的“分区”选项卡中或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的分区属性页面指定分区存储。  
   

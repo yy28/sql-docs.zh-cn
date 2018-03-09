@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,19 +31,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce5968efc9238e44be3d66b2533da8951e28c907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定关系 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]可以与 XML 文档中的元素。 元素可以按层次结构方式嵌套，并且可以在元素之间指定 ID、IDREF 或 IDREFS 关系。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+可以对 XML 文档中的元素建立相关性。 元素可以按层次结构方式嵌套，并且可以在元素之间指定 ID、IDREF 或 IDREFS 关系。  
   
  例如，在 XSD 架构中， **\<客户 >**元素包含**\<顺序 >**子元素。 当架构映射到 AdventureWorks 数据库， **\<客户 >**元素映射到 Sales.Customer 表和**\<顺序 >**元素映射到Sales.SalesOrderHeader 表。 由于是由客户下订单，因此，基础表 Sales.Customer 和 Sales.SalesOrderHeader 是相关的。 Sales.SalesOrderHeader 表中的 CustomerID 是外键，它引用 Sales.Customer 表中的 CustomerID 主键。 你可以建立在通过使用映射架构元素之间的这些关系**sql:relationship**批注。  
   
@@ -62,16 +64,16 @@ ms.lasthandoff: 11/17/2017
  **Parent**  
  指定父关系（表）。 这是一个可选属性；如果未指定此属性，将从文档的子层次结构中的信息获得父表名称。 如果架构指定使用相同的两个父-子层次结构 **\<sql:relationship >**但不同的父元素，你不指定中的父属性 **\<sql:关系 >**。 此信息将从架构的层次结构中获得。  
   
- **父项**  
+ **parent-key**  
  指定父项的父键。 如果父键由多列组成，则指定值时应在各值之间使用空格。 在为多列键指定的值与为对应的子键指定的值之间存在位置映射。  
   
- **子**  
+ **Child**  
  指定子关系（表）。  
   
- **子键**  
+ **child-key**  
  在引用父项中父键的子项中指定子键。 如果子键由多个属性（列）组成，则指定子键值时应在各值之间使用空格。 在为多列键指定的值与为对应的父键指定的值之间存在位置映射。  
   
- **反函数**  
+ **Inverse**  
  此属性上指定 **\<sql:relationship >** updategram 使用。 有关详细信息，请参阅[sql:relationship 上指定 sql:inverse 属性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
  **Sql:key-字段**批注必须在包含子元素具有的元素中指定 **\<sql:relationship >**元素和子，之间定义和执行不提供父元素中指定的表的主键。 即使未指定架构 **\<sql:relationship >**，必须指定**sql:key-字段**以生成适当的层次结构。 有关详细信息，请参阅[使用 sql:key 标识键列的字段](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  
@@ -392,7 +394,7 @@ ms.lasthandoff: 11/17/2017
   
  **\<顺序 >**元素是子元素的**\<客户 >**元素。 **\<sql:relationship >**上指定**\<顺序 >**子元素; 因此，作为子元素的显示属于客户的订单**\<客户 >**.  
   
- **\<顺序 >**元素包括 **\<OrderDetail >**子元素。 **\<sql:relationship >**上指定 **\<OrderDetail >**子元素，以便与顺序相关的订单详细信息显示为子元素的**\<顺序>**元素。  
+ **\<顺序 >**元素包括 **\<OrderDetail >**子元素。 **\<sql:relationship >**上指定 **\<OrderDetail >**子元素，以便与顺序相关的订单详细信息显示为子元素的**\<顺序 >**元素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

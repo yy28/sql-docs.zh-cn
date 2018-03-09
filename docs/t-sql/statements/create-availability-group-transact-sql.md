@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,23 +19,24 @@ f1_keywords:
 - CREATE AVAILABILITY GROUP
 - CREATE AVAILABILITY
 - AVAILABILITY_GROUP_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - CREATE AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: "196"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35ccffcfbdce2c10b20c8459e59a1c2d41962088
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +120,7 @@ CREATE AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *组名*  
+ *group_name*  
  指定新可用性组的名称。 *group_name*必须为有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][标识符](../../relational-databases/databases/database-identifiers.md)，并且它必须是唯一的 WSFC 群集中的所有可用性组。 可用性组名称的最大长度为 128 个字符。  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {主 |SECONDARY_ONLY |辅助 |无}  
@@ -147,7 +149,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  若要查看现有可用性组的自动备份首选项，请选择**automated_backup_preference**或**automated_backup_preference_desc**列[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)目录视图。 此外， [sys.fn_hadr_backup_is_preferred_replica &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)可以用于确定为首选备份副本。  此函数将返回 1 为至少一个副本，即使`AUTOMATED_BACKUP_PREFERENCE = NONE`。  
   
- FAILURE_CONDITION_LEVEL  **=**  {1 | 2 |**3** | 4 | 5}  
+ FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
  指定哪些故障条件触发此可用性组自动故障转移。 FAILURE_CONDITION_LEVEL 在组级别设置，但仅对配置为同步提交可用性模式的可用性副本 (AVAILIBILITY_MODE  **=**  synchronous_commit 的情况下)。 此外，故障条件可以触发自动故障转移，仅当主要和辅助副本配置为使用自动故障转移模式 (FAILOVER_MODE  **=** 自动) 并且辅助副本当前与主副本同步。  
   
  失败条件级别的范围 (1–5) 是从最少限制的级别 1 到最多限制的级别 5。 给定的条件级别包含所有限制较少的级别。 因此，最严格的条件级别 5 包含四个限制较少的级别 (1-4)，级别 4 包含级别 1-3，依此类推。 下表描述对应于每个级别的失败条件。  
@@ -193,7 +195,7 @@ CREATE AVAILABILITY GROUP group_name
  CLUSTER_TYPE  
  SQL Server 自 2017 年 1 中引入。 用于标识可用性组是否在 Windows Server 故障转移群集 (WSFC)。  Windows Server 故障转移群集上的故障转移群集实例上可用性组时，将设置为 WSFC。 群集管理的群集管理器不是 Windows Server 故障转移群集，如 Linux Pacemaker 时设置为外部。 可用性组未使用 WSFC 群集协调时，则设置为无。 例如，当某一可用性组包括 Linux 服务器与任何群集管理器。 
 
- 数据库*database_name*  
+ DATABASE *database_name*  
  指定本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（也就是您正在其上创建可用性组的服务器实例）上的一个或多个用户数据库的列表。 您可以为一个可用性组指定多个数据库，但每个数据库只能属于一个可用性组。 有关类型的可用性组都可以支持的数据库的信息，请参阅[先决条件、 限制和建议 Always On 可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). 若要了解哪些本地数据库已属于某一可用性组，请参阅**replica_id**中的列[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图。  
   
  DATABASE 子句是可选的。 如果省略此元素时，新的可用性组为空。  
@@ -224,19 +226,19 @@ CREATE AVAILABILITY GROUP group_name
  用于访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集的网络名称。 如果服务器实例作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移伙伴参与，则使用此名称。 执行 SELECT [@@SERVERNAME ](../../t-sql/functions/servername-transact-sql.md)在 FCI 上服务器实例将返回其整个*FCI_network_name*[\\*instance_name*] 字符串 (即完整副本名称）。  
   
  *instance_name*  
- 是的实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由承载*system_name*或*FCI_network_name* HADR 且服务已启用。 对于默认服务器实例， *instance_name* 是可选的。 此实例名不区分大小写。 在独立服务器实例中，此值名称是通过执行选择返回的值相同[@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)。  
+ 是的实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由承载*system_name*或*FCI_network_name* HADR 且服务已启用。 对于默认服务器实例，*instance_name* 是可选的。 此实例名不区分大小写。 在独立服务器实例中，此值名称是通过执行选择返回的值相同[@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)。  
   
  \  
  是仅当指定时，才使用分隔符*instance_name*，以便使其从分离*system_name*或*FCI_network_name*。  
   
  有关 WSFC 节点和服务器实例的先决条件的信息，请参阅[先决条件、 限制和建议 Always On 可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **=**TCP**://***系统地址***:***端口*  
+ ENDPOINT_URL **=**TCP**://***系统地址***:***端口*****  
  指定的 URL 路径[数据库镜像端点](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]承载可用性副本，在你当前的 REPLICA ON 子句中定义。  
   
- ENDPOINT_URL 子句是必需的。 有关详细信息，请参阅 [在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)配置服务器实例时遇到的典型问题。  
+ ENDPOINT_URL 子句是必需的。 有关详细信息，请参阅[在添加或修改可用性副本时指定终结点 URL (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)。  
   
- TCP**://***系统地址***:***端口*  
+ **'**TCP**://***system-address***:***port***'**  
  指定一个 URL，它用于指定端点 URL 或只读路由 URL。 URL 参数如下所示：  
   
  *system-address*  
@@ -263,7 +265,7 @@ CREATE AVAILABILITY GROUP group_name
 
    有关详细信息，请参阅[配置唯一副本](../../linux/sql-server-linux-availability-group-ha.md)。
   
- AVAILABILITY_MODE 子句是必需的。 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
+ AVAILABILITY_MODE 子句是必需的。 有关详细信息，请参阅 [可用性模式（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)。  
   
  FAILOVER_MODE  **=**  {自动 |手动}  
  指定您要定义的可用性副本的故障转移模式。  
@@ -319,7 +321,7 @@ CREATE AVAILABILITY GROUP group_name
   
  有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
   
- READ_ONLY_ROUTING_URL **=**TCP**://***系统地址***:***端口*  
+ READ_ONLY_ROUTING_URL **=**TCP**://***系统地址***:***端口*****  
  指定要用于此可用性副本的路由读意向连接请求的 URL。 这是 SQL Server 数据库引擎侦听的 URL。 通常，SQL Server 数据库引擎的默认实例侦听 TCP 端口 1433。  
   
  对于命名实例，你可以通过查询中获取的端口号**端口**和**type_desc**列[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)动态管理视图。 服务器实例使用 Transact SQL 侦听器 (**type_desc = TSQL**)。  
@@ -375,12 +377,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name > 指定构成一个可用性组的名称的分布式的可用性组的一半。  
   
- 侦听器**=**TCP**://***系统地址***:***端口*  
+ LISTENER **='**TCP**://***system-address***:***port***'**  
  指定与可用性组关联的侦听程序的 URL 路径。  
   
  侦听器子句是必需的。  
   
- TCP**://***系统地址***:***端口*  
+ **'**TCP**://***system-address***:***port***'**  
  与可用性组侦听器指定的 URL。 URL 参数如下所示：  
   
  *system-address*  
@@ -417,7 +419,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  指定手动种子设定的 （默认值）。 此方法要求你在主副本上创建数据库的备份并手动还原该备份上的次要可用性组副本。  
   
- 侦听器*dns_name***(** \<listener_option > **)**定义此新的可用性组侦听器可用性组。 LISTENER 是一个可选参数。  
+ 侦听器*****dns_name***(** \<listener_option > **)**定义一个新的可用性组侦听器，对于此可用性组。 LISTENER 是一个可选参数。  
   
 > [!IMPORTANT]  
 >  在创建第一个侦听器之前，我们强烈建议你阅读[创建或配置可用性组侦听器 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -439,7 +441,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option > 侦听器采用下列任一\<listener_option > 选项： 
   
- 与 DHCP [ON { **(***four_part_ipv4_address***'，'***four_part_ipv4_mask***)** }]  
+ WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
  指定可用性组侦听器使用动态主机配置协议 (DHCP)。  （可选） 使用的 ON 子句标识在其创建此侦听器的网络。 DHCP 仅限于单个子网用于每个服务器实例承载可用性组中的副本。  
   
 > [!IMPORTANT]  
@@ -449,7 +451,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- 使用 IP **(** { **(***four_part_ipv4_address***'，'***four_part_ipv4_mask* **')** | **(***ipv6_address***)** } [ **，** ... *n*  ] **)** [ **，**端口 **=**  *listener_port*]  
+ WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
  指定，而不是使用 DHCP，可用性组侦听器使用一个或多个静态 IP 地址。 若要跨多个子网创建一个可用性组，每个子网均需要一个侦听器配置中的静态 IP 地址。 对于某一给定子网，静态 IP 地址可以是 IPv4 地址或 IPv6 地址。 与网络管理员联系以获取每个承载的副本的新的可用性组的子网的静态 IP 地址。  
   
  例如：  
@@ -465,7 +467,7 @@ CREATE AVAILABILITY GROUP group_name
  *ipv6_address*  
  指定可用性组侦听器的 IPv6 地址。 例如， `2001::4898:23:1002:20f:1fff:feff:b3a3`。  
   
- 端口 **=**  *listener_port*  
+ PORT **=** *listener_port*  
  指定的端口号-*listener_port*-用于通过由 WITH IP 子句指定一个可用性组侦听器。 PORT 是可选的。  
   
  支持默认端口号 1433。 但出于安全考虑，我们建议使用其他端口号。  
@@ -477,7 +479,7 @@ CREATE AVAILABILITY GROUP group_name
   
  有关限制上的可用性组 TRANSACT-SQL 语句的信息，请参阅[概述的 TRANSACT-SQL 语句的 Alwayson 可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
  需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
@@ -497,7 +499,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |副本选项|`COMPUTER01` 上的设置|`COMPUTER02` 上的设置|`COMPUTER03` 上的设置|Description|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP: / /*COMPUTER01:5022*|TCP: / /*COMPUTER02:5022*|TCP: / /*COMPUTER03:5022*|在这个示例中，系统处于相同的域中，因此，端点 URL 可以使用计算机的名称作为系统地址。|  
+|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|在这个示例中，系统处于相同的域中，因此，端点 URL 可以使用计算机的名称作为系统地址。|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|两个副本使用同步提交模式。 同步时，它们支持故障转移而不会丢失数据。 第三个副本，将使用异步提交可用性模式。|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|同步提交副本支持自动故障转移和计划的手动故障转移。 同步提交可用性模式副本支持仅限强制的手动故障转移。|  
 |BACKUP_PRIORITY|30|30|90|与同步提交副本相比，将更高的优先级 90 分配给异步提交副本。 备份往往在承载异步提交副本的服务器实例上发生。|  
@@ -564,13 +566,13 @@ GO
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
--   [创建可用性组 (Transact-SQL)](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
+-   [创建可用性组 &#40;Transact SQL &#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   
--   [使用可用性组向导 (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用可用性组向导 &#40;SQL Server Management Studio &#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [使用“新建可用性组”对话框 (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [使用“新建可用性组”对话框 &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [使用可用性组向导 (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用可用性组向导 &#40;SQL Server Management Studio &#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
@@ -578,7 +580,7 @@ GO
  [DROP AVAILABILITY GROUP &#40;Transact SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Alwayson 故障排除可用性组配置 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [可用性组侦听器、 客户端连接和应用程序故障转移 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
 

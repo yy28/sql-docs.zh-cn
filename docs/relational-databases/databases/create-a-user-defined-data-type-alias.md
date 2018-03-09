@@ -2,30 +2,36 @@
 title: "创建用户定义的数据类型别名 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
 - sql13.swb.new.datatype.properties.general.f1
-helpviewer_keywords: alias data types [SQL Server], creating
+helpviewer_keywords:
+- alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a51db116a1ca0ffe5d408e79dcd3dc16ed4c1e58
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a2acca73084c6815410f9e0f151ab12c7d5e0b3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新的用户定义数据类型别名。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新的用户定义数据类型别名。  
   
  **本主题内容**  
   
@@ -33,7 +39,7 @@ ms.lasthandoff: 11/09/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **创建用户定义的数据类型别名，使用：**  
   
@@ -49,7 +55,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求在当前数据库中具有 CREATE TYPE 权限，以及具有对 *schema_name*的 ALTER 权限。 如果未指定 *schema_name* ，则将应用用于确定当前用户的架构的默认名称解析规则。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,7 +67,7 @@ ms.lasthandoff: 11/09/2017
      **允许 Null**  
      指定用户定义数据类型是否可以接受 Null 值。 不能编辑现有的用户定义数据类型的为 NULL 性。  
   
-     **数据类型**  
+     **Data type**  
      从列表框中选择基本数据类型。 该列表框显示除 **geography**、 **geometry**、 **hierarchyid**、 **sysname**、 **timestamp** 和 **xml** 数据类型之外的所有数据类型。 不能编辑现有的用户定义数据类型的数据类型。  
   
      **Default**  
@@ -114,13 +120,13 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例基于系统提供的 `varchar` 数据类型创建一个数据类型别名。 `ssn` 数据类型别名用于那些保存 11 位数字的社会保障号 (999-99-9999) 的列。 该列不能为 NULL。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例基于系统提供的 `varchar` 数据类型创建一个数据类型别名。 `ssn` 数据类型别名用于那些保存 11 位数字的社会保障号 (999-99-9999) 的列。 该列不能为 NULL。  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

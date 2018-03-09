@@ -3,8 +3,9 @@ title: "有关 COM 的 Visual c + + 语法索引的 ADO |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,27 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e25f69205b217399242e1e3ff94935deed4536f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 081d81654e6898496e81b809b9c4925020630181
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO COM 的 Visual c + + 语法索引
 此索引是对基于 Microsoft Visual c + + ADO 语言参考的交叉引用。  
   
- 如果你使用**#import**指令应用程序中，标头将生成文件，使你可以使用类似到 Microsoft Visual Basic 的语法。 在窗体的属性名称**get_***PropertyName*和**put_***PropertyName*就像它们已声明为可视为*PropertyName*。 然后可以如同而不是函数的数据成员一样处理属性。  
+ 如果你使用**#import**指令应用程序中，标头将生成文件，使你可以使用类似到 Microsoft Visual Basic 的语法。 在窗体的属性名称 **get_ * * * PropertyName*和 **put_ * * * PropertyName*就像它们已声明为可视为*PropertyName*。 然后可以如同而不是函数的数据成员一样处理属性。  
   
  所有方法、 属性和事件都返回的函数**HRESULT**，其中你可以对其进行测试以确定是否函数成功执行。  
   

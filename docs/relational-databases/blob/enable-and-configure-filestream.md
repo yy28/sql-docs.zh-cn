@@ -2,27 +2,33 @@
 title: "启用和配置 FILESTREAM | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FILESTREAM [SQL Server], enabling
+helpviewer_keywords:
+- FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6839f11d9375fad6c2672b760bec3d5edee031d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: abc638065f8a8a9201d5dbd37f240e82a5c81a22
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
-  在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
   
 ##  <a name="enabling"></a> 启用 FILESTREAM  
   
@@ -50,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
 11. 在查询编辑器中，输入以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码：  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  
@@ -79,9 +85,9 @@ ms.lasthandoff: 11/09/2017
   
 ||||||  
 |-|-|-|-|-|  
-|RAID 级别|写性能|读性能|容错|注释|  
+|RAID 级别|写性能|读性能|容错|Remarks|  
 |RAID 5|Normal|Normal|很好|性能比一个磁盘或 JBOD 更好；比 RAID 0 或条带化 RAID 5 差。|  
-|RAID 0|很好|很好|无||  
+|RAID 0|很好|很好|InclusionThresholdSetting||  
 |RAID 5 ＋ 条带化|很好|很好|很好|成本最高的选项。|  
   
   

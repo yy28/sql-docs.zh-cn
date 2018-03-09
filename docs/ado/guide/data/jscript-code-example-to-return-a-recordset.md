@@ -3,27 +3,30 @@ title: "返回一个记录集的 JScript 代码示例 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: JScript
-helpviewer_keywords: Recordset [ADO]
+dev_langs:
+- JScript
+helpviewer_keywords:
+- Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f69cc6f994aa9caa79733a2b32fb11111e03ff29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c9c767413fefb4f35e2f3ac60ebcf52323efd2b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>返回一个记录集的 JScript 代码示例
 ## <a name="jscript-code-rsjs"></a>JScript 代码 (rs.js)  

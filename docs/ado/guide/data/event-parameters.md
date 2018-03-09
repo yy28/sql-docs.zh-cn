@@ -3,8 +3,9 @@ title: "事件参数 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 750def3dc0a8f2938bcdf7adb6c3a8935da5dda1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="event-parameters"></a>事件参数
 每个事件处理程序有一个控制事件处理程序的状态参数。 对于完整事件，此参数还用于指示成功或失败的生成事件的操作。 最完整事件还具有一个错误参数，以便提供有关可能发生，任何错误以及一个或多个引用用来执行该操作的 ADO 对象的对象参数的信息。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包括对象参数**命令**，**记录集**，和**连接**对象与事件关联。 在以下的 Microsoft® Visual Basic® 示例中，你可以看到 pCommand、 pRecordset 和 pConnection 对象表示**命令**，**记录集**，和**连接**程序使用的对象**执行**方法。  
@@ -49,7 +50,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>状态参数  
  当调用的事件处理程序例程时，*状态*参数设置为下列值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**adStatusOK**|传递给将和完成的事件。 此值意味着引起该事件已成功完成该操作。|  
 |**adStatusErrorsOccurred**|传递给完成的事件。 此值表示引起该事件的操作不成功，或将事件取消该操作。 检查*错误*更多详细信息的参数。|  
@@ -59,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  如果你不再想要处理的事件，则可以设置*状态*到**adStatusUnwantedEvent**和你的应用程序将不再接收该事件的通知。 但请记住某些事件可以由多个原因。 在这种情况下，必须指定**adStatusUnwantedEvent**对于每个可能的原因。 例如，若要停止接收通知的挂起**RecordChange**事件，必须设置*状态*参数**adStatusUnwantedEvent**为**adRsnAddNew**， **adRsnDelete**， **adRsnUpdate**， **adRsnUndoUpdate**， **adRsnUndoAddNew**，**adRsnUndoDelete**，和**adRsnFirstChange**发生。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|请求此事件处理程序接收任何进一步的通知。|  
 |**adStatusCancel**|请求取消将要发生的操作。|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - END CONVERSATION
 - END_DIALOG_TSQL
 - END_CONVERSATION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - errors [Service Broker], conversations
 - dialogs [Service Broker], ending
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - conversations [Service Broker], ending
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f7f2dd42fd3d34073bbdfc223af339f2e867539
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +60,10 @@ END CONVERSATION conversation_handle
  *conversation_handle*  
  要结束的会话的会话句柄。  
   
- 出现错误 =*failure_code*  
+ WITH ERROR =*failure_code*  
  是错误代码。 *Failure_code*属于类型**int**。失败代码是用户定义代码，包含在发送给会话另一方的错误消息中。 失败代码必须大于 0。  
   
- 说明 =*failure_text*  
+ DESCRIPTION =*failure_text*  
  是错误消息。 *Failure_text*属于类型**nvarchar(3000)**。 失败文本是用户定义文本，包含在发送给会话另一方的错误消息中。  
   
  WITH CLEANUP  
@@ -88,7 +90,7 @@ END CONVERSATION conversation_handle
   
  END CONVERSATION 在用户定义函数中无效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要结束活动会话，当前用户必须为会话的所有者、sysadmin 固定服务器角色的成员或 db_owner 固定数据库角色的成员。  
   
  sysadmin 固定服务器角色的成员或 db_owner 固定数据库角色的成员可以使用 WITH CLEANUP 删除已经完成的会话的元数据。  
@@ -137,6 +139,6 @@ END CONVERSATION @dialog_handle WITH CLEANUP ;
 ## <a name="see-also"></a>另请参阅  
  [开始会话定时器 &#40;Transact SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

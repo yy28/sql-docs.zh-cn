@@ -1,5 +1,5 @@
 ---
-title: "管理正在运行的包，以编程方式 |Microsoft 文档"
+title: "以编程方式管理正在运行的包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,27 +17,26 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - running packages [Integration Services]
 ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 34f2c773e89c0162df5d13a16d27f01eb5d8f4df
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 93a72d16f8d99c7328929c72410751e5dca988aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="managing-running-packages-programmatically"></a>以编程方式管理正在运行的包
   以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，您可能希望确定哪些包当前正在运行。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了满足这些需求的方法和类。  
   
- 有关监视包的详细信息，请参阅[包管理 &#40;SSIS 服务 &#41;](../../integration-services/service/package-management-ssis-service.md).  
+ 有关监视包的详细信息，请参阅[包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)。  
   
- 本主题中讨论的所有方法都需要对引用**Microsoft.SqlServer.ManagedDTS**程序集。 新项目中添加引用后，导入<xref:Microsoft.SqlServer.Dts.Runtime>具有命名空间**使用**或**导入**语句。  
+ 本主题中讨论的所有方法都需要引用 **Microsoft.SqlServer.ManagedDTS** 程序集。 在新项目中添加引用后，请使用 **using** 或 **Imports** 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
 > [!IMPORTANT]  
->  方法<xref:Microsoft.SqlServer.Dts.Runtime.Application>以便使用与 SSIS 包存储区中的类仅支持"。"，localhost 或服务器的本地服务器的名称。 不能使用“(local)”。  
+>  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于 SSIS 包存储的方法仅支持“.”、localhost 或本地服务器的服务器名称。 不能使用“(local)”。  
   
 ## <a name="determining-which-packages-are-currently-running"></a>确定当前正在运行的包  
  若要确定指定服务器上哪些包当前正在运行，请调用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetRunningPackages%2A> 方法。 此方法返回 <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackages> 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage> 集合。  
@@ -70,8 +68,7 @@ ms.lasthandoff: 08/03/2017
  可以调用 <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage.Stop%2A> 对象的 <xref:Microsoft.SqlServer.Dts.Runtime.RunningPackage> 方法来请求停止包。 发出停止请求的时间和包实际停止的时间之间可能存在延迟。  
   
 ## <a name="see-also"></a>另请参阅  
- [包管理 &#40;SSIS 服务 &#41;](../../integration-services/service/package-management-ssis-service.md)   
+ [包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)   
  [以编程方式枚举可用的包](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
   
   
-

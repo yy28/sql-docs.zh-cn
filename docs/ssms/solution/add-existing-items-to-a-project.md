@@ -3,8 +3,11 @@ title: "向项目中添加现有项 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39207dcdbac2ec4f0db7b0000f72837c473ff089
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 35155a319dfe1e1565a7e6b1c0ac435b952bd7de
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-existing-items-to-a-project"></a>向项目中添加现有项
-向项目中添加新项，以扩展应用程序功能。 现有项可以是查询，也可以是杂项文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 有两个项目类型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些查询文件可以添加到项目中，则取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql_md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。 若要将附加文件扩展名关联到项目类型，请参阅 [如何将文件扩展名与代码编辑器关联](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 向项目中添加新项，以扩展应用程序功能。 现有项可以是查询，也可以是杂项文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 有两个项目类型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些查询文件可以添加到项目中，则取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql_md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。 若要将附加文件扩展名关联到项目类型，请参阅 [如何将文件扩展名与代码编辑器关联](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>向项目中添加现有查询或杂项文件  
   
@@ -53,10 +56,10 @@ ms.lasthandoff: 11/09/2017
     **文件类型**  
     使用此选项基于文件扩展名筛选文件。 每个产品列出最常用文件类型的默认筛选器。  
   
-    **添加**  
+    **“添加”**  
     使用此下拉按钮可以向项目中添加项以及在默认编辑器中打开该项。  
   
-    -   **添加**  
+    -   **“添加”**  
   
         将现有项复制到磁盘上的项目文件夹，并添加解决方案资源管理器中选定项目下的项。 对该项所做的任何更改没有反映原始位置中的项。 这是该文件类型的默认编辑器。  
   

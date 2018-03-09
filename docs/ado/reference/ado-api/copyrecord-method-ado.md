@@ -3,8 +3,9 @@ title: "CopyRecord 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_CopyRecord
 - _Record::CopyRecord
-helpviewer_keywords: CopyRecord method [ADO]
+helpviewer_keywords:
+- CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9459d144016deaaec593a8edd92bf5b518a8962b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4c31ec2491486c6c2332e32395246db4651f4e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
 将复制所表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)到另一个位置。  
@@ -40,22 +42,22 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parameters  
  *数据源*  
- 可选。 A**字符串**值，该值包含指定实体的 URL 要复制 （例如，文件或目录）。 如果*源*省略或指定一个空字符串、 文件或目录表示由当前[记录](../../../ado/reference/ado-api/record-object-ado.md)将被复制。  
+ 選擇性。 A**字符串**值，该值包含指定实体的 URL 要复制 （例如，文件或目录）。 如果*源*省略或指定一个空字符串、 文件或目录表示由当前[记录](../../../ado/reference/ado-api/record-object-ado.md)将被复制。  
   
  *目标*  
- 可选。 A**字符串**值，该值包含指定的位置的 URL 其中*源*将被复制。  
+ 選擇性。 A**字符串**值，该值包含指定的位置的 URL 其中*源*将被复制。  
   
  *UserName*  
- 可选。 A**字符串**包含如果需要授予访问权限的用户 ID 值*目标*。  
+ 選擇性。 A**字符串**包含如果需要授予访问权限的用户 ID 值*目标*。  
   
  *密码*  
- 可选。 A**字符串**值，该值包含的密码，如果需要请验证*用户名*。  
+ 選擇性。 A**字符串**值，该值包含的密码，如果需要请验证*用户名*。  
   
- *选项*  
- 可选。 A [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)值，默认值为**adCopyUnspecified**。 指定此方法的行为。  
+ *Options*  
+ 選擇性。 A [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)值，默认值为**adCopyUnspecified**。 指定此方法的行为。  
   
- *异步*  
- 可选。 A**布尔**值，当**True**，指定应异步此操作。  
+ *Async*  
+ 選擇性。 A**布尔**值，当**True**，指定应异步此操作。  
   
 ## <a name="return-value"></a>返回值  
  A**字符串**通常返回的值的值*目标*。 但是，返回的确切值与提供程序相关。  

@@ -3,26 +3,28 @@ title: "过程集合属性、 方法和事件 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Procedures collection [ADOX], members
+helpviewer_keywords:
+- Procedures collection [ADOX], members
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9689bf697dac9e3884815e901a452d2aed8313a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06f1fa5caf697bc917af9e82bf1268d2f5741e2d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>过程集合属性、 方法和事件
 ## <a name="properties"></a>属性  

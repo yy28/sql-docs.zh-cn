@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8cba3b5cb3f9da5963045d7fd8b015be4ed9f4cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db56df9bfd37b4395268250e6b921a3f98a2f6ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ordinary-arguments"></a>普通自变量
 时的目录函数字符串自变量是的普通自变量，它将被视为文字字符串。 普通参数接受字符串的搜索模式和的值列表都不。 普通自变量的情况是有意义的并按原义转字符串中的引号字符。 这些自变量被视为普通自变量，如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_FALSE;将它们视为标识符自变量而是如果此属性设置为 SQL_TRUE。  

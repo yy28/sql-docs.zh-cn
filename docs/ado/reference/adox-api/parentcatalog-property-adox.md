@@ -3,8 +3,9 @@ title: "ParentCatalog 属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -39,18 +40,19 @@ f1_keywords:
 - _User::PutRefParentCatalog
 - _Group::GetParentCatalog
 - _Group::PutRefParentCatalog
-helpviewer_keywords: ParentCatalog property [ADOX]
+helpviewer_keywords:
+- ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27181ddda63e190f1aa6e451c4fd5eeca1a25c12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c255beddbc240f30f51642a0e8fe4fd785cf88bb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 属性 (ADOX)
 指定用于提供对提供程序特定属性的访问的表、 用户或列的对象的父目录。  

@@ -1,27 +1,29 @@
 ---
 title: "在 Linux 上的 SQL Server 的性能功能入门 |Microsoft 文档"
-description: "本主题提供为 Linux 用户的新 SQL Server 的 SQL Server 性能功能的介绍。 许多这些示例适用于所有平台，但这篇文章的上下文是 Linux。"
+description: "本文提供为 Linux 用户的新 SQL Server 的 SQL Server 性能功能的介绍。 许多这些示例适用于所有平台，但这篇文章的上下文是 Linux。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 07e274f33decd59287571017d8103961334f9df4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上 SQL Server 的性能功能演练
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 如果你是刚接触 SQL Server 的 Linux 用户，以下任务会指导你完成某些性能任务。 虽然这些并非 Linux 独有或特定的任务，但能有助于你了解需要深入了解的领域。 在每个示例中，均提供该领域的详细文档链接。
 
@@ -31,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="create-a-columnstore-index"></a>创建列存储索引
 列存储索引是使用列式数据格式（称为列存储）存储和查询大量数据的技术。  
 
-1. 通过执行以下 T-SQL 将列存储索引添加到 SalesOrderDetail 表：
+1. 将列存储索引添加到 SalesOrderDetail 表中，通过执行以下 TRANSACT-SQL 命令：
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/20/2017
    GO
    ```
 
-2. 执行以下查询，使用列存储索引扫描表：
+2. 执行以下查询使用列存储索引扫描表：
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -66,7 +68,7 @@ ms.lasthandoff: 11/20/2017
 SQL Server 提供的内存中 OLTP 功能可极大提升应用程序系统的性能。  《评估指南》中的本节内容将介绍如何创建存储在内存中的内存优化表，以及创建无需编译或解释即可访问表的本机编译的存储过程。
 
 ### <a name="configure-database-for-in-memory-oltp"></a>配置内存中 OLTP 的数据库
-1. 建议将数据库的兼容级别至少设置为 130，以使用内存中 OLTP。  使用以下查询检查 AdventureWorks 的当前兼容级别：  
+1. 建议将数据库的兼容级别至少设置为 130，以使用内存中 OLTP。  使用以下查询来检查 AdventureWorks 的当前兼容级别：  
 
    ```sql
    USE AdventureWorks

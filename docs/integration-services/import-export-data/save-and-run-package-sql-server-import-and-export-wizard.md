@@ -1,5 +1,5 @@
 ---
-title: "保存并运行包 （SQL Server 导入和导出向导） |Microsoft 文档"
+title: "保存并运行包（SQL Server 导入和导出向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 02/16/2017
 ms.prod: sql-non-specified
@@ -15,50 +15,49 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 40b8677cddf363e8789a2fc15b1c2aab5f49f58c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e4b19aeecea3977b08339989e07e3b553e361372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>保存并运行包 （SQL Server 导入和导出向导）
-  在你指定并配置数据源和目标之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“保存并运行包” 。 在此页上，你可以指定是否要立即运行复制操作。 根据您的配置，你还可能无法保存您设置保存为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 包以自定义它并以后重复使用它。
+# <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>保存并运行包（SQL Server 导入和导出向导）
+  在你指定并配置数据源和目标之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“保存并运行包” 。 在此页上，你可以指定是否要立即运行复制操作。 根据配置，或许还可以将设置保存为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 包，以对其进行自定义并在以后重新使用。
   
 **什么是包？** 向导使用 SQL Server Integration Services (SSIS) 复制数据。 在 SSIS 中，基本单位是包。 当你在向导的各个页面之间移动并指定选项时，向导会在内存中创建 SSIS 包。
   
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>“保存并运行包”页面的屏幕截图  
 下面的屏幕截图显示了向导的“保存并运行包”  页。 
    
-![保存并运行导入和导出向导的包页面](../../integration-services/import-export-data/media/save-and-run.png "保存并运行导入和导出向导的包页面") 
+![保存并运行“导入和导出向导”的包页面](../../integration-services/import-export-data/media/save-and-run.png "Save and run package page of the Import and Export Wizard") 
   
 ## <a name="run-and-save-the-package"></a>运行并保存包 
  若要继续，必须选择以下两个选项中的至少一个。  
   
  **Run immediately**  
- 选择此选项以导入和立即导出数据。 默认情况下，选中此复选框，并且该操作立即运行。
+ 选择此选项以立即导入和导出数据。 默认情况下，此复选框处于选中状态，操作会立即运行。
   
  **保存 SSIS 包**  
- 将你的设置保存为 SSIS 包。 稍后可以根据需要自定义包，并再次运行。 如果选择保存包，下一页（“保存 SSIS 包” ）提供了一些附加选项。
+ 将设置保存为 SSIS 包。 稍后可以根据需要自定义包，并再次运行。 如果选择保存包，下一页（“保存 SSIS 包” ）提供了一些附加选项。
  
 只有在安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标准版或更高版本时，才会提供用于保存包的选项。   
   
 > [!NOTE]
-> 如果完成向导，运行此操作，但停止完成运行的操作之前，不保存包，即使你选择**保存 SSIS 包**复选框。  
+> 如果完成向导、运行操作，但在运行结束前停止操作，则不会保存包，即使选择“保存 SSIS 包”复选框也是如此。  
 
-### <a name="if-you-started-the-wizard-from-visual-studio"></a>如果从 Visual Studio 中启动向导
-如果从 Visual Studio 与 SQL Server Data Tools (SSDT) 中的 Integration Services 项目中启动该向导：
--   你不能**运行**包后退出该向导之前。 然后你可以从 Visual Studio 运行包。
--   向导**将保存**从其中启动该向导的 Integration Services 项目中的包。
+### <a name="if-you-started-the-wizard-from-visual-studio"></a>如果从 Visual Studio 中启动了向导
+如果使用 SQL Server Data Tools (SSDT) 从 Visual Studio 中的 Integration Services 项目中启动向导：
+-   在退出向导之前，将无法运行包。 然后可以从 Visual Studio 运行包。
+-   向导会将包保存在从其中启动向导的 Integration Services 项目中。
 
 ## <a name="specify-options-for-saving-the-package"></a>指定用于保存包的选项
 **SQL Server**  
- 选择此选项以将包保存在 SQL Server 中**msdb**数据库中**sysssispackages**表。
+ 选择此选项可将包保存在 sysssispackages 表的 msdb 数据库的 SQL Server 中 。
  
 > [!IMPORTANT]
 > 此选项不会将包保存到 SSIS 目录数据库 (SSISDB)。  
@@ -66,7 +65,7 @@ ms.lasthandoff: 08/03/2017
  在下一页（“保存 SSIS 包” ），选择目标服务器并提供凭据以连接到该服务器。 有关详细信息，请参阅 [保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
   
  **文件系统**  
- 选择此选项以将包另存为的文件**.dtsx**扩展。  
+ 选择此选项可将包保存为扩展名为 .dtsx 的文件。  
   
  在下一页（“保存 SSIS 包” ），选择包的目标文件夹和文件名。 有关详细信息，请参阅 [保存 SSIS 包](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)。  
  
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/03/2017
  再次键入该密码。  
   
 > [!NOTE]
-> 有密码选项仅当指定**包保护级别**，需要密码-即，如果您指定**使用密码加密敏感数据**或**使用密码加密所有数据**。  
+> 只有指定需要使用密码的“包保护级别” — 即如果指定“使用密码加密敏感数据”或“使用密码加密所有数据”，密码选项才可用。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>关于包保存选项的两个页面  
  “保存并运行包”  页是你在其上选择用于保存 SSIS 包的选项的两个页面之一。  
@@ -108,5 +107,4 @@ ms.lasthandoff: 08/03/2017
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
   
-
 

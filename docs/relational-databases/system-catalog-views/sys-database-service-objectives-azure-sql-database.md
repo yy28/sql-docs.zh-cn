@@ -8,24 +8,26 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
 - "弹性池"
 - "弹性池管理"
-f1_keywords: DATABASE_SERVICE_OBJECTIVES_TSQL
+f1_keywords:
+- DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d1ccfea9f9c24312d29be192e5b6497c89e7972
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08c801fe0f7d917de2c520e788320ec3677d8a6e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -46,13 +48,13 @@ ms.lasthandoff: 11/17/2017
 |service_objective|sysname|数据库的定价层。 如果数据库是在弹性池中，则返回**ElasticPool**。<br /><br /> 上**基本**层，返回**基本**。<br /><br /> **标准服务层中的单个数据库**返回以下项之一： S0、 S1、 S2 或 S3。<br /><br /> **高级层中的单个数据库**返回下列情况： P1、 P2、 P4、 P6/P3 或 P11。<br /><br /> **SQL 数据仓库**返回 DW100 通过 DW2000。|  
 |elastic_pool_name|sysname|名称[弹性池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)的所属的数据库。 返回**NULL**如果数据库位于单一数据库或数据 warehoue。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**dbManager**的主数据库上的权限。  在数据库级别中，用户必须创建者或所有者。  
   
 ## <a name="examples"></a>示例  
  此示例的主数据库上或在用户数据库上运行。 查询返回名称、 服务和数据库的性能层信息。  
   
-```tsql  
+```sql  
 SELECT  d.name,   
      slo.*    
 FROM sys.databases d   

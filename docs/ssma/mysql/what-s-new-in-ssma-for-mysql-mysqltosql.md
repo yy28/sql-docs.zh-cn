@@ -1,30 +1,43 @@
 ---
 title: "SSMA for MySQL (MySQLToSql) 中的新增 |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 03/01/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology: sql-ssma
+ms.suite: sql
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f895aee684d353451c263b136547c2c6ed7d976d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 503e6c5a6c2d06a5c6a98ae1e9f45faebc40ae34
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL (MySQLToSql) 的新增功能
 本主题列出每个版本中的 MySQL 更改 SSMA。 
+
+## <a name="ssma-v77"></a>SSMA v7.7
+SSMA for MySQL 的 v7.7 版本包含以下更改：
+- 有关 MySQL 的 SSMA 已得到增强提高质量和转换的度量值的目标修补程序。
+- 32 位版本的 MySQL 的 SSMA 根据普遍需求，已恢复。 与以前的实现 （之前 v7.4) 相比，有两个安装包，但它们不能并行安装。 因此，你必须选择最适合您的版本基于连接组件。 最好始终使用 64 位版本，如有可能。
+- 有关 MySQL 的 SSMA 现在有 ODBC 连接字符串连接模式，它允许你使用 MySQL 与兼容任何第三方 ODBC 驱动程序。
+
+> [!IMPORTANT]
+> SSMA v7.4 和更高版本，.Net 4.5.2 是安装先决条件。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 MySQL 的 SSMA v7.6 版已得到增强，具有提高质量和转换的度量值的目标修补程序和 SQL Server 2017 （公共预览版） 支持。 对于 Windows 和 Linux 上的 SQL Server 2017 支持是在公共预览版中并不用于生产迁移。
@@ -32,7 +45,7 @@ MySQL 的 SSMA v7.6 版已得到增强，具有提高质量和转换的度量值
 > [!IMPORTANT]
 > SSMA v7.4 和更高版本，.Net 4.5.2 的目标是安装先决条件，并已停止使用该工具的 32 位版本。
 
-## <a name="ssma-v75"></a>SSMA v7.5 还是
+## <a name="ssma-v75"></a>SSMA v7.5
 MySQL 的 SSMA v7.5 还是版已得到增强几项改进，确保残障人士更大的可访问性。
 
 > [!IMPORTANT]
@@ -59,7 +72,7 @@ SSMA for MySQL 的 v7.3 版本包含以下更改：
       - 在此博客文章中，提供了有关如何构造的自定义转换器说明[扩展 SQL Server Migration Assistant 的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
       - 用于转换的示例项目可以下载这个[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
-## <a name="ssma-v72"></a>SSMA 7.2 版
+## <a name="ssma-v72"></a>SSMA v7.2
 SSMA for MySQL 的 7.2 版版本包含以下更改：
 - 改进的质量和转换度量值根据客户反馈的目标修补程序。
 - 遥测功能增强以提供更好的数据点，以解决客户问题和改进 SSMA 的转换率。

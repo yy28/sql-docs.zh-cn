@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -20,21 +21,22 @@ f1_keywords:
 - _TSQL
 - Match One
 - _
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6134bec732593480cd20973eb7687a29cfbf2b8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 01bc0c4c006ae55395d752a0377575fa680dffaa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_（通配符 - 匹配一个字符）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 
 下面的示例返回所有数据库以字母开头的名称`m`和有号`d`作为第三个字母。 下划线字符指定名称的第二个字符可以是任何字母。 `model`和`msdb`数据库满足此条件。 `master`不是数据库。
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -65,7 +67,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B： 更复杂示例
  下面的示例使用 _ 运算符查找中的所有人`Person`表中，有三个字母名字以结尾`an`。  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -76,14 +78,14 @@ ORDER BY FirstName;
 ## <a name="c-escaping-the-underscore-character"></a>C： 转义下划线字符   
 下面的示例返回的固定的数据库角色，如名称`db_owner`和`db_ddladmin`，但它还返回`dbo`用户。 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 中的第三个的字符位置下划线作为通配符，和仅开头字母的主体不筛选`db_`。 进行转义下划线请将其括在方括号内`[_]`。 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
@@ -100,7 +102,7 @@ db_securityadmin
 
   
 ## <a name="see-also"></a>另请参阅  
- [如 &#40;Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [%（通配符-字符到匹配项）](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91;&#93;（通配符-到匹配项的字符）](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   

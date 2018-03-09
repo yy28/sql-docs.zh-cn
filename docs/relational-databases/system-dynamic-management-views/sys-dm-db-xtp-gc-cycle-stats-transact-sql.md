@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_gc_cycle_stats
 - sys.dm_db_xtp_gc_cycle_stats_TSQL
 - sys.dm_db_xtp_gc_cycle_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_gc_cycle_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_gc_cycle_stats dynamic management view
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a2e3f9592f990f2545b0409c399e9ee9815927d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cce841247a51be5580cece7e023bed3ebc7581e2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |xacts_copied_to_local|**bigint**|从事务管道复制到数据库的代阵列中的事务数。|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|每代中的事务数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
 ## <a name="usage-scenario"></a>使用方案  

@@ -2,35 +2,32 @@
 title: "IMDEmbeddedData 接口 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 584e13737a74d02239a9b9ff8d517ef58f53c1d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData 接口
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  IMDEmbeddedData 接口是用于管理一个嵌入的公共接口[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据库或表格模型数据库。 接口继承自**IPersistStream**接口。 此接口允许以下操作：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+IMDEmbeddedData 接口是用于管理一个嵌入的公共接口[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据库或表格模型数据库。 接口继承自**IPersistStream**接口。 此接口允许以下操作：  
   
 -   获取对容器文档中嵌入流的标识符。  
   
@@ -50,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   将本地或进程内数据库保存到容器文档中的嵌入流。 继承自**IPersistStream**。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>參考  
  以下引用文档**IMDEmbeddedData**接口，如中提供**msmd.h**标头文件。  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>源文件：PXOEmbeddedData.idl  
@@ -96,12 +93,12 @@ HRESULT GetStreamIdentifier (
 #### <a name="description"></a>Description  
  获取宿主应用程序使用的针对容器文档中嵌入流的标识符。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>參數  
  *out_pbstrStreamId*  
  指定流标识符的位置。  
   
 #### <a name="return-value"></a>返回值  
- **则为 S_OK**  
+ **S_OK**  
  流标识符已成功返回。  
   
  **S_FALSE**  
@@ -110,12 +107,12 @@ HRESULT GetStreamIdentifier (
  **E_FAIL**  
  在访问流标识符时出现错误。  
   
-#### <a name="remarks"></a>注释  
+#### <a name="remarks"></a>備註  
  为了确认当前连接是否包含嵌入数据库，用户应从 OLE DB 连接属性查看 DBPROP_MSMD_EMBEDDED_DATA 属性的值。  
   
  DBPROP_MSMD_EMBEDDED_DATA 的可能值包括：  
   
-|Name|值|定义|  
+|名称|Value|定义|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|没有可用的嵌入数据库|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|当前应用程序包含嵌入数据库|  
@@ -140,12 +137,12 @@ HRESULT SetContainerURL (
 #### <a name="description"></a>Description  
  设置包含嵌入流的文件的 URL。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>參數  
  *in_bstrURL*  
  指定包含文档的 URL。  
   
 #### <a name="return-value"></a>返回值  
- **则为 S_OK**  
+ **S_OK**  
  容器 URL 已成功设置。  
   
  **E_FAIL**  
@@ -170,12 +167,12 @@ HRESULT SetHosted (
 #### <a name="description"></a>Description  
  设置一个标志，以便指示嵌入应用程序是否处于宿主环境中。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>參數  
  *in_ftHosted*  
  如果调用方在服务应用程序（例如 IIS）中承载，则为 TRUE。  
   
 #### <a name="return-value"></a>返回值  
- **则为 S_OK**  
+ **S_OK**  
  该标志已成功设置。  
   
  **E_FAIL**  
@@ -200,12 +197,12 @@ HRESULT SetTempDirPath (
 #### <a name="description"></a>Description  
  设置嵌入应用程序使用的临时文件的路径。  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>參數  
  *in_bstrPath*  
  宿主应用程序用于临时文件的路径。  
   
 #### <a name="return-value"></a>返回值  
- **则为 S_OK**  
+ **S_OK**  
  临时文件目录已成功设置。  
   
  **E_FAIL**  
@@ -228,11 +225,11 @@ HRESULT Cancel ( void )
 #### <a name="description"></a>Description  
  取消当前嵌入的数据库操作  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>參數  
  无。  
   
 #### <a name="return-value"></a>返回值  
- **则为 S_OK**  
+ **S_OK**  
  操作已成功取消。  
   
  **DB_E_CANTCANCEL**  
@@ -264,7 +261,7 @@ HRESULT GetSizeMax (
  嵌入的数据库图像的估计大小（以字节为单位）。  
   
 #### <a name="return-value"></a>返回值  
- **则为 S_OK**  
+ **S_OK**  
  该大小已成功获取。  
   
  **E_FAIL**  
@@ -283,7 +280,7 @@ HRESULT IsDirty ( void )
  none  
   
 #### <a name="return-values"></a>返回值  
- **则为 S_OK**  
+ **S_OK**  
  自上次保存后数据库已更改。  
   
  **S_FALSE**  
@@ -308,7 +305,7 @@ HRESULT Load (
  指向从其加载嵌入的数据库的流接口的指针。  
   
 #### <a name="return-values"></a>返回值  
- **则为 S_OK**  
+ **S_OK**  
  数据库已成功加载。  
   
  **E_OUTOFMEMORY**  
@@ -337,7 +334,7 @@ HRESULT Save (
  一个标志，该标志指示在此操作后是否应清除脏标志。  
   
 #### <a name="return-values"></a>返回值  
- **则为 S_OK**  
+ **S_OK**  
  数据库已成功保存。  
   
  **STG_E_CANTSAVE**  

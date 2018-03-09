@@ -3,26 +3,28 @@ title: "ADOX 枚举常量 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: enumerated constants [ADOX]
+helpviewer_keywords:
+- enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 880c49c4cfda1faf32313ac919939bcba734ced5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 枚举常量
 若要帮助调试，ADOX 枚举常量，请列出每个常量的值。 但是，此值是纯粹是参考性的并且可以将不同的 ADOX 版本更改为另一个。 你的代码应仅依赖于的名称，而不是实际值的枚举常数。  

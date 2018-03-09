@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: TOPCOUNT
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 597faa6bfe343a0a1329dfc0dd75be5a1f785491
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e68a27c85dde732a54b87e914b643565d8549933
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定数值表达式，则**TopCount**函数以降序顺序，指定通过根据指定的数值表达式的值指定一组为指定集求得集中的元组排序。 对集进行排序之后**TopCount**函数然后返回指定的数目的具有最高值的元组。  
   
 > [!IMPORTANT]  

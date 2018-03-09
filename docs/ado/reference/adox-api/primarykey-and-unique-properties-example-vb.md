@@ -3,29 +3,31 @@ title: "PrimaryKey 和唯一属性示例 (VB) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7a8be23faf9284ee4e2bccce79f4015f8f99973
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7fbb3844149af7a036749a44ce70a425b4701706
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和唯一属性示例 (VB)
 此示例演示[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)和[Unique](../../../ado/reference/adox-api/unique-property-adox.md)属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码将使用两个列创建一个新表。 **PrimaryKey**和**Unique**属性用于将一个列将不允许重复值的主键。  

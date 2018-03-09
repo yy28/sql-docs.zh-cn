@@ -2,9 +2,12 @@
 title: "带有参数化筛选器的合并发布的快照 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f358f84d2dbcec345a160d9fafb660bbebc01be7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ec934637b86851a4d6fdc57722ac46aeebd0429e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>带有参数化筛选器的合并发布的快照
-  在合并发布中使用参数化行筛选器时，复制将使用由两部分构成的快照初始化各个订阅。 首先，创建一个架构快照，该快照包含复制所需的所有对象和已发布对象的架构，但不包含数据。 然后，使用快照初始化每个订阅，该快照包含架构快照中的对象和架构以及属于订阅分区的数据。 如果多个订阅接收某个给定分区（即这些订阅接收相同的架构和数据），则该分区的快照只创建一次；多个订阅通过使用相同的快照来初始化。 有关参数化行筛选器的详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在合并发布中使用参数化行筛选器时，复制操作将使用由两部分构成的快照初始化各个订阅。 首先，创建一个架构快照，该快照包含复制所需的所有对象和已发布对象的架构，但不包含数据。 然后，使用快照初始化每个订阅，该快照包含架构快照中的对象和架构以及属于订阅分区的数据。 如果多个订阅接收某个给定分区（即这些订阅接收相同的架构和数据），则该分区的快照只创建一次；多个订阅通过使用相同的快照来初始化。 有关参数化行筛选器的详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  可以采用下列三种方法之一为包含参数化筛选器的发布创建快照：  
   

@@ -1,5 +1,5 @@
 ---
-title: "连接到 Excel 工作簿 |Microsoft 文档"
+title: "连接到 Excel 工作簿 | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Excel [Integration Services]
 ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: f8fb1db80ac1b750950a3401516b54af5ee29686
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3ece6c4ef032f7b60f82f3f58ee602d0a4ac1196
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-excel-workbook"></a>连接到 Excel 工作簿
   若要将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包连接到 Microsoft Office Excel 工作簿，需要 Excel 连接管理器。  
@@ -34,13 +33,13 @@ ms.lasthandoff: 08/17/2017
  
 ## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Microsoft Excel 和 Access 文件的连接组件
   
-你可能需要下载 Microsoft Office 文件的连接组件，如果它们尚未安装。 下载最新版本的 Excel 和 Access 文件此处连接组件： [Microsoft Access 数据库引擎 2016年可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。
+可能需要下载 Microsoft Office 文件的连接组件（如果尚未安装）。 在此处下载用于 Excel 和 Access 文件的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。
   
-组件的最新版本可以打开的 Excel 的早期版本创建的文件。
+最新版组件可以打开 Excel 早期版本创建的文件。
 
-如果计算机具有 32 位版本的 Office，那么您需要安装 32 位版本的组件，并还需要确保在 32 位模式下运行包。
+如果计算机有 32 位版本的 Office，则必须安装 32 位版本的组件，还须确保在 32 位模式下运行程序包。
 
-如果你有 Office 365 订阅，请确保你下载访问数据库引擎 2016年可再发行组件和不是 Microsoft 访问 2016年运行时。 运行安装程序时，可能会看到一条错误消息，您无法下载通过并行安装 Office 单击以运行组件。 要跳过此错误消息，并已成功安装组件，运行安装程序在静默模式下打开命令提示符窗口并运行。使用下载的 EXE 文件`/quiet`切换。 例如：
+如果有 Office 365 订阅，请确保下载 Access 数据库引擎 2016 可再发行组件，而不是 Microsoft Access 2016 Runtime。 运行安装程序时，可能会看到一条错误消息，指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息并成功安装组件，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -68,4 +67,3 @@ ms.lasthandoff: 08/17/2017
  [连接到 Access 数据库](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   
-

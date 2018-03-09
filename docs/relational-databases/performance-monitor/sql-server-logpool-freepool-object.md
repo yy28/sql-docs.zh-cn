@@ -2,9 +2,12 @@
 title: "SQL Server - LogPool FreePool 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e1431cc4cc311e20daf416e9086acefe2bc6df9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c75bad21742f0fdfef13685094623d309bda5b42
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server，LogPool FreePool 对象
-**SQLServer：LogPool FreePool** 性能对象提供日志池内可用池的统计信息的计数器。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQLServer:LogPool FreePool 性能对象提供日志池内可用池的统计信息的计数器。
 
 下表介绍了 SQL Server **LogPool FreePool** 性能对象。
 

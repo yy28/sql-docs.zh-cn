@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - indexes [SQL Server], tempdb database
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0d85ca3709065461adb4615e9da09410c6d6650
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc20b72e294451f4c1475d04d63b037c86fd562d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sortintempdb-option-for-indexes"></a>用于索引的 SORT_IN_TEMPDB 选项
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
 -   如果 SORT_IN_TEMPDB 设置为 OFF，目标文件组中必须有足够的可用空间来存储最终表。 包括所有索引的结构。 如果具有更多的可用空间，则可以提高表和索引区的连续性。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
   
  [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  

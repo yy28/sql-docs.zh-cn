@@ -2,27 +2,30 @@
 title: "授予 Oracle 权限的脚本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 847fc8a563be78e9dd354d2a1d255945a014fa2c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90bf950b81739a9e8b5fe23c915fa6aa73b63c50
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="script-to-grant-oracle-permissions"></a>授予 Oracle 权限的脚本
-  本主题中提供的脚本用于配置使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制发布数据的 Oracle 数据库。 安装后，该脚本也会出现在以下目录中：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<实例名称>*\MSSQL\Install\oracleadmin.sql。 有关配置 Oracle 数据库的详细信息，请参阅[配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题中提供的脚本用于配置使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制发布数据的 Oracle 数据库。 安装后，该脚本也会出现在以下目录中：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<实例名称>*\MSSQL\Install\oracleadmin.sql。 有关配置 Oracle 数据库的详细信息，请参阅[配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)。  
   
 > [!NOTE]  
 >  该脚本包含 `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`语句，事务复制所用的触发器需要这个语句。 如果您仅使用快照复制，请将该行从脚本中删除。  

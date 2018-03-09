@@ -1,11 +1,11 @@
 ---
-title: "Integration Services (SSIS) 包和项目参数 |Microsoft 文档"
+title: "Integration Services (SSIS) 包和项目参数 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -16,17 +16,16 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.paramterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 17d53f23c35f34a155497455b6575fd67f7b0ddb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
@@ -41,9 +40,9 @@ ms.lasthandoff: 09/27/2017
 ## <a name="parameters-and-project-deployment-model"></a>参数和项目部署模型  
  将项目部署到 Integration Services (SSIS) 服务器时，你使用视图、存储过程和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI 来管理项目和包参数。 有关详细信息，请参阅以下主题。  
   
--   [视图 &#40; Integration Services 目录 &#41;](../integration-services/system-views/views-integration-services-catalog.md)  
+-   [视图（Integration Services 目录）](../integration-services/system-views/views-integration-services-catalog.md)  
   
--   [存储过程 &#40; Integration Services 目录 &#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
+-   [存储过程（Integration Services 目录）](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
 -   [“配置”对话框](../integration-services/service/configure-dialog-box.md)  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/27/2017
   
  下表列出了值的类型。  
   
-|值名称|说明|值的类型|  
+|值名称|Description|值的类型|  
 |----------------|-----------------|-------------------|  
 |执行值|针对包执行的特定实例赋予的值。 此赋值将覆盖所有其他值，但仅应用于包执行的单个实例。|文字|  
 |服务器值|在将项目部署到 Integration Services 服务器后在项目范围内赋予参数的值。 此值将覆盖设计默认值。|文字或环境变量引用|  
@@ -74,21 +73,21 @@ ms.lasthandoff: 09/27/2017
   
  如果项目参数引用某一环境变量且无法在执行时解析来自该变量的文字值，则使用设计值。 不使用服务器值。  
   
- 要查看分配给参数值的环境变量，请查询 catalog.object_parameters 视图。 有关详细信息，请参阅[catalog.object_parameters &#40;SSISDB 数据库 &#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
+ 要查看分配给参数值的环境变量，请查询 catalog.object_parameters 视图。 有关详细信息，请参阅 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)。  
   
 #### <a name="determining-execution-parameter-values"></a>确定执行参数值  
  下面的 Transact-SQL 视图和存储过程可用于显示和设置参数值。  
   
- [catalog.execution_parameter_values &#40;SSISDB 数据库 &#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(view)  
+ [catalog.execution_parameter_values（SSISDB 数据库）](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)（视图）  
  显示特定执行将使用的实际参数值  
   
- [catalog.get_parameter_values &#40;SSISDB 数据库 &#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) （存储过程）  
+ [catalog.get_parameter_values（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)（存储过程）  
  解析并显示指定的包和环境引用的实际值  
   
- [catalog.object_parameters &#40;SSISDB 数据库 &#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (view)  
+ [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)（视图）  
  显示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目录中所有包和项目的参数和属性，包括设计默认值和服务器默认值。  
   
- [catalog.set_execution_parameter_value &#40;SSISDB 数据库 &#41;](../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目录中的执行实例设置参数的值。  
   
  您还可以使用 **中的** “执行包” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框修改参数值。 有关详细信息，请参阅 [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)。  
@@ -116,28 +115,28 @@ ms.lasthandoff: 09/27/2017
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中打开包，然后在 SSIS 设计器中单击 **“参数”** 选项卡。  
   
-     ![包参数选项卡](../integration-services/media/denali-package-parameters.gif "包参数选项卡")  
+     ![包参数选项卡](../integration-services/media/denali-package-parameters.gif "Package Parameters Tab")  
   
 2.  单击工具栏上的 **“添加参数”** 按钮。  
   
-     ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "添加工具栏按钮")  
+     ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
   
 3.  为列表自身中或 **“属性”**窗口中的 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
   
-    |属性|Description|  
+    |“属性”|Description|  
     |--------------|-----------------|  
     |“属性”|参数名。|  
     |“名称”|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
-    |“值”|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |必需|需要首先指定并非设计默认值的值，包才能执行。|  
+    |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
+    |Required|需要首先指定并非设计默认值的值，包才能执行。|  
     |Description|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
     > **注意：**在向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
   
 4.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件中。  
   
-    > **警告!!** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
+    > **警告！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
   
     > **注意：**如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。  
   
@@ -147,62 +146,62 @@ ms.lasthandoff: 09/27/2017
   
 2.  在解决方案资源管理器中右键单击“Project.params”，然后单击“打开”，或者双击“Project.params”将其打开。  
   
-     ![项目参数窗口](../integration-services/media/denali-project-parameters.gif "项目参数窗口")  
+     ![项目参数窗口](../integration-services/media/denali-project-parameters.gif "Project Parameters Window")  
   
 3.  单击工具栏上的 **“添加参数”** 按钮。  
   
-     ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "添加工具栏按钮")  
+     ![添加工具栏按钮](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
   
 4.  为 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”**和 **“必需”** 属性输入值。  
   
-    |属性|Description|  
+    |“属性”|Description|  
     |--------------|-----------------|  
     |“属性”|参数名。|  
     |“名称”|参数的数据类型。|  
     |默认值|在设计时分配的参数的默认值。 这也称为设计默认值。|  
-    |“值”|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
-    |必需|需要首先指定并非设计默认值的值，包才能执行。|  
+    |区分|敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。|  
+    |Required|需要首先指定并非设计默认值的值，包才能执行。|  
     |Description|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
 5.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件的配置中。 保存项目文件以将对参数值的所有更改提交到磁盘。  
   
-    > **警告!!!** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮打开 **“管理参数值”** 对话框，您可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
+    > **警告！！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮打开 **“管理参数值”** 对话框，您可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-**参数化**对话框，可以将新的或现有参数与任务的属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。 以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](https://msdn.microsoft.com/library/hh213214.aspx)。
+“参数化”对话框可使将新的或现有的参数与任务属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。 以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](https://msdn.microsoft.com/library/hh213214.aspx)。
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **属性**  
  选择要与参数相关联的任务属性。 此列表包含可参数化的所有属性。  
   
- **使用现有的参数**  
+ **使用现有参数**  
  使用此选项可将任务属性与某个现有参数相关联，从而可以从下拉列表中选择该参数。  
   
  **不使用参数**  
  选择此选项可以删除对参数的引用。 不删除该参数。  
   
- **创建新的参数**  
+ **新建参数**  
  选择此选项可创建要与任务属性相关联的新参数。  
   
  **名称**  
  指定要创建的参数的名称。  
   
- **描述**  
+ **Description**  
  指定参数的说明。  
   
- **值**  
+ **ReplTest1**  
  指定参数的默认值。 这也称作设计默认值，以后在部署时可以覆盖该值。  
   
- **作用域**  
+ **范围**  
  通过选择“项目”或“包”选项指定参数的范围。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
   
- **敏感**  
+ **区分**  
  通过选中或清除该复选框，指定参数是否为敏感参数。 敏感参数值在目录中加密，并且在使用 Transact-SQL 或 SQL Server Management Studio 查看时以 NULL 值的形式出现。  
   
  **必需**  
  指定参数是否要求在执行包之前指定设计默认值之外的值。  
  
-## <a name="set-parameter-values-after-the-project-is-deployed"></a>部署项目后设置参数值
+## <a name="set-parameter-values-after-the-project-is-deployed"></a>在部署项目后设置参数值
 通过部署向导，您可以在将项目部署到目录时设置服务器默认参数值。 在您的项目处于目录中后，您可以使用 SQL Server Management Studio (SSMS) 对象资源管理器或 Transact-SQL 来设置服务器默认值。  
   
 ### <a name="set-server-defaults-with-ssms-object-explorer"></a>使用 SSMS 对象资源管理器设置服务器默认值  
@@ -217,11 +216,10 @@ ms.lasthandoff: 09/27/2017
   
 5.  在 **“值”** 列中，指定所需的服务器默认参数值。  
 
-### <a name="set-server-defaults-with-transact-sql"></a>使用 TRANSACT-SQL 设置服务器默认值  
+### <a name="set-server-defaults-with-transact-sql"></a>使用 Transact-SQL 设置服务器默认值  
  若要使用 TRANSACT-SQL 设置服务器默认值，请使用 [catalog.set_object_parameter_value（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)存储过程。 若要查看当前服务器默认值，请查询 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。 若要清除服务器默认值，请使用 [catalog.clear_object_parameter_value（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)存储过程。  
   
 ## <a name="related-content"></a>相关内容  
  mattmasson.com 上的博客文章 [SSIS 快速提示：必需参数](http://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   
-

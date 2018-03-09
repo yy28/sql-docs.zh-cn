@@ -3,8 +3,11 @@ title: "Management Studio 中的自定义报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: be381dfcba80135f5c76694ab2f19f2942e0f5a8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
-在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame_md.md)]创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]创建的自定义报表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中，许多对象资源管理器节点显示一组由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]创建的自定义报表。  
   
 ## <a name="implementation"></a>实现  
 自定义报表是使用报表定义语言 (RDL) 创建的，并存储为报表定义 (.rdl) 文件。 RDL 包含 XML 格式的报表的数据检索和布局信息。 RDL 是一个开放式架构。 开发人员可以使用其他属性和元素来扩展 RDL。 报表可以执行位于报表内部的任何有效的 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句。  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="managing-custom-reports"></a>管理自定义报表  
 如果用户具有很多自定义报表，建议他们使用具有相应 NTFS 文件系统权限的文件系统文件夹来组织这些报表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 自定义报表是使用当前用户的权限运行的。 若要防止恶意用户更改报表运行的查询，应将包含报表文件的文件系统文件夹的权限设置为“限制访问”。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 服务所使用的用户和帐户都要求对包含报表文件的文件系统文件夹具有读取权限。  
@@ -76,5 +79,5 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>另请参阅  
 [向 Management Studio 添加自定义报表](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [启用运行自定义报表警告](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[将自定义报表与对象资源管理器节点属性一起使用](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+[将自定义报告与对象资源管理器节点属性一起使用](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   

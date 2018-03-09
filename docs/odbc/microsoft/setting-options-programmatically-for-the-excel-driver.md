@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,17 +22,17 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e728a06c640203a2a3057933a3c40b543b01d4d3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bd7669339c99e756c9e03fa00cfd60aa2f53cc74
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>以编程方式为 Excel 驱动程序的的设置选项
 |选项|Description|方法|  
 |------------|-----------------|------------|  
 |数据源名称|用于标识数据源，例如工资单或人员的名称。|若要动态设置此选项，使用**DSN**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
-|数据库|而无需选择或创建数据库，可以设置 Microsoft Access 数据源。 如果没有数据库在安装程序时提供的则将提示用户能够连接到数据源时选择某个数据库文件。|若要动态设置此选项，使用**DBQ**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
+|“数据库”|而无需选择或创建数据库，可以设置 Microsoft Access 数据源。 如果没有数据库在安装程序时提供的则将提示用户能够连接到数据源时选择某个数据库文件。|若要动态设置此选项，使用**DBQ**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
 |Description|数据源; 中的数据的可选描述例如，"雇用日期、 薪金历史记录和当前查看的所有雇员。"|若要动态设置此选项，使用**说明**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
 |目录|显示当前所选的目录。<br /><br /> Microsoft Excel 3.0/4.0 文件的路径显示标记为"Directory"，为 Microsoft Excel 5.0，7.0，或 97 文件的路径显示标记为"工作簿"。|若要动态设置此选项，使用**DEFAULTDIR**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
 |只读|将数据库指定为只读的。|若要动态设置此选项，使用**READONLY**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  

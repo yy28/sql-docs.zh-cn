@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_rda_reauthorize_db (Transact SQL) |Microsoft 文档"
+title: sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_rda_reauthorize_db
 - sp_rda_reauthorize_db_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_reauthorize_db stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6e9f73c96cc07bfe442ac3104c4b1f4824596ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3450d9d9dc491e0c3c57b560281148929d0ce907
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (TRANSACT-SQL)
+# <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   还原之间启用了 Stretch 和远程数据库的本地数据库的经过身份验证的连接。  
@@ -58,7 +61,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
   
 ## <a name="remarks"></a>注释  
@@ -67,7 +70,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="example"></a>示例  
  下面的示例还原之间启用了 Stretch 和远程数据库的本地数据库的经过身份验证的连接。 它将建立 （推荐） 的远程数据的副本并连接到新的副本。  
   
-```tsql  
+```sql  
 DECLARE @credentialName nvarchar(128);   
 SET @credentialName = N'<existing_database_scoped_credential_name>';   
 EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;  
@@ -75,7 +78,7 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.sp_rda_deauthorize_db &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

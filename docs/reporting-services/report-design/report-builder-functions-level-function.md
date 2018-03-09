@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5ed59cf792bb62b1930ce3bcf6cf9ea0e505b028
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07c04ef8576eaeec00b629c045c54136cb10e463
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---level-function"></a>报表生成器函数 - Level 函数
   返回在递归层次结构中的当前深度级别。  
@@ -45,7 +43,7 @@ Level(scope)
 ## <a name="return-type"></a>返回类型  
  返回 **Integer**。 如果 scope 指定数据集或数据区域，或指定非递归分组（即没有父元素的分组），则 Level 返回 0。 如果省略 *scope* ，则返回当前作用域的级别。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **Level** 函数返回的值从 0 开始；即，层次结构中的第一级为 0。  
   
  **Level** 函数可用于为递归层次结构（如雇员列表）提供缩进格式。  

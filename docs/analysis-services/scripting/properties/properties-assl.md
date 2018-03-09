@@ -2,36 +2,36 @@
 title: "属性 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, properties
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff1e43f8fd1242b8ac314b49268ec8c86e7cb907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f616fb67d0e22bba33d22d0d59eb2ed19a4d88e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-assl"></a>属性 (ASSL)
-  本参考部分包含作为 Analysis Services 脚本语言 (ASSL) 架构中的对象属性的所有元素的语法和用法信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本参考部分包含作为 Analysis Services 脚本语言 (ASSL) 架构中的对象属性的所有元素的语法和用法信息。  
   
  尽管 ASSL 架构只包含 XML 元素，但是从开发人员的角度来说，本节中介绍的元素是与介绍对象的属性对应的。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  在少数情况下，架构中显示为属性的叶级元素可归类为对象，这是因为该元素的类型是对象类型。 例如，**源**的**维度**对象属于类型**DimensionBinding**。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |元素|Description|  
 |-------------|-----------------|  
@@ -182,7 +182,7 @@ ms.lasthandoff: 11/17/2017
 |[LogFileSize 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/logfilesize-element-assl.md)|指定最大日志文件大小 (MB)。|  
 |[ManagedProvider 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/managedprovider-element-assl.md)|包含派生自元素所用的托管提供程序的名称**数据源**数据类型。|  
 |[ManufacturingExtraMonthQuarter 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingextramonthquarter-element-assl.md)|定义为其分配额外月份的有关生产时间的月份**TimeBinding**元素。|  
-|[ManufacturingFirstMonth 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstmonth-element-assl.md)|定义的第一个生产月**TimeBinding**元素。|  
+|[ManufacturingFirstMonth 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstmonth-element-assl.md)|定义 **TimeBinding** 元素的第一个生产月。|  
 |[ManufacturingFirstWeekOfMonth 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstweekofmonth-element-assl.md)|定义生产月的第一周**TimeBinding**元素。|  
 |[MasterDatasourceID 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/masterdatasourceid-element-assl.md)|包含的主数据源 ID**数据库**元素。|  
 |[具体化元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/materialization-element-assl.md)|指示度量值组和引用维度之间的关系类型。|  

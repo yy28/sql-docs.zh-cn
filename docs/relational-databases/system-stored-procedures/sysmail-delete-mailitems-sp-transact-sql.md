@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
 - sysmail_delete_mailitems_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_delete_mailitems_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a0142e48fba0338c1271da1eb7aa0edc13a4847f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a7843e44e42de868c3748dbf31794d4c69e361e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@sent_before=** ] *sent_before*  
+ [ **@sent_before=** ] **'***sent_before***'**  
  删除最多的日期和时间作为提供的电子邮件*sent_before*自变量。 *sent_before*是**datetime**替换为默认值为 NULL。 NULL 指示所有日期。  
   
- [  **@sent_status=** ] *sent_status*  
+ [ **@sent_status=** ] **'***sent_status***'**  
  删除由指定类型的电子邮件*sent_status*。 *sent_status*是**varchar(8)**无默认值。 有效值包括**发送**，**未发送**，**重试**，和**失败**。 NULL 指示所有状态。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -58,7 +61,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
  删除电子邮件也会删除与这些邮件相关的附件。 删除电子邮件并不删除中的相应条目**sysmail_event_log**。 使用[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)从日志中删除项。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，此存储的过程授予执行成员关闭**sysadmin**固定的服务器角色和**DatabaseMailUserRole**。 成员**sysadmin**固定的服务器角色可以执行此过程可删除的所有用户发送的电子邮件。 成员**DatabaseMailUserRole**只能删除由该用户发送的电子邮件。  
   
 ## <a name="examples"></a>示例  
@@ -93,7 +96,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [sysmail_allitems &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_mailattachments &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   

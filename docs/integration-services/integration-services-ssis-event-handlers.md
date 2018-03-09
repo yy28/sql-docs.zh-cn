@@ -1,11 +1,11 @@
 ---
-title: "Integration Services (SSIS) 事件处理程序 |Microsoft 文档"
+title: "Integration Services (SSIS) 事件处理程序 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bf61c56b66a6a64f6e2156c5f458c8e09fe976e9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件处理程序
   在运行时，可执行文件（包以及 Foreach 循环容器、For 循环容器、序列容器和任务宿主容器）会引发事件。 例如，错误发生时会引发 OnError 事件。 可以为这些事件创建自定义事件处理程序，以扩展包的功能并使包在运行时更容易管理。 事件处理程序可以执行诸如下列任务：  
@@ -51,11 +50,11 @@ ms.lasthandoff: 09/26/2017
   
  以下关系图显示具有 For 循环容器的简单包，该容器包含一个执行 SQL 任务。  
   
- ![包、 For 循环、 任务宿主和执行 SQL 任务](../integration-services/media/mw-dts-eventhandlerpkg.gif "包、 For 循环、 任务宿主和执行 SQL 任务")  
+ ![包、For 循环、任务主机和执行 SQL 任务](../integration-services/media/mw-dts-eventhandlerpkg.gif "Package, For Loop, task host, and Execute SQL task")  
   
  只有包具有事件处理程序，用于处理其 **OnError** 事件。 如果执行 SQL 任务运行时发生错误，包的 **OnError** 事件处理程序就会运行。 以下关系图显示导致包的 **OnError** 事件处理程序执行的调用序列。  
   
- ![事件处理程序流](../integration-services/media/mw-dts-eventhandlers.gif "事件处理程序流")  
+ ![事件处理程序流](../integration-services/media/mw-dts-eventhandlers.gif "Event handler flow")  
   
  事件处理程序是事件处理程序集的成员，所有容器都包含此事件处理程序集。 如果使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器创建包，就可以在 **设计器的** “包资源管理器” **选项卡上的** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 文件夹中看到事件处理程序集的成员。  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 09/26/2017
   
  **“事件处理程序”** 选项卡也包含 **“连接管理器”** 区域，在这里可创建并修改事件处理程序用来连接到服务器和数据源的连接管理器。 有关详细信息，请参阅 [创建连接管理器](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
-### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>在事件处理程序选项卡上添加一个事件处理程序  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>在“事件处理程序”选项卡上添加事件处理程序  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，打开包含所需包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
@@ -113,7 +112,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  单击 **“事件处理程序”** 选项卡。  
   
-     ![与事件处理程序的设计图面的屏幕截图](../integration-services/media/eventhandlers.gif "设计图面与事件处理程序的屏幕截图")  
+     ![带有事件处理程序的设计图面的屏幕截图](../integration-services/media/eventhandlers.gif "Screenshot of design surface with event handler")  
   
      在事件处理程序中创建控制流和数据流类似于在包中创建控制流和数据流。 有关详细信息，请参阅 [Control Flow](../integration-services/control-flow/control-flow.md) 和 [Data Flow](../integration-services/data-flow/data-flow.md)。  
   
@@ -136,8 +135,7 @@ ms.lasthandoff: 09/26/2017
   
  有关如何以编程方式设置这些属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  有关如何向包中添加事件处理程序的信息，请参阅 [在包中添加事件处理程序](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
   
   
-

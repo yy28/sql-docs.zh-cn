@@ -3,29 +3,31 @@ title: "更新和正在执行的方法示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], VC++ example
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d20d467624e2fc095ac428b956fd76e937f8e8e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d10d112d6c8ed067959e949adf1480f38bcabae1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>更新和正在执行的方法示例 （VC + +）
 此示例演示[更新](../../../ado/reference/ado-api/update-method.md)方法结合[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。  

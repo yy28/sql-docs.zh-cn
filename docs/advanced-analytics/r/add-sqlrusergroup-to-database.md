@@ -1,37 +1,44 @@
 ---
 title: "作为数据库用户添加 SQLRUserGroup |Microsoft 文档"
 ms.custom: 
-ms.date: 11/13/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 12/21/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
 - "默示身份验证"
 - SQLRUserGroup
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 97a571a9a91ac31e955f6833e27a975f87267218
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e448e665044b1b8f63d30b7c99adf62419ae283
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>作为数据库用户添加 SQLRUserGroup
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在安装的过程[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]或[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，用于运行下的安全令牌的任务创建的新 Windows 用户帐户[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]服务。 当用户发送的机器学习脚本从外部客户端，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]激活可用的工作帐户、 将其映射到的调用用户的标识并运行代表用户脚本。 这一新的数据库引擎服务支持调用的外部脚本的安全执行*默示身份验证*。
+此文章介绍了如何为提供的辅助进程使用的帐户在 SQL Server 中的机器学习服务需连接到数据库并运行 R 或 Python 的作业，代表用户的权限的组。
 
-你可以在 Windows 用户组中查看这些帐户**SQLRUserGroup**。 默认情况下，被创建 20 工作人员帐户，这通常是绰绰有余用于运行 R 作业。
+## <a name="what-is-sqlrusergroup"></a>什么是 SQLRUserGroup？
 
-但是，如果你需要从远程数据科学客户端运行 R 脚本，且正在使用 Windows 身份验证，你必须授予这些辅助帐户权限登录到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表你的实例。
+在安装的过程[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]或[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]或创建新的 Windows 用户帐户来支持 R 执行 Python 脚本下的安全令牌的任务[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]服务。
+
+你可以在 Windows 用户组中查看这些帐户**SQLRUserGroup**。 默认情况下，被创建 20 工作人员帐户，此值通常比满足运行机器学习更多作业。
+
+当用户发送的机器学习脚本从外部客户端，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]激活可用的工作帐户、 将其映射到的调用用户的标识并运行代表用户脚本。 这一新的数据库引擎服务支持调用的外部脚本的安全执行*默示身份验证*。
+
+但是，如果你需要从远程数据科学客户端，运行 R 或 Python 脚本且正在使用 Windows 身份验证，则必须为这些工作人员帐户登录的权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表你的实例。
 
 ## <a name="add-sqlrusergroup-as-a-sql-server-login"></a>将 SQLRUserGroup 添加为 SQL Server 登录名
 
@@ -55,8 +62,8 @@ ms.lasthandoff: 11/17/2017
 
 5. 直到找到一个开头的服务器上的组帐户的列表中滚动`SQLRUserGroup`。
     
-    + 与的快速启动板服务关联组的名称_默认实例_只始终是**SQLRUserGroup**。 选择此帐户仅对于默认实例。
-    + 如果你使用_命名实例_，实例名称追加到的默认名称`SQLRUserGroup`。 因此，如果你的实例名为"MLTEST"，此实例的默认用户组名称将**SQLRUserGroupMLTest**。
+    + 与的快速启动板服务关联组的名称_默认实例_始终**SQLRUserGroup**，不管你是否安装 R 和 / 或 Python。 选择此帐户仅在默认实例。
+    + 如果你使用_命名实例_，实例名称追加到的默认辅助进程组名称，名称`SQLRUserGroup`。 因此，如果你的实例名为"MLTEST"，此实例的默认用户组名称将**SQLRUserGroupMLTest**。
  
      ![服务器上的组的示例](media/implied-auth-login5.png "服务器上的组的示例")
    

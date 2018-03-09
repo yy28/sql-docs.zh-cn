@@ -2,10 +2,14 @@
 title: "创建 SQL Server 代理作业以存档数据库邮件和事件日志 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Database Mail [SQL Server], archiving
 - saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cace8601462fd2469d7cdbfb4cce168111d42d07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
-  数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 **msdb** 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 **msdb** 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
   
 -   **开始之前：**[先决条件](#Prerequisites)、[建议](#Recommendations)、[权限](#Permissions)  
   
@@ -49,11 +54,11 @@ ms.lasthandoff: 11/09/2017
   
 -   第一个过程创建一个名为“存档数据库邮件”的作业，其中包含下列步骤。  
   
-    1.  将所有邮件从数据库邮件表中复制到一个格式为 **DBMailArchive_***<year_month>* 且用上一个月份命名的新表中。  
+    1.  将所有邮件从数据库邮件表中复制到一个格式为 DBMailArchive_<year_month> 且用上一个月份命名的新表中。  
   
-    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 **DBMailArchive_Attachments_**<year_month> 且用上一个月份命名的新表中。  
+    2.  将与第一个步骤中复制的邮件相关的附件从数据库邮件表中复制到格式为 DBMailArchive_Attachments_<year_month> 且用上一个月份命名的新表中。  
   
-    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 **DBMailArchive_Log_**<year_month> 且用上一个月份命名的新表中。  
+    3.  将数据库邮件事件日志中与第一个步骤中复制的邮件相关的事件从数据库邮件表中复制到格式为 DBMailArchive_Log_<year_month> 且用上一个月份命名的新表中。  
   
     4.  从数据库邮件表中删除已传输邮件项的记录。  
   
@@ -88,7 +93,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  在 **“命令”** 框中，键入以下语句以创建用上一个月份命名的表，在其中包含早于当前月份的开始日期的行：  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -114,7 +119,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  在 **“命令”** 框中，键入以下语句以创建用上一个月份命名的附件表，在其中包含与上一步中转移的邮件相对应的附件：  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -141,7 +146,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  在 **“命令”** 框中，键入以下语句以创建用上一个月份命名的日志表，在其中包含与在前面的步骤中传输的邮件相对应的日志项：  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -168,7 +173,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  在 **“命令”** 框中，键入以下语句以从数据库邮件表中删除早于当前月份的行：  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @CopyDate ;  
@@ -188,7 +193,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  在 **“命令”** 框中，键入以下语句以从数据库邮件事件日志中删除早于当前月份的行：  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @CopyDate ;  

@@ -1,11 +1,11 @@
 ---
-title: "步骤 3： 添加包和其他文件 |Microsoft 文档"
+title: "步骤 3：添加包和其他文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f8cf4eedc8930492e28f41cee67f0c25a382bacd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e23136a630638a04c390eeac809c7786aa5476b6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-3---adding-packages-and-other-files"></a>课程 1-3-添加程序包和其他文件
+# <a name="lesson-1-3---adding-packages-and-other-files"></a>第 1-3 课 — 添加包和其他文件
 在此任务中，将现有的包、支持单个包的辅助文件以及自述文件添加到您在上一任务中创建的 Deployment Tutorial 项目。 例如，您将添加一个包含包数据的 XML 数据文件和一个提供有关项目中所有包的自述文件信息的文本文件。  
   
 在将包部署到测试环境或生产环境时，通常在部署中不包括数据文件，而是改用配置来更新数据源的路径，以访问数据文件或数据库的测试版本或生产版本。 为了便于学习，本教程将数据文件包括在包部署中。  
@@ -63,7 +62,7 @@ ms.lasthandoff: 09/26/2017
   
 5.  单击浏览 **(…)**按钮，导航到 C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages，选择“DataTransfer.dtsx”，再单击“打开”。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 7.  重复步骤 3-6，但这一次添加的是 LoadXMLData.dtsx（它位于 C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages 中）。  
   
@@ -82,4 +81,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

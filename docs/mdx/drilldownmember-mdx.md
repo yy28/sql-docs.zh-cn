@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNMEMBER
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 35fb3fec36ffc3aacd68bab3baf4612942c5afd8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9f7f9a3cdb4faa7946744d9f4b0913ee866e5a04
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  *Include_Calc_Members*  
  用于使计算成员能够包括在深化结果中的关键字。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  该函数返回按层次结构排序的子成员集，并包括第一个集和第二个集的交集中的成员。 如果第一个集包含父成员以及一个或多个子成员，则不深化父成员。 第一个集可以具有任何维数，但第二个集必须包含一个一维集。 第一个集中的原始成员的顺序将保留，只不过该函数的结果集中包含的所有子成员都紧随在它们的父成员之后。 该函数将通过检索第一个集与第二个集的交集中的每个成员的子成员来构造结果集。 如果**递归**指定，则该函数将一直到以递归方式比较的结果集针对检索结果中每个成员的子级的第二个集的成员集是也存在在第二组直到从结果集中没有更多成员可以在第二组中找到。  
   
  查询的 XMLA 属性**MdpropMdxDrillFunctions** ，您可以验证服务器提供钻函数支持的级别; 请参阅[支持 XMLA 属性 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)有关详细信息。  

@@ -1,33 +1,31 @@
 ---
-title: "表格模型 (SSAS 表格) 中的 DAX |Microsoft 文档"
+title: "表格模型中的 DAX |Microsoft 文档"
 ms.custom: 
 ms.date: 10/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73a56576091a746db0ca8c52ea2be22f60a50148
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>表格模型 (SSAS 表格) 中的 DAX
-  数据分析表达式 (DAX) 是用于在 Analysis Services、 Power BI Desktop 和 Excel 中的 Power Pivot 中创建自定义计算公式语言。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
+# <a name="dax-in-tabular-models"></a>表格模型中的 DAX 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+数据分析表达式 (DAX) 是用于在 Analysis Services、 Power BI Desktop 和 Excel 中的 Power Pivot 中创建自定义计算公式语言。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
   
  尽管 DAX Analysis Services、 Power BI Desktop 和 Excel 中的 Power Pivot 中使用的则本主题更适用于 Analysis Services 表格模型项目创作 SQL Server Data Tools (SSDT) 中。  
   
@@ -369,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  处理和重新计算对行筛选器公式没有影响，除非重新计算的结果返回不同的值，致使角色成员能够查询或不能查询该行。  
   
- 有关详细信息，请参阅 [处理数据（SSAS 表格）](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
+ 有关详细信息，请参阅[处理数据](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
 ##  <a name="bkmk_troubleshoot"></a> 更正公式中的错误  
  如果在定义公式时遇到错误，公式可能会包含“语法错误” 、“语义错误” 或“计算错误”。  
@@ -402,7 +400,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [计算的列](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [支持的数据源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

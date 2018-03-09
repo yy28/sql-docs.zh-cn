@@ -2,26 +2,31 @@
 title: "SQL Server 代理属性 （高级选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9174713e614ddbb536a06feffdcc44025771e979
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7e704be1826d638b7e2c92b53a21da1b39450ad6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>SQL Server 代理属性（“高级”选项卡）
-  默认情况下， **“高级”** 选项卡中显示五个属性。 如果定义了自定义属性，则这些属性及其值将显示在此选项卡上。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+默认情况下， **“高级”** 选项卡中显示五个属性。 如果定义了自定义属性，则这些属性及其值将显示在此选项卡上。  
   
 ## <a name="options"></a>选项  
  **群集**  

@@ -2,9 +2,12 @@
 title: "新建已注册的服务器 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8b4f08d99f573511750b56c3b8bc0f684b29f7b1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fa26a8ce5bc17a2c1f0528321f01129b7d861782
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>创建新的已注册的服务器 (SQL Server Management Studio)
-  本主题介绍如何通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的已注册服务器组件中注册服务器，以保存经常访问的服务器的连接信息。 您可以在连接之前注册服务器，也可以在从对象资源管理器中进行连接时注册服务器。 对象资源管理器中有注册本地计算机上的服务器实例的专用菜单选项。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主题介绍如何通过在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的已注册服务器组件中注册服务器，保存经常访问的服务器的连接信息。 您可以在连接之前注册服务器，也可以在从对象资源管理器中进行连接时注册服务器。 对象资源管理器中有注册本地计算机上的服务器实例的专用菜单选项。  
   
  共有两种类型的已注册服务器：  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 有关详细信息，请参阅 [选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
   
-     **用户名**  
+     **User name**  
      显示当前连接所使用的用户名。 只有在已选择使用 Windows 身份验证进行连接的情况下，此只读选项才可用。 若要更改 **“用户名”**，请以其他用户身份登录计算机。  
   
      **登录**  

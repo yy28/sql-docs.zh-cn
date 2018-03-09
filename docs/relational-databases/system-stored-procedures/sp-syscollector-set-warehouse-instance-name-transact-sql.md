@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
 - sp_syscollector_set_warehouse_instance_name
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 569ad6a22134ae8da3568b56b2190ae9fbdf9645
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6d82ac58a086f09b104515300d92704e62b6aea1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +47,10 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @instance_name =] '*instance_name*  
+ [ @instance_name = ] '*instance_name*'  
  为实例名称。 *instance_name*是**sysname** ，默认值为的本地实例，如果为 NULL。  
   
-> **注意：***instance_name*必须是完全限定的实例名称，其中包含计算机名称和窗体中的实例名称*computerName* \\ *instanceName*。    
+> **注意：***instance_name*必须是完全限定的实例名称，其中包含计算机名称和窗体中的实例名称*computerName* \\ *instanceName*。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -58,7 +60,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
   
  若要查看当前的实例名称，请查询[syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)系统视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  

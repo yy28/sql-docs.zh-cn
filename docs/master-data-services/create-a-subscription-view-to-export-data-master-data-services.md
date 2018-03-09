@@ -5,36 +5,37 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d9632d2512c3ff44bea76e47bf7825f6dcc1400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eda098f740c6ffa5bf7bbb4025b6f7d181af608d
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>创建订阅视图以导出数据 (Master Data Services)
   创建订阅视图，以便将 Master Data Services 数据导出到订阅系统。 你打算在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中创建数据的视图。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“集成管理”** 功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>创建和编辑订阅视图  
   
@@ -66,12 +67,12 @@ ms.lasthandoff: 11/20/2017
 11. 单击 **“保存”**。  
   
 ## <a name="view-information"></a>查看信息  
- 对于创建的每个视图，系统都会在网格中添加一行（其中包含十列）。 下表介绍了这些列。  
+ 对于创建的每个视图，系统都会在网格中添加一行（其中包含十列）。 下表对这些列进行了说明。  
   
-|列|Description|  
+|“列”|Description|  
 |------------|-----------------|  
-|状态|视图状态。<br /><br /> 单击“保存”后，系统显示![更新状态图标 ](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示视图正在更新。<br /><br /> 如果创建或编辑视图时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
-|Name|订阅视图名称。|  
+|“登录属性”|视图状态。<br /><br /> 单击“保存”后，系统显示![更新状态图标 ](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示视图正在更新。<br /><br /> 如果创建或编辑视图时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
+|“属性”|订阅视图名称。|  
 |“模型”|模型名称。|  
 |版本|版本名称。|  
 |版本标志|版本标志名称。|  

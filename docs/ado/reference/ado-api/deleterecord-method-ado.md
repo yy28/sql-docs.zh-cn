@@ -3,8 +3,9 @@ title: "DeleteRecord 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::raw_DeleteRecord
 - _Record::DeleteRecord
-helpviewer_keywords: DeleteRecord method [ADO]
+helpviewer_keywords:
+- DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66d13bc4449bad73b1ab09869a764e6bff533442
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5088293b3866f74f39e608a8de8f300d4e3980c1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
 删除所表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -40,10 +42,10 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Parameters  
  *数据源*  
- 可选。 A**字符串**值，该值包含要删除的 URL 标识的实体 （例如，文件或目录）。 如果*源*省略或指定空字符串，表示由当前的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)被删除。 如果记录集合记录 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)的**adCollectionRecord**，如目录) 所有子项 （例如，子目录） 也将被都删除。  
+ 選擇性。 A**字符串**值，该值包含要删除的 URL 标识的实体 （例如，文件或目录）。 如果*源*省略或指定空字符串，表示由当前的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)被删除。 如果记录集合记录 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)的**adCollectionRecord**，如目录) 所有子项 （例如，子目录） 也将被都删除。  
   
- *异步*  
- 可选。 A**布尔**值，当**True**，指定删除操作是异步。  
+ *Async*  
+ 選擇性。 A**布尔**值，当**True**，指定删除操作是异步。  
   
 ## <a name="remarks"></a>注释  
  表示此对象上的操作**记录**此方法完成后可能会失败。 在调用**DeleteRecord**、**记录**应关闭，因为的行为**记录**可能会变得不可预知根据提供程序的更新时**记录**与数据源。  

@@ -2,9 +2,12 @@
 title: "删除工作负荷组 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc49607bc518ec521586fab4d18886f7e718d842
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8027e697f08d9e31e463015ca929e64f5fa3d182
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-workload-group"></a>删除工作负荷组
-  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 删除工作负荷组或资源池。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 删除工作负荷组或资源池。  
   
--   **开始之前：**  [限制和局限](#LimitationsRestrictions)、 [权限](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **若要删除工作负荷组，请使用：**[对象资源管理器](#DelWGObjEx)、[资源调控器属性](#DelWGRGProp)和 [Transact-SQL](#DelWGTSQL)  
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
   
 -   重新启动服务器。 完成重新启动过程后，将不会创建已删除的组，并且已移动的组将使用新分配的资源池。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="Permissions"></a> Permissions  
  删除工作负荷组需要 CONTROL SERVER 权限。  
   
 ##  <a name="DelWGObjEx"></a> 使用对象资源管理器删除工作负荷组  
@@ -95,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
+ [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
  [创建资源池](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [创建工作负荷组](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [删除资源池](../../relational-databases/resource-governor/delete-a-resource-pool.md)   

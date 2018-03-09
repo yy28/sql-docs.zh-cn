@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -25,7 +26,8 @@ f1_keywords:
 - NOLOCK_TSQL
 - MAXDOP_TSQL
 - USE_HINT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - REPORT PLAN query hint
 - FORCE ORDER query hint
@@ -55,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: "136"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---query"></a>提示 (TRANSACT-SQL) 的查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -158,7 +160,7 @@ ms.lasthandoff: 11/17/2017
   
  实际上，该查询提示不允许在查询计划中直接使用索引视图和直接在索引视图上使用索引。  
   
- 仅当在查询和与 (NOEXPAND) 或 WITH 的 SELECT 部分中直接引用该视图未展开该索引的视图 (NOEXPAND、 索引 ( *index_value* [ **，***...n*])) 指定。 有关查询提示与 (NOEXPAND) 的详细信息，请参阅[FROM](../../t-sql/queries/from-transact-sql.md)。  
+ 仅当在查询和与 (NOEXPAND) 或 WITH 的 SELECT 部分中直接引用该视图未展开该索引的视图 (NOEXPAND、 索引 ( *index_value* [**，* * *...n* ])) 指定。 有关查询提示与 (NOEXPAND) 的详细信息，请参阅[FROM](../../t-sql/queries/from-transact-sql.md)。  
   
  只有语句的 SELECT 部分中的视图（包括 INSERT、UPDATE、MERGE 和 DELETE 语句中的视图）才受提示影响。  
   
@@ -185,23 +187,23 @@ ms.lasthandoff: 11/17/2017
   
  使用非聚集内存优化的列存储索引会阻止查询。 如果查询包含避免使用 columnstore 索引的查询提示以及有关使用 columnstore 索引的索引提示，则这些提示将发生冲突，查询将返回错误。  
   
- MAX_GRANT_PERCENT =*百分比*  
+ MAX_GRANT_PERCENT = *percent*  
  最大内存授予百分比的大小。 查询保证将不超过此限制。 实际限制可以是低于此设置的资源调控器是否较低。 有效的值可以介于 0.0 和 100.0。  
   
 **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- MIN_GRANT_PERCENT =*百分比*  
+ MIN_GRANT_PERCENT = *percent*  
  最小内存授予百分比大小 = %的默认限制。 查询保证将获取最大值 （min 授予所需的内存），因为至少需要启动查询所需的内存。 有效的值可以介于 0.0 和 100.0。  
   
 **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- MAXDOP*数*  
+ MAXDOP *number*  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  重写**最大并行度**配置选项的**sp_configure**和指定此选项以对查询的资源调控器。 MAXDOP 查询提示可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超过配置到资源调控器中，值[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用中所述的资源调控器 MAXDOP 值[ALTER WORKLOAD GROUP &#40;Transact SQL &#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). 与使用的所有语义规则**最大并行度**使用 MAXDOP 查询提示时，配置选项都适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 > [!WARNING]  
->  如果 MAXDOP 设置为零，服务器将选择最大并行度。  
+> 如果 MAXDOP 设置为零，服务器将选择最大并行度。  
   
  MAXRECURSION*数*  
  指定该查询允许的最大递归数。 *数*是 0 和 32767 之间的非负整数。 如果指定 0，则没有限制。 如果未指定此选项，则对服务器的默认限制为 100。  
@@ -223,7 +225,7 @@ ms.lasthandoff: 11/17/2017
  *@variable_name*  
  在查询中使用的局部变量的名称，可以为其分配用于 OPTIMIZE FOR 查询提示的值。  
   
- *未知*  
+ *UNKNOWN*  
  指定查询优化器在查询优化期间使用统计数据而不是初始值来确定局部变量的值。  
   
  *literal_constant*  
@@ -240,7 +242,7 @@ ms.lasthandoff: 11/17/2017
  指定在编译查询时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器应用于此查询的参数化规则。  
   
 > [!IMPORTANT]  
->  PARAMETERIZATION 查询提示只能在计划指南中指定。 不能直接在查询中指定该查询提示。  
+> PARAMETERIZATION 查询提示只能在计划指南中指定。 不能直接在查询中指定该查询提示。  
   
  SIMPLE 用于指示查询优化器尝试进行简单参数化。 FORCED 用于指示优化器尝试进行强制参数化。 PARAMETERIZATION 查询提示用于覆盖计划指南中 PARAMETERIZATION 数据库 SET 选项的当前设置。 有关详细信息，请参阅[通过使用计划指南指定查询参数化行为](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
   
@@ -254,31 +256,30 @@ ms.lasthandoff: 11/17/2017
   
  如果不能使用这样的计划，查询优化器将返回错误而不是延迟对查询执行的错误检测。 行可以包含可变长度列；[!INCLUDE[ssDE](../../includes/ssde-md.md)]允许将行大小定义为超过[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力的最大可能的大小。 通常，应用程序存储实际大小在[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力范围内的行，而不管最大可能大小。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]遇到过长的行，则返回执行错误。  
  
- 使用提示 ( *hint_name* )  
- **适用于**： 适用于 SQL Server （从 2016 SP1 开始） 和 Azure SQL 数据库。
+<a name="use_hint"></a>使用提示 ( *****hint_name***** )  
+ **适用于**： 适用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) 和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
  
  提供了一个或多个查询处理器的提示名称按指定的其他提示**在单引号内**。 
-  **适用于**： 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。
 
  支持以下提示名称：
  
-*  DISABLE_OPTIMIZED_NESTED_LOOP  
+*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  指示查询处理器无法生成查询计划时使用优化的嵌套的循环联接的排序操作 （批处理排序）。 这相当于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)2340年。
-*  FORCE_LEGACY_CARDINALITY_ESTIMATION  
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  
  强制查询优化器使用[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更早版本。 这相当于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)9481 或[Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 LEGACY_CARDINALITY_ESTIMATION = ON。
-*  ENABLE_QUERY_OPTIMIZER_HOTFIXES  
+*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
  启用查询优化器修补程序 （在 SQL Server 累积更新和 Service Pack 中发布的更改）。 这相当于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4199 或[Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 QUERY_OPTIMIZER_HOTFIXES = ON。
-*  DISABLE_PARAMETER_SNIFFING  
+*  'DISABLE_PARAMETER_SNIFFING'  
  指示查询优化器使用时编译具有一个或多个参数，在第一次时使用已编译查询时的参数值上进行的查询计划独立的查询的平均数据分布。 这相当于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4136 或[Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 PARAMETER_SNIFFING = OFF。
-*  ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES  
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'  
  会导致 SQL Server 以生成使用最小选择性估计 AND 筛选器谓词时帐户关联的计划。 这相当于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4137 与的基数估算模型一起使用时[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和早期版本中，并且具有类似的效果时[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)9471 用于基数估算模型的[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]或更高版本。
-*  DISABLE_OPTIMIZER_ROWGOAL  
+*  'DISABLE_OPTIMIZER_ROWGOAL'  
  导致 SQL Server 以生成不使用查询时，包含 TOP，选项 (FAST N)，使用行目标调整的计划，或存在关键字。 这相当于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4138。
-*  ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS  
+*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  启用自动生成快速的统计信息 （直方图修正） 的基数估计所需的任何前导索引列。 用于估计基数直方图将调整在查询编译时，来应对此列的实际的最大或最小值。 这相当于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)4139。 
-*  ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS  
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
  SQL server 会生成查询计划对于联接，在查询优化器而不默认基包含假设使用简单的包含假设[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型的[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]或更高版本。 这相当于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)9476。 
-*  FORCE_DEFAULT_CARDINALITY_ESTIMATION  
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
  强制查询优化器使用[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)对应于当前的数据库兼容性级别的模型。 使用此提示来覆盖[Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 LEGACY_CARDINALITY_ESTIMATION = ON 或[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)9481。
  
 > [!TIP]
@@ -288,10 +289,10 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT] 
 > 一些使用提示提示可能会与在全局启用的跟踪标志冲突或会话级别或数据库作用域配置设置。 在这种情况下，查询级别提示 （使用提示） 始终将优先。 如果与另一个查询提示或在查询级别启用跟踪标志使用提示发生冲突 (例如通过 QUERYTRACEON)，在尝试执行查询时，SQL Server 将生成错误。 
 
- USE PLAN N*xml_plan*  
- 强制查询优化器将查询指定的现有查询计划*xml_plan*。 不能使用 INSERT、UPDATE、MERGE 或 DELETE 语句来指定 USE PLAN。  
+ USE PLAN N*****xml_plan*****  
+ 强制查询优化器将查询指定的现有查询计划*****xml_plan*****。 不能使用 INSERT、UPDATE、MERGE 或 DELETE 语句来指定 USE PLAN。  
   
-表提示**(***exposed_object_name* [ **，** \<table_hint > [[**，** ]... *n*  ]] **)**适用范围的表或视图的对应于指定的表提示*exposed_object_name*。 我们建议作为查询提示的上下文中仅使用表提示[计划指南](../../relational-databases/performance/plan-guides.md)。  
+表提示 **(* * * exposed_object_name* [ **，** \<table_hint > [[* *，**]... *n*  ]] **)**适用范围的表或视图的对应于指定的表提示*exposed_object_name*。 我们建议作为查询提示的上下文中仅使用表提示[计划指南](../../relational-databases/performance/plan-guides.md)。  
   
  *exposed_object_name*可以是以下引用之一：  
   
@@ -301,7 +302,7 @@ ms.lasthandoff: 11/17/2017
   
  当*exposed_object_name*指定如果没有指定表提示，将忽略表提示的对象的一部分以及索引的使用由查询优化器查询中指定任何索引。 当您无法修改原始查询时，可以使用此方法来消除 INDEX 表提示的影响。 请参阅示例 J。  
   
-**\<table_hint >:: =** {[NOEXPAND] {索引 ( *index_value* [，...*n* ] ) |索引 = ( *index_value* ) |FORCESEEK [**(***index_value***(***index_column_name* [**，**...]**))** ]|FORCESCAN |HOLDLOCK |NOLOCK |NOWAIT |PAGLOCK |READCOMMITTED |READCOMMITTEDLOCK |READPAST |READUNCOMMITTED |REPEATABLEREAD |ROWLOCK |可序列化 |快照 |SPATIAL_WINDOW_MAX_CELLS |TABLOCK |TABLOCKX |UPDLOCK |XLOCK} 是要应用于表或视图的对应于表提示*exposed_object_name*作为查询提示。 有关这些提示的说明，请参阅[表提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. 有关这些提示的说明，请参阅[表提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  不允许将非 INDEX、FORCESCAN 和 FORCESEEK 的表提示用作查询提示，除非该查询已经具有一个指定该表提示的 WITH 子句。 有关详细信息，请参阅“备注”。  
   
@@ -363,7 +364,7 @@ GO
 ### <a name="c-using-maxrecursion"></a>C. 使用 MAXRECURSION  
  可以使用 MAXRECURSION 来防止不合理的递归公用表表达式进入无限循环。 下面的示例特意创建一个无限循环，并使用 MAXRECURSION 提示以限制为两个递归级别数。 该示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
   
-```tsql  
+```sql  
 --Creates an infinite loop  
 WITH cte (CustomerID, PersonID, StoreID) AS  
 (  
@@ -556,7 +557,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_control_plan_guide &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
  [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   

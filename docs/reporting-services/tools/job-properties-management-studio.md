@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0e1887f5a1816df421b9c2864298e0068b72d09
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54fd700c21148803ce21ae83ee473753de139bd6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="job-properties-management-studio"></a>作业属性 (Management Studio)
   使用“作业属性”页可以在取消正在执行的报表或订阅之前查看相关信息。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  如果列出了某个作业，请右键单击它，再单击“属性”。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **作业 ID**  
  分配给正在处理的作业的 GUID。 该值是在每次运行报表或订阅时随机生成的。  
   

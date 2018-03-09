@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FETCH
 - FETCH_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FETCH statement
 - cursors [SQL Server], fetching
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf0fc44e9be488c7c07cdb159270056bba0adc6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +87,7 @@ FETCH
  @*cursor_variable_name*  
  游标变量名，引用要从中进行提取操作的打开的游标。  
   
- @ INTO*variable_name*[，...*n*]  
+ INTO @*variable_name*[ ,...*n*]  
  允许将提取操作的列数据放到局部变量中。 列表中的各个变量从左到右与游标结果集中的相应列相关联。 各变量的数据类型必须与相应的结果集列的数据类型匹配，或是结果集列数据类型所支持的隐式转换。 变量的数目必须与游标选择列表中的列数一致。  
   
 ## <a name="remarks"></a>注释  
@@ -101,7 +103,7 @@ FETCH
   
  @@FETCH_STATUS函数报告的最后一个的 FETCH 语句的状态。 相同的信息记录在由 sp_describe_cursor 返回的游标中的 fetch_status 列中。 这些状态信息应该用于在对由 FETCH 语句返回的数据进行任何操作之前，以确定这些数据的有效性。 有关详细信息，请参阅[@@FETCH_STATUS &#40;Transact SQL &#41;](../../t-sql/functions/fetch-status-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  FETCH 权限默认授予任何有效的用户。  
   
 ## <a name="examples"></a>示例  
@@ -213,8 +215,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关闭 &#40;Transact SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [释放 &#40;Transact SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [打开 &#40;Transact SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
   

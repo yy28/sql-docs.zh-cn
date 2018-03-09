@@ -1,10 +1,13 @@
 ---
 title: "编辑类型映射 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 90a03136fcc5a67382cffd99e426f8b8cfa605bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e579492c7895ba03d8c03d9ac0815e45aca2c3c1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-type-mapping-accesstosql"></a>编辑类型映射 (AccessToSQL)
 **编辑类型映射**对话框中，可以指定类型的源和目标的数据库对象对象之间的映射方式。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
   
 特定于表的类型映射重写数据库和项目类型映射。 特定于数据库的映射覆盖项目映射。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **源类型**  
 选择要映射到的源数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
   

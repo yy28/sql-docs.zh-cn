@@ -1,11 +1,11 @@
-# [安装 Reporting Services](install-reporting-services.md)
+# [安装 Reporting Services 2017](install-reporting-services.md)
+## [查找 Reporting Services 2017 的产品密钥](find-reporting-services-product-key-ssrs.md)
 
-
-# [在本机模式下安装 Reporting Services](install-reporting-services-native-mode-report-server.md)  
+# [在本机模式下安装 Reporting Services 2016](install-reporting-services-native-mode-report-server.md)  
 ## [执行 Reporting Services 的“仅文件”安装](files-only-installation-reporting-services.md)  
 ## [并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）](install-reporting-and-internet-information-services-side-by-side.md)  
 ## [在 SQL Server 故障转移群集中托管报表服务器数据库](host-a-report-server-database-in-a-sql-server-failover-cluster.md)  
-## [Reporting Services 配置管理器（本机节点）](reporting-services-configuration-manager-native-mode.md)  
+## [Reporting Services 配置管理器（本机模式）](reporting-services-configuration-manager-native-mode.md)  
 ### [配置报表服务器服务帐户（SSRS 配置管理器）](configure-the-report-server-service-account-ssrs-configuration-manager.md)  
 ### [配置报表服务器 URL（SSRS 配置管理器）](configure-report-server-urls-ssrs-configuration-manager.md)  
 #### [关于 URL 保留项和注册（SSRS 配置管理器）](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
@@ -29,7 +29,7 @@
 ### [Power BI 集成](power-bi-report-server-integration-configuration-manager.md)  
 
 
-# [安装 Reporting Services SharePoint 模式](install-reporting-services-sharepoint-mode.md)  
+# [在 SharePoint 模式下安装 Reporting Services 2016](install-reporting-services-sharepoint-mode.md)  
 ## [支持的 SharePoint 和 Reporting Services 服务器及外接程序的组合 (SQL Server 2016)](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 ## [用于 SharePoint 的 SSRS 外接程序的位置](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
 ## [在 SharePoint 模式下安装第一个报表服务器](install-the-first-report-server-in-sharepoint-mode.md)  

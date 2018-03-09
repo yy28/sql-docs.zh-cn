@@ -5,10 +5,11 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61fe4d56d73a3d2d7822308af2fb0eb377647ced
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c56a813ec873293fec2dc846da851fc9d36f2dae
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo 为访问返回值
 下表列出了 C 语言 #defines *fInfoType*自变量和返回的相应值**SQLGetInfo**。 可以通过将列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*自变量。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  其中**SQLGetInfo**返回 32 位位掩码，垂直条 (&#124;) 表示按位 OR。  
   
-|信息类型|返回的值|  
+|InfoType|返回的值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|文件名|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"访问"|  
+|SQL_DBMS_NAME|"ACCESS"|  
 |SQL_DBMS_VER|多个值|  
 |SQL_DDL_INDEX|多个值|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多个值|  
-|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|从驱动程序管理器|  
 |SQL_OJ_CAPABILITIES|多个值|  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|多个值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"访问"|  
+|SQL_SERVER_NAME|"ACCESS"|  
 |SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|多个值|  
 |SQL_SUBQUERIES|多个值|  

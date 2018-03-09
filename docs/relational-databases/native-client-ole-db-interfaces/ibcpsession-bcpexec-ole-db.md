@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: BCPExec method
 ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c12b94216591fdf4378db0c03951b7300f2d134d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d746c01ed19368ab4502681d946cc3f06a61be35
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ HRESULT BCPExec(
  **BCPExec**是唯一一种方法可能需要的任何时间长度内未完成的复制方法进行大容量。 因此，它是支持异步模式的唯一大容量复制方法。 若要使用异步模式，设置提供程序特定的会话属性 SSPROP_ASYNCH_BULKCOPY 为 VARIANT_TRUE，然后再调**BCPExec**方法。 此属性位于 DBPROPSET_SQLSERVERSESSION 属性集中。 若要测试是否完成，请调用**BCPExec**具有相同参数的方法。 如果大容量复制尚未完成， **BCPExec**方法返回 DB_S_ASYNCHRONOUS。 它还将在返回*pRowsCopied*参数状态的已发送到或从服务器收到的行数的计数。 发送到服务器的行直到到达批的末尾时才会提交。  
   
 ## <a name="arguments"></a>参数  
- *pRowsCopied*[out 一个]  
+ *pRowsCopied*[out]  
  指向 DWORD 的指针。 **BCPExec**方法将 DWORD 填入成功复制的行数。 如果*pRowsCopied*自变量设置为 NULL，则将忽略该**BCPExec**方法。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sp_add_trusted_assembly
 - sys.sp_add_trusted_assembly_TSQL
 - sys.sp_add_trusted_assembly
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_add_trusted_assembly
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_add_trusted_assembly
 ms.assetid: 
 caps.latest.revision: 
 author: tmullaney
 ms.author: thmullan;rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91cedb6c140b9f969d1d33e4878788fa8b9dba92
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7b44f4253a295d91c7011c0aa51d943848188784
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (TRANSACT-SQL)  
+# <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 将程序集添加到的服务器的受信任程序集列表。
@@ -51,13 +54,13 @@ sp_add_trusted_assembly
 
 ## <a name="arguments"></a>参数
 
-[ @hash =] '*值*  
+[ @hash = ] '*value*'  
 要添加的服务器的受信任程序集列表中的程序集 SHA2_512 哈希值。 受信任的程序集可能会加载时[CLR 严格的安全](../../database-engine/configure-windows/clr-strict-security.md)启用，即使该程序集是无符号或数据库未标记为可信。
 
 [ @description =] '*说明*  
 程序集的可选用户定义描述。 Microsoft 建议使用将编码简单名称、 版本号、 区域性、 公钥，以及要信任的程序集的体系结构的规范名称。 此值唯一标识一侧公共语言运行时 (CLR) 程序集，并在 sys.assemblies clr_name 值相同。 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 要求的成员身份`sysadmin`固定的服务器角色或`CONTROL SERVER`权限。
 

@@ -1,11 +1,11 @@
 ---
-title: "第 5 课： 添加的包部署模型的 SSIS 包配置 |Microsoft 文档"
+title: "第 5 课：添加包部署模型的 SSIS 包配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,20 +15,19 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1a16217f90b9120993663d9046c8178e62451111
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 852a5c26df16cafdfee1f1e8d60aade25043b816
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>第 5 课：添加包部署模型的 SSIS 包配置
-包配置允许您从开发环境的外部设置运行时属性和变量。 配置允许您开发灵活且易于部署和分发的包。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供以下配置类型：  
+包配置允许您从开发环境的外部设置运行时属性和变量。 配置允许您开发灵活且易于部署和分发的包。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了以下配置类型：  
   
 -   XML 配置文件  
   
@@ -48,18 +47,17 @@ ms.lasthandoff: 08/03/2017
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [步骤 1： 复制第 4 课包](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [步骤 1：复制 Lesson 4 包](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
--   [步骤 2： 启用和配置包配置](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
+-   [步骤 2：启用和配置包配置](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [步骤 3： 修改目录属性配置值](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [步骤 3：修改目录属性配置值](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
--   [步骤 4： 测试第 5 课教程包](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+-   [步骤 4：测试第 5 课教程包](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
   
--   [步骤 1： 复制第 4 课包](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [步骤 1：复制 Lesson 4 包](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
   
   
-

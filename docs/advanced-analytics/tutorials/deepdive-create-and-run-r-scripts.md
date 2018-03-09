@@ -1,37 +1,44 @@
 ---
-title: "创建和运行 R 脚本 |Microsoft 文档"
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+title: "创建和运行 R 脚本 （SQL 和 R 深入） |Microsoft 文档"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- R
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ff840a886e281fcb1f86fa7f79db6c187538766d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1ca2c7227163816092e7248fe20cb377fc03ac03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="create-and-run-r-scripts"></a>创建和运行 R 脚本
+# <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>创建和运行 R 脚本 （SQL 和 R 深入）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-设置数据源并建立一个或多个计算上下文之后，现在可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行一些高性能的 R 脚本。  在本课程中，将使用服务器计算上下文执行一些常见的机器学习任务：
+本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
+
+设置数据源并建立一个或多个计算上下文之后，现在可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行一些高性能的 R 脚本。  在本课程中，你使用 server 计算上下文执行一些常见的机器学习任务：
 
 - 可视化数据并生成一些摘要统计信息
 - 创建线性回归模型
 - 创建逻辑回归模型
 - 对新数据进行评分并创建分数直方图
 
-## <a name="change-compute-context-to-the-server"></a>更改服务器的计算上下文
+## <a name="change-compute-context-to-the-server"></a>更改计算到服务器的上下文
 
 运行任何 R 代码前，需要指定当前或活动计算上下文。
 
@@ -41,7 +48,7 @@ ms.lasthandoff: 11/09/2017
     rxSetComputeContext(sqlCompute)
     ```
   
-    运行此语句后，会在 *sqlCompute* 参数中指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上进行所有后续计算。
+    就会立即运行此语句时，所有后续计算上进行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中指定的计算机*sqlCompute*参数。
   
 2. 如果决定在工作站上运行 R 代码，可以使用  **local** 关键字将计算上下文切换回本地计算机。
   
@@ -53,22 +60,22 @@ ms.lasthandoff: 11/09/2017
   
 3. 指定了计算上下文后，在更改前，它将保持活动状态。 但是，任何无法在远程服务器上下文中运行的 R 脚本都将在本地运行。
 
-## <a name="compute-summary-statistics"></a>计算摘要统计信息
+## <a name="compute-some-summary-statistics"></a>计算某些摘要统计信息
 
-若要查看计算上下文的工作原理，请尝试使用 *sqlFraudDS* 数据源生成一些摘要统计信息。  请记住，数据源对象只是定义你将使用的数据，而不会更改计算上下文。
+若要查看计算上下文的工作原理，请尝试生成一些摘要统计信息使用`sqlFraudDS`数据源。  请记住，数据源对象只需定义使用; 的数据它不会更改计算上下文。
 
-+ 若要在本地执行 summary，请使用 **rxSetComputeContext** 并指定“local”关键字。
++ 若要执行本地的摘要，使用**rxSetComputeContext**并指定_本地_关键字。
 + 若要在 SQL Server 计算机上创建相同的计算，切换到前面定义的 SQL 计算上下文。
 
-1. 调用 **rxSummary** 函数并传递所需的参数（如公式和数据源）并将结果分配给变量 *sumOut*。
+1. 调用[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)函数并传递所需的自变量，如公式和数据源，并将结果赋给变量`sumOut`。
   
     ```R
-    sumOut \<- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
+    sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 语言提供了许多摘要函数，但是 rxSummary 支持各种远程计算上下文，包括网络执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  有关类似函数的详细信息，请参阅 [ScaleR 引用](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries) 中的 [数据摘要](https://msdn.microsoft.com/microsoft-r/scaler/scaler)。
+    R 语言提供了许多摘要函数，但**rxSummary**上各种远程计算上下文，包括支持执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关类似的功能的信息，请参阅[使用 RevoScaleR 的数据摘要](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
   
-2. 处理完成后，可将 sumOut 变量中的内容打印到控制台。
+2. 处理完成后，你可以打印的内容`sumOut`变量到控制台。
   
     ```R
     sumOut
@@ -76,7 +83,6 @@ ms.lasthandoff: 11/09/2017
   
     > [!NOTE]
     > 请勿在结果从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机返回前尝试进行打印，否则可能会遇到错误。
-
 
 **结果**
 
@@ -96,7 +102,7 @@ ms.lasthandoff: 11/09/2017
 
  *numIntlTrans     4.0868    8.726757 0      60 10000    0           100000*
 
- *creditLine 9.1856 9.870364 1 75 10000 0 100000*
+ *creditLine       9.1856    9.870364 1      75 10000    0          100000*
 
  *性别的类别计数*
 
@@ -112,11 +118,11 @@ ms.lasthandoff: 11/09/2017
 
   *Female 3846*
 
-## <a name="add-maximum-and-minimum-values"></a>添加最大值和最小值
+## <a name="add-maximum-and-minimum-values"></a>添加最大和最小值
 
-根据计算的摘要统计信息，你会发现一些有用的数据信息，可以将这些数据放入数据源，以备日后进一步计算使用。 例如，可以使用最小和最大值来计算直方图，所以您决定将最高和低值添加到 RxSqlServerData 数据源。
+根据计算的摘要统计信息，你会发现一些有用的数据信息，可以将这些数据放入数据源，以备日后进一步计算使用。 例如，可以使用最小和最大值来计算直方图。 为此，让我们添加高和低值**RxSqlServerData**数据源。
 
-幸运的是， [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 包含的优化函数可以非常高效地将整数数据转换成分类因素数据。
+幸运的是[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]包括可以有效地将整数数据转换为分类因素数据的优化的功能。
 
 1. 首先设置一些临时变量。
   
@@ -125,9 +131,9 @@ ms.lasthandoff: 11/09/2017
     var <- sumDF$Name
     ```
   
-2. 使用之前创建的变量 ccColInfo 定义数据源中的列。
+2. 使用之前创建的变量 `ccColInfo` 定义数据源中的列。
   
-    还需添加一些新的计算列（numTrans、numIntlTrans 和 creditLine）到列集合。
+    此外，将添加一些新计算列 (`numTrans`， `numIntlTrans`，和`creditLine`) 到列集合。
   
     ```R 
     ccColInfo <- list(
@@ -149,28 +155,28 @@ ms.lasthandoff: 11/09/2017
             )
     ```
   
-3. 更新列集合后，可以应用以下语句创建之前定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的更新版本。
+3. 具有更新列集合中，应用以下语句以创建的更新的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]前面定义的数据源。
   
     ```R
-    sqlFraudDS \<- RxSqlServerData(
+    sqlFraudDS <- RxSqlServerData(
         connectionString = sqlConnString,
         table = sqlFraudTable,
         colInfo = ccColInfo,
         rowsPerRead = sqlRowsPerRead)
     ```
   
-    现在，sqlFraudDS 数据源包括添加到 ccColInfo 的新列。
+    `sqlFraudDS`数据源现在包括新列添加使用`ccColInfo`。
   
-  所做的修改仅影响 R 中的数据源对象；未向数据库表写入任何新数据。 但是，可使用在 *sumOut* 变量中捕获的数据来创建可视化效果和摘要。 下一步，学习如何在切换计算上下文时执行此操作。
+
+此时，修改影响仅数据源中的对象 R;任何新的数据具有尚未写入到数据库表。 但是，你可以使用在捕获的数据`sumOut`变量来创建可视化效果和摘要。 在下一步中，您将学习如何执行此操作时切换计算上下文。
 
 > [!TIP]
-> 如果你忘记了你正在使用哪些计算上下文，运行`rxGetComputeContext()`。  返回值`RxLocalSeq Compute Context`指示运行本地计算上下文中。
+> 如果你忘记了你正在使用哪些计算上下文，运行`rxGetComputeContext()`。  "RxLocalSeq 计算上下文"的返回值指示运行本地计算上下文中。
 
 ## <a name="next-step"></a>下一步
 
-[实现 SQL Server 数据使用 R 可视化效果](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+[使用 R 可视化 SQL Server 数据](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
 
 ## <a name="previous-step"></a>上一步
 
-[定义和使用计算上下文](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
+[定义并使用计算上下文](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

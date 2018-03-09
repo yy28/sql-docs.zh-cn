@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data regions
@@ -18,13 +16,13 @@ ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc5666464075a418dbb9490095209856fb68a56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2609574eeb2c41bb4eeab2c85bebd483867ee16
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>数据区域和地图（报表生成器和 SSRS）
   数据区域是报表中的对象，显示来自报表数据集中的数据。 可以在表、矩阵或列表中以数字和文本形式显示报表数据；在图表或仪表中以图形方式显示报表数据；以及在地图中以地理为背景显示报表数据。 表、矩阵和列表都基于“Tablix  ”数据区域，这种数据区域可根据需要扩展以显示数据集中的所有数据。 Tablix 数据区域支持多个行组和列组，还支持静态和动态的行和列。 图表显示各种图表格式的多个序列和类别组。 仪表显示数据集的单个值或聚合值。 地图会将空间数据显示为地图元素，这些地图元素的外观会根据数据集中的聚合数据而变化。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="gauge"></a>仪表  
  仪表显示某个范围之内的数据，并且带有一个指向该范围内的某个特定值的指示器。 仪表用于显示关键绩效指标 (KPI) 和其他指标。 仪表包括线性仪表和圆形仪表等。 阅读有关 [向报表添加仪表](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)的详细信息。  
   
-## <a name="map"></a>地图  
+## <a name="map"></a>映射  
  地图用于在地理背景下显示数据。 地图数据可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询、ESRI 形状文件或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 地图图块中的空间数据。 空间数据由一组坐标组成，这些坐标定义用于表示形状或区域的多边形、表示路线或路径的线条以及由标记表示的点。 您可以将聚合数据与地图元素关联，以自动改变其颜色和大小。 例如，您可以基于销售额改变商店的标记类型，也可以基于速度限制改变公路的颜色。 有关详细信息，请参阅[地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。  
   
 ## <a name="data-regions-in-the-report-layout"></a>报表布局中的数据区域  

@@ -2,10 +2,14 @@
 title: "重新生成系统数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 69f9e085f5eb6acb749c64a7fb370deabb975e6a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3a1d3cd6a2cb8183acf9d4f787e9d434dcc5577d
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
-  必须重新生成系统数据库才能修复 [master](../../relational-databases/databases/master-database.md)、 [mode](../../relational-databases/databases/model-database.md)l、 [msdb](../../relational-databases/databases/msdb-database.md)或 [resource](../../relational-databases/databases/resource-database.md) 系统数据库中的损坏问题或者修改默认的服务器级排序规则。 本主题提供如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重新生成系统数据库的分步说明。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+必须重新生成系统数据库才能修复 [master](../../relational-databases/databases/master-database.md)、 [mode](../../relational-databases/databases/model-database.md)l、 [msdb](../../relational-databases/databases/msdb-database.md)或 [resource](../../relational-databases/databases/resource-database.md) 系统数据库中的损坏问题或者修改默认的服务器级排序规则。 本主题提供如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重新生成系统数据库的分步说明。  
   
  **本主题内容**  
   
@@ -102,7 +107,7 @@ ms.lasthandoff: 11/09/2017
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |参数名称|说明|  
+    |参数名称|Description|  
     |--------------------|-----------------|  
     |/QUIET 或 /Q|指定在没有任何用户界面的情况下运行安装程序。|  
     |/ACTION=REBUILDDATABASE|指定安装程序将重新创建系统数据库。|  
@@ -176,7 +181,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，停止然后正常重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。  
   
-6.  在命令行窗口中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并执行以下命令： `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
+6.  在命令行窗口中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并执行以下命令： `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
      使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例替换 *\<servername>*。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的文件系统路径。  
   

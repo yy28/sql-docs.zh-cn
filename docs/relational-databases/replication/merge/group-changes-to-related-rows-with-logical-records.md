@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026199b68479b9219984123bcc5958b037474986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2ae5beed7a724e7baa9783e411f8b2f656e3f8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>通过逻辑记录对相关行的更改进行分组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **text** 和 **ntext**  
   
-    -   **image**  
+    -   **图像**  
   
     -   **XML**  
   
@@ -148,6 +148,6 @@ ms.lasthandoff: 11/17/2017
  如果使用逻辑记录，则合并代理必须一起处理每个整体逻辑记录的更改。 这会影响合并代理复制行所需的时间。 此外，由于代理要为每个逻辑记录打开一个单独的事务，因此锁定要求就会增加。  
   
 ## <a name="see-also"></a>另请参阅  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+ [合并复制的项目选项](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   

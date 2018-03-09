@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_query_statistics_xml (Transact SQL) |Microsoft 文档"
+title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,20 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml_TSQL
 - dm_exec_query_statistics_xml
-helpviewer_keywords: sys.dm_exec_query_statistics_xml management view
+helpviewer_keywords:
+- sys.dm_exec_query_statistics_xml management view
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c2e4547a6c0d79f56fa0f732236e16dbde409a45
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (TRANSACT-SQL)
+# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 返回的查询正在进行的请求的执行计划。 使用此 DMV 来检索与临时统计信息的 showplan XML。 
@@ -80,7 +82,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 > [!IMPORTANT]
 > 与工作负荷测试一样 TPC C，在启用轻量的统计信息分析基础结构中添加开销 1.5 到 2%。 与此相反，标准的统计信息分析基础结构可以添加多达 90%开销为相同的工作负荷方案。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
 
 ## <a name="examples"></a>示例  
@@ -88,14 +90,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. 查看实时查询计划和执行统计信息的正在运行的批处理  
  下面的示例查询**sys.dm_exec_requests**若要查找感兴趣的查询并复制其`session_id`从输出。  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  然后，若要获取的实时查询计划和执行统计信息，请使用复制`session_id`与系统函数**sys.dm_exec_query_statistics_xml**。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,7 +105,7 @@ GO
 
  或组合所有正在运行的请求。  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  

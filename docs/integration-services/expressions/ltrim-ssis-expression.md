@@ -1,5 +1,5 @@
 ---
-title: "LTRIM （SSIS 表达式） |Microsoft 文档"
+title: "LTRIM（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - leading blanks
 - LTRIM function
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d68b87ab59dab0a5b7bbd199b58a6259eb28daf9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29461d1213fb251895a6dc423e5fdd1df09b2b12
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM（SSIS 表达式）
   返回删除了前导空格的字符表达式。  
@@ -48,7 +47,7 @@ LTRIM(character expression)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  LTRIM 只可用于 DT_WSTR 数据类型。 如果 *character_expression* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 LTRIM 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](../../integration-services/expressions/cast-ssis-expression.md)。  
   
  如果参数为空，LTRIM 将返回空结果。  
@@ -73,9 +72,8 @@ LTRIM(@FirstName)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [RTRIM &#40;SSIS 表达式 &#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
- [TRIM &#40;SSIS 表达式 &#41;](../../integration-services/expressions/trim-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [RTRIM（SSIS 表达式）](../../integration-services/expressions/rtrim-ssis-expression.md)   
+ [TRIM（SSIS 表达式）](../../integration-services/expressions/trim-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

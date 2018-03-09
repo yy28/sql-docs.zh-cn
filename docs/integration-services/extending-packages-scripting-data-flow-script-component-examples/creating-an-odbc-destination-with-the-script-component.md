@@ -1,5 +1,5 @@
 ---
-title: "使用脚本组件创建 ODBC 目标 |Microsoft 文档"
+title: "使用脚本组件创建 ODBC 目标 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,40 +19,39 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5eb539f0d18f473b10ed8d49bcee9c298292fb41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a40d282b79d5319aa5a7dcbbe5f63a72f42f9af6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用脚本组件创建 ODBC 目标
-  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，你通常将数据保存到 ODBC 目标使用[!INCLUDE[vstecado](../../includes/vstecado-md.md)]目标和[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]ODBC 数据提供程序。 当然，还可以创建供单个包使用的即席 ODBC 目标。 若要创建此即席 ODBC 目标，可使用脚本组件，如下面的示例中所示。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，通常使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标和用于 ODBC 的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序将数据保存到 ODBC 目标。 当然，还可以创建供单个包使用的即席 ODBC 目标。 若要创建此即席 ODBC 目标，可使用脚本组件，如下面的示例中所示。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个数据流任务和多个包的组件，请考虑以此脚本组件示例中的代码为基础，创建自定义数据流组件。 有关详细信息，请参阅 [开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何创建目标组件，它使用一个现有的 ODBC 连接管理器以将数据从数据流入保存[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。  
+ 下面的示例演示如何创建一个目标组件，该组件使用现有 ODBC 连接管理器将数据流中的数据保存到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。  
   
- 此示例是自定义的修改的版本[!INCLUDE[vstecado](../../includes/vstecado-md.md)]目标，在主题中，已证实[使用脚本组件创建目标](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。 但是，在此示例中，自定义 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标已修改为使用 ODBC 连接管理器并将数据保存到 ODBC 目标。 此外，还包括以下更改：  
+ 本示例是[使用脚本组件创建目标](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)主题中演示的自定义 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标的修改版本。 但是，在此示例中，自定义 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目标已修改为使用 ODBC 连接管理器并将数据保存到 ODBC 目标。 此外，还包括以下更改：  
   
--   不能调用**AcquireConnection**方法的 ODBC 连接管理器从托管代码，因为它返回本机对象。 因此，本示例使用连接管理器的连接字符串通过托管 ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口直接连接到数据源。  
+-   不能从托管代码调用 ODBC 连接管理器的 **AcquireConnection** 方法，因为它返回的是一个本机对象。 因此，本示例使用连接管理器的连接字符串通过托管 ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口直接连接到数据源。  
   
--   **OdbcCommand**期望位置参数。 在命令的文本中，参数的位置由问号 (?) 指示。 (相比之下， **SqlCommand**需要命名的参数。)  
+-   **OdbcCommand** 需要位置参数。 在命令的文本中，参数的位置由问号 (?) 指示。 （相反，**SqlCommand** 需要命名参数。）  
   
- 此示例使用**Person.Address**表中**AdventureWorks**示例数据库。 该示例将第一个和第四个列中，  **int*AddressID** * 和**nvarchar (30) 城市**该数据工作流中此表的列。 在源、 转换和目标示例在主题中，使用此相同的数据[开发特定 Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)。  
+ 本示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表。 本示例在数据流中传递该表的第一列和第四列：int*AddressID* 和 nvarchar(30)City 列。 [开发特定类型的脚本组件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主题中的源、转换和目标示例使用了相同的数据。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   
-1.  创建 ODBC 连接管理器连接到**AdventureWorks**数据库。  
+1.  创建连接 **AdventureWorks** 数据库的 ODBC 连接管理器。  
   
-2.  通过在运行以下 TRANSACT-SQL 命令创建的目标表**AdventureWorks**数据库：  
+2.  通过在 **AdventureWorks** 数据库中运行以下 Transact-SQL 命令来创建一个目标表：  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -62,17 +60,17 @@ ms.lasthandoff: 09/26/2017
   
 3.  向数据流设计器图面添加新的脚本组件并将其配置为目标。  
   
-4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）若要确保此示例适用，上游组件的输出必须包含至少**AddressID**和**城市**中的列**Person.Address**表**AdventureWorks**示例数据库。  
+4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）为了确保本示例能够正常工作，上游组件的输出必须至少包含 **AdventureWorks** 示例数据库的 **Person.Address** 表中的 **AddressID** 和 **City** 列。  
   
-5.  打开**脚本转换编辑器**。 上**输入列**页上，选择**AddressID**和**城市**列。  
+5.  打开“脚本转换编辑器”。 在“输入列”页中，选择 AddressID 和 City 列。  
   
-6.  上**输入和输出**页上，如重命名更具描述性的名称与输入**MyAddressInput**。  
+6.  在“输入和输出”页中，用更具说明性的名称（如 **MyAddressInput**）重命名输入。  
   
-7.  上**连接管理器**页上，添加或创建 ODBC 连接管理器具有描述性名称如**MyODBCConnectionManager**。  
+7.  在“连接管理器”页中，添加或创建一个具有说明性名称（如 **MyODBCConnectionManager**）的 ODBC 连接管理器。  
   
-8.  上**脚本**页上，单击**编辑脚本**，然后输入下面中所示的脚本**ScriptMain**类。  
+8.  在“脚本”页中，单击“编辑脚本”，并在 **ScriptMain** 类中输入下面所示的脚本。  
   
-9. 关闭脚本开发环境中，关闭**脚本转换编辑器**，然后运行该示例。  
+9. 关闭脚本开发环境和“脚本转换编辑器”，然后运行该示例。  
   
     ```vb  
     Imports System.Data.Odbc  
@@ -179,4 +177,3 @@ ms.lasthandoff: 09/26/2017
  [使用脚本组件创建目标](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   
-

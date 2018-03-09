@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_index_population
 - sys.dm_fts_index_population_TSQL
 - dm_fts_index_population_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_population dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 719da7d41ba34adcf7a3aa7ccc53a14217e657ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +42,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|包含正在填充的全文索引的数据库 ID。|  
 |**catalog_id**|**int**|包含此全文索引的全文目录的 ID。|  
-|**针对 table_id 所**|**int**|其全文索引正在被填充的表的 ID。|  
-|**memory_address**|**varbinary （8)**|用于表示活动填充的内部数据结构的内存地址。|  
+|**table_id**|**int**|其全文索引正在被填充的表的 ID。|  
+|**memory_address**|**varbinary(8)**|用于表示活动填充的内部数据结构的内存地址。|  
 |**population_type**|**int**|填充类型。 可以是以下类型之一：<br /><br /> 1 = 完全填充<br /><br /> 2 = 基于时间戳的增量式填充<br /><br /> 3 = 对跟踪的更改进行手动更新<br /><br /> 4 = 对跟踪的更改进行后台更新。|  
 |**population_type_description**|**nvarchar(120)**|对填充类型的说明。|  
 |**is_clustered_index_scan**|**bit**|指示填充是否涉及对聚集索引的扫描。|  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>注释  
  如果除了全文索引之外还启用了统计语义索引，则关键字短语的语义提取和填充以及文档相似性数据的提取与全文索引同时发生。 文档相似性索引的填充在后面的第二阶段中发生。 有关详细信息，请参阅[管理和监视语义搜索](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
  

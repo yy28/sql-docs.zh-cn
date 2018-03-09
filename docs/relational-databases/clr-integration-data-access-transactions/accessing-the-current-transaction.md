@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 550455ead049191d94de93a40a55aa3b064602a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abcc68d96e7516b31a231efeb4c5c851b10dee45
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-the-current-transaction"></a>访问当前事务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]如果某个事务是在上运行的公共语言运行时 (CLR) 代码的点在活动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是输入，通过公开事务**若在 System.Transactions.Transaction**类。 **Transaction.Current**属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 检查**Transaction.Current**时自动**Connection.Open**方法调用，并以透明方式登记该事务中的连接 (除非**Enlist**关键字设置为 false 连接字符串中)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+如果某个事务是在上运行的公共语言运行时 (CLR) 代码的点在活动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是输入，通过公开事务**若在 System.Transactions.Transaction**类。 **Transaction.Current**属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 检查**Transaction.Current**时自动**Connection.Open**方法调用，并以透明方式登记该事务中的连接 (除非**Enlist**关键字设置为 false 连接字符串中)。  
   
  你可能想要使用**事务**直接在以下方案中的对象：  
   

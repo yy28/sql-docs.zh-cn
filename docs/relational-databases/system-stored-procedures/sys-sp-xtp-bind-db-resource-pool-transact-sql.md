@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_xtp_bind_db_resource_pool (TRANSACT-SQL) |Microsoft 文档"
+title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool_TSQL
 - sys.sp_xtp_bind_db_resource_pool
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a58e89017ef86f85b71345cbb9f773e96dd78dd5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8bcac671ebd335be8e6f22a1385d0c038e61e365
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'  
 ```  
   
@@ -70,7 +72,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **数据库是一个系统数据库**  
- 无法在系统数据库中创建 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 表。  因此，为这种数据库创建 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存绑定是无效的。  返回以下错误：  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 无法在系统数据库中创建表。  因此，为这种数据库创建 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存绑定是无效的。  返回以下错误：  
 *Database_name %s 是指系统数据库。资源池只能绑定到用户数据库。*  
   
 ```  
@@ -114,7 +116,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
 ## <a name="examples"></a>示例  
 A.  以下代码示例将数据库 Hekaton_DB 绑定至资源池 Pool_Hekaton。  
   
-```tsql  
+```sql  
 sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'  
 ```  
  
@@ -122,7 +124,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  B. 上面的示例，其中包括一些基本的检查的扩展的示例。  执行以下操作[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
-```tsql
+```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
 DECLARE @database sysname = N'Hekaton_DB';
 
@@ -150,7 +152,7 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
   
 -   绑定之前，由 `database_name` 指定的数据库以及由 `resource_pool_name` 指定的资源池必须存在。  
   

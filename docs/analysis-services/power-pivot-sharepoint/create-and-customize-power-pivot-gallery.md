@@ -2,31 +2,29 @@
 title: "创建和自定义 Power Pivot 库 |Microsoft 文档"
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-and-customize-power-pivot-gallery"></a>创建和自定义 Power Pivot 库
+# <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一种特殊的 SharePoint 文档库，可为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
   
 ##  <a name="bkmk_top"></a> 本主题内容  
@@ -68,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  预览图像基于 Excel Services 呈现工作簿的方式。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的表示形式应该与在浏览器中查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿时看到的内容完全一致。 然而，预览的图面区域有限， 所以可能要对工作簿或报表各部分进行剪裁以适应可用空间。 您可能需要打开工作簿或报表才能查看完整的文档。  
   
- 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中完全支持从外部数据源刷新 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿数据，但它要求其他配置。 场或服务管理员必须将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为一个 Excel Services 可信位置。 有关详细信息，请参阅 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中完全支持从外部数据源刷新 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿数据，但它要求其他配置。 场或服务管理员必须将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为一个 Excel Services 可信位置。 有关详细信息，请参阅 [在管理中心中为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="createlib"></a> 创建 Power Pivot 库  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 时系统会为您创建 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 库。 如果已将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 添加到现有场或者您还需要其他库，则可为应用程序或网站新建一个库。  

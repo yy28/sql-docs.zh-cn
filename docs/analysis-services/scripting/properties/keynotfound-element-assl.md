@@ -2,15 +2,13 @@
 title: "KeyNotFound 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: KeyNotFound Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 72ebb26afc343b771e32087e9d68f4978cdaedc8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 387e6fe29fb01be462350c0d79d63e450e9b1125
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="keynotfound-element-assl"></a>KeyNotFound 元素 (ASSL)
-  指定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]时遇到了引用完整性错误的响应。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]时遇到了引用完整性错误的响应。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
 |默认值|*ReportAndContinue*|  
@@ -58,14 +56,14 @@ ms.lasthandoff: 11/17/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当依赖表中的外键值在父表中没有对应条目时会引发引用完整性错误。 当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 处理维度时，如果其中的事实数据表引用该维度的维度表中不存在的外键值，或者当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 处理分区时，分区中包含的某个维度的维度主表引用另一个关联维度表中不存在的键值，则会引发此错误。 （如果是具有父子层次结构和父属性的维度，则当分区中包含的某个维度的维度主表引用同一维度表中不存在的键值时，也会引发此错误。）  
   
  此元素的值限定为下表中的字符串之一。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |*IgnoreError*|处理应忽略错误并继续。|  
 |*ReportAndContinue*|处理应报告错误并继续。|  

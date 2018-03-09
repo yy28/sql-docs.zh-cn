@@ -3,8 +3,11 @@ title: "在同一查询中使用 HAVING 和 WHERE 子句 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44b656aff64222d86d80fd7ef68a08267c15ffe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ab0f50e4144fa734290adf39d3de11c709208ddc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
-在某些情况下，在对整个组应用条件（使用 HAVING 子句）之前，可能希望排除组中的单个行（使用 WHERE 子句）。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在某些情况下，在对整个组应用条件（使用 HAVING 子句）之前，可能希望排除组中的单个行（使用 WHERE 子句）。  
   
 HAVING 子句与 WHERE 子句类似，但仅应用于整个组（即应用于表示组的结果集中的行），而 WHERE 子句应用于单个行。 查询可同时包含 WHERE 子句和 HAVING 子句。 在这种情况下：  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: Members
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 89af65f48bc976c42a9a45c8a25c676cb16ac6f1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f600fa5163131d797c8ea0146c1a4e02e172381d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="members-set-mdx"></a>Members（集）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ Level_Expression.Members
  *Level_Expression*  
  返回级别的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定一个层次结构表达式，则**成员 （设置）**函数将返回指定层次结构，不包括计算的成员内的所有成员组成的集。 若要获取计算的所有成员组成的集或否则，在层次结构上使用[AllMembers &#40;MDX &#41;](../mdx/allmembers-mdx.md)函数  
   
  如果指定一个级别表达式，则**成员 （设置）**函数返回在指定级别的所有成员组成的集。  

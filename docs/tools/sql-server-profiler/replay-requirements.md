@@ -2,9 +2,12 @@
 title: "重播要求 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ helpviewer_keywords:
 - TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5000a910eb0868ed2113b71c698e7de5ec7163ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fe999b92d34b9070a1c461340919c839468c02c9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-requirements"></a>重播要求
-  若要使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或分布式重播实用工具重播跟踪数据，则必须在跟踪中捕获一组特定的事件类和列。 如果使用 **TSQL_Replay** 跟踪模板配置稍后用于重播的跟踪，则会默认启用这些设置。 本主题介绍这些设置以及其他重播要求。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要重播跟踪数据与[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]或分布式重播实用工具，一组特定的事件类和列则必须在跟踪中捕获。 如果使用 **TSQL_Replay** 跟踪模板配置稍后用于重播的跟踪，则会默认启用这些设置。 本主题介绍这些设置以及其他重播要求。  
   
 > [!NOTE]  
 >  建议使用分布式重播实用工具重播密集型 OLTP 应用程序（具有大量活动并发连接或高吞吐量）。 分布式重播实用工具可以从多台计算机重播跟踪数据，并更好地模拟任务关键型工作负荷。 有关详细信息，请参阅 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
@@ -126,7 +129,7 @@ ms.lasthandoff: 11/09/2017
  有关重播跟踪需要哪些权限的信息，请参阅 [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [重播跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [重播跟踪表 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [重播跟踪文件 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server 事件类参考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)   

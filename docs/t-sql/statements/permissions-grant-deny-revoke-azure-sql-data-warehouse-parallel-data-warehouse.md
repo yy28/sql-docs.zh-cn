@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21ee8a4a525e2b8c522de140a3f482915cdb361
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>权限： GRANT、 DENY、 REVOKE （Azure SQL 数据仓库，并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,9 +88,9 @@ REVOKE
   
  ON [ \<class_type >::]*安全* **ON**子句描述用于授予、 拒绝或撤消权限的安全对象参数。  
   
- \<class_type > 的安全对象的类类型。 这可以是**登录**，**数据库**，**对象**，**架构**，**角色**，或**用户**. 此外可授予权限**服务器***class_type*，但**服务器**未指定这些权限。 **数据库**未指定时权限包括单词**数据库**(例如**ALTER ANY DATABASE**)。 如果没有*class_type*指定和权限类型并不局限于服务器或数据库类，该类假定为**对象**。  
+ \<class_type > 的安全对象的类类型。 这可以是**登录**，**数据库**，**对象**，**架构**，**角色**，或**用户**. 此外可授予权限 **服务器 * * * class_type*，但**服务器**未指定这些权限。 **数据库**未指定时权限包括单词**数据库**(例如**ALTER ANY DATABASE**)。 如果没有*class_type*指定和权限类型并不局限于服务器或数据库类，该类假定为**对象**。  
   
- *安全对象*  
+ *securable*  
  登录名、 数据库、 表、 视图、 架构、 过程、 角色或授予，所依据的用户的名称拒绝或撤消权限。 可以使用中所述的由三部分命名规则指定的对象名称[TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  到*主体*[ **，**...*n* ]  
@@ -109,7 +111,7 @@ REVOKE
 > [!IMPORTANT]  
 >  如果主体拥有指定的权限而无需**授予**选项，将吊销本身的权限。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要授予权限，授权者必须具有自身的任一权限与**WITH GRANT OPTION**，或者必须具有隐含授予该权限更高权限。  对象所有者可以授予对其所拥有的对象的权限。 具有主体**控件**对安全对象的权限可以授予权限，在该安全对象。  成员**db_owner**和**db_securityadmin**固定的数据库角色可以授予数据库中的任何权限。  
   
 ## <a name="general-remarks"></a>一般备注  
@@ -230,7 +232,7 @@ REVOKE
   
 -   DELETE  
   
--   EXECUTE  
+-   在运行 CREATE 语句前执行  
   
 -   Insert  
   

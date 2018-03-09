@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - BufferWithTolerance_TSQL
 - BufferWithTolerance
-dev_langs: TSQL
-helpviewer_keywords: BefferWithTolerance method
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fea21e57554a1ff68e83ba8cc85ea004d250ca2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: bb70f24c521fd5f0325ecbb718e7d76aa43f935d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +46,12 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- *距离*  
+ *distance*  
  是**float**表达式指定的距离**geography**围绕其计算的缓冲区的实例。  
   
  缓冲区的最大距离不能超过 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 地球圆的周长) 或完整的全球范围。  
   
- *容差*  
+ *tolerance*  
  是**float**表达式指定的缓冲区距离的容差。  
   
  *容差*值指中返回的线性近似的理想的缓冲区距离的最大变体。  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
  最小限制为距离的 0.1%，任何小于此限制的公差都将向上舍入到此最小限制。  
   
- *相对*  
+ *relative*  
  是**位**指定是否*容差*值是相对或绝对。 如果 'TRUE' 或 1，容差是相对和计算的产品为*容差*参数和角速度范围\*的椭圆体赤道半径。 如果 'FALSE' 或 0，容差是绝对和*容差*值是绝对的最大变体中返回的线性近似的理想的缓冲区距离。  
   
 ## <a name="return-types"></a>返回类型  

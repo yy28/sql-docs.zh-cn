@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_qn_subscriptions (Transact SQL) |Microsoft 文档"
+title: sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,33 +17,35 @@ f1_keywords:
 - dm_qn_subscriptions_TSQL
 - sys.dm_qn_subscriptions
 - sys.dm_qn_subscriptions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_qn_subscriptions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd318140e5c3eed17a5440ebf1a3135e7e01dc90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fdc34ae033de8baf0173bc7c86bd0fe05c7668f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>查询通知-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关服务器中的活动查询通知订阅的信息。 可以使用此视图检查服务器或指定数据库中的活动订阅，或者检查指定服务器主体。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|订阅的 ID。|  
 |**database_id**|**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
 |**sid**|**varbinary(85)**|创建并拥有该订阅的服务器主体的安全 ID。|  
 |**object_id**|**int**|存储有关订阅参数信息的内部表的 ID。|  
-|**创建**|**datetime**|日期和创建订阅后的时间。|  
-|**超时**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意： 实际的激发时间可能大于指定的超时。但是，如果在指定的超时之后、激发订阅之前发生了使订阅无效的更改，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会确保激发在发生更改的时候进行。|  
+|**created**|**datetime**|日期和创建订阅后的时间。|  
+|**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意： 实际的激发时间可能大于指定的超时。但是，如果在指定的超时之后、激发订阅之前发生了使订阅无效的更改，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会确保激发在发生更改的时候进行。|  
 |**status**|**int**|指示订阅的状态。 有关代码列表，请参阅备注下的表。|  
   
 ## <a name="relationship-cardinalities"></a>关系基数  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |代码|次要状态|信息|  
 |----------|------------------|----------|  
 |65798|因为更改数据而激发订阅|由插入触发的订阅|  
-|65799|因为更改数据而激发订阅|DELETE|  
+|65799|因为更改数据而激发订阅|删除|  
 |65800|因为更改数据而激发订阅|Update|  
 |65801|因为更改数据而激发订阅|合并|  
 |65802|因为更改数据而激发订阅|截断表|  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |199168|订阅处于活动状态。|未确定的信息模式|  
 |199424|该订阅已初始化，但尚未处于活动状态|未确定的信息模式|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要针对服务器的 VIEW SERVER STATE 权限。  
   
 > [!NOTE]  

@@ -3,8 +3,11 @@ title: "向关系图中添加文本批注 (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fa9460c29b35522acdd052bf6d5414e8119f158
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d320d4b17a24a98399b967f8b461189634b8f761
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>向关系图中添加文本批注 (Visual Database Tools)
-若要为关系图添加注释，可以添加文本批注。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 要为关系图添加注释，可以添加文本批注。  
   
 ### <a name="to-add-text-annotations-to-diagrams"></a>向关系图中添加文本批注  
   

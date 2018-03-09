@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - WITH_CHANGE_TRACKING_CONTEXT_TSQL
 - WITH CHANGE_TRACKING_CONTEXT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - WITH CHANGE_TRACKING_CONTEXT
 - change tracking [SQL Server], WITH CHANGE_TRACKING_CONTEXT
 ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64df0abada886ed2e9b928efe447e40a34bdedce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: be00e318f7fa2cc2fb7e0a7423646dad13bbd7e4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="with-changetrackingcontext-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +47,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *上下文*  
+ *context*  
  由执行调用的应用程序提供且与更改的更改跟踪信息存储在一起的上下文信息。 *上下文*是**varbinary(128)**。  
   
  该值可以为常量或变量，但不能为 NULL。  

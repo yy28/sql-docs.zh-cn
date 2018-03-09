@@ -1,5 +1,5 @@
 ---
-title: "添加或删除数据流中的数据的组件 |Microsoft 文档"
+title: "在数据流中添加或删除组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - adding components
 - components [Integration Services], data flow
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 229fd23eb82ff7b6a1139bf1bd00554162cfc038
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d2a061024c6921bdc2feccc9c6372104b4a4c70e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在数据流中添加或删除组件
   数据流组件是数据流中的源、目标和转换。 包中的控制流必须包含数据流任务，然后才能向数据流添加组件。  
@@ -60,9 +59,8 @@ ms.lasthandoff: 08/03/2017
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [连接数据流中的数据的组件](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
+ [连接数据流中的组件](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
  [调试数据流](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

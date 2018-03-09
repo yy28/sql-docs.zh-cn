@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>创建外部 TABLE AS SELECT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -81,7 +82,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  [[ *database_name* 。 [ *schema_name* ]。 ] |*schema_name* 。 ] *table_name*  
  一个到三个部分组成要在数据库中创建的表的名称。 对于外部表，只是表元数据存储在关系数据库中。  
   
- 位置 = '*hdfs_folder*  
+ LOCATION =  '*hdfs_folder*'  
  指定外部数据源的 SELECT 语句将结果写入的位置。 位置的文件夹名称，而且可以选择性地包含相对于根文件夹中的 Hadoop 群集或 Azure 存储 Blob 的路径。  如果不存在，PolyBase 将创建的路径和文件夹。  
   
  外部文件写入到*hdfs_folder*和已命名*QueryID_date_time_ID.format*，其中*ID*是增量标识符和*格式*是导出的数据格式。 例如，QID776_20160130_182739_0.orc。  
@@ -131,12 +132,12 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   负载将失败并出现失败的 50%的行在尝试加载 200 行之后的大小超过指定的 30%限制。  
   
- 与*common_table_expression*  
+ WITH *common_table_expression*  
  指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 有关详细信息，请参阅[使用 common_table_expression &#40;Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  选择\<select_criteria > 填充新的表的结果与 SELECT 语句。 *select_criteria*是确定要将复制到新表的数据的 SELECT 语句的正文。 SELECT 语句有关的信息，请参阅[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要运行此命令**数据库用户**需要所有的这些权限或成员身份：  
   
 -   **ALTER SCHEMA**将包含新表或中的成员身份的本地架构权限**db_ddladmin**固定的数据库角色。  

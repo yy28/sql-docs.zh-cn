@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
 - CHANGETABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,13 +78,13 @@ CHANGETABLE (
  *表*  
  是用户定义的从中获取更改跟踪信息的表。 必须对表启用更改跟踪。 可以使用由一部分、两部分、三部分或四部分构成的表名。 表名可以是表的同义词。  
   
- *column_name*  
+ column_name  
  指定一个或多个主键列的名称。 可以按任意顺序指定多个列名。  
   
- *值*  
+ *Value*  
  是主键的值。 与列显示的对话框中，如果有多个主键列，必须以相同的顺序中指定的值*column_name*列表。  
   
- [一样]*table_alias* [(*column_alias* [，...*n* ] ) ]  
+ [AS] *table_alias* [ (*column_alias* [ ,...*n* ] ) ]  
  为 CHANGETABLE 返回的结果提供名称。  
   
  *table_alias*  
@@ -146,7 +148,7 @@ CHANGETABLE (
   
  如果未进行更改的时间超过保持期（例如，清除操作删除了更改信息），或者在为表启用更改跟踪后从未更改行，则 SYS_CHANGE_VERSION 的值可能为 NULL。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要以下权限由对表*表*值以获取更改跟踪信息：  
   
 -   主键列的 SELECT 权限  
@@ -158,7 +160,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. 返回数据初始同步的行  
  下面的示例演示了如何获取表数据的初始同步的数据。 该查询返回所有行数据及其关联的版本。 您可以随后将此数据插入或添加到要包含同步数据的系统中。  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +172,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. 列出自特定版本起进行的所有更改  
  下面的示例列出了从指定的版本 (`@last_sync_version)`) 起在表中进行的所有更改。 [Emp ID] 和 SSN 是组合主键中的列。  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +184,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. 获取同步的所有已更改数据  
  下面的示例演示如何获取所有已更改数据。 此查询将更改跟踪信息与用户表联接，以便返回用户表信息。 使用 `LEFT OUTER JOIN` 以便为删除的行返回一行。  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +199,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. 使用 CHANGETABLE(VERSION...) 检测冲突  
  下面的示例演示了如何只更新在上次同步之后未更改的行。 使用 `CHANGETABLE` 获取特定行的版本号。 如果行已经更新，则不进行更改，并且查询将返回有关对行的最近更改的信息。  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  
@@ -217,8 +219,8 @@ WHERE
 ## <a name="see-also"></a>另请参阅  
  [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact SQL &#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact SQL &#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

@@ -3,8 +3,9 @@ title: "ConnectionEvents （Visual c + + 语法索引与 #import） |Microsoft �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
-helpviewer_keywords: 'ConnectionEvents collection [ADO], Visual C++ syntax index with #import'
+dev_langs:
+- C++
+helpviewer_keywords:
+- 'ConnectionEvents collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baa2fb9e43a40f266d1b9a35d5c4f516e713d0bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c99d265baba06dd965e0d85bebd88dd1603d88ba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents （Visual c + + 语法索引与 #import）
 ## <a name="events"></a>事件  

@@ -2,26 +2,30 @@
 title: "连接查询编辑器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6714bafa18075219a7da895b05b954f3d67329d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 739a1ae0f65b4a2ca0f6efb803c851773e0bd730
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-1---connecting-with-query-editor"></a>课程 2-1 - 连接查询编辑器
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 允许在与服务器断开连接时编写或编辑代码。 当服务器不可用或要节省短缺的服务器或网络资源时，这一点很有用。 您也可以更改查询编辑器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的连接，而无需打开新的查询编辑器窗口或重新键入代码。  
   
 ## <a name="coding-offline"></a>脱机编码  

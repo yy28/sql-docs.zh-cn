@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +18,20 @@ helpviewer_keywords:
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25903194512146b53d325b217ff7d866d7b38ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abd6caba2945c9b435033d75d7c0b353e98a26f7
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>授予、撤消和拒绝权限
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.ServerPermission>对象用于分配一组权限或对单个服务器权限<xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>对象。 对于服务器级权限，被授权者指登录名。 由 Windows 进行身份验证的登录名以 Windows 用户名的形式列出。 当此代码示例运行时，它会撤消被授权者的权限并确认已使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 方法删除该被授权者。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 对象用于将一组权限或单个服务器权限分配给 <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> 对象。 对于服务器级权限，被授权者指登录名。 由 Windows 进行身份验证的登录名以 Windows 用户名的形式列出。 当此代码示例运行时，它会撤消被授权者的权限并确认已使用 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 方法删除该被授权者。  
   
  可以使用 <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> 对象和 <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> 对象以类似方式分配数据库权限和数据库对象权限。  
   

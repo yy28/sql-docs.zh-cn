@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: ISSCommandWithParameters interface
 ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70df9bbe13378f0e081ee03d8b1b9c6058c2afb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3a8852f1a3b76ac10693f151f05eeff418bbaaa
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,6 +43,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>另请参阅  
  [接口 &#40; OLE DB &#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [使用 XML 数据类型](../../relational-databases/native-client/features/using-xml-data-types.md)   
- [使用用户定义类型](../../relational-databases/native-client/features/using-user-defined-types.md)  
+ [使用用户定义的类型](../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

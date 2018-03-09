@@ -3,10 +3,10 @@ title: "应用分析平台系统修补程序 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
 caps.latest.revision: "25"
-ms.openlocfilehash: af879486885f2c27ad4c3d80ef9a3d41279ff0ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 562d0ce41f5a1b12930fdedabd73214ddebd4e4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>应用分析平台系统修补程序
 本主题讨论如何将修补程序应用于分析平台系统软件。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 > 当设备正在使用时，不适用于分析平台系统修补程序。 应用修补程序可能会导致设备节点重新启动。 当不使用该设备时，应在维护时段内应用此修补程序。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 若要执行这些步骤，你将需要：  
   
 -   有权访问管理控制台来监视的设备状态分析平台系统登录。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

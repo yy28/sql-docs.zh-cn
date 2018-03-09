@@ -3,8 +3,11 @@ title: "修改 SQL Server 代理主作业 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,22 +19,22 @@ ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d12119c3b45967927604208270bb34971b268da3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1acf7887cbc193c8293a7a44ead5da9cbce7b329
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server 代理主作业
-下面的主题介绍了如何修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理主作业。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 下面的主题介绍了如何修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理主作业。  
   
-[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[更改 SQL Server 代理主作业计划的详细信息](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
 [向 SQL Server 代理主作业添加步骤](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   
-[更改 SQL Server 代理主作业的步骤](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
+[Change Steps of a SQL Server Agent Master Job](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
   
 [Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   

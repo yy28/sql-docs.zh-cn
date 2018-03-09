@@ -3,10 +3,10 @@ title: "master 数据库 (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -17,11 +17,11 @@ ms.topic: article
 ms.assetid: c71617c0-6689-4f52-81c6-58f4cf7c7377
 caps.latest.revision: "8"
 ms.workload: not set
-ms.openlocfilehash: 59acb3fb8c5c1913e8b4d656e9895b2810e19497
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fde1a329703ed833a9fdeb6686b1a63c04aea79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-database"></a>master 数据库
 SQL Server PDW master 数据库存储设备级别登录名信息和数据库目录。 它是控制节点驻留的 SQL Server master 数据库。 在这种情况下，它提供类似的功能到 SQL Server PDW 像 master 提供到 SQL Server。  
@@ -47,7 +47,7 @@ SQL Server PDW master 数据库存储设备级别登录名信息和数据库目�
   
 -   执行**DBCC SHRINKLOG**。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务|Description|  
 |--------|---------------|  

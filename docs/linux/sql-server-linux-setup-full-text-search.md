@@ -1,29 +1,29 @@
 ---
 title: "在 Linux 上安装 SQL Server 全文搜索 |Microsoft 文档"
-description: "本主题介绍如何在 Linux 上安装 SQL Server 全文搜索。"
+description: "本文介绍如何在 Linux 上安装 SQL Server 全文搜索。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 9ab570753e7bc6cc2b2aded26b2629d00f1bf292
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安装 SQL Server 全文搜索
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 以下步骤安装[SQL Server 全文搜索](https://msdn.microsoft.com/library/ms142571.aspx)(**mssql server fts**) 在 Linux 上。 全文搜索提供了对 SQL Server 表中基于字符的数据运行全文查询的功能。 对于此版本的已知问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
@@ -51,7 +51,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-如果你需要的脱机安装，查找中的全文搜索包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后，使用主题中所述的相同脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果你需要的脱机安装，查找中的全文搜索包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后使用相同的脱机安装步骤文所述[安装 SQL Server](sql-server-linux-setup.md#offline)。
 
 ## <a name="ubuntu">在 Ubuntu 上安装</a>
 
@@ -69,7 +69,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-如果你需要的脱机安装，查找中的全文搜索包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后，使用主题中所述的相同脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果你需要的脱机安装，查找中的全文搜索包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后使用相同的脱机安装步骤文所述[安装 SQL Server](sql-server-linux-setup.md#offline)。
 
 ## <a name="SLES">在 SLES 上安装</a>
 
@@ -86,7 +86,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-如果你需要的脱机安装，查找中的全文搜索包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后，使用主题中所述的相同脱机安装步骤[安装 SQL Server](sql-server-linux-setup.md#offline)。
+如果你需要的脱机安装，查找中的全文搜索包下载内容[发行说明](sql-server-linux-release-notes.md)。 然后使用相同的脱机安装步骤文所述[安装 SQL Server](sql-server-linux-setup.md#offline)。
 
 ## <a name="supported-languages"></a>支持的语言
 
@@ -148,7 +148,7 @@ sudo zypper update mssql-server-fts
 | 乌尔都语 | 1056 |
 | 越南语 | 1066 |
 
-## <a id="filters"></a>筛选器
+## <a id="filters"></a> 筛选器
 
 全文搜索还适用于二进制文件中存储的文本。 但在这种情况下，需要安装一个筛选器来处理文件。 有关筛选器的详细信息，请参阅[配置和管理搜索筛选器](../relational-databases/search/configure-and-manage-filters-for-search.md)。
 

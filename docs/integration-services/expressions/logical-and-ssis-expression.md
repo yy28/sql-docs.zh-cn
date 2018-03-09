@@ -1,5 +1,5 @@
 ---
-title: "&amp;&amp;（逻辑与）（SSIS 表达式） |Microsoft 文档"
+title: "&amp;&amp;（逻辑与）（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - AND, logical AND
 - logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a52d1a0bf10aba48b1e628a9253c7f2361f58506
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 762ba60573bfcaf08fb9d2c38f1a8ec2e5a08cfc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;（逻辑与）（SSIS 表达式）
   执行“逻辑与”运算。 如果所有条件都为 TRUE，则表达式计算结果为 TRUE。  
@@ -46,7 +45,7 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下表显示 && 运算符的结果。  
   
 |结果|表达式|表达式|  
@@ -72,9 +71,8 @@ StandardCost < @SPrice && ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [& &#40;按位 AND &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
+ [&（位与）（SSIS 表达式）](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

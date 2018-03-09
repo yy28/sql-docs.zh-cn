@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f3b4210bcd05402336b6be4188042ef9e7188a98
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3b7d1ebc6643cea879bf60d978ba38b844d46f03
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---previous-function"></a>报表生成器函数 - Previous 函数
   返回指定作用域内某项的前一个实例的值或该实例的指定聚合值。  
@@ -48,7 +46,7 @@ Previous(expression, scope)
 ## <a name="return-type"></a>返回类型  
  返回 **Variant** 或 **Binary**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **Previous** 函数返回在应用所有排序和筛选之后，指定作用域内计算的表达式的前一个值。  
   
  如果 *expression* 不包含聚合，则 **Previous** 函数默认为该报表项的当前作用域。  

@@ -2,10 +2,14 @@
 title: "网络协议和网络库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,24 +24,26 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 657134dd5c6c7fe7c4ee81050c570dc14e9d23d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>网络协议和网络库
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   服务器可以同时监听或监视多个网络协议。 但必须对每个协议都进行配置。 如果没有配置某个协议，则服务器将无法监听该协议。 安装完成后，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改这些协议配置。  
   
 ## <a name="default-sql-server-network-configuration"></a>默认 SQL Server 网络配置  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例针对 TCP/IP 端口 1433 进行配置，并命名为管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例配置为采用 TCP 动态端口，其端口号由操作系统分配。  
   
- 如果无法使用动态端口地址（例如，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接必须通过服务器配置为要通过特定端口地址的防火墙时）。 选择一个未分配的端口号。 Internet 号码分配机构负责管理端口号的分配，并在 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)上列出这些端口号。  
+ 如果无法使用动态端口地址（例如，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接必须通过服务器配置为要通过特定端口地址的防火墙时）。 请选择一个未分配的端口号。 Internet 号码分配机构负责管理端口号的分配，并在 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)上列出这些端口号。  
   
  为了增强安全性，当安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时不会完全启用网络连接。 在安装完成后，若要启用、禁用和配置网络协议，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置区域。  
   
@@ -69,7 +75,7 @@ ms.lasthandoff: 11/09/2017
   
 -   在本地连接属性中，使用“传播控制协议/Internet 协议 (TCP/IP) 属性”对话框删除“Microsoft 网络的文件和打印共享”和“Microsoft 网络客户端”。  
   
-## <a name="endpoints"></a>端点  
+## <a name="endpoints"></a>终结点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接引入了一个新概念；在服务器端用 [!INCLUDE[tsql](../../includes/tsql-md.md)]*终结点*。 可以对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点授予、撤消和拒绝权限。 默认情况下，所有用户都具备访问端点的权限，除非 sysadmin 组的成员或端点所有者拒绝或撤消了此权限。 GRANT、REVOKE 和 DENY ENDPOINT 语法使用管理员必须从端点的目录视图中获得的端点 ID。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为所有支持的网络协议以及专用管理员连接创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 端点。  
@@ -84,7 +90,7 @@ ms.lasthandoff: 11/09/2017
   
  有关终结点的详细信息，请参阅[将数据库引擎配置为侦听多个 TCP 端口](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)和[终结点目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)。  
   
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的下列主题：  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的下列文章：  
   
 -   [服务器网络配置](../../database-engine/configure-windows/server-network-configuration.md)  
   

@@ -1,10 +1,11 @@
 ---
-title: "CursorOptionEnum |Microsoft 文档"
+title: CursorOptionEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CursorOptionEnum
-helpviewer_keywords: CursorOptionEnum enumeration [ADO]
+f1_keywords:
+- CursorOptionEnum
+helpviewer_keywords:
+- CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0076db0f4d9bcb1c85858bef763795cee1ba6754
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 93999724b38f670f8462ae62c9052b10028bf929
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 指定哪些功能[支持](../../../ado/reference/ado-api/supports-method.md)方法应进行测试以。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|支持[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法来添加新的记录。|  
 |**adApproxPosition**|0x4000|支持[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)和[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)属性。|  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |**adUpdateBatch**|0x10000|支持批处理更新 ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)和[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法) 来传输组更改为提供程序。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

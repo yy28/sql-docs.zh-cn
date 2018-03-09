@@ -8,24 +8,26 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ccddc4fe30aac6b508765af816d8dceb010555b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dda6526ab21fca7285166dc9c5196eb1d2afa01a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-schemas"></a>创建、更改和删除架构
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.Schema>对象表示的数据库对象所有权上下文。 <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Database> 属性表示 <xref:Microsoft.SqlServer.Management.Smo.Schema> 对象的集合。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  <xref:Microsoft.SqlServer.Management.Smo.Schema> 对象表示数据库对象的所有权上下文。 <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Database> 属性表示 <xref:Microsoft.SqlServer.Management.Smo.Schema> 对象的集合。  
   
 ## <a name="example"></a>示例  
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C &#35;Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

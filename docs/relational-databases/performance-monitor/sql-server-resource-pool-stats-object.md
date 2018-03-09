@@ -2,9 +2,12 @@
 title: "SQL Server - Resource Pool Stats 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4301c7b129decfb323702e584f7a6f05cb7df9c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 626e2db49945df2262db203dde46f78d5b5bde81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server，Resource Pool Stats 对象
-  SQLServer:Resource Pool Stats 对象包含报告资源调控器资源池统计相关信息的性能计数器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQLServer:Resource Pool Stats 对象包含报告资源调控器资源池统计相关信息的性能计数器。  
   
  每个活动资源池都创建一个 SQLServer:Resource Pool Stats 性能对象实例，实例的名称与资源调控器资源池的名称相同。 下表介绍了此实例支持的计数器。  
   

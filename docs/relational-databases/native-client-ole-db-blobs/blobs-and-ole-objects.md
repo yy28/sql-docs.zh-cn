@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-blobs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 833ef50540e49a72dfdc76a57525e7480b154de4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 03eb28507a7fa0fdc2bf8df55dbb39356f24109c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,16 +63,16 @@ ms.lasthandoff: 11/17/2017
   
 -   如果某一行包含多个单个大型数据值并且 DBPROP_ACCESSORDER 不 DBPROPVAL_AO_RANDOM，使用者必须使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持光标的行集来检索行数据，或者在检索其他行值之前处理所有的大数据值。 如果 DBPROP_ACCESSORDER DBPROPVAL_AO_RANDOM， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序作为二进制大型对象 (Blob) 缓存所有 xml 数据类型，以便可以按任意顺序访问。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
--   [获取大型数据](../../relational-databases/native-client-ole-db-blobs/getting-large-data.md)  
+-   [获取大数据](../../relational-databases/native-client-ole-db-blobs/getting-large-data.md)  
   
--   [设置大型数据](../../relational-databases/native-client-ole-db-blobs/setting-large-data.md)  
+-   [设置较大的数据](../../relational-databases/native-client-ole-db-blobs/setting-large-data.md)  
   
--   [BLOB 输出参数的流支持](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [用于 BLOB 输出参数的流式处理支持](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client &#40; OLE DB &#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [使用大值类型](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [使用较大的值类型](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

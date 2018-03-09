@@ -1,33 +1,31 @@
 ---
-title: "表和列 (SSAS 表格) |Microsoft 文档"
+title: "表和列 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 205dce73a6fb5940be83c5082b730ddbd753ce3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19f955231a5a68cc52ae9c867d0ea64f9c3daddf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="tables-and-columns-ssas-tabular"></a>表和列（SSAS 表格）
-  在您通过使用表导入向导将表和数据添加到某一模型后，可通过添加新的数据列、创建表之间的关系、定义对数据进行扩展的计算以及对表中的数据进行筛选和排序以便于查看，开始使用这些表。  
+# <a name="tables-and-columns"></a>表和列 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在您通过使用表导入向导将表和数据添加到某一模型后，可通过添加新的数据列、创建表之间的关系、定义对数据进行扩展的计算以及对表中的数据进行筛选和排序以便于查看，开始使用这些表。  
   
  本主题的内容：  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   关系数据和表格 (HTML) 数据的组合复制并粘贴到表中。  
   
- 当您导入数据时，每个表或视图、工作表或数据文件都将作为表添加到模型设计器中。 通常，来自不同数据源的数据添加到单独的选项卡上，但可以使用 **“粘贴”** 和 **“追加粘贴”**将数据合并到一个表中。 有关详细信息，请参阅[复制并粘贴数据（SSAS 表格）](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
+ 当您导入数据时，每个表或视图、工作表或数据文件都将作为表添加到模型设计器中。 通常，来自不同数据源的数据添加到单独的选项卡上，但可以使用 **“粘贴”** 和 **“追加粘贴”**将数据合并到一个表中。 有关详细信息，请参阅[复制并粘贴数据](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
   
  在添加了所需的数据后，可以创建各表之间的其他关系，查找或引用其他表中的相关值，或者通过添加新的计算列创建派生值。  
   
@@ -68,16 +66,16 @@ ms.lasthandoff: 11/17/2017
   
 |主题|Description|  
 |-----------|-----------------|  
-|[将列添加到表（SSAS 表格）](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|介绍如何将源列添加到表定义。|  
-|[删除列（SSAS 表格）](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|说明如何使用模型设计器或“表属性”对话框删除模型表列。|  
-|[更改表、列或行筛选器映射（SSAS 表格）](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|介绍如何通过使用表预览或 SQL 查询编辑器在“编辑表属性”对话框中更改表、列或行筛选器映射。|  
-|[指定“标记为日期表”以便用于时间智能（SSAS 表格）](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|介绍如何使用“标记为日期表”对话框指定日期表和唯一标识符列。 在 DAX 公式中使用时间智能函数时，必须指定日期表和唯一标识符。|  
-|[添加表（SSAS 表格）](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|介绍如何通过使用现有数据源连接从数据源中添加表。|  
-|[删除表（SSAS 表格）](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|介绍如何删除不再需要的模型工作区数据库中的表。|  
-|[重命名表或列（SSAS 表格）](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|介绍如何重命名表或列以使其在您的模型中更易于标识。|  
-|[设置列的数据类型（SSAS 表格）](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|介绍如何更改列的数据类型。 数据类型定义列中的数据是如何存储和展示的。|  
-|[隐藏或冻结列（SSAS 表格）](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|介绍如何隐藏您不想显示的列，以及如何通过冻结（锁定）一个区域中的特定列，在滚动到模型的其他区域时使模型的某一区域可见。|  
-|[计算列（SSAS 表格）](../../analysis-services/tabular-models/ssas-calculated-columns.md)|本节中的主题介绍了如何使用计算列向您的模型添加聚合数据。|  
-|[对数据进行筛选和排序（SSAS 表格）](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|本节中的主题介绍了如何使用模型设计器中的控件对数据进行筛选或排序。|  
+|[向表中添加列](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|介绍如何将源列添加到表定义。|  
+|[删除列](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|说明如何使用模型设计器或“表属性”对话框删除模型表列。|  
+|[更改表、列或行筛选器映射](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|介绍如何通过使用表预览或 SQL 查询编辑器在“编辑表属性”对话框中更改表、列或行筛选器映射。|  
+|[指定“标记为日期表”以便用于时间智能](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|介绍如何使用“标记为日期表”对话框指定日期表和唯一标识符列。 在 DAX 公式中使用时间智能函数时，必须指定日期表和唯一标识符。|  
+|[添加表](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|介绍如何通过使用现有数据源连接从数据源中添加表。|  
+|[删除表](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|介绍如何删除不再需要的模型工作区数据库中的表。|  
+|[重命名表或列](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|介绍如何重命名表或列以使其在您的模型中更易于标识。|  
+|[设置列的数据类型](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|介绍如何更改列的数据类型。 数据类型定义列中的数据是如何存储和展示的。|  
+|[隐藏或冻结列](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|介绍如何隐藏您不想显示的列，以及如何通过冻结（锁定）一个区域中的特定列，在滚动到模型的其他区域时使模型的某一区域可见。|  
+|[计算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)|本节中的主题介绍了如何使用计算列向您的模型添加聚合数据。|  
+|[筛选器和对数据进行排序](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|本节中的主题介绍了如何使用模型设计器中的控件对数据进行筛选或排序。|  
   
   

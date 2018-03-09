@@ -2,22 +2,25 @@
 title: "引入 revoscalepy |Microsoft 文档"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="introducing-revoscalepy"></a>引入 revoscalepy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **revoscalepy**提供由 Microsoft，以支持分布式计算、 远程计算上下文和高性能算法 for Python 是一个新的库。
 
@@ -81,15 +84,15 @@ SQL Server 2017，开头 CTP 2.0 中包含的以下机器学习算法和摘要�
 
 | 函数| Description|说明|
 | ------ | ------ |------ |
-|`rx_btrees` | 适合的随机渐变提升决策树|`rx_btrees_ex`在 CTP 2.0|
-|`rx_dforest` | 适合分类和回归的决策林|`rx_dforest_ex`在 CTP 2.0|
-|`rx_dtree` | 适合的分类和回归树 |`rx_dtree_ex`在 CTP 2.0|
-|`rx_lin_mod` | 创建线性模型|`rx_lin_mod_ex`在 CTP 2.0|
-|`rx_logit` | 创建逻辑回归模型|`rx_logit_ex`在 CTP 2.0|
-|`rx_predict` | 从训练的模型生成预测|`rx_predict_ex`在 CTP 2.0|
+|`rx_btrees` | 适合的随机渐变提升决策树|`rx_btrees_ex` in CTP 2.0|
+|`rx_dforest` | 适合分类和回归的决策林|`rx_dforest_ex` in CTP 2.0|
+|`rx_dtree` | 适合的分类和回归树 |`rx_dtree_ex` in CTP 2.0|
+|`rx_lin_mod` | 创建线性模型|`rx_lin_mod_ex` in CTP 2.0|
+|`rx_logit` | 创建逻辑回归模型|`rx_logit_ex` in CTP 2.0|
+|`rx_predict` | 从训练的模型生成预测|`rx_predict_ex` in CTP 2.0|
 |`rx_summary` | 生成模型的摘要||
 
-新的机器学习算法还提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+新的机器学习算法还提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | 函数| Description|
 | ------ | ------ |
@@ -149,7 +152,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-### <a name="requirements"></a>要求
+### <a name="requirements"></a>需求
 
 若要在 SQL Server 中运行 Python 代码，你必须已安装 SQL Server 2017 与功能结合**机器学习服务**，并启用 Python 的语言。 早期版本的 SQL Server 不支持 Python 集成。
 

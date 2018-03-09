@@ -2,9 +2,12 @@
 title: "识别瓶颈 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,18 +24,18 @@ helpviewer_keywords:
 - identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 959d0eb8b722005ae12395ab33730bf478333a42
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a98c591125dad32d9bdd9d77b62bacda8fe47750
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="identify-bottlenecks"></a>识别瓶颈
-  对共享资源同时访问会导致瓶颈。 通常，每一软件系统都不可避免地存在瓶颈。 然而，对共享资源的过多需求将导致响应时间过长，因此必须进行识别和优化。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]对共享资源同时访问会导致瓶颈。 通常，每一软件系统都不可避免地存在瓶颈。 然而，对共享资源的过多需求将导致响应时间过长，因此必须进行识别和优化。  
   
  导致瓶颈的原因包括：  
   

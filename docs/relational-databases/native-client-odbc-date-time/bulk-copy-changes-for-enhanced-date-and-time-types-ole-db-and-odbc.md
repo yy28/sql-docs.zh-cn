@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da9c9153c30e45eaa821c367f5a8b627078f7a9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b02ccdea2128211fbac5390da436f165a193fe07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增强的日期和时间类型 （OLE DB 和 ODBC） 的大容量复制更改
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h 中的 BCP 类型  
  以下类型在 sqlncli.h 中定义，以便用于对 ODBC 的 BCP API 扩展。 这些类型会随同传递*eUserDataType* IBCPSession::BCPColFmt OLE DB 中的参数。  
   
-|文件存储类型|宿主文件数据类型|键入用于 IBCPSession::BCPColFmt 中|值|  
+|文件存储类型|宿主文件数据类型|键入用于 IBCPSession::BCPColFmt 中|“值”|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |日期时间|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  

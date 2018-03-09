@@ -2,18 +2,17 @@
 title: "维度翻译 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - dimensions [Analysis Services], translations
 - multiple language support [Analysis Services]
@@ -22,23 +21,24 @@ helpviewer_keywords:
 - LCIDs
 - translations [Analysis Services], dimensions
 ms.assetid: 38fc1e05-2ac9-4816-b52b-dfd19c3a43a2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a85649bcd063271cbe4f3270cc618cc72f7e36bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 242041eb635ae8f95d417a1528c7811714a7c29b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-translations"></a>维度翻译
-  翻译是将显示的标签和标题从一种语言更改为另一种语言的简单机制。 每个翻译都被定义为一对值：带已翻译文本的字符串和带语言 ID 的数字。 翻译可用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的所有对象。 还可以翻译维度的属性值。 客户端应用程序不但要负责查找用户定义的语言设置，还要将所有标题和标签都切换为以该语言显示。 根据您的需要，一个对象可有多种翻译。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+翻译是将显示的标签和标题从一种语言更改为另一种语言的简单机制。 每个翻译都被定义为一对值：带已翻译文本的字符串和带语言 ID 的数字。 翻译可用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的所有对象。 还可以翻译维度的属性值。 客户端应用程序不但要负责查找用户定义的语言设置，还要将所有标题和标签都切换为以该语言显示。 根据您的需要，一个对象可有多种翻译。  
   
  一个简单的 <xref:Microsoft.AnalysisServices.Translation> 对象由语言 ID 号和翻译后的标题组成。 语言 ID 号是**整数**与语言 id。 翻译后的标题是已翻译的文本。  
   
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度转换是一个维度的名称的名称的特定于语言的表示[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象或其成员，如标题、 成员或层次结构级别之一。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还支持翻译的多维数据集对象。  
+ 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度转换是一个维度的名称的名称的特定于语言的表示[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象或其成员，如标题、 成员或层次结构级别之一。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 此外支持翻译的多维数据集对象。  
   
  翻译为可支持多种语言的客户端应用程序提供了服务器支持。 通常，来自不同国家/地区的用户都会查看多维数据集及其维度。 将多维数据集及其维度的各种元素翻译为其他语言很有用，因为这样这些用户才能查看并了解多维数据集。 例如，在法国业务用户可以从工作站使用法语的区域设置，访问多维数据集，并查看用法语的对象属性值。 但是，德国的业务用户如果通过采用了德语区域设置的工作站来访问相同的多维数据集，则会看到以德语显示的同一对象属性值。  
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3e240e6e5a12fc38468d51af79aa43a19c7196f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c1a266bf27c1d31d3cb662c19903da50fb7e2b8f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>内置集合 - 数据集字段集合引用（报表生成器）
   报表中的每个数据集都包含一个字段集合。 字段集合由数据集查询指定的字段集以及你创建的任何其他计算字段组成。 创建数据集后，字段集合将显示在 **“报表数据”** 窗格中。  

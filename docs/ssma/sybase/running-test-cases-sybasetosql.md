@@ -3,8 +3,11 @@ title: "运行测试用例 (SybaseToSQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20b74e4908f57c0fab89cbfbea295f2442cedde1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
 SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创建报告，有关验证结果。 如果在这两个平台上完全相同结果，测试成功。 Sybase 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -40,7 +43,7 @@ SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有先决条件。 如果未满足某些条件，则将显示一条错误消息。  
   
 ### <a name="initialization"></a>初始化  
@@ -50,19 +53,19 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 以下对象创建在 Sybase SSMATESTER2005db 或 SSMATESTER2008db 数据库中和在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb_syb 数据库中。  
   
-|Name|类型|Description|  
+|“属性”|类型|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
 |USER_TABLE$ Aud|表|保存已删除并覆盖的行的表。|  
 |USER_TABLE$ AudID|表|保存新的和已更改行的表。|  
-|USER_TABLE|视图|简化的表示形式的表修改。|  
-|新的 USER_TABLE $|视图|简化的表示形式插入的和被覆盖的行。|  
-|USER_TABLE$ new_id|视图|插入的和已更改行的标识。|  
-|旧的 USER_TABLE $|视图|简化的表示形式被删除，而且覆盖的行。|  
+|USER_TABLE|“查看”|简化的表示形式的表修改。|  
+|新的 USER_TABLE $|“查看”|简化的表示形式插入的和被覆盖的行。|  
+|USER_TABLE$ new_id|“查看”|插入的和已更改行的标识。|  
+|旧的 USER_TABLE $|“查看”|简化的表示形式被删除，而且覆盖的行。|  
   
 以下对象创建的数据库中的已验证表 Sybase 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-|Name|类型|Description|  
+|“属性”|类型|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
   

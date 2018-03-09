@@ -1,14 +1,14 @@
 ---
 title: "使用未经验证的加密 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,25 +19,27 @@ helpviewer_keywords:
 - SQL Server Native Client, encryption
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d29061f3c43735b9a3855cee0dd635face3db00
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 943a6aa49feee1d9bbd7a8fdc59392479e104735
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-encryption-without-validation"></a>使用不带验证的加密
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终对与登录相关的网络数据包进行加密。 如果在服务器启动时未为其提供任何证书，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将生成可用于对登录数据包进行加密的自签名证书。  
-  
- 应用程序还可以通过使用连接字符串关键字或连接属性请求对所有网络流量加密。 关键字是用于 ODBC 和 OLE DB 的"加密"时使用的提供程序字符串**idbinitialize:: Initialize**，或"使用加密数据的"适用于 ADO 和 OLE DB 使用带有的初始化字符串时**IDataInitialize**. 这也可能配置的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager 使用**强制协议加密**选项。 默认情况下，对某一连接的所有网络流量加密要求在服务器上设置证书。  
-  
- 有关连接字符串关键字的信息，请参阅[Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终对与登录相关的网络数据包进行加密。 如果在服务器启动时未为其提供任何证书，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将生成可用于对登录数据包进行加密的自签名证书。  
+
+自签名的证书不会保证安全。 加密的握手基于 NT LAN Manager (NTLM)。 强烈建议你预配 SQL Server 上的安全连接可验证的证书。 传输安全层 (TLS) 可以进行安全只能使用证书验证。
+
+应用程序还可以通过使用连接字符串关键字或连接属性请求对所有网络流量加密。 关键字是用于 ODBC 和 OLE DB 的"加密"时使用的提供程序字符串**idbinitialize:: Initialize**，或"使用加密数据的"适用于 ADO 和 OLE DB 使用带有的初始化字符串时**IDataInitialize**. 这也可能配置的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager 使用**强制协议加密**选项，然后通过配置客户端请求加密的连接。 默认情况下，对某一连接的所有网络流量加密要求在服务器上设置证书。 通过设置你的客户端信任的服务器上的证书，你可能会变得容易遭受拦截的攻击。 如果部署在服务器上可验证的证书，请确保将有关信任证书的客户端设置更改为 FALSE。
+
+有关连接字符串关键字的信息，请参阅[Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  若要启用加密时尚未在服务器上，设置证书用于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager 可以用于同时设置**强制协议加密**和**信任服务器证书**选项。 在这种情况下，如果服务器上未设置可验证的证书，加密将使用不带验证的自签名服务器证书。  
   
@@ -45,14 +47,18 @@ ms.lasthandoff: 11/17/2017
   
 |“强制协议加密”客户端设置|“信任服务器证书”客户端设置|连接字符串/连接属性加密/对数据使用加密|连接字符串/连接属性信任服务器证书|结果|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|是|N/A|否（默认值）|忽略|无加密。|  
-|是|N/A|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|是|N/A|是|是|始终加密，但可能使用自签名的服务器证书。|  
-|是|是|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|否|N/A|否（默认值）|忽略|无加密。|  
+|否|N/A|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|否|N/A|是|是|始终加密，但可能使用自签名的服务器证书。|  
+|是|否|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
 |是|是|否（默认值）|忽略|始终加密，但可能使用自签名的服务器证书。|  
-|是|是|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|是|是|是|是|加密始终发生，但可能使用的自签名的服务器证书。|  
-  
+|是|用户帐户控制|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|是|用户帐户控制|用户帐户控制|是|加密始终发生，但可能使用的自签名的服务器证书。|  
+||||||
+
+> [!CAUTION]
+> 上表仅在不同配置的系统行为上提供的指南。 对于安全的连接，请确保客户端和服务器都需要进行加密。 另外，请确保服务器具有可验证的证书，并且**TrustServerCertificate**上客户端设置设置为 FALSE。
+
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持且无需通过 SSPROP_INIT_TRUST_SERVER_CERTIFICATE 数据源初始化属性，用于实现 dbpropset_sqlserverdbinit 限属性中添加验证的加密设置。 此外，新的连接字符串关键字，"TrustServerCertificate"，如已添加。 它接受是或否值;不是默认设置。 使用服务组件时，它接受值 true 或 false；默认值为 false。  
   

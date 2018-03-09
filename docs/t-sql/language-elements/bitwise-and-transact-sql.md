@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bitwise
 - '&'
 - '&_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - AND, bitwise AND
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d249ca1552197a5fb7e53540c40e70c864d134bb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 094c127434f2339a4a3e977c4455ca6ce904ab01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;（位与）(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +64,7 @@ expression & expression
 ## <a name="remarks"></a>注释  
  **&** 按位运算符执行两个表达式，使每个相应位的两个表达式之间的按位逻辑 AND。 当且仅当输入表达式中两个位（正在被解析的当前位）的值都为 1 时，结果中的位才被设置为 1；否则，结果中的位被设置为 0。  
   
- 如果左侧和右侧表达式具有不同的整数数据类型 (例如，左侧*表达式*是**smallint**和右*表达式*是**int**)，较小的数据类型的自变量转换为更大的数据类型。 在这种情况下， **smallint***表达式*转换为**int**。  
+ 如果左侧和右侧表达式具有不同的整数数据类型 (例如，左侧*表达式*是**smallint**和右*表达式*是**int**)，较小的数据类型的自变量转换为更大的数据类型。 在这种情况下，**smallint * * * 表达式*转换为**int**。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建表使用**int**数据类型来存储的值，并将两个值插入一行。  

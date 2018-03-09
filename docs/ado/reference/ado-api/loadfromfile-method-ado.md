@@ -3,8 +3,9 @@ title: "LoadFromFile 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Stream::raw_LoadFromFile
-helpviewer_keywords: LoadFromFile method [ADO]
+f1_keywords:
+- _Stream::raw_LoadFromFile
+helpviewer_keywords:
+- LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14124cf39e58cf46c50ae367f68ca61b82bd50e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 071ba2d6a2aa5af96af07274455a7495a9650dea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
 加载到现有文件的内容[流](../../../ado/reference/ado-api/stream-object-ado.md)。  

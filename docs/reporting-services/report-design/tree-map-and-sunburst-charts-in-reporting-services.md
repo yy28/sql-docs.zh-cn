@@ -1,29 +1,30 @@
 ---
 title: "SQL Server Reporting Services 中的树状图和旭日图 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology: reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50224e926c08951887a6423ab1c95eb7ac23a944
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的树状图和旭日图
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状图和旭日图可视化非常适合用于以可视方式表示分层数据。 本文将概述如何将树状图或旭日图添加到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表中。 文章还包括一个 AdventureWorks 示例查询，帮助入门。  
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状图和旭日图可视化非常适合用于以可视方式表示分层数据。 本文将概述如何将树状图或旭日图添加到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表中。 文章还包括一个 AdventureWorks 示例查询，帮助入门。  
   
 ##  <a name="bkmk_treemap_chart"></a> 树状图  
 

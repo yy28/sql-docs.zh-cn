@@ -3,8 +3,9 @@ title: "属性集合 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - _ADO::get_Properties
 - _ADO::Properties
 - _ADO::GetProperties
-helpviewer_keywords: Properties collection [ADO]
+helpviewer_keywords:
+- Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d955faa0e8e13b73957dbda5ea6723dfd407c94e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5652eb78750806f916d510e4558f12aa6718b30d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="properties-collection-ado"></a>属性集合 (ADO)
 包含所有[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的特定实例的对象。  

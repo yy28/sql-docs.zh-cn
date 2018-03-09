@@ -1,5 +1,5 @@
 ---
-title: "验证 XML with the XML Task |Microsoft 文档"
+title: "使用 XML 任务验证 XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,31 +16,30 @@ helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15e3873505601704c4a14d4e5701875b7dc104f5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 131ef697bc63cfe5edbc6dcae01a1b9e831e2bc5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="validate-xml-with-the-xml-task"></a>使用 XML 任务验证 XML
+# <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   通过启用 XML 任务的 **ValidationDetails** 属性，验证 XML 文档并获取丰富的错误输出。  
   
  下面的屏幕快照显示 **XML 任务编辑器** ，其中包含具有丰富错误输出的 XML 验证所需的设置。  
   
- ![XML 任务属性在 XML 任务编辑器](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML 任务属性在 XML 任务编辑器")  
+ ![XML 任务编辑器中的 XML 任务属性](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML 任务编辑器中的 XML 任务属性")  
   
  在可以使用 **ValidationDetails** 属性之前，XML 任务的 XML 验证仅返回 true 或 false 结果，而不包含关于错误或其位置的详细信息。 现在，当你将 **ValidationDetails** 设置为 True 时，输出文件将包含关于每个错误的详细信息，包括行号和位置。 此信息可用于了解、查找和修复 XML 文档中的错误。  
   
  XML 验证功能可轻松扩展以适应大型 XML 文档和大量错误。 由于输出文件本身采用 XML 格式，你可以查询和分析输出。 例如，如果输出中包含大量错误，你可以按本主题中所述，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询对错误分组。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 引入**ValidationDetails**中的属性[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 2。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中也可使用该属性。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2 中引入了 **ValidationDetails** 属性。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中也可使用该属性。  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>有效的 XML 示例输出  
  下面是有效 XML 文件的示例输出文件（带有验证结果）。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 08/03/2017
 ```  
   
 ## <a name="sample-output-for-xml-thats-not-valid"></a>无效的 XML 示例输出  
- 下面是包含少量错误的 XML 文件的示例输出文件（带有验证结果）。 文本\<错误 > 元素具有已包装的可读性。  
+ 下面是包含少量错误的 XML 文件的示例输出文件（带有验证结果）。 为便于阅读，\<error> 元素的文本已换行。  
   
 ```xml  
   
@@ -124,11 +123,10 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  下面是上述文本中第二个示例查询在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的结果。  
   
- ![对在 Management Studio 中的 XML 错误进行分组的查询](../../integration-services/control-flow/media/queryforxmlerrors.jpg "对在 Management Studio 中的 XML 错误进行分组的查询")  
+ ![在 Management Studio 中使用查询对 XML 错误分组](../../integration-services/control-flow/media/queryforxmlerrors.jpg "在 Management Studio 中使用查询对 XML 错误分组")  
   
 ## <a name="see-also"></a>另请参阅  
  [XML 任务](../../integration-services/control-flow/xml-task.md)   
- [XML 任务编辑器 &#40;常规页 &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
+ [XML 任务编辑器（“常规”页）](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
   
-

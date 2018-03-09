@@ -2,29 +2,30 @@
 title: "安装 Analysis Services |Microsoft 文档"
 ms.custom: 
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: a8d39f0b940aaec84b7b731a7f764b2e2e3d72ab
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cdc4deb033afe212103a80a0e5b8413c13000433
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>安装 SQL Server Analysis Services
-  SQL Server Analysis Services 是托管表格模型、多维数据集以及数据挖掘模型的分析数据库服务器，可从报表、电子表格和仪表板进行访问。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services 是托管表格模型、多维数据集以及数据挖掘模型的分析数据库服务器，可从报表、电子表格和仪表板进行访问。  
   
  Analysis Services 是多实例，这意味着你可以在一台计算机上安装多个副本或运行新和旧版本并行。 安装的任何示例都以三种模式之一运行，这是在安装期间确定的：多维和数据挖掘、表格或 SharePoint。 如果你想使用多种模式，每种模式都将需要一个单独实例。  
   
@@ -72,7 +73,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** 区分大小写。  所有值必须以大写形式表示。 下表对 **ASSERVERMODE**的有效值进行了说明。  
   
-|值|说明|  
+|“值”|Description|  
 |-----------|-----------------|  
 |TABULAR|这是默认值。 如果你未设置**ASSERVERMODE**，在表格模式下安装了服务器。|
 |MULTIDIMENSIONAL|该值是可选的。|  
@@ -81,6 +82,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## <a name="see-also"></a>另请参阅  
  [确定 Analysis Services 实例的服务器模式](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [表格建模 (SSAS 表格)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
+ [表格建模](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   

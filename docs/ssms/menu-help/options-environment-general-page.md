@@ -3,8 +3,11 @@ title: "选项（“环境”-“常规”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a3862d6f6b622ddd0496b23234287443e179810
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5ebd40ed9900768c2f239319f0b2874cc49c99de
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---general-page"></a>选项（“环境”-“常规”页）
-使用“选项”对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，再单击“常规”。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“选项”对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，再单击“常规”。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
 **启动时**  

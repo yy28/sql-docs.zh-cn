@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: "49"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6f105f34e6e5d5c06159c40c8958f097ca5b2512
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd273c3dd52eb3feb0ab4f5db30b4569744e78c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-device-information-settings"></a>HTML 设备信息设置
 下表列出了以 HTML 格式呈现时的设备信息设置。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 >  下表列出的带 **(\*)** 的设备信息设置不推荐使用，不应在新应用程序中使用。 有关详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
-|设置|“值”|  
+|设置|ReplTest1|  
 |-------------|-----------|  
 |**AccessibleTablix**|指示是否呈现用于屏幕阅读器的其他辅助元数据。 其他辅助元数据可导致所呈现的报表符合电子和信息技术辅助标准（第 508 节）文档的“基于 Web 的 Intranet 和 Internet 信息和应用程序”部分 (1194.22) 中的下列技术标准：<br /><br /> (g) 行标题和列标题应为数据表的标识。<br /><br /> (h) 标记应用来与数据表（该数据表具有行标题或列标题的两个或更多逻辑级别）的数据单元格和标题单元格关联。|  
 |**ActionScript(\*)**|指定要在操作事件（如钻取或书签点击）发生时使用的 JavaScript 函数的名称。 如果指定了此参数，则操作事件将触发指定的 JavaScript 函数而不是回发到服务器。|  

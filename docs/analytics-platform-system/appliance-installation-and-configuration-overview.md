@@ -3,10 +3,10 @@ title: "设备安装和配置概述 （分析平台系统）"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
 caps.latest.revision: "23"
-ms.openlocfilehash: 34d66302d0ed114c32e0c6294dfe7789e32a9253
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 719447d2f6d9376ec9db35f35c7f38b50ef460fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-installation-and-configuration-overview"></a>设备安装和配置概述
 SQL Server PDW 设备管理员通过设置和开始使用新的 SQL Server PDW 设备的初始步骤将指导。  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7311f69807392786bd99b72e6c08734dc355d941
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7f17a6adc4449e0c3e9e1b9e944732a9aa13672b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-methods-on-geography-instances"></a>地理实例上的扩展方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [OGC specifications，地域标记语言规范](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [AsBinaryZM &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/asbinaryzm-geography-data-type.md)  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [EnvelopeCenter](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
--   [Filter](../../t-sql/spatial-geography/filter-geography-data-type.md)  
+-   [筛选](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
 -   [HasM &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Lat](../../t-sql/spatial-geography/lat-geography-data-type.md)  
   
--   [长](../../t-sql/spatial-geography/long-geography-data-type.md)  
+-   [Long](../../t-sql/spatial-geography/long-geography-data-type.md)  
   
 -   [M](../../t-sql/spatial-geography/m-geography-data-type.md)  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [NumRing](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
--   [减少](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
+-   [Reduce](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
   
 -   [ReorientObject](../../t-sql/spatial-geography/reorientobject-geography-data-type.md)  
   

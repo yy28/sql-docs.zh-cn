@@ -8,29 +8,34 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetOrderValue Method (ClientNetworkProtocol Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetOrderValue Method (ClientNetworkProtocol Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetOrderValue method
+helpviewer_keywords:
+- SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be269f8784d3812c0110bfbc12c53f1ad6cca7d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1663a40671e6d5df2c407c1a99aa70751f587fbc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 方法（ClientNetworkProtocol 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]从客户端协议列表中选择具有指定的顺序值的协议。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+从客户端协议列表中选择具有指定顺序值的协议。  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,7 +44,7 @@ object.SetOrderValue(OrderValue)
   
 ## <a name="parts"></a>组成部分  
  *对象*  
- A [ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象，表示使用的网络协议[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
+ 一个表示 [客户端使用的网络协议的](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) ClientNetworkProtocol 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象。  
   
 #### <a name="parameters"></a>Parameters  
   
@@ -53,6 +58,6 @@ object.SetOrderValue(OrderValue)
 ## <a name="remarks"></a>注释  
   
 ## <a name="see-also"></a>另请参阅  
- [客户端协议属性（“顺序”选项卡）](http://technet.microsoft.com/library/ms187884.aspx)  
+ [客户端协议属性 （顺序选项卡）](http://technet.microsoft.com/library/ms187884.aspx)  
   
   

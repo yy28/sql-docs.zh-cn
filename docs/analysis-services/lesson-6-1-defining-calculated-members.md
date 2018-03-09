@@ -2,29 +2,32 @@
 title: "定义计算成员 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77732f0ad13e3373e073038587e819ed2617eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>课程 6-1-定义计算成员
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 计算成员是基于多维数据集数据、算术运算符、数字和函数组合定义的维度或度量值组成员。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  
   
 若要创建计算成员，请在多维数据集设计器的“计算”选项卡上使用“新建计算成员”命令。 您可以在包括度量值维度在内的任意维度中创建计算成员。 还可以将计算成员放在“计算属性”对话框的显示文件夹内。 有关详细信息，请参阅[计算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)、[多维模型中的计算](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)和[创建计算成员](../analysis-services/multidimensional-models/create-calculated-members.md)。  

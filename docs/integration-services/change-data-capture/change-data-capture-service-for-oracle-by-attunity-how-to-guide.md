@@ -1,5 +1,5 @@
 ---
-title: "Change Data Capture Service for Oracle by Attunity 操作指南 |Microsoft 文档"
+title: "Change Data Capture Service for Oracle by Attunity 操作说明指南 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6bd845f244c0ed7484d91961502bfa63879544b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 35472bddf5b145c89a8d94a32cbb030773aed3a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Change Data Capture Service for Oracle by Attunity 操作指南
   本节介绍如何在 CDC 服务配置控制台中执行任务。  
@@ -41,4 +40,3 @@ ms.lasthandoff: 08/03/2017
 -   [如何使用 CDC 服务](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)  
   
   
-

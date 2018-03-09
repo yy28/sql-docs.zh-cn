@@ -1,5 +1,5 @@
 ---
-title: "通过使用数据转换将数据类型转换 |Microsoft 文档"
+title: "通过使用数据转换进行数据类型的转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -17,19 +17,18 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ebd3fc40649e77cfb42b291132f6e1168381c427
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="convert-data-type-by-using-data-conversion-transformation"></a>通过使用数据转换将转换数据类型
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>通过使用数据转换进行数据类型的转换
   若要添加并配置数据转换，包必须已经包含至少一个数据流任务和一个源。  
   
 ### <a name="to-convert-data-to-a-different-data-type"></a>将数据转换为其他数据类型  
@@ -57,16 +56,15 @@ ms.lasthandoff: 08/03/2017
   
 10. 若要配置错误输出，请单击 **“配置错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据转换](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
+ [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   
  [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)   
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENQUERY_TSQL
 - OPENQUERY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DELETE statement [SQL Server], OPENQUERY function
 - OPENQUERY function
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66c1c5dc3f116cc88b8e61111f626361a1a601b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 5b302ea6346c33431d87e1923156253411170ea5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +56,18 @@ OPENQUERY ( linked_server ,'query' )
   *查询*   
  在链接服务器中执行的查询字符串。 该字符串的最大长度为 8 KB。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  OPENQUERY 不接受其参数的变量。  
   
  OPENQUERY 不能用于对链接服务器执行扩展存储过程。 但是，通过使用四部分名称，可以在链接服务器上执行扩展存储过程。 例如：  
   
-```t-sql  
+```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
  FROM 子句中对 OPENDATASOURCE、OPENQUERY 或 OPENROWSET 的任何调用与对用作更新目标的这些函数的任何调用都是分开独立计算的，即使为两个调用提供的参数相同也是如此。 具体而言，应用到上述任一调用的结果的筛选器或联接条件不会影响其他调用的结果。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户都可以执行 OPENQUERY。 用于连接到远程服务器的权限是从为链接服务器定义的设置中获取的。  
   
 ## <a name="examples"></a>示例  
@@ -73,7 +75,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. 执行 UPDATE 传递查询  
  以下示例针对示例 A 中创建的链接服务器使用 `UPDATE` 传递查询。  
   
-```t-sql  
+```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +83,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>B. 执行 INSERT 传递查询  
  以下示例针对示例 A 中创建的链接服务器使用 `INSERT` 传递查询。  
   
-```t-sql  
+```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,14 +91,14 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>C. 执行 DELETE 传递查询  
  以下示例使用 `DELETE` 传递查询删除示例 C 中插入的行。  
   
-```t-sql  
+```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. 执行 SELECT 传递查询  
  下面的示例使用传递`SELECT`查询，以便选择示例 C.中插入的行  
   
-```t-sql  
+```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     

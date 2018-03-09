@@ -1,5 +1,5 @@
 ---
-title: "sys.fn_cdc_get_max_lsn (Transact SQL) |Microsoft 文档"
+title: sys.fn_cdc_get_max_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_max_lsn
 - fn_cdc_get_max_lsn
 - fn_cdc_get_max_lsn_TSQL
 - sys.fn_cdc_get_max_lsn_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_cdc_get_max_lsn
 - sys.fn_cdc_get_max_lsn
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 310b0d72307ac79d8dea8b01ea701cfb40c1c07f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 45be1946edde38ae6a0ebd1188153fff54d4579f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfncdcgetmaxlsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +58,7 @@ sys.fn_cdc_get_max_lsn ()
   
  该函数通常用于获取查询间隔内的相应高端点。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有公用数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -83,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fn_cdc_get_min_lsn &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

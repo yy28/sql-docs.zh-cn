@@ -3,7 +3,7 @@
 # 概述
 ## [Microsoft 机器学习服务介绍](r/r-services.md)
 ## [机器学习中的新增功能](what-s-new-in-sql-server-machine-learning-services.md)
-## [新的和最近更新的文章](new-updated-advanced-analytics.md)
+## [新的和已更新的项目](new-updated-advanced-analytics.md)
 ## [体系结构和概述](architecture-overview-machine-learning.md)
 ## [不同 SQL Server 版本中机器学习功能的差异](r/differences-in-r-features-between-editions-of-sql-server.md)
 
@@ -84,7 +84,10 @@
 ## [Python 教程](tutorials/sql-server-python-tutorials.md)
 
 ### [Python：使用 T-SQL 运行 Python](tutorials/run-python-using-t-sql.md)
-### [Python：使用 Revoscalepy 创建模型](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [在存储过程中包装 Python](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [通过 SQL Server 中的 Python 模型进行定型和评分](tutorials/train-score-using-python-in-tsql.md)
+#### [在 SQL Server 计算上下文中使用 revoscalepy 创建模型](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python：适用于 SQL 开发人员的数据库内分析](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [下载示例数据](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -94,7 +97,7 @@
 #### [定型并保存模型](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [运营模型](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python：部署和使用模型](../advanced-analytics/python/publish-consume-python-code.md)
+### [Python：通过独立服务器部署和使用模型](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [机器学习服务器 - 独立](r/r-server-standalone.md)
 ## [入门](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -107,6 +110,8 @@
 ## [SQL Server 的 R 包管理](r/r-package-management-for-sql-server-r-services.md)
 
 ### [在 SQL Server 上安装新 R 包](r/install-additional-r-packages-on-sql-server.md)
+
+### [在 SQL Server 上安装新 Python 包](python/install-additional-python-packages-on-sql-server.md)
 
 ### [为 SQL Server 实例启用 R 包管理](r/r-package-how-to-enable-or-disable.md)
 
@@ -121,7 +126,6 @@
 ### [使用 miniCRAN 创建本地包存储库](r/create-a-local-package-repository-using-minicran.md)
 
 ### [避免用户 R 包库出错](r/packages-installed-in-user-libraries.md)
-
 
 ## 数据探索和建模
 
@@ -138,7 +142,7 @@
 ### [在 R 中使用来自 OLAP 多维数据集的数据](r/using-data-from-olap-cubes-in-r.md)
 ### [使用 sqlrutils 创建存储过程](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## 性能
+## “性能”
 
 ### [R 的性能优化 - 概述](r/sql-server-r-services-performance-tuning.md)
 ### [R 的性能优化 - SQL Server 配置](r/sql-server-configuration-r-services.md)
@@ -154,12 +158,15 @@
 ### [SQL Server 中 R 运行时的安全注意事项](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [修改 SQL Server 机器学习服务的用户帐户池](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [将 SQLRUserGroup 添加为数据库用户](r/add-sqlrusergroup-to-database.md)
+
 ### [通过 Web 服务部署和使用模型](operationalization-with-mrsdeploy.md)
+
 ### [管理和监视机器学习解决方案](r/managing-and-monitoring-r-solutions.md)
 ### [机器学习服务的资源调控](r/resource-governance-for-r-services.md)
 ### [为机器学习创建资源池](r/how-to-create-a-resource-pool-for-r.md)
 ### [机器学习服务的扩展事件](r/extended-events-for-sql-server-r-services.md)
-
+### [用于监视 PREDICT 语句的扩展事件](xe-event-predict-tsql.md)
 ### [机器学习服务的 DMV](r/dmvs-for-sql-server-r-services.md)
 ### [使用 R 代码分析函数](r/using-r-code-profiling-functions.md)
 ### [使用 Management Studio 中的自定义报表监视机器学习服务](r/monitor-r-services-using-custom-reports-in-management-studio.md)

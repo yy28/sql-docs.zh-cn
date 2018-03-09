@@ -3,8 +3,9 @@ title: "Source 属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Cellset::Source
 - Source
-helpviewer_keywords: Source property [ADO MD]
+helpviewer_keywords:
+- Source property [ADO MD]
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 257fe08861ec76198fecb2aca52297859aec2df9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1acecf9cbaa00746b23a4655bd845f42af23693e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-md"></a>源属性 (ADO MD)
 指示中的数据的源[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  

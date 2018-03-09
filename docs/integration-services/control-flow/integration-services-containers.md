@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 容器 |Microsoft 文档"
+title: "Integration Services 容器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95b6e69e463bd8e3b44e55c11d308b3d5a25ce63
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 79759c7f5ec38bb2c729f092248866b87bf9e611
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-containers"></a>Integration Services 容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中为包提供结构和为任务提供服务的对象。 它们支持包中的重复控制流，并且将任务和容器分组为有意义的工作单元。 除了任务，容器还可以包含其他容器。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="summary-of-container-properties"></a>容器属性摘要  
  通常，所有容量类型都有一组属性。 如果使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的图形工具创建包，“属性”窗口将列出 Foreach 循环容器、For 循环容器和序列容器的以下属性。 配置任务宿主容器属性是配置任务宿主容器所封装的任务的一部分。 配置任务时需要设置任务宿主属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**DelayValidation**|指示是否将容器的验证推迟到运行时进行的布尔值。 此属性的默认值为 **False**。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>为止。|  
 |**Description**|容器说明。 该属性包含一个字符串，但可以为空。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>为止。|  
@@ -94,7 +93,7 @@ ms.lasthandoff: 08/03/2017
  可执行文件指容器级别的任务和该容器内的任意容器。 可执行文件可以是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的任务和容器之一，也可以是自定义任务。 有关详细信息，请参阅 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  
   
 ### <a name="precedence-constraints"></a>优先约束  
- 优先约束将同一父容器中的容器和任务链接到已排序的控制流中。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 优先约束将同一父容器中的容器和任务链接到已排序的控制流中。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
 ### <a name="event-handlers"></a>事件处理程序  
  容器级别的事件处理程序对由容器或容器包括的对象所引发的事件做出响应。 有关详细信息，请参阅 [Integration Services (SSIS) 事件处理程序](../../integration-services/integration-services-ssis-event-handlers.md)。  
@@ -109,4 +108,3 @@ ms.lasthandoff: 08/03/2017
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

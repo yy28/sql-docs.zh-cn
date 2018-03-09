@@ -3,8 +3,9 @@ title: "精度属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Parameter::Precision
 - Field20::Precision
-helpviewer_keywords: Precision property [ADO]
+helpviewer_keywords:
+- Precision property [ADO]
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 866d9db49e2aeb487d38ebde085ca4ae9da197dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f100cf54a8090e7f84ee6a4310c7110c110c69fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="precision-property-ado"></a>精度属性 (ADO)
 表示的数字值在精度程度[参数](../../../ado/reference/ado-api/parameter-object.md)对象或对数值[字段](../../../ado/reference/ado-api/field-object.md)对象。  

@@ -2,15 +2,13 @@
 title: "ColumnBinding 数据类型 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ColumnBinding Data Type
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 86d1f2ee2a1e389cc6d6d8a55b59815cc7546d06
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3905d810270f3de78382d9d4b4aaf8c6e7b7fd73
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="columnbinding-data-type-assl"></a>ColumnBinding 数据类型 (ASSL)
-  定义一个派生的数据类型，表示到数据源视图中的列的绑定[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定义一个派生的数据类型，表示到数据源视图中的列的绑定[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,20 +45,20 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|[绑定](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
-|派生数据类型|无|  
+|派生数据类型|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
+|父元素|InclusionThresholdSetting|  
 |子元素|[ColumnID](../../../analysis-services/scripting/properties/columnid-element-eventcolumn-assl.md)， [TableID](../../../analysis-services/scripting/properties/tableid-element-assl.md)|  
 |派生元素|请参阅[绑定](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要创建有效的 XML 元素名称， [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] **数据集**对象编码表名称为它们序列化到 XML 架构定义 (XSD); 例如，名称"Order Details"变为"Order_x0020_Details"。 同样， **ColumnID**和**TableID**中包含元素**ColumnBinding**元素和数据源视图 (DSV) 中的引用对象还必须进行编码在序列化，以确保名称与在 DSV 中的文本直接匹配过程的名称。 Analysis Services 实例将解码这些名称，就像**数据集**对象模型。  
   
  A **TableDefinitions**元素包含的元素使用**TableBinding**数据类型和引用在 DSV 中的表必须还编码名称为它们序列化为 XSD。 但是，表名中**分区**应未编码的绑定，因为这些名称是只需的数据库中存在，并且没有要在 DSV 中表的名称。 不编码表中的名称**分区**绑定还实现以下：  

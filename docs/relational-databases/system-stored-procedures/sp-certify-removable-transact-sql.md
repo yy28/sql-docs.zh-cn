@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
 - sp_certify_removable
-dev_langs: TSQL
-helpviewer_keywords: sp_certify_removable
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab84edebdbc4a8775e9ce4a50e3236b1377b3932
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ca484db8104c1c1e817d08be0cf2a72ada76822
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@dbname=**] *dbname*  
+ [ **@dbname=**] **'***dbname***'**  
  指定要验证的数据库。 *dbname*是**sysname**。  
   
- [  **@autofix=**] **auto**  
+ [ **@autofix=**] **'auto'**  
  对系统管理员授予数据库及所有数据库对象的所有权，并除去任何用户创建的数据库用户及非默认的权限。 *自动*是**nvarchar(4)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -83,9 +86,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   只需运行**sp_certify_removable**与**自动**值。  
   
- 注意，该存储过程只检查用户和用户权限。 可以向数据库添加组并且对这些组授予权限。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)。  
+ 注意，该存储过程只检查用户和用户权限。 可以向数据库添加组并且对这些组授予权限。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限仅限于属于**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -97,9 +100,9 @@ EXEC sp_certify_removable inventory, AUTO;
   
 ## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_create_removable &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
+ [sp_create_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

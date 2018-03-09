@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37bfede873cdcfebd34c8fba985614adc41305e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>词汇表（报表生成器）
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 |数据源名称 (data source name)|报表中数据源对象的名称。|  
 |数据类型|一种指定列、参数或变量中可以存储的信息类型的属性。|  
 |数据仓库|专门为查询和分析而构造的数据库。|  
-|database|为特定目的（例如搜索、排序和重新组合数据）而组织和表示的信息、表和其他对象的集合。|  
+|“数据库”|为特定目的（例如搜索、排序和重新组合数据）而组织和表示的信息、表和其他对象的集合。|  
 |数据库目录 (database catalog)|数据库的一部分，包含数据库中所有对象的定义以及该数据库的定义。|  
 |数据库引擎|可访问数据库管理系统 (DBMS) 的一个或多个程序模块。|  
 |数据库文件 (database file)|构成数据库的物理文件之一。|  
@@ -358,7 +356,7 @@ ms.lasthandoff: 12/05/2017
 |系统角色分配 (system role assignment)|作为一个整体应用于站点的角色分配。|  
 |系统角色定义 (system role definition)|传达站点范围的授权的角色定义。|  
 |系统存储过程|SQL Server 提供的一组存储过程，可以用于诸如从系统目录中检索信息或执行管理任务之类的操作。|  
-|table|1.一种由行和列组成的二维对象，用于存储有关在关系数据库中建模的实体的数据。 2. 报表布局中以分列格式显示数据的数据区域。|  
+|表|1.一种由行和列组成的二维对象，用于存储有关在关系数据库中建模的实体的数据。 2. 报表布局中以分列格式显示数据的数据区域。|  
 |表数据区域 (table data region)|报表布局中以分列格式显示数据的报表项。|  
 |tablix|一种 Reporting Services RDL 数据区域，其中包含类似于表或矩阵的行和列，可能兼有二者的特征。|  
 |任务 (task)|构成任务（管理报表、管理文件夹等）的权限集合|  

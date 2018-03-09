@@ -2,16 +2,13 @@
 title: "层次结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
@@ -20,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7604fe65427b5744cb0b34689a98f7fc6cd809b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0a881f97fc071d0921a8829c8bb70d4f50197c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchies"></a>层次结构
-  在表格模型中，层次结构是定义表中两个或更多列之间的关系的元数据。 层次结构可与报表客户端字段列表中的其他列单独出现，使客户端用户可以更方便地在报表中导航和包含数据。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]层次结构，在表格模型中，是定义表中的两个或多个列之间的关系的元数据。 层次结构可与报表客户端字段列表中的其他列单独出现，使客户端用户可以更方便地在报表中导航和包含数据。  
   
 ##  <a name="bkmk_benefits"></a> 优势  
  表可以包括几十甚至数百个其名称不寻常并且没有明显顺序的列。 这可能导致报表客户端字段列表显得未排序，从而使用户很难找到报表中的数据和在报表中包含数据。 层次结构可以提供复杂数据结构的简单、直观的视图。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  创建层次结构后，可以使用“在 Excel 中分析”功能来测试其效能。 有关详细信息，请参阅[在 Excel 中的分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
-##  <a name="bkmk_related_tasks"></a> 相关任务  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
 |任务|Description|  
 |----------|-----------------|  

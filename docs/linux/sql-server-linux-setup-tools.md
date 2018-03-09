@@ -1,29 +1,29 @@
 ---
 title: "在 Linux 上安装 SQL Server 命令行工具 |Microsoft 文档"
-description: "本主题介绍如何在 Linux 上安装 SQL Server 工具。"
+description: "本文介绍如何在 Linux 上安装 SQL Server 工具。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 8d97ba08eae758a22195250521935268aadb770e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 通过下列步骤安装命令行工具、Microsoft ODBC 驱动程序及其依赖项。 **Mssql 工具**包包含：
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
 - [macOS](#macos)
 - [Docker](#docker)
 
-本主题介绍如何安装命令行工具。 如果您正在寻找有关如何使用示例**sqlcmd**或**bcp**，请参阅[链接](#next-steps)本主题的末尾。
+本文介绍如何安装命令行工具。 如果您正在寻找有关如何使用示例**sqlcmd**或**bcp**，请参阅[链接](#next-steps)本主题的末尾。
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>在 RHEL 7 上安装工具
 
@@ -180,15 +180,18 @@ ms.lasthandoff: 11/20/2017
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>在 macOS 上安装工具
+## <a id="macos"></a> 在 macOS 上安装工具
 
 预览**sqlcmd**和**bcp**现可在 macOS 上。 有关详细信息，请参阅[公告](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)。
+
+*安装[Homebrew](https://brew.sh)如果你不在已具有：*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 要为 Mac El Capitan 和 Sierra 安装工具，请执行下列命令：
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools
@@ -196,7 +199,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 从 SQL Server 2017 CTP 2.0 开始，Docker 映像中便加入了 SQL Server 命令行工具。 如果使用交互式命令提示符附加至此映像，则可在本地运行工具。
 
@@ -261,7 +264,7 @@ brew install --no-sandbox mssql-tools
 
 ## <a name="next-steps"></a>后续步骤
 
-有关如何使用的示例**sqlcmd**若要连接到 SQL Server，并创建一个数据库，请参阅以下快速之一启动教程：
+有关如何使用的示例**sqlcmd**若要连接到 SQL Server，并创建一个数据库，请参阅以下快速入门之一：
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)

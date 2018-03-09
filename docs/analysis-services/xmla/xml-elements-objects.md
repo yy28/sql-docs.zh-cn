@@ -2,15 +2,13 @@
 title: "对象 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5001e7e5bf73b632432aa761c22a72440999aacc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9700a47dc1f2cc5ee071c0dcd78eb827b6c52e7f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---objects"></a>XML 元素的对象
-  XML for Analysis (XMLA) 协议使用两种方法，**发现**和**执行**，提供应用程序访问的实例上的信息的标准方法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 由于这些方法是使用简单对象访问协议 (SOAP) 调用的，因此它们接受 XML 格式的输入并传送 XML 格式的输出。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]XML for Analysis (XMLA) 协议使用两种方法，**发现**和**执行**，提供应用程序访问的实例上的信息的标准方法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 由于这些方法是使用简单对象访问协议 (SOAP) 调用的，因此它们接受 XML 格式的输入并传送 XML 格式的输出。  
   
 ## <a name="in-this-section"></a>本节内容  
  下面的主题介绍 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 实现的 XMLA 对象。  

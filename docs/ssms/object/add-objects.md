@@ -3,8 +3,11 @@ title: "添加对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21762f1398bea69542e78b663adabb91f544cfe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e2894f644ac81314e770ac667f4aa2e180a33a6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-objects"></a>添加对象
-根据您希望查看的对象类型限制显示的对象选择对话框。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 根据希望查看的对象类型限制显示的对象选择对话框。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **特定对象**  
 打开“选择对象”对话框，可以进一步定义对象搜索。  
   

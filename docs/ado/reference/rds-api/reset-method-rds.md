@@ -1,26 +1,30 @@
 ---
 title: "重置方法 (RDS) |Microsoft 文档"
-ms.prod: sql-non-specified
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Reset method [ADO]
+helpviewer_keywords:
+- Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4762d331c76b1e97d13ffd1dbf926a35468bcaa9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f95d5bf30a0646d3e67ae366e29794018095706a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="reset-method-rds"></a>重置方法 (RDS)
 客户端上执行排序或筛选器**记录集**基于指定的排序和筛选器属性。  
@@ -40,7 +44,7 @@ DataControl.Reset(value)
  表示的对象变量[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
  *值*  
- 可选。 A**布尔**值，该值是**True** （默认），如果你想要对当前的"筛选"行集进行筛选。 **False**指示，原始行集进行筛选，删除任何以前的筛选选项。  
+ 選擇性。 A**布尔**值，该值是**True** （默认），如果你想要对当前的"筛选"行集进行筛选。 **False**指示，原始行集进行筛选，删除任何以前的筛选选项。  
   
 ## <a name="remarks"></a>注释  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)， [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)， [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md)， [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)，和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)属性提供了排序和筛选功能对客户端缓存。 排序功能的一个列中的值对记录进行排序。 筛选功能显示基于查找条件，虽然完全的记录的子集[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)保留在缓存。 **重置**方法将执行条件，并将当前**记录集**与可更新**记录集**。  

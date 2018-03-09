@@ -2,9 +2,12 @@
 title: "定义合并表项目间的逻辑记录关系 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b22b667a679c2dee3a87b0348170c793af0c9e1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: baebe314605badced365be3c30212e2f20262737
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定义合并表项目间的逻辑记录关系
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义合并表项目间的逻辑记录关系。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或复制管理对象 (RMO) 定义 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中合并表项目之间的逻辑记录关系。  
   
  通过使用合并复制，您可以定义不同表中的相关行之间的关系。 然后就可以在同步过程中将这些行作为一个事务单元进行处理。 无论两个项目之间是否存在联接筛选器关系，都可以在这两个项目之间定义逻辑记录。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
@@ -173,7 +176,7 @@ ms.lasthandoff: 11/09/2017
   
     -   将 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>设置为发布的名称。  
   
-    -   （可选）如果对项目进行水平筛选，则将 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 属性指定为行筛选器子句。 使用此属性可指定静态行筛选器或参数化行筛选器。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+    -   （可选）如果对项目进行水平筛选，则将 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 属性指定为行筛选器子句。 使用此属性可指定静态行筛选器或参数化行筛选器。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
      有关详细信息，请参阅 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
   
@@ -206,7 +209,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [定义和修改静态行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [通过逻辑记录对相关行的更改进行分组](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [使用预计算分区优化参数化筛选器的性能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)   

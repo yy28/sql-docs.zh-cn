@@ -3,8 +3,11 @@ title: "排除重复行 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,16 +22,16 @@ ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caa5428de533444946e9c9ca43a28f243ff1775b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0de0569367ae5f378a29252e3a83033b2b9f2a67
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>排除重复行 (Visual Database Tools)
-如果希望在结果集中看到的值都是唯一的，则可指定要从结果集中排除重复项。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果希望在结果集中看到的值都是唯一的，则可指定要从结果集中排除重复项。  
   
 ### <a name="to-exclude-duplicate-rows-from-the-result-set"></a>从结果集中排除重复行  
   

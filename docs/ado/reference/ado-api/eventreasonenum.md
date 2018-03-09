@@ -1,10 +1,11 @@
 ---
-title: "EventReasonEnum |Microsoft 文档"
+title: EventReasonEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: EventReasonEnum
-helpviewer_keywords: EventReasonEnum enumeration [ADO]
+f1_keywords:
+- EventReasonEnum
+helpviewer_keywords:
+- EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f16c5e9ba0c79a8920c4a7d4c9bcd9171d23ec1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a49c3aac3b2f37421df9a68ae01b16770c696993
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 指定导致事件发生的原因。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|操作添加一条新记录。|  
 |**adRsnClose**|9|操作关闭**记录集**。|  
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |**adRsnUpdate**|3|操作更新现有记录。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d949d95301c6fb66ad6b027b99113850bea8e9d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8b4fab8c7d39acbffc73959ec06adb830716003
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-based-driver-diagnostic-example"></a>基于文件的驱动程序诊断示例
 基于文件的驱动程序可以充当同时 ODBC 驱动程序和数据源。 因此可以生成错误和警告同时作为组件中的 ODBC 连接和作为数据源。 它也是接口与驱动程序管理器中的组件，因为它格式，并返回自变量**SQLGetDiagRec**。  

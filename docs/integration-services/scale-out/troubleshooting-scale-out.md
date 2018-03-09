@@ -1,165 +1,220 @@
 ---
-title: "故障排除 SQL Server Integration Services (SSIS) 横向扩展 |Microsoft 文档"
+title: "SQL Server Integration Services (SSIS) Scale Out 故障排除 | Microsoft Docs"
+ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
 ms.custom: 
-ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.date: 12/19/2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 41bb853dd08591596f6f5baa918e174d0c26a6b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: bc22e1bac1e2a409061f73131cdfd203c8948fa3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="troubleshooting-scale-out"></a>故障排除横向扩展
+# <a name="troubleshoot-scale-out"></a>Scale Out 故障排除
 
-SSIS 的横向扩展涉及 communtication SSISDB，缩放出主服务和横向扩展辅助服务之间。 有时，通信将断开由于配置错误，缺少访问权限和其他原因。 本文档将帮助你解决你向外扩展的配置。
+SSIS Scale Out 涉及 SSIS 目录数据库 `SSISDB`、Scale Out Master 服务和 Scale Out Worker 服务之间的通信。 有时，通信会因配置错误、缺少访问权限及其他原因而中断。 可借助本文排查 Scale Out 配置的问题。
 
-要进行调查你会遇到的现象，请按照以下逐个的步骤，直到问题得到解决。
+要调查出现的问题，请按照下面的步骤逐一操作，直到解决问题。
 
-### <a name="symptoms"></a>**症状** 
-缩放出 Master 无法连接到 SSISDB 中。 
+## <a name="scale-out-master-fails"></a>Scale Out Master 故障
 
-主属性无法在横向扩展管理器中显示。
+### <a name="symptoms"></a>症状 
+-   Scale Out Master 无法连接 SSISDB。 
 
-主属性未填入 [SSISDB]。[目录]。[master_properties]
+-   Scale Out Manager 中无法显示主控形状属性。
 
-### <a name="solution"></a>**解决方案**
-步骤 1： 检查向外扩展是否启用。
+-   主控形状属性未填入 `[catalog].[master_properties]` 视图。
 
-右键单击**SSISDB** SSMS 并检查的对象资源管理器中的节点**启用向外扩展功能**。
+### <a name="solution"></a>解决方案
+1.  检查是否已启用 Scale Out。
 
-![向外扩展启用](media\isenabled.PNG)
+    在 SSMS 的对象资源管理器中，右键单击“SSISDB”，然后选中“启用 Scale Out 功能”。
 
-如果属性值为 False，则启用横向扩展通过调用存储的过程 [SSISDB]。[目录]。[enable_scaleout]。
+    ![是否已启用 Scale Out](media\isenabled.PNG)
 
-步骤 2： 检查出母版缩放配置文件中指定的 Sql Server 名称是否正确并重新启动缩放出主机服务。
+    如果属性值为 False，通过调用存储过程 `[catalog].[enable_scaleout]` 启用 Scale Out。
 
-### <a name="symptoms"></a>**症状** 
-横向扩展辅助进程无法连接到缩放出主服务器
+2.  检查 Scale Out Master 配置文件中指定的 SQL Server 名称是否正确，然后重启 Scale Out Master 服务。
 
-横向扩展辅助进程不会显示在扩展出管理器中添加它后
+## <a name="scale-out-worker-fails"></a>Scale Out Worker 故障
 
-[SSISDB] 中未显示出工作人员缩放。[目录]。[worker_agents]
+### <a name="symptoms"></a>症状 
+-   Scale Out Worker 无法连接 Scale Out Master。
 
-横向扩展辅助服务正在运行，横向扩展辅助处于脱机状态时
+-   Scale Out Worker 在添加到 Scale Out Manager 中后无法显示。
 
-### <a name="solutions"></a>**解决方案** 
-检查在横向扩展辅助服务日志中的错误消息\<驱动程序\>: \Users\\*[运行 worker 服务帐户]*\AppData\Local\SSIS\Cluster\Agent。
+-   Scale Out Worker 在 `[catalog].[worker_agents]` 视图中不显示。
 
-**用例** 
+-   Scale Out Worker 服务处于运行状态，而 Scale Out Worker 处于脱机状态。
 
-System.ServiceModel.EndpointNotFoundException： 没有终结点侦听时 https://*[MachineName]: [端口]*/ClusterManagement/ 无法接受消息。
+### <a name="solution"></a>解决方案
+在 `\<drive\>:\Users\\*[account running worker service]*\AppData\Local\SSIS\Cluster\Agent` 下查看 Scale Out Worker 服务日志中的错误消息。
 
-步骤 1： 检查缩放出 Master 服务配置文件中指定的端口号是否正确并重新启动缩放出主机服务。 
+## <a name="no-endpoint-listening"></a>无终结点侦听
 
-步骤 2： 检查在横向扩展辅助服务配置中指定的主终结点是否正确并重新启动缩放出 Worker 服务。
+### <a name="symptoms"></a>症状
 
-步骤 3： 检查是否在缩放出主节点上打开防火墙端口。
+“System.ServiceModel.EndpointNotFoundException：可接受消息的 https://[MachineName]:[Port]/ClusterManagement/ 下无任何终结点侦听。”
 
-步骤 4： 解决缩放出主节点和横向扩展辅助节点之间的任何其他连接问题。
+### <a name="solution"></a>解决方案
 
-**用例**
+1.  检查 Scale Out Master 服务配置文件中指定的端口号是否正确，然后重启 Scale Out Master 服务。 
 
-System.ServiceModel.Security.SecurityNegotiationException： 无法建立与机构的 SSL/TLS 安全通道的信任关系*[计算机名称]: [端口]*。 ---> System.Net.WebException： 基础连接已关闭： 未能建立 SSL/TLS 安全通道的信任关系。 ---> System.Security.Authentication.AuthenticationException： 远程证书为不符合验证过程。
+2.  检查 Scale Out Worker 服务配置中指定的主终结点是否正确，然后重启 Scale Out Worker 服务。
 
-步骤 1： 安装横向出 Master 到根证书存储在横向扩展辅助节点上的本地计算机的证书如果不是尚未安装和重新启动横向扩展辅助服务。
+3.  检查 Scale Out Mater 节点上的防火墙端口是否开启。
 
-步骤 2： 检查主终结点中的主机名是否包括 Cn 的缩放出 Master 证书中。 如果没有，重置缩放出工作配置文件中的主终结点，并重新启动缩放出 Worker 服务。 
+4.  解决 Scale Out Master 节点和 Scale Out Worker 节点之间任何其他的连接问题。
 
-> [!Note]
-> 如果不能更改由于 DNS 设置的主终结点的主机名，你必须更改缩放出主证书。 请参阅[处理中 SSIS 的横向扩展的证书](deal-with-certificates-in-ssis-scale-out.md)。
+## <a name="could-not-establish-trust-relationship"></a>无法建立信任关系
 
-步骤 3： 检查在横向扩展辅助角色配置中指定的主指纹是否与缩放出主证书的指纹匹配。 
+### <a name="symptoms"></a>症状
+“System.ServiceModel.Security.SecurityNegotiationException：无法使用授权‘[Machine Name]:[Port]’为 SSL/TLS 安全通道建立信任关系。”
 
-**用例**
+“System.Net.WebException：基础连接已关闭：无法为 SSL/TLS 安全通道建立信任关系。”
 
-System.ServiceModel.Security.SecurityNegotiationException： 无法建立安全通道的 SSL/TLS 与机构*[计算机名称]: [端口]*。 ---> System.Net.WebException： 该请求已中止： 无法创建 SSL/TLS 安全通道。
+“System.Security.Authentication.AuthenticationException：根据验证流程，远程证书无效。”
 
-步骤 1： 检查运行缩放出 Worker 服务帐户是否具有访问横向扩展辅助证书通过以下命令。
+### <a name="solution"></a>解决方案
+1.  如果尚未安装 Scale Out Master 证书，请将其安装到 Scale Out Worker 节点上本地计算机的根证书存储中，然后重启 Scale Out Worker 服务。
+
+2.  检查主终结点的主机名是否包含在 Scale Out Master 证书的 CN 中。 如果没有，重置 Scale Out Worker 配置文件中的主终结点并重启 Scale Out Worker 服务。 
+
+    > [!NOTE]
+    > 如果因 DNS 设置不能更改主终结点的主机名，则必须更改 Scale Out Master 证书。 请参阅[管理 SSIS Scale Out 证书](deal-with-certificates-in-ssis-scale-out.md)。
+
+3.  检查 Scale Out Worker 配置中指定的主指纹是否匹配 Scale Out Master 证书的指纹。 
+
+## <a name="could-not-establish-secure-channel"></a>无法建立安全通道
+
+### <a name="symptoms"></a>症状
+
+“System.ServiceModel.Security.SecurityNegotiationException：无法使用授权‘[Machine Name]:[Port]’为 SSL/TLS 建立安全通道。”
+
+“System.Net.WebException：请求已中止：无法创建 SSL/TLS 安全通道。”
+
+### <a name="solution"></a>解决方案
+通过运行以下命令，检查运行 Scale Out Worker 服务的帐户是否有权访问 Scale Out Worker 证书：
 
 ```dos
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
-如果帐户不具有访问权限，通过将以下命令来授予并重启缩放出 Worker 服务。
+如果帐户无权访问，可通过运行以下命令授予访问权限并重启 Scale Out Worker 服务。
 
 ```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}
 ```
 
-**用例**
+## <a name="http-request-forbidden"></a>HTTP 请求已禁止
 
-System.ServiceModel.Security.MessageSecurityException: HTTP 请求已禁止具有客户端身份验证方案匿名。 ---> System.Net.WebException： 远程服务器返回了错误: (403) 禁止访问。
+### <a name="symptoms"></a>症状
 
-步骤 1： 安装横向扩展辅助证书到缩放出主节点上的本地计算机的根证书存储否则尚未安装并重启横向扩展辅助服务。
+“System.ServiceModel.Security.MessageSecurityException：HTTP 请求已被禁止，同时客户端身份验证方案为‘匿名’。”
 
-步骤 2： 清理缩放出主节点上的本地计算机的根证书存储中的无用证书。
+“System.Net.WebException：远程服务器返回错误：(403) 禁止访问。”
 
-步骤 3： 配置 Schannel 以在 TLS/SSL 握手过程中，不再发送受信任的根证书颁发机构的列表，通过将下面的注册表项添加缩放出主节点上。
+### <a name="solution"></a>解决方案
+1.  如果尚未安装 Scale Out Worker 证书，请将其安装到 Scale Out Master 节点上本地计算机的根证书存储中，然后重启 Scale Out Worker 服务。
 
-控制
+2.  清理 Scale Out Master 节点上本地计算机根证书存储中的无用证书。
 
-值名称： SendTrustedIssuerList 
+3.  将 Schannel 配置为在 TLS/SSL 握手过程中不再发送受信任的根证书颁发机构列表，方法是在 Scale Out Master 节点上添加以下注册表项。
 
-值类型： REG_DWORD 
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-值数据： 0 (False)
+    值名称：SendTrustedIssuerList 
 
-**用例**
+    值类型：REG_DWORD 
 
-System.ServiceModel.CommunicationException： 发出 HTTP 请求为 https:// 时发生错误*[计算机名称]: [端口]*  /ClusterManagement /。 这可能是因为，未使用 HTTP 正确配置服务器证书。在 HTTPS 的情况下的 SYS。 这也可能引起的客户端和服务器之间的安全绑定不匹配。 
+    值数据：0 (False)
 
-步骤 1： 检查如果缩放出 Master 证书绑定到主终结点中的端口正确使用以下命令的主节点上。 检查显示的证书哈希将与的缩放出主证书指纹匹配。
+## <a name="http-request-error"></a>HTTP 请求错误
 
-```dos
-netsh http show sslcert ipport=0.0.0.0:{Master port}
-```
+### <a name="symptoms"></a>症状
 
-如果绑定不正确，请使用以下命令将它重置并重新启动缩放出 Worker 服务。
+“System.ServiceModel.CommunicationException：向 https://[Machine Name]:[Port]/ClusterManagement/ 发出 HTTP 请求时出错。*这可能是因为未正确使用 HTTP.SYS 在 HTTPS 事例中配置服务器证书。此外，客户端与服务器之间的安全绑定不匹配，也可能造成该异常。”*
 
-```dos
-netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate thumbprint} certstorename=Root appid={random guid}
-```
+### <a name="solution"></a>解决方案
+1.  使用以下命令，检查 Scale Out Master 证书是否已正确绑定到主节点上主终结点中的端口：
 
-### <a name="symptoms"></a>**症状**
-在向外扩展的执行不启动。
+    ```dos
+    netsh http show sslcert ipport=0.0.0.0:{Master port}
+    ```
 
-### <a name="solution"></a>**解决方案**
+    检查显示的证书哈希与 Scale Out Master 证书指纹是否匹配。 如果绑定不正确，运行以下命令重置绑定并重启 Scale Out Worker 服务。
 
-检查你所选的计算机 [SSISDB] 中运行包的状态。[目录]。[worker_agents]。 至少一个辅助必须联机且已启用。
+    ```dos
+    netsh http delete sslcert ipport=0.0.0.0:{Master port}
+    netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate thumbprint} certstorename=Root  appid={random guid}
+    ```
 
-### <a name="symptoms"></a>**症状** 
-包成功运行，但不没有记录任何消息。
+## <a name="cannot-open-certificate-store"></a>无法打开证书存储
 
-### <a name="solution"></a>**解决方案**
+### <a name="symptoms"></a>症状
+在 Scale Out Manager 中，Scale Out Worker 连接到 Scale Out Master 时验证失败，并收到错误消息：“无法打开计算机上的证书存储”。
 
-检查是否 SQL Server 身份验证允许通过 Sql Server 承载 SSISDB。
+### <a name="solution"></a>解决方案
 
-> [!Note]  
-> 如果你已更改的帐户向外扩展日志记录，请参阅[缩放出日志记录更改的帐户](change-logdb-account.md)和验证连接字符串用于日志记录。
+1.  以管理员身份运行 Scale Out Manager。 如果使用 SSMS 打开 Scale Out Manager，需要以管理员身份运行 SSMS。
 
-### <a name="symptoms"></a>**症状**
-包执行报表中的错误消息是不够的故障排除。
+2.  如果远程注册表服务未运行，在计算机上启动它。
 
-### <a name="solution"></a>**解决方案**
-可以在配置中 WorkerSettings.config TasksRootFolder 下找到详细的执行日志。 默认情况下，它是\<驱动程序\>: \Users\\*[帐户]*\AppData\Local\SSIS\ScaleOut\Tasks。 *[帐户]*是使用默认值 SSISScaleOutWorker140 运行缩放出 Worker 服务的帐户。
+## <a name="execution-doesnt-start"></a>无法启动执行
 
-若要找到与包执行的日志*[执行 id]*，执行以下 T-SQL 命令，以获取*[任务 id]*。 然后，找到名为的子文件夹*[任务 id]*下 TasksRootFolder。<sup>1<sup>
+### <a name="symptoms"></a>症状
+Scale Out 中“执行”不启动。
+
+### <a name="solution"></a>解决方案
+
+检查所选计算机的状态（该计算机用于在 `[catalog].[worker_agents]` 视图中运行包）。 必须至少联机启动一个辅助角色。
+
+## <a name="no-log"></a>无日志
+
+### <a name="symptoms"></a>症状 
+包运行成功，但未记录任何消息。
+
+### <a name="solution"></a>解决方案
+
+检查托管 SSISDB 的 SQL Server 实例是否允许 SQL Server 身份验证。
+
+> [!NOTE]  
+> 如果已更改用于 Scale Out 日志记录的帐户，请参阅[更改用于 Scale Out 日志记录的帐户](change-logdb-account.md)并验证用于日志记录的连接字符串。
+
+## <a name="error-messages-arent-helpful"></a>错误消息无法提供帮助
+
+### <a name="symptoms"></a>症状
+包执行报告中的错误消息不充足，无法进行故障排除。
+
+### <a name="solution"></a>解决方案
+可在 `WorkerSettings.config` 中配置的 `TasksRootFolder` 下找到更多执行日志。 默认情况下，此文件夹为 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`。 [account] 是运行 Scale Out Worker 服务的帐户，其默认值为 `SSISScaleOutWorker140`。
+
+要为执行 ID 为 [execution ID] 的包查找日志，请执行以下 Transact-SQL 命令，获取 [task ID]（任务 ID）。 然后，在 `TasksRootFolder` 下查找包含 [task ID] 的子文件夹名称。
 
 ```sql
 SELECT [TaskId]
 FROM [SSISDB].[internal].[tasks] tasks, [SSISDB].[internal].[executions] executions 
 WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions.job_id
 ```
-<sup>1</sup>此查询的故障排除目的仅和打开时横向扩展辅助进程的日志记录/诊断方案改进将来更改目标。 
+
+> [!WARNING]
+> 此查询仅用于故障排除。 查询中引用的内部视图将来会发生更改。 
+
+## <a name="next-steps"></a>后续步骤
+有关详细信息，请参阅下列关于设置和配置 SSIS Scale Out 的相关文章：
+-   [在单台计算机上开始使用 Integration Services (SSIS) Scale Out](get-started-with-ssis-scale-out-onebox.md)
+-   [演练：设置 Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)

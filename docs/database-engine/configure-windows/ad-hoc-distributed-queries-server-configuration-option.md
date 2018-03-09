@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ad hoc access
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e871bd2f5a6c54be5152f2259b82048fc3b2d237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e1e6b4133050352a4012c64f7aae8690be005e8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>即席分布式查询服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  允许使用临时名称意味着到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何经过身份验证的登录名均可访问该访问接口。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员应对任何本地登录名都能安全访问的访问接口启用此功能。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  尝试进行即席连接但未启用“ 即席分布式查询 ”  会导致错误：消息 7415，级别 16，状态 1，行 1  
   
  已拒绝对 OLE DB 访问接口“Microsoft.ACE.OLEDB.12.0”的即席访问。 必须通过链接服务器来访问此访问接口。  

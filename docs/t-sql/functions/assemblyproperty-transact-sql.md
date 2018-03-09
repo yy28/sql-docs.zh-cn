@@ -8,27 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ASSEMBLYPROPERTY_TSQL
 - ASSEMBLYPROPERTY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ASSEMBLYPROPERTY statement
 - assemblies [CLR integration], properties
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43b626c4d618feb5f7f24ca409d9f832250b616c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: a38d9f773e010ab779204d7c92b351d88c0d08f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +46,13 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 ```  
   
 ## <a name="arguments"></a>参数  
-*程序集 _ 名称*  
+*assembly_name*  
 程序集的名称。
   
 *property_name*  
 要检索其有关信息的属性的名称。 *property_name*可以是以下值之一。
   
-|值|Description|  
+|“值”|Description|  
 |---|---|
 |**CultureInfo**|程序集的区域设置。|  
 |**PublicKey**|程序集的公钥或公钥令牌。|  

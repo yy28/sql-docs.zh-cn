@@ -2,27 +2,33 @@
 title: "“查询通知”事件类别 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: event classes [SQL Server], Query Notifications event category
+helpviewer_keywords:
+- event classes [SQL Server], Query Notifications event category
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
-caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2176b111d90957a25a1ec0ce1ea493924b0f017f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c9256c4d3ea467012053a2a6251e465de8a1c3bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="query-notifications-event-category"></a>Query Notifications 事件类别
-  **Query Notifications** 事件类别包含的事件类报告有关开发人员和管理员可用于监视查询通知并解决其问题的信息。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Query Notifications** 事件类别包含的事件类报告有关开发人员和管理员可用于监视查询通知并解决其问题的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
  [QN:Dynamics 事件类](../../relational-databases/event-classes/qn-dynamics-event-class.md)  

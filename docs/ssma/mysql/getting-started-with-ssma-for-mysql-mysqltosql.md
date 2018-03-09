@@ -1,10 +1,13 @@
 ---
 title: "Getting Started with SSMA mysql (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dd175faf728f44c4d29c1097d876b52210aec992
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 961ab39ffc76be1ce2bd7dd36234163d3c8229bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Getting Started with SSMA mysql (MySQLToSQL)
 SQL Server 迁移助手 (SSMA) mysql 允许您快速将 MySQL 数据库架构转换为 SQL Server 或 Azure SQL DB 架构，将生成的架构上载到 SQL Server 或 Azure SQL DB，以及将数据从 MySQL 迁移到 SQL Server 或 Azure SQL DB。  
@@ -115,7 +118,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
 |||  
 |-|-|  
 |**菜单**|**Description**|  
-|**文件**|包含用于处理项目、 连接到 MySQL，以及连接到 SQL Server 或 Azure SQL DB 的命令。|  
+|**File**|包含用于处理项目、 连接到 MySQL，以及连接到 SQL Server 或 Azure SQL DB 的命令。|  
 |**编辑**|包含用于查找和处理的详细信息页中的文本的命令。 若要打开**管理书签**对话框中的，在编辑菜单上单击管理书签。 在对话框中，你将看到现有书签的列表。 可以使用对话框右侧的按钮来管理在书签。|  
 |**“视图”**|包含**同步元数据资源管理器**命令。 同步 MySQL 元数据资源管理器和 SQL Server 或 Azure SQL DB 元数据资源管理器之间的对象。 此外包含用于显示和隐藏的命令**输出**和**错误列表**窗格和一个选项**布局**使用两种布局进行管理。|  
 |**工具**|包含用于创建报表、 将架构转换、 从数据库刷新、 迁移对象和数据，和另存为脚本命令。 此外提供对访问**全局设置、 默认项目设置**和**项目设置**对话框。|  

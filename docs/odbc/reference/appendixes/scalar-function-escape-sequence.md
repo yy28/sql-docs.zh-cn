@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca49a0f372ef192336318fc2af3135adf4c37d1e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6792312d9b82b54460a35dd6f614c206c7bdfe3d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scalar-function-escape-sequence"></a>标量函数转义序列
 ODBC 标量函数使用转义序列。 此转义序列的语法如下所示：  
@@ -34,7 +34,7 @@ ODBC 标量函数使用转义序列。 此转义序列的语法如下所示：
 {fn scalar-function}  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  BNF 表示法中的语法，如下所示是：  
   
  *ODBC 标量函数转义*:: =  

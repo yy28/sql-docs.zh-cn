@@ -1,25 +1,28 @@
 ---
 title: "在 SQL Server 上安装预先训练的机器学习模型 |Microsoft 文档"
 ms.date: 11/16/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ed5616b66ffdad10f0e2794eb5ab0109a0979d2e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5d9f60684cc749c35674233fbdaaa222953396d9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>安装预先训练的机器学习模型上 SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本指南介绍了如何将预先训练的模型添加到的 SQL Server 实例已具有 R Services 或机器学习服务安装。
 
@@ -40,8 +43,8 @@ ms.lasthandoff: 11/17/2017
 每个网络配置的基于以下的引用实现：
 
 + ResNet-18
-+ ResNet 50
-+ ResNet 101
++ ResNet-50
++ ResNet-101
 + AlexNet
 
 有关这些模型的详细信息，请参阅[预先训练的机器学习模型观点分析和映像检测](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)

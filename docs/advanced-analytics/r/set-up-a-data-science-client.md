@@ -2,24 +2,27 @@
 title: "设置 SQL Server 用于数据科学客户端 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 791a27f78442cd1ca191a042238769368c7da228
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>设置 SQL Server 用于数据科学客户端
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 配置的实例后[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]若要支持机器学习，应设置可以连接到远程执行和部署服务器的开发环境。
 

@@ -2,27 +2,33 @@
 title: "启用 FileTable 的先决条件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], prerequisites
+helpviewer_keywords:
+- FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da9c6ce47bf6ea04e47a04246fe5524dc1d3fddb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ce0f4c7dfaf36fffd79bd6dc27e148fa2c6b29e7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>启用 FileTable 的先决条件
-  介绍如何启用创建和使用 FileTable 的先决条件。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+介绍如何启用创建和使用 FileTable 的先决条件。  
   
 ##  <a name="EnablePrereq"></a> 启用 FileTable 的先决条件  
  若要启用创建和使用 FileTable 的先决条件，请启用下列项目：  
@@ -59,7 +65,7 @@ ms.lasthandoff: 11/09/2017
 ###  <a name="HowToCheckAccess"></a> 如何检查是否在数据库上启用了非事务性访问  
  查询目录视图 [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) 并检查 **non_transacted_access** 和 **non_transacted_access_desc** 列。  
   
-```tsql  
+```sql  
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
@@ -71,14 +77,14 @@ GO
  **使用 Transact-SQL 指定非事务性访问的级别**  
  -   **创建新数据库**时，调用带 **NON_TRANSACTED_ACCESS** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
   
 -   **更改现有数据库**时，调用带 **NON_TRANSACTED_ACCESS** FILESTREAM 选项的 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 语句。  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
@@ -97,7 +103,7 @@ GO
  **使用 Transact-SQL 指定 FileTable 的目录**  
  -   **创建新数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -105,7 +111,7 @@ GO
   
 -   **更改现有数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 语句。 使用这些选项更改目录名称时，数据库必须以独占方式锁定，没有打开的文件句柄。  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -113,7 +119,7 @@ GO
   
 -   **附加数据库**时，调用带 **FOR ATTACH** 选项和 **DIRECTORY_NAME** FILESTREAM 选项的 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         FOR ATTACH WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -121,7 +127,7 @@ GO
   
 -   **还原数据库**时，调用带 **DIRECTORY_NAME** FILESTREAM 选项的 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) 语句。  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE database_name  
         WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -133,7 +139,7 @@ GO
 ###  <a name="viewnames"></a> 如何查看实例的现有目录名称  
  若要查看该实例的现有目录名称的列表，可查询目录视图 [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) 并查看 **filestream_database_directory_name** 列。  
   
-```tsql  
+```sql  
 SELECT DB_NAME ( database_id ), directory_name  
     FROM sys.database_filestream_options;  
 GO  

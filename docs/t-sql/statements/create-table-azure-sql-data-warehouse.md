@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>创建表 （Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -104,12 +106,12 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *table_name*  
  新的表的名称。 若要创建本地临时表，表名称前面加上 #。  有关说明和在临时表上的指南，请参阅[Azure SQL 数据仓库中的临时表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)。 
  
- *column_name*  
+ column_name  
  表列的名称。
    
 ### <a name="ColumnOptions"></a>列选项
 
- `COLLATE`*Windows_collation_name*  
+ `COLLATE` *Windows_collation_name*  
  指定表达式的排序规则。 排序规则必须是支持的 Windows 排序规则之一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关支持的 Windows 排序规则的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[Windows 排序规则名称 (Transact SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/)。  
   
  `NULL` | `NOT NULL`  
@@ -133,7 +135,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `HEAP`   
   将表存储为堆。 这是默认值[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
   
- `CLUSTERED INDEX`( *index_column_name* [，...*n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  将表存储为具有一个或多个键列的聚集索引。 这可以按行存储数据。 使用*index_column_name*索引中指定一个或多个键列的名称。  有关详细信息，请参阅常规备注中的行存储表。
  
  `LOCATION = USER_DB`   
@@ -142,7 +144,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="TableDistributionOptions"></a>表分发选项
 若要了解如何选择最佳的分发方法和使用分布式的表，请参阅[分发 Azure SQL 数据仓库中的表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
 
-`DISTRIBUTION = HASH`( *distribution_column_name* )   
+`DISTRIBUTION = HASH` ( *distribution_column_name* )   
 由哈希中存储的值将每一行分配到一个分发*distribution_column_name*。 这意味着始终哈希到相同的分布的相同值的算法是确定性。  自 NULL 将分配到相同的分布的所有行，应将分发列定义为 NOT NULL。
 
 `DISTRIBUTION = ROUND_ROBIN`   
@@ -154,7 +156,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="TablePartitionOptions"></a>表分区选项
 有关使用表分区的指南，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
- `PARTITION`( *partition_column_name* `RANGE` [ `LEFT`  |  `RIGHT` ] `FOR VALUES` ([*小于 boundary_value* [，...*n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 创建一个或多个表分区。 这些是可用于执行操作而不考虑是否将表存储为堆、 聚集的索引或聚集列存储索引的行子集的水平表切片。 与不同的分布列，表分区不用于确定每个行的存储位置的分布。 相反，表分区确定如何行分组，并存储在每个分布。  
  
 | 参数 | 解释 |
@@ -162,7 +164,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 |*partition_column_name*| 指定的列，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将用于分区的行。 此列可以是任何数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]分区列值以升序排序。 从低到高顺序转`LEFT`到`RIGHT`为了`RANGE`规范。 |  
 | `RANGE LEFT` | 指定的边界值属于左侧 （较低的值） 的分区。 默认值为左侧。 |
 | `RANGE RIGHT` | 指定边界值所属的权限 （较高的值） 上的分区。 | 
-| `FOR VALUES`(*小于 boundary_value* [，...*n*] ) | 指定分区的边界值。 *小于 boundary_value*是常量表达式。 它不能为 NULL。 它必须匹配，或者为隐式转换的数据类型为*partition_column_name*。 它不能被截断隐式转换的过程以使的大小和值的小数位数不匹配的数据类型*partition_column_name*<br></br><br></br>如果指定`PARTITION`子句，但未指定边界值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将创建已分区的表具有一个分区。 如果适用，你拆分为两个分区在以后的表。<br></br><br></br>如果指定了一个边界值，生成的表具有两个分区;一个用于低于的边界值和一个用于大于边界值的值的值。 请注意，是否将分区移动到未分区表，则未分区表将接收的数据，但将不具有其元数据中的分区边界。| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | 指定分区的边界值。 *小于 boundary_value*是常量表达式。 它不能为 NULL。 它必须匹配，或者为隐式转换的数据类型为*partition_column_name*。 它不能被截断隐式转换的过程以使的大小和值的小数位数不匹配的数据类型*partition_column_name*<br></br><br></br>如果指定`PARTITION`子句，但未指定边界值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将创建已分区的表具有一个分区。 如果适用，你拆分为两个分区在以后的表。<br></br><br></br>如果指定了一个边界值，生成的表具有两个分区;一个用于低于的边界值和一个用于大于边界值的值的值。 请注意，是否将分区移动到未分区表，则未分区表将接收的数据，但将不具有其元数据中的分区边界。| 
  
  请参阅[创建已分区的表](#PartitionedTable)示例部分中。
 
@@ -172,10 +174,10 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 数据类型转换的表，请参阅隐式转换部分中的[CAST 和 CONVERT (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms187928/)。
 
 `datetimeoffset` [ ( *n* ) ]  
- 默认值为 *n* 为 7。  
+ 默认值为* n *为 7。  
   
  `datetime2` [ ( *n* ) ]  
-与相同`datetime`，只不过你可以指定的小数部分组成的秒数。 默认值为 *n* 是`7`。  
+与相同`datetime`，只不过你可以指定的小数部分组成的秒数。 默认值为* n *是`7`。  
   
 |*n*值|精度|小数位数|  
 |--:|--:|-:|  
@@ -198,19 +200,19 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  存储用于最多 10 个字符的年、 月和天根据公历日期。 存储大小为 3 个字节。 日期存储为整数。  
   
  `time` [ ( *n* ) ]  
- 默认值为 *n* 是`7`。  
+ 默认值为* n *是`7`。  
   
  `float` [ ( *n* ) ]  
- 与浮点数字数据一起使用的近似数字数据类型。 浮点数据是近似，这意味着可以准确表示数据类型范围内的不是所有值。 *n*指定用于存储的尾数的比特数`float`科学记数法。 因此，  *n* 规定的精度和存储大小。 如果 *n* 指定，则它必须是介于`1`和`53`。 默认值 *n* 是`53`。  
+ 与浮点数字数据一起使用的近似数字数据类型。 浮点数据是近似，这意味着可以准确表示数据类型范围内的不是所有值。 *n*指定用于存储的尾数的比特数`float`科学记数法。 因此， * n *规定的精度和存储大小。 如果* n *指定，则它必须是介于`1`和`53`。 默认值* n *是`53`。  
   
 | *n*值 | 精度 | 存储大小 |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 位  | 4 个字节      |  
 | 25-53  | 15 位数 | 8 字节      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将 *n* 作为两个可能值之一。 如果`1` <=   *n*   <=  `24`，  *n* 将被视为`24`。 如果`25`  <=   *n*   <=  `53`，  *n* 将被视为`53`。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将* n *作为两个可能值之一。 如果`1` <=  * n *  <=  `24`， * n *将被视为`24`。 如果`25`  <=  * n *  <=  `53`， * n *将被视为`53`。  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float`数据类型符合 ISO 标准的所有值 *n* 从`1`通过`53`。 双精度同义词是`float(53)`。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float`数据类型符合 ISO 标准的所有值* n *从`1`通过`53`。 双精度同义词是`float(53)`。  
   
  `real` [ ( *n* ) ]  
  实际的定义是与 float 相同。 `real` 的 ISO 同义词为 `float(24)`。  
@@ -252,29 +254,29 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `bit`  
  整数数据类型可以采用的值`1`， `0`，或 NULL。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]优化位列的存储。 如果表中有 8 或更少位列，列存储为 1 个字节。 如果有从 9-16 位列，列存储为 2 个字节，依次类推。  
   
- `nvarchar`[(  *n*   |  `max` )]-`max`仅适用于[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+ `nvarchar`[( * n *  |  `max` )]-`max`仅适用于[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
  可变长度 Unicode 字符数据。 *n*可以是介于 1 和 4000 值。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 以字节为单位的存储大小是两次输入的字符 + 2 个字节的数目。 所输入数据的长度可以为 0 个字符。  
   
  `nchar` [ ( *n* ) ]  
- 固定长度的长度的 Unicode 字符数据 *n* 字符。 *n*必须为从值`1`通过`4000`。 存储大小是两次 *n* 字节。  
+ 固定长度的长度的 Unicode 字符数据* n *字符。 *n*必须为从值`1`通过`4000`。 存储大小是两次* n *字节。  
   
- `varchar`[(  *n*    |  `max` )]-`max`仅适用于[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。   
- 长度可变，非 Unicode 字符数据长度为 *n* 字节。 *n*必须为从值`1`到`8000`。 `max`指示最大存储大小为 2 ^31-1 个字节 (2 GB)。存储大小为输入的数据的实际长度 + 2 个字节。  
+ `varchar`[( * n *   |  `max` )]-`max`仅适用于[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。   
+ 长度可变，非 Unicode 字符数据长度为* n *字节。 *n*必须为从值`1`到`8000`。 `max`指示最大存储大小为 2 ^31-1 个字节 (2 GB)。存储大小为输入的数据的实际长度 + 2 个字节。  
   
  `char` [ ( *n* ) ]  
- 固定长度的长度的非 Unicode 字符数据 *n* 字节。 *n*必须为从值`1`到`8000`。 存储大小是 *n* 字节。 默认值为 *n* 是`1`。  
+ 固定长度的长度的非 Unicode 字符数据* n *字节。 *n*必须为从值`1`到`8000`。 存储大小是* n *字节。 默认值为* n *是`1`。  
   
- `varbinary`[(  *n*    |  `max` )]-`max`仅适用于[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
- 可变长度二进制数据。 *n*可从值`1`到`8000`。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小是输入数据的实际长度加 2 个字节。 默认值为 *n* 为 7。  
+ `varbinary`[( * n *   |  `max` )]-`max`仅适用于[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+ 可变长度二进制数据。 *n*可从值`1`到`8000`。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小是输入数据的实际长度加 2 个字节。 默认值为* n *为 7。  
   
  `binary` [ ( *n* ) ]  
- 固定长度的二进制数据长度为 *n* 字节。 *n*可从值`1`到`8000`。 存储大小是 *n* 字节。 默认值为 *n* 是`7`。  
+ 固定长度的二进制数据长度为* n *字节。 *n*可从值`1`到`8000`。 存储大小是* n *字节。 默认值为* n *是`7`。  
   
  `uniqueidentifier`  
  16 字节 GUID。  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  创建一个表需要在权限`db_ddladmin`固定数据库角色或：
  - `CREATE TABLE`针对数据库的权限
  - `ALTER SCHEMA`将包含表的架构的权限。 
@@ -304,7 +306,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  ### <a name="columnstore-table-columnstore-index"></a>列存储表 （列存储索引）
 列存储表中列的列顺序存储的表。 列存储索引是管理存储在列存储表中数据的技术。  聚集列存储索引不会影响数据的分布方式;它会影响每个分布内存储数据的方式。
 
-要将行存储表更改为列存储表，在表上删除所有现有索引，然后创建聚集列存储索引。 有关示例，请参阅[CREATE COLUMNSTORE INDEX &#40;Transact SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
+要将行存储表更改为列存储表，在表上删除所有现有索引，然后创建聚集列存储索引。 有关示例，请参阅[CREATE COLUMNSTORE INDEX & #40;Transact SQL & #41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
 有关详细信息，请参阅以下文章：
 - [列存储索引版本的功能摘要](https://msdn.microsoft.com/library/dn934994/)
@@ -447,7 +449,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>G。 创建复制的表  
+### <a name="Replicated"></a> G. 创建复制的表  
  下面的示例创建复制的表类似于前面的示例。 复制的表将完全复制到每个计算节点。 与每个计算节点上的此副本，查询减少了数据移动。 此示例将创建具有聚集索引，这将向比堆更好的数据压缩并不能包含足够的行以实现较好的聚集列存储索引压缩。  
   
 ```  
@@ -467,7 +469,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>表分区的示例
 
-###  <a name="PartitionedTable"></a>H。 创建已分区的表  
+###  <a name="PartitionedTable"></a> H. 创建已分区的表  
  下面的示例创建同一个表，示例 A，加上 RANGE LEFT 分区上的中所示`id`列。 它指定四个分区边界值，这将导致在五个分区。  
   
 ```  
@@ -501,7 +503,7 @@ WITH
 -   分区 4: 30 < = col < 40   
 -   分区 5: 40 < = 列  
   
-### <a name="OnePartition"></a>我。 使用一个分区中创建已分区的表  
+### <a name="OnePartition"></a> I. 使用一个分区中创建已分区的表  
  下面的示例使用一个分区创建已分区的表。 而不指定任何边界值，这将导致一个分区。  
   
 ```  
@@ -517,7 +519,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>J 编写。 创建具有日期分区的表  
+### <a name="DatePartition"></a> J. 创建具有日期分区的表  
  下面的示例创建名为的新表`myTable`，分区上`date`列。 通过使用 RANGE RIGHT 和日期为边界值，它将一个月的数据放在每个分区。  
   
 ```  
@@ -559,8 +561,8 @@ WITH
 <a name="SeeAlso"></a>    
 ## <a name="see-also"></a>另请参阅 
  
- [创建 TABLE AS SELECT &#40;Azure SQL 数据仓库 &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;Transact SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [创建 TABLE AS SELECT & #40;Azure SQL 数据仓库 & #41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ [DROP TABLE & #40;Transact SQL & #41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
   
   

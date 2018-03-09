@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30850b8749e062d47c5c89fd28cc140e05610967
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 67facd1aed4adfa55fd16bdba4a97c76b680b9b5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP（内存中 OLTP）性能计数器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="SQLServerPOs"></a> SQL Server XTP 性能对象  
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能对象。  
   
-|性能对象|说明|  
+|性能对象|Description|  
 |------------------------|-----------------|  
 |[SQL Server XTP 游标](../../relational-databases/performance-monitor/sql-server-xtp-cursors.md)|SQL Server XTP 游标性能对象包含与内部内存中 OLTP 引擎游标相关的计数器。 游标是内存中 OLTP 引擎用于处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的低级构建基块。 因此，您通常不能直接控制游标。|  
 |[SQL Server XTP 数据库](../../relational-databases/performance-monitor/sql-server-xtp-databases.md)|SQL Server XTP 数据库性能对象提供内存中 OLTP 数据库特定计数器。|  

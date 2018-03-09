@@ -2,26 +2,29 @@
 title: "查看重播结果 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44e055d7a3da857a1be798ae5b5222a4a8a35713
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]后[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分布式重播功能完成一个分布式的重播，可以捕获每个客户端的重播活动，并将其保存在每个客户端上结果跟踪文件。 为了捕获此活动，使用“重播”选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)。  
   
  存储结果跟踪文件的位置由位于每个客户端上的客户端配置文件 `<ResultDirectory>` 中的 XML 元素 `DReplayClient.xml` 指定。 每次重播时，都将覆盖客户端结果目录中的跟踪文件。  
   
@@ -80,9 +83,9 @@ ms.lasthandoff: 11/09/2017
 |ApplicationName|**nvarchar**|在捕获期间创建了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接的客户端应用程序的名称。|17|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed 的 Replay 要求](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令行选项 &#40; 分布式的重播实用工具 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

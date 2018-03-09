@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - BEGIN_DISTRIBUTED_TRANSACTION_TSQL
 - DISTRIBUTED_TSQL
 - BEGIN DISTRIBUTED TRANSACTION
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - BEGIN DISTRIBUTED TRANSACTION statement
 - distributed transactions [SQL Server], starting
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - remote servers [SQL Server], distributed transactions
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e0b4cf5509bf68801938a93aac339108539a0ea1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ba68a3a1a4cde26a94acd47000f46d1a0ceb40ef
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +83,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  有关分布式事务环境和处理的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器文档。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  

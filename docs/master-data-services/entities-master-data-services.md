@@ -5,26 +5,27 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f76478f355ea25c72572ebd52535360697b301cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ee34c6829e0faed75a375727850c7caf9034b7d4
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="entities-master-data-services"></a>实体 (Master Data Services)
   实体是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 模型中包含的对象。 每个实体都包含成员，它们是您管理的主数据的行。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
  使用要管理的主数据的列表填充该实体。  
   
- 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅[派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)。  
+ 实体可用于生成派生层次结构，它们是基于多个实体的基于级别的层次结构。 有关详细信息，请参阅 [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)。  
   
  还允许实体包含显示层次结构（基于单个实体的不规则结构）和集合（成员子集的一次性组合）。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md) 和[集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)。  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  这是基于 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 的一个示例。 树状层次结构显示实体和基于域的属性之间的关系。 它旨在显示关系而不是表示重要性级别。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  

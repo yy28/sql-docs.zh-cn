@@ -2,28 +2,31 @@
 title: "使用输入和输出 (SQL 快速入门中的 R) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: cb651d6541bbba7be03b74265ffae5dccdbdf9c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 593e102e75624ae2b36a56e528284bdcf47027e1
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>使用输入和输出 (SQL 快速入门中的 R)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 如果你想要在 SQL Server 中运行 R 代码，则必须在系统存储过程中，在包装 R 脚本[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 此存储过程用于在 SQL Server 的上下文中启动 R 运行时，然后，R 运行时将数据传递给 R、安全管理 R 用户会话，并向客户端返回任何结果。
 
@@ -134,7 +137,7 @@ EXECUTE sp_execute_external_script
 **结果**
 
 *Col1*
-*你好*
+*hello*
 <code>   </code>
 *world*
 

@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], permissions
 - denying permissions [SQL Server], fulll-text
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - full-text stoplist [SQL Server], permissions
 - DENY statement, full-text permissions
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b805c79267125e3e888bccd618313678a96cf47
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 70af6c1c5b5f23e857a989d37fb4cf99701dc1fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY 全文权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,13 +55,13 @@ DENY permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ *permission*  
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- 对全文目录**::***完整 text_catalog_name*  
+ 对全文目录 **:: * * * 完整 text_catalog_name*  
  指定要对其拒绝权限的全文目录。 作用域限定符**::**是必需的。  
   
- 全文非索引字表上**::***完整 text_stoplist_name*  
+ 在全文非索引字表 **:: * * * 完整 text_stoplist_name*  
  指定要对其拒绝权限的全文非索引字表。 作用域限定符**::**是必需的。  
   
  *database_principal*  
@@ -126,7 +128,7 @@ DENY permission [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对全文目录的 CONTROL 权限。 如果使用 AS 选项，则指定的主体必须拥有全文目录。  
   
 ## <a name="see-also"></a>另请参阅  
@@ -137,13 +139,13 @@ DENY permission [ ,...n ] ON
  [创建全文非索引字表 &#40;Transact SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.fn_my_permissions &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT Full-text 权限 &#40;Transact SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fulltext_catalogs &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sys.fulltext_stoplists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
   
   

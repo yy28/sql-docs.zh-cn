@@ -2,16 +2,13 @@
 title: "设置多维数据库属性 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: properties [Analysis Services], databases
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9a8a742480e5855224879552bf5966936b4979ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6585737ac1f796b7e9e6e8834d6ca5b5c1c11612
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>设置多维数据库属性 (Analysis Services)
-  可在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据库设计器中配置许多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]有大量的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库可以在配置的属性[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]数据库设计器。  
   
  在此设计器中，您可以执行下列任务类型：  
   
@@ -43,13 +40,13 @@ ms.lasthandoff: 11/17/2017
 ## <a name="database-properties"></a>数据库属性  
  除了上述属性之外，您还可以在“属性”窗口中配置许多数据库属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |聚合前缀|用于数据库中所有分区的聚合名的常用前缀。 有关详细信息，请参阅 [AggregationPrefix 元素 (ASSL)](../../analysis-services/scripting/properties/aggregationprefix-element-assl.md)。|  
 |排序规则|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例时，除非在此处提供其他值，否则数据库将继承“排序规则”服务器属性。|  
 |DataSourceImpersonationInfo|为数据库中的所有数据源对象指定默认模拟模式。 这是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务在处理对象、同步服务器以及执行 OpenQuery 和 SystemOpenSchema 数据挖掘语句时使用的模式。|  
 |估计大小|提供磁盘上数据库文件的估计大小。 如果数据存储在多个位置，此估计值将仅限于数据库文件夹下存储的数据文件。<br /><br /> **EstimatedSize** 也可用作估算内存的基础。 由于将数据库加载到内存时创建的附加数据结构，内存需求通常大于磁盘上的数据大小。<br /><br /> 要进一步估计内存需求，您也可以使用任务管理器查看在处理数据库之前和之后的 Analysis Services 进程内存并查看内存使用率，通过内存使用率来了解数据库的内存需求。|  
-|语言|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例时，除非在此处提供其他值，否则数据库将继承“语言”服务器属性。|  
+|“报表”|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例时，除非在此处提供其他值，否则数据库将继承“语言”服务器属性。|  
 |MasterDataSource ID|用于远程分区。 有关详细信息，请参阅 [Remote Partitions](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。|  
   
 ## <a name="see-also"></a>另请参阅  

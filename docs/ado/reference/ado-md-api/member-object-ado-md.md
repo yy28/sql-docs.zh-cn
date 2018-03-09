@@ -3,8 +3,9 @@ title: "成员对象 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Member
-helpviewer_keywords: Member object [ADO MD], members
+f1_keywords:
+- Member
+helpviewer_keywords:
+- Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d8e27f47e871b54aa8e7456956fc18100a5f59e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7b34e45ff23a1a71c1a45b1190d923e94328154
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="member-object-ado-md"></a>成员对象 (ADO MD)
 表示多维数据集中，某一级别的成员级别的成员或沿 x 轴的单元集的位置的成员的子级。  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
  **属性**集合包含提供程序提供的属性。 下表列出可能可用的属性。 实际的属性列表可能不同根据提供程序的实现。 请参阅你的提供程序的更完整列表的可用属性的文档。  
   
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |CatalogName|为此多维数据集所属的目录的名称。|  
 |ChildrenCardinality|成员具有的子级的个数。|  
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |MemberName|成员的名称。|  
 |MemberOrdinal|该成员的序号。|  
 |MemberType|成员的类型。|  
-|成员的唯一名称|成员的明确名称。|  
+|MemberUniqueName|成员的明确名称。|  
 |ParentCount|此成员的父级数的计数。|  
 |ParentLevel|成员的父代的级别数。|  
 |ParentUniqueName|成员的父级明确名称。|  

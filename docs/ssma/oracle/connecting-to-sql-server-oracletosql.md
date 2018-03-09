@@ -1,10 +1,13 @@
 ---
 title: "连接到 SQL Server (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6c821cf3686246e8248b622f8a5a6eb992747a50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1b550ddd57803772be53832ba8feb840021c5732
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>连接到 SQL Server (OracleToSQL)
 若要迁移到的 Oracle 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 R2 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014 必须连接到其中的任何目标实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 连接时，获取有关的实例中的所有数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]并显示在数据库元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。 SSMA 存储的哪个实例有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]已连接，但不会存储密码。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="establishing-a-sql-server-connection"></a>建立 SQL Server 连接  
 在转换到的 Oracle 数据库对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]语法，必须建立连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]想要迁移的 Oracle 数据库。  
   
-在定义的连接属性时，你还指定对象和数据将迁移的数据库。 连接到后，你可以自定义此映射在 Oracle 架构级别[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 有关详细信息，请参阅[将 Oracle 架构映射到 SQL Server 架构 & #40; OracleToSQL & #41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
+在定义的连接属性时，你还指定对象和数据将迁移的数据库。 连接到后，你可以自定义此映射在 Oracle 架构级别[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 有关详细信息，请参阅[将 Oracle 架构映射到 SQL Server 架构 &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
   
 > [!IMPORTANT]  
 > 尝试连接到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请确保实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]正在运行并且可以接受连接。  
@@ -94,7 +97,7 @@ ms.lasthandoff: 11/09/2017
 |Azure SQL 数据库||||||是|
   
 > [!IMPORTANT]  
-> 根据项目类型，但不是根据版本的数据库对象的转换执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]你连接到。 情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005年项目转换执行按照[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 即使你已连接到更高版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016年)。  
+> 根据项目类型，但不是根据版本的数据库对象的转换执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 你连接到。 情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005年项目转换执行按照[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 即使你已连接到更高版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016年)。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>SQL Server 元数据同步  
 有关的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库不会自动更新。 中的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器是元数据的快照，首次连接到时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，或上一次你手动更新的元数据。 你可以手动更新所有数据库，或任何单个数据库或数据库对象的元数据。  
@@ -112,14 +115,14 @@ ms.lasthandoff: 11/09/2017
 ## <a name="next-step"></a>下一步  
 迁移的下一步取决于您的项目需求：  
   
--   若要自定义 Oracle 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库和架构，请参阅[映射到 SQL Server 架构 & #40; OracleToSQL & #41; 的 Oracle 架构](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
+-   若要自定义 Oracle 架构之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库和架构，请参阅[映射到 SQL Server 架构 &#40; OracleToSQL &#41; 的 Oracle 架构](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
   
--   若要自定义项目的配置选项，请参阅[设置项目选项 & #40; OracleToSQL & #41;](../../ssma/oracle/setting-project-options-oracletosql.md)。  
+-   若要自定义项目的配置选项，请参阅[设置项目选项 &#40; OracleToSQL &#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。  
   
--   若要自定义的源和目标数据类型映射，请参阅[映射 Oracle 和 SQL Server 数据类型 & #40; OracleToSQL & #41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
+-   若要自定义的源和目标数据类型映射，请参阅[映射 Oracle 和 SQL Server 数据类型 &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
   
--   如果不需要执行任何这些任务，你可以将转换到的 Oracle 数据库对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象定义。 有关详细信息，请参阅[转换 Oracle 架构 & #40; OracleToSQL & #41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)。  
+-   如果不需要执行任何这些任务，你可以将转换到的 Oracle 数据库对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象定义。 有关详细信息，请参阅[转换 Oracle 架构 &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[将 Oracle 数据库迁移到 SQL Server & #40; OracleToSQL & #41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[将 Oracle 数据库迁移到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -2,32 +2,30 @@
 title: "在查询中的嵌套 select 语句 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="subselects-in-queries"></a>查询中的嵌套 select 语句
-  嵌套 select 语句表达式是嵌套的 SELECT 表达式，用于限制从其计算更外部的外部 SELECT 的多维数据集的空间。 嵌套 select 语句可用于定义要对其执行所有计算的新空间。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+嵌套 select 语句表达式是嵌套的 SELECT 表达式，用于限制从其计算更外部的外部 SELECT 的多维数据集的空间。 嵌套 select 语句可用于定义要对其执行所有计算的新空间。  
   
 ## <a name="subselects-by-example"></a>嵌套 select 语句示例  
  让我们从一个示例开始，了解嵌套 select 语句如何帮助生成我们想要显示的结果。 假定要求您生成一个表，该表显示前 10 种产品在几年中的销售行为。  
@@ -358,6 +356,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   轴子句中不允许 HAVING 子句；请改用 [Filter (MDX)](../../../mdx/filter-mdx.md) 函数表达式。  
   
--   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，是每个会话为基础，在通过将分配到的值**子查询**中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROP_MSMD_SUBQUERIES**中属性[支持的 XMLA 属性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 有关计算成员行为（基于 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 或 **DBPROP_MSMD_SUBQUERIES** 的值）的详细解释，请参阅 **嵌套 select 和子多维数据集中的计算成员**。  
+-   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，是每个会话为基础，在通过将分配到的值**子查询**中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROP_MSMD_SUBQUERIES**中属性[支持的 XMLA 属性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 有关计算成员行为（基于 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 或 **DBPROP_MSMD_SUBQUERIES** 的值）的详细解释，请参阅 **嵌套 select 和子多维数据集中的计算成员**。  
   
   

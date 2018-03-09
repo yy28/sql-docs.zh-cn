@@ -2,27 +2,30 @@
 title: "添加缩进 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 9dce05c1-c52f-455d-8b8d-6f303e242760
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c5e404ace201b429d97ae6427b16e0dcb2b47c21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d67659da2d03dc7c4927b77551241fe9ad880202
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-2---adding-indentation"></a>课程 2-2 - 添加缩进
-查询编辑器允许您通过一个步骤缩进大段代码，并允许您更改缩进量。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查询编辑器允许用户通过一个步骤缩进大段代码，并允许更改缩进量。  
   
 ## <a name="indenting-code"></a>缩进代码  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
     ![“制表符”对话框外观](./media/lesson-2-2-adding-indentation/tabsdialog.gif "“制表符”对话框外观")  
   
-3.  单击 **“确定”**。  
+3.  单击“确定” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [最大化查询编辑器](../../tools/sql-server-management-studio/lesson-2-3-maximizing-query-editor.md)  

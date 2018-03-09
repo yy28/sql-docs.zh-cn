@@ -2,16 +2,13 @@
 title: "父子维度中的一元运算符 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], unary operators
 - unary operators
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ceea7fc4a5d84d571a45c00f2e6291405544f3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>父-子维度属性的一元运算符
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中包含父子关系的维度中，可以为父属性的所有非计算成员指定将确定其自定义汇总的一元（或自定义汇总）运算符列。 计算出父成员的值后，一元运算符就将应用于成员。 父属性中的 **UnaryOperatorColumn** (**Usage**=Parent) 指定了数据源视图中包含一元运算符的表列。 存储在此列中的自定义汇总运算符的值将应用于属性的每个成员。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中包含父子关系的维度中，可以为父属性的所有非计算成员指定将确定其自定义汇总的一元（或自定义汇总）运算符列。 计算出父成员的值后，一元运算符就将应用于成员。 父属性中的 **UnaryOperatorColumn** (**Usage**=Parent) 指定了数据源视图中包含一元运算符的表列。 存储在此列中的自定义汇总运算符的值将应用于属性的每个成员。  
   
  可以在数据源视图的维度表中创建和指定作为一元运算符列的命名计算。 最简单的表达式（如“+”）对所有成员都将返回相同的运算符。 但是，可以使用任何表达式，只要它为每个成员都返回运算符。  
   

@@ -3,8 +3,11 @@ title: "删除作业步骤日志 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 399ded1a034d3664def419322c91d3b84e8d62e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 78cb45e57a023020838c78737d1d167c7a9fc804
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
-本主题介绍如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤日志。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤日志。  
   
 -   **开始之前：**  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- removes the job step log for step 2 in the job Weekly Sales Data Backup  

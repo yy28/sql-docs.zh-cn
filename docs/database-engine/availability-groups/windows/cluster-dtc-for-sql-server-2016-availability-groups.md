@@ -2,9 +2,12 @@
 title: "SQL Server 2016 可用性组的群集 DTC | Microsoft Docs"
 ms.custom: 
 ms.date: 08/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 caps.latest.revision: "3"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9291f9ce4659e022652078a9f1fadb3502c0e6e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad11a6e0f6e9bf9a2830fed6068423b79d0726ae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>SQL Server 2016 可用性组的群集 DTC
-本主题介绍为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 群集化 Microsoft 分布式事务处理协调器 (DTC) 服务的要求和步骤。 有关分布式事务和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的其他信息，请参阅 [AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 群集化 Microsoft 分布式事务处理协调器 (DTC) 服务的要求和步骤。 有关分布式事务和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的其他信息，请参阅 [AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
 
  ## <a name="checklist-preliminary-requirements"></a>清单：初步要求
 ||任务|参考|  

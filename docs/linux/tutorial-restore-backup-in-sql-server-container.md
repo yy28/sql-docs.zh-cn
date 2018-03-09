@@ -3,26 +3,26 @@ title: "在 Docker 中的 SQL Server 数据库还原 |Microsoft 文档"
 description: "本教程将说明如何还原新的 Linux Docker 容器中的 SQL Server 数据库备份。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a1b63756bbf257709b1888caf2af7bad2ddf5e74
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>还原 Linux Docker 容器中的 SQL Server 数据库
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本教程演示如何移动并将 SQL Server 备份文件还原到在 Docker 上运行的 SQL Server 自 2017 年 Linux 容器映像。
 
@@ -33,15 +33,12 @@ ms.lasthandoff: 11/20/2017
 > * 运行 TRANSACT-SQL 语句，以查看和修改数据库。
 > * 备份已修改的数据库。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 * 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅[安装 Docker](https://docs.docker.com/engine/installation/)。
-* 至少 4 GB 的磁盘空间
-* 至少 4 GB 的 RAM
+* 至少 2 GB 的磁盘空间
+* 至少 2 GB 的 RAM
 * [在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
-
-> [!IMPORTANT]
-> Docker for Mac 和 Docker for Windows 的 Moby VM 默认大小为 2 GB，因此必须将其更改为 4 GB。 如果你在 Mac 或 Windows 上运行，增加你使用的内存设置[Docker 快速入门中的说明](quickstart-install-connect-docker.md)。
 
 ## <a name="pull-and-run-the-container-image"></a>请求和运行容器映像
 

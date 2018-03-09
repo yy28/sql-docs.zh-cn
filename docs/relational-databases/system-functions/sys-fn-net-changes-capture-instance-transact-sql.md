@@ -8,32 +8,35 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_net_changes_TSQL
 - fn_net_changes_TSQL
 - fn_net_changes
 - sys.fn_net_changes
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be3cd4da4aa890624dc33f36af135bd96dbc3057
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d95fad7337666594aa41552a20e6ab5d4f211995
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
+# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包装**净更改**查询函数。 创建这些函数所必需的脚本由 sys.sp_cdc_generate_wrapper_function 存储过程生成。  
@@ -101,7 +104,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |列名|列类型|Description|  
 |-----------------|-----------------|-----------------|  
-|\<中的列@column_list>|**各不相同**|在中标识的列**column_list** sp_cdc_generate_wrapper_function 时被调用以生成用于创建包装的脚本的自变量。 如果*column_list*为 NULL，所有的跟踪的源列将显示在结果集。|  
+|\<中的列@column_list>|**varies**|在中标识的列**column_list** sp_cdc_generate_wrapper_function 时被调用以生成用于创建包装的脚本的自变量。 如果*column_list*为 NULL，所有的跟踪的源列将显示在结果集。|  
 |__CDC_OPERATION|**nvarchar(2)**|一个操作代码，它指示将行应用于目标环境所需的操作。 自变量的值将因该操作*row_filter_option*提供的、 在下面的调用：<br /><br /> *row_filter_option* = 'all'，'all with mask<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作<br /><br /> *row_filter_option* = 全部且具有合并<br /><br /> 'D' - 删除操作<br /><br /> 'M' - 插入操作或更新操作|  
 |\<中的列@update_flag_list>|**bit**|通过将 _uflag 追加到列名称末尾所命名的位标记。 标志会对非 null 值时，才*row_filter_option* **= all with mask**和\__CDC_OPERATION **= 取消**。 如果在查询窗口中修改相应的列，则会将其设置为 1； 否则为 0。|  
   
@@ -125,7 +128,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  变更数据捕获配置模板“实例化架构的 CDC 包装 TVF”显示如何使用 sp_cdc_generate_wrapper_function 存储过程以获取某个架构的已定义查询函数的所有包装函数的 CREATE 脚本。 然后，此模板创建这些脚本。 有关模板的详细信息，请参阅[模板资源管理器](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.sp_cdc_generate_wrapper_function &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60; capture_instance &#62;&#40;Transact SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+ [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

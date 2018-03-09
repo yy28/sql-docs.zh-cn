@@ -2,15 +2,13 @@
 title: "Microsoft 序列聚类分析算法 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是一种结合了顺序分析和聚类分析的唯一算法。 你可以使用该算法来研究包含可在“顺序”中链接的事件的数据。 该算法可查找最常见的顺序，并且通过执行聚类分析来查找相似的顺序。 下面的示例说明了可以将其作为机器学习的数据捕获的顺序类型，从而提供有关常见问题或业务方案的建议：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是一种结合了顺序分析和聚类分析的唯一算法。 你可以使用该算法来研究包含可在“顺序”中链接的事件的数据。 该算法可查找最常见的顺序，并且通过执行聚类分析来查找相似的顺序。 下面的示例说明了可以将其作为机器学习的数据捕获的顺序类型，从而提供有关常见问题或业务方案的建议：  
   
 -   用户在导航或浏览网站时生成的点击流或单击路径  
   
@@ -85,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 -   支持使用 OLAP 挖掘模型和创建数据挖掘维度。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 顺序分析算法技术参考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [序列聚类分析模型查询示例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
  [使用 Microsoft 序列分类查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  

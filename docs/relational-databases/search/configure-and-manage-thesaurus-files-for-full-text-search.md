@@ -1,11 +1,15 @@
 ---
 title: "为全文搜索配置和管理同义词库文件 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 12/04/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: "84"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 669070a97978afa1c461cb8cfbc6e14143232432
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 849c650522d90348fd7bec2d115dd3af04b1c18b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索查询可以通过使用全文搜索*同义词库*来搜索用户指定的字词的同义词。 每个同义词库为特定语言定义一组同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索查询可以使用全文搜索同义词库来搜索用户指定字词的同义词。 每个同义词库为特定语言定义一组同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。
 
 仅对所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查询以及指定 `FORMSOF THESAURUS` 子句的任意 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询执行同义词库匹配操作。
   
@@ -172,10 +177,10 @@ ms.lasthandoff: 11/09/2017
   
 同义词库的标注字符设置是在单个 `<diacritics_sensitive>` 元素中指定的。 此元素包含一个控制重音区分设置的整数值，如下所示：  
   
-|标注字符设置|值|XML|  
+|标注字符设置|ReplTest1|XML|  
 |------------------------|-----------|---------|  
 |不区分重音|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-|区分重音|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+|区分重音|@shouldalert|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
 > [!NOTE]  
 >  只能在文件中应用一次此设置，它适用于文件中的所有搜索模式。 不能为各个模式单独指定此设置。  
@@ -200,7 +205,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  使用 [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) 将同义词库文件内容加载到 tempdb 中，并指定对应于同义词库文件语言的本地标识符 (LCID)。 例如，对于英语同义词库文件 tsenu.xml，对应的 LCID 为 1033。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
     GO

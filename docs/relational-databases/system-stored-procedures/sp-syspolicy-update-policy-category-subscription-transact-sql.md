@@ -1,5 +1,5 @@
 ---
-title: "sp_syspolicy_update_policy_category_subscription (Transact SQL) |Microsoft 文档"
+title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_subscription_TSQL
 - sp_syspolicy_update_policy_category_subscription
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_update_policy_category_subscription
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_update_policy_category_subscription
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0131962e5f69fcb2090b95151c360cc2cb0fce7d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 58b441f56ca079e5665a60c0c1904e5070c1c033
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +49,18 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+ [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  您要更新的策略类别订阅的标识符。 *policy_category_subscription_id*是**int**，和是必需的。  
   
- [  **@target_type=** ] target_type  
+ [ **@target_type=** ] **'**target_type**'**  
  类别订阅的目标类型。 *target_type*是**sysname**，默认值为 NULL。  
   
  如果指定*target_type*，值必须设置为 'DATABASE'。  
   
- [  **@target_object=** ] target_object  
+ [ **@target_object=** ] **'**target_object**'**  
  是将订阅策略类别的名称。 *target_object*是**sysname**，默认值为 NULL。  
   
- [  **@policy_category=** ] policy_category  
+ [ **@policy_category=** ] **'**policy_category**'**  
  您希望数据库订阅的策略类别的名称。 *policy_category*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -76,7 +79,7 @@ INNER JOIN msdb.dbo.syspolicy_policy_categories AS b
 ON a.policy_category_id = b.policy_category_id;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
@@ -95,7 +98,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [基于策略的管理存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_delete_policy_category_subscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
+ [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   
   

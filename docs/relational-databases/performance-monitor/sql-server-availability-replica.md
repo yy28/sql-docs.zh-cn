@@ -2,9 +2,12 @@
 title: "SQL Server，可用性副本 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f02d1bce1c2c66520e382334cedd00e292c524e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f57bdb7b9ffdcd908d593a2c0ac0ad464bf03b3e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server，可用性副本
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，**SQLServer:Availability Replica** 性能对象包含的性能计数器报告有关 AlwaysOn 可用性组中可用性副本的信息。 所有可用性副本性能计数器都适用于主副本和辅助副本，并且具有反映本地副本的发送/接收计数器。 大多数情况下，主副本发送大部分数据，而辅助副本将接收这些数据。 但是，辅助副本会将 ACK 和其他一些后台流量发送到主副本。 请注意，在某个给定可用性副本上，某些计数器将显示零值，具体取决于该本地副本的当前角色，即是主副本还是辅助副本。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，SQLServer:Availability Replica 性能对象包含的性能计数器报告有关 AlwaysOn 可用性组中可用性副本的信息。 所有可用性副本性能计数器都适用于主副本和辅助副本，并且具有反映本地副本的发送/接收计数器。 大多数情况下，主副本发送大部分数据，而辅助副本将接收这些数据。 但是，辅助副本会将 ACK 和其他一些后台流量发送到主副本。 请注意，在某个给定可用性副本上，某些计数器将显示零值，具体取决于该本地副本的当前角色，即是主副本还是辅助副本。  
   
-|计数器名称|说明|  
+|计数器名称|Description|  
 |------------------|-----------------|  
 |**Bytes Received from Replica/sec**|每秒从可用性副本接收的字节数。 Ping 和状态更新将生成网络流量，甚至在没有用户更新的数据库上也是如此。|  
 |**Bytes Sent to Replica/sec**|每秒发送到远程可用性副本的字节数。 在主副本上，这是发送到辅助副本的字节数。 在辅助副本上，这是发送到主副本的字节数。|  

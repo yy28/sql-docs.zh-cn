@@ -3,8 +3,9 @@ title: "OriginalValue 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Field20::OriginalValue
-helpviewer_keywords: OriginalValue property [ADO]
+f1_keywords:
+- Field20::OriginalValue
+helpviewer_keywords:
+- OriginalValue property [ADO]
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baa1b522660f2ed7d521a55ad995ed8347c0a2fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cc3597b6f3b476a889f836ae899f558b38eff20
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 属性 (ADO)
 指示的值[字段](../../../ado/reference/ado-api/field-object.md)进行任何更改之前存在的记录。  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  在*批处理更新模式下*(在其中提供程序缓存多个更改，并将其写入到基础数据源仅在调用[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法)，则**OriginalValue**属性返回的任何更改之前存在的字段值 (即，自上次操作后**UpdateBatch**方法调用)。 这是相同的值，[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法使用取代**值**属性。 当你使用此属性与[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)属性，您可以解决冲突所带来的批处理更新。  
   
-## <a name="record"></a>录制  
+## <a name="record"></a>記錄  
  有关[记录](../../../ado/reference/ado-api/record-object-ado.md)对象， **OriginalValue**属性将为空的字段之前添加[更新](../../../ado/reference/ado-api/update-method.md)调用。  
   
 ## <a name="applies-to"></a>适用范围  

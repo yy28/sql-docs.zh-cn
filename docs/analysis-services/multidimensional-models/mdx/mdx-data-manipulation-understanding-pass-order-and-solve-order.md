@@ -2,16 +2,13 @@
 title: "理解传递次序和求解次序 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +20,20 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 数据操作-了解传递顺序和求解次序
-  当某个多维数据集是 MDX 脚本的计算结果时，该多维数据集可能会经历许多计算阶段，具体取决于与计算有关的各种功能的使用情况。 每个阶段称为一个计算传递。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+当某个多维数据集是 MDX 脚本的计算结果时，该多维数据集可能会经历许多计算阶段，具体取决于与计算有关的各种功能的使用情况。 每个阶段称为一个计算传递。  
   
  计算传递可以按序号位置（称为“计算传递号”）进行引用。 完全计算一个多维数据集中的所有单元所需的计算传递数称为多维数据集的计算传递深度。  
   
@@ -222,9 +220,9 @@ FROM [Adventure Works]
  求解次序可能会成为需要处理的非常复杂的问题，尤其是在具有很多维度而维度涉及计算成员、自定义汇总公式或计算单元的多维数据集中，更是如此。 当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算 MDX 查询时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将考虑给定传递中涉及的所有内容的求解次序值，包括 MDX 查询中指定的多维数据集的维度。  
   
 ## <a name="see-also"></a>另请参阅  
- [CalculationCurrentPass (MDX)](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass &#40;MDX &#41;](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue &#40;MDX &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [CREATE MEMBER 语句 (MDX)](../../../mdx/mdx-data-definition-create-member.md)   
- [操作数据 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [创建成员语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [操作数据 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

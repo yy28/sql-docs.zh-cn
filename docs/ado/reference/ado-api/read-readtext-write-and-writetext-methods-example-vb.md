@@ -3,31 +3,33 @@ title: "读取、 ReadText、 写入和 WriteText 方法示例 (VB) |Microsoft �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - ReadText method [ADO], Visual Basic example
 - Write method [ADO], Visual Basic example
 - Read method [ADO], Visual Basic example
 - WriteText method [ADO], Visual Basic example
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 148d884f1effd676b4fabd80abe9f741ecc396f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c51ca097f3c1a9c71dbd75d00f7411b6dd61d03b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>读取、 ReadText、 写入和 WriteText 方法示例 (VB)
 此示例演示如何在文本框中的内容读入这两个文本[流](../../../ado/reference/ado-api/stream-object-ado.md)和二进制**流**。 其他属性和方法显示包括[位置](../../../ado/reference/ado-api/position-property-ado.md)，[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)， [Charset](../../../ado/reference/ado-api/charset-property-ado.md)，和[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  

@@ -1,10 +1,11 @@
 ---
-title: "DataTypeEnum |Microsoft 文档"
+title: DataTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: DataTypeEnum
-helpviewer_keywords: DataTypeEnum enumeration [ADO]
+f1_keywords:
+- DataTypeEnum
+helpviewer_keywords:
+- DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a50a4efc0c84e3d18fad287ba31a0ebaf0705dd0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f99476b2ccbf9e405d29eca6adbf49ce22fc3f85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 指定的数据类型[字段](../../../ado/reference/ado-api/field-object.md)，[参数](../../../ado/reference/ado-api/parameter-object.md)，或[属性](../../../ado/reference/ado-api/property-object-ado.md)。 对应的 OLE DB 类型指示符显示在下表描述列中的括号中。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|标志值，与另一个数据类型的常量，指示其他数据类型的数组始终结合使用。 不适用于 ADOX。|  
 |**adBigInt**|20|指示的 8 字节有符号的整数 (是 DBTYPE_I8)。|  
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 |**adBoolean**|11|指示**布尔**值 (DBTYPE_BOOL)。|  
 |**adBSTR**|8|指示以 null 结尾的字符串 (Unicode) (DBTYPE_BSTR)。|  
 |**adChapter**|136|指示用于标识子行集 (DBTYPE_HCHAPTER) 中的行的 4 字节章值。|  
-|**每**|129|指示一个字符串值 (DBTYPE_STR)。|  
+|**adChar**|129|指示一个字符串值 (DBTYPE_STR)。|  
 |**adCurrency**|6|表示货币值 (DBTYPE_CY)。 货币是小数点的带有四个数字右侧的定点数字。 它存储在按 10,000 缩放的 8 字节有符号整数。|  
 |**adDate**|7|指示日期值 (DBTYPE_DATE)。 日期存储为双精度型，其中的整个部分是自 1899 年 12 月 30 日以来的天数的小数部分是一天的部分。|  
 |**adDBDate**|133|指示日期值 (yyyymmdd) (DBTYPE_DBDATE)。|  
@@ -65,15 +68,15 @@ ms.lasthandoff: 11/17/2017
 |**adUnsignedSmallInt**|18|指示两个字节无符号的整数 (DBTYPE_UI2)。|  
 |**adUnsignedTinyInt**|17|指示一个单字节无符号的整数 (DBTYPE_UI1)。|  
 |**adUserDefined**|132|指示用户定义变量 （以外，dbtype_udt 还）。|  
-|**兴趣的绑定信息**|204|指示一个二进制值。|  
-|**以便您可以排除**|200|指示一个字符串值。|  
+|**adVarBinary**|204|指示一个二进制值。|  
+|**adVarChar**|200|指示一个字符串值。|  
 |**adVariant**|12|指示自动化**Variant** (DBTYPE_VARIANT)。<br /><br /> **请注意**ADO 当前不支持此数据类型。 使用情况可能会导致不可预知的结果。|  
 |**adVarNumeric**|139|指示数字值。|  
 |**adVarWChar**|202|指示以 null 结尾的 Unicode 字符字符串。|  
 |**adWChar**|130|指示以 null 结尾 Unicode 字符的字符串 (DBTYPE_WSTR)。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

@@ -1,33 +1,32 @@
 ---
 title: "ADOMD.NET Server 编程 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd825c22b7b6b4436d57c0baaeaf6abdb416cd91
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c1049b869257c08f1c699e908c33302fed9771e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 服务器编程
   ADOMD.NET ADOMD.NET 服务器组件驻留在**Microsoft.AnalysisServices.AdomdServer** （中 msmgdsrv.dll) 命名空间。 这些服务器组件用于创建自定义多维表达式 (MDX) 函数和实例运行的存储的过程[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 服务器对象可提供查询多维数据集和挖掘模型以及在给定上下文计算表达式的功能。 创建自定义函数和存储过程的优点包括执行速度快、部署集中且可维护性得以改进。  

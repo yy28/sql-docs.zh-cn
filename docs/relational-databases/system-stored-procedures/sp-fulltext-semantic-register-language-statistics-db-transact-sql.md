@@ -1,5 +1,5 @@
 ---
-title: "sp_fulltext_semantic_register_language_statistics_db (TRANSACT-SQL) |Microsoft 文档"
+title: sp_fulltext_semantic_register_language_statistics_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 - sp_fulltext_semantic_register_language_statistics_db_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_semantic_register_language_statistics_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d1a0820d6cafd6930eb4446267840b52aa24fd3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6702d9bb9773d5c4e41d84c6e57a923e9cf5ffdf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +42,14 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db  
     [ @dbname = ] ‘database_name’;  
 GO  
 ```  
   
 ##  <a name="Arguments"></a> 参数  
- [ @dbname =] '*database_name*  
+ [ @dbname = ] ‘*database_name*’  
  要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例注册的语义语言统计数据库的名称。 必须已经附加数据库。 *database_name*是**sysname**，且不能为 NULL。  
   
 ## <a name="return-code-value"></a>返回代码值  
@@ -79,15 +82,15 @@ GO
 ## <a name="metadata"></a>元数据  
  有关安装的实例上的语义语言统计数据库信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查询目录视图[sys.fulltext_semantic_language_statistics_database &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何通过调用注册语义语言统计数据库**sp_fulltext_semantic_register_language_statistics_db**。  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = 'semanticsDb';  
 GO  
 ```  

@@ -17,13 +17,13 @@ ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8208e4e2a7e1e93183c2d7123f523b74515aefa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc3af26fd507ef52e13ca29fa72b4dc6640c0dbd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>断开一些可用性副本的连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/20/2017
 |**策略名称**|可用性副本连接状态|  
 |**问题**|断开一些可用性副本的连接。|  
 |**类别**|**警告**|  
-|**方面**|可用性组|  
+|**方面**|可用性组 (availability group)|  
   
-## <a name="description"></a>说明  
+## <a name="description"></a>Description  
  此策略将汇总所有可用性副本的连接状态，并且检查是否存在处于 DISCONENCTED 状态的任何可用性副本。 当任何可用性副本处于 DISCONNECTED 状态时，此策略处于不正常状态。 否则，该策略处于正常状态。  
   
 > [!NOTE]  

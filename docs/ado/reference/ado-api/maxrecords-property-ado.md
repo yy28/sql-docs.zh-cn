@@ -3,8 +3,9 @@ title: "最大记录属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::MaxRecords
-helpviewer_keywords: MaxRecords property [ADO]
+f1_keywords:
+- Recordset15::MaxRecords
+helpviewer_keywords:
+- MaxRecords property [ADO]
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1fe9a1540e6c5abd3759cd5c7abb18a0d4f85ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d6991928fdf3c284f7039b75f96a95fd93e0be3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="maxrecords-property-ado"></a>最大记录属性 (ADO)
 指示要返回到的记录的最大[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从查询。  

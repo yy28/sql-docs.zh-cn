@@ -3,8 +3,9 @@ title: "Requery 方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::Requery
 - Recordset15::raw_Requery
-helpviewer_keywords: Requery method [ADO]
+helpviewer_keywords:
+- Requery method [ADO]
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed510a242cee92518b6b4511ffaa51539766e086
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6e81cda01f894b87d2741f80735b21b23423ce6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="requery-method"></a>Requery 方法
 更新中的数据[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)通过重新执行的查询所基于的对象的对象。  
@@ -39,8 +41,8 @@ recordset.Requery Options
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *选项*  
- 可选。 包含一个位屏蔽[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)和[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)影响此操作的值。  
+ *Options*  
+ 選擇性。 包含一个位屏蔽[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)和[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)影响此操作的值。  
   
 > [!NOTE]
 >  如果*选项*设置为**adAsyncExecute**，将以异步方式执行此操作和[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)当它到结束，将发出事件。 **ExecuteOpenEnum**值**adExecuteNoRecords**或**adExecuteStream**不应与使用**Requery**。  

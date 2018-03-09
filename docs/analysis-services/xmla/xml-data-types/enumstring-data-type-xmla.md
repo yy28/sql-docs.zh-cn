@@ -2,15 +2,13 @@
 title: "EnumString 数据类型 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: EnumString Data Type
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f3365cbe5ad69fb81ab1231b2d09fd593ada3ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b00fa29ae9dc0bb4529e013f9767451c3d0f1720
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString 数据类型 (XMLA)
-  定义一个派生数据类型，该类型表示一组给定枚举器的命名常量。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]定义一个派生的数据类型，表示给定的枚举器的一组命名常数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,20 +44,20 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|**string**|  
-|派生数据类型|无|  
+|派生数据类型|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
-|子元素|无|  
-|派生元素|无|  
+|父元素|InclusionThresholdSetting|  
+|子元素|InclusionThresholdSetting|  
+|派生元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  XML for Analysis (XMLA) 可以使用枚举将字符串值限制为一组可验证设置。 **EnumString**使用标准的 XML**字符串**数据类型。 每个命名常量的特定值都通过枚举器定义指定。 通过将它们添加到定义枚举器[DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)架构行集，并可以通过使用检索[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法 DISCOVER_ENUMERATORS 替换请求类型。  
   
  下表描述了支持的实例的枚举数[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  

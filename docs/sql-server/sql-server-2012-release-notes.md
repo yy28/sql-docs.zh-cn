@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2012 发行说明 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Release Notes, SQL Server
@@ -15,14 +18,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a84e08ccbb7806dafe0549b5825192dfd6e33565
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
-本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[此处下载](http://go.microsoft.com/fwlink/?LinkId=238647)(#单击此处下载)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[单击此处下载](http://go.microsoft.com/fwlink/?LinkId=238647)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
   
 有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 还可以在 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?LinkId=190948) (#sql-server-联机丛书) 中以及 [SQL Server 论坛](http://go.microsoft.com/fwlink/?LinkId=213599)(#sql-server-论坛) 上找到更多信息。  
   

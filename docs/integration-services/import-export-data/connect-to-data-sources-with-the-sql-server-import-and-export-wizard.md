@@ -1,5 +1,5 @@
 ---
-title: "连接到数据源与 SQL Server 导入和导出向导 |Microsoft 文档"
+title: "使用 SQL Server 导入和导出向导连接到数据源 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/15/2017
 ms.prod: sql-non-specified
@@ -13,28 +13,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: d4107dab192ae5f0bfa3c221dcb7997f83642eb8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 4679367f544000c384e897c85e18cba1d0936a81
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>连接到数据源与 SQL Server 导入和导出向导
-本部分中的主题说明了如何连接到多个常用的数据源，当你运行 SQL Server 导入和导出向导。 你需要为您的数据源的连接信息提供有关**选择数据源**和**选择目标**向导页。
+# <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导连接到数据源
+本部分中的主题说明如何在运行 SQL Server 导入和导出向导时连接到多个常用的数据源。 用户需要在向导的“选择数据源”和“选择目标”页上为数据源提供连接信息。
 
-本部分中的主题介绍如何仅到**连接到数据源**从**选择数据源**和**选择目标**向导页。 如果你正在寻找其他事情，请参阅[相关的任务和内容](#related)。
+本部分中的主题仅介绍如何从向导的“选择数据源”和“选择目标”页**连接到数据源**。 如需其他信息，请参阅[相关任务和内容](#related)。
 
-## <a name="connect-to-a-commonly-used-data-source"></a>连接到常用的数据源
-单击链接以了解有关通常连接到下列其中一项的详细使用数据源。
+## <a name="connect-to-a-commonly-used-data-source"></a>连接到常用数据源
+单击链接详细了解如何连接到以下常用数据源之一。
 -   [SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
--   [平面文件 （文本文件）](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
+-   [平面文件（文本文件）](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [访问](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [Azure Blob 存储](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
@@ -43,21 +42,21 @@ ms.lasthandoff: 09/27/2017
 -   [MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 ## <a name="connect-to-other-data-providers"></a>连接到其他数据提供程序
-有关如何连接到未在此处列出的数据源的信息，请参阅[该连接字符串引用](https://www.connectionstrings.com/)。 此第三方站点包含示例连接字符串以及有关数据提供程序的详细信息和它们需要的连接信息。
+有关如何连接到此处未列出的数据源的信息，请参阅 [The Connection Strings Reference](https://www.connectionstrings.com/)（连接字符串参考）。 该第三方站点包含示例连接字符串、关于数据提供程序的详细信息以及它们需要的连接信息。
 
-## <a name="related"></a>相关的任务和内容  
-以下是一些其他基本任务。
--   **请参阅快速示例说明在向导的工作原理。**
+## <a name="related"></a>相关任务和内容  
+以下是一些其他的基本任务。
+-   **查看有关向导工作原理的简短示例。**
 
-    -   **如果想要查看屏幕快照。** 在一页-看一看这个简单的端到端示例[开始导入和导出向导的这个简单的示例使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
+    -   **如果想查看屏幕快照。** 查看此仅占用一页的简单端对端示例 — [开始使用这一简单的导入和导出向导示例](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
 
-    -   **如果你更愿意观看视频。** 观看此四分钟的视频演示向导并清楚地说明的 YouTube、 只需如何将数据导出到 Excel-[使用 SQL Server 导入和导出向导导出到 Excel](https://go.microsoft.com/fwlink/?linkid=829049)。
+    -   **如果想观看视频。** 观看这个来自 YouTube 的四分钟视频，该视频演示了此向导，并清晰简明地说明了将数据导出到 Excel 的方法：[使用 SQL Server 导入和导出向导导出到 Excel](https://go.microsoft.com/fwlink/?linkid=829049)。
 
--   **了解有关该向导的工作原理的详细信息。**
+-   **了解有关向导工作原理的详细信息。**
 
-    -   **了解有关该向导的详细信息。** 如果正在寻找有关该向导的概述，请参阅 [使用 SQL Server 导入和导出向导来导入和导出数据](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
+    -   **了解有关向导的详细信息。** 如果正在寻找有关该向导的概述，请参阅 [使用 SQL Server 导入和导出向导来导入和导出数据](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
-    -   **了解有关向导中的步骤。** 如果你正在寻找有关向导中的步骤的信息，请参阅[的 SQL Server 导入和导出向导中的步骤](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 此外没有单独的页的向导的每一页的文档。
+    -   **了解有关向导中的步骤的信息。** 如需有关向导中的各个步骤的信息，请参阅 [SQL Server 导入和导出向导中的步骤](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)。 该文档还分页介绍了向导的各个页面。
 
 -   **启动向导。** 如果已准备好运行向导，并且只想知道如何启动向导，请参阅[启动 SQL Server 导入和导出向导](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
@@ -66,6 +65,5 @@ ms.lasthandoff: 09/27/2017
 ## <a name="see-also"></a>另请参阅
 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 
 

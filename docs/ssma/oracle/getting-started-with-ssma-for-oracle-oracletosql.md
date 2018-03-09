@@ -1,10 +1,13 @@
 ---
 title: "入门 Oracle (OracleToSQL) SSMA |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 72c831ce1209aafecee171431b3d022f7587051f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1765ceb5cb1f4100d60a0f429635f9fc80d14e82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>入门 Oracle (OracleToSQL) SSMA
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 的 Oracle 使你能够快速地转换到的 Oracle 数据库架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]架构，上载生成架构转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和将数据迁移到的 Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -99,7 +102,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
   
 |菜单|Description|  
 |----|-----------|  
-|**文件**|包含用于处理项目、 连接到 Oracle，并且连接到的命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
+|**File**|包含用于处理项目、 连接到 Oracle，并且连接到的命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |**编辑**|包含用于查找和处理的详细信息页中，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql_md.md)]从 SQL 详细信息窗格。 此外包含**管理书签**选项，其中你将能够查看现有的书签的列表。 可以使用对话框右侧的按钮来管理在书签。|  
 |**“视图”**|包含**同步元数据资源管理器**命令。 同步之间 Oracle 元数据资源管理器的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。 此外包含用于显示和隐藏的命令**输出**和**错误列表**窗格和一个选项**布局**管理两种布局。|  
 |**工具**|包含用于创建报表，报表和迁移对象和数据的命令。 此外提供对访问**全局设置**和**项目设置**对话框。|  

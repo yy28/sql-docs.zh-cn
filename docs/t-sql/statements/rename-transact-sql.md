@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
-ms.translationtype: MT
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>重命名 (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/20/2017
   重命名的用户创建的表中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 重命名的用户创建的表或数据库中的[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
   
 > [!NOTE]  
->  若要重命名的数据库中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，使用存储的过程[sp_renamedb &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). 若要重命名 Azure SQL 数据库中的数据库，使用[ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md)语句。 
+>  若要重命名的数据库中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，使用存储的过程[sp_renamedb &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). 若要重命名 Azure SQL 数据库中的数据库，可使用 [ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md) 语句。 
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +57,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>参数  
  重命名对象 [:]   
-          [[*database_name* 。 [ *schema_name* ]。 ] |[ *schema_name* 。 ]]*table_name*收件人*new_table_name*  
+          [[*database_name* 。 [ *schema_name* ]。 ] |[ *schema_name* 。 ] ]*table_name* TO *new_table_name*  
  **适用于：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  更改用户定义表的名称。 指定要与一维、 两个或三个部分组成的名称重命名的表。    指定新的表*new_table_name*作为一个部分名称。  
@@ -79,13 +80,13 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 -   pdwtempdb2  
   
--   : DWConfiguration  
+-   DWConfiguration  
   
 -   DWDiagnostics  
   
 -   DWQueue  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要运行此命令需要此权限：  
   
 -   **ALTER**对表的权限  

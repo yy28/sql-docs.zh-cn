@@ -3,26 +3,28 @@ title: "对象属性、 方法和事件字段 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Field object [ADO], members
+helpviewer_keywords:
+- Field object [ADO], members
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbb59a6baa87d2535ef43fb8bee543070e118cc2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d0b888947896af5b11d9d7ce3ea8e55d43ac842
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-object-properties-methods-and-events"></a>字段对象属性、 方法和事件
 ## <a name="propertiescollections"></a>属性/集合  

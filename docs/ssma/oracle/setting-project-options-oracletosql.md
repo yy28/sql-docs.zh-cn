@@ -1,10 +1,13 @@
 ---
 title: "设置项目选项 (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4cbe26dd843d3857af3468baffae8e8254f6d150
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0022ce5df4791ba3084507810d3490db2c7ae4dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-oracletosql"></a>设置项目选项 (OracleToSQL)
 为每个 SSMA 项目中，你可以设置项目级别选项。 这些选项用于指定对象转换、 对象加载、 用户界面和数据迁移设置。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，验证是否适用于项目的配置选项。  
@@ -41,7 +44,7 @@ SSMA 有五个集的项目设置：
   
 它还具有用于配置这些设置的四种模式：  
   
--   默认  
+-   ，则“默认”  
   
 -   Optimistic  
   
@@ -94,7 +97,7 @@ SSMA 有五个集的项目设置：
   
 3.  单击**确定**以保存设置。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 迁移的下一步取决于您的项目需求：  
   
 -   若要自定义的源和目标数据类型映射，请参阅[映射 Oracle 和 SQL Server 数据类型 &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  

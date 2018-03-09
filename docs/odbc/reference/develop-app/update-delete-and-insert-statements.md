@@ -5,10 +5,11 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,35 +19,35 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bfdd769bdea98e21cec4031bf140ca6ee8bdd3d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、 DELETE 和 INSERT 语句
 基于 SQL 的应用程序通过执行对表进行更改**更新**，**删除**，和**插入**语句。 这些语句是最小 SQL 语法一致性级别的一部分，并且必须支持的所有驱动程序和数据源。  
   
  这些语句的语法是：  
   
- **更新***表名称*   
+ **UPDATE**  *table-name*  
   
- **设置***列标识符*  **=**  {*表达式*&#124;**NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
  [**，** *列标识符*  **=**  {*表达式*&#124;**NULL**}]...  
   
- [**其中***搜索条件*]  
+ [**WHERE** *search-condition*]  
   
- **DELETE FROM** *表名*[**其中***搜索条件*]  
+ **DELETE FROM** *table-name*[**WHERE** *search-condition*]  
   
- **INSERT INTO** *表名*[**(***列标识符*[**，** *列标识符*]...**)**]  
+ **INSERT INTO** *table-name*[**(***column-identifier* [**,** *column-identifier*]...**)**]  
   
- {*查询规范*&#124;**值 (***插入值*[**，** *插入值*]...**)**}  
+ {*查询规范* &#124; **值 (***插入值* [**，** *插入值*]...**)**}  
   
  请注意，*查询规范*元素是仅在核心和扩展 SQL 语法中，且中有效*表达式*和*搜索条件*元素变得更核心和扩展 SQL 语法中的复杂。  
   

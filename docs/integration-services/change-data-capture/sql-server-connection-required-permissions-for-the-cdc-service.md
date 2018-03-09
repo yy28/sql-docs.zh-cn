@@ -1,5 +1,5 @@
 ---
-title: "CDC 服务所需的 SQL Server 连接权限 |Microsoft 文档"
+title: "针对 CDC 服务的 SQL Server 连接所需权限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 406cb1233d871603a38dc2d904d7ecd894b5f0cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1556a9f29ba5746fdd4a5a721602b01c1cc54c58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>针对 CDC 服务的 SQL Server 连接所需权限
   CDC 服务配置控制台要求与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接信息以便执行其任务。 本主题介绍可在“连接到 SQL Server”对话框中为设置与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的连接而提供的信息。  
@@ -42,7 +41,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [连接到 SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)   
- [连接到 SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
+ [删除与 SQL Server 的连接](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
   
-

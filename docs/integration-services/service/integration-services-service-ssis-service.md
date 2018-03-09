@@ -1,5 +1,5 @@
 ---
-title: "Integration Services 服务 （SSIS 服务） |Microsoft 文档"
+title: "Integration Services 服务（SSIS 服务）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -25,22 +25,21 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 06b632de9ef477e31de110f98a8fca4295144bb9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
   本节中的主题论述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 此服务不是创建、保存和运行集成服务包所必需的。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务以便与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的早期版本向后兼容。  
   
- 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将对象、设置和运行数据存储在使用项目部署模型部署到 **服务器的项目的** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据库中。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的实例，它承载该数据库。 有关数据库的详细信息，请参阅 [SSIS 目录](../../integration-services/service/ssis-catalog.md)。 有关部署到的项目详细信息[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务器，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+ 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将对象、设置和运行数据存储在使用项目部署模型部署到 **服务器的项目的** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据库中。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的实例，它承载该数据库。 有关数据库的详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。 有关将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ## <a name="management-capabilities"></a>管理功能  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的 Windows 服务。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务只在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中可用。  
@@ -83,7 +82,7 @@ ms.lasthandoff: 09/27/2017
   
  可以使用以下任一 Microsoft 管理控制台 (MMC) 管理单元来管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务：SQL Server 配置管理器或服务。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中管理包，必须首先确保该服务已启动。  
   
- 默认情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 msdb 数据库中的包，该实例与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]同时安装。 如果未同时安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务可配置为管理本地默认 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 msdb 数据库中的包。 若要管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)]某个命名实例或远程实例中存储的包或 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例中存储的包，则必须修改该服务的配置文件。
+ 默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为管理[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 msdb 数据库中的包，该实例与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 同时安装。 如果未同时安装[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务可配置为管理本地默认[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 msdb 数据库中的包。 若要管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)]某个命名实例或远程实例中存储的包或 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例中存储的包，则必须修改该服务的配置文件。
   
  默认情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为在该服务停止时停止正在运行的包。 但是， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不会等待包停止，因此，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务停止后，一些包可能仍在运行。  
   
@@ -140,13 +139,13 @@ ms.lasthandoff: 09/27/2017
   
     -   单击 **“依赖项”** 选项卡可查看依赖服务的列表。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务没有任何依赖项。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  另外，如果启动类型为“手动”或“自动”，还可以右键单击 **SQL Server Integration Services**，然后单击“启动”、“停止”或“重新启动”。  
   
 7.  在“文件”菜单上，单击“退出”关闭“服务”管理单元。  
 
-## <a name="grant-permissions-to-the-service"></a>授予对服务的权限
+## <a name="grant-permissions-to-the-service"></a>向服务授予权限
   在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，在您安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，默认情况下 Users 组中的所有用户都已对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务具有访问权限。 在您安装当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，用户无权访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 该服务默认是安全的。 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，管理员必须授予对服务的访问权限。  
   
 ### <a name="to-grant-access-to-the-integration-services-service"></a>授予对 Integration Services 服务的访问权限  
@@ -175,7 +174,7 @@ ms.lasthandoff: 09/27/2017
   
 -   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的对象资源管理器中为 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示的根文件夹是 MSDB 和“文件系统”文件夹。  
   
--   文件系统中的包，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务管理位于 %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务所管理的文件系统中的包位于 %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages 中。  
   
  此配置文件还指定哪个 msdb 数据库包含将由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务管理的包。 默认情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的 msdb 数据库中的包，该实例与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]同时安装。 如果未同时安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务可配置为管理本地默认 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的 msdb 数据库中的包。  
   
@@ -254,8 +253,8 @@ ms.lasthandoff: 09/27/2017
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file-location"></a>修改配置文件位置  
- 注册表项**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile**指定的位置和名称的配置文件[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务使用。 注册表项的默认值是**C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**。 可以更新该注册表项的值，以使配置文件使用其他名称和位置。 请注意，在路径中的版本号 (SQL Server 的 120 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]、 130 的[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]等) 的 SQL Server 版本而异。
+### <a name="modify-the-configuration-file-location"></a>修改配置文件的位置  
+ 注册表项 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** 指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用的配置文件的位置和名称。 该注册表项的默认值是 **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**。 可以更新该注册表项的值，以使配置文件使用其他名称和位置。 请注意，路径中的版本号（SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 为 120、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 为 130 等等）因 SQL Server 版本而异。
   
 > [!CAUTION]  
 >  如果注册表编辑不当，可能会导致严重问题并需要重新安装操作系统。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不能保证可以解决因注册表编辑不当而导致的问题。 编辑注册表之前，请备份所有重要数据。 有关如何备份、还原和编辑注册表的信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章 [Microsoft Windows 注册表说明](http://support.microsoft.com/kb/256986)。  
@@ -265,7 +264,7 @@ ms.lasthandoff: 09/27/2017
 ## <a name="connect-to-the-local-service"></a>连接到本地服务
   在您连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务之前，管理员必须授予您该服务的访问权限。 
   
-### <a name="to-connect-to-the-integration-services-service"></a>若要连接到 Integration Services 服务  
+### <a name="to-connect-to-the-integration-services-service"></a>连接到 Integration Services 服务  
   
 1.  打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -277,7 +276,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  单击 **“连接”**。  
 
-## <a name="connect-to-a-remote-ssis-server"></a>连接到远程的 SSIS 服务器
+## <a name="connect-to-a-remote-ssis-server"></a>连接到远程 SSIS 服务器
   
  若要从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或其他管理应用程序连接到远程服务器上的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 实例，应用程序的用户需要拥有服务器上的一组特定权限。  
   
@@ -361,20 +360,20 @@ ms.lasthandoff: 09/27/2017
  
 ## <a name="configure-the-firewall"></a>配置防火墙
   
- Windows 防火墙系统有助于阻止对计算机资源通过网络连接的未经授权的访问。 若要通过此防火墙访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，您必须将该防火墙配置为允许访问。  
+ Windows 防火墙系统可帮助防止通过网络连接对计算机资源进行未经授权的访问。 若要通过此防火墙访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，您必须将该防火墙配置为允许访问。  
   
 > [!IMPORTANT]  
 >  若要管理存储在某远程服务器上的包，您不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议如何在防火墙下运作的详细信息，请参阅 MSDN Library 上的文章“[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)（与防火墙一起使用分布式 COM）”。  
   
- 有很多可用的防火墙系统。 如果你正在运行 Windows 防火墙以外的防火墙，请参阅防火墙文档有关特定于所使用的系统的信息。  
+ 有很多可用的防火墙系统。 如果运行的防火墙不是 Windows 防火墙，请参阅防火墙文档，获取特定于所用系统的信息。  
   
  如果防火墙支持应用程序级筛选，则可以使用 Windows 提供的用户界面来指定允许通过该防火墙的例外项，如程序和服务。 否则，必须将 DCOM 配置为使用一组有限的 TCP 端口。 上面提供的 Microsoft 网站链接包含有关如何指定要使用的 TCP 端口的信息。  
   
  Integration Services 服务使用端口 135，该端口不能更改。 只有打开 TCP 端口 135 才能访问服务控制管理器 (SCM)。 SCM 执行以下任务：启动和停止 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，以及将控制请求传输到运行的服务。  
   
- 下列部分中的信息是特定于 Windows 防火墙。 通过在命令提示符处，运行命令或通过在 Windows 防火墙对话框中设置属性，你可以配置 Windows 防火墙系统。  
+ 以下部分中的信息特定于 Windows 防火墙。 可以通过在命令提示符处运行命令或在“Windows 防火墙”对话框中设置属性来配置 Windows 防火墙系统。  
   
  有关默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -400,7 +399,7 @@ ms.lasthandoff: 09/27/2017
   
  下面的步骤描述了如何使用 Windows 用户界面来打开 TCP 端口 135，向例外列表中添加 MsDtsSrvr.exe 并指定防火墙不阻止的范围。  
   
-#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>若要配置防火墙使用 Windows 防火墙对话框  
+#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>使用“Windows 防火墙”对话框配置防火墙  
   
 1.  在“控制面板”中，双击“Windows 防火墙”。  
   
@@ -424,5 +423,4 @@ ms.lasthandoff: 09/27/2017
 9. 若要关闭 **“Windows 防火墙”** 对话框，请单击 **“确定”**。  
   
     > [!NOTE]  
-    >  若要配置 Windows 防火墙，此过程使用**Windows 防火墙**控制面板中的项。 **“Windows 防火墙”** 项仅可为当前网络位置配置文件配置防火墙。 但是，你还可以通过配置 Windows 防火墙**netsh**命令行工具或[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理控制台 (MMC) 管理单元中名为高级安全 Windows 防火墙。 有关这些工具的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
-
+    >  为了配置 Windows 防火墙，此过程使用“控制面板”中的“Windows 防火墙”项。 **“Windows 防火墙”** 项仅可为当前网络位置配置文件配置防火墙。 不过，也可使用 **netsh** 命令行工具或名为高级安全 Windows 防火墙的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 管理单元来配置 Windows 防火墙。 有关这些工具的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  

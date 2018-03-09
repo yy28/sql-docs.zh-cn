@@ -1,5 +1,5 @@
 ---
-title: "SQLDriverConnect |Microsoft 文档"
+title: SQLDriverConnect | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,22 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords: SQLDriverConnect function
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 449f8d576fe0738c8afb58c2938a9b2f356bdd52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 449cd44ff1561d95aeab80eca6ca18c0efde5f70
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,11 +37,11 @@ ms.lasthandoff: 11/17/2017
   
  有关对有效的连接字符串关键字的讨论[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端，请参阅[Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
- 当**SQLDriverConnect***DriverCompletion*参数值为 SQL_DRIVER_PROMPT、 SQL_DRIVER_COMPLETE，或者 SQL_DRIVER_COMPLETE_REQUIRED， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序从显示的对话框中检索关键字值。 如果关键字值传递到连接字符串中，并且用户未在对话框中更改关键字的值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将使用连接字符串中的值。 如果在连接字符串中未设置值，并且用户在对话框中未指定任何值，则驱动程序将使用默认值。  
+ 当 **SQLDriverConnect * * * DriverCompletion*参数值为 SQL_DRIVER_PROMPT、 SQL_DRIVER_COMPLETE，或者 SQL_DRIVER_COMPLETE_REQUIRED， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序检索中的关键字值显示的对话框。 如果关键字值传递到连接字符串中，并且用户未在对话框中更改关键字的值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将使用连接字符串中的值。 如果在连接字符串中未设置值，并且用户在对话框中未指定任何值，则驱动程序将使用默认值。  
   
  **SQLDriverConnect**必须为其提供一个有效*WindowHandle*任何*DriverCompletion*值需要 （或可能需要） 的驱动程序的连接对话框中显示。 无效句柄将返回 SQL_ERROR。  
   
- 指定 DRIVER 或 DSN 关键字。 ODBC 规定，如果同时指定了这两个关键字，驱动程序将使用左边的关键字，而忽略另一个关键字。 如果驱动程序指定，或者是这二者当中，最左边和**SQLDriverConnect***DriverCompletion*参数值是 SQL_DRIVER_NOPROMPT，SERVER 关键字，并且需要适当的值时。  
+ 指定 DRIVER 或 DSN 关键字。 ODBC 规定，如果同时指定了这两个关键字，驱动程序将使用左边的关键字，而忽略另一个关键字。 如果驱动程序指定，或者是这二者当中，最左边和 **SQLDriverConnect * * * DriverCompletion*参数值是 SQL_DRIVER_NOPROMPT，SERVER 关键字，并且需要适当的值时。  
   
  当指定 SQL_DRIVER_NOPROMPT 时，用户身份验证关键字必须具有值。 驱动程序确保字符串“Trusted_Connection=yes”或 UID 和 PWD 关键字存在。  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 24abc4dee066853da7b201f19839063aa437d854
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19a70f6afcceeac41ef983a5756409fabcb428af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serializability"></a>可序列化性
 理想情况下，事务应*可序列化*。 事务可认为是如果同时运行事务的结果是否相同按顺序运行它们的结果，可序列化-一个接一个，即。 它并不重要的事务，则首先执行，仅，结果不会反映任何事务的混合。  

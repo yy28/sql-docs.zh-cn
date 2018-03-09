@@ -8,22 +8,23 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f7e05ccc9cc264faf5d4d7f563d1df028969309
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 28a38f60127100d80a7f9c52caa9851597403c45
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (TRANSACT-SQL)
+# <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   不同的警报会在系统; 上的存储属性这是警报的目录表。  
@@ -33,9 +34,9 @@ ms.lasthandoff: 11/17/2017
 |alert_id|**int**|警报的唯一标识符。<br /><br /> 此视图的键。|NOT NULL|  
 |component_id|**int**|此警报适用于组件的 ID。 组件是一个常规组件标识符，例如"提供的电源，"，并不是特定于安装。 请参阅[sys.pdw_health_components &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
 |alert_name|**nvarchar(255)**|警报名称。|NOT NULL|  
-|state|**nvarchar(32)**|警报状态。|NOT NULL<br /><br /> 可能的值：<br /><br /> 操作<br /><br /> 不再运行<br /><br /> 已降级<br /><br /> 已失败|  
-|severity|**nvarchar(32)**|警报的严重性。|NOT NULL<br /><br /> 可能的值：<br /><br /> 信息性<br /><br /> 警告<br /><br /> 错误|  
-|类型|**nvarchar(32)**|类型的警报。|NOT NULL<br /><br /> 可能的值：<br /><br /> StatusChange-设备状态已更改。<br /><br /> 阈值的值超出阈值的值。|  
+|state|**nvarchar(32)**|警报状态。|NOT NULL<br /><br /> 可能的值：<br /><br /> 'Operational'<br /><br /> 'NonOperational'<br /><br /> 已降级<br /><br /> 已失败|  
+|severity|**nvarchar(32)**|警报的严重性。|NOT NULL<br /><br /> 可能的值：<br /><br /> 信息性<br /><br /> 'Warning'<br /><br /> 错误|  
+|type|**nvarchar(32)**|类型的警报。|NOT NULL<br /><br /> 可能的值：<br /><br /> StatusChange-设备状态已更改。<br /><br /> 阈值的值超出阈值的值。|  
 |description|**nvarchar(4000)**|警报描述。|NOT NULL|  
 |条件 (condition)|**nvarchar(255)**|键入时使用 = 阈值。 定义如何计算警报阈值。|NULL|  
 |status|**nvarchar(32)**|警报状态|NULL|  

@@ -3,8 +3,11 @@ title: "使用测试存储库 (SybaseToSQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2348c527027603895cee2ebda45ea55b21626044
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-test-repositories-sybasetosql"></a>使用测试存储库 (SybaseToSQL)
 SSMA 测试储存库中存储 SSMA 测试器测试用例和测试结果以供将来使用。 存储库数据保存在 SQL Server 表**TestCaseRepository**和**RunTestCaseResultRepository**架构中**ssma_sybase_utilities**的**ssmatesterdb_syb**数据库。  

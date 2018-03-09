@@ -3,8 +3,11 @@ title: "对国际数据使用查询和视图设计器 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,16 +27,16 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96713730d6dadca1681e571200db51cee8f30af4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 729e6f96755bc033ac151fdd24526eaeb9fafc15
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>对国际数据使用查询和视图设计器 (Visual Database Tools)
-在 [查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 中，可以使用任何语言的数据，也可以在任何 Windows 操作系统版本中使用查询和视图设计器。 以下准则概括介绍了需要注意的一些差异，并提供有关管理国际应用程序中的数据的信息。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)中，可以使用任何语言的数据，也可以在任何 Windows 操作系统版本中使用查询和视图设计器。 以下准则概括介绍了需要注意的一些差异，并提供有关管理国际应用程序中的数据的信息。  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>“条件”窗格和 SQL 窗格中的本地化信息  
 如果使用“条件”窗格创建查询，则可以使用与计算机中的 Windows 区域设置相应的格式输入信息。 例如，如果要搜索数据，则可以在“条件”列中采用您所习惯的格式输入数据，但以下情况除外：  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/09/2017
   
 在“条件”窗格中以本地特定格式输入数据时，查询和视图设计器会在 SQL 窗格中将其自动转换为 ANSI 格式。 例如，如果区域设置设置为“标准德语”，则可以在“条件”窗格中以类似于“31.12.96”的格式输入数据。 但是，该日期在 SQL 窗格中将以 ANSI 日期时间格式显示为 `{ ts '1996-12-31 00:00:00' }.` ，如果直接在 SQL 窗格中输入数据，则必须以 ANSI 格式输入。  
   
-## <a name="sort-order"></a>排序顺序  
+## <a name="sort-order"></a>“排序顺序”  
 查询中数据的排序顺序由数据库决定。 Windows“区域设置”对话框中设置的选项不影响查询的排序顺序。 但是，在任何特定查询中，可以请求以特定的顺序返回行。  
   
 ## <a name="using-double-byte-characters"></a>使用双字节字符  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 054ce76fcc4637d60bc220a559792330b0a5e665
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update---sql-command"></a>更新-SQL 命令
 使用新值更新表中的记录。  
@@ -53,7 +53,7 @@ SET Column_Name1 = eExpression1
   
  *FilterCondition*指定记录为使用新值更新而必须满足的条件。 可以包含任意数量的筛选条件根据需要，将它们连接使用 AND 或 OR 运算符。 你还可以使用 NOT 运算符颠倒的逻辑表达式时，值或可以使用**空**（) 检查是否有一个空的字段。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  更新-SQL 可以更新仅在单个表的记录。  
   
  与替换，不同更新-SQL 使用记录锁定更新表中的多个记录打开以进行共享访问时。 这将减少在多用户情况下记录争用，但可能会降低性能。 为获得最佳性能，打开该表的独占使用，或者使用**FLOCK**（) 锁定表。  

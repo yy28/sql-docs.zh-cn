@@ -1,5 +1,5 @@
 ---
-title: "catalog.revoke_permission （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.revoke_permission（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f058368bdd39b31a569d8810cccfc4d03d9f875e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,48 +42,48 @@ catalog.revoke_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @object_type =] *object_type*  
- 安全对象类型。 安全对象类型包括文件夹 (`1`)，项目 (`2`)，环境 (`3`)，和操作 (`4`)。*Object_type*是**smallint***。*  
+ [ @object_type = ] *object_type*  
+ 安全对象的类型。 安全对象类型包括文件夹 (`1`)、项目 (`2`)、环境 (`3`) 和操作 (`4`)。object_type 为 *smallint****。*  
   
- [ @object_id =] *object_id*  
- 唯一 identitifier (ID) 的安全对象。 *Object_id*是**bigint**。  
+ [ @object_id = ] *object_id*  
+ 安全对象的唯一标识符 (ID)。 *object_id* 为 **bigint**。  
   
- [ @principal_id =] *principal_id*  
- 被撤消权限的主体的 ID。 *Principal_id*是**int**。  
+ [ @principal_id = ] *principal_id*  
+ 被撤消权限的主体的 ID。 *principal_id* 为 **int**。  
   
- [ @permission_type =] *permission_type*  
- 权限的类型。 *Permission_type*是**smallint**。  
+ [ @permission_type = ] *permission_type*  
+ 权限的类型。 *permission_type* 为 **smallint**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）  
   
- 1 （object_class 不是有效的）  
+ 1（object_class 无效）  
   
- 2 （object_id 不存在）  
+ 2（object_id 不存在）  
   
- 3 （主体不存在）  
+ 3（主体不存在）  
   
- 4 （权限不是有效的）  
+ 4（权限无效）  
   
  5（其他错误）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="remarks"></a>注释  
- 无  
+## <a name="remarks"></a>Remarks  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对对象的 ASSIGN_PERMISSIONS 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
-## <a name="remarks"></a>注释  
- 如果指定 permission_type，则存储的过程中删除显式分配给对象的主体的权限。 即使不发生此类情况，该过程也将返回成功代码值 (`0`)。 如果省略 permission_type，存储的过程将删除对对象的主体的所有权限。  
+## <a name="remarks"></a>Remarks  
+ 如果指定 permission_type，存储过程会删除显式分配给主体的针对对象的权限。 即使不发生此类情况，该过程也将返回成功代码值 (`0`)。 如果忽略 permission_type，存储过程会删除主体针对对象的所有权限。  
   
 > [!NOTE]  
 >  如果主体是具有指定权限的角色的成员，则该主体可能仍对该对象具有指定的权限。  
@@ -104,4 +103,3 @@ catalog.revoke_permission [ @object_type = ] object_type
 |`104`|MANAGE_OBJECT_PERMISSIONS|允许主体管理文件夹中所有对象的权限。|文件夹|  
   
   
-

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026cc54ab05fa07dca6a668902e286d9903dd94c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7e2483b8bf861a677e1fbe7b417376bb266e7f4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路径中指定节点测试 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]节点测试指定的位置步选择的节点类型。 每个轴 (**子**，**父**，**属性**，或**自助**) 具有主体数据库节点类型。 有关**属性**轴，主体数据库节点类型是**\<属性 >**。 有关**父**，**子**，和**自助**轴，主体数据库节点类型是**\<元素 >**。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+节点测试指定根据位置步骤选择的节点类型。 每个轴 (**子**，**父**，**属性**，或**自助**) 具有主体数据库节点类型。 有关**属性**轴，主体数据库节点类型是**\<属性 >**。 有关**父**，**子**，和**自助**轴，主体数据库节点类型是**\<元素 >**。  
   
 > [!NOTE]  
 >  不支持通配符节点测试 *（例如 `child::*`）。  

@@ -1,5 +1,5 @@
 ---
-title: "FileTableRootPath (Transact SQL) |Microsoft 文档"
+title: FileTableRootPath (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
 - FileTableRootPath
-dev_langs: TSQL
-helpviewer_keywords: FileTableRootPath function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 475c76c68198719de312a6a7ca9485097596d624
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1dd6d1b54d92142f3089b6323127257341ffe4d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  *@option*  
  一个整数表达式，定义路径的服务器组件应如何进行格式化。 *@option*可以具有以下值之一：  
   
-|值|说明|  
+|“值”|说明|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
@@ -72,7 +75,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
 ## <a name="best-practices"></a>最佳实践  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，获得的完整路径的文件在运行时通过使用**FileTableRootPath**和**GetFileNamespacePath**函数组合，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
   
 @root varchar(100)  
@@ -84,9 +87,9 @@ FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  **FileTableRootPath**函数需要：  
   
 -   拥有 FileTable 的 SELECT 权限以获取特定 FileTable 的根路径。  

@@ -1,10 +1,13 @@
 ---
 title: "在 SQL Server (OracleToSQL) 上安装 SSMA 组件 |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d2a76c23bc7b29caa87360362c7121d068bb92a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 76880266efb8c38bffdaa4223e49822c6d3b0778
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server (OracleToSQL) 上安装 SSMA 组件
 除了安装 SSMA，你还必须安装组件正在运行的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 这些组件包括 SSMA 扩展包，它支持数据迁移和 Oracle 提供程序启用服务器到服务器的连接。  
@@ -31,7 +34,7 @@ SSMA 扩展包增加了数据库， **sysdb**和**ssmatesterdb**，到的指定�
   
 此外，当你将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理作业时服务器端数据迁移引擎用于将数据迁移。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 在上安装 Oracle 服务器组件 SSMA 之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请确保系统满足以下要求：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]安装实例。 SSMA 不支持 SQL Server 2008 Express Edition。  

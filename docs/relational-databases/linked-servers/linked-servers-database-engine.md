@@ -2,10 +2,14 @@
 title: "链接服务器（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linked-servers
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - remote servers [SQL Server], linked servers
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1ad56cbb1df58df74bd72fac4f0f916dff0e7eb8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8aed4c3bc881a4d2e6481c2c1e9d46de8e304d2a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
-  配置链接服务器以支持 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之外对 OLE DB 数据源执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 和 Excel。 链接服务器具有以下优点：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+配置链接服务器以支持 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之外对 OLE DB 数据源执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 和 Excel。 链接服务器具有以下优点：  
   
 -   能够访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之外的数据。  
   
@@ -81,12 +86,12 @@ ms.lasthandoff: 11/09/2017
   
  还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”，选择“新建”，再选择“链接服务器”。 通过右键单击链接服务器名称并选择“删除”，可以删除链接服务器定义。  
   
- 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称格式应为 *linked_server_name.catalog***.***schema***.***object_name*。  
+ 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 这个四部分名称格式应为 linked_server_name.catalog.schema.object_name。  
   
 > [!NOTE]  
 >  可以定义链接服务器指回（环回）到在其上定义它们的服务器。 当在单服务器网络中测试使用分布式查询的应用程序时，环回服务器是很有用的。 环回链接服务器专用于测试，许多操作（如分布式事务）不支持该服务器。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [创建链接服务器（SQL Server 数据库引擎）](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)  
   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  

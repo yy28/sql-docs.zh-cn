@@ -3,26 +3,28 @@ title: "成员对象属性、 方法和事件 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Member object [ADO MD]
+helpviewer_keywords:
+- Member object [ADO MD]
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47cfd56d2c63f1eb4099c37e846b66f77c379449
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e860d8d676b82e718271324472fd399261082f6a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="member-object-properties-methods-and-events"></a>成员对象属性、 方法和事件
 ## <a name="propertiescollections"></a>属性/集合  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  [父属性](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
   
- [ParentSameAsPrev 属性](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
+ [ParentSameAsPrev Property](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
   
  [属性集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
   

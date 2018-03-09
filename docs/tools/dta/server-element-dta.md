@@ -2,9 +2,12 @@
 title: "服务器元素 (DTA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: Server element
 ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 235e26936e27600c3d3d6d089b559ceca8c68b0e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32f1958fcf5b69d9a3b8ef7b3fdf63f67216d9d0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="server-element-dta"></a>服务器元素 (DTA)
-  包含要优化的数据库所驻留的服务器的标识信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]包含在其的数据库所驻留要优化的服务器的标识信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,8 +50,8 @@ ms.lasthandoff: 11/09/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[DTAInput 元素 (DTA)](../../tools/dta/dtainput-element-dta.md)|  
-|**子元素**|[服务器的名称元素 (DTA)](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [服务器的数据库元素 (DTA)](../../tools/dta/database-element-for-server-dta.md)|  
+|**父元素**|[DTAInput 元素 &#40; DTA &#41;](../../tools/dta/dtainput-element-dta.md)|  
+|**子元素**|[服务器 &#40; DTA &#41; 的名称元素](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [服务器 &#40; DTA &#41; 的数据库元素](../../tools/dta/database-element-for-server-dta.md)|  
   
 ## <a name="remarks"></a>注释  
  只能为 **Server** 元素指定一个 **DTAInput** 元素。 在 DTA XML 架构中，该元素的名称为 **ServerDetailsTypecomplexType** 。 请不要将此 **Server** 元素与 **Configuration** 元素的子元素混淆。 有关详细信息，请参阅[用于配置的服务器元素 (DTA)](../../tools/dta/server-element-for-configuration-dta.md)。  

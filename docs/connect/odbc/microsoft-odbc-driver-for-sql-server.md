@@ -8,20 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3081be03ffb4b8291a9d27c5eb2049f38d0ae4fc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 44d62e94b53d1599a0fcfb3f5815719bdbc2986d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -43,13 +44,21 @@ ODBC 驱动程序附带了工具如[ **sqlcmd** ](../../tools/sqlcmd-utility.md)
 
 ## <a name="documentation"></a>文档  
 
+### <a name="features"></a>功能
+
+- [自定义密钥存储提供程序](../../connect/odbc/custom-keystore-providers.md)
+- [DSN 和连接字符串关键字和属性](dsn-connection-string-attribute.md)
+- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) （提供的功能也应用，而无需 OLEDB，到 ODBC Driver for SQL Server）
+- [使用始终加密](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [使用 Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
+- [使用透明网络 IP 解析](../../connect/odbc/using-transparent-network-ip-resolution.md)
+
 ### <a name="linux-and-macos"></a>Linux 和 macOS
 
 - [驱动程序的安装](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [连接到 SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [使用连接**bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [使用连接**sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
-- [使用集成身份验证 (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
-- [连接字符串关键字和数据源名称](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [数据访问跟踪](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [常见问题](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [安装驱动程序管理器](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
@@ -57,6 +66,7 @@ ODBC 驱动程序附带了工具如[ **sqlcmd** ](../../tools/sqlcmd-utility.md)
 - [编程指南](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [发行说明](../../connect/odbc/linux-mac/release-notes.md)
 - [用于高可用性和灾难恢复的支持](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+- [使用集成身份验证 (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 
 ### <a name="windows"></a>Windows
 
@@ -67,13 +77,7 @@ ODBC 驱动程序附带了工具如[ **sqlcmd** ](../../tools/sqlcmd-utility.md)
 - [发行说明](../../connect/odbc/windows/release-notes.md)
 - [系统要求、安装和驱动程序文件](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
-### <a name="features"></a>功能
 
-- [自定义密钥存储提供程序](../../connect/odbc/custom-keystore-providers.md)
-- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) （提供的功能也应用，而无需 OLEDB，到 ODBC Driver for SQL Server）
-- [使用始终加密](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
-- [使用 Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
-- [使用透明网络 IP 解析](../../connect/odbc/using-transparent-network-ip-resolution.md)
 
 ## <a name="community"></a>社区  
 - [Microsoft SQL Server ODBC 驱动程序团队博客](http://blogs.msdn.com/sqlnativeclient/default.aspx)  

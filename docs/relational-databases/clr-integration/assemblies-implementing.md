@@ -8,24 +8,26 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: assemblies [CLR integration], implementing
+helpviewer_keywords:
+- assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dadb7fe14a03bfd94350ea280cca94494e3c163b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---implementing"></a>程序集的实现
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题提供有关下列方面以帮助你实现和使用数据库中的程序集的信息：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题提供有关以下方面的信息以帮助您在数据库中实现和使用程序集：  
   
 -   创建程序集  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
  只有的成员**db_owner**和**db_ddlowner**固定的数据库角色可以通过使用 WITH UNCHECKED DATA 子句执行 ALTER 运行程序集。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将消息（程序集对表中的未检查数据已修改）投递给 Windows 应用程序事件日志。 然后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将任何包含依赖于程序集的数据的表标记为带有未检查数据的表。 **Has_unchecked_assembly_data**列**sys.tables**目录视图包含包含未选中状态的数据，使用 0 表示不包含未选中状态数据的表的表的值 1。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将消息发送到 Windows 应用程序事件日志，已使用表中的未选中数据进行修改的程序集。 然后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将任何包含依赖于程序集的数据的表标记为带有未检查数据的表。 **Has_unchecked_assembly_data**列**sys.tables**目录视图包含包含未选中状态的数据，使用 0 表示不包含未选中状态数据的表的表的值 1。  
   
  若要解决的未选中状态数据的完整性，可针对具有每个表运行 DBCC CHECKDB 与 EXTENDED_LOGICAL_CHECKS 未选中状态的数据。 如果 DBCC CHECKDB 与 EXTENDED_LOGICAL_CHECKS 失败，你必须删除不是有效或修改的程序集代码以便解决问题的表行，，然后发出其他 ALTER ASSEMBLY 语句。  
   

@@ -1,5 +1,5 @@
 ---
-title: "DBCC INDEXDEFRAG (Transact SQL) |Microsoft 文档"
+title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC INDEXDEFRAG
 - DBCC_INDEXDEFRAG_TSQL
 - INDEXDEFRAG_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - defragmenting indexes
 - DBCC INDEXDEFRAG statement
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2444d6510e680d2ca3ab9938df92b839a7d04ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7e601ebb9a795445e4b49e0f60e134923edba104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +65,7 @@ DBCC INDEXDEFRAG
  *database_name* | *database_id* | 0  
  包含要进行碎片整理的索引的数据库。 如果指定 0，则使用当前数据库。 数据库名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
- *table_name* | *针对 table_id 所* | *view_name* | *view_id*  
+ *table_name* | *table_id* | *view_name* | *view_id*  
  包含要进行碎片整理的索引的表或视图。 表和视图的名称必须符合有关标识符的规则。  
   
  *index_name* | *index_id*  
@@ -113,7 +115,7 @@ Pages Scanned Pages Moved Pages Removed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 调用方必须拥有某个表，或者是的成员**sysadmin**固定服务器角色、 **db_owner**固定数据库角色或**db_ddladmin**固定的数据库角色。
   
 ## <a name="examples"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: "数据流组件的版本升级 |Microsoft 文档"
+title: "升级数据流组件的版本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 65e38600b0974d75f5509a4231f6ebb0a15ba19a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d8ae9c279e40bcfa3728969f39a1db1f97d7e26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>升级数据流组件的版本
   通过较早版本的组件创建的包可能包含不再有效的元数据，例如已在更新版本的组件中修改其用法的自定义属性。 可以重写 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法来更新之前保存在较早的包中的元数据，从而反映组件的当前属性。  
@@ -54,9 +52,9 @@ ms.lasthandoff: 08/03/2017
 -   将版本元数据设置为当前的组件版本。  
   
 > [!NOTE]  
->  数据流引擎将传递到其自己的版本号<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>中的方法*pipelineVersion*参数。 此参数在 1.0 版本的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中没有任何用处，但是在后续版本中可能有用。  
+>  数据流引擎会将自己的版本号传递到 pipelineVersion 参数的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 方法中。 此参数在 1.0 版本的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中没有任何用处，但是在后续版本中可能有用。  
   
- 示例代码只使用直接映射到自定义属性的先前布尔值的两个枚举值。 用户可以在高级编辑器中通过组件的自定义用户界面或以编程方式选择其他可用枚举值。 在高级编辑器中显示的自定义属性的枚举值的信息，请参阅"创建自定义属性"中[的数据流组件的设计时方法](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)。  
+ 示例代码只使用直接映射到自定义属性的先前布尔值的两个枚举值。 用户可以在高级编辑器中通过组件的自定义用户界面或以编程方式选择其他可用枚举值。 有关在高级编辑器中显示自定义属性的枚举值的信息，请参阅[数据流组件的设计时方法](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)中的“创建自定义属性”。  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  
@@ -188,4 +186,3 @@ public class PerformUpgradeCS :
   
 }  
 ```
-

@@ -5,7 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a5e5d809845d6ecd7378a370c800231fb10c2a8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 666236842318cfba0cee38f71ac694eef86cdbf5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrate-on-premises-sql-server-using-data-migration-assistant"></a>迁移在本地 SQL Server 使用数据迁移助手
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 
 1. 建议您通过选择加密连接**加密连接**中**连接属性**部分。
 
-1. 单击 **“下一步”**。
+1. 单击“下一步” 。
 
    ![指定源和目标页](../dma/media/SourceTarget.png)
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
 
    ![选项可将数据库备份复制到其他位置](../dma/media/CopyDatabaseDifferentLocation.png)
 
-1. 单击 **“下一步”**。
+1. 单击“下一步” 。
 
 数据迁移助手会执行验证对备份的文件夹，数据和日志文件位置。 如果任何验证失败，请修复该选项，然后单击**下一步**。
 

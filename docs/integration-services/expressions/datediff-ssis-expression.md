@@ -1,5 +1,5 @@
 ---
-title: "DATEDIFF （SSIS 表达式） |Microsoft 文档"
+title: "DATEDIFF（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c771f4788199c26fae2cfe46dfd66a18d67fcb6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cf39c984e5bd78b9ac11ff057fdfd7f81d6726a7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF（SSIS 表达式）
   返回两个指定日期之间所跨的日期和时间边界的数目。 *datepart* 参数标识要比较的日期和时间边界。  
@@ -51,7 +50,7 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下表列出了表达式计算器可以识别的日期部分和缩写形式。  
   
 |datepart|缩写形式|  
@@ -96,12 +95,11 @@ DATEDIFF("Week", ModifiedDate,@YearEndDate)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DATEADD &#40;SSIS 表达式 &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [日期部分 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [天 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [月 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [年 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [DATEADD（SSIS 表达式）](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEPART（SSIS 表达式）](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DAY（SSIS 表达式）](../../integration-services/expressions/day-ssis-expression.md)   
+ [MONTH（SSIS 表达式）](../../integration-services/expressions/month-ssis-expression.md)   
+ [YEAR（SSIS 表达式）](../../integration-services/expressions/year-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

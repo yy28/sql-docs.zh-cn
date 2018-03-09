@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: "3"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4ee27d7a15dcd93fbeffc60ff8f6f67309efb2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1684760951c661e50111028594c576661028da6e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,13 +124,13 @@ SQL Server 不会在添加 CPU 后自动开始使用它们。 这可以防止 SQ
 |进程名称   |可执行程序 |是否可使用超过 64 个 CPU |  
 |----------|----------|----------|  
 |SQL Server 数据库引擎 |Sqlserver.exe  |是 |  
-|Reporting Services |Rs.exe |“否” |  
-|Analysis Services  |As.exe |“否” |  
-|Integration Services   |Is.exe |“否” |  
-|Service Broker |Sb.exe |“否” |  
-|全文搜索   |Fts.exe    |“否” |  
-|SQL Server 代理   |Sqlagent.exe   |“否” |  
-|SQL Server Management Studio   |Ssms.exe   |“否” |  
-|SQL Server 安装程序   |Setup.exe  |“否” |  
+|Reporting Services |Rs.exe |是 |  
+|Analysis Services  |As.exe |是 |  
+|Integration Services   |Is.exe |是 |  
+|Service Broker |Sb.exe |是 |  
+|全文搜索   |Fts.exe    |是 |  
+|SQL Server 代理   |Sqlagent.exe   |是 |  
+|SQL Server Management Studio   |Ssms.exe   |是 |  
+|SQL Server 安装程序   |Setup.exe  |是 |  
 
 

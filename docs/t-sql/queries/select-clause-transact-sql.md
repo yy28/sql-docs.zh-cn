@@ -8,14 +8,16 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT Clause
 - SELECT_Clause_TSQL
 - DISTINCT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - parentheses [SQL Server]
 - identity columns [SQL Server], SELECT clause
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acc0566abe5865284a39680136f0535e8b801d90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +77,7 @@ SELECT [ ALL | DISTINCT ]
  DISTINCT  
  指定在结果集中只能包含唯一行。 对于 DISTINCT 关键字来说，Null 值是相等的。  
   
- 顶部 (*表达式*) [百分比] [WITH TIES]  
+ TOP (*expression* ) [ PERCENT ] [ WITH TIES ]  
  指示只能从查询结果集返回指定的第一组行或指定的百分比数目的行。 *expression* 可以是行数或行的百分比。  
   
  为了向后兼容，使用 TOP*表达式*不带括号中选择支持语句，但我们不建议这样做。 有关详细信息，请参阅[顶部 &#40;Transact SQL &#41;](../../t-sql/queries/top-transact-sql.md).  
@@ -88,7 +90,7 @@ SELECT [ ALL | DISTINCT ]
  *table_name* | *view_name* | *表*_*别名*。 *  
  限制的作用域\*到指定的表或视图。  
   
- *column_name*  
+ column_name  
  要返回的列名。 限定*column_name*若要避免不明确的引用，例如当两个表在 FROM 子句中时发生使具有相同名称的列。 例如，SalesOrderHeader 和 SalesOrderDetail 中的表[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库这两个具有一个名为 ModifiedDate 列。 如果将这两个表加入查询，则可以在选择列表中指定 SalesOrderDetail 项的修改日期，即 SalesOrderDetail.ModifiedDat。  
   
  *expression*  
@@ -116,7 +118,7 @@ SELECT [ ALL | DISTINCT ]
  *property_name*  
  是的一个公共属性*udt_column_name*。  
   
- *字段名*  
+ *field_name*  
  公共数据成员的*udt_column_name*。  
   
  *method_name*  

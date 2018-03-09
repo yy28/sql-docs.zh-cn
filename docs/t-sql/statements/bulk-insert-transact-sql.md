@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - BULK INSERT
 - BULK_INSERT_TSQL
 - BULK
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - tables [SQL Server], importing data into
 - inserting files
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: "153"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: da5449283269e7ff018e7a4b394eb4c26b69e590
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -323,7 +325,7 @@ GO
   
  由于计算机千差万别，因此我们建议在数据加载过程中测试各种批大小，以确定最佳方案。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
 ### <a name="security-account-delegation-impersonation"></a>安全帐户委托（模拟）  
  如果用户使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则系统将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程帐户的安全配置文件。 使用 SQL Server 身份验证的登录名不能在数据库引擎外部进行身份验证。 因此，当 BULK INSERT 命令由使用 SQL Server 身份验证的登录名启动时，使用 SQL Server 进程帐户（SQL Server 数据库引擎服务使用的帐户）的安全上下文建立到数据的连接。 要成功读取源数据，您必须授予 SQL Server 数据库引擎使用的帐户访问源数据的权限。与此相反，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户使用 Windows 身份验证登录，则该用户只能读取用户帐户可以访问的那些文件，而不考虑 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的安全配置文件。  
@@ -334,8 +336,8 @@ GO
   
  有关此设置和使用大容量插入其他安全注意事项的详细信息，请参阅[导入批量数据使用 BULK INSERT 或 OPENROWSET &#40;BULK...&#41;&#40;SQL server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Permissions  
- 需要 INSERT 和 ADMINISTER BULK OPERATIONS 权限。 另外，如果存在下列一种或多种情况，则还需要 ALTER TABLE 权限：  
+### <a name="permissions"></a>权限  
+ 需要 INSERT 和 ADMINISTER BULK OPERATIONS 权限。 在 Azure SQL 数据库中，插入和管理数据库大容量操作的权限是必需的。 另外，如果存在下列一种或多种情况，则还需要 ALTER TABLE 权限：  
   
 -   存在约束但未指定 CHECK_CONSTRAINTS 选项。  
   
@@ -415,7 +417,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. 从 Azure blob 存储中的文件导入数据   
 下面的示例演示如何从 csv 文件中的 Azure blob 存储位置，已配置为外部数据源加载数据。 这要求数据库范围的凭据使用的共享的访问签名。    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -451,7 +453,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
   
 ## <a name="see-also"></a>另请参阅  
  [批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 实用工具](../../tools/bcp-utility.md)   
  [格式化文件来导入或导出数据 &#40;SQL server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   

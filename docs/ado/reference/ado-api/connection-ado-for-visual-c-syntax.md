@@ -3,8 +3,9 @@ title: "连接 (ADO 的 Visual c + + 语法) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
-helpviewer_keywords: Connection collection [ADO], ADO for Visual C++ syntax
+dev_langs:
+- C++
+helpviewer_keywords:
+- Connection collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd0859d1df6083192e4c95dabb98bffcdc79f53a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81f3d53f8203f5e0d36f52ea5c937fe7cceb5770
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>连接 (ADO 的 Visual c + + 语法)
 ## <a name="methods"></a>方法  

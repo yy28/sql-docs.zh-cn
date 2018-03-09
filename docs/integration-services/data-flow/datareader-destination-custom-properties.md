@@ -1,5 +1,5 @@
 ---
-title: "DataReader 目标自定义属性 |Microsoft 文档"
+title: "DataReader 目标自定义属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 44a9f26f1125f2c6b319653528aaa7eea04aa84f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e7f29a5c88b4cb4e8d090336a8d59072a25cfeb8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目标自定义属性
   DataReader 目标具有自定义属性和所有数据流组件通用的属性。  
@@ -32,7 +31,7 @@ ms.lasthandoff: 08/03/2017
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
-|DataReader|字符串|DataReader 目标的类名。|  
+|DataReader|String|DataReader 目标的类名。|  
 |FailOnTimeout|Boolean|指示发生 **ReadTimeout** 时是否失败。 此属性的默认值为 **False**。|  
 |ReadTimeout|Integer|超时发生之前的毫秒数。 此属性的默认值为 30000（30 秒）。|  
   
@@ -41,7 +40,6 @@ ms.lasthandoff: 08/03/2017
  有关详细信息，请参阅 [DataReader Destination](../../integration-services/data-flow/datareader-destination.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
-

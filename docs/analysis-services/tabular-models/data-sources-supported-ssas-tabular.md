@@ -1,39 +1,35 @@
 ---
 title: "在 SQL Server Analysis Services 表格模型中支持的数据源 |Microsoft 文档"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ad72f038095af14c6df605c3d018da0feec7b847
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-sources-supported-in-tabular-models"></a>在表格模型中受支持的数据源
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Azure Analysis Services，请参阅[Azure Analysis Services 中支持的数据源](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)。
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]   
-Azure Analysis Services，请参阅[Azure Analysis Services 中支持的数据源](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-datasource)。
-
-  本主题介绍可用于表格模型的数据源的类型。  
+  本文介绍可与表格模型使用的数据源的类型。  
   
-##  <a name="bkmk_supported_ds"></a>内存中表格模型的支持的数据源  
+##  <a name="bkmk_supported_ds"></a> 内存中表格模型的支持的数据源  
 在您安装 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]时，安装程序不安装对每种数据源列出的访问接口。 某些提供可能与你的计算机上的其他应用程序一起安装。 在其他情况下，你可能需要下载并安装提供程序。  
   
 |||||  
@@ -51,7 +47,7 @@ Azure Analysis Services，请参阅[Azure Analysis Services 中支持的数据�
 |Microsoft Excel 文件|Excel 2010 及更高版本|.xlsx、xlsm、.xlsb、.xltx、.xltm|ACE 14 OLE DB 访问接口|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿|Microsoft SQL Server 2008 及 Analysis Services 更高版本|xlsx、xlsm、.xlsb、.xltx、.xltm|ASOLEDB 10.5<br /><br /> （只能与发布到已安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的 SharePoint 场的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 工作簿一起使用）|  
 |Analysis Services 多维数据集|Microsoft SQL Server 2008 及 Analysis Services 更高版本|（不适用）|ASOLEDB 10|  
-|数据馈送<br /><br /> （用于从 Reporting Services 报表、Atom 服务文档、Microsoft Azure Marketplace DataMarket 和单个数据馈送导入数据）|Atom 1.0 格式<br /><br /> 作为 Windows Communication Foundation (WCF) Data Service（以前称作 ADO.NET Data Services）公开的任何数据库或文档。|`.atomsvc`服务文档，它定义一个或多个馈送<br /><br /> Atom Web 馈送文档的 .atom|Microsoft 数据馈送提供程序 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework 数据馈送数据提供程序 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|数据馈送<br /><br /> （用于从 Reporting Services 报表、Atom 服务文档、Microsoft Azure Marketplace DataMarket 和单个数据馈送导入数据）|Atom 1.0 格式<br /><br /> 作为 Windows Communication Foundation (WCF) Data Service（以前称作 ADO.NET Data Services）公开的任何数据库或文档。|`.atomsvc` 服务文档，它定义一个或多个馈送<br /><br /> Atom Web 馈送文档的 .atom|Microsoft 数据馈送提供程序 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework 数据馈送数据提供程序 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Office 数据库连接文件||.odc||  
   
   
@@ -70,7 +66,9 @@ Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 
   
 ##  <a name="bkmk_tips"></a> 选择数据源的提示  
   
- 从关系数据库导入表可以省去一些操作步骤，因为在导入过程中将使用外键关系在模型设计器的各表之间创建关系。  
+
+              *
+              * 从关系数据库导入表可以省去一些操作步骤，因为在导入过程中将使用外键关系在模型设计器的各表之间创建关系。  
   
 导入多个表，然后删除不需要的表，这样也可以省去一些操作步骤。 如果一次导入一个表，则仍可能需要手动创建表之间的关系。  
   

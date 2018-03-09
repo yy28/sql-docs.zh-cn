@@ -2,11 +2,12 @@
 title: "为可用性组手动准备辅助数据库 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,15 +23,15 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: "47"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 63ef60586a8fd776cc31a331c677760705974f21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 58b7a7ba954159974f60e58ff6b8bbbd07017fef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>为可用性组手动准备数据库 (SQL Server)
-本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中为 AlwaysOn 可用性组准备辅助数据库。 准备数据库需要两个步骤： 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中为 AlwaysOn 可用性组准备辅助数据库。 准备数据库需要两个步骤： 
 
 1. 使用 RESTORE WITH NORECOVERY，将主数据库的最近数据库备份和后续日志备份还原到托管次要副本的每个服务器实例
 2. 将还原的辅助数据库联接到可用性组。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/09/2017
 ###  <a name="Security"></a> 安全性  
  备份数据库时， [TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md) 设置为 OFF。 因此，在新还原的数据库中，TRUSTWORTHY 始终为 OFF。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)。  
   
  如果服务器实例上不存在要还原的数据库，则 RESTORE 语句要求 CREATE DATABASE 权限。 有关详细信息，请参阅 [RESTORE (Transact-SQL)](../../../t-sql/statements/restore-statements-transact-sql.md)备份。  
@@ -272,7 +273,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP (Transact-SQL)](../../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE 参数 (Transact-SQL)](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)   
  [添加文件操作失败的故障排除（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
   

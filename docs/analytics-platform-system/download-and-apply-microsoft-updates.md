@@ -3,10 +3,10 @@ title: "下载并应用 Microsoft 更新 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>下载并应用 Microsoft 更新
 本主题讨论如何从 Microsoft 更新目录到 Windows Server Update Services (WSUS) 下载更新并将这些更新应用于分析平台系统设备服务器。 Microsoft 更新将安装所有合适的更新，Windows 和 SQL Server。 VMM 虚拟机的设备上安装 WSUS。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 >   
 > 当设备正在使用时，不适用于 Microsoft 更新。 应用更新可能会导致设备节点重新启动。 当不使用该设备时，应在维护时段内应用这些更新。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 在执行这些步骤之前, 你需要：  
   
 -   中的说明在你的设备上配置 WSUS[配置 Windows Server Update Services &#40;WSUS &#41;&#40;分析平台系统 &#41;](configure-windows-server-update-services-wsus.md).  

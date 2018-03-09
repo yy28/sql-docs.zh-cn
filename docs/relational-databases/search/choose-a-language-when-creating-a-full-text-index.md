@@ -4,8 +4,11 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +21,21 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>创建全文索引时选择语言
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   创建全文索引时，需要为索引列指定列级语言。 所指定语言的 [断字符和词干分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 将由针对相应列的全文查询使用。 如果要在创建全文索引时选择列语言，有几个事项需要注意。 这些注意事项均与全文引擎如何对文本进行词汇切分再编制其索引有关。  
   
 > [!NOTE]  
@@ -50,7 +56,7 @@ ms.lasthandoff: 12/01/2017
   
      测试表明这些新的断字符在高压查询环境中非常可靠。  
   
--   安全性  
+-   Security  
   
      由于语言组件的安全性得到改进，因此默认情况下 SQL Server 中已启用这些新的断字符。 我们极力建议对诸如断字符和筛选器之类的外部组件进行签名以提高 SQL Server 的整体安全性和可靠性。 可以按如下方式配置全文查询以验证是否对这些组件进行了签名：  
   
@@ -100,7 +106,7 @@ ms.lasthandoff: 12/01/2017
   
   
 ##  <a name="stemming"></a> 词干分析  
- 选择列级语言时的另外一个注意事项是词干分析。 全文查询中的*词干分析* 是指搜索特定语言中某个词的所有词干派生形式（变形）的过程。 当使用一般断字符处理多种语言时，词干分析过程仅对为相应列指定的语言起作用，对于此列中的其他语言则不起作用。 例如，德语词干分析器对于英语或西班牙语（等语言）不起作用。 这可能会影响恢复操作，具体取决于您选择在查询时要使用的语言。  
+ 选择列级语言时的另外一个注意事项是词干分析。 全文查询中的*词干分析* 是指搜索特定语言中某个词的所有词干派生形式（变形）的过程。 当使用一般断字符处理多种语言时，词干分析过程仅对为相应列指定的语言起作用，对于此列中的其他语言则不起作用。 例如，德语词干分析器对于英语或西班牙语（等语言）不起作用。 这可能会影响恢复操作，具体取决于你在查询时选择使用的语言。  
   
   
 ##  <a name="type"></a> 列类型对全文搜索的影响  

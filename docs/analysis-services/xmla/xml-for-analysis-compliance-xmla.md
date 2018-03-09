@@ -2,15 +2,13 @@
 title: "XML for Analysis 遵从性 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f86d674ec86788741e098d8cfe37462cdffaec6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: efd2d4cfd7adb6185abdd383a261494495817ec5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-for-analysis-compliance-xmla"></a>XML for Analysis 遵从性 (XMLA)
-  XML for Analysis 1.1 规范描述了一种开放标准，该标准支持对位于万维网上的数据源的数据访问。 本主题详细介绍与支持的 XML for Analysis 1.1 规范的符合度[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]XML for Analysis 1.1 规范介绍在万维网支持对驻留的数据源的数据访问的开放标准。 本主题详细介绍与支持的 XML for Analysis 1.1 规范的符合度[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="compliant-items"></a>符合项  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 符合 XML for Analysis 1.1 规范中列出的所有必须遵循的内容。 此外，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还实现了 XML for Analysis 1.1 规范中描述的下列可选项。  

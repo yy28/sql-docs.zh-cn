@@ -2,29 +2,34 @@
 title: "使用 EVENTDATA 函数 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-ddl
+ms.suite: sql
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f657cb2a52bb4871baba4c2fa6c8b846590ab111
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 049d6eb85ebd1fcbbfecb1d64ec507979a0026f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函数
-  使用 EVENTDATA 函数，可以捕获有关激发 DDL 触发器的事件的信息。 此函数返回 **xml** 值。 XML 架构包括下列信息：  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+使用 EVENTDATA 函数，可以捕获有关激发 DDL 触发器的事件的信息。 此函数返回 **xml** 值。 XML 架构包括下列信息：  
   
 -   事件时间。  
   

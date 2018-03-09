@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorchangealert_TSQL
 - sp_dbmmonitorchangealert
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 276f3b3f6f3194a311874db3724f07bf8ab053d0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41132fa5fd69036e9bc504628cd353d809d6a0bf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +58,7 @@ sp_dbmmonitorchangealert database_name
  *alert_id*  
  整数值，用于标识要添加或更改的警告。 指定以下值之一：  
   
-|值|性能指标|警告阈值|  
+|“值”|性能指标|警告阈值|  
 |-----------|------------------------|-----------------------|  
 |1|最早的未发送事务|指定在主体服务器实例上生成警告之前，发送队列中可以累积的事务的分钟数。 该警告有助于度量数据丢失的可能性（以时间计），并且特别适用于高性能模式。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|  
 |2|未发送日志|指定未发送日志达到多少 KB 后，在主体服务器实例上生成一个警告。 该警告有助于度量数据丢失的可能性（以 KB 计），并且特别适用于高性能模式。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|  
@@ -72,7 +74,7 @@ sp_dbmmonitorchangealert database_name
 > [!NOTE]  
 >  若要查看的当前值，请运行[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)存储过程。  
   
- *启用*  
+ *enabled*  
  警告是否已启用？  
   
  0 = 已禁用警告。  
@@ -83,12 +85,12 @@ sp_dbmmonitorchangealert database_name
 >  始终启用保持期。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -97,9 +99,9 @@ sp_dbmmonitorchangealert database_name
 |*alert_id*|性能指标|警告阈值|警告是否已启用？|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
 |1|最早的未发送事务|30 分钟|是|  
-|2|未发送日志|10000 KB|是|  
-|3|未还原日志|10000 KB|是|  
-|4|镜像提交开销|1,000 毫秒|是|  
+|2|未发送日志|10,000 KB|是|  
+|3|未还原日志|10,000 KB|是|  
+|4|镜像提交开销|1,000 毫秒|否|  
 |5|保持期|8 小时|是|  
   
 ```  

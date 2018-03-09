@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dff68e0c4e50a755ec058602bd61208ccd9b7de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>创建 DATABASE SCOPED CREDENTIAL (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -63,7 +63,7 @@ WITH IDENTITY = 'identity_name'
 >  [!WARNING]
 >  SAS 密钥值可能会开始使用？（问号）。 如果你使用 SAS 密钥，你必须删除前导？。 否则可能会阻止你的工作。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  数据库范围的凭据是包含连接到外部的资源所需的身份验证信息的记录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 多数凭据包括一个 Windows 用户和一个密码。  
   
  创建数据库范围的凭据之前，数据库必须具有主密钥来保护凭据。 有关详细信息，请参阅 [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)。  
@@ -87,14 +87,14 @@ WITH IDENTITY = 'identity_name'
 
 - [大容量插入](../../t-sql/statements/bulk-insert-transact-sql.md)和[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)使用数据库范围的凭据来访问 Azure blob 存储中的数据。 有关详细信息，请参阅[示例的大容量访问 Azure Blob 存储中的数据](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**控件**对数据库拥有权限。  
   
 ## <a name="examples"></a>示例  
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. 创建数据库范围的应用程序的凭据。
  下面的示例创建数据库范围的凭据调用`AppCred`。 数据库范围凭据包含 Windows 用户`Mary5`和密码。  
   
-```tsql  
+```sql  
 -- Create a db master key if one does not already exist, using your own password.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';  
   
@@ -106,7 +106,7 @@ GO
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 创建数据库范围的共享的访问签名的凭据。   
 下面的示例创建数据库范围的凭据可以用于创建[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)，这可以执行大容量操作，如[大容量插入](../../t-sql/statements/bulk-insert-transact-sql.md)和[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). 共享的访问签名不能与 SQL Server、 AP 或 SQL DW 中的 PolyBase。
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -118,7 +118,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 Azure 数据湖存储用于服务到服务身份验证使用 Azure Active Directory 应用程序。
 请[创建 AAD 应用程序](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)和记录 client_id、 OAuth_2.0_Token_EndPoint 和密钥，再尝试创建数据库范围的凭据。
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'

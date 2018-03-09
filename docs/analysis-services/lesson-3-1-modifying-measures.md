@@ -2,29 +2,32 @@
 title: "修改度量值 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 46215891a04401956e98b7e429e5b6191b47df81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 322abebe579106c03f4855f7b9e2e7573f5d5580
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-1---modifying-measures"></a>Lesson 3-1-修改度量值
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 可以使用“FormatString”属性定义控制如何向用户显示度量值的格式设置。 在此任务中，您将为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的货币和百分比度量值指定格式设置属性。  
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>修改多维数据集的度量值  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 11. 在“文件”  菜单上，单击“全部保存” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[修改“客户”维度](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
+[修改客户维度](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [定义数据库维度](../analysis-services/multidimensional-models/define-database-dimensions.md)  

@@ -2,28 +2,32 @@
 title: "步骤 2： 将数据导入到 SQL Server 使用 PowerShell |Microsoft 文档"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-vnext-ctp2
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: b4741dcfee4bdc2e5ca2327b50f5dd727be9de55
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>步骤 2： 将数据导入到 SQL Server 使用 PowerShell
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 使用本教程，本文摘自[SQL 开发人员的数据库中 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
@@ -54,7 +58,7 @@ ms.lasthandoff: 11/09/2017
     - 名称或地址[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]已安装与 Python 的机器学习服务实例。
     - 实例上某帐户的用户名和密码。 你使用的帐户必须具有创建数据库、 创建表和存储的过程和大容量加载到表的数据的能力。 
     - 如果未提供的用户名和密码，你的 Windows 标识可用于登录到 SQL Server，并将提升到输入密码。
-    - 刚下载的示例数据文件的路径和文件名。 例如，使用 IPv4 地址 `C:\temp\pysql\nyctaxi1pct.csv`
+    - 刚下载的示例数据文件的路径和文件名。 例如： `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > 若要成功加载数据，库 xmlrw.dll 必须是 bcp.exe 所在的文件夹。

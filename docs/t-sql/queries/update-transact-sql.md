@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
 - UPDATE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DML [SQL Server], UPDATE statement
 - data updates [SQL Server], UPDATE statement
@@ -38,16 +40,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: "91"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 671eb95a5c1772ec790886d923112d491bbd2a35
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -119,12 +121,12 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- 与\<common_table_expression >  
+ WITH \<common_table_expression>  
  指定在 UPDATE 语句作用域内定义的临时命名结果集或视图，也称为公用表表达式 (CTE)。 CTE 结果集派生自简单查询并由 UPDATE 语句引用。  
   
  公用表表达式还可与 SELECT、INSERT、DELETE 和 CREATE VIEW 等语句一起使用。 有关详细信息，请参阅[使用 common_table_expression &#40;Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- 顶部**(** *表达式***)** [百分比]  
+ TOP **(** *expression***)** [ PERCENT ]  
  指定的数目或百分比的更新的行。 *expression* 可以是行数或行的百分比。  
   
  与 INSERT、UPDATE 或 DELETE 一起使用的 TOP 表达式中被引用行将不按任何顺序排列。  
@@ -149,7 +151,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *rowset_function_limited*  
  可以是[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)或[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)函数，受制于提供程序功能。  
   
- 与**(** \<Table_Hint_Limited > **)**  
+ WITH **(** \<Table_Hint_Limited> **)**  
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的信息，请参阅[表提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
@@ -158,7 +160,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET  
  指定要更新的列或变量名称的列表。  
   
- *column_name*  
+ column_name  
  包含要更改的数据的列。 *column_name*必须存在于*table_or view_name*。 不能更新标识列。  
   
  *expression*  
@@ -172,9 +174,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
  复合赋值运算符：  
- + = 添加和分配  
+ += 添加和分配  
  -= 减去和分配  
- * = Multiply 和分配  
+ *= Multiply 和分配  
  / = 分割和分配  
  %= 取模和分配  
  &=              “位与”并赋值  
@@ -184,13 +186,13 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *udt_column_name*  
  用户定义类型列。  
   
- *property_name* | *字段名*  
+ *property_name* | *field_name*  
  用户定义类型的公共属性或公共数据成员。  
   
  *method_name* **(** *参数*[ **，**...*n*] **)**  
  是一种非静态公共赋值函数方法*udt_column_name*采用一个或多个参数。  
   
- **.**编写**(***表达式***，***@Offset***，** *@Length***)**  
+ **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
  指定的值的部分*column_name*是要修改。 *表达式*替换 *@Length* 单位从开始 *@Offset* 的*column_name*。 只能为的列**varchar （max)**， **nvarchar (max)**，或**varbinary （max)**可以使用此子句指定。 *column_name*不能为 NULL，并且不能与表名称或表别名进行限定。  
   
  *表达式*会将该值复制到*column_name*。 *表达式*必须计算结果为或能够隐式强制转换为*column_name*类型。 如果*表达式*设置为 NULL，  *@Length* 将被忽略，和中的值*column_name*将被截断处指定 *@Offset*.  
@@ -201,15 +203,15 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  有关详细信息，请参阅“备注”。  
   
- **@***变量*  
+ **@** *variable*  
  是一个声明的变量，设置为返回的值*表达式*。  
   
- 设置 **@** *变量* = *列* = *表达式*将变量设置为相同列的值。 这不同于集 **@** *变量* = *列*，*列* =  *表达式*，这将变量设置为列的更新前值。  
+ 设置 **@ * * * 变量* = *列* = *表达式*将变量设置为列的值。 这不同于组 **@ * * * 变量* = *列*，*列* = *表达式*，哪些集为列的更新前的值的变量。  
   
- \<OUTPUT_Clause >  
+ \<OUTPUT_Clause>  
  在 UPDATE 操作中，返回更新后的数据或基于更新后的数据的表达式。 针对远程表或视图的任何 DML 语句都不支持 OUTPUT 子句。 有关详细信息，请参阅[OUTPUT 子句 &#40;Transact SQL &#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
- 从\<table_source >  
+ FROM \<table_source>  
  指定将表、视图或派生表源用于为更新操作提供条件。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   
  如果所更新对象与 FROM 子句中的对象相同，并且在 FROM 子句中对该对象只有一个引用，则指定或不指定对象别名均可。 如果更新的对象在 FROM 子句中出现了不止一次，则对该对象的一个（并且只有一个）引用不能指定表别名。 FROM 子句中对该对象的所有其他引用都必须包含对象别名。  
@@ -226,7 +228,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
 -   定位更新使用 CURRENT OF 子句指定游标。 更新操作发生在游标的当前位置。  
   
-\<search_condition >  
+\<search_condition>  
  为要更新的行指定需满足的条件。 搜索条件也可以是联接所基于的条件。 对搜索条件中可以包含的谓词数量没有限制。 有关谓词和搜索条件的详细信息，请参阅[搜索条件 &#40;Transact SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
@@ -243,7 +245,7 @@ GLOBAL
 *cursor_variable_name*  
  是游标变量的名称。 *cursor_variable_name*必须引用允许更新的游标。  
   
-选项**(** \<query_hint > [ **，**...*n* ] **)**  
+OPTION **(** \<query_hint> [ **,**... *n* ] **)**  
  指定优化器提示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
@@ -334,7 +336,7 @@ GO
 >  **Ntext**，**文本**，和**映像**的未来版本中将删除数据类型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a>更新大值数据类型  
- 使用**。**写入 (*表达式***，**  *@Offset*  **，***@Length*) 子句执行的部分或完整更新**varchar （max)**， **nvarchar (max)**，和**varbinary （max)**数据类型。 例如，部分更新的**varchar （max)**列可能会删除或修改列中的，只有前 200 个字符，而完全更新会删除或修改列中的所有数据。 **.**编写如果数据库恢复模式设置为大容量日志或简单按最小方式记录插入或追加新数据的更新。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ 使用**。**写入 (*表达式 * * *，** *@Offset***，***@Length*) 子句执行部分或完整的更新**varchar （max)**， **nvarchar (max)**，和**varbinary （max)**数据类型。 例如，部分更新的**varchar （max)**列可能会删除或修改列中的，只有前 200 个字符，而完全更新会删除或修改列中的所有数据。 **.**编写如果数据库恢复模式设置为大容量日志或简单按最小方式记录插入或追加新数据的更新。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅[事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  当 UPDATE 语句导致下列任一操作时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]便会将部分更新转换为完整更新：  
 -   更改分区视图或表的键列。  
@@ -346,7 +348,7 @@ GO
   
 为了获得最佳性能，建议按照块区大小为 8040 字节倍数的方式插入或更新数据。  
   
-如果通过修改该列**。**编写或者在 OUTPUT 子句，整个值的列中引用子句中的映像之前**删除。***column_name*或中的后图像**插入。***column_name*，返回到表变量中指定的列。 请参阅下面的示例 R。  
+如果通过修改该列**。**编写或者在 OUTPUT 子句，整个值的列中引用子句中的映像之前 **删除。 * * * column_name*或中的后图像 **插入。 * * * column_name*，返回表变量中的指定列。 请参阅下面的示例 R。  
   
 若要实现的相同的功能**。**与其他字符或二进制数据类型编写，请使用[内容 &#40;Transact SQL &#41;](../../t-sql/functions/stuff-transact-sql.md).  
   
@@ -464,9 +466,9 @@ ID     Value
 ## <a name="logging-behavior"></a>日志记录行为  
  记录 UPDATE 语句;但是，部分更新到大型值数据类型使用**。**编写子句最小日志记录。 有关详细信息，请参阅上一节“数据类型”中的“更新大值数据类型”。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求对目标表具有 UPDATE 权限。 选择的权限时也需要如果 UPDATE 语句包含 WHERE 子句，或者如果正在更新表*表达式*集中子句使用了一个列的表中。  
   
  更新的成员的权限仅默认**sysadmin**固定服务器角色、 **db_owner**和**db_datawriter**固定数据库角色和表所有者。 成员**sysadmin**， **db_owner**，和**db_securityadmin**角色和表所有者可将权限传输到其他用户。  
@@ -920,7 +922,7 @@ SET Location = CONVERT(Point, '12.3:46.2')
 WHERE Name = 'Anchorage';  
 ```  
   
-#### <a name="w-invoking-a-method"></a>W。 调用方法  
+#### <a name="w-invoking-a-method"></a>W. 调用方法  
  通过调用标记为“赋值函数”的用户定义类型的方法执行更新，可以更新 UDT。 以下示例调用类型 `Point` 的名为 `SetXY` 的赋值函数方法。 这将更新该类型的实例状态。  
   
 ```sql  
@@ -929,7 +931,7 @@ SET Location.SetXY(23.5, 23.5)
 WHERE Name = 'Anchorage';  
 ```  
   
-#### <a name="x-modifying-the-value-of-a-property-or-data-member"></a>X。 修改属性或数据成员的值  
+#### <a name="x-modifying-the-value-of-a-property-or-data-member"></a>X. 修改属性或数据成员的值  
  通过修改用户定义类型的已注册属性或公共数据成员的值，可以更新 UDT。 提供值的表达式必须可隐式转换为属性的类型。 以下示例修改用户定义类型 `X` 的属性 `Point` 的值。  
   
 ```sql  
@@ -944,7 +946,7 @@ WHERE Name = 'Anchorage';
 > [!CAUTION]  
 >  由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器通常会为查询选择最佳执行计划，因此我们建议仅在最后迫不得已的情况下才可由资深的开发人员和数据库管理员使用提示。  
   
-#### <a name="y-specifying-a-table-hint"></a>Y。 指定表提示  
+#### <a name="y-specifying-a-table-hint"></a>Y. 指定表提示  
  下面的示例指定[表提示](../../t-sql/queries/hints-transact-sql-table.md)TABLOCK。 此提示指定对 `Production.Product` 表采用共享锁，并保持到 UPDATE 语句结束。  
   
 ```sql  
@@ -957,7 +959,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-#### <a name="z-specifying-a-query-hint"></a>Z。 指定查询提示  
+#### <a name="z-specifying-a-query-hint"></a>Z. 指定查询提示  
  下面的示例指定[查询提示](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)` UPDATE 语句中。 此提示指示查询优化器在编译和优化查询时对局部变量使用特定值。 仅在查询优化期间使用该值，在查询执行期间不使用该值。  
   
 ```sql  
@@ -1036,7 +1038,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>AC。 在 TRY…CATCH 块中使用 UPDATE  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. 在 TRY…CATCH 块中使用 UPDATE  
  下面的示例使用在 TRY UPDATE 语句...CATCH 块来处理更新操作过程中可能发生的执行错误。  
   
 ```sql  
@@ -1070,7 +1072,7 @@ GO
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="ad-using-a-simple-update-statement"></a>AD。 使用简单 UPDATE 语句  
+### <a name="ad-using-a-simple-update-statement"></a>AD. 使用简单 UPDATE 语句  
  以下示例显示如何可以影响所有行当 WHERE 子句不用于指定的行 （或行） 更新。  
   
  此示例将更新中的值`EndDate`和`CurrentFlag`列中的所有行`DimEmployee`表。  
@@ -1102,7 +1104,7 @@ SET FirstName = 'Gail'
 WHERE EmployeeKey = 500;  
 ```  
   
-### <a name="af-using-the-update-statement-with-label"></a>AF。 UPDATE 语句中使用标签  
+### <a name="af-using-the-update-statement-with-label"></a>AF. UPDATE 语句中使用标签  
  下面的示例演示一个标签的 UPDATE 语句的使用。  
   
 ```sql  

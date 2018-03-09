@@ -2,9 +2,12 @@
 title: "结尾日志备份 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ helpviewer_keywords:
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 697a6b7db5513165db073bf70954499dc95503e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 06e3604fcd70a4ce7948d704d923c84cbc5acf2a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>结尾日志备份 (SQL Server)
-  本主题仅与备份和还原使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的备份和恢复相关。  
   
  “结尾日志备份”捕获尚未备份的任何日志记录（“结尾日志”），以防丢失所做的工作并确保日志链完好无损。 在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库恢复到其最近一个时间点之前，必须先备份数据库的事务日志。 结尾日志备份将是数据库还原计划中相关的最后一个备份。  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
   
 |BACKUP LOG 选项|注释|  
 |-----------------------|--------------|  
-|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。 除非同时指定 NO_TRUNCATE 或 COPY_ONLY 选项，否则将截断日志。<br /><br /> **\*\* 重要提示 \*\*** 除非数据库受损，否则不建议使用 NO_TRUNCATE。|  
+|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。 除非同时指定 NO_TRUNCATE 或 COPY_ONLY 选项，否则将截断日志。<br /><br /> **重要提示：**除非数据库受损，否则不建议使用 NO_TRUNCATE。|  
 |CONTINUE_AFTER_ERROR|仅当您要备份受损数据库的尾部时，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 对受损数据库备份日志尾部时，日志备份中正常捕获的部分元数据可能不可用。 有关详细信息，请参阅本主题中的 [包含不完整备份元数据的结尾日志备份](#IncompleteMetadata)。|  
   
 ##  <a name="IncompleteMetadata"></a> 包含不完整备份元数据的结尾日志备份  
@@ -60,13 +63,9 @@ ms.lasthandoff: 11/09/2017
  如果结尾日志备份中的元数据不完整，则 [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) 表在结尾日志备份时将丢失文件组的大多数相关信息。 大多数 **backupfilegroup** 表列为 NULL；只有以下几列有意义：  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **type**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
@@ -76,10 +75,10 @@ ms.lasthandoff: 11/09/2017
     
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [SQL Server 事务日志体系结构和管理指南](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   

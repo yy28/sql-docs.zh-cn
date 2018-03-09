@@ -2,43 +2,43 @@
 title: "无人参与的安装在 Ubuntu 上的 SQL Server |Microsoft 文档"
 description: "SQL Server 脚本示例-Ubuntu 上的无人参与安装"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f5291dc17a1109a7f734ec302eae9db2fac2a1e9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f6df20d942331b6361651ade82b6158b2c6798de
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例： 适用于 Ubuntu 的无人参与的 SQL Server 安装脚本
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 此示例 Bash 脚本上 Ubuntu 16.04 中安装 SQL Server 自 2017 年，而无需交互式输入。 它提供的安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 或者，你可以安装全文搜索，并创建一个管理用户。
 
 > [!TIP]
-> 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[适用于 Ubuntu 的快速入门教程](quickstart-install-connect-ubuntu.md)。 有关安装程序的其他信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
+> 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[适用于 Ubuntu 的快速入门](quickstart-install-connect-ubuntu.md)。 有关安装程序的其他信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
-- 你需要至少 3.25 GB 的内存来运行在 Linux 上的 SQL Server。
+- 你需要至少 2 GB 的内存来运行在 Linux 上的 SQL Server。
 - 文件系统必须是**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
 - 其他系统要求，请参阅[在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
 
 ## <a name="sample-script"></a>示例脚本
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

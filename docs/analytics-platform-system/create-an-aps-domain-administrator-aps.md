@@ -3,10 +3,10 @@ title: "创建一个 AP 域管理员 (AP)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: "7"
-ms.openlocfilehash: 5ec32cd93b7fece9e12076fa82eea147bf13b81b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>创建一个 AP 域管理员
 某些操作需要 Analytics Platform System 域管理员权限。 本部分说明如何创建其他设备域管理员。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>若要将用户添加到 Domain Admins 组  
   
-1.  登录到活动的 AD 节点 **(*appliance_domain*-AD01 * * 或 ***appliance_domain*-AD02**) 使用现有设备域管理员帐户。  
+1.  登录到活动的 AD 节点**(*appliance_domain*-AD01**或 ***appliance_domain *-AD02**) 使用现有的设备域管理员帐户。  
   
 2.  在“开始”菜单上，单击“运行”。 在**打开**框中，键入**dsa.msc**。 单击 **“确定”**。  
   

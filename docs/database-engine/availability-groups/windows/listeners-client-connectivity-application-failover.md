@@ -2,10 +2,14 @@
 title: "侦听器、客户端连接、应用程序故障转移 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af6a6732a78007d51221cff6c6fb386e3abe48f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>侦听器、客户端连接、应用程序故障转移
-  本主题包含有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题包含有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
   
 > [!NOTE]  
 >  对于绝大多数常见的侦听器配置，只需通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句或 PowerShell cmdlet 即可创建第一个可用性组侦听器。 有关详细信息，请参阅本主题后面的 [相关任务](#RelatedTasks)。  
@@ -118,7 +123,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  只读路由指的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将到可用性组侦听器的传入连接路由到配置为允许只读工作负荷的次要副本。 如果符合下列要求，则引用可用性组侦听器名称的传入连接可自动路由到只读副本：  
   
 -   至少一个辅助副本设置为只读访问，并且每个只读辅助副本和主副本都配置为支持只读路由。 有关详细信息，请参阅 [本节中后面的为只读路由配置可用性副本](#ConfigureARsForROR)。  
-  
+
+-   连接字符串引用可用性组中涉及的数据库。 替代方法是连接中使用的登录帐户将该数据库配置为其默认数据库。 有关详细信息，请参阅[此有关如何使用算法处理只读路由的文章](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)。
+
 -   连接字符串引用某一可用性组侦听器，并且将传入连接的应用程序意向设置为只读（例如，使用 ODBC 或 OLEDB 连接字符串或连接特性或属性中的 **Application Intent=ReadOnly** 关键字）。 有关详细信息，请参阅本节后面的 [只读应用程序意向和只读路由](#ReadOnlyAppIntent)。  
   
 ###  <a name="ConfigureARsForROR"></a> 为只读路由配置可用性副本  
@@ -149,7 +156,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 在此连接字符串示例中，客户端尝试连接到端口 1433 上名为 `AGListener` 的可用性组侦听器（如果可用性组侦听器正在侦听 1433，您也可以忽略端口）。  连接字符串将 **ApplicationIntent** 属性设置为 **ReadOnly**，从而使其成为 *读意向连接字符串*。  如果没有此设置，服务器将不会尝试该连接的只读路由。  
+ 在此连接字符串示例中，客户端尝试通过端口 1433 上名为 `AGListener` 的可用性组侦听程序（如果可用性组侦听程序正在侦听 1433，也可以忽略端口）连接到 AdventureWorks 数据库。  连接字符串将 **ApplicationIntent** 属性设置为 **ReadOnly**，从而使其成为 *读意向连接字符串*。  如果没有此设置，服务器将不会尝试该连接的只读路由。  
   
  可用性组的主数据库处理传入的只读路由请求，并尝试找到联接到主副本并配置为进行只读路由的只读副本。  客户端收回来自主副本服务器的连接信息，并连接到确定的只读副本。  
   

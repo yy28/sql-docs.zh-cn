@@ -1,35 +1,34 @@
 ---
 title: "监视跟踪 (XMLA) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, traces
 - XMLA, traces
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3895ae75a7e7e34456756ea9dfb5b2fe4198e32c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitoring-traces-xmla"></a>监视跟踪 (XMLA)
   你可以使用[订阅](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md)命令，在 XML 用于 Analysis (XMLA) 监视的实例上定义的现有跟踪[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 **订阅**命令返回的结果作为行集跟踪。  
@@ -76,11 +75,11 @@ ms.lasthandoff: 11/17/2017
 |NTCanonicalUserName|字符串|与事件关联的用户的 Windows 规范用户名。|  
 |SPID|字符串|发生事件的会话的服务器进程 ID (SPID)。 此列的值直接对应于发生事件的 XMLA 消息的 SOAP 标头中指定的会话 ID。|  
 |TextData|字符串|与事件关联的文本数据。 此列的内容取决于事件的事件类和子类。|  
-|ServerName|字符串|发生事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
+|ssSqlProfiler|字符串|发生事件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。|  
 |RequestParameters|字符串|发生事件的参数化查询或 XMLA 命令的参数。|  
 |RequestProperties|字符串|发生事件的 XMLA 方法的属性。|  
   
 ## <a name="see-also"></a>另请参阅  
- [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [使用 Analysis Services 中的 XMLA 进行开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

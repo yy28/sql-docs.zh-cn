@@ -1,19 +1,18 @@
 ---
 title: "执行批处理操作 (XMLA) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - multiple projects
 - XML for Analysis, batches
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 509554d21fc56088d5be341cd828b8b8ed8e3d60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2730fb8396f63e123bf8d896ea9a648ad22016d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>执行批处理操作 (XMLA)
   你可以使用[批处理](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML 用于 Analysis (XMLA) 若要运行多个 XMLA 命令使用的单个 XMLA 命令[执行](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 你可以运行多个命令中包含**批处理**是作为单个事务或在为每个命令的单个事务、 以串行或并行命令。 你还可以指定的外部绑定和其他属性**批处理**命令处理多个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。  
@@ -41,12 +40,12 @@ ms.lasthandoff: 11/17/2017
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>运行事务性和非事务性 Batch 命令  
  **批处理**命令在两种方式之一执行命令：  
   
- **事务性**  
+ **事务**  
  如果**事务**属性**批处理**命令设置为 true，**批处理**命令运行命令的所有包含的命令**批处理**命令在单个事务中 —*事务*批处理。  
   
  如果任何命令失败的事务性批处理中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在中回滚任何命令**批处理**以前失败的命令运行的命令和**批处理**命令立即结束。 中的任何命令**批处理**尚未运行的命令不会执行。 后**批处理**命令结束，**批处理**命令会报告遇到的失败的命令的任何错误。  
   
- **非事务性**  
+ **Nontransactional**  
  如果**事务**属性设置为 false，**批处理**命令运行所包含的每个命令**批处理**命令，在单独的事务- *非事务性*批处理。 如果任何命令失败到非事务性批处理中，**批处理**命令会继续运行之后失败的命令运行命令。 后**批处理**命令尝试运行所有命令，**批处理**命令包含，**批处理**命令报告发生的任何错误。  
   
  返回由命令中包含的所有结果**批处理**命令返回与命令包含在相同的顺序**批处理**命令。 返回的结果**批处理**命令取决于是否**批处理**命令是事务性还是非事务性。  
@@ -68,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  若要并行运行命令，你添加命令以运行以并行方式对[并行](../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)属性**批处理**命令。 目前，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可以仅运行，连续、 顺序[过程](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)并行中的命令。 任何其他 XMLA 命令，如[创建](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)或[Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)、 包含在**并行**属性按顺序运行。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]尝试运行所有**过程**命令包含在**并行**属性并行，但不能保证，包括所有**过程**可以并行运行命令。 实例分析上述各**过程**命令和实例确定，该命令不能并行运行的如果**过程**命令以串行方式运行。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 尝试运行所有**过程**命令包含在**并行**属性并行，但不能保证，包括所有**过程**可以并行运行命令。 实例分析上述各**过程**命令和实例确定，该命令不能并行运行的如果**过程**命令以串行方式运行。  
   
 > [!NOTE]  
 >  若要并行运行命令**事务**属性**批处理**命令必须设置为 true，因为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持每个连接和非事务性只有一个活动事务在单独的事务中运行每个命令的批次。 如果包含**并行**非事务性批处理中的属性，就会出错。  
@@ -132,6 +131,6 @@ ms.lasthandoff: 11/17/2017
  [Batch 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
  [Process 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [使用 Analysis Services 中的 XMLA 进行开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

@@ -3,10 +3,10 @@ title: "配置 Windows Server Update Services (WSUS) (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: "41"
-ms.openlocfilehash: d2b37819663009df090c76d516d629199691472c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>配置 Windows Server Update Services (WSUS)
 这些说明将引导你完成使用 Windows Server Update Services (WSUS) 配置向导配置 WSUS 以分析平台系统的步骤。 你需要先将软件更新应用到该设备配置 WSUS。 VMM 虚拟机的设备上已安装 WSUS。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
     1.  在**服务器管理器仪表板**上**工具**菜单上，单击**Windows Server Update Services**。  
   
-    2.  在左窗格中**Update Services**窗口中，单击以展开的虚拟机管理节点服务器 (***appliance_domain*VMM**)，然后单击**选项**。  
+    2.  在左窗格中**Update Services**窗口中，单击以展开的虚拟机管理节点服务器 (***appliance_domain *-VMM**)，然后单击**选项**。  
   
     3.  在**选项**窗格中，单击**WSUS 服务器配置向导**以启动配置向导。  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
     #### <a name="to-update-by-using-microsoft-update"></a>通过使用 Microsoft 更新来更新  
   
-    1.  如果你选择使用 Microsoft Update 同步，你不需要进行任何更改到**选择上游服务器**页。 单击 **“下一步”**。  
+    1.  如果你选择使用 Microsoft Update 同步，你不需要进行任何更改到**选择上游服务器**页。 单击“下一步” 。  
   
         ![WSUS 上游服务器同步](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/17/2017
   
     如果此服务器需要代理服务器，若要访问 Microsoft 更新或不同的上游服务器，你可以配置代理服务器设置此处;否则，请单击**下一步**。  
   
-    ![WSUS 代理](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>若要配置代理服务器设置  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 11/17/2017
   
     取消选择所有所选的更新。  
   
-    选择**SQL Server 2014**， **Windows Server 2012 R2**，和**System Center 2012 R2-虚拟机管理器**，然后单击**下一步**。  
+    选择**SQL Server 2014**， **SQL Server 2016**， **Windows Server 2012 R2**，和**System Center 2012 R2 Virtual Machine Manager**，和然后单击**下一步**。  
   
 9. 选择分类。  
   

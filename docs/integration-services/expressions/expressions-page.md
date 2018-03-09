@@ -1,5 +1,5 @@
 ---
-title: "表达式页 |Microsoft 文档"
+title: "“表达式”页 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2517f3b049261614a219d64698a99bd82e14915d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b066820ae0c67c393f8583189a0a589bda79bb24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expressions-page"></a>“表达式”页
   可以使用 **“表达式”** 页编辑属性表达式以及访问 **“属性表达式编辑器”** 和 **“属性表达式生成器”** 对话框。  
@@ -36,17 +35,16 @@ ms.lasthandoff: 08/03/2017
   
  了解有关编写表达式和使用属性表达式的详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md) 和 [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **表达式 (...)**  
  单击省略号可以打开 **“属性表达式编辑器”** 对话框。 有关详细信息，请参阅 [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md)。  
   
- **\<属性名称 >**  
+ **\<属性名称>**  
  单击省略号可以打开 **“表达式生成器”** 对话框。 有关详细信息，请参阅 [Expression Builder](../../integration-services/expressions/expression-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
  [系统变量](../../integration-services/system-variables.md)   
- [Integration Services &#40;SSIS &#41;表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

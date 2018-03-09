@@ -1,27 +1,32 @@
 ---
 title: "创建内存优化表和本机编译的存储过程 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80a65fb9599f613d63b6201242471ca89cbb1080
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4bbbd0581a293ee43da5b56d4717802258150017
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>创建内存优化表和本机编译的存储过程
-  本主题包含一个示例，该示例介绍内存中 OLTP 的语法。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题包含一个示例，该示例介绍内存中 OLTP 的语法。  
   
  若要使应用程序可使用内存中 OLTP，需要完成以下任务：  
   
@@ -39,7 +44,7 @@ ms.lasthandoff: 11/09/2017
   
  下面的代码示例需要名为 c:\Data 的目录。  
   
-```tsql  
+```sql  
 CREATE DATABASE imoltp   
 GO  
   

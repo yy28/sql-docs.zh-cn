@@ -1,5 +1,5 @@
 ---
-title: "使用 XML 源提取数据 |Microsoft 文档"
+title: "使用 XML 源提取数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: ba401b0f0a97415ecd2a24f168129d3a3c312811
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6bad96e7d130fe0caaa935a5e16d7d6c380cbb83
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 源提取数据
   若要添加和配置 XML 源，包中必须已经包含至少一个数据流任务。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 08/03/2017
   
 9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -76,4 +75,3 @@ ms.lasthandoff: 08/03/2017
  [数据流任务](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -1,13 +1,15 @@
 ---
 title: "安装 SQL Server 2016 的硬件和软件要求 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -46,23 +48,24 @@ helpviewer_keywords:
 - disk space [SQL Server]
 - localized SQL Server versions
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-caps.latest.revision: "333"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 952d6202918895d0d6f7b6496bff1185ccc4170b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 563a3403e9744a043690d059e3dd2223e663325a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安装 SQL Server 的硬件和软件要求
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主题列出了在 Windows 操作系统上安装和运行 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 至少需要满足的硬件和软件要求。 
+本文列出了在 Windows 操作系统上安装和运行 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 至少需要满足的硬件和软件要求。 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 现已开始支持 Linux 上的 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)]。 有关信息，请参阅 [Linux 上 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)] 的硬件和软件要求](../../linux/sql-server-linux-setup.md#system)。 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 引入了对于 Linux 版 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 的支持。 有关信息，请参阅 [Linux 上 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)] 的硬件和软件要求](../../linux/sql-server-linux-setup.md#system)。 
 
-> 本主题适用于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本。 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014 的硬件和软件要求](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)。 
+> 本文适用于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本。 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014 的硬件和软件要求](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)。 
   
 **进行试用：**  
   
@@ -72,13 +75,13 @@ ms.lasthandoff: 11/09/2017
   
  **以下注意事项适用于所有版本：**  
   
--   我们建议在使用 NTFS 或 ReFS 文件格式的计算机上运行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 。 支持但建议不要在使用 FAT32 文件系统的计算机上安装 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] ，因为它没有 NTFS 或 ReFS 文件系统安全。  
+-   我们建议在使用 NTFS 或 ReFS 文件格式的计算机上运行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 。 支持但建议不要在使用 FAT32 文件系统的计算机上安装 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]，因为它没有 NTFS 或 ReFS 文件系统安全。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将阻止在只读驱动器、映射的驱动器或压缩驱动器上进行安装。  
   
 -   如果通过远程桌面连接 RDC 客户端上本地资源中的介质来启动安装程序，安装将会失败。 若要执行远程安装，介质必须处于网络共享状态，或是物理计算机或虚拟机的本地介质。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质要么处于网络共享状态，要么是映射的驱动器、本地驱动器，或者是虚拟机的 ISO。  
   
--   安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 时，必须先安装 .NET 4.6.1 必备组件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 处于选中状态时，安装程序将自动安装 .NET 4.6.1。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 安装时，必须先安装 .NET 4.6.1 必备组件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 处于选中状态时，安装程序将自动安装 .NET 4.6.1。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装该产品所需的以下软件组件：  
   
@@ -93,9 +96,9 @@ ms.lasthandoff: 11/09/2017
   
 |组件|要求|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 安装程序会自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序） [中手动安装](http://support.microsoft.com/kb/3045560)。<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>在安装[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]4.6 之前， [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 和 [需要](http://support.microsoft.com/kb/2919355) KB2919355 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 安装程序会自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序） [中手动安装](http://support.microsoft.com/kb/3045560)。<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]4.6 之前， [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 和 [需要](http://support.microsoft.com/kb/2919355) KB2919355 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。|  
 |网络软件|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支持的操作系统具有内置网络软件。 独立安装的命名实例和默认实例支持以下网络协议：共享内存、命名管道、TCP/IP 和 VIA。<br/><br/> 注意：故障转移群集不支持共享内存和 VIA。<br/><br/> 还要注意，不推荐使用 VIA 协议。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> 有关网络协议和网络库的详细信息，请参阅 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)。|  
-|硬盘|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求最少 6 GB 的可用硬盘空间。<br/><br/> 磁盘空间要求将随所安装的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 组件不同而发生变化。 有关详细信息，请参阅本主题靠后部分中的 [硬盘空间要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 。 有关支持的数据文件存储类型的信息，请参阅 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
+|硬盘|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求最少 6 GB 的可用硬盘空间。<br/><br/> 磁盘空间要求将随所安装的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 组件不同而发生变化。 有关详细信息，请参阅本文后面部分的[硬盘空间要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 。 有关支持的数据文件存储类型的信息，请参阅 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
 |驱动器|从磁盘进行安装时需要相应的 DVD 驱动器。|  
 |监视器|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求有 Super-VGA (800x600) 或更高分辨率的显示器。|  
 |Internet|使用 Internet 功能需要连接 Internet（可能需要付费）。|  
@@ -135,7 +138,7 @@ ms.lasthandoff: 11/09/2017
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 > 
->-   用于 SharePoint 产品的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序  
+>-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用于 SharePoint 产品的外接程序  
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>32 位客户端操作系统支持的功能  
  Windows 客户端操作系统，例如 Windows 10 和 Windows 8.1 可作为 32 位或 64 位体系结构。   64 位客户端操作系统支持所有 SQL Server 功能。 在支持的 32 位客户端操作系统上，Microsoft 支持以下功能︰  
@@ -200,13 +203,13 @@ ms.lasthandoff: 11/09/2017
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|967 MB|  
 |[!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)] （独立）|280 MB|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint|1203 MB|  
-|用于 SharePoint 产品的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products|325 MB|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用于 SharePoint 产品的外接程序|325 MB|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|121 MB|  
 |客户端工具连接|328 MB|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|306 MB|  
 |客户端组件（除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书组件和 Integration Services 工具之外）|445 MB|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|280 MB|  
-|用于查看和管理帮助内容的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书组件*|27 MB|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于查看和管理帮助内容的联机丛书组件*|27 MB|  
 |所有功能|8030 MB|  
   
  *下载的联机丛书内容需要 200 MB 的磁盘空间。  
@@ -226,7 +229,7 @@ ms.lasthandoff: 11/09/2017
     >  无论是独立安装还是群集安装， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件均不支持 SMB 存储。 请改用直接连接的存储、存储区域网络或 S2D。  
   
     > [!IMPORTANT]  
-    >  SMB 存储可由 Windows 文件服务器或第三方 SMB 存储设备承载。 如果使用 Windows 文件服务器，该 Windows 文件服务器版本应为 2008 或更高。 有关将 SMB 文件共享作为存储选项安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [SMB 文件共享用作存储选项时安装 SQL Server](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
+    >  SMB 存储可由 Windows 文件服务器或第三方 SMB 存储设备承载。 如果使用 Windows 文件服务器，该 Windows 文件服务器版本应为 2008 或更高。 有关将 SMB 文件共享作为存储选项安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅[安装 SQL Server，并使用 SMB 文件共享作为存储选项](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
   
     > [!WARNING]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装只支持使用本地磁盘安装 tempdb 文件。 确保为 tempdb 数据和日志文件指定的路径在所有群集节点上均有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源将无法联机。  
@@ -240,9 +243,9 @@ ms.lasthandoff: 11/09/2017
   
 -   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装到计算机上之后，无法将此计算机从域控制器更改为域成员。 必须先卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然后才能将主机计算机更改为域成员。  
   
--   在群集节点用作域控制器的情况下，不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。  
   
-- 只读域控制器不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不能在只读域控制器上创建安全组或设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 在这种情况下，安装将失败。  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只读域控制器不支持。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序不能在只读域控制器上创建安全组或设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户。 在这种情况下，安装将失败。  
 
 - 在仅可以访问只读域控制器的环境中不支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。 
   

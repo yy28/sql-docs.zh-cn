@@ -2,11 +2,12 @@
 title: "Microsoft Azure 中的 SQL Server 数据文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/02/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +15,15 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 caps.latest.revision: "26"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: d70ab69a1779e19c66fadb1044e0fc6af38a4129
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: craigg
+ms.openlocfilehash: 8c86ddf9555dbdac83821d7f16a7000415ec7b2d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
-  ![Azure 上的数据文件](../../relational-databases/databases/media/data-files-on-azure.png "Azure 上的数据文件")  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Azure 上的数据文件](../../relational-databases/databases/media/data-files-on-azure.png "Azure 上的数据文件")  
   
  Microsoft Azure 中的 SQL Server 数据文件可为作为 Microsoft Azure Blob 存储的 SQL Server 数据库文件提供本机支持。 通过此功能，你可以在本地或在 Microsoft Azure 中虚拟机上运行的 SQL Server 中创建数据库，而将数据存储在 Microsoft Azure Blob 存储中的专用存储位置。 此增强功能使用分离和附加操作，简化了计算机之间的数据库移动。 此外，它还允许你将数据库备份文件从 Microsoft Azure 存储空间还原或还原到 Microsoft Azure 存储空间，为数据库备份文件提供了备选存储位置。 因此，它在数据虚拟化、数据移动、安全性和可用性、轻松降低成本以及维护方面都具备优势，可实现高可用性和弹性扩展，支持几种混合解决方案。
  

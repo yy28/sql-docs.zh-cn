@@ -2,9 +2,12 @@
 title: "osql 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: osql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,18 +26,18 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: "49"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbd6a75a0ff9e3be746c46882ee93e201d7955ef
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="osql-utility"></a>osql 实用工具
-  使用 **osql** 实用工具可以输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句、系统过程和脚本文件。 此实用工具通过 ODBC 与服务器通信。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Osql**实用工具可以输入[!INCLUDE[tsql](../includes/tsql-md.md)]语句、 系统过程和脚本文件。 此实用工具通过 ODBC 与服务器通信。  
   
 > [!IMPORTANT]  
 >  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的未来版本中将删除此功能。 请避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 改用 **sqlcmd** 。 有关详细信息，请参阅 [sqlcmd Utility](../tools/sqlcmd-utility.md)。  
@@ -97,7 +100,7 @@ C:\>osql
  使用可信连接而不请求密码。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定要连接到该服务器上 *命名实例的***\\***server_name* instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
+ 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定*server_name***\\***instance_name*连接到的命名实例[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在该服务器上。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
   
  **-H** *wksta_name*  
  工作站的名称。 工作站名称存储在 **sysprocesses.hostname** 中，并由 **sp_who**显示。 如果不指定此选项，则采用当前计算机名称。  
@@ -172,7 +175,7 @@ osql -E -q "select name, object_id from %table%"
  打印性能统计信息。  
   
  **-b**  
- 指定发生错误时， **osql** 退出并返回一个 DOS ERRORLEVEL 值。 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误消息的严重级别为 11 或更大值时，返回给 DOS ERRORLEVE 变量的值为 1；否则返回的值为 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)] MS-DOS 批处理文件可以测试 DOS ERRORLEVEL 的值并正确地处理错误。  
+ 指定发生错误时， **osql** 退出并返回一个 DOS ERRORLEVEL 值。 当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误消息的严重级别为 11 或更大值时，返回给 DOS ERRORLEVE 变量的值为 1；否则返回的值为 0。 [!INCLUDE[msCoName](../includes/msconame-md.md)]MS-DOS 批处理文件可以测试 DOS ERRORLEVEL 的值并相应地处理错误。  
   
  **-u**  
  指定无论 *input_file* 为何种格式，都以 Unicode 格式存储 *output_file*。  
@@ -192,12 +195,12 @@ osql -E -q "select name, object_id from %table%"
  同时还将 DOS ERRORLEVEL 的默认值设置为 -1。  
   
 > [!NOTE]  
->  使用 **-n**、 **-O** 和 **-D** 选项不再受 **osql**的未来版本中将删除此功能。  
+>   **-n** ， **-O**和**-D**选项不再受**osql**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>備註  
  **osql** 实用工具从操作系统直接启动，并且使用本文中列出的区分大小写的选项。 **osql**启动后将接受 SQL 语句，然后以交互方式将这些语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 结果被格式化并在屏幕 (**stdout**) 上显示。 可使用 QUIT 或 EXIT 退出 **osql**。  
   
- 如果启动 **osql**时不指定用户名，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将检查并使用环境变量，如 **osqluser=(***user***)** 或 **osqlserver=(***server***)**。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
+ 如果在启动时，不指定用户名称**osql**，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]检查的环境变量，并使用，例如， **osqluser = (***用户***)**或**osqlserver = (***服务器***)**。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
   
  如果 **-U** 或 **-P** 选项都没有使用，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证模式进行连接。 身份验证根据运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **的用户的**Windows 帐户进行。  
   
@@ -256,7 +259,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  如果可能，请使用 **-E**选项（信任连接）。  
   
- 以交互方式使用 **osql** 时，可使用 **:r***file_name*将操作系统文件读入命令缓冲区。 这会将 *file_name* 中的 SQL 脚本作为单个批处理直接发送给服务器。  
+ 使用时**osql**以交互方式，可以将操作系统文件读入命令缓冲区与 **: r * * * file_name*。 这会将 *file_name* 中的 SQL 脚本作为单个批处理直接发送给服务器。  
   
 > [!NOTE]  
 >  使用 **osql**时，如果批处理分隔符 GO 出现在 SQL 脚本文件中，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将其视为语法错误。  
@@ -338,7 +341,7 @@ GO
  此语句的结果为 `10.3496`，说明该值是原样按完整的小数位存储的。  
   
 ## <a name="see-also"></a>另请参阅  
- [注释 (MDX)](../mdx/comment-mdx.md)   
+ [注释 &#40;MDX &#41;](../mdx/comment-mdx.md)   
  [-&#40;注释 &#41;&#40;MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
  [强制转换和转换 &#40;Transact SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40;Transact SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  

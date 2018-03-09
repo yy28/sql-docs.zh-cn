@@ -1,5 +1,5 @@
 ---
-title: "Cast （SSIS 表达式） |Microsoft 文档"
+title: "Cast（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 66e8c901a01e3d8fc1fe2744891e17d4056d81a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cast-ssis-expression"></a>Cast（SSIS 表达式）
   将表达式从一种数据类型显式转换为另一种数据类型。 转换运算符还可以用作截断运算符。  
@@ -52,10 +51,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="result-types"></a>结果类型  
  *type_spec*数据类型。 有关详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  以下关系图显示了合法的转换运算。  
   
- ![数据类型之间的法律和法律不强制转换](../../integration-services/expressions/media/data-conversion.gif "数据类型之间的法律和法律不强制转换")  
+ ![数据类型之间的合法转换和非法转换](../../integration-services/expressions/media/data-conversion.gif "数据类型之间的合法转换和非法转换")  
   
  转换为某些数据类型时需要参数。 下表列出了这些数据类型及其参数。  
   
@@ -152,9 +151,8 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Integration Services &#40;SSIS &#41;表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [表达式中的 Integration Services 数据类型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   
-

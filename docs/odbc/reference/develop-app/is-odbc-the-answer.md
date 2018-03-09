@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab4f9d293b0cbe2f4536c80662271664a8fd896b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 390188eb430e51bf0ce27bf2f32f9f82c195d4da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="is-odbc-the-answer"></a>答案是 ODBC？
 在深入了解的互操作性问题之前, 请考虑以下问题： 应用程序应使用 ODBC 根本？ 这看起来有点奇怪问题到 ODBC，指南中提出，但它实际上是，一个合法。 ODBC 未设计为完全替换本机数据库 Api，也不旨在提供在所有情况下的数据库访问。 它旨在提供到数据库的常见界面，用于释放应用程序程序员无需了解和维护多个数据库的链接。  

@@ -1,33 +1,31 @@
 ---
-title: "更新 PowerPivotSystemService cmdlet |Microsoft 文档"
+title: Update-PowerPivotSystemService cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a90f1158-68d3-4330-98c1-fb0f81e13328
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 92b1c88166578605f0060ac65278d13ab4c42864
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 045979085e6d8e1622fef2a961f6c9fdb21d772a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="update-powerpivotsystemservice-cmdlet"></a>Update-PowerPivotSystemService cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  升级场中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务的父对象。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+升级场中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务的父对象。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -51,7 +49,7 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
   
 ## <a name="parameters"></a>Parameters  
   
-### <a name="-confirm-switch"></a>确认\<切换 >  
+### <a name="-confirm-switch"></a>-Confirm \<switch>  
  在执行命令前提示您进行确认。 默认情况下将启用该值。 若要在命令中跳过确认响应，请在命令中指定 Confirm:$false。  
   
 |||  
@@ -62,10 +60,10 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  此 cmdlet 支持以下参数：  
   
--   “详细”  
+-   Verbose  
   
 -   调试  
   

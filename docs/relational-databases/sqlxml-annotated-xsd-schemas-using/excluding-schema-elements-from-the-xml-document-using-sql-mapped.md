@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 660fe866db09675916d90cdf8130b2b99980b2ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>从 XML 文档使用 sql 排除架构元素： 映射
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]每个元素和 XSD 架构中的属性将映射到数据库表/视图和列由于默认映射。 如果你想要创建 XSD 架构，不显示在 XML 中和未映射到任何数据库表 （视图） 或列中的元素，你可以指定**sql： 映射**批注。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+由于是默认映射，XSD 架构中的每个元素和属性都映射到数据库表/视图和列。 如果你想要创建 XSD 架构，不显示在 XML 中和未映射到任何数据库表 （视图） 或列中的元素，你可以指定**sql： 映射**批注。  
   
  **Sql： 映射**批注是特别有用，如果架构不能修改或如果架构用于验证 XML 从其他源并尚未包含不会存储在你的数据库的数据。 **Sql： 映射**批注区别**sql： 是常量**在于未映射的元素和属性在 XML 文档中不会出现。  
   

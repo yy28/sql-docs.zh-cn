@@ -2,9 +2,12 @@
 title: "重播跟踪文件 （SQL Server 事件探查器） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - replaying traces
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c91e197d91cb63fb2f523a6f558404b3886ab1c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4f3f19c69cae22987767cd7b65ca8dc9718faa4e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>重播跟踪文件 (SQL Server Profiler)
-  重播是指打开已保存的跟踪并对其重播的功能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 具有多线程播放引擎，能模拟用户连接和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 重播对于解决应用程序或进程问题是很有用的。 在您确定问题并进行更正后，请对更正后的应用程序或进程运行发现该潜在问题的跟踪。 然后，重播原始跟踪并比较结果。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]重播是指打开已保存的跟踪并对其重播功能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 具有多线程播放引擎，能模拟用户连接和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 重播对于解决应用程序或进程问题是很有用的。 在您确定问题并进行更正后，请对更正后的应用程序或进程运行发现该潜在问题的跟踪。 然后，重播原始跟踪并比较结果。  
   
  除了要监视的任何其他事件类之外，还必须捕获特定的事件类才能启用重播。 如果使用 **TSQL_Replay** 跟踪模板，则在默认情况下将捕获这些事件。 有关详细信息，请参阅 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。  
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/09/2017
     -   若要控制重播期间 SQL Server 管理进程的方法，请配置 **“Health Monitor 选项”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
+ [运行 SQL Server 事件探查器所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [重播跟踪](../../tools/sql-server-profiler/replay-traces.md)   
  [打开跟踪文件 &#40;SQL Server 事件探查器 &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  

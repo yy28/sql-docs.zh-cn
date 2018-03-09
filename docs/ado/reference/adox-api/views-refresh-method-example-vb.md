@@ -3,27 +3,30 @@ title: "视图刷新方法示例 (VB) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Refresh method [ADOX]
+dev_langs:
+- VB
+helpviewer_keywords:
+- Refresh method [ADOX]
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f01584b4de215811ace4311558e7ae91e636b5d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b38ea0dc734cf38462f15fe702510186bfa0ff8f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-refresh-method-example-vb"></a>视图刷新方法示例 (VB)
 下面的代码演示如何刷新[视图](../../../ado/reference/adox-api/views-collection-adox.md)集合[目录](../../../ado/reference/adox-api/catalog-object-adox.md)。 这必需的之前[视图](../../../ado/reference/adox-api/view-object-adox.md)对象从**目录**可访问。  

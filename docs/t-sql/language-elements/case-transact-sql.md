@@ -1,5 +1,5 @@
 ---
-title: "用例 (Transact SQL) |Microsoft 文档"
+title: CASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CASE_TSQL
 - CASE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - CASE expression [Transact-SQL]
 - simple CASE expression
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0036e0ddf54eeef950bf81da2bf4a8997b4bef3c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,13 +81,13 @@ END
  *input_expression*  
  使用简单 CASE 格式时计算的表达式。 *input_expression*是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 当*when_expression*  
+ WHEN *when_expression*  
  是一个简单的表达式，向其*input_expression*进行比较时使用的简单的大小写格式。 *when_expression*为任何有效表达式。 数据类型的*input_expression*和每个*when_expression*必须相同或必须是隐式转换。  
   
- 然后*result_expression*  
+ THEN *result_expression*  
  返回的表达式时*input_expression*等于*when_expression*计算结果为 TRUE，或*Boolean_expression*计算结果为 TRUE。 *导致表达式*是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 其他*else_result_expression*  
+ ELSE *else_result_expression*  
  比较运算计算结果不为 TRUE 时返回的表达式。 如果忽略此参数且比较运算计算结果不为 TRUE，则 CASE 返回 NULL。 *else_result_expression*为任何有效表达式。 数据类型的*else_result_expression*和任何*result_expression*必须相同或必须是隐式转换。  
   
  当*Boolean_expression*  
@@ -122,7 +124,7 @@ END
   
  CASE 语句按顺序评估其条件并在满足第一个条件时停止。 在某些情况下，将会先计算表达式，然后 CASE 语句会将表达式的结果作为其输入接收。 在计算这些表达式时可能会出现错误。 首先计算在 CASE 语句的 WHEN 参数中出现的聚合表达式，然后将结果提供给 CASE 语句。 例如，下面的查询将在生成 MAX 聚合的值时生成被零除错误。 在计算 CASE 表达式之前会出现这种情况。  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   
@@ -359,7 +361,7 @@ WHERE SalariedFlag = 0;
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [将合并 &#40;Transact SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [IIF &#40;Transact SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [选择 &#40;Transact SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

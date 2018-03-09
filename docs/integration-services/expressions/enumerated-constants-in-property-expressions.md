@@ -1,5 +1,5 @@
 ---
-title: "枚举属性表达式中的常量 |Microsoft 文档"
+title: "属性表达式中的枚举常量 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1ba138c4315bf31efc281aff9a42b0e8a513b756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>属性表达式中的枚举常量
   如果属性表达式包括枚举器成员列表中的值，则该表达式必须使用枚举器成员的数值，而不是成员的友好名称。 例如，如果表达式设置 **LoggingMode** 属性，则必须使用数值 2 而不是友好名称“Disabled”。  
@@ -58,8 +57,8 @@ ms.lasthandoff: 08/03/2017
   
 |DTSPackageType 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
-|默认|0|  
-|DTSWizard|1|  
+|，则“默认”|0|  
+|DTSWizard|@shouldalert|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
 |DTSDesigner100|5|  
@@ -70,15 +69,15 @@ ms.lasthandoff: 08/03/2017
 |DTSCheckpointUsage 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
 |从不|0|  
-|IfExists|1|  
+|IfExists|@shouldalert|  
 |始终|2|  
   
  **PackagePriorityClass** 属性 - 通过使用 **DTSPriorityClass** 枚举中的值设置。  
   
 |DTSPriorityClass 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
-|默认|0|  
-|AboveNormal|1|  
+|，则“默认”|0|  
+|AboveNormal|@shouldalert|  
 |Normal|2|  
 |BelowNormal|3|  
 |Idle|4|  
@@ -88,7 +87,7 @@ ms.lasthandoff: 08/03/2017
 |DTSProtectionLevel 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
 |DontSaveSensitive|0|  
-|EncryptSensitiveWithUserKey|1|  
+|EncryptSensitiveWithUserKey|@shouldalert|  
 |EncryptSensitiveWithPassword|2|  
 |EncryptAllWithPassword|3|  
 |EncryptAllWithUserKey|4|  
@@ -99,7 +98,7 @@ ms.lasthandoff: 08/03/2017
   
 |DTSPrecedenceEvalOp 中的友好名称|数值|  
 |------------------------------------------|-------------------|  
-|表达式|1|  
+|表达式|@shouldalert|  
 |约束|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -109,7 +108,7 @@ ms.lasthandoff: 08/03/2017
 |友好名称|数值|  
 |-------------------|-------------------|  
 |成功|0|  
-|失败|1|  
+|失败|@shouldalert|  
 |Completion|2|  
 |已取消|3|  
   
@@ -122,7 +121,7 @@ ms.lasthandoff: 08/03/2017
 |ADOEnumerationType 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
 |EnumerateTables|0|  
-|EnumerateAllRows|1|  
+|EnumerateAllRows|@shouldalert|  
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 枚举器  
@@ -131,7 +130,7 @@ ms.lasthandoff: 08/03/2017
 |SourceType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |文件连接|0|  
-|变量|1|  
+|变量|@shouldalert|  
 |DirectInput|2|  
   
  **EnumerationType** 属性 - 通过使用 **EnumerationType** 枚举中的值设置。  
@@ -139,7 +138,7 @@ ms.lasthandoff: 08/03/2017
 |EnumerationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |Navigator|0|  
-|节点|1|  
+|节点|@shouldalert|  
 |NodeText|2|  
 |ElementCollection|3|  
   
@@ -148,7 +147,7 @@ ms.lasthandoff: 08/03/2017
 |InnerElementType 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
 |Navigator|0|  
-|节点|1|  
+|节点|@shouldalert|  
 |NodeText|2|  
   
 ##  <a name="Tasks"></a> “任务”  
@@ -160,7 +159,7 @@ ms.lasthandoff: 08/03/2017
 |DDLSourceType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
 |DirectInput|0|  
-|文件连接|1|  
+|文件连接|@shouldalert|  
 |变量|2|  
   
 ### <a name="bulk-insert-task"></a>大容量插入任务  
@@ -169,7 +168,7 @@ ms.lasthandoff: 08/03/2017
 |DTSBulkInsert_DataFileType 中的友好名称|数值|  
 |--------------------------------------------------|-------------------|  
 |DTSBulkInsert_DataFileType_Char|0|  
-|DTSBulkInsert_DataFileType_Native|1|  
+|DTSBulkInsert_DataFileType_Native|@shouldalert|  
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
@@ -178,7 +177,7 @@ ms.lasthandoff: 08/03/2017
   
 |ResultSetType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
-|ResultSetType_None|1|  
+|ResultSetType_None|@shouldalert|  
 |ResultSetType_SingleRow|2|  
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
@@ -187,7 +186,7 @@ ms.lasthandoff: 08/03/2017
   
 |SqlStatementSourceType 中的友好名称|数值|  
 |---------------------------------------------|-------------------|  
-|DirectInput|1|  
+|DirectInput|@shouldalert|  
 |文件连接|2|  
 |变量|3|  
   
@@ -197,7 +196,7 @@ ms.lasthandoff: 08/03/2017
 |DTSFileSystemOperation 中的友好名称|数值|  
 |---------------------------------------------|-------------------|  
 |CopyFile|0|  
-|MoveFile|1|  
+|MoveFile|@shouldalert|  
 |DeleteFile|2|  
 |RenameFile|3|  
 |SetAttributes|4|  
@@ -212,7 +211,7 @@ ms.lasthandoff: 08/03/2017
 |DTSFileSystemAttributes 中的友好名称|数值|  
 |----------------------------------------------|-------------------|  
 |Normal|0|  
-|Archive|1|  
+|Archive|@shouldalert|  
 |Hidden|2|  
 |ReadOnly|4|  
 |系统|8|  
@@ -223,7 +222,7 @@ ms.lasthandoff: 08/03/2017
 |DTSFTPOp 中的友好名称|数值|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|1|  
+|Receive|@shouldalert|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -231,13 +230,13 @@ ms.lasthandoff: 08/03/2017
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### <a name="message-queue-task"></a>消息队列任务  
+### <a name="message-queue-task"></a>Message Queue Task  
  **MessageType** 属性 - 通过使用 **MQMessageType** 枚举中的值设置。  
   
 |MQMessageType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
 |DTSMQMessageType_String|0|  
-|DTSMQMessageType_DataFile|1|  
+|DTSMQMessageType_DataFile|@shouldalert|  
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
@@ -246,7 +245,7 @@ ms.lasthandoff: 08/03/2017
 |MQStringMessageCompare 中的友好名称|数值|  
 |---------------------------------------------|-------------------|  
 |DTSMQStringMessageCompare_None|0|  
-|DTSMQStringMessageCompare_Exact|1|  
+|DTSMQStringMessageCompare_Exact|@shouldalert|  
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
@@ -255,7 +254,7 @@ ms.lasthandoff: 08/03/2017
 |MQType 中的友好名称|数值|  
 |-----------------------------|-------------------|  
 |DTSMQType_Sender|0|  
-|DTSMQType_Receiver|1|  
+|DTSMQType_Receiver|@shouldalert|  
   
 ### <a name="send-mail-task"></a>发送邮件任务  
  **MessageSourceType** 属性 - 通过使用 **SendMailMessageSourceType** 枚举中的值设置。  
@@ -263,14 +262,14 @@ ms.lasthandoff: 08/03/2017
 |SendMailMessageSourceType 中的友好名称|数值|  
 |------------------------------------------------|-------------------|  
 |DirectInput|0|  
-|文件连接|1|  
+|文件连接|@shouldalert|  
 |变量|2|  
   
  **Priority** 属性 - 通过使用 **MailPriority** 枚举中的值设置。  
   
 |MailPriority 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
-|High|1|  
+|High|@shouldalert|  
 |Normal|3|  
 |Low|5|  
   
@@ -280,14 +279,14 @@ ms.lasthandoff: 08/03/2017
 |TransferAction 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |复制|0|  
-|移动|1|  
+|“移动”|@shouldalert|  
   
  **Method** 属性 - 通过使用 **TransferMethod** 枚举中的值设置。  
   
 |TransferMethod 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |DatabaseOffline|0|  
-|DatabaseOnline|1|  
+|DatabaseOnline|@shouldalert|  
   
 ### <a name="transfer-error-messages-task"></a>传输错误消息任务  
  **IfObjectExists** 属性 - 通过使用 **IfObjectExists** 枚举中的值设置。  
@@ -295,7 +294,7 @@ ms.lasthandoff: 08/03/2017
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>传输作业任务  
@@ -304,7 +303,7 @@ ms.lasthandoff: 08/03/2017
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>传输登录名任务  
@@ -313,7 +312,7 @@ ms.lasthandoff: 08/03/2017
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
  **LoginsToTransfer** 属性 - 通过使用 **LoginsToTransfer** 枚举中的值设置。  
@@ -321,7 +320,7 @@ ms.lasthandoff: 08/03/2017
 |LoginsToTransfer 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
 |AllLogins|0|  
-|SelectedLogins|1|  
+|SelectedLogins|@shouldalert|  
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务  
@@ -330,7 +329,7 @@ ms.lasthandoff: 08/03/2017
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务  
@@ -339,7 +338,7 @@ ms.lasthandoff: 08/03/2017
 |ExistingData 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
 |替换|0|  
-|追加|1|  
+|追加|@shouldalert|  
   
 ### <a name="web-service-task"></a>Web 服务任务  
  **OutputType** 属性 - 通过使用 **DTSOutputType** 枚举中的值设置。  
@@ -347,7 +346,7 @@ ms.lasthandoff: 08/03/2017
 |DTSOutputType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
 |文件|0|  
-|变量|1|  
+|变量|@shouldalert|  
   
 ### <a name="wmi-data-reader-task"></a>WMI 数据读取器任务  
  **OverwriteDestination** 属性 - 通过使用 **OverwriteDestination** 枚举中的值设置。  
@@ -355,7 +354,7 @@ ms.lasthandoff: 08/03/2017
 |OverwriteDestination 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |OverwriteDestination|0|  
-|AppendToDestination|1|  
+|AppendToDestination|@shouldalert|  
 |KeepOriginal|2|  
   
  **OutputType** 属性 - 通过使用 **OutputType** 枚举中的值设置。  
@@ -363,7 +362,7 @@ ms.lasthandoff: 08/03/2017
 |OutputType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |DataTable|0|  
-|PropertyValue|1|  
+|PropertyValue|@shouldalert|  
 |PropertyNameAndValue|2|  
   
  **DestinationType** 属性 - 通过使用 **DestinationType** 枚举中的值设置。  
@@ -371,14 +370,14 @@ ms.lasthandoff: 08/03/2017
 |DestinationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |文件连接|0|  
-|变量|1|  
+|变量|@shouldalert|  
   
  **WqlQuerySourceType** 属性 - 通过使用 **QuerySourceType** 枚举中的值设置。  
   
 |QuerySourceType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |文件连接|0|  
-|DirectInput|1|  
+|DirectInput|@shouldalert|  
 |变量|2|  
   
  WMI 事件观察器 **ActionAtEvent** 属性 - 通过使用 **ActionAtEvent** 枚举中的值设置。  
@@ -386,21 +385,21 @@ ms.lasthandoff: 08/03/2017
 |ActionAtEvent 中的友好名称|数值|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
-|LogTheEvent|1|  
+|LogTheEvent|@shouldalert|  
   
  **ActionAtTimeout** 属性 - 通过使用 **ActionAtTimeout** 枚举中的值设置。  
   
 |ActionAtTimeout 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
-|LogTimeout|1|  
+|LogTimeout|@shouldalert|  
   
  **AfterEvent** 属性 - 通过使用 **AfterEvent** 枚举中的值设置。  
   
 |AfterEvent 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|1|  
+|ReturnWithFailure|@shouldalert|  
 |WatchfortheEventAgain|2|  
   
  **AfterTimeout** 属性 - 通过使用 **AfterTimeout** 枚举中的值设置。  
@@ -408,7 +407,7 @@ ms.lasthandoff: 08/03/2017
 |AfterTimeout 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|1|  
+|ReturnWithFailure|@shouldalert|  
 |WatchfortheEventAgain|2|  
   
  **WqlQuerySourceType** 属性 - 通过使用 **QuerySourceType** 枚举中的值设置。  
@@ -416,7 +415,7 @@ ms.lasthandoff: 08/03/2017
 |QuerySourceType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |文件连接|0|  
-|DirectInput|1|  
+|DirectInput|@shouldalert|  
 |变量|2|  
   
 ### <a name="xml-task"></a>XML 任务  
@@ -425,7 +424,7 @@ ms.lasthandoff: 08/03/2017
 |DTSXMLOperation 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |验证|0|  
-|XSLT|1|  
+|XSLT|@shouldalert|  
 |XPATH|2|  
 |合并|3|  
 |差异|4|  
@@ -436,7 +435,7 @@ ms.lasthandoff: 08/03/2017
 |DTSXMLSourceType 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
 |文件连接|0|  
-|变量|1|  
+|变量|@shouldalert|  
 |DirectInput|2|  
   
  **DestinationType** 和 **DiffGramDestinationType** 属性 - 通过使用 **DTSXMLSaveResultTo** 枚举中的值设置。  
@@ -444,21 +443,21 @@ ms.lasthandoff: 08/03/2017
 |DTSXMLSaveResultTo 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
 |文件连接|0|  
-|变量|1|  
+|变量|@shouldalert|  
   
  **ValidationType** 属性 - 通过使用 **DTSXMLValidationType** 枚举中的值设置。  
   
 |DTSXMLValidationType 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
-|XSD|1|  
+|XSD|@shouldalert|  
   
  **XPathOperation** 属性 - 通过使用 **DTSXMLXPathOperation** 枚举中的值设置。  
   
 |DTSXMLXPathOperation 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |Evaluation|0|  
-|值|1|  
+|值|@shouldalert|  
 |NodeList|2|  
   
  **DiffOptions** 属性 - 通过使用 **DTSXMLDiffOptions** 枚举中的值设置。 此枚举器中的选项不相互排斥。 若要使用多个选项，请将要应用的选项作为逗号分隔的列表提供。  
@@ -466,7 +465,7 @@ ms.lasthandoff: 08/03/2017
 |DTSXMLDiffOptions 中的友好名称|数值|  
 |----------------------------------------|-------------------|  
 |InclusionThresholdSetting|0|  
-|IgnoreChildOrder|1|  
+|IgnoreChildOrder|@shouldalert|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
 |IgnoreWhitespace|8|  
@@ -480,7 +479,7 @@ ms.lasthandoff: 08/03/2017
 |DTSXMLDiffAlgorithm 中的友好名称|数值|  
 |------------------------------------------|-------------------|  
 |Auto|0|  
-|Fast|1|  
+|Fast|@shouldalert|  
 |Precise|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> 维护计划任务  
@@ -496,7 +495,7 @@ ms.lasthandoff: 08/03/2017
 |DatabaseSelection 中的友好名称|数值|  
 |----------------------------------------|-------------------|  
 |InclusionThresholdSetting|0|  
-|全部|1|  
+|All|@shouldalert|  
 |系统|2|  
 |用户|3|  
 |Specific|4|  
@@ -506,7 +505,7 @@ ms.lasthandoff: 08/03/2017
 |TableSelection 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |InclusionThresholdSetting|0|  
-|全部|1|  
+|All|@shouldalert|  
 |Specific|2|  
   
  **ObjectTypeSelection** 属性 - 通过使用 **ObjectType** 枚举中的值设置。  
@@ -514,7 +513,7 @@ ms.lasthandoff: 08/03/2017
 |ObjectType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |表|0|  
-|视图|1|  
+|“查看”|@shouldalert|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>“备份数据库”任务  
@@ -523,21 +522,21 @@ ms.lasthandoff: 08/03/2017
 |DestinationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|Manual|1|  
+|Manual|@shouldalert|  
   
  **ExistingBackupsAction** 属性 - 通过使用 **ActionForExistingBackups** 枚举中的值设置。  
   
 |ActionForExistingBackups 中的友好名称|数值|  
 |-----------------------------------------------|-------------------|  
 |追加|0|  
-|Overwrite|1|  
+|Overwrite|@shouldalert|  
   
  **BackupAction** 属性 - 通过使用 **BackupTaskType** 枚举中的值设置。 此属性与 **BackupIsIncremental** 属性一起使用以定义该任务所执行的备份的类型。  
   
 |BackupTaskType 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
-|数据库|0|  
-|文件|1|  
+|“数据库”|0|  
+|“文件”|@shouldalert|  
 |日志|2|  
   
  **BackupDevice** 属性 - 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) **DeviceType** 枚举中的值设置。  
@@ -545,7 +544,7 @@ ms.lasthandoff: 08/03/2017
 |DeviceType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |LogicalDevice|0|  
-|磁带|1|  
+|磁带|@shouldalert|  
 |文件|2|  
 |Pipe|3|  
 |VirtualDevice|4|  
@@ -556,14 +555,14 @@ ms.lasthandoff: 08/03/2017
 |FileType 中的友好名称|数值|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
-|FileReport|1|  
+|FileReport|@shouldalert|  
   
  **OlderThanTimeUnitType** 属性 - 通过使用 **TimeUnitType** 枚举中的值设置。  
   
 |TimeUnitType 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
 |Day|0|  
-|Week|1|  
+|Week|@shouldalert|  
 |Month|2|  
 |Year|3|  
   
@@ -572,9 +571,9 @@ ms.lasthandoff: 08/03/2017
   
 |StatisticsTarget 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
-|列|1|  
+|“列”|@shouldalert|  
 |索引|2|  
-|全部|3|  
+|All|3|  
   
 ##  <a name="CommonProperties"></a> 通用属性  
  包、任务和 Foreach 循环、For 循环和序列容器可以使用以下枚举来设置指定的属性。  
@@ -585,7 +584,7 @@ ms.lasthandoff: 08/03/2017
 |------------------------------------------|-------------------|  
 |InclusionThresholdSetting|-1|  
 |成功|0|  
-|失败|1|  
+|失败|@shouldalert|  
 |Completion|2|  
   
  **IsolationLevel** 属性 - 由 .NET Framework **IsolationLevel** 枚举设置。 详细信息，请参阅位于 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313)中的 .NET Framework 类库。  
@@ -595,7 +594,7 @@ ms.lasthandoff: 08/03/2017
 |DTSLoggingMode 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|已启用|1|  
+|已启用|@shouldalert|  
 |禁用|2|  
   
  **TransactionOption** 属性 - 通过使用 **DTSTransactionOption** 枚举中的值设置。  
@@ -603,18 +602,17 @@ ms.lasthandoff: 08/03/2017
 |DTSTransactionOption 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|是否支持|1|  
-|必需|2|  
+|是否支持|@shouldalert|  
+|Required|2|  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS &#41;包](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [优先约束](../../integration-services/control-flow/precedence-constraints.md)  
   
   
-

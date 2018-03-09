@@ -2,33 +2,36 @@
 title: "数据库引擎实例 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 418e09ffb86563d22b145c2fba9f7ce61ad0c746
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>数据库引擎实例 (SQL Server)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例是作为操作系统服务运行的 **sqlservr.exe** 可执行程序的副本。 每个实例管理几个系统数据库以及一个或多个用户数据库。 每台计算机都可以运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例。 应用程序连接到实例，以便在实例管理的数据库中执行任务。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例是作为操作系统服务运行的 sqlservr.exe 可执行程序的副本。 每个实例管理几个系统数据库以及一个或多个用户数据库。 每台计算机都可以运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例。 应用程序连接到实例，以便在实例管理的数据库中执行任务。  
   
 ## <a name="instances"></a>实例  
  一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例作为处理所有应用程序请求的服务操作，以便使用该实例管理的任何数据库中的数据。 它是应用程序所发出连接请求（登录名）的目标。 如果应用程序和实例分别位于单独的计算机上，则连接通过网络连接运行。 如果应用程序和实例位于同一台计算机上，则 SQL Server 连接可作为网络连接或内存中连接运行。 完成连接后，应用程序通过连接将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句发送给实例。 实例将这些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句解析为针对数据库中的数据和对象的操作；并且如果已将所需权限授予了登录凭据，，则实例会执行这些工作。 检索的任何数据都将返回到应用程序，同时还返回错误之类的任何消息。  
   
  可以在一台计算机上运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的多个实例。 一个实例可以是默认实例。 该默认实例没有名称。 如果某一连接请求仅指定计算机的名称，则会与默认实例建立连接。 命名实例是您在安装实例时指定实例名称的一种实例。 为了连接到该实例，连接请求必须同时指定计算机名称和实例名称。 不一定非要安装默认实例；在计算机上运行的所有实例都可以是命名实例。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  

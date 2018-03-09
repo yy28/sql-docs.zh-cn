@@ -2,29 +2,32 @@
 title: "浏览已部署的多维数据集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5ac15a2a9f2cb4f572e797b54b44194958c8d024
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ddbefdcbc54c076c801e5f4d83e107e48ac5ba9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-5---browsing-the-deployed-cube"></a>Lesson 3-5-浏览已部署的多维数据集
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 在下面的任务中，将浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集。 因为我们的分析将比较多个维度的度量值，所以，您将使用 Excel 数据透视表来浏览您的数据。 使用数据透视表使您可以将客户、日期和产品信息放置于不同的轴上，这样，您可以在查看时看到在特定的时间段、客户人口统计信息和产品系列上 Internet 销售是如何变化的。  
   
 ### <a name="to-browse-the-deployed-cube"></a>浏览部署的多维数据集  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/17/2017
     ![Internet 销售区域和产品线](../analysis-services/media/l3-cube-browser-finish.gif "Internet 销售区域和产品线")  
   
 ## <a name="next-lesson"></a>下一课  
-[第 4 课：定义高级属性和维度属性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+[第 4 课： 定义高级的属性和维度属性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   
   

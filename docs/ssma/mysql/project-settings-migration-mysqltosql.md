@@ -1,10 +1,13 @@
 ---
 title: "项目设置 （迁移） (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e46fb86489ca7e2a1fed33e85f638f99e47770eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>项目设置 （迁移） (MySQLToSQL)
 迁移页的**项目设置**对话框中包含自定义如何 SSMA 将数据迁移从 MySQL 到 SQL Server 的设置。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
 -   若要对指定为当前项目中，设置**工具**菜单上，选择**项目设置**，单击**常规**中左窗格中，然后单击底部**迁移**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ### <a name="bulk-copy"></a>大容量复制  
   

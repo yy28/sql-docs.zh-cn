@@ -3,8 +3,11 @@ title: "“排序规则”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16504f76025571fa7627027ba37267aac6e41a41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b99f35322872e33f4bd727724dd9167465d6f1ea
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
-使用此对话框可为列指定排序规则顺序。 列的排序规则顺序可用在将列值与其他列的值或常量值进行比较的各项操作中。 它还会影响一些字符串函数（如 SUBSTRING 和 CHARINDEX）的行为。 有关列排序规则设置的效果的完整列表，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 文档。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此对话框可为列指定排序规则顺序。 列的排序规则顺序可用在将列值与其他列的值或常量值进行比较的各项操作中。 它还会影响一些字符串函数（如 SUBSTRING 和 CHARINDEX）的行为。 有关列排序规则设置的效果的完整列表，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 文档。  
   
 在以下情况下将显示此对话框：  
   
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
 -   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 **(…)**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **SQL 排序规则**  
 在下拉列表中由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 定义的排序规则顺序之间进行选择。  
   

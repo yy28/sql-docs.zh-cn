@@ -1,34 +1,33 @@
 ---
-title: "重命名表或列 (SSAS 表格) |Microsoft 文档"
+title: "重命名表或列 |Microsoft 文档"
 ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.renametableorcolumn.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: edfd1fe4e353f74f9729325b40865905a1907dc2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf8d925f0ffe72eab343ebf8af82030a21c0a9b0
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="rename-a-table-or-column-ssas-tabular"></a>重命名表或列（SSAS 表格）
-  在导入过程中，您可以通过在 **“表导入向导”** 的 **“选择表和视图”** 页中键入 **“友好名称”**，更改表的名称。 如果您通过在 **“表导入向导”** 的 **“指定 SQL 查询”**页上指定查询来导入数据，也可以更改表和列名。  
+# <a name="rename-a-table-or-column"></a>重命名表或列 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在导入过程中，您可以通过在 **“表导入向导”** 的 **“选择表和视图”** 页中键入 **“友好名称”**，更改表的名称。 如果您通过在 **“表导入向导”** 的 **“指定 SQL 查询”**页上指定查询来导入数据，也可以更改表和列名。  
   
  在您将数据添加到模型中后，表的名称（或标题）将出现在模型设计器底部的表选项卡上。 您可以更改表的名称，以便为其提供更为合适的名称。 您还可以在数据添加到模型中之后重命名列。 在您从多个源导入了数据，并且想要确保不同表中的列具有易于区分的名称时，此选项特别重要。  
   

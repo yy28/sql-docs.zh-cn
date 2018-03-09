@@ -1,11 +1,11 @@
 ---
-title: "步骤 9： 测试第 1 课教程包 |Microsoft 文档"
+title: "步骤 9：测试第 1 课教程包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca45e8e1ba02246eb5429bd7bfea125663f69f41
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5fe1c97344edd6b5893fee1873df89a1ca37444c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>课程 1-9-测试第 1 课教程包
+# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>第 1-9 课 - 测试第 1 课教程包
 在本课中，已经完成了下列任务：  
   
 -   创建了一个新的 [!INCLUDE[ssIS](../includes/ssis-md.md)] 项目。  
@@ -43,11 +42,11 @@ ms.lasthandoff: 09/26/2017
   
 **控制流**  
   
-![控制包中的流](../integration-services/media/task9lesson1control.gif "控制包中的流")  
+![包中的控制流](../integration-services/media/task9lesson1control.gif "Control flow in package")  
   
 **数据流**  
   
-![包中的数据流](../integration-services/media/task9lesson1data.gif "包中的数据流")  
+![包中的数据流](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>运行 Lesson 1 教程包  
   
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

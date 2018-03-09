@@ -2,38 +2,43 @@
 title: "查找和替换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
 - vs.findreplace.quickreplace
-helpviewer_keywords: Find and Replace dialog box
+helpviewer_keywords:
+- Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af60a2ce76a9e9eeaff398d9cad94f0415ed4f83
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fe528cb691bfff2d46f01470477fe602ee91c410
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="find-and-replace"></a>查找和替换
-  使用 **“查找和替换”** 对话框可以在文件中查找特定文本，并且可以选择是否替换文本。 根据 **“查找和替换”** 对话框打开方式的不同，将显示不同版本的对话框，其中的选项会稍有差异。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速查找”** ，可打开包含查找选项的对话框，但其中不包含替换选项。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速替换”** ，可打开包含查找选项和替换选项的对话框。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“查找和替换”对话框可以在文件中查找特定文本，并且可以选择是否替换文本。 根据 **“查找和替换”** 对话框打开方式的不同，将显示不同版本的对话框，其中的选项会稍有差异。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速查找”** ，可打开包含查找选项的对话框，但其中不包含替换选项。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速替换”** ，可打开包含查找选项和替换选项的对话框。  
   
  您也可使用工具栏按钮和快捷键打开 **“查找和替换”** 对话框。  
   
 ## <a name="find-what"></a>查找内容  
  使用这些控件可以指定要匹配的字符串或表达式。  
   
- **Find what**  
+ **查找内容**  
  键入要搜索的文本。 对话框会尝试使用在打开该对话框前用光标选择的文本、光标附近的文本或以前搜索过的文本，来填充可能的搜索文本。 通过从此下拉列表中选择字符串，可以重用最近搜索过的 20 个字符串之一。  
   
  **[带有通配符的字符串]**  
@@ -71,11 +76,11 @@ ms.lasthandoff: 11/09/2017
  **跳过文件**  
  如果为“查找范围”指定的值包含多个文件，则此选项可用。 如果不希望搜索或修改当前文件，请单击此按钮。 此时，将继续在 **“查找范围”**列表中的下一个文件内进行搜索。  
   
-## <a name="look-in"></a>“查找范围”  
+## <a name="look-in"></a>查找范围  
  **Look in**  
  选择“查找内容”框中指定文本的查找位置。 相应的选项有 **“当前文档”**，用于搜索在打开该对话框时焦点所在的文档窗口，还有 **“所有打开的文档”**，用于搜索 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]当前打开的所有文档窗口。  
   
-## <a name="find-options"></a>“使用”  
+## <a name="find-options"></a>查找选项  
  您可以展开或折叠 **“查找选项”** 部分。 您可以选中或清除下列选项：  
   
  **匹配大小写**  

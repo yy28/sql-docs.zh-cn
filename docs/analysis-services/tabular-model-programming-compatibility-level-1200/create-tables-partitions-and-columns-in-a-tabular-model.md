@@ -2,15 +2,13 @@
 title: "在表格模型中创建表、 分区和列 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ecf8c233177b283c5dc3a5601a267bdfa0c8a10f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2017fa20a68222bf577cc68284882ac15a22f95f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>在表格模型中创建表、 分区和列
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-在表格模型中，表由行和列组成。 行组织成分区，以支持增量数据刷新。 表格解决方案可以支持几种类型的表，具体取决于数据来源于何处：  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格模型中，表由行和列组成。 行组织成分区，以支持增量数据刷新。 表格解决方案可以支持几种类型的表，具体取决于数据来源于何处：  
 
 * 普通表，数据从关系数据源，通过数据提供程序的来源位置。 
 

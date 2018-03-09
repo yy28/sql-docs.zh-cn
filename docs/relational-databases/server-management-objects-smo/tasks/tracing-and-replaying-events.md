@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +18,20 @@ helpviewer_keywords:
 - events [SMO], tracing
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3f21d2fb03590680afb0ceaf405448f6ad17761
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6a5501861717bf21e6004730b38f93b309c40e0e
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="tracing-and-replaying-events"></a>跟踪和重播事件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在 SMO 中，**跟踪**和**重播**中的对象<xref:Microsoft.SqlServer.Management.Trace>命名空间提供以编程方式访问[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]功能，用于监视的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 您可以捕获有关每个事件的数据并将其保存到文件或表中供以后分析。 例如，可以监视生产环境，了解哪些过程由于执行速度太慢影响了性能。  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  在 SMO 中，**跟踪**和**重播**中的对象<xref:Microsoft.SqlServer.Management.Trace>命名空间提供以编程方式访问[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]功能，用于监视的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 您可以捕获有关每个事件的数据并将其保存到文件或表中供以后分析。 例如，可以监视生产环境，了解哪些过程由于执行速度太慢影响了性能。  
   
  **跟踪**和**重播**对象提供一组可以用于的实例上创建跟踪的对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 可以在您自己的应用程序中使用这些对象为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 手动创建跟踪。 此外，SMO**跟踪**对象可以用于读取 SQL 跟踪文件和表创建的监视[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，或 DTS 日志记录。  
   

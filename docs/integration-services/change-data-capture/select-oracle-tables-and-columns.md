@@ -1,5 +1,5 @@
 ---
-title: "选择 Oracle 表和列 |Microsoft 文档"
+title: "选择 Oracle 表和列 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,22 +15,21 @@ ms.topic: article
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a32dc9416e79380cb9ce289960ad2ab0942e99fb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5b771c9eccbae877fcc073fcb0075629460343fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-oracle-tables-and-columns"></a>选择 Oracle 表和列
   使用“选择 Oracle 表和列”页可以从捕获了更改的 Oracle 源数据库选择表。 该页具有以下元素：  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **表列表**  
  此表列表具有三列：  
   
@@ -64,4 +63,3 @@ ms.lasthandoff: 08/03/2017
  [编辑表属性](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
   
-

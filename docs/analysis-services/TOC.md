@@ -1,12 +1,13 @@
-# [什么是 Analysis Services？](analysis-services.md)
+# [关于 SQL Server Analysis Services](analysis-services.md)
 
 # 概述
 ## [SQL Server Analysis Services 2016 中的新增功能](what-s-new-in-analysis-services.md)  
 ## [SQL Server Analysis Services 2017 中的新增功能](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [新的和已更新的项目](new-updated-analysis-services.md)
 ## [工具和应用程序](tools-and-applications-used-in-analysis-services.md)   
+## [客户端库（数据提供程序）](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [比较表格和多维解决方案](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [SQL Server 2016 各个版本支持的 Analysis Services 功能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [SQL Server 各个版本支持的 Analysis Services 功能](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [向后兼容性（SQL Server 2016 Analysis Services）](analysis-services-backward-compatibility.md)  
 ## [向后兼容性（SQL Server 2017 Analysis Services）](analysis-services-backward-compatibility-sql2017.md)  
 ## [全球化和翻译](globalization-scenarios-for-analysis-services.md)  
@@ -15,11 +16,26 @@
 ### [货币换算](currency-conversions-analysis-services.md)  
 ### [提示和最佳实践](globalization-tips-and-best-practices-analysis-services.md) 
 
-# 示例
-## [Analysis Services 示例](analysis-services-samples.md)
+# [教程](analysis-services-tutorials-ssas.md)
+## [表格建模（1400 兼容级别）](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+### [1- 创建表格模型项目](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+### [2 - 获取数据](tutorial-tabular-1400/as-lesson-2-get-data.md)
+### [3 - 标记为日期表](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+### [4 - 创建关系](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+### [5 - 创建计算列](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+### [6 - 创建度量值](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+### [7 - 创建关键绩效指标](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+### [8 - 创建透视](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+### [9 - 创建层次结构](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+### [10 - 创建分区](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+### [11 - 创建角色](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+### [12 - 在 Excel 中分析](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+### [13 - 部署](tutorial-tabular-1400/as-lesson-13-deploy.md)
+### [补充课程 - 详细信息行](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+### [补充课程 - 动态安全性](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+### [补充课程 - 不规则层次结构](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
 
-# 教程
-## [表格建模（Adventure Works 教程）](tabular-modeling-adventure-works-tutorial.md)  
+## [表格建模（1200 兼容级别）](tabular-modeling-adventure-works-tutorial.md)  
 ### [第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)  
 ### [第 2 课：添加数据](lesson-2-add-data.md)  
 ### [第 3 课：标记为日期表](lesson-3-mark-as-date-table.md)  
@@ -36,7 +52,7 @@
 ### [补充课程 - 通过使用行筛选器实现动态安全性](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [补充课程 - 为 Power View 报表配置报表属性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [多维建模（Adventure Works 教程）](multidimensional-modeling-adventure-works-tutorial.md)  
+## [多维建模](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [教程方案](analysis-services-tutorial-scenario.md)  
 ### [安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)  
 ### [第 1 课：在 Analysis Services 项目中定义数据源视图](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  
@@ -94,24 +110,24 @@
 ## [跟踪事件](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # 开发人员
-## 表格模型
-### [表格模型编程兼容级别 1200 及更高](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [表格模型脚本语言 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [表格模型脚本语言 (TMSL) 命令](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [表格模型脚本语言 (TMSL) 对象](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [表格模型编程兼容级别 1050 和 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+## [表格模型编程兼容级别 1200 及更高](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [表格模型脚本语言 (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+### [表格模型脚本语言 (TMSL) 命令](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [表格模型脚本语言 (TMSL) 对象](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [表格模型编程兼容级别 1050 和 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## 多维模型
-### [Analysis Services 脚本语言 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [分析管理对象 +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [OLAP 逻辑 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [OLAP 物理 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [扩展 OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [Analysis Services 脚本语言 (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [分析管理对象 (AMO)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [OLAP 逻辑 +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [OLAP 物理 +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [扩展 OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [架构行集](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services 脚本语言 (ASSL for XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# 示例
+## [Analysis Services 示例](analysis-services-samples.md)
 
 # 参考
 ## [MSDN 上的数据分析表达式 (DAX)](https://msdn.microsoft.com/library/gg413422.aspx)

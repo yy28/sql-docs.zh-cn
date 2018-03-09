@@ -1,5 +1,5 @@
 ---
-title: "脚本任务中的日志记录 |Microsoft 文档"
+title: "脚本任务中的日志记录 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -26,25 +26,24 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-caps.latest.revision: 57
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 98859dafe0b023954f10239fe11e8b76f36ab28b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e706290986acb7c7886e2f14e08c626f58448480
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="logging-in-the-script-task"></a>脚本任务中的日志记录
-  使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包中的日志记录可以记录预定义的事件或用户定义的消息，从而记录有关执行进度、结果和问题的详细信息，供随后分析时使用。 可以使用脚本任务<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>方法**Dts**对象来记录用户定义数据。 如果启用日志记录，和**ScriptTaskLogEntry**来登录选择事件**详细信息**选项卡**配置 SSIS 日志**对话框中，一次对<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>方法将事件信息存储在为该任务配置的所有日志提供程序。  
+  使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包中的日志记录可以记录预定义的事件或用户定义的消息，从而记录有关执行进度、结果和问题的详细信息，供随后分析时使用。 脚本任务可以使用 Dts 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法记录用户定义的数据。 如果启用了日志记录，并且在“配置 SSIS 日志”对话框的“详细信息”选项卡中为日志记录选择了 ScriptTaskLogEntry 事件，则调用一次 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法即可将事件信息存储在为该任务配置的所有日志提供程序中。  
   
 > [!NOTE]  
 >  尽管可以直接从脚本任务执行日志记录，但是您可能希望考虑实现事件，而不是日志记录。 如果使用事件，不仅能够启用事件消息的日志记录，而且能够通过默认或用户定义的事件处理程序响应事件。  
   
- 有关日志记录的详细信息，请参阅[Integration Services &#40;SSIS &#41;日志记录](../../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 有关日志记录的详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 ## <a name="logging-example"></a>日志记录示例  
  下面的示例演示通过记录表示已处理的行数的值，从脚本任务进行日志记录。  
@@ -104,10 +103,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>外部资源  
   
--   博客文章[记录为 Integration Services 任务的自定义事件](http://go.microsoft.com/fwlink/?LinkId=165644)，dougbert.com 上  
+-   dougbert.com 上的博客文章 [为 Integration Services 任务记录自定义事件](http://go.microsoft.com/fwlink/?LinkId=165644)  
   
 ## <a name="see-also"></a>另请参阅  
- [Integration Services &#40;SSIS &#41;日志记录](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services (SSIS) 日志记录](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

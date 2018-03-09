@@ -2,32 +2,37 @@
 title: "使用 SQL Server MicrosoftML 包 |Microsoft 文档"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: "132"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5d4e4081ba4722f2c7aa468cf70f3a3238d6e9ee
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>使用 SQL Server MicrosoftML 包
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction)附带了 Microsoft R Server 和 SQL Server 自 2017 年的程序包中包括多个机器学习算法。 这些 Api 为内部的机器学习应用程序，由 Microsoft 已开发且已完善多年来支持高性能大数据，使用多核处理和快速数据流式处理。 MicrosoftML 还包括对文本和图像处理的大量转换。
 
 在 SQL Server 自 2017 年 1 CTP 2.0 中，Python 语言添加了支持。 **Microsoftml**打包 Python 函数等效于 MicrosoftML 包中包含的。 
 
-+ **MicrosoftML**
++ **MicrosoftML for R**
 
     简介和包的引用： [MicrosoftML： 机器学习 R 算法](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
 

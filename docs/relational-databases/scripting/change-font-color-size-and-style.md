@@ -2,10 +2,14 @@
 title: "更改字体颜色、大小和样式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,19 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing fonts
 - text fonts [SQL Server Management Studio]
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44b149ed19e4c5eefc4ca2b0298fc8d63342b2c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 86bd0ea46e11f544b543c952b9630654a67f95de
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="change-font-color-size-and-style"></a>更改字体颜色、大小和样式
-  您可以自定义文本在编辑器和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他位置的显示方式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]可以自定义文本在编辑器和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的其他位置的显示方式。  
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>在编辑器中更改字体颜色、大小和样式  
   

@@ -1,7 +1,7 @@
 ---
-title: "使用始终加密的 ODBC Driver 13.1 for SQL Server |Microsoft 文档"
+title: "使用始终加密的 ODBC 驱动程序适用于 SQL Server |Microsoft 文档"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,20 +17,27 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 4e56c987938aa3cb8645dc9bef94f2f97b8c0649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/22/2018
 ---
-# <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>使用始终加密的 ODBC Driver 13.1 for SQL Server
+# <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>使用始终加密的 ODBC 驱动程序适用于 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-本文提供有关如何开发使用 ODBC 应用程序的信息[始终加密 （数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
+### <a name="applicable-to"></a>适用于
 
-始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 始终加密启用驱动程序，如 ODBC Driver 13.1 for SQL Server，从而实现此目的以透明方式加密和解密在客户端应用程序中的敏感数据。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
+- ODBC Driver 13.1 for SQL Server
+- ODBC Driver 17 for SQL Server
 
-### <a name="prerequisites"></a>先决条件
+### <a name="introduction"></a>简介
+
+本文提供有关如何开发使用 ODBC 应用程序的信息[始终加密 （数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
+
+始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 始终加密启用驱动程序，如 ODBC Driver for SQL Server，从而实现此目的以透明方式加密和解密在客户端应用程序中的敏感数据。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
+
+### <a name="prerequisites"></a>必要條件
 
 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置了始终加密的数据库，请按照 [始终加密入门](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)中的说明操作。 具体而言，你的数据库应包含列主密钥 (CMK)、 列加密密钥 (CEK) 及包含一个或多个使用该 CEK 加密的列的表的元数据定义。
 
@@ -270,7 +277,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 若要缓解此问题，请使用`SQL_COLUMN_IGNORE`标志来忽略将不会更新作为的一部分的列`SQLBulkOperations`以及何时使用`SQLSetPos`对于游标基于更新。  应忽略不会被直接修改应用程序的所有列，这两种性能，并且若要避免所绑定到的缓冲区的列的截断*较小*比其实际 (DB) 大小。 有关详细信息，请参阅[SQLSetPos 函数引用](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)。
 
-#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 和 SQLDescribeCol
+#### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults & SQLDescribeCol
 
 应用程序可以调用[SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)已准备的语句中返回有关列元数据。  启用始终加密后，调用`SQLMoreResults`*之前*调用`SQLDescribeCol`导致[sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)调用，这不正确返回纯文本加密列的元数据。 若要避免此问题，请调用`SQLDescribeCol`已准备的语句上*之前*调用`SQLMoreResults`。
 
@@ -282,11 +289,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 - 调用列主密钥存储以访问列主密钥。
 
-本部分介绍在 ODBC Driver 13.1 for SQL Server 和可以如何控制上述两个因素对性能的影响的内置性能优化。
+本部分介绍用于 SQL Server 和可以如何控制上述两个因素对性能的影响 ODBC 驱动程序中的内置性能优化。
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制以检索查询参数的元数据的往返
 
-如果为连接启用始终加密，ODBC Driver 13.1 将 SQL Server，默认情况下，调用[sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)每个参数化查询，将传递 （不带任何参数的查询语句值） 到 SQL Server。 此存储的过程分析查询语句，以找出，如果任何参数需要加密，并且如果是这样，则返回的每个参数，以允许要加密的驱动程序与加密相关的信息。 上述行为可确保的高级别透明性向客户端应用程序： 应用程序 （和应用程序开发人员） 不需要注意的哪些查询在访问加密的列，只要面向加密的列的值传递给参数中的驱动程序。
+如果为连接启用始终加密，该驱动程序将默认情况下，调用[sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)对于每个参数化查询，将查询语句 （不带任何参数值） 传递到 SQL Server。 此存储的过程分析查询语句，以找出，如果任何参数需要加密，并且如果是这样，则返回的每个参数，以允许要加密的驱动程序与加密相关的信息。 上述行为可确保的高级别透明性向客户端应用程序： 应用程序 （和应用程序开发人员） 不需要注意的哪些查询在访问加密的列，只要面向加密的列的值传递给参数中的驱动程序。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>每个语句始终加密行为
 
@@ -294,7 +301,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 若要控制语句的始终加密行为，请调用 SQLSetStmtAttr 设置`SQL_SOPT_SS_COLUMN_ENCRYPTION`语句属性设置为下列值之一：
 
-|值|Description|
+|“值”|Description|
 |-|-|
 |`SQL_CE_DISABLED` (0)|禁用了始终加密语句|
 |`SQL_CE_RESULTSETONLY` (1)|仅用于解密。 结果集和返回值解密的、 和未加密的参数|
@@ -329,7 +336,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 若要减少的列主密钥存储的调用，以解密列加密密钥数，该驱动程序缓存在内存中的纯文本 Cek。 收到后 ECEK 从数据库元数据，该驱动程序首先尝试查找纯文本 CEK 对应于缓存中的加密密钥值。 该驱动程序调用包含 CMK，仅当在缓存中找不到相应的纯文本 CEK 的密钥存储。
 
 > [!NOTE]
-> 在 ODBC Driver 13.1 for SQL Server，在两个小时超时后将逐出缓存中的条目。 这意味着，给定 ECEK，有关该驱动程序生存期的应用程序或每隔两小时联系一次的密钥存储，小者为准。
+> 在 ODBC Driver for SQL Server 中，在两个小时超时后被逐出缓存中的条目。 这意味着，给定 ECEK，有关该驱动程序生存期的应用程序或每隔两小时联系一次的密钥存储，小者为准。
 
 ## <a name="working-with-column-master-key-stores"></a>使用列主密钥存储
 
@@ -339,9 +346,9 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ### <a name="built-in-keystore-providers"></a>内置 Keystore 提供程序
 
-ODBC Driver 13.1 for SQL Server 附带以下内置 keystore 提供程序：
+ODBC Driver for SQL Server 附带以下内置 keystore 提供程序：
 
-| Name | Description | 提供程序 （元数据） 名称 |可用性|
+| 名称 | Description | 提供程序 （元数据） 名称 |可用性|
 |:---|:---|:---|:---|
 |Azure Key Vault |Azure 密钥保管库中存储 Cmk | `AZURE_KEY_VAULT` |Windows，macOS，Linux|
 |Windows 证书存储区|将 Cmk 本地存储在 Windows 密钥存储区| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -352,7 +359,7 @@ ODBC Driver 13.1 for SQL Server 附带以下内置 keystore 提供程序：
 
 ### <a name="using-the-azure-key-vault-provider"></a>使用 Azure 密钥保管库提供程序
 
-Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（尤其是当应用程序在 Azure 中托管时）。 在 Linux、 macOS 和 Windows 上的 SQL Server ODBC Driver 13.1 包括 Azure 密钥保管库的内置列主密钥存储提供程序。 请参阅[Azure 密钥保管库 – Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)，[密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)，和[Azure 密钥保管库中创建列主密匙](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)有关配置 Azure 密钥的详细信息保管库 Always encrypted。
+Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（尤其是当应用程序在 Azure 中托管时）。 在 Linux、 macOS 和 Windows 上的 SQL Server ODBC 驱动程序包括 Azure 密钥保管库的内置列主密钥存储提供程序。 请参阅[Azure 密钥保管库-Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)，[密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)，和[Azure 密钥保管库中创建列主密匙](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)有关配置 Azure 密钥的详细信息保管库 Always encrypted。
 
 驱动程序还支持向 Azure 密钥保管库使用以下凭据类型进行身份验证：
 
@@ -364,7 +371,7 @@ Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（�
 
 |凭据类型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|用户名/密码| `KeyVaultPassword`|用户主体名称|密码|
+|Username/password| `KeyVaultPassword`|用户主体名称|密码|
 |客户端 ID/密钥| `KeyVaultClientSecret`|客户端 ID|机密|
 
 #### <a name="example-connection-strings"></a>连接字符串示例
@@ -377,7 +384,7 @@ Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（�
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**用户名/密码**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -387,11 +394,11 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 ### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储区提供程序
 
-在 Windows 上的 SQL Server ODBC Driver 13.1 包括名为 Windows 证书存储的内置列主密钥存储提供程序`MSSQL_CERTIFICATE_STORE`。 （此提供程序不可用在 macOS 或 Linux。）与此提供程序，客户端计算机上本地存储 CMK 和不使用该驱动程序所必需的附加配置应用程序。 但是，应用程序必须具有访问证书和其私钥存储区中。 请参阅[创建并存储列主密钥 (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)有关详细信息。
+在 Windows 上的 SQL Server ODBC 驱动程序包括用于 Windows 证书存储中，名为的内置列主密钥存储提供程序`MSSQL_CERTIFICATE_STORE`。 （此提供程序不可用在 macOS 或 Linux。）与此提供程序，客户端计算机上本地存储 CMK 和不使用该驱动程序所必需的附加配置应用程序。 但是，应用程序必须具有访问证书和其私钥存储区中。 请参阅[创建并存储列主密钥 (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)有关详细信息。
 
 ### <a name="using-custom-keystore-providers"></a>使用自定义密钥存储提供程序
 
-ODBC Driver 13.1 for SQL Server 还支持使用 CEKeystoreProvider 接口的自定义第三方 keystore 提供程序。 这允许应用程序加载，查询，并配置 keystore 提供程序，以便它们可以使用由驱动程序以访问加密的列。 应用程序可直接与 SQL 服务器中的存储来加密 Cek 和执行任务超出访问加密的列使用 ODBC; 为了 keystore 提供程序进行交互有关详细信息，请参阅[自定义密钥存储提供程序](../../connect/odbc/custom-keystore-providers.md)。
+ODBC Driver for SQL Server 还支持使用 CEKeystoreProvider 接口的自定义第三方 keystore 提供程序。 这允许应用程序加载，查询，并配置 keystore 提供程序，以便它们可以使用由驱动程序以访问加密的列。 应用程序可直接与 SQL 服务器中的存储来加密 Cek 和执行任务超出访问加密的列使用 ODBC; 为了 keystore 提供程序进行交互有关详细信息，请参阅[自定义密钥存储提供程序](../../connect/odbc/custom-keystore-providers.md)。
 
 两个连接属性用于与自定义密钥存储提供程序交互。 它们分别是：
 
@@ -515,17 +522,50 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>ODBC 驱动程序使用始终加密时的限制
 
-### <a name="bulk-copy-function-usage"></a>大容量复制函数的用法
-利用[SQL 大容量复制函数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)使用始终加密使用 ODBC 驱动程序时，不支持。 不透明的加密/解密会对加密列与 SQL 大容量复制函数一起使用。
-
 ### <a name="asynchronous-operations"></a>异步操作
 虽然 ODBC 驱动程序将允许使用[异步操作](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)使用始终加密，对性能有影响上没有操作时启用始终加密。 调用`sys.sp_describe_parameter_encryption`为该语句阻止和将导致驱动程序等待服务器在返回之前返回元数据确定加密元数据`SQL_STILL_EXECUTING`。
+
+### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>检索使用 SQLGetData 部件中的数据
+对于 SQL Server，ODBC 驱动程序 17 加密之前字符和二进制列无法检索在使用 SQLGetData 部件中。 只有一个针对 SQLGetData 可以进行调用，使用具有足够的长度以包含整个列的数据缓冲区。
+
+### <a name="send-data-in-parts-with-sqlputdata"></a>在使用 SQLPutData 部件中发送数据
+插入或比较的数据不在使用 SQLPutData 部件中发送。 只有一个针对 SQLPutData 可以进行调用，使用包含整个数据的缓冲区。 用于插入到加密列的长整型数据，使用大容量复制 API，与输入的数据文件中下一节中所述。
+
+### <a name="encrypted-money-and-smallmoney"></a>加密的 money 和 smallmoney
+加密**money**或**smallmoney**列不能将参数作为目标，因为不具体 ODBC 数据类型映射到这些类型，从而导致操作数类型冲突错误。
+
+## <a name="bulk-copy-of-encrypted-columns"></a>大容量复制加密列
+
+利用[SQL 大容量复制函数](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)和**bcp**实用程序的支持功能始终加密 ODBC 驱动程序 17 自 SQL Server。 纯文本 （加密上插入和解密上检索） 和密码文本 （按原义传输） 都可以插入并使用大容量复制中 （bcp_ *） Api 检索和**bcp**实用程序。
+
+- 若要检索已加密文本 （例如，对于大容量加载到另一个数据库） 的 varbinary （max） 窗体中，连接而无需`ColumnEncryption`选项 (或将其设置为`Disabled`) 和执行 BCP OUT 操作。
+
+- 插入和检索纯文本，并允许驱动程序以透明方式执行加密和解密作为必需的设置`ColumnEncryption`到`Enabled`就足够了。 否则保持不变的 BCP API 的功能。
+
+- 将已加密文本插入 varbinary （max） 的形式 （例如检索到的上面） 中，设置`BCPMODIFYENCRYPTED`选项设为 TRUE，然后执行 BCP IN 操作。 为了使生成的数据要解密，请确保目标列的 CEK 是最初从中获取密码相同。
+
+使用时**bcp**实用程序： 控制`ColumnEncryption`设置，请使用-D 选项并指定包含所需的值的 DSN。 若要插入已加密文本，确保`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`启用的用户的设置。
+
+操作在加密列时下, 表提供操作的摘要：
+
+|`ColumnEncryption`|BCP 方向|Description|
+|----------------|-------------|-----------|
+|`Disabled`|OUT （到客户端）|检索已加密文本。 观察到的数据类型是**varbinary （max)**。|
+|`Enabled`|OUT （到客户端）|检索纯文本。 该驱动程序将解密列数据。|
+|`Disabled`|IN （到服务器）|将插入已加密文本。 这被适用于进行移动加密的数据，而无需它可进行解密。 如果该操作将失败`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`对用户未设置的选项或 BCPMODIFYENCRYPTED 未设置连接句柄。 有关详细信息，请参阅下文。|
+|`Enabled`|IN （到服务器）|将插入纯文本。 该驱动程序将加密列数据。|
+
+### <a name="the-bcpmodifyencrypted-option"></a>BCPMODIFYENCRYPTED 选项
+
+若要防止数据损坏，服务器通常不允许密码文本将直接插入到加密列，并且因此尝试进行这些操作都将失败;但是，对于使用 BCP API，设置的加密数据的大容量加载`BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)为 TRUE 的选项将允许已加密文本直接，插入和降低了加密的数据损坏于设置的风险`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`的用户帐户上的选项。 但是，键必须与数据，而且很大容量插入后并在进一步使用之前执行插入的数据的一些只读检查一个好办法。
+
+请参阅[迁移保护的敏感数据的始终加密](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)有关详细信息。
 
 ## <a name="always-encrypted-api-summary"></a>始终加密 API 摘要
 
 ### <a name="connection-string-keywords"></a>连接字符串关键字
 
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |`ColumnEncryption`|接受的值是`Enabled` / `Disabled`。<br>`Enabled`-启用始终加密的连接的功能。<br>`Disabled`-禁用始终加密连接的功能。 <br><br>默认值为 `Disabled`。|  
 |`KeyStoreAuthentication` | 有效值： `KeyVaultPassword`，`KeyVaultClientSecret` |
@@ -534,7 +574,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="connection-attributes"></a>连接属性
 
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE`(0)-禁用始终加密 <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1)-启用始终加密|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|后连接|[设置]尝试加载 CEKeystoreProvider<br>[Get]返回 CEKeystoreProvider 名称|
@@ -542,7 +582,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ### <a name="statement-attributes"></a>语句属性
 
-|Name|Description|  
+|名称|Description|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0)-语句禁用始终加密 <br>`SQL_CE_RESULTSETONLY`(1)-仅解密。 结果集和返回值解密的、 和未加密的参数 <br>`SQL_CE_ENABLED`(3)--始终启用加密并将其用于参数和结果|
 
@@ -551,6 +591,12 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |IPD 字段|大小/类型|默认值|Description|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|字 （2 个字节）|0|当 0 （默认值）： 决策来加密此参数确定的加密元数据中的可用性。<br><br>时则为非 0： 如果加密元数据可用于此参数，其进行加密。 否则，请求失败，出现错误 [CE300] [Microsoft] [ODBC Driver 13 for SQL Server] 强制加密指定的参数，但没有加密元数据由服务器。|
+
+### <a name="bcpcontrol-options"></a>bcp_control 选项
+
+|选项名称|默认值|Description|
+|-|-|-|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|为 TRUE 时，允许使用 varbinary （max） 值要插入到加密列。 为 FALSE 时，可以防止插入，除非提供正确的类型和加密元数据。|
 
 ## <a name="see-also"></a>另请参阅
 

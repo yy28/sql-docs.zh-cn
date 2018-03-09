@@ -3,8 +3,9 @@ title: "CreateParameter 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
 - Command15::CreateParameter
-helpviewer_keywords: CreateParameter method [RDS]
+helpviewer_keywords:
+- CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 929d7e91566aa18938a64f1085b1d77153205898
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c293e3a6e337e3c0331884bf1ee1eed57ad36003
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 创建一个新[参数](../../../ado/reference/ado-api/parameter-object.md)使用指定的属性的对象。  
@@ -43,19 +45,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Parameters  
  *名称*  
- 可选。 A**字符串**包含的名称值**参数**对象。  
+ 選擇性。 A**字符串**包含的名称值**参数**对象。  
   
  *类型*  
- 可选。 A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，该值指定的数据类型**参数**对象。  
+ 選擇性。 A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，该值指定的数据类型**参数**对象。  
   
  *方向*  
- 可选。 A [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值，该值指定的一种**参数**对象。  
+ 選擇性。 A [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值，该值指定的一种**参数**对象。  
   
  *Size*  
- 可选。 A**长**值，该值指定参数值的最大长度，以字符数或字节。  
+ 選擇性。 A**长**值，该值指定参数值的最大长度，以字符数或字节。  
   
- *值*  
- 可选。 A **Variant** ，指定值**参数**对象。  
+ *Value*  
+ 選擇性。 A **Variant** ，指定值**参数**对象。  
   
 ## <a name="remarks"></a>注释  
  使用**CreateParameter**方法来创建一个新**参数**具有指定的名称、 类型、 方向、 大小和值对象。 参数中传递任何值写入到相应**参数**属性。  

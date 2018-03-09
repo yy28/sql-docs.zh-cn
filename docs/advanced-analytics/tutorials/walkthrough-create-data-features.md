@@ -2,27 +2,32 @@
 title: "创建使用 R 和 SQL （演练） 的数据功能 |Microsoft 文档"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 095f5b9880a8f78a8d73461dd8cbeae28f30169e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>创建使用 R 和 SQL （演练） 的数据功能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 数据工程是机器学习的一个重要组成部分。 数据通常需要转换，然后才能使用它进行预测性建模。 如果数据不具有所需的功能，可根据现有值进行创建。
 
@@ -31,7 +36,7 @@ ms.lasthandoff: 11/09/2017
 在此步骤中，我们将比较两个不同的方法，用于从数据中创建一项功能：
 
 - 使用自定义 R 函数
-- 使用中的自定义 T-SQL 函数[!INCLUDE[tsql](../../includes/tsql-md.md)]
+- 使用中的自定义 T-SQL 函数 [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 目的是创建一个新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组数据，包括原始列加上新的数字特征， *direct_distance*。
 

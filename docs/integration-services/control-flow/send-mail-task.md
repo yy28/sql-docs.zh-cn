@@ -1,5 +1,5 @@
 ---
-title: "发送邮件任务 |Microsoft 文档"
+title: "发送邮件任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 6d3cacac1c13700c1416b6365ec6bb03f650fa31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="send-mail-task"></a>发送邮件任务
   发送邮件任务可以发送电子邮件。 通过使用发送邮件任务，包可以在包工作流中的任务成功或失败时发送邮件，也可为响应运行时包引发的事件而发送邮件。 例如，该任务可以通知数据库管理员，告知备份数据库任务是成功还是失败。  
@@ -75,7 +74,7 @@ ms.lasthandoff: 08/11/2017
 |**SendMailTaskInfo**|提供有关任务的说明性信息。|  
   
 ## <a name="configuring-the-send-mail-task"></a>配置发送邮件任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的信息，请单击以下主题：  
   
@@ -85,7 +84,7 @@ ms.lasthandoff: 08/11/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的信息，单击 [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
 ## <a name="related-content"></a>相关内容  
@@ -95,7 +94,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="send-mail-task-editor-general-page"></a>发送邮件任务编辑器（“常规”页）
   可以使用 **“发送邮件任务编辑器”** 对话框的 **“常规”** 页，对发送邮件任务进行命名和说明。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为发送邮件任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -107,16 +106,16 @@ ms.lasthandoff: 08/11/2017
 ## <a name="send-mail-task-editor-mail-page"></a>发送邮件任务编辑器（“邮件”页）
   使用 **“发送邮件任务编辑器”** 对话框中的 **“邮件”** 页，可以指定收件人、邮件类型和邮件的优先级。 您还可以在邮件中附加文件。 邮件正文可以是您提供的字符串，也可以是指向包含文本的文件连接，还可以是包含文本的变量的名称。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **SMTPConnection**  
- 在列表中，选择 SMTP 连接管理器或单击**\<新连接 … >**创建新的连接管理器。  
+ 从列表中选择一个 SMTP 连接管理器，或单击 \<“新建连接…”> 创建新的连接管理器。  
   
 > [!IMPORTANT]  
 >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
   
  **相关主题：**[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
- **从**  
+ **From**  
  指定发件人的电子邮件地址。  
   
  **若要**  
@@ -134,7 +133,7 @@ ms.lasthandoff: 08/11/2017
  **MessageSourceType**  
  选择消息的源类型。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为邮件正文。 选择此值将显示动态选项 **MessageSource**。|  
 |**文件连接**|将源设置为包含邮件正文的文件。 选择此值将显示动态选项 **MessageSource**。|  
@@ -157,19 +156,18 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 文件连接  
  **MessageSource**  
- 选择列表中的文件连接管理器或单击\<**新的连接...**> 创建新的连接管理器。  
+ 从列表中选择一个文件连接管理器，或单击 **“新建连接…”\<**> 创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 变量  
  **MessageSource**  
- 在列表中选择变量，或单击\<**新变量...**> 若要创建新变量。  
+ 从列表中选择一个变量，或单击 **“新建变量...”\<**> 创建新变量。  
   
  **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ead354a4f95b061f44728b76bbbccd6ef84606a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3b3d4f355e52f27689dad4f157ca65edad99fa99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>添加数据集筛选器、数据区域筛选器和组筛选器
   在报表中，筛选器是创建的数据集、数据区域或数据区域组的一部分，用于限制报表中使用的数据。 如果无法更改数据集查询（例如，如果您使用的是共享数据集），则可使用筛选器帮助您控制报表数据。  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
 |**Between**|测试表达式是否在两个值之间（含这两个值）。|  
 |**In**|测试表达式是否包含在一组值中。|  
   
-### <a name="value"></a>值  
+### <a name="value"></a>ReplTest1  
  Value 表达式指定筛选器公式的最后一部分。 报表处理器会将计算后的表达式转换为指定的数据类型，然后计算整个筛选器公式以确定表达式中指定的数据是否通过了筛选器的筛选。  
   
  若要转换为非标准 CLR 数据类型的数据类型，必须修改表达式以显式转换为该数据类型。 您可使用 **“表达式”** 对话框的 **“常见函数”**下的 **“转换”**中列出的转换函数。 例如，对于 `ListPrice` 字段，该字段表示 **数据源中以** money [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型存储的数据，数据处理扩展插件将以 <xref:System.Decimal> 数据类型返回该字段值。 若要将筛选器设置为仅使用报表货币中大于 **$50000.00** 的值，则可使用表达式 `=CDec(50000.00)`将该值转换为 Decimal 类型。  

@@ -8,27 +8,31 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SqlService Class
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SqlService Class
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SqlService class
+helpviewer_keywords:
+- SqlService class
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 539f2587b7190d9917496cf406c826e619e7cbfa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4b36c499a17cd484fa20740fa098c5990a20a8a8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlservice-class"></a>SqlService 类
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)][SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)表示的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)表示的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。  
   
  [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)用于以编程方式管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务。 与[SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md)对象，你可以执行以下任务：  
   

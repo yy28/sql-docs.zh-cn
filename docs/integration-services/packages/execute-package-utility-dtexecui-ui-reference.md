@@ -1,5 +1,5 @@
 ---
-title: "执行包实用工具 (dtexecui) |Microsoft 文档"
+title: "执行包实用工具 (dtexecui) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,17 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: de1484e04318c45057213226016379326e670304
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-utility-dtexecui"></a>执行包实用工具 (dtexecui)
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **命令提示工具运行包的替代方法，可从** 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
@@ -74,14 +73,14 @@ ms.lasthandoff: 08/03/2017
   
 |||  
 |-|-|  
-|“值”|Description|  
+|ReplTest1|Description|  
 |**SQL Server**|当包驻留在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时选择此选项。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证提供用户名和密码。 每个用户名和密码会将 **/USER** *username* 和 **/PASSWORD** *password* options to the comm和 prompt.|  
 |**文件系统**|当包驻留在文件系统时选择此选项。|  
 |**SSIS 包存储区**|当包驻留在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区时选择此选项。|  
   
  上述选择的每一项都包括以下一组选项：  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -99,7 +98,7 @@ ms.lasthandoff: 08/03/2017
  **使用 Windows 身份验证**  
  选择此选项，可以使用 Windows 身份验证，并使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户登录。  
   
- **使用 SQL Server 身份验证**  
+ **Use SQL Server Authentication**  
  选择此选项，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 当用户使用指定的登录名和密码从不可信连接进行连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将通过检查是否已设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户以及指定的密码是否与以前记录的密码匹配，来进行身份验证。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 找不到登录帐户，则身份验证会失败，用户将收到错误消息。  
   
 > [!IMPORTANT]  
@@ -119,10 +118,10 @@ ms.lasthandoff: 08/03/2017
  **登录到服务器**  
  指定包是否使用 Microsoft Windows 身份验证连接到包源。 为了实现更好的安全性，建议使用 Windows 身份验证。 使用 Windows 身份验证时无需指定用户名和密码。  
   
- **使用 Windows 身份验证**  
+ **Use Windows Authentication**  
  选择此选项可以使用 Windows 身份验证，并使用 Microsoft Windows 用户帐户登录。  
   
- **使用 SQL Server 身份验证**  
+ **Use SQL Server Authentication**  
  在运行存储于“SSIS 包存储区”的包时，此选项不可用。  
   
  **“包”**  
@@ -131,7 +130,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configurations-page"></a>配置页  
  可以使用 **“执行包实用工具”** 对话框的 **“配置”** 页，选择在运行时加载的配置文件并指定它们的加载顺序。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **配置文件**  
  列出包使用的配置。 每个配置文件都会向命令提示符中添加 **/CONFIGFILE filename** 选项。  
   
@@ -141,13 +140,13 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  如果多个配置修改了同一个属性，则使用最后加载的配置。  
   
- **添加**  
+ **“添加”**  
  单击此项可以使用“打开”对话框添加配置。 默认情况下，该对话框只列出具有 .dtsconfig 扩展名的文件。  
   
  **删除**  
  在列表中选择配置文件，再单击“删除”。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -156,20 +155,20 @@ ms.lasthandoff: 08/03/2017
 ## <a name="command-files-page"></a>“命令文件”页  
  可以使用 **“执行包实用工具”** 对话框的 **“命令文件”** 页选择在运行时加载的命令文件。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **Command files**  
  列出包使用的命令文件。 一个包可以使用多个文件来设置命令行选项。  
   
  **箭头键**  
  在列表中选择命令文件，然后使用右侧的箭头键更改加载顺序。 将从列表顶部开始按顺序加载命令文件。  
   
- **添加**  
+ **“添加”**  
  单击此项可以使用“打开”对话框添加命令文件。  
   
  **删除**  
  在文本框中选择命令文件，然后使用“删除”按钮删除该文件。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -178,17 +177,17 @@ ms.lasthandoff: 08/03/2017
 ## <a name="connection-managers-page"></a>“连接管理器”页  
  可以使用 **“执行包实用工具”** 对话框的 **“连接管理器”** 页，编辑包使用的连接管理器的连接字符串。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **连接管理器**  
  选中其复选框后，“连接字符串”列即会变为可编辑状态。  
   
- **说明**  
+ **Description**  
  查看每个连接管理器的说明。 无法编辑说明。  
   
  **连接字符串**  
  编辑连接管理器的连接字符串。 只有选中 **“连接管理器”** 复选框时，此字段才是可编辑的。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -197,7 +196,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="execution-options-page"></a>“执行选项”页  
  可以使用“执行包实用工具”对话框的“执行选项”页指定包的运行时选项。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **发生验证警告时包失败**  
  指示如果发生验证警告包是否失败。  
   
@@ -213,7 +212,7 @@ ms.lasthandoff: 08/03/2017
  **检查点文件**  
  如果启用包检查点，则列出包所使用的检查点文件。  
   
- **浏览**  
+ **“浏览”**  
  如果启用了包检查点，则单击浏览按钮 **(…)** 可以通过“打开”对话框查找检查点文件。 如果已经指定了检查点文件，将用所选文件替换该文件。  
   
  **覆盖重新启动选项**  
@@ -231,11 +230,11 @@ ms.lasthandoff: 08/03/2017
 ## <a name="reporting-page"></a>“报告”页  
  可以使用 **“执行包实用工具”** 对话框的 **“报告”** 页指定与包有关的事件和信息，以便在包运行时记录到控制台。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **控制台事件**  
  指示要报告的事件和消息类型。  
   
- **InclusionThresholdSetting**  
+ **无**  
  选择此选项将不进行报告。  
   
  **错误**  
@@ -283,16 +282,16 @@ ms.lasthandoff: 08/03/2017
  **开始时间和结束时间**  
  选择此选项将报告包开始和完成的时间。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
 ## <a name="logging-page"></a>“日志记录”页  
- 可以使用 **“执行包实用工具”** 对话框的 **“日志记录”** 页，将包设置为可在运行时使用日志提供程序。 提供包日志提供程序类型和连接到日志的连接字符串。 对于每个日志提供程序项，在命令提示符下都会添加一个 **/LOGGER***classid* 选项。  
+ 可以使用 **“执行包实用工具”** 对话框的 **“日志记录”** 页，将包设置为可在运行时使用日志提供程序。 提供包日志提供程序类型和连接到日志的连接字符串。 对于每个日志提供程序项，在命令提示符下都会添加一个 */LOGGER***classid 选项。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **日志提供程序**  
  从该列表中选择日志提供程序。  
   
@@ -302,26 +301,26 @@ ms.lasthandoff: 08/03/2017
  **删除**  
  选择一个日志提供程序，再单击此项将删除该日志提供程序。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
  单击此项可关闭“执行包实用工具”对话框。  
   
 ## <a name="set-values-page"></a>“设置值”页  
- 可以使用 **“执行包实用工具”** 对话框的 **“设置值”** 页，通过键入属性路径和属性值来设置包、可执行文件、连接、变量和日志提供程序的属性值。 对于每个路径项，在命令提示符下都会添加一个 **/SET***propertypath;value* 选项。  
+ 可以使用 **“执行包实用工具”** 对话框的 **“设置值”** 页，通过键入属性路径和属性值来设置包、可执行文件、连接、变量和日志提供程序的属性值。 对于每个路径项，在命令提示符下都会添加一个 */SET***propertypath;value 选项。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **属性路径**  
  键入属性的路径。 在路径语法中，反斜杠 (\\) 用于指示其后面为容器项，句点 (.) 用于指示其后面为属性项，而括号用于指示集合成员。 成员可以通过其索引或其名称进行标识。 例如，包变量的属性路径可以是 \Package.Variables[MyVariable].Value。  
   
- **“值”**  
+ **ReplTest1**  
  键入属性的值。  
   
  **删除**  
  在选择属性路径后单击此项将删除相应的属性路径。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -330,7 +329,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="verification-page"></a>“验证”页  
  可以使用 **“执行包”** 对话框的 **“验证”** 页设置对包进行验证的条件。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **仅执行已签名的包**  
  选择此项将仅执行已签名的包。  
   
@@ -352,7 +351,7 @@ ms.lasthandoff: 08/03/2017
  版本 ID  
  指定版本标识号。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -361,17 +360,17 @@ ms.lasthandoff: 08/03/2017
 ## <a name="command-line-page"></a>“命令行”页  
  可以使用 **“执行包实用工具”** 对话框的 **“命令行”** 节点，编辑由不同对话框创建的选项生成的命令行。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **还原原始选项**  
  单击此项可将命令行还原为其原始状态。 如果你使用“手动编辑命令行”选项进行了修改，然后要还原原始命令行选项，则可以使用此选项。  
   
  **手动编辑命令行**  
  单击此项可在“命令行”文本框中编辑命令行。  
   
- **Command line**  
+ **命令行**  
  显示当前的命令行。 如果您选择了手动编辑命令行的选项，则可编辑该命令行。  
   
- **Execute**  
+ **执行**  
  单击此项可运行包。  
   
  **关闭**  
@@ -381,4 +380,3 @@ ms.lasthandoff: 08/03/2017
  [dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)  
   
   
-

@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords: Reporting Services, report creation
@@ -18,13 +16,13 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: "54"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b5d023c1f2fa7c8795f83e610c49e03f50f38032
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 11bf9da4b78262f75a411f847c721309abc2457b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表是基于 XML 的报表定义，其中包括报表数据和报表布局元素。 在客户端文件系统中，报表定义具有文件扩展名 .rdl。 在发布某一分页报表后，该报表将成为在报表服务器或 SharePoint 站点上存储的报表项。 分页报表是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供的基于服务器的报表平台的一部分。 你还可以 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
         -   [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
-        -   [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+        -   [图表&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
         -   [迷你图和数据条（报表生成器和 SSRS）](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="create-notifications-based-on-report-data"></a>基于报表数据创建通知  
  您可以为 SharePoint 站点上的已发布报表创建数据警报。 数据警报基于报表的数据区域中的数据馈送。 默认情况下，将自动对数据区域进行命名。 报表作者可以通过基于其业务用途命名数据区域，更轻松地在其报表中创建数据区域。 在您创建数据警报时，如果数据满足您指定的条件，您将收到以电子邮件形式发出的通知。 有关详细信息，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)、[在数据警报设计器中创建数据警报](../../reporting-services/create-a-data-alert-in-data-alert-designer.md)和 [Reporting Services 数据警报](../../reporting-services/reporting-services-data-alerts.md)。  
   
-## <a name="upgrade-reports"></a>升级报表  
+## <a name="upgrade-reports"></a>Upgrade Reports  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持报表定义、报表服务器和 SharePoint 站点的多个版本。 升级报表：  
   
 -   升级报表服务器安装。 在首次使用时自动升级报表服务器上存储的已编译报表。 报表定义 (.rdl) 不更改。 有关详细信息，请参阅 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  

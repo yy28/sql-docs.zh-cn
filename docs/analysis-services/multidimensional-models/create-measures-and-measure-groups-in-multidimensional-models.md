@@ -2,16 +2,13 @@
 title: "在多维模型中创建度量值和度量值组 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: measure groups [Analysis Services], defining
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f10c201d936a3580ca02846f43e3592ebfbacebf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a66d433e5b96e8012e8c4c05c14d3078235db958
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多维模型中创建度量值和度量值组
-  *度量值* 是数字数据值的聚合，如求和、计数、最小值、最大值、平均值或你创建的自定义 MDX 表达式。 *度量值组* 是一个或多个度量值的容器。 所有度量值存在于一个度量值组中，即使只有一个度量值。 一个多维数据集必须至少有一个度量值和度量值组。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*度量值*是数值数据值，例如总和、 计数、 最小值、 最大值、 平均值或你创建的自定义 MDX 表达式的聚合。 *度量值组* 是一个或多个度量值的容器。 所有度量值存在于一个度量值组中，即使只有一个度量值。 一个多维数据集必须至少有一个度量值和度量值组。  
   
  本主题包含以下各节：  
   

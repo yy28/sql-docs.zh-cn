@@ -1,5 +1,5 @@
 ---
-title: "如何使用 CDC 服务命令行界面 |Microsoft 文档"
+title: "如何使用 CDC 服务命令行界面 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b1f69b32824d88f2e5be131dde2043414c2f9e8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9f9f1dbb3e3b3e006d97ba6c76bf41a974359e69
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>如何使用 CDC 服务命令行界面
   Oracle CDC 服务程序 xdbcdcsvc.exe 通常运行 Oracle CDC Windows 服务，但可以从命令行直接调用它，以便创建或删除 Oracle CDC Windows 服务。  
@@ -37,4 +36,3 @@ ms.lasthandoff: 08/03/2017
 3.  键入执行可能任务之一所需的命令。  
   
   
-

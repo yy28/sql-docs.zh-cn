@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - CREATE ENDPOINT
 - ENDPOINT_TSQL
 - CREATE_ENDPOINT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database mirroring [SQL Server], endpoint
 - HTTP SOAP support [SQL Server]
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: "135"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8ce3df8a9b6e7ead8e775b6bd0b2d31720b38a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +134,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  端点被禁用。 在该状态下，服务器侦听端口请求但向客户端返回错误。  
   
- **已停止**  
+ **STOPPED**  
  端点被停止。 在该状态下，服务器不侦听端点端口，也不对使用端点的任何尝试请求进行响应。  
   
  若要更改的状态，使用[ALTER ENDPOINT &#40;Transact SQL &#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
@@ -149,10 +151,10 @@ FOR DATABASE_MIRRORING (
   
  下列参数仅适用于 TCP 协议选项。  
   
- LISTENER_PORT  **=**  *listenerPort*  
+ LISTENER_PORT **=***listenerPort*  
  指定 Service Broker TCP/IP 协议在其上侦听连接的端口号。 按照约定，将使用 4022，但 1024 和 32767 之间的任何数字都有效。  
   
- LISTENER_IP  **=** 所有 |**(***4 一部分 ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
  指定端点将侦听的 IP 地址。 默认值为 ALL。 这表示侦听器将接受任何有效 IP 地址上的连接。  
   
  如果用 IP 地址而不是完全限定域名（`ALTER DATABASE SET PARTNER = partner_IP_address` 或 `ALTER DATABASE SET WITNESS = witness_IP_address`）配置数据库镜像，则在创建镜像端点时必须指定 `LISTENER_IP =IP_address` 而不是 `LISTENER_IP=ALL`。  
@@ -171,17 +173,17 @@ FOR DATABASE_MIRRORING (
 > [!IMPORTANT]  
 >  服务器实例上所有的镜像连接都只使用一个数据库镜像端点。 任何创建其他数据库镜像端点的尝试都将失败。  
   
- **\<authentication_options >:: =**  
+ **\<authentication_options> ::=**  
   
  **WINDOWS** [{NTLM |KERBEROS |**NEGOTIATE** }]  
  指定端点使用 Windows 身份验证协议进行连接以验证端点。 这是默认设置。  
   
  如果指定某一授权方法（NTLM 或 KERBEROS），则始终将该方法用作身份验证协议。 默认值 NEGOTIATE 允许端点使用 Windows 协商协议在 NTLM 和 Kerberos 之间进行选择。  
   
- 证书*certificate_name*  
+ CERTIFICATE *certificate_name*  
  指定要使用的证书由连接的身份验证终结点*certificate_name*才能建立标识进行授权。 远端点必须具有其公钥与指定证书的私钥相匹配的证书。  
   
- WINDOWS [{NTLM |KERBEROS |**NEGOTIATE** }]证书*certificate_name*  
+ WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  指定端点通过使用 Windows 身份验证尝试进行连接；如果该尝试失败，则尝试使用指定的证书。  
   
  证书*certificate_name* WINDOWS [{NTLM |KERBEROS |**NEGOTIATE** }]  
@@ -234,7 +236,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  放弃位于其他位置的服务的消息。 这是默认设置。  
   
- MESSAGE_FORWARD_SIZE  **=**  *forward_size*  
+ MESSAGE_FORWARD_SIZE **=***forward_size*  
  指定存储要转发的消息时为要使用的端点分配的最大存储量 (MB)。  
   
  **DATABASE_MIRRORING 选项**  
@@ -272,7 +274,7 @@ FOR DATABASE_MIRRORING (
   
 -   已被授予对端点的 CONNECT 权限的用户或组  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 CREATE ENDPOINT 权限，或者具有 **sysadmin** 固定服务器角色的成员身份。 有关详细信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
 ## <a name="example"></a>示例  
@@ -294,7 +296,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [选择加密算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT (Transact SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [删除终结点 &#40;Transact SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

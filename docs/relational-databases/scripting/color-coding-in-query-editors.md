@@ -2,29 +2,33 @@
 title: "查询编辑器中的颜色编码 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
 - color coding [Query Editor]
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b4e760bcc0aabeadae6b95ac71d81086d915c661
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5df02dfb76c056cabe08074d83b69270c6db014c
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="color-coding-in-query-editors"></a>查询编辑器中的颜色编码
-  在代码编辑器中输入的文本分配有一个类别；每个类别都由某种颜色来标识。 这些颜色有助于您在代码中快速查找文本。 例如，注释突出显示为深绿色。 下表列出了最常用的颜色。 在 **“工具”**菜单的 **“选项”** 中，可以查看颜色及其类别的完整列表，并可配置自定义配色方案。 有关如何更改默认颜色的详细信息，请参阅 [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]在代码编辑器中输入的文本分配有一个类别；每个类别都由某种颜色来标识。 这些颜色有助于您在代码中快速查找文本。 例如，注释突出显示为深绿色。 下表列出了最常用的颜色。 在 **“工具”**菜单的 **“选项”** 中，可以查看颜色及其类别的完整列表，并可配置自定义配色方案。 有关如何更改默认颜色的详细信息，请参阅 [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)。  
   
 ## <a name="default-code-colors"></a>默认代码颜色  
   

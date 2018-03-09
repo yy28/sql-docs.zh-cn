@@ -2,25 +2,30 @@
 title: "内存使用情况的监视和故障排除 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e08358859b04559b2ed2f010887fd4166ebc6196
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b1e30a7ef6ebf2ee0f2a586950b50e4b1b1744b5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 使用内存的模式与针对基于磁盘的表的模式不同。 您可以使用为内存和垃圾回收子系统提供的 DMV 或性能计数器，监视数据库中内存优化表和索引分配和使用的内存量。  这使您在系统和数据库级别都获得可见性，并允许防止由于内存用尽而导致的问题。  
   
  本主题介绍如何监视 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存使用量。  
@@ -152,7 +157,7 @@ ms.lasthandoff: 11/09/2017
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>内存优化表和索引的内存使用情况  
  您可以通过按如下所示查询 `sys.dm_db_xtp_table_memory_stats` ，查找所有用户表、索引和系统对象的内存使用情况。  
   
-```tsql  
+```sql  
 SELECT object_name(object_id) AS Name  
      , *  
    FROM sys.dm_db_xtp_table_memory_stats  
@@ -178,7 +183,7 @@ NULL       -2          192                           25                      16 
 #### <a name="memory-consumption-by-internal-system-structures"></a>内部系统结构的内存使用情况  
  系统对象也会使用内存，例如事务结构、针对数据和差异文件的缓冲区以及垃圾回收结构等。 您可以通过按如下所示查询 `sys.dm_xtp_system_memory_consumers` ，查找用于这些系统对象的内存。  
   
-```tsql  
+```sql  
 SELECT memory_consumer_desc  
      , allocated_bytes/1024 AS allocated_bytes_kb  
      , used_bytes/1024 AS used_bytes_kb  
@@ -217,7 +222,7 @@ PGPOOL:  4K               0                    0                    0
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>访问内存优化表时在运行时的内存使用情况  
  您可以确定运行时结构使用的内存，例如使用以下查询确定过程缓存使用的内存：运行此查询可获取运行时结构（例如用于过程缓存的运行时结构）使用的内存。 所有运行时结构都用 XTP 进行标记。  
   
-```tsql  
+```sql  
 SELECT memory_object_address  
      , pages_in_bytes  
      , bytes_used  
@@ -250,7 +255,7 @@ memory_object_address pages_ in_bytes bytes_used type
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>跨实例的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎使用的内存  
  管理分配给 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎和内存优化对象的内存的方式与管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内任何其他内存消耗者的方式完全相同。 MEMORYCLERK_XTP 类型的内存分配器计算分配给 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎的所有内存。 使用下面的查询可查找 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎使用的所有内存。  
   
-```tsql  
+```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
 SELECT type  
      , name  

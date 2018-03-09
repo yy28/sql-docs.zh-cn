@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bdecb5570f4c139fd42a77d2ef5479758bdf63a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b93a1955adb6f38eebd8de86599e1861a80ff75b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]公共语言运行时 (CLR) 支持用于托管代码称为代码访问安全性的安全模型。 在这种模式下，根据代码的标识来对程序集授予权限。 有关详细信息，请参阅 .NET Framework 软件开发包中的“代码访问安全性”部分。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+公共语言运行时 (CLR) 支持用于托管代码的一种称为代码访问安全性的安全模式。 在这种模式下，根据代码的标识来对程序集授予权限。 有关详细信息，请参阅 .NET Framework 软件开发包中的“代码访问安全性”部分。  
   
  决定授予程序集的权限的安全策略定义在三个不同的位置：  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 主机策略级别权限集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主机策略级别授予程序集的代码访问安全性权限集由创建该程序集时指定的权限集决定。 有三个权限集：**安全**， **EXTERNAL_ACCESS**和**UNSAFE** (使用指定**的 PERMISSION_SET** 选项[创建程序集 &#40;Transact SQL &#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在承载 CLR 的同时向其提供了主机级别安全策略级别；该策略为始终有效的两个策略级别下的附加策略级别。 会为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]创建的每个应用程序域设置此策略。 此策略并不用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建 CLR 实例时有效的默认应用程序域。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供托管; 的主机级安全策略级别设置为 CLR此策略是下面始终正在起作用的两个策略级别的其他策略级别。 会为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]创建的每个应用程序域设置此策略。 此策略并不用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建 CLR 实例时有效的默认应用程序域。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 宿主级别策略组合了用于系统程序集的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固定策略和用于用户程序集的用户指定策略。  
   
@@ -75,8 +76,8 @@ ms.lasthandoff: 11/17/2017
 |----------------|-----------------------------|  
 |**DistributedTransactionPermission**|**不受限制地：**允许分布式事务。|  
 |**DNSPermission**|**不受限制地：**从域名服务器请求信息的权限。|  
-|**中**|**不受限制地：**完整允许对系统和用户环境变量的访问。|  
-|**使用**|**管理：**允许以下操作： 创建事件源，读取现有的日志，删除事件源或日志，响应条目，清除事件日志，侦听事件，并访问的所有事件日志集合。|  
+|**EnvironmentPermission**|**不受限制地：**完整允许对系统和用户环境变量的访问。|  
+|**EventLogPermission**|**管理：**允许以下操作： 创建事件源，读取现有的日志，删除事件源或日志，响应条目，清除事件日志，侦听事件，并访问的所有事件日志集合。|  
 |**FileIOPermission**|**不受限制地：**的完全访问权限的文件，允许文件夹。|  
 |**KeyContainerPermission**|**不受限制地：**完整允许对密钥容器的访问。|  
 |**NetworkInformationPermission**|**访问：**允许 Pinging。|  
@@ -111,12 +112,12 @@ ms.lasthandoff: 11/17/2017
   
 |||||  
 |-|-|-|-|  
-||**安全**|**EXTERNAL_ACCESS**|**不安全**|  
+||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**代码访问安全性权限**|仅执行|执行和访问外部资源|不受限制（包括 P/Invoke）|  
 |**编程模型限制**|是|是|无限制|  
-|**可验证性要求**|是|是|是|  
-|**本地数据访问**|是|是|是|  
-|**调用本机代码的能力**|是|是|是|  
+|**可验证性要求**|是|用户帐户控制|否|  
+|**本地数据访问**|是|用户帐户控制|是|  
+|**调用本机代码的能力**|否|“否”|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [CLR 集成安全性](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

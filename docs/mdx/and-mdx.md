@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: AND
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 61f45a9cc637f6bef11d3abb51ccfb85c1af5805
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4ddc10c3c32b6ac2cd411e04afd1775bdd3fc02f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="and-mdx"></a>AND (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>返回值  
  一个布尔值，如果两个参数的计算结果为将返回 true **true**; 否则为**false**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **AND**运算符将两个表达式视为布尔值 (0，0，作为**false**; 否则为**true**) 执行逻辑与运算的运算符之前。 下表说明了如何**AND**运算符执行逻辑与。  
   
 |*Expression1*|*Expression2*|返回值|  

@@ -1,34 +1,33 @@
 ---
 title: "使用 ADOMD.NET 对象模型 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - object model (client) [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fac5e4a825c4b30e7b9f102d03c5793438e2a2d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5ab7348371437e79b52f16c98890aa2c93431b8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>检索元数据-使用 ADOMD.NET 对象模型
   ADOMD.NET 提供了一个对象模型，用于查看分析数据源中包含的多维数据集和从属对象。 但通过对象模型并不能获得给定分析数据源中的所有元数据。 通过对象模型只可访问那些对客户端应用程序的显示而言最有用的信息，以允许用户以交互方式构造命令。 由于要显示的元数据的复杂性较低，因而 ADOMD.NET 对象模型的使用较为简单。  

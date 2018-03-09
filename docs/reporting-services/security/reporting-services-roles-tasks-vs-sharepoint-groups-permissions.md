@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6dfe5a9c884008b2e5e5e744e2b2169356c6442f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d115273f5072941acde9c0f2370e7f42b484678
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色任务与SharePoint 组权限对比
   本主题将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下基于角色和任务的授权功能与 SharePoint 产品中的安全功能进行比较。 本主题将比较角色、任务、SharePoint 组、权限级别和权限的术语及特征。  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/05/2017
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 角色|SharePoint 组|  
 |--------------------------------------|-----------------------|  
-|**浏览者**<br /><br /> 视图| 使用“访问者”组授予查看报表的权限。  “访问者”组拥有“读取”级权限，通过这些权限，组成员能够查看页面、列表项和文档。|  
+|**浏览者**<br /><br /> “查看”| 使用“访问者”组授予查看报表的权限。  “访问者”组拥有“读取”级权限，通过这些权限，组成员能够查看页面、列表项和文档。|  
 |**内容管理员**<br /><br /> 拥有对所有项和项级操作的全部权限，包括设置安全性的权限。| 使用“所有者”组授予管理 SharePoint 站点上的报表服务器项的完全控制权限。  “所有者”组拥有“完全控制”权限，通过这些权限，组成员能够更改网站内容、页面或功能。 “完全控制”访问权限应仅限于站点管理员。|  
 |**我的报表**|没有等同的组。  在 SharePoint 模式下运行的报表服务器不支持“我的报表”。 如果希望使用等同功能，可以使用 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 中的“我的站点”功能。|  
 |**发布服务器**<br /><br /> 添加、更新、查看、删除报表、报表模型、共享数据源和资源。| 使用“成员”组授予在 SharePoint 站点上添加项、编辑项以及更新对依赖项的引用的权限。  “成员”组拥有“参与讨论”级权限，通过这些权限，组成员能够查看页面、添加和更新项以及提交更改以待批准。|  

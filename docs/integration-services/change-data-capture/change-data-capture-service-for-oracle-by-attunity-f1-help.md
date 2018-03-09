@@ -1,5 +1,5 @@
 ---
-title: "Change Data Capture Service for Oracle by Attunity F1 帮助 |Microsoft 文档"
+title: "Change Data Capture Service for Oracle by Attunity F1 帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d214af688c862d64e5a5d5f608c5b02f9037b55a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fdc72cfc3a6265c54d8b7f78a1266cea1a0e8756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Change Data Capture Service for Oracle by Attunity F1 帮助
   使用 CDC 服务配置控制台可以定义本地 Oracle CDC 服务以及对该服务进行更新和删除。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [连接到 SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)  
   
--   [连接到 SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
+-   [删除与 SQL Server 的连接](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
 -   [创建和编辑 Oracle CDC 服务](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
@@ -47,4 +46,3 @@ ms.lasthandoff: 08/03/2017
 -   [使用 CDC 服务](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   
-

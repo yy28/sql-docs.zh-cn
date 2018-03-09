@@ -1,5 +1,5 @@
 ---
-title: "通过使用派生的列转换派生列值 |Microsoft 文档"
+title: "使用派生列转换派生列值 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c0106d70fa5a3b31f0a92edf5c7088cf427c59a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 80c5df3dec8351c6ab47e596081a5c4f8f7fd3fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用派生列转换派生列值
   若要添加和配置派生列转换，包必须已包含至少一个数据流任务和一个源。  
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  如果表达式无效，表达式文本将突出显示，列上的工具提示将对错误进行说明。  
   
-7.  在**派生列**列表中，选择**\<将添加为新的列 >**表达式的计算结果写入新的列，或选择要使用的计算结果更新现有列。  
+7.  在“派生列”列表中，选择“\<作为新列添加>”以将表达式的计算结果写入新列，或选择一个现有列以用计算结果对其进行更新。  
   
      如果选择使用新列， **“派生列转换编辑器”** 对话框将对表达式求值，并根据数据类型、长度、精度、小数位数和代码页为列指定数据类型。  
   
@@ -62,17 +61,16 @@ ms.lasthandoff: 08/03/2017
   
 10. 若要配置错误输出，请单击 **“配置错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [派生的列转换](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
+ [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
  [Integration Services 数据类型](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services &#40;SSIS &#41;表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services (SSIS) 表达式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

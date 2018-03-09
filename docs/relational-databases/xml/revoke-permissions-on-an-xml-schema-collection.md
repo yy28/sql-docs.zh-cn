@@ -2,27 +2,33 @@
 title: "撤消对 XML 架构集合的权限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: revoking permissions [SQL Server]
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db10bb0d69106c3263c01a6762a0685a3cd721d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dc855ac7206e483b4a024d2fa31876a73ffa80b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤消对 XML 架构集合的权限
-  可以使用下列一种方法撤消创建 XML 架构集合的权限：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+可以使用下列一种方法撤消创建 XML 架构集合的权限：  
   
 -   撤消对关系架构的 ALTER 权限。 这样，主体就不能在关系架构中创建 XML 架构集合。 但是，主体仍然可以在同一数据库的其他关系架构中执行此操作。  
   

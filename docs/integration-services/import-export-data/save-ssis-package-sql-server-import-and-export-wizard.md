@@ -1,5 +1,5 @@
 ---
-title: "保存 SSIS 包 （SQL Server 导入和导出向导） |Microsoft 文档"
+title: "保存 SSIS 包（SQL Server 导入和导出向导）| Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -15,29 +15,28 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: 64
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 6ebbab742350e6874b86213c1fbf516e095a1e9a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>保存 SSIS 包（SQL Server 导入和导出向导）
-  如果在指定**保存和运行包**你想要作为 SQL Server Integration Services (SSIS) 包，保存你的设置的页[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导所示**保存 SSIS 包**。 在此页上，你可以指定用于保存由向导创建的包的其他选项。  
+  如果在“保存和运行包”页上指定要将设置保存为 SQL Server Integration Services (SSIS) 包，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导显示“保存 SSIS 包”。 在此页上，将指定用于保存由向导创建的包的附加选项。  
 
 “保存 SSIS 包”  页上显示的选项取决于你先前在“保存并运行包”  页上做出的选择（将包保存到 SQL Server 还是文件系统）。 若要再次查看“保存并运行包”  页，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
  
 **什么是包？** 向导使用 SQL Server Integration Services (SSIS) 复制数据。 在 SSIS 中，基本单位是包。 当你在向导的各个页面之间移动并指定选项时，向导会在内存中创建 SSIS 包。
 
-## <a name="screen-shot---common-options"></a>屏幕截图所示的常用选项
-以下屏幕截图显示的第一部分**保存 SSIS 包**向导页。 网页的其余内容具有可变数量选项，这取决于你选择的包目标。
+## <a name="screen-shot---common-options"></a>屏幕截图 — 常用选项
+以下屏幕截图显示向导的“保存 SSIS 包”页的第一部分。 该页的其余部分具有不定的选项，具体取决于所选的包目标。
 
-![保存包的常用选项](../../integration-services/import-export-data/media/save-package-common-options.png)
+![保存包 — 常用选项](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>提供包的名称和说明  
  **名称**  
@@ -51,48 +50,48 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>屏幕截图 - 将包保存在 SQL Server 中
 
- 下面的屏幕快照显示**保存 SSIS 包**如果你选择在向导页**SQL Server**选项**保存和运行包**页。 
+ 如果在“保存和运行包”页选择了“SQL Server”选项，则以下屏幕截图将显示向导的“保存 SSIS 包”。 
   
-![保存 SSIS 包的导入和导出向导页](../../integration-services/import-export-data/media/save-package2.png "保存 SSIS 包的导入和导出向导页")  
+![导入和导出向导的 SSIS “保存包”页](../../integration-services/import-export-data/media/save-package2.png "Save SSIS Package page of the Import and Export Wizard")  
 
-## <a name="options-to-specify-target--sql-server"></a>若要指定的选项 (目标 = SQL Server) 
+## <a name="options-to-specify-target--sql-server"></a>要指定的选项（目标 = SQL Server） 
 
  > [!NOTE]
- > 向导将包中的保存**msdb**数据库中**sysssispackages**表。 此选项可以完成**不**将包保存到 SSIS 目录数据库 (SSISDB)。  
+ > 向导会将包保存在“sysssispackages”表中的“msdb”数据库。 此选项不会将包保存到 SSIS 目录数据库 (SSISDB)。  
  
  **服务器名称**  
  键入或选择目标服务器名称。  
    
- **使用 Windows 身份验证**  
+ **Use Windows Authentication**  
 使用 Windows 集成身份验证连接到服务器。 这是首选的身份验证方法。  
   
  **使用 SQL Server 身份验证**  
 使用 SQL Server 身份验证连接到服务器。  
   
- **用户名**  
-如果你指定 SQL Server 身份验证，输入的用户名。  
+ **User name**  
+如果指定了 SQL Server 身份验证，输入用户名。  
   
  **密码**  
-如果你指定 SQL Server 身份验证，则输入的密码。  
+如果指定了 SQL Server 身份验证，输入密码。  
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>屏幕截图 - 将包保存在文件系统中
  
-下面的屏幕快照显示**保存 SSIS 包**如果你选择在向导页**文件系统**选项**保存和运行包**页。 
+如果选择了“保存并运行包”页上的“文件系统”选项，下面的屏幕截图将显示向导的“保存 SSIS 包”页。 
   
-![保存 SSIS 包的导入和导出向导页](../../integration-services/import-export-data/media/save-package1.png "保存 SSIS 包的导入和导出向导页")  
+![导入和导出向导的 SSIS “保存包”页](../../integration-services/import-export-data/media/save-package1.png "Save SSIS Package page of the Import and Export Wizard")  
 
-## <a name="options-to-specify-target--file-system"></a>若要指定的选项 (目标 = 文件系统)
+## <a name="options-to-specify-target--file-system"></a>要指定的选项（目标 = 文件系统）
 
- **File name**  
- 输入目标文件的路径和文件名，或使用**浏览**按钮以选择一个目标。  
+ **文件名**  
+ 输入目标文件的路径和文件名，或使用“浏览”按钮选择目标。  
   
 > [!TIP]
-> 请确保指定的目标文件夹中，通过输入它，也可以通过浏览。 如果你只需输入不含路径的文件名，你不知道该向导将包的保存。 此外，向导可能会尝试将包保存到你无权保存文件的位置，并引发错误。  
+> 务必以输入或浏览的方式指定目标文件夹。 如果仅输入文件名而不输入路径，则不知道向导将包保存在什么位置。 此外，向导可能会尝试将包保存到你无权保存文件的位置，并引发错误。  
 >   
 >  请记住包文件的保存位置。  
   
- **浏览**  
- （可选） 通过浏览来选择中的目标文件的路径**保存包**对话框。  
+ **“浏览”**  
+ （可选）浏览以选择“保存包”对话框中的目标文件的路径。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>关于包保存选项的两个页面  
  “保存 SSIS 包”  页是你在其上选择用于保存 SSIS 包的选项的两个页面之一。  
@@ -124,4 +123,3 @@ ms.lasthandoff: 08/03/2017
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
  
  
-

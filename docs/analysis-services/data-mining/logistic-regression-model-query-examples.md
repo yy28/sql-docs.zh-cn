@@ -2,34 +2,33 @@
 title: "逻辑回归模型查询示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b423036644bdb4811aec4fcf7fb720b2f783944
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>逻辑回归模型查询示例
-  在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来应用新数据进行预测。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来应用新数据进行预测。  
   
  本节介绍如何为基于 Microsoft 逻辑回归算法的模型创建查询。  
   
@@ -46,9 +45,9 @@ ms.lasthandoff: 11/17/2017
  [对离散值进行预测](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> 获取有关逻辑回归模型的信息  
- 逻辑回归模型是使用带有一组特殊参数的 Microsoft 神经网络算法创建的；因此，逻辑回归模型具有某些与神经网络模型相同的信息，但是会简单些。 若要了解模型内容的结构以及哪些节点存储哪类信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
+ 逻辑回归模型是使用带有一组特殊参数的 Microsoft 神经网络算法创建的；因此，逻辑回归模型具有某些与神经网络模型相同的信息，但是会简单些。 若要了解模型内容的结构以及哪些节点存储哪类信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
- 若要继续探讨查询方案，可以按“数据挖掘中级教程”中的下一节所述，创建逻辑回归模型： [第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)。  
+ 若要继续探讨查询方案，可以按“数据挖掘中级教程”中的下一节所述，创建逻辑回归模型：[第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)。  
   
  此外，还可以使用 [数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中的挖掘结构 Targeted Mailing。  
   
@@ -107,7 +106,7 @@ FROM [TM_Logistic Regression].CONTENT
 |上下班路程|缺少|0|0|0|1|  
 |上下班路程|5-10 英里|3033|0.173472889|0|4|  
   
- 实际查询会返回多得多的行；但是此示例演示了所提供的有关输入的信息类型。 对于离散输入，每个可能值都列在表中。 对于“年龄”之类的连续值输入，全部列出是不可能的，所以输入被离散化为均值。 有关如何使用边际统计信息节点中的信息的详细信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
+ 实际查询会返回多得多的行；但是此示例演示了所提供的有关输入的信息类型。 对于离散输入，每个可能值都列在表中。 对于“年龄”之类的连续值输入，全部列出是不可能的，所以输入被离散化为均值。 有关如何使用边际统计信息节点中的信息的详细信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
 > [!NOTE]  
 >  为便于查看，结果是平展的，但是，如果您的访问接口支持分层行集，则可在单个列中返回嵌套表。  
@@ -138,7 +137,7 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 |||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- 有关嵌套表 NODE_DISTRIBUTION 中的概率、支持和标准偏差值的详细信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
+ 有关嵌套表 NODE_DISTRIBUTION 中的概率、支持和标准偏差值的详细信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)。  
   
 ###  <a name="bkmk_Query4"></a> 示例查询 4：对离散值进行预测  
  要分析产生二进制结果的因素时通常使用逻辑回归。 尽管教程中使用的模型预测的是连续值 **ServiceGrade**，但实际生活中你可能还是希望设置该模型来预测服务等级是否符合特定的离散化目标值。 或者，您可以使用连续值来输出预测，但之后将这些预测结果分组到 **较好**、 **一般**或 **较差**这几个等级中。  
@@ -198,13 +197,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant (DMX)](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|返回指定状态调整后的概率。|  
-|[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|返回指定列的一个预测值或一组值。|  
-|[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|返回指定状态的概率。|  
-|[PredictStdev (DMX)](../../dmx/predictstdev-dmx.md)|返回预测值的标准偏差。|  
-|[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|返回指定状态调整后的概率。|  
+|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|返回指定列的一个预测值或一组值。|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|返回指定状态的概率。|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|返回预测值的标准偏差。|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](../../dmx/general-prediction-functions-dmx.md)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -215,7 +214,7 @@ NATURAL PREDICTION JOIN
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 逻辑回归算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Microsoft 逻辑回归算法技术参考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [逻辑回归模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [第 5 课： 生成神经网络和逻辑回归模型 &#40; 数据挖掘中级教程 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

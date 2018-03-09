@@ -18,13 +18,13 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbbfe6e6d06a71e54b93e90cf42c121fdaab7927
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b92e1a679cfa738620e8e46195b2df14e8ee03ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>针对运行问题的 AlwaysOn 策略 - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,9 +80,9 @@ ms.lasthandoff: 11/20/2017
 |可用性副本连接状态|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)。|严重|可用性副本|  
 |可用性副本联接状态|[可用性副本未联接](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md)。|警告|可用性副本|  
 |可用性副本数据同步状态|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性副本|  
-|可用性数据库挂起状态|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)。|警告|可用性数据库 (availability database)|  
-|可用性数据库联接状态|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性数据库 (availability database)|  
-|可用性数据库数据同步状态|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性数据库 (availability database)|  
+|可用性数据库挂起状态|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)。|警告|可用性数据库|  
+|可用性数据库联接状态|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性数据库|  
+|可用性数据库数据同步状态|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性数据库|  
   
 > [!IMPORTANT]  
 >  **\*** 对于 AlwaysOn 策略，类别名称作为 ID 使用。 更改 AlwaysOn 类别的名称将会破坏其运行状况评价功能。 因此，请不要修改 AlwaysOn 类别的名称。  

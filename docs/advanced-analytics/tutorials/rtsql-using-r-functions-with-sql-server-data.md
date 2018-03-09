@@ -2,28 +2,31 @@
 title: "使用 R 函数的 SQL Server 数据 (SQL 快速入门中的 R) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 919f29c8d96324f21dde2e87bb861f3e76f8241d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 93fb7d90ab6d1f387fe50dd63a29eda7a2ecc764
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>使用 R 函数的 SQL Server 数据 (SQL 快速入门中的 R)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 现在，你已熟悉了基本操作，是时候使用 R 做一些有趣的事情了。例如，许多高级统计功能可能比较复杂，难以使用 T-SQL 来实现，但可能只需要一行 R 代码便可实现。  使用 R Services，可以轻松在存储过程中嵌入 R 实用工具脚本。
 

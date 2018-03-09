@@ -1,33 +1,30 @@
 ---
-title: "在 DirectQuery 模式下 (SSAS 2016) 的 DAX 公式兼容性 |Microsoft 文档"
+title: "在 DirectQuery 模式下的 DAX 公式兼容性 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ab540d2806d6afb75eab3890fdad605a7b34a71c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery 模式下的 DAX 公式兼容性 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+# <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式下的 DAX 公式兼容性 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 对于在 DirectQuery 模式下的表格 1200年和更高版本模型，在早期版本中的许多功能限制不再适用。 尤其是对于 DAX 公式：
 
 - DirectQuery 现在会生成更简单的查询，从而提供改进的性能。
@@ -352,7 +349,7 @@ DirectQuery 模式将 DAX TRIM 函数转换为 SQL 语句 `LTRIM(RTRIM(<column>)
 
 
 ## <a name="see-also"></a>另请参阅  
-[DirectQuery 模式（SSAS 表格）](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery 模式](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

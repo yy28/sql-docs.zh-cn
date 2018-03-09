@@ -2,32 +2,37 @@
 title: "使用 sqlcmd 实用工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Transact-SQL statements, executing
 - command prompt utilities [SQL Server], sqlcmd
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f0db4cc8c1888e53735579e82699a1471d432b18
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ea2018f4b9b0ad9c0ef29dbacaeaa6e7639a1a34
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
-  **sqlcmd** 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]sqlcmd 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的临时、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 **sqlcmd** ，或要生成可使用 **sqlcmd**运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 通常以下列方式使用 **sqlcmd** 实用工具：  
   
 -   用户输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，请在 Windows 搜索中输入“cmd”，然后单击“命令提示符”将其打开。 在命令提示符处，键入 **sqlcmd** ，后面跟随所需的选项列表。 有关 **sqlcmd**支持的选项的完整列表，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
@@ -65,7 +70,7 @@ ms.lasthandoff: 11/09/2017
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     或  
+     或多个  
   
     ```  
     sqlcmd -S .\<InstanceName>  

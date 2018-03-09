@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 458b169c41ebf5e209e178bd9db67b9e04503ff7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1047b2b8a6eeddf1d3f02609f3af0b079a30b2eb
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 
   按照序号基于每个参数设置参数属性，或者通过指定 SSPARAMPROPS 结构数组来设置大容量参数属性。  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -51,7 +51,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>返回代码值  
  **ISSCommandWithParameters::SetParameterProperties**方法返回作为核心 OLE DB 相同的错误代码**ICommandProperties::SetProperties**方法。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>備註  
  使用此方法设置参数属性基于每个参数允许序号，或使用单个**ISSCommandWithParameters::SetParameterProperties**调用后 SSPARAMPROPS 由属性数组。  
   
  **SetParameterInfo**方法必须调用，然后再调**ISSCommandWithParameters::SetParameterProperties**方法。 调用 `SetParameterProperties(0, NULL)` 可清除所有指定的参数属性，而调用 `SetParameterInfo(0,NULL,NULL)` 则会清除所有参数信息（包括可能与某个参数相关的任何属性）。  

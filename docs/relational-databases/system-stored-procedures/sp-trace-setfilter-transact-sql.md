@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
 - sp_trace_setfilter_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setfilter
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 659544a47bc142ed430ac6406e2bfde0f60f6845
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +53,19 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  要为其设置筛选器的跟踪的 ID。 *trace_id*是**int**，无默认值。 用户使用这*trace_id*值来识别、 修改和控制跟踪。  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  应用了筛选器的列的 ID。 *column_id*是**int**，无默认值。 如果*column_id*为 NULL，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]清除所有筛选器指定的跟踪。  
   
- [  **@logical_operator**  =] *logical_operator*  
+ [ **@logical_operator** = ] *logical_operator*  
  指定是否 AND (**0**) 或 OR (**1**) 运算符应用。 *logical_operator*是**int**，无默认值。  
   
- [  **@comparison_operator=** ] *comparison_operator*  
+ [ **@comparison_operator=** ] *comparison_operator*  
  指定要执行的比较的类型。 *comparison_operator*是**int**，无默认值。 下表包含比较运算符及其代表的值。  
   
-|值|比较运算符|  
+|“值”|比较运算符|  
 |-----------|-------------------------|  
 |**0**|= （等于）|  
 |**1**|<>（不等于）|  
@@ -73,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|不类似于|  
   
- [  **@value=** ]*值*  
+ [ **@value=** ] *value*  
  指定要在其上进行筛选的值。 数据类型*值*必须匹配要筛选的列的数据类型。 例如，如果在对象 ID 列上设置筛选器，则**int**数据类型，*值*必须**int**。如果*值*是**nvarchar**或**varbinary**，它可以具有的最大长度为 8000。  
   
  比较运算符为 LIKE 或 NOT LIKE 时，逻辑运算符可以包括“%”或其他适合 LIKE 运算的筛选器。  
@@ -107,7 +110,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
  参数的所有 SQL 跟踪存储过程 (**sp_trace_xx**) 已严格类型化。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="examples"></a>示例  

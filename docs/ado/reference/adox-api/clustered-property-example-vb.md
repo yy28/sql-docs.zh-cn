@@ -3,27 +3,30 @@ title: "群集属性示例 (VB) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Clustered property [ADOX], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Clustered property [ADOX], Visual Basic example
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d5259a57c0f53d0505e1bd577d834c43db343bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d1fd197bf6b50ad4f5fbf31591c9ce33f39956a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 的属性示例 (VB)
 此示例演示[聚集](../../../ado/reference/adox-api/clustered-property-adox.md)属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 请注意，Microsoft Jet 数据库不支持聚集的索引，因此本示例将返回**False**为**聚集**属性中的所有索引**Northwind**数据库。  

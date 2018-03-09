@@ -1,33 +1,34 @@
 ---
-title: "编程指南 |Microsoft 文档"
+title: "编程指南 (ODBC Driver for SQL Server) |Microsoft 文档"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="programming-guidelines"></a>编程指南
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-编程功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 和为 13.1[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 macOS 和 Linux 上基于在 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]本机客户端 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]本机客户端将基于 Windows 数据访问组件中的 ODBC ([ODBC 程序员参考](http://go.microsoft.com/fwlink/?LinkID=45250))。  
+编程功能[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 macOS 和 Linux 上基于在 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]本机客户端 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]本机客户端将基于 Windows 数据访问组件中的 ODBC ([ODBC 程序员参考](http://go.microsoft.com/fwlink/?LinkID=45250))。  
 
-ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定功能包括`/usr/local/include/msodbcsql.h`后的 unixODBC 标头 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 然后，使用的相同符号名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-就像在 Windows ODBC 应用程序中的特定项。  
+ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定功能包括`/usr/local/include/msodbcsql.h`后的 unixODBC 标头 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 然后，使用的相同符号名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-你将在你 Windows ODBC 应用程序的特定项。
 
 ## <a name="available-features"></a>可用功能  
 以下各节从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]适用于 ODBC 的本机客户端文档 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) 时在 macOS 和 Linux 上使用的 ODBC 驱动程序都有效：  
@@ -54,7 +55,7 @@ ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssN
 以下功能不验证在 macOS 和 Linux 上的 ODBC 驱动程序的此版本中正常工作：
 
 -   故障转移群集连接
--   [透明网络 IP 解析](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)
+-   [透明网络 IP 解析](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)（之前 ODBC 驱动程序 17）
 -   [高级驱动程序跟踪](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 不在 macOS 和 Linux 上的 ODBC 驱动程序的此版本中提供以下功能： 
@@ -75,27 +76,52 @@ ODBC 应用程序可以使用多个活动结果集 (MARS) 和其他[!INCLUDE[ssN
 
 ## <a name="character-set-support"></a>字符集支持
 
-编码的客户端可以是以下项之一：
-  -  UTF-8
-  -  ISO 8859-1
-  -  ISO 8859-2
-  -  ISO 8859-3
-  -  ISO 8859-4
-  -  ISO 8859-5
-  -  ISO 8859-6
-  -  ISO 8859-7
-  -  ISO 8859-8
-  -  ISO 8859-9
-  -  ISO 8859-13
-  -  ISO 8859-15
-  
-SQLCHAR 数据必须是支持的字符集。 SQLWCHAR 数据必须是 UTF-16LE (Little Endian)。  
+对于 ODBC Driver 13 和 13.1，SQLCHAR 数据必须是 utf-8。 不支持任何其他编码。
 
-如果 SQLDescribeParameter 没有在服务器上指定 SQL 类型，驱动程序将使用在 SQLBindParameter 的 *ParameterType* 参数中指定的 SQL 类型。 如果在 SQLBindParameter 指定窄字符 SQL 类型，如 SQL_VARCHAR，驱动程序将转换所提供的数据从客户端代码页为默认值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]代码页。 (默认值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]代码页通常是 1252年。)如果不支持的客户端代码页，则它将设置为 utf-8。 在这种情况下，该驱动程序然后将 utf-8 数据转换为默认代码页。 但这样可能会发生数据丢失。 如果代码页 1252 无法表示某个字符，驱动程序会将该字符转换为一个问号 ('?')。 为避免此数据丢失，请在 SQLBindParameter 中指定一种 Unicode SQL 字符类型（例如 SQL_NVARCHAR）。 在这种情况下，该驱动程序将转换 utf-8 编码为 utf-16 而不会丢失数据中提供的 Unicode 数据。
+对于 ODBC 驱动程序 17 支持 SQLCHAR 之一中的以下字符集/编码的数据：
 
-没有 Windows 和 Linux 和 macOS 上的 iconv 库的多个版本之间的文本编码转换有所不同。 在代码页 1255 （希伯来语） 中编码的文本数据具有一个码位 (0xCA)，在转换时的行为方式不同。 将此字符转换为 Unicode Windows 上生成 0x05BA 一个 utf-16 码的位。 将转换为 Unicode 在 macOS 和 Linux 上使用 libiconv 版本早于 1.15 产生的 0x00CA 的一个 utf-16 码位。
+|名称|Description|
+|-|-|
+|UTF-8|Unicode|
+|CP437|MS-DOS Latin 美国|
+|CP850|MS-DOS 拉丁文 1|
+|CP874|Latin/泰语|
+|CP932|日语，Shift JIS|
+|CP936|简体中文 GBK|
+|CP949|朝鲜语，EUC KR|
+|CP950|繁体中文 Big5|
+|CP1251|西里尔语|
+|CP1253|希腊语|
+|CP1256|阿拉伯语|
+|CP1257|波罗的语|
+|CP1258|越南语|
+|ISO-8859-1 / CP1252|Latin 1|
+|ISO-8859-2 / CP1250|Latin 2|
+|ISO-8859-3|Latin 3|
+|ISO-8859-4|Latin-4|
+|ISO-8859-5|拉丁/西里尔|
+|ISO-8859-6|Latin/阿拉伯语|
+|ISO-8859-7|拉丁语/希腊语|
+|ISO-8859-8 / CP1255|希伯来语|
+|ISO-8859-9 / CP1254|土耳其语|
+|ISO-8859-13|Latin 7|
+|ISO-8859-15|拉丁语 9|
 
-当在 SQLPutData 缓冲区上拆分 UTF-8 多字节字符或 UTF-16 代理项时，这会导致数据损坏。 使用用于流式传输不会在部分字符编码中结束的 SQLPutData 的缓冲区。  
+在连接时该驱动程序检测到的进程中加载的当前区域设置。 如果它使用上面的编码之一，驱动程序使用 SQLCHAR （窄字符） 数据; 该编码否则，它默认为 utf-8。 由于所有进程启动的"C"区域设置中，默认情况下 （并因此导致为 utf-8 的驱动程序添加到默认），如果应用程序需要使用上面的编码之一，它应使用**setlocale**函数适当之前设置的区域设置连接;通过显式指定所需的区域设置或使用空字符串，例如`setlocale(LC_ALL, "")`使用环境的区域设置。
+
+因此，在典型 Linux 或 Mac 环境中其中编码为 utf-8，ODBC 驱动程序 17 从 13 或 13.1 升级的用户将不会看到任何差异。 但是，应用程序使用通过上面的列表中的非 utf-8 编码`setlocale()`需要使用向/从驱动程序而不是 utf-8 数据该编码。
+
+SQLWCHAR 数据必须是 UTF-16LE (Little Endian)。
+
+当绑定使用 SQLBindParameter，输入的参数时如果窄字符 SQL 类型，如指定 SQL_VARCHAR，驱动程序将提供的数据转换从客户端为默认值 （通常代码页 1252年） 编码[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]编码。 对于输出参数，该驱动程序将从与向客户端编码的数据关联的排序规则信息中指定的编码转换。 但是，可能会丢失数据-编码中的字符源无法在目标编码中表示会将转换为一个问号 ('？ ')。
+
+若要避免这种数据丢失，绑定输入的参数时，指定一个 Unicode SQL 字符类型，例如 SQL_NVARCHAR。 在这种情况下，该驱动程序将从客户端编码为 utf-16，可以表示所有 Unicode 字符转换。 此外，目标列或服务器上的参数还必须是 Unicode 类型 (**nchar**， **nvarchar**， **ntext**) 或另一个使用排序规则/编码，这可以表示原始的源数据的所有字符。 为避免数据丢失与 output 参数，指定是 Unicode SQL 类型和一个 Unicode C 类型 (SQL_C_WCHAR)，导致驱动程序 utf-16; 的形式返回数据或窄的 C 类型，并确保客户端编码可以表示源数据 （这是始终可能使用 utf-8。） 的所有字符
+
+有关排序规则和编码的详细信息，请参阅[Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)。
+
+有一些编码转换差异 Windows 和 Linux 和 macOS 上的 iconv 库的多个版本。 在代码页 1255年的文本数据 （希伯来语） 具有一个码位 (0xCA)，在转换为 Unicode 时的行为方式不同。 在 Windows 上，此字符将转换为 0x05BA utf-16 码位。 在 macOS 和使用早于 1.15 libiconv 版本的 Linux 上，它将转换为 0x00CA。 在与 iconv 库不支持的 Big5/CP950 2003 版本的 Linux 上 (名为`BIG5-2003`)，添加与该修订版本的字符将不会正确转换。
+
+在 ODBC Driver 13 和 13.1 中，当 utf-8 多字节字符或 utf-16 代理项分布 SQLPutData 缓冲区，它导致数据损坏。 使用用于流式传输不会在部分字符编码中结束的 SQLPutData 的缓冲区。 使用 ODBC 驱动程序 17，已取消此限制。
 
 ## <a name="additional-notes"></a>其他说明  
 

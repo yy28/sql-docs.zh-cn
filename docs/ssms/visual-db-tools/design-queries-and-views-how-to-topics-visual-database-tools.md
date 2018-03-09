@@ -3,8 +3,11 @@ title: "设计查询和视图操作指南主题 (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4212d888298d36e7a2aa9365de7153e3e353fff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 33b5f17a28639d750e1c3df36c5619d33740c3db
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>设计查询和视图操作指南主题 (Visual Database Tools)
-查询和视图设计器可以帮助您创建和维护应用程序的数据检索和数据操作部分。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查询和视图设计器可以帮助用户创建和维护应用程序的数据检索和数据操作部分。  
   
 ## <a name="in-this-section"></a>本节内容  
 [打开查询和视图设计器 (Visual Database Tools)](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  

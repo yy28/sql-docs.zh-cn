@@ -2,31 +2,30 @@
 title: "交叉验证公式 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d472fce002938f8305d0429937482181cee990d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cross-validation-formulas"></a>交叉验证公式
-  生成交叉验证报表后，它将包含每个模型的准确性度量值，具体取决于挖掘模型的类型（即，用于创建模型的算法）、可预测属性的数据类型和可预测属性值（如果有）。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+生成交叉验证报表后，它将包含每个模型的准确性度量值，具体取决于挖掘模型的类型（即，用于创建模型的算法）、可预测属性的数据类型和可预测属性值（如果有）。  
   
  本节列出了交叉验证报表中使用的度量值，并介绍了计算方法。  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |**均方根误差**|离散属性，无指定的目标。|概率得分补数的平方的平方根除以分区中的事例数，不包括缺少目标属性值的事例。|  
   
 ## <a name="see-also"></a>另请参阅  
- [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
+ [测试和验证 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [交叉验证 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   

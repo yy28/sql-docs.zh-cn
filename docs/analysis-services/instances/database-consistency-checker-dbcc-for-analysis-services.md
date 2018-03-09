@@ -2,32 +2,30 @@
 title: "数据库一致性检查 (DBCC) Analysis Services |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 的数据库一致性检查 (DBCC)
-  DBCC 为 Analysis Services 实例上的多维数据库和表格数据库提供按需数据库验证。 你可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查询窗口中执行 DBCC，并在 SQL Server Profiler 或 SSMS 的 xEvent 会话中跟踪 DBCC 输出。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+DBCC 为 Analysis Services 实例上的多维数据库和表格数据库提供按需数据库验证。 你可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查询窗口中执行 DBCC，并在 SQL Server Profiler 或 SSMS 的 xEvent 会话中跟踪 DBCC 输出。  
 命令采用对象定义，如果对象已损坏，则返回空结果集或详细的错误信息。   在本文中，你将了解如何运行命令、解释结果以及解决出现的任何问题。  
   
  对于表格数据库，DBCC 执行的一致性检查相当于你每次加载、同步或还原数据库时自动进行的内置验证。  相比之下，对于多维数据库的一致性检查仅当你按需运行 DBCC 时才发生。  
@@ -175,7 +173,7 @@ Execution complete
   
 4.  在 SQL Server Profiler 中，DBCC 活动是通过事件子类为 DBCC 的 **Command** 事件指示的：  
   
-     ![ssas dbcc 探查器 eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas dbcc 探查器 eventsubclass")  
+     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      事件代码 32 是 DBCC 执行。  
   

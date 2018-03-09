@@ -2,15 +2,13 @@
 title: "FoldingParameters 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d6565a5898f5f41898d82a1d70d3748f8b2883c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="foldingparameters-element-assl"></a>FoldingParameters 元素 (ASSL)
-  指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器在执行挖掘模型的交叉验证时使用的参数。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定使用的参数[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务器执行交叉验证挖掘模型时。  
   
 > [!NOTE]  
 >  这些参数仅供内部使用。 此处提供的信息仅供参考。  
@@ -71,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 |父元素|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
 |子元素|*FoldIndex*<br /><br /> *FoldCount*<br /><br /> *MaxCases*<br /><br /> *FoldTargetAttribute*|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  这些属性仅用于内部使用，不支持在 DDL 语句中使用。  
   
  有关如何使用交叉验证中[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]，请参阅[交叉验证报表中的度量值](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。  

@@ -2,27 +2,30 @@
 title: "数据库属性（“镜像”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47f75acd0677fb838304de87cd9216671d019131
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f1dece952a9aba10ef1dff5fe92d7747ae11f711
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-mirroring-page"></a>数据库属性（“镜像”页）
-  从主体数据库中访问此页，并用它来配置并修改数据库的数据库镜像的属性。 还可以使用该页来启动配置数据库镜像安全向导，以查看镜像会话的状态，并可以暂停或删除数据库镜像会话。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]从主体数据库中访问此页，并用它来配置并修改数据库的数据库镜像的属性。 还可以使用该页来启动配置数据库镜像安全向导，以查看镜像会话的状态，并可以暂停或删除数据库镜像会话。  
   
 > **重要说明！！！** 开始镜像前必须先配置安全性。 如果镜像尚未开始，则必须使用此向导来开始。 **“镜像”** 页文本框将被禁用，直到向导完成为止。  
   
@@ -30,7 +33,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **配置安全性**  
  单击此按钮可以启动 **配置数据库镜像安全向导。**  
   
@@ -75,7 +78,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   必须存在镜像数据库。  
   
-     必须在通过使用 WITH NORECOVERY 将最近的完整备份（可能还会包括主体数据库的日志备份）还原到镜像服务器，创建了镜像数据库之后，才可以开始镜像。 有关详细信息，请参阅[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)。  
+     必须在通过使用 WITH NORECOVERY 将最近的完整备份（可能还会包括主体数据库的日志备份）还原到镜像服务器，创建了镜像数据库之后，才可以开始镜像。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 -   主体服务器实例和镜像服务器实例的 TCP 地址已经在**服务器网络地址**部分中指定。  
   
@@ -123,7 +126,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  有关运行模式的详细信息，请参阅 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  
   
- **状态**  
+ **“状态”**  
  镜像开始以后，“状态”面板将显示从你选择“镜像”页时起数据库镜像会话的状态。 若要更新 **“状态”** 面板，请单击 **“刷新”** 按钮。 可能的状态如下：  
   
 |状态|解释|  
@@ -133,14 +136,14 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |**无连接**|主体服务器实例无法与其伙伴建立连接。|  
 |**同步**|镜像数据库的内容滞后于主体数据库的内容。 主体服务器实例正在向镜像服务器实例发送日志记录，这会对镜像数据库应用更改，使其前滚。<br /><br /> 在数据库镜像会话开始时，镜像数据库和主体数据库处于此状态。|  
 |**故障转移**|在主体服务器实例中，手动故障转移（角色切换）已开始，服务器当前正转换为镜像角色。 在此状态中，到主体数据库的用户连接将快速终止，并且数据库将立即接管镜像角色。|  
-|**已同步**|当镜像服务器与主体服务器几乎保持同步时，数据库状态将更改为 **“已同步”**。 只要主体服务器继续向镜像服务器发送更改，并且镜像服务器继续将更改应用于镜像数据库，数据库就会保持此状态。<br /><br /> 对于高安全模式，可以进行故障转移，并且没有任何数据丢失。<br /><br /> 对于高性能模式，可能总会有些数据丢失，即使在**已同步**状态中也是如此。|  
+|**已同步**|当镜像服务器与主体服务器几乎保持同步时，数据库状态将改为 **“已同步”**。 只要主体服务器继续向镜像服务器发送更改，并且镜像服务器继续将更改应用于镜像数据库，数据库就会保持此状态。<br /><br /> 对于高安全模式，可以进行故障转移，并且没有任何数据丢失。<br /><br /> 对于高性能模式，可能总会有些数据丢失，即使在**已同步**状态中也是如此。|  
   
  有关详细信息，请参阅[镜像状态 (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
   
- **刷新**  
+ **“刷新”**  
  单击此项可更新“状态”框。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果你不熟悉数据库镜像，请参阅 [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>向现有会话中添加见证服务器  

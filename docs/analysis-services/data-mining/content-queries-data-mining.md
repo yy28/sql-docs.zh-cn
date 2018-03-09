@@ -2,31 +2,30 @@
 title: "内容查询 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45a912354d122eadb7008c2ff260366fa46770fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cae138336afe7590bf23f42532096dc910010848
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-queries-data-mining"></a>内容查询（数据挖掘）
-  内容查询是一种提取有关内部统计信息以及挖掘模型结构信息的一种方式。 有时，内容查询可提供在查看器中不易查看的详细信息。 您还可以使用内容查询的结果以编程方式提取信息以供他用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+内容查询是一种提取有关内部统计信息以及挖掘模型结构信息的一种方式。 有时，内容查询可提供在查看器中不易查看的详细信息。 您还可以使用内容查询的结果以编程方式提取信息以供他用。  
   
  本节提供有关可以使用内容查询检索的信息类型的常规信息，以及用于内容查询的一般 DMX 语法。  
   

@@ -1,5 +1,5 @@
 ---
-title: "由 Integration Services 包记录的事件 |Microsoft 文档"
+title: "Integration Services 包记录的事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: df4b2e68a9b024ed2911d4b5c1d5bcea8984ae15
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 30cec734f1bf60180475e1bebc6b8c66c7686bf5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包将各种事件消息记入 Windows 应用程序事件日志。 包会在包启动时、包停止时和特定问题出现时记录这些消息。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 > [!NOTE]  
 >  即使未对包启用日志记录，包也会记录下表中的消息。  
   
-|事件 ID|符号名称|Text|说明|  
+|事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|包“”已开始运行。|包已开始运行。|  
 |12289|DTS_MSG_PACKAGESUCCESS|包“”已成功完成。|包已运行成功且不再运行。|  
@@ -63,7 +62,7 @@ ms.lasthandoff: 09/27/2017
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>有关包执行阶段的消息  
   
-|事件 ID|符号名称|Text|说明|  
+|事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|将包日志记录配置为记入应用程序事件日志时，各种消息都会使用这种通用格式。|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|包已启动。|  
@@ -76,7 +75,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="messages-about-events-that-occur"></a>有关发生的事件的消息  
  下表仅列出属于事件结果的部分消息。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的错误、警告和信息性消息的更全面的列表，请参阅 [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)。  
   
-|事件 ID|符号名称|Text|说明|  
+|事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|任务失败。|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|事件名称: %1%r 消息: %9%r 操作员: %2%r 源名称: %3%r 源 ID: %4%r 执行 ID: %5%r 开始时间: %6%r 结束时间: %7%r 数据代码: %8|此消息用于报告产生了一个错误。|  
@@ -111,4 +110,3 @@ ms.lasthandoff: 09/27/2017
 8.  在 **“日志条目”** 对话框中，单击向上和向下键头，以显示上一个或下一个日志项，并单击复制图标以复制该日志项。  
   
 9. 打开文本编辑器，粘贴，然后将日志项保存到文本文件中。
-

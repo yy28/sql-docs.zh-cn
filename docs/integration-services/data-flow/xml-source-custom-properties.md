@@ -1,5 +1,5 @@
 ---
-title: "XML 源的自定义属性 |Microsoft 文档"
+title: "XML 源自定义属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9acfe256755294f134decddc31a7cbb9c7966f78
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5a56fae7a047bbb49f955b36a05b068eec23195a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-source-custom-properties"></a>XML 源自定义属性
   XML 源具有自定义属性和所有数据流组件通用的属性。  
@@ -34,21 +33,20 @@ ms.lasthandoff: 08/03/2017
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|用来访问 XML 数据的模式。|  
 |UseInlineSchema|Boolean|该值指示是否要在 XML 源中使用内联架构定义。 此属性的默认值为 **False**。|  
-|XMLData|字符串|要从中检索 XML 数据的文件或变量。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
-|XMLSchemaDefinition|字符串|架构定义文件 (.xsd) 的路径和文件名。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
+|XMLData|String|要从中检索 XML 数据的文件或变量。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
+|XMLSchemaDefinition|String|架构定义文件 (.xsd) 的路径和文件名。<br /><br /> 此属性的值可以使用属性表达式来指定。|  
   
  下表描述了 XML 源的输出的自定义属性。 所有属性均可读/写。  
   
 |属性名称|数据类型|Description|  
 |-------------------|---------------|-----------------|  
-|RowsetID|字符串|标识与输出关联的行集的值。|  
+|RowsetID|String|标识与输出关联的行集的值。|  
   
  XML 源的输出列没有自定义属性。  
   
  有关详细信息，请参阅 [XML Source](../../integration-services/data-flow/xml-source.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
-

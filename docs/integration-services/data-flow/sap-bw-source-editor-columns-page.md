@@ -1,5 +1,5 @@
 ---
-title: "SAP BW 源编辑器 （列页） |Microsoft 文档"
+title: "SAP BW 源编辑器（“列”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2047fddb6986bd3014015d742053bfb0dda42019
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 33b0ea8d0c8774aa128ff4698cad163fd08d9645
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 源编辑器（“列”页）
   使用“SAP BW 源编辑器”的“列”页将输出列映射到每个外部（源）列。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  在 **“SAP BW 源编辑器”**中单击 **“列”** ，以打开编辑器的 **“列”** 页。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 > [!NOTE]  
 >  如果您不知道配置源所需的所有值，可能需要询问您的 SAP 管理员。  
@@ -62,13 +61,12 @@ ms.lasthandoff: 08/03/2017
  要更改这些列的顺序，请在 **“可用外部列”** 列表中清除所有列的复选框。 然后按照您希望列显示的顺序选择列。  
   
  **输出列**  
- 为每个输出列提供唯一的名称。 默认值是所选外部（源）列的名称。 但是，您可以输入任何唯一的描述性名称。 [!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器将显示**输出列**配置使用来自此源的数据的下游组件时的列的名称。  
+ 为每个输出列提供唯一的名称。 默认值是所选外部（源）列的名称。 但是，您可以输入任何唯一的描述性名称。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器将显示列的 **输出列** 名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [SAP BW 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [SAP BW 源编辑器 &#40;高级页 &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [SAP BW 源编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 源编辑器（“错误输出”页）](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [SAP BW 源编辑器（“高级”页）](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "Visual Database Tools F1 帮助 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32e78a959c6aa4ec69f817999c8bf83339cc0afc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b5c1404c4f5dceb9ca5ef5b6a9be5c8a64a24dd7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools F1 帮助
-这些主题介绍 Visual Database Tools 元素的对话框和属性窗口（如“表属性”窗口和“列属性”选项卡）中的命令和选项。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 这些主题介绍 Visual Database Tools 元素的对话框和属性窗口（如“表属性”窗口和“列属性”选项卡）中的命令和选项。  
   
 若要访问对话框主题，请在对话框打开并具有焦点时按 F1。 若要访问属性窗口主题，请在“属性”窗口中单击并按 F1。  
   

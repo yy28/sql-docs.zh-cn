@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a41d99b7087463d5583e9cbb194175118dcab583
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ff683e7c226812f8e5045464ea7f226dabb2fee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
   逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现分页报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
 -   图像  
   
--   矩形  
+-   Rectangle  
   
 -   自动小计  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/05/2017
 |迷你图|像图表一样呈现。 通常，迷你图并不包括层次结构或标签。|  
 |仪表|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
 |指示器|作为单个记录呈现，具有活动状态名称、可用状态以及数据值。|  
-|地图|对于地图层的每个地图成员，呈现包含标签和值的行。<br /><br /> 如果地图具有多个层，则行中的值将会变化，具体取决于地图层是使用相同还是不同的地图数据区域。 如果多个地图层使用相同数据区域，该行将包含所有层的数据。|  
+|映射|对于地图层的每个地图成员，呈现包含标签和值的行。<br /><br /> 如果地图具有多个层，则行中的值将会变化，具体取决于地图层是使用相同还是不同的地图数据区域。 如果多个地图层使用相同数据区域，该行将包含所有层的数据。|  
   
 ### <a name="hierarchical-and-grouped-data"></a>分层数据和分组数据  
  分层数据和分组数据必须进行平展才能以 CSV 格式表示。  

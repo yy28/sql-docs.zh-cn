@@ -8,22 +8,20 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4eb8037bfbb7f1fd3edebcd108c59fe8168ffeff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6dd79986579847f890ec4387602c833b4f48d7cb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
 
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  在 **“报表路径”**中，指定一个正斜杠后接文件夹路径和报表名。 请 **不要** 包括服务器名称或报表管理器虚拟目录。 例如，若要打开 Adventure Works 文件夹中的“Company Sales”报表，请指定 **/Adventure Works/Company Sales**。 下面是另一个示例，其中，报表“Products”位于报表服务器根文件夹 **/Products**中。  
   
-9. 单击 **“确定”**。  
+9. 单击“确定” 。  
   
 #### <a name="add-report-explorer-and-connect-to-report-viewer"></a>添加报表资源管理器和连接到报表查看器  
   
@@ -166,7 +164,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  （可选）设置 **“开始路径”**。 开始路径是报表服务器文件夹层次结构中的文件夹。 如果希望默认页面是深入文件夹层次结构的某个文件夹，则可以指定开始路径。 该路径必须以正斜杠开头。 您必须指定从报表服务器文件夹层次结构根节点开始的完整路径，但不包含服务器名称或报表管理器虚拟目录。 例如，若要打开紧邻根节点下名为 Adventure Works 的文件夹，请在“开始路径”中指定 **/Adventure Works** 。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  报表资源管理器将显示报表服务器中报表项的列表。 默认情况下，如果您单击某一报表的名称，则会在新窗口中打开该报表。 如果您想要将报表资源管理器连接到报表查看器，以便当您在报表资源管理器中单击某一报表名称时该名称显示在报表查看器中，请完成以下步骤。  
   

@@ -2,27 +2,30 @@
 title: "保护快照文件夹 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43c9603e1f3a30ed558d264edb81d81c6d4c1297
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4816ea4f6e42fdcabb4fbbbdd8a58650a14b1448
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-the-snapshot-folder"></a>保护快照文件夹的安全
-  快照文件夹是存储快照文件的目录；建议将该目录专门用于存储快照。 请授予快照代理对该文件夹的写入权限，并确保仅为合并代理或分发代理访问文件夹时所用的 Windows 帐户授予读取权限。 与该代理相关联的 Windows 帐户必须是访问远程计算机上快照文件夹的域帐户。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]快照文件夹是存储快照文件的目录；建议将该目录专门用于存储快照。 请授予快照代理对该文件夹的写入权限，并确保仅为合并代理或分发代理访问文件夹时所用的 Windows 帐户授予读取权限。 与该代理相关联的 Windows 帐户必须是访问远程计算机上快照文件夹的域帐户。  
   
 > [!NOTE]  
 >  用户帐户控制 (UAC) 可帮助管理员管理其提升的用户权限（有时称为“特权”） 。 在启用 UAC 的操作系统上运行时，管理员并不使用其管理权限。 相反，他们以标准（非管理）用户的身份执行大多数操作，仅在必要时临时采用其管理权限。 UAC 可以防止对快照共享的管理访问。 因此，必须对快照代理、分发代理和合并代理使用的 Windows 帐户显式授予快照共享权限。 即使 Windows 帐户是管理员组的成员，也必须执行此操作。  

@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ba7880d9cc6f316b7ce06b73dda896becd892797
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52547af895d362214e6a33c69c29fe2cd2c3cb8a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程中，你会使用 Web 门户来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。  在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/05/2017
 1.  使用管理员权限浏览到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户，例如，右键单击 Internet Explorer 图标，然后单击“以管理员身份运行”。  
  
 2.    浏览到 Web 门户 URL。  例如：   
-    `http://<server name>/reports`。  
+    `http://<server name>/reports`的用户。  
     `http://localhost/reports`
  **注意：**Web 门户 URL 为“Reports”而非“Reportserver”的报表服务器 URL。  
 3.  浏览到包含 **Sales Orders** 报表的文件夹，在该报表的上下文菜单中，单击 **“管理”**。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/05/2017
 10. 单击 **“保存”**。
 11. 单击“取消”  
   
-11. 查看报表以验证报表是否以指定的凭据运行。 报表。  
+11. 查看报表以验证报表是否以指定的凭据运行。 实例时都提供 SQL Server 登录名。  
   
 ## <a name="bkmk_modify_dataset"></a>修改 AdventureWorksDataset  
  在以下步骤中，你将修改数据集以使用参数基于订单号筛选数据集。
@@ -102,7 +102,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  选择 **“允许 Null 值”**。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
 7.  单击“预览”选项卡以运行报表。 请注意报表顶部的参数输入框。 您可以：  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  在工具栏上，单击 **“生成”** ，然后单击 **“部署教程”**。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 + 你已成功地将报表配置为使用已存储凭据获取数据，并且可以使用参数筛选数据。 
 + 在下一课中，你会使用 Web 门户“数据驱动订阅”页来配置订阅。 请参阅 [第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)。  
   

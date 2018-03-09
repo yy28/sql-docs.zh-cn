@@ -3,31 +3,34 @@ title: "解决在 Linux 上的 SQL Server |Microsoft 文档"
 description: "提供有关在 Linux 上使用 SQL Server 2017 故障排除提示。"
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>对 Linux 上的 SQL Server 进行故障排除
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文档介绍如何对 Linux 上或 Docker 容器中运行的 Microsoft SQL Server 进行故障排除。 故障排除在 Linux 上的 SQL Server，请记得要检查的支持的功能和中的已知的限制[Linux 发行说明上的 SQL Server](sql-server-linux-release-notes.md)。
+本文档介绍如何对 Linux 上或 Docker 容器中运行的 Microsoft SQL Server 进行故障排除。 在故障排除在 Linux 上的 SQL Server，请记得查看支持的功能和中的已知的限制[Linux 发行说明上的 SQL Server](sql-server-linux-release-notes.md)。
 
-## <a id="connection"></a>解决连接失败
+> [!TIP]
+> 有关的常见问题的答案，请参阅[Linux 常见问题的 SQL Server](sql-server-linux-faq.md)。
+
+## <a id="connection"></a> 解决连接失败
 如果在连接到 Linux SQL Server 时存在问题，可以检查以下几点。 
 
 - 验证可从客户端计算机的服务器名称或 IP 地址。
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 
 - 验证用户名和密码是否存在任何拼写错误、多余的空格或错误的大小写。
 
-- 尝试显式设置如下所示的服务器名称的协议和端口号： **tcp:servername，1433年**。
+- 尝试显式设置的服务器名称，如下例所示的协议和端口号： **tcp:servername，1433年**。
 
 - 连接错误和超时，也会导致网络连接问题。 验证连接信息和网络连接后，请再次尝试连接。
 
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>管理中 Red Hat Enterprise Linux (RHEL) 和 Ubuntu 的 mssql server 服务 
 
-检查 SQL Server 服务使用此命令的状态的状态：
+检查 SQL Server 服务使用此命令的状态：
 
    ```bash
    sudo systemctl status mssql-server
@@ -77,7 +80,7 @@ ms.lasthandoff: 11/20/2017
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>管理 mssql Docker 容器的执行
 
-通过运行以下命令，可以获得最新创建的 SQL Server Docker 容器的状态和容器 ID（ID 位于“CONTAINER ID”列下）：
+你可以通过运行以下命令获取最新创建的 SQL Server Docker 容器的状态和容器 ID (ID 低于**容器 ID**列):
 
    ```bash
    sudo docker ps -l
@@ -149,19 +152,19 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    ```
   
 > [!WARNING]  
->  在 Linux 上的 SQL Server 启动与"mssql"的用户，以防止将来启动问题。 示例"sudo-u mssql /opt/mssql/bin/sqlservr [启动选项]" 
+>  使用“mssql”用户启动 Linux 上的 SQL Server 以防止将来的启动问题。 例如，“sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]” 
 
-如果你意外已经与另一个用户启动 SQL Server，你将需要改回为之前从 SQL Server 开始 systemd mssql 用户的 SQL Server 数据库文件的所有权。 例如，若要将 /var/opt/mssql 下的所有数据库文件的所有权更改为 mssql 的用户，请运行以下命令
+如果你意外已经与另一个用户启动 SQL Server，你必须将 SQL Server 数据库文件的所有权更改回之前与 systemd 启动 SQL Server mssql 用户。 例如，若要将 /var/opt/mssql 下的所有数据库文件的所有权更改为 mssql 的用户，请运行以下命令
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
-## <a name="common-issues"></a>常见的问题
+## <a name="common-issues"></a>常见问题
 
-1. 无法连接到远程 SQL Server 实例。
+1. 你无法连接到远程 SQL Server 实例。
 
-   请参阅疑难解答部分的主题，[连接到 Linux 上的 SQL Server](#connection)。
+   请参阅疑难解答部分的文章，[连接到 Linux 上的 SQL Server](#connection)。
 
 2. 错误：主机名称必须不超过 15 个字符。
 
@@ -169,10 +172,10 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 
 3. 重置系统管理 (SA) 密码。
 
-   如果忘了系统管理员 (SA) 密码，或出于其他原因需要重置密码，请遵循以下步骤。
+   如果您忘记了系统管理员 (SA) 密码，或者需要重置其他原因，请按照下列步骤。
 
    > [!NOTE]
-   > 执行以下步骤将暂时停止 SQL Server 服务。
+   > 以下步骤可暂时停止 SQL Server 服务。
 
    登录到主机终端，运行以下命令并按照提示重置 SA 密码：
 
@@ -183,7 +186,7 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
 
 4. 在密码中使用特殊字符。
 
-   如果在 SQL Server 登录密码中使用某些字符，则在 Linux 终端中使用这些字符时可能需要对它们进行转义。 每次在终端命令/Shell 脚本中使用 $ 时，需使用反斜杠字符对它进行转义：
+   如果在 SQL Server 登录密码中使用某些字符，则在 Linux 终端中使用这些字符时可能需要对它们进行转义。 你必须转义 $ 使用反斜杠字符的任何时候使用它中终端命令/外壳脚本：
 
    无效：
 
@@ -200,12 +203,4 @@ SQL Server 引擎在 Linux 和 Docker 安装的 /var/opt/mssql/log/errorlog 文�
    资源：[特殊字符](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>支持
-
-可以通过社区获取支持，并且由工程团队核查。 有关特定问题，请参阅以下资源：
-
-- [DBA 堆栈 Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)： 提问数据库管理
-- [堆栈溢出](http://stackoverflow.com/questions/tagged/sql-server)： 提出开发问题
-- [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)： 询问技术问题
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)： 报告 bug 和请求功能
-- [Reddit](https://www.reddit.com/r/SQLServer/)： 讨论 SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

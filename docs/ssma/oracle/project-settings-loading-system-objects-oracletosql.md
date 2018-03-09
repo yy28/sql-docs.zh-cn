@@ -1,10 +1,13 @@
 ---
 title: "项目设置 （加载系统对象） (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ffd350a1f77f6e61585c97286fc7e2f86f7a85c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 28736a939c3ad2a73c0924901b79ce8f9954982b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>项目设置 （加载系统对象） (OracleToSQL)
 加载系统对象页**项目设置**对话框中，可以指定哪些 Oracle 系统对象 SSMA 将转换并向其中加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5388b629501bc1e882646fd4e35c75014982ab67
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dbadd517c4d4a2eadf5f4fce374fab3a1d06d8e1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---min-function"></a>报表生成器函数 - Min 函数
   返回在给定作用域上下文中由表达式指定的所有非 Null 数值的最小值。  
@@ -51,7 +49,7 @@ Min(expression, scope, recursive)
 ## <a name="return-type"></a>返回类型  
  视表达式的类型而定。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  表达式中指定的数据集必须具有相同的数据类型。 若要将具有多个数值数据类型的数据转换为同一数据类型，请使用类似 **CInt**、 **CDbl** 或 **CDec**的转换函数。 有关详细信息，请参阅 [Type Conversion Functions](http://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
   
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  

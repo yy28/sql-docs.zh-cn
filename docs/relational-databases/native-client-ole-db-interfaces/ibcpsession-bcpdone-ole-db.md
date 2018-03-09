@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e88454b0c039470a82ee0e40e26f2a33097354ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31b1007f15bd8a853d6d2b05121ee227e4f05204
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  可以通过以下命令，使用 BCP 将此数据添加回表中：  
   
- **bcp 主...在 outfile.dat-n-T-S fltest** *服务器*  
+ **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
  当编译此示例时，您需要指定 sqlncli11.lib。  
   

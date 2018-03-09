@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
 - sp_addumpdevice
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3e7996f56f71b3028022b869b3e3c3a5480fb5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +54,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@devtype=** ] *设备类型*  
+ [ **@devtype=** ] **'***device_type***'**  
  备份设备的类型。 *设备类型*是**varchar （20)**，无默认值，并且可为以下值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
-|**磁盘**|硬盘文件作为备份设备。|  
-|**磁带**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支持的任何磁带设备。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
+|**disk**|硬盘文件作为备份设备。|  
+|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支持的任何磁带设备。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
   
- [  **@logicalname =** ] *logical_name*  
+ [ **@logicalname =** ] **'***logical_name***'**  
  在 BACKUP 和 RESTORE 语句中使用的备份设备的逻辑名称。 *logical_name*是**sysname**，无默认值，并不能为 NULL。  
   
- [  **@physicalname =** ] *physical_name*  
+ [ **@physicalname =** ] **'***physical_name***'**  
  备份设备的物理名称。 物理名称必须遵从操作系统文件名规则或网络设备的通用命名约定，并且必须包含完整路径。 *physical_name*是**nvarchar(260)**，无默认值，并不能为 NULL。  
   
  在远程网络位置上创建备份设备时，请确保启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]时所用的名称对远程计算机有相应的写权限。  
@@ -73,17 +75,17 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  此过程会在目录中输入指定的物理名称。 此过程不会尝试访问或创建设备。  
   
- [  **@cntrltype =** ] *controller_type*  
+ [ **@cntrltype =** ] **'***controller_type***'**  
  已过时。 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 新的使用**sp_addumpdevice**应省略此参数。  
   
- [  **@devstatus =** ] *device_status*  
+ [ **@devstatus =** ] **'***device_status***'**  
  已过时。 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 新的使用**sp_addumpdevice**应省略此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  **sp_addumpdevice**将添加到备份设备**sys.backup_devices**目录视图。 然后便可以在 BACKUP 和 RESTORE 语句中逻辑引用该设备。 **sp_addumpdevice**不执行任何访问物理设备。 只有在执行 BACKUP 或 RESTORE 语句后才会访问指定的设备。 创建一个逻辑备份设备可简化 BACKUP 和 RESTORE 语句，在这种情况下指定设备名称将代替使用 "TAPE =" 或 "DISK =" 子句指定设备路径。  
@@ -98,7 +100,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  若要删除某个设备，使用[sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)或[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **diskadmin** 固定服务器角色中的成员身份。  
   
  要求拥有写入磁盘的权限。  

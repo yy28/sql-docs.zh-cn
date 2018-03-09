@@ -3,8 +3,11 @@ title: "操作员 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,16 +28,16 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 465ec6d532e4ee46a7c4158475b2890eccf1b0be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b9c8caffe4e8172585c1e17fdf9368dbbb3c87d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="operators"></a>运算符
-操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的功能。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的功能。  
   
 ## <a name="operator-attributes-and-concepts"></a>运算符属性和概念  
 操作员的主要属性如下：  
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/09/2017
   
 -   若要使用 **net send**，操作员必须登录到指定计算机，并且该指定计算机必须允许使用 Windows Messenger 的消息。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

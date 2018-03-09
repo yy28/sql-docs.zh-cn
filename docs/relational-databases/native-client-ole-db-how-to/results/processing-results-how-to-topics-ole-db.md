@@ -8,21 +8,21 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: OLE DB, processing results
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3cfce2d8d8e706fe1fd75821558b651eed7d978
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9fa01beef8f63de415cf273e89797b4808a22d87
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>处理结果操作指南主题 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 
   OLE DB 应用程序中的处理结果包括首先确定结果集的特性，然后将数据检索至程序变量。 如果该命令执行存储过程，则还必须了解如何处理来自此存储过程的返回代码和输出参数。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [执行存储的过程 &#40;使用 ODBC 调用语法 &#41;和处理返回代码和输出参数 &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   

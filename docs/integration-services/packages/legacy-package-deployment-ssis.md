@@ -1,5 +1,5 @@
 ---
-title: "旧的包部署 (SSIS) |Microsoft 文档"
+title: "早期包部署 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,17 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些工具和向导，它们简化了将包从开发计算机部署到生产服务器或其他计算机的过程。  
@@ -153,7 +152,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="registry-entry"></a>注册表项  
  如果要使用注册表项存储配置，可以使用已有项或在 HKEY_CURRENT_USER 中创建新项。 使用的注册表项必须具有名为 **Value**的值。 该值可以是 DWORD 或一个字符串。  
   
- 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式是\<注册表项 >。 如果你想要使用不是根目录下的 HKEY_CURRENT_USER 注册表项，使用格式\<key\registry 注册表\\...> 若要标识的密钥。 例如，若要使用 SSISPackages 中的 MyPackage 项，请键入 **SSISPackages\MyPackage**。  
+ 如果选择 **“注册表项”** 配置类型，请在“注册表项”框中键入注册表项的名称。 格式为 \<registry key>。 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。 例如，若要使用 SSISPackages 中的 MyPackage 项，请键入 **SSISPackages\MyPackage**。  
   
 #### <a name="sql-server"></a>SQL Server  
  如果选择 **SQL Server** 配置类型，则需指定到要存储这些配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接。 可以将配置保存到现有表，也可以在指定数据库中新建表。  
@@ -223,7 +222,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表介绍 **“包配置组织程序”** 对话框的配置列表中的各列。  
   
-|列|Description|  
+|“列”|Description|  
 |------------|-----------------|  
 |**配置名称**|配置的名称。|  
 |**配置类型**|配置类型。|  
@@ -268,7 +267,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  在运行时，包配置将更新包对象的属性值。 加载包时，配置中的值将替换开发包时所设置的值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持不同的配置类型。 例如，您可以使用包含多个配置的 XML 文件或包含单个配置的环境变量。 有关详细信息，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **启用包配置**  
  选择此选项可对包使用配置。  
   
@@ -287,7 +286,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **目标属性**  
  查看配置修改的属性的名称。 如果配置类型支持多个配置，则此列为空白。  
   
- **添加**  
+ **“添加”**  
  通过使用包配置向导来添加配置。  
   
  **编辑**  
@@ -309,7 +308,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>“欢迎使用包配置向导”页  
  使用 **“SSIS 配置向导”** 可以创建在运行时更新包及其对象的属性的配置。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **不再显示此页**  
  下次打开向导时跳过欢迎页。  
   
@@ -325,7 +324,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **配置类型**  
  使用下列选项选择存储配置的源的类型：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**XML 配置文件**|将配置存储为 XML 文件。 选择此值将显示 **“配置类型”**部分中的动态选项。|  
 |**环境变量**|将配置存储在一个环境变量中。 选择此值将显示 **“配置类型”**部分中的动态选项。|  
@@ -342,15 +341,15 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**配置文件名**|键入向导生成的配置文件的路径。|  
-|**浏览**|使用 **“选择配置文件位置”** 对话框指定向导生成的配置文件的路径。 如果文件不存在，则向导将创建该文件。|  
+|**“浏览”**|使用 **“选择配置文件位置”** 对话框指定向导生成的配置文件的路径。 如果文件不存在，则向导将创建该文件。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -362,14 +361,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**注册表项**|键入包含配置信息的注册表项。 格式是\<注册表项 >。<br /><br /> 该注册表项必须已经存在于 HKEY_CURRENT_USER 中并且具有一个名为 Value 的值。 该值可以是 DWORD 或一个字符串。<br /><br /> 如果你想要使用的注册表项不是根目录下的 HKEY_CURRENT_USER，使用格式\<key\registry 注册表\\...> 若要标识的密钥。|  
+|**注册表项**|键入包含配置信息的注册表项。 格式为 \<registry key>。<br /><br /> 该注册表项必须已经存在于 HKEY_CURRENT_USER 中并且具有一个名为 Value 的值。 该值可以是 DWORD 或一个字符串。<br /><br /> 如果要使用不在 HKEY_CURRENT_USER 根目录下的注册表项，请使用 \<Registry key\registry key\\...> 格式来标识该项。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -377,14 +376,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**父变量**|指定父包中包含配置信息的变量。|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
@@ -392,23 +391,23 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定配置设置**  
  用于直接指定设置。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**连接**|从列表中选择连接，或者单击 **“新建”** 创建新连接。|  
+|**“连接”**|从列表中选择连接，或者单击 **“新建”** 创建新连接。|  
 |**配置表**|选择现有的表，或者单击 **“新建”** 编写用于创建新表的 SQL 语句。|  
 |**配置筛选器**|选择现有配置名称或者键入新名称。<br /><br /> 多个 SQL Server 配置可以存储在同一个表中，而且每个配置可以包括多个配置项。<br /><br /> 此用户定义值存储在表中以标识属于特定配置的配置项|  
   
  **配置位置存储在一个环境变量中**  
  用于指定存储配置的环境变量。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**环境变量**|从列表中选择环境变量。|  
   
 ### <a name="select-objects-to-export-page"></a>“选择要导出的对象”页  
  使用 **“选择目标属性”** 或“选择要导出的属性”页可以指定配置包含的对象属性。 只有在选择 XML 配置类型时，才能选择多个属性。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **对象**  
  展开包层次结构并选择要导出的属性。  
   
@@ -421,14 +420,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>“完成向导”页  
  使用 **“完成向导”** 页可以提供配置的名称以及查看此向导用于创建配置的设置。 在向导完成之后，将显示 **“包配置组织程序”** ，其中列出了包的所有配置。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **配置名称**  
  键入配置的名称。  
   
  **预览**  
  查看此向导用于创建配置的设置。  
   
- **完成**  
+ **“完成”**  
  创建配置并退出 **包配置向导**。  
 
 ## <a name="child"></a>在子包中使用变量和参数的值
@@ -477,7 +476,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 5.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
-## <a name="create-a-deployment-utility"></a>创建部署实用工具
+## <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   部署包的第一步是为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目创建一个部署实用工具。 部署实用工具是一个文件夹，其中包含在不同服务器上部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目中的包所需的文件。 部署实用工具是在存储 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的计算机上创建的。  
   
  通过首先配置创建部署实用工具的生成过程，然后生成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目，可以为该项目创建一个包部署实用工具。 在生成项目时，将自动包括项目中的所有包和包配置。 若要部署其他文件（如项目的自述文件），请将这些文件放在 **项目的** “杂项” [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 文件夹中。 当生成项目时，也会自动包括这些文件。  
@@ -486,13 +485,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表列出了部署实用工具属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |AllowConfigurationChange|一个指定在部署过程中是否可以更新配置的值。|  
 |CreateDeploymentUtility|一个指定在生成项目时是否创建包部署实用工具的值。 此属性必须为 **True** 才能创建部署实用工具。|  
 |DeploymentOutputPath|部署实用工具的位置，相对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。|  
   
- 当生成[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]项目，将一个清单文件，\<项目名称 >。SSISDeploymentManifest.xml，被创建并添加，以及项目包和包的依赖项，到在项目中，bin\Deployment 文件夹或 DeploymentOutputPath 属性中指定的位置的副本。 该清单文件列出了项目中的包、包配置和所有杂项文件。  
+ 在生成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目时，除了创建项目包的副本和包依赖项外，还会创建一个清单文件 \<project name>.SSISDeploymentManifest.xml，并将它们都添加到项目的 bin\Deployment 文件夹中，或添加到 DeploymentOutputPath 属性中所指定的位置。 该清单文件列出了项目中的包、包配置和所有杂项文件。  
   
  每次生成项目时将刷新部署文件夹的内容。 这意味着系统将删除所有已保存到此文件夹中但未由生成进程再次复制到该文件夹中的文件。 例如，将删除保存到部署文件夹中的包配置文件。  
   
@@ -502,7 +501,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  右键单击该项目，再单击“属性”。  
   
-3.  在**\<项目名称 > 属性页**对话框中，单击**部署实用工具**。  
+3.  在“\<project name> 属性页”对话框中，单击“部署实用工具”。  
   
 4.  若要在部署包时更新包配置，请将 **AllowConfigurationChanges** 设置为 **True**。  
   
@@ -510,7 +509,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 6.  还可以通过修改 **DeploymentOutputPath** 属性来更新部署实用工具的位置。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 8.  在解决方案资源管理器中，右键单击该项目，再单击“生成”。  
   
@@ -521,7 +520,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  部署文件夹的路径是在为其创建部署实用工具的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目的 DeploymentOutputPath 属性中指定的。 默认路径为 bin\Deployment，它相对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象。 有关详细信息，请参阅 [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md)。  
   
- 可以使用包安装向导安装包。 若要启动向导，在将部署文件夹复制到服务器之后，请双击部署实用工具文件。 此文件命名为\<项目名称 >。SSISDeploymentManifest，并可在目标计算机上的部署文件夹中找到。  
+ 可以使用包安装向导安装包。 若要启动向导，在将部署文件夹复制到服务器之后，请双击部署实用工具文件。 此文件名为 \<项目名称>.SSISDeploymentManifest，可以在目标计算机上的部署文件夹找到它。  
   
 > [!NOTE]  
 >  如果并行安装了不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，根据你部署的包的版本，可能会遇到错误。 因为 .SSISDeploymentManifest 文件扩展名对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的所有版本是相同的，因此可能出现此错误。 针对最近安装的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本双击该文件调用安装程序 (dtsinstall.exe)，它的版本可能与部署实用工具文件的版本不同。 若要解决这个问题，请从命令行运行正确的 dtsinstall.exe 版本，并且提供部署实用工具文件的路径。  
@@ -544,7 +543,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  在目标计算机上打开部署文件夹。  
   
-2.  双击该清单的文件，\<项目名称 >。SSISDeploymentManifest，以启动包安装向导。  
+2.  双击清单文件（\<项目名称>.SSISDeploymentManifest），以启动包安装向导。  
   
 3.  在 **“部署 SSIS 包”** 页上，选择 **“SQL Server 部署”** 选项。  
   
@@ -584,13 +583,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Next**  
  转到向导的下一页。  
   
- **完成**  
+ **“完成”**  
  跳到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ### <a name="configure-packages-page"></a>“配置包”页  
  可以使用 **“配置包”** 页编辑包配置。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **配置文件**  
  通过从列表中选择文件，可以编辑配置文件的内容。  
   
@@ -602,13 +601,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **类型**  
  查看属性的数据类型。  
   
- **“值”**  
+ **ReplTest1**  
  指定配置的值。  
   
  **Next**  
  转到向导的下一页。  
   
- **完成**  
+ **“完成”**  
  跳到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ### <a name="confirm-installation-page"></a>“确认安装”页  
@@ -617,16 +616,16 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Next**  
  安装包及其相关文件，并在完成安装后转到下一个向导页。  
   
- **状态**  
+ **“状态”**  
  显示包的安装进度。  
   
- **完成**  
+ **“完成”**  
  转到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ### <a name="deploy-ssis-packages-page"></a>“部署 SSIS 包”页  
  可以使用 **“部署 SSIS 包”** 页指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包及其依赖关系的安装位置。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **部署到文件系统**  
  将包及其依赖关系部署到文件系统内指定的文件夹中。  
   
@@ -639,7 +638,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Next**  
  转到向导的下一页。  
   
- **完成**  
+ **“完成”**  
  跳到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ### <a name="packages-validation-page"></a>“包验证”页  
@@ -651,33 +650,33 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>“选择安装文件夹”页  
  可以使用 **“选择安装文件夹”** 页，指定在文件系统中安装包及其依赖关系的文件夹。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **文件夹**  
  指定包及其依赖关系要复制到的路径和文件夹。  
   
- **浏览**  
+ **“浏览”**  
  使用“查找文件夹”对话框找到目标文件夹。  
   
  **Next**  
  转到向导的下一页。  
   
- **完成**  
+ **“完成”**  
  跳到“完成包安装向导”页。 如果已经复查完前面向导页中的选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ### <a name="specify-target-sql-server-page"></a>“指定目标 SQL Server”页  
  可以使用 **“指定目标 SQL Server”** 页，指定将包部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的选项。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **服务器名称**  
  指定要部署包的服务器的名称。  
   
- **使用 Windows 身份验证**  
+ **Use Windows Authentication**  
  指定是否使用 Windows 身份验证来登录到服务器。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
  **使用 SQL Server 身份验证**  
  指定包是否应使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证来登录到服务器。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则必须提供用户名和密码。  
   
- **用户名**  
+ **User name**  
  指定用户名。  
   
  **密码**  
@@ -697,7 +696,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Next**  
  转到向导的下一页。  
   
- **完成**  
+ **“完成”**  
  跳到“完成包安装向导”页。 如果返回到向导前面的页修改所选项，并指定了所有必需的选项，则可以使用此选项。  
   
 ### <a name="finish-the-package-installation-page"></a>“完成包安装”页  
@@ -705,5 +704,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **“完成”**  
  单击“完成”即可退出该向导。  
-
 

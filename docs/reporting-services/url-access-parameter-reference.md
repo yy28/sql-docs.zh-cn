@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2924bd13417cbe3b9ce114516b998871abb0c89d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
@@ -133,7 +131,7 @@ ms.lasthandoff: 12/05/2017
  报表服务器命令以 *rs:* 为前缀，用于指向报表服务器：  
   
 -   Command：  
-                  根据目录项的类型，对其执行操作。 默认值由在 URL 访问字符串中引用的目录项的类型确定。 有效值包括：  
+                  根据目录项的类型，对其执行操作。 默认值由在 URL 访问字符串中引用的目录项的类型确定。 有效值为  
   
     -   **ListChildren** 和 **GetChildren** 显示文件夹的内容。 文件夹项显示在一般项导航页内。  
   
@@ -320,7 +318,7 @@ ms.lasthandoff: 12/05/2017
   
 -   *AsyncRender*：控制是否异步呈现报表。 默认值为 **true**，该值指定将异步呈现报表。 该值必须为布尔值 **true** 或 **false**。  
   
--   ParamMode：控制报表查看器 Web 部件的参数提示区域在整页视图中的显示方式。 默认值是 **Full**秒。 有效值包括：  
+-   ParamMode：控制报表查看器 Web 部件的参数提示区域在整页视图中的显示方式。 默认值是 **Full**秒。 有效值为  
   
     -   **Full**：显示参数提示区域。  
   
@@ -334,7 +332,7 @@ ms.lasthandoff: 12/05/2017
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   DocMapMode：控制报表查看器 Web 部件的文档结构图区域在整页视图中的显示方式。 默认值是 **Full**秒。 有效值包括：  
+-   DocMapMode：控制报表查看器 Web 部件的文档结构图区域在整页视图中的显示方式。 默认值是 **Full**秒。 有效值为  
   
     -   **Full**：显示文档结构图区域。  
   

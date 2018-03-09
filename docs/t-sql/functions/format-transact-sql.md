@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FORMAT_TSQL
 - FORMAT
-dev_langs: TSQL
-helpviewer_keywords: FORMAT function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 43d702accc0611030c1c7ad0eda74d456711b694
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,12 +48,12 @@ FORMAT ( value, format [, culture ] )
  *值*  
  支持格式化的数据类型的表达式。 有关有效类型的列表，请参阅下面“备注”部分中的表。  
   
- *格式*  
+ *format*  
  **nvarchar**格式模式。  
   
  *格式*参数必须包含一个有效的.NET Framework 格式字符串，为标准格式字符串 （例如，"C"或"D"），或作为自定义字符的模式的日期和数字值 (例如，"MMMM DD，yyyy (dddd)"). 不支持组合格式。 这些格式设置模式的完整说明，请查阅上格式设置的常规字符串、 自定义日期和时间格式和自定义数字格式的.NET Framework 文档。 很好的起点是主题中，"[格式类型](http://go.microsoft.com/fwlink/?LinkId=211776)。"  
   
- *区域性*  
+ *culture*  
  可选**nvarchar**指定区域性的自变量。  
   
  如果*区域性*既未提供参数，则使用当前会话的语言。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 *区域性*接受任何作为自变量;.NET Framework 支持的区域性并不局限于显式支持的语言[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果*区域性*自变量无效，格式将引发错误。  
@@ -81,7 +84,7 @@ FORMAT ( value, format [, culture ] )
 |数字|tinyint|Byte|  
 |数字|decimal|SqlDecimal|  
 |数字|numeric|SqlDecimal|  
-|数字|float|Double|  
+|数字|float|双精度|  
 |数字|real|Single|  
 |数字|smallmoney|Decimal|  
 |数字|money|Decimal|  
@@ -212,5 +215,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>另请参阅  
  [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

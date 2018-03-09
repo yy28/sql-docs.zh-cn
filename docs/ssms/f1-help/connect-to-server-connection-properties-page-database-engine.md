@@ -3,8 +3,11 @@ title: "连接到服务器（“连接属性”页）（数据库引擎）| Micr
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92c974ad90689a01d4155610b71babc7df7765d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 61040d43e2e351e0dab262b549abf7f90ce7f0f8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
-使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例或在“已注册的服务器”中注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 实例时，此对话框中才显示“连接”和“选项”。 注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时，此对话框中仅显示“测试”和“保存”。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 实例或在“已注册的服务器”中注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 实例时，此对话框中才显示“连接”和“选项”。 注册 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 时，此对话框中仅显示“测试”和“保存”。  
   
 **连接到数据库**  
 从列表中选择要连接到的数据库。 如果选择“<default>”，则将连接到服务器的默认数据库。 如果选择 **<Browse server>**，则可以浏览要连接的数据库的服务器。  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
 **全部重置**  
 将所有手动输入的连接属性值替换为默认值。  
   
-**Connect**  
+**“连接”**  
 使用列出的值尝试连接。  
   
 **选项**  

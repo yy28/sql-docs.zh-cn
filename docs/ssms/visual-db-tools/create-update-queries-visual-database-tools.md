@@ -3,8 +3,11 @@ title: "创建更新查询 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da449c0b83c9769a030e018128e79de3677fc077
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 27a23579d2396b2008587cafcaeb1cf6adf0f9ee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-update-queries-visual-database-tools"></a>创建更新查询 (Visual Database Tools)
-可以使用“更新”查询在一次操作中更改多个行中的内容。 例如，在 `titles` 表中，可以使用“更新”查询将特定出版商出版的所有书籍都加价 10%。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以使用“更新”查询在一次操作中更改多个行中的内容。 例如，在 `titles` 表中，可以使用“更新”查询将特定出版商出版的所有书籍都加价 10%。  
   
 在创建“更新”查询时，需要指定：  
   

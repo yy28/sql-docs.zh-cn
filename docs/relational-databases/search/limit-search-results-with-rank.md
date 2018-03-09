@@ -2,10 +2,14 @@
 title: "使用 RANK 限制搜索结果 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f82c1bfe30401d60de557c79ad7fd95be78496c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f9d4cf346f769133ffecdf20d7a5541876652ea1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
-  [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 函数返回名为 RANK 的列，该列包含从 0 到 1000 的序数值（排名值）。 这些值用来根据返回的行与选择条件的匹配程度对这些行进行排名。 排名值仅表示结果集中各行相关性的相对顺序，值越小，表示相关性越低。 实际的值并不重要，并且每次运行查询时实际值通常都不同。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 和 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 函数返回名为 RANK 的列，该列包含从 0 到 1000 的序数值（排名值）。 这些值用来根据返回的行与选择条件的匹配程度对这些行进行排名。 排名值仅表示结果集中各行相关性的相对顺序，值越小，表示相关性越低。 实际的值并不重要，并且每次运行查询时实际值通常都不同。  
   
 > [!NOTE]  
 >  CONTAINS 和 FREETEXT 谓词不会返回任何排名值。  
@@ -107,7 +112,7 @@ GO
   
  下表包含了对计算排名非常重要的一些常用术语和统计值。  
   
- 属性  
+ “属性”  
  行的全文索引列。  
   
  Document  

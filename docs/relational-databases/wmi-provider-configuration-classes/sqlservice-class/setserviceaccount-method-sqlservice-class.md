@@ -8,29 +8,34 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetServiceAccount Method (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetServiceAccount Method (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetServiceAccount method
+helpviewer_keywords:
+- SetServiceAccount method
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0cec37d97f91da803a7d071aabfdd664878862f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bdcb3f6789baf009165a74bcf3d82630fa868fd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 方法（SqlService 类）
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]尝试将更改的用户名和密码下运行的服务实例。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+尝试更改运行服务实例时使用的用户名和密码。  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -57,7 +62,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 **uint32** 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1。 其他任何数字表示出现错误。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另请参阅  
  [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_query_optimizer_info (Transact SQL) |Microsoft 文档"
+title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_query_optimizer_info
 - sys.dm_exec_query_optimizer_info_TSQL
 - sys.dm_exec_query_optimizer_info
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_info dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d954f21d2cfe9a99701f81a9439c9b4a82bd30a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c7b87cc0b34d33abd8f658a7ff20852200b93a2c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,14 +41,14 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_query_optimizer_info**。  
   
-|Name|数据类型|Description|  
+|名称|数据类型|Description|  
 |----------|---------------|-----------------|  
-|**计数器**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
-|**匹配项**|**bigint**|此计数器的优化事件的发生次数。|  
+|**counter**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
+|**occurrence**|**bigint**|此计数器的优化事件的发生次数。|  
 |**值**|**float**|每次发生事件的平均属性值。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>注释  
  **sys.dm_exec_query_optimizer_info**包含以下属性 （计数器）。 出现的所有值将累积并在系统重新启动时设置为 0。 系统重新启动时，值字段的所有值都设置为 NULL。 指定平均值的所有“值-列”的值使用同一行中的出现次数值作为计算平均值的分母。 所有查询优化时测量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]确定更改**dm_exec_query_optimizer_info**，包括这两个用户和系统生成的查询。 执行已缓存的计划不会更改中的值**dm_exec_query_optimizer_info**，则只是有意义的优化。  
   
-|计数器|出现次数|值|  
+|计数器|出现次数|“值”|  
 |-------------|----------------|-----------|  
 |优化|总优化次数。|不适用|  
 |占用时间|总优化次数。|每次优化单个语句（查询）所用的平均时间（秒）。|  

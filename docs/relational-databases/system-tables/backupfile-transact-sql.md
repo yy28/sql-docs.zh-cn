@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupfile
 - backupfile_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f51eff63650e1cf3572b7b2e8ea77a89eb4a8265
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84b26ca09b8cd537ed40f0af8844f3f0c7627c86
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +42,16 @@ ms.lasthandoff: 11/17/2017
 |**backup_set_id**|**int**|包含备份集的文件的唯一标识号。 引用**backupset(backup_set_id)**。|  
 |**first_family_number**|**tinyint**|包含该备份文件的第一个介质的介质簇号。 可以为 NULL。|  
 |**first_media_number**|**int**|包含该备份文件的第一个介质的介质号。 可以为 NULL。|  
-|**filegroup_name**|**nvarchar （128)**|包含已备份数据库文件的文件组的名称。 可以为 NULL。|  
+|**filegroup_name**|**nvarchar(128)**|包含已备份数据库文件的文件组的名称。 可以为 NULL。|  
 |**page_size**|**int**|页大小（字节）。|  
 |**file_number**|**numeric(10,0)**|在数据库中唯一文件标识号 (对应于**sys.database_files**。**file_id**)。|  
 |**backed_up_page_count**|**numeric(10,0)**|已备份的页数。 可以为 NULL。|  
-|**file_type**|**char （1)**|已备份文件，可以是下列类型之一：<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件。<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件。<br /><br /> F = 全文目录。<br /><br /> 可以为 NULL。|  
+|**file_type**|**char(1)**|已备份文件，可以是下列类型之一：<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件。<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件。<br /><br /> F = 全文目录。<br /><br /> 可以为 NULL。|  
 |**source_file_block_size**|**numeric(10,0)**|原始数据或日志文件备份时所在的设备。 可以为 NULL。|  
 |**file_size**|**numeric(20,0)**|备份文件的长度（字节）。 可以为 NULL。|  
-|**logical_name**|**nvarchar （128)**|备份文件的逻辑名称。 可以为 NULL。|  
-|**physical_drive**|**nvarchar(260)**|物理驱动器或分区名称。 可以为 NULL。|  
-|**physical_name**|**nvarchar(260)**|物理（操作系统）文件名的剩余部分。 可以为 NULL。|  
+|**logical_name**|**nvarchar(128)**|备份文件的逻辑名称。 可以为 NULL。|  
+|**physical_drive**|nvarchar(260)|物理驱动器或分区名称。 可以为 NULL。|  
+|**physical_name**|nvarchar(260)|物理（操作系统）文件名的剩余部分。 可以为 NULL。|  
 |**状态**|**tinyint**|文件的状态，可以是下列值之一：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT <br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = 删除<br /><br /> 注意： 值 5 将跳过，以便这些值对应于数据库状态的值。|  
 |**state_desc**|**nvarchar(64)**|文件状态的说明，可以是下列值之一：<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|创建文件时的日志序列号。|  

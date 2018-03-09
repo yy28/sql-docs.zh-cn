@@ -2,27 +2,32 @@
 title: "查看和浏览数据使用 SQL （演练） |Microsoft 文档"
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+dev_langs:
+- R
 ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6b8ca39a05d77a41f5c04f58459bf26cf01daf59
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 97d1e0b468222162644e98f5813d4e4d97fd5add
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>查看和浏览使用 SQL （演练） 的数据
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 数据浏览是数据建模的重要组成部分，涉及查看要用于分析以及数据可视化的数据对象的汇总。 在本课程中，你浏览数据对象和生成图形，同时使用[!INCLUDE[tsql](../../includes/tsql-md.md)]和 R 函数纳入[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。
 

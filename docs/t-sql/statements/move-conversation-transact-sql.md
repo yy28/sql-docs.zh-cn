@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - MOVE CONVERSATION
 - MOVE_TSQL
 - MOVE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - moving conversations
 - MOVE CONVERSATION statement
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - conversations [Service Broker], groups
 - conversations [Service Broker], moving
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7367254b7dad104c7503c33777d26316a542b4ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: cd8c5e548bf45fe4a2fc6bf0638ebb5282981263
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +57,7 @@ MOVE CONVERSATION conversation_handle
  *conversation_handle*  
  一个变量或常量，包含要移动的会话的会话句柄。 *conversation_handle*的类型必须为**uniqueidentifier**。  
   
- 到*conversation_group_id*  
+ TO *conversation_group_id*  
  一个变量或常量，包含会话将要移至的会话组的标识符。 *conversation_group_id*的类型必须为**uniqueidentifier**。  
   
 ## <a name="remarks"></a>注释  
@@ -68,7 +70,7 @@ MOVE CONVERSATION conversation_handle
   
  MOVE CONVERSATION 在用户定义函数中无效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要移动会话，当前用户必须是会话和会话组的所有者，或者是 sysadmin 固定服务器角色的成员或 db_owner 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -90,7 +92,7 @@ MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;
  [BEGIN DIALOG CONVERSATION &#40;Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION &#40;Transact SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [sys.conversation_groups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

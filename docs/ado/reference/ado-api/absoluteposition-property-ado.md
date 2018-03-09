@@ -3,8 +3,9 @@ title: "AbsolutePosition 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset15::AbsolutePosition
-helpviewer_keywords: AbsolutePosition property [ADO]
+f1_keywords:
+- Recordset15::AbsolutePosition
+helpviewer_keywords:
+- AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 491ed39340dd066955db2fd73ed986614744cff4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2d1df667bb580d451e527e458d83703940483f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition 属性 (ADO)
 指示的序号位置[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的当前记录。  

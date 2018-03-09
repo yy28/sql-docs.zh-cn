@@ -3,8 +3,11 @@ title: "指定作业响应 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1275fe5d32937339e3b93e67443165f550854e2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 493fe4698081d7d748e0cb4a16993dc697baf799
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-job-responses"></a>指定作业响应
-作业响应指定完成作业后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务将执行的操作。 作业响应可确保数据库管理员知道作业完成的时间和作业运行频率。 典型的作业响应包括：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 作业响应指定完成作业后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务将执行的操作。 作业响应可确保数据库管理员知道作业完成的时间和作业运行频率。 典型的作业响应包括：  
   
 -   使用电子邮件、电子寻呼或 **net send** 消息通知操作员。  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
   
     如果确信不需要再次运行该作业，可以使用这种作业响应。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

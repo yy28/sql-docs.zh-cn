@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_xe_objects (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_xe_objects (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_objects
 - sys.dm_xe_objects_TSQL
 - dm_xe_objects_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ac492b7189a3f6508874c5fbd32d50827463ff6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e9f1146f74618195b28fd19f2464bc45a2498c61
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +49,10 @@ ms.lasthandoff: 11/17/2017
   
 -   类型。 类型封装了字节集合的长度和特征，在解释数据时需要用到这些内容。  
 
- |列名|数据类型|说明|  
+ |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|对象的名称。 名称是唯一的特定对象类型的包中。 不可为 null。|  
-|object_type|**nvarchar(60)**|对象的类型。 object_type 是以下项之一：<br /><br /> 事件<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 类型<br /><br /> 不可为 null。|  
+|object_type|**nvarchar(60)**|对象的类型。 object_type 是以下项之一：<br /><br /> 事件<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> 不可为 null。|  
 |package_guid|**uniqueidentifier**|公开此操作的包的 GUID。 与 sys.dm_xe_packages.package_id 存在多对一关系。 不可为 null。|  
 |description|**nvarchar(256)**|操作的说明。 由程序包作者设置说明。 不可为 null。|  
 |capabilities|**int**|说明对象功能的位图。 可以为 Null。|  
@@ -59,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |type_package_guid|**uniqueidentifier**|包的 GUID，此包公开此对象所操作的类型。 可以为 Null。|  
 |type_size|**int**|数据类型的大小（单位为字节）。 仅限于有效的对象类型。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  

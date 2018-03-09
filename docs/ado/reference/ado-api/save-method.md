@@ -3,8 +3,9 @@ title: "Save 方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Recordset::Save
 - _Recordset::raw_Save
-helpviewer_keywords: Save method [ADO]
+helpviewer_keywords:
+- Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bd594fb077c3a8b6eca9e3496c857dbbc0249c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ca1aa95841be1331ad1b214b2a8b377622883d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="save-method"></a>Save 方法
 将保存[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)文件中或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -40,10 +42,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parameters  
  *目标*  
- 可选。 A **Variant** ，表示该文件的完整路径名称其中**记录集**保存，或对引用**流**对象。  
+ 選擇性。 A **Variant** ，表示该文件的完整路径名称其中**记录集**保存，或对引用**流**对象。  
   
  *PersistFormat*  
- 可选。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)值，该值指定在其中的格式**记录集**（XML 或 ADTG） 保存。 默认值是**adPersistADTG**。  
+ 選擇性。 A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md)值，该值指定在其中的格式**记录集**（XML 或 ADTG） 保存。 默认值是**adPersistADTG**。  
   
 ## <a name="remarks"></a>注释  
  [Save 方法](../../../ado/reference/ado-api/save-method.md)方法只能在 open 上调用**记录集**。 使用[Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)到更高版本的还原方法**记录集**从*目标*。  

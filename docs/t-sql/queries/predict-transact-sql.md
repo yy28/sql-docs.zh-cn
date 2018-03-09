@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>预测 (Transact SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ MODEL = @model | model_literal
 
 可以通过使用 R 或 Python 或其他工具创建的模型对象。
 
-**数据**
+**data**
 
 数据参数用于指定用于评分或预测的数据。 在查询中的表源的形式指定数据。 表源可以是表、 表别名，CTE 别名、 视图或表值函数。
 
-**参数**
+**parameters**
 
 参数参数用于指定用于评分或预测的可选用户定义参数。
 
@@ -73,7 +73,7 @@ MODEL = @model | model_literal
 
 > [注意]此选项中的 SQL Server 自 2017 年的预发行版不支持而且包含仅用于向前兼容性。
 
-**使用 ( \<result_set_definition >)**
+**WITH ( \<result_set_definition> )**
 
 WITH 子句用于指定由返回的输出的架构`PREDICT`函数。
 
@@ -101,7 +101,7 @@ WITH 子句用于指定由返回的输出的架构`PREDICT`函数。
 
 你使用的模型必须已创建使用 RevoScaleR 包从支持的算法之一。 有关当前支持的型号的列表，请参阅[实时评分](../../advanced-analytics/real-time-scoring.md)。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 
 不所需的任何权限`PREDICT`; 但是，用户需求`EXECUTE`对数据库的权限和权限来查询任何用作输入的数据。 如果已在表中存储的模型，用户还必须能够从表中读取模型。
 

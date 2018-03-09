@@ -2,32 +2,37 @@
 title: "存储过程属性（“常规”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stored-Procs
+ms.suite: sql
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.spassistededitor.storedprocedure.f1
 - sql13.swb.spproperties.general.f1
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee9de5d6a71411489f1a8cfd7595a910cfc971da
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7132c45e5ea0fe66235b4c77de823b0fa3384319
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stored-procedure-properties-general-page"></a>存储过程属性（“常规”页）
-  显示有关存储过程的信息。 所有信息均为只读。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+显示有关存储过程的信息。 所有信息均为只读。  
   
-## <a name="options"></a>选项  
- **数据库**  
+## <a name="options"></a>“常规”  
+ **“数据库”**  
  包含此存储过程的数据库的名称。  
   
  **Server**  

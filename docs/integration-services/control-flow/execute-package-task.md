@@ -1,5 +1,5 @@
 ---
-title: "执行包任务 |Microsoft 文档"
+title: "执行包任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -113,7 +112,7 @@ ms.lasthandoff: 08/11/2017
  子包可以通过使用脚本任务访问父包变量。 在 **“脚本任务编辑器”** 的 **“脚本”**页上输入父包变量的名称时，不要在变量名称中包括 **“用户:”** 。 否则，子包在您运行父包时找不到该变量。  
   
 ## <a name="configuring-the-execute-package-task"></a>配置执行包任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
@@ -176,12 +175,12 @@ ms.lasthandoff: 08/11/2017
  **位置**  
  选择子包的位置。 此属性具有下表所列的选项。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**SQL Server**|将位置设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。|  
 |**文件系统**|将位置设置为文件系统。|  
   
- **连接**  
+ **“连接”**  
  选择子包的存储位置的类型。  
   
  **PackageNameReadOnly**  
@@ -194,17 +193,17 @@ ms.lasthandoff: 08/11/2017
 #### <a name="location-dynamic-options"></a>位置动态选项  
   
 ##### <a name="location--sql-server"></a>位置 = SQL Server  
- **连接**  
- 在列表中，选择一个 OLE DB 连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+ **“连接”**  
+ 在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
   
- **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **相关主题：**[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  键入子包的名称，或单击省略号 (…) 再定位到包。  
   
 ##### <a name="location--file-system"></a>位置 = 文件系统  
- **连接**  
- 在列表中，选择文件连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。  
+ **“连接”**  
+ 在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
  **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -222,11 +221,10 @@ ms.lasthandoff: 08/11/2017
  **绑定参数或变量**  
  选择包含要传递到子包的值的参数或变量。  
   
- **添加**  
+ **“添加”**  
  单击此选项可将参数或变量映射到子包参数。  
   
  **删除**  
  单击此选项可删除参数或变量与子包参数之间的映射。  
   
   
-

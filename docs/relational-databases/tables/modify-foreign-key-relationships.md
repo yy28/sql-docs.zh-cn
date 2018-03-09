@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server], modifying
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51ee95780b228a723be7c5f86b4a64c171bf5df2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **修改外键，使用：**  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/17/2017
      **选定的关系**  
      列出现有的关系。 选择一个关系将在右侧的网格中显示其属性。 如果该列表为空，则表示尚未为该表定义关系。  
   
-     **添加**  
+     **“添加”**  
      创建新关系。 必须先设置 **“表和列规范”** ，之后该关系才会生效。  
   
      **删除**  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/17/2017
      **名称**  
      显示关系的名称。 在创建新关系时，将基于 **表设计器**的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
   
-     **说明**  
+     **Description**  
      描述该关系。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号 **(...)**。 这可以提供一个更大的文本编写区域。  
   
      **表设计器类别**  
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **设置默认值** 如果表的所有外键列均已定义默认值，则将值设置成为该列定义的默认值。  
   
-4.  在“文件”菜单上，单击“保存”以保存表名。  
+4.  在“文件”菜单上，单击“保存table name”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改外键**  

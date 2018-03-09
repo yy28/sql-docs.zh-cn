@@ -2,9 +2,12 @@
 title: "维护计划（“设计”选项卡）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,20 +17,20 @@ f1_keywords:
 - sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64e01a02225d6849bd38def9f00b8a5003752e5e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e425cd4e4901b396ae08cc9586381120ab225745
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-design-tab"></a>维护计划（“设计”选项卡）
-  使用 **维护计划（“设计”选项卡）** 可以指定维护计划及其子计划的属性。 将任务从工具箱拖到计划设计器中。 右键单击任务组以创建分支执行路径。 维护计划将另存为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业执行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“维护计划”（“设计”选项卡）可以指定维护计划及其子计划的属性。 将任务从工具箱拖到计划设计器中。 右键单击任务组以创建分支执行路径。 维护计划将另存为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业执行。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **添加子计划**  
  添加可以配置的子计划。  
   
@@ -55,13 +58,13 @@ ms.lasthandoff: 11/09/2017
  **名称**  
  显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名” 。  
   
- **说明**  
+ **Description**  
  查看或指定维护计划的说明。 说明的最大长度为 512 个字符。  
   
  **设计器图面**  
  设计和维护维护计划。 使用设计器图面，可以向计划中添加维护任务、从计划中删除任务、指定任务之间的优先链接以及指示任务分支和并行情况。  
   
- 两个任务之间的优先链接会在任务之间建立关系。 只有当第一项任务（前置任务 ）的执行结果与指定的条件相匹配时，才执行第二项任务（依赖任务 ）。 通常，指定的执行结果为 **“成功”**、 **“失败”**或 **“完成”**。 维护计划设计器图面基于 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器图面。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
+ 两个任务之间的优先链接会在任务之间建立关系。 只有当第一项任务（前置任务 ）的执行结果与指定的条件相匹配时，才执行第二项任务（依赖任务 ）。 通常，指定的执行结果为 **“成功”**、 **“失败”**或 **“完成”**。 维护计划设计器图面基于 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器图面。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
   
  例如，可以将“索引碎片整理”任务指定为只在上一个“检查数据库完整性”任务成功完成之后才能执行。 使用任务优先关联功能，您还可以在计划中处理错误或失败条件。 例如，如果“检查数据库完整性”任务失败，则“通知操作员”任务可以通知用户或操作员有关失败的消息。  
   

@@ -1,5 +1,5 @@
 ---
-title: "通过使用合并联接转换扩展数据集 |Microsoft 文档"
+title: "使用合并联接转换扩展数据集 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-caps.latest.revision: 27
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a7d7b4a2af89c855a6269d90d94f79465bfad8a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 00aaf46bb6b24813a79300be3a23d2a3aab28e41
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合并联接转换扩展数据集
   若要添加和配置合并联接转换，则包中必须已包含至少一个数据流任务和为合并联接转换提供输入的两个数据流组件。  
@@ -64,15 +63,14 @@ ms.lasthandoff: 08/03/2017
   
 9. 还可以更新 **“输出别名”** 列中的输出列名称。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>另请参阅  
- [合并联接转换](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+ [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 路径](../../../integration-services/data-flow/integration-services-paths.md)   
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

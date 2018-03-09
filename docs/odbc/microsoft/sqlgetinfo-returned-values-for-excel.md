@@ -5,10 +5,11 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,24 +19,24 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a94fc69a43737a4a59c7e82d39d4e6d6dda6b77a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 946742b89eb1023737adbc0fd0bdc4196587463c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo excel 返回值
 下表列出了 C 语言 #defines *fInfoType*自变量和返回的相应值**SQLGetInfo**。 可以通过将列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*自变量。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**返回 32 位位掩码，垂直条 (&#124;) 表示按位 OR。  
+>  其中**SQLGetInfo**返回 32 位位掩码，垂直条 (& #124;) 表示按位 OR。  
   
-|信息类型|返回值|  
+|InfoType|返回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_DRIVER_HSTMT|处理由驱动程序管理器。|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00。*nnnn*"( *nnnn* 指定生成日期)|  
+|SQL_DRIVER_VER|"4.00。*nnnn*"(* nnnn *指定生成日期)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多个值|  
-|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|从驱动程序管理器|  
 |SQL_OJ_CAPABILITIES|多个值|  

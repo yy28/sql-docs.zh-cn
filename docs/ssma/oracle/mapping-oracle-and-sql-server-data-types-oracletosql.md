@@ -1,10 +1,13 @@
 ---
 title: "映射 Oracle 和 SQL Server 数据类型 (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 80f9b9c13057d65877aaadb3b51047d739e50beb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8984f279cb6a42d057093f048a29149a7be2d981
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>映射 Oracle 和 SQL Server 数据类型 (OracleToSQL)
 Oracle 数据库类型与不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库类型。 当转换到的 Oracle 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，你必须指定如何将从到 Oracle 数据类型映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  
@@ -89,7 +92,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         无法删除继承的映射。 但是，通过上的特定对象或对象类别的自定义映射中重写继承的映射。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 迁移过程的下一步是为[创建评估报表](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)或[Oracle 数据库对象转换为 SQL Server 语法](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272)。 如果创建了一个评估报告，Oracle 对象将自动转换此评估过程。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,10 +1,13 @@
 ---
 title: "菜单命令和其他快捷键 (Oracle SQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 1bd1576f0c6b03a1299d5fc40e9a990604970689
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b6bdfbc11f7e458cb93fbf0af7a159526fe29d7f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>菜单命令和其他快捷键 (Oracle SQL)
 以下各节描述了用于访问菜单命令和其他 Oracle 应用程序的 SSMA 的各种对话框中使用键盘快捷方式的键盘快捷键。  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_SHRINKFILE_TSQL
 - DBCC SHRINKFILE
 - SHRINKFILE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data shrinking [SQL Server]
 - TRUNCATEONLY option
@@ -30,16 +32,16 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: "87"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1b96b92738d3f44c21f4e6056798da74e26872a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +65,7 @@ DBCC SHRINKFILE
 ```  
   
 ## <a name="arguments"></a>参数  
-*文件名*  
+*file_name*  
 要收缩的文件的逻辑名称。
   
 *file_id*  
@@ -163,7 +165,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   终止收缩操作。 如果终止收缩操作，则会保留任何已完成的工作。  
 -   不执行任何操作，并允许收缩操作等到阻塞事务完成。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。
   
 ## <a name="examples"></a>示例  

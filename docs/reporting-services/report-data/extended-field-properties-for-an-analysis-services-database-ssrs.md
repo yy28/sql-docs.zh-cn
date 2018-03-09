@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5d09ae6530bc9180b23a4ec81eeaeaabf1c41110
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d5c9c11ddf274af9bf8f1851509dae5bff8e27a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 **Value** 和 **IsMissing** 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 你可以通过编写使用内置 **Fields** 集合按名称指定扩展字段属性值的表达式，来将这些扩展字段属性值包含在报表中。  
@@ -54,18 +52,18 @@ ms.lasthandoff: 12/05/2017
 |------------------|--------------|---------------------------------------|  
 |**Value**|**对象**|指定字段的数据值。|  
 |**IsMissing**|**Boolean**|指示是否在结果数据集中找到了该字段。|  
-|**UniqueName**|**字符串**|返回级别的完全限定名称。 例如，某位员工的 **UniqueName** 值可能为 [Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]。|  
-|**BackgroundColor**|**字符串**|返回数据库中为该字段定义的背景颜色。|  
-|**Color**|**字符串**|返回数据库中为该项定义的前景色。|  
-|**FontFamily**|**字符串**|返回数据库中为该项定义的字体的名称。|  
-|**FontSize**|**字符串**|返回数据库中为该项定义的字体的字号。|  
-|**FontWeight**|**字符串**|返回数据库中为该项定义的字体的粗细。|  
-|**FontStyle**|**字符串**|返回数据库中为该项定义的字体的样式。|  
-|**TextDecoration**|**字符串**|返回数据库中为该项定义的特殊文本格式设置。|  
-|**FormattedValue**|**字符串**|返回度量值或关键数字的格式值。 例如， **“销售额配额”** 的 **FormattedValue** 属性将返回一种货币格式，如 $1,124,400.00。|  
+|**UniqueName**|**String**|返回级别的完全限定名称。 例如，某位员工的 **UniqueName** 值可能为 [Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]。|  
+|**BackgroundColor**|**String**|返回数据库中为该字段定义的背景颜色。|  
+|**Color**|**String**|返回数据库中为该项定义的前景色。|  
+|**FontFamily**|**String**|返回数据库中为该项定义的字体的名称。|  
+|**FontSize**|**String**|返回数据库中为该项定义的字体的字号。|  
+|**FontWeight**|**String**|返回数据库中为该项定义的字体的粗细。|  
+|**FontStyle**|**String**|返回数据库中为该项定义的字体的样式。|  
+|**TextDecoration**|**String**|返回数据库中为该项定义的特殊文本格式设置。|  
+|**FormattedValue**|**String**|返回度量值或关键数字的格式值。 例如， **“销售额配额”** 的 **FormattedValue** 属性将返回一种货币格式，如 $1,124,400.00。|  
 |**Key**|**对象**|返回级别的键。|  
 |**LevelNumber**|**Integer**|针对父子层次结构返回级别号或维度编号。|  
-|**ParentUniqueName**|**字符串**|针对父子层次结构返回父级的完全限定名称。|  
+|**ParentUniqueName**|**String**|针对父子层次结构返回父级的完全限定名称。|  
   
 > [!NOTE]  
 >  仅当数据源（如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集）在运行报表并检索报表数据集的数据时，为这些扩展字段属性提供值，这些值才存在。 然后，您可以使用下面介绍的语法从任意表达式引用这些字段属性值。 但是，由于这些字段专用于此数据访问接口，因此，对这些值所做的更改不会随报表定义一同保存。  
@@ -105,7 +103,7 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |All Periods|[Date].[Date].[All Periods]|(null)|(null)|(null)|0|  
-|1-Jul-01|[Date].[Date].&[1]|星期日|7/1/2001|[Date].[Date].[All Periods]|1|  
+|1-Jul-01|[Date].[Date].&[1]|星期日|7/1/2001|[Date].[Date].[All Periods]|@shouldalert|  
 |2-Jul-01|[Date].[Date].&[2]|星期一|7/2/2001|[Date].[Date].[All Periods]|2|  
 |3-Jul-01|[Date].[Date].&[3]|星期二|7/3/2001|[Date].[Date].[All Periods]|3|  
   
@@ -136,7 +134,7 @@ CELL PROPERTIES
   
  即使属性是 MDX 选择语句的一部分，它们也不会显示在结果集列中。 尽管如此，使用扩展属性功能仍可将这些数据用于报表。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 MDX 查询结果窗格中，你可以双击单元格并查看单元格的属性值（如果在多维数据集中进行了设置）。 如果双击第一个包含 1,379 的 Order Count 单元，则会看到一个包含以下单元属性的弹出窗口：  
   
-|属性|Value|  
+|“属性”|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  

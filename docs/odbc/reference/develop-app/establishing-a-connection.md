@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2d061c689ae35a93eceab083f554ed6534ca810
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b782f94bb67580308c844a653389800fb0ff7af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="establishing-a-connection"></a>建立连接
 后分配环境和连接句柄并设置任何连接属性，应用程序已准备好连接到数据源或驱动程序。 应用程序可用于执行此操作的三个不同函数： **SQLConnect** （核心接口一致性级别）， **SQLDriverConnect** （核心） 和**SQLBrowseConnect**(级别 1)。 这三个用于在不同的方案中使用。 连接之前，，应用程序可以确定这这些函数与受支持**ConnectFunctions**关键字由**SQLDrivers**。  

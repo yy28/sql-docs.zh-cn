@@ -1,11 +1,11 @@
 ---
-title: "步骤 1： 创建新的集成服务项目 |Microsoft 文档"
+title: "步骤 1：创建新的 Integration Services 项目 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 162bd2913648f8164c11fb425f8ca58a976c74a2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 771c956d5e33dfc6b91ff70acfc387244d2513d6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-1---creating-a-new-integration-services-project"></a>课程 1-1-创建新的 Integration Services 项目
+# <a name="lesson-1-1---creating-a-new-integration-services-project"></a>第 1-1 课 - 创建新的 Integration Services 项目
 若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建包，第一步是创建一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 此项目包含在数据转换解决方案中使用的数据源、数据源视图和包等对象的模板。  
   
 将在本 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中创建的包用于解释受区域设置影响的数据的值。 如果您的计算机未配置为使用区域选项“英语(美国)”，则需要在包中设置其他属性。 第 2 课到第 5 课中使用的包是从第 1 课中创建的包复制而来的，因此不需要更新复制的包中受区域设置影响的属性。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 > 本教程需要 Microsoft SQL Server Data Tools。  
 >   
-> 有关安装 SQL Server Data Tools 的详细信息，请参阅 [SQL Server Data Tools 下载](http://msdn.microsoft.com/en-us/data/hh297027)。  
+> 有关安装 SQL Server Data Tools 的详细信息，请参阅 [SQL Server Data Tools 下载](http://msdn.microsoft.com/data/hh297027)。  
   
 ### <a name="to-create-a-new-integration-services-project"></a>创建新的 Integration Services 项目  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/26/2017
   
 5.  接受默认位置，或单击“浏览”，以浏览并找到要使用的文件夹。 在“项目位置”对话框中，单击文件夹，再单击“选择文件夹”。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
     默认情况下，将创建一个名为 **Package.dtsx** 的空包，并将该包添加到项目中的“SSIS 包”之下。  
   
@@ -58,4 +57,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [步骤 2：添加和配置平面文件连接管理器](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
-

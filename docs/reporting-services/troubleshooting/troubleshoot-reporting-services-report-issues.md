@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f74bae865a6d2fe3ec5fbd86c77b24af2284ff7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9546aaea0b177552fa83095c342a24a2e0f954e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>排查 Reporting Services 报表问题
 本主题可以帮助解决在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 报表设计、预览报表、将报表发布到本机模式或 SharePoint 集成模式下的报表服务器、在报表服务器上查看报表或以其他文件格式导出报表时遇到的问题。  

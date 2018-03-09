@@ -2,10 +2,14 @@
 title: "配置可用性副本备份 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 888adf11733fcc00ed233cbb8f32cbe3b64c9e96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 51e23d647bd96cdb540223af2ef18cd6ba996c2c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>配置可用性副本备份 (SQL Server)
-  本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 配置 AlwaysOn 可用性组的次要副本的备份。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 配置 AlwaysOn 可用性组的次要副本的备份。  
   
 > [!NOTE]  
 >  有关辅助副本备份的介绍，请参阅 [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)或 PowerShell 配置 AlwaysOn 可用性组的次要副本的备份。  
@@ -38,7 +43,7 @@ ms.lasthandoff: 11/09/2017
   
      [先决条件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要配置辅助副本备份，可使用：**  
   
@@ -61,7 +66,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
   
 |任务|权限|  
 |----------|-----------------|  
@@ -134,7 +139,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  （可选）配置要添加或修改的每个可用性副本的备份优先级。 此优先级由承载主副本的服务器实例用来确定哪一副本应该用于针对可用性组中某一数据库的自动备份请求（选择具有最高优先级的副本）。 该优先级可以是 0 和 100 之间（含 0 和 100）的任何数字。 优先级 0 指示副本不应视作支持备份请求的候选。  默认设置为 50。  
   
-     在将可用性副本添加到可用性组中时，使用 **New-SqlAvailabilityReplica** cmdlet。 在修改现有可用性副本时，使用 **Set-SqlAvailabilityReplica** cmdlet。 在任一情况下，指定 **BackupPriority***n* 参数，其中 *n* 是一个介于 0 和 100 之间的值。  
+     在将可用性副本添加到可用性组中时，使用 **New-SqlAvailabilityReplica** cmdlet。 在修改现有可用性副本时，使用 **Set-SqlAvailabilityReplica** cmdlet。 在任一情况下，指定 BackupPriorityn 参数，其中 n 是一个介于 0 和 100 之间的值。  
   
      例如，以下命令会将可用性副本 `MyReplica` 的备份优先级设置为 **60**。  
   

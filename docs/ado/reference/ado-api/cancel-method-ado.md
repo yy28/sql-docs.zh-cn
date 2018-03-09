@@ -3,8 +3,9 @@ title: "Cancel 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Connection::Cancel
 - Command25::Cancel
 - _Stream::Cancel
-helpviewer_keywords: Cancel method [ADO]
+helpviewer_keywords:
+- Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b0112431262f9b120bb3006c07e077e968f79c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9dd6f6c62d9ee20f75dabc8b28831b7376fc00b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancel-method-ado"></a>Cancel 方法 (ADO)
 取消挂起的异步方法调用的执行。  
@@ -48,10 +50,10 @@ object.Cancel
   
 |如果*对象*是|终止对此方法的最后一个异步调用|  
 |----------------------|-------------------------------------------------------------|  
-|[Command](../../../ado/reference/ado-api/command-object-ado.md)|[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Command](../../../ado/reference/ado-api/command-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[连接](../../../ado/reference/ado-api/connection-object-ado.md)|[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)或[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
-|[记录](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)，[移动记录](../../../ado/reference/ado-api/moverecord-method-ado.md)，或[打开](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[Record](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)，[移动记录](../../../ado/reference/ado-api/moverecord-method-ado.md)，或[打开](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
 |[流](../../../ado/reference/ado-api/stream-object-ado.md)|[打开](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>适用范围  

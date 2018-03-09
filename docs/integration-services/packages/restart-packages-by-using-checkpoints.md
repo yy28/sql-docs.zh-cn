@@ -1,5 +1,5 @@
 ---
-title: "通过使用检查点重新启动包 |Microsoft 文档"
+title: "使用检查点重启包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5630458cf4f925ad1cce7cfab27cedbcf66bf3eb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以从失败点重新启动失败的包，而不是重新运行整个包。 如果包配置为使用检查点，则关于包执行的信息会写入检查点文件中。 当重新运行失败的包时，可以使用检查点文件从失败点重新启动该包。 如果包成功运行，则会删除该检查点文件，然后在下次运行包时会重新创建相应的检查点文件。  
@@ -61,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
  下表列出了可设置为实现检查点的包属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |CheckpointFileName|指定检查点文件的名称。|  
 |CheckpointUsage|指定是否使用检查点。|  
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="checkpoint-usage"></a>检查点用法  
  CheckpointUsage 属性可设置为下列值：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**从不**|指定不使用检查点文件，包从包工作流的起点开始运行。|  
 |**始终**|指定始终使用检查点文件，包从上一次执行失败的点重新启动。 如果找不到检查点文件，则包失败。|  
@@ -123,4 +122,3 @@ ms.lasthandoff: 08/03/2017
 -   social.technet.microsoft.com 上的技术文章： [在故障转移或失败后自动重新启动 SSIS 包](http://go.microsoft.com/fwlink/?LinkId=200407)  
   
 -   support.microsoft.com 上的支持文章： [不为 For 循环和 Foreach 循环容器项采用 SSIS 检查点](http://go.microsoft.com/fwlink/?LinkId=241633)。  
-

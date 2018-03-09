@@ -3,8 +3,11 @@ title: "查询和视图设计器如何表示联接 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2231538d858cf69c6275c00458ebfa97561bd303
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9392dee21a72846a2659c68d9804369127fe8235
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查询和视图设计器如何表示联接 (Visual Database Tools)
-如果对表进行了联接，[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将在“[关系图](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)”窗格中以图形方式表示联接，并在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中使用 SQL 语法表示联接。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果对表进行了联接，[查询和视图设计器](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)将在“[关系图](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)”窗格中以图形方式表示联接，并在 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中使用 SQL 语法表示联接。  
   
 ## <a name="diagram-pane"></a>“关系图”窗格  
 在“关系图”窗格中，查询和视图设计器在联接所涉及的数据列之间显示一条联接线。 查询和视图设计器为每个联接条件显示一条联接线。 例如，下图阐释两个联接的表之间的联接线：  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
   
 联接线中间的图标形状指示表或表结构对象的联接方式。 如果联接子句使用等号 (=) 以外的运算符，则该运算符将出现在联接线图标中。 下表列出了在联接线上显示的图标。  
   
-|**联接线图标**|**说明**|  
+|**联接线图标**|**Description**|  
 |----------------------|-------------------|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools 图标")|内部联接（用等号创建）。|  
 |![Visual Database Tools 图标](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 图标")|基于“大于”运算符的内部联接。|  

@@ -3,8 +3,9 @@ title: "FilterCriterion 属性 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: FilterCriterion property [RDS]
+helpviewer_keywords:
+- FilterCriterion property [RDS]
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24e64adb684435f40c52c55d1c97b1c863551ecb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8221e70c15c4c7eda5404d0bb56a40a856964baa
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 属性 (RDS)
 指示要使用的筛选器值中的评估运算符。  

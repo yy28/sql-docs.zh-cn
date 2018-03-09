@@ -1,32 +1,35 @@
 ---
-title: "将列映射到复合域 |Microsoft 文档"
+title: "将列映射到复合域 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a8f24f9808d184229cb85be5ddc88d0102f2ee7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f8fb2e38ea252928a84dfaa8404d1b29b0bb6f33
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="map-columns-to-composite-domains"></a>将列映射到复合域
   一个复合域包含两个或多个单一域。 您可以将多个列映射到域，也可以将具有分隔值的单个列映射到域。  
   
- 当您具有多个列时，必须将一个列映射到复合域中的每个单一域，以便应用复合域规则来执行数据清理。 在数据质量客户端中选择复合域中包含的单一域。 有关详细信息，请参阅 [Create a Composite Domain](../../../data-quality-services/create-a-composite-domain.md)。  
+ 当您具有多个列时，必须将一个列映射到复合域中的每个单一域，以便应用复合域规则来执行数据清理。 在数据质量客户端中选择复合域中包含的单一域。 有关详细信息，请参阅 [创建复合域](../../../data-quality-services/create-a-composite-domain.md)。  
   
- 在您具有含分隔值的单个列时，必须将该单个列映射到复合域。 这些值的出现顺序必须与单一域在复合域中的出现顺序相同。 数据源中的分隔符必须匹配用于解析复合域值的分隔符。 在数据质量客户端中为复合域选择分隔符，以及设置其他属性。 有关详细信息，请参阅 [Create a Composite Domain](../../../data-quality-services/create-a-composite-domain.md)。  
+ 在您具有含分隔值的单个列时，必须将该单个列映射到复合域。 这些值的出现顺序必须与单一域在复合域中的出现顺序相同。 数据源中的分隔符必须匹配用于解析复合域值的分隔符。 在数据质量客户端中为复合域选择分隔符，以及设置其他属性。 有关详细信息，请参阅 [创建复合域](../../../data-quality-services/create-a-composite-domain.md)。  
   
 ### <a name="to-map-multiple-columns-to-a-composite-domain"></a>将多个列映射到一个复合域  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  根据需要，修改在 **“源别名”**、 **“输出别名”**和 **“状态别名”** 字段中出现的名称。  
   
-6.  根据需要，在 **“高级”** 选项卡上设置属性。 有关属性的详细信息，请参阅 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
+6.  根据需要，在 **“高级”** 选项卡上设置属性。有关属性的详细信息，请参阅 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
   
 ### <a name="to-map-a-column-with-delimited-values-to-a-composite-domain"></a>将具有分隔值的列映射到复合域  
   
@@ -54,9 +57,9 @@ ms.lasthandoff: 08/03/2017
   
 5.  根据需要，修改在 **“源别名”**、 **“输出别名”**和 **“状态别名”** 字段中出现的名称。  
   
-6.  根据需要，在 **“高级”** 选项卡上设置属性。 有关属性的详细信息，请参阅 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
+6.  根据需要，在 **“高级”** 选项卡上设置属性。有关属性的详细信息，请参阅 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [DQS 清除转换](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [DQS 清理转换](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

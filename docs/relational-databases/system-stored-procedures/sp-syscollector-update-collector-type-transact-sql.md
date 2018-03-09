@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collector_type_TSQL
 - sp_syscollector_update_collector_type
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e8f2dbc3024ee7349774c1bccd10d75c0bfffb7
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 484acd19197e5df0cdf8f8b342d67a5e18b66c63
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,25 +51,25 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@collector_type_uid =** ] *collector_type_uid*  
+ [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
  是收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**，并且如果它为的 NULL，它将自动创建和返回作为输出。  
   
- [  **@name =** ] *名称*  
+ [ **@name =** ] **'***name***'**  
  收集器类型的名称。 *名称*是**sysname**并且必须指定。  
   
- [  **@parameter_schema =** ] *parameter_schema*  
+ [ **@parameter_schema =** ] **'***parameter_schema***'**  
  此收集器类型的 XML 架构。 *parameter_schema*是**xml**和可能要求的特定收集器类型。 如果它不是必需的，此参数可为 NULL。  
   
- [  **@collection_package_id =** ] *collection_package_id*  
+ [ **@collection_package_id =** ] *collection_package_id*  
  指向收集组使用的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集包的本地唯一标识符。 *collection_package_id*是**uniqueidentifer**和是必需的。 若要获取的值*collection_package_id*，查询在 msdb 数据库 dbo.syscollector_collector_types 系统视图。  
   
- [  **@upload_package_id =** ] *upload_package_id*  
+ [ **@upload_package_id =** ] *upload_package_id*  
  指向收集组使用的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上载包的本地唯一标识符。 *upload_package_id*是**uniqueidentifier**和是必需的。 若要获取的值*upload_package_id*，查询在 msdb 数据库 dbo.syscollector_collector_types 系统视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**dc_admin** （拥有 EXECUTE 权限） 固定的数据库角色。  
   
 ## <a name="example"></a>示例  

@@ -1,14 +1,15 @@
 ---
 title: "集 NUMERIC_ROUNDABORT (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - SET_NUMERIC_ROUNDABORT_TSQL
 - SET NUMERIC_ROUNDABORT
 - NUMERIC_ROUNDABORT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - rounding expressions
 - precision [SQL Server], rounded expressions
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - NUMERIC_ROUNDABORT
 - SET NUMERIC_ROUNDABORT statement
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a78c81a9990b2a9c895776c5f51fe9046b2eb5d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: a4f5a5369321999a980835a502a730bfe383aefd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,20 +43,13 @@ ms.lasthandoff: 11/21/2017
   指定当表达式中的舍入导致精度损失时生成的错误报告级别。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>语法  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET NUMERIC_ROUNDABORT { ON | OFF }   
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET NUMERIC_ROUNDABORT ON;  
-```  
+
+## <a name="syntax"></a>语法
+
+```
+
+SET NUMERIC_ROUNDABORT { ON | OFF }
+```
   
 ## <a name="remarks"></a>注释  
  当 SET NUMERIC_ROUNDABORT 为 ON 时，在表达式中出现精度损失时将生成错误。 当设置为 OFF 时，精度损失不生成错误信息，并且将结果舍入为存储结果的列或变量的精度。  
@@ -63,16 +58,16 @@ SET NUMERIC_ROUNDABORT ON;
   
  如果 SET NUMERIC_ROUNDABORT 为 ON，则 SET ARITHABORT 决定生成错误的严重级别。 该表显示当出现精度损失时这两个设置的效果。  
   
-|设置|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|  
-|-------------|--------------------------------|---------------------------------|  
+|设置|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|
+|-------------|--------------------------------|---------------------------------|
 |SET ARITHABORT ON|生成错误；不返回结果集。|没有错误和警告；对结果进行舍入。|  
 |SET ARITHABORT OFF|返回警告；表达式返回 NULL。|没有错误和警告；对结果进行舍入。|  
+
+ SET NUMERIC_ROUNDABORT 的设置是在执行或运行时设置，而不是在分析时设置。
+
+ 在对计算列或索引视图创建或更改索引时，SET NUMERIC_ROUNDABORT 必须为 OFF。 如果 SET NUMERIC_ROUNDABORT 为 ON，创建、 更新、 插入和删除语句在表上使用的计算的列或索引的视图上的索引将失败。 对计算列所需的 SET 选项设置的索引的视图和索引的详细信息，请参阅"当你使用 SET 语句的注意事项"中[SET 语句 &#40;Transact SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md).
   
- SET NUMERIC_ROUNDABORT 的设置是在执行或运行时设置，而不是在分析时设置。  
-  
- 在对计算列或索引视图创建或更改索引时，SET NUMERIC_ROUNDABORT 必须为 OFF。 如果 SET NUMERIC_ROUNDABORT 为 ON，则用于计算列或索引视图中带索引的表的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 对计算列所需的 SET 选项设置的索引的视图和索引的详细信息，请参阅"当你使用 SET 语句的注意事项"中[SET 语句 &#40;Transact SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md).  
-  
- 要查看此设置的当前设置，请运行以下查询。  
+ 若要查看此设置的当前设置，请运行以下查询：
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  

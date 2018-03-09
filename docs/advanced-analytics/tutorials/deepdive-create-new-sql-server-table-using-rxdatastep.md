@@ -1,58 +1,68 @@
 ---
-title: "创建新的 SQL Server 表使用 rxDataStep |Microsoft 文档"
+title: "创建新的 SQL Server 表使用 rxDataStep （SQL 和 R 深入） |Microsoft 文档"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- R
 ms.assetid: 98cead96-6de7-4edf-98b9-a1efb09297b9
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c37cb44bdf2cc30e826ced8e06d47ec64c80f1b1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b64a62a9bc5e9b7c105bae1f6a8dda4a60e641c4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="create-new-sql-server-table-using-rxdatastep"></a>使用 rxDataStep 创建新的 SQL Server 表
+# <a name="create-new-sql-server-table-using-rxdatastep-sql-and-r-deep-dive"></a>创建新的 SQL Server 表使用 rxDataStep （SQL 和 R 深入）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本课程中，你将学习如何在内存中数据帧、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上下文和本地文件之间移动数据。
+本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 
-> [!NOTE]
-> 在本课程中，你将使用另一数据集。 航班延迟数据集是广泛用于机器学习试验的公共数据集。 刚开始使用 R 时，可以很方便获得此数据进行测试，因为其用于随 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 一起发布的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的各种产品示例。 在本例中所需的数据文件在与其他产品示例相同的目录中提供。
-
-## <a name="create-sql-server-table-from-local-data"></a>通过本地数据创建 SQL Server 表
-
-在本教程的第一部分，你使用了**RxTextData**函数以将数据导入从一个文本文件，R，然后使用**RxDataStep**函数将数据插入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
-
-在本课程中，你将使用另一方法，并从以 [XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format)保存的文件中获取数据。 XDF 格式是为高维数据开发的 XML 标准。 其为二进制文件格式，具有用于优化行和列的处理与分析的 R 接口。  可将其用于移动数据和存储对分析有用的数据子集。
-
-使用 XDF 文件对数据执行一些轻型转换后，将转换的数据保存到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。
+在本课程中，你学习如何内存中数据帧之间移动数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上下文和本地文件。
 
 > [!NOTE]
-> 对于此步骤需要 DDL 权限。
+> 本课程中使用不同的数据集。 航班延迟数据集是广泛用于机器学习试验的公共数据集。 此示例中使用的数据文件与其他产品示例相同的目录中可用。
 
-1. 将计算上下文设置为本地工作站。
+## <a name="create-sql-server-table-from-local-data"></a>从本地数据创建 SQL Server 表
+
+在本教程的第一个部分，您使用**RxTextData**函数以将数据导入从一个文本文件，R，然后使用**RxDataStep**函数将数据插入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+
+本课程采用不同的方法，并使用文件中的数据保存在[XDF 格式](https://en.wikipedia.org/wiki/Extensible_Data_Format)。 在执行某些轻型转换使用 XDF 文件的数据之后, 你将保存的已转换的数据到一个新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。
+
+**什么是 XDF？**
+
+XDF 格式是一 XML 标准开发高维数据并通过使用本机文件格式[机器学习服务器](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)。 其为二进制文件格式，具有用于优化行和列的处理与分析的 R 接口。  可将其用于移动数据和存储对分析有用的数据子集。
+
+1. 将计算上下文设置为本地工作站。 **此步骤需要 DDL 权限。**
+
   
     ```R
     rxSetComputeContext("local")
     ```
   
-2. 使用 RxXdfData 函数定义新数据源对象。 对于 XDF 数据源，只需指定数据文件的路径。  你可以指定使用的文本变量，该文件的路径，但在这种情况下，存在是方便快捷方式，因为示例数据文件 (AirlineDemoSmall.xdf) 在 rxGetOption 函数返回的目录。
+2. 使用 RxXdfData 函数定义新数据源对象。 若要定义 XDF 数据源，指定数据文件的路径。  
+
+    你可以指定使用的文本变量的文件的路径。 但是，在这种情况下，没有方便快捷方式，就是使用**rxGetOption**函数，并从示例数据目录获取文件 (AirlineDemoSmall.xdf)。
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. 调用 rxGetVarInfo 对内存中数据来查看数据集的摘要。
+3. 对内存中数据调用 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 以查看数据集的摘要。
   
     ```R
     rxGetVarInfo(xdfAirDemo)
@@ -68,9 +78,9 @@ ms.lasthandoff: 11/09/2017
 
 > [!NOTE]
 > 
-> 您发现你不需要调用任何其他函数以将数据载入 XDF 文件，并可以调用 rxGetVarInfo 对数据立即？ 这是因为 XDF 是针对 RevoScaleR 的默认临时存储方法。 有关 XDF 文件的详细信息，请参阅[创建 XDF](https://msdn.microsoft.com/microsoft-r/scaler-data-xdf)。
+> 你是否注意将数据加载到 XDF 文件时不需要调用任何其他函数，并可立即对该数据调用 rxGetVarInfo？ 这是因为 XDF 是针对 RevoScaleR 的默认临时存储方法。 除了 XDF 文件**rxGetVarInfo**函数现在支持多个源类型。
   
-4. 现在，你会将此数据置于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中，从而使用 1 到 7 之间的值将 _DayOfWeek_ 存储为整数。
+4. 将此数据插入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，存储_DayOfWeek_作为值从 1 到 7 之间的整数。
   
     为此，请首先定义 SQL Server 数据源。
   
@@ -84,7 +94,7 @@ ms.lasthandoff: 11/09/2017
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-6. 使用 **rxDataStep** 创建表并加载数据。 此函数将两个之间的数据已定义数据源，并可以转换数据路由。
+6. 使用 **rxDataStep** 创建表并加载数据。 此函数将两个之间的数据已定义数据源，并可以根据需要转换数据路由。
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
@@ -93,7 +103,7 @@ ms.lasthandoff: 11/09/2017
             overwrite = TRUE )
     ```
   
-    这是一个相当大的表，因此将等到你看到最终状态消息：*读取的行数: 200000，已处理的总行数: 600000*。
+    这是相当大型表，因此等待，直到你看到如下所示的最终状态消息：*行读取： 200000，总行处理： 600000*。
      
 7. 将计算上下文重新设置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机。
 
@@ -101,7 +111,7 @@ ms.lasthandoff: 11/09/2017
     rxSetComputeContext(sqlCompute)
     ```
   
-8. 对新表使用简单的 SQL 查询创建新的 SQL Server 数据源。 此定义使用 RxSqlServerData 的 *colInfo* 参数为 *DayOfWeek* 列添加了因素级别。
+8. 对新表使用简单的 SQL 查询创建新的 SQL Server 数据源。 此定义添加了因素级别*DayOfWeek*列中，使用*colInfo*参数**RxSqlServerData**。
   
     ```R
     SqlServerAirDemo <- RxSqlServerData(
@@ -111,7 +121,7 @@ ms.lasthandoff: 11/09/2017
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-9. 调用 rxSummary 以查看你的查询中的数据的摘要。
+9. 调用**rxSummary**以查看你的查询中的数据的摘要。
   
     ```R
     rxSummary(~., data = sqlServerAirDemo)
@@ -119,10 +129,8 @@ ms.lasthandoff: 11/09/2017
 
 ## <a name="next-step"></a>下一步
 
-[执行使用 rxDataStep 分块分析](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
+[使用 rxDataStep 执行区块分析](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
 
 ## <a name="previous-step"></a>上一步
 
-[将数据加载到内存中用 rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-
-
+[使用 rxImport 将数据加载到内存中](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)

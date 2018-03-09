@@ -1,32 +1,35 @@
 ---
 title: "ALTER WORKLOAD GROUP (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_WORKLOAD_GROUP_TSQL
 - ALTER WORKLOAD GROUP
-dev_langs: TSQL
-helpviewer_keywords: ALTER WORKLOAD GROUP statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bfb6ca0200095860acec2b275020012e4b96284
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -53,36 +55,34 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>参数  
- *group_name* |"**默认**"  
+ *group_name* | "**default**"  
  是现有用户定义工作负荷组或资源调控器默认工作负荷组的名称。  
   
 > [!NOTE]  
->  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时资源调控器创建“默认”和内部组。  
+> 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时资源调控器创建“默认”和内部组。  
   
  与 ALTER WORKLOAD GROUP 一起使用时，选项 "default" 必须用引号 ("") 引起来或用方括号 ([]) 括起来，以免与系统保留字 DEFAULT 冲突。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
 > [!NOTE]  
->  预定义的工作负荷组和资源池全部使用小写字母的名称，例如"默认"。 对于使用区分大小写排序规则的服务器，应当注意这一点。 使用不区分大小写排序规则的服务器（例如 SQL_Latin1_General_CP1_CI_AS）会将“default”和“Default”视为相同。  
+> 预定义的工作负荷组和资源池全部使用小写字母的名称，例如"默认"。 对于使用区分大小写排序规则的服务器，应当注意这一点。 使用不区分大小写排序规则的服务器（例如 SQL_Latin1_General_CP1_CI_AS）会将“default”和“Default”视为相同。  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  指定工作负荷组中某个请求的相对重要性。 重要性为以下值之一：  
   
 -   LOW  
-  
 -   MEDIUM（默认值）  
-  
 -   HIGH  
   
 > [!NOTE]  
->  在内部，每个重要性设置都存储为用于计算的一个数字。  
+> 在内部，每个重要性设置都存储为用于计算的一个数字。  
   
  IMPORTANCE 对资源池而言是局部性的；同一资源池内重要性不同的工作负荷组会相互影响，但不会影响其他资源池中的工作负荷组。  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*值*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  指定单个请求可以从池中获取的最大内存量。 此百分比是相对于 MAX_MEMORY_PERCENT 指定的资源池大小而言的。  
   
 > [!NOTE]  
->  指定的量指的只是查询执行授予内存。  
+> 指定的量指的只是查询执行授予内存。  
   
  *值*必须为 0 或一个正整数。 所允许的范围*值*是从 0 到 100 之间。 默认设置*值*为 25。  
   
@@ -101,11 +101,14 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  请注意，如果服务器没有足够的物理内存，则这两种情况都会出现超时错误 8645。  
   
- REQUEST_MAX_CPU_TIME_SEC =*值*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  指定请求可以使用的最长 CPU 时间，以秒为单位。 *值*必须为 0 或一个正整数。 默认设置*值*为 0，这意味着无限制。  
   
 > [!NOTE]  
->  如果超过最长时间，资源调控器并不会阻止继续发出请求。 但会生成一个事件。 有关详细信息，请参阅[CPU 阈值超出 Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。  
+> 默认情况下，资源调控器不会阻止请求继续如果超出最大时间。 但会生成一个事件。 有关详细信息，请参阅[CPU 阈值超出 Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。 
+
+> [!IMPORTANT]
+> 从开始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3，并使用[跟踪标志 2422年](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，资源调控器将中止请求时超出最大时间。
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*值*  
  指定查询等待内存授予（工作缓冲区内存）变为可用的最长时间（以秒为单位）。  
@@ -115,7 +118,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *值*必须是正整数。 默认设置*值*，0，使用基于查询开销的内部计算来确定的最长时间。  
   
- MAX_DOP =*值*  
+ MAX_DOP =*value*  
  指定最大并行度 (DOP 并行请求)。 *值*必须是 0 或正整数，1 到 255。 当*值*为 0，则服务器会选择最大并行度。 这是默认设置，还是推荐设置。  
   
 > [!NOTE]  
@@ -136,7 +139,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  配置 DOP 后，只能在授予内存不足时降低它。 工作负荷组重新配置在授予内存队列中等待时不可见。  
   
- GROUP_MAX_REQUESTS =*值*  
+ GROUP_MAX_REQUESTS =*value*  
  指定在工作负荷组中允许执行的同时请求最大数。 *值*必须为 0 或一个正整数。 默认设置*值*，0，允许无限的请求。 当达到最大并发请求数时，该组中的用户可以登录但置于等待状态，直至并发请求数降到指定值之下。  
   
  使用 { *pool_name* |"**默认**"}  
@@ -167,7 +170,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  针对非对齐已分区表创建索引占用的内存是涉及的分区数成正比。  如果所需的内存总量超过资源调控器工作负荷组设置为每个查询设定的限制 (REQUEST_MAX_MEMORY_GRANT_PERCENT)，则可能无法执行这种索引创建。 由于“默认”工作负荷组允许查询超过每个查询的限制，并在开始时使用所需的最低内存以便与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 保持兼容，因此，如果“默认”资源池配置了足够多的内存总量以运行此类查询，则用户或许能够在“默认”工作负荷组中运行相同的索引创建。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

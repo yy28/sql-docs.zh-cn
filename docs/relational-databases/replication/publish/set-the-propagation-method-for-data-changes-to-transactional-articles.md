@@ -2,29 +2,34 @@
 title: "为事务项目的数据更改设置传播方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, propagation methods
 - propagating data changes [SQL Server replication]
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b79b21cea8d1edfbb3c1aecf5bbaf2f4fa86624a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0f97ecca34a7c61305e243ce75a11dc58a5f641f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>为事务项目的数据更改设置传播方法
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为事务项目的数据更改设置传播方法。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为事务项目的数据更改设置传播方法。  
   
  默认情况下，事务复制使用一组存储过程将每个项目的更改传播到订阅服务器。 可以使用自定义过程替换这些存储过程。 有关详细信息，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
@@ -119,11 +124,11 @@ ms.lasthandoff: 11/09/2017
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication**指定项目所属的发布的名称，为 **@article**指定项目的名称，为 **@source_object**指定要发布的数据库对象，并为包含值 **@schema_option** （可自动生成自定义存储过程）的 **@schema_option** 位掩码以及下列至少一个参数指定值：  
   
-    -   **@ins_cmd** - 指定 **CALL sp_MSins_*article_name*** 的值，其中，***article_name*** 是为 **@article** 指定的值。  
+    -   @ins_cmd - 指定 CALL sp_MSins_article_name 的值，其中，article_name 是为 @article 指定的值。  
   
-    -   **@del_cmd** - 指定 **CALL sp_MSdel_*article_name*** 或 **XCALL sp_MSdel_*article_name*** 的值，其中，***article_name*** 是为 **@article** 指定的值。  
+    -   @del_cmd - 指定 CALL sp_MSdel_article_name 或 XCALL sp_MSdel_article_name 的值，其中 article_name 是为 @article 指定的值。  
   
-    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_*article_name***、**CALL sp_MSupd_*article_name***、**XCALL sp_MSupd_*article_name* **或 **MCALL sp_MSupd_*article_name*** 的值，其中，***article_name*** 是为 **@article** 指定的值。  
+    -   @upd_cmd - 指定 SCALL sp_MSupd_article_name、 CALL sp_MSupd_article_name、XCALL sp_MSupd_article_name 或 MCALL sp_MSupd_article_name 的值，其中 article_name 是为 @article 指定的值。  
   
     > [!NOTE]  
     >  对于以上每个命令参数，您都可以为复制生成的存储过程指定您自己的名称。  
@@ -139,11 +144,11 @@ ms.lasthandoff: 11/09/2017
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication**指定项目所属的发布的名称，为 **@article**指定项目的名称，为 **@source_object**指定要发布的数据库对象，并为包含值 **@schema_option** （可自动生成自定义存储过程）的 **@schema_option** 位掩码以及下列至少一个参数指定值：  
   
-    -   **@ins_cmd** - 指定 **CALL sp_MSins_*article_name*** 的值，其中，***article_name*** 是为 **@article** 指定的值。  
+    -   @ins_cmd - 指定 CALL sp_MSins_article_name 的值，其中，article_name 是为 @article 指定的值。  
   
-    -   **@del_cmd** - 指定 **CALL sp_MSdel_*article_name*** 或 **XCALL sp_MSdel_*article_name*** 的值，其中，***article_name*** 是为 **@article** 指定的值。  
+    -   @del_cmd - 指定 CALL sp_MSdel_article_name 或 XCALL sp_MSdel_article_name 的值，其中 article_name 是为 @article 指定的值。  
   
-    -   **@upd_cmd** - 指定 **SCALL sp_MSupd_*article_name***、**CALL sp_MSupd_*article_name***、**XCALL sp_MSupd_*article_name***、**MCALL sp_MSupd_*article_name*** 的值，其中，***article_name*** 是为 **@article** 指定的值。  
+    -   @upd_cmd - 指定 SCALL sp_MSupd_article_name、 CALL sp_MSupd_article_name、XCALL sp_MSupd_article_name 或 MCALL sp_MSupd_article_name 的值，其中 article_name 是为 @article 指定的值。  
   
     > [!NOTE]  
     >  对于以上每个命令参数，您都可以为复制生成的存储过程指定您自己的名称。  

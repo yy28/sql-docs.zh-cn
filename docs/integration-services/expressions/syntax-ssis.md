@@ -1,5 +1,5 @@
 ---
-title: "语法 (SSIS) |Microsoft 文档"
+title: "语法 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 298c94c7a016e3df8bd89a11281d571f1c5b669d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 28dc10cc407a41e8ba2ec594fdacbe293dbe53a1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="syntax-ssis"></a>语法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语法与 C 和 C# 语言使用的语法类似。 表达式可包括多种元素，例如标识符（列和变量）、文字、运算符和函数。 本主题概述了表达式计算器语法在应用于不同的表达式元素时的特殊要求。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="identifiers"></a>标识符  
  表达式可包含列和变量标识符。 列可以源自数据源或由数据流中的转换创建。 表达式可以使用沿袭标识符来引用列。 沿袭标识符是唯一地标识包元素的数字。 表达式中引用的沿袭标识符必须包含井号 (#) 前缀。 例如，使用 #138 引用沿袭标识符 138。  
   
- 表达式可包含 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系统变量和自定义变量。 在表达式中引用的变量必须包含 @ 前缀。 例如，`Counter`使用引用变量@Counter。 @ 字符不是变量名的一部分，它仅向表达式计算器指示该标识符是一个变量。 有关详细信息，请参阅[标识符 (SSIS)](../../integration-services/expressions/identifiers-ssis.md)。  
+ 表达式可包含 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系统变量和自定义变量。 在表达式中引用的变量必须包含 @ 前缀。 例如，使用 @Counter 引用 `Counter` 变量。 @ 字符不是变量名的一部分，它仅向表达式计算器指示该标识符是一个变量。 有关详细信息，请参阅[标识符 (SSIS)](../../integration-services/expressions/identifiers-ssis.md)。  
   
 ## <a name="literals"></a>文字  
  表达式可以包含数值、字符串和布尔文字。 表达式中使用的字符串文字必须用引号引起来。 数值和布尔文字不使用引号。 表达式语言包含用于常用转义字符的转义序列。 有关详细信息，请参阅[文字 (SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
  有关详细信息，请参阅[函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [在数据流组件中使用表达式](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>相关内容  
@@ -93,4 +92,3 @@ ms.lasthandoff: 08/03/2017
 -   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](http://go.microsoft.com/fwlink/?LinkId=220761)  
   
   
-

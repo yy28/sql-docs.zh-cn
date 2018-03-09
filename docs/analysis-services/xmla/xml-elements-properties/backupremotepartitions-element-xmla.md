@@ -2,15 +2,13 @@
 title: "BackupRemotePartitions 元素 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: BackupRemotePartitions Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1978d6f9690d6eb9937901d17e9baf0ae800b668
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72261e1b88207e9c20f05dd82c7720c86fd73534
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backupremotepartitions-element-xmla"></a>BackupRemotePartitions 元素 (XMLA)
-  确定是否父[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令备份与对象关联的远程分区。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]确定是否父[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)命令备份与对象关联的远程分区。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|Boolean|  
 |默认值|False|  
@@ -61,9 +59,9 @@ ms.lasthandoff: 11/17/2017
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[备份](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|  
-|子元素|无|  
+|子元素|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果**BackupRemotePartitions**设置为**True**、**位置**包含一个或多个元素**位置**元素必须包含在**备份**命令，或出现错误。 有关备份和还原远程分区的详细信息，请参阅[Backing Up，正在还原，和同步数据库 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>另请参阅  

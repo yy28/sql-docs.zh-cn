@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d47221585f9bf08f4493043224390ff2d82bb30e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
   **rsconfig.exe** 实用工具可以在 RSReportServer.config 文件中加密并存储连接和帐户值。 加密值包括用于无人参与报表处理的报表服务器数据库连接信息和帐户值。  
@@ -60,29 +58,29 @@ rsconfig {-?}
 |**-e**|如果未使用 **-c** 参数，则为必需项。|指定无人参与报表执行帐户。<br /><br /> 此参数不带值。 但是，您必须在命令行中指定其他参数，以指定配置文件中加密的值。<br /><br /> 可以使用 **-e** 指定的参数包括 **-u** 和 **-p**。 你还可以设置 **-t**。|  
 |**-m**  computername|如果要配置远程报表服务器实例，则此参数是必需的。|指定承载报表服务器的计算机的名称。 如果省略该参数，则默认值为 **localhost**。|  
 |**-s**  servername|必需的。|指定承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
-|**-i**  instancename|如果使用了命名实例，则此参数是必需的。|如果使用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例承载报表服务器数据库，则此值指定该命名实例。|  
+|**-i**  instancename|如果使用了命名实例，则此参数是必需的。|如果使用已命名的 Reporting Services 实例，则此值指定 Reporting Services 实例的名称。|  
 |**-d**  databasename|必需的。|指定报表服务器数据库的名称。|  
 |**-a**  authmethod|必需的。|指定报表服务器连接到报表服务器数据库时使用的身份验证方法。 有效值是 **Windows** 或 **SQL** （该参数不区分大小写）。<br /><br /> **Windows** 指定报表服务器使用 Windows 身份验证。<br /><br /> **SQL** 指定报表服务器使用 SQL Server 身份验证。|  
 |**-u**  [domain\\]username|**-e** 是必需的， **-c**是可选的。|指定报表服务器数据库连接或无人参与帐户的用户帐户。<br /><br /> 对于 **rsconfig -e**，该参数是必需的。 该帐户必须是域用户帐户。<br /><br /> 对于 **rsconfig -c** 和 **-a SQL**，此参数必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。<br /><br /> 对于 **rsconfig -c** 和 **-a Windows**，此参数可能指定域用户、内置帐户或服务帐户凭据。 若要指定域帐户，请以“domain\username”格式指定域和用户名。 如果使用了内置帐户，则该参数是可选的。 如果要使用服务帐户凭据，则可省略该参数。|  
 |**-p**  *password*|如果指定了 **-c** 参数，则为必需项。|指定与 *username* 参数一起使用的密码。 如果帐户不需要密码，则可将该参数设置为空值。 对于域帐户，此值区分大小写。|  
 |**-t**|可选。|将错误消息输出到跟踪日志。 此参数不带值。 有关详细信息，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  您必须是要配置的承载报表服务器的计算机本地管理员。  
   
 ## <a name="file-location"></a>文件位置  
  Rsconfig.exe 位于 **\Program Files\Microsoft SQL Server\110\Tools\Binn**中。 可以在文件系统的任何文件夹中运行此实用工具。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  Rsconfig.exe 有以下两个用途：  
   
 -   修改报表服务器用于连接到报表服务器数据库的连接信息。  
   
 -   配置报表服务器在其他凭据不可用时登录远程数据库服务器所用的特殊帐户。  
   
- 可以针对**的本地或远程实例来运行** rsconfig [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实用工具。 不能使用 **rsconfig** 实用工具解密和查看已设置的值。  
+可以针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的本地或远程实例来运行 rsconfig 实用工具。 不能使用 **rsconfig** 实用工具解密和查看已设置的值。  
   
- 要配置的计算机上必须安装 Windows Management Instrumentation (WMI) 才能运行此配置工具。  
+要配置的计算机上必须安装 Windows Management Instrumentation (WMI) 才能运行此配置工具。  
   
 ## <a name="examples"></a>示例  
  以下示例阐释了 **rsconfig**的使用方法。  

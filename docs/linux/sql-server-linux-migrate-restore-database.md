@@ -3,27 +3,27 @@ title: "从 Windows 的 SQL Server 数据库迁移到 Linux |Microsoft 文档"
 description: "本教程演示如何在 Windows 上，执行 SQL Server 数据库备份并将其还原到运行 SQL Server 2017 Linux 计算机。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: bd27b9e7d69698137c8f16f6e4439462a55fa007
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server 的备份和还原功能是将从在 Windows 上的 SQL Server 数据库迁移到 SQL Server 自 2017 年在 Linux 上的推荐的方式。 在本教程中，将会演练使用备份将数据库移到 Linux 和还原技术所需的步骤。
 
@@ -34,7 +34,9 @@ SQL Server 的备份和还原功能是将从在 Windows 上的 SQL Server 数据
 > * 还原与 TRANSACT-SQL 的 Linux 上的备份文件
 > * 运行查询以验证迁移
 
-## <a name="prerequisites"></a>先决条件
+你还可以创建 SQL Server Alwayson 可用性组将从 Windows 的 SQL Server 数据库迁移到 Linux。 请参阅[sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)。
+
+## <a name="prerequisites"></a>必要條件
 
 完成本教程所需的以下先决条件：
 
@@ -86,7 +88,7 @@ SQL Server 的备份和还原功能是将从在 Windows 上的 SQL Server 数据
 
 1. 在 Windows 上打开 Bash 会话。
 
-## <a id="scp"></a>将备份文件复制到 Linux
+## <a id="scp"></a> 将备份文件复制到 Linux
 
 1. 在 Bash 会话中，导航到包含您的备份文件的目录。 例如：
 
@@ -195,6 +197,7 @@ SQL Server 的备份和还原功能是将从在 Windows 上的 SQL Server 数据
 > * 重新定位要准备还原的备份文件
 > * 使用**sqlcmd**运行 TRANSACT-SQL 命令
 > * 还原数据库备份与**RESTORE DATABASE**命令 
+> * 运行查询以验证迁移
 
 接下来，将介绍其他迁移方案适用于 SQL Server 上 Linux。 
 

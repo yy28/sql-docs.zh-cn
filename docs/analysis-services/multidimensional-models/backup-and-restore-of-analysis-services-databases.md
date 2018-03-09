@@ -2,16 +2,13 @@
 title: "Analysis Services 数据库的备份和还原 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,18 +23,19 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6f5db5fe3911767be37930fb7d195efffb826042
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>备份和还原 Analysis Services 数据库
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括备份和还原功能，以便您能从特定时间点恢复数据库及其对象。 此外，备份和还原是一项用于将数据库迁移到升级后的服务器、在服务器之间移动数据库或将数据库部署到生产服务器的有效方法。 出于数据恢复目的，如果您还没有制定备份计划并且您的数据十分重要，则应尽快设计和实施备份计划。  
   
  对已部署的 Analysis Services 数据库执行备份和还原命令。 对于 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的项目和解决方案，您应该使用源控制来确保可以还原特定版本的源文件，然后为您所使用的源控制系统的存储库创建数据恢复计划。  
@@ -76,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  管理员可以将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库备份到单个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件 (.abf)，这与数据库的大小无关。 有关分步说明，请参阅 [如何备份 Analysis Services 数据库 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 和 [自动备份 Analysis Services 数据库 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]用于加载和查询[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据模型在 SharePoint 环境中，从 SharePoint 内容数据库加载其模型。 这些内容数据库是相关的且运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库引擎上。 同样，没有针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 备份和还原策略。 如果你有针对 SharePoint 内容的灾难恢复计划，则该计划包含存储在内容数据库中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型。  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]（用于在 SharePoint 环境中加载和查询 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型）从 SharePoint 内容数据库加载其模型。 这些内容数据库是相关的且运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库引擎上。 同样，没有针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 备份和还原策略。 如果你有针对 SharePoint 内容的灾难恢复计划，则该计划包含存储在内容数据库中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型。  
   
  **远程分区**  
   

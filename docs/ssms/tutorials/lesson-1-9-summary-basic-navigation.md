@@ -2,27 +2,30 @@
 title: "摘要：基本导航 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9f0db357c16b9b3b2347fdd1f1922be9e473827
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4bec50ff9f626b38b994dd6dbd09f8091fa5e41c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-9---summary---basic-navigation"></a>课程 1-9 - 摘要 - 基本导航
-可以根据个人的喜好和工作要求来自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计图面。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以根据个人的喜好和工作要求来自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计图面。  
   
 以下是高效使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 工作区的一些最佳实践：  
   

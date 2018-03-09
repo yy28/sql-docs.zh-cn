@@ -3,8 +3,9 @@ title: "提供程序属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - Connection15::put_Provider
 - Connection15::GetProvider
 - Connection15::Provider
-helpviewer_keywords: Provider property [ADO]
+helpviewer_keywords:
+- Provider property [ADO]
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ead9a90e3788efd420251912612de520279b43e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40cf90e63ac27fd6d6b088a4405db3e44d3c5b65
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="provider-property-ado"></a>提供程序属性 (ADO)
 指示提供程序名称[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  

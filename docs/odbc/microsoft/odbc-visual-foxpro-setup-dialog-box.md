@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ca3aa931dc19199913a5f1499c87e89348fa7b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4142d2806cb71f8cb188f1ab155213493d4dc975
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 安装程序对话框
 **ODBC Visual FoxPro 安装**对话框中，可以添加或更改 Visual FoxPro 数据源。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
  **路径**  
  显示的路径和用于数据库或数据源连接到的可用表的目录的名称。  
   
- **浏览**  
+ **“浏览”**  
  使您可以搜索您的系统和网络中的数据库或你想要连接的数据源的目录。  
   
  **选项**  

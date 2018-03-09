@@ -1,5 +1,5 @@
 ---
-title: "连接到 Oracle 源数据库 |Microsoft 文档"
+title: "连接到 Oracle 源数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d8007bd54b9ee8612d9b65a0864b3271427f0b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-oracle-source-database"></a>连接到 Oracle 源数据库
   使用“Oracle 源”页可提供连接到 Oracle 源数据库所需的信息。 CDC 实例将读取您连接到的 Oracle 数据库的重做日志。  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  用户必须在 Oracle 数据库中被授予以下权限才能成为日志挖掘用户。  
 >   
->  -   选择\<any 捕获表 >  
+>  -   SELECT on \<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
 > -   SELECT on V$LOGMNR CONTENTS  
@@ -78,4 +77,3 @@ ms.lasthandoff: 08/03/2017
  [编辑实例属性](../../integration-services/change-data-capture/edit-instance-properties.md)  
   
   
-

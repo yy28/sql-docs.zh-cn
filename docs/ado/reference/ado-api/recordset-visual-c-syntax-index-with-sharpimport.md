@@ -3,8 +3,9 @@ title: "记录集 （Visual c + + 语法索引与 #import） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
-helpviewer_keywords: 'Recordset collection [ADO], Visual C++ syntax index with #import'
+dev_langs:
+- C++
+helpviewer_keywords:
+- 'Recordset collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc9db3750162ddd99cfd911f43a452415747bce4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f396510de52ce581f91690b9839627870cba1c3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>记录集 （Visual c + + 语法索引与 #import）
 ## <a name="methods"></a>方法  

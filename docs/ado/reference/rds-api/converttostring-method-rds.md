@@ -3,8 +3,9 @@ title: "ConvertToString 方法 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: ConvertToString method [ADO]
+helpviewer_keywords:
+- ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd7be0ef5fae5bd05dfa5f7c1a31b98341f30117
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95425c734f254bf534eacdad606025fca43c2158
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 方法 (RDS)
 将转换[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)表示的记录集数据的 MIME 字符串。  
@@ -42,7 +44,7 @@ DataFactory.ConvertToString(Recordset)
  *DataFactory*  
  表示的对象变量[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象。  
   
- *记录集*  
+ *Recordset*  
  表示的对象变量**记录集**对象。  
   
 ## <a name="remarks"></a>注释  

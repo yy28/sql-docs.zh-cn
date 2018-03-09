@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CLEANTABLE_TSQL
 - DBCC CLEANTABLE
 - CLEANTABLE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - disk space [SQL Server], reclaiming
 - reclaiming space
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af5d7e7dab04bf6999b8c8085a4f154a4192d96c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: dbc034e7ed5dd1d6f4704376adf73d517d3b5c47
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]回收从表或索引的视图中删除可变长度列的空间。
@@ -59,7 +61,7 @@ DBCC CLEANTABLE
  *database_name* | *database_id* | 0  
  要清除的表所在的数据库。 如果指定 0，则使用当前数据库。 数据库名称必须遵循的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
- *table_name* | *针对 table_id 所* | *view_name*| *view_id*  
+ *table_name* | *table_id* | *view_name*| *view_id*  
  要清除的表或索引视图。  
   
  *batch_size*  
@@ -85,7 +87,7 @@ DBCC CLEANTABLE 将返回：
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  调用方必须拥有的表或索引的视图，或者是属于**sysadmin**固定服务器角色、 **db_owner**固定数据库角色或**db_ddladmin**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -165,6 +167,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [sys.allocation_units &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   
   

@@ -1,35 +1,34 @@
 ---
 title: "编程 AMO OLAP Basic Objects |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bebff2d4f64f26f0f1824042512534c5459f2872
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 基本对象的编程
   创建复杂 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象是一个简单直接的过程，但需要注意细节。 本主题介绍 OLAP 基本对象的编程详细信息。 本主题包含以下各节：  
@@ -44,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [聚合对象](#AD)  
   
-##  <a name="Dim"></a>维度对象  
+##  <a name="Dim"></a> 维度对象  
  若要管理或处理维度，需要对 <xref:Microsoft.AnalysisServices.Dimension> 对象进行编程。  
   
 ### <a name="creating-dropping-and-finding-a-dimension"></a>创建、删除和查找维度  
@@ -181,7 +180,7 @@ static void UpdateAllDimensions(Database db)
 }  
 ```  
   
-##  <a name="Cub"></a>多维数据集对象  
+##  <a name="Cub"></a> 多维数据集对象  
  若要管理或处理多维数据集，需要对 <xref:Microsoft.AnalysisServices.Cube> 对象进行编程。  
   
 ### <a name="creating-dropping-and-finding-a-cube"></a>创建、删除和查找多维数据集  
@@ -266,7 +265,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG"></a>度量值组对象  
+##  <a name="MG">度量值组对象</a>  
  若要管理或处理度量值组，需要对 <xref:Microsoft.AnalysisServices.MeasureGroup> 对象进行编程。  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>创建、删除和查找 MeasureGroup  
@@ -435,7 +434,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part"></a>分区对象  
+##  <a name="Part">分区对象</a>  
  若要管理或处理分区，需要对 <xref:Microsoft.AnalysisServices.Partition> 对象进行编程。  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>创建、删除和查找分区  
@@ -486,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 }  
 ```  
   
-###  <a name="ProcPart"></a>处理分区  
+###  <a name="ProcPart"></a> 处理分区  
  处理分区非常简单，使用 <xref:Microsoft.AnalysisServices.Partition> 对象的 Process 方法即可。  
   
  有关处理选项的详细信息，请参阅[处理对象 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)和[处理多维模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
@@ -534,7 +533,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD"></a>聚合对象  
+##  <a name="AD">聚合对象</a>  
  若要设计一个聚合并将其应用于一个或多个分区，需要对 <xref:Microsoft.AnalysisServices.Aggregation> 对象进行编程。  
   
 ### <a name="creating-and-dropping-aggregations"></a>创建和删除聚合  

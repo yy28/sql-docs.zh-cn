@@ -1,5 +1,5 @@
 ---
-title: "sys.xml_schema_model_groups (Transact SQL) |Microsoft 文档"
+title: sys.xml_schema_model_groups (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - xml_schema_model_groups
 - sys.xml_schema_model_groups_TSQL
 - xml_schema_model_groups_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_model_groups catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_model_groups catalog view
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 830713a431d79dde6448579806e035bc330ae68e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3b6f555006e33bd980ba1bcfe6cba5340e5e112c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysxmlschemamodelgroups-transact-sql"></a>sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +41,10 @@ ms.lasthandoff: 11/27/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**\<继承列 >**||继承中的列[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)。|  
-|**复合器**|**char （1)**|组的排序种类：<br /><br /> A = XSD\<所有 > 组<br /><br /> C = XSD\<选择 > 组<br /><br /> S = XSD\<序列 > 组|  
+|**compositor**|**char(1)**|组的排序种类：<br /><br /> A = XSD\<所有 > 组<br /><br /> C = XSD \<choice> Group<br /><br /> S = XSD \<sequence> Group|  
 |**compositor_desc**|**nvarchar (60)**|组的排序种类的说明：<br /><br /> XSD_ALL_GROUP<br /><br /> XSD_CHOICE_GROUP<br /><br /> XSD_SEQUENCE_GROUP|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,5 +1,5 @@
 ---
-title: "创建消息类型 (Transact SQL) |Microsoft 文档"
+title: CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,7 +21,8 @@ f1_keywords:
 - MESSAGE TYPE
 - MESSAGE_TYPE_TSQL
 - CREATE MESSAGE TYPE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - XML [Service Broker]
 - validation [Service Broker]
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - binary [SQL Server], message types
 - CREATE MESSAGE TYPE statement
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78606c8f9f058acec660a7fe20a392f93c8dee49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: ab3cf42da615c6ec303abb80b3a5d3f961edf888
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +91,7 @@ CREATE MESSAGE TYPE message_type_name
   
  消息类型不能是临时对象。 消息类型名称开头 **#** 可以，但是永久的对象。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  有关创建消息类型的成员的默认值的权限**db_ddladmin**或**db_owner**固定数据库角色的成员和**sysadmin**固定的服务器角色。  
   
  消息类型的 REFERENCES 权限默认为消息类型的成员的所有者**db_owner**固定数据库角色和成员的**sysadmin**固定的服务器角色。  

@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - denying permissions [Service Broker]
 - routes [Service Broker], permissions
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +61,22 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ *permission*  
  指定可拒绝授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全对象的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- 协定**::***contract_name*  
+ 协定 **:: * * * contract_name*  
  指定拒绝将其权限授权他人的约定。 作用域限定符**::**是必需的。  
   
- 消息类型**::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  指定拒绝将其权限授予他人的消息类型。 作用域限定符**::**是必需的。  
   
- 远程服务绑定**::***remote_binding_name*  
+ 远程服务绑定 **:: * * * remote_binding_name*  
  指定拒绝将其权限授予他人的远程服务绑定。 作用域限定符**::**是必需的。  
   
- 路由**::***route_name*  
+ ROUTE **::***route_name*  
  指定拒绝将其权限授予他人的路由。 作用域限定符**::**是必需的。  
   
- 服务**::***message_type_name*  
+ SERVICE **::***message_type_name*  
  指定拒绝将其权限授予他人的服务。 作用域限定符**::**是必需的。  
   
  *database_principal*  
@@ -159,7 +161,7 @@ CASCADE
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定、消息类型、远程服务绑定、路由或服务具有 CONTROL 权限。 如果使用 AS 子句，那么指定主体必须拥有其权限被拒绝授予的安全对象。  
   
 ## <a name="see-also"></a>另请参阅  

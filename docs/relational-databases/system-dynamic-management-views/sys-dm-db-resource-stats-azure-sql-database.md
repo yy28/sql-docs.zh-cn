@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_resource_stats_TSQL
 - dm_db_resource_stats
 - dm_db_resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**十进制 (5,2)**|平均计算使用率（以服务层限制的百分比表示）。|  
 |avg_data_io_percent|**十进制 (5,2)**|平均数据输入/输出利用的服务层限制的百分比度量。|  
 |avg_log_write_percent|**十进制 (5,2)**|平均写入资源使用率（以服务层限制的百分比表示）。|  
-|avg_memory_percent|**十进制 (5,2)**|平均内存使用率（以服务层限制的百分比表示）。<br /><br /> 这包括用于内存中 OLTP 对象的存储的内存。|  
+|avg_memory_usage_percent|**十进制 (5,2)**|平均内存使用率（以服务层限制的百分比表示）。<br /><br /> 这包括用于内存中 OLTP 对象的存储的内存。|  
 |xtp_storage_percent|**十进制 (5,2)**|存储使用率内存中 OLTP 中的服务层限制的百分比 （报告间隔末尾）。 这包括用于存储以下内存中 OLTP 对象的内存： 内存优化表、 索引和表变量。 它还包括用于处理 ALTER TABLE 操作的内存。<br /><br /> 如果在数据库中未使用内存中 OLTP，则返回 0。|  
 |max_worker_percent|**十进制 (5,2)**|最大并发辅助进程 （请求） 中的数据库的服务层限制百分比表示。|  
 |max_session_percent|**十进制 (5,2)**|中的数据库的服务层限制百分比表示的最大并发会话。|  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 > [!TIP]  
 >  有关这些限制和服务层的更多上下文，请参阅主题[服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)和[服务层功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="remarks"></a>注释  

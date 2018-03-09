@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC_CHECKCONSTRAINTS_TSQL
 - CHECKCONSTRAINTS
 - CHECKCONSTRAINTS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - DBCC CHECKCONSTRAINTS statement
 - consistency [SQL Server], constraints
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 358dddc25f1265f344387cc75ef12f79182c27e3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 2ff75ba3c32d138d9124eba5cfe170cf146d5778
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +60,7 @@ DBCC CHECKCONSTRAINTS
 ```  
   
 ## <a name="arguments"></a>参数  
- *table_name* | *针对 table_id 所* | *constraint_name* | *constraint_id*  
+ *table_name* | *table_id* | *constraint_name* | *constraint_id*  
  要检查的表或约束。 当*table_name*或*针对 table_id 所*是指定，检查在此表上的所有启用的约束。 当*constraint_name*或*constraint_id*是指定，则检查仅该约束。 如果表标识符或约束标识符都未指定，则对当前数据库中所有表上的已启用约束进行检查。  
  约束名称唯一地标识其所属于的表。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
@@ -99,7 +101,7 @@ DBCC CHECKCONSTRAINTS 检查 FOREIGN KEY 和 CHECK 约束的完整性，但并�
   
 |检查|如果检查失败的输出中的其他信息|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn （当前版）|[sys_end] ="{0}"和 MAX(DATETIME2) = 9999-12-31 23:59:59.99999|  
+|PeriodEndColumn ≥ PeriodStartColumn （当前版）|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn （最新状态，历史记录）|[sys_start] ="{0}"AND [sys_end] = {1}|  
 |PeriodStartColumn < current_utc_time （当前版）|[sys_start] ="{0}"和 SYSUTCTIME|  
 |PeriodEndColumn < current_utc_time （历史记录）|[sys_end] ="{0}"和 SYSUTCTIME|  
@@ -116,7 +118,7 @@ DBCC CHECKCONSTRAINTS 返回带有以下列的行集。
 |Constraint Name|**varchar**|违反的约束名。|  
 |位置|**varchar**|标识违反约束的行的列值分配。<br /><br /> 该列中的值可以用于 SELECT 语句（用于查询违反约束的行）的 WHERE 子句中。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。
   
 ## <a name="examples"></a>示例  

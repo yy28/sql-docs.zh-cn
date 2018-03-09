@@ -2,27 +2,33 @@
 title: "OLE 自动化脚本示例 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-ole
+ms.suite: sql
+ms.technology:
+- dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: OLE Automation [SQL Server], examples
+helpviewer_keywords:
+- OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea466e1a827b90ebbe55f7e62469beecbc8a9a28
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5d2a76d1009cede00b373eac16b143743332d8fe
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="ole-automation-sample-script"></a>OLE 自动化脚本示例
-  本主题包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句批处理的一个示例，它使用 OLE 自动化存储过程在本地 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中创建和使用 SQL-DMO SQLServer 对象。 部分代码在 OLE 自动化系统存储过程的引用主题中用作示例。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主题包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句批处理的一个示例，它使用 OLE 自动化存储过程在本地 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中创建和使用 SQL-DMO SQLServer 对象。 部分代码在 OLE 自动化系统存储过程的引用主题中用作示例。  
   
 ```  
 USE AdventureWorks2012;  

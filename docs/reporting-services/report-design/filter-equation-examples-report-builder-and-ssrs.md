@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: filtering data [Reporting Services], filter equation examples
@@ -18,13 +16,13 @@ ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6f21d7bfce08a41ec3ac5a86f57d3babc87769ad
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 615ecce6b75f388e690205e16f9d630f3dc348b8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>筛选器公式示例（报表生成器和 SSRS）
   若要创建筛选器，必须指定一个或多个筛选器公式。 筛选器公式包括表达式、数据类型、运算符和值。 本主题提供了常用筛选器的示例。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="filter-examples"></a>筛选器示例  
  下表显示使用不同数据类型和不同运算符的筛选器公式的示例。 比较的范围由将为其定义筛选器的报表项确定。 例如，对于为数据集定义的筛选器， **TOP % 10** 表示数据集中前 10% 的值；对于为组定义的筛选器， **TOP % 10** 表示组中前 10% 的值。  
   
-|简单表达式|数据类型|运算符|“值”|Description|  
+|简单表达式|数据类型|运算符|ReplTest1|Description|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|包括大于 7 的数据值。|  
 |`[SUM(Quantity)]`|**Integer**|**前 N 个**|`10`|包括前 10 个数据值。|  

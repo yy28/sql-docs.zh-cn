@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
 - sp_help_jobactivity
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobactivity
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cb0d3d344b97f0ce14e3bd156b5915a1721c8f4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a4b1b81a94f272ffed56c26f4ede9080f80527c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [  **@job_name =**] *job_name*  
+ [ **@job_name =**] **'***job_name***'**  
  作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定。  
   
- [  **@session_id**  =] *session_id*  
+ [ **@session_id** = ] *session_id*  
  报告其信息的会话的 ID。 *session_id*是**int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -76,7 +79,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|作业停止运行的时间。|  
 |**next_scheduled_run_date**|**datetime**|计划下一次作业运行的时间。|  
 |**job_history_id**|**int**|作业历史记录表中作业历史记录的标识符。|  
-|**消息**|**nvarchar(1024)**|上次运行作业期间产生的消息。|  
+|message|**nvarchar(1024)**|上次运行作业期间产生的消息。|  
 |**run_status**|**int**|作业上次运行时返回的状态：<br /><br /> **0** = 失败错误<br /><br /> **1** = 成功<br /><br /> **3** = 取消<br /><br /> **5** = 状态未知|  
 |**operator_id_emailed**|**int**|作业完成时通过电子邮件通知的操作员的 ID 号。|  
 |**operator_id_netsent**|**int**|通过通知的操作员的 ID 号**网络发送**在作业完成。|  
@@ -85,13 +88,13 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>注释  
  此过程可提供作业的当前状态快照。 返回的结果表示处理请求时的有关信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在每次启动代理服务时都会创建一个会话 ID。 表中存储的会话 id **msdb.dbo.syssessions**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在代理服务将启动每次都创建一个会话 id。 表中存储的会话 id **msdb.dbo.syssessions**。  
   
  如果没有*session_id*提供，将列出有关最新的会话的信息。  
   
  如果没有*job_name*或*job_id*提供，将列出所有作业的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，成员的**sysadmin**固定的服务器角色可以运行此存储的过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

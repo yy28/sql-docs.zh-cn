@@ -2,25 +2,29 @@
 title: "第 2 课：编写 Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fdc78cbd3ca921ba16f4c68ab550f51342a87053
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f98a8f5eee2300a6351da1718e5a6e0d485afdee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-writing-transact-sql"></a>第 2 课：编写 Transact-SQL
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一个集成开发环境，用于编写 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 查询以及 SQLCMD 命令。 本教程说明如何使用数据库引擎查询编辑器编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。  
   
 >**请注意！！** 本课程着重介绍如何在使用 T-SQL 语句时使用 SSMS， **而不是如何编写 T-SQL 语句！** 有关编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的教程，请参阅 [教程：编写 Transact-SQL 语句](../../t-sql/tutorial-writing-transact-sql-statements.md)。  

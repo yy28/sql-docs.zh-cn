@@ -2,37 +2,42 @@
 title: "在服务器核心安装上配置 SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2356991aa91bc1390638d5cb84935068c79f2fd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
-本主题详细介绍如何在服务器核心安装上配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+本文详细介绍如何在服务器核心安装上配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 
 ##  <a name="BKMK_ConfigureWindows"></a> 在 Windows Server 上配置和管理 Server Core  
-本节提供帮助配置和管理 Server Core 安装的主题参考资料。  
+本节提供帮助配置和管理 Server Core 安装的文章参考资料。  
   
 在 Server Core 模式下，部分 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 功能不受支持。  其中的一些功能可以安装在客户端计算机或未运行 Server Core 的另一服务器上，然后连接到在 Server Core 上安装的数据库引擎服务。  
   
-有关远程配置和管理 Server Core 安装的详细信息，请参阅以下主题：  
+有关远程配置和管理 Server Core 安装的详细信息，请参阅以下文章：  
   
 - [安装服务器核心](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -210,7 +215,7 @@ $Tcp
 ##  <a name="BKMK_CMD"></a> 命令提示实用工具  
  可以使用以下命令提示实用工具，它们允许您在 Server Core 计算机上为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作编写脚本。 下表包含了随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的用于 Server Core 的命令提示实用工具列表：  
   
-|**实用工具**|**说明**|**安装位置**|  
+|**实用工具**|**Description**|**安装位置**|  
 |-----------------|---------------------|----------------------|  
 |[bcp 实用工具](../../tools/bcp-utility.md)|用于在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件之间复制数据。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)|用于配置和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
@@ -226,10 +231,10 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> 使用故障排除工具  
  可以使用 [SQLdiag 实用工具](../../tools/sqldiag-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他类型的服务器中收集日志和数据文件，同时还可将其用于一直监视服务器或对服务器的特定问题进行故障排除。 SQLdiag 用于加快和简化为 Microsoft 客户支持服务部门收集诊断信息的过程。  
   
- 您可以在 Server Core 上使用以下主题中指定的语法在管理员命令提示符下启动该实用工具： [SQLdiag Utility](../../tools/sqldiag-utility.md)。  
+ 可以在 Server Core 上使用 [SQLdiag Utility](../../tools/sqldiag-utility.md) 一文中指定的语法在管理员命令提示符下启动该实用工具。  
   
 ## <a name="see-also"></a>另请参阅  
  [在服务器核心上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [安装操作指南主题](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [安装操作指南文章](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

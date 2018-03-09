@@ -5,23 +5,24 @@ ms.date: 07/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: "85"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4184ce50cbacda16e113122753b56a4e4ee682cf
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 583d8f49803b7a9d527583644540c7d93e103cf6
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/04/2017
   
 -   若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到  **[评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。  
   
--   是否拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** ，以加速已安装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
+-   已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** ，以加速已安装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
   
 ##  <a name="improved-performance"></a>改进的性能  
   

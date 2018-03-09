@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -35,13 +35,13 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6886fedeb7940ca56b23ea47333e0a87835383a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075cce0d10d02d5566f4a370b28466a4f79ab9c0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="using-xml-data-types"></a>使用 XML 数据类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,11 +93,11 @@ ms.lasthandoff: 11/17/2017
 |DBTYPE_XML|将通过<sup>6，7</sup>|错误<sup>1</sup>|确定<sup>11、 6</sup>|错误<sup>8</sup>|  
 |DBTYPE_BYTES|将通过<sup>6，7</sup>|N/A<sup>2</sup>|确定<sup>11、 6</sup>|N/A <sup>2</sup>|  
 |DBTYPE_WSTR|将通过<sup>6,10</sup>|N/A <sup>2</sup>|确定<sup>4、 6、 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|将通过<sup>6,10</sup>|N/A <sup>2</sup>|确定<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|将通过<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|确定<sup>6、 9、 10</sup>|N/A <sup>2</sup>|确定<sup>5、 6、 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|字节流通过**ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|字节流通过**ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124;VT_ARRAY)|将通过<sup>6，7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|将通过<sup>6,10</sup>|N/A <sup>2</sup>|确定<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|将通过<sup>6，7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|将通过<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>如果服务器的类型是其他不是使用指定 DBTYPE_XML **ICommandWithParameters::SetParameterInfo**和访问器类型是 DBTYPE_XML，执行语句时出错 （DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）; 否则将数据发送到服务器，但服务器返回错误，指示是否从 XML 没有隐式转换为参数的数据类型。  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为了支持**xml**通过 OLE DB 的数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端实现新的 DBPROPSET_SQLSERVERPARAMETER 属性集，其中包含以下值。  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录（数据库）的名称。 SQL 三部分组成的名称标识符的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|架构集合内 XML 架构的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
@@ -185,7 +185,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  若要支持中的表创建**ITableDefinition**接口，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端将三个新列添加到 DBPROPSET_SQLSERVERCOLUMN 属性集。  
   
-|Name|类型|Description|  
+|名称|类型|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定在其中存储 XML 架构的目录的名称。 对于其他列类型，此属性返回空字符串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定定义此列的 XML 架构的名称。|  

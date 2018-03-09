@@ -2,10 +2,14 @@
 title: "使用通配符搜索文本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +20,19 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], wildcard searches
 - wildcard options [SQL Server Management Studio]
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a2030de50a7fb70e9e276803af12300bbb4ecf0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 37b204b63dbc6cf39d2be442a16afc7cf6b5c970
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="search-text-with-wildcards"></a>使用通配符搜索文本
-  以下表达式可以替换“查找和替换”对话框的“查找内容”字段中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的字符或数字。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]以下表达式可以替换 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查找和替换”对话框的“查找内容”字段中的字符或数字。  
   
 #### <a name="to-search-using-wildcards"></a>使用通配符进行搜索  
   
@@ -38,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
  下表介绍了 **“引用列表”**中可用的通配符。  
   
-|表达式|语法|说明|  
+|表达式|语法|Description|  
 |----------------|------------|-----------------|  
 |任何单个字符|?|与任何单个字符匹配。|  
 |任何单个数字|#|与任何单个数字匹配。 例如，7# 与包括 7 且其后跟随另一数字的数字匹配，例如 71，但不能是 17。|  

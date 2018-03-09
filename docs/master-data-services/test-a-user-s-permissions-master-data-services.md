@@ -5,23 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
-caps.latest.revision: "4"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8126179f84ba0fa189996c583c3d0973b5f71b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c5c84a7d6c678f7bf98d62ed63e78b6922243c7e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>测试用户权限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以创建测试用户并登录到 Web 应用程序以测试权限。当某个用户尝试访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] URL 时，将会对该用户的凭据进行身份验证。 在 Internet Explorer 中，安全设置控制是否自动进行身份验证，或者用户是否必须输入用户名和密码。 若要更改这些设置，请完成以下步骤：  

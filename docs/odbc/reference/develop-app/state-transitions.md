@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6795a0e730f1b927b7921863714a2a9db55551e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="state-transitions"></a>状态转换
 ODBC 定义离散*状态*为每个环境，每个连接和每个语句。 例如，环境有三个可能的状态： 未分配的 （中都没有环境将分配），已分配 （在其中分配环境，但没有连接被分配） 和连接 （在其环境和一个或多个连接都是已分配）。 连接具有七个可能的状态;语句具有 13 可能的状态。  

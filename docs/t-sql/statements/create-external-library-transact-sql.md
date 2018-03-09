@@ -3,12 +3,12 @@ title: "创建外部库 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,16 +20,16 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>创建外部库 (Transact SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 将 R 包上载到数据库中，从指定的字节流或文件路径。
 
@@ -99,7 +99,7 @@ WITH ( LANGUAGE = 'R' )
 
 SQL Server 2017 版本中的数据源中不能用作 blob。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要`CREATE ANY EXTERNAL LIBRARY`权限。
 
@@ -192,6 +192,6 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 ## <a name="see-also"></a>另请参阅
 
 [ALTER 外部库 (Transact SQL)](alter-external-library-transact-sql.md)  
-[删除外部库 (Transact SQL)](drop-external-library-transact-sql.md)  
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

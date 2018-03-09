@@ -1,5 +1,5 @@
 ---
-title: "连接到 SQL Server for Delete |Microsoft 文档"
+title: "与 SQL Server 的连接（用于删除）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9be0eb89c1d19068e8cb97e94654d5dc177c0a86
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0e5eebfc735d60f9f5ef23c7d7574b35cbabeab3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connection-to-sql-server-for-delete"></a>删除与 SQL Server 的连接
   在不含对 MSXDBCDC 数据库具有写入权限的数据库角色（例如 **db_owner** 角色）的登录名尝试删除某一 Oracle CDC 实例时，“连接到 SQL Server”对话框将显示。  
@@ -54,7 +53,6 @@ ms.lasthandoff: 08/03/2017
 -   **高级**：单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   
 ## <a name="see-also"></a>另请参阅  
- [CDC 服务所需的 SQL Server 连接权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
+ [针对 CDC 服务的 SQL Server 连接所需权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
   
-

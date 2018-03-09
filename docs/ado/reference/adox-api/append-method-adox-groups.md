@@ -3,8 +3,9 @@ title: "Append 方法 （ADOX 组） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Groups::raw_Append
 - Groups::Append
-helpviewer_keywords: Append method [ADOX]
+helpviewer_keywords:
+- Append method [ADOX]
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b88abda8492902df0c050cad085e758bf6562fca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 232f7d51b00d9c22689f126518bbaddacc9a3b8f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-groups"></a>Append 方法 （ADOX 组）
 添加新[组](../../../ado/reference/adox-api/group-object-adox.md)对象传递给[组](../../../ado/reference/adox-api/groups-collection-adox.md)集合。  
@@ -39,7 +41,7 @@ Groups.Append Group
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *分组*  
+ *组*  
  **组**要追加的对象或组要创建并追加的名称。  
   
 ## <a name="remarks"></a>注释  

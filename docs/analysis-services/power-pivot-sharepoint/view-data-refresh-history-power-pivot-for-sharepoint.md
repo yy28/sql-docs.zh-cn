@@ -2,16 +2,13 @@
 title: "查看数据刷新历史记录 (Power Pivot for SharePoint) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43dce2aa27cfda6251eeca52eba4f74f722f4ced
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc4dcd60f4a37b1b3f01844369f210a81653160b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>查看数据刷新历史记录 (Power Pivot for SharePoint)
-  数据刷新历史记录用于记录 Excel 工作簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的所有数据刷新活动。 将根据您提供的计划，对 SharePoint 场中的 Analysis Services 服务器实例执行数据刷新操作。 默认情况下，数据刷新历史记录将保留一年时间。 但是，场管理员可以为使用情况和事件历史记录指定不同的保持策略，以确定将数据刷新记录保留多长时间。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+数据刷新历史记录用于记录 Excel 工作簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的所有数据刷新活动。 将根据您提供的计划，对 SharePoint 场中的 Analysis Services 服务器实例执行数据刷新操作。 默认情况下，数据刷新历史记录将保留一年时间。 但是，场管理员可以为使用情况和事件历史记录指定不同的保持策略，以确定将数据刷新记录保留多长时间。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   

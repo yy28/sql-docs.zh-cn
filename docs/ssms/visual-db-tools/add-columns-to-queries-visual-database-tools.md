@@ -3,8 +3,11 @@ title: "向查询中添加列 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef0cb558d600efdbf0e47e8c45cdd5f49c50274e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c6b326ef23c2840be683faa499ceeb40293afa5b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>向查询中添加列 (Visual Database Tools)
-若要在查询中使用列，必须将其添加到查询中。 您可以添加某个列，以在查询输出中显示该列，使用该列进行排序，搜索该列的内容或对其内容进行汇总。 您可以决定在运行查询时，“结果”窗格中将包括查询中使用的哪些列。 有关详细信息，请参阅[从查询结果中删除列 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 要在查询中使用列，必须将其添加到查询中。 您可以添加某个列，以在查询输出中显示该列，使用该列进行排序，搜索该列的内容或对其内容进行汇总。 您可以决定在运行查询时，“结果”窗格中将包括查询中使用的哪些列。 有关详细信息，请参阅[从查询结果中删除列 (Visual Database Tools)](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)  
   
 > [!NOTE]  
 > 若要在查询和视图设计器中查看列的数据类型，请在“关系图”窗格中选择表或表值对象，然后在“属性”窗口中单击“列列表”。 再单击省略号 **(…)** 以打开“列列表”对话框。  
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
   
 -   在“关系图”窗格中，选中要包括的列旁边的复选框。  
   
-    - 或 -  
+    -或 -  
   
 -   在“条件”窗格中移动到第一个空白网格行，单击“列”列中的字段，然后从下拉列表中选择一个列名。  
   

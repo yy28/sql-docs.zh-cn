@@ -2,13 +2,13 @@
 title: "发现服务器状态事件类别 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +17,20 @@ helpviewer_keywords:
 - discover server state events
 - event classes [Analysis Services], discover server state
 ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f553fc692cb15d5393718c3b40d2c5d33dbcf222
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38da7056ebdb294516ea8f88125ddb13c118d297
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discover-server-state-event-category"></a>“发现服务器状态”事件类别
-  “发现服务器状态”事件类别包含下表中说明的事件类。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+“发现服务器状态”事件类别包含下表中说明的事件类。  
   
 |Event Class|事件 ID|Description|  
 |-----------------|--------------|-----------------|  

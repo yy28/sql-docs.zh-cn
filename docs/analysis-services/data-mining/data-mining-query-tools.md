@@ -2,15 +2,13 @@
 title: "数据挖掘查询工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +20,20 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-query-tools"></a>数据挖掘查询工具
-  所有数据挖掘查询都使用数据挖掘扩展插件 (DMX) 语言。 DMX 可以用于为所有种类的机器学习任务创建模型，包括分类、风险分析、建议生成和线性回归。 还可以编写 DMX 查询以获取有关在处理模型时生成的模式和统计信息的信息。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+所有数据挖掘查询都使用数据挖掘扩展插件 (DMX) 语言。 DMX 可以用于为所有种类的机器学习任务创建模型，包括分类、风险分析、建议生成和线性回归。 还可以编写 DMX 查询以获取有关在处理模型时生成的模式和统计信息的信息。  
   
  可以编写自己的 DMX，也可以使用某种工具（如 **预测查询生成器** ）生成基本 DMX，然后进行修改。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 均提供了有助于生成 DMX 预测查询的工具。 本主题介绍如何使用这些工具创建和执行数据挖掘查询。  
   
@@ -84,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 -   若要检索**模型内容**和**模型元数据**，例如群集的数目、在决策树中使用的属性、上次处理模型的日期以及在创建模型时使用的算法参数，可以使用 [Discover 方法 (XMLA)](../../analysis-services/xmla/xml-elements-methods-discover.md) 并在 [RequestType 元素 (XMLA)](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 标头中指定数据挖掘架构行集之一。 若要缩小查询范围，请在 [RestrictionList 元素 (XMLA)](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md) 内输入限制条件。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件 &#40; DMX &#41;引用](../../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)   
  [了解 DMX Select 语句](../../dmx/understanding-the-dmx-select-statement.md)   
  [结构和使用情况的 DMX 预测查询](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

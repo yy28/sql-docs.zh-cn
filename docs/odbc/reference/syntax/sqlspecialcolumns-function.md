@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c7f4a796fe40327c1d3691e0178876da010130e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函数
 **一致性**  
@@ -120,7 +120,7 @@ SQLRETURN SQLSpecialColumns(
 |24000|无效的游标状态|在打开游标的*StatementHandle*，和**SQLFetch**或**SQLFetchScroll**已调用一样。 此错误返回由驱动程序管理器中，如果**SQLFetch**或**SQLFetchScroll**未返回 SQL_NO_DATA 和在驱动程序返回**SQLFetch**或**SQLFetchScroll**已返回 SQL_NO_DATA。<br /><br /> 在打开游标的*StatementHandle*，但**SQLFetch**或**SQLFetchScroll**不调用一样。|  
 |40001|序列化失败|事务已回滚，因为资源死锁与另一个事务。|  
 |40003|未知的语句结束|此函数在执行期间失败关联的连接，无法确定事务的状态。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其可能的原因。|  
+|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义没有特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中* \*MessageText*缓冲区描述错误以及其可能的原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或函数完成所需的内存。|  
 |HY008|已取消操作|为启用了异步处理*StatementHandle*。 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*。 然后在再次调用该函数*StatementHandle*。<br /><br /> 已调用函数，和它之前完成执行， **SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自中的不同线程多线程应用程序。|  
 |HY009|不允许使用 null 指针|*TableName*自变量是空指针。<br /><br /> SQL_ATTR_METADATA_ID 语句属性已设置为 SQL_TRUE， *CatalogName*自变量为 null 指针和 SQL_CATALOG_NAME*信息类型*支持中返回该目录名称。<br /><br /> (DM) SQL_ATTR_METADATA_ID 语句属性已设置为 SQL_TRUE，和*SchemaName*自变量是空指针。|  
@@ -166,7 +166,7 @@ SQLRETURN SQLSpecialColumns(
   
 |列名|列号|数据类型|注释|  
 |-----------------|-------------------|---------------|--------------|  
-|作用域 (ODBC 1.0)|1|Smallint|Rowid 实际范围。 包含以下值之一：<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> 则返回 NULL *IdentifierType*是 SQL_ROWVER。 有关每个值的说明，请参阅说明*作用域*"语法中，"此部分中前面。|  
+|作用域 (ODBC 1.0)|@shouldalert|Smallint|Rowid 实际范围。 包含以下值之一：<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> 则返回 NULL *IdentifierType*是 SQL_ROWVER。 有关每个值的说明，请参阅说明*作用域*"语法中，"此部分中前面。|  
 |COLUMN_NAME (ODBC 1.0)|2|Varchar 不为 NULL|列名称。 该驱动程序返回的列没有名称为空字符串。|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint（非 NULL）|SQL 数据类型。 这可以是 ODBC SQL 数据类型或特定于驱动程序的 SQL 数据类型。 有关有效的 ODBC SQL 数据类型的列表，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。|  
 |TYPE_NAME (ODBC 1.0)|4|Varchar 不为 NULL|数据源 – 依赖于数据类型名称;例如，"CHAR"、"VARCHAR"、"货币"、"长 VARBINARY"或者"CHAR （） FOR BIT DATA"。|  

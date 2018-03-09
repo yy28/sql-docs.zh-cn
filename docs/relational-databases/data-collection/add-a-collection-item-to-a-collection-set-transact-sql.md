@@ -2,29 +2,34 @@
 title: "将收集项添加到收集组中 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - collection items [SQL Server]
 - collection sets [SQL Server], adding items
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08104faa0f62ace56b291bc6fa45290e826b773b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5e6a3619ee81352c4345b31546599839fdb59eb2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>将收集项添加到收集组中 (Transact-SQL)
-  可以使用随数据收集器一起提供的存储过程将收集项添加到现有收集组中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+可以使用随数据收集器一起提供的存储过程将收集项添加到现有收集组中。  
   
  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查询编辑器执行以下步骤。  
   
@@ -32,7 +37,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  通过运行 **sp_syscollector_stop_collection_set** 存储过程停止要向其中添加收集项的收集组。 例如，若要停止名为“Test Collection Set”的收集组，请运行下列语句：  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     DECLARE @csid int  
     SELECT @csid = collection_set_id  
@@ -47,7 +52,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  声明要向其中添加收集项的收集组。 下面的代码提供了一个演示如何声明收集组 ID 的示例。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_set_id_1 int  
     SELECT @collection_set_id_1 = collection_set_id FROM [msdb].[dbo].[syscollector_collection_sets]  
     WHERE name = N'Test Collection Set'; -- name of collection set  
@@ -55,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  声明收集器类型。 下面的代码提供了一个演示如何声明一般 T-SQL 查询收集器类型的示例。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid_1 uniqueidentifier  
     SELECT @collector_type_uid_1 = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
        WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -63,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
      可以运行下面的代码以获取已安装收集器类型的列表：  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     SELECT * from syscollector_collector_types  
     GO  
@@ -71,7 +76,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  运行 **sp_syscollector_create_collection_item** 存储过程来创建收集项。 必须声明收集项的架构，以便它映射到所需收集器类型要求的架构。 下面的示例使用一般 T-SQL 查询输入架构。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_item_id int;  
     EXEC [msdb].[dbo].[sp_syscollector_create_collection_item]   
     @name=N'OS Wait Stats', --name of collection item  

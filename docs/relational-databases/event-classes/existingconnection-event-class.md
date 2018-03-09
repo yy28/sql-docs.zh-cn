@@ -2,31 +2,37 @@
 title: "ExistingConnection 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ExistingConnection event class
+helpviewer_keywords:
+- ExistingConnection event class
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98b79af4713d77b3c53bf2de715d70d2bddc8ede
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c2dcc04627c3acf3365f3aebcc4e84fecc9cc368
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection 事件类
-  ExistingConnection 事件类表示启动跟踪时现有用户连接的属性。 服务器为每个现有用户连接生成一个 ExistingConnection 事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ExistingConnection 事件类表示启动跟踪时现有用户连接的属性。 服务器为每个现有用户连接生成一个 ExistingConnection 事件。  
   
 ## <a name="existing-connection-event-class-data-columns"></a>Existing Connection 事件类的数据列  
   
-|数据列名称|数据类型|说明|列 ID|可筛选|  
+|数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BinaryData|**图像**|二进制转储的选项标记（例如会话级别设置），包括 ANSI NULLS、ANSI Padding、cursor close on commit、Null 串联和带引号的标识符。|2|是|  
@@ -48,7 +54,7 @@ ms.lasthandoff: 11/09/2017
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|**int**|发生该事件的会话的 ID。|12|是|  
 |StartTime|**datetime**|用户打开连接的时间（登录时间）。|14|是|  
-|TextData|**ntext**|设置与连接相关的选项。|1|是|  
+|TextData|**ntext**|设置与连接相关的选项。|@shouldalert|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

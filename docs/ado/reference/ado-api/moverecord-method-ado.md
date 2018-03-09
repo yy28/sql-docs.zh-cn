@@ -3,8 +3,9 @@ title: "移动记录方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Record::MoveRecord
 - _Record::raw_MoveRecord
-helpviewer_keywords: MoveRecord method [ADO]
+helpviewer_keywords:
+- MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fdada4b43bb8a32d841cd07541b2355d68eb2f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a626e6f86d2e44fed972f8043b556d233fdf1d17
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="moverecord-method-ado"></a>移动记录方法 (ADO)
 将移动所表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)到另一个位置。  
@@ -40,22 +42,22 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parameters  
  *数据源*  
- 可选。 A**字符串**值，该值包含 URL 标识**记录**要移动。 如果*源*省略或指定空字符串，表示此对象**记录**移动。 例如，如果**记录**表示一个文件，文件的内容移到指定的位置*目标*。  
+ 選擇性。 A**字符串**值，该值包含 URL 标识**记录**要移动。 如果*源*省略或指定空字符串，表示此对象**记录**移动。 例如，如果**记录**表示一个文件，文件的内容移到指定的位置*目标*。  
   
  *目标*  
- 可选。 A**字符串**值，该值包含指定的位置的 URL 其中*源*将移动。  
+ 選擇性。 A**字符串**值，该值包含指定的位置的 URL 其中*源*将移动。  
   
  *UserName*  
- 可选。 A**字符串**包含如果需要授予访问权限的用户 ID 值*目标*。  
+ 選擇性。 A**字符串**包含如果需要授予访问权限的用户 ID 值*目标*。  
   
  *密码*  
- 可选。 A**字符串**包含的密码，如果需要请验证*用户名*。  
+ 選擇性。 A**字符串**包含的密码，如果需要请验证*用户名*。  
   
- *选项*  
- 可选。 A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)值其默认值为**adMoveUnspecified**。 指定此方法的行为。  
+ *Options*  
+ 選擇性。 A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)值其默认值为**adMoveUnspecified**。 指定此方法的行为。  
   
- *异步*  
- 可选。 A**布尔**值，当**True**，指定此操作应为异步。  
+ *Async*  
+ 選擇性。 A**布尔**值，当**True**，指定此操作应为异步。  
   
 ## <a name="return-value"></a>返回值  
  A**字符串**值。 通常情况下，值*目标*返回。 但是，返回的确切值与提供程序相关。  

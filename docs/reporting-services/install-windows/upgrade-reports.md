@@ -8,9 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +22,17 @@ helpviewer_keywords:
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 caps.latest.revision: "70"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4e254e5338ef80143d5444ea0c4b4365b957c514
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2b4cf65845edd7a67d52bc3c593a341823f5e0c8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="upgrade-reports"></a>升级报表
+# <a name="upgrade-reports"></a>Upgrade Reports
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
  在您将报表定义文件直接上载到报表服务器或 SharePoint 站点时，报表不升级。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中升级报表定义是升级 .rdl 文件的唯一方法。  
   
- 在本地或在报表服务器上升级报表后，您可能注意到出现附加的错误、警告和消息。 这是对内部报表对象模型和处理组件进行更改的结果，当在报表中检测到根本问题时，将导致出现这些消息。 有关详细信息，请参阅[ [Reporting Services 的向后兼容性]](../../reporting-services/reporting-services-backward-compatibility.md "向后兼容性 | Reporting Services")。  
+ 在本地或在报表服务器上升级报表后，您可能注意到出现附加的错误、警告和消息。 这是对内部报表对象模型和处理组件进行更改的结果，当在报表中检测到根本问题时，将导致出现这些消息。 有关详细信息，请参阅 [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)。  
   
  有关 [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md) 的新增功能的详细信息。  
 

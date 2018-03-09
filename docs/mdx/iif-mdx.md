@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: IIF
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a7f4002bb2fcad0733413c6c755dec93217b86ef
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e859e97cd013e7910238ef373bc4b4f5724df02c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Expression2 提示 [Eager |严格 |延迟]]*  
  逻辑表达式计算结果为时使用**false**。 Expression2 必须是有效的多维表达式 (MDX) 表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  逻辑表达式指定的条件的计算结果为**false**时此表达式的值为零。 任何其他值的计算结果为**true**。  
   
  满足条件时**true**、 **IIf**函数将返回第一个表达式。 否则，该函数返回第二个表达式。  

@@ -2,27 +2,30 @@
 title: "Oracle 发布服务器性能优化 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], performance tuning
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 469bfebfc57e78844d6d1a942c256d814969cd66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 48afc3f5b4123b4a08b4be4ffe248a01dbd10461
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle 发布服务器性能优化
-  Oracle 发布体系结构与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布体系结构类似。因此，Oracle 复制性能优化的第一步要求遵循 [Enhance General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)中提供的一般优化建议。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Oracle 发布体系结构与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布体系结构类似。因此，Oracle 复制性能优化的第一步要求遵循 [Enhance General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md) 中提供的一般优化建议。  
   
  此外，还有两个与 Oracle 发布服务器性能有关的选项：  
   
@@ -44,6 +47,6 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle 发布概述](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

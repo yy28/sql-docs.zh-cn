@@ -2,9 +2,12 @@
 title: "管理（复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47107da4379ff36923d9bf8987501203d3830175
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a93507645a081f1e0fdc245eae439cf932a44360
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administration-replication"></a>管理（复制）
-  本节包含有关管理复制拓扑的信息。 建议首先阅读最佳实践主题，然后按照该主题中的链接在本节和其他节中阅读更多详细信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本部分包含管理复制副本拓扑的信息。 建议首先阅读最佳实践主题，然后按照该主题中的链接在本节和其他节中阅读更多详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
  [复制管理最佳做法](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  

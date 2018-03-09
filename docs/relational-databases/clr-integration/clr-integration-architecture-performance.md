@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 485a37af0cb6d9d5f7d34986f99db151e59c4628
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 集成体系结构的性能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题讨论一些增强的性能的设计选择[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与集成[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework 公共语言运行时 (CLR)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题讨论一些增强的性能的设计选择[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与集成[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework 公共语言运行时 (CLR)。  
   
 ## <a name="the-compilation-process"></a>编译过程  
  在编译 SQL 表达式时，如果遇到对托管例程的引用，则生成 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中间语言 (MSIL) 存根。 该存根包含的代码用于将例程参数从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封送到 CLR、调用函数并返回结果。 该“粘附”代码基于参数类型和参数方向（向内、向外或引用）。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  当 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标必须遍历更容易表示为数组的数据时，使用托管代码可以显著提高性能。  
   
 ### <a name="string-data"></a>字符串数据  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符数据，例如**varchar**，可以是类型 SqlString 或对托管的函数中。 SqlString 变量将整个值的实例创建到内存中。 SqlChars 变量提供可用于获得更好性能和可扩展性的流式接口，而无需将整个值的实例创建到内存中。 这对于大型对象 (LOB) 数据尤为重要。 此外，可以通过返回的流式处理接口中访问服务器的 XML 数据**SqlXml.CreateReader()**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符数据，例如**varchar**，可以是类型 SqlString 或对托管的函数中。 SqlString 变量将整个值的实例创建到内存中。 SqlChars 变量提供可用于获得更好性能和可扩展性的流式接口，而无需将整个值的实例创建到内存中。 这对于大型对象 (LOB) 数据尤为重要。 此外，可以通过返回的流式处理接口中访问服务器的 XML 数据**SqlXml.CreateReader()**。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 与扩展存储过程  
  允许托管过程向客户端回发结果集的 Microsoft.SqlServer.Server 应用程序编程接口 (API) 的性能优于扩展存储过程使用的开放式数据服务 (ODS) API。 此外，System.Data.SqlServer Api 支持数据类型，如**xml**， **varchar （max)**， **nvarchar (max)**，和**varbinary （max)**、 中引入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而 ODS Api 不已扩展为支持新的数据类型。  
@@ -84,6 +85,6 @@ ms.lasthandoff: 11/17/2017
  为了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中很好地执行和调整托管垃圾回收，请避免使用大型单一分配。 大小大于 88 千字节 (KB) 的分配将被放置到大对象堆，这将导致垃圾回收的性能和调整结果远不如多个较小分配的性能和调整结果。 例如，如果需要分配一个大型多维数组，最好分配一个交错（分散）数组。  
   
 ## <a name="see-also"></a>另请参阅  
- [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [CLR 用户定义的类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

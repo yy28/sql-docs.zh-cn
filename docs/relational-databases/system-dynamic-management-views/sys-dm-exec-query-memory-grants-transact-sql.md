@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_query_memory_grants (Transact SQL) |Microsoft 文档"
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_memory_grants
 - sys.dm_exec_query_memory_grants_TSQL
 - dm_exec_query_memory_grants
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_memory_grants dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e10e979e962c7f0e2f98a8fbabff47995dc7e86
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92b11100a0a037374871dc38844fecc8b69b0c72
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,15 +63,15 @@ ms.lasthandoff: 11/17/2017
 |**wait_order**|**int**|等待查询在指定的连续顺序**queue_id**。 如果其他查询获得内存授予或超时，则给定查询的该值可以更改。如果已授予内存，则为 NULL。|  
 |**is_next_candidate**|**bit**|下一个内存授予的候选对象。<br /><br /> 1 = 是<br /><br /> 0 = 否<br /><br /> NULL = 已授予内存。|  
 |**wait_time_ms**|**bigint**|等待时间（毫秒）。 如果已授予内存，则为 NULL。|  
-|**plan_handle 收集**|**varbinary(64)**|查询计划的标识符。 使用**sys.dm_exec_query_plan**提取实际的 XML 计划。|  
-|**sql 句柄**|**varbinary(64)**|查询的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文本标识符。 使用**sys.dm_exec_sql_text**以获取实际[!INCLUDE[tsql](../../includes/tsql-md.md)]文本。|  
+|**plan_handle**|**varbinary(64)**|查询计划的标识符。 使用**sys.dm_exec_query_plan**提取实际的 XML 计划。|  
+|**sql_handle**|**varbinary(64)**|查询的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文本标识符。 使用**sys.dm_exec_sql_text**以获取实际[!INCLUDE[tsql](../../includes/tsql-md.md)]文本。|  
 |**group_id**|**int**|在其中运行此查询的工作负荷组的 ID。|  
 |**pool_id**|**int**|该工作负荷组所属的资源池的 ID。|  
 |**is_small**|**tinyint**|如果设置为 1，则指示此授予使用小型资源信号量。 如果设置为 0，则指示使用常规信号量。|  
 |**ideal_memory_kb**|**bigint**|将所有内容存放在物理内存中所需的内存授予的大小（以 KB 为单位）。 这基于基数估计。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
   
@@ -117,7 +120,7 @@ ms.lasthandoff: 11/17/2017
  数据库管理员可以使用资源调控器功能在多个资源池之间分发服务器资源，最多可为 64 个池。 开头[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，每个池的行为类似的小型的独立服务器实例，且需要 2 信号量。 从返回的行数**sys.dm_exec_query_resource_semaphores**可以是最多 20 次中返回的行超过[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_exec_query_resource_semaphores &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
  [执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

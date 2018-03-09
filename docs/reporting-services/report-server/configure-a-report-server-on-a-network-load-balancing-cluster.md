@@ -8,23 +8,22 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], network load balancing
+helpviewer_keywords:
+- report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77ab1d9f9216fda6bf393037b341e531cd16c14
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
   如果要将报表服务器扩展配置为在网络负载平衡 (NLB) 群集上运行，必须执行以下操作：  
@@ -42,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 |步骤|Description|详细信息|  
 |----------|-----------------|----------------------|  
-|1|在将 Reporting Services 安装在 NLB 群集内的服务器节点上之前，请检查扩展部署的要求。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[扩展部署 - Reporting Services 本机模式 (Configuration Manager)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
+|@shouldalert|在将 Reporting Services 安装在 NLB 群集内的服务器节点上之前，请检查扩展部署的要求。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[扩展部署 - Reporting Services 本机模式 (Configuration Manager)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
 |2|配置 NLB 群集并验证它是否正常工作。<br /><br /> 确保将主机标头名称映射到 NLB 群集的虚拟服务器 IP。 主机标头名称用在报表服务器 URL 中，它比 IP 地址便于记忆和键入。|有关详细信息，请参阅您运行的 Windows 操作系统版本的 Windows Server 产品文档。|  
 |3|将主机标头的 NetBIOS 和完全限定域名 (FQDN) 添加到 Windows 注册表中存储的 **BackConnectionHostNames** 列表中。 使用 [KB 896861](http://support.microsoft.com/kb/896861) (http://support.microsoft.com/kb/896861) 的“方法 2：指定主机名”中的步骤，但进行以下调整。 该 KB 文章的**步骤 7** 指出“退出注册表编辑器，然后重新启动 IISAdmin 服务”。 改为重新启动计算机以确保更改生效。<br /><br /> 例如，如果主机标头名称 \<MyServer> 是 Windows 计算机名称“contoso”的虚拟名称，可以将该 FQDN 形式作为“contoso.domain.com”引用。 需要将主机标头名称 (MyServer) 与 FQDN 名称 (contoso.domain.com) 一起添加到 **BackConnectionHostNames**的列表中。|如果您的服务器环境涉及本地计算机上的 NTLM 身份验证并且造成环回连接，则此步骤是必需的。<br /><br /> 如果出现这种情况，将会出现报表管理器和报表服务器之间的请求失败，错误号为 401（未经授权）。|  
 |4|在已是 NLB 群集一部分的节点上以“仅文件”模式安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并为扩展部署配置报表服务器实例。<br /><br /> 所配置的扩展部署将不响应那些定向到虚拟服务器 IP 的请求。 在配置视图状态验证之后，会在以后的步骤中将扩展部署配置为使用虚拟服务器 IP。|[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
@@ -51,27 +50,24 @@ ms.lasthandoff: 12/05/2017
 |7|验证能否通过指定的主机名来访问服务器。|本主题中的[验证报表服务器访问权限](#Verify) 。|  
   
 ##  <a name="ViewState"></a> 如何配置视图状态验证  
- 若要在 NLB 群集上运行扩展部署，必须配置视图状态验证，以便用户可以查看交互式 HTML 报表。 您必须针对报表服务器和报表管理器执行此操作。  
+ 若要在 NLB 群集上运行扩展部署，必须配置视图状态验证，以便用户可以查看交互式 HTML 报表。
   
  视图状态验证由 ASP.NET 控制。 默认情况下，将启用视图状态验证并使用 Web 服务的标识来执行验证。 但是，在 NLB 群集方案中，存在运行于不同计算机上的多个服务实例和 Web 服务标识。 因为每个节点的服务标识都各不相同，所以您无法依赖单个进程标识来执行验证。  
   
  若要解决此问题，可以生成一个任意验证密钥来支持视图状态验证功能，然后将每个报表服务器节点手动配置为使用同一密钥。 可以使用随机生成的十六进制序列。 十六进制序列的长度由验证算法（如 SHA1）确定。  
+
+1.  通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，必须具有单个 \<MachineKey> 条目，以便将该条目粘贴到扩展部署中每个报表服务器实例的 RSReportServer.config 文件中。
   
-1.  通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，必须具有单个 \<machineKey> 条目，以便将该条目粘贴到扩展部署中每个报表管理器实例的 Web.config 文件中。  
-  
-     下面的示例说明了您必须获得的值。 请不要将该示例复制到配置文件中，其中的密钥值是无效的。  
+     下面的示例说明了您必须获得的值。 请不要将该示例复制到配置文件中，其中的密钥值是无效的。 报表服务器需要正确的大小写。
   
     ```  
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    ```   
+2.  保存该文件。  
   
-2.  打开报表管理器的 Web.config 文件，并在 \<system.web> 部分粘贴所生成的 \<machineKey> 元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config 中。  
+3.  对扩展部署中的每个报表服务器重复上述步骤。  
   
-3.  保存该文件。  
-  
-4.  对扩展部署中的每个报表服务器重复上述步骤。  
-  
-5.  确保 \Reporting Services\Report Manager 文件夹中所有 Web.Config 文件的 \<system.web> 部分都包含相同的 \<machineKey> 元素。  
+4.  确保 \Reporting Services\Report Server 文件夹中所有 RSReportServer.Config 文件都包含相同的 \<MachineKey> 元素。  
   
 ##  <a name="SpecifyingVirtualServerName"></a> 如何配置 Hostname 和 UrlRoot  
  若要在 NLB 群集上配置报表服务器扩展部署，必须定义单个虚拟服务器名称，以提供服务器群集的单访问点。 然后向您的环境中的域名服务器 (DNS) 注册此虚拟服务器名称。  

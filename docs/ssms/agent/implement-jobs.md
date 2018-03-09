@@ -3,8 +3,11 @@ title: "执行作业 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,22 +20,22 @@ ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27c654a36d652abe632fb7e2063760893ec6b06e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 86944bd1f1a11102a79599449a8cde21c4ba721f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="implement-jobs"></a>执行作业
-您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业来自动执行日常管理任务并反复运行它们，从而提高管理效率。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业来自动执行日常管理任务并反复运行它们，从而提高管理效率。  
   
 作业是一系列由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理按顺序执行的指定操作。 作业可以执行一系列活动，包括运行 [!INCLUDE[tsql](../../includes/tsql_md.md)] 脚本、命令行应用程序、Microsoft ActiveX 脚本、Integration Services 包、Analysis Services 命令和查询或复制任务。 作业可以运行重复任务或那些可计划的任务，它们可以通过生成警报来自动通知用户作业状态，从而极大地简化了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 管理。  
   
 可以手动运行作业，也可以将作业配置为根据计划或响应警报来运行。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

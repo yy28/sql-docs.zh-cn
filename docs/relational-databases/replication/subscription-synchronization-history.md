@@ -2,35 +2,38 @@
 title: "订阅，同步历史记录 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.synchhistory.f1
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5773373f1b865e8f3d36eebb3f459bbc84fc7e70
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ec6cfef6e74a1bf6479a78301f85c6d062992db3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-synchronization-history"></a>订阅，同步历史记录
-  **“同步历史记录”** 选项卡显示有关合并代理的详细信息，包括状态、项目统计信息、历史记录、信息性消息和所有错误信息。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]“同步历史记录”选项卡显示有关合并代理的详细信息，包括状态、项目统计信息、历史记录、信息性消息和所有错误信息。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  从 **“视图”** 菜单中选择要查看的合并代理会话，然后在标记为 **“合并代理的会话”**的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中已处理的项目”**的网格中。  
   
  **“视图”**  
  选择要查看的合并代理会话。  
   
- **状态**  
+ **“状态”**  
  会话结束时合并代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -100,6 +103,6 @@ ms.lasthandoff: 11/09/2017
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

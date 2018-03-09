@@ -2,10 +2,14 @@
 title: "交互搜索文档 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,19 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], interactive
 - Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba56e643a7f6cec61bc6ad5d9797b55de7cb23ae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b1b665a2ce68bf3c99c950d8a943052d123c2f6a
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="search-documents-interactively"></a>交互式搜索文档
-  使用 **“查找和替换”** 对话框，可以搜索一个或多个打开的文件或窗口，并逐个移动到每个搜索匹配项。 该技术允许您在匹配项周围的文本上下文中检查每个单独的搜索匹配项。 **“查找和替换”** 对话框还提供了执行大容量查找操作和在报表格式中检查搜索匹配项的选项。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]使用“查找和替换”对话框，可以搜索一个或多个打开的文件或窗口，并逐个移动到每个搜索匹配项。 该技术允许您在匹配项周围的文本上下文中检查每个单独的搜索匹配项。 **“查找和替换”** 对话框还提供了执行大容量查找操作和在报表格式中检查搜索匹配项的选项。  
   
 ### <a name="to-search-all-open-documents"></a>搜索所有打开的文档  
   
@@ -58,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
 5.  单击 **“替换”**，并连续单击 **“替换”** ，直到替换了最后一个文件中的最后一个匹配项。 单击 **“查找下一个”** 可以跳过不想替换的匹配项。  
   
-     - 或 -  
+     -或 -  
   
      选择 **“全部替换”** 以替换所有匹配项。 然后将出现消息框，列出替换的总数。  
   

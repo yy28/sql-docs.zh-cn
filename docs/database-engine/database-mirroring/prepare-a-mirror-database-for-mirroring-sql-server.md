@@ -19,13 +19,13 @@ ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 869a784fe82f1a142fd2a9792bd79784b5fe3959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a14d697865f099b584e3f8f7132f0bfc6a0cf49
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>为镜像准备镜像数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]在数据库镜像会话开始之前，数据库所有者或系统管理员必须确保已创建镜像数据库并可进行镜像。 创建新镜像数据库的最低要求是：执行主体数据库的完整备份和一个后续日志备份，并使用 WITH NORECOVERY 将这两个备份还原到镜像服务器实例上。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
      [建议](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   [准备现有镜像数据库以重新启动镜像](#PrepareToRestartMirroring)  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/20/2017
   
  有关启用镜像数据库主秘钥自动加密的详细信息，请参阅 [设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  数据库所有者或系统管理员。  
   
 ##  <a name="PrepareToRestartMirroring"></a> 准备现有镜像数据库以重新启动镜像  
@@ -273,7 +273,7 @@ ms.lasthandoff: 11/20/2017
  [数据库镜像和全文目录 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   
  [数据库镜像和复制 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   

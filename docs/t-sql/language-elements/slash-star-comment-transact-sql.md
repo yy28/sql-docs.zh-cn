@@ -8,30 +8,32 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - /*...*/_TSQL
 - Comment
 - /*...*/
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - nonexecuting text strings [SQL Server]
 - /*...*/ (comment)
 - remarks [SQL Server]
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 60ae52af725a065a8319a2fde1e87e1b8bb52e02
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4d7181070cb0524b31364a915040307198054780
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>正斜杠星型 （块注释） (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +109,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [-&#40;注释 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+ [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   

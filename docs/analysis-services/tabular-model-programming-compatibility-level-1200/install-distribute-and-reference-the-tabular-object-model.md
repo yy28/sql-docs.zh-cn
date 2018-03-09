@@ -2,15 +2,13 @@
 title: "安装、 分发和引用表格对象模型 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4992c9a621964f8125178f114a930b1f4e007179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>安装、 分发和引用表格对象模型
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-此文章介绍了如何下载、 引用和重新分发 Analysis Services 表格对象模型 (TOM)，用于创建和管理表格模型和托管代码中的数据库的 C# 库。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]此文章介绍了如何下载、 引用和重新分发 Analysis Services 表格对象模型 (TOM)，用于创建和管理表格模型和托管代码中的数据库的 C# 库。  
   
 TOM 是附带 SQL Server 2016 的 AMO 客户端库 (Microsoft.AnalysisServices.dll) 的扩展。 它适用于表格模型以在 SQL Server 2016 版本表格元数据引擎为目标。 若要使用 TOM，模型和数据库必须处于兼容性级别为 1200年或更高版本。  
 
@@ -42,7 +37,7 @@ SQL Server 2016 重构，且会展开以包括新的核心、 表格和 JSON 程
 Assembly  |功能  |重要的类 |
 ---------|---------|--------------  |
 核心 <br/>Microsoft.AnalysisServices.Core.dll | 表格和多维数据库所共有。 <br/><br/>提供的异常处理，泛型连接到 Analysis Services 实例和数据库，并且有权公共属性和方法的服务器和数据库对象。 <br/><br/>它具有所需的任何 AMO 解决方案针对 SQL Server 2016。 | 核心&nbsp;服务器<br/>核心&nbsp;数据库<br/>AmoException
-TOM<br/> Microsoft.AnalysisServices.Tabular.dll、 版本 13.0.1601.5 或更高版本。| 创建和管理表格元数据对象。 | TOM&nbsp;服务器 <br/>TOM&nbsp;数据库<br /> Model<br /> 表<br /> 列<br /> 关系
+TOM<br/> Microsoft.AnalysisServices.Tabular.dll、 版本 13.0.1601.5 或更高版本。| 创建和管理表格元数据对象。 | TOM&nbsp;服务器 <br/>TOM&nbsp;数据库<br /> “模型”<br /> 表<br /> “列”<br /> 关系
   AMO<br /> Microsoft.AnalysisServices.dll| 创建和管理多维元数据对象，包括表格 1050年 1103年数据库。 | AMO&nbsp;服务器 <br />AMO&nbsp;数据库 <br /> 多维数据集 <br /> 维度 <br /> 度量值组 
 Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | 帮助器的包装 NewtonSoftJson.dll (JSON.NET) 来控制更新，删除引入到 Analysis Services 工作负荷中的 JSON 序列化的功能更改的风险的 DLL。 <br /> <br />此 DLL 作为 TOM 中的依赖项存在，而且不应在代码中直接使用。 | 无。  
   
@@ -109,7 +104,7 @@ AMO 取决于 TOM 因为 AMO 中的某些类从 TOM 引用类。 例如，AMO �
    * Microsoft.AnalysisServices.Tabular  
    * Microsoft.AnalysisSerivces.Tabular.Json  
   
-3. 单击 **“确定”**。  在**解决方案资源管理器**，确认在引用文件夹中存在的程序集。
+3. 单击“确定” 。  在**解决方案资源管理器**，确认在引用文件夹中存在的程序集。
   
 4. 在代码页中，添加 Microsoft.AnalysisServces.Tabular 命名空间，如果数据库和模型是表格 1200年或更高的兼容性级别。 
   

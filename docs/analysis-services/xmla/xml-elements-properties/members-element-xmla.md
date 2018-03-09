@@ -2,15 +2,13 @@
 title: "Members 元素 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Members Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2d2b4f8a9c466fa85bdd1131a58c2c11fc232967
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 478115a00c7e0f97fcad6e25fc74c1e205bb0a75
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="members-element-xmla"></a>Members 元素 (XMLA)
-  包含一套[成员](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)包含由容器的父元素[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含一套[成员](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)包含由容器的父元素[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,10 +49,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -70,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |---------------|-----------------|  
 |层次结构|所需**字符串**属性。 向其成员包含的层次结构的名称**成员**元素属于。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当客户端应用程序设置**AxisFormat**属性*ClusterFormat*，每个轴上的成员被划分到其中的每个群集都表示之间有序集的叉积的群集从每个层次结构的成员。 每个**轴**元素包含一个或多个**CrossProduct**元素。 每个**CrossProduct**元素包含**成员**在轴上的每个层次结构的元素。 **成员**元素，反过来，包含一个**成员**跨产品中包含指定层次结构的每个成员的元素。  
   
 ## <a name="example"></a>示例  

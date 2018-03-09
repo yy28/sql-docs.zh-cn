@@ -2,9 +2,12 @@
 title: "SQL Server 事件探查器对话框 |Microsoft 文档"
 ms.custom: 
 ms.date: 07/07/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -41,18 +44,18 @@ helpviewer_keywords:
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c48b3eca23a83669e33c7d31ddb7495176944813
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server 事件探查器对话框
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从服务器捕获 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。 以下是命令和的对话框中可用的设置[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是一个工具，捕获[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器中的事件。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。 以下是命令和的对话框中可用的设置[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
 ## <a name="trace-properties"></a>跟踪属性
 ### <a name="general-tab"></a>“常规”选项卡
 使用 **“跟踪属性”** 对话框中的 **“常规”** 选项卡可以查看或指定跟踪属性。  
@@ -120,7 +123,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 若要查看此窗口，请打开跟踪文件。 然后在 **“文件”** 菜单上，单击 **“属性”**。  
 |项|Description
 |---|---
-|**文件名**|所显示的跟踪文件的路径和名称。  
+|**File name**|所显示的跟踪文件的路径和名称。  
 |**跟踪提供程序名称**|显示跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
 |**跟踪提供程序类型**|显示提供跟踪的服务器类型。  
 |**version**|显示提供跟踪的服务器的版本。  
@@ -197,7 +200,7 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 |**SQL Server**|指定当前连接的 SQL Server 的实例。 此字段将自动填充，并且无法更新。  
 |**数据库**|指定跟踪表所在的数据库。  
 |**所有者**|Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
-|**Table**|指定将从中读取跟踪的跟踪表的名称。  
+|**表**|指定将从中读取跟踪的跟踪表的名称。  
 ## <a name="destination-table"></a>目的表
 使用 **“目标表”** 对话框可以指定要用于存储跟踪的表。  
 |项|Description
@@ -209,12 +212,12 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 ## <a name="replay-configuration"></a>重播配置
 ### <a name="basic-replay-options"></a>基本重播选项
 在 **“重播配置”** 对话框中，使用 **“基本重播配置”** 页可以指定如何重播跟踪文件或表。  
-若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”**，然后连接到要重播跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”**，然后连接到要重播跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
 |项|Description
 |---|---
 |**重播服务器**|显示要连接用来重播的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
 |**更改...**|启动“连接到服务器”对话框以连接到另一台服务器。  
-|**保存到文件** |将重播结果保存到文件。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 将显示标准文件对话框，您可以在该对话框中指定文件的保存位置。  
+|**保存到文件** |将重播结果保存到文件。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]显示标准文件对话框中，你可以在其中指定要保存该文件的位置。  
 |**保存到表**|将重播结果保存到表。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 将显示表选择对话框，您可以在该对话框中指定表的保存位置。  
 |**重播线程数**|指定要并发使用的重播线程数。 数目越大，重播期间消耗的资源越多，但是重播速度更快，允许的并发事件更多。  
 |**按跟踪事件的顺序重播事件**|按顺序重播事件。 如果重播跟踪进行调试，请使用此选项。  
@@ -222,10 +225,10 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 |**显示重播结果**|在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中显示重播结果。 
 ### <a name="advanced-replay-options"></a>高级的重播选项
 在 **“重播配置”** 对话框中，使用 **“高级重播选项”** 选项卡可以指定如何重播跟踪文件。  
-若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”**，连接到要重播跟踪的 SQL Server 实例，再单击 **“高级重播选项”** 选项卡。  
+若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”**，连接到要重播跟踪的 SQL Server 实例，再单击 **“高级重播选项”** 选项卡。  
 |项|Description
 |---|---
-|**重播系统 SPID**|指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是否重播系统进程标识符 (SPID)。  
+|**重播系统 SPID**|指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是否重播系统进程标识符 (SPID)。  
 |**仅重播一个 SPID**|仅重播与所选 SPID 相关的源跟踪文件中的活动。  
 |**要重播的 SPID**|指定要重播的 SPID。  
 |**按日期和时间限制重播**|选中此选项可以仅重播部分源跟踪文件。  
@@ -240,7 +243,7 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
  若要在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中打开此对话框，请在 **“编辑”** 菜单上，单击 **“查找”**。  
 |项|Description
 |---|---
-|**查找内容**|输入要搜索的文本。 该搜索匹配包含指定字符串的任何字符串。 例如，针对“Completed”的搜索匹配“SQL:BatchCompleted”。 不支持通配符（*、? 等）。  
+|**Find what**|输入要搜索的文本。 该搜索匹配包含指定字符串的任何字符串。 例如，针对“Completed”的搜索匹配“SQL:BatchCompleted”。 不支持通配符（*、? 等）。  
 |**在列中搜索**|单击数据列，以搜索，或单击**\<所有列 >**要在跟踪中搜索所有数据列。  
 |**匹配大小写**|查找与“查找内容”框中的大小写完全匹配的文本。 清除此复选框将在跟踪中不区分文本字符的大小写形式查找匹配项。  
 |**全字匹配**|将搜索结果限制为完整的字词。 清除 **“全字匹配”** 复选框可以搜索单词内的部分字符。  
@@ -260,7 +263,7 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 |项|Description
 |---|---
 |**列**|列出可移动到“组”中的数据列。 单击“列”左侧的加号 (**+**) 可展开列表。  
-|**向上**|选择数据列之后，单击“向上”可将数据列移动到“组”中。 您也可以单击 **“向上”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
+|**上移**|选择数据列之后，单击“向上”可将数据列移动到“组”中。 您也可以单击 **“向上”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
 |**向下**|选择数据列之后，单击“向下”可将数据列从“组”中移出。 您也可以单击 **“向下”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
 ## <a name="edit-filter"></a>编辑筛选器
 使用 **“编辑筛选器”** 对话框可以在跟踪中创建和修改数据列筛选器。 在列表中单击数据列名称，相邻窗格中将会显示可用于该数据列的筛选条件。 输入筛选条件并单击 **“确定”** ，这样可将其应用于所选数据列。 如果在列表中的数据列名称左侧显示筛选器图标，则表明该列已配置了筛选器。  
@@ -275,7 +278,7 @@ Microsoft SQL Server Profiler 和优化顾问使用此对话框来选择表。
 |**模板名称**|键入新的模板名称，或者从列表中选择一个模板名称。 如果要导出模板，则只能从列表中选择一个模板名称。 
 
 ## <a name="see-also"></a>另请参阅 
-[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+[SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [服务器性能和活动监视](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,35 +19,21 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1deb5bcddde514334b0f8318c0dab221fb91d018
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa2f52d326ae38533c2c493db91e4b6a1597f491
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建非聚集索引。 非聚集索引是一种与存储在表中的数据相分离的索引结构，可对一个或多个选定列重新排序。 非聚集索引通常可帮助您通过比搜索基础表更快的速度查找数据；有时可以完全由非聚集索引中的数据回答查询，或非聚集索引可将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基础表中的行。 一般来说，创建非聚集索引是为了提高聚集索引不涵盖的频繁使用的查询的性能，或在没有聚集索引的表（称为堆）中查找行。 可以对表或索引视图创建多个非聚集索引。  
-  
- **本主题内容**  
-  
--   **开始之前：**  
-  
-     [典型实现](#Implementations)  
-  
-     [安全性](#Security)  
-  
--   **若要创建非聚集索引，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -67,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -90,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 8.  单击 **“关闭”**。  
   
-9. 在“文件”菜单上，单击“保存”以保存 *table_name*。  
+9. 在“文件”菜单上，单击“保存table_name”。  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>使用对象资源管理器创建非聚集索引  
   
@@ -106,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  在 **“索引键列”**下，单击 **“添加…”**。  
   
-7.  在“从 table_name 中选择列”对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
+7.  在“从table_name中选择列”对话框中，选中要添加到非聚集索引的一个或多个表列的复选框。  
   
 8.  单击“确定” 。  
   
@@ -116,13 +103,13 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>对表创建非聚集索引  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find an existing index named IX_ProductVendor_VendorID and delete it if found.   
@@ -137,6 +124,6 @@ ms.lasthandoff: 11/17/2017
     GO  
     ```  
   
- 有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
-  
-  
+## <a name="related-content"></a>相关内容  
+[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
+[SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md) 

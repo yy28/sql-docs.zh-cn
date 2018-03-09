@@ -5,26 +5,27 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Excel driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], Excel Driver
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e3db750232c45ce02b1dfe32e103d35ab20b366c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 659789e73fa4ad85b0b79b599c6f253afdd566ec
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect （Excel 驱动程序）
 > [!NOTE]  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/20/2017
   
 |驱动程序|所需的关键字|示例|  
 |------------|-----------------------|--------------|  
-|Microsoft Excel 3.0 或 4.0|驱动程序 DriverID|驱动程序 = {Microsoft Excel 驱动程序 (*.xls)};DBQ = c:\temp;DriverID = 278|  
-|Microsoft Excel 5.0/7.0|驱动程序，DriverID DBQ|驱动程序 = {Microsoft Excel 驱动程序 (*.xls)};DBQ=c:\temp\sample.xls;DriverID = 22|  
-|Microsoft Excel 97 及更高版本|驱动程序，DriverID DBQ|驱动程序 = {Microsoft Excel 驱动程序 (*.xls)};DBQ=c:\temp\sample.xls;DriverID = 790|
+|Microsoft Excel 3.0 or 4.0|驱动程序 DriverID|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp; DriverID=278|  
+|Microsoft Excel 5.0/7.0|驱动程序，DriverID DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=22|  
+|Microsoft Excel 97 及更高版本|驱动程序，DriverID DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=790|

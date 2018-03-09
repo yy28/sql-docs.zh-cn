@@ -2,28 +2,33 @@
 title: "使用格式化文件将表列映射到数据文件字段 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mapping columns to fields during import [SQL Server]
 - format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b20798245fbc18e8796887cfeff23a512ba923bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 238bde9c0928554b38c0f7411cf29863d6f17019
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式化文件将表列映射到数据文件字段 (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 数据文件中包含的字段的排列顺序可能不同于表中相应列的顺序。 本主题介绍了非 XML 格式化文件和 XML 格式化文件，它们经过修改可容纳字段排列顺序不同于表列顺序的数据文件。 修改后的格式化文件可将数据字段映射到与之相应的表列。  有关其他信息，请查看 [创建格式化文件 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 。
 
 |轮廓|
@@ -163,7 +168,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 
 
 ## 使用格式化文件导入数据以将表列映射到数据文件字段<a name="import_data"></a>
-以下示例中使用上面创建的数据库、数据文件和格式化文件。
+下面的示例使用上面创建的数据库、数据文件和格式化文件。
 
 ### 使用 [bcp](../../tools/bcp-utility.md) 和 [非 XML 格式化文件](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
 在命令提示符处输入以下命令：

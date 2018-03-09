@@ -55,4 +55,8 @@
 ## [删除计划指南](delete-a-plan-guide.md)  
 ## [启用或禁用计划指南](enable-or-disable-a-plan-guide.md)  
 
-#[监视资源使用情况（系统监视器）](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [监视资源使用情况（系统监视器）](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [联接](joins.md)   
+
+# [子查询](subqueries.md)    

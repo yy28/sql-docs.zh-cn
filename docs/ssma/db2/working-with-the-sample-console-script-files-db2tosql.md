@@ -1,10 +1,13 @@
 ---
 title: "使用示例控制台脚本文件 (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6243c644b6a64aea05bbc826652ea9a09e1d19f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 18787dab013e29427743b0712a9d56b28fbddd3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用示例控制台脚本文件 (DB2ToSQL)
 几个示例文件已与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足的最终用户需求。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
     生成报表的详细信息，请参阅[生成报表 &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)。  
   
-    **注意：**  
+    **说明：**  
   
     确保变量值文件命令行自变量传递到控制台应用程序，并使用指定的用户更新 VariableValueFileSample.xml 值。  
   

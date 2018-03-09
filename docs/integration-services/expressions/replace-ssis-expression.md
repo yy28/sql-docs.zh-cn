@@ -1,5 +1,5 @@
 ---
-title: "REPLACE （SSIS 表达式） |Microsoft 文档"
+title: "REPLACE（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5208747b21d3380a7f8fead98ec47522c2ad6e12
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 93f62c9307e149e2bfcae74282c1bd6b0e6f9ea4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="replace-ssis-expression"></a>REPLACE（SSIS 表达式）
   将表达式中的一个字符串替换为另一个字符串或空字符串后，返回一个字符表达式。  
@@ -54,7 +53,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *searchstring* 的长度一定不能为零。  
   
  *replacementstring* 的长度可以为零。  
@@ -85,8 +84,7 @@ REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [子字符串 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/substring-ssis-expression.md)   
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [SUBSTRING（SSIS 表达式）](../../integration-services/expressions/substring-ssis-expression.md)   
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

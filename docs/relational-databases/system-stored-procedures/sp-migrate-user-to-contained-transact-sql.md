@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_migrate_user_to_contained**使用密码，而不考虑的属性或权限的登录名创建包含的数据库用户。 例如，过程可能会成功是否禁用该登录名，或者如果用户拒绝**连接**的数据库权限。  
   
  **sp_migrate_user_to_contained**具有以下限制。  
@@ -72,12 +72,12 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   **sp_migrate_user_to_contained**不能在一个系统数据库。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  在迁移用户时，切勿从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中禁用或删除所有管理员登录名。 如果删除了所有登录名，请参阅[连接到 SQL Server 系统管理员被锁定时](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。  
   
  如果**BUILTIN\Administrators**登录名存在，管理员可以通过启动其应用程序使用连接**以管理员身份运行**选项。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求具有 **CONTROL SERVER** 权限。  
   
 ## <a name="examples"></a>示例  
@@ -85,7 +85,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ### <a name="a-migrating-a-single-user"></a>A. 迁移单个用户  
  以下示例将名为 `Barry` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名迁移到具有密码的包含数据库用户。 该示例不更改用户名，并将该登录名保持启用。  
   
-```tsql  
+```sql  
 sp_migrate_user_to_contained   
 @username = N'Barry',  
 @rename = N'keep_name',  
@@ -96,7 +96,7 @@ sp_migrate_user_to_contained
 ### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>B. 将所有具有登录名的数据库用户迁移到没有登录名的包含数据库用户  
  以下示例将所有基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户迁移到具有密码的包含数据库用户。 该示例不包括未启用的登录名。 必须在包含的数据库中执行该示例。  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

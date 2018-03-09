@@ -1,5 +1,5 @@
 ---
-title: "Azure Blob 源 |Microsoft 文档"
+title: "Azure blob 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2016
 ms.prod: sql-non-specified
@@ -8,32 +8,30 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpblobsrc.f1
 - sql14.dts.designer.afpblobsrc.f1
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 752f199d4555163fee9bbc7b1cbcda9e69b638aa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 96203230b881dbdea9389daa6a2e726cd59d86af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="azure-blob-source"></a>Azure blob 源
   借助“Azure blob 源”  组件，SSIS 包可以读取 Azure blob 中的数据。 支持的文件格式：CSV 和 AVRO。
   
   若要查看 Azure blob 源的编辑器，请将“Azure blob 源”拖放到数据流设计器上，然后双击它打开编辑器。  
   
- **Azure Blob 源**的组成部分[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
+ “Azure blob 源”是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。  
   
 1.  对于“Azure 存储空间连接管理器”  字段，请指定一个现有的 Azure 存储空间连接管理器，或新建一个引用 Azure 存储空间帐户的连接管理器。  
   
@@ -48,4 +46,3 @@ ms.lasthandoff: 08/03/2017
 6.  指定连接信息后，切换到“列”  页，将源列映射到 SSIS 数据流的目标列。  
   
   
-

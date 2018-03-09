@@ -1,19 +1,18 @@
 ---
 title: "AMO 概念和对象模型 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - AMO, classes
 - Analysis Management Objects, classes
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - Analysis Management Objects
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5fb57ba499669e09d177892eb861ad8994819e85
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 概念和对象模型
   本主题提供的分析管理对象 (AMO) 的定义如何与其他工具和库中的体系结构提供相关 AMO [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及在 AMO 中的所有主对象的概念说明。  
@@ -54,10 +53,10 @@ ms.lasthandoff: 11/17/2017
   
  [自动执行使用 AMO 的管理任务](#AutomatingAdministrativeTaskswithAMO)  
   
-##  <a name="AMOintheAnalysisServicesArchitecture"></a>AMO 中的 Analysis Services 体系结构  
+##  <a name="AMOintheAnalysisServicesArchitecture">AMO 中的 Analysis Services 体系结构</a>  
  按照设计，AMO 只用于对象管理，而不用于查询数据。 如果用户需要查询[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序的数据，客户端应用程序应使用[使用 ADOMD.NET 开发](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
   
-##  <a name="AMOArchitecture"></a>AMO 体系结构  
+##  <a name="AMOArchitecture">AMO 体系结构</a>  
  AMO 是用于管理的实例的类的完整库[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序在.NET Framework 2.0 版的托管代码中。  
   
  AMO 类库具有类层次结构，特定的类必须在其他类之前实例化才能在代码中使用。 此外，还有可随时在代码中实例化的辅助类，但是在使用任一辅助类之前，您可能已经实例化了类层次结构中的一个或多个类。  
@@ -87,11 +86,11 @@ ms.lasthandoff: 11/17/2017
 |[AMO 安全类](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|用于控制对其他对象的访问权限以及维护安全性的类。|  
 |[AMO 其他类和方法](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|用于帮助 OLAP 或数据挖掘管理员完成其日常任务的类。|  
   
-##  <a name="bkmk_UsingAMO"></a>使用 AMO  
+##  <a name="bkmk_UsingAMO">使用 AMO</a>  
  AMO 对于自动执行重复任务来说特别有用，例如，基于事实数据表中的新数据在度量值组中创建新分区，或者基于新数据为挖掘模型重新定型。 这些创建新对象的任务经常按月、周或季度执行，并且应用程序可以很容易地基于新数据命名这些新对象。  
   
 ##### <a name="analysis-services-administrators"></a>Analysis Services 管理员  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 管理员可以使用 AMO 自动执行 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库的处理。 设计和部署 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库则应使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 管理员可以使用 AMO 来自动执行的处理[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。 设计和部署 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库则应使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。  
   
 ##### <a name="developers"></a>开发人员  
  开发人员可以使用 AMO 为特定用户组开发管理界面。 这些界面可以限制对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象的访问，还可以限制用户只能执行特定任务。 例如，使用 AMO 可以创建一个备份应用程序，用户使用该应用程序可以查看所有数据库对象，可以选择其中的任何一个数据库，还可以将该数据库备份到指定设备组中的任何一个设备中。  
@@ -104,7 +103,7 @@ ms.lasthandoff: 11/17/2017
 ##### <a name="data-mining-advanced-users"></a>数据挖掘高级用户  
  对于数据挖掘高级用户，如果您有必须定期重新定型的大型模型集，则 AMO 是最有用的。  
   
-##  <a name="AutomatingAdministrativeTaskswithAMO"></a>自动执行使用 AMO 的管理任务  
+##  <a name="AutomatingAdministrativeTaskswithAMO">自动执行使用 AMO 的管理任务</a>  
  对于大多数重复性的任务来说，与使用任何您选择的语言将其开发为应用程序相比，使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 进行开发可以更好地设计、部署和维护这些任务。 但是，对于不能使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 自动执行的重复性任务，可以使用 AMO。 如果您想用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 开发专用的商业智能应用程序，AMO 也很有用。  
   
 ##### <a name="automatic-object-management"></a>自动对象管理  

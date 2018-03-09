@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8013a03e8f108a8ae625a8946fca148c65ed8ea8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 39914679c931086a526a4bf88ec159b984fb5273
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---countrows-function"></a>报表生成器函数 - CountRows 函数
   返回指定作用域内的行数，包括含有 Null 值的行。  
@@ -48,7 +46,7 @@ CountRows(scope, recursive)
 ## <a name="return-type"></a>返回类型  
  返回 **Integer**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **CountRows** 计数指定作用域内的所有行，其中包括具有 Null 值的行。  
   
  *scope* 的值不能是表达式，并且必须引用当前作用域或包含作用域。  

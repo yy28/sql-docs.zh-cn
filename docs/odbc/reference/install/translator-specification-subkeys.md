@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec8f2b705ca226f94f2fcea9cf79aa8a7cdc31c4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86ba311eb458c1128a611b6d1cc2ed1c71329d3f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="translator-specification-subkeys"></a>转换器规范子项
 ODBC 转换器子项中列出每个翻译人员都有自己的子项。 此子项具有相同名称，为 ODBC 转换器子项下相应的值。 此子项下的值列表转换器和转换器设置 Dll 和使用情况计数的完整的路径。 值的格式为下表中所示。  
   
-|Name|数据类型|data|  
+|“属性”|数据类型|data|  
 |----------|---------------|----------|  
 |转换器|REG_SZ|*转换器的 DLL 的路径*|  
 |安装|REG_SZ|*安装程序的 DLL 的路径*|  

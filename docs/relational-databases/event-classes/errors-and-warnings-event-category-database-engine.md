@@ -2,10 +2,14 @@
 title: "“错误和警告”事件类别（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,23 +17,24 @@ helpviewer_keywords:
 - SQL Server event classes, Errors and Warnings event category
 - event classes [SQL Server], Errors and Warnings event category
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a7bd25e25dd35ec1dd6bfc0a64a836b2466ebd4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f6eaa88dfe9f1d01b72d63e44f30c9850e846f20
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 事件类别（数据库引擎）
-  **Errors and Warnings** 事件类别包含常规错误和警告事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Errors and Warnings** 事件类别包含常规错误和警告事件。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|Description|  
 |-----------|-----------------|  
 |[Attention 事件类](../../relational-databases/event-classes/attention-event-class.md)|指示出现了 **Attention** 事件。|  
 |[Background Job Error 事件类](../../relational-databases/event-classes/background-job-error-event-class.md)|指示后台作业异常终止。|  

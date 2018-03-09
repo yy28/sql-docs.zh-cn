@@ -2,9 +2,12 @@
 title: "SQL Server - Transactions 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3c085266a6f4d14f0c7881289ebea15347675de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 757b2b72fe2066f452e53087e2ae73ea67d45aa8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server Transactions 对象
-  Microsoft **中的** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供的计数器用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中处于活动状态的事务的数量，以及这些事务对资源（如 **tempdb**中的快照隔离行版本存储区）的影响。 事务是工作的逻辑单位，是一组要么必须全部成功要么必须全部从数据库中清除（以便保持数据的逻辑完整性）的操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，对数据的所有修改都在事务中进行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft 中的“Transactions”对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的计数器用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中处于活动状态的事务的数量，以及这些事务对资源（如 tempdb 中的快照隔离行版本存储区）的影响。 事务是工作的逻辑单位，是一组要么必须全部成功要么必须全部从数据库中清除（以便保持数据的逻辑完整性）的操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，对数据的所有修改都在事务中进行。  
   
  当数据库设置为允许快照隔离级别时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须保留对数据库中每行进行修改的记录。 每次修改行时，由于在修改前行已存在，所以行的副本将记录在 **tempdb**中的行版本存储区。 **Transaction** 对象中的许多计数器可用来监视 **tempdb**中的行版本存储区的大小和增长速率。  
   
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
  下表说明了 **SQLServer:Transactions** 计数器。  
   
-|SQL Server Transactions 计数器|说明|  
+|SQL Server Transactions 计数器|Description|  
 |--------------------------------------|-----------------|  
 |**Free Space in tempdb (KB)**|**tempdb**中的可用空间量 (KB)。 必须具有足够的可用空间以保存快照隔离级别版本存储区和在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中创建的所有新临时对象。|  
 |**Longest Transaction Running Time**|比任何其他当前事务活动时间都长的事务启动后运行的时间长度（秒）。 在数据库处于读取已提交读快照隔离级别之下时，该计数器只显示活动。 如果数据库处于任何其他隔离级别中，该计数器将不会记录任何活动。|  

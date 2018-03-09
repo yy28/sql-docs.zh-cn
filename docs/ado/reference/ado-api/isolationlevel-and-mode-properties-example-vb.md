@@ -3,29 +3,31 @@ title: "IsolationLevel 和模式属性示例 (VB) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a6f6bc311798a71189813da19f6dfb1b96089a7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d59b27059ee4249bebbe3d35129a755e91544895
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和模式属性示例 (VB)
 此示例使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)属性以打开独占连接，和[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)以打开执行的事务中的其他事务的隔离。  

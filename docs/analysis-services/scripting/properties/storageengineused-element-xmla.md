@@ -2,35 +2,37 @@
 title: "StorageEngineUsed 元素 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: StorageEngineUsed Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- StorageEngineUsed Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83d79027913faff48098fb7e7d1daaa2fdf407ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bbd6a47e68c069ca9eef8c8fe8f414d4025ebeba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 元素 (XMLA)
-  包含一个说明当前数据库类型的只读值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+包含一个说明当前数据库类型的只读值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -83,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 |父元素|[database](../../../analysis-services/scripting/objects/database-element-assl.md)|  
 |子元素|无|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>備註  
  此元素的值限定为下表中列出的字符串之一。  
   
 |值|Description|  

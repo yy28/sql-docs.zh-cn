@@ -2,34 +2,34 @@
 title: "关系表示形式 （表格） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 948614ea176ef4cb4cc506272daed33ac7435ded
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c0fef50d7a63d51955dcc523e07957c237d530ff
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="relationship-representation-tabular"></a>关系表示形式（表格）
-  关系是两个数据表之间的联系。 该关系确立两个表中的数据应该如何相关。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+关系是两个数据表之间的联系。 该关系确立两个表中的数据应该如何相关。  
   
- 请参阅[关系表示形式 （表格）](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md)有关如何创建和操作关系表示形式的详细说明。  
+ 有关如何创建和操作关系表示形式的详细说明，请参阅 [Relationship Representation (Tabular)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) 。  
   
 ## <a name="relationship-representation"></a>关系表示形式  
  在表格模型中，两个表之间可以定义多重关系。 如果在两个表之间定义了多重关系，只能将其中一个定义为模型的默认关系，默认关系命名为“活动”关系；其他所有关系都命名为“非活动”关系。  

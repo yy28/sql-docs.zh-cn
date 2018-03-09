@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8733b33aa97e33daf1a7394d5e0df8fb2d97a6d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c06ca9a84504ca2ce9958e39e352a7ad93c9a56d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-to-sql-database"></a>复制到 SQL 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ ms.lasthandoff: 11/17/2017
  --   通过将 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 逻辑服务器名称用作订阅服务器（例如 N'azuresqldbdns.database.windows.net'）并将 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 名称用作目标数据库（例如 AdventureWorks）来[创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
  -  
  -## 另请参阅  
- - [创建发布](../../relational-databases/replication/publish/create-a-publication.md)   
+ - [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  - [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)   
  - [复制类型](../../relational-databases/replication/types-of-replication.md)   
  - [监视（复制）](../../relational-databases/replication/monitor/monitoring-replication.md)   

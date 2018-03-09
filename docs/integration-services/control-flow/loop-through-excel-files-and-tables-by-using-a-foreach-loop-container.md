@@ -1,10 +1,13 @@
 ---
-title: "通过 Excel 文件和表使用 Foreach 循环容器循环 |Microsoft 文档"
+title: "使用 Foreach 循环容器循环遍历 Excel 文件和表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b4b4a69b1712a5b84b49c63aee4242cb6355bc5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 8344f5e7ec975af0dea3b35a218347b8c1d6224f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 循环容器循环遍历 Excel 文件和表
+# <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 循环容器，循环遍历 Excel 文件和表
   本主题中的过程介绍如何使用具有相应枚举器的 Foreach 循环容器循环访问文件夹中的 Excel 工作簿或 Excel 工作簿中的表。  
   
 ### <a name="to-loop-through-excel-files-by-using-the-foreach-file-enumerator"></a>使用 Foreach 文件枚举器循环遍历 Excel 文件  
@@ -36,7 +39,7 @@ ms.lasthandoff: 08/03/2017
   
      如果您未使用扩展属性参数的变量，必须手动将它添加到包含连接字符串的表达式。  
   
-3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。 有关如何配置 Foreach 循环容器的信息，请参阅[配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅[配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 4.  在“Foreach 循环编辑器”的“集合”页上，选择“Foreach 文件”枚举器，并指定 Excel 工作簿所在的文件夹，然后指定文件筛选器（通常是 *.xls）。  
   
@@ -77,7 +80,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  创建一个字符串变量，用于在每次循环迭代中接收当前表的名称。  
   
-3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。 有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 4.  在 **“Foreach 循环编辑器”** 的 **“集合”**页上，选择 Foreach ADO.NET 架构行级枚举器。  
   
@@ -100,6 +103,6 @@ ms.lasthandoff: 08/03/2017
  [Excel 连接管理器](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel 源](../../integration-services/data-flow/excel-source.md)   
  [Excel 目标](../../integration-services/data-flow/excel-destination.md)   
- [Working with Excel Files with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [使用脚本任务处理 Excel 文件](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

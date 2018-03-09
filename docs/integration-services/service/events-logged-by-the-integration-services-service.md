@@ -1,5 +1,5 @@
 ---
-title: "由 Integration Services 服务记录的事件 |Microsoft 文档"
+title: "由 Integration Services 服务记录的事件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9ba7f6ab3bda7bfc40acffc54fa56131ba53514b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>由 Integration Services 服务记录的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务将各种消息记入 Windows 应用程序事件日志。 该服务会在服务启动时、服务停止时和特定问题出现时记录这些消息。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="service-status-messages"></a>服务状态消息
  当您选择安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时，系统将安装并启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，且其启动类型将设置为自动。  
   
-|事件 ID|符号名称|Text|说明|  
+|事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|正在启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务。|服务即将启动。|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务已启动。|服务已启动。|  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="settings-file-messages"></a>设置文件消息  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的设置存储在一个 XML 文件中，您可以修改该文件。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)。  
   
-|事件識別碼|符号名称|Text|说明|  
+|事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务: %n指定配置文件的注册表设置不存在。 %n正尝试加载默认的配置文件。|包含配置文件路径的注册表项不存在或为空。|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务配置文件不存在。%n正在使用默认设置加载。|在指定位置不存在配置文件自身。|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="other-messages"></a>其他消息  
   
-|事件 ID|符号名称|Text|说明|  
+|事件 ID|符号名称|文本|说明|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服务: 正在停止运行中的包。%n包实例 ID: %1%n包 ID: %2%n包名称: %3%n包说明: %4%n包|服务正在尝试停止运行中的包。 可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中监视和停止正在运行的包。 有关如何在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中管理包的信息，请参阅[包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)。|  
 
@@ -99,10 +98,9 @@ ms.lasthandoff: 08/03/2017
   
 7.  选择使用字节或字来显示事件数据。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 9. 在 **“文件”** 菜单上，单击 **“退出”** 关闭 **“事件查看器”** 对话框。  
  
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  有关如何查看日志项的信息，请参阅 [Integration Services 包记录的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

@@ -1,35 +1,90 @@
 ---
 title: "JDBC 驱动程序的发行说明 |Microsoft 文档"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: "206"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 49710c98aad4af9373dd35ebf50960f32d999c10
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC 驱动程序的发行说明
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
+## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Microsoft JDBC Driver 6.4 for SQL Server 中的更新
+SQL Server 的 Microsoft JDBC 驱动程序 6.4 是完全符合 JDBC 4.1 和 4.2 的规范。 按照 Java 版本兼容性，6.4 包中包含 jar 进行命名。 例如，建议从 6.4 包 mssql jdbc 6.4.0.jre8.jar 文件与 Java 8 一起使用。 
+
+**对 JDK 9 支持**  
+  
+支持的 Java 开发工具包 (JDK) 版本 9.0 除了 JDK 8.0 和 7.0。
+  
+**JDBC 4.3 法规遵从性**  
+  
+Java 数据库连接 API 4.3 规范，除了 4.1 和 4.2 支持。 JDBC 4.3 API 方法是添加，但尚未实现。 有关详细信息，请参阅[JDBC 驱动程序的 JDBC 4.3 符合性](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)。
+ 
+**添加新连接属性： sslProtocol**
+
+添加一个新的连接属性，允许用户指定 TLS 协议关键字。 可能的值为:"TLS"、"TLSv1"、"TLSv1.1"、"TLSv1.2"。 请参阅[SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol)有关详细信息。
+
+**弃用连接属性： fipsProvider**
+
+连接属性"fipsProvider"从接受的连接属性的列表中删除。 查看详细信息[此处](https://github.com/Microsoft/mssql-jdbc/pull/460)。
+
+**用于指定自定义 TrustManager 添加的连接属性**
+
+驱动程序现在支持指定自定义 TrustManager 与添加"trustManagerClass"和"trustManagerConstructorArg"连接属性。 这使得动态规范的一套基于每个连接而无需修改 JVM 环境的全局设置受信任证书。
+
+**添加了对 datetime/smallDatetime 中表值参数 (TVP) 支持**
+
+使用表值参数 (TVP) 时，驱动程序现在支持 DATETIME 和 SMALLDATETIME 数据类型。
+
+**添加了对 sql_variant 数据类型支持**
+
+JDBC 驱动程序现在支持 sql_variant 数据类型与 SQL Server 一起使用。 Sql_variant 还支持与功能，例如表值参数 (TVP) 和 BulkCopy 具有以下限制：
+
+1. 对于日期值： 当使用 TVP 填充包含存储在 sql_variant 列中的 datetime/smalldatetime/date 值的表，getDateTime()/getSmallDateTime()/getDate() 方法调用在结果集中上不起作用和引发以下异常：
+    ```
+    java.lang.String cannot be cast to java.sql.Timestamp
+    ```
+    解决方法： 请改用"getString()"或"getObject()"方法。
+
+2. 使用 TVP SQL 变体为 null 值
+
+如果使用 TVP 填充表，并将 NULL 值发送到 sql_variant 列类型，你将会遇到异常，因为插入 NULL 值与列类型为 sql_variant TVP 中当前不支持。
+
+**实现已准备的语句元数据缓存**
+
+JDBC 驱动程序已准备好语句元数据缓存的实现性能改善。 驱动程序现在支持具有"disableStatementPooling"和"statementPoolingCacheSize"连接属性驱动程序中的缓存准备语句元数据。 默认情况下，该功能被禁用。 可以找到更多信息[此处](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)
+
+**添加了对在 Linux/Mac 上的 AAD 集成身份验证支持**
+
+JDBC 驱动程序现在还支持 Active Directory 集成身份验证时 Azure 上所有支持的操作系统 (Linux/Windows/Mac) 使用 Kerberos。 或者，Windows 操作系统上，用户可以进行身份验证 sqljdbc_auth.dll。
+
+**更新到 1.4.0 ADAL4J 版本**
+
+JDBC 驱动程序已更新到版本 1.4.0 其 maven 依赖于 azure activedirectory-库-为-java (ADAL4J)。 有关依赖关系的详细信息，请参阅[此处](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Microsoft JDBC Driver 6.2 for SQL Server 中的更新
 SQL Server 的 Microsoft JDBC 驱动程序 6.2 是完全符合 JDBC 4.1 和 4.2 的规范。 按照 Java 版本兼容性，6.0 包中包含 jar 进行命名。 例如，建议从 6.2 包 mssql jdbc 6.2.1.jre8.jar 文件与 Java 8 一起使用。 
 
-**注意：**中发布了 2017 年 6 月 29 日 JDBC 6.2 RTW 找缓存改善的元数据的问题。 改善已回滚并且新 jar （版本 6.2.1） 已在 2017 年 7 月 17 日发行[Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)，和[Maven 中央](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)。 请更新你的项目以使用 6.2.1 释放 jar。 请查看[发行说明](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)有关详细信息。
+> [!NOTE]  
+>  在 2017 年 6 月 29 日发布 JDBC 6.2 RTW 中找到的元数据缓存改进的问题。 改善已回滚并且新 jar （版本 6.2.1） 已在 2017 年 7 月 17 日发行[Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)，和[Maven 中央](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)。 请更新你的项目以使用 6.2.1 释放 jar。 请查看[发行说明](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)有关详细信息。
 
 **适用于 Linux 的 azure Active Directory (AAD) 支持**
 
@@ -122,36 +177,12 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  除 JDK 6.0 和 5.0 外，还支持 Java 开发工具包 (JDK) 版本 7.0。  
   
-## <a name="updates-in-microsoft-jdbc-driver-40-for-sql-server-and-later"></a>Microsoft JDBC Driver 4.0 for SQL Server 及更高版本中的更新  
- **有关连接到 Azure SQL 数据库的信息**  
+## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>JDBC 驱动程序 6.4、 6.0、 4.2 和 4.1 应用程序不支持 Itanium  
   
- 现在有一个有关连接 Azure SQL Database 的信息的主题。 请参阅[连接到 Azure SQL 数据库](../../connect/jdbc/connecting-to-an-azure-sql-database.md)有关详细信息。  
-  
- **对高可用性、 灾难恢复的支持**  
-  
- 高可用性、 灾难恢复到的连接中的 AlwaysOn 可用性组支持[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。 请参阅[的高可用性、 灾难恢复的 JDBC 驱动程序支持](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)有关详细信息。  
-  
- **使用 Kerberos 集成身份验证连接到 SQL Server**  
-  
- 对应用程序连接到的类型 4 Kerberos 集成身份验证的支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。 有关详细信息，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 (键入集成身份验证是中可用的 2 Kerberos [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 之前的版本。)  
-  
- **访问扩展事件日志中的诊断信息**  
-  
- 你可以访问服务器的扩展事件日志中的信息，了解连接失败的原因。 有关详细信息，请参阅[访问扩展事件日志中的诊断信息](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)。  
-  
- **稀疏列的附加支持**  
-  
- 如果你的应用程序已访问使用稀疏列的表中的数据，则应看到性能有所提高。 你可以 （包括稀疏列信息） 的列的信息与[getColumns 方法 &#40;SQLServerDatabaseMetaData &#41;](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md). 有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]稀疏列，请参阅[使用稀疏列](http://go.microsoft.com/fwlink/?LinkId=224244)。  
-  
- **Xid.getFormatId**  
-  
- 从[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]，JDBC 驱动程序将从数据库服务器到应用程序传递格式标识符。 若要获取更新的行为，请确保服务器上的 sqljdbc_xa.dll 已更新。 Sqljdbc_xa.dll 的更新的版本复制到服务器的详细信息，请参阅[了解 XA 事务](../../connect/jdbc/understanding-xa-transactions.md)。  
-  
-## <a name="itanium-not-supported-for-jdbc-driver-60-42-41-and-40-applications"></a>JDBC Driver 6.0、 4.2、 4.1 和 4.0 的应用程序不支持 Itanium  
-  
- Microsoft JDBC Drivers 6.0、 4.2、 4.1 和 4.0 for SQL Server 应用程序不支持在 Itanium 的计算机上运行。  
+ Microsoft JDBC Drivers 6.4、 6.0、 4.2 和 4.1 SQL Server 应用程序不支持在 Itanium 的计算机上运行。  
   
 ## <a name="see-also"></a>另请参阅  
  [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

@@ -3,8 +3,9 @@ title: "删除记录使用 Delete 方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0a12e1d6d7e94d2f4feb69f51bb43b1e0edbb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 23238ea9992931cea607feb3fbd73ddefb9201f3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleting-records-using-the-delete-method"></a>删除记录使用 Delete 方法
 使用**删除**方法将当前记录或一组中的记录标记**记录集**对象以备删除。 如果**记录集**对象不允许记录删除，将会出错。 如果要立即更新模式中，删除数据库中会立即发生。 如果无法成功删除记录 （由于数据库完整性的冲突，例如），该记录将保持处于编辑模式的调用后**更新。** 这意味着，你必须取消更新使用[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)之前离开当前记录 (例如，使用[关闭](../../../ado/reference/ado-api/close-method-ado.md)，[移动](../../../ado/reference/ado-api/move-method-ado.md)，或[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  

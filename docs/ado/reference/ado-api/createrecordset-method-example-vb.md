@@ -3,27 +3,30 @@ title: "CreateRecordset 方法示例 (VB) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: CreateRecordset method [RDS], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c60165bf853495d7e3cf900e3828ee1f137beec9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aab6469e8b8352ed1981831509469323f803599a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 方法示例 (VB)
 你可以创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，并指定的列信息。 你可以然后数据插入到**记录集**对象; 基础的行集缓冲区插入。  

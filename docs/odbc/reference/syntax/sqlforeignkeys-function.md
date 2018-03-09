@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c57c8e1aa0548ceaec3342d5e668616b3292400c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函数
 **一致性**  
@@ -172,7 +172,7 @@ SQLRETURN SQLForeignKeys(
   
 |列名|列号|数据类型|注释|  
 |-----------------|-------------------|---------------|--------------|  
-|PKTABLE_CAT (ODBC 1.0)|1|Varchar|主键表目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
+|PKTABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|主键表目录名称;如果不适用于数据源为 NULL。 如果驱动程序支持目录对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有目录这些表。|  
 |PKTABLE_SCHEM (ODBC 1.0)|2|Varchar|主键表架构名称;如果不适用于数据源为 NULL。 如果驱动程序支持架构对于某些表，但对于其他操作系统，例如，如果驱动程序从不同 Dbms 检索数据，它将返回空字符串 ("") 不具有架构这些表。|  
 |PKTABLE_NAME (ODBC 1.0)|3|Varchar 不为 NULL|主键表名称。|  
 |PKCOLUMN_NAME (ODBC 1.0)|4|Varchar 不为 NULL|主键列名称。 该驱动程序返回的列没有名称为空字符串。|  
@@ -206,19 +206,19 @@ SQLRETURN SQLForeignKeys(
   
 |TABLE_NAME|COLUMN_NAME|KEY_SEQ|  
 |-----------------|------------------|--------------|  
-|ORDERS|ORDERID|1|  
+|ORDERS|ORDERID|@shouldalert|  
   
  接下来，该示例调用**SQLForeignKeys**以获取其他引用 ORDERS 表的主键的表中的外键。 结果集将有一个行;下表中显示了重要的列。  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|ORDERS|CUSTID|行|CUSTID|1|  
+|ORDERS|CUSTID|行|CUSTID|@shouldalert|  
   
  最后，该示例调用**SQLForeignKeys**若要获取由订单表中的外键引用的其他表的主键。 结果集将有一个行;下表中显示了重要的列。  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|客户|CUSTID|ORDERS|CUSTID|1|  
+|客户|CUSTID|ORDERS|CUSTID|@shouldalert|  
   
 ```  
 #define TAB_LEN SQL_MAX_TABLE_NAME_LEN + 1  

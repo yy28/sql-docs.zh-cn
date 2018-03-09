@@ -3,8 +3,11 @@ title: "“页面设置”对话框 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,19 +16,19 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 857a8a1331b49273ff82dd459c65da983c60dc4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8ff85dabb4dc02737ccd0379435c85c87902a8dc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="page-setup-dialog-box"></a>“页面设置”对话框
-可通过选择“页面设置”对话框中的选项来自定义页面设计。 某些选项的可用性取决于安装的语言和为进行编辑所启用的语言。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可通过选择“页面设置”对话框中的选项来自定义页面设计。 某些选项的可用性取决于安装的语言和为进行编辑所启用的语言。  
   
 ## <a name="paper"></a>纸张  
-**Size**  
+**大小**  
 从列表中选择大小。  
   
 **数据源**  
@@ -45,7 +48,7 @@ Left
 Right  
 设置页面的右边缘和右对齐未缩进行的右边缘之间的距离。  
   
-顶部  
+TOP  
 设置页面顶部和页面第一行顶部之间的距离。  
   
 下  

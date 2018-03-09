@@ -5,10 +5,11 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - functional area permissions [Master Data Services]
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 506bd9415733f02d54875ecb936e750a877e0e32
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cee8bca8d48df114780a29d8bde97319102c1c6
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="functional-area-permissions-master-data-services"></a>功能区域权限 (Master Data Services)
   可以将权限分配给 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 的各个功能区域。 功能区域如下所示：  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
  将权限分配给功能区域时，即使得 UI 的一个区域对用户或组可见。  
   
- 在 **“资源管理器”** 功能区域内，分配给模型对象和层次结构成员的附加权限可以确定用户可访问的数据。 在所有其他功能区域内，用户必须是模型管理员才能查看模型和对模型执行操作。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+ 在 **“资源管理器”** 功能区域内，分配给模型对象和层次结构成员的附加权限可以确定用户可访问的数据。 在所有其他功能区域内，用户必须是模型管理员才能查看模型和对模型执行操作。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 > [!IMPORTANT]  
 >  具有超级用户功能权限的用户可以对所有模型有效地行使管理员权限，并可行使所有其他功能权限。  

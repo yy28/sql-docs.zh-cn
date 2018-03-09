@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-size"></a>行集大小
 要使用哪些行集大小取决于应用程序。 基于屏幕的应用程序通常按照两个策略之一。 第一种是将行集大小设置为显示在屏幕; 上的行数如果用户调整屏幕的大小，应用程序做相应更改的行集大小。 第二个是行集的大小设置为一个更大数字，如 100，从而减少了对数据源的调用数。 应用程序内的行集尽可能本地滚动，并仅在它滚动外部行集时提取新行。  

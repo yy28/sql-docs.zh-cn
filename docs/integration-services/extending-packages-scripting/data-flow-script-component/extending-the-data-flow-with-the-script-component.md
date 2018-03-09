@@ -1,5 +1,5 @@
 ---
-title: "扩展 with the Script Component 数据流 |Microsoft 文档"
+title: "使用脚本组件扩展数据流 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -29,44 +28,43 @@ helpviewer_keywords:
 - Script component [Integration Services]
 - data flow [Integration Services], components
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c58a854082fcbd12333be63995e4fcdf2d55aac7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c28063d82ed42a354aaef21c01e796280cb6c9a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
-  脚本组件扩展的数据流功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]用自定义代码编写的包[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual Basic 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C#，编译并在包运行时执行。 当 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的数据流源、转换或目标不能完全满足您的需求时，脚本组件可简化自定义数据流源、转换或目标的开发。 用预期输入和输出配置该组件后，它将为您编写所有必需的基础结构代码，这样您就可以只将注意力集中于自定义处理所需的代码。  
+  脚本组件通过以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写，在包运行时编译和执行的自定义代码来扩展 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包的数据流功能。 当 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的数据流源、转换或目标不能完全满足您的需求时，脚本组件可简化自定义数据流源、转换或目标的开发。 用预期输入和输出配置该组件后，它将为您编写所有必需的基础结构代码，这样您就可以只将注意力集中于自定义处理所需的代码。  
   
- 与包含程序包和数据流中的自动生成类通过脚本组件交互**ComponentWrapper**和**BufferWrapper**项目项，是实例的<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>和<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>分别类。 这些类使连接、变量和其他包项成为类型化对象，并管理输入和输出。 脚本组件还可以使用 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 命名空间、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类库以及自定义程序集来实现自定义功能。  
+ 脚本组件通过 ComponentWrapper 和 BufferWrapper 项目项中自动生成的类来与包含包和数据流进行交互，这两个项目项分别是 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 类的实例。 这些类使连接、变量和其他包项成为类型化对象，并管理输入和输出。 脚本组件还可以使用 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 命名空间、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类库以及自定义程序集来实现自定义功能。  
   
- 脚本组件及其生成的基础结构代码可以大大简化自定义数据流组件的开发过程。 但是，若要了解脚本组件的工作原理，你可能发现很有用读取部分[开发自定义数据流组件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)了解参与开发自定义数据流组件的步骤。  
+ 脚本组件及其生成的基础结构代码可以大大简化自定义数据流组件的开发过程。 但是，若要了解脚本组件的工作方式，你会发现阅读[开发自定义数据流组件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)一节是很有帮助的，从该节中可了解开发自定义数据流组件的步骤。  
   
  如果您创建的是计划在多个包中重用的源、转换或目标，则应考虑开发自定义组件，而不是使用脚本组件。 有关详细信息，请参阅 [开发自定义数据流组件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  下列主题提供有关脚本组件的详细信息。  
   
- [配置脚本组件编辑器中的脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
- 在中配置的属性**脚本转换编辑器**影响功能和脚本组件代码的性能。  
+ [在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
+ 在“脚本转换编辑器”中配置的属性会影响脚本组件代码的功能和性能。  
   
- [编码和调试脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
- 你使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 开发环境以开发脚本组件中所包含的脚本。  
+ [脚本组件的编码和调试](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
+ 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 开发环境来开发包含在脚本组件中的脚本。  
   
  [了解脚本组件对象模型](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)  
  新脚本组件项目包含三个带有多个类和自动生成的属性及方法的项目项。  
   
- [使用脚本组件中的变量](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)  
- **ComponentWrapper**项目项包含的包变量的强类型化访问器属性。  
+ [在脚本组件中使用变量](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)  
+ ComponentWrapper 项目项包含包变量的强类型取值函数属性。  
   
- [连接到脚本组件中的数据源](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)  
- **ComponentWrapper**项目项还包含连接的包中定义的强类型化访问器属性。  
+ [在脚本组件中连接数据源](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)  
+ ComponentWrapper 项目项还包含在包中定义的连接的强类型取值函数属性。  
   
  [在脚本组件中引发事件](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)  
  您可以引发事件来提供问题和错误的通知。  
@@ -80,9 +78,8 @@ ms.lasthandoff: 08/03/2017
  [其他脚本组件示例](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  这些简单示例说明和演示脚本组件的一些可能的用法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [脚本组件](../../../integration-services/data-flow/transformations/script-component.md)   
  [比较脚本任务和脚本组件](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   
   
-

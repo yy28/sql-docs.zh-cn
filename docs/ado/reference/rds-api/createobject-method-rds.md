@@ -3,8 +3,9 @@ title: "CreateObject 方法 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: CreateObject method [ADO]
+helpviewer_keywords:
+- CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 创建用于目标业务对象的代理，并将指针返回到它。 与业务对象的通信，以通过 Internet 发送请求和数据服务器端存根 （stub） 将代理包和封送处理数据。 对于进程内组件的对象，不使用代理、 提供只需指向对象的指针。  
@@ -36,10 +38,10 @@ ms.lasthandoff: 11/17/2017
   
 |协议|语法|  
 |--------------|------------|  
-|HTTP|设置对象 = DataSpace.CreateObject ("ProgId"，"http://awebsrvr")|  
-|HTTPS|设置对象 = DataSpace.CreateObject ("ProgId"，"https://awebsrvr")|  
-|DCOM|设置对象 = DataSpace.CreateObject ("ProgId"，"computername")|  
-|进程内|设置对象 = DataSpace.CreateObject ("ProgId"，"")|  
+|HTTP|Set object = DataSpace.CreateObject("ProgId", "http://awebsrvr")|  
+|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https://awebsrvr")|  
+|DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
+|进程内|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>Parameters  
  *对象*  

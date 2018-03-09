@@ -3,8 +3,11 @@ title: "映射多对多关系 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3eaab2649f6e84f99761b8c4acce6143eff997f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ed3cbddf952f2991c51a281187d398959fa52ad0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>映射多对多关系 (Visual Database Tools)
-使用多对多关系，您可以将一个表中的每一行与另一个表中的多行相关，反之亦然。 例如，可以在 `authors` 表与 `titles` 表之间创建多对多关系，以将每位作者与其所有书籍相匹配并将每本书与其所有作者相匹配。 从上述任何一个表创建一对多关系都会错误地表示每本书只能有一位作者或者每位作者只能编写一本书。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用多对多关系，可以将一个表中的每一行与另一个表中的多行相关，反之亦然。 例如，可以在 `authors` 表与 `titles` 表之间创建多对多关系，以将每位作者与其所有书籍相匹配并将每本书与其所有作者相匹配。 从上述任何一个表创建一对多关系都会错误地表示每本书只能有一位作者或者每位作者只能编写一本书。  
   
 表与表之间的多对多关系通过联接表存储在数据库中。 联接表包含要相关的两个表的主键列。 然后，分别创建从每个表的主键列到联接表中的匹配列之间的关系。 在 pubs 数据库中， `titleauthor` 表为联接表。  
   

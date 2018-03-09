@@ -1,5 +1,5 @@
 ---
-title: "定义状态变量 |Microsoft 文档"
+title: "定义状态变量 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 292a24071ea7d6247972353a0dbe7d5bdb689f69
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
   本过程介绍如何定义用于存储 CDC 状态的包变量。  
@@ -36,18 +35,18 @@ ms.lasthandoff: 08/03/2017
   
 |组件|Description|  
 |---------------|-----------------|  
-|**\<状态名称 >**|这是当前 CDC 状态的名称。|  
+|**\<state-name>**|这是当前 CDC 状态的名称。|  
 |**CS**|这标记当前处理范围开始点（当前开始）。|  
-|**\<cs lsn >**|这是上一次 CDC 运行中处理的最后一个（日志序列号）LSN。|  
+|**\<cs-lsn>**|这是上一次 CDC 运行中处理的最后一个（日志序列号）LSN。|  
 |**CE**|这标记当前处理范围结束点（当前结束）。 CDC 状态中的 CE 组分表示 CDC 包当前正在处理或 CDC 包在完全处理其 CDC 处理范围前失败。|  
-|**\<ce lsn >**|这是当前运行的 CDC 中要处理的最后一个 LSN。 始终假定要处理的最后一个序列号为最大值 (0xFFF…)。|  
+|**\<ce-lsn>**|这是当前运行的 CDC 中要处理的最后一个 LSN。 始终假定要处理的最后一个序列号为最大值 (0xFFF…)。|  
 |**IR**|这标记初始处理范围。|  
-|**\<ir 开始 >**|这是初始加载开始之前的最后一个更改 LSN。|  
-|**\<ir 结束 >**|这是初始加载结束之后的第一个更改 LSN。|  
+|**\<ir-start>**|这是初始加载开始之前的最后一个更改 LSN。|  
+|**\<ir-end>**|这是初始加载结束之后的第一个更改 LSN。|  
 |**TS**|这标记最后一个 CDC 状态更新的时间戳。|  
-|**\<时间戳 >**|这是 64 位 System.DateTime.UtcNow 属性的十进制表示法。|  
+|**\<timestamp>**|这是 64 位 System.DateTime.UtcNow 属性的十进制表示法。|  
 |**ER**|当最后一个操作失败且包括错误原因的简短说明时显示它。 如果存在该组分，则它始终最后一个显示。|  
-|**\<短错误文本 >**|这是简短的错误说明。|  
+|**\<short-error-text>**|这是简短的错误说明。|  
   
  LSN 和序列号每个都作为一个十六进制的字符串编码，该字符串最多包含 20 位数字，表示 Binary(10) 的 LSN 值。  
   
@@ -93,8 +92,7 @@ ms.lasthandoff: 08/03/2017
  如果您不将该 CDC 控制任务用于“自动状态持久化”，则必须从持久性存储区中加载该变量值，在该持久性存储区中，在上次包运行时保存了该变量值并且在当前处理范围完成后该变量值将写回持久性存储区。  
   
 ## <a name="see-also"></a>另请参阅  
- [CDC 控制任务](../../integration-services/control-flow/cdc-control-task.md)   
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC 控制任务编辑器](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

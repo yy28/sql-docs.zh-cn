@@ -1,36 +1,35 @@
 ---
 title: "DirectQuery 模式下 |Microsoft 文档"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.realtime.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9bd8eb8e3bd0f313fec3e2d0228fb04e08cb6199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 13c60b58664d87cf23ea76069a6c68eb00870927
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="directquery-mode"></a>DirectQuery 模式
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  本主题介绍*DirectQuery 模式下*对 1200年和更高版本的兼容性级别的 Analysis Services 表格模型。 你可以为正在 SSDT 中设计的模型打开 DirectQuery 模式；对于已部署的表格模型，你可以在 SSMS 中更改为 DirectQuery 模式。 在选择 DirectQuery 模式之前，务必先了解其优势和限制。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本指南介绍了*DirectQuery 模式下*对 1200年和更高版本的兼容性级别的 Analysis Services 表格模型。 你可以为正在 SSDT 中设计的模型打开 DirectQuery 模式；对于已部署的表格模型，你可以在 SSMS 中更改为 DirectQuery 模式。 在选择 DirectQuery 模式之前，务必先了解其优势和限制。
   
-##  <a name="bkmk_Benefits"></a> 优势
+##  <a name="bkmk_Benefits"></a> 优点
  默认情况下，表格模型使用内存中缓存来存储和查询数据。 当表格模型查询内存中驻留的数据时，即使是复杂查询也可以非常快地执行。 但是，使用缓存数据存在许多限制。 也就是说，如果无法按计划定期进行处理，大型数据集可能会超出可用内存，并且可能难以达到数据刷新要求。  
   
  DirectQuery 克服了这些限制，同时还利用 RDBMS 功能提高了查询执行效率。 使用 DirectQuery：  
@@ -59,8 +58,8 @@ DirectQuery 模式下的表格模型存在许多限制。 在切换模式前，�
 |**SQL 存储过程**|对于 DirectQuery 模型，在使用数据导入向导时，不能在 SQL 语句中指定存储过程来定义表。 |   
 |**计算表**|DirectQuery 模型不支持计算表，但支持计算列。 如果你尝试转换一个包含计算表的表格模型，则将发生错误，指出该模型不能包含粘贴数据。|  
 |**查询限制**|默认行数限制为 100 万行，可以通过指定 msmdsrv.ini 文件中的 **MaxIntermediateRowSize** 增加此值。 有关详细信息，请参阅 [DAX 属性](../../analysis-services/server-properties/dax-properties.md) 。
-|**DAX 公式**|在 DirectQuery 模式下查询表格模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将 DAX 公式和度量值定义转换为 SQL 语句。 所含元素不能转换为 SQL 语法的 DAX 公式将在模型上返回验证错误。<br /><br /> 此限制主要限于特定的 DAX 函数。 对于度量值，DAX 公式将针对关系数据存储转换为基于集的操作。 这意味着将支持所有隐式创建的度量值。 <br /><br /> 发生验证错误时，必须重写公式，替换为其他函数，或通过使用数据源中的派生列来解决该问题。  如果表格模型所含的公式包含不兼容的函数，则在设计器中切换到 DirectQuery 模式时将报告这一问题。 <br /><br />**注意：**  在将模型切换到 DirectQuery 模式时，模型中的某些公式可能会进行验证，但在对缓存和关系数据存储执行验证时将返回不同的结果。 这是因为对缓存的计算使用内存中分析引擎（包含用于模拟 Excel 行为的功能）的语义，而针对关系数据源中存储的数据的查询使用 SQL Server 的语义。<br /><br /> SQL 存储  <br /><br /> 若要了解详细信息，请参阅 [DirectQuery 模式下的 DAX 公式兼容性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)。|  
-|**公式一致性**|在某些情况下，与仅使用关系数据存储的 DirectQuery 模型相比，相同的公式可能在缓存模型中返回不同的结果。 这些差异是由内存中分析引擎和 SQL Server 之间的语义差异造成的。<br /><br /> 有关兼容性问题的完整列表，包括在实时部署模型时可能返回不同结果的函数，请参阅 [DirectQuery 模式下的 DAX 公式兼容性 (SQL Server Analysis Services)](http://msdn.microsoft.com/en-us/981b6a68-434d-4db6-964e-d92f8eb3ee3e)。|  
+|**DAX 公式**|在 DirectQuery 模式下查询表格模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将 DAX 公式和度量值定义转换为 SQL 语句。 所含元素不能转换为 SQL 语法的 DAX 公式将在模型上返回验证错误。<br /><br /> 此限制主要限于特定的 DAX 函数。 对于度量值，DAX 公式将针对关系数据存储转换为基于集的操作。 这意味着将支持所有隐式创建的度量值。 <br /><br /> 发生验证错误时，必须重写公式，替换为其他函数，或通过使用数据源中的派生列来解决该问题。  如果表格模型所含的公式包含不兼容的函数，则在设计器中切换到 DirectQuery 模式时将报告这一问题。 <br /><br />**注意：**  在将模型切换到 DirectQuery 模式时，模型中的某些公式可能会进行验证，但在对缓存和关系数据存储执行验证时将返回不同的结果。 这是因为对缓存的计算使用内存中分析引擎（包含用于模拟 Excel 行为的功能）的语义，而针对关系数据源中存储的数据的查询使用 SQL Server 的语义。<br /><br /> SQL 存储  <br /><br /> 若要了解详细信息，请参阅[在 DirectQuery 模式下的 DAX 公式兼容性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)。|  
+|**公式一致性**|在某些情况下，与仅使用关系数据存储的 DirectQuery 模型相比，相同的公式可能在缓存模型中返回不同的结果。 这些差异是由内存中分析引擎和 SQL Server 之间的语义差异造成的。<br /><br /> 有关兼容性问题，包括可能会返回不同的结果时模型部署到实时的函数的完整列表请参阅[在 DirectQuery 模式下 (SQL Server Analysis Services) 的 DAX 公式兼容性](http://msdn.microsoft.com/en-us/981b6a68-434d-4db6-964e-d92f8eb3ee3e)。|  
 |**MDX 限制**|没有相对对象名称。 所有对象名称都必须是完全限定的。<br /><br /> 没有会话范围 MDX 语句（命名集、计算成员、计算单元格、直观合计、默认成员等），但你可以使用查询范围构造，例如“WITH”子句。<br /><br /> MDX 再选择子句中没有包含不同级别成员的元组。<br /><br /> 不要使用用户定义的层次结构。<br /><br /> 没有本机 SQL 查询（通常，Analysis Services 支持 T-SQL 子集，但不适用于 DirectQuery 模型）。|  
 
 ## <a name="data-sources-supported-for-directquery"></a>DirectQuery 支持的数据源
@@ -85,7 +84,7 @@ Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 
 如果已使用表导入向导导入数据但尚未打开 DirectQuery 模式，那么在打开该模式时，将清除内存中缓存。
 
   
-## <a name="additional-topics-in-this-section"></a>本节中的其他主题
+## <a name="additional-articles-in-this-section"></a>本部分中的其他文章
 [在 SSDT 中启用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssdt.md)
 
 [在 SSMS 中启用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)
@@ -96,5 +95,5 @@ Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 
   
 [在 DirectQuery 模式下测试模型](../../analysis-services/tabular-models/test-a-model-in-directquery-mode.md)
 
-[DirectQuery 模式下的 DAX 公式兼容性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)
+[在 DirectQuery 模式下的 DAX 公式兼容性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)
   

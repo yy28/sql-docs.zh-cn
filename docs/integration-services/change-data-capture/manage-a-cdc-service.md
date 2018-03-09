@@ -1,5 +1,5 @@
 ---
-title: "管理 CDC 服务 |Microsoft 文档"
+title: "管理 CDC 服务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b212ccfd61c11a8c06a840260918cc581564a6fc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a2b3241a4152d81346da17d3f9eaddefaffa00b1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服务
   您可以使用 CDC 设计器控制台查看通过 CDC 服务配置控制台创建的服务并且管理 Oracle CDC 服务中的所有实例。  
@@ -56,4 +55,3 @@ ms.lasthandoff: 08/03/2017
  [使用新建实例向导](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

@@ -3,8 +3,9 @@ title: "DefaultDatabase 属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Connection15::DefaultDatabase
-helpviewer_keywords: DefaultDatabase property
+f1_keywords:
+- Connection15::DefaultDatabase
+helpviewer_keywords:
+- DefaultDatabase property
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50ecb225fe90c48dc0b82551015f8b86fec03a08
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c4220d8551d7aa9d1bd37f0770474214bc14209
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase 属性
 指示的默认数据库[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  

@@ -2,27 +2,33 @@
 title: "示例：指定 XMLTEXT 指令 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: XMLTEXT directive
+helpviewer_keywords:
+- XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13f296721a3648c1b75b7b5329d8b9d4a927cd20
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e71a67f991291f1426fbf3a583169b339f69c110
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>示例：指定 XMLTEXT 指令
-  此示例说明如何在使用 EXPLICIT 模式的 **语句中使用** XMLTEXT `SELECT` 指令处理溢出列中的数据。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+此示例说明如何在使用 EXPLICIT 模式的 **语句中使用** XMLTEXT `SELECT` 指令处理溢出列中的数据。  
   
  请考虑一下 `Person` 表。 此表含有存储 XML 文档的未使用部分的 `Overflow` 列。  
   

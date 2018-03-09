@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Report Designer [Reporting Services], dialog boxes
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 caps.latest.revision: "63"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a283102f53802dabef95b289f7dcab6a96af6c34
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bb3352a4399ff6b890c1addb3bcb8a9af4747ba1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-designer-f1-help"></a>报表设计器的 F1 帮助
   本节提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表设计器向导、视图和 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中对话框的 F1 帮助。 另外，您也可以在使用对话框时按 F1 或单击对话框中显示的“帮助”按钮来打开 F1 帮助。  

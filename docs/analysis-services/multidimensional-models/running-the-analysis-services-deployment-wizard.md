@@ -2,16 +2,13 @@
 title: "运行 Analysis Services 部署向导 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Analysis Services Deployment Wizard, running
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 56a144c05d62207b0e738b56d452dca523dce020
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d6a1102ed83493e25e3e73a0b77d035c2e299d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>运行 Analysis Services 部署向导
-  在使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导部署 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，可以按照以下方法运行该向导：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导部署[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中，你可以通过以下方式运行该向导：  
   
 -   **以交互方式**交互式运行时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导生成部署脚本基于输入文件中，由用户输入以交互方式修改。 此向导将任何用户的更改仅应用于部署脚本。 向导不会更改输入文件。 有关输入文件的详细信息，请参阅 [了解用于创建部署脚本的输入文件](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)。  
   
@@ -46,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   单击 **“开始”**，依次指向 **“所有程序”**、 **“Microsoft SQL Server”**和 **“Analysis Services”**，然后单击 **“部署向导”**。  
   
-     - 或 -  
+     — 或 —  
   
 -   在**项目**文件夹[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中，双击\<项目名称 >.asdatabase 文件。
     > [!NOTE]  

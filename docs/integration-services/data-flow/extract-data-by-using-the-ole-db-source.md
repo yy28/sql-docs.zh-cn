@@ -1,5 +1,5 @@
 ---
-title: "使用 OLE DB 源提取数据 |Microsoft 文档"
+title: "使用 OLE DB 源提取数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 06c12224a9117d26d10149698289508edc63567f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>使用 OLE DB 源提取数据
   若要添加并配置 OLE DB 源，包必须已包含至少一个数据流任务。  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/03/2017
   
 10. 可以单击 **“预览”** ，查看最多 200 行 OLE DB 源所提取的数据。  
   
-11. 单击 **“确定”**。  
+11. 单击“确定” 。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -79,4 +78,3 @@ ms.lasthandoff: 08/03/2017
  [数据流任务](../../integration-services/control-flow/data-flow-task.md)  
   
   
-

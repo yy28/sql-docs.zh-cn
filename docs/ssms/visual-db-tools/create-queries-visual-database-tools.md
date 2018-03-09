@@ -3,8 +3,11 @@ title: "创建查询 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b7c219e4ead14c4053dfd481d1fa5559ce257a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>创建查询 (Visual Database Tools)
-使用查询，您可以从数据库的表和视图中检索数据。 在“查询和视图设计器”中创建和使用查询，该窗口由四个窗格组成：[“关系图”窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)、[“SQL”窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)、[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)和[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用查询，用户可以从数据库的表和视图中检索数据。 在“查询和视图设计器”中创建和使用查询，该窗口由四个窗格组成：[“关系图”窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)、[“SQL”窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)、[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)和[“结果”窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)。  
   
 ### <a name="to-create-a-new-query"></a>创建新查询  
   

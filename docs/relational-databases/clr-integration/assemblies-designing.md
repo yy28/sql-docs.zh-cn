@@ -8,26 +8,27 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce4e2e7fb36146d9e7e84a8a5c0a1b2f3fe09f58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---designing"></a>程序集的设计
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍设计程序集时，应考虑以下因素：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题说明了设计程序集时应考虑的下列因素：  
   
 -   打包程序集  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/17/2017
  同时，指定 UNSAFE 将允许程序集中的代码执行 CLR 验证工具认为是非安全类型的操作。 这些操作可能以非控制的方式访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程空间中的内存缓冲区。 UNSAFE 程序集也可能破坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或公共语言运行时的安全系统。 有经验的开发人员或管理员应仅向高度可信的程序集授予 UNSAFE 权限。 只有的成员**sysadmin**固定的服务器角色可以创建不安全程序集。  
   
 ## <a name="restrictions-on-assemblies"></a>对程序集的限制  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对程序集中的托管代码有一些限制，以便确保可以以可靠和可伸缩的方式运行它们。 这意味着在 SAFE 和 EXTERNAL_ACCESS 程序集不允许可能危及服务器可靠性的某些操作。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在程序集中，以确保它们可以在可靠且可扩展的方式运行的托管代码中放置某些限制。 这意味着在 SAFE 和 EXTERNAL_ACCESS 程序集不允许可能危及服务器可靠性的某些操作。  
   
 ### <a name="disallowed-custom-attributes"></a>禁止的自定义属性  
  不能用以下自定义属性批注程序集：  

@@ -1,5 +1,5 @@
 ---
-title: "syscollector_execution_stats (TRANSACT-SQL) |Microsoft 文档"
+title: syscollector_execution_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_stats
 - syscollector_execution_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syscollector_execution_stats view
 - data collector view
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 911ab5cd479290cd9448430b284c11ba2d7078bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1e04c57081f19358786dcc723f6ef2f79757fae2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorexecutionstats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +40,14 @@ ms.lasthandoff: 11/17/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**bigint**|标识收集组的每次执行。 用于将此视图与其他详细日志联接起来。 不可为 null。|  
-|**task_name**|**nvarchar （128)**|该信息对应的收集组或包任务的名称。 不可为 null。|  
+|**task_name**|**nvarchar(128)**|该信息对应的收集组或包任务的名称。 不可为 null。|  
 |**execution_row_count_in**|**int**|在数据流起始位置处理的行数。 可以为 Null。|  
 |**execution_row_count_out**|**int**|在数据流结尾位置处理的行数。 可以为 Null。|  
 |**execution_row_count_errors**|**int**|在数据流过程中失败的行数。 可以为 Null。|  
 |**execution_time_ms**|**int**|完成任务所需的时间（单位为毫秒）。 可以为 Null。|  
 |**log_time**|**datetime**|记录此信息的时间。 不可为 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要选择权限**dc_operator**。  
   
 ## <a name="see-also"></a>另请参阅  

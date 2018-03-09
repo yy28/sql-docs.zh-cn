@@ -3,8 +3,9 @@ title: "执行方法 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Execute method [ADO]
+helpviewer_keywords:
+- Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b42de5e1548cc7fd68c7b71182034df7e9f97f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be0dfb94d6681af706d75437143dcde28e63587d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-rds"></a>执行方法 (RDS)
 执行该请求，并使用 ADO 记录集在创建 ADO 2.5 及更高版本。  
@@ -45,7 +47,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *HandlerString*  
  用于标识要用于此执行的处理程序的两部分字符串。 该字符串包含两个部分。 第一部分包含要使用的处理程序的名称 (ProgID)。 第二部分包含自变量传递到处理程序。 如何解释自变量字符串的详细信息是特定于每个处理程序。 两个部分的第一个实例在字符串中的逗号分隔。 参数字符串可以包含额外逗号。 这些参数是可选的。  
   
- *查询字符串*  
+ *QueryString*  
  在连接字符串中标识的 OLE DB 访问接口支持的命令语言中的命令。 对于基于 SQL 的提供程序， *QueryString*可能包含 TRANSACT-SQL 命令语句，但对于非 SQL 提供程序 (例如，MSDataShape)，这可能不是[!INCLUDE[tsql](../../../includes/tsql_md.md)]查询语句。  
   
  如果正在使用一个处理程序，该处理程序可以更改或替换此处指定的值。 例如，该处理程序通常取代*QueryString*其.ini 文件中的查询字符串。 默认情况下，使用 Msdfmap.ini 文件。  

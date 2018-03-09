@@ -3,26 +3,28 @@ title: "对 HelloData 注释 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: hellodata sample application [ADO]
+helpviewer_keywords:
+- hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adda58b0be044229cc4efc26c65b1af1c4ca3dc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2265e361258ee49a9d387f3cb879f138c196ba8e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comments-on-hellodata"></a>对 HelloData 的注释
 HelloData 应用程序步骤通过一个典型的 ADO 应用程序的基本操作： 获取、 检查、 编辑和更新数据。 当启动应用程序时，单击第一个按钮，**获取数据**。 这将运行**GetData**子例程。  

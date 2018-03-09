@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: admin
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 939ac623b62b4b079e81a5c3f12df804e0b6171c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>设置 ODBC 连接池选项
 应用程序，从无需为每种使用重新建立的连接池使用连接可以连接池。 你可以使用**连接池**选项卡**ODBC 数据源管理器**对话框中，若要启用和禁用性能监视。 双击要设置的连接超时期限的驱动程序名称。  

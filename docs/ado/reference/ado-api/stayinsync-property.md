@@ -3,8 +3,9 @@ title: "StayInSync 属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - Recordset20::PutStayInSync
 - Recordset20::get_StayInSync
 - Recordset20::GetStayInSync
-helpviewer_keywords: StayInSync property
+helpviewer_keywords:
+- StayInSync property
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 440cfbc89b1e5e1b221869880e061aad8711630f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1edc5a35035ed8847dd26c13932b49e29b22dca
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stayinsync-property"></a>StayInSync 属性
 指示在分层结构[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象、 是否对基础的子记录的引用 (即，*章*) 对父行的位置更改时，发生变化。  

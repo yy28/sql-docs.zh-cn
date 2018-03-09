@@ -3,26 +3,28 @@ title: "附录 c: 使用 ADO 编程 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO, programming
+helpviewer_keywords:
+- ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f7abcbece2ae08beab7cbe99f6bdb21ded96d41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ce6030b4e039cf88ac22bc85dd5c2aba46ded7b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>使用在开发环境 ADO 编程附录 c:
 ADO 是可以用于许多编程语言，包括 Microsoft Visual Basic、 VBScript、 JScript 和 Visual c + + COM 自动化接口组件。 ADO 的版本与每个这些工具和其他应用程序，如 Microsoft Office 和 Microsoft SQL Server 安装。

@@ -2,9 +2,12 @@
 title: "SQL Server Management Studio 键盘快捷键 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,16 +25,16 @@ ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 caps.latest.revision: "82"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b42d5ff8c209d4df06abbf8c85b0edee8883a868
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d206355149899d1e8f9df816d45b2f64fe2c4cb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 键盘快捷键
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”**下的 **“键盘”** 页中选择所需的键盘方案。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为用户提供了两种键盘方案。 默认情况下使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 方案，即使用基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 的键盘快捷键。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 还提供了类似于 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的标准方案的键盘方案。 若要更改键盘方案或添加其他键盘快捷键，请在 **“工具”** 菜单中单击 **“选项”**。 在 **“环境”**下的 **“键盘”** 页中选择所需的键盘方案。  
   
 > [!NOTE]  
 >  若要仅显示标题，请单击此页顶部的“全部折叠”。  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
 |显示上下文菜单|Shift+F10|Shift+F10|  
 |显示 **“新建文件”** 对话框以创建文件。|Ctrl+N|Ctrl+N|  
 |显示 **“新建项目”** 对话框以创建新项目|Ctrl+Shift+N|Ctrl+Shift+N|  
-|显示 **“打开文件”** 对话框以打开现有文件|Ctrl+O<br /><br /> 或<br /><br /> CTRL+Shift+G|Ctrl+O|  
+|显示 **“打开文件”** 对话框以打开现有文件|Ctrl+O<br /><br /> 或多个<br /><br /> CTRL+Shift+G|Ctrl+O|  
 |显示 **“打开项目”** 对话框，用于打开现有项目|Ctrl+Shift+O|Ctrl+Shift+O|  
 |显示 **“添加新项”** 对话框，用于向当前项目添加新文件|Ctrl+Shift+A|Ctrl+Shift+A|  
 |显示 **“添加现有项”** 对话框，用于向当前项目添加现有文件|SHIFT+ALT+A|SHIFT+ALT+A|  
@@ -68,10 +71,10 @@ ms.lasthandoff: 11/09/2017
 |在编辑器处于代码视图或服务器代码视图中时将插入点移到位于代码编辑器顶部的下拉条|Ctrl+F2|无等效项|  
 |移到当前工具窗口工具栏|Shift+Alt|Shift+Alt|  
 |显示 IDE 导航器，并选中第一个工具窗口|Alt+F7|无等效项|  
-|移到下一个工具窗口|Alt+F6<br /><br /> 或<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 F6|Alt+F6|  
+|移到下一个工具窗口|Alt+F6<br /><br /> 或多个<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 F6|Alt+F6|  
 |移到上一个工具窗口|Shift+Alt+F7|Shift+Alt+F7|  
 |移到单个文档的拆分窗格视图的下一个窗格|F6|F6|  
-|移到上一个选定窗口|Shift+Alt+F6<br /><br /> 或<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 Shift+F6|Shift+Alt+F6|  
+|移到上一个选定窗口|Shift+Alt+F6<br /><br /> 或多个<br /><br /> [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器中的 Shift+F6|Shift+Alt+F6|  
 |移到单个文档的拆分窗格视图的上一个窗格|Shift+F6|F6|  
 |显示停靠菜单|Alt+减号 (-)|无等效项|  
 |显示一个弹出窗口，其中列出所有打开的窗口|Ctrl+Alt+向下键|无等效项|  
@@ -83,14 +86,14 @@ ms.lasthandoff: 11/09/2017
 |显示摘要窗口|F7|F7|  
 |显示属性窗口|F4|F4|  
 |显示 **“输出”** 窗口|Ctrl+Alt+O|无等效项|  
-|显示 **“任务列表”** 窗口|CTRL+\\，T<br /><br /> 或<br /><br /> CTRL+\\，CTRL+T|Ctrl+Alt+K|  
+|显示 **“任务列表”** 窗口|CTRL+\\，T<br /><br /> 或多个<br /><br /> CTRL+\\，CTRL+T|Ctrl+Alt+K|  
 |在对象资源管理器的详细信息列表视图和对象资源管理器的详细信息属性窗格之间切换。|F6|F6|  
 |控制拆分栏，拆分栏用于分隔对象资源管理器的详细信息列表视图和对象资源管理器的详细信息属性窗格，以便调整显示窗格的大小。|TAB，然后是上箭头或下箭头|TAB，然后是上箭头或下箭头|  
 |显示工具箱|Ctrl+Alt+X|Ctrl+Alt+X|  
 |显示书签窗口|Ctrl+K、Ctrl+W|Ctrl+K、Ctrl+W|  
 |显示浏览器窗口|Ctrl+Alt+R|Ctrl+Alt+R|  
 |显示用于 HTML 设计器中 Web 服务器控件的公共命令的智能标记菜单|Shift+ALT+F10|无等效项|  
-|显示“错误列表”窗口（仅限[!INCLUDE[tsql](../includes/tsql-md.md)] 编辑器）|CRTL+\\，CTRL+E<br /><br /> 或<br /><br /> CTRL+\\，E|CRTL+\\，CTRL+E|  
+|显示“错误列表”窗口（仅限[!INCLUDE[tsql](../includes/tsql-md.md)] 编辑器）|CRTL+\\，CTRL+E<br /><br /> 或多个<br /><br /> CTRL+\\，E|CRTL+\\，CTRL+E|  
 |移到“错误列表”窗口中的下一项（仅限[!INCLUDE[tsql](../includes/tsql-md.md)] 编辑器）|Ctrl+Shift+F12|Ctrl+Shift+F12|  
 |显示查看历史记录中的上一页。 仅在 Web 浏览器窗口中可用|Alt+向左键|无等效项|  
 |显示查看历史记录中的下一页。 仅在 Web 浏览器窗口中可用|Alt+向右键|无等效项|  
@@ -183,8 +186,8 @@ ms.lasthandoff: 11/09/2017
 |切换全屏显示|Shift+Alt+Enter|Shift+Alt+Enter|  
 |向上滚动一行文本|Ctrl+向上键|Ctrl+向上键|  
 |向下滚动一行文本|Ctrl+向下键|Ctrl+向下键|  
-|撤消上一个编辑操作|Ctrl+Z<br /><br /> 或<br /><br /> Alt+退格键|Ctrl+Z|  
-|恢复上一个撤消的操作|Ctrl+Shift+Z<br /><br /> 或<br /><br /> Ctrl+Y<br /><br /> 或<br /><br /> Alt+Shift+Backspace|Ctrl+Shift+Z<br /><br /> 或<br /><br /> Ctrl+Y<br /><br /> 或<br /><br /> Alt+Shift+Backspace|  
+|撤消上一个编辑操作|Ctrl+Z<br /><br /> 或多个<br /><br /> Alt+退格键|Ctrl+Z|  
+|恢复上一个撤消的操作|Ctrl+Shift+Z<br /><br /> 或多个<br /><br /> Ctrl+Y<br /><br /> 或多个<br /><br /> Alt+Shift+Backspace|Ctrl+Shift+Z<br /><br /> 或多个<br /><br /> Ctrl+Y<br /><br /> 或多个<br /><br /> Alt+Shift+Backspace|  
 |保存选定项|Ctrl+S|Ctrl+S|  
 |全部保存|Ctrl+Shift+S|Ctrl+Shift+S|  
 |关闭|Ctrl+F4|Ctrl+F4|  
@@ -203,7 +206,7 @@ ms.lasthandoff: 11/09/2017
 |用当前连接打开一个新查询|Ctrl+N|Ctrl+N|  
 |在对象资源管理器中打开数据库|Alt+F8|Alt+F8|  
 |指定模板参数的值|Ctrl+Shift+M|Ctrl+Shift+M|  
-|运行查询编辑器的选定部分；如果未选择任何内容，则分析整个查询编辑器|F5<br /><br /> 或<br /><br /> Ctrl+Shift+E|F5<br /><br /> 或<br /><br /> Ctrl+E<br /><br /> 或<br /><br /> Alt+X|  
+|运行查询编辑器的选定部分；如果未选择任何内容，则分析整个查询编辑器|F5<br /><br /> 或多个<br /><br /> Ctrl+Shift+E|F5<br /><br /> 或多个<br /><br /> Ctrl+E<br /><br /> 或多个<br /><br /> Alt+X|  
 |分析查询编辑器的选定部分；如果未选择任何内容，则分析整个查询编辑器|Ctrl+F5|Ctrl+F5|  
 |显示估计的执行计划|Ctrl+Shift+Alt+L|Ctrl+L|  
 |取消正在执行的查询|Alt+Break|Alt+Break|  
@@ -237,8 +240,8 @@ ms.lasthandoff: 11/09/2017
 |------------|-----------------------------|---------------------------------|  
 |插入新行|Enter 或 Shift+Enter|Enter 或 Shift+Enter|  
 |交换光标两侧的字符（不适用于 SQL 编辑器。）|Ctrl+T|Ctrl+T|  
-|删除光标右侧一个字符|DELETE|DELETE|  
-|删除光标左侧一个字符|Backspace<br /><br /> 或<br /><br /> Shift+<br /><br /> Backspace|Backspace<br /><br /> 或<br /><br /> Shift+<br /><br /> Backspace|  
+|删除光标右侧一个字符|删除|删除|  
+|删除光标左侧一个字符|Backspace<br /><br /> 或多个<br /><br /> Shift+<br /><br /> Backspace|Backspace<br /><br /> 或多个<br /><br /> Shift+<br /><br /> Backspace|  
 |删除选定内容中的空白，或者删除光标旁的空白（如果不存在选定内容）|Ctrl+K、C|无等效项|  
 |插入编辑器配置的空格数|Tab|Tab|  
 |在光标上方插入一个空行|Ctrl+Enter|Ctrl+Enter|  
@@ -281,7 +284,7 @@ ms.lasthandoff: 11/09/2017
 |设置下一语句|Ctrl+3 0|无等效项|  
 |显示下一语句|Alt+NUM|无等效项|  
 |执行 **“运行至光标处”** 命令|Ctrl+F10|Ctrl+F10|  
-|显示 **“快速监视”** 对话框|Ctrl+Alt+Q<br /><br /> 或<br /><br /> Shift+F9|Ctrl+Alt+Q|  
+|显示 **“快速监视”** 对话框|Ctrl+Alt+Q<br /><br /> 或多个<br /><br /> Shift+F9|Ctrl+Alt+Q|  
 |切换断点|F9|F9|  
 |启用断点|Ctrl+F9|无等效项|  
 |删除断点。 仅在 **“断点”** 窗口中可用|Alt+F9、D|无等效项|  
@@ -306,8 +309,8 @@ ms.lasthandoff: 11/09/2017
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|列出成员|Ctrl+J|Ctrl+空格键<br /><br /> 或<br /><br /> Ctrl+J|  
-|完成单词|Ctrl+空格键<br /><br /> 或<br /><br /> Alt+向右键|Alt+向右键|  
+|列出成员|Ctrl+J|Ctrl+空格键<br /><br /> 或多个<br /><br /> Ctrl+J|  
+|完成单词|Ctrl+空格键<br /><br /> 或多个<br /><br /> Alt+向右键|Alt+向右键|  
 |显示快速信息|Ctrl+K、Ctrl+I|无等效项|  
 |显示参数信息|Ctrl+Shift+空格键|Ctrl+Shift+空格键|  
 |复制参数提示|Ctrl+Shift+Alt+C|无等效项|  
@@ -346,7 +349,7 @@ ms.lasthandoff: 11/09/2017
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|帮助|F1<br /><br /> 或<br /><br /> Shift+F1|F1|  
+|帮助|F1<br /><br /> 或多个<br /><br /> Shift+F1|F1|  
 |显示 SQL Server 联机丛书|Ctrl+F1|无等效项|  
 |打开帮助库管理器|Ctrl+Alt+F1|无等效项|  
 |显示 SQL Server 资源中心网页|Ctrl+Alt+F2|无等效项|  
@@ -384,11 +387,11 @@ ms.lasthandoff: 11/09/2017
   
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|剪切（删除当前选定项并将其放入剪贴板）|Ctrl+X<br /><br /> 或<br /><br /> Shift+Delete|Ctrl+X<br /><br /> 或<br /><br /> Shift+Delete|  
-|剪切所有所选行，或者剪切当前行（如果没有选定任何内容）。|Ctrl+L<br /><br /> 或<br /><br /> Ctrl+Shift+L|无等效项|  
-|复制到剪贴板|Ctrl+C<br /><br /> 或<br /><br /> Ctrl+Insert|Ctrl+C<br /><br /> 或<br /><br /> Ctrl+Insert|  
-|在插入点从剪贴板粘贴|Ctrl+V<br /><br /> 或<br /><br /> Shift+Insert|Ctrl+V<br /><br /> 或<br /><br /> Shift+Insert|  
-|从剪贴板环在插入点处粘贴某一项并且自动选择粘贴的项|Ctrl+Shift+V<br /><br /> 或<br /><br /> Ctrl+Shift+Insert|无等效项|  
+|剪切（删除当前选定项并将其放入剪贴板）|Ctrl+X<br /><br /> 或多个<br /><br /> Shift+Delete|Ctrl+X<br /><br /> 或多个<br /><br /> Shift+Delete|  
+|剪切所有所选行，或者剪切当前行（如果没有选定任何内容）。|Ctrl+L<br /><br /> 或多个<br /><br /> Ctrl+Shift+L|无等效项|  
+|复制到剪贴板|Ctrl+C<br /><br /> 或多个<br /><br /> Ctrl+Insert|Ctrl+C<br /><br /> 或多个<br /><br /> Ctrl+Insert|  
+|在插入点从剪贴板粘贴|Ctrl+V<br /><br /> 或多个<br /><br /> Shift+Insert|Ctrl+V<br /><br /> 或多个<br /><br /> Shift+Insert|  
+|从剪贴板环在插入点处粘贴某一项并且自动选择粘贴的项|Ctrl+Shift+V<br /><br /> 或多个<br /><br /> Ctrl+Shift+Insert|无等效项|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>日志查看器键盘快捷键  
   

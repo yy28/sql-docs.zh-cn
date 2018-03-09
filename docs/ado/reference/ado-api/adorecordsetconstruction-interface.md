@@ -3,8 +3,9 @@ title: "ADORecordsetConstruction 接口 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADORecordsetConstruction
-helpviewer_keywords: ADORecordsetConstruction interface [ADO]
+f1_keywords:
+- ADORecordsetConstruction
+helpviewer_keywords:
+- ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd346172159ac3ee64d2c03a22f2c9a467fc2bcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be4c36c5bd69fe6657b57d74e8808259fe602db0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
 **ADORecordsetConstruction**接口用于构造 ADO**记录集**从 OLE DB 对象**行集**C/c + + 应用程序中的对象。  
@@ -75,10 +78,10 @@ ms.lasthandoff: 11/17/2017
   
  你还可以构造 ADO**记录集**从 OLE DB 对象**章**或**RowPosition**对象。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>需求  
  **版本：** ADO 2.0 及更高版本  
   
- **库：** msado15.dll  
+ **Library:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

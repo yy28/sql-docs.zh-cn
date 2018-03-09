@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b042185cb49c00e61d090934a9c8ed8d2258059f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 713b9448ecb70b57f0aace7f05aa9b977511323b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC 中的 C 数据类型
 ODBC 定义由应用程序变量和其相应的类型标识符的 C 数据类型。 绑定到结果集中的列和语句参数的缓冲区使用这些名称。 例如，假设应用程序想要从字符格式的结果集列中检索数据。 它声明的变量 SQLCHAR * 数据类型，并将此变量绑定到结果集列与 SQL_C_CHAR 类型标识符。 C 数据类型和类型标识符的完整列表，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  

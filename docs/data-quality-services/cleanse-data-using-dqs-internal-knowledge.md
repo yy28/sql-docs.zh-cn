@@ -18,15 +18,15 @@ f1_keywords:
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75eb80e656e390cd6ad931e29b94776630214708
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e837002fb9060fa87bdd2588e8c72570687345
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS（内部）知识清理数据
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用数据质量项目清理您的数据。 可以使用已在 DQS 中针对高质量数据集生成的知识库对您的源数据执行数据清理。 有关详细信息，请参阅 [生成知识库](../data-quality-services/building-a-knowledge-base.md)。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色，才能执行数据清理。  
   
 ##  <a name="Create"></a> 创建清理数据质量项目  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
  根据置信度，值将显示在以下五个选项卡上：  
   
-|选项卡|说明|  
+|选项卡|Description|  
 |---------|-----------------|  
 |**建议**|显示 DQS 找到其建议值的域值，这些值的置信度高于  “自动建议阈值”，但是低于  “自动更正阈值”。<br /><br /> 建议值显示在 **“更正为”** 列中（与原始值相对照）。 您可以针对上部网格中的某个值单击 **“批准”** 或 **“拒绝”** 列中的单选按钮，以接受或拒绝对于该值所有实例的建议。 在此情况下，接受的值移到 **“已更正”** 选项卡，被拒绝的值移到 **“无效”** 选项卡。|  
 |**新建**|显示 DQS 没有足够信息，因此不能映射到任何其他选项卡的有效域。此外，此选项卡还包含这样的值：它们的置信度低于 *自动建议阈值* ，但是足以被标记为有效。<br /><br /> 如果您认为值是正确的，请单击 **“批准”** 列中的单选按钮。 否则，请单击 **“拒绝”** 列中的单选按钮。 接受的值移到 **“正确”** 选项卡，被拒绝的值移到 **“无效”** 选项卡。对于该值，还可以手动键入正确的值，以替换“更正为”列中的原始值，然后单击“批准”列中的单选按钮接受更改。 在此情况下，值将移到 **“已更正”** 选项卡。|  

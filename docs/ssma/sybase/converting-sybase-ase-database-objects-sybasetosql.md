@@ -1,10 +1,13 @@
 ---
 title: "转换 Sybase ASE 数据库对象 (SybaseToSQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 12/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,25 +21,25 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c26c897ef9b4ffe1a05a47ab722770681a3737a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38cd19ee1684b52aa7e98d4e9cd30897098e3b4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="converting-sybase-ase-database-objects-sybasetosql"></a>转换 Sybase ASE 数据库对象 (SybaseToSQL)
-你已连接到 Sybase 自适应 Server Enterprise (ASE) 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 和设置项目和数据映射选项，您可以将转换到的 Sybase 自适应 Server Enterprise (ASE) 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库对象。  
+# <a name="converting-sap-ase-database-objects-sybasetosql"></a>转换 SAP ASE 数据库对象 (SybaseToSQL)
+你已连接到 SAP 自适应 Server Enterprise (ASE) 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 和组项目模板和数据映射选项，你可以将转换到 SAP 自适应 Server Enterprise (ASE) 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库对象。  
   
 ## <a name="the-conversion-process"></a>转换过程  
-转换数据库对象从 ASE 所需的对象定义，将它们转换为类似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 对象，然后将此信息加载到 SSMA 元数据。 不，它不会将信息加载到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您然后可以通过查看对象及其属性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 元数据资源管理器。  
+转换数据库对象从 ASE 所需的对象定义，将它们转换为类似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 对象，然后将此信息加载到 SSMA 元数据。 不，它不会将信息加载到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL。 您然后可以通过查看对象及其属性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 元数据资源管理器。
   
-在转换期间，SSMA 打印消息输出到输出窗格中，并为错误列表窗格中的错误消息。 使用的输出和错误的信息来确定你是否必须修改你的 ASE 数据库或您的转换过程，以获取所需的转换结果。  
+在转换期间，SSMA 将打印消息输出到输出窗格中和错误消息到**错误列表**窗格。 使用的输出和错误的信息来确定你是否必须修改你的 ASE 数据库或您的转换过程，以获取所需的转换结果。  
   
 ## <a name="setting-conversion-options"></a>设置转换选项  
 在将对象转换之前, 查看中的项目转换选项**项目设置**对话框。 通过使用此对话框中，你可以设置 SSMA 将函数和全局变量的转换。 有关详细信息，请参阅[项目设置 &#40;转换 &#41;&#40;SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
   
 ## <a name="converting-ase-database-objects"></a>转换 ASE 数据库对象  
-若要转换 ASE 数据库对象，你首先选择你想要转换的对象，然后执行转换的 SSMA。 若要查看输出消息在转换期间上,**视图**菜单上，选择**输出**。  
+若要转换 ASE 数据库对象，首先选择你想要转换的对象，然后执行转换的 SSMA。 若要查看输出消息在转换期间上,**视图**菜单上，选择**输出**。  
   
 **若要将 ASE 对象转换为 SQL Server 或 SQL Azure 语法**  
   
@@ -54,12 +57,12 @@ ms.lasthandoff: 11/09/2017
   
     -   若要将转换或省略单个对象，展开类别文件夹中，然后选择或清除该对象旁边的复选框。  
   
-3.  要将所有所选的对象的转换，请右键单击**数据库**和选择**转换架构**。  
+3.  要将所有所选的对象的转换，请右键单击**数据库**，然后选择**转换架构**。  
   
     您还可以通过右键单击该对象或其包含的文件夹，然后选择转换单个对象的类别**转换架构**。  
   
 > [!NOTE]  
-> 某些 Sybase 系统函数不完全匹配的等效的 SQL Server 系统函数的行为。 为了模拟 Sybase ASE 行为，SSMA 将生成下调用 s2ss 的架构转换后的 SQL Server 数据库中用户定义函数。 具体取决于项目设置中，某些 SQL Server 系统函数会替换这些仿真函数。 SSMA 创建以下用户定义函数：  
+> 某些 SAP ASE 系统函数并不完全匹配等效的 SQL Server 系统函数的行为。 为了模拟 SAP ASE 行为，SSMA 将生成下调用 s2ss 的架构转换后的 SQL Server 数据库中用户定义函数。 具体取决于项目设置中，某些 SQL Server 系统函数会替换这些仿真函数。 SSMA 创建以下用户定义函数：  
   
 ||||  
 |-|-|-|  
@@ -70,8 +73,8 @@ ms.lasthandoff: 11/09/2017
 |**ulowsurr**|**to_unichar**|**ssma_current_time**|  
 |**uhighsurr**|||  
   
-## <a name="objects-not-supported-in-sql-azure"></a>不支持在 SQL Azure 中的对象  
-以下 T-SQL 关键字用于通过 SSMA Sybase 转换为正则 SQL Server 过程，但这些关键字不受 SQL Azure T-SQL 语法：  
+## <a name="objects-not-supported-in-azure-sql"></a>在 Azure SQL 不支持的对象  
+以下 T-SQL 关键字用于通过 SSMA SAP ASE 在转换为 SQL Server 本地，但这些关键字不受 SQL Azure T-SQL 语法：  
   
 ||||  
 |-|-|-|  
@@ -82,7 +85,7 @@ ms.lasthandoff: 11/09/2017
 |WRITETEXT|||  
   
 ## <a name="viewing-conversion-problems"></a>查看转换问题  
-某些 ASE 对象可能不进行转换。 你可以通过查看摘要转换报表来确定转换成功率。  
+某些 SAP ASE 对象可能不进行转换。 你可以通过查看摘要转换报表来确定转换成功率。  
   
 **若要查看摘要报表**  
   
@@ -110,27 +113,27 @@ ms.lasthandoff: 11/09/2017
   
 5.  选择具有红色错误图标的对象。  
   
-6.  在右窗格中，单击**报表**选项卡。  
+6.  在右窗格中，选择**报表**选项卡。  
   
 7.  在顶部**报表**选项卡是下拉列表。 如果此列表显示**统计信息**，更改选定范围向**源**。  
   
     SSMA 显示的源代码和紧邻代码之上的多个按钮。  
   
-8.  单击**下一步问题**按钮。 这是一个带有箭头右侧的红色错误图标。  
+8.  选择**下一步问题**，一个带有箭头右侧的红色错误图标。  
   
-    ASE 的 SSMA 将突出显示当前对象中找到的第一个有问题的源代码。  
+    SAP ASE 的 SSMA 将突出显示当前对象中找到的第一个有问题的源代码。  
   
 对于无法转换每个项，您必须确定你想要使用该对象执行操作：  
   
 -   您可以在编辑过程和触发器的源代码**SQL**选项卡。  
   
--   你可以更改要删除或修改有问题的代码的 ASE 对象。 若要更新的代码载入 SSMA，你将需要更新的元数据。 有关详细信息，请参阅[连接到 Sybase ASE &#40;SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+-   你可以更改要删除或修改有问题的代码的 SAP ASE 对象。 若要更新的代码加载到 SSMA 中，你必须更新元数据。 有关详细信息，请参阅[连接到 SAP ASE &#40;SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
--   你可以从迁移中排除对象。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 元数据资源管理器和 Sybase 元数据资源管理器中，在加载到对象之前清除项旁边的复选框[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 和从 ASE 的迁移数据。  
+-   你可以从迁移中排除对象。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 元数据资源管理器和 Sybase 元数据资源管理器中，在加载到对象之前清除项旁边的复选框[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 和从 SAP ASE 的迁移数据。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-steps"></a>后续步骤  
 迁移过程的下一步是[加载转换数据库对象到 SQL Server / SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06)。  
   
 ## <a name="see-also"></a>另请参阅  
-[Sybase ASE 将数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SAP ASE 将数据库迁移到 SQL Server 的 Azure SQL Database &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -8,24 +8,22 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 caps.latest.revision: "16"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9ebea5b20a98810b9a680f476bfa0bd94ffbf7e7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c22be9c55c773bb363589b2aea278f2b43ec24f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>对 Reporting Services 订阅和传递进行故障排除
+# <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services 订阅和传递的疑难解答
   
     
 利用本主题解决你在执行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 报表订阅、计划和传递时遇到的问题。  

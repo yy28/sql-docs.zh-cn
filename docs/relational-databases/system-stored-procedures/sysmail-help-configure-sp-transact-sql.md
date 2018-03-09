@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
 - sysmail_help_configure_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_configure_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d799b3d4d319bfda84014e8b520008acdb2c6a30
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 13f768cd5e1cbbbcfa3f5b74d7ae52d2e9f357e1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@parameter_name**  =] *parameter_name*  
+ [**@parameter_name** = ] **'***parameter_name***'**  
  要检索的配置设置名称。 如果指定，在返回的配置设置的值 **@parameter_value** 输出参数。 如果没有 **@parameter_name** 指定，此存储的过程返回的结果集包含所有实例中的数据库邮件配置设置。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -55,8 +58,8 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ||||  
 |-|-|-|  
 |列名|数据类型|Description|  
-|**参数名称**|**nvarchar(256)**|配置参数的名称。|  
-|**参数值**|**nvarchar(256)**|配置参数的值。|  
+|**paramname**|**nvarchar(256)**|配置参数的名称。|  
+|**paramvalue**|**nvarchar(256)**|配置参数的值。|  
 |**说明**|**nvarchar(256)**|配置参数的说明。|  
   
 ## <a name="remarks"></a>注释  
@@ -66,7 +69,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
  存储的过程**sysmail_help_configure_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称调用过程**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认为成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

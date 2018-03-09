@@ -3,8 +3,11 @@ title: "在“条件”窗格中组合搜索条件的约定 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,16 +24,16 @@ ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b40c9f61780760655373d160e3c6c9ee52545d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d99326f7d045aff95bf753d7f1ff68826f313af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
-您可以创建包含用任意多个 AND 和 OR 运算符链接的任意多个搜索条件的查询。 具有 AND 和 OR 子句组合的查询会变得非常复杂。因此，了解在执行此类查询时如何对其进行解释，以及在[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)和 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中如何表示此类查询，是非常有用的。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以创建包含用任意多个 AND 和 OR 运算符链接的任意多个搜索条件的查询。 具有 AND 和 OR 子句组合的查询会变得非常复杂。因此，了解在执行此类查询时如何对其进行解释，以及在[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)和 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)中如何表示此类查询，是非常有用的。  
   
 > [!NOTE]  
 > 有关仅包含一个 AND 或 OR 运算符的搜索条件的详细信息，请参阅[为同一列指定多个搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) 和 [为多个列指定多个搜索条件 (Visual Database Tools)](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md)。  

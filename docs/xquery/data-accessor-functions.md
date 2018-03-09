@@ -3,28 +3,35 @@ title: "数据访问器函数 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
-helpviewer_keywords: data-accessor functions [XQuery]
+applies_to:
+- SQL Server
+dev_langs:
+- XML
+helpviewer_keywords:
+- data-accessor functions [XQuery]
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c77c0a1a9b6d61465956d8e1e81eb58e86f8b086
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a6b3cc974ae32047d88e1355a870cc97806c22d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-accessor-functions"></a>数据取值函数
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本节中的主题介绍数据取值函数并提供相应的示例代码。  
   
@@ -35,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
 -   类型化的 XML： 表达式 /age/text() 返回任何简单类型化的静态错误\<age > 元素。 另一方面，fn:data(/age) 返回整数 12。 fn:string(/age) 产生字符串“12”。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [字符串函数 &#40;XQuery &#41;](../xquery/data-accessor-functions-string-xquery.md)  
   

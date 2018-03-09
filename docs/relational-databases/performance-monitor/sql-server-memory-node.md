@@ -2,31 +2,34 @@
 title: "SQL Server，内存节点 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65bc7a1872ddcbd5644c53118a34f037d56f5913
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f8e499aec26a962e6d4e70afcdd81bf021b6e0ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-node"></a>SQL Server、内存节点
-  Microsoft **中的** “内存节点” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象在 NUMA 节点上提供监视服务器内存使用情况的计数器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的“内存节点”对象在 NUMA 节点上提供监视服务器内存使用情况的计数器。  
   
 ## <a name="memory-node-counters"></a>内存节点计数  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **内存节点** 计数器。  
   
-|SQL Server Memory Manager 计数器|说明|  
+|SQL Server Memory Manager 计数器|Description|  
 |----------------------------------------|-----------------|  
 |**Database Node Memory (KB)**|指定服务器当前在此节点上用于数据库页面的内存量。|  
 |**Free Node Memory (KB)**|指定服务器在此节点上未使用的内存量。|  

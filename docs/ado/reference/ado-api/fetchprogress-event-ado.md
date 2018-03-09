@@ -3,8 +3,9 @@ title: "FetchProgress 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - FetchProgress
 - Recordset::FetchProgress
-helpviewer_keywords: FetchProgress event [ADO]
+helpviewer_keywords:
+- FetchProgress event [ADO]
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 990e5bbe3a203cd48c34c6153a9ee0ca8e678758
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3bd5284c35e51a8cc711fe7612d1176241c00ac7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 事件 (ADO)
 **FetchProgress**定期在较长的异步操作以报告更多的行数当前已经检索到过程中调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

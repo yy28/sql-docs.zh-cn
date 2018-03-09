@@ -2,15 +2,13 @@
 title: "挖掘结构和结构列的属性 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>挖掘结构和结构列的属性
-  可以使用数据挖掘设计器的 **“挖掘结构”** 选项卡，为挖掘结构及其关联的列和嵌套表设置或更改属性。 在该选项卡中设置的属性将传播到与结构相关联的每个挖掘模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以使用数据挖掘设计器的 **“挖掘结构”** 选项卡，为挖掘结构及其关联的列和嵌套表设置或更改属性。 在该选项卡中设置的属性将传播到与结构相关联的每个挖掘模型。  
   
 > [!NOTE]  
 >  如果更改挖掘结构中的任何属性的值，即使是名称或说明等元数据，也必须首先重新处理该挖掘结构及其模型，然后才能查看或查询模型。  
@@ -56,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |**HoldoutSeed**|指定用于初始化维持测试集分区的种子，以确保可以重新创建测试数据集。 **注意：**  若要设置此属性， <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 必须设置为 **KeepTrainingCases**。|  
 |**ID**|显示挖掘结构的唯一标识符。<br /><br /> 创建挖掘结构时为其分配的名称将用作 ID。 如果之后通过为 **Name** 属性键入新值而更改了名称，则此新名称仅用作别名；但 ID 不会更改。|  
 |**语言**|指定挖掘结构中标题的语言。|  
-|**Name**|指定挖掘结构的名称或别名。<br /><br /> 如果更改了 Name 属性的值，则新的名称仅用作标题或别名；但挖掘结构的标识符不会更改。|  
+|**名称**|指定挖掘结构的名称或别名。<br /><br /> 如果更改了 Name 属性的值，则新的名称仅用作标题或别名；但挖掘结构的标识符不会更改。|  
 |**数据源**|显示数据源的名称和类型。|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>挖掘结构列的属性  
@@ -73,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 |**IsKey**|指示列是否为键列。|  
 |**KeyColumns**|包含用作属性键（或属性键的一部分）的列的定义。|  
 |**ModelingFlags**|设置算法可用的其他参数。|  
-|**Name**|列的名称。|  
+|**名称**|列的名称。|  
 |**NameColumn**|标识提供父元素名称的列。|  
 |**数据源**|显示列的源。<br /><br /> 对于关系数据源，其值始终为 **(none)**。<br /><br /> 对于基于 OLAP 多维数据集的结构，其值为对用作嵌套表源的切片进行定义的 MDX 语句。|  
 |**SourceMeasureGroup**|显示度量值组的源。<br /><br /> 对于关系数据源，其值始终为 **(none)**。<br /><br /> 对于基于 OLAP 多维数据集的结构，其值为对用作嵌套表源的切片进行定义的 MDX 语句。|  

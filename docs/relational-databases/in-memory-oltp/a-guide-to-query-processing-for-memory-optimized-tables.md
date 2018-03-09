@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee2351e74989e9a574b591366af4a8764b89dea0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  我们考虑 Customer 和 Order 这两个表。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本按（传统）基于磁盘的形式定义了这两个表和关联的索引：  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -72,7 +73,7 @@ GO
   
  考虑以下查询，这些查询联接 Customer 和 Order 表，并返回订单 ID 和相关客户信息：  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -91,7 +92,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  考虑一个与此查询稍有不同的查询，它返回 Order 表的所有行，而不仅是 OrderID：  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -144,7 +145,7 @@ SQL Server 查询处理管道。
   
  下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本包含 Order 和 Customer 表的内存优化版本，其中使用哈希索引：  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -161,7 +162,7 @@ GO
   
  考虑对内存优化表执行相同的查询：  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -183,7 +184,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 ## <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程  
  本机编译存储过程是编译为机器代码的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程，而不是由查询执行引擎解释。 以下脚本创建一个本机编译存储过程来运行示例查询（来自“示例查询”部分）。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -230,7 +231,7 @@ END
   
  本机编译存储过程的调用如下所述：  
   
-1.  用户发出一条 **EXEC***usp_myproc* 语句。  
+1.  用户发出一条“EXEC usp_myproc”语句。  
   
 2.  分析器提取名称和存储过程参数。  
   
@@ -249,7 +250,7 @@ END
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>为本机编译存储过程检索查询执行计划  
  可使用 **中的** 估计的执行计划 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的 SHOWPLAN_XML 选项，检索本机编译的存储过程的查询执行计划。 例如：  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -268,11 +269,11 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |Insert|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|删除|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|此运算符用于内部函数和类型转换。 不是所有函数和类型转换在本机编译存储过程中都受支持。|  
 |Nested Loops Join|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops 是本机编译存储过程内唯一支持的联接运算符。 所有包含联接的计划都将使用 Nested Loops 运算符，即使以解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 执行的同一查询计划包含哈希或合并联接也是如此。|  
 |排序|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
-|顶部|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
+|TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
 |Top-sort|`SELECT TOP 10 ContactName FROM dbo.Customer  ORDER BY ContactName`|**TOP** 表达式（要返回的行的数量）不能超过 8,000 行。 如果查询中还有联接和聚合运算符，数量会更少。 与基表的行数相比，联接和聚合通常可减少要排序的行数。|  
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|请注意，聚合不支持 Hash Match 运算符。 因此，本机编译存储过程中的所有聚合都使用 Stream Aggregate 运算符，即使解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中针对同一查询计划使用 Hash Match 运算符也是如此。|  
   

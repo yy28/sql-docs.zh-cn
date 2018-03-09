@@ -3,28 +3,35 @@ title: "构造函数 (XQuery) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
-helpviewer_keywords: constructor functions [XQuery]
+applies_to:
+- SQL Server
+dev_langs:
+- XML
+helpviewer_keywords:
+- constructor functions [XQuery]
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5b465f9d282c3955aa41bf74c84aa7b1481136f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 882f5ed7260a195e815482a0fb44240fda48e138
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="constructor-functions-xquery"></a>构造函数 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   从指定的输入中，构造函数创建任意 XSD 内置或用户定义原子类型的实例。  
   
@@ -42,7 +49,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *$strval*  
  将被转换的字符串。  
   
- *类*  
+ *TYP*  
  任意内置 XSD 类型。  
   
 ## <a name="remarks"></a>注释  

@@ -1,5 +1,5 @@
 ---
-title: "catalog.worker_agents （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.worker_agents（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -13,43 +13,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
-caps.latest.revision: 3
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d56af0ab150255c53746898a638a32112938755c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 5b3d7ae2666a6adc774093a8496863685457e7e6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents （SSISDB 数据库）
+# <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-显示的信息[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]横向扩展辅助进程。
+显示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker 的相关信息。
 
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|WorkerAgentId|**uniqueidentifier**|辅助代理 ID 的横向扩展辅助中。|
-|IsEnabled|**bit**|是否启用缩放出工作线程。|
-|DisplayName|**nvarchar(256)**|横向扩展辅助进程的显示名称。|
-|Description|**nvarchar(256)**|横向扩展辅助进程的说明。|
-|MachineName|**nvarchar(256)**|横向扩展辅助进程的计算机名称。|
-|Tags|**nvarchar(max)**|横向扩展辅助进程的标记。|
-|用户帐户|**nvarchar(256)**|运行了缩放出 Worker 服务的用户帐户。|
-|LastOnlineTime|**datetimeoffset(7)**|上次缩放出工作线程处于联机状态的时间。|
+|WorkerAgentId|**uniqueidentifier**|Scale Out Worker 的 Worker 代理 ID。|
+|IsEnabled|**bit**|是否启用 Scale Out Worker。|
+|DisplayName|**nvarchar(256)**|Scale Out Worker 的显示名称。|
+|Description|**nvarchar(256)**|Scale Out Worker 的相关说明。|
+|MachineName|**nvarchar(256)**|Scale Out Worker 的计算机名称。|
+|Tags|**nvarchar(max)**|Scale Out Worker 的标记。|
+|UserAccount|**nvarchar(256)**|运行 Scale Out Worker 服务的用户帐户。|
+|LastOnlineTime|**datetimeoffset(7)**|Scale Out Worker 上次联机的时间。|
 
-## <a name="remarks"></a>注释
-此视图显示每个横向扩展辅助角色连接到使用 SSISDB 目录出 Master 缩放行。
+## <a name="remarks"></a>Remarks
+此视图对于使用 SSISDB 目录连接到 Scale Out Master 的每个 Scale Out Worker 显示一行。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 此视图需要下列权限之一：
 
-- 成员资格**ssis_admin**数据库角色
+- ssis_admin 数据库角色的成员资格
 
-- 成员资格**ssis_cluster_executor**数据库角色
+- **ssis_cluster_executor** 数据库角色的成员资格
 
-- 成员资格**sysadmin**服务器角色
-
+- sysadmin 服务器角色的成员资格

@@ -2,9 +2,12 @@
 title: "Oracle 发布服务器的数据类型映射 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d692a102043f78c7c62674843bed4228445ba7c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4078e78f9f1e8879d709ef154a11e44055e2dcd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 发布服务器的数据类型映射
-  Oracle 数据类型并非始终与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  
+# <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Oracle 数据类型并非与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  
   
  下表显示了将数据从 Oracle 发布服务器移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器时，在 Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间数据类型的默认映射情况。 “备用”列指示备用映射是否可用。  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|是|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|是|  
 |RAW([1-2000])|VARBINARY([1-2000])|是|  
-|REAL|FLOAT|是|  
+|real|FLOAT|是|  
 |ROWID|CHAR(18)|是|  
 |TIMESTAMP|DATETIME|是|  
 |TIMESTAMP(0-7)|DATETIME|是|  
@@ -110,6 +113,6 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle 发布服务器的设计注意事项和限制](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle 发布概述](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

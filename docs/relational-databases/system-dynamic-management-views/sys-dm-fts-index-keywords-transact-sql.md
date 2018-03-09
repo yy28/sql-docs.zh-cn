@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.dm_fts_index_keywords
 - sys.dm_fts_index_keywords_TSQL
 - dm_fts_index_keywords_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_fts_index_keywords dynamic management function
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 903c8f459242fc7f470f71207afd2d5ea3bee23e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 687a81711efdaf98f142a0d314db94a53cc74371
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,17 +53,17 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 ```  
   
 ## <a name="arguments"></a>参数  
- db_id (*database_name*)  
+ db_id('*database_name*')  
  调用[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函数。 此函数接受数据库名称，并返回数据库 ID，其中**sys.dm_fts_index_keywords**用于查找指定的数据库。 如果*database_name*是省略，则返回当前数据库 ID。  
   
- object_id (*table_name*)  
+ object_id('*table_name*')  
  调用[OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md)函数。 此函数接受表名，并返回包含要检查的全文索引的表的表 ID。  
   
 ## <a name="table-returned"></a>返回的表  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**关键字**|**nvarchar(4000)**|十六进制表示形式存储于全文索引内的关键字。<br /><br /> 注意： OxFF 表示指示文件或数据集的末尾的特殊字符。|  
+|**keyword**|**nvarchar(4000)**|十六进制表示形式存储于全文索引内的关键字。<br /><br /> 注意： OxFF 表示指示文件或数据集的末尾的特殊字符。|  
 |**display_term**|**nvarchar(4000)**|关键字的可读格式。 这种格式是从十六进制格式派生的。<br /><br /> 注意： **display_term**值 OxFF 为"的文件结尾"。|  
 |**column_id**|**int**|从中对当前关键字进行全文索引的列的 ID。|  
 |**document_count**|**int**|包含当前字词的文档或行的数目。|  
@@ -82,7 +84,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 > [!NOTE]  
 >  **Document_count**返回**sys.dm_fts_index_keywords**可能是特定文档返回的计数不太准确**sys.dm_fts_index_keywords_by_document**或**CONTAINS**查询。 这一可能的不精确估计小于 1%。 由于可能出现此不精确**document_id**可能会持续跨多个行在索引片段中，或在同一行中多次出现时，两次计数。 若要获取特定文档的更准确计数，使用**sys.dm_fts_index_keywords_by_document**或**CONTAINS**查询。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

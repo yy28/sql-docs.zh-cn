@@ -1,5 +1,5 @@
 ---
-title: "开发自定义源组件 |Microsoft 文档"
+title: "开发自定义源组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,30 +25,29 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a0cd0b0e1ae14ffe7f068adb1b77482cc180d3c9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-source-component"></a>开发自定义源组件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]为开发人员提供用于编写可以连接到自定义数据源并将数据从这些源复制到数据流任务中的其他组件的源组件的功能。 如果必须连接到无法使用现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源之一进行访问的数据源，则创建自定义源是非常重要的。  
+  开发人员可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到自定义数据源的源组件，并可以将这些自定义数据源中的数据提供给数据流任务中的其他组件。 如果必须连接到无法使用现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源之一进行访问的数据源，则创建自定义源是非常重要的。  
   
  源组件有一个或多个输出，没有输入。 在设计时，源组件用于创建和配置连接、从外部数据源读取列元数据并基于外部数据源配置源的输出列。 在执行过程中，源组件连接到外部数据源，并将行添加到输出缓冲区。 然后，数据流任务会将此数据行缓冲区提供给下游组件。  
   
- 有关数据数据流组件开发的一般概述，请参阅[开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
+ 有关数据流组件开发的一般概述，请参阅[开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
 ## <a name="design-time"></a>设计时  
  实现源组件的设计时功能包括指定与外部数据源的连接、添加和配置反映数据源的输出列以及验证该组件是否可以执行。 根据定义，源组件没有输入，有一个或多个异步输出。  
   
 ### <a name="creating-the-component"></a>创建组件  
- 源组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 源组件将元素添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 属性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 集合，以指明自己需要连接管理器。 此集合有两个用途：一是保存对组件所用包中的连接管理器的引用；二是通知设计器此集合需要连接管理器。 当<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>已添加到集合，**高级编辑器**显示**连接属性**选项卡，其中，用户可以选择或者包中创建的连接。  
+ 源组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 源组件将元素添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 属性的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 集合，以指明自己需要连接管理器。 此集合有两个用途：一是保存对组件所用包中的连接管理器的引用；二是通知设计器此集合需要连接管理器。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”会显示“连接属性”选项卡，用户可以在其中选择包中的连接或创建连接。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的实现，该实现添加一个输出，然后将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 对象添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。  
   
@@ -112,7 +110,7 @@ End Class
 ```  
   
 ### <a name="connecting-to-an-external-data-source"></a>连接外部数据源  
- 将连接添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 后，请重写 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法以建立与外部数据源的连接。 此方法在设计和执行期间调用。 该组件应建立到连接管理器指定的运行时连接，并随后，到外部数据源的连接。  
+ 将连接添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 后，请重写 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法以建立与外部数据源的连接。 此方法在设计和执行期间调用。 组件应先建立与连接管理器（由运行时连接指定）的连接，再建立与外部数据源的连接。  
   
  连接建立后，组件应在内部缓存该连接，并在调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 方法时释放该连接。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> 方法与 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 方法一样，在设计时和执行时调用。 开发人员可重写此方法，释放在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> 过程中由组件建立的连接。  
   
@@ -188,7 +186,7 @@ End Sub
 |DT_STR|大于 0 且小于 8000。|0|0|不为 0，并且是一个有效的代码页。|  
 |DT_WSTR|大于 0 且小于 4000。|0|0|0|  
   
- 由于对数据类型属性的限制是基于输出列的数据类型的，因此使用托管类型时必须选择正确的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 数据类型。 基类提供了三个帮助器方法， <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>， <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>，和<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>，有助于托管的组件开发人员选择[!INCLUDE[ssIS](../../includes/ssis-md.md)]给定的托管的类型的数据类型。 这些方法用于将托管数据类型转换为 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 数据类型，反之亦然。  
+ 由于对数据类型属性的限制是基于输出列的数据类型的，因此使用托管类型时必须选择正确的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 数据类型。 基类提供了三个帮助程序方法：<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>，它们可协助托管组件开发人员在给定托管类型的情况下选择 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 数据类型。 这些方法用于将托管数据类型转换为 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 数据类型，反之亦然。  
   
  下面的代码示例演示如何基于表架构来填充组件的输出列集合。 基类的帮助器方法用于设置列的数据类型，并基于该数据类型设置依赖属性。  
   
@@ -371,7 +369,7 @@ End Sub
 ### <a name="validating-the-component"></a>验证组件  
  您应验证源组件，并验证源组件的输出列集合中定义的列是否与外部数据源中的列相匹配。 有时，根据外部数据源验证输出列是不可能，例如处于断开连接状态时，或者希望避免与服务器之间费时的往返通信时。 在这些情况下，仍然可以使用输出对象的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> 来验证输出中的列。 有关详细信息，请参阅[验证数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)。  
   
- 此集合同时存在于输入对象和输出对象中，可以使用来自外部数据源的列填充此集合。 你可以使用此集合来验证输出列时[!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器处于脱机状态，当组件已断开连接，或者当<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>属性是**false**。 应在创建输出列的同时对该集合进行首次填充。 将外部元数据列添加到集合相对比较容易，因为外部元数据列最初就应与输出列相匹配。 列的数据类型属性应已正确设置，这些属性可直接复制到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 对象。  
+ 此集合同时存在于输入对象和输出对象中，可以使用来自外部数据源的列填充此集合。 此集合可用于在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器处于离线状态、组件断开连接或 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 属性为 false 时验证输出列。 应在创建输出列的同时对该集合进行首次填充。 将外部元数据列添加到集合相对比较容易，因为外部元数据列最初就应与输出列相匹配。 列的数据类型属性应已正确设置，这些属性可直接复制到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 对象。  
   
  下面的示例代码添加一个外部元数据列，该列基于新创建的输出列。 假定已经创建了该输出列。  
   
@@ -410,13 +408,13 @@ Private Sub CreateExternalMetaDataColumn(ByVal output As IDTSOutput100, ByVal ou
     End Sub  
 ```  
   
-## <a name="run-time"></a>运行时间  
+## <a name="run-time"></a>运行时  
  执行期间，组件会将行添加到输出缓冲区中，输出缓冲区由数据流任务创建并在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 中提供给组件。 只为源组件调用一次该方法，该方法会为连接到下游组件的组件的每个 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 接收一个输出缓冲区。  
   
 ### <a name="locating-columns-in-the-buffer"></a>在缓冲区中查找列  
  组件的输出缓冲区中包含组件定义的列以及向下游组件的输出添加的所有列。 例如，如果源组件在其输出中提供三列，下一个组件添加了第四个输出列，则供源组件使用的输出缓冲区将包含这四列。  
   
- 缓冲区行中的列顺序不是由输出列集合中输出列的索引确定的。 只有使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> 方法才能在缓冲区行中准确地定位输出列。 此方法在指定的缓冲区中, 定位指定的沿袭 ID 的列，并返回其位置的行中。 输出列的索引通常在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 方法中查找，并存储以供在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 中使用。  
+ 缓冲区行中的列顺序不是由输出列集合中输出列的索引确定的。 只有使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> 方法才能在缓冲区行中准确地定位输出列。 此方法在指定缓冲区中查找具有指定沿袭 ID 的列，并返回其在行中的位置。 输出列的索引通常在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 方法中查找，并存储以供在 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 中使用。  
   
  下面的代码示例在调用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 期间在输出缓冲区中查找输出列的位置，并将其存储在内部结构中。 列的名称也存储在该结构中，在本主题下一部分的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> 方法的代码示例中将使用该名称。  
   
@@ -676,9 +674,8 @@ Namespace BlobSrc
 End Namespace  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [开发自定义的目标组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
+## <a name="see-also"></a>另请参阅  
+ [开发自定义目标组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
  [使用脚本组件创建源](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
-

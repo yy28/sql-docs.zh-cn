@@ -2,62 +2,60 @@
 title: "支持 MDX (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fc0cbe76eff75b9735e32c879d20bf70c16005f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c4f6573ce8f72c0fa907f58a1f4264709809f11
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="supported-mdx-mdx"></a>支持的 MDX (MDX)
-  支持在多维表达式 (MDX) 脚本中使用下列语句和函数：  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+支持在多维表达式 (MDX) 脚本中使用下列语句和函数：  
   
- [（注释）(MDX)](../../../mdx/comment-mdx-double-slash.md)  
+ [&#40;注释 &#41;&#40;MDX &#41;](../../../mdx/comment-mdx-double-slash.md)  
   
- [--（注释）(MDX)](../../../mdx/comment-mdx-operator-reference.md)  
+ [-&#40;注释 &#41;&#40;MDX &#41;](../../../mdx/comment-mdx-operator-reference.md)  
   
- [注释 (MDX)](../../../mdx/comment-mdx.md)  
+ [注释 &#40;MDX &#41;](../../../mdx/comment-mdx.md)  
   
- [ALTER CUBE 语句 (MDX)](../../../mdx/mdx-data-definition-alter-cube.md)  
+ [ALTER CUBE 语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-alter-cube.md)  
   
 > [!NOTE]  
 >  MDX 脚本仅支持更改默认成员。  
   
- [CALCULATE 语句 (MDX)](../../../mdx/mdx-scripting-calculate.md)  
+ [计算语句 &#40;MDX &#41;](../../../mdx/mdx-scripting-calculate.md)  
   
- [CASE 语句 (MDX)](../../../mdx/case-statement-mdx.md)  
+ [CASE 语句 &#40;MDX &#41;](../../../mdx/case-statement-mdx.md)  
   
- [CREATE CELL CALCULATION 语句 (MDX)](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [创建单元格计算语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
- [CREATE MEMBER 语句 (MDX)](../../../mdx/mdx-data-definition-create-member.md)  
+ [创建成员语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)  
   
- [CREATE SET 语句 (MDX)](../../../mdx/mdx-data-definition-create-set.md)  
+ [创建 SET 语句 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-set.md)  
   
- [EXISTING 关键字 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
+ [EXISTING 关键字 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
   
- [FREEZE 语句 (MDX)](../../../mdx/mdx-scripting-freeze.md)  
+ [冻结语句 &#40;MDX &#41;](../../../mdx/mdx-scripting-freeze.md)  
   
- [IF 语句 (MDX)](../../../mdx/mdx-scripting-if.md)  
+ [如果语句 &#40;MDX &#41;](../../../mdx/mdx-scripting-if.md)  
   
  [此 (MDX)](../../../mdx/this-mdx.md)  
   
@@ -67,6 +65,6 @@ ms.lasthandoff: 11/17/2017
  [SCOPE 语句 (MDX)](../../../mdx/mdx-scripting-scope.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [基本 MDX 脚本 (MDX)](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+ [基本 MDX 脚本 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
   

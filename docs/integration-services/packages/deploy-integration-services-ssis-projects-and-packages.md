@@ -1,10 +1,13 @@
 ---
-title: "部署 Integration Services (SSIS) 项目和包 |Microsoft 文档"
+title: "部署 Integration Services (SSIS) 项目和包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: e69567c814248b48a7be9ce72c1e13b28a56f6c0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 项目和包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持两种部署模型：项目部署模型和旧的包部署模型。 项目部署模型使您可以将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。  
@@ -36,7 +38,7 @@ ms.lasthandoff: 09/27/2017
 有关早期包部署模型的详细信息，请参阅[包部署 (SSIS)](../../integration-services/packages/legacy-package-deployment-ssis.md)。  
   
 > [!NOTE]  
->  项目部署模型是在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]中引入的。 如果使用此模型，则不能在未部署整个项目的情况下部署一个或多个包。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 引入的增量包部署功能能够让你部署一个或多个包，无需部署整个项目。  
+>  项目部署模型是在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]中引入的。 如果使用此模型，则不能在未部署整个项目的情况下部署一个或多个包。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引入的增量包部署功能能够让你部署一个或多个包，无需部署整个项目。  
   
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>比较项目部署模型和旧的包部署模型  
  您为项目选择的部署模型的类型将决定可用于该项目的开发和管理选项。 下表显示使用项目部署模型和使用包部署模型之间的差异和相似之处。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 09/27/2017
 |包在单独的 Windows 进程中运行。|包在单独的 Windows 进程中运行。|  
 |SQL Server 代理用于计划包执行。|SQL Server 代理用于计划包执行。|  
   
- 项目部署模型是在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]中引入的。 如果使用此模型，则不能在未部署整个项目的情况下部署一个或多个包。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 引入的增量包部署功能能够让你部署一个或多个包，无需部署整个项目。   
+ 项目部署模型是在 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]中引入的。 如果使用此模型，则不能在未部署整个项目的情况下部署一个或多个包。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引入的增量包部署功能能够让你部署一个或多个包，无需部署整个项目。   
   
 ## <a name="features-of-project-deployment-model"></a>项目部署模型的功能  
  下表列出的功能仅可用于为项目部署模型开发的项目。  
@@ -71,27 +73,27 @@ ms.lasthandoff: 09/27/2017
 ## <a name="project-deployment"></a>项目部署  
  项目部署模型的中心是项目部署文件（.ispac 扩展名）。 该项目部署文件是自包含的部署单元，仅包含与项目中的包和参数有关的基本信息。 该项目部署文件不捕获在 Integration Services 项目文件（.dtproj 扩展名）中包含的所有信息。 例如，您用于撰写备注的附加文本文件不存储于该项目部署文件中，因此不部署到目录中。  
 
-## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>部署 SSIS 所需的权限项目和包
+## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>部署 SSIS 项目和包时所需的权限
 
-如果从默认的更改的 SSIS 服务帐户，你可能需要向非默认服务帐户授予的其他权限，然后可以将包部署成功。 如果非默认服务帐户不具有所需的权限，你可能会看到以下错误消息。
+如果在默认情况下更改 SSIS 服务帐户，可能须向非默认服务账户授予其他权限，才能成功部署包。 如果非默认服务帐户不具有所需权限，可能会收到以下错误消息。
 
-*用户定义例程或聚合"deploy_project_internal"的执行期间出现.NET Framework 错误： System.ComponentModel.Win32Exception： 客户端不具有所需的权限。*
+执行用户定义的例程或聚合“deploy_project_internal”期间，发生 .NET Framework 错误：System.ComponentModel.Win32Exception: 客户端不具有所需的权限。
 
-此错误通常是缺少 DCOM 权限的结果。 若要修复此错误，请执行以下操作。
+此错误通常是因为缺少 DCOM 权限造成的。 若要修复此错误，请执行以下操作。
 
-1.  打开**组件服务**控制台 （或运行 Dcomcnfg.exe）。
-2.  在**组件服务**控制台中，展开**组件服务** > **计算机** > **我的电脑** > **DCOM 配置**。
-3.  在列表中，找到**Microsoft SQL Server Integration Services xx.0**你正在使用的 SQL Server 的版本。 例如，SQL Server 2016 是版本 13。
-4.  右键单击并选择**属性**。
-5.  在**Microsoft SQL Server Integration Services 13.0 属性**对话框中，选择**安全**选项卡。
-6.  这三个集的权限-启动和激活、 访问和配置-选择**自定义**，然后选择**编辑**以打开**权限**对话框。
-7.  在**权限**对话框框中，添加非默认服务帐户并授予**允许**所需的权限。 通常情况下，帐户具有**本地启动**和**本地激活**权限。
-8.  单击**确定**两次，然后关闭**组件服务**控制台。
+1.  打开“组件服务”控制台（或运行 Dcomcnfg.exe）。
+2.  在“组件服务”控制台中，展开“组件服务” > “计算机” > “我的电脑” > “DCOM Config”。
+3.  在列表中，查找适用于所使用的 SQL Server 版本的 Microsoft SQL Server Integration Services xx.0。 例如，SQL Server 2016 的版本为 13。
+4.  右键单击并选择“属性”。
+5.  在“Microsoft SQL Server Integration Services 13.0 属性”对话框中，选择“安全性”选项卡。
+6.  针对三组权限中的每一组 — 启动与激活、访问和配置 — 选择“自定义”，然后选择“编辑”以打开“权限”对话框。
+7.  在“权限”对话框中，添加非默认服务帐户并根据需要授予“允许”权限。 通常来说，一个帐户具有“本地启动”和“本地激活”权限。
+8.  单击“确定”两次，然后关闭“组件服务”控制台。
 
-在本部分中描述的错误以及有关 SSIS 服务帐户所需的权限的详细信息，请参阅以下博客文章。  
-[System.ComponentModel.Win32Exception： 部署 SSIS 项目时客户端不具有所需的权限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+有关本部分中描述的错误和 SSIS 服务帐户所需权限的详细信息，请参阅以下博客文章。  
+[System.ComponentModel.Win32Exception：部署 SSIS 项目时，客户端不具有所需权限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
-## <a name="deploy-projects-to-integration-services-server"></a>将项目部署到 Integration Services 服务器
+## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，您可以将您的项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器。 通过 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，您可以使用环境来管理包、运行包以及为包配置运行时值。  
   
 > [!NOTE]  
@@ -99,11 +101,11 @@ ms.lasthandoff: 09/27/2017
   
  若要将项目部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器，请完成以下任务：  
   
-1.  创建一个 SSISDB 目录（如果您尚未创建）。 有关详细信息，请参阅[SSIS 目录](../../integration-services/service/ssis-catalog.md)。  
+1.  创建一个 SSISDB 目录（如果您尚未创建）。 有关详细信息，请参阅 [SSIS 目录](../../integration-services/catalog/ssis-catalog.md)。  
   
 2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明： [将项目转换为项目部署模型](#convert)  
   
-    -   如果在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]中创建了项目，默认情况下该项目使用项目部署模型。  
+    -   如果在 [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 中或更高版本中创建了项目，则默认情况下该项目使用项目部署模型。  
   
     -   如果您在早期版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中创建了项目，则在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中打开项目文件之后，将该项目转换为项目部署模型。  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 09/27/2017
   
 1.  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中打开该项目，然后在解决方案资源管理器中，右键单击该项目并单击“转换为项目部署模型”。  
   
-     -或-  
+     -或 -  
   
      从 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击“项目”节点并选择“导入包”。  
   
@@ -140,9 +142,9 @@ ms.lasthandoff: 09/27/2017
   
 1.  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]并打开项目，然后从 **“项目”** 菜单，选择 **“部署”** 以便启动 **“Integration Services 部署向导”**。  
   
-     - 或 -  
+     -或 -  
   
-     在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，展开[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  >  **SSISDB**节点在对象资源管理器，并找到你想要部署项目的项目文件夹。 右键单击“项目”文件夹，然后单击“部署项目”。  
+     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，展开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > SSISDB 节点，并查找想要部署的项目的项目文件夹。 右键单击“项目”文件夹，然后单击“部署项目”。  
   
      -或 -  
   
@@ -157,7 +159,7 @@ ms.lasthandoff: 09/27/2017
 3.  完成向导。 
 
 ## <a name="deploy-packages-to-integration-services-server"></a>将包部署到 Integration Services 服务器
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 引入了增量包部署功能，能够让你将一个或多个包部署到现有或新的项目，而无需部署整个项目。  
+  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引入了增量包部署功能，能够让你将一个或多个包部署到现有或新的项目，而无需部署整个项目。  
   
 ###  <a name="DeployWizard"></a> 通过使用 Integration Services 部署向导部署包  
   
@@ -290,7 +292,7 @@ static void Main()
 
  - 在 Windows Search 中键入 **“SQL Server 部署向导”** 
 
-**或**
+**OR**
 
  - 在 SQL Server 安装文件夹下搜索可执行文件 **ISDeploymentWizard.exe** ；例如：“C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn”。 
  
@@ -310,7 +312,7 @@ static void Main()
  该页使你能够查看你所选择的设置。 可以通过单击 **“上一步”**或单击左窗格中的任意步骤来更改所做的选择。 单击“部署”  以启动部署过程。  
   
 #### <a name="results"></a>结果  
- 部署过程完成之后，将看到“结果”  页。 该页显示每个操作是成功了还是失败了。 如果操作失败，单击 **“结果”** 列中的 **“失败”** 可以显示错误说明。 单击**保存报表...**将结果保存到 XML 文件或单击**关闭**以退出向导。
+ 部署过程完成之后，将看到“结果”  页。 该页显示每个操作是成功了还是失败了。 如果操作失败，单击 **“结果”** 列中的 **“失败”** 可以显示错误说明。 单击“保存报表...”以将结果保存到 XML 文件，或单击“关闭”以退出向导。
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -340,7 +342,7 @@ static void Main()
 > [!IMPORTANT]  
 >  对于给定的执行，只能使用单个服务器环境中包含的值来执行包。  
   
- 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 [SSIS Catalog](../../integration-services/service/ssis-catalog.md) 中的 **服务器环境、服务器变量和服务器环境引用**一节。  
+ 您可以查询视图以获得服务器环境、环境引用和环境变量的列表。 您也可以调用存储过程来添加、删除和修改环境、环境引用和环境变量。 有关详细信息，请参阅 [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md) 中的“服务器环境、服务器变量和服务器环境引用”一节。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>创建和使用服务器环境  
   
@@ -360,13 +362,13 @@ static void Main()
   
     3.  输入环境变量的 **“值”** 。  
   
-         有关环境变量名称的规则的信息，请参阅 [SSIS Catalog](../../integration-services/service/ssis-catalog.md) 中的 **环境变量**一节。  
+         有关环境变量名称的规则的信息，请参阅 [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md) 中的“环境变量”一节。  
   
     4.  通过选中或取消选中 **“敏感”** 复选框，指示该变量是否包含敏感值。  
   
          如果您选择 **“敏感”**，则变量值不会显示在 **“值”** 字段中。  
   
-         敏感值在 SSISDB 目录中进行加密。 有关加密的详细信息，请参阅 [SSIS Catalog](../../integration-services/service/ssis-catalog.md)。  
+         敏感值在 SSISDB 目录中进行加密。 有关加密的详细信息，请参阅 [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md)。  
   
 6.  在 **“权限”** 页上，通过执行以下操作，授予或拒绝所选用户和角色的权限。  
   
@@ -576,7 +578,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **使用 SQL Server 身份验证**  
  当户使用指定的登录名和密码从不可信连接进行连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将通过检查是否已设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户以及指定的密码是否与以前记录的密码匹配，对该连接进行身份验证。 如果未设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户，则身份验证失败，并且用户会收到一条错误消息。  
   
- **用户名**  
+ **User name**  
  使用 SQL Server 身份验证时，指定用户名。  
   
  **密码**  
@@ -589,7 +591,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **包名称**  
  列出包文件。  
   
- **状态**  
+ **“状态”**  
  指示包是否已准备好转换为项目部署模型。  
   
  **消息**  
@@ -601,7 +603,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **应用于所选内容**  
  单击以将“密码”文本框中的密码应用于一个或多个所选包。  
   
- **刷新**  
+ **“刷新”**  
  刷新包的列表。  
   
 ###  <a name="destination"></a> 设置“选择目标”页上的选项  
@@ -663,13 +665,13 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **配置字符串**  
  列出配置文件的路径。  
   
- **状态**  
+ **“状态”**  
  显示配置的状态消息。 单击该消息可以查看整个消息文本。  
   
  **添加配置**  
  将在其他项目中包含的包配置添加到要用参数替换的可用配置的列表中。 您可以选择存储在文件系统或 SQL Server 中的配置。  
   
- **刷新**  
+ **“刷新”**  
  单击以刷新配置列表。  
   
  **在转换后删除所有包的配置**  
@@ -696,7 +698,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **范围**  
  列出参数的作用域。  
   
- **“值”**  
+ **ReplTest1**  
  列出参数值。  
   
  单击值字段旁边的省略号按钮以配置参数属性。  
@@ -729,4 +731,3 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **保存报告**  
  单击以在 .xml 文件中保存项目转换的摘要。  
-

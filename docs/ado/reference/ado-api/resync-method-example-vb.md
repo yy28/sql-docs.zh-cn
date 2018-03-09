@@ -3,27 +3,30 @@ title: "重新同步方法示例 (VB) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Resync method [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Resync method [ADO], Visual Basic example
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42bb1e1895dcf5cc577c520c58652b10efc14b1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86e65db9410f501224f9a745ada5e6128d91c7b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resync-method-example-vb"></a>重新同步方法示例 (VB)
 此示例演示如何使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法来刷新在静态记录集中的数据。  

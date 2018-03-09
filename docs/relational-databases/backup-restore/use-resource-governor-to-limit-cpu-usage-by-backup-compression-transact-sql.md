@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a5cd10ed1fc52431898748772038883b3bc4851
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
      **创建登录名**  
   
-    -   [创建一个登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
+    -   [创建登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
   
     -   [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  此示例为 *domain_name*`\MAX_CPU` Windows 帐户创建一个登录名，然后对该登录名授予 VIEW SERVER STATE 权限。 使用此权限，您可以验证登录名的会话的资源调控器分类。 本示例为 *domain_name*`\MAX_CPU` 创建一个用户，并将它添加到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 db_backupoperator 固定数据库角色。 此用户名将供资源调控器分类器函数使用。  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -207,7 +207,7 @@ GO
 > [!IMPORTANT]  
 >  以下示例使用“示例 A：设置登录名和用户 (Transact-SQL)”中创建的示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的用户名 *domain_name*`\MAX_CPU`。 将此用户名替换为您计划在创建低优先级压缩备份时使用的登录名的用户名。  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -249,7 +249,7 @@ GO
 ##  <a name="verifying"></a> 验证当前会话的分类 (Transact-SQL)  
  还可以选择使用在分类器函数中指定的用户身份登录，通过在对象资源管理器中发出以下 [SELECT](../../t-sql/queries/select-transact-sql.md) 语句来验证会话分类：  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -272,7 +272,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>示例 C：创建压缩备份 (Transact-SQL)  
  下面的 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 示例在一个采用新格式的备份文件 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 中创建 `Z:\SQLServerBackups\AdvWorksData.bak`数据库的压缩完整备份。  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   

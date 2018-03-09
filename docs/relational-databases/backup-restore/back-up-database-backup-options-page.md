@@ -2,9 +2,12 @@
 title: "备份数据库（“备份选项”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ f1_keywords:
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa20534a1e98766899cbcd0825b5fbbf6c62ea0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b476e0436b392d2b3c093a6a4424dc3445d8e27e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-backup-options-page"></a>备份数据库（“备份选项”页）
-  使用  **“备份数据库”** 对话框的 **“备份选项”** 页可以查看或修改数据库备份选项。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“备份数据库”对话框的“备份选项”页以查看或修改数据库备份选项。  
   
  **使用 SQL Server Management Studio 创建备份**  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) 脚本。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ### <a name="backup-set"></a>备份集  
  **“备份集”** 面板中的选项允许您指定有关备份操作所创建的备份集的可选信息。  

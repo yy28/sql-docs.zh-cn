@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
 - sp_syscollector_create_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23015f77f4d2bc9dafe10fb12b660cec31484985
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 50e5c77d8af3ae4ab42ef74ee18f7b49db2a7c57
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +62,15 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name =** ]*名称*  
+ [ **@name =** ] '*name*'  
  是的收集组的名称。 *名称*是**sysname** ，并且不能为空字符串或 NULL。  
   
  *名称*必须是唯一的。 有关当前收集组名称的列表，请查询 syscollector_collection_sets 系统视图。  
   
- [  **@target =** ]*目标*  
+ [ **@target =** ] '*target*'  
  保留供将来使用。 *名称*是**nvarchar （128)**默认值为 NULL。  
   
- [  **@collection_mode =** ] *collection_mode*  
+ [ **@collection_mode =** ] *collection_mode*  
  指定收集和存储数据的方式。 *collection_mode*是**smallint**和可以具有以下值之一：  
   
  0 - 缓存模式。 数据收集和上载分别位于各自的计划中。 为连续收集指定缓存模式。  
@@ -77,24 +79,24 @@ sp_syscollector_create_collection_set
   
  默认值为*collection_mode*为 0。 当*collection_mode*为 0， *schedule_uid*或*schedule_name*必须指定。  
   
- [  **@days_until_expiration =** ] *days_until_expiration*  
+ [ **@days_until_expiration =** ] *days_until_expiration*  
  是的收集的数据保存到管理数据仓库中的天数。 *days_until_expiration*是**smallint**默认值为 730 （两年）。 *days_until_expiration*必须为 0 或一个正整数。  
   
- [  **@proxy_id =** ] *proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户的唯一标识符。 *proxy_id*是**int**默认值为 NULL。 如果指定， *proxy_name*必须为 NULL。 若要获取*proxy_id*，查询 sysproxies 系统表。 dc_admin 固定数据库角色必须拥有访问代理的权限。 有关详细信息，请参阅[创建 SQL Server 代理的代理](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)。  
   
- [  **@proxy_name =** ]*proxy_name*  
+ [ **@proxy_name =** ] '*proxy_name*'  
  代理帐户的名称。 *proxy_name*是**sysname**默认值为 NULL。 如果指定， *proxy_id*必须为 NULL。 若要获取*proxy_name*，查询 sysproxies 系统表。  
   
- [  **@schedule_uid =** ]*schedule_uid*  
+ [ **@schedule_uid =** ] '*schedule_uid*'  
  指向计划的 GUID。 *schedule_uid*是**uniqueidentifier**默认值为 NULL。 如果指定， *schedule_name*必须为 NULL。 若要获取*schedule_uid*，查询 sysschedules 系统表。  
   
  当*collection_mode*设置为 0， *schedule_uid*或*schedule_name*必须指定。 当*collection_mode*设置为 1， *schedule_uid*或*schedule_name*如果指定，则忽略。  
   
- [  **@schedule_name =** ]*schedule_name*  
+ [ **@schedule_name =** ] '*schedule_name*'  
  是计划的名称。 *schedule_name*是**sysname**默认值为 NULL。 如果指定， *schedule_uid*必须为 NULL。 若要获取*schedule_name*，查询 sysschedules 系统表。  
   
- [  **@logging_level =** ] *logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  表示日志记录级别。 *logging_level*是**smallint**使用以下值之一：  
   
  0 - 记录执行信息和跟踪以下内容的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 事件：  
@@ -111,19 +113,19 @@ sp_syscollector_create_collection_set
   
 -   连续运行收集的进度  
   
--   来自 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的警告事件  
+-   从的警告事件 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
- 2 - 级别 1 日志记录和来自 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的详细事件信息  
+ 2-1 级日志记录和详细的事件信息 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  默认值为*logging_level*为 1。  
   
- [  **@description =** ]*说明*  
+ [ **@description =** ] '*description*'  
  收集组的说明。 *说明*是**nvarchar （4000)**默认值为 NULL。  
   
- [  **@collection_set_id =** ] *collection_set_id*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  收集组的唯一本地标识符。 *collection_set_id*是**int**与输出和是必需的。  
   
- [  **@collection_set_uid =** ]*collection_set_uid*  
+ [ **@collection_set_uid =** ] '*collection_set_uid*'  
  是收集组的 GUID。 *collection_set_uid*是**uniqueidentifier**与默认值为 NULL 的输出。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -132,7 +134,7 @@ sp_syscollector_create_collection_set
 ## <a name="remarks"></a>注释  
  sp_syscollector_create_collection_set 必须在 msdb 系统数据库的上下文中运行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  

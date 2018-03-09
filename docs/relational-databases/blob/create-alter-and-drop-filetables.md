@@ -2,10 +2,14 @@
 title: "创建、更改和删除 FileTable | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-blob
+ms.suite: sql
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2409e20ab8d3944d33f09f6961cdb1d860669e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5e402ae5344d8dcae116954856644d206d62f0e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
-  说明如何创建新的 FileTable 或者更改或删除现有的 FileTable。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+说明如何创建新的 FileTable 或者更改或删除现有的 FileTable。  
   
 ##  <a name="BasicsCreate"></a> 创建 FileTable  
  FileTable 是专用的用户表，它具有预定义的固定架构。 此架构存储 FILESTREAM 数据、文件和目录信息以及文件属性。 有关 FileTable 架构的信息，请参阅 [FileTable Schema](../../relational-databases/blob/filetable-schema.md)。  
@@ -70,7 +75,7 @@ ms.lasthandoff: 11/09/2017
   
  以下示例将创建一个新的 FileTable，并为 **FILETABLE_DIRECTORY** 和 **FILETABLE_COLLATE_FILENAME**指定用户定义的值。  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -81,7 +86,7 @@ GO
   
  下面的示例也创建一个新的 FileTable。 由于没有指定用户定义的值，因此 **FILETABLE_DIRECTORY** 的值将成为 FileTable 的名称， **FILETABLE_COLLATE_FILENAME** 的值将成为 database_default，主键和唯一约束将收到系统生成的名称。  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -116,7 +121,7 @@ GO
   
  **示例**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -147,7 +152,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> 创建 FileTable 时创建其他数据库对象  
  创建新的 FileTable 时，还会创建一些系统定义的索引和约束。 您不能更改或删除这些对象；仅当删除 FileTable 本身时，它们才消失。 若要查看这些对象的列表，请查询目录视图 [sys.filetable_system_defined_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)。  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  

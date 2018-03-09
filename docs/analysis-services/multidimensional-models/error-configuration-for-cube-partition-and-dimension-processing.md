@@ -2,16 +2,13 @@
 title: "多维数据集、 分区和维度处理的错误配置 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +16,20 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>多维数据集、 分区和维度处理的错误配置
-  有关多维数据集、分区或维度对象的错误配置属性决定了当处理过程中出现数据完整性错误时服务器的响应方式。 键列中的重复键、缺失键和空值通常会触发这类错误，尽管导致错误的记录不会添加到数据库中，不过您仍可以设置确定后续操作的属性。 默认情况下处理会停止。 但在多维数据集开发过程中，您可能希望在出现错误时继续进行处理，以便使用导入的数据测试多维数据集的行为（即使数据不完整）。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+有关多维数据集、分区或维度对象的错误配置属性决定了当处理过程中出现数据完整性错误时服务器的响应方式。 键列中的重复键、缺失键和空值通常会触发这类错误，尽管导致错误的记录不会添加到数据库中，不过您仍可以设置确定后续操作的属性。 默认情况下处理会停止。 但在多维数据集开发过程中，您可能希望在出现错误时继续进行处理，以便使用导入的数据测试多维数据集的行为（即使数据不完整）。  
   
  本主题包含以下各节：  
   
@@ -187,7 +185,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_next"></a> 下一步  
  决定错误是停止处理还是被忽略。 请记住，忽略的只是错误。 不会忽略导致错误的记录；该记录会被弃用或转换为未知成员。 违反数据完整性规则的记录绝不会添加到数据库中。 默认情况下，处理在出现第一个错误时停止，但是您可以通过提高错误限制来更改此行为。 在多维数据集开发中，放宽错误配置规则可能十分有用，从而允许处理继续进行，以便可以使用数据进行测试。  
   
- 决定是否更改默认 null 值处理行为。 默认情况下，字符串列中的 null 值会作为空字符串进行处理，而数字列中的 null 值会作为零值进行处理。 有关对属性设置 null 值处理的说明，请参阅 [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 。  
+ 决定是否更改默认 null 值处理行为。 默认情况下，字符串列中的 null 值会作为空字符串进行处理，而数字列中的 null 值会作为零值进行处理。 有关对属性设置 null 值处理的说明，请参阅 [定义未知成员和 Null 处理属性](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [日志属性](../../analysis-services/server-properties/log-properties.md)   

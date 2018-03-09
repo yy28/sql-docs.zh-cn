@@ -1,14 +1,14 @@
 ---
-title: "使用 OPENJSON 将 JSON 数据转换为行和列 (SQL Server) | Microsoft Docs"
+title: "使用 OPENJSON 分析和转换 JSON 数据 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - JSON, importing
 - importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b40959b38860bc9e31bf093d7498c4391be19fce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6caf93638c66ff2c8c23842fafdedff1fd22fcb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>用 OPENJSON (SQL Server) 将 JSON 数据转换为行和列
+# <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>使用 OPENJSON 分析和转换 JSON 数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** 行集函数可将 JSON 文本转换为一组行和列。 使用 OPENJSON 将 JSON 集合转换为行集后，可以在返回的数据上运行任意 SQL 查询或将其插入到 SQL Server 表中。 
   
 **OPENJSON** 函数采用单个 JSON 对象或 JSON 对象的集合，并将其转换为一行或多行。 OPENJSON 函数默认返回以下数据：
--   从 JSON 对象中，该函数返回在第一个级别找到的所有“键:值”对。
+-   从 JSON 对象中，该函数返回在第一个级别找到的所有“键/值”对。
 -   从 JSON 数组中，该函数返回数组的所有元素及其索引。  
 
 可以添加可选的 WITH 子句来提供显式定义输出结构的架构。  
@@ -62,8 +62,8 @@ FROM OPENJSON(@json);
   
 |Key|值|type|  
 |---------|-----------|----------|  
-|name|John|1|  
-|姓氏|Doe|1|  
+|NAME|John|@shouldalert|  
+|姓氏|Doe|@shouldalert|  
 |年龄|45|2|  
 |技能|["SQL","C#","MVC"]|4|
 
@@ -121,9 +121,9 @@ WITH (
   
 **结果**  
   
-|Number|日期|Customer|数量|  
+|Number|date|Customer|Quantity|  
 |------------|----------|--------------|--------------|  
-|SO43659|2011-05-31T00:00:00|AW29825|1|  
+|SO43659|2011-05-31T00:00:00|AW29825|@shouldalert|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
   
 此函数返回 JSON 数组的元素并将其格式化。  
@@ -145,8 +145,21 @@ WITH (
 可以使用以下命令更改数据库的兼容级别：   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
-若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>详细了解 SQL Server 和 Azure SQL 数据库中的 JSON  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft 博客文章  
+  
+若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
+
+### <a name="microsoft-videos"></a>Microsoft 视频
+
+有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)（SQL Server 2016 和 JSON 支持）
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)（在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON）
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)（JSON 充当 NoSQL 和关系环境之间的桥梁）
   
 ## <a name="see-also"></a>另请参阅  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  

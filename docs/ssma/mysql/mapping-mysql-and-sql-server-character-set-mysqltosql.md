@@ -1,10 +1,13 @@
 ---
 title: "将 MySQL 和 SQL Server 字符映射设置 (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>将 MySQL 和 SQL Server 字符映射设置 (MySQLToSQL)
 可以为 MySQL 字符数据类型、 表达式和文本指定字符集 （字符集）。  
@@ -118,7 +121,7 @@ ms.lasthandoff: 11/09/2017
     |cp 1251|Windows 西里尔文|CHAR/VARCHAR （默认值）|  
     |cp 1256|Windows 阿拉伯语|CHAR/VARCHAR （默认值）|  
     |cp 1257|Windows 波罗|CHAR/VARCHAR （默认值）|  
-    |binary|二进制伪 charset|CHAR/VARCHAR （默认值）|  
+    |BINARY|二进制伪 charset|CHAR/VARCHAR （默认值）|  
     |geostd8|GEOSTD8 格鲁吉亚语|CHAR/VARCHAR （默认值）|  
     |cp932|对于 Windows 日文 SJIS|NCHAR/NVARCHAR （默认值）|  
     |eucjpms|对于 Windows 日文 UJIS|NCHAR/NVARCHAR （默认值）|  

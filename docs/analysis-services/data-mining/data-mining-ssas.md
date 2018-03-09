@@ -2,15 +2,13 @@
 title: "数据挖掘 (SSAS) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data mining [Analysis Services], about data mining
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 08014cb37823ce3f2bbdec7d89647d685f6a7684
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-ssas"></a>数据挖掘 (SSAS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的数据挖掘，是自 2000 版本以来预测分析方面的领导者。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘的组合提供了针对预测分析的集成平台，其中包含数据清理和准备、机器学习和报告。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘包括多个标准算法，包括 EM 和 K-Means 群集模型、神经网络、逻辑回归和线性回归、决策树和 naive bayes 分类器。 所有模型具有集成的可视化效果，以帮助开发、优化和评估模型。  将数据挖掘集成到商业智能解决方案可帮助你针对复杂问题做出明智决策。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]预测分析领导者起已 2000年版本中，通过提供中的数据挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘的组合提供了针对预测分析的集成平台，其中包含数据清理和准备、机器学习和报告。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘包括多个标准算法，包括 EM 和 K-Means 群集模型、神经网络、逻辑回归和线性回归、决策树和 naive bayes 分类器。 所有模型具有集成的可视化效果，以帮助开发、优化和评估模型。  将数据挖掘集成到商业智能解决方案可帮助你针对复杂问题做出明智决策。  
   
 ## <a name="benefits-of-data-mining"></a>数据挖掘的优点  
  数据挖掘（也称为预测分析和机器学习）使用精心研究的统计原则来发现数据中的模式。 通过将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘算法应用于您的数据，您可以预测趋势、标识模式、创建规则和建议、分析复杂数据集中的事件顺序以及洞察新情况。  

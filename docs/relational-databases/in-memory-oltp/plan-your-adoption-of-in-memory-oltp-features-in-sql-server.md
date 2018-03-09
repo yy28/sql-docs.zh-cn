@@ -1,7 +1,7 @@
 ---
 title: "在 SQL Server 中计划内存中 OLTP 功能的应用 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/08/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 833d774381654b77bc1efcfcb3efdbb1e6d61068
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>在 SQL Server 中计划内存中 OLTP 功能的应用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -200,7 +199,7 @@ ms.lasthandoff: 09/27/2017
 
 
 
-## <a name="d-performance"></a>D. 性能
+## <a name="d-performance"></a>D. “性能”
 
 本部分介绍内存优化表在完全利用潜力时达到卓越性能的情况。
 
@@ -261,126 +260,15 @@ ms.lasthandoff: 09/27/2017
 ## <a name="e-limitations-of-native-procs"></a>E. 本机过程的限制
 
 
-本机编译的存储过程中不支持 Transact-SQL 的特定元素。
+本机编译的 T-SQL 模块（包括存储过程）中不支持 Transact-SQL 的特定元素。 有关支持的功能的详细信息，请参阅：
 
-有关将 Transact-SQL 脚本迁移到本机过程时的注意事项，请参阅：
+- [本机编译的 T-SQL 模块支持的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
 
-- [本机编译的存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
+有关将使用不支持的功能的 Transact-SQL 模块迁移到本机编译的模块时的注意事项，请参阅：
 
+- [本机编译存储过程的迁移问题](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
-### <a name="e1-no-case-in-a-native-proc"></a>E.1 本机过程中不存在 CASE
-
-Transact-SQL 中的 CASE 表达式不能用于本机过程中。 可使用以下方式解决此问题：
-
-- [在本机编译的存储过程中实现 CASE 表达式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
-
-
-### <a name="e2-no-merge-in-a-native-proc"></a>E.2 本机过程中不存在 MERGE
-
-
-Transact-SQL 的 [MERGE 语句](../../t-sql/statements/merge-transact-sql.md) 与通常所说的 upsert 功能相似。 本机过程不能使用 MERGE 语句。 但是，通过结合使用 SELECT、UPDATE 和 INSERT 语句可实现与 MERGE 相同的功能。 代码示例所在位置：
-
-- [在本机编译的存储过程中实现 MERGE 功能](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)
-
-
-
-### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>E.3 本机过程中的 UPDATE 或 DELETE 语句中没有联接
-
-本机过程中的 Transact-SQL 语句仅可访问内存优化表。 在 UPDATE 和 DELETE 语句中，无法联接任何表。 本机过程中的尝试失败，并提示 Msg 12319 这样的消息来说明：
-
-- UPDATE 语句中不能使用 FROM 子句。
-- 不能在 DELETE 语句中指定表源。
-
-任何类型的子查询均未提供一种解决方法。 但是，可使用内存优化表变量通过多个语句实现联接结果。 以下为两个代码示例：
-
-- DELETE...JOIN... 想要在本机过程运行，但无法运行。
-- 通过一组实现删除联接的 Transact-SQL 语句解决此问题。
-
-
-方案：TabProjectEmployee 表具有以下两列的唯一键：ProjectId 和 EmployeeId。 每行表示将一个员工分配到某个活动项目中。 某个员工离开公司时，必须从 TabProjectEmployee 表删除员工。
-
-
-#### <a name="invalid-t-sql-deletejoin"></a>无效的 T-SQL、DELETE...JOIN
-
-
-本机过程不能执行如下所示的 DELETE...JOIN。
-
-
-```tsql
-DELETE pe
-    FROM
-             TabProjectEmployee   AS pe
-        JOIN TabEmployee          AS e
-
-            ON pe.EmployeeId = e.EmployeeId
-    WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-```
-
-
-#### <a name="valid-work-around-manual-deletejoin"></a>有效的解决方法，手动删除...联接
-
-接下为解决此问题的代码示例，分两部分：
-
-1. CREATE TYPE 在实际表变量首次使用该类型之前几天执行一次。
-
-2. 业务流程使用已创建的类型。 通过声明创建的表类型的表变量开始。
-
-
-```tsql
-
-CREATE TYPE dbo.type_TableVar_EmployeeId
-    AS TABLE  
-    (
-        EmployeeId   bigint   NOT NULL
-    );
-```
-
-
-然后，使用创建的表类型。
-
-
-```tsql
-DECLARE @MyTableVarMo  dbo.type_TableVar_EmployeeId  
-
-INSERT INTO @MyTableVarMo (EmployeeId)
-    SELECT
-            e.EmployeeId
-        FROM
-                 TabProjectEmployee  AS pe
-            JOIN TabEmployee         AS e  ON e.EmployeeId = pe.EmployeeId
-        WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-
-DECLARE @EmployeeId   bigint;
-
-WHILE (1=1)
-BEGIN
-    SET @EmployeeId = NULL;
-
-    SELECT TOP 1 @EmployeeId = v.EmployeeId
-        FROM @MyTableVarMo  AS v;
-
-    IF (NULL = @Employeed) BREAK;
-    
-    DELETE TabProjectEmployee
-        WHERE EmployeeId = @EmployeeId;
-
-    DELETE @MyTableVarMo
-        WHERE EmployeeId = @EmployeeId;
-END;
-```
-
-
-### <a name="e4-query-plan-limitations-for-native-procs"></a>E.4 本机过程的查询计划限制
-
-
-查询计划的某些类型不可用于本机过程。 有关详细信息的介绍，请参阅：
-
-- [内存优化表查询处理指南](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
-
+除存在对 Transact-SQL 特定元素的限制外，对本机编译的 T-SQL 模块中支持的查询运算符也存在限制。 由于这些限制，本机编译的存储过程不适用于可处理大型数据集的分析查询。
 
 #### <a name="no-parallel-processing-in-a-native-proc"></a>本机过程中不进行并行处理
 
@@ -421,6 +309,5 @@ SQL Server 2016 中：
 ## <a name="related-links"></a>相关链接
 
 - [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
 
 

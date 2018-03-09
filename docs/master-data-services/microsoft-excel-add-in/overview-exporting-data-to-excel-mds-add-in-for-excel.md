@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86a17fe1e0bab836ed004d10e1f4691b04c127c6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7d084ce76ed1dd535575caa2d43ccb43e64fd3a2
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Overview: Exporting Data to Excel (MDS Add-in for Excel)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，你必须先将数据从 MDS 存储库导出到 Excel 活动工作表中，然后才能处理这些数据。 完成数据处理后，将其导入到 MDS 存储库以便其他用户可以共享这些数据。  
@@ -37,12 +38,12 @@ ms.lasthandoff: 11/20/2017
  可以在导出数据前先筛选数据，以限制要下载的数据量。 这包括选择要加载的属性（列）、属性的显示顺序，以及要处理的成员（数据行）。 有关详细信息，请参阅 [导出前筛选数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)。  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>自动连接和加载常用数据  
- 如果总要连接同一服务器并导出相同的一组数据，可以创建快捷查询文件，其中包含连接和筛选器信息。 有关查询文件的详细信息，请参阅 [快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
+ 如果总要连接同一服务器并导出相同的一组数据，可以创建快捷查询文件，其中包含连接和筛选器信息。 有关查询文件的详细信息，请参阅[快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
   
 ## <a name="refreshing-data"></a>刷新数据  
  在导出 MDS 存储库中的数据后，其他用户可能更新这些数据。 您可以检索此数据，而不会丢失您对非 MDS 数据所做的更改。 有关详细信息，请参阅[刷新数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  

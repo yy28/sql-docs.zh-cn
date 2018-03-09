@@ -8,20 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 522f8c8404e80943e093ebeb0a56698fa790b6c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE （并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -57,19 +58,19 @@ ALTER DATABASE database_name
  自动增长 = {ON |关闭}  
  更新的自动增长选项。 当自动增长为 ON，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]会自动增加为复制的表、 分布式的表和事务日志分配的空间，根据需要以适应存储需求的增长。 自动增长时 OFF，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]会返回一个错误，如果所复制表，分布式表，或事务日志文件超出最大大小设置。  
   
- REPLICATED_SIZE =*大小*[GB]  
+ REPLICATED_SIZE = *size* [GB]  
  指定每个在更改数据库中存储的所有复制的表的计算节点的新的最大千兆字节。 如果你打算设备存储空间，你将需要 REPLICATED_SIZE 乘以设备中的计算节点数。  
   
- DISTRIBUTED_SIZE =*大小*[GB]  
+ DISTRIBUTED_SIZE = *size* [GB]  
  指定每个数据库的更改数据库中存储的所有分布式表的新的最大千兆字节。 大小分布在所有设备的计算节点。  
   
- LOG_SIZE =*大小*[GB]  
+ LOG_SIZE = *size* [GB]  
  指定每个数据库的更改数据库中存储的所有事务日志的新的最大千兆字节。 大小分布在所有设备的计算节点。  
   
  加密 {ON |关闭}  
  将数据库设置为加密的 (ON) 或未加密的 (OFF)。 加密只能为配置[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]时[sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e)已设置为**1**。 必须创建数据库加密密钥，然后才能配置透明数据加密。 有关数据库加密的详细信息，请参阅[透明数据加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要数据库拥有 ALTER 权限。  
   
 ## <a name="general-remarks"></a>一般备注  

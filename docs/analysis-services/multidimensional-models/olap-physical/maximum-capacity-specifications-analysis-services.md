@@ -2,35 +2,35 @@
 title: "最大容量规范 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 07/27/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39c69ad1c26b30eda9244d192e6199903249ff40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量规范 (Analysis Services)
-  以下各表基于不同的服务器部署模式指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 组件中定义的各种对象的最大大小和最大数量。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+以下各表基于不同的服务器部署模式指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 组件中定义的各种对象的最大大小和最大数量。  
   
  本主题包含以下各节：  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  [表格 (DeploymentMode = 2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>多维和数据挖掘 (DeploymentMode = 0)  
+##  <a name="bkmk_OLAP">多维和数据挖掘 (DeploymentMode = 0)</a>  
  MOLAP 存储模式（既存储数据，也存储元数据）具有针对文件大小的附加物理限制。 字符串存储文件的默认最大大小是 4 GB。 如果您要求更大的文件来用于字符串存储，则可以指定其他字符串存储体系结构。 有关详细信息，请参阅[维度和分区的配置字符串存储区](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)。  
   
 |对象|最大大小/最大数量|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  有关联机分析处理 (OLAP) 和数据挖掘的数据源限制的详细信息，请参阅[支持数据源 &#40;SSAS-多维 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，[支持数据源 &#40;SSAS-多维 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)，和[ASSL 对象和对象特征](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)。  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="bkmk_sharepoint">SharePoint (DeploymentMode = 1)</a>  
   
 |对象|最大大小/最大数量|  
 |------------|----------------------------|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |源查询的记录大小|64K|  
 |对象名的长度|100 个字符|  
   
-##  <a name="bkmk_vertipaq"></a>表格 (DeploymentMode = 2)  
+##  <a name="bkmk_vertipaq">表格 (DeploymentMode = 2)</a>  
 以下是理论上的限制。 在较低的数值，将会降低性能。   
 
 |对象|最大大小/最大数量|  

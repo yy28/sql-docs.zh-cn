@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79fbb4e4f6c143d693e1b41cc1660938bc61cde1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-table---sql-command"></a>更改表的 SQL 命令
 以编程方式修改一个表结构。  
@@ -185,7 +185,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  指定 Visual FoxPro 允许进行表; 的结构更改这些更改可能会违反的表中数据的完整性。 默认情况下，Visual FoxPro 阻止 ALTER TABLE 进行更改违反的表中数据的完整性。 包括 NOVALIDATE 重写此默认行为。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ALTER TABLE 可以用于修改尚未添加到数据库表的结构。 但是，如果包括默认、 外键、 主键、 引用，或修改可用的表时，SET 子句 Visual FoxPro 将生成错误。  
   
  ALTER TABLE 可能通过创建新的表头和记录追加到表标头来重建表。 例如，更改字段的类型或宽度可能会导致要重新生成的表。  

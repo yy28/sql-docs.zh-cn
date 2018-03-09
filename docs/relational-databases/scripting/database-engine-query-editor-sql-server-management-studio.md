@@ -2,14 +2,20 @@
 title: "数据库引擎查询编辑器 (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.tsqlquery.f1
-dev_langs: TSQL
+f1_keywords:
+- sql13.swb.tsqlquery.f1
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Query Editor [Database Engine]
 - Transact-SQL Editor See Query Editor [Database Engine]
@@ -19,19 +25,19 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d67f47cddfe48575758ec7ff3b5949a4c6f1f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e6b32e0a52127becc2850e79c0d2b6828ed14aaf
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>数据库引擎查询编辑器 (SQL Server Management Studio)
-  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器可以创建和运行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的脚本。 此编辑器还支持包含 **sqlcmd** 命令的正在运行的脚本。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器创建和运行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的脚本。 此编辑器还支持包含 **sqlcmd** 命令的正在运行的脚本。  
   
 ## <a name="transact-sql-f1-help"></a>Transact-SQL F1 帮助  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器支持当您选择 F1 时将您链接到特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的参考主题。 为此，突出显示 Transact-SQL 语句的名称，然后选择 F1。 接着，帮助搜索引擎将搜索具有与突出显示的字符串匹配的 F1 帮助属性的主题。  
@@ -54,7 +60,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="sql-editor-toolbar"></a>SQL 编辑器工具栏  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器打开时，SQL 编辑器工具栏上显示以下按钮：  
   
- **连接**  
+ **“连接”**  
  打开“连接到服务器”对话框。 此对话框用于建立与服务器的连接。  
   
  **断开连接**  

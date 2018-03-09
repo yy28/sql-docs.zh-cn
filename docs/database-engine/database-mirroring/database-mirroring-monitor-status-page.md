@@ -2,33 +2,39 @@
 title: "数据库镜像监视器（“状态”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.status.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58634269a34ed091c99954435d93df892fa4d7df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>数据库镜像监视器（状态页）
-  该只读页面显示导航树中当前选定数据库的主体和镜像服务器实例的最新镜像状态。 如果有关某一实例的信息当前不可用，则 **“状态”** 网格与该实例对应的一些单元格将呈灰色并显示 **“未知”**。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+该只读页面显示导航树中当前选定数据库的主体和镜像服务器实例的最新镜像状态。 如果有关某一实例的信息当前不可用，则 **“状态”** 网格与该实例对应的一些单元格将呈灰色并显示 **“未知”**。  
   
  **使用 SQL Server Management Studio 监视数据库镜像**  
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **“状态”**  
  显示包含每个主体和镜像服务器实例的最新高级镜像状态的网格。 **“状态”** 网格行的排列顺序如下：  
   
@@ -38,11 +44,11 @@ ms.lasthandoff: 11/09/2017
   
  这些列如下所示：  
   
-|列名|说明|  
+|列名|Description|  
 |-----------------|-----------------|  
 |**服务器实例**|在 **“状态”** 行显示状态的服务器实例的名称。|  
 |**当前角色**|服务器实例的当前角色，即 **“主体”** 或 **“镜像”**。|  
-|**镜像状态**|由服务器实例报告的镜像状态和指示状态严重性的图标。 可能的状态及其相关图标如下所示：<br /><br /> 图标：—，状态为“未知” 。 监视器未与任一伙伴建立连接。 唯一可用的信息是监视器缓存的内容。<br /><br /> 图标：警告图标，状态为“正在同步” 。 镜像数据库的内容滞后于主体数据库的内容。 主体服务器实例正在向镜像服务器实例发送日志记录，这会对镜像数据库应用更改，使其前滚。 在数据库镜像会话开始时，镜像数据库和主体数据库处于此状态。<br /><br /> 图标：标准数据库圆柱图，状态为“已同步” 。 当镜像服务器与主体服务器几乎保持同步时，数据库状态将改为 **“已同步”**。 只要主体服务器正在向镜像服务器发送更改，并且镜像服务器正在将更改应用于镜像数据库，数据库就会保持此状态。  对于高安全模式，自动故障转移和手动故障转移都可以使用，并且不会造成任何数据丢失。  对于高性能模式，可能总会有些数据丢失，即使在**已同步**状态中也是如此。<br /><br /> 图标：警告图标，状态为“已挂起” 。 <br />                            主体数据库可用，但没有向镜像服务器发送任何日志。<br /><br /> 图标：错误图标，状态为“已断开连接” 。 服务器实例无法与其伙伴建立连接。|  
+|**镜像状态**|由服务器实例报告的镜像状态和指示状态严重性的图标。 可能的状态及其相关图标如下所示：<br /><br /> 图标：—，状态为“未知” 。 监视器未与任一伙伴建立连接。 唯一可用的信息是监视器缓存的内容。<br /><br /> 图标：警告图标，状态为“正在同步” 。 镜像数据库的内容滞后于主体数据库的内容。 主体服务器实例正在向镜像服务器实例发送日志记录，这会对镜像数据库应用更改，使其前滚。 在数据库镜像会话开始时，镜像数据库和主体数据库处于此状态。<br /><br /> 图标：标准数据库圆柱图，状态为“已同步” 。 当镜像服务器与主体服务器几乎保持同步时，数据库状态将改为 **“已同步”**。 只要主体服务器正在向镜像服务器发送更改，并且镜像服务器正在将更改应用于镜像数据库，数据库就会保持此状态。  对于高安全模式，自动故障转移和手动故障转移都可以使用，并且不会造成任何数据丢失。  对于高性能模式，可能总会有些数据丢失，即使在 **已同步** 状态中也是如此。<br /><br /> 图标：警告图标，状态为“已挂起” 。 <br />                            主体数据库可用，但没有向镜像服务器发送任何日志。<br /><br /> 图标：错误图标，状态为“已断开连接” 。 服务器实例无法与其伙伴建立连接。|  
 |**见证服务器连接**|见证服务器的连接状态，前面有状态图标 **“未知”**、 **“已连接”**或 **“已断开连接”**。|  
 |**历史记录**|单击以显示服务器实例上的镜像历史记录。 这将打开 **“数据库镜像历史记录”** 对话框，其中显示给定服务器实例中镜像状态的历史记录和镜像数据库的统计信息。<br /><br /> 如果监视器未与服务器实例建立连接， **“历史记录”** 按钮将呈灰色。|  
   
@@ -94,8 +100,8 @@ ms.lasthandoff: 11/09/2017
   
 -   **带自动故障转移功能的高安全(同步)**  
   
-## <a name="remarks"></a>注释  
- **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 它们依赖于“数据库镜像监视器作业” 来定期更新状态表。 若要了解所显示的状态的保留时间，用户可以在“主体日志 (\<time>)”和“镜像日志 (\<time>)”标签上查看时间。  
+## <a name="remarks"></a>Remarks  
+ **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 它们依赖于“数据库镜像监视器作业” 来定期更新状态表。 若要了解所显示状态的保留时间，用户可以在“主体日志 (\<time>)”和“镜像日志 (\<time>)”标签上查看时间。  
   
  如果该作业不存在或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，状态将变得越来越陈旧，并且可能不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能分享相同的角色 - 主体或镜像。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  
   

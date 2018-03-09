@@ -3,8 +3,9 @@ title: "执行方法 （ADO 命令） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Command15::Execute
 - Command15::raw_Execute
-helpviewer_keywords: Execute method [ADO]
+helpviewer_keywords:
+- Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8a16c395a01e20765dd1aaa569889b4b041cb9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f16d3c01fb219bdbe7f52bbc39d3c410b5de918
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-command"></a>执行方法 （ADO 命令）
 执行查询、 SQL 语句或存储的过程中指定[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性[命令对象](../../../ado/reference/ado-api/command-object-ado.md)。  
@@ -43,13 +45,13 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
 #### <a name="parameters"></a>Parameters  
  *RecordsAffected*  
- 可选。 A**长**变量到该提供程序返回的操作所影响的记录数。 *RecordsAffected*参数仅适用于操作查询或存储的过程。 *RecordsAffected*不返回的返回结果的查询或存储的过程返回的记录数。 若要获取此信息，请使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性。 **执行**方法不会返回正确的信息一起使用时**adAsyncExecute**，只需时以异步方式执行命令，因为受影响的记录数可能尚未未知在该方法返回的时间。  
+ 選擇性。 A**长**变量到该提供程序返回的操作所影响的记录数。 *RecordsAffected*参数仅适用于操作查询或存储的过程。 *RecordsAffected*不返回的返回结果的查询或存储的过程返回的记录数。 若要获取此信息，请使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性。 **执行**方法不会返回正确的信息一起使用时**adAsyncExecute**，只需时以异步方式执行命令，因为受影响的记录数可能尚未未知在该方法返回的时间。  
   
- *参数*  
- 可选。 A **Variant**与输入的字符串或流中指定结合使用的参数值数组**CommandText**或**CommandStream**。 （输出参数不会返回此参数中传递时的正确值。）  
+ *Parameters*  
+ 選擇性。 A **Variant**与输入的字符串或流中指定结合使用的参数值数组**CommandText**或**CommandStream**。 （输出参数不会返回此参数中传递时的正确值。）  
   
- *选项*  
- 可选。 A**长**值，该值指示提供程序应如何评估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 可以是使用所做的位掩码值[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)和/或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值。 例如，可以使用**adCmdText**和**adExecuteNoRecords**结合，如果你想要评估的值的 ADO **CommandText**属性作为文本，并指示该命令应放弃，并且不会返回命令文本执行时可能会生成任何记录。  
+ *Options*  
+ 選擇性。 A**长**值，该值指示提供程序应如何评估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 可以是使用所做的位掩码值[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)和/或[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)值。 例如，可以使用**adCmdText**和**adExecuteNoRecords**结合，如果你想要评估的值的 ADO **CommandText**属性作为文本，并指示该命令应放弃，并且不会返回命令文本执行时可能会生成任何记录。  
   
 > [!NOTE]
 >  使用**ExecuteOptionEnum**值**adExecuteNoRecords**通过最小化内部处理来提高性能。 如果**adExecuteStream**已指定，选项**adAsyncFetch**和**adAsynchFetchNonBlocking**将被忽略。 不要使用**CommandTypeEnum**值**adCmdFile**或**adCmdTableDirect**与**执行**。 这些值仅用作选项[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[Requery](../../../ado/reference/ado-api/requery-method.md)方法**记录集**。  

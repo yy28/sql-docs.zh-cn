@@ -1,5 +1,5 @@
 ---
-title: "Change Data Capture Service for Oracle by Attunity 系统体系结构 |Microsoft 文档"
+title: "Change Data Capture Service for Oracle by Attunity 系统体系结构 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f1834218ade0df3d83ad605effd96bd0d431e581
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service for Oracle by Attunity 系统体系结构
   Oracle CDC 服务将对一个或多个源 Oracle 数据库中所选表的更改捕获到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 数据库中。 下面的关系图显示构成 Oracle CDC 服务的各组件。  
   
- ![服务体系结构](../../integration-services/change-data-capture/media/service-architecture.gif "服务体系结构")  
+ ![服务体系结构](../../integration-services/change-data-capture/media/service-architecture.gif "Service Architecture")  
   
  下图阐释使用的四个平台。 在许多情况下，这些平台可以重叠，但此关系图表示一个标准用例。 例如，Oracle 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库分别运行在单独的计算机上并且不与 Oracle CDC 服务平台或用于设计 CDC 服务的平台共享是有意义的。 在此图中阐释的平台是：  
   
@@ -60,4 +59,3 @@ ms.lasthandoff: 08/03/2017
  Oracle CDC 服务及其子 Oracle CDC 实例只能与作为客户端的源 Oracle 数据库和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例通信。 它们不主动侦听任何网络和其他协议。 Oracle CDC 服务监视 CDC 数据库中是否有配置更改，并且基于更新的配置更新其操作。  
   
   
-

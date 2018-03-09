@@ -2,9 +2,12 @@
 title: "队列读取器代理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,20 +15,20 @@ f1_keywords: sql13.rep.monitor.queuereaderagent.f1
 helpviewer_keywords: Queue Reader Agent dialog box
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5525abd1716e7eb896d9cfe7fa846abd62dd7778
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 536010c7312cc33b7ee7b394ac2761be7aefc8dc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="queue-reader-agent"></a>队列读取器代理
-  **“队列读取器代理”** 对话框显示有关队列读取器代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“队列读取器代理”对话框显示有关队列读取器代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  从 **“视图”** 菜单中选择要查看的队列读取器代理会话，然后在标记为 **“队列读取器代理的会话”**的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”**的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
  **“视图”**  
@@ -67,6 +70,6 @@ ms.lasthandoff: 11/09/2017
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [查看与发布关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

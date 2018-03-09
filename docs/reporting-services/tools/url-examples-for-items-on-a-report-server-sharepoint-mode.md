@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: "5"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e74c53736485e3ee7745937e9e9dbd1de1b75e2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d102444b30ad5ddadcd6dcfe8fe25b072f230a63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>用于报表服务器上的项的 URL 示例 - SharePoint 模式
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
  以下 Web 层次结构元素可用于访问和保护报表服务器内容。 其他对象（如列表和页）不用于访问报表服务器内容，因此未在下表中进行说明。  
   
-|对象|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |SharePoint Web 应用程序|SharePoint Web 应用程序可以作为独立的服务器安装，也可以在包含许多虚拟服务器的场中安装。 Web 应用程序具有 URL（例如，`http:*//servername*`）并且可以包含多个站点。|  
 |站点|站点为 Web 应用程序的父站点或子站点。|  

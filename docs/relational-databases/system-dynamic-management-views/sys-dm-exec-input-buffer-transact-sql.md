@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_input_buffer (Transact SQL) |Microsoft 文档"
+title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,23 @@ f1_keywords:
 - sys.dm_exec_input_buffer _tsql
 - dm_exec_input_buffer
 - dm_exec_input_buffer_tsql
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_input_buffer dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ed224c77a502f81da57b232a68fddc0d4157338
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 456ae8af5d366f8fb5be006f944f1f704e382488
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (TRANSACT-SQL)
+# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
   返回有关提交到的实例的语句的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -59,10 +62,10 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar(256)**|对于给定的 spid 输入缓冲区中的事件的类型。|  
-|**参数**|**int**|为该语句提供任何参数。|  
+|**parameters**|**int**|为该语句提供任何参数。|  
 |**event_info**|**nvarchar(max)**|给定的 spid 的输入缓冲区中的语句的文本。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如果用户具有 VIEW SERVER STATE 权限，用户将看到的实例上的执行的所有会话[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户将看到的只对当前会话。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，如果用户是数据库所有者，用户将在看到执行的所有会话[!INCLUDE[ssSDS](../../includes/sssds-md.md)]; 否则为用户将看到的只对当前会话。  
@@ -75,7 +78,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 ### <a name="a-simple-example"></a>A. 简单示例  
  下面的示例演示将会话 id (SPID) 和一个请求 id 传递给函数。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
@@ -83,7 +86,7 @@ GO
 ### <a name="b-using-cross-apply-to-additional-information"></a>B. 使用跨适用于其他信息  
  下面的示例为会话 id 大于 50 会话列出输入的缓冲区。  
   
-```tsql  
+```sql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  
@@ -93,6 +96,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [DBCC INPUTBUFFER (Transact-SQL)](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  

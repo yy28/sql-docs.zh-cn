@@ -2,28 +2,35 @@
 title: "同义词（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: synonyms
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
-helpviewer_keywords: synonyms [SQL Server], about synonyms
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 86fb16833f248731becb9e40f7525281a8b52e94
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synonyms-database-engine"></a>同义词（数据库引擎）
-  同义词是用来实现下列用途的数据库对象：  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+同义词是用来实现下列用途的数据库对象：  
   
 -   为可以存在于本地或远程服务器上的其他数据库对象（称为基对象）提供备用名称。  
   
@@ -42,7 +49,7 @@ ms.lasthandoff: 11/09/2017
 |复制筛选过程|扩展存储过程|  
 |SQL 标量函数|SQL 表值函数|  
 |SQL 内联表值函数|SQL 存储过程|  
-|视图|表*（用户定义）|  
+|“查看”|表*（用户定义）|  
   
  *包括本地和全局临时表  
   
@@ -65,8 +72,8 @@ ms.lasthandoff: 11/09/2017
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
-|EXECUTE|Insert|  
+|CONTROL|删除|  
+|在运行 CREATE 语句前执行|Insert|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
   
@@ -76,8 +83,8 @@ ms.lasthandoff: 11/09/2017
 |||  
 |-|-|  
 |SELECT|Insert|  
-|UPDATE|DELETE|  
-|EXECUTE|嵌套的 SELECT|  
+|UPDATE|删除|  
+|在运行 CREATE 语句前执行|嵌套的 SELECT|  
   
  在以前说明的上下文中使用同义词时，该基对象会受到影响。 例如，如果某个同义词引用了基对象（表）并且将行插入同义词中，则实际上将行插入到引用的表中。  
   

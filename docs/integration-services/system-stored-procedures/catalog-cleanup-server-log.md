@@ -1,29 +1,31 @@
 ---
-title: "catalog.cleanup_server_log |Microsoft 文档"
+title: catalog.cleanup_server_log | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1195bbfcc77cb6b96ea5a68cd1a95c2b2126a81e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 31e8aba7f3ac9913189278c6c6ccc482ec3e3020
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   清除操作日志，使 SSISDB 数据库进入可让您更改 SERVER_OPERATION_ENCRYPTION_LEVEL 属性的值的状态。  
   
@@ -37,52 +39,52 @@ catalog.cleanup_server_log
  无。  
   
 ## <a name="return-code-values"></a>返回代码值  
- 针对成功和失败的 1 为 0。  
+ 0 表示成功，1 表示失败。  
   
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
--   读取和执行项目的权限，如果适用，在引用的环境上的读取权限。  
+-   针对项目的 READ 和 EXECUTE 权限，以及针对引用环境的 READ 权限（如果适用）。  
   
--   中的成员身份**ssis_admin**数据库角色。  
+-   ssis_admin 数据库角色的成员资格。  
   
--   成员资格**sysadmin**服务器角色。  
+-   **sysadmin** 服务器角色的成员资格。  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
- 此存储的过程可引发以下方案中的错误：  
+ 在以下情况中，此存储过程引发错误：  
   
--   有一些 SSISDB 数据库中的一个或多个活动操作。  
+-   SSISDB 数据库中有一个或多个活动操作。  
   
--   SSISDB 数据库不处于单用户模式。  
+-   SSISDB 数据库未处于单用户模式下。  
   
-## <a name="remarks"></a>注释  
- SQL Server 2012 Service Pack 2 添加到 SERVER_OPERATION_ENCRYPTION_LEVEL 属性**internal.catalog_properties**表。 此属性具有两个可能值：  
+## <a name="remarks"></a>Remarks  
+ SQL Server 2012 Service Pack 2 将 SERVER_OPERATION_ENCRYPTION_LEVEL 属性添加到 internal.catalog_properties 表。 该属性有两个可能值：  
   
--   **PER_EXECUTION (1)** – 的证书和对称密钥用于保护敏感执行参数，每次执行创建执行日志。 这是默认值。 你可能会遇到性能问题 （死锁，失败的维护作业等） 在生产环境中由于每次执行生成的证书/密钥。 但是，此设置可以提供比其他值 (2) 更高级别的安全性。  
+-   PER_EXECUTION (1) - 为每次执行创建用于保护敏感执行参数和执行日志的证书和对称密钥。 因为每次执行都会生成证书/密钥，生产环境中可能会出现性能问题（死锁、失败的维护工作等）。 但是，此设置提供的安全性级别比其他值 (2) 高。  
   
--   **PER_PROJECT (2)** – 每个项目创建的证书和对称密钥用于保护敏感参数。 这可让你更好的性能比 PER_EXECUTION 级别因为生成的密钥和证书是一次为一个项目而不是每次执行。  
+-   PER_PROJECT (2) – 为每个项目创建用于保护敏感参数的证书和对称密钥。 PER_PROJECT (2) 是默认值。 此设置提供比 PER_EXECUTION 级别更好的性能，因为密钥和证书针对一个项目生成一次，而不是为每次执行生成。  
   
- 你必须运行[catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md)之前从 1 到 2 从 1 到 2 （或），可以更改 SERVER_OPERATION_ENCRYPTION_LEVEL 存储过程。 运行此存储过程之前，请执行以下操作：  
+ 必须先运行 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) 存储过程，然后才可将 SERVER_OPERATION_ENCRYPTION_LEVEL 从 2 更改为 1 或从 1 更改为 2。 在运行此存储过程之前，请执行以下操作：  
   
-1.  确保属性 OPERATION_CLEANUP_ENABLED 的值设置为 TRUE [catalog.catalog_properties &#40;SSISDB 数据库 &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)表。  
+1.  确保在 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)表中将属性 OPERATION_CLEANUP_ENABLED 的值设置为 TRUE。  
   
-2.  设置为单用户模式的 Integration Services 数据库 (SSISDB)。 在 SQL Server Management Studio，启动 SSISDB 数据库属性对话框中，切换到选项选项卡，并将限制访问属性设置为单用户模式 (SINGLE_USER)。 运行 cleanup_server_log 后存储的过程，将属性值设置回原始值。  
+2.  将 Integration Services 数据库 (SSISDB) 设置为单用户模式。 在 SQL Server Management Studio 中，启动 SSISDB 的“数据库属性”对话框，切换到“选项”选项卡，并将“限制访问”属性设置为单用户模式 (SINGLE_USER)。 运行 cleanup_server_log 存储过程后，将属性值设置回原始值。  
   
-3.  运行存储的过程[catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md)。  
+3.  运行存储过程 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md)。  
   
-4.  现在，请继续并更改中的 SERVER_OPERATION_ENCRYPTION_LEVEL 属性的值[catalog.catalog_properties &#40;SSISDB 数据库 &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)表。  
+4.  现在，继续在 [catalog.catalog_properties（SSISDB 数据库）](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)表中更改 SERVER_OPERATION_ENCRYPTION_LEVEL 属性的值。  
   
-5.  运行存储的过程[catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md)清理 SSISDB 数据库中的证书密钥。 从 SSISDB 数据库中删除证书和密钥可能需要很长时间，以便它应定期在非高峰时间运行。  
+5.  运行存储过程 [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) 以从 SSISDB 数据库清理证书密钥。 从 SSISDB 数据库中删除证书和密钥可能需要很长时间，因此应在非峰值时间定期运行。  
   
-     你可以指定的作用域或级别 （执行与项目） 和要删除的键数。 删除的默认批处理大小为 1000年。 当你将级别设置为 2 时，则会删除密钥和证书仅当关联的项目已被删除。  
+     可指定范围或级别（执行与项目）以及要删除的密钥数量。 删除的默认批大小为 1000。 将级别设置为 2 时，仅当删除关联的项目时才会删除密钥和证书。  
   
- 有关详细信息，请参阅以下知识库文章。 [修复： 在 SQL Server 2012 中存储的 SSISDB 用作你的部署时的性能问题](http://support.microsoft.com/kb/2972285)  
+ 有关详细信息，请参阅以下知识库文章：[修复：在 SQL Server 2012 中使用 SSISDB 作为部署存储时的性能问题](http://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>示例  
- 下面的示例调用 cleanup_server_log 存储过程。  
+ 以下示例调用 cleanup_server_log 存储过程。  
   
 ```sql  
 USE [SSISDB]  
@@ -95,4 +97,3 @@ GO
 ```  
   
   
-

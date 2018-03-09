@@ -3,26 +3,28 @@ title: "步骤 5: DataControl 可进行 （RDS 教程） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS tutorial [ADO], datacontrol made usable
+helpviewer_keywords:
+- RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93ac89a0007223681f4844c0ecd36e4581414a6c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc51b8047a4eddc007dfbb46cbc087676800d54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步骤 5: DataControl 可进行 （RDS 教程）
 返回**记录集**对象是可供使用。 你可以检查、 导航，或对其进行编辑，就像任何其他**记录集**。 如何使用**记录集**取决于你的环境。 Visual Basic 和 Visual c + + 提供了可视控件，可以使用**记录集**直接或间接启用的数据控件的帮助。  

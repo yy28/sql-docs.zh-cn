@@ -3,8 +3,11 @@ title: "选项（“设计器”-“Analysis Services 设计器”-“常规”�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5059827ffb027d0397863b2076da4bbe8507fccc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e28ee8cda5ac45f6c34f3d6229b07505e066de5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>选项（“设计器”-“Analysis Services 设计器”-“常规”）
-使用“设计器”、“维护计划”、“Analysis Services”和“常规”页可以确定 Analysis Services 设计器的默认行为。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用“设计器”、“维护计划”、“Analysis Services”和“常规”页可以确定 Analysis Services 设计器的默认行为。  
   
 ## <a name="connectivity"></a>连接  
 查询超时值  

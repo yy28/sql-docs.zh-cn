@@ -2,27 +2,33 @@
 title: "示例：使用 EXPLICIT 模式构造同级 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: EXPLICIT FOR XML mode
+helpviewer_keywords:
+- EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6889b92094b8f9767930506a6e32da07c60b92ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8fa42e6f30f7a37a2e438bb76b52916c8d710504
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>示例：使用 EXPLICIT 模式构造同级
-  假定您要构造提供销售订单信息的 XML。 请注意，<`SalesPerson`> 和 <`OrderDetail`> 元素是同级。 每个订单都有一个 <`OrderHeader`> 元素、一个 <`SalesPerson`> 元素和一个或多个 <`OrderDetail`> 元素。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+假定您要构造提供销售订单信息的 XML。 请注意，<`SalesPerson`> 和 <`OrderDetail`> 元素是同级。 每个订单都有一个 <`OrderHeader`> 元素、一个 <`SalesPerson`> 元素和一个或多个 <`OrderDetail`> 元素。  
   
 ```  
 <OrderHeader SalesOrderID=... OrderDate=... CustomerID=... >  

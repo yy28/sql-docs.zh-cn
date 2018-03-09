@@ -3,8 +3,11 @@ title: "高级对象选择 (SybaseToSQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8887e545e28957601de3b4e487e2026a74625819
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b08be1840a3746616e2b57f45f729339e15cef70
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>高级的对象选择 (SybaseToSQL)
 **高级对象部分**对话框可以通过使用中的对象名称，字符串和子字符串筛选数据库对象，然后选择或取消选择这些对象。 SSMA 执行对所选对象的转换和迁移操作。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
 使用此对话框之前，你可能想要强制 SSMA 来加载所有元数据转换架构或保存该项目。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **检查所有项**  
 将添加所有项旁边的复选标记。 在元数据资源管理器中，将立即选择这些项。  
   

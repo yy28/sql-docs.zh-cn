@@ -7,7 +7,7 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: database-engine
 ms.component: smo
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +16,19 @@ helpviewer_keywords:
 - SQL Server Management Objects, installing
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bae4a59bc8365eae4bfcaba8610c1f3c11b8af97
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: 26438c3a9baea978aace0fc1383349f813e6c0d0
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/12/2018
 ---
 #<a name="installing-smo"></a>安装 SMO
+
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 此页提供有关如何安装 SMO 使用应用程序和使用 SMO 的系统要求的信息。
 

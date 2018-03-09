@@ -1,5 +1,5 @@
 ---
-title: "翻译 (Transact SQL) |Microsoft 文档"
+title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,24 +8,26 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - TRANSLATE
 - TRANSLATE_TSQL
-helpviewer_keywords: TRANSLATE function
+helpviewer_keywords:
+- TRANSLATE function
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4f4793f0692b77ba8a606c904612674e29721
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: e7ea679043b83d8cee26f431602450d023516647
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="translate-transact-sql"></a>翻译 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +79,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>B. 将 GeoJSON 点转换为 WKT    
 GeoJSON 是一种格式进行编码各种地理数据结构。 与`TRANSLATE`函数，开发人员可以轻松地将转换 GeoJSON 点为 WKT 格式，反之亦然。 下面的查询替换正则大括号中输入的正方形和大括号：   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
@@ -91,7 +93,14 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 
 ## <a name="see-also"></a>另请参阅
-
-[字符串函数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[REPLACE (Transact SQL)](../../t-sql/functions/replace-transact-sql.md)   
+ [CONCAT &#40;Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [字符串函数 (TRANSACT-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 

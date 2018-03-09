@@ -3,8 +3,9 @@ title: "ParentURL 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _Record::ParentURL
-helpviewer_keywords: ParentURL property [ADO]
+f1_keywords:
+- _Record::ParentURL
+helpviewer_keywords:
+- ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1171d3d5b50838988ece3032300d327e08123356
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eca04999eece256ef22503c4d227ffcec297c79a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 属性 (ADO)
 指示指向父级的绝对 URL 字符串[记录](../../../ado/reference/ado-api/record-object-ado.md)的当前**记录**对象。  

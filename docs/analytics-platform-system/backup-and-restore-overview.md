@@ -3,10 +3,10 @@ title: "备份和还原"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -14,12 +14,12 @@ description: "描述数据如何备份和还原的 SQL Server 并行数据仓库
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: "50"
-ms.openlocfilehash: 646db87f946475ebdf427b3f4ef3ec00da0dc5f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backup-and-restore"></a>备份和还原
 描述数据如何备份和还原的 SQL Server 并行数据仓库 (PDW) 的工作原理。 备份和还原操作用于灾难恢复。 备份和还原还可将数据库从一个设备复制到另一个设备。  
@@ -133,7 +133,7 @@ PDW 使用 SQL Server 的备份技术来备份和还原设备的数据库。 SQL
   
 |备份和还原任务|Description|  
 |---------------------------|---------------|  
-|准备一台服务器作为备份服务器。|[获取和配置备份服务器](acquire-and-configure-backup-server.md)|  
+|准备一台服务器作为备份服务器。|[获取和配置备份服务器 ](acquire-and-configure-backup-server.md)|  
 |备份数据库。|[备份数据库](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |还原的数据库。|[还原数据库](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 <!-- MISSING LINKS

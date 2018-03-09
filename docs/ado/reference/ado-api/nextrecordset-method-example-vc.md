@@ -3,27 +3,30 @@ title: "方法签名的示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: NextRecordset method [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- NextRecordset method [ADO], VC++ example
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb471b0e65686698de1eafd5feb49efeda4a2b7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ed08a46b937015b489c423d6f832d5caf767e1a1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nextrecordset-method-example-vc"></a>方法签名的示例 （VC + +）
 此示例使用[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法来查看数据，在记录集中使用的三个单独组成的复合命令语句**选择**语句。  

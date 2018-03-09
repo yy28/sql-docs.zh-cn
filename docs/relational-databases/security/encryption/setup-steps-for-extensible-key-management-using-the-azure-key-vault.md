@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3105ead24cc79ba2374e6caf1438ed1384078a01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 375898263ea58a2ac8dd9e54f86257d07d1daeca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>使用 Azure 密钥保管库的可扩展密钥管理的设置步骤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ SQL Server 版本  |可再发行组件安装链接
   
      执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本配置 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 以使用 EKM 提供程序。  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -294,7 +294,7 @@ SQL Server 版本  |可再发行组件安装链接
      -- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器（Azure 密钥保管库的 EKM 提供程序）创建加密提供程序。    
     此示例使用名称 `AzureKeyVault_EKM_Prov`。  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -318,15 +318,15 @@ SQL Server 版本  |可再发行组件安装链接
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
         - 如果使用 **公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
-        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。   
+        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含“https://”。   
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
         > [!IMPORTANT]  
         >  必须删除 **客户端 ID**中的连字符。  
   
-    -   使用第 I 部分的 `SECRET` 客户端密码 **完成** 参数的第二部分。在此示例中，第 I 部分的 **客户端密码** 为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串*不带连字符*的字母和数字。  
+    -   使用第 I 部分的 `SECRET` 客户端密码 **完成** 参数的第二部分。在此示例中，第 I 部分的 **客户端密码** 为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串 *不带连字符*的字母和数字。  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -351,7 +351,7 @@ SQL Server 版本  |可再发行组件安装链接
   
     -   将 `ContosoRSAKey0` 替换为 Azure 密钥保管库中的密钥的名称。  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  

@@ -1,5 +1,5 @@
 ---
-title: "catalog.environments （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.environments（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e7ba1ba0bd8a444e4609a2f3d011da9cd233b73
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b76a46e4946bcdcfb9431df9799de6a1aeff6030
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,27 +32,26 @@ ms.lasthandoff: 09/26/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |environment_id|**bigint**|环境的唯一标识符 (ID)。|  
-|name|**sysname**|环境的名称。|  
+|NAME|**sysname**|环境的名称。|  
 |folder_id|**bigint**|环境位于其中的文件夹的唯一 ID。|  
 |description|**nvarchar(1024)**|环境的说明。 该值是可选的。|  
 |created_by_sid|**varbinary(85)**|创建了环境的用户的安全标识符 (SID)。|  
-|created_by_name|**nvarchar （128)**|创建环境的用户名。|  
+|created_by_name|**nvarchar(128)**|创建环境的用户名。|  
 |created_time|**datetimeoffset**|创建环境的日期和时间。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图对于目录中的每个环境显示一行。 环境名称只是相对于它们所在的文件夹是唯一的。 例如，名为 `E1` 的环境可能存在于目录中的多个文件夹中，但每个文件夹只能有一个名为 `E1` 的环境。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对环境的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 > [!NOTE]  
 >  将实施行级安全性；只显示您有权查看的行。  
   
   
-

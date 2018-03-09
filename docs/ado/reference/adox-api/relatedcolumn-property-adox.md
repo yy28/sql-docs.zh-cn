@@ -3,8 +3,9 @@ title: "RelatedColumn 属性 (ADOX) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - _Column::RelatedColumn
 - _Column::put_RelatedColumn
 - _Column::get_RelatedColumn
-helpviewer_keywords: RelatedColumn property [ADOX]
+helpviewer_keywords:
+- RelatedColumn property [ADOX]
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2df38af84332c98320187a4a90dc77b45195dac4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f06a8d57b78d86708b46a8e830cb13eeac8fc5c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn 属性 (ADOX)
 指示将相关名称[列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)相关表 （仅限键列） 中。  

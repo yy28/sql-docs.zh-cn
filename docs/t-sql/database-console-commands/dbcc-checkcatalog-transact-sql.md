@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC CHECKCATALOG
 - CHECKCATALOG_TSQL
 - CHECKCATALOG
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - catalogs [SQL Server], consistency checks
 - checking catalog consistency
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c554f15df3eae68ea3b5cda1ba5bb316f5dcc17
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7c8b73259e599e0001706cfaf09dca30d7d31a5b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +47,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -78,27 +79,27 @@ DBCC CHECKCATALOG 在系统元数据表之间执行各种一致性检查。 DBCC
 如果无法创建快照，则 DBCC CHECKCATALOG 将获取一个排他数据库锁以获得要求的一致性。 如果检测到任何不一致，则无法修复这些不一致问题，必须使用备份来还原数据库。
   
 > [!NOTE]  
->  运行 DBCC CHECKCATALOG 针对**tempdb**不执行任何检查。 这是因为，出于性能原因，数据库快照上不可用**tempdb**。 这意味着，无法获得所需的事务一致性。 回收服务器以解决任何**tempdb**元数据问题。  
+> 运行 DBCC CHECKCATALOG 针对**tempdb**不执行任何检查。 这是因为，出于性能原因，数据库快照上不可用**tempdb**。 这意味着，无法获得所需的事务一致性。 回收服务器以解决任何**tempdb**元数据问题。  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG 不会检查 FILESTREAM 数据。 FILESTREAM 在文件系统中存储二进制大型对象 (BLOB)。  
+> DBCC CHECKCATALOG 不会检查 FILESTREAM 数据。 FILESTREAM 在文件系统中存储二进制大型对象 (BLOB)。  
   
 作为的一部分也运行 DBCC CHECKCATALOG [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。
   
 ## <a name="result-sets"></a>结果集  
 如果未指定数据库，则 DBCC CHECKCATALOG 返回以下内容：
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 如果将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 指定为数据库名，则 DBCC CHECKCATALOG 返回以下内容：
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定服务器角色或**db_owner**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  

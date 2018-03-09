@@ -3,8 +3,11 @@ title: "“关系图”窗格 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6808554aad795fcda134687dfaf071487217f63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3d0b1ab935d8f6af9390131a0813468bbcdd0732
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="diagram-pane-visual-database-tools"></a>关系图窗格 (Visual Database Tools)
-“关系图”窗格以图形形式显示了您通过数据连接选择的表或表值对象。 同时也会显示它们之间的联接关系。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]“关系图”窗格以图形形式显示了用户通过数据连接选择的表或表值对象。 同时也会显示它们之间的联接关系。  
   
 在“关系图”窗格中可以进行如下操作：  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
 每个表或表值对象在“关系图”窗格中均作为单独的窗口出现。 每个矩形的标题栏中的图标表示该矩形所代表的对象类型，如下表所示：  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **表**  
 列出可以添加到“关系图”窗格中的表。 若要添加某个表，请选择该表，再单击“添加”。 若要同时添加多个表，请选中这些表，再单击“添加”。  
   

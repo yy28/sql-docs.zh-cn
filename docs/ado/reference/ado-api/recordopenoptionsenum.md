@@ -1,10 +1,11 @@
 ---
-title: "RecordOpenOptionsEnum |Microsoft 文档"
+title: RecordOpenOptionsEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RecordOpenOptionsEnum
-helpviewer_keywords: RecordOpenOptionsEnum enumeration [ADO]
+f1_keywords:
+- RecordOpenOptionsEnum
+helpviewer_keywords:
+- RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b94b5bf6c47fa824e7ff5f542d749b509376376
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 56caae53741a24727763868295ca92216557323c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 指定用于打开选项[记录](../../../ado/reference/ado-api/record-object-ado.md)。 这些值可能组合的使用或者。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|向字段与关联的提供程序指示**记录**最初，不需要检索，但可以在第一次尝试访问该字段检索。 缺少此标志，指示的默认行为是检索所有**记录**对象字段。|  
 |**adDelayFetchStream**|0x4000|向关联的默认流时使用的提供程序指示**记录**最初不需要检索。 缺少此标志，指示的默认行为是检索与关联的默认流**记录**对象。|  

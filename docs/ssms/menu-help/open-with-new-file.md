@@ -3,8 +3,11 @@ title: "打开方式（新建文件）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce714ce9042b3c827e1916ec3b6664ca06e278e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f7df416a20f8b8bae22e10e72fd35904c460808b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-with-new-file"></a>打开方式（新建文件）
-通过在“文件”菜单上单击“打开”再单击“文件”，可以在一个或多个编辑器中打开文档。 在“打开文件”对话框中，选择文件，单击“打开”箭头，再单击“打开方式”。 在“打开方式”对话框中的“选择要打开的程序”列表中，单击要使用的程序，再单击“打开”。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 通过在“文件”菜单上单击“打开”再单击“文件”，可以在一个或多个编辑器中打开文档。 在“打开文件”对话框中，选择文件，单击“打开”箭头，再单击“打开方式”。 在“打开方式”对话框中的“选择要打开的程序”列表中，单击要使用的程序，再单击“打开”。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **选择要打开的程序**  
 列出 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 中可供所选文件类型使用的编辑器。 从所显示的列表中选择要用来打开文档的编辑器，或者单击“添加”在该列表中包括新编辑器。  
   

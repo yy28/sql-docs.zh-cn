@@ -1,11 +1,14 @@
 ---
-title: "什么 &#39; s SQL Server 2016 中 Integration Services 中的新增功能 |Microsoft 文档"
+title: "SQL Server 2016 Integration Services 中的新增功能 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,34 +17,33 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-caps.latest.revision: 183
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/29/2017
-
+ms.openlocfilehash: 0d684f94dcd18d45c1a8b860b80d20ab07f64529
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>什么 &#39; s SQL Server 2016 中 Integration Services 中的新增功能
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-本主题介绍已添加或更新 SQL Server 2016 中的功能[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 它还包括功能中添加或更新[Azure Feature Pack for Integration Services &#40;SSIS &#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) SQL Server 2016 时间范围内。  
+本主题介绍 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中新增或更新的功能。 它还包括在 SQL Server 2016 期限期间在 [Integration Services (SSIS) 的 Azure 功能包](../integration-services/azure-feature-pack-for-integration-services-ssis.md)中添加或更新的功能。  
 
-## <a name="new-for-ssis-in-azure-data-factory"></a>SSIS Azure 数据工厂中的新增功能
+## <a name="new-for-ssis-in-azure-data-factory"></a>SSIS Azure 数据工厂中用于 SSIS 的新增功能
 
-使用 Azure 数据工厂中自 2017 年 9 月版本 2 公共预览版，你现在可以执行以下操作：
+现在使用 2017 年 9 月发布的 Azure 数据工厂版本 2 公共预览版可完成以下操作：
 -   将包部署到 Azure SQL 数据库上的 SSIS 目录数据库 (SSISDB)。
--   运行部署到 Azure SSIS 集成运行库的 Azure 数据工厂版本 2 的组件上的 Azure 包。
+-   运行部署到 Azure-SSIS Integration Runtime（Azure 数据工厂版本 2 的一个组件）上 Azure 中的包。
 
-有关详细信息，请参阅[到云中的 SQL Server Integration Services 工作负荷提供提起并移动](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+有关详细信息，请参阅[将 SQL Server Integration Services 工作负荷直接迁移到云](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
-这些新功能需要 SQL Server Data Tools (SSDT) 版本 17.2 或更高版本，但不是需要 SQL Server 2017 或 SQL Server 2016。 当将包部署到 Azure 时，包部署向导始终的包升级到最新的包格式。
+这些新增功能需要 SQL Server Data Tools (SSDT) 版本 17.2 或更高版本，但不需要 SQL Server 2017 或 SQL Server 2016。 将包部署到 Azure 时，包部署向导始终将包升级到最新的包格式。
 
-## <a name="2016-improvements-by-category"></a>按类别 2016年改进  
+## <a name="2016-improvements-by-category"></a>按类别分组的 2016 改进  
   
 -   **可管理性**  
   
@@ -160,16 +162,16 @@ ms.lasthandoff: 09/29/2017
   
 -   从旧版 SQL Server 还原数据库。  
   
--   在升级 SQL Server 实例之前，未从 AlwaysOn 可用性组中删除数据库。 这样可以防止数据库自动升级。 有关详细信息，请参阅 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)。  
+-   在升级 SQL Server 实例之前，未从 AlwaysOn 可用性组中删除数据库。 这样可以防止数据库自动升级。 有关详细信息，请参阅 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)。  
   
- 有关详细信息，请参阅[SSIS 目录 &#40;SSISDB &#41;](../integration-services/service/ssis-catalog.md). 
+ 有关详细信息，请参阅 [SSIS 目录 (SSISDB)](../integration-services/catalog/ssis-catalog.md)。 
 
 ####  <a name="AlwaysOn"></a> 支持 SSIS 目录中的 AlwaysOn  
  AlwaysOn 可用性组功能是一个高可用性和灾难恢复解决方案，可以提供替代数据库镜像的企业级方案。 可用性组支持的故障转移环境适用于一组可以共同进行故障转移的离散用户数据库（称为可用性数据库）。 有关详细信息，请参阅 [AlwaysOn 可用性组](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
- 在 SQL Server 2016 SSIS 引入了新功能，允许您轻松地将其部署到集中式的 SSIS 目录 （即 SSISDB 用户数据库中）。 为了确保 SSISDB 数据库及其内容（项目、包、执行日志等）的高可用性，可以将 SSISDB 数据库添加到 AlwaysOn 可用性组（其他用户数据库也是如此）。 当发生故障转移时，其中一个辅助节点将自动成为新的主节点。  
+ SSIS 在 SQL Server 2016 中引入了新功能，可以轻松地将其部署到集中式 SSIS 目录（即 SSISDB 用户数据库）。 为了确保 SSISDB 数据库及其内容（项目、包、执行日志等）的高可用性，可以将 SSISDB 数据库添加到 AlwaysOn 可用性组（其他用户数据库也是如此）。 当发生故障转移时，其中一个辅助节点将自动成为新的主节点。  
   
- 有关详细的概述，以及用于启用 Always On ssisdb 的分步说明，请参阅[SSIS 目录](../integration-services/service/ssis-catalog.md)。  
+ 有关如何为 SSISDB 启用 Always On 的详细概述和分步说明，请参阅 [SSIS 目录](../integration-services/catalog/ssis-catalog.md)。  
 
 ####  <a name="IncrementalDeployment"></a> 增量包部署  
 增量包部署功能允许你将一个或多个包部署到现有的或新的项目，无需部署整个项目。 可使用下述工具以增量方式部署包。  
@@ -184,7 +186,7 @@ ms.lasthandoff: 09/29/2017
   
 -   管理对象模型 (MOM) API  
   
- 有关详细信息，请参阅 [部署 Integration Services (SSIS) 项目和包] (.../ integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md。  
+ 有关详细信息，请参阅 [部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md。  
 
 ####  <a name="encrypted"></a> 支持 SSIS 目录中的 Always Encrypted  
  SSIS 已在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供始终加密功能支持。 有关详细信息，请参阅以下博客文章。  
@@ -204,12 +206,12 @@ ms.lasthandoff: 09/29/2017
  SSIS 目录中的全新“运行时沿袭”日志记录级别收集在数据流中跟踪沿袭信息所需的数据。  可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。 
 
 ####  <a name="CustomLogging"></a> SSIS 目录中的全新自定义日志记录级别  
- 旧版 SSIS 目录允许你在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。  SQL Server 2016 将添加**运行时沿袭**日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
+ 旧版 SSIS 目录允许你在运行包时从以下四个内置日志记录级别进行选择：“无”、“基本”、“性能”或“详细”。  SQL Server 2016 增加了 RuntimeLineage 日志记录级别。 此外，你现在还可以在 SSIS 目录中创建和保存多个自定义日志记录级别，然后在每次运行包时选取要使用的日志记录级别。 每个自定义日志记录级别只选择要捕获的统计信息和事件。 （可选）包括事件上下文，以便查看变量值、连接字符串和任务属性。 有关详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)。 
 
 ####  <a name="ErrorColumn"></a> 数据流中错误对应的列名称  
  当您将重定向的数据流中包含到错误输出的错误的行时，输出会包括顺序错误发生，但不会显示的列的名称的列的数值标识符。 现在可以通过多种方式来查找和显示发生了错误的列的名称。  
   
--   配置日志记录时，请选择对 **DiagnosticEx** 事件进行记录。 此事件将数据流列映射写入日志。 然后就可以使用由错误输出捕获的列标识符来查找此列映射中的列名称。 有关详细信息，请参阅 [Error Handling in Data](../integration-services/data-flow/error-handling-in-data.md)。  
+-   配置日志记录时，请选择对 **DiagnosticEx** 事件进行记录。 此事件将数据流列映射写入日志。 然后就可以使用由错误输出捕获的列标识符来查找此列映射中的列名称。 有关详细信息，请参阅[数据中的错误处理](../integration-services/data-flow/error-handling-in-data.md)。  
   
 -   在高级编辑器中，你可以在查看数据流组件的输入或输出列的属性时，查看上游列的列名称。  
   
@@ -300,7 +302,7 @@ ms.lasthandoff: 09/29/2017
 ### <a name="expanded-connectivity-to-the-cloud"></a>扩展了到云的连接
 
 ####  <a name="AFP2016"></a> 适用于 SSIS 的 Azure 功能包已发布（针对 SQL Server 2016）  
- Azure Feature Pack for Integration Services 已为 SQL Server 2016 已发布。 功能包包含连接到 Azure 数据源的连接管理器，以及用于执行常用 Azure 操作的任务。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
+ 用于 Integration Services 的 Azure 功能包已发布（针对 SQL Server 2016）。 功能包包含连接到 Azure 数据源的连接管理器，以及用于执行常用 Azure 操作的任务。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
 
 #### <a name="dynamics"></a> 支持在 Service Pack 1 中发布的 Microsoft Dynamics Online 资源
 
@@ -319,7 +321,7 @@ ms.lasthandoff: 09/29/2017
 ### <a name="better-install-experience"></a>改进安装体验
 
 ####  <a name="Upgrade"></a> 当 SSISDB 属于某个可用性组时，会阻止升级  
- 如果 SSIS 目录数据库 (SSISDB) 属于某个 AlwaysOn 可用性组，则必须从该可用性组中删除 SSISDB，升级 SQL Server，然后再将 SSISDB 重新添加到该可用性组。 有关详细信息，请参阅 [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade)。  
+ 如果 SSIS 目录数据库 (SSISDB) 属于某个 AlwaysOn 可用性组，则必须从该可用性组中删除 SSISDB，升级 SQL Server，然后再将 SSISDB 重新添加到该可用性组。 有关详细信息，请参阅 [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade)。  
 
 ### <a name="better-design-experience"></a>改进设计体验
 
@@ -328,7 +330,7 @@ ms.lasthandoff: 09/29/2017
 
  在解决方案资源管理器中，右键单击 Integration Services 项目并选择“属性”  以打开该项目的属性页。 在“配置属性”  的“常规” 选项卡上，选择“TargetServerVersion”  属性，然后选择 SQL Server 2016、SQL Server 2014 或 SQL Server 2012。  
    
- ![在项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion 属性在项目属性对话框中")  
+ ![项目属性对话框中的 TargetServerVersion 属性](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
 
 >   [!IMPORTANT]
 > 如果为 SSIS 开发自定义扩展插件，请参阅 [支持自定义组件中的多目标](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) 和 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)（使 SSIS 自定义扩展插件获得用于 SQL Server 2016 的 SSDT 2015 多版本支持的支持）。  
@@ -377,5 +379,4 @@ ms.lasthandoff: 09/29/2017
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

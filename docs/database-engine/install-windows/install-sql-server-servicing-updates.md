@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 760625b44f96422eabb6f753dab02c47da4f0750
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: d543239bfec50ec6b5466bf8e57d98fba542e8b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-servicing-updates"></a>安装 SQL Server 服务更新
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题提供了有关为 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安装更新的信息。 本节提供有关以下方面的信息：  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+本文提供有关为 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安装更新的信息。 本节提供有关以下方面的信息：
   
 - 在全新安装期间为 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安装更新  
   
@@ -53,10 +57,10 @@ ms.lasthandoff: 11/20/2017
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新 (MU)、Windows Server Update Services (WSUS) 和 Microsoft 下载中心获得。 针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全更新和关键更新通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新提供，并且能够通过控制面板中的 Windows Update 小程序查看您需要的选择进入 MU 的这些更新。  
   
-在您通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新接收某一更新时，它会以无人参与模式将所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能更新为最新版本。 如果您需要更多的灵活性或者没有 Internet 或 WSUS 访问，将需要从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心获取更新。  
+在您通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新接收某一更新时，它会以无人参与模式将所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能更新为最新版本。 如果需要更多的灵活性或者没有 Internet 或 WSUS 访问，则必须从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心获取更新。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用安装向导安装 SQL Server（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
-[向 SQL Server 实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)   
+[使用安装向导安装 SQL Server（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+[向 SQL Server 实例添加功能（安装程序）](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
 [修复失败的 SQL Server 安装](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
 

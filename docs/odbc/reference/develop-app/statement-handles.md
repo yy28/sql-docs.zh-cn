@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dedc2ece9c73c0be4e9bbab61e231ab8e2d3060a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0d80db9c7ce795514dd362e37170aa58cce817c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statement-handles"></a>语句句柄
 A*语句*非常轻松地视为 SQL 语句，如**选择\*从员工**。 但是，一个语句是远不止一个 SQL 语句，它包含所有与该 SQL 语句，如所有结果集由该语句创建和执行语句中使用的参数关联的信息。 语句不甚至不需要具有应用程序定义 SQL 语句。 例如，目录的如函数时**SQLTables**执行上一条语句，它会执行返回表名称的列表的预定义的 SQL 语句。  

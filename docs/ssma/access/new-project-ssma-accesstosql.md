@@ -1,10 +1,13 @@
 ---
 title: "新项目 (SSMA) (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c69d91f46c87b7001e572a479c398a1f54bf8aad
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e1ffcacafa80c8679f2aae6cb873d1c802e84ebf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-project-ssma-accesstosql"></a>新项目 (SSMA) (AccessToSQL)
 使用**新项目**对话框中，创建新的 SSMA 项目。 访问**新项目**对话框中，在**文件**菜单上，单击**新项目**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **名称**  
   
 输入项目的名称。 SSMA 将追加文件扩展名。  

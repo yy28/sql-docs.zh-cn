@@ -2,28 +2,30 @@
 title: "什么 &#39; s Analysis Services 中的新增功能 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>什么 &#39; s Analysis Services 中的新增功能
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
 SQL Server 2016 Analysis Services 包含许多提供改进的性能、 更轻松解决方案创作、 自动的数据库管理新的增强功能，与双向交叉筛选，增强的关系的并行分区处理和其他更多。 此版本的大多数增强功能的核心是表格模型数据库的全新 1200 兼容级别。     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
@@ -75,7 +77,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
  ### <a name="calculated-tables-in-ssdt"></a>SSDT 中的计算表    
 *计算表* 是基于 SSDT 中 DAX 表达式或查询的仅限模型的构造。 在数据库中部署后，计算表与常规表没有区别。    
 
- 计算表有多种用途，包括创建新表用于公开特定角色中的现有表。 典型的示例是在多个上下文中运行的日期表（订单日期、发货日期等）。 通过为给定的角色创建计算表，你可以激活表关系以便于查询，或使用计算表进行数据交互。 计算表的另一个用途是将现有表的组成部分合并到只在模型中存在的全新表。  若要了解详细信息，请参阅[创建计算表（SSAS 表格）](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md)。    
+ 计算表有多种用途，包括创建新表用于公开特定角色中的现有表。 典型的示例是在多个上下文中运行的日期表（订单日期、发货日期等）。 通过为给定的角色创建计算表，你可以激活表关系以便于查询，或使用计算表进行数据交互。 计算表的另一个用途是将现有表的组成部分合并到只在模型中存在的全新表。  请参阅[创建计算表](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md)若要了解详细信息。    
  ### <a name="formula-fixup"></a>公式修正    
  使用针对表格 1200 模型的公式修正，SSDT 可自动更新引用已重命名的列或表的任何度量值。    
  ### <a name="support-for-visual-studio-configuration-manager"></a>支持 Visual Studio 配置管理器    
@@ -85,9 +87,9 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
  ### <a name="administer-tabular-1200-models-in-ssms"></a>在 SSMS 中管理表格 1200 模型    
  在此版本中，表格服务器模式下的 Analysis Services 实例可以运行任何兼容级别（1100、1103、1200）的表格模型。 最新的 [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) 已更新，可以显示属性并针对 1200 兼容级别的表格模型提供数据库模型管理。    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>并行处理表格模型中的多个表分区    
- 此版本为包含两个或更多个分区的表提供新的并行处理功能，从而提高处理性能。 使用此功能不需要进行任何配置设置。 有关配置分区和处理表的详细信息，请参阅[表格模型分区（SSAS 表格）](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)。    
+ 此版本为包含两个或更多个分区的表提供新的并行处理功能，从而提高处理性能。 使用此功能不需要进行任何配置设置。 有关配置分区和处理表的详细信息，请参阅[表格模型分区](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)。    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>在 SSMS 中将计算机帐户添加为管理员    
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]管理员现在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将计算机帐户配置为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员组的成员。 在“选择用户或组”对话框中，设置计算机域的“位置”，然后添加“计算机”对象类型。 有关详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员现在可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将计算机帐户配置为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理员组的成员。 在“选择用户或组”对话框中，设置计算机域的“位置”，然后添加“计算机”对象类型。 有关详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。    
  ### <a name="dbcc-for-analysis-services"></a>DBCC for Analysis Services    
  数据库一致性检查 (DBCC) 在内部运行，以检测数据库负载上的潜在数据损坏问题，但如果你怀疑数据或模型有问题，也可以按需运行该工具。 DBCC 将根据模型是表格式还是多维式来运行不同的检查。 有关详细信息，请参阅[适用于 Analysis Services 表格数据库和多维数据库的数据库一致性检查器 (DBCC)](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md)。    
  ### <a name="extended-events-updates"></a>扩展事件更新    
@@ -130,7 +132,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
 
 在数据库级别，CREATE、 ALTER 和 DELETE 命令将在你熟悉的 XMLA 窗口中输出 TMSL 脚本。  还可以在此版本中编写其他命令（例如 Process）的脚本。 将来的版本可能会添加对其他许多操作的脚本支持。    
 
-**可编写脚本的命令** | **描述**
+**可编写脚本的命令** | **Description**
 --------------- | ----------------
 创建|添加数据库、连接或分区。 ASSL 等效项为 CREATE。
 createOrReplace|通过覆盖以前的版本来更新现有的对象定义（数据库、连接或分区）。 ASSL 等效于 AllowOverwrite 设置为 true 并且 ObjectDefinition 设置为 ExpandFull 时的 ALTER。
@@ -204,7 +206,7 @@ Visual Studio 2015 中的代码视图现在以 JSON 格式呈现表格 1200 模�
 ### <a name="new-data-sources-for-directquery-mode"></a>用于 DirectQuery 模式的新数据源    
  现在支持在 DirectQuery 模式下的表格 1200年模型的数据源即包括 Oracle、 Teradata 和 Microsoft 分析平台 （以前称为并行数据仓库）。    
     
-若要了解详细信息，请参阅 [DirectQuery 模式（SSAS 表格）](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。    
+若要了解详细信息，请参阅[DirectQuery 模式下](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。    
 
 ## <a name="see-also"></a>另请参阅
 [Analysis Services 团队博客](http://blogs.msdn.microsoft.com/analysisservices/)    

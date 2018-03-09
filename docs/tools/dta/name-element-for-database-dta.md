@@ -2,9 +2,12 @@
 title: "数据库 (DTA) 的名称元素 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,18 +15,18 @@ dev_langs: XML
 helpviewer_keywords: Name element
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd11009bb7ff93b58a2c49124913e3a10f99a31f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 342364fbc99ef542120d3a36c22e4a59ce6bcca8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-database-dta"></a>数据库的名称元素 (DTA)
-  指定要优化的数据库的名称。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定要优化的数据库的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
 |关系|元素|  
 |------------------|--------------|  
-|**父元素**|[服务器的数据库元素 (DTA)](../../tools/dta/database-element-for-server-dta.md)|  
+|**父元素**|[服务器 &#40; DTA &#41; 的数据库元素](../../tools/dta/database-element-for-server-dta.md)|  
 |**子元素**|无。|  
   
 ## <a name="example"></a>示例  

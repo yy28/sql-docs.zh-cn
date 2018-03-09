@@ -1,5 +1,5 @@
 ---
-title: "连接到数据源中自定义任务 |Microsoft 文档"
+title: "在自定义任务中连接数据源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - connections [Integration Services], external data sources
 - SSIS custom tasks, external data sources
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5b9446be2b632e6df78fbc1f66762de02d4644f5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a708c9c85fccff10691014d4696147b7d3bb39e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>在自定义任务中连接数据源
   任务使用连接管理器连接外部数据源，以检索或保存数据。 在设计时，连接管理器表示逻辑连接，并提供诸如服务器名称和任何身份验证属性的关键信息。 在运行时，任务调用连接管理器的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法，以建立与数据源的物理连接。  
@@ -145,9 +143,8 @@ Public Overrides Function Execute( _
 End Function  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS &#41;连接](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>另请参阅  
+ [Integration Services (SSIS) 连接](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [创建连接管理器](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
-

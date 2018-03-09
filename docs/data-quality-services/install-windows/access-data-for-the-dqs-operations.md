@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bb59f0303f904426d3077af2fa96edd5ebea67f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bf4ccaec030d6db0db4b3e83b8051e4ca97b5b2f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="access-data-for-the-dqs-operations"></a>访问 DQS 操作数据
   若要将您的源数据用于 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作并导出已处理的数据，您可以执行以下任一操作：  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/20/2017
   
 -   使用您自己的数据库作为 DQS 操作的源数据，以及导出已处理的数据的目标。 为此，请确保你的数据库与数据质量服务器数据库在同一个 SQL Server 实例中。 否则，该数据库将无法在数据质量客户端中用于 DQS 操作。 此外，为导出匹配结果，必须向你的 Windows 用户帐户授予对 DQS_STAGING_DATA 数据库的访问权限，因为匹配结果分为两个阶段进行导出：首先，匹配结果导出到 DQS_STAGING_DATA 数据库的临时表中，然后移到你的目标数据库的表中。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 -   您必须已通过运行 DQSInstaller.exe 文件完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 有关详细信息，请参阅 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  在 **“登录属性”** 对话框中，单击 **“确定”** 以应用所做的更改。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  尝试执行 DQS 操作，这些操作访问数据库来作为 DQS 操作的数据源，然后将处理后的数据导出到数据库。  
   
 ## <a name="see-also"></a>另请参阅  

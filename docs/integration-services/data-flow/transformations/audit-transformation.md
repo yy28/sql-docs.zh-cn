@@ -1,5 +1,5 @@
 ---
-title: "审核转换 |Microsoft 文档"
+title: "审核转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="audit-transformation"></a>审核转换
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/19/2017
 |系统变量|索引|Description|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|标识包的执行实例的 GUID。|  
-|**PackageID**|1|包的唯一标识符。|  
+|**PackageID**|@shouldalert|包的唯一标识符。|  
 |**PackageName**|2|包名称。|  
 |**VersionID**|3|包的版本。|  
 |**ExecutionStartTime**|4|包开始运行的时间。|  
@@ -67,14 +66,14 @@ ms.lasthandoff: 08/19/2017
 ## <a name="audit-transformation-editor"></a>审核转换编辑器
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输出列的名称**  
  为包含审核信息的新输出列提供名称。  
   
  **审核类型**  
  选择用于提供审核信息的可用系统变量。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**执行实例 GUID**|插入唯一标识包的执行实例的 GUID。|  
 |**包 ID**|插入唯一标识包的 GUID。|  
@@ -82,9 +81,8 @@ ms.lasthandoff: 08/19/2017
 |**版本 ID**|插入唯一标识包版本的 GUID。|  
 |**执行开始时间**|插入包执行的开始时间。|  
 |**计算机名称**|插入启动包的计算机的名称。|  
-|**用户名**|插入启动包的用户的登录名。|  
+|**User name**|插入启动包的用户的登录名。|  
 |**任务名称**|插入与审核转换相关联的数据流任务的名称。|  
 |**任务 ID**|插入唯一标识与审核转换相关联的数据流任务的 GUID。|  
   
   
-

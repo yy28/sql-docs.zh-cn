@@ -1,11 +1,11 @@
 ---
-title: "步骤 2： 创建部署项目 |Microsoft 文档"
+title: "步骤 2：创建部署项目 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e92d8018d600c88e444cebd4623d290e24c0a779
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: db93b4dbb21f2918b254b6493352f18533d03c5f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-2---creating-the-deployment-project"></a>课程 1-2-创建部署项目
+# <a name="lesson-1-2---creating-the-deployment-project"></a>第 1-2 课 - 创建部署项目
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，可部署的单元是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 必须先创建一个新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，再将所有包和要与包一起部署的任何辅助文件添加到该项目，才能部署包。  
   
 ### <a name="to-create-the-integration-services-project"></a>创建 Integration Services 项目  
@@ -44,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  在“项目位置”对话框中，单击文件夹，再单击“打开”。  
   
-7.  单击 **“确定”**。  
+7.  单击“确定” 。  
   
 8.  默认情况下，将创建一个名为 Package.dtsx 的空包，并将该包添加到项目中。 但是您将不使用此包；相反您将现有的包添加到项目。 由于项目中的所有包都包括在部署中，因此您应该删除 Package.dtsx。 若要删除它，右键单击它，再单击“删除”。  
   
@@ -56,5 +55,4 @@ ms.lasthandoff: 09/26/2017
   
   
   
-
 

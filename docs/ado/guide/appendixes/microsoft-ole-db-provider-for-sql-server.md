@@ -3,8 +3,9 @@ title: "Microsoft OLE DB Provider for SQL Server |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b79b775a9e6bee5a1363cc95089bb0d6e66f40a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 概述
 Microsoft OLE DB Provider for SQL Server，SQLOLEDB，允许 ADO 来访问 Microsoft SQL Server。
@@ -66,7 +67,7 @@ User ID=MyUserID;Password=MyPassword;"
 
 |参数|Description|
 |---------------|-----------------|
-|Trusted_Connection|指示用户身份验证模式。 此属性可以设置为**是**或**否**。 默认值是**否**。 如果此属性设置为**是**，SQLOLEDB 使用 Microsoft Windows NT 身份验证模式为授权用户对指定的 SQL Server 数据库的访问**位置**和[数据源](../../../ado/reference/ado-api/datasource-property-ado.md)属性值。 如果此属性设置为**否**，SQLOLEDB 使用混合模式来授予用户对 SQL Server 数据库的访问权限。 中指定的 SQL Server 登录名和密码**用户 Id**和**密码**属性。|
+|Trusted_Connection|指示用户身份验证模式。 此属性可以设置为**是**或**否**。 默认值是 **否**。 如果此属性设置为**是**，SQLOLEDB 使用 Microsoft Windows NT 身份验证模式为授权用户对指定的 SQL Server 数据库的访问**位置**和[数据源](../../../ado/reference/ado-api/datasource-property-ado.md)属性值。 如果此属性设置为**否**，SQLOLEDB 使用混合模式来授予用户对 SQL Server 数据库的访问权限。 中指定的 SQL Server 登录名和密码**用户 Id**和**密码**属性。|
 |当前语言|指示 SQL Server 语言名称。 标识用于系统消息选择和格式化的语言。 必须在 SQL Server 上安装的语言否则为打开，则连接将失败。|
 |网络地址|指示由指定的 SQL 服务器的网络地址**位置**属性。|
 |网络库|指示用于与 SQL Server 进行通信的网络库 (DLL) 的名称。 该名称不应当包含路径或 .dll 文件扩展名。 默认值提供的 SQL Server 客户端配置。|

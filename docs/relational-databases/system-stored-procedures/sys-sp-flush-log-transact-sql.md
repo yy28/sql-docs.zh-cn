@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_flush_log (TRANSACT-SQL) |Microsoft 文档"
+title: sys.sp_flush_log (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.sp_flush_log
 - sys.sp_flush_log_TSQL
 - sp_flush_log
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_flush_log
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_flush_log
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
-caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7085d93310e0f2b5e4f4523fa96ba66b3eaadc7
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b4347cb94ab7e6e42418f7b0380250debbdcad03
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
   
 sys.sp_flush_log  
   
@@ -60,7 +63,7 @@ sys.sp_flush_log
   
 ## <a name="sample-code"></a>示例代码  
   
-```tsql  
+```sql  
 .  
 EXECUTE sys.sp_flush_log  
   

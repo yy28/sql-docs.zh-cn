@@ -1,25 +1,28 @@
 ---
 title: "有关 SQL Server 中的机器学习的安全注意事项 |Microsoft 文档"
-ms.date: 11/16/2017
-ms.prod: sql-server-2017
+ms.date: 02/01/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8c1cc4c65d35f6c2806a9890464cccfb6c621494
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ed20a8267a8f89e1ab64c19ddafee28cb66c375
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>有关 SQL Server 中的机器学习的安全注意事项
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文列出了管理员或架构师应牢记使用机器学习服务时的安全注意事项。
 
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 
 ## <a name="authentication-methods-supported-for-remote-compute-contexts"></a>支持远程计算上下文的身份验证方法
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]支持 Windows 集成身份验证和 SQL 登录名创建之间的连接时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和远程数据科学客户端。
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 支持 Windows 集成身份验证和 SQL 登录名创建之间的连接时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和远程数据科学客户端。
 
 例如，假设你在您的笔记本电脑上进行开发 R 解决方案并想要在 SQL Server 计算机上执行计算。 你将使用在 R，创建 SQL Server 数据源**rx**函数和定义连接字符串基于您的 Windows 凭据。
 
@@ -48,9 +51,9 @@ ms.lasthandoff: 11/17/2017
  一般情况下，[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]启动外部脚本运行时并执行其自己的帐户下的脚本。 但是，如果外部运行时发出的 ODBC 调用，[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]模拟发送命令以确保不会无法通过 ODBC 调用用户的凭据。 这称为*隐式身份验证*。
  
  > [!IMPORTANT]
- > 要使隐式身份验证成功，包含辅助角色帐户的 Windows 用户组（默认情况下，为 **SQLRUser**）必须在实例的 master 数据库中有帐户，并且此帐户必须有权连接到该实例。
+ > 默示的身份验证成功，包含辅助帐户的 Windows 用户组 (默认情况下， **SQLRUserGroup**) 必须具有 master 数据库中的帐户的实例，并且此帐户必须会获得对权限连接到的实例。
  > 
- > 组**SQLRUser**运行 Python 脚本时，还使用。 
+ > 组**SQLRUserGroup**运行 Python 脚本时，还使用。 
 
 通常情况下，我们建议你将大型数据集移入 SQL Server 事先，而不是尝试读取数据使用 RODBC 或另一个库。 此外，使用 SQL Server 查询或视图作为您的主数据源，以提高性能。 
 

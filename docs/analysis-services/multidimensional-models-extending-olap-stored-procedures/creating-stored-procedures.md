@@ -2,18 +2,17 @@
 title: "创建存储的过程 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - registering assemblies
 - database assemblies [Analysis Services]
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], creating
 - assemblies [Analysis Services]
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a18ccef8d4e2e79f5a88e43def0bf13b683e266
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 913b2cbb8fbf93be08b1854051024492e691bdea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="creating-stored-procedures"></a>创建存储的过程
-  所有存储过程必须与公共语言运行时 (CLR) 或组件对象模型 (COM) 类相关联才能使用。 必须在服务器上安装类-通常在窗体的[!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX® 动态链接库 (DLL) — 并为在服务器上或程序集已注册[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+所有存储过程必须与公共语言运行时 (CLR) 或组件对象模型 (COM) 类相关联才能使用。 必须在服务器上安装类-通常在窗体的[!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX® 动态链接库 (DLL) — 并为在服务器上或程序集已注册[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。  
   
  存储过程将在服务器或数据库中注册。 服务器存储过程可以从任何查询上下文进行调用。 而只有当数据库上下文是定义存储过程时所针对的数据库时，才能访问数据库存储过程。 如果一个程序集内的函数调用了另一个程序集内的函数，则必须在相同的上下文（服务器或数据库）中注册这两个程序集。 对于服务器或已部署[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库在服务器上，你可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]注册程序集。 对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 设计器在项目中注册程序集。  
   
@@ -123,6 +123,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型程序集管理](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
- [定义存储过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [定义存储的过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

@@ -3,26 +3,28 @@ title: "步骤 4： 服务器返回的记录集 （RDS 教程） |Microsoft 文�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RDS tutorial [ADO], server returns Recordset
+helpviewer_keywords:
+- RDS tutorial [ADO], server returns Recordset
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b607faa566bf584e1a18acb2ed6970f2e45d4404
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 33d7afeb5912ff46a0f90a30ea1203f2040cb689
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步骤 4： 服务器返回的记录集 （RDS 教程）
 > [!IMPORTANT]

@@ -2,32 +2,34 @@
 title: "为表启用 Stretch Database | Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: stretch-database
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f210ed6defa86d000820f23e2385f91ed2f32a27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ebf0e74709450f3f6bcee076c6ac4921996c54b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   若要为 Stretch Database 配置表，请在 SQL Server Management Studio 中为表选择“Stretch | 启用”，以打开“为 Stretch 启用表”向导。 还可以使用 Transact-SQL 在现有表上启用 Stretch Database，或创建已启用 Stretch Database 的新表。  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 -   如果表中同时包含热数据和冷数据，则可以指定筛选器函数以选择要迁移的行。    
  
- **先决条件**。 如果你为表选择“Stretch | 启用”且尚未为数据库启用 Stretch Database，则向导将首先为 Stretch Database 配置数据库。 请执行[通过运行“启用数据库延伸向导”开始](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)中的步骤，而非本主题中的步骤。  
+ **先决条件**。 如果你为表选择“Stretch | 启用”且尚未为数据库启用 Stretch Database，则向导将首先为 Stretch Database 配置数据库。 请执行[通过运行“启用数据库延伸向导”开始](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)中的步骤，而非本文中的步骤。  
   
  **权限**。 在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在表上启用 Stretch Database 还需具有表的 ALTER 权限。  
 
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 -   运行 ALTER TABLE 语句以在退出向导后指定筛选器函数。 有关所需步骤，请参阅 [运行向导后添加筛选器函数](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)。  
   
- ALTER TABLE 语法将在本主题的后面进行介绍。  
+ ALTER TABLE 语法将在本文的后面进行介绍。  
   
  **摘要**  
  查看你输入的值和你在该向导中选择的选项。 然后选择“完成”  以启用 Stretch。  
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="EnableTSQLTable"></a> 使用 Transact-SQL 在表上启用 Stretch Database  
  可以为现有表启用 Stretch Database，或通过使用 Transact-SQL 创建已启用 Stretch Database 的新表。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  运行 CREATE TABLE 或 ALTER TABLE 时使用以下选项来在表上启用 Stretch Database。  
   
 -   根据需要，如果表中同时包含热数据和冷数据，则使用 `FILTER_PREDICATE = <function>` 子句指定一个函数来选择要迁移的行。 该谓词必须调用内联表值函数。 有关详细信息，请参阅 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。 如果未指定筛选器函数，则将迁移整个表。  

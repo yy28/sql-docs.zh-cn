@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 462245faec6b34c8ad38e47ec23c1f8038769ae8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +138,7 @@ HAVING 子句：
   - 当查询包含联接或聚合函数时，该限制数可能降低。 （例如，对于一个联接（两个表），限制为 4,096 行。 对于两个联接（三个表），限制为 2,730 行。）  
   - 可通过将行数存储在变量中来获得多于 8,192 的结果：  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -155,7 +156,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   UPDATE  
 
--   DELETE  
+-   删除  
 
 -   UPDATE 和 DELETE 语句支持 WHERE。  
 
@@ -257,7 +258,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
  使用 TOP N = 8192 的示例：编译  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -270,7 +271,7 @@ GO
 
  使用 TOP N > 8192 的示例：无法编译。  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -285,7 +286,7 @@ GO
 
  使用变量的示例：编译  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  

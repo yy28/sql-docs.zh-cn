@@ -1,10 +1,13 @@
 ---
 title: "添加和删除访问数据库文件 (AccessToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -36,11 +39,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db0c8970cb9a4cd47da5982d0ecc8c1e81a5ccbc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 64e1bc5dd6b78df1f24ee03b65cfdf6b796c0e39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>添加和删除访问数据库文件 (AccessToSQL)
 若要迁移 Access 数据移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，必须将一个或多个访问数据库添加到 SSMA 项目。 这些数据库必须 Access 97 或更高版本。 如果你的数据库从早期版本的访问，你必须将数据库转换为较新版本。 通过打开并将数据库保存 Access 97 或更高版本中，添加到 SSMA 之前执行此操作。  
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/09/2017
   
     你可以使用**选择所有**和**清除所有**要选中或清除所有数据库的列表顶部的按钮。 你可以按住 CTRL 键来选择多个数据库，或按住 SHIFT 键以选择一系列数据库。  
   
-7.  单击 **“下一步”**。  
+7.  单击“下一步” 。  
   
 8.  在验证页上，单击**完成**。  
   

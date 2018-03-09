@@ -2,30 +2,36 @@
 title: "注册已连接的服务器 (SQL Server Management Studio)| Microsoft Docs"
 ms.custom: 
 ms.date: 07/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.registerserver.f1
+f1_keywords:
+- sql13.swb.registerserver.f1
 helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 520992cd863dcd5fcdc9b265ef168cd171b8aa27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6b6639909649cd9f988b5dd308f831763a82ef3c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>注册连接的服务器 (SQL Server Management Studio)
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册已连接的服务器。 通过注册服务器，您可以保存经常访问的服务器的连接信息。 可以在连接前注册服务器，也可以在通过对象资源管理器进行连接时注册服务器。  可以通过从菜单导航到“视图”\\“已注册的服务器，在 SSMS 中查看已注册的服务器。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (SSMS) 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册已连接的服务器。 通过注册服务器，您可以保存经常访问的服务器的连接信息。 可以在连接前注册服务器，也可以在通过对象资源管理器进行连接时注册服务器。  可以通过从菜单导航到“视图”\\“已注册的服务器，在 SSMS 中查看已注册的服务器。
   
  **本主题内容**  
   
@@ -54,7 +60,7 @@ Windows 身份验证模式允许用户通过 [!INCLUDE[msCoName](../../includes/
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 有关详细信息，请参阅 [选择身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)。  
 
-     -    **用户名**  
+     -    **User name**  
 显示当前连接所使用的用户名。 只有在已选择使用 Windows 身份验证进行连接的情况下，此只读选项才可用。 若要更改 **“用户名”**，请以其他用户身份登录计算机。 
 
      -    **登录**  

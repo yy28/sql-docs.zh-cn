@@ -1,51 +1,39 @@
 ---
-title: "连接到表格模型数据库 (SSAS) |Microsoft 文档"
+title: "连接到表格模型数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 69878a319fb5b061e712bcf96e094356b558553e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e733d7e8964dcdd714ac095dc44a4432ac4835b7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="connect-to-a-tabular-model-database-ssas"></a>连接到表格模型数据库 (SSAS)
-  在您生成表格模型并且将其部署到某一 Analysis Services 表格模式服务器后，需要设置权限以使其可供客户端应用程序使用。 本主题介绍了如何设置权限以及如何从客户端应用程序连接到数据库。  
+# <a name="connect-to-a-tabular-model-database"></a>连接到表格模型数据库  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在您生成表格模型并且将其部署到某一 Analysis Services 表格模式服务器后，需要设置权限以使其可供客户端应用程序使用。 此文章介绍了如何权限以及如何从客户端应用程序连接到数据库。  
   
 > [!NOTE]  
->  默认情况下，在您配置防火墙之前，与 Analysis Services 的远程连接将不可用。 如果您在为客户端连接配置命名实例或默认实例，则请确保您打开了适当的端口。 有关详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
-  
- 本主题包含以下各节：  
-  
- [针对数据库的用户权限](#bkmk_userpermissions)  
-  
- [针对服务器的管理权限](#bkmk_admin)  
-  
- [从 Excel 或 SharePoint 进行连接](#bkmk_excelconn)  
-  
- [解决连接问题](#bkmk_Tshoot)  
+>  默认情况下，在您配置防火墙之前，与 Analysis Services 的远程连接将不可用。 如果您在为客户端连接配置命名实例或默认实例，则请确保您打开了适当的端口。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 ##  <a name="bkmk_userpermissions"></a> 针对数据库的用户权限  
  连接到表格数据库的用户必须在指定读取访问权限的数据库角色中具有成员身份。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创作模型时或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创作模型时（对于已部署的模型）会定义角色（有时会定义角色成员身份）。 有关在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中使用角色管理器创建角色的详细信息，请参阅[创建和管理角色（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。 有关为已部署的模型创建和管理角色的详细信息，请参阅[表格模型角色（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创作模型时或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创作模型时（对于已部署的模型）会定义角色（有时会定义角色成员身份）。 有关使用角色管理器中创建角色的详细信息[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，请参阅[创建和管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。 有关创建和管理角色的已部署的模型的详细信息，请参阅[表格模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
   
 > [!CAUTION]  
 >  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中通过角色管理器使用已定义的角色重新部署表格模型项目，将覆盖已部署的表格模型中定义的角色。  
@@ -94,11 +82,11 @@ ms.lasthandoff: 11/17/2017
   
      必须为独立的表格部署配置服务器实例，并且该服务器实例必须具有允许访问的入站规则。 有关详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) 和 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-4.  对于登录凭据，如果您对数据库具有读取权限，则选择 **“使用 Windows 身份验证”** 。 否则，请选择 **“使用以下用户名和密码”**，然后输入具有数据库权限的 Windows 帐户的用户名和密码。 单击 **“下一步”**。  
+4.  对于登录凭据，如果您对数据库具有读取权限，则选择 **“使用 Windows 身份验证”** 。 否则，请选择 **“使用以下用户名和密码”**，然后输入具有数据库权限的 Windows 帐户的用户名和密码。 单击“下一步” 。  
   
 5.  选择数据库。 有效选择将为该数据库显示单个 **“模型”** 多维数据集。 单击 **“下一步”** ，然后单击 **“完成”**。  
   
- 在建立连接后，您可以使用数据来创建数据透视表或数据透视图。 有关详细信息，请参阅本主题后面的 [在 Excel 中分析（SSAS 表格）](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)中的“角色管理器”对话框定义角色的表格模型作者。  
+ 在建立连接后，您可以使用数据来创建数据透视表或数据透视图。 有关详细信息，请参阅[在 Excel 中的分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
 ##  <a name="bkmk_sharepoint"></a> 从 SharePoint 进行连接  
  如果使用的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，则可在 SharePoint 中创建一个 BI 语义模型连接文件，通过该文件，可重定向到在 Analysis Services 表格模式服务器上运行的数据库。 BI 语义模型连接提供指向数据库的 HTTP 端点。 对于经常要使用 SharePoint 站点上的文档的知识工作者，该连接还简化了表格模型访问。 知识工作者只需要知道 BI 语义模型连接文件的位置或其 URL 就可以访问表格模型数据库。 与服务器位置或数据库名称有关的详细信息封装在 BI 语义模型连接中。 有关创建和使用 BI 语义模型连接文件的详细信息，请参阅 [PowerPivot BI 语义模型连接 (bism)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) 和[创建与表格模型数据库的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
@@ -108,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
  **数据连接向导不能从指定的数据源获取数据库列表。**  
   
- 在导入数据时，如果您尝试使用该向导连接到远程 Analysis Services 服务器上的表格模型数据库，而您不具有足够的权限，则会发生此 Microsoft Excel 错误。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
+ 在导入数据，此 Microsoft Excel 错误发生在尝试使用向导连接到表格模型数据库在远程 Analysis Services 服务器上，并且你没有足够的权限。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
   
  **在尝试建立与外部数据源的连接的过程中出现错误。以下连接刷新失败：\<模型名称 > 沙盒**  
   
@@ -123,6 +111,6 @@ ms.lasthandoff: 11/17/2017
  在 SharePoint 上，当您尝试在使用模型数据的数据透视表中进行数据交互（例如筛选数据）时，将会发生此 Microsoft Excel 错误。 发生此错误的原因是该用户对工作簿没有足够的 SharePoint 权限。 该用户必须具有 **“读取”** 权限或更高权限。 “仅查看”权限对于数据访问是不够的。  
   
 ## <a name="see-also"></a>另请参阅  
- [表格模型解决方案部署（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [表格模型解决方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

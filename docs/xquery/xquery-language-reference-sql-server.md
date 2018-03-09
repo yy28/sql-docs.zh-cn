@@ -3,12 +3,17 @@ title: "XQuery 语言参考 (SQL Server) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XQuery
 - XQuery, about XQuery
@@ -16,21 +21,21 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d04fe9c2bca3a057f37947ca2ec89ac51321e39b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>Xquery 语言参考 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[tsql](../includes/tsql-md.md)]支持用于查询的 XQuery 语言的子集**xml**数据类型。 此 XQuery 实现符合 2004 年 7 月的 XQuery 工作草案。 该语言正在由 World Wide Web 联合会 (W3C) 开发，所有主要数据库供应商和 Microsoft 也参与此开发。 由于 W3C 规范在成为 W3C 建议之前还可能进行修订，因此此实现可能与最终的建议有所不同。 本主题概要介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中所支持的 XQuery 子集的语义和语法。  
+  [!INCLUDE[tsql](../includes/tsql-md.md)] 支持用于查询的 XQuery 语言的子集**xml**数据类型。 此 XQuery 实现符合 2004 年 7 月的 XQuery 工作草案。 该语言正在由 World Wide Web 联合会 (W3C) 开发，所有主要数据库供应商和 Microsoft 也参与此开发。 由于 W3C 规范在成为 W3C 建议之前还可能进行修订，因此此实现可能与最终的建议有所不同。 本主题概要介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中所支持的 XQuery 子集的语义和语法。  
   
  有关详细信息，请参阅[W3C XQuery 1.0 语言规范](http://go.microsoft.com/fwlink/?LinkId=48846)。  
   
@@ -71,7 +76,7 @@ WHERE ProductModelID=7
 > [!NOTE]  
 >  本部分的组织结构基于 World Wide Web 联合会 (W3C) XQuery 工作草案规范。 本部分中的某些关系图是从该规范得到的。 本部分将 Microsoft XQuery 实现与 W3C 规范进行比较，介绍 Microsoft XQuery 与 W3C 的不同之处并指明不支持的 W3C 功能。 W3C 规范位于[http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |-----------|-----------------|  

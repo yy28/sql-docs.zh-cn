@@ -1,5 +1,5 @@
 ---
-title: "通过使用聚合转换来聚合数据集中的值 |Microsoft 文档"
+title: "使用聚合转换来聚合数据集中的值 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b4e99dd830e0722fa5717f8749ef7f4dc152be0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 985f5cd2a2ed1d93df3d164a34bbeb4428b97df9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用聚合转换来聚合数据集中的值
   若要添加并配置聚合转换，则包必须已包含至少一个数据流任务和一个源。  
@@ -72,7 +71,7 @@ ms.lasthandoff: 08/03/2017
   
 13. 或者，单击 **“高级”** 选项卡并设置应用于优化聚合转换所执行的所有操作的属性。  
   
-14. 单击 **“确定”**。  
+14. 单击“确定” 。  
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -83,4 +82,3 @@ ms.lasthandoff: 08/03/2017
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bbb4d1492bb3abf35d9e3bc3047b9f1d4f3fcfa5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个 HTML 查看器，该查看器可用来按需显示从报表服务器请求的报表。 HTML 查看器提供了一个用于以 HTML 格式查看报表的框架。 该查看器包含报表工具栏、参数区域、凭据区域和文档结构图。 HTML 查看器中的报表工具栏包含可用于处理报表的功能（包括导出选项，以便您可以使用 HTML 之外的格式查看报表）。 只有在打开配置为使用参数和文档结构图控件的报表时，才会显示参数区域和文档结构图。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/05/2017
 |CSV|以逗号分隔格式查看报表。 报表将在与 CSV 文件类型相关联的应用程序中打开。|  
 |PDF|使用客户端 PDF 查看器查看报表。 您必须具有第三方 PDF 查看器（例如，Adobe Acrobat Reader），才可使用此格式。|  
 |MHTML|以 MIME 编码的 HTML 格式查看报表，该格式可将图像和链接内容与报表一起保存。|  
-|Excel|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel（.xlsx 文件）中查看报表。|  
+|“导出”|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel（.xlsx 文件）中查看报表。|  
 |PowerPoint|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] PowerPoint（.pptx 文件）中查看报表。|  
 |TIFF 文件|在默认的 TIFF 查看器中查看报表。 对于某些 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 客户端，查看器为 Windows 图片与传真查看器。 选择此格式可以按面向页面的布局查看报表。|  
 |Word|在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word（.docx 文件）中查看报表。|  

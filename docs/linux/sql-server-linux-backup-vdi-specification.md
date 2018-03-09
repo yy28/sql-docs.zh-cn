@@ -3,27 +3,27 @@ title: "VDI 备份规范-在 Linux 上的 SQL Server |Microsoft 文档"
 description: "SQL Server 备份的虚拟设备接口规格。"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 客户端 SDK 规范
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文档介绍 Linux 上的 SQL Server 虚拟设备接口 (VDI) 客户端 SDK 所提供的接口。 独立软件供应商 (ISV) 可以使用虚拟备份设备应用程序编程接口 (API) 将 SQL Server 集成到产品中。 通常，Linux 上的 VDI 的行为与 Windows 上的 VDI 行为类似，但进了以下更改：
 
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| | **超时** | 此为超时值（毫秒）。 使用 INFINITE 或任何负整数以防止超时。
+| | **timeout** | 此为超时值（毫秒）。 使用 INFINITE 或任何负整数以防止超时。
 | | **cfg** | 执行成功后，此项将包括服务器所选的配置。 有关详细信息，请参阅本文档后面的"配置"。
 
 | 返回值 | 参数 | 解释
@@ -165,7 +165,7 @@ ms.lasthandoff: 11/20/2017
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| |**超时** |此为等待的时间（毫秒）。 使用 INFINTE 以无限期等待。 使用 0 以轮询一条命令。 如果当前无可用的命令，则返回 VD_E_TIMEOUT。 如果发生超时，客户端则会决定后续操作。
+| |**timeout** |此为等待的时间（毫秒）。 使用 INFINTE 以无限期等待。 使用 0 以轮询一条命令。 如果当前无可用的命令，则返回 VD_E_TIMEOUT。 如果发生超时，客户端则会决定后续操作。
 | |**超时** |此为等待的时间（毫秒）。 使用 INFINTE 或负值以无限期等待。 使用 0 以轮询一条命令。 如果在超时过期之前无可用的命令，则返回 VD_E_TIMEOUT。 如果发生超时，客户端则会决定后续操作。
 | |**ppCmd** |成功返回命令后，参数将返回要执行的命令的地址。 返回的内存是只读的。 完成命令后，此指针会被传递到 CompleteCommand 例程。 有关每条命令的详细信息，请参阅本文档后面的“命令”。
         
@@ -199,7 +199,7 @@ ms.lasthandoff: 11/20/2017
 | |**pCmd** |这是以前从 ClientVirtualDevice::GetCommand 返回命令的地址。
 | |**completionCode** |这是表示完成状态的状态代码。 必须为所有命令返回此参数。 返回的代码应适合正在执行的命令。 ERROR_SUCCESS 用于在所有情况下代表成功执行的命令。 有关可能代码的完整列表，请参阅文件 vdierror.h。 有关每条命令的典型状态代码列表，请参阅本文档后面的“命令”。
 | |**bytesTransferred** |这是已成功传输的字节数。 仅对数据传输命令 Read 和 Write 返回此值。
-| |**位置** |这是对仅 GetPosition 命令的响应。
+| |**position** |这是对仅 GetPosition 命令的响应。
         
 | 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
@@ -222,7 +222,7 @@ ms.lasthandoff: 11/20/2017
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| |无 | 不适用
+| |InclusionThresholdSetting | 不适用
         
 | 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
@@ -242,7 +242,7 @@ ms.lasthandoff: 11/20/2017
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| |无 |不适用
+| |InclusionThresholdSetting |不适用
         
 | 返回值 | 参数 | 解释
 | ----- | ----- | ------ |

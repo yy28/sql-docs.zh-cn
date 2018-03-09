@@ -1,5 +1,5 @@
 ---
-title: "逆透视转换 |Microsoft 文档"
+title: "逆透视转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -21,28 +21,27 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 667a8c77caa3d3cdbfe4601f1f8597ac7e6d5a11
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unpivot-transformation"></a>逆透视转换
   逆透视转换将来自单个记录中多个列的值扩展为单个列中具有同样值的多个记录，使得非规范的数据集成为较规范的版本。 例如，每个客户在列出客户名的数据集中各占一行，在该行的各列中显示购买的产品和数量。 逆透视转换将数据集规范之后，客户购买的每种产品在该数据集中各占一行。  
   
  下面的关系图显示对 Product 列逆透视数据之前的数据集。  
   
- ![数据集后逆透视](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "后逆透视数据集")  
+ ![逆透视后的数据集](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "Dataset after it is unpivoted")  
   
  下面的关系图显示对 Product 列逆透视数据之后的数据集。  
   
- ![数据集之前逆透视](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "之前逆透视数据集")  
+ ![逆透视前的数据集](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "Dataset before it is unpivoted")  
   
  在某些情况下，逆透视结果可能包含具有意外值的行。 例如，如果关系图中显示的要逆透视的示例数据在 Fred 的所有 Qty 列中都具有空值，则输出将只包括 Fred 的一行，而非五行。 Qty 列将为空或包含零，具体取决于列数据类型。  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  本主题围绕 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 中所述的“逆透视”应用场景，举例说明各选项的使用方法。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  使用复选框指定要透视到行中的列。  
   
@@ -104,4 +103,3 @@ ms.lasthandoff: 08/19/2017
  [透视转换](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   
-

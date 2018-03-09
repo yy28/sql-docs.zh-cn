@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e3ce670be898d98447464fdcc89390e9eefa927d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d0ea49d4e9d399f5027f235bce8b895d063ed4e7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>取消报表服务器作业 (Management Studio)
   使用“取消报表服务器作业”对话框可以查看或取消正在执行的报表。 此对话框显示报表服务器上当前运行的所有作业。 尽管不能暂停或重新启动当前正在处理的作业，但是可以取消需要很长时间才能完成的所有作业或单个作业。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  在具有高级服务的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中不支持此功能。 运行 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]时，将不会显示该页。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **名称**  
  显示报表的名称。 订阅通过其各自的说明进行标识。  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/05/2017
  **用户名**  
  对于由用户启动的作业，此列显示用户名。  
   
- **状态**  
+ **“状态”**  
  显示作业的状态。 有效值为 **“新”** 和 **“正在运行”**。 当作业开始时，状态始终为 **“新”** 。 在 60 秒之后，状态会改为 **“正在运行”**。 必须刷新该页才能看到变化。  
   
  **确定**  

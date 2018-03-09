@@ -8,26 +8,30 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - syssubscriptions_TSQL
 - syssubscriptions
-dev_langs: TSQL
-helpviewer_keywords: syssubscriptions view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- syssubscriptions view
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81135d7c10ac1c9404837015740d74b71e65817d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ecb2619d2cbb7aed9f4bee294ef5fe0b672234f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions（系统视图）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +43,11 @@ ms.lasthandoff: 11/17/2017
 |**artid**|**int**|订阅项目的唯一 ID。|  
 |**srvid**|**int**|订阅服务器的服务器 ID。|  
 |**dest_db**|**sysname**|订阅数据库的名称。|  
-|**status**|**tinyint**|订阅的状态：<br /><br /> **0** = 处于非活动状态。<br /><br /> **1** = 订阅。<br /><br /> **2** = 活动。|  
+|**status**|**tinyint**|订阅的状态：<br /><br /> **0** = Inactive.<br /><br /> **1** = 订阅。<br /><br /> **2** = 活动。|  
 |**sync_type**|**tinyint**|初始同步的类型：<br /><br /> **1** = automatic。<br /><br /> **2** = none。|  
 |**login_name**|**sysname**|连接到发布服务器以添加订阅时使用的登录名。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送-分发服务器上运行分发代理。<br /><br /> **1** = 请求的订阅服务器上运行分发代理。|  
-|**distribution_jobid**|**binary （16)**|标识用于同步订阅的分发代理作业。|  
+|**distribution_jobid**|**binary(16)**|标识用于同步订阅的分发代理作业。|  
 |**timestmap**|**timestamp**|创建订阅的日期和时间。|  
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 只读的。<br /><br /> **1** = 立即更新。|  
 |**loopback_detection**|**bit**|适用于作为双向事务复制拓扑的一部分的订阅。 环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **0**回 = 发送。<br /><br /> **1** = 不发回。|  

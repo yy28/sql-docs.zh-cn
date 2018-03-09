@@ -2,29 +2,32 @@
 title: "定义和浏览翻译 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9a58a8ff72b4c550ec9cce284df86b6860bbea5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac86f038e382be591b8974f36cd03fee6a80144d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lesson 9-2-定义和浏览翻译
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 翻译是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的名称在特定语言中的表示形式。 对象包括度量值组、度量值、维度、属性、层次结构、KPI、操作和计算成员。 翻译为可支持多种语言的客户端应用程序提供了服务器支持。 通过使用这样的客户端，客户端就可以将区域设置标识符 (LCID) 传递给 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，该实例则使用 LCID 来确定在为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象提供元数据时要使用哪一组翻译。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象不包含该语言的翻译或不包含指定对象的翻译，则在将该对象元数据返回给客户端时使用默认语言。 例如，如果一个法国的业务用户从使用法语区域设置的工作站访问多维数据集，则存在法语翻译时，此业务用户将看到法语的成员标题和成员属性值。 但是，如果一个德国的业务用户从使用德语区域设置的工作站上访问同一个多维数据集，则此业务用户将看到德语的成员标题和成员属性值。 有关详细信息，请参阅 [维度翻译](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、 [多维数据集翻译](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)和 [Analysis Services 中的翻译支持](../analysis-services/translation-support-in-analysis-services.md)。  
   
 在本主题的任务中，您将为“日期”维度中的一组有限的维度对象和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集中的多维数据集对象定义元数据翻译。 然后浏览这些维度和多维数据集对象，以检查元数据翻译。  
@@ -130,10 +133,10 @@ ms.lasthandoff: 11/17/2017
     注意，月份名称现在将以法语显示，并且度量值名称现在也以法语显示。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 10 课：定义管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)  
+[第 10 课： 定义管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[维度翻译](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
+[维度转换](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
 [多维数据集翻译](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)  
 [Analysis Services 中的翻译支持](../analysis-services/translation-support-in-analysis-services.md)  
   

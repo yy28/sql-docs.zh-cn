@@ -2,25 +2,28 @@
 title: "SQL Server 中的支持 R 组件 |Microsoft 文档"
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f3a6387f16e567c09c233cfd2c4de71d567f2ce7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>SQL Server 中支持 R 组件
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 SQL Server 2016 和自 2017 年中，数据库引擎包括支持对外部脚本语言，包括 R 和 Python 的可扩展性的可选组件。 SQL Server 2016; 中添加了对 R 语言支持对 SQL Server 自 2017 年 1 机器学习 Services 中添加 Python 的支持。
 
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
 
 Launchpad 服务只会启动 Microsoft 发布的受信任启动器，或者经 Microsoft 认证满足性能和资源管理要求的启动器。 特定于语言的启动器的命名非常简单：
 
-  + R-RLauncher.dll
+  + R -  RLauncher.dll
   + Python-PythonLauncher.dll
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务在其自身的用户帐户下运行。 特定语言运行时的每个附属进程将继承 Launchpad 的用户帐户。 有关配置和快速启动板的安全上下文的详细信息，请参阅[安全概述](../../advanced-analytics/r/security-overview-sql-server-r.md)。
@@ -109,7 +112,7 @@ BxlServer 使用 SQL Satellite 执行以下任务：
 4. BxlServer 与 R 运行时协同工作，管理与 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 之间的数据交换并存储工作结果。
 5. SQL 卫星管理相关任务有关的通信和处理[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。
 6. BxlServer 使用 SQL Satellite 向 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 传递状态和结果。
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 获取结果并关闭相关任务和进程。
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 获取结果并关闭相关的任务和进程。
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>从远程客户端执行 R 脚本
 
@@ -125,7 +128,7 @@ BxlServer 使用 SQL Satellite 执行以下任务：
 6. RLauncher 针对 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 计算机上安装的 R 运行时实例发出调用。
 7. 将结果返回到 BxlServer。
 8. SQL Satellite 管理与 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 之间的通信并清理相关的作业对象。
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将结果传回客户端。
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将结果传递回客户端。
 
 ## <a name="next-steps"></a>后续步骤
 

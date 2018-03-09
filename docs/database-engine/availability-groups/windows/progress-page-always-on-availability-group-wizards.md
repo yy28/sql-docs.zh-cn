@@ -20,13 +20,13 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 222e727dbfea11ecd334bd6d88f01ce7294359e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80fad41153c117a5b76c3e7023bb9eb40b268d4b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>“结果”页（Always On 可用性组向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/20/2017
  **名称**  
  显示描述特定步骤的短语。  
   
- **状态**  
+ **“状态”**  
  指示已完成步骤的结果，以及当前步骤的完成百分比，如下所示：  
   
-|结果|说明|  
+|结果|Description|  
 |------------|-----------------|  
 |**错误**|指示此步骤操作遇到了错误。 单击该链接可显示一个描述该错误的消息对话框。|  
 |**正在进行（**完成百分比**）**|指示操作正在发生，并且估计此步骤已完成的百分比。|  

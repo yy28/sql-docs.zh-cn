@@ -3,8 +3,11 @@ title: "演练：添加和更改数据库关系图 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,18 +19,18 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adc91396fd49a546217d28f970a0eb3156c0fae7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a258f766d08c0cbd513cd34b152708f4948445e7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
-本演练说明了如何创建和修改数据库关系图以及如何通过数据库关系图组件更改数据库。 您将看到如何向关系图添加表、如何创建表之间的关系、如何对列创建约束和索引以及如何更改每个表的信息级别。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本演练说明了如何创建和修改数据库关系图以及如何通过数据库关系图组件更改数据库。 您将看到如何向关系图添加表、如何创建表之间的关系、如何对列创建约束和索引以及如何更改每个表的信息级别。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
 为了完成本演练，您需要：  
   
 -   能够访问带有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 示例数据库的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]  
@@ -194,11 +197,11 @@ ms.lasthandoff: 11/09/2017
   
     此时将显示“保存”对话框。 如果选中了“表受到影响时警告”，则会列出有关新表或更改的表的信息。  
   
-2.  单击 **“确定”**。  
+2.  单击“确定” 。  
   
 3.  如果发生了任何错误，则会出现“保存后的通知”对话框，显示错误及其原因。 修复错误并再次保存关系图。  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
 虽然这是一个仅包含两个现有表和两个新表的简单关系图，但是它展示了创建现有数据库的关系图或直观地创建新架构的潜力。 建议了解的其他内容包括：  
   
 -   创建包含多组相关表的新关系图  

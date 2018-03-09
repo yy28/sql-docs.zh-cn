@@ -3,8 +3,9 @@ title: "FormattedValue 属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Cell::FormattedValue
 - FormattedValue
-helpviewer_keywords: FormattedValue property [ADO MD]
+helpviewer_keywords:
+- FormattedValue property [ADO MD]
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbf0c7a5fc9fc88cc1962ec3414b293c03a41a25
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0250690adc967205f87fb71c33ef8c424a28a841
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue 属性 (ADO MD)
 指示格式化的显示的[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)值。  

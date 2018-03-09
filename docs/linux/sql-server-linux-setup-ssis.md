@@ -1,29 +1,29 @@
 ---
 title: "在 Linux 上安装 SQL Server Integration Services |Microsoft 文档"
-description: "本主题介绍如何在 Linux 上安装 SQL Server Integration Services (SSIS)。"
+description: "本文介绍如何在 Linux 上安装 SQL Server Integration Services (SSIS)。"
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d265d1c4fa25f10c58e321cef06cf293fdce5ac5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70e5bddb584135585042d9521ab580777e0e8b5a
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安装 SQL Server Integration Services (SSIS)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 按照本文章来安装 SQL Server Integration Services 中的步骤 (`mssql-server-is`) 在 Linux 上。 在此版本的适用于 Linux Integration Services 支持的功能的信息，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 - [Ubuntu](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
-## <a name="ubuntu"></a>在 Ubuntu 上安装 SSIS
+## <a name="ubuntu"></a> 在 Ubuntu 上安装 SSIS
 若要安装`mssql-server-is`打包在 Ubuntu 上，执行以下步骤：
 
 1. 导入公共存储库 GPG 密钥。
@@ -76,10 +76,10 @@ sudo apt-get install mssql-server-is
 ### <a name="remove-ssis"></a>删除 SSIS
 若要删除`mssql-server-is`，可以运行以下命令：
 ```bash
-sudo apt-get remove msssql-server-is
+sudo apt-get remove mssql-server-is
 ```
 
-## <a name="RHEL"></a>在 RHEL 上安装 SSIS
+## <a name="RHEL"></a> 在 RHEL 上安装 SSIS
 若要安装`mssql-server-is`打包在 RHEL 上，执行以下步骤：
 
 1. 下载 Microsoft SQL Server Red Hat 存储库配置文件。
@@ -117,21 +117,40 @@ sudo yum update mssql-server-is
 ### <a name="remove-ssis"></a>删除 SSIS
 若要删除`mssql-server-is`，可以运行以下命令：
 ```bash
-sudo yum remove msssql-server-is
+sudo yum remove mssql-server-is
 ```
 
+## <a name="unattended-installation"></a>无人参与的安装
+若要在运行时运行无人参与的安装`ssis-conf setup`，执行以下操作：
+1.  指定`-n`（无提示） 选项。
+2.  通过设置环境变量来提供所需的值。
 
+下面的示例将执行以下操作：
+-   安装 SSIS。
+-   通过提供的值指定开发人员版`SSIS_PID`环境变量。
+-   通过提供的值接受 EULA`ACCEPT_EULA`环境变量。
+-   通过指定运行无人参与的安装`-n`（无提示） 选项。
 
-
-## <a name="run-a-package"></a>运行包
-将 SSIS 包复制到 Linux 计算机。 然后使用以下命令运行包。
-
-```bash
-dtexec /F <package name> /DE <protection password>
+```
+sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
 ```
 
+### <a name="environment-variables-for-unattended-installation"></a>无人参与安装的环境变量
 
+| 环境变量 | Description |
+|---|---|
+| **ACCEPT_EULA** | 接受 SQL Server 许可协议时设置为任何值 (例如， `Y`)。|
+| **SSIS_PID** | 设置 SQL Server 版本或产品密钥。 下面是可能的值：<br/>Evaluation<br/>开发人员<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>产品密钥<br/><br/>如果指定的产品密钥，产品密钥必须是形式`#####-#####-#####-#####-#####`，其中`#`是字母或数字。  |
+| | |
 
 ## <a name="next-steps"></a>后续步骤
 
-有关如何在 Linux 上使用 SSIS 来提取、 转换和加载数据的详细信息，请参阅[提取、 转换和加载数据使用 SSIS 的 Linux 上的 SQL Server](sql-server-linux-migrate-ssis.md)。
+若要在 Linux 上运行 SSIS 包，请参阅[提取、 转换和加载数据使用 SSIS 的 Linux 上的 SQL Server](sql-server-linux-migrate-ssis.md)。
+
+若要在 Linux 上配置其他 SSIS 设置，请参阅[配置与 ssis conf Linux 上 SQL Server Integration Services](sql-server-linux-configure-ssis.md)。
+
+## <a name="related-content-about-ssis-on-linux"></a>有关在 Linux 上的 SSIS 的相关的内容
+-   [提取、 转换和加载使用 SSIS 的 Linux 上的数据](sql-server-linux-migrate-ssis.md)
+-   [使用 ssis conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [限制和 Linux 上的 SSIS 的已知的问题](sql-server-linux-ssis-known-issues.md)
+-   [计划 SQL Server Integration Services 包执行在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)

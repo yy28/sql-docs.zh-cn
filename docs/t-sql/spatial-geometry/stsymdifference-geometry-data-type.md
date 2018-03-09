@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STSymDifference_TSQL
 - STSymDifference (geometry Data Type)
-dev_langs: TSQL
-helpviewer_keywords: STSymDifference (geometry Data Type)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- STSymDifference (geometry Data Type)
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb7658a326272749bf80b6fd507d974b70a7df09
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: a3bedfb8a5cc4eb2ca0963bbfe2454a3ed1508c0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

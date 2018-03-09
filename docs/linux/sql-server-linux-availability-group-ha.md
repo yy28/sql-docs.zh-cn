@@ -1,31 +1,31 @@
 ---
 title: "SQL Server Always On 可用性组部署模式 |Microsoft 文档"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cacdf2de6c6e85c8afd0723f4dae21feab0c71cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文介绍了在 Linux 服务器上的 SQL Server Always On 可用性组的受支持的部署配置。 一个可用性组支持高可用性和数据保护。 自动故障检测、 自动故障转移和故障转移后的透明重新连接提供高可用性。 同步的副本提供数据保护。 
 
@@ -70,7 +70,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主是 R / 瓦 |自动故障转移。 新的主是 R / 瓦 |自动故障转移。 前面的主要恢复和联接可用性组作为辅助之前，新的主才可供用户事务。 
 |一个次要副本中断  | 主是 R / 瓦 如果主没有自动故障转移将失败。 |主是 R / 瓦 如果主没有自动故障转移也会失败。 | 主也无法供用户事务。 
-<sup>*</sup>默认值
+<sup>*</sup> 默认值
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主是 R / 瓦| 自动故障转移。 前面的主要恢复和联接可用性组作为辅助之前，新的主才可供用户事务。
 |一个次要副本中断  |主是 R/W，运行公开数据丢失。 |主辅助恢复之前不可用的用户事务。
-<sup>*</sup>默认值
+<sup>*</sup> 默认值
 
 >[!NOTE]
 >前面的方案是在 SQL Server 自 2017 年 CU 1 之前的行为。 
@@ -117,12 +117,12 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 |辅助副本中断 | 主数据库处于 R/W，运行已公开到数据丢失 （如果主失败并且无法恢复）。 如果主没有自动故障转移也会失败。 | 主也无法供用户事务。 如果主故障转移到没有副本也会失败。 
 |配置仅副本中断 | 主是 R / 瓦 如果主没有自动故障转移也会失败。 | 主是 R / 瓦 如果主没有自动故障转移也会失败。 
 |同步辅助 + 配置仅副本中断| 主也无法供用户事务。 自动故障转移。 | 主也无法供用户事务。 故障转移到如果没有副本以及主服务器失败。 
-<sup>*</sup>默认值
+<sup>*</sup> 默认值
 
 >[!NOTE]
 >承载配置唯一的副本的 SQL Server 的实例还可以托管其他数据库。 此外可以参与作为多个可用性组的配置数据库。 
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 * 可用性组中的配置仅副本的所有副本都必须都是 SQL Server 自 2017 年 CU 1 或更高版本。
 * 任何版本的 SQL Server 可以承载配置仅副本，包括 SQL Server Express。 
@@ -142,7 +142,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>了解 Pacemaker 的 SQL Server 资源代理
 
-SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_groups`以允许 Pacemaker 来确定如何最新的辅助副本均与主副本。 `sequence_number`是单调递增 BIGINT 的表示方式保持最新的本地可用性组副本。 Pacemaker 更新`sequence_number`与每个可用性组配置更改。 配置更改的示例包括故障转移、 副本添加或删除。 对主要主机和更新数，则将其复制到辅助副本。 因此具有最新配置的辅助副本具有相同的序列号的主数据库。 
+SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_groups`以允许 Pacemaker 来确定如何最新的辅助副本均与主副本。 `sequence_number` 是单调递增 BIGINT 的表示方式保持最新的本地可用性组副本。 Pacemaker 更新`sequence_number`与每个可用性组配置更改。 配置更改的示例包括故障转移、 副本添加或删除。 对主要主机和更新数，则将其复制到辅助副本。 因此具有最新配置的辅助副本具有相同的序列号的主数据库。 
 
 当 Pacemaker 决定将提升为主副本时，它首先会发送*预提升*到所有副本的通知。 副本返回的序列号。 接下来，当 Pacemaker 实际尝试将提升为主副本，副本仅提升本身如果其序列号为最高的所有序列号。 如果其自己的序列号与最高序列号不匹配，副本会拒绝升级操作。 这样，就只有序列号最高的副本才会升级为主副本，确保不会丢失数据。 
 
@@ -150,7 +150,7 @@ SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_gr
 
 例如，具有三个同步副本的一个主副本和两个同步辅助副本的可用性组。
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`为 1;(3 / 2-> 1)。
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1; (3 / 2 -> 1).
 
 - 所需的响应来预升级操作的副本数为 2;(3-1 = 2)。 
 
@@ -161,7 +161,7 @@ SQL Server 自 2017 年 1 CTP 1.4 添加`sequence_number`到`sys.availability_gr
 
 你可以选择重写默认行为，并防止设置可用性组资源`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`自动。
 
-以下脚本集`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`可用性组上的 0 到名为`<**ag1**>`。 在运行替换之前`<**ag1**>`替换为你的可用性组的名称。
+以下脚本集`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`可用性组上的 0 到名为`<**ag1**>`。 运行前，将 `<**ag1**>` 替换为可用性组的名称。
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

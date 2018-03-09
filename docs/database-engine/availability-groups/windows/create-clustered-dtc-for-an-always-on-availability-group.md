@@ -2,9 +2,12 @@
 title: "为 AlwaysOn 可用性组创建群集 DTC | Microsoft Docs"
 ms.custom: 
 ms.date: 08/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,16 +15,16 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1964cd48c4ab789bb95564a1595e1c6b09aeccb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC
-本主题介绍如何为 SQL Server AlwaysOn 可用性组完整配置群集 DTC 资源。 完整配置过程可能要长达一小时才能完成。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主题介绍如何为 SQL Server AlwaysOn 可用性组完整配置群集 DTC 资源。 完整配置过程可能要长达一小时才能完成。 
 
 本演练将按照[为 SQL Server 可用性组群集化 DTC](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) 中的要求，创建群集 DTC 资源和 SQL Server 可用性组。
 
@@ -117,7 +120,7 @@ foreach ($node in $nodes) {
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.配置“未决事务解析” 
 此脚本针对未决事务将“未决事务解析”服务器配置选项配置为“假设提交”。  在 SQL Server Management Studio (SSMS) 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -158,7 +161,7 @@ GO
 ## <a name="4-create-test-databases"></a>4.创建测试数据库
 该脚本将在 `SQLNODE1` 上创建一个名为 `AG1` 的数据库，在 `SQLNODE2` 上创建一个名为 `dtcDemoAG1` 的数据库。  在 SSMS 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -216,7 +219,7 @@ GO
 ## <a name="5---create-endpoints"></a>5. 创建端点
 此脚本将创建一个名为 `AG1_endpoint` 的端点，以侦听 TCP 端口 `5022`。  在 SSMS 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
-```tsql  
+```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
@@ -249,7 +252,7 @@ GO
 ## <a name="6---prepare-databases-for-availability-group"></a>6. 为可用性组准备数据库
 该脚本将备份 `SQLNODE1` 上的 `AG1` 并将其还原到 `SQLNODE2`。  在 SSMS 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -282,7 +285,7 @@ GO
 ## <a name="7---create-availability-group"></a>7. 创建可用性组
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 必须使用 **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC_SUPPORT = PER_DB** 子句创建。  当前不可更改现有可用性组。  新建可用性组向导不允许为新的可用性组启用 DTC 支持。  以下脚本将创建新的可用性组并加入辅助数据库。  在 SSMS 中以 `SQLNODE1` SQLCMD 模式 **对**运行以下 T-SQL 脚本。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -485,7 +488,7 @@ $nodes = (Get-ClusterNode).Name;
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务第一次需要分布式事务时，需向 DTC 服务注册。 之后，SQL Server 服务会一直使用该 DTC 服务，直到它重新启动。 如果群集 DTC 服务可用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将向群集 DTC 服务注册。 如果群集 DTC 服务不可用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将向本地 DTC 服务注册。 为了确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 向群集 DTC 服务注册，请停止然后重启每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 
 
 请按照以下 T-SQL 脚本中包含的步骤操作：
-```tsql  
+```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
     a.  On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
@@ -546,7 +549,7 @@ END
 ### <a name="create-linked-servers"></a>创建链接服务器  
 以下脚本将在 `SQLNODE1`上创建两个链接服务器。  在 SSMS 中对 `SQLNODE1`运行以下 T-SQL 脚本。
 
-```tsql  
+```sql  
 -- SQLNODE1
 IF NOT EXISTS (SELECT * FROM sys.servers where name = N'SQLNODE1')
 BEGIN
@@ -562,7 +565,7 @@ END
 ### <a name="execute-a-distributed-transaction"></a>执行分布式事务
 此脚本先返回当前 DTC 事务统计信息，  然后利用 `SQLNODE1` 和 `SQLNODE2`上的数据库执行分布式事务。  接着，该脚本再次返回 DTC 事务统计信息，此时其计数应已增加。  以物理方式连接到 `SQLNODE1` ，并在 SSMS 中以 `SQLNODE1` SQLCMD 模式 **对**运行以下 T-SQL 脚本。
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
     Must be physically connected to SQLNODE1

@@ -2,26 +2,29 @@
 title: "创建加密的备份 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 583c1cb2213ba744ddda0f4bc2fc76cf0c504994
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2ee0ec30a5ec6f6fc6977d74ff4b00a35781e2ac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
-  本主题介绍使用 Transact-SQL 创建加密备份所需的步骤。  有关使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的示例，请参阅 [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍使用 Transact-SQL 创建加密备份所需的步骤。  有关使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的示例，请参阅 [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。 
   
 ## <a name="backup-to-disk-with-encryption"></a>备份到磁盘并加密  
  **先决条件：**  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
     ```  
   
-3.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/09/2017
   
     ```  
   
-4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

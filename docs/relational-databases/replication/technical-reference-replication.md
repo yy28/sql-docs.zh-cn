@@ -2,27 +2,30 @@
 title: "技术参考（复制）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: technical reference [SQL Server replication]
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c40b1a86fd793fe9151d05948b3fe68b19a3a521
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 591194f20b042c1f069fc3a7756cc4bcb96581c9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="technical-reference-replication"></a>技术参考（复制）
-  本节包含指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制技术参考文档的链接。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]本节包含指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制技术参考文档的链接。  
   
  ![小文件文件夹图标](../../analysis-services/media/filefolder-small.png "小文件文件夹图标") 错误和事件  
  [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)  

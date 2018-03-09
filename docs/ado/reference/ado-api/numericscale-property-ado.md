@@ -3,8 +3,9 @@ title: "NumericScale 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Parameter::NumericScale
 - Field20::NumericScale
-helpviewer_keywords: NumericScale property [ADO]
+helpviewer_keywords:
+- NumericScale property [ADO]
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d768c96b97a80a024eb007ed8ed59d4cb7df9b23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21e85b7e9645761a6d25227113deb5d3eb564720
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 属性 (ADO)
 指示小数位数的数字值在[参数](../../../ado/reference/ado-api/parameter-object.md)或[字段](../../../ado/reference/ado-api/field-object.md)对象。  

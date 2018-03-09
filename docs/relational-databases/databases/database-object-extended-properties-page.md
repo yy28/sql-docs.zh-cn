@@ -2,34 +2,37 @@
 title: "数据库对象（“扩展属性”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 398d3c8ac57fa0ffa8e66d5075b44d2363ebba66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a40f19346fe5c40c4c7f6aa1426d2a58081e564a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-object-extended-properties-page"></a>数据库对象（“扩展属性”页）
-  使用扩展属性，您可以向数据库对象添加自定义属性。 使用此页可以查看或修改所选对象的扩展属性。 **“扩展属性”** 页对于所有类型的数据库对象都是相同的。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 使用扩展属性可以向数据库对象添加自定义属性。 使用此页可以查看或修改所选对象的扩展属性。 **“扩展属性”** 页对于所有类型的数据库对象都是相同的。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **数据库**  
- 显示所选数据库的名称。 此字段是只读的。  
+ **“数据库”**  
+ 显示所选数据库的名称。 此字段为只读。  
   
  **排序规则**  
- 显示用于所选数据库的排序规则。 此字段是只读的。  
+ 显示用于所选数据库的排序规则。 此字段为只读。  
   
  **属性**  
  查看或指定对象的扩展属性。 每个扩展属性都由与该对象关联的元数据的名称/值对组成。  

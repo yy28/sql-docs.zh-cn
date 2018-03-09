@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_index_operational_stats (Transact SQL) |Microsoft 文档"
+title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_index_operational_stats_TSQL
 - sys.dm_db_index_operational_stats
 - dm_db_index_operational_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_index_operational_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3856ea2062d6575f34382c2489d3a80ece259203
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3866f4dfbd25fc665949455969b1546bd906462a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -62,19 +65,19 @@ sys.dm_db_index_operational_stats (
     
  内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。    
     
- *object_id* |NULL |0 |默认值    
+ *object_id* | NULL | 0 | DEFAULT    
  索引所基于的表或视图的对象 ID。 *object_id* 是 **int**。    
     
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回指定数据库中的所有表和视图的缓存信息。 如果指定 NULL 为*object_id*，还必须指定为 NULL *index_id*和*partition_number*。    
     
- *index_id* | 0 |NULL |为-1 |默认值    
+ *index_id* | 0 | NULL | -1 | DEFAULT    
  索引的 ID。 *index_id*是**int**。有效输入包括索引，0 的 ID 号，如果*object_id*是堆，NULL，则为-1 或默认值。 默认值为 -1。在此上下文中，NULL、-1 和 DEFAULT 是等价值。    
     
  指定 NULL 可返回基表或视图的所有索引的缓存信息。 如果指定 NULL 为*index_id*，还必须指定为 NULL *partition_number*。    
     
- *partition_number* |NULL |0 |默认值    
+ *partition_number* | NULL | 0 | DEFAULT    
  对象中的分区号。 *partition_number*是**int**。有效输入包括*partion_number*索引或堆，NULL、 0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回索引或堆的所有分区的缓存信息。    
@@ -185,7 +188,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>使用系统函数指定参数值    
  你可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)指定的值*database_id*和*object_id*参数。 但是，将无效的值传递给这些函数可能会导致意外结果。 请始终确保使用 DB_ID 或 OBJECT_ID 时返回了有效的 ID。 有关详细信息，请参阅备注部分中的[sys.dm_db_index_physical_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>权限    
  需要下列权限：    
     
 -   对数据库中的指定对象具有 CONTROL 权限    
@@ -240,13 +243,13 @@ GO
     
 ## <a name="see-also"></a>另请参阅    
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
- [索引相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
+ [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [sys.dm_db_index_usage_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
- [sys.dm_os_latch_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [sys.dm_db_partition_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [sys.allocation_units &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

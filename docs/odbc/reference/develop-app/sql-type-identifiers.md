@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0565ddfffb5b74344aaa41a1d0dfd243c590850
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 98754c574acd8dea29184fafa70e1df702925a2a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-type-identifiers"></a>SQL 类型标识符
 每个数据源定义其自己的 SQL 数据类型。 ODBC 定义类型标识符，并描述了可能映射到每个类型标识符的 SQL 数据类型的一般特征。 它是驱动程序特定的基础数据源中的每个数据类型映射到 ODBC SQL 类型标识符的方式。  

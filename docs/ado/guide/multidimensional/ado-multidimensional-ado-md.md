@@ -3,26 +3,28 @@ title: "ADO （多维） (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ADO (Multidimensional) [ADO MD]
+helpviewer_keywords:
+- ADO (Multidimensional) [ADO MD]
 ms.assetid: 75b774a5-fa94-490a-b521-b2b8f7d48919
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2094cb361cfc14770fd7c71fbe2293af9253f573
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8bf2ce44b37261581cb717471f6d7a065a974167
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-multidimensional-ado-md"></a>ADO （多维） (ADO MD)
 本部分包含以下主题。  

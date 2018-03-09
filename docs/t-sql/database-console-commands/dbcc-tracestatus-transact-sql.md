@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC TRACESTATUS
 - TRACESTATUS_TSQL
 - TRACESTATUS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - global trace flags [SQL Server]
 - status information [SQL Server], trace flags
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - session trace flags [SQL Server]
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c0241e43f4d9516eefb73e65889df8944ccd018
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 4f373d7cf31a4dbc53318245b8ba2800ab9e90b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +53,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 ```  
   
 ## <a name="arguments"></a>参数  
-*跟踪 #*  
+*trace#*  
 将要显示其状态的跟踪标志的编号。 如果*trace #*，和未指定-1，会显示为会话启用的所有跟踪标志。
   
 *n*  
@@ -68,17 +70,17 @@ WITH NO_INFOMSGS
   
 |列名|Description|  
 |---|---|
-|**跟踪标志**|跟踪标志的名称|  
+|**TraceFlag**|跟踪标志的名称|  
 |**状态**|表示跟踪标志是设置为 ON 还是 OFF，是全局启用的还是针对会话启用的。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**全局**|表示跟踪标志是否是全局设置的<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**会话**|表示跟踪标志是否是针对会话设置的<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Session**|表示跟踪标志是否是针对会话设置的<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS 将针对跟踪标志号和状态各返回一列。 这表示跟踪标志为 ON (1) 还是 OFF (0)。 列标题，为跟踪标志号是**全局跟踪标志**或**会话跟踪标志**，取决于是否检查全局或会话跟踪标志的状态。
   
 ## <a name="remarks"></a>注释  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有两种跟踪标志：会话和全局。 会话跟踪标志对某个连接是有效的，只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求 **公共** 角色具有成员身份。
   
 ## <a name="examples"></a>示例  

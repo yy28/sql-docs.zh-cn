@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb1ef22a3a460926dc99f2afda21d7c1ecc0ad11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01257c38de98453f4672ebcf0d9101bdeedd5ae9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-programming-concepts"></a>复制编程概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
 |<xref:Microsoft.SqlServer.Replication>|托管代码|同步。|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|托管代码|创建业务逻辑处理程序，以集成自定义逻辑与合并同步进程。|  
 |[复制存储过程 (Transact-SQL)](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|脚本编写|管理和监视。|  
-|[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|脚本编写|同步。|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|脚本编写|同步。|  
   
 ## <a name="example"></a>示例  
  在 [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] 中，需要为全球 200 位销售代表发布数据。 销售代表经常出差，需要使用便携式计算机或个人数字助理 (PDA) 更改客户数据以及添加新订单。 这些更改需要在销售代表将便携式计算机连接到网络时，与发布服务器进行同步。  

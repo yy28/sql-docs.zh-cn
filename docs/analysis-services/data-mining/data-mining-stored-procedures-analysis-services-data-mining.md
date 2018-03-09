@@ -2,13 +2,13 @@
 title: "数据挖掘存储过程 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: stored procedures [Analysis Services], data mining
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d73a02535eb55e16de7058fa9f24dc335763f45
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf4b9b0fb2fe19d084c47d78d215f0001309af20
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-stored-procedures-analysis-services---data-mining"></a>数据挖掘存储过程（Analysis Services - 数据挖掘）
-  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开始， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持以任何托管语言编写的存储过程。 支持的托管语言包括 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET、C# 和托管 C++。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，可以使用 **CALL** 语句直接调用存储过程，或作为数据挖掘扩展插件 (DMX) 查询的一部分来调用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]从[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持可以用任何托管语言编写的存储的过程。 支持的托管语言包括 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET、C# 和托管 C++。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，可以使用 **CALL** 语句直接调用存储过程，或作为数据挖掘扩展插件 (DMX) 查询的一部分来调用。  
   
  有关调用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存储过程的详细信息，请参阅 [调用存储过程](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md)。  
   

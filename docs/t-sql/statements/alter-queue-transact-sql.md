@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
 - ALTER QUEUE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - number of queue readers
 - modifying queues
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - unavailable queues [SQL Server]
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2774da9a0a75c4645a4bd64237ec99a7cf92d771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +95,7 @@ WITH
  *database_name* （对象）  
  包含要更改队列的数据库的名称。 如果没有*database_name*提供，这将默认为当前数据库。  
   
- *schema_name* （对象）  
+ *schema_name* (object)  
  新队列所属架构的名称。 如果没有*schema_name*提供，这将默认为当前用户的默认架构。  
   
  *queue_name*  
@@ -133,7 +135,7 @@ WITH
   
  将 （具有其索引） 的队列内部表移动到用户指定的文件组。  新的文件组中不能是只读的。  
   
- PROCEDURE_NAME =\<过程 >  
+ PROCEDURE_NAME = \<procedure>  
  指定当队列包含要处理的消息时，要激活的存储过程的名称。 此值必须是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
   
  *database_name* （过程）  
@@ -154,7 +156,7 @@ WITH
  SELF  
  指定存储过程以当前用户身份执行。 （执行该 ALTER QUEUE 语句的数据库主体。）  
   
- *user_name*  
+ '*user_name*'  
  存储过程执行时所用的用户的名称。 *user_name*必须为有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户指定为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符。 当前用户必须具有 IMPERSONATE 权限*user_name*指定。  
   
  OWNER  
@@ -179,7 +181,7 @@ WITH
   
  如果 RECEIVE 语句或 GET CONVERSATION GROUP 语句指定了不可用的队列，则该语句将失败，并出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，队列的所有者、db_ddladmin 或 db_owner 固定数据库角色的成员及 sysadmin 固定服务器角色的成员具有修改队列的权限。  
   
 ## <a name="examples"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: "开发具有同步输出的自定义转换组件 |Microsoft 文档"
+title: "开发具有同步输出的自定义转换组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,20 +25,19 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7717bfcbe29f9d59abe25a8b295fb57b955d0c63
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>开发具有同步输出的自定义转换组件
-  具有同步输出的转换组件接收来自上游组件的行，并在将行传递到下游组件时读取或修改这些行的列中的值。 这些转换组件还定义从上游组件提供的列派生的其他输出列，但是它们不会向数据流添加行。 有关同步和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
+  具有同步输出的转换组件接收来自上游组件的行，并在将行传递到下游组件时读取或修改这些行的列中的值。 这些转换组件还定义从上游组件提供的列派生的其他输出列，但是它们不会向数据流添加行。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
   
  这类组件适用的任务如下：任务中的数据在提供给组件时被内联修改，并且组件在处理这些行之前不必看到所有行。 这是用于开发的最简单组件，因为具有同步输出的转换通常不连接到外部数据源、管理外部元数据列或向输出缓冲区添加行。  
   
@@ -117,7 +115,7 @@ End Class
 ### <a name="creating-and-configuring-output-columns"></a>创建和配置输出列  
  尽管具有同步输出的转换组件不向缓冲区添加行，但是它们可能向自己的输出添加额外的输出列。 通常，当组件添加输出列时，新输出列的值在运行时从一个或多个列中包含的数据派生而来，这些列由上游组件提供给该组件。  
   
- 创建输出列后，必须设置该列的数据类型属性。 输出列的数据类型属性的设置需要特殊处理，并通过调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.SetDataTypeProperties%2A> 方法来执行。 此方法是必需的因为<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>， <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.Length%2A>， <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.Precision%2A>，和<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.CodePage%2A>属性是单独只读的因为每个依赖于其他设置。 此方法可保证属性值的设置保持一致，并且数据流任务会验证是否正确设置了这些值。  
+ 创建输出列后，必须设置该列的数据类型属性。 输出列的数据类型属性的设置需要特殊处理，并通过调用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.SetDataTypeProperties%2A> 方法来执行。 此方法是必需的，因为 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.Length%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.Precision%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.CodePage%2A> 属性在单独情况下都是只读的，原因是每个属性均取决于另一个属性的设置。 此方法可保证属性值的设置保持一致，并且数据流任务会验证是否正确设置了这些值。  
   
  列的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 决定了为其他属性设置的值。 下表说明了对每个 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> 的依赖属性的要求。 未列出的数据类型的依赖属性设置为零。  
   
@@ -132,7 +130,7 @@ End Class
   
  由于对数据类型属性的限制是基于输出列的数据类型的，因此使用托管类型时必须选择正确的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 基类提供了三个帮助器方法：<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>，它们可协助托管组件开发人员在给定托管类型的情况下选择 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 数据类型。 这些方法用于将托管数据类型转换为 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 数据类型，反之亦然。  
   
-## <a name="run-time"></a>运行时间  
+## <a name="run-time"></a>运行时  
  通常，组件的运行时部分的实现分为两个任务：在缓冲区中查找组件的输入和输出列，以及在传入缓冲区行中读取或写入这些列的值。  
   
 ### <a name="locating-columns-in-the-buffer"></a>在缓冲区中查找列  
@@ -194,7 +192,7 @@ End Sub
 ### <a name="processing-rows"></a>处理行  
  组件可接收 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 对象，这些对象包含 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法中的行和列。 在此方法中，将循环访问缓冲区中的行，并读取和修改 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 期间标识的列。 数据流任务将重复调用该方法，直到上游组件不再提供行。  
   
- 读取或写入通过使用数组索引器访问方法，或通过使用其中一个缓冲区中的单个列**获取**或**设置**方法。 **获取**和**设置**方法更高效和知道将缓冲区中列的数据类型时应使用。  
+ 可使用数组索引器访问方法或者使用 Get 或 Set 方法之一来读取或写入缓冲区中的单个列。 Get 和 Set 方法的效率更高，应在缓冲区中的列的数据类型已知时使用。  
   
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 方法的实现，该方法用于处理传入的行。  
   
@@ -337,4 +335,3 @@ End Namespace
  [使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

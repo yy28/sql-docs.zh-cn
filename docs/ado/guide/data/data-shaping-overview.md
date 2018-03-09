@@ -3,26 +3,28 @@ title: "数据定形概述 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: data shaping [ADO], overview
+helpviewer_keywords:
+- data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bcfa746be8db71aa85c7e83f7f52b40997fd433
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5ebd3d67ffc5c3f3aba0f481182c5812f4523a5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-shaping-overview"></a>数据调整概述
 *数据成型*意味着构建在查询中的两个或多个逻辑实体之间的层次结构关系。 可以在父-子关系之间的一个记录中看到层次结构[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和一个或多个记录 （也称为章） 的另一个**记录集**。 在父-子关系中，父**记录集**包含子**记录集**。 此类层次结构关系的一个示例是客户和订单。 对于数据库中每个客户，可以有零个或多个订单。 层次结构关系可以是递归的这意味着，孙级记录可以嵌套子记录中。 原则上，可以为任何深度嵌套分层记录。 在实践中，ADO 限制为最多 512 个递归**记录集**s。  

@@ -2,15 +2,13 @@
 title: "Alter 命令 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8bdc49f1-209e-4055-be19-c83862b81efa
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da8bc8b79cf500686f7ce955132af426376f0a97
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34e3e12741988f5d1369e96381a54c15f64ec557
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-command-tmsl"></a>Alter 命令 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  更改现有对象，但不是其子项，在表格模式下的 Analysis Services 实例上。  如果不存在该对象，该命令将引发错误。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]更改现有对象，但不是其子项，在表格模式下的 Analysis Services 实例上。  如果不存在该对象，该命令将引发错误。  
   
  使用**Alter**命令目标的更新，如同在表上设置一个属性，而无需指定的所有列以及。 此命令是类似于**CreateOrReplace**，但没有无需再次提供完整的对象定义的要求。  
   

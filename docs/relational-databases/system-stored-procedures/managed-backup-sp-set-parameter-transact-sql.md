@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 - smart_admin.sp_set_parameter_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3fb501b9fedb7b9e9fd55d571b44d1dcc702b5f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7c8469b7ddb66198889604af7b0d512166429a0b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (TRANSACT-SQL)
+# <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   设置指定的智能管理系统参数的值。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 EXEC managed_backup.sp_set_parameter   
     [@parameter_name = ] {'SSMBackup2WANotificationEmailIds' | 'SSMBackup2WAEnableUserDefinedPolicy' | 'SSMBackup2WADebugXevent' | 'FileRetentionDebugXevent' | 'StorageOperationDebugXevent'}  
     ,[@parameter_value = ] 'parameter_value'  
@@ -65,7 +67,7 @@ EXEC managed_backup.sp_set_parameter
   
 -   @parameter_name= 'FileRetentionDebugXevent': @parameter_value = {'true' |false'}  
   
--   @parameter_name= StorageOperationDebugXevent = {'true' |false'}  
+-   @parameter_name = 'StorageOperationDebugXevent' = { 'true' | 'false' }  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -73,9 +75,9 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="best-practices"></a>最佳实践  
  可选部分，介绍用户在执行语句或例程时应了解的最佳实践。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要**执行**权限**managed_backup.sp_set_parameter**存储过程。  
   
 ## <a name="examples"></a>示例  

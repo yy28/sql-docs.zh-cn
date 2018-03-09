@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_xtp_merge_requests (Transact SQL) |Microsoft 文档"
+title: sys.dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/01/2017
 ms.prod: sql-non-specified
@@ -14,16 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b068552f48544b8dc3a7f11dd8981008cb080bad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e08d9df86f8b389e3a2811c4b63a35ab0945dd0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpmergerequests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 | checkpoint_tsn | bigint | 检查点启动时的时间。<br/><br/>在新数据文件中将考虑时间戳低于此值的事务执行的所有删除。 其余删除会移动到目标差异文件。 |
 | sourcenumber_file_id | GUID | 用于唯一标识合并中的源文件的最多 16 个内部文件 ID。 |
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 要求对当前数据库拥有 VIEW DATABASE STATE 权限。
 

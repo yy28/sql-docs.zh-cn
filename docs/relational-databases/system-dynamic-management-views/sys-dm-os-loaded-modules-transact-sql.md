@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_loaded_modules
 - sys.dm_os_loaded_modules_TSQL
 - dm_os_loaded_modules_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_loaded_modules dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c260b70aca72d90254571bc819dd20704bafbb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9e33e71c94cffe6b455be1b5a5fc0e22732e60f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,21 +43,21 @@ ms.lasthandoff: 11/17/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**base_address**|**varbinary （8)**|进程中的模块的地址。|  
+|**base_address**|**varbinary(8)**|进程中的模块的地址。|  
 |**file_version**|**varchar(23)**|文件的版本。 按如下格式显示：<br /><br /> x.x:x.x|  
 |**product_version**|**varchar(23)**|产品版本。 按如下格式显示：<br /><br /> x.x:x.x|  
-|**调试**|**bit**|1 = 模块是调试版本的已加载模块。|  
+|**debug**|**bit**|1 = 模块是调试版本的已加载模块。|  
 |**修补**|**bit**|1 = 模块已得到修补。|  
-|**预发行版**|**bit**|1 = 模块是预发行版本的已加载模块。|  
+|**prerelease**|**bit**|1 = 模块是预发行版本的已加载模块。|  
 |**private_build**|**bit**|1 = 模块是专用版本的已加载模块。|  
 |**special_build**|**bit**|1 = 模块是特殊版本的已加载模块。|  
-|**语言**|**int**|模块的版本信息语言。|  
-|**公司**|**nvarchar(256)**|创建模块的公司的名称。|  
+|**language**|**int**|模块的版本信息语言。|  
+|**company**|**nvarchar(256)**|创建模块的公司的名称。|  
 |**说明**|**nvarchar(256)**|模块的说明。|  
 |**名称**|**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
-|**pdw_node_id**|**int**|**适用于**:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  

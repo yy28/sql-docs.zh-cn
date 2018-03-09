@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysdownloadlist_TSQL
 - dbo.sysdownloadlist_TSQL
 - sysdownloadlist
-dev_langs: TSQL
-helpviewer_keywords: sysdownloadlist system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdownloadlist system table
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64ab3c661ff3cb5aa92d11e8193680629af9851b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec8e8dc5a4e145cf0965fa509029225336e621c9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +42,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|对提供行的自然插入顺序的列进行标识。|  
 |**source_server**|**sysname**|源服务器的名称。|  
-|**operation_code**|**tinyint**|作业的操作代码：<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD （更新）<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = START<br /><br /> **5** = 停止|  
-|**对象类型**|**tinyint**|对象类型代码。|  
+|**operation_code**|**tinyint**|作业的操作代码：<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD （更新）<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = START<br /><br /> **5** = STOP|  
+|**object_type**|**tinyint**|对象类型代码。|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|对象标识号。|  
 |**target_server**|**sysname**|目标服务器的名称。|  
 |**error_message**|**nvarchar(1024)**|目标服务器处理特定行时，遇到错误时出现的错误消息。|  

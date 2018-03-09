@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 527e8d47d4d352a0fad579d3c12c5ef3768c402b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignment"></a>Alignment
 ODBC 应用程序中的对齐方式问题并通常没有什么区别不是它们处于任何其他应用程序。 这就是，大多数 ODBC 应用程序具有带对齐方式的弱或根本没有问题。 因为不对齐地址受到处罚硬件和操作系统而异，并且可能导致性能略微下降作为等小或为主要视为致命的运行时错误。 因此，ODBC 应用程序和可移植的 ODBC 应用程序尤其是，应小心地将其正确对齐的数据。  

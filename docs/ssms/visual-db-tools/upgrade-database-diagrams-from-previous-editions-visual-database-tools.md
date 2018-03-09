@@ -3,8 +3,11 @@ title: "从以前的版本升级数据库关系图 (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 877e61b351a2e3b5c0f51fc015ec59ae7bf62c78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 565760167336f38c1bbb2f1eaee1734801eb90c9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>从以前的版本升级数据库关系图 (Visual Database Tools)
-如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 设置了数据库关系图创建功能，则对以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]数据库创建的数据库关系图将自动升级。 有关设置关系图的详细步骤，请参阅 [设置数据库关系图设计器 (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果对 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 设置了数据库关系图创建功能，则对以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库创建的数据库关系图将自动升级。 有关设置关系图的详细步骤，请参阅 [设置数据库关系图设计器 (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>升级旧的数据库关系图  
   

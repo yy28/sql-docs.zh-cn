@@ -3,8 +3,11 @@ title: "SQL Server Management Studio - 遥测 (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 02/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,17 +15,16 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 caps.latest.revision: "72"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd49e14d6a19d1ac81a5cb17494988ce05c40e80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a960b0862617027d77f28a7acc247312f461a78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用反馈收集的本地审核
-
-SQL Server Management Studio (SSMS) 包含支持 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况数据。 SSMS 可能会收集标准计算机信息以及有关使用情况和性能的信息，并可能会将这些信息传输给 Microsoft 进行分析，以便改进 SSMS 的质量、安全性和可靠性。 我们不会收集您的姓名、地址或其他联系信息。 有关详细信息，请参阅 [SQL Server 隐私声明](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio (SSMS) 包含支持 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况数据。 SSMS 可能会收集标准计算机信息以及有关使用情况和性能的信息，并可能会将这些信息传输给 Microsoft 进行分析，以便改进 SSMS 的质量、安全性和可靠性。 我们不会收集您的姓名、地址或其他联系信息。 有关详细信息，请参阅 [SQL Server 隐私声明](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)。
 
 ## <a name="audit-feature-usage-data"></a>审核功能使用情况数据
 

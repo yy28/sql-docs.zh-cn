@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], executing
 - user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0ae7abf60c9d2cf540a0daa73bd0bb6ceebb3729
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c4052a34b4365de0382e7a8118f743231b8f4873
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [建议](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要执行存储过程，请使用：**  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
 -   与系统过程名称匹配时使用调用数据库排序规则。 因此，在过程调用中始终使用系统过程名称的正确大小写形式。 例如，如果在具有区分大小写的排序规则的数据库上下文中执行，以下代码将失败：  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
      系统过程以前缀 **sp_**开头。 因为从逻辑意义上讲，这些过程出现在所有用户定义的数据库和系统定义的数据库中，所以可以从任何数据库执行这些过程，而不必完全限定过程名称。 但是，建议使用 **sys** 架构名称对所有系统过程名称进行架构限定，以防止名称冲突。 以下示例说明调用系统过程的推荐方法。  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
      以下示例说明执行用户定义过程的推荐方法。 请注意，此过程接受一个输入参数。 有关指定输入参数和输出参数的信息，请参阅 [指定参数](../../relational-databases/stored-procedures/specify-parameters.md)。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
      -或-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> 安全性  
  有关详细信息，请参阅 [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md) 和 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  有关详细信息，请参阅 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)中执行存储过程。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/17/2017
      **传递空值**  
      将 NULL 作为参数值传递。  
   
-     **值**  
+     **ReplTest1**  
      在调用过程时键入参数的值。  
   
 5.  若要执行存储过程，请单击 **“确定”**。  
@@ -167,13 +168,13 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-execute-a-stored-procedure"></a>执行存储过程  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例演示如何执行应有一个参数的存储过程。 该示例执行 `uspGetEmployeeManagers` 存储过程，并将值  `6` 指定为 `@EmployeeID` 参数。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何执行应有一个参数的存储过程。 该示例执行 `uspGetEmployeeManagers` 存储过程，并将值  `6` 指定为 `@EmployeeID` 参数。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -182,13 +183,13 @@ GO
   
 #### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>设置或清除过程自动执行  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例演示如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 设置过程自动执行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 设置过程自动执行。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -198,13 +199,13 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 #### <a name="to-stop-a-procedure-from-executing-automatically"></a>阻止过程自动执行  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例说明如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 阻止过程自动执行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 阻止过程自动执行。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

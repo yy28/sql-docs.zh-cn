@@ -20,19 +20,19 @@ ms.date: 07/19/2017"
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
+ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 423ce5e7a0f686c6b97abfe20050de22ef785e70
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 将 PolyBase 用于受 Kerberos 保护的 Hadoop 群集时，可以使用 PolyBase 内置的交互式诊断工具帮助解决身份验证问题。 
 
 本文可作为指南，引导用户利用此工具完成此类问题的整个调试过程。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 1. 已安装 PolyBase 的 SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 或更高版本
 1. 受 Kerberos（Active Directory 或 MIT）保护的 Hadoop 群集（Cloudera 或 Hortonworks）
@@ -208,6 +208,5 @@ PolyBase 将尝试访问 HDFS 并将失败，因为请求不包含必要的服�
 [Cloudera 的 Kerberos for CDH 设置指南](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks 的 Kerberos for HDP 设置指南](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [Polybase 故障排除](polybase-troubleshooting.md)
-
 
 

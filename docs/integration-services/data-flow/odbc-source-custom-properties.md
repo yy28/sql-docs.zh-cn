@@ -1,5 +1,5 @@
 ---
-title: "ODBC 源的自定义属性 |Microsoft 文档"
+title: "ODBC 源自定义属性 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,19 +13,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 99f561213fafe5b70c3d0f95af247780c9247137
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="odbc-source-custom-properties"></a>ODBC 源自定义属性
+# <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   下表介绍 ODBC 源的自定义属性。 所有属性都可以从 SSIS 属性表达式设置。  
   
 |属性名称|数据类型|Description|  
@@ -38,15 +37,14 @@ ms.lasthandoff: 08/03/2017
 |DefaultCodePage|Integer|要用于字符串输出列的代码页。<br /><br /> **注意**：此属性未在 **“OLE 源编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。|  
 |ExposeCharColumnsAsUnicode|Boolean|此属性确定组件如何公开 CHAR 列。 默认值为 False，指示 CHAR 列作为多字节字符串 (DT_STR) 公开。 如果为 True，则 CHAR 列将作为宽字符串 (DT_WSTR) 公开。<br /><br /> **注意**：此属性未在 **“OLE 源编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。|  
 |FetchMethod|Integer（枚举）|用于获取数据的方法。 可能的选项为逐行 (0) 和批处理 (1)。 默认值为批处理 (1)。<br /><br /> 有关这些选项的详细信息，请参阅 [ODBC Source](../../integration-services/data-flow/odbc-source.md)。<br /><br /> **注意**：此属性未在 **“OLE 源编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。|  
-|SqlCommand|字符串|在 AccessMode 设置为“SQL 命令”时要执行的 SQL 命令。|  
+|SqlCommand|String|在 AccessMode 设置为“SQL 命令”时要执行的 SQL 命令。|  
 |StatementTimeout|Integer|在无错返回应用程序之前等待 SQL 语句执行的秒数。 默认值为 120。 值为 0 时指示系统不会超时。|  
-|TableName|字符串|具有在 AccessMode 设置为“表名”时要使用的数据的表的名称。|  
+|TableName|String|具有在 AccessMode 设置为“表名”时要使用的数据的表的名称。|  
 |LobChunckSize|Integer|针对 LOB 列的块大小分配。|  
 ||||  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC 源](../../integration-services/data-flow/odbc-source.md)   
- [ODBC 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+ [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
+ [ODBC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   
-

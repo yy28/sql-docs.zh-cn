@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d6c33118d108c4a4c9e541db311710202cabdb3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b3e69167072663f2fa4e2aea0e13611f5cf15cd8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="state-transition-checks"></a>状态转换检查
 驱动程序管理器检查环境、 连接或语句的状态适用于被调用函数。 例如，连接必须为一个已分配状态时**SQLConnect**称为; 语句必须是中的已准备状态时**SQLExecute**调用。 驱动程序管理器返回 SQL_ERROR 状态转换错误。

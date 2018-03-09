@@ -3,27 +3,30 @@ title: "取消方法示例 (VB) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Cancel method [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Cancel method [ADO], Visual Basic example
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8e3d8a6bfc3afa5981d69fc8c91dc1a0b70cda3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63c0512622045cb4c65820826cbb8e120a91ead4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancel-method-example-vb"></a>取消方法示例 (VB)
 此示例使用[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法来取消命令执行[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象连接是否在忙。  

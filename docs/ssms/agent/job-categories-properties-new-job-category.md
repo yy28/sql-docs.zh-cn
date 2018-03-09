@@ -3,8 +3,11 @@ title: "作业类别属性 - 新建作业类别 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b26f1ff05b93b81aed61a7ee0ea0aa7beece47fb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c4bbd74c2a547238305034ab9e4c9067762997c2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-categories-properties---new-job-category"></a>作业类别属性 - 新建作业类别
-列出一种作业类别或所有作业类别中的作业，并且您可以通过它来添加新的作业类别。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 列出一种作业类别或所有作业类别中的作业，并且可以通过它来添加新的作业类别。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **名称**  
 键入新作业类别的名称。 如果这是作业类别的“属性”对话框，则在此处显示您所查看的类别。  
   

@@ -3,8 +3,11 @@ title: "作业步骤属性 - 新建作业步骤（“高级”页）| Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ad17a4381de9bac0443cd0bc65ebfbfbd1f9a2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 99d0e4a39d2a4c2e1bdada89142f1fee9b7cb78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作业步骤属性 - 新建作业步骤（“高级”页）
-使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤的属性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤的属性。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **成功时要执行的操作**  
 设置作业步骤成功时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理应执行的操作。  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 **...**  
 浏览至用于作业步骤输出的文件。  
   
-**视图**  
+**“视图”**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/09/2017
 **...**  
 浏览至用于作业步骤输出的文件。  
   
-**视图**  
+**“视图”**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
@@ -97,7 +100,7 @@ ms.lasthandoff: 11/09/2017
 **...**  
 浏览至用于作业步骤输出的文件。  
   
-**视图**  
+**“视图”**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
@@ -119,7 +122,7 @@ ms.lasthandoff: 11/09/2017
 **Server**  
 设置服务器用于复制队列读取器作业步骤。  
   
-**数据库**  
+**“数据库”**  
 设置数据库用于复制队列读取器作业步骤。  
   
 ## <a name="options-for-sql-server-analysis-services-job-steps"></a>SQL Server Analysis Services 作业步骤的选项。  

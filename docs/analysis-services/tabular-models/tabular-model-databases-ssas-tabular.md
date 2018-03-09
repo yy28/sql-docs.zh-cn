@@ -1,35 +1,33 @@
 ---
-title: "表格模型数据库 (SSAS 表格) |Microsoft 文档"
+title: "表格模型数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5d77d1cc5f03ac2d6894cefa6458f9096b47b3a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbfa3c258d784b3a591abd13c2eb90f333bf53a1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>管理已部署的表格模型数据库
-  表格模型数据库是您使用 Analysis Services 表格模型项目模板在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中创建的 Analysis Services 数据库，其中，表和关系是用于表示数据的主要结构。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+表格模型数据库是您使用 Analysis Services 表格模型项目模板在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中创建的 Analysis Services 数据库，其中，表和关系是用于表示数据的主要结构。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [处理数据库、表或分区 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)  
   
  [表格模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)  
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 
     
 ## <a name="related-content"></a>相关内容  
- [表格模型解决方案（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [表格模型解决方案](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
  [表格模型数据访问](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 
@@ -51,11 +49,11 @@ ms.lasthandoff: 11/17/2017
   
  [同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [修改或删除 Analysis Services 数据库](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   
- [记录和编写 Analysis Services 数据库脚本](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+ [Document and Script Analysis Services 数据库](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
  [备份和还原 Analysis Services 数据库](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

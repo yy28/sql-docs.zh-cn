@@ -8,24 +8,22 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: "20"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 5f01391991a8e57d09da1888c541183962e488e5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 配置文件
+# <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]RsReportServer.config 文件存储报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
 
 在 SharePoint 模式下，该配置文件中包含适用于在该计算机上运行的所有服务应用程序实例的那些设置。 SharePoint 配置数据库包含适用于特定服务应用程序的配置设置。 对于每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序，在配置数据库中存储并且通过 SharePoint 管理页进行管理的设置可能会有所不同。  
@@ -69,14 +67,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 > [!NOTE]  
 >  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅 [整数限制](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
   
-|设置|Description|模式|  
+|设置|Description|“模式”|  
 |-------------|-----------------|----------|  
 |**Dsn**|指定承载报表服务器数据库的数据库服务器的连接字符串。 在创建报表服务器数据库时，此值会进行加密并添加到配置文件中。 对于 SharePoint，从 SharePoint 配置数据库获取数据库连接信息。|N,S|  
 |**ConnectionType**|指定报表服务器用来连接报表服务器数据库的凭据类型。 有效值为 **Default** 和 **Impersonate**。 如果将报表服务器配置为使用**登录帐户或服务帐户连接至报表服务器数据库，则指定** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果报表服务器使用一个 Windows 帐户连接到报表服务器数据库，则指定**Impersonate** 。|否|  
 |**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 将报表服务器连接配置为使用域帐户时，会创建 **LogonUser**、 **LogonDomain**和 **LogonCred** 的值。 有关报表服务器数据库连接的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|否|  
-|**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值为“MSRS12”\<实例名>。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值为 MSRS12\<实例名>。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|安装程序创建的报表服务器安装的标识符。 此值设置为 GUID。 请不要修改此设置。|否|  
-|**SecureConnectionLevel**|指定 Web 服务调用必须使用的安全套接字层 (SSL) 的级别。 此设置用于报表服务器 Web 服务和 Web 门户。 当您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中配置 URL 以使用 HTTP 或 HTTPS 时将设置此值。 有效值的范围为 0 到 3 之间，其中 0 的安全性最低。 有关详细信息，请参阅 [使用安全 Web 服务方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) 和 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N,S|  
+|**SecureConnectionLevel**|指定 Web 服务调用必须使用的安全套接字层 (SSL) 的级别。 此设置用于报表服务器 Web 服务和 Web 门户。 当您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中配置 URL 以使用 HTTP 或 HTTPS 时将设置此值。 在 SQL Server 2008 R2 中，SecureConnectionLevel 是一个开关。 对于早于 SQL Server 2008 R2 的版本，其有效值范围是 0 到 3（0 最不安全）。 有关详细信息，请参阅 [ConfigurationSetting 方法 - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)、[使用安全 Web 服务方法](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)和[配置本机模式 Report Server 上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N,S|
 |**DisableSecureFormsAuthenticationCookie**|默认值为 False。<br /><br /> 指定是否禁止将用于窗体和自定义身份验证 cookie 强制标记为安全的。 从 SQL Server 2012 开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在发送到客户端时将用于自定义身份验证扩展插件的窗体身份验证 cookie 标记为安全 cookie。 通过更改此属性，报表服务器管理员和自定义安全扩展插件作者可以恢复以前的行为，即允许自定义安全扩展插件作者确定是否将 cookie 标记为安全 cookie。 建议将安全 cookie 用于窗体身份验证，以便帮助防止网络截取和重播攻击。|否|  
 |**CleanupCycleMinutes**|指定多少分钟后从报告服务器数据库删除旧会话和过期快照。 有效值的范围为 0 到最大整数之间。 默认值为 10。 如果将值设置为 0，将禁止数据库清除进程。|N,S|  
 |**MaxActiveReqForOneUser**|指定一个用户可以同时处理的报表的最大数目。 达到此限制之后，将拒绝进一步的报表处理请求。 有效值介于 1 和最大整数之间。 默认值为 20。<br /><br /> 注意，大多数请求都处理得非常快，因此单个用户在任意给定时间都不太可能拥有 20 个以上的打开连接。 如果用户同时打开了 15 个以上的占用大量进程的报表，则最好增大此值。<br /><br /> 对于在 SharePoint 集成模式下运行的报表服务器，将忽略此设置。|N,S|  
@@ -108,7 +106,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
   
-|设置|Description|模式|  
+|设置|Description|“模式”|  
 |-------------|-----------------|----------|  
 |**应用程序**|包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的设置。|否|  
 |**名称**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 有效值为 ReportServerWebService 或 ReportManager。|否|  
@@ -137,7 +135,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  以下表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
   
-|设置|Description|模式|  
+|设置|Description|“模式”|  
 |-------------|-----------------|----------|  
 |**AuthenticationTypes**|指定一个或多个身份验证类型。 有效值为 **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**、 **RSWindowsBasic**和 **Custom**。<br /><br /> 类型**RSWindows** 和 **Custom** 是互斥的。<br /><br /> **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**和 **RSWindowsBasic** 是累积的并且可以一起使用，如本节前面的默认值示例所示。<br /><br /> 如果预期会收到来自使用不同类型的身份验证的各种客户端应用程序和浏览器的请求，则必须指定多个身份验证类型。<br /><br /> 不要删除 **RSWindowsNTLM**，否则会将浏览器支持限制为部分受支持的浏览器类型。 有关详细信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|否|  
 |**RSWindowsNegotiate**|报表服务器接受 Kerberos 或 NTLM 安全令牌。 如果报表服务器在本机模式下运行并且服务帐户为 Network Service，这便是默认设置。 如果报表服务器在本机模式下运行并且服务帐户已配置为域用户帐户，将忽略该设置。<br /><br /> 如果为报表服务器服务帐户配置了域帐户但未为报表服务器配置服务主体名称 (SPN)，则该设置可能会阻止用户登录该服务器。|否|  
@@ -157,7 +155,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  以下表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
   
-|设置|Description|模式|  
+|设置|Description|“模式”|  
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|指定报表服务器是否维护一组与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户创建的计划和订阅相对应的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 代理作业。 有效值包括 **True** （默认值）和 **False**。<br /><br /> 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时，此设置将受到影响。 有关详细信息，请参阅 [启动和停止报表服务器服务](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N,S|  
 |**IsNotificationService**|指定报表服务器是否处理通知和传递。 有效值包括 **True** （默认值）和 **False**。 如果该值为 **False**，则不传递订阅。<br /><br /> 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时，此设置将受到影响。 有关详细信息，请参阅 [启动和停止报表服务器服务](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N,S|  
@@ -183,7 +181,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  以下表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
   
-|设置|Description|模式|  
+|设置|Description|“模式”|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|指定 Web 门户连接到的报表服务器的 URL。 仅当将 Web 门户配置为连接到其他实例中或远程计算机上的报表服务器时，才修改此值。|N,S|  
 |**ReportBuilderTrustLevel**|请不要修改此值，它是不可配置的。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以及更高版本中，报表生成器仅在 **FullTrust**下运行。 有关详细信息，请参阅 [配置报表生成器访问权限](../../reporting-services/report-server/configure-report-builder-access.md) 。 有关不再使用的部分信任模式的详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)。|N,S|  

@@ -1,5 +1,5 @@
 ---
-title: "创建函数以检索变更数据 |Microsoft 文档"
+title: "创建函数以检索变更数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f3e717ccf46cc7929c510229b19a16eb5a857487
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>创建函数以检索变更数据
   在完成用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流之后，接下来的任务是创建用于检索变更数据的表值函数。 只需在第一次增量加载之前创建一次此函数。  
@@ -124,9 +123,9 @@ deallocate #hfunctions
   
  为了简化对更改表的所有行的查询，生成的包装函数还支持以下约定：  
   
--   如果@start_time参数为 null，包装器函数中使用的最小 LSN 值捕获实例中，作为查询的下限。  
+-   如果 @start_time 参数为 Null，包装函数使用捕获实例中最低的 LSN 值作为查询的下限。  
   
--   如果@end_time参数为 null，包装器函数中使用的最高的 LSN 值捕获实例中，作为查询的上限。  
+-   如果 @end_time 参数为 Null，包装函数使用捕获实例中最高的 LSN 值作为查询的上限。  
   
  大部分用户应该能够使用 **sys.sp_cdc_generate_wrapper_function** 系统存储过程创建的包装函数而无需进行修改。 但是，若要自定义包装函数，您必须自定义 CREATE 脚本，然后再运行该脚本。  
   
@@ -220,7 +219,7 @@ go
 |**__$seqval**|**binary(10)**|用于对事务中的行更改进行排序的序列值。|  
 |**__$operation**|**int**|与更改关联的数据操作语言 (DML) 操作。 可以为以下各项之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（执行更新操作前的值。）<br /><br /> 4 = 更新（执行更新操作后的值。）|  
 |**__$update_mask**|**varbinary(128)**|基于变更表的列序号的位掩码，用于标识那些发生了变更的列。 如果需要确定哪些列发生了更改，则可检查此值。|  
-|**\<捕获源表列 >**|不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中最初未指定任何列，则将返回源表中的所有列。|  
+|\<捕获的源表列>|不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中最初未指定任何列，则将返回源表中的所有列。|  
   
  有关详细信息，请参阅[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
@@ -230,4 +229,3 @@ go
  **下一个主题：** [检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
-

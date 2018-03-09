@@ -1,5 +1,5 @@
 ---
-title: "比较脚本解决方案和自定义对象 |Microsoft 文档"
+title: "比较脚本解决方案与自定义对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - SSIS Script task, vs. custom managed tasks
 - custom tasks [Integration Services], scripts
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8d0d387c56513475df9764b0c11f2e8bdb8ed728
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c4947255d2e2b6151861877ae8a8c43b1328ec74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>比较脚本解决方案与自定义对象
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 脚本任务或脚本组件可实现许多可用于自定义托管任务或数据流组件的相同功能。 下面是有助于您根据需要选择相应的任务类型的一些注意事项：  
@@ -45,8 +44,7 @@ ms.lasthandoff: 08/03/2017
   
 -   如果实现将随时间而发生变化，则可考虑使用自定义对象。 自定义对象的开发和部署可以独立于父包，而对脚本解决方案所做的更新则需要重新部署整个包。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [用自定义对象扩展包](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
   
   
-

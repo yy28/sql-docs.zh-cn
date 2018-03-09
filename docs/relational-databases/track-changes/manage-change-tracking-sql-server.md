@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0353aea7e84d69dca9dc469d4945a7cdf6eb7c34
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 76ab7f38d33ca8940eb9f0c82a7e1279f552364d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理更改跟踪 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  此外， [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 目录视图还列出了对用户表启用更改跟踪时所创建的内部表。  
   
-### <a name="security"></a>安全性  
+### <a name="security"></a>Security  
  若要使用 [更改跟踪函数](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)访问更改跟踪信息，主体必须拥有以下权限：  
   
 -   至少针对主键列（已启用更改跟踪的表针对被查询表的主键列）拥有 SELECT 权限。  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
  对于其他内部表，可以使用 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 存储过程来确定用于更改跟踪表的空间。 可以使用 [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 目录视图来获取这些内部表的名称，如下例所示。  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

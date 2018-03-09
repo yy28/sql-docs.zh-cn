@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_active_catalogs
 - dm_fts_active_catalogs_TSQL
 - sys.dm_fts_active_catalogs
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_active_catalogs dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_active_catalogs dynamic management view
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3712a9cb104058d46cc0f2b9b21d1ad0f5bf062c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c6031073091f63185f58cd256900719c25d8a7ae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,8 +46,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|包含活动全文目录的数据库的 ID。|  
 |**catalog_id**|**int**|活动的全文目录的 ID。|  
-|**memory_address**|**varbinary （8)**|为与此全文目录相关的填充活动所分配的内存缓冲区的地址。|  
-|**名称**|**nvarchar （128)**|活动的全文目录的名称。|  
+|**memory_address**|**varbinary(8)**|为与此全文目录相关的填充活动所分配的内存缓冲区的地址。|  
+|**名称**|**nvarchar(128)**|活动的全文目录的名称。|  
 |**is_paused**|**bit**|指示活动全文目录的填充是否已暂停。|  
 |**status**|**int**|全文目录的当前状态。 可以是以下类型之一：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 就绪<br /><br /> 2 = 已暂停<br /><br /> 3 = 暂时错误<br /><br /> 4 = 需要重新装入<br /><br /> 5 = 关闭<br /><br /> 6 = 停止以备份<br /><br /> 7 = 已完成目录备份<br /><br /> 8 = 目录已损坏|  
 |**status_description**|**nvarchar(120)**|对活动全文目录的当前状态的说明。|  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>注释  
  Is_importing 列中的新增功能[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
   

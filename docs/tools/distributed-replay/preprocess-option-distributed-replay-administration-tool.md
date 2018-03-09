@@ -2,26 +2,29 @@
 title: "Preprocess 选项 （分布式的重播管理工具） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88d5c85d15eed2503cc1b7315173b4a4ac9fa462
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d1096da9b2acf50e7f495c6948a9c7f9e20acacb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 **DReplay.exe** 是一个命令行工具，可与分布式重播控制器一起用来进行通信。 本主题介绍 **preprocess** 命令行选项和相应的语法。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， **DReplay.exe**，是一个命令行工具，可用来与分布式的重播控制器进行通信。 本主题介绍 **preprocess** 命令行选项和相应的语法。  
   
  **preprocess** 选项用于启动预处理阶段。 在此阶段，控制器会准备对针对目标服务器进行重播的输入跟踪数据。  
   
@@ -36,7 +39,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>Parameters  
- **-m** *控制器*  
+ **-m** *controller*  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  
@@ -107,8 +110,8 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
  有关详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [准备输入跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
- [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [准备输入的跟踪数据](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
+ [SQL Server 分布式的重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [配置分布式的重播](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

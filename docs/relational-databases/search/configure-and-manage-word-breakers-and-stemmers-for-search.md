@@ -2,10 +2,14 @@
 title: "配置和管理断字符和词干分析器以便搜索 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,19 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29c3477e0a53e78727eb95423158e550328cbfe6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e50f02ed70002a7f8af8d6464672328d20e70ea3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 断字符和词干分析器用于对所有全文索引数据执行语言分析。 语言分析执行下述两项操作：
 
 -   **查找词边界（断字）**。 “断字符”根据语言的词法规则确定词的边界位置，从而标识各个词。 每个词（也称为标记）使用压缩表示形式插入全文索引以减少其大小。
@@ -51,7 +55,7 @@ ms.lasthandoff: 11/09/2017
 
 若要查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索所支持的语言的列表，请使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 如果一种语言存在于该列表中，则说明已为该语言注册断字符。 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -61,7 +65,7 @@ SELECT * FROM sys.fulltext_languages
 
 若要查看已注册断字符组件的列表，请使用以下语句。
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -86,7 +90,7 @@ GO
   
 若要查看特定列的断字符语言，请运行以下语句。
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -97,7 +101,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>有关 MSSQLSERVER_30053 错误的信息
   
-|属性|“值”|
+|“属性”|ReplTest1|
 |-|-|
 |产品名称|SQL Server|  
 |事件 ID|30053|  

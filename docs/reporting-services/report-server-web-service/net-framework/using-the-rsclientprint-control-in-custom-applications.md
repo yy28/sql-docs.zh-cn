@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: "31"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d641ec2dacd6f0296199e9f547bce6baa1c0cb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34becf7210dd08dbf663d99e6cf5cd1b7f57c190
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
   对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 属性  
   
-|属性|类型|RW|默认|Description|  
+|“属性”|类型|RW|，则“默认”|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|双精度|RW|报表设置|获取或设置左边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
 |MarginRight|双精度|RW|报表设置|获取或设置右边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 |PageWidth|双精度|RW|报表设置|获取或设置页宽。 如果开发人员或报表定义中未进行设置，则默认值为 215.9 毫米。|  
 |PageHeight|双精度|RW|报表设置|获取或设置页高。 如果开发人员或报表定义中未进行设置，则默认值为 279.4 毫米。|  
 |Culture|Int32|RW|浏览器区域设置|指定区域设置标识符 (LCID)。 此值将确定用户输入的度量单位。 例如，如果用户键入 3，则在语言为法语时，值将按毫米度量；在语言为英语（美国）时，值将按英寸度量。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
-|UICulture|字符串|RW|客户端区域性|指定对话框字符串的本地化语言。 “打印”对话框中的文本已本地化为以下语言：简体中文、繁体中文、英语、法语、德语、意大利语、日语、朝鲜语和西班牙语。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
+|UICulture|String|RW|客户端区域性|指定对话框字符串的本地化语言。 “打印”对话框中的文本已本地化为以下语言：简体中文、繁体中文、英语、法语、德语、意大利语、日语、朝鲜语和西班牙语。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
 |Authenticate|Boolean|RW|False|指定控件是否向报表服务器发出 GET 命令，以启动无会话打印连接。|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>何时设置 Authenticate 属性  
@@ -113,9 +111,9 @@ ms.lasthandoff: 12/05/2017
   
 |参数|I/O|类型|Description|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|字符串|指定报表服务器虚拟目录（例如，`https://adventure-works/reportserver`）。|  
-|ReportPathParameters|In|字符串|指定报表在报表服务器文件夹命名空间中的全名，包括参数。 对报表的检索是通过 URL 访问进行的。 例如：“/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234”。|  
-|ReportName|In|字符串|报表的简称（在上面的示例中，简称为 Employee Sales Summary）。 它显示在“打印”对话框和打印队列中。|  
+|ServerPath|In|String|指定报表服务器虚拟目录（例如，`https://adventure-works/reportserver`）。|  
+|ReportPathParameters|In|String|指定报表在报表服务器文件夹命名空间中的全名，包括参数。 对报表的检索是通过 URL 访问进行的。 例如：“/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234”。|  
+|ReportName|In|String|报表的简称（在上面的示例中，简称为 Employee Sales Summary）。 它显示在“打印”对话框和打印队列中。|  
   
 ### <a name="example"></a>示例  
  下面的 HTML 示例显示如何在 JavaScript 中指定 .cab 文件、Print 方法和属性：  

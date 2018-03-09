@@ -2,25 +2,28 @@
 title: "R Services 的结果和资源的性能 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R 服务的性能： 结果和资源
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是第四个和最后一个序列中，它描述 R Services 的性能优化。 本文总结了方法、 发现和的两个测试各种优化方法的案例研究的结论。
 
@@ -95,7 +98,7 @@ metric time pct
 
 第一个测试比较使用压缩和纵栏表的表，以减少数据的大小。
 
-| 表名            | 行     | 保留   | 数据       | index_size | 未使用  | 节省率（保留） |
+| 表名            | “行”     | 保留   | Data       | index_size | 未使用  | 节省率（保留） |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |

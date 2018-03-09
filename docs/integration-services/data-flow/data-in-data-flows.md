@@ -1,5 +1,5 @@
 ---
-title: "数据中的数据流动 |Microsoft 文档"
+title: "数据流中的数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75b3313a841152e31ca6ff52e7c523fbc1d4b249
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-in-data-flows"></a>数据流中的数据
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了用于数据流中的一组数据类型。  
@@ -49,4 +48,3 @@ ms.lasthandoff: 08/03/2017
  将包部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录后，您可以在执行期间对包中的数据流进行分析，以检查性能或查找其他问题。 通过提供的标准报表，您可以查看包状态和历史记录，并查询提供了有关包执行的详细信息的数据库视图。 您还可以在执行期间动态添加和删除分流点以面向包的特定组件。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
   
-

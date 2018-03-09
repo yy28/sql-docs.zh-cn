@@ -3,8 +3,9 @@ title: "查找方法 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset21::Seek
 - Recordset21::raw_Seek
-helpviewer_keywords: Seek method [ADO]
+helpviewer_keywords:
+- Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2e6e7d303e8cf1bad6edc21b22832ab76df5244
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: af29a65772019a31c495fedc546b204e98455809
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seek-method"></a>查找方法
 搜索的索引[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)快速找到的行与匹配的指定的值，并更改为该行的当前行位置。  

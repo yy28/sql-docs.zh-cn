@@ -1,5 +1,5 @@
 ---
-title: "用户角色 |Microsoft 文档"
+title: "用户角色 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0abefa916dda5690d033bc9cd74ac5f75245d408
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-roles"></a>用户角色
   本节介绍 Change Data Capture Service for Oracle by Attunity 的用户角色。 介绍的角色包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色、Windows 角色或 Oracle 数据库角色。  
@@ -147,7 +146,7 @@ ms.lasthandoff: 08/03/2017
   
  下表描述应向日志挖掘用户授予的所需权限：  
   
--   选择\<any 捕获表 >  
+-   SELECT on \<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   
@@ -181,4 +180,3 @@ ms.lasthandoff: 08/03/2017
  永远不会存储此用户的凭据。 每当需要这些凭据时 CDC 设计器控制台将请求这些凭据，并且将为其余的用户界面会话保存它们。  
   
   
-

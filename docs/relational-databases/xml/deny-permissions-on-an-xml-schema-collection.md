@@ -2,27 +2,33 @@
 title: "拒绝对 XML 架构集合的权限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: denying permissions [SQL Server], XML server collections
+helpviewer_keywords:
+- denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 199cddd16d3ae32bc4b1c292c6adf38326abee26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f671b78f43515a1968b384660df5b13fc933b252
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>拒绝对 XML 架构集合的权限
-  可以拒绝创建新 XML 架构集合或使用现有 XML 架构集合的权限。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+可以拒绝创建新 XML 架构集合或使用现有 XML 架构集合的权限。  
   
 ## <a name="denying-permission-to-create-an-xml-schema-collection"></a>拒绝创建 XML 架构集合的权限  
  可以通过下列方式拒绝创建 XML 架构集合的权限：  

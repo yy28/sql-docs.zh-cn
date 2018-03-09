@@ -1,10 +1,11 @@
 ---
-title: "LockTypeEnum |Microsoft 文档"
+title: LockTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: LockTypeEnum
-helpviewer_keywords: LockTypeEnum enumeration [ADO]
+f1_keywords:
+- LockTypeEnum
+helpviewer_keywords:
+- LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 528d26feb0037a3717ff7b1a9b05606e3ecf37c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9fe62c251092eb182925de0fa7b6d70c359a25d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 指定的编辑期间在记录上放置的锁的类型。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|指示开放式批量更新。 批处理更新模式，所需。|  
 |**adLockOptimistic**|3|指示乐观锁定，记录的记录。 提供程序使用乐观锁定，锁定记录，仅在调用[更新](../../../ado/reference/ado-api/update-method.md)方法。|  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |**adLockUnspecified**|-1|未指定锁的类型。 克隆，具有相同的锁类型与原始创建克隆。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

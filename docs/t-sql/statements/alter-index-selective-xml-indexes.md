@@ -8,21 +8,23 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b8ee79d871f207b59ccaf5cc0562d7e125e596a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 9f875f7d34c568bc1156c5f8bce60d893fce8039
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX（选择性 XML 索引）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -142,20 +144,20 @@ identifier
  [使用**(** \<index_options > **)**]  
  你只能指定\<index_options > 当你使用 ALTER INDEX 不带 FOR 子句。 在您使用 ALTER INDEX 添加或删除索引中的路径时，索引选项将不是有效的参数。 有关索引选项的信息，请参阅[CREATE XML INDEX &#40;选择性 XML 索引 &#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  在您运行 ALTER INDEX 语句时，始终重新生成选择性 XML 索引。 请务必考虑此过程对服务器资源的影响。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  若要运行 ALTER INDEX，需要对表或视图拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例说明 ALTER INDEX 语句。 该语句将路径 `'/a/b/m'` 添加到索引的 XQuery 部分，并且从在 [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md) 主题的示例中创建的索引的 SQL 部分删除路径 `'/a/b/e'`。 要删除的路径由在创建时提供给它的名称标识。  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -167,7 +169,7 @@ FOR
   
  下面的示例说明指定索引选项的 ALTER INDEX 语句。 允许索引选项，因为该语句未使用 FOR 子句来添加或删除路径。  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 PAD_INDEX = ON;  

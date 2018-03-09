@@ -2,15 +2,13 @@
 title: "内容类型 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,19 +28,20 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-types-data-mining"></a>内容类型（数据挖掘）
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，在模型中使用挖掘结构中的列时，可以定义该列的物理数据类型和逻辑内容类型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，在模型中使用挖掘结构中的列时，可以定义该列的物理数据类型和逻辑内容类型。  
   
  “数据类型  ”确定在您创建挖掘模型时算法如何处理这些列中的数据。 定义列的数据类型可为算法提供有关列中的数据类型以及如何处理数据的信息。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的每种数据类型均支持用于数据挖掘的一种或多种内容类型。  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 11/17/2017
  除了前面列出的可通用于所有模型的内容类型以外，对于某些数据类型，还可以使用已分类列定义内容类型。 有关已分类列的详细信息，请参阅[已分类列（数据挖掘）](../../analysis-services/data-mining/classified-columns-data-mining.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [内容类型 (DMX)](../../dmx/content-types-dmx.md)   
+ [内容类型 &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
  [数据类型 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [数据类型 &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
  [更改挖掘结构的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   

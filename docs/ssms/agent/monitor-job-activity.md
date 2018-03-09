@@ -3,8 +3,11 @@ title: "监视作业活动 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 469142ab52bedda92cba1650982afbc6809b77ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b25b8b95fa950f7764272d2e2a47ebea4e26a78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitor-job-activity"></a>监视作业活动
-可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业活动监视器监视在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的实例中定义的所有作业的当前活动。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业活动监视器监视在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的实例中定义的所有作业的当前活动。  
   
 ## <a name="sql-server-agent-sessions"></a>SQL Server 代理会话  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 每当服务启动时，代理都会创建新的会话。 创建新会话后，将用所有现有已定义的作业填充 **msdb** 数据库中的 **sysjobactivity** 表。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理重新启动时，此表将保留作业的上一次活动。 每个会话均记录从作业开始到作业结束的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的正常作业活动。 有关这些会话的信息存储在 **msdb** 数据库的 **syssessions** 表中。  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
 也可以使用存储过程 **sp_help_jobactivity** 查看当前会话的作业活动。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

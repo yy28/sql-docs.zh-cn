@@ -3,10 +3,10 @@ title: "卸载分析平台系统修补程序 (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c9ab596d-3f5a-48e2-bce7-c9be99b8c23b
 caps.latest.revision: "21"
-ms.openlocfilehash: 04740eeccc1b7837c278ce0041cc1e6f78fd4c60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32d733f2e05855eb361095d23d6c34acefd343dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>卸载分析平台系统修补程序
 以下步骤介绍如何卸载以前安装的分析平台系统修补程序。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
 若要执行这些步骤，你将需要：  
   
 -   有权访问管理控制台监视设备分析平台系统登录。  

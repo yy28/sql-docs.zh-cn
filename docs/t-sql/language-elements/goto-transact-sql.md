@@ -1,5 +1,5 @@
 ---
-title: "GOTO (Transact SQL) |Microsoft 文档"
+title: GOTO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GOTO
 - GOTO_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - skipping statements
 - Transact-SQL statements, skipping
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - statements [SQL Server], skipping
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9dbabcc0fe5f9573554384549023ab8395b87762
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e4420f83c9cb36ea9c8dfb2f9cae6586d7089047
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,13 +53,13 @@ GOTO label
 ```  
   
 ## <a name="arguments"></a>参数  
- *标签*  
+ *label*  
  如果 GOTO 语句指向该标签，则其为处理的起点。 标签必须遵循的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 无论是否使用 GOTO 语句，标签均可作为注释方法使用。  
   
 ## <a name="remarks"></a>注释  
  GOTO 可出现在条件控制流语句、语句块或过程中，但它不能跳转到该批以外的标签。 GOTO 分支可跳转到定义在 GOTO 之前或之后的标签。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  GOTO 语句的权限默认情况下授予任何有效用户。  
   
 ## <a name="examples"></a>示例  
@@ -84,10 +86,10 @@ Branch_Three:
   
 ## <a name="see-also"></a>另请参阅  
  [控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [开始...结束 &#40;Transact SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [中断 &#40;Transact SQL &#41;](../../t-sql/language-elements/break-transact-sql.md)   
  [继续 &#40;Transact SQL &#41;](../../t-sql/language-elements/continue-transact-sql.md)   
- [如果...其他 &#40;Transact SQL &#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
  [WAITFOR &#40;Transact SQL &#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
  [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md)  
   

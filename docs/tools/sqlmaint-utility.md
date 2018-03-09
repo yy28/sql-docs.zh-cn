@@ -2,9 +2,12 @@
 title: "sqlmaint 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqlmaint
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87b232709f63a1a4041a057cb5a6c275bc9835b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
-  如果成功运行，则**sqlmaint** 实用工具可以对一个或多个数据库执行一组指定的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlmaint**实用程序执行一组指定的一个或多个数据库上的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] 将使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划功能代替此实用工具。 有关维护计划的详细信息，请参阅 [维护计划](../relational-databases/maintenance-plans/maintenance-plans.md)。  
@@ -83,7 +86,7 @@ number[minutes | hours | days | weeks | months]
  指定返回 **sqlmaint** 的语法关系图。 此参数必须单独使用。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 。 指定要连接到该服务器上 *命名实例的***\\***server_name* instance_name [!INCLUDE[ssDE](../includes/ssde-md.md)] 。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 。 指定*server_name***\\***instance_name*连接到的命名实例[!INCLUDE[ssDE](../includes/ssde-md.md)]在该服务器上。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
   
  **-U** *login_ID*  
  指定连接服务器时使用的登录 ID。 如果未提供， **sqlmaint** 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证。 如果 *login_ID* 包含特殊字符，则必须用双引号 (") 引起来；否则，双引号为可选。  
@@ -146,7 +149,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  指定在 **-D** 指定的数据库中运行带 NOINDEX 选项的 DBCC CHECKALLOC 语句。 有关详细信息，请参阅 [DBCC CHECKALLOC (Transact-SQL)](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
   
  **-CkCat**  
- 指定在 **-D**指定的数据库中运行 DBCC CHECKCATALOG (Transact-SQL) 语句。 有关详细信息，请参阅 [DBCC CHECKCATALOG (Transact-SQL)](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)。  
+ 指定在 **-D** 指定的数据库中运行 DBCC CHECKCATALOG (Transact-SQL) 语句。 有关详细信息，请参阅 [DBCC CHECKCATALOG (Transact-SQL)](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)。  
   
  **-UpdOptiStats** *sample_percent*  
  指定对数据库中的每个表运行下列语句：  

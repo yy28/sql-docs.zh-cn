@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ebf88408f523594fc9a74f49d5d613a2d059b36
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 43d5425678270fb224b0a55e70c5f7928545ffaa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="change-domain-values"></a>更改域值
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中更改和增加知识库中的元数据。 通过知识发现生成知识，将知识导入到知识库或域中，或者使知识基于其他知识库之后，您可以通过交互方式更改数据值。 知识库生成不仅利用计算机辅助过程，而且向您提供了一种方法，供您使用您的知识来验证数据值和按以下方式更改数据值：  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能更改域值。  
   
 ##  <a name="Change"></a> 更改域值  
@@ -90,20 +90,20 @@ ms.lasthandoff: 11/20/2017
   
     -   **将所选域值设为其组的前导值**：若要更改该组的前导值，请在组中选择未指定为前导值的一个值，然后单击 **“将所选域值设为其组的前导值”** 按钮。 这会将前导值设置为另一个值的替代值。 只有将两个或更多属于组的值设置为同义词，并且您要更改 DQS 所指定的主导值时，此操作才有效。 请注意，前导值由蓝色行且值由粗体显示来指示。  
   
-7.  **拼写检查器**：如果值有红色的波浪下划线，则拼写检查器正在建议对值的更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为（或仍保持为）错误，并且更正将被添加到 **“更正为”** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 和 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
+7.  **拼写检查器**：如果值有红色的波浪下划线，则拼写检查器正在建议对值的更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为（或仍保持为）错误，并且更正将被添加到 **“更正为”** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../data-quality-services/set-domain-properties.md)。  
   
     > [!NOTE]  
     >  若要使用拼写检查器，您或者可以在 **“域属性”** 页中启用它，或者如果已在 **“域属性”** 页中禁用它，则可以在 **“域值”** 页中单击 **“启用/禁用拼写检查器”** 图标以便在该页上启用它。  
   
 8.  **添加新的域值**：单击以在行尾添加一行。 在输入值后，该行将以字母顺序重新定位，并将通过在前面加上星号字符定义为新条目。  
   
-9. **从 Excel 导入域值**：若要从 Excel 电子表格添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入域值”**，。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 有关详细信息，请参阅 [Import Values from an Excel File into a Domain](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
+9. **从 Excel 导入域值**：若要从 Excel 电子表格添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入域值”**，。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 有关详细信息，请参阅 [将值从 Excel 文件导入到域](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
 10. **从 Excel 导入项目值**：若要从数据质量项目添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入项目值”**。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 选择您从中导入值的项目，然后单击 **“确定”**。 将显示导入的值。 单击 **“完成”**。 有关详细信息，请参阅“将项目值导入到域中”。  
   
 11. **删除所选域值**：若要从域中删除一个或多个现有值，请在“值”表中选择值，然后单击 **“删除所选域值”** 图标。 无法删除 DQS_NULL 的项，因此，如果您选择要删除的多个值，并且 DQS_NULL 的项是其中之一，则操作将失败。  
   
-12. 单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
+12. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
 ##  <a name="FollowUp"></a> 跟进：更改域值后  
  在更改域值后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  

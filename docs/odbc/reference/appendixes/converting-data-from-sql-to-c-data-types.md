@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fef5a663ecbb3ec1f162dcf453691f04183d732
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2133c6b155b163b971f7049cdd8238f091669dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>将数据从 SQL 转换为 C 数据类型
 在应用程序调用**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**，驱动程序从数据源检索数据。 如果有必要，它将数据从转换中的驱动程序检索到到由指定的数据类型的数据类型*TargetType*中的参数**SQLBindCol**或**SQLGetData。** 最后，它指向的位置中存储数据时*TargetValuePtr*中的参数**SQLBindCol**或**SQLGetData** （和 ARD SQL_DESC_DATA_PTR 字段）。  

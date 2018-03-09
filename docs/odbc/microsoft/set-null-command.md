@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ddc4b8a31a50c2f8ac0da02ffeaf2701a8a3e80
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1050db2b6a50fc794626b6017bd26af05f458a8a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-null-command"></a>SET NULL 命令
 确定如何支持 null 值的 ALTER TABLE-SQL、 创建表的 SQL 和插入的 SQL 命令。  
@@ -45,7 +45,7 @@ SET NULL ON | OFF
   
  此外指定它插入-SQL 将插入空值到插入-SQL VALUE 子句中不包含任何列。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ALTER TABLE、 CREATE TABLE 和 INSERT-SQL 支持 SET NULL 影响仅如何 null 值。 其他命令不会受到设置为 NULL。  
   
 ## <a name="see-also"></a>另请参阅  

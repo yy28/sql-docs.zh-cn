@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 059fbfebd22c23be1976bdd9b398e59b484dd397
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe04cae6783949c517a9a75a715ea4250577643c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>显示参数值的隐藏数据集 - 多维数据
   报表可能包括默认在“报表数据”窗格中不显示的自动生成的数据集（也称为隐藏数据集）。 这些数据集是用下列方法创建的：  

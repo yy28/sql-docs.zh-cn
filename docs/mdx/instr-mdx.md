@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5638c358-47da-40ad-b988-1a5214c05492
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4772f212c075cec7b0acd239833604bd2213d3c0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7a6b5a1a987662fbe4ec0bcab4241ac0d6ff3109
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +61,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |找不到 String2|零 (0)|  
 |start 大于 Len(String2)|零 (0)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 > [!WARNING]  
 >  **Instr**始终执行不区分大小写比较。  
@@ -110,7 +110,7 @@ from [Adventure Works]
 |uppercase found in lowercase string|16|  
 |searched string is empty|0|  
 |searched string is null|未定义|  
-|search string is empty|1|  
+|search string is empty|@shouldalert|  
 |search string is empty start 10|10|  
 |search string is null|未定义|  
 |found from start 10|16|  

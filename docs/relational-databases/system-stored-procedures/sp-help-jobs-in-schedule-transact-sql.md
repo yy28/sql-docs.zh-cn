@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
 - sp_help_jobs_in_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobs_in_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff12f4e1ee3f994a74360969cacd51d9e479a70e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aac7c4d1cb1199f17e060c9c9d0d4437d8a3220c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  将列出其信息的计划的标识符。 *schedule_id*是**int**，无默认值。 任一*schedule_id*或*schedule_name*可指定。  
   
- [  **@schedule_name =** ] *schedule_name*  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  将列出其信息的计划的名称。 *schedule_name*是**sysname**，无默认值。 任一*schedule_id*或*schedule_name*可指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -60,14 +63,14 @@ sp_help_jobs_in_schedule
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业的唯一 ID。|  
-|**originating_server**|**nvarchar (30)**|作业来自的服务器的名称。|  
+|**originating_server**|**nvarchar(30)**|作业来自的服务器的名称。|  
 |**名称**|**sysname**|作业的名称。|  
-|**启用**|**tinyint**|指示是否启用要执行的作业。|  
-|**description**|**nvarchar(512)**|对作业的说明。|  
+|**enabled**|**tinyint**|指示是否启用要执行的作业。|  
+|**说明**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
-|**类别**|**sysname**|作业类别。|  
+|**category**|**sysname**|作业类别。|  
 |**所有者**|**sysname**|作业所有者。|  
-|**notify_level_eventlog**|**int**|位掩码，它表示在何种情况下通知事件应记录到 Microsoft Windows 应用程序日志中。 可以是下列值之一：<br /><br /> **0** = 从不<br /><br /> **1** = 当作业成功<br /><br /> **2** = 当作业失败时<br /><br /> **3** = 当作业完成 （不考虑作业结果中） 时|  
+|**notify_level_eventlog**|**int**|位掩码，它表示在何种情况下通知事件应记录到 Microsoft Windows 应用程序日志中。 可以是下列值之一：<br /><br /> **0** = Never<br /><br /> **1** = 当作业成功<br /><br /> **2** = 当作业失败时<br /><br /> **3** = 当作业完成 （不考虑作业结果中） 时|  
 |**notify_level_email**|**int**|位掩码，它指示当作业完成时，在什么情况下应该发送一个通知电子邮件。 可能的值为相同**notify_level_eventlog**。|  
 |**notify_level_netsend**|**int**|位掩码，它表示当作业完成时，在什么情况下应该发送一个网络消息。 可能的值为相同**notify_level_eventlog**。|  
 |**notify_level_page**|**int**|位掩码，它表示当作业完成时，在什么情况下应该发送一个呼叫。 可能的值为相同**notify_level_eventlog**。|  
@@ -90,12 +93,12 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|作业具有的作业步骤数。|  
 |**has_schedule**|**int**|作业具有的作业计划数。|  
 |**has_target**|**int**|作业具有的目标服务器数。|  
-|**type**|**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业具有任何目标服务器。|  
+|**类型**|**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业具有任何目标服务器。|  
   
 ## <a name="remarks"></a>注释  
  此过程列出有关附加到指定计划的作业的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -122,9 +125,9 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 代理存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule 将 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4656e1db61779909827535ce6d718e3300211c51
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe9dcb6eb8401348212fbaaae7c5f57aa4fccc99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>向数据集添加筛选器（报表生成器和 SSRS）
   向数据集添加筛选器可以在从外部数据源检索数据后限制报表中的数据。 在向数据集添加筛选器后，所有报表部件或数据区域将都只使用与筛选条件匹配的数据。  

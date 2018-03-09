@@ -1,5 +1,5 @@
 ---
-title: "数据源 |Microsoft 文档"
+title: "数据源 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/27/2016
 ms.prod: sql-non-specified
@@ -15,19 +15,18 @@ ms.topic: article
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: eccbd3683393dfd27665fe827af74100cef415db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-sources"></a>数据源
+# <a name="data-sources"></a>“数据源”
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包括一个可在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用的设计时对象：数据源。  
   
  数据源对象是对连接的引用，它至少包括一个连接字符串和一个数据源标识符。 数据源对象还可以包括其他元数据，如说明、名称、用户名和密码。  
@@ -52,4 +51,3 @@ ms.lasthandoff: 09/27/2017
  在数据源和引用它的连接管理器之间没有依赖关系。 即使数据源不再是项目的一部分，包仍然有效，因为有关该数据源的信息（例如其连接类型和连接字符串）已包括在包定义中。  
   
   
-

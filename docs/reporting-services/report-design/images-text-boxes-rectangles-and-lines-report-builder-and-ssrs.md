@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea493c80dba54d0c9b497c7c41423d24764a9533
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: addd20b5bf083ad99b0d877f519f86170ac2a57c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>图像、文本框、矩形和线条（报表生成器和 SSRS）
   除了如表、矩阵和图表这样的数据区域外， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表还可以使用如图像、文本框和矩形等其他报表项增添视觉吸引力、突出显示关键信息或提供相关信息。 您可以更改报表项的格式设置。 例如，可以添加边框或填充、更改初始可见性或方向，或指定报表项的准确大小和位置。  

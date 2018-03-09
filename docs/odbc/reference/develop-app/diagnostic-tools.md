@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53dc476875b70c221a0fd78d0da4995f75a078b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3b72462175e33a47325cc563f35a56afd833f20d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-tools"></a>诊断工具
 两种工具可以帮助进行诊断 ODBC 应用程序中的问题。 两者都可以从 ODBC 管理器中使用和实现由驱动程序管理器。 *跟踪*提供一种方式来记录到日志文件的函数调用序列。 Visual Studio 分析器允许分布式环境中分析的组件的交互有关的信息。  

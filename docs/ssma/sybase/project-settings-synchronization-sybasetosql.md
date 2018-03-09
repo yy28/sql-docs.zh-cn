@@ -3,8 +3,11 @@ title: "项目设置 （同步） (SybaseToSQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c27c5db00165b0664e9d3d42fbfe104264cde147
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 23b91803d96e77e171bb32e4af7d42dc45872b14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>项目设置 （同步） (SybaseToSQL)
 同步页**项目设置**对话框中包含自定义 SSMA 如何将数据库对象，如表和存储的过程加载到设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
 -   若要对指定为当前项目中，设置**工具**菜单上，选择**项目设置**，然后选择**同步**在左窗格的底部。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **尝试**  
 指定的 SSMA 应加载到对象时的尝试次数[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 不会加载到的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中当前的尝试将重试直到 SSMA 达到当前的同步过程中最大次数。  
   

@@ -3,8 +3,9 @@ title: "Append 方法 （ADOX 过程） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Procedures::Append
 - Procedures::raw_Append
-helpviewer_keywords: Append method [ADOX]
+helpviewer_keywords:
+- Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac280aebcf98c593124cabb6876a0dd5b6a56826
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cdf43784501659e3fd4da883ddeac33439a30719
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法 （ADOX 过程）
 添加新[过程](../../../ado/reference/adox-api/procedure-object-adox.md)对象传递给[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  

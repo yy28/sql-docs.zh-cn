@@ -5,24 +5,26 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.mds.configmanager.webconfigpg.f1
+f1_keywords:
+- sql13.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 422b1a28f91bb33705f0cb6592f4a19bb6341e76
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44173e31a611ef050672901c72c090784848fcc0
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>“Web 配置”页（Master Data Services 配置管理器）
   使用“Web 配置”  页配置网站和 Web 应用程序。 也可启用 Data Quality Services。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |**选择**|打开 **“连接到服务器”** 对话框，从中连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择要与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库。|  
 |**SQL Server 实例**|显示承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例的名称。 在您连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择某一数据库之前，此项为空。|  
-|**数据库**|显示与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库的名称。 在您连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择某一数据库之前，此项为空。|  
+|**“数据库”**|显示与所选 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 应用程序相关联的 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 数据库的名称。 在您连接到某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例并选择某一数据库之前，此项为空。|  
   
 ## <a name="enable-dqs-integration"></a>启用 DQS 集成  
   

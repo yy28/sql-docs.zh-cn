@@ -2,15 +2,13 @@
 title: "数据类型 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,25 +16,26 @@ helpviewer_keywords:
 - columns [data mining], data types
 - data mining [Analysis Services], data types
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 380a7208eceb9468e4bca2490f04c79149d4665d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e5d09435546cf0605bb7b70a685021612fd2f9b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-types-data-mining"></a>数据类型（数据挖掘）
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建挖掘模型或挖掘结构时，必须为挖掘结构中的每一列定义数据类型。 数据类型告知分析引擎数据源中的数据是数值还是文本以及应如何处理数据。 例如，如果数据源中包含数值数据，则可以指定是将数字作为整数处理还是使用小数位数来处理。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建挖掘模型或挖掘结构时，必须为挖掘结构中的每一列定义数据类型。 数据类型告知分析引擎数据源中的数据是数值还是文本以及应如何处理数据。 例如，如果数据源中包含数值数据，则可以指定是将数字作为整数处理还是使用小数位数来处理。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持挖掘结构列的以下数据类型：  
   
 |数据类型|支持的内容类型|  
 |---------------|-----------------------------|  
-|**Text**|Cyclical、Discrete、Discretized、Key Sequence、Ordered 和 Sequence|  
+|**文本**|Cyclical、Discrete、Discretized、Key Sequence、Ordered 和 Sequence|  
 |**Long**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time、Ordered、Sequence 和 Time<br /><br /> Classified|  
 |**Boolean**|Cyclical、Discrete 和 Ordered|  
 |**双精度**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time、Ordered、Sequence 和 Time<br /><br /> Classified|  
@@ -59,10 +58,10 @@ ms.lasthandoff: 11/17/2017
  如果更改某一列的数据类型，则必须始终重新处理挖掘结构以及基于该结构的所有挖掘模型。 有时候，如果更改数据类型，则可能无法再在特定的模型中使用该列。 在这种情况下，Analysis Services 将在您重新处理该模型时引发一个错误，或者将处理该模型但忽略该特定列。  
   
 ## <a name="see-also"></a>另请参阅  
- [内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)   
- [内容类型 (DMX)](../../dmx/content-types-dmx.md)   
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [内容类型 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [内容类型 &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [数据类型 &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)   
  [挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)  

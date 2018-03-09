@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) 日志记录 |Microsoft 文档"
+title: "Integration Services (SSIS) 日志 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -32,17 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 22c1126b8d5555dc743f7c8906230cf5dbcb08a8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
@@ -141,7 +140,7 @@ ms.lasthandoff: 08/03/2017
 |**OnVariableValueChanged**|在变量的值更改时写入日志项。|  
 |**OnWarning**|在出现警告时写入日志项。|  
 |**PipelineComponentTime**|对于每个数据流组件，为验证和执行的每个阶段写入日志项。 该日志条目为每个阶段指定处理时间。|  
-|**诊断**<br /><br /> **DiagnosticEx**|写入提供诊断信息的日志项。<br /><br /> 例如，您可以在每次调用外部数据访问接口之前和之后记录消息。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 当你想查找数据流中存在错误的列的列名称时，请记录 **DiagnosticEx** 事件。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。 有关详细信息，请参阅 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 注意：如果你使用 SQL Server 日志提供程序记录 **DiagnosticEx** ，输出可能被截断。 SQL Server 日志提供程序的 **消息** 字段属于 nvarchar(2048) 类型。 若要避免截断，请在记录 **DiagnosticEx** 事件时使用其他日志提供程序。|  
+|**诊断**<br /><br /> **DiagnosticEx**|写入提供诊断信息的日志项。<br /><br /> 例如，您可以在每次调用外部数据访问接口之前和之后记录消息。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 当你想查找数据流中存在错误的列的列名称时，请记录 **DiagnosticEx** 事件。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。 有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 注意：如果你使用 SQL Server 日志提供程序记录 **DiagnosticEx** ，输出可能被截断。 SQL Server 日志提供程序的 **消息** 字段属于 nvarchar(2048) 类型。 若要避免截断，请在记录 **DiagnosticEx** 事件时使用其他日志提供程序。|  
   
  包和很多任务都有可以启用日志记录功能的自定义日志项。 例如，发送邮件任务提供了 **SendMailTaskBegin** 自定义日志项，该日志项在发送邮件任务开始运行时（但在发送电子邮件消息之前）记录信息。 有关详细信息，请参阅 [Custom Messages for Logging](#custom_messages)。  
   
@@ -165,7 +164,7 @@ ms.lasthandoff: 08/03/2017
 3.  选择要在日志中捕获的事件以及每个事件的日志架构信息。 有关详细信息，请参阅 [使用保存的配置文件配置日志记录](#saved_config)。  
   
 ### <a name="configuration-of-log-provider"></a>日志提供程序的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  作为在包中实现日志记录的一个步骤来创建和配置日志提供程序。  
   
@@ -177,7 +176,7 @@ ms.lasthandoff: 08/03/2017
  数据流任务提供了许多可用于监视和调整性能的自定义日志项。 例如，您可以监视可能会导致内存泄漏的组件，或者跟踪特定组件运行所用的时间。 有关这些自定义日志项的列表和日志记录输出示例，请参阅 [Data Flow Task](../../integration-services/control-flow/data-flow-task.md)。  
   
 #### <a name="capture-the-names-of-columns-in-which-errors-occur"></a>捕获在其中发生错误的列的名称  
- 当在数据流中配置错误输出时，默认情况下错误输出仅提供在其中发生错误的列的数字标识符。 有关详细信息，请参阅 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)。  
+ 当在数据流中配置错误输出时，默认情况下错误输出仅提供在其中发生错误的列的数字标识符。 有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。  
   
  可以通过启用日志记录并选择 **DiagnosticEx** 事件来查找列名称。 此事件将数据流沿袭映射写入到日志中。 然后可以在此沿袭映射中从其标识符查找列名称。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。  
   
@@ -234,7 +233,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  在 **“提供程序类型”** 列表中，选择一个日志提供程序，然后单击 **“添加”**。  
   
-4.  在**配置**列中，选择连接管理器，或单击**\<新连接 >**为日志提供程序创建新的连接管理器中的相应的类型。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
+4.  在“配置”列中，选择连接管理器或单击“\<新建连接>”以为日志提供程序新建一个适当类型的连接管理器。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
   
     -   对于文本文件，请使用文件连接管理器。 有关详细信息，请参阅 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -242,7 +241,7 @@ ms.lasthandoff: 08/03/2017
   
     -   对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-    -   对于 Windows 事件日志，无需执行任何操作。 [!INCLUDE[ssIS](../../includes/ssis-md.md)]自动创建日志。  
+    -   对于 Windows 事件日志，无需执行任何操作。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 会自动创建日志。  
   
     -   对于 XML 文件，请使用文件连接管理器。  
   
@@ -262,7 +261,7 @@ ms.lasthandoff: 08/03/2017
   
 9. 在“详细信息”选项卡上，单击“保存”。 将显示 **“另存为”** 对话框。 找到要将日志记录配置保存到的文件夹，为新的日志配置键入文件名，然后单击 **“保存”**。  
   
-10. 单击 **“确定”**。  
+10. 单击“确定” 。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
@@ -287,7 +286,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="container"></a> 配置“容器”窗格中的选项  
  可以使用 **“配置 SSIS 日志”** 对话框的 **“容器”** 窗格，为包及其容器启用日志记录。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **“配置 SSIS 日志”**  
  选中层次结构视图中的该复选框可以为日志记录启用包和包容器：  
   
@@ -302,11 +301,11 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="provider"></a> 配置“提供程序和日志”选项卡上的选项  
  可以使用“配置 SSIS 日志”对话框的“提供程序和日志”选项卡，创建和配置用于捕获运行时事件的日志。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **提供程序类型**  
  从列表中选择日志提供程序的类型。  
   
- **添加**  
+ **“添加”**  
  将指定类型的日志添加到包的日志提供程序集合中。  
   
  **名称**  
@@ -315,8 +314,8 @@ ms.lasthandoff: 08/03/2017
  **Description**  
  说明字段是可编辑的。 可以单击该字段，然后修改日志的默认说明。  
   
- **配置**  
- 在列表中，选择一个现有的连接管理器，或单击\<**新的连接...**> 创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
+ **Configuration**  
+ 在列表中选择一个现有的连接管理器或单击\<“新建连接...”> 以创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
   
  相关主题： [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -326,7 +325,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="detail"></a> 配置“详细信息”选项卡上的选项  
  可以使用 **“配置 SSIS 日志”** 对话框的 **“详细信息”** 选项卡，指定要启用日志记录的事件以及要记录的详细信息。 所选的信息适用于包中的所有日志提供程序。 例如，无法将一些信息写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而在文本文件中写入另外一些信息。  
   
-#### <a name="options"></a>选项  
+#### <a name="options"></a>“常规”  
  **事件**  
  为事件启用或禁用日志记录功能。  
   
@@ -336,10 +335,10 @@ ms.lasthandoff: 08/03/2017
  **高级**  
  选中或清除要记录的事件，以及选中或清除要为每个事件记录的信息。 单击 **“基本”** 可以隐藏除事件列表之外的所有日志记录详细信息。 日志记录可以包含以下信息：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Computer**|发生所记录事件的计算机的名称。|  
-|**运算符**|启动包的人员的用户名。|  
+|**“运算符”**|启动包的人员的用户名。|  
 |**SourceName**|发生所记录事件的包、容器或任务的名称。|  
 |**SourceID**|发生所记录事件的包、容器或任务的全局唯一标识符 (GUID)。|  
 |**ExecutionID**|包执行实例的全局唯一标识符。|  
@@ -417,10 +416,10 @@ ms.lasthandoff: 08/03/2017
 |“日志记录级别”|Description|  
 |-------------------|-----------------|  
 |InclusionThresholdSetting|关闭日志记录。 仅记录包执行状态。|  
-|基本|除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
+|“基本”|除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
 |运行时沿袭|收集跟踪数据流中的沿袭信息所需的数据。 可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。|  
-|性能|仅记录性能统计信息、OnError 和 OnWarning 事件。<br /><br /> **“执行性能”** 报表显示包数据流组件的活动时间和总时间。 仅当上次包执行的日志记录级别设置为 **“性能”** 或 **“详细”**时，此信息才可用。 有关详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 视图显示数据流组件在执行的每个阶段的开始时间和结束时间。 仅当包执行的日志记录级别设置为 **“性能”** 或 **“详细”**时，此视图才会为这些组件显示以上信息。|  
-|“详细”|记录所有事件，包括自定义事件和诊断事件。<br /><br /> 自定义事件包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务记录的那些事件。 有关自定义事件的详细信息，请参阅 [Custom Messages for Logging](#custom_messages)。<br /><br /> 诊断事件的一个例子就是“DiagnosticEx”  事件。 每当执行包任务执行子包时，此事件均将捕获传递给子包的参数值。<br /><br /> “DiagnosticEx”事件还有助于获取其中出现行级错误的列的名称。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> **DiagnosticEx** 的消息列的值是 XML 文本。 若要查看包执行的消息文本，请查询 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)视图。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 每当数据流组件向下游组件发送数据时， [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 视图就会显示一行。 日志记录级别必须设置为 **“详细”** ，才能在该视图中捕获此信息。|  
+|“性能”|仅记录性能统计信息、OnError 和 OnWarning 事件。<br /><br /> **“执行性能”** 报表显示包数据流组件的活动时间和总时间。 仅当上次包执行的日志记录级别设置为 **“性能”** 或 **“详细”**时，此信息才可用。 有关详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 视图显示数据流组件在执行的每个阶段的开始时间和结束时间。 仅当包执行的日志记录级别设置为 **“性能”** 或 **“详细”**时，此视图才会为这些组件显示以上信息。|  
+|“详细”|记录所有事件，包括自定义事件和诊断事件。<br /><br /> 自定义事件包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务记录的那些事件。 有关自定义事件的详细信息，请参阅 [Custom Messages for Logging](#custom_messages)。<br /><br /> 诊断事件的一个例子就是“DiagnosticEx”  事件。 每当执行包任务执行子包时，此事件均将捕获传递给子包的参数值。<br /><br /> “DiagnosticEx”事件还有助于获取其中出现行级错误的列的名称。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> **DiagnosticEx** 的消息列的值是 XML 文本。 若要查看包执行的消息文本，请查询 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)视图。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 每当数据流组件向下游组件发送数据时， [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 视图就会显示一行。 日志记录级别必须设置为 **“详细”** ，才能在该视图中捕获此信息。|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>使用“自定义日志记录级别管理”对话框来创建和管理自定义日志记录级别  
  可以创建只收集想要的统计信息和事件的自定义日志记录级别。 还可以选择捕获事件上下文，包括变量值、连接字符串和组件属性。 运行包时，可在任何可以选择内置日志记录级别的位置处，选择自定义日志记录级别。  
@@ -680,11 +679,10 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 |---------------|-----------------|  
 |**XMLOperation**|提供任务所执行的操作的相关信息|  
 
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  下面的列表包含一些链接，这些链接指向的主题说明如何执行与日志记录功能相关的任务。  
   
 -   [Integration Services 包记录的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## <a name="related-content"></a>相关内容  
  [用于完整和详细日志记录的 DTLoggedExec 工具（CodePlex 项目）](http://go.microsoft.com/fwlink/?LinkId=150579)  
-

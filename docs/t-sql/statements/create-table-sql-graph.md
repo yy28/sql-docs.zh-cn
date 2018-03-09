@@ -1,5 +1,5 @@
 ---
-title: "创建表 （SQL 图形） |Microsoft 文档"
+title: CREATE TABLE (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -23,7 +24,8 @@ f1_keywords:
 - EDGE_TSQL
 - AS_EDGE
 - AS_EDGE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - graph
 - SQL graph
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - EDGE
 - SQL graph, CREATE TABLE statement
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 92a586a3612934a4f66e5a616d969454afc87eac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: fe8ace1b8f8c55c14d4807514fcb1436f6966fed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-sql-graph"></a>创建表 （SQL 图形）
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -125,6 +127,6 @@ CREATE TABLE
 
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
- [INSERT （SQL 图形）](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [使用 SQL Server 2017 处理的关系图](../../relational-databases/graphs/sql-graph-overview.md)
 

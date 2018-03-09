@@ -2,16 +2,13 @@
 title: "从客户端应用程序 (Analysis Services) 连接 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +16,20 @@ f1_keywords:
 - sql13.swb.connecttoas.connectionproperties.f1
 - sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0310a1012153fae8ecb364e63a270ce0846af277
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3aaccfe1f58568bde946c9ddf112b3e83bf8b9e1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
-  如果您不熟悉 Analysis Services，则在了解了本主题中的信息之后，您就可以通过常用工具和应用程序连接到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+如果您不熟悉 Analysis Services，则在了解了本主题中的信息之后，您就可以通过常用工具和应用程序连接到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  
   
 -   [使用 SQL Server Management Studio (SSMS) 进行连接](#bkmk_SSMS)  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [授予对对象和操作的访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授权访问对象和操作 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 进行连接  
  在 SSMS 中连接到 Analysis Services 时，能够以交互方式管理服务器实例和数据库。 还可以运行 XMLA 或 MDX 查询以便执行管理任务或检索数据。 与只在发出查询时才加载数据库的其他工具和应用程序相比，SSMS 会在您连接服务器时加载所有数据库，前提是您拥有查看数据库的权限。 这意味着，如果您在服务器上保存有大量的表格数据库，所有这些数据库都会在您使用 SSMS 连接时加载至系统内存。  
@@ -132,7 +130,7 @@ ms.lasthandoff: 11/17/2017
   
      若要进行测试，请在远程计算机上使用 Excel 或 SSMS，并且指定 Analysis Services 实例使用的 IP 地址和端口。 如果您可以连接，则防火墙规则对实例是有效的并且实例允许远程连接。  
   
-     此外，在使用 TCP/IP 作为连接协议时，请记住 Analysis Services 要求客户端连接源自相同的域或可信域。 如果连接穿过了安全边界，您很可能需要配置 HTTP 访问。 有关详细信息，请参阅[在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+     此外，在使用 TCP/IP 作为连接协议时，请记住 Analysis Services 要求客户端连接源自相同的域或可信域。 如果连接穿过了安全边界，您很可能需要配置 HTTP 访问。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
 -   某些工具可以连接，而其他工具却不能？ 该问题可能是客户端库的版本错误导致的。 您可以从 SQL Server 功能包下载页获取客户端库。  
   
@@ -143,7 +141,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>另请参阅  
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [模拟 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [创建数据源（SSAS 多维）](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [模拟](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [创建数据源 &#40;SSAS 多维 &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

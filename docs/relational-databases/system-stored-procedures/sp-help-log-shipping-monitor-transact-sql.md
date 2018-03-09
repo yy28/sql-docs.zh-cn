@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
 - sp_help_log_shipping_monitor
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_monitor
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_monitor
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85677235addc7a6508f482dfa7f944518efddd0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 96e9b3f2fa8e040789b15e0969fbb4de6ccb9e00
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +57,7 @@ sp_help_log_shipping_monitor
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|日志传送数据库代理的共同状态。<br /><br /> **0** = 正常和无代理失败。<br /><br /> **1**否则 =。|  
 |**is_primary**|**bit**|指示该行是否用于主数据库：<br /><br /> **1** = 行是针对主数据库。<br /><br /> **0** = 行适用于的辅助数据库。|  
-|**服务器**|**sysname**|此数据库所在的主服务器或辅助服务器的名称。|  
+|服务器|**sysname**|此数据库所在的主服务器或辅助服务器的名称。|  
 |**database_name**|**sysname**|数据库名称。|  
 |**time_since_last_backup**|**int**|最后一次备份日志以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**last_backup_file**|**nvarchar(500)**|上一个成功的备份日志文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
@@ -63,7 +66,7 @@ sp_help_log_shipping_monitor
 |**time_since_last_copy**|**int**|上次复制日志备份以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**last_copied_file**|**nvarchar(500)**|上一次成功复制的日志备份文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**time_since_last_restore**|**int**|上一次还原日志备份以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
-|**last_restored_file**|**nvarchar(500)。**|上一次成功还原的日志备份文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
+|**last_restored_file**|**nvarchar(500).**|上一次成功还原的日志备份文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**last_restored_latency**|**int**|上一次创建备份到还原该备份的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**restore_threshold**|**int**|两次还原操作之间允许的间隔时间（分钟），一旦超过此值，就会生成警报。 **restore_threshold**不能为 NULL。|  
 |**is_restore_alert_enabled**|**bit**|指定是否发生警报时**restore_threshold**超出。 值之一 (**1**)，默认情况下，意味着会生成此警报。<br /><br /> NULL = 信息不可用或者不相关。<br /><br /> 若要设置还原阈值，请使用[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)。|  
@@ -71,11 +74,11 @@ sp_help_log_shipping_monitor
 ## <a name="remarks"></a>注释  
  **sp_help_log_shipping_monitor**必须从运行**master**监视服务器上的数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [有关日志传送 &#40;SQL server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: "计划在 Linux 上使用 cron 的 SSIS 包 |Microsoft 文档"
-description: "本文介绍如何使用cron服务在Linux上安排SQL Server Integration Services（SSIS）软件包。"
+description: "本文介绍 逼 ﹚ 与 cron 服务在 Linux 上的 SQL Server Integration Services (SSIS) 包。"
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -10,24 +10,26 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8678d4abd61ca93e53c217b295650c9d3998fe50
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7543c17a0ac9a1014658f83f0c8595bff2cda608
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>计划 SQL Server Integration Services 包执行在 Linux 上的使用 cron
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 当在 Windows 上运行的是 SQL Server Integration Services (SSIS) 和 SQL Server 时，你可以使用 SQL Server 代理自动 SSIS 包的执行。 当在 Linux 上运行的是 SQL Server 和 SSIS 时，但是，SQL Server 代理程序实用工具不可用来安排在 Linux 上的作业。 相反，你使用 cron 服务，广泛用于 Linux 平台自动执行包。
 
 本文提供了演示如何自动执行 SSIS 包的示例。 编写示例是在 Red Hat Enterprise 上运行。 此代码是类似的其他 Linux 发行版，如 Ubuntu。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 Cron 服务用于运行作业之前，请检查以查看是否它在你的计算机上运行。
 
@@ -78,3 +80,9 @@ Cron 作业是可配置为按指定间隔定期运行的任务。 作业可以�
 下面是输出的部分示例，以帮助解释此文章中的示例：
 
 ![详细的部分 crontab 格式说明](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+
+## <a name="related-content-about-ssis-on-linux"></a>有关在 Linux 上的 SSIS 的相关的内容
+-   [提取、 转换和加载使用 SSIS 的 Linux 上的数据](sql-server-linux-migrate-ssis.md)
+-   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
+-   [使用 ssis conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [限制和 Linux 上的 SSIS 的已知的问题](sql-server-linux-ssis-known-issues.md)

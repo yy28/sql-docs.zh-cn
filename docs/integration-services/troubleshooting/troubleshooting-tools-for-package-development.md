@@ -1,10 +1,13 @@
 ---
-title: "包开发的故障排除工具 |Microsoft 文档"
+title: "包开发的故障排除工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-caps.latest.revision: 65
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: c4c51f83c7e691f9c77c4d035e7dd80ead4f4a94
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 5c47c0b46d9b171c2bf75e11e9e854ed91c68836
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>包开发的故障排除工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中开发包的过程中可用于对包进行故障排除的功能和工具。  
@@ -60,7 +63,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **使用调试窗口**。 在运行具有断点的包时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的调试窗口提供对变量值和状态消息的访问。  
   
--   **查看“进度”选项卡中的信息**。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时控制流的其他信息。 “进度”选项卡按执行顺序列出任务和容器，而且还包括每个任务和容器及包自身的开始时间和结束时间、警告以及错误消息。  
+-   **查看“进度”选项卡中的信息**。[!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时控制流的其他信息。 “进度”选项卡按执行顺序列出任务和容器，而且还包括每个任务和容器及包自身的开始时间和结束时间、警告以及错误消息。  
   
  有关这些功能的详细信息，请参阅 [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md)。  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **捕获处理的行数**。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中运行包时，通过某路径传递的行数将显示在数据流设计器中。 随着数据在路径中的移动，该数量会定期更新。 您还可以将行计数转换添加到数据流中，以捕获变量中的最终行计数。 有关详细信息，请参阅 [Row Count Transformation](../../integration-services/data-flow/transformations/row-count-transformation.md)。  
   
--   **查看“进度”选项卡中的信息**。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时数据流的其他信息。 “进度”选项卡按执行顺序列出数据流组件，而且还包括包的每个阶段的进度（显示为完成百分比）以及写入目标的行数。  
+-   **查看“进度”选项卡中的信息**。[!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时数据流的其他信息。 “进度”选项卡按执行顺序列出数据流组件，而且还包括包的每个阶段的进度（显示为完成百分比）以及写入目标的行数。  
   
  有关这些功能的详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   

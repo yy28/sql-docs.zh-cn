@@ -3,8 +3,9 @@ title: "Microsoft OLE DB 简单的提供程序 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB simple provider
 - OLE DB simple provider [ADO]
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1159651ab4b7198895f4d5192a1b34701dcaac7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae0672fc209e2a31608a36fdef6757bef8d60cf6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 简单的提供程序概述
 Microsoft OLE DB 简单提供程序 (OSP) 允许访问已为其提供程序已编写使用任何数据的 ADO [OLE DB 简单提供程序 (OSP) 工具包](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 简单的提供程序用于访问需要唯一重要的 OLE DB 支持，例如内存中数组或 XML 文档的数据源。

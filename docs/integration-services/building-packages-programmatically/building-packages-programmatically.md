@@ -1,5 +1,5 @@
 ---
-title: "以编程方式生成包 |Microsoft 文档"
+title: "以编程方式生成包 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,22 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b80495b726ac6fdac713ba028629633bf84cc004
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a048e8bef9eeb64288f83f17f0ba9b3f3544a66b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="building-packages-programmatically"></a>以编程方式生成包
   如果您需要动态创建包，或需要在开发环境之外管理和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，则可以采用编程方式对包进行操作。 如果采用这种方法，则有一系列选择：  
@@ -38,14 +36,14 @@ ms.lasthandoff: 08/03/2017
   
  您可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型，以任何托管编程语言编写可创建、配置和执行包的代码。 例如，您可能希望创建元数据驱动的包，它们可以基于所选数据源及其表和列，配置它们的连接或数据源、转换和目标。  
   
- 本节逐行介绍并演示如何以编程方式创建和配置包。 在不太复杂的编程选项的包的范围结束时，你可以只需加载和运行而无需修改现有包中所述[运行和管理包以编程方式](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)。  
+ 本节逐行介绍并演示如何以编程方式创建和配置包。 如果选择复杂性最低的包编程方式，只需加载并运行现有包，不需要进行[以编程方式运行和管理包](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)中所介绍的修改。  
   
  这里没有介绍一种中间方式，即将一个现有包加载为模板，对其进行重新配置（例如，指定一个不同的数据源），然后执行。 您也可以使用本节中的信息，修改包中的现有对象。  
   
 > [!NOTE]  
 >  将现有包用作模板并修改数据流中的现有列时，您可能必须删除现有列并调用受影响组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> 方法。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
  [以编程方式创建包](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
  介绍如何以编程方式创建包。  
   
@@ -79,18 +77,18 @@ ms.lasthandoff: 08/03/2017
  [以编程方式连接数据流组件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
  介绍如何连接两个数据流组件。  
   
- [以编程方式选择输入的列](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [以编程方式选择输入列](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
  介绍如何从数据流中的上游组件提供给组件的输入列中选择输入列。  
   
  [以编程方式保存包](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  介绍如何以编程方式保存包。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>参考  
  [Integration Services 错误和消息引用](../../integration-services/integration-services-error-and-message-reference.md)  
  列出预定义的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误代码及其符号名称和说明。  
   
 ## <a name="related-sections"></a>相关章节  
- [使用脚本扩展包](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [用脚本扩展包](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  讨论如何使用脚本任务扩展控制流，以及如何使用脚本组件扩展数据流。  
   
  [用自定义对象扩展包](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
@@ -101,12 +99,11 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="external-resources"></a>外部资源  
   
--   CodePlex 示例[Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=131204)，www.codeplex.com/MSFTISProdSamples 上  
+-   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=131204)  
   
--   博客文章[性能分析自定义扩展](http://go.microsoft.com/fwlink/?LinkId=238831)，blogs.msdn.com 上的。  
+-   blogs.msdn.com 上的博客文章[自定义扩展插件性能探查](http://go.microsoft.com/fwlink/?LinkId=238831)  
 
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

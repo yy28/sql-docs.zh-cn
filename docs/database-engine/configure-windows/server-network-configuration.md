@@ -2,9 +2,12 @@
 title: "服务器网络配置 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4ed91e4fd96fde43f87f25d351597b875df4550
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-network-configuration"></a>服务器网络配置
-  服务器网络配置任务包括启用协议、修改协议使用的端口或管道、配置加密、配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务、在网络上显示或隐藏 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以及注册服务器主体名称。 大多数情况下，无须更改服务器网络配置。 只在有特殊的网络要求时才需要重新配置服务器网络协议。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]服务器网络配置任务包括启用协议、修改协议使用的端口或管道、配置加密、配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务、在网络上显示或隐藏 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以及注册服务器主体名称。 大多数情况下，无须更改服务器网络配置。 只在有特殊的网络要求时才需要重新配置服务器网络协议。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的网络配置是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器完成的。 对于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用这些产品附带的服务器网络实用工具。  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
   
  在通过 NTLM 进行连接时，还可以使用 SPN 来使客户端身份验证更安全。 有关详细信息，请参阅 [使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)。  
   
-## <a name="sql-server-browser-service"></a>SQL Server Browser 服务  
+## <a name="sql-server-browser-service"></a>SQL Server Browser Service  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务在服务器上运行，可帮助客户端计算机查找 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 无需对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行配置，但是必须采用某些连接方案运行此服务。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的详细信息，请参阅 [SQL Server Browser 服务（数据库引擎和 SSAS）](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)  
   
 ## <a name="hiding-sql-server"></a>隐藏 SQL Server  

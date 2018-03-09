@@ -3,8 +3,9 @@ title: "SQLState 属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Error::GetSQLState
 - Error::SQLState
 - Error::get_SQLState
-helpviewer_keywords: SQLState property
+helpviewer_keywords:
+- SQLState property
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6709e1e538db77b1aed5b281ffd826d90448daf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 13ca3fb822dc6ea79f835a3d50cac847b345c29b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqlstate-property"></a>SQLState 属性
 指示 SQL 状态给定[错误](../../../ado/reference/ado-api/error-object.md)对象。  

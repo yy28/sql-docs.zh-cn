@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_cleanup_temporal_history |Microsoft 文档"
+title: sys.sp_cleanup_temporal_history | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: 
@@ -8,20 +8,21 @@ ms.service: sql-database
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed631f41e1ce49bfa431645b5f439925190198c7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1539ae456b1159cf4fdd458948a905171e3d33aa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="temporal-table---sysspcleanuptemporalhistory"></a>临时表的 sys.sp_cleanup_temporal_history
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 当前临时表所属的架构名称
 
-*row_count_var* [输出]
+*row_count_var* [OUTPUT]
 
 输出参数返回的已删除的行数。 如果历史记录表具有聚集列存储索引，此参数将返回始终为 0。
   
@@ -55,7 +56,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 建议始终依赖于清理内部后台任务删除过期的常规工作负载和一般的数据库上的最小影响的行。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
 
 ## <a name="example"></a>示例

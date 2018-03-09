@@ -14,16 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de12dd7f28eb427429ecc0260ce37707ff0cec99
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 [Ring_buffer 部分](#h2_target_ring_buffer) 包括举例说明如何使用 [Transact-SQL 中的 XQuery](../../xquery/xquery-language-reference-sql-server.md) 将 XML 的字符串复制到关系行集。
 
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必备条件
 
 
 - 请对扩展事件的基础知识有一般性了解，如 [快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)中所述。
@@ -122,7 +122,7 @@ sqlserver      checkpoint_begin   4
 接下来介绍导致之前结果的 CREATE EVENT SESSION。 对于此测试，EVENT...WHERE 子句上的 **package0.counter** 字段用于在计数攀升到 4 后停止计数。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_counter_1]
     ON SERVER 
     ADD EVENT sqlserver.checkpoint_begin   -- Test by issuing CHECKPOINT; statements.
@@ -160,7 +160,7 @@ CREATE EVENT SESSION [event_counter_1]
 接下来介绍用于测试的 CREATE EVENT SESSION。 ADD TARGET 子句之一指定 event_file。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -292,7 +292,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - 若要跟踪多个源操作，可以将第二个 histogram 目标添加到 CREATE EVENT SESSION 语句。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_lockacquired]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -358,7 +358,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
     ON SERVER 
     ADD EVENT  sqlserver.checkpoint_begin
@@ -451,7 +451,7 @@ sqlserver   lock_acquired   resource_type            NULL
 若要缩小结果范围，我们首先从 sys.objects 中进行选择来查找测试表的 object_id。 为该唯一 ID 向 EVENT...WHERE 子句添加筛选器。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -555,7 +555,7 @@ ring_buffer 对快速和简单事件测试来说非常便利。 停止事件会�
 使用 ring_buffer 目标的 CREATE EVENT SESSION 语句并没有什么特别之处。
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -668,7 +668,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 若要查看前述的 XML，可以在事件会话处于活动状态时发出以下 SELECT。 从系统视图 **sys.dm_xe_session_targets**检索活动的 XML 数据 。
 
 
-```tsql
+```sql
 SELECT
         CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
     INTO
@@ -700,7 +700,7 @@ SELECT * FROM #XmlAsTable;
 若要将前述的 XML 作为关系行集查看，通过发出以下 T-SQL 从前面的 SELECT 语句继续。 已注释的行解释了 XQuery 的每次使用。
 
 
-```tsql
+```sql
 SELECT
          -- (A)
          ObjectLocks.value('(@timestamp)[1]',

@@ -2,9 +2,12 @@
 title: "发布服务器属性 - 分发服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,20 +15,20 @@ f1_keywords: sql13.rep.configdistwizard.distpubproperties.f1
 helpviewer_keywords: Publisher Properties dialog box
 ms.assetid: ab6ada76-0f99-43fe-b524-baac7b1bc483
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 788b81b9917f99197df74301f6d1ec7e222dcdeb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8cdec591e5ab9ee25158277668af4abf24cbf0da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-properties---distributor"></a>发布服务器属性 - 分发服务器
-  使用 **“发布服务器属性”** 对话框，可以查看和修改与发布服务器和其分发服务器之间的关系相关联的属性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用“发布服务器属性”对话框，可以查看和修改与发布服务器和其分发服务器之间的关系相关联的属性。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **到发布服务器的代理连接**  
  指定以下代理从分发服务器连接到发布服务器时所处的上下文：  
   

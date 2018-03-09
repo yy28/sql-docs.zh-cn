@@ -2,16 +2,13 @@
 title: "内部成员属性 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: intrinsic member properties [MDX]
@@ -21,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 95f89f7681777d6d65f9d385521c9cfb911ff1b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成员属性的内部成员属性
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 公开您可以包含在查询中的维度成员的内部属性，以返回要在自定义应用程序中使用的额外数据或元数据，或帮助进行模型调查或构建。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]公开内部属性，可以在查询返回其他数据或元数据用于在自定义应用程序，或以帮助进行模型调查或构造包含的维度成员。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
   
  内部属性包括 **ID**、 **KEY**、 **KEYx**和 **NAME**，这些是每个成员在任意级别公开的属性。 还可以返回位置信息，如 **LEVEL_NUMBER** 或 **PARENT_UNIQUE_NAME**等等。  
   
@@ -67,12 +64,12 @@ ms.lasthandoff: 11/17/2017
 ## <a name="context-sensitive-member-properties"></a>上下文相关的成员属性  
  所有维度成员和级别成员都支持一列上下文相关的内部成员属性。 下表列出了这些上下文相关的属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**ID**|在内部维护的成员 ID。|  
 |**Key**|以原始数据类型表示的成员键的值。 MEMBER_KEY 用于向后兼容。  对于非组合键，MEMBER_KEY 具有与 KEY0 相同的值；对于组合键，MEMBER_KEY 属性为 null。|  
 |**KEYx**|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 适用于组合键和非组合键，但是主要用于组合键。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立使用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 如果键不是组合键，则 KEY0 与 **Key**等效。<br /><br /> 请注意， **KEYx** 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅 [简单的 MDX 小组件：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|**Name**|成员的名称。|  
+|**名称**|成员的名称。|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>上下文相关属性的 PROPERTIES 语法  
  在特定维度或级别的上下文中使用这些成员属性，用于为指定维度或级别的每个成员提供值。  
@@ -97,7 +94,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  MEMBERS 架构行集中的列支持下表中列出的内部成员属性。 有关 **MEMBERS** 架构行集的详细信息，请参阅 [MDSCHEMA_MEMBERS 行集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|此成员所属的多维数据集的名称。|  
 |**CHILDREN_CARDINALITY**|成员具有的子级的个数。 它可以是一个估计值，所以不应依赖它进行确切计数。 访问接口应尽可能返回最精确的估计值。|  

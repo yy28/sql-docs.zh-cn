@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - SET @local_variable
 - variables [SQL Server], assigning
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7d855f491a4f9482308df6f3ed2dcca8b067398
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>设置@local_variable(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,13 +76,13 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>参数  
- **@***local_variable*  
+ **@** *local_variable*  
  是除之外的任何类型的变量的名称**光标**，**文本**， **ntext**，**映像**，或**表**。 变量名称必须以一个 at 符号开头 (**@**)。 变量名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
  *property_name*  
  用户定义类型的属性。  
   
- *字段名*  
+ *field_name*  
  用户定义类型的公共字段。  
   
  *udt_name*  
@@ -92,7 +94,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *method_name* **(** *参数*[ **，**...*n* ] **)**  
  用户定义类型的方法，它带有一个或多个参数以修改类型实例的状态。 静态方法必须是公共的。  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  其类型位于程序集内的变量。 有关详细信息，请参阅[公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)。  
   
  *mutator_method*  
@@ -181,7 +183,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  变量只能用在表达式中，不能代替对象名或关键字。 若要构造动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，请使用 EXECUTE。  
   
- 组的语法规则 **@**  *cursor_variable*不包括本地和全局关键字。 当集 **@**  *cursor_variable* = 光标...使用语法，作为全局或本地，具体取决于与局部游标数据库选项的默认设置创建光标。  
+ 组的语法规则 **@ * * * cursor_variable*不包括本地和全局关键字。 当集 **@ * * * cursor_variable* = 光标...使用语法，作为全局或本地，具体取决于与局部游标数据库选项的默认设置创建光标。  
   
  即使游标变量引用全局游标，它们也始终是局部变量。 如果游标变量引用全局游标，则该游标既有全局游标引用，也有局部游标引用。 有关详细信息，请参阅示例 C。  
   
@@ -191,8 +193,8 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  不要在 SELECT 语句中使用变量来连接值（即来计算聚合值）。 可能发生了意外查询结果。 这是因为 SELECT 列表中的所有表达式（包括赋值）不保证对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](http://support.microsoft.com/kb/287515)。  
   
-## <a name="permissions"></a>Permissions  
- 要求具有 public 角色的成员身份。 所有用户都可以都使用组 **@**  *local_variable*。  
+## <a name="permissions"></a>权限  
+ 要求具有 public 角色的成员身份。 所有用户都可以都使用组 **@ * * * local_variable*。  
   
 ## <a name="examples"></a>示例  
   

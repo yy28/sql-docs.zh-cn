@@ -2,32 +2,33 @@
 title: "SQL Server 中的机器学习的资源调控 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e5f334edf065d691a78469c01bf2cd3352a71544
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server 中的机器学习的资源调控
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文提供的资源调控概述 SQL Server 中的功能来帮助分配和平衡使用 R 和 Python 脚本的资源。
 
-**适用于：** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] 
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]和[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+**适用于：** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
+ [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>机器学习的资源调控的目标
 
@@ -89,7 +90,7 @@ SQL Server 支持三种类型的默认资源池：
 
 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 过程中，对外部脚本的支持是可选的。 在安装机器学习功能后, 能够执行外部脚本默认情况下，为 OFF 和您必须手动重新配置属性，并重新启动要启用脚本执行的实例。
 
-因此，如果需要立即，缓解资源问题或安全问题，管理员可以立即禁用任何外部脚本执行使用[sp_configure &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)和设置属性`external scripts enabled`为 FALSE 或 0。
+因此，如果需要立即，缓解资源问题或安全问题，管理员可以立即禁用任何外部脚本执行使用[sp_configure & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)和设置属性`external scripts enabled`为 FALSE 或 0。
   
 ## <a name="see-also"></a>另请参阅
 

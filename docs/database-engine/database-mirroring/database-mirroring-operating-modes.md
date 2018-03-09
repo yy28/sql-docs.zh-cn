@@ -2,9 +2,12 @@
 title: "数据库镜像运行模式 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b16df777853d2485643d066a040a2fc4521e4b66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8c716fa65c68b44c6a4eb53e9c63bbe378298633
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
-  本主题说明数据库镜像会话的同步和异步运行模式。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题介绍数据库镜像会话的同步和异步运行模式。  
   
 > [!NOTE]  
 >  有关数据库镜像的介绍，请参阅 [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
@@ -148,7 +151,7 @@ ms.lasthandoff: 11/09/2017
   
  ![不使用见证服务器的伙伴通信](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "不使用见证服务器的伙伴通信")  
   
- 当伙伴连接在一起并且数据库已同步时，支持手动故障转移。 如果镜像服务器实例出现故障，则主体服务器实例不会受到影响并且公开运行（即，未镜像数据）。 如果主体服务器丢失，则镜像会挂起，但可以将服务强制到镜像服务器（可能造成数据丢失）。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。  
+ 当伙伴连接在一起并且数据库已同步时，支持手动故障转移。 如果镜像服务器实例出现故障，则主体服务器实例不会受到影响并且公开运行（即，未镜像数据）。 如果主体服务器丢失，则镜像会挂起，但可以将服务强制到镜像服务器（可能造成数据丢失）。 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> 具有自动故障转移的高安全性模式  
  自动故障转移通过确保在丢失一个服务器之后仍向数据库提供服务来提供高可用性。 自动故障转移要求会话具有第三个服务器实例（“见证服务器 ”），理想情况是见证服务器驻留在第三台计算机上。 下图显示了支持自动故障转移的高安全性模式会话的配置。  
@@ -248,7 +251,7 @@ ms.lasthandoff: 11/09/2017
 ###  <a name="ViewWitness"></a> 查看安全设置和见证服务器状态  
  若要针对数据库查看安全设置和见证服务器的状态，请使用 **sys.database_mirroring** 目录视图。 相关列如下所示：  
   
-|因素|列|说明|  
+|因素|“列”|Description|  
 |------------|-------------|-----------------|  
 |事务安全|**mirroring_safety_level** 或 **mirroring_safety_level_desc**|镜像数据库上用于更新的事务安全设置，如下所示：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= 数据库没有在线。|  
 |是否存在见证服务器？|**mirroring_witness_name**|数据库镜像见证服务器的名称或 NULL（指示不存在见证服务器）。|  

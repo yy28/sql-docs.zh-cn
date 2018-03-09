@@ -3,23 +3,23 @@ title: "dwloader 并行数据仓库的命令行加载程序"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "* * dwloader * * 是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。"
+description: "**dwloader**是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。"
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader 命令行加载程序
 **dwloader**是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。 当加载行时，可以将所有行都添加到表的末尾 (*追加模式*或*fastappend 模式*)、 追加新行和更新现有行 (*upsert 模式*)，或删除所有现有的行之前加载，然后将所有行都插入空表 (*重新加载模式*)。  
@@ -161,7 +161,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name。*[*架构*]。*table_name*  
+**-T** *target_database_name.*[*schema*].*table_name*  
 目标表由三部分名称。  
   
 **-I***source_data_location*  
@@ -215,7 +215,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-fh** *number_header_rows*  
 若要忽略的开头的行 （行） 数*source_data_file_name*。 默认值为 0。  
   
-< variable_length_column_options >  
+<variable_length_column_options>  
 选项*source_data_file_name* ，其字符分隔的可变长度列。 默认情况下， *source_data_file_name*包含可变长度列中的 ASCII 字符。  
   
 对于 ASCII 文件，由连续放置分隔符表示 null 值。 例如，在竖线分隔的文件 ("|")，空值将由"| |"。 在以逗号分隔文件中，NULL 将由"（、、"。 此外， **-E** (-emptyStringAsNull) 必须指定选项。 有关详细信息-E，请参阅下面。  
@@ -226,9 +226,9 @@ For more information about this install option, see [Install dwloader Command-Li
 **-t** *field_delimiter*  
 每个字段 （列） 中的行分隔符。 字段分隔符为一个或多个这些 ASCII 转义字符或十六进制 ASCII 值...  
   
-|Name|转义字符|十六进制字符|  
+|名称|转义字符|十六进制字符|  
 |--------|--------------------|-----------------|  
-|选项卡|\t|为 0x09|  
+|选项卡|\t|0x09|  
 |回车符 (CR)|\r|0x0d|  
 |换行符 (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
@@ -240,15 +240,15 @@ For more information about this install option, see [Install dwloader Command-Li
   
 示例：  
   
--t"|"  
+-t "|"  
   
--t '  
+-t ' '  
   
 -t 0x0a  
   
 -t \t  
   
--t ' ~ | ~  
+-t '~|~'  
   
 **-r** *row_delimiter*  
 源数据文件的每一行分隔符。 行分隔符是一个或多个 ASCII 值。  
@@ -284,7 +284,7 @@ LF 的示例：
   
 -s 0x22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 具有固定长度列的源数据文件有关的选项。 默认情况下， *source_data_file_name*包含可变长度列中的 ASCII 字符。  
   
 UTF8 – e 时，不支持固定的宽度列。  
@@ -300,9 +300,9 @@ UTF8 – e 时，不支持固定的宽度列。
   
 固定宽度配置文件的示例：  
   
-SalesCode = 3  
+SalesCode=3  
   
-SalesID = 10  
+SalesID=10  
   
 示例中的行*source_data_file_name*:  
   
@@ -402,7 +402,7 @@ dym
 fastappend  
 加载程序将行插入直接，而无需使用临时表，到目标表中的现有行的末尾。 fastappend 要求多事务 (– m) 选项。 使用 fastappend 时，不能指定一个临时数据库。 没有与 fastappend，这意味着从失败或已中止负载恢复必须由你自己的加载过程回滚。  
   
-upsert **-K***merge_column* [，...*n* ]    
+upsert **-K**  *merge_column* [ ,...*n* ]  
 加载程序将使用 SQL Server 合并语句以更新现有行和插入新行。  
   
 -K 选项指定的列或列要合并基础。 这些列构成合并键，它应表示唯一行。 如果合并密钥存在目标表中，更新行。 如果合并密钥不存在目标表中，追加行。  
@@ -427,7 +427,7 @@ Microsoft 支持部门，建议仅用于*batchsize*是 DMS 执行到计算节点
   
 如果负载的类型是 FASTAPPEND， *batchsize*适用于将数据加载到表，否则*batchsize*适用于将数据加载到临时表。  
   
-< reject_options >  
+<reject_options>  
 指定用于确定加载程序将允许的加载失败的数目的选项。 如果加载失败超出阈值时，加载程序将暂停并提交的任何行。  
   
 **-rt** {**值**| 百分比}  
@@ -502,7 +502,7 @@ if %errorlevel%==0 echo Success
   
 使用 PowerShell 时，使用`$LastExitCode`。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要负载权限和对目标表的适用权限 (INSERT、 UPDATE、 DELETE)。 将在临时数据库要求 （用于创建临时表） 的创建权限。 如果未使用临时数据库，然后在目标数据库上，则必须创建权限。 
 
 <!-- MISSING LINK
@@ -555,14 +555,14 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 |表类型|多事务<br />模式 (-m)|表为空|支持的并发|日志记录|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|堆|是|是|是|最小|  
+|堆|是|用户帐户控制|是|最小|  
 |堆|是|“否”|是|最小|  
-|堆|是|是|是|最小|  
-|堆|是|“否”|是|最小|  
-|Cl|是|是|是|最小|  
-|Cl|是|“否”|是|完全|  
-|Cl|是|是|是|最小|  
-|Cl|是|是|是|完全|  
+|堆|否|是|否|最小|  
+|堆|否|“否”|否|最小|  
+|Cl|是|用户帐户控制|否|最小|  
+|Cl|是|“否”|是|“完全”|  
+|Cl|否|是|否|最小|  
+|Cl|否|“否”|是|“完全”|  
   
 上面的表所示**dwloader**使用追加模式加载到堆或聚集的索引 (CI) 表，或如果没有多事务的标志，以及将加载到一个空表或非空表。 表中会显示锁定和日志记录的每个此类组合的负载的行为。 例如，加载 （第 2 个） 阶段，并带有追加模式到多事务模式下没有聚集索引和一个空表将具有 PDW 的表上创建的排他锁和日志记录是最小。 这意味着客户将无法加载同时到一个空表的 （第二个） 的阶段和查询。 但是，在加载时用到非空表相同的配置，PDW 将不会发出对表的排他锁并且可能并发。 遗憾的是，完整的日志记录会发生，减慢了处理过程。  
   

@@ -2,18 +2,17 @@
 title: "分区存储模式和处理 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - hybrid OLAP
@@ -26,19 +25,20 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 66d7906862ef10fe5e2f9aa93a143d0655c84971
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>分区的分区存储模式和处理
-  分区的存储模式影响分区及其父度量值组和多维数据集的查询和处理性能、存储要求以及存储位置。 存储模式的选择也会影响处理选择。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+分区的存储模式影响分区及其父度量值组和多维数据集的查询和处理性能、存储要求以及存储位置。 存储模式的选择也会影响处理选择。  
   
  分区可以使用下列三种基本存储模式之一：  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 -   混合 OLAP (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支持所有三种基本的存储模式。 它还支持主动缓存，使用主动缓存，您可以组合 ROLAP 和 MOLAP 存储的特征，从而满足数据的即时性和查询性能的要求。 有关详细信息，请参阅[主动缓存（分区）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持所有三种基本的存储模式。 它还支持主动缓存，使用主动缓存，您可以组合 ROLAP 和 MOLAP 存储的特征，从而满足数据的即时性和查询性能的要求。 有关详细信息，请参阅[主动缓存（分区）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
 ## <a name="molap"></a>MOLAP  
  在 MOLAP 存储模式下，处理分区时，分区的聚合及其源数据副本将存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 内的多维结构中。 此 MOLAP 结构在得到高度优化后，可以最大程度地提高查询性能。 该存储位置可以位于用来定义分区的计算机上，也可以位于其他运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的计算机上。 由于源数据副本位于多维结构中，因此，可以在不访问分区源数据的情况下直接解析查询。 使用聚合可以显著缩短查询响应时间。 分区 MOLAP 结构中的数据与分区的最新处理完全保持同步。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/17/2017
   
     -   QUOTED_IDENTIFIER  
   
--   在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，索引键的总计大小不能超过 900 字节。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]将断言基于固定的长度键列，则在处理 CREATE INDEX 语句时此条件。 但是，如果索引键中有可变长度列[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]还断言基础表的每次更新此条件。 因为不同的聚合具有不同的视图定义，所以使用索引视图的 ROLAP 处理可能成功，也可能失败，具体取决于聚合设计。  
+-   在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，索引键的总计大小不能超过 900 字节。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将断言基于固定的长度键列，则在处理 CREATE INDEX 语句时此条件。 但是，如果索引键中有可变长度列[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]还断言基础表的每次更新此条件。 因为不同的聚合具有不同的视图定义，所以使用索引视图的 ROLAP 处理可能成功，也可能失败，具体取决于聚合设计。  
   
 -   创建索引视图的会话的下列选项必须为 ON：ARITHABORT、CONCAT_NULL_YIELDS_NULL、QUOTED_IDENTIFIER、ANSI_NULLS、ANSI_PADDING 和 ANSI_WARNING。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对此进行设置。  
   
@@ -95,6 +95,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>另请参阅  
  [主动缓存 &#40;分区 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [分区（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分区 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

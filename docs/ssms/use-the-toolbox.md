@@ -3,8 +3,11 @@ title: "使用工具箱 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3190646ab3eb434e2b7ad17aa6ca3914857c6690
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 44ad54ed01f16b55f4930292348d0277655c137c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
-您可以选择工具箱中的项、文本和控件并将其拖至窗体、页和设计器，也可以将这些项从上述源位置拖回到工具箱中，以备将来再次使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中，可以将任务拖到“维护计划”上。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以选择工具箱中的项、文本和控件并将其拖至窗体、页和设计器，也可以将这些项从上述源位置拖回到工具箱中，以备将来再次使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 中，可以将任务拖到“维护计划”上。  
   
 工具箱中的项被划分到各选项卡。 以下是常用的工具箱任务及其使用方法的参考表：  
   

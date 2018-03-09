@@ -1,5 +1,5 @@
 ---
-title: "安装 Integration Services 版本并行 |Microsoft 文档"
+title: "并行安装 Integration Services 版本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,21 +16,20 @@ helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 114e51f111e4b3dfece42c9510a35bb9be5d5652
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: b14e919cc180e8934b0cf9435d8d286c6468ccc2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>并行安装 Integration Services 版本
   你可以安装   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services (SSIS) 的并行与早期版本的 SSIS。 本主题介绍并行安装的一些限制。  
+      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS)，与早期版本的 SSIS 并行使用。 本主题介绍并行安装的一些限制。  
   
 ## <a name="designing-and-maintaining-packages"></a>设计和维护包  
  若要设计和维护面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包，请使用 SQL Server Data Tools (SSDT) for Visual Studio 2015。 要获取 SSDT，请参阅 [下载最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
@@ -40,8 +39,8 @@ ms.lasthandoff: 09/27/2017
 |SQL Server 的目标版本|SSIS 包的开发环境|  
 |----------------------------------|-----------------------------------------------|  
 |2016|适用于 Visual Studio 2015 的 SQL Server Data Tools|  
-|2014|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
-|2012|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
+|2014|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或多个<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2013|  
+|2012|适用于 Visual Studio 2015 的 SQL Server Data Tools<br /><br /> 或多个<br /><br /> SQL Server Data Tools - Business Intelligence for Visual Studio 2012|  
 |2008|来自 SQL Server 2008 的 Business Intelligence Development Studio|  
   
  当将现有包添加到现有项目时，包将转换为项目所面向的格式。  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/27/2017
  你可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 **dtexec** 实用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行早期版本的开发工具所创建的 Integration Services 包。 当这些 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 工具加载早期版本的开发工具开发的包时，该工具暂时将内存中的包转换为 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 使用的包格式。 如果包存在问题导致无法转换成功，则在这些问题解决之前， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 工具将无法运行该包。 有关详细信息，请参阅 [升级 Integration Services 包](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
   
-

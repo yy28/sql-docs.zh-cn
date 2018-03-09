@@ -2,15 +2,13 @@
 title: "行集数据类型 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Rowset Data Type
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bf941f9e6231174bd0288bf71aa3055570d1c74a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 885910e506995f6aef382d95eb24320749b682eb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset 数据类型 (XMLA)
-  定义一个派生的数据类型，表示[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)返回从表格数据的元素[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]定义一个派生的数据类型，表示[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)返回从表格数据的元素[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法调用。  
   
  **Namespace** urn： 架构-microsoft-com:xml-分析： 行集  
   
@@ -52,20 +50,20 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="data-type-characteristics"></a>数据类型特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|[结果集](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|派生数据类型|无|  
+|派生数据类型|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|无|  
+|父元素|InclusionThresholdSetting|  
 |子元素|[行](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
 |派生元素|[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  XML 不允许某些字符作为元素和属性的名称。 若要解决此命名的约束，XML Analysis (XMLA) 支持编码由定义[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 对于包含不符合 XML 1.0 规范的 XML 名称字符的列名，XMLA 使用对应的十六进制值不是有效的 Unicode 字符进行编码。 十六进制值转义为 _x*HHHH*\_，其中*HHHH*代表最高有效位第一个订单中的字符的四位十六进制 ucs-2 代码。 例如，XMLA 将名称“Order Details”编码为 Order_x0020_Details，将空格字符替换为相应的十六进制代码。  
   
  编码会使可扩展样式语言 (XSL) 转换变得困难。 若要支持的实际快速查找未编码列名称、 添加**sql:field**归于每个列的 XML 行集架构，如下面的示例中所示：  

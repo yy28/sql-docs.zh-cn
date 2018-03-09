@@ -2,9 +2,12 @@
 title: "启动数据库引擎优化顾问 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 427cfbba4191f70541e47d3082c34fa185d92598
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 545a7f2e9758bb5221bbaec9c35516cef66596ab
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>课程 1-1-启动数据库引擎优化顾问
-开始前，请先打开数据库引擎优化顾问图形用户界面 (GUI)。 第一次使用时，必须由 **sysadmin** 固定服务器角色的成员来启动数据库引擎优化顾问，以初始化应用程序。 初始化后， **db_owner** 固定数据库角色的成员便可使用数据库引擎优化顾问来优化他们拥有的数据库。 有关初始化数据库引擎优化顾问的详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]若要开始，请打开数据库引擎优化顾问图形用户界面 (GUI)。 第一次使用时，必须由 **sysadmin** 固定服务器角色的成员来启动数据库引擎优化顾问，以初始化应用程序。 初始化后， **db_owner** 固定数据库角色的成员便可使用数据库引擎优化顾问来优化他们拥有的数据库。 有关初始化数据库引擎优化顾问的详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
 ### <a name="open-the-database-engine-tuning-advisor-gui"></a>打开数据库引擎优化顾问 GUI  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 -   右窗格包含“常规”和“优化选项”选项卡。 在此可以定义数据库引擎优化会话。 在“常规”选项卡中，键入优化会话的名称，指定要使用的工作负荷文件或表，并选择要在该会话中优化的数据库和表。 工作负荷是对要优化的一个或多个数据库执行的一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 优化数据库时，数据库引擎优化顾问使用跟踪文件、跟踪表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本或 XML 文件作为工作负荷输入。 在“优化选项”选项卡上，可以选择希望数据库引擎优化顾问在分析过程中考虑的物理数据库设计结构（索引或索引视图）和分区策略。 在此选项卡上，还可以指定数据库引擎优化顾问优化工作负荷使用的最大时间。 默认情况下，数据库引擎优化顾问优化工作负荷的时间为一个小时。  
   
 > [!NOTE]  
-> 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中导入 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 脚本时，数据库引擎优化顾问可接受 XML 文件作为输入。 有关详细信息，请参阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动并使用数据库引擎优化顾问 [中的“从](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)查询编辑器中启动数据库引擎优化顾问”一节。  
+> 数据库引擎优化顾问可以将 XML 文件作为输入时[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本从导入[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询编辑器。 有关详细信息，请参阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动并使用数据库引擎优化顾问 [中的“从](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)查询编辑器中启动数据库引擎优化顾问”一节。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [设置工具选项和布局](../../tools/dta/lesson-1-2-setting-tool-options-and-layout.md)  

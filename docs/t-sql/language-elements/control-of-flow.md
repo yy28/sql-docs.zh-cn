@@ -8,26 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - keywords [SQL Server], control-of-flow language
 - control-of-flow language [SQL Server], keywords listed
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 27c7874fbdd1ed29e60b32a8dba1f4acbb84566d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c437c64aa5f06061e5525dcc7e5526389ece9e56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="control-of-flow"></a>控制流
+# <a name="control-of-flow"></a>Control-of-Flow
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 控制流语言关键字包括：  
@@ -41,9 +43,9 @@ ms.lasthandoff: 11/18/2017
 |[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [用例 &#40;Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [斜杠星型 &#40;块注释 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
- [-&#40;注释 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+ [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   

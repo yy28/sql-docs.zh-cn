@@ -1,5 +1,5 @@
 ---
-title: "sys.fn_builtin_permissions (TRANSACT-SQL) |Microsoft 文档"
+title: sys.fn_builtin_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - sys.fn_builtin_permissions_TSQL
 - fn_builtin_permissions_TSQL
 - sys.fn_builtin_permissions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - compact permissions types
 - viewing permission hierarchy
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - displaying permission hierarchy
 - sys.fn_builtin_permissions function
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
-caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d36338abefd30103b80a202ebde030d73b6b071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +73,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  等效于 DEFAULT。  
   
- < securable_class >  
+ **'**<securable_class>**'**  
  当使用一个安全对象类的名称调用它，则 sys.fn_builtin_permissions 将返回将应用于类的所有权限。 < securable_class > 是一个字符串，它需要引号引起来。 **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>返回的表  
@@ -80,7 +82,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|服务器的排序规则|安全对象类的说明。|  
 |permission_name|**nvarchar(60)**|服务器的排序规则|权限名称。|  
-|类型|**varchar(4)**|服务器的排序规则|压缩权限类型代码。 请参阅后面的表。|  
+|type|**varchar(4)**|服务器的排序规则|压缩权限类型代码。 请参阅后面的表。|  
 |covering_permission_name|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为该类的权限名称（隐含该类的其他权限）。|  
 |parent_class_desc|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为包含当前类的父类的名称。|  
 |parent_covering_permission_name|**nvarchar(60)**|服务器的排序规则|如果不为 NULL，则为父类的权限名称（隐含该类的所有其他权限）。|  
@@ -117,7 +119,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
-|AL|ALTER|User|  
+|AL|ALTER|USER|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
 |ALAG|ALTER ANY AVAILABILITY GROUP<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
@@ -184,7 +186,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
-|CL|CONTROL|User|  
+|CL|CONTROL|USER|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
 |CO|CONNECT|DATABASE|  
 |CO|CONNECT|ENDPOINT|  
@@ -235,7 +237,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |EX|在运行 CREATE 语句前执行|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|SERVER|  
 |IM|IMPERSONATE|Login|  
-|IM|IMPERSONATE|User|  
+|IM|IMPERSONATE|USER|  
 |IN|Insert|DATABASE|  
 |IN|Insert|OBJECT|  
 |IN|Insert|SCHEMA|  
@@ -313,7 +315,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
-|VW|VIEW DEFINITION|User|  
+|VW|VIEW DEFINITION|USER|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。|DATABASE|  
@@ -341,27 +343,27 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 > 作为本主题的一部分，海报太小了，因此无法查看。 请从 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)下载数据库引擎权限海报。  
    
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. 列出所有内置权限   
 使用`DEFAULT`或一个空字符串，以返回所有权限。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. 列出可针对对称密钥设置的权限   
 指定一个类以返回为该类的所有可能的权限。   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>C. 列出对其拥有 SELECT 权限的类   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  
@@ -369,10 +371,10 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
 ## <a name="see-also"></a>另请参阅  
  [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [创建架构 &#40;Transact SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [删除架构 &#40;Transact SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
- [sys.fn_my_permissions &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

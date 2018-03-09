@@ -2,32 +2,32 @@
 title: "DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21fdb446b1d2c8475969cbc89050260d0e09f6b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行集
-  提供在列和段级别表格中运行的 Analysis Services 数据库使用的存储表有关的信息或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式。 此行集主要用于故障排除和分析。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+提供在列和段级别表格中运行的 Analysis Services 数据库使用的存储表有关的信息或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式。 此行集主要用于故障排除和分析。  
   
  **适用于：** 表格模型  
   
@@ -41,16 +41,16 @@ ms.lasthandoff: 11/17/2017
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|是|度量值组的名称。|  
 |**PARTITION_NAME**|**DBTYPE_WSTR**|是|分区的名称。|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||维度的名称。|  
-|**针对 TABLE_ID 所**|**DBTYPE_WSTR**||表段的内部 ID。|  
+|**TABLE_ID**|**DBTYPE_WSTR**||表段的内部 ID。|  
 |**COLUMN_ID**|**DBTYPE_WSTR**||列的内部 ID。|  
-|**段数目 （_N)**|**是 DBTYPE_I8**||表段的序号。|  
-|**TABLE_PARTTION_NUMBER**|**是 DBTYPE_I8**||分区的序号。|  
-|**RECORDS_COUNT**|**是 DBTYPE_I8**||分区中的记录数。|  
+|**段数目 （_N)**|**DBTYPE_I8**||表段的序号。|  
+|**TABLE_PARTTION_NUMBER**|**DBTYPE_I8**||分区的序号。|  
+|**RECORDS_COUNT**|**DBTYPE_I8**||分区中的记录数。|  
 |**ALLOCATED_SIZE**|**DBTYPE_UI8**||分配给列段的大小（字节）。|  
 |**USED_SIZE**|**DBTYPE_UI8**||列段使用的大小（字节）。|  
 |**COMPRESSION_TYPE**|**DBTYPE_WSTR**||应用于列段的压缩的类型。 该值仅供内部使用及客户支持部门使用。 Microsoft 不发布此列的有效值或说明。|  
-|**BITS_COUNT**|**是 DBTYPE_I8**||位计数。|  
-|**BOOKMARK_BITS_COUNT**|**是 DBTYPE_I8**||书签位计数。|  
+|**BITS_COUNT**|**DBTYPE_I8**||位计数。|  
+|**BOOKMARK_BITS_COUNT**|**DBTYPE_I8**||书签位计数。|  
 |**VERTIPAQ_STATE**|**DBTYPE_WSTR**||此列段的 VertiPaq 压缩状态。 值为下列其中一项：<br /><br /> SKIPPED - 已跳过 VertiPaq 压缩。<br /><br /> COMPLETED – VertiPaq 压缩已成功完成。<br /><br /> TIMEBOXED – 已对 VertiPaq 压缩设置时间范围。|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>使用 ADOMD.NET 返回行集  

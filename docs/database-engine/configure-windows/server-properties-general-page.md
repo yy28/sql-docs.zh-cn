@@ -2,9 +2,12 @@
 title: "服务器属性（“常规”页）- SQL Server Management Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ f1_keywords:
 - sql13.swb.serverproperties.prodinfo.f1
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d644c490e6c09dd49e43ec8abffd09ec0462cb55
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0209fe2fdf5b3cd71409dcad9bda46446f673bd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---general-page"></a>服务器属性 -“常规”页
-  使用此页可以查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的只读信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用此页可以查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的只读信息。  
   
 ## <a name="property-grid"></a>属性网格  
  查看所选服务器的属性，例如服务器名称、服务器操作系统或处理器数。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
  **平台**  
  说明运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的操作系统和硬件。  
   
- **版本**  
+ **版本(Version)**  
  显示当前运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的版本号。  
   
  **语言**  

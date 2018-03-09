@@ -1,10 +1,11 @@
 ---
-title: "SeekEnum |Microsoft 文档"
+title: SeekEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: SeekEnum
-helpviewer_keywords: SeekEnum enumeration [ADO]
+f1_keywords:
+- SeekEnum
+helpviewer_keywords:
+- SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97a2a99c7310022e86e574a0f4b04227cee95726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40c15bd116b4e0a7ba13127dc48ec18421b5924b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seekenum"></a>SeekEnum
 指定的一种[Seek](../../../ado/reference/ado-api/seek-method.md)执行。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|查找第一个键等于*KeyValues*。|  
 |**adSeekLastEQ**|2|查找等于的最后一个键*KeyValues*。|  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |**adSeekBefore**|32|其中包含的匹配项之前查找密钥*KeyValues*应发生。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 包： **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |常量|  
 |--------------|  

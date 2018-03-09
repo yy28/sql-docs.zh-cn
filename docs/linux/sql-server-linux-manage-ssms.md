@@ -1,31 +1,31 @@
 ---
 title: "使用 SSMS 管理 SQL Server on Linux |Microsoft 文档"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 57c13b89e4bb8410f40e4a75ed93b08fa9812722
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31bff0cb43048585fb03246b683ad71e673bb7f4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows 上使用 SQL Server Management Studio 管理 SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本主题介绍[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)并指导您完成几个常见任务。 SSMS 是一个 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用 SSMS。
+本文介绍[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)并指导您完成几个常见任务。 SSMS 是一个 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用 SSMS。
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)是 Microsoft 提供的免费的开发和管理需求的 SQL 工具套件的一部分。 SSMS 是一个集成环境，用于访问、配置、管理和开发 SQL Server（在本地或云中、Linux、Windows 或 macOS Docker 以及在 Azure SQL 数据库和 Azure SQL 数据仓库上运行）的所有组件。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，各种技术水平的开发人员和管理员都能访问 SQL Server。
 
@@ -45,7 +45,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 使用 SQL Server 时，应始终使用最新版本的 SQL Server Management Studio (SSMS)。 最新版本的 SSMS 不断更新和优化并且当前适用于 SQL Server 2017 on Linux。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。 
 
-## <a name="before-you-begin"></a>开始之前
+## <a name="before-you-begin"></a>開始之前
 - 请参阅[使用 SSMS 连接到 Linux 上的 SQL Server 的 Windows 上](sql-server-linux-develop-use-ssms.md)有关如何连接和查询使用 SSMS
 - 读取[已知问题](sql-server-linux-release-notes.md)在 Linux 上的 SQL server 自 2017 年 1
 

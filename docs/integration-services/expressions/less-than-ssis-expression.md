@@ -1,5 +1,5 @@
 ---
-title: "&lt;（小于）（SSIS 表达式） |Microsoft 文档"
+title: "&lt;（小于）（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb12a0ff651cf50c5208bae6ba0229d1e6be85f6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9e3077cd8656a53e79b255076f782f6913a3185e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt;（小于）（SSIS 表达式）
   通过比较确定第一个表达式是否小于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -51,7 +50,7 @@ expression1 < expression2
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果比较中的任一表达式为空，则比较结果为空。 如果两个表达式都为空，则结果为空。  
   
  表达式集， *expression1* 和 *expression2*，必须遵守下列规则之一：  
@@ -108,11 +107,10 @@ ListPrice < 500
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#62;&#40;大于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#62; = &#40;大于或等于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
- [&#60; = &#40;小于或等于 &#41;&#40;SSIS 表达式 &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [>（大于）（SSIS 表达式）](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [>=（大于或等于）（SSIS 表达式）](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [<=（小于或等于）（SSIS 表达式）](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
  [运算符优先级和结合性](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [运算符 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

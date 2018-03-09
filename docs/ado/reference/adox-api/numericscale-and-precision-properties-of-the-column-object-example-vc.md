@@ -3,29 +3,31 @@ title: "NumericScale 和精度属性的列的示例 （VC + +） |Microsoft 文�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Precision property [ADOX], VC++ example
 - NumericScale property [ADOX], VC++ example
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a9d10cb0493db6e19d8f3ee7c60beb0be5adeff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 182bc81997c3ff1ad2d84ac4835da35774bd71b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>NumericScale 和精度属性的列对象的示例 （VC + +）
 此示例演示[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)和[精度](../../../ado/reference/adox-api/precision-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。 此代码将显示其值**订单详细信息**表*Northwind*数据库。  

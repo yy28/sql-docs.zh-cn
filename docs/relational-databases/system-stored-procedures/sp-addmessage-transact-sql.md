@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
 - sp_addmessage_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_addmessage
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efb582779e55287699cd60f642b50a88205ee992
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1b8b71c14da2b38bbc16c63b39143fd0a85ebf30
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +49,32 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@msgnum* * * =** ] *msg_id*  
+ [ **@msgnum****=** ] *msg_id*  
  消息的 ID。 *msg_id*是**int**默认值为 NULL。 *msg_id*对于用户定义的错误消息可以是 50,001 和 2,147,483,647 之间的整数。 组合*msg_id*和*语言*必须是唯一的; 如果该 ID 已存在指定的语言，则返回错误。  
   
- [  **@severity =** ]*严重性*  
+ [ **@severity =** ]*severity*  
  是错误的严重性级别。 *严重性*是**smallint**默认值为 NULL。 有效级别的范围为 1 到 25。 有关错误严重性的详细信息，请参阅 [数据库引擎错误严重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
- [  **@msgtext =** ] *消息*  
+ [ **@msgtext =** ] **'***msg***'**  
  错误消息的文本。 *消息*是**nvarchar （255)**默认值为 NULL。  
   
- [  **@lang =** ] *语言*  
+ [ **@lang =** ] **'***language***'**  
  消息所用的语言。 *语言*是**sysname**默认值为 NULL。 因为可以在同一服务器上，安装多个语言*语言*指定编写每条消息所采用的语言。 当*语言*是省略的语言为会话是默认语言。  
   
- [  **@with_log =** ] { TRUE | **'FALSE'** }  
+ [ **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
  是否在消息发生时将其写入 Windows 应用程序日志。 **@with_log**是**varchar(5)**默认值为 FALSE。 如果为 TRUE，则错误始终写入 Windows 应用程序日志。 如果为 FALSE，则错误不会始终写入 Windows 应用程序日志，但仍然可以写入，具体取决于错误是如何引发的。 只有的成员**sysadmin**服务器角色可以使用此选项。  
   
 > [!NOTE]  
 >  如果消息写入了 Windows 应用程序日志，那么它也将被写入[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误日志文件。  
   
- [  **@replace**   *=*  ] *替换*  
+ [ **@replace** *=* ] **'***replace***'**  
  如果指定为字符串*替换*，以新的消息文本和严重性级别覆盖现有错误消息。 *替换*是**varchar(7)**默认值为 NULL。 必须指定此选项，如果*msg_id*已存在。 如果替换美国英语消息，英语消息，严重性级别将替换具有相同的所有其他语言中的所有消息*msg_id*。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
  对于非英语版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须已经存在美国英语版本的消息，然后才能使用另一种语言添加消息。 两种消息版本的严重性必须匹配。  
@@ -84,7 +87,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
  由于语言语法不同，因此，本地化消息中的参数可能不会以原始消息中相同的顺序出现。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求的成员身份**sysadmin**或**serveradmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -168,7 +171,7 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>另请参阅  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_dropmessage &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

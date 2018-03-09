@@ -1,28 +1,29 @@
 ---
 title: "机器学习服务器独立服务器或 R Server 独立安装 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 02/14/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 408e2503-5c7d-4ec4-9d3d-bba5a8c7661d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8a11d71e1568b3da175de0d2eecf182a9b415400
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ecb60bd02b3fc1ee7ac7101749fa7affc2523bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>安装机器学习 Server （独立） 或 R Server （独立）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 安装程序包括用于安装的机器学习在 SQL Server 外部运行的服务器的选项。 此选项可能会很有用，如果你需要开发高性能计算机学习解决方案，可以使用远程计算上下文，或者，可以部署到多个平台，包括：
   
@@ -37,7 +38,7 @@ SQL Server 安装程序包括用于安装的机器学习在 SQL Server 外部运
 + [Microsoft R Server 的现有实例升级](#bkmk_upgrade)
 + [帮助我确定要安装的内容](#bkmk_tips)
 
-##  <a name="bkmk_installMLServer"></a>安装机器学习 Server （独立）
+##  <a name="bkmk_installMLServer"></a> 安装机器学习 Server （独立）
 
 此功能需要企业许可证或等效**SQL Server 2017**。
 
@@ -113,7 +114,7 @@ SQL Server 安装程序包括用于安装的机器学习在 SQL Server 外部运
     
 5.  在“准备安装”  页上，验证选择，并单击“安装” 。
 
-## <a name="bkmk_upgrade"></a>R Server 的现有实例升级
+## <a name="bkmk_upgrade"></a> R Server 的现有实例升级
 
 如果你安装 Microsoft R Server （独立版） 的早期版本，你可以升级要使用的 R 组件的较新版本的实例。 升级也会更改要使用现代软件生命周期支持策略的支持策略。 这样，要不是 SQL Server 释放，更频繁地更新按不同的计划的实例。
 
@@ -124,7 +125,7 @@ SQL Server 安装程序包括用于安装的机器学习在 SQL Server 外部运
 
 2. 运行安装程序，然后按照说明。 在其中选择要安装的功能页上，选择你想要升级的 R Server 的每个实例。
 
-## <a name ="bkmk_tips"></a>安装提示和后续步骤
+## <a name ="bkmk_tips"></a> 安装提示和后续步骤
 
 本部分提供与设置相关的其他信息。
 
@@ -150,11 +151,12 @@ SQL Server 安装程序包括用于安装的机器学习在 SQL Server 外部运
 |----|----|----|
 |R Server (Standalone) |SQL Server 2016 安装程序向导|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (Standalone) |Windows 独立安装程序|`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|机器学习服务器（独立） |  自 2017 年 SQL Server 安装向导 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|机器学习服务器（独立） |  自 2017 年 SQL Server 安装向导中，与 R 语言选项 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|机器学习服务器（独立） |  自 2017 年 SQL Server 安装向导中，与 Python 语言选项 |`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |机器学习服务器（独立） |  Windows 独立安装程序 |`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|R Services (数据库中) |SQL Server 2016 安装程序向导|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|机器学习服务（数据库内） |自 2017 年 SQL Server 安装向导|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`或`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-
+|R Services（数据库内） |SQL Server 2016 安装程序向导|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
+|机器学习服务（数据库内） |自 2017 年 SQL Server 安装向导中，与 R 语言选项|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  |
+|机器学习服务（数据库内） |自 2017 年 SQL Server 安装向导中，与 Python 语言选项| `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 ### <a name="development-tools"></a>开发工具
 
 开发 IDE 不会安装安装程序的一部分。 不需要其他工具，如所有标准工具，将包括，将向你提供的 R 或 Python 的分布。
@@ -181,7 +183,7 @@ SQL Server 安装程序包括用于安装的机器学习在 SQL Server 外部运
 
 如果你遇到此问题，则可以应用中所述的修复[KB3164398](https://support.microsoft.com/kb/3164398)将 R 功能添加到 Windows Server Core 上的现有实例。   有关详细信息，请参阅 [不能在 Windows Server Core 操作系统上安装 Microsoft R Server 独立版](https://support.microsoft.com/kb/3168691)。
 
-###  <a name="bkmk_Uninstall"></a>从 Microsoft R Server 的较旧版本升级
+###  <a name="bkmk_Uninstall"></a> 从 Microsoft R Server 的较旧版本升级
 
 如果安装了 Microsoft R Server 的预发布版本，必须先卸载它，才能升级到较新版本。
 

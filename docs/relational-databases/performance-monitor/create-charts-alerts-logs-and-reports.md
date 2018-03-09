@@ -2,9 +2,12 @@
 title: "创建图表、警报、日志和报表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,18 +22,18 @@ helpviewer_keywords:
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14e449b64d959cd6f877b27871f329b231038955
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0c84f299a27b69def3acf965f7a3cf6d4ab74017
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>创建图表、警报、日志和报表
-  使用系统监视器可以创建图表、警报、日志和报表，以监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用系统监视器可以创建图表、警报、日志和报表，以监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 ## <a name="charts"></a>图表  
  图表可以监视所选对象和计数器的当前性能，例如，CPU 使用率或磁盘 I/O。 您可以向图表添加系统监视器对象和计数器的各种组合。 还可以向图表中添加 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 对象和计数器。  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
  图表对于短期、实时监视本地或远程计算机很有用，例如，希望在事件发生时对其进行监视。  
   
-## <a name="alerts"></a>警报  
+## <a name="alerts"></a>Alerts  
  利用警报，系统监视器可以跟踪特定的事件，并按要求向您通知这些事件。 警报日志可以监视所选计数器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中对象的实例的性能。 当计数器超过给定值时，日志记录下这一事件的日期和时间。 事件也可产生网络警报。 可在一个事件第一次出现或每次出现时运行一个特定的程序。 例如，一个警报可以向所有系统管理员发送一条网络消息，报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的磁盘空间不足。  
   
 ## <a name="logs"></a>日志  

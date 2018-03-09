@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_exec_connections (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_connections_TSQL
 - sys.dm_exec_connections
 - dm_exec_connections
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 02fcbfb195c913396d6013f62a76853045ac3b9b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +46,12 @@ ms.lasthandoff: 11/17/2017
 |session_id|**int**|标识与此连接关联的会话。 可以为 Null。|  
 |most_recent_session_id|**int**|表示与此连接关联的最近请求的会话 ID。 （另一个会话可以重用 SOAP 连接。）可以为 Null。|  
 |connect_time|**datetime**|连接建立时的时间戳。 不可为 null。|  
-|net_transport|**nvarchar （40)**|始终返回**会话**连接当具有多个活动结果集 (MARS) 启用。<br /><br /> **注意：**描述此连接使用的物理传输协议。 不可为 null。|  
-|protocol_type|**nvarchar （40)**|指定负载的协议类型。 此参数当前可区分 TDS (TSQL) 和 SOAP。 可以为 Null。|  
+|net_transport|**nvarchar(40)**|始终返回**会话**连接当具有多个活动结果集 (MARS) 启用。<br /><br /> **注意：**描述此连接使用的物理传输协议。 不可为 null。|  
+|protocol_type|**nvarchar(40)**|指定负载的协议类型。 此参数当前可区分 TDS (TSQL) 和 SOAP。 可以为 Null。|  
 |protocol_version|**int**|与此连接关联的数据访问协议的版本。 可以为 Null。|  
 |endpoint_id|**int**|说明其连接类型的标识符。 此 endpoint_id 可用于查询 sys.endpoints 视图。 可以为 Null。|  
-|encrypt_option|**nvarchar （40)**|说明是否为此连接启用了加密的布尔值。 不可为 null。|  
-|auth_scheme|**nvarchar （40)**|指定此连接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 身份验证方案。 不可为 null。|  
+|encrypt_option|**nvarchar(40)**|说明是否为此连接启用了加密的布尔值。 不可为 null。|  
+|auth_scheme|**nvarchar(40)**|指定此连接使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 身份验证方案。 不可为 null。|  
 |node_affinity|**int**|标识与此连接关联的内存节点。 不可为 null。|  
 |num_reads|**int**|字节读取已发生的此连接数。 可以为 Null。|  
 |num_writes|**int**|通过此连接已发生的字节写入数。 可以为 Null。|  
@@ -62,9 +65,9 @@ ms.lasthandoff: 11/17/2017
 |connection_id|**uniqueidentifier**|对每个连接进行唯一标识。 不可为 null。|  
 |parent_connection_id|**uniqueidentifier**|标识 MARS 会话正在使用的主要连接。 可以为 Null。|  
 |most_recent_sql_handle|**varbinary(64)**|此连接上执行的上一个请求的 SQL 句柄。 most_recent_sql_handle 列始终与 most_recent_session_id 列同步。 可以为 Null。|  
-|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。
   
@@ -82,7 +85,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="examples"></a>示例  
  收集查询自有连接有关信息的典型查询。  
   
-```t-sql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

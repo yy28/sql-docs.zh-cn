@@ -3,8 +3,11 @@ title: "用于管理解决方案和项目的文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a52986d5b5eee8051d7ac518be4f636da0bb8743
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fc52df270500afea2bc2849930f1168937fa392d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>用于管理解决方案和项目的文件
- 本主题介绍了特定于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]的文件类型。 默认情况下，所有的解决方案及其项目均创建于 \My Documents\SQL Server Management Studio Projects 中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主题介绍特定于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的文件类型。 默认情况下，所有的解决方案及其项目均创建于 \My Documents\SQL Server Management Studio Projects 中。  
 
 
 ## <a name="management-studio-solution-files"></a>Management Studio 解决方案文件  

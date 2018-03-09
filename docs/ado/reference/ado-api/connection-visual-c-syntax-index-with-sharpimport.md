@@ -3,8 +3,9 @@ title: "连接 （Visual c + + 语法索引与 #import） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
-helpviewer_keywords: 'Connection collection [ADO], Visual C++ syntax index with #import'
+dev_langs:
+- C++
+helpviewer_keywords:
+- 'Connection collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e903b3090119134ea2010b8edfdcd449d18b8907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 840e50f51f2fdb2853f80634941eb883576457e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>连接 （Visual c + + 语法索引与 #import）
 ## <a name="methods"></a>方法  

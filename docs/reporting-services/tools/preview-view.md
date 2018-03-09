@@ -8,30 +8,28 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.previewview.f1
 helpviewer_keywords: Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8bc7aa1def90295e81b98ab91a505219b3ce08f7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ff72cb8ca44709cabd38f122c87150f901bb476
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preview-view"></a>“预览”视图
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表设计器中，使用“预览”视图可以显示呈现的报表。 在预览报表时，报表设计器将在本地运行该报表，并在“预览”视图中显示该报表。 在预览模式下会对报表进行完全处理。 如果报表具有复杂的查询或具有大量数据，则首次查看时，预览可能需要花费几分钟的时间才能完成。 对于只影响报表格式的后续更改，预览使用缓存数据。
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  使用工具栏可以管理预览功能。  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)

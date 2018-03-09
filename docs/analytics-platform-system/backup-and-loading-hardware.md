@@ -3,10 +3,10 @@ title: "备份和加载 AP PDW 硬件概述"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
 caps.latest.revision: "9"
-ms.openlocfilehash: 0bdf529aacf1644f55cd44da3d0a7590e509a323
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91348b3cb936556cbfe4b2c515c6d32e38913618
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-and-loading-hardware-overview"></a>备份和加载硬件概述
 若要部署端到端数据仓库解决方案分析平台系统 (AP) 与 SQL Server 并行数据仓库 (PDW)，你需要创建备份数据仓库和加载数据的计划。 使用本指南来获取和配置将根据业务需求的备份和加载服务器。  

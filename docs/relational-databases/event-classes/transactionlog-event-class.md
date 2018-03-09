@@ -2,31 +2,37 @@
 title: "TransactionLog 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: TransactionLog event class
+helpviewer_keywords:
+- TransactionLog event class
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 372113aa92be61fb807f351ff79cf9c1b6a8ec86
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d9f3f46c005665450baec0869fe956c38696b27
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog 事件类
-  使用 TransactionLog 事件类可以监视 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的事务日志中的活动。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+使用 TransactionLog 事件类可以监视 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的事务日志中的活动。  
   
 ## <a name="transactionlog-event-class-data-columns"></a>TransactionLog 事件类的数据列  
   
-|数据列名称|数据类型|说明|列 ID|可筛选|  
+|数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BinaryData|**图像**|与在跟踪中捕获的事件类相关的二进制值。|2|是|  

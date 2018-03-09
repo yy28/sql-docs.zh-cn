@@ -1,5 +1,5 @@
 ---
-title: "连接到 dBASE 或其他 DBF 文件 |Microsoft 文档"
+title: "连接到 dBASE 或其他 DBF 文件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - dBase files
 - DBF files
 ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b1ae38e8b7ba0a9e584a80d1c6cacc76938576a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a840093c5501dc7d7f91ea3aa0a7b04ed4a42339
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>连接到 dBASE 或其他 DBF 文件
   通过使用 OLE DB 连接管理器并选择 Microsoft OLE DB Provider for Jet 4.0，可以连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的 dBASE 数据库文件或其他 .DBF 数据库文件。  
@@ -55,4 +54,3 @@ ms.lasthandoff: 08/03/2017
  [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   
-

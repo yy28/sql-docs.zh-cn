@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
@@ -17,7 +18,8 @@ applies_to:
 f1_keywords:
 - SOME
 - SOME_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - scalar values
 - comparing scalar with single-column set
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f962702faec170262f50c3c2ca5c328af3bc266d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,14 +63,14 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  指定应进行比较。  
   
- *子查询*  
+ *subquery*  
  包含某列结果集的子查询。 返回的列的数据类型必须是与相同的数据类型*scalar_expression*。  
   
 ## <a name="result-types"></a>结果类型  
  **Boolean**  
   
 ## <a name="result-value"></a>结果值  
- 部分或任何返回**TRUE**时指定比较为 TRUE 时为的任何对 (*scalar_expression***，***x*) 其中*x*是单列集合中的值; 否则，返回**FALSE**。  
+ 部分或任何返回**TRUE**时指定比较为 TRUE 时为的任何对 (*scalar_expression***，***x*) 其中*x*是中的值单列集;否则，返回**FALSE**。  
   
 ## <a name="remarks"></a>注释  
  某些需要*scalar_expression*要产生积极与至少一个子查询返回的值进行比较。 对于需要的语句， *scalar_expression*要产生积极与子查询返回的每个值进行比较，请参阅[所有 &#40;Transact SQL &#41;](../../t-sql/language-elements/all-transact-sql.md). 例如，如果子查询将返回值为 2 和 3， *scalar_expression* = 一些 （子查询），则计算结果为 TRUE 作为*scalar_express*为 2。 如果子查询将返回值为 2 和 3， *scalar_expression* = 所有 （子查询），则计算结果为 FALSE，因为某些子查询 （3 的值） 的值将不满足的条件表达式。  
@@ -149,11 +151,11 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
 ## <a name="see-also"></a>另请参阅  
  [所有 &#40;Transact SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [用例 &#40;Transact SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
  [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40;Transact SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   

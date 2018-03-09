@@ -2,35 +2,34 @@
 title: "处理数据库、 表或分区 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
+f1_keywords:
+- sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77ae5703b9a45a9f15eddfd4eb933fed62a9ab1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c789fc9601bd4889585d52dcb6ecfe6365038323
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="process-database-table-or-partition-analysis-services"></a>处理数据库、表或分区 (Analysis Services)
-  本主题中的任务说明如何通过使用手动处理表格模型数据库、 表或分区**过程\<对象 >**中的对话框[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+本主题中的任务说明如何通过使用手动处理表格模型数据库、 表或分区**过程\<对象 >**中的对话框[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- 有关表格模型处理的详细信息，请参阅[处理数据（SSAS 表格）](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
+ 有关表格模型处理的详细信息，请参阅[处理数据](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
 ##  <a name="bkmk_process_tasks"></a> “任务”  
   
@@ -84,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 4.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [表格模型分区（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [创建和管理表格模型分区（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [表格模型分区](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
+ [创建和管理表格模型分区](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

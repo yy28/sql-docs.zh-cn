@@ -3,8 +3,9 @@ title: "LevelName 属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Member::LevelName
 - LevelName
-helpviewer_keywords: LevelName property [ADO MD]
+helpviewer_keywords:
+- LevelName property [ADO MD]
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63d1709c67ebc0aadb88d879f01633e0fa9c4ede
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e19960561b98d89edd515a974c089a7153eb82f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="levelname-property-ado-md"></a>LevelName 属性 (ADO MD)
 指示的级别的名称[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  

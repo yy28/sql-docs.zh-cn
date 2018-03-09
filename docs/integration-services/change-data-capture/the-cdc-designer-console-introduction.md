@@ -1,5 +1,5 @@
 ---
-title: "CDC 设计器控制台简介 |Microsoft 文档"
+title: "CDC 设计器控制台简介 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
-ms.openlocfilehash: 12afe7ad2b83c4ab25e4c0803d015442ef9cfc55
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b89045fbbda6920dbeb57e6d19da3813932ba597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 设计器控制台简介
   本节介绍用于 Change Data Capture Designer for Oracle by Attunity 的安装过程。  
@@ -46,8 +45,8 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="source-oracle-database"></a>源 Oracle 数据库
   
--   Oracle Database 10g 发行版 2
--   Oracle Database 11g 发行 1 和版本 2
+-   Oracle 数据库 10g 发行版 2
+-   Oracle 数据库 11g 发行版 1 和发行版 2
 -   经典安装的 Oracle Database 12c。 （不支持多租户安装。）  
 
 ### <a name="target-sql-server-database"></a>目标 SQL Server 数据库
@@ -70,4 +69,3 @@ ms.lasthandoff: 08/03/2017
  可使用“控制面板”的“程序和功能”卸载 CDC 设计器控制台。  
   
   
-

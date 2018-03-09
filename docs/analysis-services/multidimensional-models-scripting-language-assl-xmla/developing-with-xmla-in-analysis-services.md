@@ -1,19 +1,18 @@
 ---
 title: "使用 Analysis Services 中的 XMLA 开发 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, data mining
 - commands [XML for Analysis]
@@ -22,25 +21,25 @@ helpviewer_keywords:
 - XML for Analysis, Analysis Services tasks
 - XMLA, Analysis Services tasks
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71df2a16685019e6b1117dee995d5499711625eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6bf41801ce6b81c532d8be56b5afdfe4fd5e901f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>在 Analysis Services 中使用 XMLA 开发
   XML for Analysis (XMLA) 是一种基于 SOAP 的 XML 协议，它专门设计用于可通过 HTTP 连接访问的任何标准多维数据源的通用数据访问。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 XMLA 作为与客户端应用程序通信的唯一协议。 从根本上说，Analysis Services 支持的所有客户端库都可以采用 XMLA 来表示请求和响应。  
   
  作为开发人员，您可以使用 XMLA 将客户端应用程序与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 集成，而不必依赖 .NET Framework 或 COM 接口。 通过使用 XMLA 并与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立 HTTP 连接，可以满足包括在众多平台上托管在内的应用程序要求。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不仅完全符合 XMLA 1.1 规范，还对其进行了扩展，可支持数据定义、数据操作和数据控制。 Analysis Services 扩展被称为 Analysis Services 脚本语言 (ASSL)。 将 XMLA 与 ASSL 一起使用可支持比 XMLA 单独提供的功能更广泛的功能。 ASSL 有关的详细信息，请参阅[使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 完全符合 XMLA，1.1 规范，但也扩展它，以使数据定义、 数据操作和数据控制支持。 Analysis Services 扩展被称为 Analysis Services 脚本语言 (ASSL)。 将 XMLA 与 ASSL 一起使用可支持比 XMLA 单独提供的功能更广泛的功能。 ASSL 有关的详细信息，请参阅[使用 Analysis Services 脚本语言 &#40; 进行开发ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
 |主题|Description|  
 |-----------|-----------------|  
@@ -55,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |[处理对象 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)|介绍如何使用[过程](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)命令到进程[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。|  
 |[合并分区 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)|介绍如何使用[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令要将分区合并在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。|  
 |[设计聚合 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)|介绍如何使用[DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)命令，在迭代或批处理模式下中的聚合设计的设计聚合到[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|  
-|[备份、还原和同步数据库 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|介绍如何使用[备份](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)和[还原](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)命令以备份和还原[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]从备份文件的数据库。<br /><br /> 此外介绍了如何使用[同步](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)命令以使同步[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用现有的数据库的同一个实例或另一个实例的数据库。|  
+|[备份、 还原和同步数据库 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|介绍如何使用[备份](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)和[还原](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)命令以备份和还原[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]从备份文件的数据库。<br /><br /> 此外介绍了如何使用[同步](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)命令以使同步[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用现有的数据库的同一个实例或另一个实例的数据库。|  
 |[插入、 更新和删除成员 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)|介绍如何使用[插入](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)，和[删除](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令将添加，更改或删除从允许写维度的成员。|  
 |[更新的单元格 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)|介绍如何使用[UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)命令以更改写入的分区中的单元格的值。|  
 |[管理缓存 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md)|详细介绍如何使用[ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md)命令来清除缓存的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。|  

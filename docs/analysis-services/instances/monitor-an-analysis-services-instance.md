@@ -2,16 +2,13 @@
 title: "监视 Analysis Services 实例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], SQL Server Profiler
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c583616f8ba9a7ae1f4104e22cf5dd3a4ec5d87
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitor-an-analysis-services-instance"></a>监视 Analysis Services 实例
-  可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或性能监视器（此应用程序有时称为 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **）监视**的性能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于创建和管理跟踪并分析和重播跟踪结果。 性能监视器报告服务器状态（通过某些计数器进行索引），下一节中将对此进行讨论。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或性能监视器（此应用程序有时称为 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **）监视**的性能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]可创建和管理跟踪和分析和重播跟踪结果。 性能监视器报告服务器状态（通过某些计数器进行索引），下一节中将对此进行讨论。  
   
 > [!NOTE]  
 >  有关监视的详细信息，请参阅 [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)（SQL Server 2008 R2 操作指南）。  
@@ -46,8 +44,8 @@ ms.lasthandoff: 11/17/2017
   
  [使用 SQL Server 扩展事件监视 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [使用动态管理视图 (DMV) 监视 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [使用动态管理视图 &#40; Dmv &#41;监视 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [性能计数器 (SSAS)](../../analysis-services/instances/performance-counters-ssas.md)  
+ [性能计数器 ](../../analysis-services/instances/performance-counters-ssas.md)  
   
   

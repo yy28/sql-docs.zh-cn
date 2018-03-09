@@ -2,9 +2,12 @@
 title: "SQL Server 事件探查器 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,21 +28,21 @@ helpviewer_keywords:
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7d17e24ef7a815a77a4a7cfc338a8d87369d7e81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8a6f1151141c3f0641ba35b92d8c9cd8b1639a14
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler"></a>SQL Server 事件探查器
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是一个接口来创建和管理跟踪和分析和重播跟踪结果。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播一系列特定的步骤。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是一个接口来创建和管理跟踪和分析和重播跟踪结果。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播一系列特定的步骤。  
   
 >**重要说明!!**  
-> 我们宣布不推荐将 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 跟踪捕获和跟踪重播。 这些功能在 SQL Server 2016 中均 **可用** ，但在更高版本中将删除。
+> 我们宣布不推荐将 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于[!INCLUDE[ssDE](../../includes/ssde-md.md)]跟踪捕获和跟踪重播。 这些功能在 SQL Server 2016 中均 **可用** ，但在更高版本中将删除。
 >   
 >  也不推荐使用包含 Microsoft SQL Server 跟踪和重播对象的 *Microsoft.SqlServer.Management.Trace* 命名空间。                     
 **注意：** 针对 Analysis Services 工作负荷的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 尚未弃用，我们将继续提供支持。
@@ -131,7 +134,7 @@ ms.lasthandoff: 11/09/2017
   
  SQL Server 提供了两种跟踪 SQL Server 实例的方式：可使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 进行跟踪，也可以使用系统存储过程进行跟踪。  
   
- **Filter**  
+ **筛选**  
  当创建跟踪或模板时，可以定义筛选由事件收集的数据的准则。 若要避免跟踪过大，可以筛选跟踪，以便只收集一部分事件数据。 例如，可以在跟踪中将 Microsoft Windows 用户名限制为特定的用户，从而减少输出的数据。  
   
  如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。  
@@ -141,7 +144,7 @@ ms.lasthandoff: 11/09/2017
 |任务说明|主题|  
 |----------------------|-----------|  
 |列出 SQL Server 提供的用于监视特定类型事件的预定义模板，以及重播跟踪所需使用的权限。|[SQL Server Profiler 模板和权限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)|  
-|说明如何运行 SQL Server Profiler。|[运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
+|说明如何运行 SQL Server Profiler。|[运行 SQL Server 事件探查器所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
 |介绍如何创建跟踪。|[创建跟踪 (SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)|  
 |说明如何指定跟踪文件的事件和数据列。|[指定跟踪文件的事件和数据列 (SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |说明如何将跟踪结果保存到文件。|[将跟踪结果保存到文件 (SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)|  

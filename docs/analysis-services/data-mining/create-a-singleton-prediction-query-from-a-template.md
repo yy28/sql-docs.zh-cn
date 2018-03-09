@@ -2,15 +2,13 @@
 title: "从模板创建单独预测查询 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: singleton query predictions [DMX]
@@ -20,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b455a9f4c8996ec2dd9e6d255f4e9f282d58df4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 021faf311132e7bd104c66f02340159a9a8b290c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>通过模板创建单独预测查询
-  如果您具有一个要用于预测的模型，但不希望将该模型映射到外部输入数据集或生成大容量预测，则单独查询很有用。 对于单独查询，您可以向模型提供一个或多个值，并且立即会看到预测值。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]当你具有你想要用于预测，但不希望将其映射到外部输入数据集或生成大容量预测的模型时，单独查询很有用。 对于单独查询，您可以向模型提供一个或多个值，并且立即会看到预测值。  
   
  例如，以下 DMX 查询表示对目标邮件模型 TM_Decision_Tree 的单独查询。  
   

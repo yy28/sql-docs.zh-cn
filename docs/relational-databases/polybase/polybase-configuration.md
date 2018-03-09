@@ -1,27 +1,26 @@
 ---
 title: "PolyBase 配置 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/13/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 80ff73c1-2861-438b-a13f-309155f3d6e1
-caps.latest.revision: "17"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d796fb91c46e2620a80d2bedb481156657aeb539
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a202fe4cb2a6f6bd24ce6279259e6cbc46a622f6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="polybase-configuration"></a>PolyBase 配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +31,15 @@ ms.lasthandoff: 11/17/2017
  必须确保从 SQL Server 到外部数据源的连接。 连接类型会显著影响查询性能。 例如，10Gbit 以太网链接将使 PolyBase 查询的查询响应时间比 1Gbit 以太网链接更快。  
   
  必须使用 **sp_configure**配置 SQL Server，以连接到你的 Hadoop 版本或 Azure Blob 存储。 PolyBase 支持两种 Hadoop 分发：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。  有关受支持的外部数据源的完整列表的详细信息，请参阅 [PolyBase 连接配置 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
-1 请注意：PolyBase 不支持 Cloudera 加密的区域。 
+
+请注意，从 SQL Server 2016 SP1 CU7 和 SQL Server 2017 开始，PolyBase 支持 Hadoop 加密区域。
+
   
 ### <a name="run-spconfigure"></a>运行 sp_configure  
   
 1.  运行 sp_configure ‘hadoop connectivity’ 并设置适当的值。  若要查找值，请参阅 [PolyBase 连接配置 (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。  
   
-    ```tsql  
+    ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 4. 对于所有 CDH 5.X 版本，你都需要将 **mapreduce.application.classpath** 配置参数添加到 **yarn.site.xml 文件**的末尾或添加到 **mapred-site.xml 文件**中。 HortonWorks 在 **yarn.application.classpath** 配置中包括了这些配置。
 
 ## <a name="connecting-to-hadoop-cluster-with-hadooprpcprotection-setting"></a>使用 Hadoop.RPC.Protection 设置连接到 Hadoop 群集
-在 Hadoop 群集中保护通信的常用方法是将 hadoop.rpc.protection 配置更改为“隐私”或“完整性”。 默认情况下，PolyBase 假定配置设置为“身份验证”。 要替代此默认设置，需要将以下属性添加到 core-site.xml 文件。 通过更改此配置，可实现 hadoop 节点之间以及 SSL 到 SQL Server 的连接之间安全的数据传输。
+在 Hadoop 群集中保护通信的常用方法是将 hadoop.rpc.protection 配置更改为“隐私”或“完整性”。 默认情况下，PolyBase 假定配置设置为“身份验证”。 要替代此默认设置，请将以下属性添加到 core-site.xml 文件。 通过更改此配置，可实现 hadoop 节点之间以及 SSL 到 SQL Server 的连接之间安全的数据传输。
 
 ```
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/17/2017
 ```
   
 ## <a name="kerberos-configuration"></a>Kerberos 配置  
-请注意，当 PolyBase 向 Kerberos 保护的群集证明身份时，我们要求将 hadoop.rpc.protection 设置设为身份验证。 这会使 Hadoop 节点间的数据通信保持非加密状态。 
+请注意，当 PolyBase 向 Kerberos 保护的群集证明身份时，默认情况下需要将 hadoop.rpc.protection 设置设为“身份验证”。 这会使 Hadoop 节点间的数据通信保持非加密状态。 要为 hadoop.rpc.protection 使用“隐私”或“完整性”设置，请在 PolyBase 服务器上更新 core-site.xml 文件。 有关详细信息，请参阅上一节的[使用 Hadoop.rpc.protection 连接到 Hadoop 群集](#connecting-to-hadoop-cluster-with-hadooprpcprotection-setting)。
 
  连接到 Kerberos 保护的 Hadoop 群集 [使用 MIT KDC]：
    
@@ -208,7 +209,7 @@ ms.lasthandoff: 11/17/2017
   
     |**#**|**配置文件**|**配置密钥**|**操作**|  
     |------------|----------------|---------------------|----------|   
-    |1|core-site.xml|polybase.kerberos.kdchost|指定 KDC 主机名。 例如：kerberos.your-realm.com。|  
+    |@shouldalert|core-site.xml|polybase.kerberos.kdchost|指定 KDC 主机名。 例如：kerberos.your-realm.com。|  
     |2|core-site.xml|polybase.kerberos.realm|指定 Kerberos 领域。 例如：YOUR-REALM.COM|  
     |3|core-site.xml|hadoop.security.authentication|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如：KERBEROS<br></br>**安全说明：** KERBEROS 必须采用大写形式。 如果采用小写，则可能不会打开。|   
     |4|hdfs-site.xml|dfs.namenode.kerberos.principal|查找 Hadoop 端配置并复制到 SQL Server 计算机。 例如： hdfs/_HOST@YOUR-REALM.COM|  

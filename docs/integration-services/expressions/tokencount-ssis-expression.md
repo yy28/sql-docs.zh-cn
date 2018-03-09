@@ -1,5 +1,5 @@
 ---
-title: "TOKENCOUNT （SSIS 表达式） |Microsoft 文档"
+title: "TOKENCOUNT（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 77faf8083207373dee5dba3721fb38f91eefc3f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 38de8406db5a5302065a40cf187e4ab34d053540
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT（SSIS 表达式）
   返回包含指定分隔符分隔的标记的字符串中的标记数目。  
@@ -44,7 +43,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下面的备注适用于 TOKEN 函数：  
   
 -   分隔符字符串可以包含一个或多个分隔符字符。  
@@ -89,7 +88,6 @@ TOKENCOUNT("        a little white dog", " ")
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

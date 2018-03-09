@@ -2,9 +2,12 @@
 title: "数据库镜像期间可能出现的故障 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fbc7cc9abcbfb1e0608104000bab04e56b5ea86d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 16801b4bcf5cfbaf01090d716d4e77f0fbdd1e41
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="possible-failures-during-database-mirroring"></a>数据库镜像期间可能出现的故障
-  物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障都可能导致数据库镜像会话失败。 数据库镜像不会定期检查 Sqlservr.exe 所依赖的组件来验证组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误 ”。 为了检测可能未被注意的其他故障，数据库镜像采用了自己的超时机制。 发生镜像超时时，数据库镜像假定已发生故障并声明一个“软错误”。 然而，某些在 SQL Server 实例级别发生的故障不会导致镜像超时，并且检测不到。  
+# <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障都可能导致数据库镜像会话失败。 数据库镜像不会定期检查 Sqlservr.exe 所依赖的组件来验证组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误 ”。 为了检测可能未被注意的其他故障，数据库镜像采用了自己的超时机制。 发生镜像超时时，数据库镜像假定已发生故障并声明一个“软错误”。 然而，某些在 SQL Server 实例级别发生的故障不会导致镜像超时，并且检测不到。  
   
 > [!IMPORTANT]  
 >  在数据库镜像会话中无法检测到数据库（除镜像数据库之外）故障。 此外，也无法检测到数据磁盘故障，除非数据库因为数据磁盘故障而重新启动。  

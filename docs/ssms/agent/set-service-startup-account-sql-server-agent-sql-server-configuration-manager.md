@@ -3,9 +3,13 @@ title: "为 SQL Server 代理设置服务启动帐户 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
+ms.suite: sql
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +17,19 @@ helpviewer_keywords:
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c421d5bab68e114069534ebf4fd83dddfb50469e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bcd26feceb6ecd2fc0b776a5ceec80756cd2e110
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服务启动帐户定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在运行时所用的 Windows 帐户及其网络权限。 本主题说明了如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中通过 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 配置管理器设置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]代理服务帐户。  
   
 **本主题内容**  
@@ -74,9 +79,9 @@ ms.lasthandoff: 11/09/2017
   
 5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 配置管理器的控制台窗格中，选择 **“SQL Server 服务”**。  
   
-6.  在详细信息窗格中，右键单击“SQL Server 代理 (server_name)”（其中 server_name 是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理实例的名称），然后选择“属性”。  
+6.  在详细信息窗格中，右键单击“SQL Server 代理(server_name)”（其中 server_name 是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理实例的名称），然后选择“属性”。  
   
-7.  在“SQL Server 代理 (server_name)”的“属性”对话框的“登录”选项卡中，选择“登录身份”下的以下选项之一：  
+7.  在“SQL Server 代理(server_name)属性”对话框的“登录”选项卡中，选择“登录身份”下的以下选项之一：  
   
     -   **内置帐户**：如果你的作业仅需要本地服务器中的资源，则选择此选项。 有关如何选择 Windows 内置帐户类型的信息，请参阅 [为 SQL Server 代理服务选择帐户](http://msdn.microsoft.com/library/ms191543.aspx)。  
   
@@ -91,7 +96,7 @@ ms.lasthandoff: 11/09/2017
   
         2.  在 **“密码”** 框中，输入帐户密码。 在“确认密码”框中重新输入密码。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 9. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 配置管理器中，单击 **“关闭”** 按钮。  
   

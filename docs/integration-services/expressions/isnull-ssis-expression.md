@@ -1,5 +1,5 @@
 ---
-title: "ISNULL （SSIS 表达式） |Microsoft 文档"
+title: "ISNULL（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - null values [Integration Services]
 - ISNULL function
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dd74ffbf491733826eef4cf61530e838033d7e3d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 73cba6f01e1b3566200c4818ada13969866bee48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL（SSIS 表达式）
   根据表达式是否为空，返回一个布尔值结果。  
@@ -65,8 +64,7 @@ ISNULL(DaysToManufacture + @AddDays)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)   
- [将合并 &#40;Transact SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)   
+ [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   
-

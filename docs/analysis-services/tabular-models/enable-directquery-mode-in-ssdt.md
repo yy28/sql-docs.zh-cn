@@ -1,32 +1,30 @@
 ---
 title: "启用 DirectQuery 模式下在 SSDT |Microsoft 文档"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3b43ff386936e76091c64d8db1f73bda587f23b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cc16e4c1e4c34e9e37d20a747e8ea2acac6bea01
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>在 SSDT 中启用 DirectQuery 模式
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 本主题介绍如何在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中为表格模型项目启用 DirectQuery 模式。  
   
 为你在 SSDT 中设计的表格模型启用 DirectQuery 模式时：

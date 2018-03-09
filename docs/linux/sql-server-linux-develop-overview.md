@@ -1,28 +1,29 @@
 ---
 title: "开发应用程序的 SQL Server on Linux |Microsoft 文档"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
+ms.custom: sql-linux
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.workload: On Demand
-ms.openlocfilehash: aa5b8ecf8b9801874d0af342d268073a09e4812c
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: fb07628c8818b16709abab07efc1f52248426305
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 开发应用程序
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 你可以创建应用程序连接到并从多种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + Linux 上使用 SQL Server 自 2017 年。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
 
@@ -73,11 +74,11 @@ ms.lasthandoff: 11/28/2017
 
 - [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
-- [mssql conf](sql-server-linux-configure-mssql-conf.md)
+- [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
 ## <a name="next-steps"></a>后续步骤
 
-若要开始，请在使用以下快速入门教程之一的 Linux 上安装 SQL Server:
+若要开始，请在使用以下快速入门之一的 Linux 上安装 SQL Server:
 
 - [在 Red Hat Enterprise Linux 上安装](quickstart-install-connect-red-hat.md)
 - [在 SUSE Linux Enterprise Server 上安装](quickstart-install-connect-suse.md)

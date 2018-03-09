@@ -3,8 +3,11 @@ title: "SQL Server 代理 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,16 @@ ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cebf731c4a429ea738b1031da3d4f9445af3096b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 67b44d5e9057cc9ede6cdece28b23ae3ab8bf037
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中执行计划的管理任务，即“作业”。  
   
 **本主题内容**  
@@ -45,7 +49,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="Components"></a>SQL Server 代理的组件  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理使用下列组件来定义要执行的任务、执行任务的时间以及报告任务成功或失败的方式。  
   
-### <a name="jobs"></a>作业  
+### <a name="jobs"></a>中执行计划的管理任务，即“作业”  
 “作业”  是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理执行的一系列指定操作。 使用作业可以定义一个能执行一次或多次的管理任务，并能监视执行结果是成功还是失败。 作业可以在一个本地服务器上运行，也可以在多个远程服务器上运行。  
   
 > [!IMPORTANT]  
@@ -63,7 +67,7 @@ ms.lasthandoff: 11/09/2017
   
 所有作业步骤均在特定的安全上下文中运行。 对于使用 [!INCLUDE[tsql](../../includes/tsql_md.md)]的作业步骤，请使用 EXECUTE AS 语句设置作业步骤的安全上下文。 对于其他类型的作业步骤，请使用代理帐户来设置作业步骤的安全上下文。  
   
-### <a name="schedules"></a>计划  
+### <a name="schedules"></a>“计划”  
 “计划”  指定了作业运行的时间。 多个作业可以根据一个计划运行，多个计划也可以应用到一个作业。 计划可以为作业运行的时间定义下列条件：  
   
 -   每当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理启动时。  
@@ -76,7 +80,7 @@ ms.lasthandoff: 11/09/2017
   
 有关详细信息，请参阅 [创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)。  
   
-### <a name="alerts"></a>警报  
+### <a name="alerts"></a>Alerts  
 “警报”  是对特定事件的自动响应。 例如，事件可以是启动的作业，也可以是达到特定阈值的系统资源。 可以定义警报产生的条件。  
   
 警报可以响应下列任一条件：  
@@ -151,7 +155,7 @@ ms.lasthandoff: 11/09/2017
   
 每个代理对应于一个安全凭据。 每个代理都可与一组子系统和一组登录名相关联。 代理仅可用于使用与该代理相关联的子系统的作业步骤。 若要创建使用特定代理的作业步骤，作业所有者必须使用与此代理相关联的登录名，或者是对代理具有无限访问权限的角色成员。 **sysadmin** 固定服务器角色的成员可以无限制地访问代理。 **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole** 的成员仅能使用授予他们特定访问权限的代理。 这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理固定数据库角色的每个成员用户必须获得访问特定代理的权限，才能创建使用那些代理的作业步骤。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
 使用以下步骤来配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理以自动管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ：  
   
 1.  确定哪些管理任务或服务器事件定期执行以及这些任务或事件是否可以通过编程方式进行管理。 如果任务涉及一系列可预见的步骤并且在特定时间或响应特定事件时执行，则该任务非常适合自动化。  

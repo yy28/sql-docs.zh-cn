@@ -1,10 +1,13 @@
 ---
 title: "执行 SSMA 控制台 (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 16f646303766e8e249e2bd76a336bc5c3ee59049
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c0109ed3c675b140cbce6d780c24256c0eb2bc9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>执行 SSMA 控制台 (OracleToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。 控制台应用程序在此部分中使用作为枚举的某些标准脚本文件命令。  
@@ -164,7 +167,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
   metabase="<source/target>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <force-load>  
@@ -277,7 +280,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <generate-assessment-report  
@@ -351,7 +354,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <convert-schema  
@@ -419,7 +422,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
 </migrate-data>  
 ```  
-或  
+或多个  
   
 ```xml  
 <migrate-data  
@@ -508,7 +511,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target  
@@ -517,7 +520,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
    object-type="<object-category>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target>  
@@ -573,7 +576,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database  
@@ -582,7 +585,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
    object-type="<object-category>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database>  
@@ -632,7 +635,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <save-as-script  
@@ -708,7 +711,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
 </convert-sql-statement>  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  
@@ -731,7 +734,7 @@ Oracle 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  

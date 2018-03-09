@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3a004db77f5c137742542a729ced6e79c708c43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22a2d5eec19c545771fb5791b37aa50b90124b94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 连接类型 (SSRS)
   若要在报表中包含来自 SAP NetWeaver® Business Intelligence 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].NET Framework Data Provider 1.0 的数据扩展插件。  
@@ -93,13 +91,13 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |------------------|--------------|---------------------------------------|  
 |**Value**|**对象**|指定字段的数据值。|  
 |**IsMissing**|**Boolean**|指示是否在结果数据集中找到了该字段。|  
-|**FormattedValue**|**字符串**|返回关键数字的格式值。|  
-|**BackgroundColor**|**字符串**|返回数据库中为该字段定义的背景颜色。|  
-|**Color**|**字符串**|返回数据库中为该项定义的前景色。|  
+|**FormattedValue**|**String**|返回关键数字的格式值。|  
+|**BackgroundColor**|**String**|返回数据库中为该字段定义的背景颜色。|  
+|**Color**|**String**|返回数据库中为该项定义的前景色。|  
 |**Key**|**对象**|返回级别的键。|  
 |**LevelNumber**|**Integer**|针对父子层次结构返回级别号或维度编号。|  
-|**ParentUniqueName**|**字符串**|针对父子层次结构返回父级的完全限定名称。|  
-|**UniqueName**|**字符串**|返回级别的完全限定名称。 例如，某员工的 **UniqueName** 值可能为 *[0D_Company].[10D_Department].[11]*。|  
+|**ParentUniqueName**|**String**|针对父子层次结构返回父级的完全限定名称。|  
+|**UniqueName**|**String**|返回级别的完全限定名称。 例如，某员工的 **UniqueName** 值可能为 *[0D_Company].[10D_Department].[11]*。|  
   
  有关在表达式中使用字段和字段属性的详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   

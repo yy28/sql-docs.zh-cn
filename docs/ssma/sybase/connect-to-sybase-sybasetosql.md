@@ -3,8 +3,11 @@ title: "连接到 Sybase (SybaseToSQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 447d53ca968cd17441c359ca782dc212a3435095
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>连接到 Sybase (SybaseToSQL)
 使用**连接到 Sybase**对话框中，若要连接到你想要迁移的 Sybase 自适应 Server Enterprise (ASE) 实例。  
   
 若要访问此对话框中，在**文件**菜单上，选择**连接到 Sybase**。 如果你以前连接，则命令是**重新连接到 Sybase**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **提供程序**  
 选择任何用于连接到 Sybase 服务器计算机上安装提供程序。  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/09/2017
 **服务器端口**  
 如果将非默认端口用于连接到 ASE，输入端口号。 默认端口号为 5000。 这是标准模式选项。  
   
-**用户名**  
+**User name**  
 输入用于连接到 ASE 的用户名称。 这是标准模式选项。  
   
 **密码**  
@@ -58,10 +61,10 @@ ms.lasthandoff: 11/09/2017
   
     |设置|Sybase 12.5 参数|Sybase 15 参数|  
     |-----------|-------------------------|-----------------------|  
-    |服务器名称|服务器名称|Server|  
+    |服务器名称|服务器名称|“服务器”|  
     |端口|服务器端口地址|端口|  
-    |用户名|用户 ID|用户 ID|  
-    |密码|密码|密码|  
+    |“用户名”|用户 ID|用户 ID|  
+    |Password|Password|Password|  
     |提供程序|提供程序|提供程序|  
   
     Sybase ASE 12.5 的一个示例连接字符串如下所示：  
@@ -77,9 +80,9 @@ ms.lasthandoff: 11/09/2017
     |设置|Sybase 12.5 月 15 日参数|  
     |-----------|-----------------------------|  
     |驱动程序名称|驱动程序|  
-    |服务器名称|Server|  
+    |服务器名称|“服务器”|  
     |用户名|uid|  
-    |密码|pwd|  
+    |Password|pwd|  
     |端口号|端口|  
   
     对于 Sybase ASE 12.5 或 15 中，连接字符串的示例如下所示：  
@@ -90,9 +93,9 @@ ms.lasthandoff: 11/09/2017
   
     |设置|Sybase 12.5 月 15 日参数|  
     |-----------|-----------------------------|  
-    |服务器名称|Server|  
+    |服务器名称|“服务器”|  
     |用户名|uid|  
-    |密码|pwd|  
+    |Password|pwd|  
     |端口号|端口|  
   
     请按照是的 ADO.NET 提供程序的连接字符串示例：  

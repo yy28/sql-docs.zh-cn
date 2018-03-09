@@ -1,10 +1,11 @@
 ---
-title: "ObjectTypeEnum |Microsoft 文档"
+title: ObjectTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ObjectTypeEnum
-helpviewer_keywords: ObjectTypeEnum enumeration [ADOX]
+f1_keywords:
+- ObjectTypeEnum
+helpviewer_keywords:
+- ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a320f3471c3ba7db9bd51225d9237ae0d29e085
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2deffcf2d45b5b2fe8920435ab06b139c80143ab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 指定为其设置权限或所有权的数据库对象的类型。  
   
-|常量|值|Description|  
+|常量|“值”|Description|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|对象是列。|  
 |**adPermObjDatabase**|3|对象是一个数据库。|  

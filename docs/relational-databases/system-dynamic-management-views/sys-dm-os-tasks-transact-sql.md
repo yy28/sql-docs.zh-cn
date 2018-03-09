@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_tasks_TSQL
 - dm_os_tasks_TSQL
 - dm_os_tasks
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_tasks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_tasks dynamic management view
 ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dfd9c411f7de1e40eb035ac4d7c8de1b949e6f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b2fd7607fb0e22206ce309bd30427ba3f8dc7631
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**varbinary （8)**|对象的内存地址。|  
+|**task_address**|**varbinary(8)**|对象的内存地址。|  
 |**task_state**|**nvarchar(60)**|任务的状态。 可以是下列选项之一：<br /><br /> PENDING：正在等待工作线程。<br /><br /> RUNNABLE：可运行，但正在等待接收量程。<br /><br /> RUNNING：当前正在计划程序中运行。<br /><br /> SUSPENDED：具有工作线程，但正在等待事件。<br /><br /> DONE：已完成。<br /><br /> SPINLOOP：陷入自旋锁。|  
 |**context_switches_count**|**int**|此任务完成的计划程序上下文切换数。|  
 |**pending_io_count**|**int**|此任务执行的物理 I/O 数。|  
@@ -50,12 +53,12 @@ ms.lasthandoff: 11/17/2017
 |**session_id**|**int**|与任务关联的会话 ID。|  
 |**exec_context_id**|**int**|与任务关联的执行上下文 ID。|  
 |**request_id**|**int**|此任务的请求的 ID。 有关详细信息，请参阅[sys.dm_exec_requests &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|**worker_address**|**varbinary （8)**|运行任务的工作线程的内存地址。<br /><br /> NULL = 任务正在等待工作线程以便运行，或者任务刚刚完成运行。<br /><br /> 有关详细信息，请参阅[sys.dm_os_workers &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|**host_address**|**varbinary （8)**|主机的内存地址。<br /><br /> 0 = 不使用宿主创建任务。 这有助于标识用于创建此任务的主机。<br /><br /> 有关详细信息，请参阅[sys.dm_os_hosts &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
-|**parent_task_address**|**varbinary （8)**|作为该对象的父对象的任务的内存地址。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**worker_address**|**varbinary(8)**|运行任务的工作线程的内存地址。<br /><br /> NULL = 任务正在等待工作线程以便运行，或者任务刚刚完成运行。<br /><br /> 有关详细信息，请参阅[sys.dm_os_workers &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|**host_address**|**varbinary(8)**|主机的内存地址。<br /><br /> 0 = 不使用宿主创建任务。 这有助于标识用于创建此任务的主机。<br /><br /> 有关详细信息，请参阅[sys.dm_os_hosts &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
+|**parent_task_address**|**varbinary(8)**|作为该对象的父对象的任务的内存地址。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   

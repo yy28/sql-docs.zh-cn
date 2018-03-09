@@ -2,9 +2,12 @@
 title: "sqlps 实用工具 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqlps
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ helpviewer_keywords:
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2d6922ae966b581f29212a0e9b1d6547743e6e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
-  **sqlps** 实用工具可启动 Windows PowerShell 会话，同时加载和注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Sqlps**实用工具启动 Windows PowerShell 会话，同时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]PowerShell 提供程序和 cmdlet 加载和注册。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]使用**sqlps** PowerShell 模块相反。 有关 **sqlps** 模块的详细信息，请参阅 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
@@ -72,7 +75,7 @@ sqlps
  指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 仅当从*script_block* 或其他 **script_block** 实用工具会话调用 **script_block** 实用工具时，才能指定 **script_block** 。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block*中 PowerShell 命令的参数。  
   
  *字符串* [ *command_parameters* ]  
- 指定包含要运行的 PowerShell 命令的字符串。 使用 **"&{***command***}"** 格式。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
+ 指定包含要运行的 PowerShell 命令的字符串。 使用格式**"& {***命令***}"**。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
   
  [ **-?** | **-Help** ]  
  显示 **sqlps** 实用工具选项的语法摘要。  

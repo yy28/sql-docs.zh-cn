@@ -2,10 +2,14 @@
 title: "包含标记的事务的相关数据库的恢复 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +25,20 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64c02014a1a5dca2e2ed40869f24bea3e2a682f9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 35cef9e6a0576780aa802d891f9ea43cc21bc15a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>包含标记的事务的相关数据库的恢复
-  本主题仅适用于那些包含标记事务和使用完整或大容量日志恢复模式的数据库。  
+# <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>包含标记事务的相关数据库恢复
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题仅适用于那些包含标记事务和使用完整或大容量日志恢复模式的数据库。  
   
  有关还原到特定恢复点的要求的详细信息，请参阅 [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
@@ -64,11 +69,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>恢复到某个标记的 Transact-SQL 语法  
  使用[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)语句将某个标记的事务作为目标时，可以使用以下子句之一在标记处或在紧邻其之前的位置处停止：  
   
--   使用 WITH STOPATMARK = **'***<mark_name>***'** 子句将标记事务指定为恢复点。  
+-   使用 WITH STOPATMARK = '<mark_name>' 子句将标记事务指定为恢复点。  
   
      STOPATMARK 前滚到标记处，并在前滚中包含标记的事务。  
   
--   使用 WITH STOPBEFOREMARK = **'**<mark_name>**'** 子句将紧邻标记之前的日志记录指定为恢复点。  
+-   使用 WITH STOPBEFOREMARK = '<mark_name>' 子句将紧邻标记之前的日志记录指定为恢复点。  
   
      STOPBEFOREMARK 前滚到标记处，但在前滚中不包含标记的事务。  
   

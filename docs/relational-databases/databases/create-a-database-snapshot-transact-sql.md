@@ -2,27 +2,33 @@
 title: "创建数据库快照 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: database snapshots [SQL Server], creating
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf1f5e93da2d30437dddad27ccf2e6d1edd6d15d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 57985ae3903c8c27b702818897e9889ecc0c01bf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
-  创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库快照的唯一方式是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支持创建数据库快照。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库快照的唯一方式是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支持创建数据库快照。  
   
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -88,7 +94,7 @@ AdventureWorks_snapshot_evening
   
 
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  可创建数据库的任何用户都可以创建数据库快照；但是，若要创建镜像数据库的快照，你必须是 **sysadmin** 固定服务器角色的成员。  
   
 ##  <a name="TsqlProcedure"></a> 如何创建数据库快照（使用 Transact-SQL）  

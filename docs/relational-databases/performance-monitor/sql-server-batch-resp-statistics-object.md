@@ -2,9 +2,12 @@
 title: "SQL Server - Batch Resp Statistics 对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e7dd5d90f7e7b59e6d685f1e2dd4e4c1cdb319e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 95ca0cdfcfe13e5176e205b6168a6e5117b35c09
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Batch Resp Statistics 对象
-**SQLServer:Batch Resp Statistics** 性能对象提供计数器来跟踪 SQL Server 批处理响应时间。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]SQLServer:Batch Resp Statistics 性能对象提供计数器来跟踪 SQL Server 批处理响应时间。
 
 下表介绍了 SQL Server **Batch Resp Statistics** 性能对象。
 

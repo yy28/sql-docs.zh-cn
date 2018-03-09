@@ -5,36 +5,37 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fae2da517d16980da679de1a596f0aed8f486aa4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6f1343fd3f55b58e7dca7b6d8381d8f7a0add9a
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-an-entity-master-data-services"></a>创建实体 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建一个实体以便包含成员及其属性。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   模型必须存在。 有关详细信息，请参阅[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)。  
   
@@ -70,10 +71,10 @@ ms.lasthandoff: 11/20/2017
 ## <a name="grid-columns"></a>网格列  
  对于创建的每个实体，系统都会在网格中添加一行（其中包含十三列）。 下面介绍了这些列。  
   
-|名称|Description|  
+|“属性”|Description|  
 |----------|-----------------|  
-|状态|实体状态。 单击“保存”  时，将显示下图，指示实体正在更新。<br /><br /> ![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
-|Name|实体名称。|  
+|“登录属性”|实体状态。 单击“保存”  时，将显示下图，指示实体正在更新。<br /><br /> ![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
+|“属性”|实体名称。|  
 |Description|实体说明。|  
 |临时表|用于存储数据的表的前缀名称。|  
 |事务日志类型|实体的事务日志类型。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/20/2017
 |更新者|上次更新实体的用户的用户名。|  
 |更新时间|上次更新实体的日期和时间。|  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
   
 -   [创建文本属性 (Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)  
   

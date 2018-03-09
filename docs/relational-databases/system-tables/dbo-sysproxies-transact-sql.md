@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysproxies_TSQL
 - dbo.sysproxies
 - sysproxies
-dev_langs: TSQL
-helpviewer_keywords: sysproxies system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysproxies system table
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b28fdf8c7cee40fa088ee0d7634e4ea17aba91c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9a1e16809177b6bec502493d03527343fecf6923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**proxy_id**|**int**|代理帐户的 ID。|  
 |**名称**|**sysname**|代理帐户的名称。|  
 |**credential_id**|**int**|代理帐户使用的凭证的 ID。|  
-|**启用**|**tinyint**|代理帐户的状态。<br /><br /> **0** = 已禁用。 **1** = 启用。|  
+|**enabled**|**tinyint**|代理帐户的状态。<br /><br /> **0** = 已禁用。 **1** = 启用。|  
 |**说明**|**nvarchar(512)**|创建代理帐户时用户输入的说明。|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier*的用户或组和代理凭据相关联。|  
 |**credential_date_created**|**datetime**|凭证创建的日期和时间。|  

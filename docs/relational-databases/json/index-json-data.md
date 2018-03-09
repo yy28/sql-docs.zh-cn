@@ -4,32 +4,32 @@ ms.custom:
 ms.date: 06/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-json
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d89fd1ad109ab0017b49dd9993aa3cafec85d15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b6df549ab64edfcc766b4839cf17cc1814efa36
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="index-json-data"></a>对 JSON 数据编制索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-在 SQL Server 2016 中，JSON 不是内置数据类型，SQL Server 不具有自定义 JSON 索引。 但是，可以使用标准索引优化对 JSON 文档的查询。 
+在 SQL Server 和 SQL 数据库中，JSON 不是内置数据类型，SQL Server 不具有自定义 JSON 索引。 但是，可以使用标准索引优化对 JSON 文档的查询。 
 
 数据库索引可提升筛选和排序操作的性能。 如果没有索引，每次查询数据时，SQL Server 不得不扫描整个表。  
   
@@ -70,7 +70,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
   
 需使用计划在查询中使用的同一表达式来创建计算列，这一点很重要 - 在此示例中该表达式为 `JSON_VALUE(Info, '$.Customer.Name')`。  
   
-无须重新编写查询。 如果使用带有 `JSON_VALUE` 函数的表达式（如上面的示例索引所示），SQL Server 会认为存在具有相同表达式的等效计算列，并会在可能的情况下应用索引。
+无须重新编写查询。 如果使用带有 `JSON_VALUE` 函数的表达式（如前面的示例查询所示），SQL Server 会认为存在具有相同表达式的等效计算列，并会在可能的情况下应用索引。
 
 ### <a name="execution-plan-for-this-example"></a>此示例的执行计划
 下面是此示例中查询的执行计划。  
@@ -80,7 +80,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 SQL Server 在非聚集索引中使用索引查找而非进行全表扫描，由此找到满足指定条件的行。 然后它在 `SalesOrderHeader` 表中使用键查找来提取查询中引用的其他列 - 在此示例中为 `SalesOrderNumber` 和 `OrderDate`。  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>通过包含的列进一步优化索引
-如果在索引中添加所需的列，则可避免在表中进行这一附加查找。 可将这些列作为标准包含列进行添加，如下例中所示，这是对上文所示 `CREATE INDEX` 示例的延伸。  
+如果在索引中添加所需的列，则可避免在表中进行这一附加查找。 可将这些列作为标准包含列添加，如以下示例中所示，这是对前面的 `CREATE INDEX` 示例的延伸。  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -88,12 +88,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-在这种情况下，SQL Server 不必从 `SalesOrderHeader` 表中读取其他数据，因为所需内容已全部包含在非聚集 JSON 索引中。 这是在查询中将 JSON 和列数据相结合以及为工作负载创建最佳索引的一个好方法。  
+在这种情况下，SQL Server 不必从 `SalesOrderHeader` 表中读取其他数据，因为所需内容已全部包含在非聚集 JSON 索引中。 这种索引是在查询中将 JSON 和列数据相结合以及为工作负载创建最佳索引的一个好方法。  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON 索引是可识别排序规则的索引  
 索引可识别排序规则，这是针对 JSON 数据的一个重要索引功能。 创建计算列时使用的 `JSON_VALUE` 函数的结果是一个文本值，该值从输入表达式继承其排序规则。 因此，将使用源列中定义的排序规则对索引中的值进行排序。  
   
-为了阐释这一点，下面的示例创建具有主键和 JSON 内容的一个简单集合表。  
+为了阐释索引可识别排序规则，下面的示例创建具有主键和 JSON 内容的一个简单集合表。  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -147,11 +147,24 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  虽然查询具有 `ORDER BY` 子句，但执行计划不使用 Sort 运算符。 此时已根据塞尔维亚西里尔文规则对 JSON 索引进行了排序。 因此 SQL Server 便可使用其中结果已经过排序的非聚集索引。  
   
- 但是，如果更改 `ORDER BY` 表达式的排序规则 - 例如，如果将 `COLLATE French_100_CI_AS_SC` 放在 `JSON_VALUE` 函数之后 - 会得到不同的查询执行计划。  
+ 但是，如果更改 `ORDER BY` 表达式的排序规则（例如，如果将 `COLLATE French_100_CI_AS_SC` 添加到 `JSON_VALUE` 函数之后），会得到其他查询执行计划。  
   
  ![执行计划](../../relational-databases/json/media/jsonindexblog3.png "执行计划")  
   
  由于索引中的值的顺序不符合法语排序规则，所以 SQL Server 无法使用索引对结果进行排序。 因此，它会添加一个使用法语排序规则对结果进行排序的 Sort 运算符。  
  
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>了解 SQL Server 中内置 JSON 支持的详细信息  
-若要获取大量特定解决方案、用例和建议，请参阅 Microsoft 项目经理 Jovan Popovic 发表的 SQL Server 和 Azure SQL 数据库中的[内置 JSON 支持相关博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>详细了解 SQL Server 和 Azure SQL 数据库中的 JSON  
+  
+### <a name="microsoft-blog-posts"></a>Microsoft 博客文章  
+  
+若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
+
+### <a name="microsoft-videos"></a>Microsoft 视频
+
+有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)（SQL Server 2016 和 JSON 支持）
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)（在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON）
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)（JSON 充当 NoSQL 和关系环境之间的桥梁）

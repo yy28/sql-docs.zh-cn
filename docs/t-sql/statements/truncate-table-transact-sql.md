@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - TRUNCATE TABLE
 - TRUNCATE_TSQL
 - TRUNCATE_TABLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - row removal [SQL Server], TRUNCATE TABLE statement
 - table truncating [SQL Server]
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - deleting rows
 - dropping rows
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5523e2797d3f0a69e39f0fb3cdbd70a6f389eed2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 71f05b47a4a070e5d797a6f9ff6b5f4d88e585c5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -59,7 +61,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```tsql  
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
@@ -93,7 +95,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  若要减少已分区的表，表和索引必须对齐 （分区上相同的分区函数）。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  与 DELETE 语句相比，TRUNCATE TABLE 具有以下优点：  
   
 -   所用的事务日志空间较少。  
@@ -134,7 +136,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>截断大型表  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]能够删除或截断具有多于 128 个区，而无需在所需的放置的所有范围上保持同时锁的表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  所需的最小权限位于 ALTER *table_name*。 TRUNCATE TABLE 权限默认授予表所有者、sysadmin 固定服务器角色的成员、db_owner 和 db_ddladmin 固定数据库角色的成员，并且不可转移权限。 但是，可以在诸如存储过程这样的模块中加入 TRUNCATE TABLE 语句，然后为使用 EXECUTE AS 子句的模块授予适当的权限。  
   
 ## <a name="examples"></a>示例  
@@ -142,7 +144,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ### <a name="a-truncate-a-table"></a>A. 截断表  
  下面的示例删除 `JobCandidate` 表中的所有数据。 在 `SELECT` 语句之前和之后使用 `TRUNCATE TABLE` 语句来比较结果。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT COUNT(*) AS BeforeTruncateCount   
@@ -161,7 +163,7 @@ GO
   
  下面的示例将截断已分区表的指定分区。 `WITH (PARTITIONS (2, 4, 6 TO 8))` 语法导致分区号 2、4、6、7 和 8 被截断。  
   
-```  
+```sql  
 TRUNCATE TABLE PartitionTable1   
 WITH (PARTITIONS (2, 4, 6 TO 8));  
 GO  

@@ -2,35 +2,38 @@
 title: "订阅，分发服务器到订阅服务器的历史记录（事务订阅）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.monitor.subscription.disttosub.f1
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cde3743b22942423fbceb3b3541a02e5efba15a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e975b4d43532fe7f9aa8219570c9e8869dab4805
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>订阅，分发服务器到订阅服务器的历史记录（事务订阅）
-  **“分发服务器到订阅服务器的历史记录”** 选项卡显示有关分发代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]“分发服务器到订阅服务器的历史记录”选项卡显示有关分发代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  从 **“视图”** 菜单中选择要查看哪些分发代理会话，然后在标记为 **“分发代理的会话”**的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”**的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
  **“视图”**  
  选择要查看哪些分发代理会话。 分发代理通常连续运行，因此可能只有一个可供查看的会话。  
   
- **状态**  
+ **“状态”**  
  分发代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -66,6 +69,6 @@ ms.lasthandoff: 11/09/2017
  [启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [查看与订阅关联的代理的信息和执行其任务（复制监视器）](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [复制代理概述](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

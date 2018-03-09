@@ -3,8 +3,9 @@ title: "自定义项文件 UserList 部分 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 882b50778567fd82367bcbac376363e9e93eaaed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f883b100d522f90ae802578256108ee9e658b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-userlist-section"></a>自定义文件 UserList 部分
 **Userlist**部分与**连接**部分相同的部分*标识符*参数。  
@@ -37,12 +38,12 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>语法  
  用户访问条目的格式为：  
   
- *用户名***=**   
+ *userName* **=**   
  ***accessRights***  
   
 |组成部分|Description|  
 |----------|-----------------|  
-|*用户名*|*用户名*如何使用此连接的人员。 有效的用户名称与 IIS 建立**Service Manager**对话框。|  
+|*userName*|*用户名*如何使用此连接的人员。 有效的用户名称与 IIS 建立**Service Manager**对话框。|  
 |***accessRights***|以下的访问权限之一：<br /><br /> -   **NoAccess** -用户将无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
   
 ## <a name="see-also"></a>另请参阅  

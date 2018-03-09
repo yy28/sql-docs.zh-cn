@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_os_memory_clerks (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_os_memory_clerks (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_memory_clerks
 - dm_os_memory_clerks_TSQL
 - sys.dm_os_memory_clerks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_clerks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_clerks dynamic management view
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d79b1fada58e02416afe4bbbebd56a7553ccc1ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 042afaa050206507b09508ce43900ec7c993d707
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +43,8 @@ ms.lasthandoff: 11/17/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**memory_clerk_address**|**varbinary （8)**|指定内存分配器的唯一内存地址。 这是主键列。 不可为 null。|  
-|**type**|**nvarchar(60)**|指定内存分配器的类型。 每个分配器都具有特定类型，例如，CLR Clerks MEMORYCLERK_SQLCLR。 不可为 null。|  
+|**memory_clerk_address**|**varbinary(8)**|指定内存分配器的唯一内存地址。 这是主键列。 不可为 null。|  
+|**类型**|**nvarchar(60)**|指定内存分配器的类型。 每个分配器都具有特定类型，例如，CLR Clerks MEMORYCLERK_SQLCLR。 不可为 null。|  
 |**名称**|**nvarchar(256)**|指定在内部为此内存分配器分配的名称。 一个组件可拥有多个特定类型的内存分配器。 组件可选择使用特定名称来标识相同类型的内存分配器。 不可为 null。|  
 |**memory_node_id**|**int**|指定内存节点的 ID。 不可为 Null。|  
 |**single_pages_kb**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。|  
@@ -53,11 +56,11 @@ ms.lasthandoff: 11/17/2017
 |**shared_memory_reserved_kb**|**bigint**|指定内存分配器保留的共享内存量。 保留以供共享内存和文件映射使用的内存量。 不可为 null。|  
 |**shared_memory_committed_kb**|**bigint**|指定内存分配器提交的共享内存量。 不可为 null。|  
 |**page_size_in_bytes**|**bigint**|指定此内存分配器的页分配粒度。 不可为 null。|  
-|**page_allocator_address**|**varbinary （8)**|指定页分配器的地址。 该地址是唯一的内存分配器，并且可在**sys.dm_os_memory_objects**查找绑定到此分配器的内存对象。 不可为 null。|  
-|**host_address**|**varbinary （8)**|指定用于此内存分配器的主机的内存地址。 有关详细信息，请参阅[sys.dm_os_hosts &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). 组件，如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过主机接口的内存资源。<br /><br /> 0x00000000 = 属于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存分配器。<br /><br /> 不可为 null。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**page_allocator_address**|**varbinary(8)**|指定页分配器的地址。 该地址是唯一的内存分配器，并且可在**sys.dm_os_memory_objects**查找绑定到此分配器的内存对象。 不可为 null。|  
+|**host_address**|**varbinary(8)**|指定用于此内存分配器的主机的内存地址。 有关详细信息，请参阅[sys.dm_os_hosts &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). 组件，如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过主机接口的内存资源。<br /><br /> 0x00000000 = 属于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存分配器。<br /><br /> 不可为 null。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
     
@@ -71,10 +74,10 @@ ms.lasthandoff: 11/17/2017
 
  [SQL Server 操作系统相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Compact Edition 连接管理器 |Microsoft 文档"
+title: "SQL Server Compact Edition 连接管理器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], SQL Server Compact
 - connection managers [Integration Services], SQL Server Compact
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 52662ac737fe33d151a423f8fa34feec7013e2dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 连接管理器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 连接管理器使包能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 目标使用该连接管理器将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库。  
@@ -53,20 +52,20 @@ ms.lasthandoff: 08/09/2017
   
 -   指示是否在运行时保留从连接管理器中创建的连接。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
- 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)。  
+ 有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
 ## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 连接管理器编辑器（“连接”页）
   可以使用“SQL Server Compact Edition 连接管理器”对话框，指定连接到 **Compact 数据库时使用的属性。**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  若要了解有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 连接管理器的详细信息，请参阅 [SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入数据库文件名和路径**  
  输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的路径和文件名。  
   
- **浏览**  
+ **“浏览”**  
  通过使用“选择 SQL Server Compact Edition 数据库”对话框找到所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库文件。  
   
  **输入数据库密码**  
@@ -77,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
  若要了解有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 连接管理器的详细信息，请参阅 [SQL Server Compact Edition 连接管理器](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **自动收缩阈值**  
  指定运行自动收缩进程前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库中允许使用的可用空间大小（以百分比表示）。  
   
@@ -104,7 +103,7 @@ ms.lasthandoff: 08/09/2017
   
  “模式”选项包含四个值，如下表所述：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**只读**|指定对数据库的只读访问。|  
 |**“读写”**|指定对数据库的读/写权限。|  
@@ -123,4 +122,3 @@ ms.lasthandoff: 08/09/2017
  **密码**  
  输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的密码。  
   
-

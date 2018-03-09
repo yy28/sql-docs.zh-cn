@@ -2,10 +2,14 @@
 title: "创建统计信息 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-statistics
+ms.suite: sql
+ms.technology:
+- dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +21,20 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 161543d02f49763db010021f817302635367c001
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-statistics"></a>创建统计信息
-  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为表或索引视图的一个或多个列创建查询优化统计信息。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在少数一些情况下，您需要创建附加的统计信息。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为表或索引视图的一个或多个列创建查询优化统计信息。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在少数一些情况下，您需要创建附加的统计信息。  
   
  **本主题内容**  
   
@@ -37,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要创建统计信息，请使用：**  
   
@@ -57,7 +62,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求用户是表或索引视图所有者，或者是以下角色之一的成员： **sysadmin** 固定服务器角色、 **db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -72,7 +77,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”。  
   
-     以下属性将显示在“新建表 table_name 的统计信息”对话框的“常规”页面上。  
+     以下属性显示在“新建表table_name的统计信息”对话框的“常规”页面上。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -89,7 +94,7 @@ ms.lasthandoff: 11/09/2017
      **数据类型**  
      指示统计信息中所涉及列的数据类型。  
   
-     **Size**  
+     **大小**  
      显示每列的数据类型大小。  
   
      **标识**  
@@ -98,7 +103,7 @@ ms.lasthandoff: 11/09/2017
      **允许 Null 值**  
      指示列是否接受空值。  
   
-     **添加**  
+     **“添加”**  
      将表中的其他列添加到统计信息网格。  
   
      **删除**  
@@ -107,7 +112,7 @@ ms.lasthandoff: 11/09/2017
      **上移**  
      将所选列移动到统计信息网格中更靠前的位置。 网格中的位置会显著地影响统计信息的有效性。  
   
-     **下移**  
+     **“下移”**  
      将所选列移到统计信息网格中更后面的位置。  
   
      **上次更新了这些列的统计信息:**  
@@ -116,12 +121,12 @@ ms.lasthandoff: 11/09/2017
      **更新这些列的统计信息**  
      选中此项后将在对话框关闭时更新统计信息。  
   
-     以下属性将显示在“新建表 table_name 的统计信息”对话框的“筛选器”页面上。  
+     以下属性显示在“新建表table_name的统计信息”对话框的“筛选器”页面上。  
   
      **筛选表达式**  
-     定义要将哪些数据行包含在筛选的统计信息中。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     定义要将哪些数据行包含在筛选的统计信息中。 例如，使用 IPv4 地址 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在“新建表 table_name 的统计信息”对话框中，在“常规”页面上，单击“添加”。  
+5.  在“新建表table_name的统计信息”对话框的“常规”页面上，单击“添加”。  
   
      **“选择列”** 对话框中显示以下属性： 此信息为只读信息。  
   
@@ -131,7 +136,7 @@ ms.lasthandoff: 11/09/2017
      **数据类型**  
      指示统计信息中所涉及列的数据类型。  
   
-     **Size**  
+     **大小**  
      显示每列的数据类型大小。  
   
      **标识**  
@@ -142,17 +147,17 @@ ms.lasthandoff: 11/09/2017
   
 6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”**。  
   
-7.  在“新建表 table_name 的统计信息”对话框中，单击“确定”。  
+7.  在“新建表table_name的统计信息”对话框中，单击“确定”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-statistics"></a>创建统计信息  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;   

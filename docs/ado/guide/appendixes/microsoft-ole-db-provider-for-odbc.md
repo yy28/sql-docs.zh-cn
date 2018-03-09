@@ -3,8 +3,9 @@ title: "Microsoft OLE DB Provider for ODBC |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调入数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源不尚未公开这种方式。 但是，可以通过 ODBC 访问当今使用的大多数 DBMS 系统。
@@ -184,15 +185,15 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|读/写|读/写|读/写|读/写|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|只读|只读|只读|
-|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|不可用|不可用|读/写|读/写|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|不可用|不可用|读/写|读/写|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|读/写|读/写|读/写|读/写|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|读/写|读/写|读/写|读/写|
-|[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)|读/写|读/写|读/写|读/写|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|读/写|读/写|读/写|读/写|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|只读|只读|只读|只读|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|读/写|读/写|读/写|
+|[筛选](../../../ado/reference/ado-api/filter-property.md)|读/写|读/写|读/写|读/写|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|读/写|读/写|读/写|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|读/写|读/写|读/写|读/写|
-|[最大记录](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|读/写|读/写|读/写|
+|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|读/写|读/写|读/写|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|读/写|不可用|只读|只读|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|读/写|读/写|读/写|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|读/写|不可用|只读|只读|
@@ -206,26 +207,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |方法|ForwardOnly|Dynamic|Keyset|静态|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|是|是|是|是|
-|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|是|是|是|
-|[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|是|是|是|是|
-|[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|是|是|是|是|
-|[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|是|是|是|是|
-|[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|是|是|是|
-|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|是|是|是|是|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|是|是|是|
-|[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|是|是|是|是|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
-|[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|是|是|是|是|
-|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|是|是|是|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|是|是|是|是|
-|[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|是|是|是|
-|[支持](../../../ado/reference/ado-api/supports-method.md)|是|是|是|是|
-|[Update](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|是|是|是|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|是|用户帐户控制|用户帐户控制|是|
+|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|用户帐户控制|用户帐户控制|是|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|是|用户帐户控制|用户帐户控制|是|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|是|用户帐户控制|用户帐户控制|是|
+|[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|否|“否”|用户帐户控制|是|
+|[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|用户帐户控制|用户帐户控制|是|
+|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|是|用户帐户控制|用户帐户控制|是|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|用户帐户控制|用户帐户控制|是|
+|[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|是|用户帐户控制|用户帐户控制|是|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|用户帐户控制|用户帐户控制|是|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|用户帐户控制|用户帐户控制|是|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|用户帐户控制|用户帐户控制|是|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|用户帐户控制|用户帐户控制|是|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|是|用户帐户控制|用户帐户控制|是|
+|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|用户帐户控制|用户帐户控制|是|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|是|用户帐户控制|用户帐户控制|是|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|否|“否”|用户帐户控制|是|
+|[支持](../../../ado/reference/ado-api/supports-method.md)|是|用户帐户控制|用户帐户控制|是|
+|[更新](../../../ado/reference/ado-api/update-method.md)|是|用户帐户控制|用户帐户控制|是|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|用户帐户控制|用户帐户控制|是|
 
  * 中不受支持的 Microsoft Access 数据库。
 

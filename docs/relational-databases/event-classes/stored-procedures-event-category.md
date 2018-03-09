@@ -2,10 +2,14 @@
 title: "“存储过程”事件类别 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,23 +17,24 @@ helpviewer_keywords:
 - SQL Server event classes, Stored Procedures event category
 - event classes [SQL Server], Stored Procedures event category
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee7d5e0c170fc0ad5df22bca0e5c48d26a6305d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 392e922e32dcae4f6765503c5af24cf0b58b81e6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 事件类别
-  **Stored Procedures** 事件类别包含一般的存储过程事件。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+**Stored Procedures** 事件类别包含一般的存储过程事件。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|说明|  
+|主题|Description|  
 |-----------|-----------------|  
 |[RPC:Completed 事件类](../../relational-databases/event-classes/rpc-completed-event-class.md)|指示已完成远程过程调用 (RPC)。|  
 |[PreConnect:Completed 事件类](../../relational-databases/event-classes/preconnect-completed-event-class.md)|指示何时资源调控器分类器函数结束执行。|  

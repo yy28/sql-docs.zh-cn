@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3889b64da6484b7aac8adfb0b643467fc716e560
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-1-interface-conformance"></a>级别 1 接口一致性
 级别 1 接口一致性级别包括核心接口一致性级别功能以及其他功能，如通常都存在于 OLTP 关系 DBMS 的事务。 级别 1 接口 – 符合的驱动程序可让应用程序执行以下操作，除了核心接口一致性级别中的功能：  

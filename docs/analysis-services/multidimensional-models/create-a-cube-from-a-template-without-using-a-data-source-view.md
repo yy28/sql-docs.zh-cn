@@ -2,32 +2,30 @@
 title: "从模板创建多维数据集，而不使用数据源视图 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>从模板创建多维数据集而无需使用数据源视图
-  在多维数据集向导的第一页上选择 **“不使用数据源生成多维数据集”** ，可以在不使用数据源视图的情况下创建多维数据集。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在多维数据集向导的第一页上选择 **“不使用数据源生成多维数据集”** ，可以在不使用数据源视图的情况下创建多维数据集。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
   
 ## <a name="selecting-the-build-method"></a>选择生成方法  
  在多维数据集向导的 **“选择生成方法”** 页上，单击 **“不使用数据源生成多维数据集”**。 若要使用现有多维数据集模板生成多维数据集，请选中 **“使用多维数据集模板”** 复选框。 。 如果您不选择使用模板，则必须手动设置选项。  
@@ -67,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 |列|Description|  
 |------------|-----------------|  
 |**类型**|显示模板维度的维度类型。 单击此单元可更改维度的维度类型。 此列设置维度对象的 **Type** 属性。|  
-|**Name**|显示维度名称。 单击此单元可以键入不同的名称。 此值设置维度对象的 **Name** 属性。|  
+|**名称**|显示维度名称。 单击此单元可以键入不同的名称。 此值设置维度对象的 **Name** 属性。|  
 |**SCD**|指定这是一个渐变维度 (SCD)。 选中此复选框可以向维度添加 SCD 开始日期、结束日期、原始 ID 和状态等属性。 如果使用模板创建多维数据集并且向导检测到模板维度中存在这四个属性类型，则默认情况下**SCD** 处于选中状态。|  
 |**属性**|显示要为该维度创建的属性。 列表中每个属性名称前都附有维度名称。 此列表是只读的。 完成向导操作后，可以使用维度设计器来编辑这些属性。|  
   

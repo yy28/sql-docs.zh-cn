@@ -2,28 +2,33 @@
 title: "创建和管理全文目录 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b4b38c2aac9a5d960f84f2b9d6f7b32762aa862
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3e98a00fd7f165fbd5c83b7149a8e63505116e3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 全文目录是适用于一组全文索引的逻辑容器。 在创建全文索引之前，必须创建全文目录。
 
 全文目录是虚拟对象，不属于任何文件组。
@@ -33,7 +38,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>使用 Transact-SQL 创建全文目录
 使用 [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)。 例如：
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -68,7 +73,7 @@ GO
   
 下表列出了与全文目录相关的属性。 此信息可用于全文搜索的管理和故障排除。 
   
-|属性|说明|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|区分重音设置。|
 |**ImportStatus**|是否将导入全文目录。|  

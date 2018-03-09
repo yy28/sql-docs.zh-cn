@@ -2,27 +2,30 @@
 title: "备份设备（“常规”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41ccc8cfe692b236e7bd372ef2328b7d987870a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 783ec3d28cac152932ffd2088d0aa53c92f9dcb7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-device-general-page"></a>备份设备（“常规”页）
-  使用 **“常规”** 页可指定或查看逻辑备份设备的常规属性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“常规”页可指定或查看逻辑备份设备的常规属性。  
   
  **使用 SQL Server Management Studio 查看备份设备的内容**  
   
@@ -30,7 +33,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **设备名称**  
  查看现有逻辑备份设备的名称，或指定新逻辑备份设备的名称。  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  远程计算机中的磁带备份设备不是有效的备份目标。  
   
- **文件**  
+ **File**  
  查看现有逻辑备份设备的目标文件，或指定新逻辑备份设备的目标文件。  
   
 -   对于现有的逻辑备份设备，将显示备份文件的路径。 **“文件”** 字段不可编辑，“浏览”按钮也不可用。  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/09/2017
     > [!IMPORTANT]  
     >  通过网络备份数据时可能会出现网络错误；因此，建议您在完成备份后验证备份操作。 有关详细信息，请参阅 [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  包含一个或多个备份设备的集合的备份构成一个介质集。 “介质集”  是“备份介质”（磁带或磁盘文件）的有序集合，使用固定类型和数量的备份设备向其写入一个或多个备份操作。 有关媒体集的信息，请参阅 [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)。  
   
  将介质集中的第一个备份写入逻辑备份设备时，将对与逻辑备份设备对应的物理备份设备进行初始化。 如果物理备份设备是尚不存在的文件，则此时将创建该文件。  

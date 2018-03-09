@@ -1,34 +1,34 @@
 ---
-title: "演练： 设置 SQL Server Integration Services 向外的扩展 |Microsoft 文档"
+title: "演练：设置 SQL Server Integration Services Scale Out | Microsoft Docs"
+ms.description: This article walks you through the setup and configuration of SSIS Scale Out
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: f8abf2424f8bb1c9c8fb2e04d649e385dd30a024
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="walkthrough-set-up-integration-services-scale-out"></a>演练：设置 Integration Services Scale Out
-设置[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]向外扩展通过完成以下任务。 
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>演练：设置 Integration Services (SSIS) Scale Out
+通过完成以下任务，设置 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out。 
 
-> [!NOTE]
-> 如果你在一台计算机上安装横向扩展，请在同一时间安装缩放出 Master 和横向扩展辅助功能。 同时安装这两种功能时，将自动生成端点以连接到 Scale Out Master。 
+> [!TIP]
+> 如果是在一台计算机上安装 Scale Out，请同时安装 Scale Out Master 和 Scale Out Worker 功能。 同时安装这两种功能时，将自动生成端点以连接到 Scale Out Master。 
 
 * [安装 Scale Out Master](#InstallMaster)
 
@@ -48,106 +48,146 @@ ms.lasthandoff: 10/20/2017
 
 ## <a name="InstallMaster"></a> 安装 Scale Out Master
 
-若要启用缩放出母版的功能，必须安装数据库引擎服务、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]，和你在设置时其缩放出 Master 功能[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 
+要设置 Scale Out Master，必须在设置 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 时，安装数据库引擎服务、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 及 SSIS 的 Scale Out Master 功能。 
 
-有关安装数据库引擎服务和 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 的信息，请参阅[安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)和[安装 Integration Services](../install-windows/install-integration-services.md)。
+要了解如何设置数据库引擎和 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]，请参阅[安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)和[安装 Integration Services](../install-windows/install-integration-services.md)。
+
 > [!NOTE]
-> 若要使用的默认 SQL 身份验证帐户向外扩展日志记录，请在数据库引擎安装过程中针对数据库引擎配置页上的身份验证模式选择混合模式。 请参阅[更改向外扩展日志记录的帐户](change-logdb-account.md)有关详细信息。
+> 要将默认 SQL Server 身份验证帐户用于 Scale Out 日志记录，安装数据库引擎期间，请在“数据库引擎配置”页上选择“混合模式”作为身份验证模式。 请参阅[更改 Scale Out 日志记录的帐户](change-logdb-account.md)，了解详细信息。
 
-**若要安装 Scale Out Master 功能，请使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导或命令提示符。**
+要安装 Scale Out Master 功能，请使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导或命令提示符。
 
-- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导的步骤
-  1.  上**功能选择**页上，选择**缩放出 Master**，下面列出[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。   
-  ![功能选择 Master](media/feature-select-master.PNG)
+### <a name="install-scale-out-master-with-the-sql-server-installation-wizard"></a>使用 SQL Server 安装向导安装 Scale Out Master
+1.  在“功能选择”页上，选择 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下列出的“Scale Out Master”。   
   
-  2.  在“服务器配置”  页上，选择要运行“SQL Server Integration Services Scale Out Master 服务”  的帐户，然后选择“启动类型” 。  
-  ![服务器配置](media/server-config.PNG)
-  3.  在“Integration Services Scale Out Master 配置”  页上，指定 Scale Out Master 用于与 Scale Out Worker 进行通信的端口号。 默认端口号为 8391。  
-  ![主配置](media/master-config.PNG "母版配置")
-  4.  指定用于保护出母版横向和横向扩展辅助进程之间的通信通过执行下列其中一项操作的 SSL 证书。
-    * 让安装程序创建默认的自签名的 SSL 证书通过单击**创建新的 SSL 证书**。  默认证书安装在本地计算机中受信任的根证书颁发机构之下。 你可以指定在此证书的 Cn。 主终结点的主机名应包含在 Cn。 默认情况下，将包含计算机名称和主节点的 ip。
-    * 通过单击选择本地计算机上的现有 SSL 证书**使用现有的 SSL 证书**，然后单击**浏览**选择证书。 文本框中显示证书的指纹。 单击“浏览”  ，显示存储在本地计算机中受信任的根证书颁发机构中的证书。 必须选择存储在此处的证书。       
-![主配置 2](media/master-config-2.PNG "Master 配置 2")
-  5.  完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导。
-- 命令提示符的步骤
+    ![功能选择 Master](media/feature-select-master.PNG)
+  
+2.  在“服务器配置”  页上，选择要运行“SQL Server Integration Services Scale Out Master 服务”  的帐户，然后选择“启动类型” 。  
+    ![服务器配置](media/server-config.PNG)
 
-    按照[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的说明操作。 执行以下操作，设置 Scale Out Master 的相关参数。
-  1.  将 IS_Master 添加到参数 /FEATURES
-  2.  将缩放出主机配置为通过指定以下参数和它们的值： /ISMASTERSVCACCOUNT、 /ISMASTERSVCPASSWORD、 /ISMASTERSVCSTARTUPTYPE、 /ISMASTERSVCPORT，/ISMasterSVCSSLCertCN(optional)、 /ISMASTERSVCTHUMBPRINT(optional)。
+3.  在“Integration Services Scale Out Master 配置”  页上，指定 Scale Out Master 用于与 Scale Out Worker 进行通信的端口号。 默认端口号为 8391。  
 
-> [!Note]
-> 如果缩放出 Master 不与数据库引擎一起安装，并且数据库引擎是命名的实例，你需要安装后在缩放出 Master 服务配置文件中配置 SqlServerName。 请参阅[缩放出 Master](integration-services-ssis-scale-out-master.md)有关详细信息。
+    ![Master Config](media/master-config.PNG "Master Config")
+
+4.  通过执行以下操作之一，指定用于保护 Scale Out Master 与 Scale Out Worker 之间的通信的 SSL 证书。
+    * 单击“创建新的 SSL 证书”，使安装进程创建默认的自签名 SSL 证书。  默认证书安装在本地计算机中受信任的根证书颁发机构之下。 可在此证书中指定 CN。 CN 中应包含主终结点的主机名。 默认包含主节点的计算机名称和 IP。
+    * 单击“使用现有的 SSL 证书”，然后单击“浏览”，在本地计算机上选择现有的 SSL 证书。 文本框中显示证书的指纹。 单击“浏览”  ，显示存储在本地计算机中受信任的根证书颁发机构中的证书。 必须选择存储在此处的证书。       
+
+    ![Master Config 2](media/master-config-2.PNG "Master Config 2")
+  
+5.  完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导。
+
+### <a name="install-scale-out-master-from-the-command-prompt"></a>从命令提示符安装 Scale Out Master
+
+按照[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的说明操作。 执行以下操作，为 Scale Out Master 设置参数：
+ 
+1.  将 `IS_Master` 添加到参数 `/FEATURES`
+
+2.  通过指定下列参数及其值来配置 Scale Out Master：
+    -   `/ISMASTERSVCACCOUNT`
+    -   `/ISMASTERSVCPASSWORD`
+    -   `/ISMASTERSVCSTARTUPTYPE`
+    -   `/ISMASTERSVCPORT`
+    -   `/ISMasterSVCSSLCertCN`（可选）
+    -   `/ISMASTERSVCTHUMBPRINT`（可选）
+
+    > [!NOTE]
+    > 如果 Scale Out Master 未与数据库引擎一起安装，且数据库引擎实例为命名实例，则须于安装后在 Scale Out Master 服务配置文件中配置 `SqlServerName`。 有关详细信息，请参阅 [Scale Out Master](integration-services-ssis-scale-out-master.md)。
 
 ## <a name="InstallWorker"></a> 安装 Scale Out Worker
  
-若要启用 Scale Out Worker 的功能，必须在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装程序中安装 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 及其 Scale Out Worker 功能。
+要设置 Scale Out Worker，必须在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装程序中安装 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 及其 Scale Out Worker 功能。
 
-**若要安装 Scale Out Worker 功能，请使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导或命令提示符。**
+要安装 Scale Out Worker 功能，请使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导或命令提示符。
 
-- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导的步骤
-  1.  上**功能选择**页上，选择**横向扩展辅助**，下面列出[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。   
-  ![功能选择 Worker](media/feature-select-worker.PNG)
-  2. 在“服务器配置”  页上，选择要运行“SQL Server Integration Services Scale Out Worker 服务”  的帐户，然后选择“启动类型” 。    
-  ![服务器配置 2](media/server-config-2.PNG "服务器配置 2")
-  3. 在“Integration Services Scale Out Worker 配置”  页上，指定端点以连接到 Scale Out Master。 
-      > [!Note]
-      > 可以此处跳过辅助节点配置 （步骤 3 和 4） 并将关联到与缩放出母版出辅助缩放[缩放出 Manager](integration-services-ssis-scale-out-manager.md)在安装完成后。
+### <a name="install-scale-out-worker-with-the-sql-server-installation-wizard"></a>使用 SQL Server 安装向导安装 Scale Out Worker
 
-    - 有关**一台计算机**缩放出 Master 和横向扩展辅助安装在同一时间时，将自动生成环境中，终结点。 
-    - 有关**多台计算机**环境中，终结点组成的名称或计算机的 IP 与安装 Master 出横向和横向扩展 Master 安装过程中指定的端口号。    
-   ![辅助进程配置 1](media/worker-config.PNG "辅助配置 1")    
+1.  在“功能选择”页上，选择 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 下列出的“Scale Out Worker”。
 
-  4. 有关**多台计算机**环境中，指定用于验证缩放出母版的客户端 SSL 证书。 有关**一台计算机**环境，无需指定客户端 SSL 证书。 
+    ![功能选择 Worker](media/feature-select-worker.PNG)
+
+2.  在“服务器配置”  页上，选择要运行“SQL Server Integration Services Scale Out Worker 服务”  的帐户，然后选择“启动类型” 。
+
+    ![Server Config 2](media/server-config-2.PNG "Server Config 2")
+
+3.  在“Integration Services Scale Out Worker 配置”  页上，指定端点以连接到 Scale Out Master。 
+
+    - 对于单一计算机环境，同时安装 Scale Out Master 和 Scale Out Worker 时，会自动生成终结点。 
+
+    - 对于多台计算机环境，终结点包括安装了 Scale Out Master 的计算机的名称或 IP 以及 Scale Out Master 安装期间指定的端口号。
+   
+    ![Worker Config 1](media/worker-config.PNG "Worker Config 1")    
+
+    > [!NOTE]
+    > 此处也可跳过 Worker 配置，并在安装后使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 将 Scale Out Worker 与 Scale Out Master 关联起来。
+
+4. 对于多台计算机环境，需指定用于验证 Scale Out Master 的客户端 SSL 证书。 对于单一计算机环境，则无需指定客户端 SSL 证书。 
   
-     > [!NOTE]
-     > 自签名由缩放出主机使用的 SSL 证书时，相应的客户端 SSL 证书时需要安装在横向扩展辅助计算机上。 如果你的文件路径为客户端提供 SSL 证书上**Integration Services 辅助配置出缩放**页上，该证书将自动安装; 否则，你必须手动更高版本安装证书。 
+    单击“浏览”  ，查找证书文件 (*.cer)。 要使用默认 SSL 证书，请在安装了 Scale Out Master 的计算机上找到 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn`，并在其下选择 `SSISScaleOutMaster.cer` 文件。   
+
+    ![Worker Config 2](media/worker-config-2.PNG "Worker Config 2")
+
+    > [!NOTE]
+    > 如果 Scale Out Master 使用的 SSL 证书为自签名证书，则需要在具有 Scale Out Worker 的计算机上安装相应的客户端 SSL 证书。 如果在“Integration Services Scale Out Worker 配置”页上提供了客户端 SSL 证书的文件路径，证书将自动安装；否则，稍后必须手动安装证书。 
      
-     单击“浏览”  ，查找证书文件 (*.cer)。 若要使用的默认 SSL 证书，选择位于 SSISScaleOutMaster.cer 文件\<驱动器\>: files\microsoft SQL Server\140\DTS\Binn 缩放出母版安装在其的计算机上。   
-   ![辅助进程配置 2](media/worker-config-2.PNG "辅助配置 2")
-  5. 完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导。
-- 命令提示符的步骤
+5. 完成 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 安装向导。
 
-    按照[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的说明操作。 执行以下操作，设置 Scale Out Worker 的相关参数。
-    1.  将 IS_Worker 添加到参数 /FEATURES
-    2. 配置横向扩展辅助指定以下参数和它们的值： /ISWORKERSVCACCOUNT、 /ISWORKERSVCPASSWORD、 /ISWORKERSVCSTARTUPTYPE，/ISWORKERSVCMASTER(optional)、 /ISWORKERSVCCERT(optional)。
+### <a name="install-scale-out-worker-from-the-command-prompt"></a>从命令提示符安装 Scale Out Worker
 
+按照[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的说明操作。 执行以下操作，为 Scale Out Worker 设置参数：
+
+1.  将 IS_Worker 添加到参数 `/FEATURES`。
+
+2. 通过指定下列参数及其值来配置 Scale Out Worker：
+    -   `/ISWORKERSVCACCOUNT`
+    -   `/ISWORKERSVCPASSWORD`
+    -   `/ISWORKERSVCSTARTUPTYPE`
+    -   `/ISWORKERSVCMASTER`（可选）
+    -   `/ISWORKERSVCCERT`（可选）
  
 ## <a name="InstallCert"></a> 装 Scale Out Worker 客户端证书
 
-安装过程中的横向扩展辅助进程的工作线程证书将自动创建，并在计算机上安装。 此外，将在 \<driver\>:\Program Files\Microsoft SQL Server\140\DTS\Binn 之下安装相应的客户端证书 SSISScaleOutWorker.cer。 对于横向出母版进行横向扩展辅助身份验证，必须将此客户端证书添加到缩放出 Master 的本地计算机的根存储区。
+在 Scale Out Worker 安装期间，将在计算机上自动创建并安装辅助角色证书。 此外，将在 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` 之下安装相应的客户端证书 SSISScaleOutWorker.cer。 对于用于对 Scale Out Worker 进行身份验证的 Scale Out Master，必须将此客户端证书添加到具有 Scale Out Master 的本地计算机的根存储中。
   
-若要将客户端证书添加到根存储，可双击 .cer 文件，然后单击“证书”对话框中的“安装证书”  。 将显示“证书导入向导”  。  
+要将客户端证书添加到根存储，可双击 .cer 文件，然后单击“证书”对话框中的“安装证书”。 这将打开“证书导入向导”。  
 
 ## <a name="Firewall"></a>打开防火墙端口
 
-打开在缩放出主安装和端口的 SQL Server (1433，默认情况下)，过程中指定的端口在缩放出主计算机上使用 Windows 防火墙。
+在 Scale Out Master 计算机上的 Windows 防火墙中，打开在 Scale Out Master 安装期间指定的端口和 SQL Server 端口（默认为 1433）。
+
+> [!Note]
+> 打开防火墙端口之后，还需重启 Scale Out Worker 服务。
     
 ## <a name="Start"></a>启动 SQL Server Scale Out Master 和 Worker 服务
 
-如果在安装过程中服务的启动类型未设置为自动，启动服务： SQL Server Integration Services 缩放出 Master 14.0 (SSISScaleOutMaster140) 和 SQL Server Integration Services 缩放出辅助 14.0 (SSISScaleOutWorker140)。 
+如果在安装期间未将服务的启动类型设置为“自动”，请启动以下服务：
 
-> [!Note]
-> 打开防火墙端口后，你还需要重新启动了缩放出 Worker 服务。
-   
+-   SQL Server Integration Services Scale Out Master 14.0 (SSISScaleOutMaster140)
+
+-   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
+
 ## <a name="EnableMaster"></a> 启用 Scale Out Master
 
-在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] 中创建 SSISDB 目录时，请在“创建目录”对话框中，单击“启用此服务器作为 SSIS Scale Out Master”。 或者，可以使用启用缩放出 Master[缩放出 Manager](integration-services-ssis-scale-out-manager.md)创建目录后。
+在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] 中创建 SSISDB 目录时，请在“创建目录”对话框中，选择“启用此服务器作为 SSIS Scale Out Master”。
+
+创建目录后，可使用 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 启用 Scale Out Master。
 
 ## <a name="EnableAuth"></a> 启用 SQL Server 身份验证模式
-如果[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]身份验证未启用数据库引擎安装期间上, 启用 SQL Server 身份验证模式[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]承载 SSISDB 目录的实例。 
+如果在数据库引擎安装期间没有启用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 身份验证，可在托管 SSISDB 目录的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例上启用 SQL Server 身份验证模式。 
 
-禁用 SQL Server 身份验证时，包执行不会受到阻止。 但是，执行日志将无法写入 SSISDB。
+禁用 SQL Server 身份验证时，包执行不会受到阻止。 但是，执行日志将无法写入 SSISDB 数据库。
 
 ## <a name="EnableWorker"></a> 启用 Scale Out Worker
 
-可以通过启用横向扩展辅助[缩放出 Manager](integration-services-ssis-scale-out-manager.md)、 提供 GUI; 或通过存储过程启用，请参阅下文。
+可通过 [Scale Out Manager](integration-services-ssis-scale-out-manager.md) 启用 Scale Out Worker，前者可提供图形用户界面；或通过存储过程启用。
 
-若要启用 Scale Out Worker，请以 *WorkerAgentId* 作为参数，执行 **[catalog].[enable_worker_agent]** 存储过程。 
+要通过存储过程启用 Scale Out Worker，请执行 `[catalog].[enable_worker_agent]` 存储过程，并将 WorkerAgentId 设为参数。 
 
-Scale Out Worker 注册到 Scale Out Master 之后，将从 SSISDB 的 **[catalog].[worker_agents]** 数据库视图中获取 *WorkerAgentId* 值。 Scale Out Master 和 Worker 服务启用之后，需要花几分钟进行注册。
+Scale Out Worker 注册到 Scale Out Master 之后，从 SSISDB 的 `[catalog].[worker_agents]` 视图中获取 WorkerAgentId 值。 Scale Out Master 和 Worker 服务启用之后，需要花几分钟进行注册。
 
 #### <a name="example"></a>示例
-此示例将启用辅助计算机 a 上缩放出。
+下例将在 `computerA` 上启用 Scale Out Worker。
+
 ```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
@@ -158,6 +198,6 @@ GO
 EXEC [catalog].[enable_worker_agent] '6583054A-E915-4C2A-80E4-C765E79EF61D'
 GO 
 ```
-## <a name="next-steps"></a>后续步骤
-已完成 Scale Out 功能的设置。 你现在可以在向外扩展运行包。有关详细信息，请参阅[在 Integration Services (SSIS) Scale Out 中执行包](run-packages-in-integration-services-ssis-scale-out.md)。
 
+## <a name="next-steps"></a>后续步骤
+-   [在 Integration Services (SSIS) Scale Out 中运行包](run-packages-in-integration-services-ssis-scale-out.md)。

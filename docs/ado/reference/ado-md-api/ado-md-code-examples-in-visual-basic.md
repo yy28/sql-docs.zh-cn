@@ -3,27 +3,30 @@ title: "ADO MD Visual Basic 中的代码示例 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: ADO MD code examples, Visual Basic
+dev_langs:
+- VB
+helpviewer_keywords:
+- ADO MD code examples, Visual Basic
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d211fdf479774dbbd24c89ebb0b34de61cacee8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96982fc09cbfb5538eccb8f57e2f5b99f5da0b75
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>ADO MD Visual Basic 中的代码示例
 下面的示例需要带有 Service Pack 3 的 Microsoft Visual Basic 版本 5.0 或 Visual Basic 6.0 版。  

@@ -1,5 +1,5 @@
 ---
-title: "在群集中的 integration Services (SSIS) |Microsoft 文档"
+title: "群集中的 Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,24 +13,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>群集中的 Integration Services (SSIS)
   建议不要对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行聚类分析，因为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不是群集服务或群集感知服务，而且不支持从一个群集节点故障转移到另一个节点。 因此，在群集环境内，应当在群集的每个节点上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 并将其作为一个独立服务来启动。  
   
  虽然 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不是群集服务，但您可以在将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务单独安装在群集的每个节点上之后，手动将该服务配置为作为群集资源运行。  
   
- 但是，如果您建立群集硬件环境的目的是实现高可用性，那么，不将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为群集资源也可以实现此目标。  若要从群集中的其他任何节点管理该群集中某一节点上的包，请在群集的每个节点上修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件。 可以修改每个配置文件，使其指向包所存储到的所有可用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 本解决方案提供大多数客户所需的高可用性，而不会带来在将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为群集资源时可能遇到的问题。 有关如何更改配置文件的详细信息，请参阅[Integration Services 服务 &#40;SSIS 服务 &#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
+ 但是，如果您建立群集硬件环境的目的是实现高可用性，那么，不将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为群集资源也可以实现此目标。  若要从群集中的其他任何节点管理该群集中某一节点上的包，请在群集的每个节点上修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件。 可以修改每个配置文件，使其指向包所存储到的所有可用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 本解决方案提供大多数客户所需的高可用性，而不会带来在将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置为群集资源时可能遇到的问题。 有关如何更改此配置文件的详细信息，请参阅 [Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)。  
   
  了解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的角色对于就如何在群集环境中配置该服务做出明智决定至关重要。 有关详细信息，请参阅 [Integration Services 服务（SSIS 服务）](../../integration-services/service/integration-services-service-ssis-service.md)。  
   
@@ -106,9 +105,9 @@ ms.lasthandoff: 09/26/2017
   
 4.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“资源”**。  
   
-5.  在“资源向导”的 **“新资源”** 页上，键入名称并选择 **“一般服务”** 作为 **“服务类型”**。 不要更改 **“组”**的值。 单击 **“下一步”**。  
+5.  在“资源向导”的 **“新资源”** 页上，键入名称并选择 **“一般服务”** 作为 **“服务类型”**。 不要更改 **“组”**的值。 单击“下一步” 。  
   
-6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击 **“下一步”**。  
+6.  在 **“可能的所有者”** 页上，将群集的节点作为可能的资源所有者来添加或删除。 单击“下一步” 。  
   
 7.  若要添加依赖关系，请在 **“依赖关系”** 页上的 **“可用资源”**下选择一项资源，然后单击 **“添加”**。 对于故障转移情况， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和用来存储 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的共享磁盘应在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 联机前重新联机。 在选择依赖关系之后，单击 **“下一步”**。  
   
@@ -139,4 +138,3 @@ ms.lasthandoff: 09/26/2017
 -   在“群集管理器”中选择 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，单击右键，然后在弹出菜单中选择“联机”。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务现已作为群集资源联机。  
   
   
-

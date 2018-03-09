@@ -1,14 +1,15 @@
 ---
 title: "DBCC SHOW_STATISTICS (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: "75"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 66f00526254a3592c3bb980ecf22c390b88cb687
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +92,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
- STAT_HEADER |DENSITY_VECTOR |直方图 |STATS_STREAM [ **，**  *n*  ]  
+ STAT_HEADER |DENSITY_VECTOR |直方图 |STATS_STREAM [**，* * * n* ]  
  如果指定以上一个或多个选项，将根据指定的选项限制该语句返回的结果集。 如果没有指定任何选项，则返回所有统计信息。  
   
  STATS_STREAM 为 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -100,9 +102,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |列名|Description|  
 |-----------------|-----------------|  
-|Name|统计信息对象的名称。|  
-|Updated|上一次更新统计信息的日期和时间。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md)函数是另一种方法检索此信息。|  
-|行|上次更新统计信息时表或索引视图中的总行数。 如果筛选统计信息或者统计信息与筛选索引对应，该行数可能小于表中的行数。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
+|名称|统计信息对象的名称。|  
+|Updated|上一次更新统计信息的日期和时间。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md)函数是另一种方法检索此信息。 有关详细信息，请参阅[备注](#Remarks)在此页中的部分。|  
+|“行”|上次更新统计信息时表或索引视图中的总行数。 如果筛选统计信息或者统计信息与筛选索引对应，该行数可能小于表中的行数。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
 |Rows Sampled|用于统计信息计算的抽样总行数。 如果 Rows Sampled < Rows，显示的直方图和密度结果则是根据抽样行估计的。|  
 |步骤|直方图中的梯级数。 每个梯级都跨越一个列值范围，后跟上限列值。 直方图梯级是根据统计信息中的第一个键列定义的。 最大梯级数为 200。|  
 |Density|计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值。 查询优化器不使用此 Density 值，显示此值的目的是为了与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本实现向后兼容。|  
@@ -130,7 +132,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |DISTINCT_RANGE_ROWS|非重复列值位于直方图梯级内（不包括上限）的行的估算数目。|  
 |AVG_RANGE_ROWS|重复列值位于直方图梯级内（不包括上限）的平均行数（如果 DISTINCT_RANGE_ROWS > 0，则为 RANGE_ROWS / DISTINCT_RANGE_ROWS）。| 
   
-## <a name="remarks"></a>注释  
+## <a name="Remarks"></a> 注释 
+
+统计信息更新日期存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)连同[直方图](#histogram)和[密度向量](#density)，而不是在元数据。 不读取任何数据以生成统计信息数据时, 未创建统计信息 blob，日期不可用，和*更新*列为 NULL。 这种情况的谓词不返回任何行，或为新的空表的筛选统计信息。
   
 ## <a name="histogram"></a>直方图  
 直方图度量数据集中每个非重复值的出现频率。 查询优化器根据统计信息对象第一个键列中的列值来计算直方图，它选择列值的方法是以统计方式对行进行抽样或对表或视图中的所有行执行完全扫描。 如果直方图是根据一组抽样行创建的，存储的总行数和非重复值总数则为估计值，且不必为整数。
@@ -148,8 +152,8 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 查询优化器按照直方图梯级的统计重要性来定义直方图梯级。 它使用最大差异算法使直方图中的梯级减至最少，并同时最大化边界值之间的差异。 最大梯级数为 200。 直方图梯级数可以少于非重复值的数目，即使对于边界点少于 200 的列也是如此。 例如，具有 100 个非重复值的列所具有的直方图的边界点可以少于 100。
   
-## <a name="density-vector"></a>密度向量  
-查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度向量针对统计信息对象中的列的每个前缀包含一个密度。 例如，如果统计信息对象有键列`CustomerId`，`ItemId`和`Price`，密度计算上每个以下的列前缀。
+## <a name="density"></a>密度向量  
+查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度向量针对统计信息对象中的列的每个前缀包含一个密度。 例如，如果统计信息对象包含键列 `CustomerId`、`ItemId` 和 `Price`，则根据以下每个列前缀计算密度。
   
 |列前缀|计算密度所基于的对象|  
 |---|---|
@@ -185,7 +189,7 @@ DBCC SHOW_STATISTICS 显示控件节点级别上的 Shell 数据库中存储的�
 ### <a name="a-returning-all-statistics-information"></a>A. 返回所有统计信息  
 下面的示例显示所有统计信息对于`AK_Address_rowguid`索引`Person.Address`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
 GO  
 ```  
@@ -193,7 +197,7 @@ GO
 ### <a name="b-specifying-the-histogram-option"></a>B. 指定 HISTOGRAM 选项  
 这就限制了显示 Customer_LastName 直方图数据的统计信息。
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
@@ -202,7 +206,7 @@ GO
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 显示一个统计信息对象的内容  
  下面的示例显示上 DimCustomer 表 Customer_LastName 统计信息的内容。  
   
-```t-sql
+```sql
 -- Uses AdventureWorks  
 --First, create a statistics object  
 CREATE STATISTICS Customer_LastName   
@@ -220,10 +224,10 @@ GO
 [统计信息](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)  
-[删除统计信息 &#40;Transact SQL &#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
-[sp_autostats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
-[sp_createstats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
-[STATS_DATE &#40;Transact SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
+[DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
+[sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
+[sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
+[STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)  
-[sys.dm_db_stats_properties (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
-[sys.dm_db_stats_histogram (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

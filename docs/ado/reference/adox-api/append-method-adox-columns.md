@@ -3,8 +3,9 @@ title: "Append 方法 （ADOX 列） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Columns::raw_Append
 - Columns::Append
-helpviewer_keywords: Append method [ADOX]
+helpviewer_keywords:
+- Append method [ADOX]
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab08924023bb1179a4f3b5dbbd7000fc1c337f09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e67dc9f6240e94dea2e4494906453ba8e4cfad1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-columns"></a>Append 方法 （ADOX 列）
 添加新[列](../../../ado/reference/adox-api/column-object-adox.md)对象传递给[列](../../../ado/reference/adox-api/columns-collection-adox.md)集合。  
@@ -43,10 +45,10 @@ Columns.Append Column [,Type] [,DefinedSize]
  **列**要追加的对象或要创建并追加的列的名称。  
   
  *类型*  
- 可选。 A**长**值，该值指定列的数据类型。 *类型*参数对应于[类型](../../../ado/reference/adox-api/type-property-column-adox.md)属性**列**对象。  
+ 選擇性。 A**长**值，该值指定列的数据类型。 *类型*参数对应于[类型](../../../ado/reference/adox-api/type-property-column-adox.md)属性**列**对象。  
   
  *DefinedSize*  
- 可选。 A**长**值，该值指定列的大小。 *DefinedSize*参数对应于[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性**列**对象。  
+ 選擇性。 A**长**值，该值指定列的大小。 *DefinedSize*参数对应于[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性**列**对象。  
   
 > [!NOTE]
 >  在追加时，将发生错误**列**到**列**集合[索引](../../../ado/reference/adox-api/index-object-adox.md)如果**列**中不存在[表](../../../ado/reference/adox-api/table-object-adox.md)已追加到[表](../../../ado/reference/adox-api/tables-collection-adox.md)集合。  

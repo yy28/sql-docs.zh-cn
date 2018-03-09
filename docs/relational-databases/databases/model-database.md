@@ -2,9 +2,12 @@
 title: "model 数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8a4023cf2ac4d0176d421a262f13b9a4603fcc5a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6733a6d7440071e655004df7dc7926b33503ed1b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="model-database"></a>model 数据库
-  **model** 数据库用作在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建的所有数据库的模板。 因为每次启动 **时都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。 **model** 数据库的全部内容（包括数据库选项）都会被复制到新的数据库。 启动期间，也可使用 **model** 数据库的某些设置创建新的 **tempdb** ，因此 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] model  数据库用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上创建所有数据库的模板。 因为每次启动 **时都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。 **model** 数据库的全部内容（包括数据库选项）都会被复制到新的数据库。 启动期间，也可使用 **model** 数据库的某些设置创建新的 **tempdb** ，因此 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。  
   
  新创建的用户数据库与 model 数据库使用相同的 [恢复模式](../../relational-databases/backup-restore/recovery-models-sql-server.md) 。 默认值是用户可配置的。 若要了解模式的当前恢复模式，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   

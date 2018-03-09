@@ -3,44 +3,44 @@ title: "SQL Server 2017 上 Docker 配置选项 |Microsoft 文档"
 description: "了解不同使用和 SQL Server 2017 容器映像在 Docker 中与之进行交互的方式。 这包括持久保存数据，将文件，复制和故障排除。"
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: d3e551d02c6a4b62dbe30949c81d15fcb16e93ea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0e602345be28c9740cae9cd610899b8b2d372f6
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>在 Docker 上配置 SQL Server 2017 容器映像
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本主题说明如何配置和使用[mssql server linux 容器映像](https://hub.docker.com/r/microsoft/mssql-server-linux/)使用 Docker。 此映像包含在 Linux（基于 Ubuntu 16.04）上运行的 SQL Server。 它可与适用于 Linux 的 Docker 引擎 1.8 以上版本或适用于 Mac/Windows 的 Docker 配合使用。
+此文章介绍了如何配置和使用[mssql server linux 容器映像](https://hub.docker.com/r/microsoft/mssql-server-linux/)使用 Docker。 此映像包含在 Linux（基于 Ubuntu 16.04）上运行的 SQL Server。 它可与适用于 Linux 的 Docker 引擎 1.8 以上版本或适用于 Mac/Windows 的 Docker 配合使用。
 
 > [!NOTE]
-> 本主题专门重点介绍 mssql-server-linux 映像的使用。 未涵盖的 Windows 映像，但你可以了解有关它在[mssql server windows Docker Hub 页](https://hub.docker.com/r/microsoft/mssql-server-windows/)。
+> 具体而言，本文重点介绍在使用 mssql server linux 映像。 未涵盖的 Windows 映像，但你可以了解有关它在[mssql server windows Docker Hub 页](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)。
 
 ## <a name="pull-and-run-the-container-image"></a>请求和运行容器映像
 
-若要请求并对 SQL Server 2017 运行 Docker 容器映像，按照以下快速入门教程中的的先决条件和步骤:
+若要请求并对 SQL Server 2017 运行 Docker 容器映像，请按照的先决条件和以下快速入门中的步骤操作：
 
 - [使用 Docker 运行 SQL Server 2017 容器映像](quickstart-install-connect-docker.md)
 
-此配置主题提供了下面的部分中的其他使用方案。
+配置本文提供了下列部分中的其他使用方案。
 
-## <a id="production"></a>运行容器映像的生产
+## <a id="production"></a> 运行容器映像的生产
 
-上一节中的快速入门教程从 Docker Hub 运行 SQL Server 的免费的开发人员版。 如果你想要运行容器映像，例如 Enterprise、 Standard、 或 Web edition 的生产，仍将应用的大部分信息。 但是，有一些区别此处所述。
+上一节中的快速入门从 Docker Hub 中运行 SQL Server 的免费的开发人员版。 如果你想要运行容器映像，例如 Enterprise、 Standard、 或 Web edition 的生产，仍将应用的大部分信息。 但是，有一些区别此处所述。
 
 - 如果你具有有效的许可证，你只可以在生产环境中使用 SQL Server。 你可以获取免费的 SQL Server Express 生产许可证[此处](https://go.microsoft.com/fwlink/?linkid=857693)。 SQL Server Standard 和 Enterprise Edition 许可证均可通过[Microsoft 批量许可](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)。
 
@@ -56,18 +56,18 @@ ms.lasthandoff: 11/20/2017
 
    1. 接下来，你需要获取免费的开发人员 Docker 存储上的容器映像。 转到[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)，单击**结帐**，并按照说明操作。
 
-   1. 检查要求，然后运行过程[快速入门教程](quickstart-install-connect-docker.md)。 但有两个的差异。 你必须拉取映像**存储/microsoft/mssql-服务器-linux:\<标记名称\>** Docker 存储区中。 并且你必须指定与生产版本**MSSQL_PID**环境变量。 下面的示例演示如何为 Enterprise Edition 运行最新的 SQL Server 2017 容器映像：
+   1. 检查要求，然后运行过程[快速入门](quickstart-install-connect-docker.md)。 但有两个的差异。 你必须拉取映像**存储/microsoft/mssql-服务器-linux:\<标记名称\>** Docker 存储区中。 并且你必须指定与生产版本**MSSQL_PID**环境变量。 下面的示例演示如何为 Enterprise Edition 运行最新的 SQL Server 2017 容器映像：
 
       ```bash
       docker run --name sqlenterprise \
-         -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+         -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
          -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
          -d store/microsoft/mssql-server-linux:2017-latest
       ```
 
       ```PowerShell
       docker run --name sqlenterprise `
-         -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+         -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
          -e "MSSQL_PID=Enterprise" -p 1433:1433 `
          -d "store/microsoft/mssql-server-linux:2017-latest"
       ```
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/20/2017
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
 - [Visual Studio 代码](sql-server-linux-develop-use-vscode.md)
-- [在 Windows 上的 SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [适用于 Windows 的 SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 
 下面的示例使用**sqlcmd**以连接到在 Docker 容器中运行的 SQL Server。 连接字符串中的 IP 地址是运行容器的主机的 IP 地址。
 
@@ -114,7 +114,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 从 SQL Server 自 2017 年 1 CTP 2.0，开始[SQL Server 命令行工具](sql-server-linux-setup-tools.md)包含在容器映像。 如果使用交互式命令提示符附加至此映像，则可在本地运行工具。
 
-1. 使用`docker exec -it`命令来启动交互式 bash shell 内你正在运行的容器。 在下面的示例`e69e056c702d`是容器 id。
+1. 使用 `docker exec -it` 命令在运行的容器内部启动交互式 Bash Shell。 在下面的示例`e69e056c702d`是容器 id。
 
     ```bash
     docker exec -it e69e056c702d "bash"
@@ -161,7 +161,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
 sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
 
-## <a id="persist"></a>保存数据
+## <a id="persist"></a> 保存数据
 
 SQL Server 配置更改和数据库文件会保留容器，即使您重新启动的容器`docker stop`和`docker start`。 但是，如果删除的容器`docker rm`，容器中的所有内容将被删除，包括 SQL Server 和数据库。 以下部分说明了如何使用**数据卷**以保留你的数据库文件，即使删除关联的容器。
 
@@ -236,7 +236,7 @@ docker ps
 docker exec -ti <Container ID> /bin/bash
 ```
 
-现在，可以运行这些命令，就像在容器内的终端上运行那样。 完成后，键入`exit`。 这将退出交互式命令会话，但容器将继续运行。
+现在，可以运行这些命令，就像在容器内的终端上运行那样。 完成后，键入 `exit`。 这将退出交互式命令会话，但容器将继续运行。
 
 ## <a name="copy-files-from-a-container"></a>从容器复制文件
 
@@ -301,7 +301,7 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 > [!IMPORTANT]
 > 升级和降级只有之间支持 RC1 和 RC2 这次。
 
-## <a id="upgrade"></a>升级在容器中的 SQL Server
+## <a id="upgrade"></a> 升级在容器中的 SQL Server
 
 若要升级使用 Docker 容器映像，首先请标识为升级版本的标记。 从注册表中，与请求此版本`docker pull`命令：
 
@@ -324,7 +324,7 @@ docker pull microsoft/mssql-server-linux:<image_tag>
 
 1. 还可以删除的旧容器`docker rm`。
 
-## <a id="troubleshooting"></a>故障排除
+## <a id="troubleshooting"></a> 故障排除
 
 以下各节提供关于在容器中运行 SQL Server 的故障排除建议。
 
@@ -409,7 +409,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 
 - 显式设置容器主机名与`-h YOURHOSTNAME`参数`docker run`命令。 配置可用性组时使用该主机名。 如果未指定其与`-h`，它默认为容器 id。
 
-### <a id="errorlogs"></a>SQL Server 安装程序和错误日志
+### <a id="errorlogs"></a> SQL Server 安装程序和错误日志
 
 你可以查看 SQL Server 安装程序和错误日志**/var/opt/mssql/log**。 如果容器未运行，请首先启动它。 然后使用交互式命令提示符来检查日志。
 
@@ -431,6 +431,6 @@ cat errorlog
 
 ## <a name="next-steps"></a>后续步骤
 
-开始使用 Docker 上的 SQL Server 2017 容器映像浏览[快速入门教程](quickstart-install-connect-docker.md)。
+开始使用 Docker 上的 SQL Server 2017 容器映像浏览[快速入门](quickstart-install-connect-docker.md)。
 
 另请参阅[mssql docker GitHub 存储库](https://github.com/Microsoft/mssql-docker)对资源、 反馈和已知的问题。

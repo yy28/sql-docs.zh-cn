@@ -3,8 +3,11 @@ title: "放弃对查询所做的更改 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4fc3552f3c45f41b828b4027dc25b98fc332262f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5412ede653f8bd6eb67091dd4ebc532b1d7f1b19
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>放弃对查询所做的更改 (Visual Database Tools)
-在保存之前，可以放弃对查询定义所做的更改。 在保存之后，查询将无法还原到先前的状态。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在保存之前，可以放弃对查询定义所做的更改。 在保存之后，查询将无法还原到先前的状态。  
   
 > [!NOTE]  
 > 若要撤消对“结果”窗格中的值所做的更改，请在离开该记录之前按 Esc 键。 如果在离开记录时收到更改无法提交到数据库的通知，您也可以按 Esc 键恢复到先前的值。  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_persisted_sku_features
 - dm_db_persisted_sku_features_TSQL
 - dm_db_persisted_sku_features
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - editions [SQL Server], feature restrictions
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6108de273aedd3808a1941da5c152c6c774e5804
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0af6dc4a6c8031be8a33a44d2c00265d5c58ed0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +44,9 @@ ms.lasthandoff: 11/17/2017
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |feature_name|**sysname**|在数据库中启用但并非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都支持的功能的外部名称。 必须先删除此功能，然后才能将数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有可用版本。|  
-|feature_id|**int**|与功能关联的功能 ID。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
+|feature_id|**int**|与功能关联的功能 ID。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]中创建已分区表或索引。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="remarks"></a>注释  
@@ -68,14 +70,14 @@ ms.lasthandoff: 11/17/2017
   
 -   **分区。** 指示数据库包含已分区表、已分区索引、分区方案或分区函数。 若要使数据库能够移动到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或 Developer 以外的版本，将表修改到单个分区上是不够的。 必须删除相应的已分区表。 如果该表包含数据，请使用 SWITCH PARTITION 将每个分区转换成无分区表。 然后删除已分区表、分区方案和分区函数。  
   
--   **TransparentDataEncryption。** 指示使用透明数据加密对数据库进行加密。 若要删除透明数据加密，请使用 ALTER DATABASE 语句。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
+-   **TransparentDataEncryption.** 指示使用透明数据加密对数据库进行加密。 若要删除透明数据加密，请使用 ALTER DATABASE 语句。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
 
 > [!NOTE]
 > 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1，这些功能都可在多个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，并不只局限于企业版或开发人员版。
 
  若要确定数据库是否使用仅限于特定版本的任何功能，请对数据库执行下面的语句：  
   
-```t-sql  
+```sql  
 SELECT feature_name FROM sys.dm_db_persisted_sku_features;  
 GO  
 ```  

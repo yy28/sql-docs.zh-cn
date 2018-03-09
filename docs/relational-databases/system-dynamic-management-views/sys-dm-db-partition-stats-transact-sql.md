@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_partition_stats (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats_TSQL
 - sys.dm_db_partition_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_partition_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b58fb8b2933e99f2eb77dc03ed7fdfbb132375a6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd061684962fe1d779b3f35f472b35ca52f45e95
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,8 +57,8 @@ ms.lasthandoff: 11/17/2017
 |**used_page_count**|**bigint**|用于分区的总页数。 计算为**in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**。|  
 |**reserved_page_count**|**bigint**|为分区保留的总页数。 计算为**in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**。|  
 |**row_count**|**bigint**|分区中的大约行数。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
-|**distribution_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分发与关联的唯一数字 id。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**distribution_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分发与关联的唯一数字 id。|  
   
 ## <a name="remarks"></a>注释  
  **sys.dm_db_partition_stats**显示有关用于存储和管理行内数据 LOB 数据和数据库中的所有分区的行溢出数据的空间的信息。 每个分区对应一行。  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
  可以通过求全部相关分区计数的和来获取单个表或单个索引的总计数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对查询的 VIEW DATABASE STATE 权限**sys.dm_db_partition_stats**动态管理视图。 有关动态管理视图权限的详细信息，请参阅[动态管理视图和函数 &#40;Transact SQL &#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>示例  

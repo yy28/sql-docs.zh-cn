@@ -1,32 +1,35 @@
 ---
 title: "Query Store 最佳做法 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7e41e78e7e4ffc1699a79bee2e7ed6236210e52d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本主题概述使用 Query Store 处理工作负荷的最佳实践。  
   
-##  <a name="SSMS"></a> 使用最新版 SQL Server Management Studio  
+##  <a name="SSMS"></a>使用最新 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计各种用户界面的目的是方便用户对查询存储进行配置和使用收集的工作负荷数据。  
 单击[此处](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)下载最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
  如果你的工作负荷会生成大量不同的查询和计划，或者你想要让查询历史记录保存较长的时间，则默认值 (100 MB) 可能不够大。 跟踪当前的空间使用情况，增大“最大大小(MB)”以防 Query Store 转换到只读模式。  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或执行以下脚本，以便获取有关 Query Store 大小的最新信息：  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -65,14 +68,14 @@ FROM sys.database_query_store_options;
   
  以下脚本将设置新的“最大大小(MB)”：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **统计信息收集间隔：** 定义已收集的运行时统计信息的粒度级别（默认值为 1 小时）。 如果你需要更细的粒度或更短的时间来检测问题和解决问题，则可考虑使用更低的值，但请记住，这会直接影响 Query Store 数据的大小。 使用 SSMS 或 Transact-SQL 为“统计信息收集间隔”设置不同的值：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
@@ -81,7 +84,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
   
  避免保留你不计划使用的历史数据。 这样可以减少变为只读状态的次数。 Query Store 数据的大小以及检测问题和解决问题的时间将会变得更可预测。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或以下脚本配置基于时间的清理策略：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
@@ -90,7 +93,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
   
  强烈建议你激活基于大小的清理功能，确保 Query Store 始终以读写模式运行并收集最新数据。  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -105,7 +108,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  以下脚本将“查询捕获模式”设置为“Auto”：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -117,7 +120,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  按上一节的说明通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来启用 Query Store，或者执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 导航到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中数据库节点下的 Query Store 子文件夹，以便打开特定方案的故障排除视图。   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 查询存储视图在操作时使用一组执行度量值，每个度量值都表示为下述任意统计函数：  
   
-|执行度量值|统计函数|  
-|----------------------|------------------------|  
-|CPU 时间、持续时间、执行计数、逻辑读取次数、逻辑写入次数、内存消耗和物理读取次数|平均值、最大值、最小值、标准偏差、总数|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|执行度量值|统计函数|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU 时间、持续时间、执行计数、逻辑读取次数、逻辑写入次数、内存消耗、物理读取次数、CLR 时间、并行度 (DOP) 和行计数|平均值、最大值、最小值、标准偏差、总数|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU 时间、持续时间、执行计数、逻辑读取次数、逻辑写入次数、内存消耗、物理读取次数、CLR 时间、并行度 (DOP)、行计数、日志内存、TempDB 内存和等待时间|平均值、最大值、最小值、标准偏差、总数|
   
  下图显示了如何查找 Query Store 视图：  
   
@@ -172,10 +176,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   重写有问题的查询。 这样有很多好处，例如可以充分利用查询参数化或实现更优化的逻辑。  
   
-##  <a name="Verify"></a> 确保查询存储持续收集查询数据  
+##  <a name="Verify"></a>确保查询存储持续收集查询数据  
  Query Store 可通过无提示方式更改操作模式。 你应该定期监视 Query Store 的状态以确保 Query Store 正常运行，并采取相应措施，避免那些本来可以避免的因素造成故障。 执行以下查询，以便确定操作模式并查看最相关的参数：  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -196,13 +200,13 @@ FROM sys.database_query_store_options;
   
 -   使用以下语句清理 Query Store 数据：  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- 在应用这两项步骤或其中一项步骤时，可以执行以下语句，通过显式方式将操作模式改回为读写：  
+在应用这两项步骤或其中一项步骤时，可以执行以下语句，通过显式方式将操作模式改回为读写：  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -218,7 +222,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>错误状态  
  若要恢复 Query Store，可尝试显式设置读写模式，然后再次检查实际状态。  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -236,7 +240,7 @@ FROM sys.database_query_store_options;
  
  如果没有效果，可在请求读写模式之前尝试清除查询存储。  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -299,7 +303,7 @@ FROM sys.database_query_store_options;
 
  可以方便地使用计划强制机制来修复关键查询的性能问题，使这些查询的结果更可预测。 但与计划提示和计划指南一样，强制实施某项计划并不能确保在今后的执行过程中会用到它。 通常情况下，如果对数据库架构的更改导致执行计划所引用的对象被更改或删除，计划强制就会失败。 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会回退到重新编译查询，而强制失败实际原因则显示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 以下查询返回强制计划的相关信息：  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   

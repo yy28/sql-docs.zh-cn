@@ -1,39 +1,47 @@
 ---
-title: "分块使用执行分析 rxDataStep |Microsoft 文档"
+title: "块区使用执行分析 rxDataStep （SQL 和 R 深入） |Microsoft 文档"
 ms.custom: 
-ms.date: 05/03/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: R
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- R
 ms.assetid: 4290ee5f-be90-446a-91e8-3095d694bd82
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7fb2f00e3506514c7d4870763052df2558f47aa4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5b5ba8c59ca5dfb84a7c062a8c09b40e0528fb5d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep"></a>使用 rxDataStep 执行区块分析
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-and-r-deep-dive"></a>块区使用执行分析 rxDataStep （SQL 和 R 深入）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-rxDataStep 函数可用于在区块中处理数据，而不需要像在传统 R 中一样，将整个数据集加载到内存并对其进行一次性处理。其工作方式是在区块中读取数据并使用 R 函数依次处理每个区块的数据，然后将每个区块的摘要结果写入常见 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源。
+本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 
-在本课程中，您将通过使用练习此技术`table`R，来计算应急表中的函数。
+在本课程中，你使用**rxDataStep**函数来处理数据的区块，而无需整个数据集被加载到内存并处理一次如下所示传统。**RxDataStep**函数读取区块中的数据反过来，适用于每个数据块区的 R 函数，然后将每个区块的摘要结果保存到一个常见[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源。 读取所有数据后，对结果进行组合。
 
 > [!TIP]
-> 本示例仅供教学使用。 如果你需要制成表格实际数据集，我们建议你使用**rxCrossTabs**或**rxCube**中函数**RevoScaleR**，针对进行了优化这有点操作。
+> 通过使用本课程中，为计算应急表`table`函数中。本示例旨在仅供指导。 
+> 
+> 如果你需要制成表格实际数据集，我们建议你使用**rxCrossTabs**或**rxCube**中函数**RevoScaleR**，针对进行了优化这有点操作。
 
-## <a name="partition-data-by-values"></a>按值的分区数据
+## <a name="partition-data-by-values"></a>值的分区数据
 
-1. 首先，创建自定义 R 调用的函数，*表*函数对每个区块的数据，并将其命名`ProcessChunk`。
+1. 创建自定义 R 调用的函数，R`table`函数对每个区块的数据，并命名新函数`ProcessChunk`。
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -58,24 +66,20 @@ rxDataStep 函数可用于在区块中处理数据，而不需要像在传统 R 
     rxSetComputeContext( sqlCompute )
     ```
   
-3. 定义 SQL Server 数据源以保存正在处理的数据。 首先将 SQL 查询分配给变量。
+3. 定义 SQL Server 数据源以容纳要处理的数据。 首先将 SQL 查询分配给变量。 然后，使用该变量在*sqlQuery*的一个新的自变量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源。
+  
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
-    ```
-
-4. 将该变量插入新 *数据源的* sqlQuery [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数。
-  
-    ```R
     inDataSource <- RxSqlServerData(sqlQuery = dayQuery,
         connectionString = sqlConnString,
         rowsPerRead = 50000,
         colInfo = list(DayOfWeek = list(type = "factor",
             levels = as.character(1:7))))
     ```
-     如果在此数据源上运行 *rxGetVarInfo* ，你将会发现其仅包含单列： *Var 1: DayOfWeek，类型：因子，没有可用的因子级别*
+4. （可选） 你可以运行**rxGetVarInfo**对此数据源。 此时，它包含单个列： *Var 1: DayOfWeek，键入： 不因数，可用任何因素级别*
      
-5. 将此因子变量应用到源数据之前，先创建单独的表以保存中间结果。 同样，你只需使用 RxSqlServerData 函数来定义数据，并删除具有相同名称的任何现有表。
+5. 将此因子变量应用到源数据之前，先创建单独的表以保存中间结果。 同样，您只需使用 RxSqlServerData 函数来定义的数据，使确实要删除具有相同名称的任何现有表。
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -83,13 +87,13 @@ rxDataStep 函数可用于在区块中处理数据，而不需要像在传统 R 
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  现在你将调用自定义函数`ProcessChunk`来转换数据，它读取时，通过使用其作为*transformFunc* rxDataStep 函数参数。
+7.  调用自定义函数`ProcessChunk`来转换数据，它读取时，通过使用其作为*transformFunc*参数**rxDataStep**函数。
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  若要查看的中间结果`ProcessChunk`将 rxImport 的结果赋给变量，然后将结果输出到控制台。
+8.  若要查看的中间结果`ProcessChunk`，分配的结果**rxImport**给一个变量，然后输出到控制台的结果。
   
     ```R
     iroResults <- rxImport(iroDataSource)
@@ -115,18 +119,16 @@ rxDataStep 函数可用于在区块中处理数据，而不需要像在传统 R 
 ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
 97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. 若要删除的中间结果表，请对 rxSqlServerDropTable 另一个调用。
+10. 要移除的中间结果表，请先调用**rxSqlServerDropTable**。
   
     ```R
-    rxSqlServerDropTable( table = "iroResults",     connectionString = sqlConnString)
+    rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)
     ```
 
 ## <a name="next-step"></a>下一步
 
-[分析本地计算上下文; 中的数据](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
+[在本地计算上下文中分析数据](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
 
 ## <a name="previous-step"></a>上一步
 
-[创建新的 SQL Server 表使用 rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-
-
+[使用 rxDataStep 创建新的 SQL Server 表](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)

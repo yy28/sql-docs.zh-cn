@@ -2,15 +2,13 @@
 title: "刷新命令 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
@@ -19,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 001f9bcf731212b98070a6fb09e5f46206094394
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77bef111f20a6ccc72347b8e02bd967ef2d316b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="refresh-command-tmsl"></a>刷新命令 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  处理当前数据库中的对象。   
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]处理当前数据库中的对象。   
 **刷新**始终运行并行，除非限制其与[序列命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
   
  您可以在数据刷新操作期间覆盖某些对象的某些属性：  
@@ -72,7 +67,7 @@ ms.lasthandoff: 11/17/2017
 ||||  
 |-|-|-|  
 |**刷新类型**|**适用于**|**Description**|  
-|full|数据库，<br />表，<br />分区|对于指定分区、表或数据库中的所有分区，刷新数据并重新计算所有依赖项。 对于计算分区，重新计算此分区及其所有依赖项。|  
+|完整|数据库，<br />表，<br />分区|对于指定分区、表或数据库中的所有分区，刷新数据并重新计算所有依赖项。 对于计算分区，重新计算此分区及其所有依赖项。|  
 |clearValues|数据库，<br />表，<br />分区|清除此对象及其所有依赖项内的值。|  
 |计算|数据库，<br />表，<br />分区|仅当需要时，重新计算此对象及其所有依赖项。 此值不会强制重新计算，可变公式除外。|  
 |dataOnly|数据库，<br />表，<br />分区|刷新此对象内的数据并清除所有依赖项。|  

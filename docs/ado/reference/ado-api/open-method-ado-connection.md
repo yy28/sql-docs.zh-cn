@@ -3,8 +3,9 @@ title: "Open 方法 （ADO 连接） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Connection15::raw_Open
 - Connection15::Open
 - _Connection::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9133d8e959d1831fc1ff64ed1d8ecace96c3f882
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 （ADO 连接）
 打开与数据源的连接。  
@@ -41,16 +43,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Parameters  
  *ConnectionString*  
- 可选。 A**字符串**值，该值包含连接信息。 请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有关有效的设置的详细信息的属性。  
+ 選擇性。 A**字符串**值，该值包含连接信息。 请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有关有效的设置的详细信息的属性。  
   
- *用户 Id*  
- 可选。 A**字符串**值，该值包含用于建立连接时所使用的用户名。  
+ *UserID*  
+ 選擇性。 A**字符串**值，该值包含用于建立连接时所使用的用户名。  
   
  *密码*  
- 可选。 A**字符串**值，该值包含要建立连接时使用的密码。  
+ 選擇性。 A**字符串**值，该值包含要建立连接时使用的密码。  
   
- *选项*  
- 可选。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，该值确定是否将此方法应返回后 （同步） 或 （异步） 建立连接之前。  
+ *Options*  
+ 選擇性。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，该值确定是否将此方法应返回后 （同步） 或 （异步） 建立连接之前。  
   
 ## <a name="remarks"></a>注释  
  使用**打开**方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象建立到数据源的物理连接。 此方法成功完成后，连接处于活动状态并可以发出对其的命令，还可以处理的结果。  

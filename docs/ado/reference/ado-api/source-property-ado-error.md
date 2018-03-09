@@ -3,8 +3,9 @@ title: "Source 属性 （ADO 错误） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Error::get_Source
 - Error::Source
 - Error::GetSource
-helpviewer_keywords: Source property [ADO Error]
+helpviewer_keywords:
+- Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a0f34bfbe5c4d7fa251316658dd76878c7b53c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a4b3e69feaada6c11504a1c5c2c834060be5b04
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-error"></a>源属性 （ADO 错误）
 指示最初生成了错误的应用程序的对象的名称。  
@@ -36,7 +38,7 @@ ms.lasthandoff: 11/17/2017
  返回**字符串**值，该值指示对象或应用程序的名称。  
   
 ## <a name="remarks"></a>注释  
- 使用**源**属性[错误](../../../ado/reference/ado-api/error-object.md)对象确定最初生成了错误的应用程序的对象的名称。 这可能是对象的类名称或以编程方式的 id。 属性值将是在 ADO 中的错误， **ADODB。***ObjectName*，其中*ObjectName*是触发错误的对象的名称。 对于 ADOX ADO MD，则值将是**ADOX。***ObjectName*和**ADOMD。***ObjectName，*分别。  
+ 使用**源**属性[错误](../../../ado/reference/ado-api/error-object.md)对象确定最初生成了错误的应用程序的对象的名称。 这可能是对象的类名称或以编程方式的 id。 属性值将是在 ADO 中的错误，**ADODB。 * * * ObjectName*，其中*ObjectName*是触发错误的对象的名称。 对于 ADOX ADO MD，则值将是 **ADOX。 * * * ObjectName*和 **ADOMD。 * * * ObjectName，*分别。  
   
  基于的错误文档**源**，[数](../../../ado/reference/ado-api/number-property-ado.md)，和[说明](../../../ado/reference/ado-api/description-property.md)属性**错误**对象，你可以编写代码将相应地处理错误。  
   

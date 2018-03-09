@@ -3,8 +3,11 @@ title: "设置主服务器 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,16 +26,16 @@ ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdaaf25e74004b787f02e17a8f04598d1e2d13f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8b2f78dcac9b0d976efb806d8c436b60e88882ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="make-a-master-server"></a>设置主服务器
-本主题描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 设置主服务器 [!INCLUDE[tsql](../../includes/tsql_md.md)]。  
+# <a name="make-a-master-server"></a>Make a Master Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主题描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 [!INCLUDE[tsql](../../includes/tsql_md.md)] 设置主服务器 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]。  
   
 **本主题内容**  
   
@@ -110,7 +113,7 @@ ms.lasthandoff: 11/09/2017
     **添加连接**  
     向目标服务器列表中添加服务器，但不注册该服务器。  
   
-    **连接**  
+    **“连接”**  
     更改所选服务器的连接属性。  
   
 5.  从 **“主服务器登录凭据”** 页中，指定是否要在必要时为目标服务器创建新的登录名，并为其分配针对主服务器的权限。  
@@ -122,11 +125,11 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-make-a-master-server"></a>设置主服务器  
   
-1.  连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。  
+1.  连接到[!INCLUDE[ssDE](../../includes/ssde_md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
   
 ```  
 USE msdb ;  

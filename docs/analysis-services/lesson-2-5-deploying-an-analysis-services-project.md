@@ -2,29 +2,32 @@
 title: "部署 Analysis Services 项目 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 29c7d1c38dc4703cdbd3db1bcbf5fd07fcfa10c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>课程 2-5-部署 Analysis Services 项目
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 若要查看位于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的对象的多维数据集和维度数据，必须将该项目部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中，然后再处理该多维数据集及其维度。 部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中创建定义的对象。 处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中的对象会将基础数据源中的数据复制到多维数据集对象中。 有关详细信息，请参阅[部署 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)和[配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
 在开发过程中的这个阶段通常将此多维数据集部署到开发服务器上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中。 完成业务智能项目的开发时，通常会使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 开发向导将项目从开发服务器部署到生产服务器。 有关详细信息，请参阅 [多维模型解决方案部署](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) 和 [使用部署向导部署模型解决方案](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)。  
@@ -39,10 +42,10 @@ ms.lasthandoff: 11/17/2017
   
 2.  在左窗格的“配置属性”节点中，单击“部署”。  
   
-    查看项目的部署属性。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目模板将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目配置为将所有项目增量部署到本地计算机上的默认 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，以创建一个与此项目同名的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，并在部署后使用默认处理选项处理这些对象。 有关详细信息，请参阅 [配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
+    查看项目的部署属性。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目模板将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目配置为将所有项目增量部署到本地计算机上的默认 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，以创建一个与此项目同名的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，并在部署后使用默认处理选项处理这些对象。 有关详细信息，请参阅[配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
     > [!NOTE]  
-    > 如果你想要将项目部署到的命名实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]在本地计算机上，或到远程服务器上的实例时，更改**服务器**到相应的实例的属性名称，如\< *ServerName**>\\<**InstanceName**>*。  
+    > 如果你想要将项目部署到的命名实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]在本地计算机上，或到远程服务器上的实例时，更改**服务器**到相应的实例的属性名称，如\< *ServerName**>\\<**InstanceName * * >*。  
   
 3.  单击 **“确定”**。  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 [浏览多维数据集](../analysis-services/lesson-2-6-browsing-the-cube.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[部署 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+[部署 Analysis Services 项目 &#40;SSDT &#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
 [配置 Analysis Services 项目属性 (SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "变更数据捕获 (SSIS) |Microsoft 文档"
+title: "变更数据捕获 (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d4b1a7480113be51245c8c01a087a65ce616cb2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，变更数据捕获为有效地执行从源表到数据市场和数据仓库的增量加载提供了一种颇有成效的解决方案。  
@@ -44,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
  管理员在数据库上启用变更数据捕获后，即可以创建执行变更数据增量加载的包。 下面的关系图显示的步骤用于创建一个从单表执行增量加载的包：  
   
- ![更改数据捕获包创建步骤](../../integration-services/change-data-capture/media/cdc-package-creation.gif "更改数据捕获包创建步骤")  
+ ![更改数据捕获包创建步骤](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Change Data Capture Package Creation Steps")  
   
  如上面的关系图所示，创建执行变更数据的增量加载的包涉及下列步骤：  
   
@@ -107,7 +106,7 @@ ms.lasthandoff: 09/26/2017
   
 -   [关于自上次请求以来的变更数据捕获包示例的自述文件](http://go.microsoft.com/fwlink/?LinkId=133508)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [指定变更数据的间隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
@@ -129,4 +128,3 @@ ms.lasthandoff: 09/26/2017
  sqlblog.com 上的博客文章 [SSIS 设计模式 – 增量加载](http://go.microsoft.com/fwlink/?LinkId=217679)  
   
   
-

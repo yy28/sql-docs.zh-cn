@@ -3,8 +3,9 @@ title: "EndOfRecordset 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - EndOfRecordset
 - Recordset::EndOfRecordset
-helpviewer_keywords: EndOfRecordset event [ADO]
+helpviewer_keywords:
+- EndOfRecordset event [ADO]
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b8c610cc6346e8ec4ec466926d2dc80f45cc77b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79d37ae42a9c9e607ba4d8dba8917fccd7f20c42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 事件 (ADO)
 **EndOfRecordset**尝试移动到末尾的某一行时调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

@@ -1,41 +1,40 @@
 ---
 title: "表格模型设计器 |Microsoft 文档"
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>表格模型设计器 (SSAS)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 表格模型设计器是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的一部分（与 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成），它具有专用于开发专业表格模型解决方案的附加项目类型模板。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 作为免费 Web 下载内容安装。 有关详细信息，请参阅[下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。    
   
-##  <a name="bkmk_benefits"></a> 优势  
+##  <a name="bkmk_benefits"></a> 优点  
  在您安装 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]时，用于创建表格模型的新项目模板将添加到可用项目类型中。 在使用这些模板之一创建了新的表格模型项目后，您可以通过使用表格模型设计器工具和向导开始创建模型。  
   
  除了用于创建专业多维和表格模型解决方案的新模板和工具外， [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境还提供调试和项目生命周期功能，确保您可以为组织创建功能最强大的 BI 解决方案。 有关 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的详细信息，请参阅 [Getting Started with Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389)（Visual Studio 入门）。  
   
-##  <a name="bkmk_proj_temp"></a>项目模板  
+##  <a name="bkmk_proj_temp"></a> 项目模板  
  在您安装 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]时，以下表格模型项目模板将添加到商业智能项目类型中：  
   
  **Analysis Services 表格项目**  
@@ -88,7 +87,7 @@ ms.lasthandoff: 11/17/2017
 
  表格模型资源管理器还具有方便的搜索功能。 只需在搜索框中键入部分名称，表格模型资源管理器就会将树视图缩小至匹配项范围。 
   
-### <a name="properties-window"></a>属性窗口  
+### <a name="properties-window"></a>屬性視窗  
  “属性”窗口列出所选对象的属性。 下列对象具有可以在“属性”窗口中查看和编辑的属性：  
   
 -   Model.bim  
@@ -99,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 -   度量值  
   
- 项目属性在“属性”窗口中只显示项目名称和项目文件夹。 项目还具有您可以使用模式属性对话框设置的其他部署选项和部署服务器设置。 若要查看这些属性，请在 **“解决方案资源管理器”**中右键单击相应的项目，然后单击 **“属性”**。  
+ 项目属性在属性窗口中显示的项目名称和项目文件夹。 项目还具有您可以使用模式属性对话框设置的其他部署选项和部署服务器设置。 若要查看这些属性，请在 **“解决方案资源管理器”**中右键单击相应的项目，然后单击 **“属性”**。  
   
  “属性”窗口的字段中嵌入了控件，单击这些控件便可将其打开。 编辑控件的类型取决于具体属性。 控件包括编辑框、下拉列表和指向自定义对话框的链接。 灰显的属性为只读属性。  
   
@@ -129,7 +128,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="toolbar"></a>工具栏  
  Analysis Services 工具栏提供了快速轻松访问最常用的模型创建命令的方式。  
   
-##  <a name="bkmk_vsint"></a>Visual Studio 集成  
+##  <a name="bkmk_vsint"></a> Visual Studio 集成  
  **源代码管理**  
  Analysis Services 项目与所选的源代码管理插件集成。 如果您将 Visual Studio 配置为使用源代码管理，可以使用解决方案资源管理器中的“签入”/“签出”。 若要配置为使用 Team Foundation Server，请参阅 [为 Visual Studio 配置 Team Foundation 版本控制](http://msdn.microsoft.com/library/ms253064.aspx)。 还支持很多第三方源代码管理插件。  
   
@@ -140,7 +139,7 @@ ms.lasthandoff: 11/17/2017
  Analysis Services 键盘快捷键可以通过“工具”->“选项”->“键盘”对话框进行配置/重新映射。 一些全局 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 快捷方式（如生成、保存、调试、新建项目等）在表格模型设计器上下文中受支持。 Analysis Services 上下文中支持其他表格模型设计器的特定快捷键。  
   
 ## <a name="see-also"></a>另请参阅  
- [表格模型项目（SSAS 表格）](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [属性（SSAS 表格）](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [表格模型项目](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [属性](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

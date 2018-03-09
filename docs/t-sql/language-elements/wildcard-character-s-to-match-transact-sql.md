@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - wildcard
 - '[ ]'
 - '[_]_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[ ] (wildcard - character(s) to match)'
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee043b18eebafdc86b0d2d6e6a34afc0fc865c2f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 04fcf0d9e76db380430bfbf4c4ed6e5fadf14afb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] （通配符-到匹配项个字符） (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/18/2017
 ### <a name="a-simple-example"></a>答： 简单的示例   
 下面的示例返回的字母开头的名称`m`。 `[n-z]`指定，使用某处范围内必须是第二个字母`n`到`z`。 百分号通配符`%`允许使用 3 字符开头的任何或任何字符。 `model`和`msdb`数据库满足此条件。 `master`数据库不并且不包括在结果集。
  
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm[n-z]%';
 ```
@@ -59,7 +61,7 @@ msdb
 ### <a name="b-more-complex-example"></a>B： 更复杂示例   
  以下示例使用 [] 运算符查找其地址中有四位邮政编码的所有 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 雇员的 ID 和姓名。  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.BusinessEntityID, p.FirstName, p.LastName, a.PostalCode  
@@ -82,7 +84,7 @@ EmployeeID      FirstName      LastName      PostalCode
 
   
 ## <a name="see-also"></a>另请参阅  
- [如 &#40;Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [%&#40;通配符-字符 &#40; &#41;到匹配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93;&#40;通配符-字符 &#40; &#41;不到匹配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     

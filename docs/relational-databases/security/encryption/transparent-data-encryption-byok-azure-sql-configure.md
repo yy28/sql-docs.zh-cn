@@ -2,33 +2,34 @@
 title: "PowerShell：使用自有 Azure Key Vault 密钥启用 TDE | Microsoft Docs"
 description: "了解如何配置 Azure SQL 数据库和数据仓库，以开始使用透明数据加密 (TDE) 通过 PowerShell 进行静态加密。"
 keywords: 
-services: sql-database
 documentationcenter: 
-author: becczhang
-manager: cguyer
+author: aliceku
+manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
-ms.author: rebeccaz
+ms.author: aliceku
+ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: cf8f46ab01c08e68fa22f65a4f86f4ff16f16ba3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/04/2018
 ---
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell：使用 Azure Key Vault 中的自有密钥启用透明数据加密
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell：使用 Azure Key Vault（预览）中的自有密钥启用透明数据加密
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-本操作指南介绍了如何使用 Azure Key Vault 的密钥在 SQL 数据库或数据仓库中进行透明数据加密 (TDE)。 若要了解更多有关使用自带密钥 (BYOK) 支持进行 TDE 的信息，请访问 [Azure SQL 的 TDE 自带密钥](transparent-data-encryption-byok-azure-sql.md)。 
+本操作指南介绍了如何使用 Azure Key Vault 中的密钥在 SQL 数据库或数据仓库中进行透明数据加密 (TDE)（预览）。 若要了解更多有关使用自带密钥 (BYOK) 支持（预览）进行 TDE 的信息，请访问 [Azure SQL 的 TDE 自带密钥](transparent-data-encryption-byok-azure-sql.md)。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 必须有 Azure 订阅，并且成为订阅中的管理员。
 - [推荐但可选]具有硬件安全性模块 (HSM) 或本地密钥存储，用于创建 TDE 保护程序密钥材料的本地副本。
@@ -66,7 +67,7 @@ ms.lasthandoff: 09/05/2017
 
 ## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>步骤 2. 向服务器授予密钥保管库权限
 
-将密钥保管库中的密钥用于 TDE 之前，使用 [Set-AzureRmKeyValutAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet 向服务器授予密钥保管库的访问权限。
+将密钥保管库中的密钥用于 TDE 之前，使用 [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet 向服务器授予密钥保管库的访问权限。
 
    ```powershell
    Set-AzureRmKeyVaultAccessPolicy  `
@@ -190,6 +191,5 @@ ms.lasthandoff: 09/05/2017
 
 - 了解如何轮换服务器的 TDE 保护程序以符合安全要求：[使用 PowerShell 轮换透明数据加密保护程序](transparent-data-encryption-byok-azure-sql-key-rotation.md)。
 - 如果存在安全风险，了解如何删除可能已泄露的 TDE 保护程序：[删除可能已泄露的密钥](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)。 
-
 
 

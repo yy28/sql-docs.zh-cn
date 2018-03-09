@@ -2,32 +2,30 @@
 title: "创建 BI 语义模型连接到表格模型数据库 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cad58c850f42e42791bbd57c010b48234e5640e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>创建与表格模型数据库的 BI 语义模型连接
-  使用本主题中的信息设置一个 BI 语义模型连接，该连接将重定向到在 SharePoint 场外的 Analysis Services 实例上运行的表格模型数据库。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+使用本主题中的信息设置一个 BI 语义模型连接，该连接将重定向到在 SharePoint 场外的 Analysis Services 实例上运行的表格模型数据库。  
   
  在创建 BI 语义模型连接并配置 SharePoint Services 和 Analysis Services 权限后，可将其用作 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报告的数据源。  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_BISM"></a> 授予对表格模型数据库的读取权限  
  由于数据库在服务器场外部的服务器上运行，因此设置您的连接的部分工作是授予后端 Analysis Services 服务器的数据库用户权限。 Analysis Services 使用基于角色的权限模型。 连接到模型数据库的用户必须具有读取权限或更高权限并且通过对其成员授予读取读取访问权限的角色才能执行此操作。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建模型时会定义角色（有时会定义角色成员身份）。 虽然无法使用 SQL Server Management Studio 创建角色，但可以使用它向已定义的角色中添加成员。 有关创建角色的详细信息，请参阅[创建和管理角色（SSAS 表格）](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建模型时会定义角色（有时会定义角色成员身份）。 虽然无法使用 SQL Server Management Studio 创建角色，但可以使用它向已定义的角色中添加成员。 有关创建角色的详细信息，请参阅[创建和管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
   
 #### <a name="assign-role-membership"></a>分配角色成员身份  
   

@@ -2,15 +2,13 @@
 title: "数据挖掘概念 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,19 +26,20 @@ helpviewer_keywords:
 - SSAS, data mining
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 167d150c65f8fcdfb16417c204eebac22f2ddc40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
-  数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
   
  这些模式和趋势可以被收集在一起并定义为“数据挖掘模型” 。 挖掘模型可以应用于特定的方案，例如：  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
  Microsoft SQL Server 数据挖掘提供用于创建和使用数据挖掘模型的集成环境。 此环境包含 SQL Server Development Studio 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，前者提供用于轻松生成各种项目的综合性解决方案的数据挖掘算法和查询工具，后者包含用于浏览模型和管理数据挖掘对象的工具。 有关详细信息，请参阅[使用 SQL Server Data Tools 创建多维模型 (SSDT)](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)。  
   
- 有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具应用于业务方案的示例，请参阅 [数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具应用于业务方案的示例，请参阅[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
 ##  <a name="DefiningTheProblem"></a> 定义问题  
  与以下关系图的突出显示相同，数据挖掘过程的第一步就是明确定义问题，并考虑可以何种方式利用数据来解答该问题。  
@@ -142,7 +141,7 @@ ms.lasthandoff: 11/17/2017
   
  通过创建挖掘结构定义要使用的数据列。 将挖掘结构链接到数据源，但只有对挖掘结构进行处理后，该结构才会实际包含数据。 处理挖掘结构时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 生成可用于分析的聚合信息以及其他统计信息。 基于该结构的所有挖掘模型均可使用该信息。 有关挖掘结构如何与挖掘模型关联的详细信息，请参阅[逻辑体系结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)。  
   
- 在处理结构和模型之前，数据挖掘模型也只是一个容器，它指定用于输入的列、要预测的属性以及指示算法如何处理数据的参数。 处理模型通常称为“定型 ”。 定型表示向结构中的数据应用特定数学算法以便提取模式的过程。 在定型过程中找到的模式取决于选择的定型数据、所选算法以及如何配置该算法。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含多种不同算法，每种算法适合不同的任务类型，并且每种算法创建不同的模型类型。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的算法列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
+ 在处理结构和模型之前，数据挖掘模型也只是一个容器，它指定用于输入的列、要预测的属性以及指示算法如何处理数据的参数。 处理模型通常称为“定型 ”。 定型表示向结构中的数据应用特定数学算法以便提取模式的过程。 在定型过程中找到的模式取决于选择的定型数据、所选算法以及如何配置该算法。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]包含许多不同的算法，其中每个适用于不同类型的任务，且创建不同类型的模型。 有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的算法列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
  此外，还可以使用参数调整每种算法，并向定型数据应用筛选器，以便仅使用数据子集，进而创建不同结果。 在通过模型传递数据之后，即可查询挖掘模型对象包含的摘要和模式，并将其用于预测。  
   
@@ -157,7 +156,7 @@ ms.lasthandoff: 11/17/2017
   
  在将模型部署到生产环境之前，您需要测试模型的性能。 此外，在生成模型时，您通常需要使用不同配置创建多个模型，并对所有这些模型进行测试，以便查看哪个模型为您的问题和数据生成最佳结果。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可帮助您将数据分成定型数据集和测试数据集，使您可以更准确地评估基于相同数据的所有模型的性能。 您使用定型数据集生成模型，并通过创建预测查询来使用测试数据集测试模型的准确性。 此分区可以完成操作时自动生成挖掘模型。 有关详细信息，请参阅 [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)生成数据挖掘项目。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可帮助您将数据分成定型数据集和测试数据集，使您可以更准确地评估基于相同数据的所有模型的性能。 您使用定型数据集生成模型，并通过创建预测查询来使用测试数据集测试模型的准确性。 此分区可以完成操作时自动生成挖掘模型。 有关详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
  可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中数据挖掘设计器内的查看器来浏览算法发现的趋势和模式。 有关详细信息，请参阅 [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)。 还可以使用该设计器中的工具（如，提升图和分类矩阵）来测试模型创建预测的性能。 若要验证模型是否特定于你的数据，或者是否可用于推断总体，可以使用称为交叉验证的统计方法来自动创建数据子集，并参照每个子集测试模型。 有关详细信息，请参阅[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
@@ -170,7 +169,7 @@ ms.lasthandoff: 11/17/2017
   
  当生产环境中部署了挖掘模型之后，便可根据您的需求执行许多任务。 下面是一些可以执行的任务：  
   
--   使用这些模型创建预测，您以后可以使用这些预测进行业务决策。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供可用于创建预测查询的 DMX 语言以及帮助生成查询的预测查询生成器。 有关详细信息，请参阅[数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)。  
+-   使用这些模型创建预测，您以后可以使用这些预测进行业务决策。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供可用于创建预测查询和预测查询生成器可帮助你构建查询的 DMX 语言。 有关详细信息，请参阅[数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)。  
   
 -   创建内容查询以检索模型中的统计信息、规则或公式。 有关详细信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: "模糊分组转换 |Microsoft 文档"
+title: "模糊分组转换 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,17 +31,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 58
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
@@ -98,7 +97,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  有关如何设置此任务的属性的详细信息，请单击下列主题之一：  
   
 -   [使用模糊分组转换标识相似数据行](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
@@ -111,7 +110,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  连接指定的服务器必须正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 模糊分组转换会在 tempdb 中创建临时数据对象，这些对象的大小可能与为此转换输入的所有内容完全一致。 在执行转换时，该转换将对这些临时对象发出服务器查询。 这会影响服务器的总体性能。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **“无缓存”**  
  使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。  
   
@@ -121,7 +120,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊分组转换编辑器（“列”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“列”** 选项卡，指定用于对带有重复值的行进行分组的列。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用输入列**  
  从此列表中选择用于对带有重复值的行进行分组的输入列。  
   
@@ -152,7 +151,7 @@ ms.lasthandoff: 08/19/2017
  **数字**  
  指定比较列数据时前导数字和尾随数字的重要性。 例如，如果前导数字重要，则“123 Main Street”将不会与“456 Main Street”分组在一起。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**Neither**|前导数字和尾随数字都不重要。|  
 |**Leading**|只有前导数字重要。|  
@@ -168,7 +167,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  模糊分组转换的 **Exhaustive** 和 **MaxMemoryUsage** 属性未在 **“模糊分组转换编辑器”**中提供，但可以使用 **“高级编辑器”**进行设置。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入键列名**  
  指定包含每个输入行的唯一表示符的输出列名称。 **_key_in** 列包含的值可唯一标识每个行。  
   
@@ -189,4 +188,3 @@ ms.lasthandoff: 08/19/2017
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

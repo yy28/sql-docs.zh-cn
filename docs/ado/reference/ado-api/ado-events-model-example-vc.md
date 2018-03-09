@@ -3,27 +3,30 @@ title: "ADO 事件模型示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Visual C++ code examples [ADO], event model
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e984459ddf5e45cbcf25d9109a7e50cbd43abbf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e141eadd6f641608ccef1fb6b1b48b4138bf2728
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 （VC + +）
 Visual c + + 部分[ADO 事件实例化语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)常规说明如何实例化 ADO 事件模型。 以下是实例化创建的环境中的事件模型的特定示例**#import**指令。  

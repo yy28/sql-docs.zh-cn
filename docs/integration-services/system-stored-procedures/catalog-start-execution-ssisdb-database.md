@@ -1,5 +1,5 @@
 ---
-title: "catalog.start_execution （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.start_execution（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 33f50d558073a82985ef225288471489d220e2c8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +36,17 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
 ```  
   
 ## <a name="arguments"></a>参数  
- [@execution_id =] *execution_id*  
- 执行实例的唯一标识符。 *Execution_id*是**bigint**。
+ [@execution_id =] execution_id  
+ 执行实例的唯一标识符。 execution_id 为 bigint。
  
- [@retry_count =] *retry_count*  
- 如果执行失败重试计数。 仅当执行在横向扩展设置将生效。此参数可选。 如果未指定，则会将其值设置为 0。 *Retry_count*是**int**。
+ [@retry_count =] retry_count  
+ 执行失败时的重试次数。 仅当在 Scale Out 中执行时才生效。此参数可选。 如果未指定，其值设置为 0。 retry_count 为 int。
   
-## <a name="remarks"></a>注释  
- 执行用于指定包在包执行的单个实例期间使用的参数值。 在创建执行实例后，但在启动此实例之前，可能重新部署对应的项目。 在这种情况下，执行实例引用的项目已过时。 此无效的引用将导致失败的存储的过程。  
+## <a name="remarks"></a>Remarks  
+ 使用执行来指定参数值，包在单个包执行实例中将使用这些参数值。 在创建执行实例后，但在启动此实例之前，可能重新部署对应的项目。 在本例中，执行实例引用过时的项目。 这个无效引用导致存储过程失败。  
   
 > [!NOTE]  
->  只能启动执行一次。 若要启动的执行实例，它必须在创建的状态 (值为`1`中**状态**列[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图)。  
+>  只能启动执行一次。 要开始执行实例，它必须处于已创建状态（[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 视图中 status 列的值为 `1`）。  
   
 ## <a name="example"></a>示例  
  以下示例调用 catalog.create_execution 来创建 Child1.dtsx 包的执行实例。 Integration Services Project1 包含该包。 该示例调用 catalog.set_execution_parameter_value 来设置 Parameter1、Parameter2 和 LOGGING_LEVEL 参数的值。 该示例调用 catalog.start_execution 启动一个执行实例。  
@@ -70,21 +69,21 @@ GO
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 无  
+ InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对执行实例的 READ 和 MODIFY 权限，针对项目的 READ 和 EXECUTE 权限，针对引用环境的 READ 权限（如果适用）  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
   
--   用户没有适当的权限  
+-   用户没有相应的权限  
   
 -   执行标识符无效  
   
@@ -97,4 +96,3 @@ GO
 -   与实例执行关联的项目版本已过时；只可执行项目的最新版本  
   
   
-

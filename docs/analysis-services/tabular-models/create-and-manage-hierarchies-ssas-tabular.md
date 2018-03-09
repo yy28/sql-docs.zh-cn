@@ -1,35 +1,33 @@
 ---
-title: "创建和管理层次结构 (SSAS 表格) |Microsoft 文档"
+title: "创建和管理层次结构 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 813d48fcb964fc82c3dd9b1b72a70d0f1385f35c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96af188d39d583c53b2520d03f6fd0962092a90f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-hierarchies-ssas-tabular"></a>创建和管理层次结构（SSAS 表格）
-  可以在模型设计器的关系图视图中创建和管理层次结构。 若要在关系图视图中查看模型设计器，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
+# <a name="create-and-manage-hierarchies"></a>创建和管理层次结构 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+可以在模型设计器的关系图视图中创建和管理层次结构。 若要在关系图视图中查看模型设计器，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
   
- 本主题包括以下任务：  
+ 本文包括以下任务：  
   
 -   [创建层次结构](#bkmk_create)  
   
@@ -103,8 +101,8 @@ ms.lasthandoff: 11/17/2017
 -   或者，单击父层次结构级别，然后按 Delete 键。 这也会删除其所有子级别。  
   
 ## <a name="see-also"></a>另请参阅  
- [表格模型设计器 (SSAS)](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [层次结构 &#40;SSAS 表格 &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [度量值（SSAS 表格）](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [表格模型设计器 ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [层次结构](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

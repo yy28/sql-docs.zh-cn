@@ -3,8 +3,9 @@ title: "NativeError 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Error::GetNativeError
 - Error::get_NativeError
 - Error::NativeError
-helpviewer_keywords: NativeError property [ADO]
+helpviewer_keywords:
+- NativeError property [ADO]
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6d98280027ac307ca04a988052b189cf3365f8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a21c2f5fb6e4432ecfd5d98156fa8e856243886
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nativeerror-property-ado"></a>NativeError 属性 (ADO)
 表示的提供程序特定的错误代码给定[错误](../../../ado/reference/ado-api/error-object.md)对象。  

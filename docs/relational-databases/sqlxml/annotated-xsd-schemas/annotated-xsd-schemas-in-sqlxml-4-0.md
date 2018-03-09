@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,21 +20,22 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], annotations
 - schemas [SQLXML]
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42ce6e12d3a51dbba5219c8ebdac9fc199fdcbe4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 986e771127cb517d44a1aac1b2bb67988ec888f3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的带批注的 XSD 架构
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]本部分提供有关 SQLXML 4.0 中使用带批注的 XSD 架构的信息。 在以往的 SQLXML 版本中，使用 XML 数据简化 (XDR) 架构提供类似的功能。 本节还提供早期应用程序的 XDR 信息。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+本节提供有关使用 SQLXML 4.0 中的带批注的 XSD 架构的信息。 在以往的 SQLXML 版本中，使用 XML 数据简化 (XDR) 架构提供类似的功能。 本节还提供早期应用程序的 XDR 信息。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [批注的 XSD 架构 &#40; 简介SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  提供 SQLXML 4.0 中的带批注的 XSD 架构的概述。  
   

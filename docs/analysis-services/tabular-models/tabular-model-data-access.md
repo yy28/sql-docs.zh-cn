@@ -2,34 +2,32 @@
 title: "表格模型数据访问 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6b535c1eba06e7f023ef9a1f7b00476e7be39eb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-data-access"></a>表格模型数据访问
-  Analysis Services 中的表格模型数据库可由用于检索多维模型中的数据或元数据的大多数相同的客户端、接口和语言访问。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Analysis Services 中的表格模型数据库可由用于检索多维模型中的数据或元数据的大多数相同的客户端、接口和语言访问。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
   
- 本主题介绍适用于表格模型的客户端、查询语言和编程接口。  
+ 本文介绍客户端、 查询语言和适用于表格模型的编程接口。  
   
 ## <a name="clients"></a>客户端  
  以下 Microsoft 客户端应用程序支持本机连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型数据库。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="excel"></a>Excel  
  您可以从 Excel 连接表格模型数据库，使用 Excel 中的数据可视化和分析功能来处理数据。 若要访问数据，您需要定义 Analysis Services 数据连接，指定以表格服务器模式运行的服务器，然后选择要使用的数据库。 有关详细信息，请参阅 [连接到 SQL Server Analysis Services 或从其中导入数据](http://go.microsoft.com/fwlink/?linkID=215150)。  
   
- Excel 也是推荐用于在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览表格模型的应用程序。 该工具包括一个 **“在 Excel 中分析”** 选项，可用来启动新的 Excel 实例，创建 Excel 工作簿并打开从该工作簿到模型工作区数据库的数据连接。 在 Excel 中浏览表格模型数据时，要注意 Excel 使用 Excel PivotTable 客户端对该模型发出查询。 相应地，Excel 工作簿中的操作会生成将发送到工作区数据库的 MDX 查询而非 DAX 查询。 如果您在使用 SQL Profiler 或其他监视工具来监视查询，则应能在事件探查器跟踪中看到 MDX 而不是 DAX。 有关“在 Excel 中分析”功能的详细信息，请参阅[在 Excel 中分析（SSAS 表格）](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
+ Excel 也是推荐用于在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览表格模型的应用程序。 该工具包括一个 **“在 Excel 中分析”** 选项，可用来启动新的 Excel 实例，创建 Excel 工作簿并打开从该工作簿到模型工作区数据库的数据连接。 在 Excel 中浏览表格模型数据时，要注意 Excel 使用 Excel PivotTable 客户端对该模型发出查询。 相应地，Excel 工作簿中的操作会生成将发送到工作区数据库的 MDX 查询而非 DAX 查询。 如果您在使用 SQL Profiler 或其他监视工具来监视查询，则应能在事件探查器跟踪中看到 MDX 而不是 DAX。 有关在 Excel 功能中分析的详细信息，请参阅[在 Excel 中的分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
 ### <a name="power-view"></a>Power View  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是一个在 SharePoint 2010 环境中运行的 Reporting Services 报表客户端应用程序。 它将数据浏览、查询设计和演示布局融合为集成的特别报表体验。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 可以将表格模型用作数据源，无论该模型是承载于在表格模式下运行的 Analysis Services 实例中，还是使用 DirectQuery 模式从关系数据存储区中检索到的。 若要在 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]中连接到表格模型，您必须创建包含服务器位置和数据库名称的连接文件。 您可以在 SharePoint 中创建 Reporting Services 共享数据源或 BI 语义模型连接文件。 有关 BI 语义模型连接的详细信息，请参阅 [PowerPivot BI 语义模型连接 (bism)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)。  
@@ -93,11 +91,11 @@ ms.lasthandoff: 11/17/2017
 ### <a name="data-and-metadata"></a>数据和元数据  
  可以使用 ADOMD.NET 从托管应用程序中的表格模型检索数据和元数据。 
   
--   [使用动态管理视图 (DMV) 监视 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [使用动态管理视图 &#40; Dmv &#41;监视 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  可以在非托管客户端应用程序中使用 Analysis Services 9.0 OLE DB 访问接口以支持对表格模型的 OLE DB 访问。 启用表格模型访问需要更新版本的 Analysis Services OLE DB 访问接口。 有关用于表格模型的提供程序的详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 。  
   
- 还可以直接从 Analysis Services 实例以基于 XML 的格式检索数据。 可以使用 DISCOVER_CSDL_METADATA 行集来检索表格模型的架构，也可以将 EXECUTE 或 DISCOVER 命令与现有 ASSL 元素、对象或属性一起使用。 有关详细信息，请参阅下列资源：  
+ 还可以直接从 Analysis Services 实例以基于 XML 的格式检索数据。 可以使用 DISCOVER_CSDL_METADATA 行集来检索表格模型的架构，也可以将 EXECUTE 或 DISCOVER 命令与现有 ASSL 元素、对象或属性一起使用。 如需詳細資訊，請參閱下列資源：  
   
 -   [用于商业智能的 CSDL 批注 (CSDLBI)](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
@@ -126,7 +124,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [MDSCHEMA_HIERARCHIES 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     新的 **STRUCTURE_TYPE** 枚举支持在表格模型中创建的用户定义的层次结构的标识。 有关详细信息，请参阅[层次结构（SSAS 表格）](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
+     新的 **STRUCTURE_TYPE** 枚举支持在表格模型中创建的用户定义的层次结构的标识。 有关详细信息，请参阅[层次结构](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
   
  此版本中不包含针对 OLE DB for Data Mining 架构行集的更新。  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 11/17/2017
 >  您无法在已在 DirectQuery 模式下部署的数据库中使用 MDX 或 DMX 查询；因此，如果您需要对使用架构行集的 DirectQuery 模型执行查询，则您应使用 XMLA 而非关联的 DMV。 对于将服务器的结果作为一个整体返回的 DMV（例如，SELECT * from $system.DBSCHEMA_CATALOGS 或 DISCOVER_TRACES），您可以对在缓存模式下部署的数据库内容执行查询。  
   
 ## <a name="see-also"></a>另请参阅  
- [连接到表格模型数据库 (SSAS)](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
+ [连接到表格模型数据库 ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Power Pivot 数据访问](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   

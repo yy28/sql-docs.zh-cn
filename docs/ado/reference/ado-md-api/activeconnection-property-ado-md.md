@@ -3,8 +3,9 @@ title: "ActiveConnection 属性 (ADO MD) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - ActiveConnection
 - Cellset::ActiveConnection
 - Catalog::ActiveConnection
-helpviewer_keywords: ActiveConnection property [ADO MD]
+helpviewer_keywords:
+- ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a3a25e63f4da0329e3b1f81ced1b2b4fbe4086c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ec51c77b1963832cf101278b5c00bcbfe253093
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 属性 (ADO MD)
 指示哪些 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的当前的单元集或当前所属的编录。  

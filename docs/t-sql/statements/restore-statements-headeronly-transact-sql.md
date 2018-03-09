@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - RESTORE HEADERONLY
 - RESTORE_HEADERONLY_TSQL
 - HEADERONLY_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backup sets [SQL Server], header information
 - headers [SQL Server]
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-caps.latest.revision: "95"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ea17d9f848a47639b748e6f243f604e0e3e2bb2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 840793c4bbfee8282676cf90d42d6e7a6c4d6b42
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>还原语句的 HEADERONLY (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,16 +97,16 @@ FROM <backup_device>
   
 |列名|数据类型|SQL Server 备份集说明|  
 |-----------------|---------------|--------------------------------------------|  
-|**BackupName**|**nvarchar （128)**|备份集名称。|  
+|**BackupName**|**nvarchar(128)**|备份集名称。|  
 |**BackupDescription**|**nvarchar(255)**|备份集说明。|  
 |**BackupType**|**int**|备份类型：<br /><br /> **1** = 数据库<br /><br /> **2** = 事务日志<br /><br /> **4** = 文件<br /><br /> **5** = 差异数据库<br /><br /> **6** = 差异文件<br /><br /> **7** = 部分<br /><br /> **8** = 差异部分|  
-|**到期日期**|**datetime**|备份集的过期时间。|  
-|**压缩**|**BYTE(1)**|是否使用基于软件的压缩对备份集进行压缩：<br /><br /> **0** = 否<br /><br /> **1** = yes|  
+|**ExpirationDate**|**datetime**|备份集的过期时间。|  
+|**Compressed**|**BYTE(1)**|是否使用基于软件的压缩对备份集进行压缩：<br /><br /> **0** = No<br /><br /> **1** = yes|  
 |**位置**|**int**|备份集在卷中的位置（用于 FILE = 选项）。|  
-|**DeviceType**|**tinyint**|与用于备份操作的设备对应的编号：<br /><br /> 磁盘：<br /><br /> **2** = 逻辑<br /><br /> **102** = 物理<br /><br /> 磁带：<br /><br /> **5** = 逻辑<br /><br /> **105** = 物理<br /><br /> 虚拟设备：<br /><br /> **7** = 逻辑<br /><br /> **107** = 物理<br /><br /> 逻辑设备名称和设备号位于**sys.backup_devices**; 有关详细信息，请参阅[sys.backup_devices &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
-|**UserName**|**nvarchar （128)**|执行备份操作的用户名。|  
-|**ServerName**|**nvarchar （128)**|写入备份集的服务器名称。|  
-|**DatabaseName**|**nvarchar （128)**|已备份的数据库名称。|  
+|**DeviceType**|**tinyint**|与用于备份操作的设备对应的编号：<br /><br /> 磁盘：<br /><br /> **2** = Logical<br /><br /> **102** = 物理<br /><br /> 磁带：<br /><br /> **5** = 逻辑<br /><br /> **105** = 物理<br /><br /> 虚拟设备：<br /><br /> **7** = 逻辑<br /><br /> **107** = 物理<br /><br /> 逻辑设备名称和设备号位于**sys.backup_devices**; 有关详细信息，请参阅[sys.backup_devices &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**UserName**|**nvarchar(128)**|执行备份操作的用户名。|  
+|**ServerName**|**nvarchar(128)**|写入备份集的服务器名称。|  
+|**DatabaseName**|**nvarchar(128)**|已备份的数据库名称。|  
 |**DatabaseVersion**|**int**|从其中创建备份的数据库的版本。|  
 |**DatabaseCreationDate**|**datetime**|数据库的创建日期和时间。|  
 |**BackupSize**|**numeric(20,0)**|备份大小（以字节为单位）。|  
@@ -123,11 +125,11 @@ FROM <backup_device>
 |**SoftwareVersionMajor**|**int**|创建备份集的服务器主要版本号。|  
 |**SoftwareVersionMinor**|**int**|创建备份集的服务器次要版本号。|  
 |**SoftwareVersionBuild**|**int**|创建备份集的服务器内部版本号。|  
-|**MachineName**|**nvarchar （128)**|执行备份操作的计算机名称。|  
+|**MachineName**|**nvarchar(128)**|执行备份操作的计算机名称。|  
 |**标志**|**int**|个人标志位含义，如果设置为**1**:<br /><br /> **1** = 日志备份包含大容量日志操作。<br /><br /> **2** = 快照备份。<br /><br /> **4** = 数据库是只读的备份时。<br /><br /> **8** = 数据库处于单用户模式下备份时。<br /><br /> **16** = 备份包含备份校验和。<br /><br /> **32** = 数据库已损坏时备份，但请求备份操作错误时仍继续。<br /><br /> **64** = 结尾日志备份。<br /><br /> **128** = 具有不完整元数据的结尾日志备份。<br /><br /> **256** = 结尾日志备份使用 with NORECOVERY。<br /><br /> **重要说明：**我们建议，而不是**标志**使用单独的布尔值列 (下面开头列出**HasBulkLoggedData**结束**IsCopyOnly**)。|  
 |**BindingID**|**uniqueidentifier**|数据库的绑定 ID。 这对应于**sys.database_recovery_status***database_guid**。 恢复数据库时，会分配一个新值。 另请参阅**FamilyGUID** （下文）。|  
 |**RecoveryForkID**|**uniqueidentifier**|结尾恢复分支的 ID。 此列对应于**last_recovery_fork_guid**中[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)表。<br /><br /> 对于数据的备份， **RecoveryForkID**等于**FirstRecoveryForkID**。|  
-|**排序规则**|**nvarchar （128)**|数据库使用的排序规则。|  
+|**排序规则**|**nvarchar(128)**|数据库使用的排序规则。|  
 |**FamilyGUID**|**uniqueidentifier**|创建时的原始数据库 ID。 恢复数据库时，此值保持不变。|  
 |**HasBulkLoggedData**|**bit**|**1** = 包含大容量日志操作的日志备份。|  
 |**IsSnapshot**|**bit**|**1** = 快照备份。|  
@@ -147,7 +149,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|字符串形式的备份类型有以下几种：<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|备份集的唯一标识号，可以根据此标识号在介质上标识备份集。|  
 |**CompressedBackupSize**|**bigint**|备份集的字节计数。 对于未压缩备份，此值等同于**BackupSize**。<br /><br /> 若要计算的压缩率，请使用**CompressedBackupSize**和**BackupSize**。<br /><br /> 期间**msdb**升级，此值设置为与值匹配的**BackupSize**列。|  
-|**包含**|**tinyint**不为 NULL|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示数据库的包含状态。<br /><br /> 0 = 数据库包含状态为 OFF<br /><br /> 1 = 数据库处于部分包含状态|  
+|**containment**|**tinyint**不为 NULL|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示数据库的包含状态。<br /><br /> 0 = 数据库包含状态为 OFF<br /><br /> 1 = 数据库处于部分包含状态|  
 |**KeyAlgorithm**|**nvarchar(32)**|**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至当前版本。<br /><br /> 用于加密备份的加密算法。 NO_Encryption 指示备份未加密。 当无法确定正确的值时，此值应为 NULL。|  
 |**EncryptorThumbprint**|**varbinary(20)**|**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至当前版本。<br /><br /> 可用于在数据库中查找证书或非对称密钥的加密程序的指纹。 当备份未加密时，此值为 NULL。|  
 |**EncryptorType**|**nvarchar(32)**|**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至当前版本。<br /><br /> 使用的加密程序的类型：证书或非对称密钥。 当备份未加密时，此值为 NULL。|  
@@ -158,13 +160,13 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>一般备注  
  客户端可以使用 RESTORE HEADERONLY 检索特殊备份设备上的所有备份的所有备份标头信息。 对于备份设备上的每个备份，服务器都会将标头信息作为一行发送。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码防止未经授权的还原操作，并且未授权的媒体使用的备份集追加[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
   
 > [!IMPORTANT]  
 >  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保护备份的最佳做法是在一个安全位置或备份到磁盘保护的文件，由足够的访问控制列表 (Acl) 来存储备份的磁带。 ACL 应设置在创建备份的根目录下。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  获取有关备份集或备份设备的信息需要具有 CREATE DATABASE 权限。 有关详细信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  

@@ -3,8 +3,11 @@ title: "查询属性 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,28 +18,28 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53fe222a0b084b49b324bcc0de9dee053e575edf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 310d9c728820be6bc8f31b24cc979dea6ad1f7ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
-当您在查询和视图设计器中打开查询时，将在“属性”窗口中显示以下属性。 除非另行说明，否则这些属性都可以在“属性”窗口中编辑。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 当在查询和视图设计器中打开查询时，将在“属性”窗口中显示以下属性。 除非另行说明，否则这些属性都可以在“属性”窗口中编辑。  
   
 > [!NOTE]  
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **标识类别**  
 展开此项可显示“名称”属性。  
   
 **名称**  
 显示当前查询的名称。 无法在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]中更改。  
   
-**数据库名称**  
+**Database Name**  
 显示所选表的数据源的名称。  
   
 **服务器名称**  

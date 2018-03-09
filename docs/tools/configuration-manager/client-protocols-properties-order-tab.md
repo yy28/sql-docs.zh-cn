@@ -2,27 +2,33 @@
 title: "客户端协议属性 （顺序选项卡） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: client protocols [SQL Server]
+helpviewer_keywords:
+- client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c3e253853ebcaec3217634605e573d9a96bd063
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b00026954339af65d3730c91a24ec4f16505c682
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="client-protocols-properties-order-tab"></a>客户端协议属性（“顺序”选项卡）
-  使用“客户端协议属性”对话框中的“顺序”页，可以查看和启用客户端协议。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+使用**顺序**页上**客户端协议属性**对话框中，若要查看和启用客户端协议。  
   
  单击某个协议，再单击 **“启用”** 或 **“禁用”** ，可以将所选协议移到 **“启用的协议”** 列表或 **“禁用的协议”** 列表中。  
   
@@ -36,7 +42,7 @@ ms.lasthandoff: 11/09/2017
  列出已安装但当前未使用的协议。  
   
  **“禁用的协议”**  
- 列出此计算机上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端可以使用的协议。  
+ 列出可用于的协议[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在此计算机上的客户端。  
   
  **>**  
  启用“禁用的协议”框中当前突出显示的协议，会将其移到“启用的协议”框中。  

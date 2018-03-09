@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: bfb7f618f6927c79392d13953dfd4daf5aa84290
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5753323aaf5d0dad99354441a6d44bbaecb2e845
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
   必须为每个应用程序配置至少一个 URL 才能使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
  有关如何存储和维护 URL 或有关互操作性问题的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[关于 URL 保留项和注册（SSRS 配置管理器）](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)和[并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)。 若要查看 Reporting Services 安装中经常使用的 URL 示例，请参阅本主题中的 [URL 示例](#URLExamples) 。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  在创建或修改 URL 之前，请注意以下几点：  
   
 -   您必须是报表服务器计算机上本地 Administrators 组的成员。  
@@ -163,7 +163,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  指定端口。 如果指定自定义端口，则应用程序的 URL 必须始终包含该端口号。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
 6.  通过打开浏览器窗口并输入 URL 来测试 URL。  
   

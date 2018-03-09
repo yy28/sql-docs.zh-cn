@@ -3,8 +3,11 @@ title: "打开数据库关系图设计器 (Visual Database Tools) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be41a077b7c0f0e484adc67642b31c4c005ca38d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f80f91be3c5ad55103011beb0f56c8a9e0595968
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>打开数据库关系图设计器 (Visual Database Tools)
-数据库关系图设计器是一种可视化工具，可用于对所连接的数据库进行设计和可视化处理。 设计数据库时，您可以使用数据库设计器创建、编辑或删除表、列、键、索引、关系和约束。 为使数据库可视化，您可创建一个或多个关系图，以显示数据库中的部分或全部表、列、键和关系。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 数据库关系图设计器是一种可视化工具，可用于对所连接的数据库进行设计和可视化处理。 设计数据库时，您可以使用数据库设计器创建、编辑或删除表、列、键、索引、关系和约束。 为使数据库可视化，您可创建一个或多个关系图，以显示数据库中的部分或全部表、列、键和关系。  
   
 您可以通过打开新关系图或现有的关系图来打开数据库关系图设计器。  
   

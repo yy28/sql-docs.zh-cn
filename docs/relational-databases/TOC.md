@@ -12,7 +12,7 @@
 ## [查询处理体系结构](query-processing-architecture-guide.md)
 ## [线程和任务体系结构](thread-and-task-architecture-guide.md)
 ## [事务日志体系结构和管理](sql-server-transaction-log-architecture-and-management-guide.md)
-## 事务锁定和行版本控制指南
+## [事务锁定和行版本控制指南](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [备份和还原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -47,7 +47,7 @@
 # [分层数据](hierarchical-data-sql-server.md)  
 # [导入和导出](../relational-databases/import-export/overview-import-export.md)
 # [内存中 OLTP](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-# [索引](../relational-databases/indexes/indexes.md)
+# [“索引”](../relational-databases/indexes/indexes.md)
 # [JSON](../relational-databases/json/json-data-sql-server.md)
 # [链接服务器](../relational-databases/linked-servers/linked-servers-database-engine.md)
 # [维护计划](../relational-databases/maintenance-plans/maintenance-plans.md)
@@ -55,6 +55,7 @@
 ## [数据库生命周期管理](database-lifecycle-management.md)  
 ## [使用中央管理服务器管理多台服务器](administer-multiple-servers-using-central-management-servers.md)  
 
+# [联接](../relational-databases/performance/joins.md)
 # [分区](../relational-databases/partitions/partitioned-tables-and-indexes.md)
 # [“性能”](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [基于策略的管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
@@ -71,6 +72,7 @@
 # [SQL 跟踪](../relational-databases/sql-trace/sql-trace.md)
 # [统计信息](../relational-databases/statistics/statistics.md)
 # [存储过程](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+# [子查询](../relational-databases/performance/subqueries.md)
 # [同义词](../relational-databases/synonyms/synonyms-database-engine.md)
 # [系统目录视图](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 # [系统兼容性视图](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)

@@ -2,27 +2,34 @@
 title: "第 3 课：配置分发 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c6d21ac167392960d315ea495acc5fe1385640c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2888c3f576159def2fb141802aafc1853ce9b50f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-configuring-distribution"></a>第 3 课：配置分发
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 在本课中，将在发布服务器中配置分发，并设置所需的发布数据库和分发数据库权限。 如果已经配置了分发服务器，则必须在开始本课之前先禁用发布和分发。 如果必须保留现有复制拓扑，请不要执行该操作。  
   
 使用远程分发服务器配置发布服务器不属于本教程讨论的范畴。  
@@ -42,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未运行，则在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“代理启动”页上，选择“是”**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，将**  代理服务配置为自动启动。 单击“下一步” 。  
   
-5.  在“快照文件夹”文本框中，输入 **\\\\**\<*Machine_Name>***\repldata**（其中 \<*Machine_Name>* 是发布服务器的名称），然后单击“下一步”。  
+5.  在“快照文件夹”文本框中，输入 \\\\\<Machine_Name>\repldata（其中 \<Machine_Name> 是发布服务器的名称），然后单击“下一步”。  
   
 6.  接受向导剩余页上的默认值。  
   
@@ -52,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，展开“安全性”，右键单击“登录名”，然后选择“新建登录名”。  
   
-2.  在“常规”页上单击“搜索”，在“输入要选择的对象名称”框中输入 \<*Machine_Name>***\repl_snapshot**（其中 \<*Machine_Name>* 是本地发布服务器的名称），单击“检查名称”，然后单击“确定”。  
+2.  在“常规”页上单击“搜索”，在“输入要选择的对象名称”框中输入 \<Machine_Name>\repl_snapshot（其中 \<Machine_Name> 是本地发布服务器的名称），单击“检查名称”，然后单击“确定”。  
   
 3.  在“用户映射”页上，在“映射到此登录名的用户”列表中选择“分发”和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
   

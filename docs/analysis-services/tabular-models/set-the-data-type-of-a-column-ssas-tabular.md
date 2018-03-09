@@ -1,33 +1,31 @@
 ---
-title: "设置列 (SSAS 表格) 的数据类型 |Microsoft 文档"
+title: "设置列的数据类型 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff4bf9de4a232561d813ae304aa3ae660ff9041
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>设置列的数据类型（SSAS 表格）
-  导入数据或将数据粘贴到模型时，模型设计器将自动检测并应用数据类型。 在将数据添加到模型后，您可以手动修改列的数据类型以便更改数据的存储方式。 如果只想更改显示数据的格式而不更改其存储方式，可以采用其他方法。  
+# <a name="set-the-data-type-of-a-column"></a>设置列的数据类型 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+导入数据或将数据粘贴到模型时，模型设计器将自动检测并应用数据类型。 在将数据添加到模型后，您可以手动修改列的数据类型以便更改数据的存储方式。 如果只想更改显示数据的格式而不更改其存储方式，可以采用其他方法。  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>更改列的数据类型或显示格式  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  下列数据类型在商业智能语义模型中可用：  
   
--   **Text**  
+-   **文本**  
   
 -   **小数**  
   
@@ -82,9 +80,9 @@ ms.lasthandoff: 11/17/2017
   
  如果支持该数据类型，但是模型设计器在新数据类型中发现不支持的值，将遇到另一个错误，在继续操作前您需要更正数据值。  
   
- 有关商业智能语义模型中使用的数据类型、如何隐式转换这些数据类型以及如何在公式中使用不同数据类型的详细信息，请参阅 [支持的数据类型（SSAS 表格）](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
+ 有关在商业智能语义模型中使用的数据类型的详细信息，它们隐式转换和不同数据类型如何将它用公式中，请参阅[数据类型支持](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [支持的数据类型（SSAS 表格）](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+ [支持的数据类型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

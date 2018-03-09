@@ -1,11 +1,11 @@
 ---
-title: "添加现有包的副本 |Microsoft 文档"
+title: "添加现有包的副本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -17,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 95cf1faebe886981c272a71d54d84bc42b2a66f9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c81b378a82156493fd88119f83ef814350cf091f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-copy-of-existing-package"></a>添加现有包的副本
   可以使用 **“添加现有包的副本”** 对话框，将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、文件系统或 SSIS 包存储区中存储的包副本添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **包位置**  
  选择要从中复制包的存储位置的类型。  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 09/26/2017
  **身份验证类型**  
  如果从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中复制，请选择一种身份验证类型。  
   
- **用户名**  
+ **User name**  
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请提供用户名。  
   
  **密码**  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/26/2017
  [Integration Services 服务（SSIS 服务）](../integration-services/service/integration-services-service-ssis-service.md)
   
   
-

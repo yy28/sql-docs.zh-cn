@@ -3,8 +3,9 @@ title: "CreateRecordset 方法 (RDS) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - CreateRecordset
 - RDSServer.DataFactory::CreateRecordset
 - DataFactory::CreateRecordset
-helpviewer_keywords: CreateRecordset method [RDS]
+helpviewer_keywords:
+- CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空断开连接[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -53,7 +55,7 @@ object.CreateRecordset(ColumnInfos)
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|Name|列标题的名称。|  
+|名称|列标题的名称。|  
 |类型|数据类型的整数。|  
 |Size|以字符为单位，无论何种数据类型的宽度的整数。|  
 |可空性|布尔值。|  
@@ -93,14 +95,14 @@ object.CreateRecordset(ColumnInfos)
 |固定|**adDBTime**|134||  
 |固定|**adDBTimestamp**|135|7|  
 |变量|**adBSTR**|8|130|  
-|变量|**每**|129|200|  
-|变量|**以便您可以排除**|200||  
+|变量|**adChar**|129|200|  
+|变量|**adVarChar**|200||  
 |变量|**adLongVarChar**|201|200|  
 |变量|**adWChar**|130||  
 |变量|**adVarWChar**|202|130|  
 |变量|**adLongVarWChar**|203|130|  
 |变量|**adBinary**|128||  
-|变量|**兴趣的绑定信息**|204||  
+|变量|**adVarBinary**|204||  
 |变量|**adLongVarBinary**|205|204|  
   
 ## <a name="applies-to"></a>适用范围  

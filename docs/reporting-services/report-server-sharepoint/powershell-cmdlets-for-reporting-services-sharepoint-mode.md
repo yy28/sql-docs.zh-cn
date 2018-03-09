@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 96e9ea12df36219b11fe74e3328e6817b03471e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b2d501e76e281716d1d88f858d6642c3a0a1ef5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
 
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/05/2017
 |cmdlet|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|获取一个或多个 Reporting Services 服务应用程序对象。|  
-|New-SPRSServiceApplication|创建一个新的 Reporting Services 服务应用程序及关联的数据库。<br /><br /> LogonType 参数：指定报表服务器是否使用 SSRS 应用程序池帐户或 SQL Server 登录名来访问报表服务器数据库。 有效值包括：<br /><br /> 0 Windows 身份验证<br /><br /> 1 SQL Server<br /><br /> 2 应用程序池帐户（默认值）|  
+|New-SPRSServiceApplication|创建一个新的 Reporting Services 服务应用程序及关联的数据库。<br /><br /> LogonType 参数：指定报表服务器是否使用 SSRS 应用程序池帐户或 SQL Server 登录名来访问报表服务器数据库。 有效值为<br /><br /> 0 Windows 身份验证<br /><br /> 1 SQL Server<br /><br /> 2 应用程序池帐户（默认值）|  
 |Remove-SPRSServiceApplication|删除指定的 Reporting Services 服务应用程序。 此操作也将删除关联的数据库。|  
 |Set-SPRSServiceApplication|编辑现有 Reporting Services 服务应用程序的属性。|  
 |New-SPRSServiceApplicationProxy|创建新的 Reporting Services 服务应用程序代理。|  
@@ -117,7 +115,7 @@ ms.lasthandoff: 12/05/2017
 |New-SPRSExtension|向 Reporting Services 服务应用程序注册新的扩展插件。|  
 |Set-SPRSExtension|设置现有 Reporting Services 扩展插件的属性。|  
 |Remove-SPRSExtension|从 Reporting Services 服务应用程序删除扩展插件。|  
-|Get-SPRSExtension|获取一个或多个 Reporting Services 服务应用程序的 Reporting Services 扩展插件。<br /><br /> 有效值为<br /><br /> <br /><br /> 传递<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> 数据<br /><br /> Security<br /><br /> 身份验证<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 设计器<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|获取一个或多个 Reporting Services 服务应用程序的 Reporting Services 扩展插件。<br /><br /> 有效值为<br /><br /> <br /><br /> 传递<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> Security<br /><br /> 身份验证<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 设计器<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|基于是否启用了“ReportingService”功能来获取 SharePoint 站点。 默认情况下，将返回启用“ReportingService”功能的站点。|  
   
 ## <a name="basic-samples"></a>基本示例

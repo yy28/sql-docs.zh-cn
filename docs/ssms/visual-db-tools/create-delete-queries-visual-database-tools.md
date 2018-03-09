@@ -3,8 +3,11 @@ title: "创建删除查询 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,16 +24,16 @@ ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad9076f8acb0236ce85bb0b72b6890174d54d04e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1538fed172283d64b2c8d5154162cf457436a476
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>创建删除查询 (Visual Database Tools)
-您可以通过使用“删除”查询来删除表中的所有行。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以通过使用“删除”查询来删除表中的所有行。  
   
 > [!NOTE]  
 > 删除表中的所有行会清除表中的数据，但不会删除表本身。 若要从数据库中删除表，请在对象资源管理器中右键单击该表，再单击“删除”。  

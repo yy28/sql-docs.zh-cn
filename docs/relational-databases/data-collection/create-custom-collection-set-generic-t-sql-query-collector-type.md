@@ -2,29 +2,34 @@
 title: "创建自定义收集组 - 一般 T-SQL 查询收集器类型 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - T-SQL Query collector type
 - collection sets [SQL Server], creating custom
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49c964b1381aaaf90fac2f4582fd70d9112a4255
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c72ceb6d3bb9220c9f4f5ce8ad8c25624f037cbd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>创建自定义收集组 - 一般 T-SQL 查询收集器类型
-  可以使用与数据收集器一起提供的存储过程创建包含使用一般 T-SQL 查询收集器类型的收集项的自定义收集组。 若要完成此任务，需使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查询编辑器来执行以下过程：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+可以使用与数据收集器一起提供的存储过程创建包含使用一般 T-SQL 查询收集器类型的收集项的自定义收集组。 若要完成此任务，需使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查询编辑器来执行以下过程：  
   
 -   配置上载计划。  
   
@@ -81,7 +86,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  由于新的收集项基于已经安装的一般收集器类型，因此可以运行以下代码来设置 GUID，使其与一般 T-SQL 查询收集器类型相对应。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -90,7 +95,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  使用 sp_syscollector_create_collection_item 存储过程来创建收集项。 声明收集项的架构，这样它将映射到一般 T-SQL 查询收集器类型所需的架构。  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -111,7 +116,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  在启动新的收集组之前，运行以下查询以验证新的收集组及其收集项是否已创建。  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -123,7 +128,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="example"></a>示例  
  下面的代码示例汇集了上面步骤中记录的示例。 请注意，为收集项设置的收集频率（5 秒钟）将被忽略，因为收集组的收集模式设置为 0，即缓存模式。 有关详细信息，请参阅 [Data Collection](../../relational-databases/data-collection/data-collection.md)。  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  

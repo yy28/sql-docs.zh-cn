@@ -2,13 +2,18 @@
 title: "使用 NEAR 搜索与另一个词邻近的词 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - word searches [full-text search]
 - NEAR option [full-text search]
@@ -18,19 +23,20 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: "65"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81230587be4efd864fb2ec3958a1473db8de2e53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 74732252ddb62adc02b532a23fdfe588fbbed2b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
-  可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函数中使用邻近词 **NEAR** 来搜索相互邻近的字词或短语。 
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+可以在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词或 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 函数中使用邻近词 **NEAR** 来搜索相互邻近的字词或短语。 
   
 ##  <a name="Custom_NEAR"></a> NEAR 概述  
 **NEAR** 具有以下功能：  
@@ -76,7 +82,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="example-1"></a>示例 1
  例如，可以搜索距离“Smith”两个词以内的“John”，如下所示：  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -89,7 +95,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="example-2"></a>示例 2
  以下示例在 `Production.Document` 示例数据库的 `AdventureWorks` 表中搜索包含与字词“bracket”在同一文档中的字词“reflector”的所有文档摘要。  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -112,17 +118,17 @@ GO
 ## <a name="combine-near-with-other-terms"></a>将 NEAR 与其他词组合使用  
  你可以将 NEAR 与一些其他词组合使用。 可以使用 AND (&), OR (|) 或 AND NOT (&!) 将一个自定义邻近词与另一个自定义邻近词、简单词或前缀词组合使用。 例如：  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
+-   CONTAINS('NEAR((term1, term2),5) AND term3')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR *term3*')  
+-   CONTAINS('NEAR((term1, term2),5) OR term3')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NOT *term3*')  
+-   CONTAINS('NEAR((term1, term2),5) AND NOT term3')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NEAR((*term3*,*term4*),2)')  
+-   CONTAINS('NEAR((term1, term2),5) AND NEAR((term3, term4),2)')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR NEAR((*term3*,*term4*),2, TRUE)')  
+-   CONTAINS('NEAR((term1, term2),5) OR NEAR((term3, term4),2, TRUE)')  
   
- 例如：  
+ 例如，  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  

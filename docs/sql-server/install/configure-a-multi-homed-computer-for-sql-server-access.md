@@ -2,10 +2,14 @@
 title: "将多宿主计算机配置为允许 SQL Server 访问 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 153525785a354d9a730bee4fff48d0562a2e48e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>将多宿主计算机配置为允许 SQL Server 访问
-  当服务器必须提供与两个或更多个网络或网络子网的连接时，典型的方案是使用多宿主计算机。 此计算机通常位于外围网络（也称为 DMZ、外围安全区域或屏蔽子网）中。 本主题介绍如何在多宿主环境中对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙进行配置，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  当服务器必须提供与两个或更多个网络或网络子网的连接时，典型的方案是使用多宿主计算机。 此计算机通常位于外围网络（也称为 DMZ、外围安全区域或屏蔽子网）中。 本文介绍如何在多宿主环境中配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。  
   
 > [!NOTE]  
 >  多宿主计算机有多个网络适配器或者已配置为一个网络适配器使用多个 IP 地址。 双宿主计算机有两个网络适配器或者已配置为一个网络适配器使用两个 IP 地址。  
   
- 在继续本主题之前，你应当熟悉 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)主题中提供的信息。 本主题包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件如何与防火墙一起使用的基本信息。  
+ 在继续阅读本文之前，用户应当熟悉[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)一文中提供的信息。 本文包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件如何与防火墙一起使用的基本信息。  
   
  **本示例假设：**  
   
@@ -41,7 +47,7 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  IPv4 地址是一串四个数字（称为八位字节）。 每个数字小于 255，由句点分隔，例如 127.0.0.1。 IPv6 地址是一串八个十六进制数字，由冒号分隔，如 fe80:4898:23:3:49a6:f5c1:2452:b994。  
   
--   防火墙规则可能允许通过特定端口（如端口 1433）进行访问， 也可能允许访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 程序 (sqlservr.exe)。 哪个方法都不会比另一个方法更好。 因为外围网络中的服务器比 Intranet 上的服务器更容易受到攻击，本主题假设您希望进行更精确的控制并单独选择打开的端口。 出于上述原因，本主题假设您将把 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为侦听固定端口。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用端口的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+-   防火墙规则可能允许通过特定端口（如端口 1433）进行访问， 也可能允许访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 程序 (sqlservr.exe)。 哪个方法都不会比另一个方法更好。 因为外围网络中的服务器比 Intranet 上的服务器更容易受到攻击，本文假设用户希望进行更精确的控制并单独选择打开的端口。 出于上述原因，本文假设用户将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为侦听固定端口。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用端口的详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 -   本示例使用 TCP 端口 1433 配置对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的访问。 可以使用相同的常规步骤来配置不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用的其他端口。  
   

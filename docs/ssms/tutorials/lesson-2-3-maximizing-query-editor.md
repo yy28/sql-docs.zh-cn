@@ -2,27 +2,30 @@
 title: "最大化查询编辑器 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d265d008c019ccc03aed0a212bf632962d04ab2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eaf3eef790009a62035c4ea284a047b793eaf783
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-3---maximizing-query-editor"></a>课程 2-3 - 最大化查询编辑器
-程序员通常会问：“我如何才能获得更多的代码编写空间？” 有两种简单的方式可以解决此问题：一种是最大化查询编辑器窗口，另一种是隐藏不使用的工具窗口。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 程序员通常会问：“我如何才能获得更多的代码编写空间？” 有两种简单的方式可以解决此问题：一种是最大化查询编辑器窗口，另一种是隐藏不使用的工具窗口。  
   
 ## <a name="maximizing-the-query-editor-window"></a>最大化查询编辑器窗口  
   

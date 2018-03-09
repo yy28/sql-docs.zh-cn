@@ -3,8 +3,11 @@ title: "课程 1：SQL Server Management Studio 中的基本导航| Microsoft Do
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 37f2b590f7e20990e1b2a70b88bca17bc6401f2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e06efb71bc6d888fbad143d73019525f9529e97e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>第 1 课：SQL Server Management Studio 中的基本导航
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 是一个功能强大且灵活的工具。 本课介绍各个窗口组成设计界面的方式，帮助您轻松完成工作。 本课结束后，您将了解如何清除不需要的窗口，如何快速访问包含所需信息的窗口，以及如何配置默认界面以支持经常处理的工作。  
   
 本课程包含以下主题：  

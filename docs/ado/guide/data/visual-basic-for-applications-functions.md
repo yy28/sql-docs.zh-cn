@@ -3,29 +3,31 @@ title: "应用程序函数的 Visual Basic |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bdf33a21339147c9e6b24ff35f08fb2b483bb8f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic 应用程序函数
 可以调整 CALC 表达式的数据中使用以下 Visual Basic 应用程序函数：  
@@ -34,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |Cdate|CDbl|Chr|ChrB|ChrW|Chr$|  
-|ChrB $|CInt|CLng|Cos|CSng|CStr|  
+|ChrB$|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|日期|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |错误|Error$|Exp|Fix|格式|Format$|  

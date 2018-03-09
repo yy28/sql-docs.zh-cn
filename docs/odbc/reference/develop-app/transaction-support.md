@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac759747a088f98f1426afedf8623169d91b113f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4964565ce7de30b30fa3dc4c7705c5656ebcb88b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-support"></a>事务支持
 对事务的程度是支持的驱动程序定义的。 ODBC 旨在在具有无需管理其数据的多个更新的单用户或桌面数据库上实现。 此外，某些支持事务的数据库执行因此仅对 SQL; 的数据操作语言 (DML) 语句没有限制或特殊事务语义与使用的数据定义语言 (DDL) 事务处于活动状态时。 也就是说，可能有对表的多个同时进行更新，但不是能为更改的数量和事务处理期间定义的表的事务支持。  

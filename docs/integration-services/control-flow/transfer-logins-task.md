@@ -1,5 +1,5 @@
 ---
-title: "传输登录名任务 |Microsoft 文档"
+title: "传输登录名任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 2027b3ea760568ced8a41b72a7a2c3cf225de94f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: e62891da63a881b525067dbb3afba820eed24b26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-logins-task"></a>传输登录名任务
   传输登录名任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间传输一个或多个登录名。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/11/2017
   
  在运行时，传输登录名任务使用两个 SMO 连接管理器连接到源服务器和目标服务器。 SMO 连接管理器与传输登录名任务分开进行配置，然后在传输登录名任务中引用连接管理器。 SMO 连接管理器指定服务器以及在访问该服务器时要使用的身份验证模式。 有关详细信息，请参阅 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题：  
   
@@ -92,7 +91,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="transfer-logins-task-editor-general-page"></a>传输登录名任务编辑器（“常规”页）
   可以使用 **“传输登录名任务编辑器”** 对话框的 **“常规”** 页，对传输登录名任务进行命名和说明。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为传输登录名任务键入唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -108,17 +107,17 @@ ms.lasthandoff: 08/11/2017
 > [!IMPORTANT]  
 >  执行传输登录名任务时，在目标服务器上创建的登录名将具有随机的密码，并且密码处于禁用状态。 只有在 **sysadmin** 固定服务器角色的某个成员更改并启用这些登录名的密码后，才可使用这些登录名。 无法传输 **sa** 登录名。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **SourceConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**创建与源服务器的新连接。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 在列表中，选择 SMO 连接管理器，或单击**\<新连接 … >**以创建新的连接到目标服务器。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
   
  **LoginsToTransfer**  
  选择要从源服务器复制到目标服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此属性具有下表所列的选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**AllLogins**|源服务器上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名都将复制到目标服务器。|  
 |**SelectedLogins**|只有通过 **LoginsList** 指定的登录名才会复制到目标服务器。|  
@@ -135,7 +134,7 @@ ms.lasthandoff: 08/11/2017
   
  此属性具有下表所列的选项：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**FailTask**|如果目标服务器上已存在同名的登录名，则任务失败。|  
 |**Overwrite**|任务将覆盖目标服务器上同名的登录名。|  
@@ -144,4 +143,3 @@ ms.lasthandoff: 08/11/2017
  **CopySids**  
  选择是否应将与登录名相关联的安全标识符复制到目标服务器。 如果传输登录名任务与传输数据库任务一起使用，则必须将**CopySids** 设置为 **True** 。 否则，传输的数据库将不能识别复制的登录名。  
   
-

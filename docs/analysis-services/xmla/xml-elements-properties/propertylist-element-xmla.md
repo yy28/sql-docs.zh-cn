@@ -2,15 +2,13 @@
 title: "PropertyList 元素 (XMLA) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: PropertyList Element
@@ -28,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cc793c573a9044ba4dc711cb8912c589e076ac13
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4f337d96be6d9fe960a70953b27413b2f5aedb1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="propertylist-element-xmla"></a>PropertyList 元素 (XMLA)
-  包含所使用的 Analysis (XMLA) 属性的集合的 XML[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)和[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含所使用的 Analysis (XMLA) 属性的集合的 XML[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)和[执行](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,10 +48,10 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|无|  
-|默认值|无|  
+|数据类型和长度|InclusionThresholdSetting|  
+|默认值|InclusionThresholdSetting|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -63,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |父元素|[属性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
 |子元素|XMLA 属性（请参阅“备注”）|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **PropertyList** 元素包含一组 XMLA 属性。 利用每个属性，用户可以控制 **Discover** 或 **Execute** 方法的某个方面，如定义连接至数据源所需的信息、指定结果集的返回格式或指定设置数据格式时应使用的区域设置。 **PropertyList** 元素中的每个 XMLA 属性都由单独的 XML 元素定义。 XMLA 属性的值为 XML 元素包含的数据，XMLA 属性的名称与 XML 元素的名称对应。  
   
  结合使用 **Discover** 方法和 DISCOVER_PROPERTIES 请求类型可获取可用属性及其值。 **PropertyList** 元素中列出的属性对顺序没有要求。  

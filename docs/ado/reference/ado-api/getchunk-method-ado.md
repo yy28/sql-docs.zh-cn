@@ -3,8 +3,9 @@ title: "GetChunk 方法 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Field20::raw_GetChunk
 - Field20::GetChunk
-helpviewer_keywords: GetChunk method [ADO]
+helpviewer_keywords:
+- GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0d34a6d93c37513dd766529f85294ccd5743cec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b479146e26196e42836ce381e3f5e555dd0a9a6b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 方法 (ADO)
 返回所有或较大的文本或二进制数据的内容的一部分，[字段](../../../ado/reference/ado-api/field-object.md)对象。  

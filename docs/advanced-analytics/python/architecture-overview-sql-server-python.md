@@ -2,23 +2,26 @@
 title: "体系结构 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1dcde96872f391d1be312c5b8ff9bd8c2dd7a479
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>具有 Python 的机器学习服务的体系结构概述
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题概述如何与 SQL Server，包括支持外部脚本执行的数据库引擎和启用与 SQL Server 的 Python 的互操作性的新组件中的安全模型，组件集成 Python。 有关详细信息，请参阅链接的主题。
 
@@ -37,7 +40,7 @@ SQL Server 计算机学习 Services （数据库中） 安装 Python，Anaconda 
 
 有关支持 Python，如的组件的详细说明[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]和 PythonLauncher，请参阅[新组件](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md)。
 
-## <a name="security"></a>安全性
+## <a name="security"></a>Security
 
 Python 任务执行外部 SQL Server 过程中，以提供安全和更高版本的可管理性。
 

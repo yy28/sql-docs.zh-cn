@@ -3,8 +3,9 @@ title: "有关记录集持久性的详细信息 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03208e45eb04540befeae3e8e86ec0100e1f9831
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5dedcc3c1326c8b71844637c24f81835472ae9e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="more-about-recordset-persistence"></a>有关记录集持久性的详细信息
 ADO 记录集对象支持存储内容**记录集**通过使用文件中的对象及其[保存](../../../ado/reference/ado-api/save-method.md)方法。 永久存储的文件可能存在位于本地驱动器中，服务器，或在网站上的 URL 为站点。 更高版本，可以还原该文件使用[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**记录集**对象或[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  

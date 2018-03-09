@@ -3,8 +3,11 @@ title: "警报属性 - 新建警报（“常规”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30a648ec7ee810656007bd1371236e2687338a7f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0c7a30feeafee15ee4f02e20fb86512d2f183464
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alert-properties---new-alert-general-page"></a>警报属性 - 新建警报（“常规”页）
-使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报的常规属性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报的常规属性。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **名称**  
 更改警报的名称。  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/09/2017
 **命名空间**  
 指定用于 WMI 查询语言 (WQL) 语句的命名空间。 仅支持运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的计算机上的命名空间。  
   
-**Query**  
+**“数据集属性”**  
 指定用于标识该警报所响应事件的 WQL 语句。  
   
 ## <a name="see-also"></a>另请参阅  

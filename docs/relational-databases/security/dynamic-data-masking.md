@@ -17,11 +17,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bcd7c5ce901bf1083aa48ee2e1236226b13ce5ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a40b52ccc4839f63acbd1be1f9b2643552a44430
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="defining-a-dynamic-data-mask"></a>定义动态数据屏蔽  
  针对表中的列定义屏蔽规则即可模糊该列中的数据。 可以使用四种类型的屏蔽。  
   
-|函数|说明|示例|  
+|函数|Description|示例|  
 |--------------|-----------------|--------------|  
-|默认|根据指定字段的数据类型进行完全屏蔽。<br /><br /> 对于字符串数据类型，可以使用 XXXX 或者在字段不到 4 个字符长的情况下使用更少的 X（**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**）。  <br /><br /> 对于数字数据类型，可使用零值（**bigint****bit****decimal**、**int**、**money**、**numeric**、**smallint**、**smallmoney**、**tinyint**、**float**、**real**）。<br /><br /> 对于日期和时间数据类型，可使用 01.01.1900 00:00:00.0000000（**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**）。<br /><br />对于二进制数据类型，可使用单字节的 ASCII 值 0（**binary**、 **varbinary**、 **image**）。|列定义语法示例： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 语法示例： `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|电子邮件|该屏蔽方法公开电子邮件地址的第一个字母，以及电子邮件地址格式中的常量后缀“.com”。 。 `aXXX@XXXX.com`。|定义语法示例： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> ALTER 语法示例： `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()'`）|  
+|，则“默认”|根据指定字段的数据类型进行完全屏蔽。<br /><br /> 对于字符串数据类型，可以使用 XXXX 或者在字段不到 4 个字符长的情况下使用更少的 X（**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**）。  <br /><br /> 对于数字数据类型，可使用零值（**bigint****bit****decimal**、**int**、**money**、**numeric**、**smallint**、**smallmoney**、**tinyint**、**float**、**real**）。<br /><br /> 对于日期和时间数据类型，可使用 01.01.1900 00:00:00.0000000（**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**）。<br /><br />对于二进制数据类型，可使用单字节的 ASCII 值 0（**binary**、 **varbinary**、 **image**）。|列定义语法示例： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 语法示例： `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|电子邮件|该屏蔽方法公开电子邮件地址的第一个字母，以及电子邮件地址格式中的常量后缀“.com”。 实例时都提供 SQL Server 登录名。 `aXXX@XXXX.com`。|定义语法示例： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> ALTER 语法示例： `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |随机|一种随机屏蔽函数，适用于任何数字类型，可以在指定范围内使用随机值来屏蔽原始值。|定义语法示例： `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> ALTER 语法示例： `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |自定义字符串|该屏蔽方法公开第一个和最后一个字母，在中间添加自定义填充字符串。 `prefix,[padding],suffix`<br /><br /> 注意：如果因原始值太短而无法进行完整的屏蔽，则不会公开部分前缀或后缀。|定义语法示例： `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> ALTER 语法示例： `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 其他示例：<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  不需任何特殊权限即可使用动态数据屏蔽来创建表，只需标准的 **CREATE TABLE** 权限以及对架构的 **ALTER** 权限。  
   
  添加、替换或删除对列的屏蔽，需要 **ALTER ANY MASK** 权限以及对表的 **ALTER** 权限。 可以将 **ALTER ANY MASK** 权限授予安全负责人。  
@@ -111,7 +111,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  ID | 名称| 薪水 |   
+>    |  ID | “属性”| 薪水 |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  

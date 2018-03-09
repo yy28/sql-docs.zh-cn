@@ -2,10 +2,14 @@
 title: "使用正则表达式搜索文本 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +21,19 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 11ac36bd42257b0be9a0b03166132f658d62431e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f60dd96e3a335938d99c0b0f619ce859c208e795
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
-  正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  
   
 #### <a name="to-find-using-regular-expressions"></a>使用正则表达式进行查找  
   
@@ -42,7 +46,7 @@ ms.lasthandoff: 11/09/2017
   
  下表对 **“引用列表”**中提供的正则表达式进行了说明。  
   
-|表达式|语法|说明|  
+|表达式|语法|Description|  
 |----------------|------------|-----------------|  
 |任何单个字符|中提供的正则表达式进行了说明。|匹配除换行符外的所有单一字符。|  
 |零个或更多|*|匹配零或更多前导表达式的匹配项，执行所有可能的匹配。|  
@@ -64,7 +68,7 @@ ms.lasthandoff: 11/09/2017
   
  **“引用列表”** 中只列出了部分可在 **“查找和替换”**操作中使用的正则表达式。 还可以将下列任一正则表达式插入 **“查找内容”** 字符串：  
   
-|表达式|语法|说明|  
+|表达式|语法|Description|  
 |----------------|------------|-----------------|  
 |最少 - 零个或更多|@|匹配零个或更多前导表达式的匹配项，匹配尽可能少的字符。|  
 |最少 - 一个或更多|#|匹配一个或更多前导表达式的匹配项，匹配尽可能少的字符。|  
@@ -88,7 +92,7 @@ ms.lasthandoff: 11/09/2017
   
  下表列出了按标准 Unicode 字符属性匹配时的语法。 双字母缩写和 Unicode 字符属性数据库中列出的缩写相同。 可以将这些缩写指定为字符集的一部分。 例如，表达式 [:Nd:Nl:No] 匹配任何数字。  
   
-|表达式|语法|说明|  
+|表达式|语法|Description|  
 |----------------|------------|-----------------|  
 |大写字母|:Lu|匹配任何单个大写字母。 例如，:Luhe 匹配“The”，但不匹配“the”。|  
 |小写字母|:Ll|匹配任何单个小写字母。 例如，:Llhe 匹配“the”，但不匹配“The”。|  
@@ -123,7 +127,7 @@ ms.lasthandoff: 11/09/2017
   
  除了标准的 Unicode 字符属性以外，还可以将下列附加属性指定为字符集的一部分。  
   
-|表达式|语法|说明|  
+|表达式|语法|Description|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|匹配任何单字符。 例如，:Alhe 匹配“The”、“then” 和“reached”之类的字。|  
 |数字|:Nu|匹配任何数字。|  

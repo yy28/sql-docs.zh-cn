@@ -2,29 +2,34 @@
 title: "事件通知 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: service-broker
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a1470d8bb606a29df7c7393fbd0c74772ba5d06
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8590e3177aefa3889743069c8b69b63ec5f93953
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="event-notifications"></a>事件通知
-  事件通知将有关事件的信息发送给 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。 执行事件通知可对各种 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据定义语言 (DDL) 语句和 SQL 跟踪事件做出响应，其方法是将这些事件的相关信息发送到 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+事件通知将有关事件的信息发送给 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。 执行事件通知可对各种 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据定义语言 (DDL) 语句和 SQL 跟踪事件做出响应，其方法是将这些事件的相关信息发送到 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。  
   
  事件通知可以用来执行以下操作：  
   

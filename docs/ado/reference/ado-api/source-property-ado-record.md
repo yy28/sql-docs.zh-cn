@@ -3,8 +3,9 @@ title: "Source 属性 （ADO 记录） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,18 +20,19 @@ f1_keywords:
 - _Record::put_Source
 - _Record::putref_Source
 - _Record::get_Source
-helpviewer_keywords: Source property [ADO Record]
+helpviewer_keywords:
+- Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2e379bb3e2fce7899125c208251c8a04da1ea95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1ea9472275b0dbaa8a1a88ba70c21e8b6576af14
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-record"></a>源属性 （ADO 记录）
 指示数据源或由表示对象[记录](../../../ado/reference/ado-api/record-object-ado.md)。  

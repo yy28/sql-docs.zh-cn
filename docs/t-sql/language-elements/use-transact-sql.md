@@ -1,5 +1,5 @@
 ---
-title: "使用 (Transact SQL) |Microsoft 文档"
+title: USE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/28/2016
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - USE_TSQL
 - USE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - USE statement
 - database context [SQL Server]
 - context changes [SQL Server]
 - modifying database context
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
-caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 835266562ca4a3f81e92c02ff4abbf7948a36f82
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 1de8ddd8d109e7ba2b83dd6c940487c6aa3fd155
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -57,7 +59,7 @@ USE { database_name }
   
  USE 在编译和执行期间均可执行，并且立即生效。 因此，出现在批处理中 USE 语句之后的语句将在指定数据库中执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 CONNECT 权限。  
   
 ## <a name="examples"></a>示例  

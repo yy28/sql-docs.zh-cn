@@ -2,23 +2,26 @@
 title: "如何执行实时评分或在 SQL Server 中的本机评分 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e036310aa348437047be4f4270764b9f4c002afa
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何执行实时评分或在 SQL Server 中的本机评分
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题提供有关如何执行实时评分和 SQL Server 2017 和 SQL Server 2016 中的本机评分功能说明和示例代码。 同时实时评分和本机评分的目标是提高在小的批处理计分操作的性能。
 
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/11/2017
 3. 使模型可供 SQL Server。 通常这意味着在 SQL Server 表中存储的序列化的模型。
 4. 调用的函数或存储的过程，并传递的模型和输入的数据。
 
-### <a name="requirements"></a>要求
+### <a name="requirements"></a>需求
 
 + 预测函数也可在所有版本的 SQL Server 2017 默认处于启用状态。 不需要安装 R 或启用额外功能。
 

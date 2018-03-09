@@ -1,5 +1,5 @@
 ---
-title: "以编程方式管理包和文件夹 |Microsoft 文档"
+title: "以编程方式管理包和文件夹 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,22 +18,21 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - custom enumerators [Integration Services]
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a40acf3a586c74119d948291fd179f78833cb37a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4d0213c5ae32099a934daf88c2c60ef12204b86c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>以编程方式管理包和文件夹
-<a name="top"></a>当您使用以编程方式[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包，你可能想要确定是否将存在单个包或文件夹，或管理在其中存储包的文件夹。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。    
+<a name="top"></a>以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，你可能希望确定个别包或文件夹是否存在，或管理用于存储包的文件夹。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。    
     
-##  <a name="exists"></a>确定是否存在包或文件夹    
+##  <a name="exists"></a>确定包或文件夹是否存在    
  若要以编程方式确定已保存的包是否存在，请先调用以下方法之一，然后尝试加载和运行该包：    
     
 |存储位置|调用的方法|    
@@ -49,12 +47,12 @@ ms.lasthandoff: 09/26/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ##  <a name="managing"></a>管理包和文件夹    
  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供其他用于管理包和存储包的文件夹的方法。    
     
-###  <a name="managing_rempkg"></a>删除程序包    
+###  <a name="managing_rempkg"></a>删除包    
  若要以编程方式删除已保存的包，请调用以下方法之一：    
     
 |存储位置|调用的方法|    
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/26/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ###  <a name="managing_create"></a>创建文件夹    
  若要以编程方式创建存储文件夹，请调用以下方法之一：    
@@ -72,7 +70,7 @@ ms.lasthandoff: 09/26/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ###  <a name="managing_remfldr"></a>删除文件夹    
  若要以编程方式删除存储文件夹，请调用以下方法之一：    
@@ -82,7 +80,7 @@ ms.lasthandoff: 09/26/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ###  <a name="managing_rename"></a>重命名文件夹    
  若要以编程方式重命名存储文件夹，请调用以下方法之一：    
@@ -92,11 +90,10 @@ ms.lasthandoff: 09/26/2017
 |SSIS 包存储区|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnSqlServer%2A>|    
     
- [返回页首](#top)    
+ [返回首页](#top)    
     
 ## <a name="see-also"></a>另请参阅    
- [包管理 &#40;SSIS 服务 &#41;](../../integration-services/service/package-management-ssis-service.md)     
+ [包管理（SSIS 服务）](../../integration-services/service/package-management-ssis-service.md)     
  [以编程方式枚举可用的包](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
     
   
-

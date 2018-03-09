@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: af59aeaede83bad3d2b2d0acbbc7b6fd272c65cb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: acc06da22cc03530e3a7ddc05f8825eaadfd8f6a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>MSRS 2011 SharePoint 模式性能对象的性能计数器
   本主题介绍作为 **SharePoint 模式部署一部分的** MSRS 2011 Web Service SharePoint Mode **和** MSRS 2011 Windows Service SharePoint Mode [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 性能对象的性能计数器。  
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/05/2017
 |**每秒内存缓存未命中数**|每秒从内存中缓存未检索到报表的次数。|  
 |**下一个每秒会话请求数**|对当前会话中打开的报表（例如通过会话快照呈现的报表）的每秒请求数。|  
 |**报表请求**|当前处于活动状态正由报表服务器进行处理的报表的数目。 使用此计数器可以评估缓存策略。 请求数可能会比报表生成的请求数多很多。|  
-|**每秒执行的报表数**|每秒成功生成的报表数。|  
+|**每秒执行的报表**|每秒成功生成的报表数。|  
 |**每秒请求数**|报表服务器服务每秒处理的成功请求的总数。|  
 |**每秒快照更新数**|每秒报表执行快照更新的总数。|  
 |**总应用域回收数**|报表服务器 Windows 服务启动后应用程序域循环的总次数。|  

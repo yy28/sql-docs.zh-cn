@@ -3,26 +3,28 @@ title: "命名空间 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: namespaces in ADO
+helpviewer_keywords:
+- namespaces in ADO
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d32b2d51454f48d4ef164058abbf08d06859a281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c34bb680f7a066eeb694cf62fba39cabb0d4cbea
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="namespaces"></a>命名空间
 ADO 中的 XML 持久性格式使用以下四个命名空间。  
@@ -30,7 +32,7 @@ ADO 中的 XML 持久性格式使用以下四个命名空间。
 ## <a name="remarks"></a>注释  
  ADO 中的 XML 持久性格式使用以下四个命名空间。  
   
-|前缀|Description|  
+|Prefix|Description|  
 |------------|-----------------|  
 |s|表示"XML 数据"命名空间包含的元素和属性定义当前记录集的架构。|  
 |dt|引用数据类型定义规范。|  

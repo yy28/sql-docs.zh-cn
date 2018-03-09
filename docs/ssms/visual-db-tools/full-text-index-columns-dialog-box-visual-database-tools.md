@@ -3,8 +3,11 @@ title: "“全文索引列”对话框 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,18 +16,18 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2caff225677243f4e6d8e6286268ec645ef274c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0ec4029fc816c963a2a0ac5ddc61ffc354e50589
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>“全文本索引列”对话框 (Visual Database Tools)
-此对话框列出了参与表设计器中所打开表的全文本索引的列。 若要访问此对话框，请在表设计器中右键单击相应的表，选择“全文检索”，然后在“全文检索”对话框中，单击具有要查看或编辑的列的索引，单击右侧网格中的“列”字段，再单击省略号 (**…**)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 此对话框列出了参与表设计器中所打开表的全文检索的列。 若要访问此对话框，请在表设计器中右键单击相应的表，选择“全文检索”，然后在“全文检索”对话框中，单击具有要查看或编辑的列的索引，单击右侧网格中的“列”字段，再单击省略号 (**…**)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **列**  
 显示参与全文本索引的列的名称。 若要添加列，请单击第一个空单元格，再从下拉列表中选择列。 只能基于文本的数据类型或 image 数据类型的列才可访问。  
   

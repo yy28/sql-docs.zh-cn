@@ -2,27 +2,30 @@
 title: "包含数据库的排序规则 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a064d177390a6e9037f02cb7ab4c05364122273
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="contained-database-collations"></a>包含数据库的排序规则
-  许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、区分重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
  排序规则不仅适用于用户表中存储的数据，还适用于由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理的所有文本，包括元数据、临时对象、变量名称等。在这些内容的处理方面，包含数据库和非包含数据库采用不同的方式。 此更改不会影响很多用户，而且有助于提供独立而统一的实例。 但是，此更改也可能导致某些混淆，并可能使同时访问包含数据库和非包含数据库的会话出现问题。  
   
@@ -34,13 +37,13 @@ ms.lasthandoff: 11/09/2017
 ### <a name="example-1"></a>示例 1  
  例如，如果我们在北京工作，则可能会使用中文排序规则：  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  现在，如果我们创建一个列，其默认排序规则将是此中文排序规则，但我们可以根据需要选择其他排序规则：  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -53,7 +56,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -65,7 +68,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>示例 2  
  假设在排序规则为 **Latin1_General** 的实例上使用上述（中文）数据库：  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -89,7 +92,7 @@ JOIN #T2
   
  通过显式排列临时表可修复此问题。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 **COLLATE** 子句提供 **DATABASE_DEFAULT** 关键字，使操作在一定程度上得到了简化。  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -139,7 +142,7 @@ END;
   
  通过上述临时表示例可以看出，此排序规则行为使大多数临时表不再需要使用显式 **COLLATE** 子句。 在包含数据库中，即使数据库和实例采用不同的排序规则，此代码现在也可以正常运行：  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  

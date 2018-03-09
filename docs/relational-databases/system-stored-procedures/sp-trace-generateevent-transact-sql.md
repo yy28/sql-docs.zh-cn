@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
 - sp_trace_generateevent
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_generateevent
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28512a66275000a1d185dabdb1ce96a5ed242165
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f02fbb7e401740f6720fd8a654a38f3a9408e07
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +51,13 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@eventid=**] *event_id*  
+ [ **@eventid=**] *event_id*  
  要打开的事件的 ID。 *event_id*是**int**，无默认值。 ID 必须是从 82 到 91，作为具有一组表示用户定义的事件的事件号之一[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
- [  **@userinfo** =] *user_info*  
+ [ **@userinfo**= ] **'***user_info***'**  
  用于标识事件原因的可选用户定义字符串。 *user_info*是**nvarchar （128)**，默认值为 NULL。  
   
- [  **@userdata** =] *user_data*  
+ [ **@userdata**= ] *user_data*  
  用于事件的可选的用户指定数据。 *user_data*是**varbinary （8000)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -74,7 +77,7 @@ sp_trace_generateevent [ @eventid = ] event_id
   
  参数的所有 SQL 跟踪存储过程 (**sp_trace_xx**) 已严格类型化。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -102,7 +105,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fn_trace_geteventinfo &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   

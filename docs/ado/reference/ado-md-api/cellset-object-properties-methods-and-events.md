@@ -3,26 +3,28 @@ title: "单元集对象属性、 方法和事件 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Cellset object [ADO MD], members
+helpviewer_keywords:
+- Cellset object [ADO MD], members
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b74ec9ea65712e2a84f6431afbb6b83fb7fd5c22
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 76687d99e803c4858d11c495e911ba18881b4b64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>单元集对象属性、 方法和事件
 ## <a name="propertiescollections"></a>属性/集合  

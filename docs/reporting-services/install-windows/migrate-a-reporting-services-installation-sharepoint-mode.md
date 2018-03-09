@@ -8,22 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 515fb60031f75d0c3743628a345e415770a731fe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 627029330280cef882f631701d5ea9a0ed8a8791
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
 
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 ####  <a name="bkmk_databases"></a> 您将在完成的迁移中看到的数据库  
  下表描述了与在您成功迁移了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 安装后将具有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关的 SQL Server 数据库：  
   
-|数据库|示例名称||  
+|“数据库”|示例名称||  
 |--------------|------------------|-|  
 |目录数据库|ReportingService_[服务应用程序 GUID] **(\*)**|用户迁移。|  
 |Temp 数据库|ReportingService_[服务应用程序 GUID]TempDB **(\*)**|用户迁移。|  
@@ -86,8 +84,8 @@ ms.lasthandoff: 12/05/2017
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥。|**Rskeymgmt.exe** 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。|指出的工具可用于备份操作；但对于还原操作，您将使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序管理页或 PowerShell。|  
 |**2**|SharePoint 内容数据库。||备份数据库和分离数据库。<br /><br /> 请参阅 [确定升级方法 (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)中的“数据库附加升级”部分。|  
-|**3**|作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]目录数据库的 SQL Server 数据库。|SQL Server 数据库备份和还原<br /><br /> 或<br /><br /> SQL Server 数据库分离和附加。||  
-|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件。|简单文件复制。|如果您对文件进行了自定义，则仅需复制 rsreportserver.config。 文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*：<br /><br /> <br /><br /> Rsreportserver.config<br /><br /> Rssvrpolicy.config<br /><br /> 针对报表服务器 ASP.NET 应用程序的 Web.config。<br /><br /> 针对 ASP.NET 的 Machine.config|  
+|**3**|作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]目录数据库的 SQL Server 数据库。|SQL Server 数据库备份和还原<br /><br /> 或多个<br /><br /> SQL Server 数据库分离和附加。||  
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件。|简单文件复制。|如果您对文件进行了自定义，则仅需复制 rsreportserver.config。 文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*：<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> 针对报表服务器 ASP.NET 应用程序的 Web.config。<br /><br /> 针对 ASP.NET 的 Machine.config|  
   
 ####  <a name="bkmk_restore_operations"></a> 还原操作  
  本节介绍迁移所需的信息的类型以及用于完成还原的工具或过程。 您用于还原的工具可能会不同于用于备份的工具。  

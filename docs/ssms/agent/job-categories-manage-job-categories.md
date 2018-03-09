@@ -3,8 +3,11 @@ title: "作业类别 - 管理作业类别 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5526919659f7d5d36943c1fd8619f9c1f5262f52
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38e0121fb72d109225da097785c68a722f8d82f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-categories---manage-job-categories"></a>作业类别 - 管理作业类别
-使用“作业类别”对话框可以添加或删除作业类别。 但不能删除内置作业类别。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用“作业类别”对话框可以添加或删除作业类别。 但不能删除内置作业类别。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **名称**  
 作业类别的名称。  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/09/2017
 **删除**  
 删除所选作业类别。 只用于用户定义的作业类别。  
   
-**刷新**  
+**“刷新”**  
 查询该服务器的当前信息。  
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>访问“作业类别”对话框  

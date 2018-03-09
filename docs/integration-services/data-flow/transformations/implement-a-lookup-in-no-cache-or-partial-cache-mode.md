@@ -1,5 +1,5 @@
 ---
-title: "在不缓存或部分缓存模式下实现查找 |Microsoft 文档"
+title: "在不缓存模式或部分缓存模式下实现查找 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-caps.latest.revision: 67
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4312836f421788df8a2927afc8f6e0986a0490d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>在不缓存模式或部分缓存模式下实现查找
   可以将查找转换配置为使用部分缓存模式或不缓存模式：  
@@ -119,4 +118,3 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

@@ -2,29 +2,32 @@
 title: "第 8 课： 定义操作 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 556766b328f7af4086643235f126ea3c5a459332
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c34913be54a2eb74401d602f1ecafee25d5921c6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 课：定义操作
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 在本课中，将了解如何在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中定义操作。 操作只是存储在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中并且可以合并到客户端应用程序中并被用户启动的多维表达式 (MDX) 语句。  
   
 > [!NOTE]  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |。|运行 OLE DB 命令。|  
 |URL|在 Internet 浏览器中显示动态网页。|  
   
-操作让用户能够在所选项的上下文中启动应用程序或执行其他步骤。 有关详细信息，请参阅 [操作（Analysis Services - 多维数据）](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)和 [多维模型中的操作](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
+操作让用户能够在所选项的上下文中启动应用程序或执行其他步骤。 有关详细信息，请参阅[操作（Analysis Services — 多维数据）](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)和[多维模型中的操作](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
 > [!NOTE]  
 > 有关操作的示例，请参阅“计算工具”窗格中的“模板”选项卡上的操作示例或 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 示例数据仓库中的示例。 有关如何安装此数据库的详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](../analysis-services/install-sample-data-and-projects.md)。  
@@ -55,12 +58,12 @@ ms.lasthandoff: 11/17/2017
 在此任务中，将通过先前在此教程中定义的事实维度关系，来定义、使用然后修改钻取操作。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 9 课：定义透视和翻译](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[Lesson 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>另请参阅  
 [Analysis Services 教程方案](../analysis-services/analysis-services-tutorial-scenario.md)  
 [多维建模（Adventure Works 教程）](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[操作（Analysis Services - 多维数据）](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
+[操作 &#40;Analysis Services-多维数据 &#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [多维模型中的操作](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

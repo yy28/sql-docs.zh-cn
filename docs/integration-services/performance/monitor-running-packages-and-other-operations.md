@@ -1,5 +1,5 @@
 ---
-title: "监视器运行包和其他操作 |Microsoft 文档"
+title: "监视运行包操作和其他操作 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2555a719c2677c2c573a07dfa803ad80b3946ebf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: c2254c139d1e93755cd9b3c503ad0bc42f08cb4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>监视运行包和其他操作
   您可以使用以下一个或多个工具监视 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包执行、项目验证和其他操作。 某些工具（如数据分流）只适用于部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的项目。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/27/2017
   
  使用九种不同的状态类型来指示操作的状态。 有关状态类型的完整列表，请参阅 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图。  
 
-## <a name="active_ops"></a>活动操作对话框
+## <a name="active_ops"></a>“活动操作”对话框
   使用 **“活动操作”** 对话框可以查看 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器上当前运行的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作的状态，例如部署、验证和包执行。 此数据存储在 SSISDB 目录中。  
   
  有关相关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 视图的详细信息，请参阅 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)、[catalog.validations（SSISDB 数据库）](../../integration-services/system-views/catalog-validations-ssisdb-database.md)和 [catalog.executions（SSISDB 数据库）](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
@@ -74,7 +73,7 @@ ms.lasthandoff: 09/27/2017
   
 |||  
 |-|-|  
-|Integration Services 初始化|1|  
+|Integration Services 初始化|@shouldalert|  
 |操作清除（SQL 代理作业）|2|  
 |项目版本清除（SQL 代理作业）|3|  
 |部署项目|101|  
@@ -102,7 +101,7 @@ ms.lasthandoff: 09/27/2017
  若要查看正在服务器上运行的包的列表，请为其状态为 2 的包查询视图 [catalog.executions（SSISDB 数据库）](../../integration-services/system-views/catalog-executions-ssisdb-database.md)。  
   
  通过托管 API 以编程方式访问  
- 请参阅<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空间及其类。  
+ 请参阅 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间及其类。  
   
 ### <a name="stopping-a-running-package"></a>停止正在运行的包  
  您可以在 **“活动操作”** 对话框中请求正在运行的包停止。 有关详细信息，请参阅 [Active Operations Dialog Box](#active_ops)。  
@@ -113,7 +112,7 @@ ms.lasthandoff: 09/27/2017
  若要停止正在服务器上运行的包，请调用存储过程 [catalog.stop_operation（SSISDB 数据库）](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)。  
   
  通过托管 API 以编程方式访问  
- 请参阅<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空间及其类。  
+ 请参阅 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间及其类。  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>查看已运行的包的历史记录  
  若要查看在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中已运行的包的历史记录，请使用 **“全部执行”** 报表。 有关“全部执行”报表和其他标准报表的详细信息，请参阅 [Integration Services 服务器的报告](#reports)。  
@@ -124,14 +123,14 @@ ms.lasthandoff: 09/27/2017
  若要查看与已运行的包有关的信息，请查询视图 [catalog.executions（SSISDB 数据库）](../../integration-services/system-views/catalog-executions-ssisdb-database.md)。  
   
  通过托管 API 以编程方式访问  
- 请参阅<xref:Microsoft.SqlServer.Management.IntegrationServices>命名空间及其类。  
+ 请参阅 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间及其类。  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
   在当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了标准报告，帮助你监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。 这些报告有助于您查看包状态和历史记录，并根据需要确定包执行失败的原因。  
   
  在每个报告页的顶部，后退图标会将您转到查看过的上一页，刷新图标会刷新在该页上显示的信息，打印图标则可以打印当前页。  
   
- 有关如何将包部署到的信息[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务器，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+ 有关如何将包部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ### <a name="integration-services-dashboard"></a>Integration Services 面板  
  **“Integration Services 面板”** 报告提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上所有包执行的概览。 对于已在服务器上运行的每个包，该面板允许您“放大”以便查找有关可能已发生的包执行错误的具体细节。  
@@ -178,7 +177,7 @@ ms.lasthandoff: 09/27/2017
  **“所有验证”** 报告显示已在服务器上执行的所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 验证的摘要。 摘要中显示每次验证的信息，如状态、开始时间和结束时间。 每个摘要条目包含一个指向在验证期间生成的消息的链接。 与 Integration Services 面板一样，您可以将筛选器应用于表，以便缩小显示的信息的范围。  
   
 ### <a name="custom-reports"></a>自定义报告  
- 可以将自定义报告（.rdl 文件）添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“Integration Services 目录”节点下的 **SSISDB** 目录节点。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定是\<数据库 >。\<所有者 >。\<对象 >。 例如，SSISDB.internal.executions。  
+ 可以将自定义报告（.rdl 文件）添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“Integration Services 目录”节点下的 **SSISDB** 目录节点。 在添加报告前，请确认正在使用第三方命名约定以完全限定您引用的对象（如源表）。 否则， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将显示错误。 命名约定为 \<数据库>.\<所有者>.\<对象>。 例如，SSISDB.internal.executions。  
   
 > [!NOTE]  
 >  将自定义报告添加到“数据库”节点下的 **SSISDB** 节点时，可以不使用 SSISDB 前缀。  
@@ -209,4 +208,3 @@ ms.lasthandoff: 09/27/2017
 ## <a name="see-also"></a>另请参阅  
  [项目和包的执行](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [包执行的疑难解答报告](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
-

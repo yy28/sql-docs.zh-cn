@@ -2,16 +2,13 @@
 title: "创建和管理本地分区 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2e5047564e2001f87691d622a736c9ad28b87c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 94cf5d3bdf0feadadf2180c6eb03f9898a4b6966
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>创建和管理本地分区 (Analysis Services)
-  您可以为度量值组创建更多分区以提高处理性能。 通过多个分区，您可以跨本地以及远程服务器上对应数目的物理数据文件分配事实数据。 在 Analysis Services 中，可以独立和并行处理分区，从而可更好地控制服务器上的处理工作负荷。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+您可以为度量值组创建更多分区以提高处理性能。 通过多个分区，您可以跨本地以及远程服务器上对应数目的物理数据文件分配事实数据。 在 Analysis Services 中，可以独立和并行处理分区，从而可更好地控制服务器上的处理工作负荷。  
   
  可以在模型设计期间在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中创建分区，或在部署解决方案后使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 XMLA 来创建分区。 建议您仅选择一种方法。 如果您交替使用这些工具，可能会发现，在随后从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重新部署该解决方案时，在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中对已部署的数据库所进行的更改将被覆盖。  
   
@@ -131,8 +129,8 @@ ms.lasthandoff: 11/17/2017
  在最后一个步骤中，通常需要删除基于表本身的默认分区（如果该分区仍存在），否则基于分区的查询将与基于完整表的查询重叠。  
   
 ## <a name="see-also"></a>另请参阅  
- [分区（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [分区 &#40;Analysis Services-多维数据 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [远程分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [在 Analysis Services 中合并分区（SSAS - 多维）](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [在 Analysis Services &#40; 中合并分区SSAS-多维 &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

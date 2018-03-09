@@ -2,26 +2,30 @@
 title: "监视 R Services | Microsoft Docs"
 ms.custom: 
 ms.date: 11/29/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c717473de44124ae8ea1736de371069a155c6b0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ffbeefeea8fd1c90a9ea09c0094cd81877a797ea
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="monitoring-r-services"></a>监视 R Services
-  本部分提供有关使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 时这些常见监视任务的信息：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+本部分提供有关使用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 时这些常见监视任务的信息：  
   
 -   标识 R 所使用的服务器资源  
   
@@ -37,7 +41,7 @@ ms.lasthandoff: 11/09/2017
   
  本主题还介绍在 R 安装过程中在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上安装的工具，并列出与 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 相关的 DMV 和扩展事件。  
   
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>本節內容
 
 [适用于 SQL Server R Services 的 DMV](../../advanced-analytics/r-services/dmvs-for-sql-server-r-services.md)
 

@@ -2,29 +2,34 @@
 title: "使用计算列提升常用的 XML 值 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 790650397525811dd3be71edb28f233f25bf9ab8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38efa0d9948afdd31c93442f657d7f3d68c82f0e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
-  如果主要是对少数元素和属性值进行查询，您可能希望将这些数量提升到关系列。 检索整个 XML 实例，但只对一小部分 XML 数据进行查询时，这很有用。 不必对 XML 列创建 XML 索引。 但可以对提升的列进行索引。 必须编写查询才能使用提升的列。 也就是说，查询优化器不会将对 XML 列的查询再定向到提升的列。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+如果主要是对少数元素和属性值进行查询，您可能希望将这些数量提升到关系列。 检索整个 XML 实例，但只对一小部分 XML 数据进行查询时，这很有用。 不必对 XML 列创建 XML 索引。 但可以对提升的列进行索引。 必须编写查询才能使用提升的列。 也就是说，查询优化器不会将对 XML 列的查询再定向到提升的列。  
   
  提升的列可以是同一个表中的计算列，也可以是表中用户维护的单独列。 从每个 XML 实例提升单一值时，这就足够了。 但是，对于多值属性，则必须为属性创建单独的表，如下节所述。  
   

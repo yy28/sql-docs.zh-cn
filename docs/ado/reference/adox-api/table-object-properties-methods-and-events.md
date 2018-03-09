@@ -3,26 +3,28 @@ title: "表对象属性、 方法和事件 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Table object [ADOX], members
+helpviewer_keywords:
+- Table object [ADOX], members
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 531119cc42b4f02f6b6a6e4dc5e09c75cf101c94
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 14513ebdb460ab08fb513e5cc0f00fc8e4571240
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="table-object-properties-methods-and-events"></a>表对象属性、 方法和事件
 ## <a name="propertiescollections"></a>属性/集合  

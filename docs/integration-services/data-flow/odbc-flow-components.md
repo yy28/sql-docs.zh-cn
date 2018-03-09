@@ -1,5 +1,5 @@
 ---
-title: "ODBC 流组件 |Microsoft 文档"
+title: "ODBC 流组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,22 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1d2f92077fd1424827866820a0627ac62447e3f2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-flow-components"></a>ODBC 流组件
   本主题介绍使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- Connector for Open Database Connectivity (ODBC) by Attunity for [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 可帮助 SSIS 开发人员轻松地创建从支持 ODBC 的数据库加载和卸载数据的包。  
+ 适用于 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的开放式数据库连接 (ODBC) 连接器有助于 SSIS 开发人员轻松创建从支持 ODBC 的数据库加载和卸载数据的包。  
   
  ODBC 连接器设计为在将数据加载到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的上下文中支持 ODBC 的数据库中或者从支持 ODBC 的数据库卸载数据时获得最佳性能。  
   
@@ -144,4 +143,3 @@ ms.lasthandoff: 08/03/2017
 -   [ODBC 目标](../../integration-services/data-flow/odbc-destination.md)  
   
  
-

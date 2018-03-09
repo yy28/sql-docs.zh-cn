@@ -1,14 +1,15 @@
 ---
 title: "sys.dm_os_memory_cache_clock_hands (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 08/18/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_memory_cache_clock_hands
 - dm_os_memory_cache_clock_hands_TSQL
 - sys.dm_os_memory_cache_clock_hands
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_cache_clock_hands dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_cache_clock_hands dynamic management view
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32ac57b5da2720b8ba3c874d604b5f65ec8da308
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 08e181d6f4735a8977d8af4fb226d7f532a4e88d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +43,9 @@ ms.lasthandoff: 11/17/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**cache_address**|**varbinary （8)**|与时钟关联的缓存的地址。 不可为 null。|  
+|**cache_address**|**varbinary(8)**|与时钟关联的缓存的地址。 不可为 null。|  
 |**名称**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|**type**|**nvarchar(60)**|缓存存储的类型。 可存在相同类型的多个缓存。 不可为 null。|  
+|**类型**|**nvarchar(60)**|缓存存储的类型。 可存在相同类型的多个缓存。 不可为 null。|  
 |**clock_hand**|**nvarchar(60)**|现有的类型。 这是以下之一：<br /><br /> External<br /><br /> 内部<br /><br /> 不可为 null。|  
 |**clock_status**|**nvarchar(60)**|时钟的状态。 这是以下之一：<br /><br /> 已挂起<br /><br /> 正在运行<br /><br /> 不可为 null。|  
 |**rounds_count**|**bigint**|通过缓存执行的、旨在删除项的清扫数。 不可为 null。|  
@@ -52,20 +55,17 @@ ms.lasthandoff: 11/17/2017
 |**last_tick_time**|**bigint**|移动时钟指针的最后时间，以毫秒表示。 不可为 null。|  
 |**round_start_time**|**bigint**|上一次清扫的时间，以毫秒表示。 不可为 null。|  
 |**last_round_start_time**|**bigint**|时钟完成上一往返花费的总时间，以毫秒表示。 不可为 null。|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。    
   
 ## <a name="remarks"></a>注释  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将信息存储在内存中一个称为内存缓存的结构中。 缓存中的信息可以是数据、索引条目、编译的过程计划以及其他各种类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息。 若要避免重新创建信息，尽可能将信息保留在内存缓存中，通常当信息太旧而失去用处或新信息需要使用内存空间时，会将旧信息从缓存中删除。 删除旧信息的过程称为内存清扫。 内存清扫是经常执行的操作，但不是连续执行的操作。 时钟算法控制内存缓存的清扫。 每个时钟能够控制几个内存清扫，称为指针。 内存缓存时钟指针是指一个内存清扫指针的当前位置。  
-  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在结构称为内存缓存中的内存中存储信息。 缓存中的信息可以是数据、索引条目、编译的过程计划以及其他各种类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息。 若要避免重新创建信息，尽可能将信息保留在内存缓存中，通常当信息太旧而失去用处或新信息需要使用内存空间时，会将旧信息从缓存中删除。 删除旧信息的过程称为内存清扫。 内存清扫是经常执行的操作，但不是连续执行的操作。 时钟算法控制内存缓存的清扫。 每个时钟能够控制几个内存清扫，称为指针。 内存缓存时钟指针是指一个内存清扫指针的当前位置。  
+
 ## <a name="see-also"></a>另请参阅  
-
-
- [SQL Server 操作系统相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 操作系统相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
+ [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
   
-  
-
 

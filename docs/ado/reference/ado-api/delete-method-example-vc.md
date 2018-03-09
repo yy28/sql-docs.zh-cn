@@ -3,27 +3,30 @@ title: "删除方法示例 （VC + +） |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Delete method [ADO], VC++ example
+dev_langs:
+- C++
+helpviewer_keywords:
+- Delete method [ADO], VC++ example
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4fd92448bb2353c48463e58ca1719e4e6735d57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac2b901995a10e1af4f29dbc716f23fd26522678
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-method-example-vc"></a>删除方法示例 （VC + +）
 此示例使用[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法来删除从指定的记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

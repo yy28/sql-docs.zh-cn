@@ -3,26 +3,26 @@ title: "配置故障转移群集实例存储 iSCSI-在 Linux 上的 SQL Server |
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: ab6e176718ef3db2babdc03990a0b7a6062062cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例-iSCSI-在 Linux 上的 SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 此文章介绍了如何在 Linux 上配置的故障转移群集实例 (FCI) 的 iSCSI 存储。 
 
@@ -41,7 +41,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
 
 本部分将介绍如何在将充当 FCI 节点的服务器上配置 iSCSI 发起程序。 作为在 RHEL 和 Ubuntu 上，应运行说明。
 
-有关受支持的分发的 iSCSI 发起程序的其他信息，请参阅以下链接：
+有关受支持的分发的 iSCSI 发起程序的详细信息，请参阅以下链接：
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
@@ -51,7 +51,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
-    ![7 setiscsinetwork][6]
+    ![7-setiscsinetwork][6]
  
 2.  编辑`/var/lib/iscsi/ifaces/iSCSIIfaceName`。 请确保它有完全填写以下值：
 
@@ -99,7 +99,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  在 iSCSI 磁盘上创建物理卷。
 
@@ -200,7 +200,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    类型`exit`若要切换回根用户。
 
@@ -210,7 +210,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > 是的卷组的名称和\<LogicalVolumeName > 是创建的逻辑卷的名称。 下面的示例语法与卷组和上面创建的逻辑卷匹配。
+    \<VolumeGroupName > 是的卷组的名称和\<LogicalVolumeName > 是创建的逻辑卷的名称。 下面的示例语法与卷组和前一个命令中的逻辑卷匹配。
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -278,7 +278,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
     mkdir <FolderName>
     ```
 
-    \<文件夹名称 > 是文件夹的名称。 该文件夹的完整路径将需要指定如果不在正确的位置。 下面的示例创建一个名为 /var/opt/mssql/userdata 文件夹。
+    \<文件夹名称 > 是文件夹的名称。 该文件夹的完整路径，需要指定如果不在正确的位置。 下面的示例创建一个名为 /var/opt/mssql/userdata 文件夹。
 
     ```bash
     mkdir /var/opt/mssql/userdata
@@ -324,7 +324,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
 
    *    若要测试，请在该文件夹中创建数据库。 下面所示的示例使用 sqlcmd 创建数据库，将上下文切换到它，验证文件中的操作系统级别中，存在，然后删除的临时位置。 你可以使用 SSMS。
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    卸载共享 
 
@@ -358,7 +358,7 @@ iSCSI 使用网络来提供从服务器到服务器称为目标的磁盘。 连�
 
     \<ListOfVGsNotUsedByPacemaker > 是的输出将不能由 FCI 的步骤 20 的卷组的列表。 用逗号将每个用引号引起来的独立。 以下是一个示例。
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. Linux 启动时，它就会装载文件系统。 若要确保仅 Pacemaker 可以装载的 iSCSI 磁盘，重新生成的根文件系统映像。 

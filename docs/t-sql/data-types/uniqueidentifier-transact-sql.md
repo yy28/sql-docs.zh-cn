@@ -1,44 +1,46 @@
 ---
 title: "uniqueidentifier (Transact SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 7/23/2017
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.service: 
 ms.component: t-sql|data-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - uniqueidentifier
 - uniqueidentifier_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - uniqueidentifier data type
 - globally unique identifiers [SQL Server]
 - GUIDs [SQL Server]
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92d6795e0317930e2235847d5f7373db52812b01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 76f7a3c784c0d05e1a6f94da0b33207bfbb1efec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
 16 字节 GUID。
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 列或的本地变量**uniqueidentifier**数据类型可以通过以下方式初始化为值：
--   使用 NEWID 函数。  
+-   通过使用[NEWID](../../t-sql/functions/newid-transact-sql.md)或[NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md)函数。    
 -   通过从窗体中的字符串常量转换*xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*- *xxxxxxxxxxxx*，其中的每个*x*是范围 0-9 或 a-f 的十六进制数字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 是一个有效**uniqueidentifier**值。  
   
 比较运算符可与**uniqueidentifier**值。 不过，排序不是通过比较两个值的位模式来实现的。 可以针对执行的唯一操作**uniqueidentifier**值是比较 (=、 <>， \<，>， \<=、 > =) 和检查是否为 NULL （IS NULL 和 IS NOT NULL）。 不能使用其他算术运算符。 所有列约束和属性，除了标识，可以都用在上**uniqueidentifier**数据类型。
@@ -86,8 +88,8 @@ String                                       TruncatedValue
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [NEWID &#40;Transact SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40;Transact SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md) 
-[设置@local_variable&#40;Transact SQL &#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+[NEWSEQUENTIALID &#40;Transact SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   
   

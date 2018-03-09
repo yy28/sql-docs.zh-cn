@@ -2,53 +2,32 @@
 title: "在 Power Pivot 模式下安装 Analysis Services |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - setup-install
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ffad3e8daf95263a5c0ce8ee6607c2715defe43b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>在 Power Pivot 模式下安装 Analysis Services。
-  本主题中的过程将指导你以适用于 SharePoint 部署的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式在单台服务器上安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 | SharePoint 2013|  
-  
- **本主题内容：**  
-  
- [背景](#bkmk_background)  
-  
- [先决条件](#bkmk_prereq)  
-  
- [步骤 1：安装 Power Pivot for SharePoint](#InstallSQL)  
-  
- [步骤 2：配置基本 Analysis Services SharePoint 集成](#bkmk_config)  
-  
- [步骤 3：验证集成](#bkmk_verify)  
-  
- [将 Windows 防火墙配置为允许 Analysis Services 访问](#bkmk_firewall)  
-  
- [升级工作簿和计划的数据刷新](#bkmk_upgrade_workbook)  
-  
- [单个服务器安装之外 - Power Pivot for Microsoft SharePoint](#bkmk_multiple_servers)  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+本主题中的过程将指导你以适用于 SharePoint 部署的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式在单台服务器上安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 管理中心的配置任务。  
   
 ##  <a name="bkmk_background"></a> 背景  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 是在 SharePoint 2016 或 SharePoint 2013 场中提供 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 数据访问的中间层和后端服务的集合。  
@@ -306,11 +285,11 @@ ms.lasthandoff: 11/17/2017
   
  **冗余性和服务器负荷：** 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式下安装第二个或更多的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器将提供 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器功能的冗余性。 附加的服务器还将在各服务器上分散负荷。 有关详细信息，请参见以下内容：  
   
--   [配置 Analysis Services 以便在 Excel Services (SharePoint 2013) 中处理数据模型](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15))。  
+-   [配置用于处理 Excel Services (SharePoint 2013) 中的数据模型的 Analysis Services](http://technet.microsoft.com/library/jj614437(v=office.15))。  
   
--   [管理 Excel Services 数据模型设置 (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15))。  
+-   [管理 Excel Services 数据模型设置 (SharePoint 2013)](http://technet.microsoft.com/library/jj219780(v=office.15))。  
   
- ![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect 提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 设置](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[提交反馈和联系信息，通过 SQL Server 反馈](https://feedback.azure.com/forums/908035-sql-server)。  
   
 ## <a name="see-also"></a>另请参阅  
  [将 Power Pivot 迁移到 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

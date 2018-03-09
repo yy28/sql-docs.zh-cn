@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_io_virtual_file_stats_TSQL
 - sys.dm_io_virtual_file_stats
 - dm_io_virtual_file_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_virtual_file_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: deec9ee56fe129b77e130276c22b24c415ddc473
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -66,7 +69,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
  内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。  
   
-*file_id* |NULL
+*file_id* | NULL
 
 **适用于：** SQL Server （从 2008年开始），Azure SQL 数据库
  
@@ -81,7 +84,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**database_name**|**sysname**|数据库名称。</br></br>对于 SQL 数据仓库，这将是数据库的存储在由 pdw_node_id 的节点上的名称。 每个节点都有一个具有 13 文件的 tempdb 数据库。 每个节点也具有一个数据库，每个分布，并且每个分发数据库具有 5 个文件。 例如，如果每个节点包含 4 分发，结果将显示每个 pdw_node_id 的 20 个分发数据库文件。 
 |**database_id**|**int**|数据库 ID。|  
 |**file_id**|**int**|文件 ID。|  
-|**sample_ms**|**bigint**|自从计算机启动以来的毫秒数。 可以使用此列来比较该函数的不同输出。</br></br>数据类型是**int**为[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|自从计算机启动以来的毫秒数。 可以使用此列来比较该函数的不同输出。</br></br>数据类型是**int**为[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|对文件发出的读取次数。|  
 |**num_of_bytes_read**|**bigint**|在此文件中读取的总字节数。|  
 |**io_stall_read_ms**|**bigint**|用户等待文件中发出读取所用的总时间（毫秒）。|  
@@ -93,10 +96,10 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**file_handle**|**varbinary**|用于此文件的 Windows 文件句柄。|  
 |**io_stall_queued_read_ms**|**bigint**|**不适用于：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br /> 针对读的 IO 资源调控所引入的总 IO 延迟。 不可为 null。 有关详细信息，请参阅[sys.dm_resource_governor_resource_pools &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**不适用于：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br />  针对写的 IO 资源调控所引入的总 IO 延迟。 不可为 null。|
-|**pdw_node_id**|**int**|**适用于：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分发节点的标识符。
+|**pdw_node_id**|**int**|**适用范围：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分发节点的标识符。
  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。 有关详细信息，请参阅[动态管理视图和函数 &#40;Transact SQL &#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>示例  
@@ -107,7 +110,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  以下示例将返回有关 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的日志文件的统计信息。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
 ```  
@@ -116,7 +119,7 @@ GO
 
 **适用于：** Azure SQL 数据仓库
 
-```tsql
+```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
 WHERE database_name = ‘tempdb’ AND file_id = 2;
 

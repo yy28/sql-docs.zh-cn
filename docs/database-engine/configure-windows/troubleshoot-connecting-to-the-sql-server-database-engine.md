@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时发生的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
 
 2.  获取计算机的 IP 地址。
     1. 在“开始”菜单上，单击“运行”。 在“运行”窗口中键入 **cmd**，然后单击“确定”。
-    2.  在命令提示符窗口中键入 **ipconfig**，然后按 Enter。 记下 **IPv4** 地址和 **IPv6** 地址。 （SQL Server 可以使用较旧的 IP 版本 4 协议或较新的 IP 版本 6 协议进行连接。 你的网络可能允许其中某种协议，或者两种协议都允许。 多数用户首先会排查 **IPv4** 地址问题。 它更短且更容易键入。）
+    2.  在命令提示符窗口中键入 **ipconfig** ，然后按 Enter。 记下 **IPv4** 地址和 **IPv6** 地址。 （SQL Server 可以使用较旧的 IP 版本 4 协议或较新的 IP 版本 6 协议进行连接。 你的网络可能允许其中某种协议，或者两种协议都允许。 多数用户首先会排查 **IPv4** 地址问题。 它更短且更容易键入。）
 
 
 3.  获取 SQL Server 所用的 TCP 端口号。 在大多数情况下，你会使用 TCP 协议从另一台计算机连接到数据库引擎。

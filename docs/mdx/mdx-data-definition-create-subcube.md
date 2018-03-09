@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c3d7f30626eb5ae44e779b51973e5b74c734616e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bf2b3d21aa2eac4bc982b75257f8c1e2d87ea46b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 数据定义-创建子多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  请参阅[选择语句 &#40;MDX &#41;](../mdx/mdx-data-manipulation-select.md)有关在 Select 语句的详细的语法说明和**非直观**子句。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果将默认成员排除在子多维数据集的定义之外，坐标将会相应更改。 对于可以聚合的属性，默认成员会被移到 [All] 成员中。 对于不可聚合的属性，默认成员会被移到该子多维数据集中存在的某一成员中。 下表包含子多维数据集和默认成员组合的示例。  
   
 |原始默认成员|可以聚合|嵌套 select 语句|修改后的默认成员|  
@@ -139,7 +139,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
-|Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
+|增值分销商|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
   
  [All Products] 和 [All Resellers] 分别为列和行，包含所有成员（而不仅是可见成员）的总数。  

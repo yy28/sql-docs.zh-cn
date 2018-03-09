@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CurveToLineWithTolerance_TSQL
 - CurveToLineWithTolerance
-dev_langs: TSQL
-helpviewer_keywords: CurveToLineWithTolerance method (geography)
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CurveToLineWithTolerance method (geography)
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27a256db89add06815ab65346216d3a9b013b5f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 208878805dcf7c812caa1e6fb4f06120431ad803
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,10 +44,10 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>参数  
- *容差*  
+ *tolerance*  
  是**double**定义原始条圆弧线段和其线性近似值之间的最大错误的表达式。  
   
- *相对*  
+ *relative*  
  是**bool** ，该值指示是否使用相对的最大偏差的表达式。 如果将 relative 设置为 false (0)，则为可能具有线性近似值的偏差设置绝对最大值。  如果将 relative 设置为 true (1)，则按 tolerance 参数与空间对象边界框直径的乘积来计算公差。  
   
 ## <a name="return-types"></a>返回类型  

@@ -1,5 +1,5 @@
 ---
-title: "建议列类型对话框 UI 参考 |Microsoft 文档"
+title: "“提供列类型建议”对话框 UI 参考 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -15,24 +15,23 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.suggestdatatypes.f1
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb4d89741a2bbdbd4e93d983a7cc49b358df8d63
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e6e015362f115e85bb24a4a4d4603690ea892068
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>“提供列类型建议”对话框 UI 参考
   可以使用 **“提供列类型建议”** 对话框，根据文件内容抽样指定平面文件连接管理器中的列的数据类型和长度。  
   
  若要了解有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用的数据类型的详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **行数**  
  键入或选择算法使用的示例中的行数。  
   
@@ -56,4 +55,3 @@ ms.lasthandoff: 08/03/2017
  [平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   
-

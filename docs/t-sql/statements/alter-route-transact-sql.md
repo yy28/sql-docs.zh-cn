@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ROUTE_TSQL
 - ALTER ROUTE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - ALTER ROUTE statement
 - dropping routes
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 221fcf4d801d062d491935c8380abd4f75b83285
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +64,12 @@ WITH
  替换为  
  引入对要更改的路由进行定义的子句。  
   
- SERVICE_NAME **=***service_name*  
+ SERVICE_NAME **='***service_name***'**  
  指定此路由指向的远程服务的名称。 *Service_name*必须完全匹配的名称远程服务使用。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用逐字节比较，以匹配*service_name*。 也就是说，这种比较区分大小写，并且不考虑当前的排序规则。 服务名称的路由**SQL/ServiceBroker/BrokerConfiguration**是到 Broker 配置通知服务的路由。 指向此服务的路由不能指定 Broker 实例。  
   
  如果省略 SERVICE_NAME 子句，则路由的服务名称保持不变。  
   
- BROKER_INSTANCE **=***broker_instance*  
+ BROKER_INSTANCE **=***broker_instance*****  
  指定承载目标服务的数据库。 *Broker_instance*参数必须是远程数据库，可以通过在所选数据库中运行以下查询获取的 broker 实例标识符：  
   
 ```  
@@ -81,13 +83,13 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- 生存期 **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在路由表中保留路由的时间（秒）。 在生存期结束后，相应的路由即过期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为新会话选择路由时将不再考虑该路由。 如果省略此子句，则路由的生存期保持不变。  
   
- 地址**=***next_hop_address 的*  
+ ADDRESS **='***next_hop_address'*  
  指定此路由的网络地址。 *Next_hop_address*采用以下格式指定 TCP/IP 地址：  
   
- **TCP: / /** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
  指定*port_number*必须与匹配的端口号[!INCLUDE[ssSB](../../includes/sssb-md.md)]实例的终结点[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在指定的计算机。 这可以通过在选定数据库中运行如下查询获得：  
   
@@ -108,10 +110,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- MIRROR_ADDRESS **=***next_hop_mirror_address*  
+ MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  指定其主体服务器位于镜像对的镜像服务器的网络地址*next_hop_address*。 *Next_hop_mirror_address*采用以下格式指定 TCP/IP 地址：  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  指定*port_number*必须与匹配的端口号[!INCLUDE[ssSB](../../includes/sssb-md.md)]实例的终结点[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在指定的计算机。 这可以通过在选定数据库中运行如下查询获得：  
   
@@ -139,7 +141,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  若要更改服务的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  权限更改路由的默认路由的成员的所有者为**db_ddladmin**或**db_owner**固定数据库角色和成员的**sysadmin**固定服务器角色。  
   
 ## <a name="examples"></a>示例  

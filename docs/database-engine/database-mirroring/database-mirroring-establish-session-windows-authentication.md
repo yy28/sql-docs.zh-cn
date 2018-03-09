@@ -8,31 +8,32 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: "77"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44ea42f601222565a395a808c9c22fceadf95a1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c58ad04d7b1574d6954e31f8117ff23827ab1375
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>数据库镜像 - 建立会话 - Windows 身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 改为使用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 该工具将由 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 代替。  
   
- 准备好镜像数据库后（请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)），便可以建立数据库镜像会话。 主体服务器实例、镜像服务器实例和见证服务器实例都必须是单独的服务器实例，并位于单独的主机系统中。  
+ 准备好镜像数据库后（请参阅 [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)），便可以建立数据库镜像会话。 主体服务器实例、镜像服务器实例和见证服务器实例都必须是单独的服务器实例，并位于单独的主机系统中。  
   
 > [!IMPORTANT]  
 >  我们建议您在非高峰时段配置数据库镜像，因为配置镜像会影响性能。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  若要将主体服务器设置为镜像数据库中的伙伴，请连接到镜像服务器，然后执行下面的语句：  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE <database_name> SET PARTNER =<server_network_address>  
   
      其中，*<database_name>* 是要镜像的数据库的名称（此名称在两个伙伴上相同），*<server_network_address>* 是主体服务器的服务器网络地址。  
   
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  若要将镜像服务器设置为主体数据库中的伙伴，请连接到主体服务器，然后执行下面的语句：  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE <database_name> SET PARTNER =<server_network_address>  
   
      有关详细信息，请参阅步骤 4。  
   

@@ -1,5 +1,5 @@
 ---
-title: "脚本任务 |Microsoft 文档"
+title: "脚本任务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: 67
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 02febb9ffc5fd20842bff97edc231005a64c30dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task"></a>脚本任务
   脚本任务提供代码来执行内置任务中没有的函数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的转换。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
@@ -100,9 +99,9 @@ ms.lasthandoff: 08/11/2017
 ## <a name="script-task-editor-general-page"></a>脚本任务编辑器（“常规”页）
   可以使用 **“脚本任务编辑器”** 对话框的 **“常规”** 页命名和描述脚本任务。  
   
- 若要了解有关脚本任务的详细信息，请参阅 [脚本任务](../../integration-services/control-flow/script-task.md) 和 [配置脚本任务编辑器中的脚本任务](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)。 若要了解如何对脚本任务进行编程，请参阅 [扩展使用脚本任务对包](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)。  
+ 若要了解有关脚本任务的详细信息，请参阅 [Script Task](../../integration-services/control-flow/script-task.md) 和 [在脚本任务编辑器中配置脚本任务](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)。 若要了解如何对脚本任务进行编程，请参阅 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **名称**  
  为脚本任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -118,9 +117,9 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  在 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 和更高版本中，所有脚本都将预编译。 而在早期版本中，要设置 **PrecompileScriptIntoBinaryCode** 属性来指定是否对脚本进行预编译。  
   
- 若要了解有关脚本任务的详细信息，请参阅 [Script Task](../../integration-services/control-flow/script-task.md) 和 [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)。 若要了解如何对脚本任务进行编程，请参阅 [扩展使用脚本任务对包](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)。  
+ 若要了解有关脚本任务的详细信息，请参阅 [Script Task](../../integration-services/control-flow/script-task.md) 和 [在脚本任务编辑器中配置脚本任务](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)。 若要了解如何对脚本任务进行编程，请参阅 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **ScriptLanguage**  
  选择任务的脚本语言， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#。  
   
@@ -150,7 +149,6 @@ ms.lasthandoff: 08/11/2017
   
 ## <a name="related-content"></a>相关内容  
   
--   shareourideas.com 上的技术文章 [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
+-   shareourideas.com 上的技术文章 [如何在 C# 中发送具有传递通知的电子邮件](http://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
   
   
-

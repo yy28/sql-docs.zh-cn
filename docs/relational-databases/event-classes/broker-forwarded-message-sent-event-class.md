@@ -2,31 +2,37 @@
 title: "Broker:Forwarded Message Sent 事件类 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Broker:Forwarded Message Sent event class
+helpviewer_keywords:
+- Broker:Forwarded Message Sent event class
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d93b0ce74c37df8877e3cb51a991e391c4d72ad
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 60e3e742bc653abb2b7f653826a278d89e9e766a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent 事件类
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当 Service Broker 转发消息时，会生成 Broker:Forwarded Message Sent 事件。  
   
 ## <a name="brokerforwarded-message-sent-event-class-data-columns"></a>Broker:Forwarded Message Sent 事件类的数据列  
   
-|数据列|类型|说明|列号|可筛选|  
+|数据列|类型|Description|列号|可筛选|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BigintData1|**bigint**|消息序列号。|52|是|  
@@ -47,7 +53,7 @@ ms.lasthandoff: 11/09/2017
 |ObjectId|**int**|转发消息后转发的消息的生存时间值。|22|是|  
 |ObjectName|**nvarchar**|所转发消息的消息 ID。|34|是|  
 |OwnerName|**nvarchar**|消息要定向到的 Broker 标识符。|37|是|  
-|RoleName|**nvarchar**|会话句柄的角色。 有效值包括：<br /><br /> Initiator。 此 Broker 发起了该会话。<br /><br /> Target。 此 Broker 是会话的目标。|38|是|  
+|RoleName|**nvarchar**|会话句柄的角色。 有效值为<br /><br /> Initiator。 此 Broker 发起了该会话。<br /><br /> Target。 此 Broker 是会话的目标。|38|是|  
 |ServerName|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|是|  
 |SPID|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |StartTime|**datetime**|事件（如果有）的开始时间。|14|是|  

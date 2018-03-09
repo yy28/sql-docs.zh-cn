@@ -1,5 +1,5 @@
 ---
-title: "DBCC PDW_SHOWSPACEUSED (Transact SQL) |Microsoft 文档"
+title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
@@ -8,23 +8,25 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|database-console-commands
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ce89806ad869f18333d535402c1d112ae5873de
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 8c564a6debb9c110cb41f8fc90a7cc1c0c5a01f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact SQL)
+# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 显示的行、 磁盘空间保留，以及用于特定的表，或用于中的所有表的磁盘空间数[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]数据库。
@@ -47,7 +49,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
  [ *database_name* 。 [ *schema_name* ]。 | *schema_name* 。 ] *table_name*  
  一个、 两个，或要显示的表的由三部分名称。 对于两个或三部分的表名称，名称必须用双引号括起来 ("")。 使用一部分表名称周围的引号是可选的。 当指定未表名时，是当前数据库中显示的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要 VIEW SERVER STATE 权限。
   
 ## <a name="result-sets"></a>结果集  
@@ -95,7 +97,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 DBCC PDW_SHOWSPACEUSED;  
 ```  
  ## <a name="see-also"></a>另请参阅
-[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact SQL &#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 
   

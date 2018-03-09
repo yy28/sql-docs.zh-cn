@@ -3,8 +3,9 @@ title: "UnderlyingValue 属性 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Field20::GetUnderlyingValue
 - Field20::get_UnderlyingValue
 - Field20::UnderlyingValue
-helpviewer_keywords: UnderlyingValue property
+helpviewer_keywords:
+- UnderlyingValue property
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d4f3014350f4e29461a6208802d3f82f8c95535
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 739852d4cbfa4aaf2cf45a59b81b60e23617597f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue 属性
 指示的当前值[字段](../../../ado/reference/ado-api/field-object.md)数据库中的对象。  
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
  当你使用此属性与**OriginalValue**属性，您可以解决冲突所带来的批处理更新。  
   
-## <a name="record"></a>录制  
+## <a name="record"></a>記錄  
  有关[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，此属性将为空的字段之前添加[更新](../../../ado/reference/ado-api/update-method.md)调用。  
   
 ## <a name="applies-to"></a>适用范围  

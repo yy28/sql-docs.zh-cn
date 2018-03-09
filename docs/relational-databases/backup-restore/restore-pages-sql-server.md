@@ -21,15 +21,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5de0a22e84a354096a5e595b39f8ba60154bdd87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e59972bf634c4326f14081d7909b0926161d90b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
      [建议](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要还原页，请使用：**  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
@@ -118,14 +118,14 @@ ms.lasthandoff: 11/17/2017
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]连接到相应的 实例，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开“数据库”。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
+2.  展开 **“数据库”**。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
 3.  右键单击该数据库，指向 **“任务”**，再指向 **“还原”**，然后单击 **“页”** ，这将打开“还原页”对话框。  
   
      **还原**  
      此部分执行的功能与 [还原数据库（常规页）](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **“还原到”** 的功能相同。  
   
-     **数据库**  
+     **“数据库”**  
      指定要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。  该列表包含了服务器上除系统数据库 **master**和 tempdb 之外的所有数据库。  
   
     > [!WARNING]  
@@ -143,7 +143,7 @@ ms.lasthandoff: 11/17/2017
     |**组件**|已备份的组件：**数据库**、**文件**或 **\<blank>**（用于事务日志）。|  
     |**类型**|执行的备份类型有： **“完整”**、 **“差异”**或 **“事务日志”**。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行备份操作的实例的名称。|  
-    |**数据库**|备份操作中涉及的数据库的名称。|  
+    |**“数据库”**|备份操作中涉及的数据库的名称。|  
     |**位置**|备份集在卷中的位置。|  
     |**第一个 LSN**|备份集中第一个事务的日志序列号 (LSN)。 对于文件备份为空。|  
     |**最后一个 LSN**|备份集中最后一个事务的日志序列号 (LSN)。 对于文件备份为空。|  
@@ -151,7 +151,7 @@ ms.lasthandoff: 11/17/2017
     |**完整 LSN**|最近的完整数据库备份的日志序列号 (LSN)。|  
     |**开始日期**|备份操作开始的日期和时间，按客户端的区域设置显示。|  
     |**完成日期**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
-    |**Size**|备份集的大小（字节）。|  
+    |**大小**|备份集的大小（字节）。|  
     |**用户名**|执行备份操作的用户的名称。|  
     |**过期日期**|备份集的过期日期和时间。|  
   
@@ -211,7 +211,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例使用 `B` 还原文件 `NORECOVERY`的四个损坏页。 随后，将使用 `NORECOVERY`应用两个日志备份，然后是结尾日志备份（使用 `RECOVERY`还原）。 此示例执行联机还原。 此示例中，文件 `B` 的文件 ID 为 `1`，损坏的页的页 ID 分别为 `57`、 `202`、 `916`和 `1016`。  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  

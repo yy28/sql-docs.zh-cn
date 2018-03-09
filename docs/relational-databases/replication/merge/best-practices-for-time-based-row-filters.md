@@ -2,27 +2,30 @@
 title: "基于时间的行筛选器的最佳做法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80f52f422d5804a14dc3fbac86ac40a2d3a143ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
-  应用程序用户通常需要某个表的基于时间的数据子集。 例如，销售人员可能需要上周的订单数据，事件计划人员可能需要下周的事件数据。 在许多情况下，应用程序使用包含 **GETDATE()** 函数的查询来实现此功能。 请考虑以下行筛选器语句：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]应用程序用户通常需要某个表的基于时间的数据子集。 例如，销售人员可能需要上周的订单数据，事件计划人员可能需要下周的事件数据。 在许多情况下，应用程序使用包含 **GETDATE()** 函数的查询来实现此功能。 请考虑以下行筛选器语句：  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
@@ -61,7 +64,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|招待会|112|2006-10-04|1|  
+|@shouldalert|招待会|112|2006-10-04|@shouldalert|  
 |2|宴会|112|2006-10-10|0|  
 |3|聚会|112|2006-10-11|0|  
 |4|婚礼|112|2006-10-12|0|  
@@ -85,16 +88,16 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|1|招待会|112|2006-10-04|0|  
-|2|宴会|112|2006-10-10|1|  
-|3|聚会|112|2006-10-11|1|  
-|4|婚礼|112|2006-10-12|1|  
+|@shouldalert|招待会|112|2006-10-04|0|  
+|2|宴会|112|2006-10-10|@shouldalert|  
+|3|聚会|112|2006-10-11|@shouldalert|  
+|4|婚礼|112|2006-10-12|@shouldalert|  
   
  现在，下周的事件被标记为正准备进行复制。 当下次为事件协调器 112 使用的订阅运行合并代理时，将把第 2、3 和 4 行下载到订阅服务器中，并从订阅服务器中删除第 1 行。  
   
 ## <a name="see-also"></a>另请参阅  
  [GETDATE (Transact-SQL)](../../../t-sql/functions/getdate-transact-sql.md)   
  [执行作业](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

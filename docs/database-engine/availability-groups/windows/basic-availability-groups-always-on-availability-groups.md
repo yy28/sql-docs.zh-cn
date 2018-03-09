@@ -1,26 +1,27 @@
 ---
 title: "基本可用性组（AlwaysOn 可用性组）| Microsoft Docs"
 ms.custom: 
-ms.date: 09/27/2016
+ms.date: 02/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2704a726c3d9c6caffd1c26bac0cfb3926d1c0b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: ba38095f11a5f40ec6b9a9398217a98f390d146d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>基本可用性组（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +43,7 @@ ms.lasthandoff: 11/20/2017
 - 在次要副本上没有完整性检查。 
 
 - 不支持在运行 SQL Server 2016 社区技术预览版 3 (CTP3) 之前的 SQL Server 版本的服务器上托管的副本。  
-  
-- 不支持在现有基本可用性组中添加或删除副本。  
-  
+
 - 支持一个可用性数据库。  
   
 - 基本可用性组不能升级到高级可用性组。 必须删除该组并重新添加到包含仅运行 SQL Server 2016 Enterprise Edition 的服务器的组中。  

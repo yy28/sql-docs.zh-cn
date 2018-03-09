@@ -2,9 +2,12 @@
 title: "筛选已发布数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,18 +23,18 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dccb06209dc9f938254fe2b1e86dc490ed00ab0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c33c6903f664437076c06f12fb2be3b231f7e0f1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-published-data"></a>筛选已发布数据
-  通过筛选表项目，可以为要发布的数据创建分区。 通过筛选已发布数据，可以：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过筛选表项目，可以为要发布的数据创建分区。 通过筛选已发布数据，可以：  
   
 -   最大程度地减少通过网络发送的数据量。  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/09/2017
   
 -   参数化行筛选器，仅适用于合并复制。  
   
-     使用参数化行筛选器，可以选择要发布的行的子集。 与向所有订阅服务器发送相同行子集的静态筛选器不同，参数化行筛选器使用订阅服务器提供的数据值向订阅服务器发送不同的行子集。 有关详细信息，请参阅 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+     使用参数化行筛选器，可以选择要发布的行的子集。 与向所有订阅服务器发送相同行子集的静态筛选器不同，参数化行筛选器使用订阅服务器提供的数据值向订阅服务器发送不同的行子集。 有关详细信息，请参阅 [参数化行筛选器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
 -   联接筛选器，仅适用于合并复制。  
   
@@ -124,7 +127,7 @@ ms.lasthandoff: 11/09/2017
   
     -   **text 和 ntext**  
   
-    -   **image**  
+    -   **图像**  
   
     -   **XML**  
   

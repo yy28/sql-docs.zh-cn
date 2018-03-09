@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: HEAD
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c4bfdcd8170ed6ff50e64e137e99ddd703bb0d5e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7276608bf6d50410cd157fe82ec96d006639d5df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="head-mdx"></a>Head (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ Head(Set_Expression [ ,Count ] )
  *计数*  
  指定要返回的元组数的有效数值表达式。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **头**函数从指定集的开头返回指定的数目的元组。 会保留元素的顺序。 Count 的默认值为 1。 如果指定的元组数是等于或大于 1，**头**函数返回一个空集。 如果指定的元组数目超过了集中的元组数目，则此函数返回原始集。  
   
 ## <a name="example"></a>示例  

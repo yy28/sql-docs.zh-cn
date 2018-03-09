@@ -2,26 +2,29 @@
 title: "配置 SQL Server Managed Backup to Microsoft Azure 的高级选项 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 caps.latest.revision: "8"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e968aad24d2d1ac529028eb39f64b2a842e1712b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4b1f6ccfb9fdcf2fa3022864159fb87e589844df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>配置 SQL Server Managed Backup to Microsoft Azure 的高级选项
-  以下教程介绍了如何设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的高级选项。 仅当你需要提供的这些功能时，才需要这些步骤。 否则，可以启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 并依赖于默认行为。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 以下教程介绍如何设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的高级选项。 仅当你需要提供的这些功能时，才需要这些步骤。 否则，可以启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 并依赖于默认行为。  
   
  在每个方案中，使用 `database_name` 参数指定备份。 当 `database_name` 为 NULL 或 * 时，这些更改会影响实例级别的默认设置。 实例级别的设置也会影响在更改后创建的新数据库。  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  **创建备份证书或非对称密钥：** 可以将证书或非对称密钥用于加密。 以下示例创建了用于加密的备份证书。  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  
@@ -112,7 +115,7 @@ ms.lasthandoff: 11/09/2017
   
     ```  
   
-## <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>Next Steps  
  在配置高级选项和自定义计划后，必须在目标数据库或 SQL Server 实例上启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 有关详细信息，请参阅 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="see-also"></a>另请参阅  

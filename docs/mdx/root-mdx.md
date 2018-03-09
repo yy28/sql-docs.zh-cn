@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: Root
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a444fe658eae3d84af4ee320f57a182c4d100f75
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16e6fb8fb10816391a25d71a717cff5f4c7abe58
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="root-mdx"></a>Root (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ Root( Tuple_Expression )
  *Tuple_Expression*  
  返回元组的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定既不是维度名称，也不是元组表达式，则**根**函数返回包含的元组**所有**成员 (或默认成员如果**所有**成员不存在) 从多维数据集中每个属性层次结构。 成员在元组中的顺序基于多维数据集中定义属性层次结构的顺序。  
   
  如果指定维度名称，则**根**函数返回包含的元组**所有**成员 (或默认成员如果**所有**成员不存在) 基于当前的成员的上下文的指定维中的每个属性层次结构中。 成员在元组中的顺序基于维度中定义属性层次结构的顺序。  

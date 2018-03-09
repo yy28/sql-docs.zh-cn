@@ -1,5 +1,5 @@
 ---
-title: "包连接的故障排除工具 |Microsoft 文档"
+title: "包连接故障排除工具 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 223023cae5ba0ca6ac2fab8298334547875ab4d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>包连接故障排除工具
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些功能和工具，您可以利用它们对在包和包从其提取和加载数据的数据源之间的连接进行故障排除。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
     -   OLE DB 连接管理器、OLE DB 源以及 OLE DB 目标  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]连接管理器和 ADO NET 源  
+    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器和 ADO NET 源  
   
     -   执行 SQL 任务  
   
@@ -76,9 +75,8 @@ ms.lasthandoff: 08/03/2017
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另请参阅  
  [包开发的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [包执行的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

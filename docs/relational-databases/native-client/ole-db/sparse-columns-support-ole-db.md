@@ -8,20 +8,20 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e619df00ebd8c35d950de35aacc058f24205c2e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 83781fb2194f5ef94ea7a73a8c32017ceb25424a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sparse-columns-support-ole-db"></a>稀疏列支持 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |IColumnsInfo::GetColumnsInfo|新 DBCOLUMNFLAGS 标志 DBCOLUMNFLAGS_SS_ISCOLUMNSET 设置为值**column_set**中的列*dwFlags*。<br /><br /> 为设置 DBCOLUMNFLAGS_WRITE **column_set**列。|  
 |IColumsRowset::GetColumnsRowset|为设置新 DBCOLUMNFLAGS 标志值，DBCOLUMNFLAGS_SS_ISCOLUMNSET， **column_set** DBCOLUMN_FLAGS 中的列。<br /><br /> DBCOLUMN_COMPUTEMODE 设置为 DBCOMPUTEMODE_DYNAMIC 为**column_set**列。|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 返回两个新列：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 返回不是的成员的列**column_set**。<br /><br /> 已添加两个新的架构行集： DBSCHEMA_COLUMNS_EXTENDED 将返回所有列的稀疏性无论**column_set**成员身份。 DBSCHEMA_SPARSE_COLUMN_SET 返回的成员的列**column_set**。 这些新行集具有与 DBSCHEMA_COLUMNS 相同的列和限制。|  
-|Idbschemarowset:: Getschemas|Idbschemarowset:: Getschemas 可用架构行集的列表中包括 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的新行集的 Guid。|  
+|IDBSchemaRowset::GetSchemas|Idbschemarowset:: Getschemas 可用架构行集的列表中包括 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的新行集的 Guid。|  
 |ICommand::Execute|如果**选择\*从***表*是使用，它将返回不是稀疏的成员的所有列**column_set**，加上包含的所有值的 XML 列成员的稀疏的非 null 列**column_set**，如果存在。|  
 |IOpenRowset::OpenRowset|IOpenRowset::OpenRowset 返回作为 ICommand::Execute，相同的列行集**选择\***对同一个表的查询。|  
 |ITableDefinition|没有此接口为稀疏列或没有更改**column_set**列。 必须进行架构修改的应用程序必须直接执行正确的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  

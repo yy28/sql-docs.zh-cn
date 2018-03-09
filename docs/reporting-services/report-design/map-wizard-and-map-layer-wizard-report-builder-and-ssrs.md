@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d810c44d790b73cb9bd8050370487e25ea6870eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8799fa0b54d60990ee701f4fef2950cf5e0d2b86
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -255,7 +253,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **点：** 可以指定颜色、大小和标记类型规则。  
   
- 报表处理器应用您设置的规则，并自动确定要显示在图例中的项列表。 默认情况下，所有层的所有规则的结果都会显示在第一个图例中。 您可以在完成向导操作后对此进行调整。 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+ 报表处理器应用您设置的规则，并自动确定要显示在图例中的项列表。 默认情况下，所有层的所有规则的结果都会显示在第一个图例中。 您可以在完成向导操作后对此进行调整。 有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   

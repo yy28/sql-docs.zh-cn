@@ -1,5 +1,5 @@
 ---
-title: "CDC 数据流组件 |Microsoft 文档"
+title: "CDC 流组件 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 7fea154af206b964206f7e04eddde0cea6cf08f9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/14/2017
-
+ms.openlocfilehash: 96311a68d7d003889f88ed91987f1d9a2775c72f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
   用于 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 Change Data Capture 组件（由 Attunity 提供）可帮助 SSIS 开发人员处理 CDC，并降低 CDC 包的复杂性。  
@@ -47,17 +46,17 @@ ms.lasthandoff: 09/14/2017
 ## <a name="installation"></a>安装  
  本节介绍用于 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的 CDC 组件的安装过程。  
   
- SSIS CDC 组件是 Microsoft® Change Data Capture Designer 与 Service for Oracle by Attunity for 打包 Microsoft SQL Server®。 该下载内容是 SQL Server 功能包的一部分。 从 [SQL Server 2016 功能包网页](http://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。  
+ 用于 SSIS 的 CDC 组件与 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 打包在一起。 SQL Server 功能包下载内容中包含此类组件。 从 [SQL Server 2016 功能包网页](http://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。  
   
 ### <a name="version-support"></a>版本支持
 
 #### <a name="sql-server-version-support"></a>SQL Server 版本支持
 
-SSIS 的 CDC 组件支持的 Microsoft SQL Server 的所有受支持版本上。 目前，支持的 SQL Server 版本包括 SQL Server 2012 至 SQL Server 自 2017 年。
+所有支持的 Microsoft SQL Server 版本均支持用于 SSIS 的 CDC 组件。 目前，支持的 SQL Server 版本包括 SQL Server 2012 到 SQL Server 2017 的所有版本。
 
 #### <a name="operating-system-version-support"></a>操作系统版本支持
   
-SSIS 的 CDC 组件支持以下操作系统和平台上：  
+以下操作系统和平台支持用于 SSIS 的 CDC 组件：  
   
 -   Windows 8 和 8.1
 -   Windows 10  
@@ -67,8 +66,8 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
 ### <a name="running-the-installation-program"></a>运行安装程序  
  在运行安装向导前，请务必关闭 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 。 然后按照安装向导中的说明进行操作。  
   
-### <a name="restart-ssis-service"></a>重新启动 SSIS 服务 
-安装 CDC 组件之后，你必须重新启动 SSIS 服务以确保组件正常工作时 SQL 中开发包[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
+### <a name="restart-ssis-service"></a>重启 SSIS 服务 
+安装 CDC 组件后，必须重新启动 SSIS 服务，以确保在 SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中开发包时，这些组件能够正常运行。  
   
 安装这些组件后将显示一条消息。 在系统提示时单击 **“是”** 。  
   
@@ -83,9 +82,9 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
  SSIS CDC 组件设计用于处理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 功能，其中的更改表位于同一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库中。  
   
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Change Data Capture 组件入门  
- 典型的 CDC 包处理针对一组表的更改。 这种 CDC 包的基本控制流部件下图所示。 此包被称为滴送处理包。  
+ 典型的 CDC 包处理针对一组表的更改。 下图显示了此类 CDC 包的基本控制流部分。 此包被称为滴送处理包。  
   
- ![滴送处理包控制流](../../integration-services/data-flow/media/tricklefeedprocessing.gif "滴送处理包控制流")  
+ ![滴送处理包控制流](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
   
  这一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 控制流包含两个 CDC 控制任务以及一个数据流任务。 第一个任务称为“获取 CDC 处理范围”，此任务为在称为“处理更改”的数据流任务中处理的更改建立 LSN 范围。 基于上一包运行期间处理的已保存在持久存储区中的更改建立此范围。  
   
@@ -93,13 +92,13 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
   
  下图显示了 **“处理更改”** 数据流，该数据流在概念上演示了如何处理更改。  
   
- ![更改过程的数据流](../../integration-services/data-flow/media/processchangesdataflow.gif "过程会更改数据流")  
+ ![处理变化数据流](../../integration-services/data-flow/media/processchangesdataflow.gif "Process Changes Data Flow")  
   
  此图中演示了以下步骤：  
   
--   **更改针对表 X**正在读取对表 X 所做的更改 CDC 中所做的 CDC 源处理在父控制流中确定范围。  
+-   针对表 X 的更改是一种 CDC 源，用来读取在父控制流中确定的 CDC 处理范围中对表 X 所作的更改。  
   
--   **CDC 拆分器 X**用于将更改拆分为插入、 删除和更新。 在此方案中，假定 CDC 源被配置为生成净更改，以便可以并行处理不同的更改类型。  
+-   CDC 拆分器 X 用于将更改拆分为插入、删除和更新等操作。 在此情况下，假定 CDC 源被配置为生成净更改，以便并行处理不同的更改类型。  
   
 -   然后在下游进一步处理特定的更改。 在此演示中，使用多个 ODBC 目标将更改插入表，但实际情况下处理方式可能有所不同。  
   
@@ -129,7 +128,7 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
   
  下图显示了可处理前两种方案的 SSIS 包：  
   
- ![SSIS 包处理前两个方案](../../integration-services/data-flow/media/scenarioonetwo.gif "SSIS 包处理前两个方案")  
+ ![处理前两个方案的 SSIS 包](../../integration-services/data-flow/media/scenarioonetwo.gif "SSIS package handling first two scenarios")  
   
  下图显示了可处理第三种方案的 SSIS 包：  
   
@@ -139,7 +138,7 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
   
  将 CDC 处理的状态从初始加载包传递到滴送更新包以及在每个包的不同任务之间传递该状态时，需要借助特殊的 SSIS 包字符串变量。 此变量的值称为 CDC 状态，该状态反映初始加载包和滴送包所处理的各组表的 CDC 处理的当前状态。  
   
- 需要在持久性存储中维护 CDC 状态变量的值。 它启动 CDC 处理之前应阅读，因此在处理完成后应该与当前状态保存。 加载和存储 CDC 状态的任务可由 SSIS 开发人员处理，但是 CDC 控制组件可以通过在数据库表中维护 CDC 状态值来自动处理此任务。  
+ CDC 状态变量的值需在永久性存储中留存和维护。 应在启动 CDC 处理前读取该值，并在处理完成后以当前状态保存。 加载和存储 CDC 状态的任务可由 SSIS 开发人员处理，但是 CDC 控制组件可以通过在数据库表中维护 CDC 状态值来自动处理此任务。  
   
 ## <a name="security-considerations"></a>安全注意事项  
  本节列出了与在 SSIS 中使用 CDC 组件相关的一些安全注意事项。  
@@ -148,7 +147,7 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
  滴送更新包需要针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 功能的访问权限。 默认情况下向 **db_owner** 固定数据库角色的成员授予此访问权限。 由于 **db_owner** 是一个权限很高的角色，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中定义捕获实例时，建议为每个捕获实例关联一个安全访问控制角色，以便允许 SSIS CDC 包使用限制性更强的用户身份处理这些更改。  
   
 ### <a name="access-to-cdc-database-current-lsn"></a>针对 CDC 数据库当前 LSN 的访问权限  
- 用于标记更改处理始自的 LSN 的 CDC 控制任务操作必须能够找到 CDC 数据库的当前 LSN。 组件使用该过程查找 LSN **sp_replincrementlsn** master 数据库中。 必须为用于连接 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 数据库的登录名授予针对此过程的执行权限。  
+ 用于标记更改处理始自的 LSN 的 CDC 控制任务操作必须能够找到 CDC 数据库的当前 LSN。 此组件通过从 master 数据库使用 sp_replincrementlsn 来查找 LSN。 必须为用于连接 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 数据库的登录名授予针对此过程的执行权限。  
   
 ### <a name="access-to-cdc-states-table"></a>针对 CDC 状态表的访问权限  
  CDC 状态表用于自动持久化 CDC 状态，这些状态需要由用于连接 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 数据库的登录名来更新。 由于此表是 SSIS 开发人员创建的，所以要将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 系统管理员设置为有权创建 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库并执行管理和维护任务的用户。 此外，使用启用 CDC 的数据库的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 系统管理员必须了解 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 技术及其执行方式。  
@@ -156,7 +155,7 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
 ## <a name="grouping-tables-for-cdc-processing"></a>用于 CDC 处理的分组表  
  数据库项目的大小从几个表到成千上万的表不等。 设计初始加载和 CDC 包时，最好将表分组到较小的组中，以便简化管理和提高效率。 本节列出影响将表归入较小的组中的各种注意事项，表将在各组中进行初始加载，随后作为一个组来更新。  
   
- CDC 组件支持的 CDC 模式假设已经确定此分组。 每个组定义单独的 CDC 上下文，该上下文与其他组分开维护。 对于每个组中，会创建初始负载和滴送更新包。 滴送更新根据更改处理约束的速率（例如 CPU 和 IO 占用、对其他系统的影响）和所需的滞后时间定期运行。  
+ CDC 组件支持的 CDC 模式假设已经确定此分组。 每个组定义单独的 CDC 上下文，该上下文与其他组分开维护。 对于每个组，创建初始加载包和滴送更新包。 滴送更新根据更改处理约束的速率（例如 CPU 和 IO 占用、对其他系统的影响）和所需的滞后时间定期运行。  
   
  根据下列注意事项对表分组：  
   
@@ -188,11 +187,11 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
 |6-TFREDO（重新处理-滴送-更新)|这是在 TFSTART 之后执行 **GetProcessingRange** 时出现的状态。 这指示上次运行未成功完成。<br /><br /> 如果使用 _$reprocessing 列，该列设置为 1，指示该包可能在重新处理目标上已存在的行。|  
 |7-ERROR|CDC 组处于 ERROR 状态。|  
   
- 下面是 CDC 组件的状态关系图。 当出现意外状态时，就会出现 ERROR 状态。 在下图说明了预期的状态。 但是关系图不显示错误状态。  
+ 这里是 CDC 组件的状态示意图。 当出现意外状态时，就会出现 ERROR 状态。 下图对期望的状态进行了阐释。 但是该图不显示错误状态。  
   
  例如，在初始加载包的末尾，当试图将状态设置为 ILEND 时，如果该状态为 TFSTART，则 CDC 组将处于错误状态，滴送更新包不会运行（但初始加载包会运行）。  
   
- ![状态图](../../integration-services/data-flow/media/statediagram.gif "状态关系图")  
+ ![状态图](../../integration-services/data-flow/media/statediagram.gif "State Diagram")  
   
  一旦初始加载包成功运行，滴送更新包就会根据预先确定的计划反复运行，以处理针对源表的更改。 滴送更新包的每次运行都是一次 CDC 运行。  
   
@@ -202,7 +201,7 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
   
 -   [CDC 拆分器](../../integration-services/data-flow/cdc-splitter.md)  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [根据更改的类型定向 CDC 流](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
@@ -226,4 +225,3 @@ SSIS 的 CDC 组件支持以下操作系统和平台上：
  [CDC 控制任务](../../integration-services/control-flow/cdc-control-task.md)  
   
   
-

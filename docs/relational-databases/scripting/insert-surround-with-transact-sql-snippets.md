@@ -2,10 +2,14 @@
 title: "插入外侧 Transact-SQL 代码段 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,19 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23dc1addf677c549e53d69c1fa8f8c15af32c3dd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c1f1ec2e376c496e2b3dcdaf5ef032ba8c54745
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>插入外侧 Transact-SQL 代码段
-  外侧代码段是一种模板，可将其作为在 BEGIN、IF 或 WHILE 块中插入一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起点。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]外侧代码段是一种模板，可将其作为在 BEGIN、IF 或 WHILE 块中插入一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起点。  
   
 ## <a name="inserting-surround-with-snippets"></a>插入外侧代码段  
  外侧代码段可以通过以下三种方式之一实现：键盘快捷键、“编辑”菜单和上下文菜单。  

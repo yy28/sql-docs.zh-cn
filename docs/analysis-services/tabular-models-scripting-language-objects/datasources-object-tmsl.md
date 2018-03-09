@@ -2,41 +2,37 @@
 title: "数据源对象 (TMSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42da7b6895e2a125253e824e8a812f63c04e633a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datasources-object-tmsl"></a>数据源对象 (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  到数据源模型期间导入将数据添加到模型，或在传递通过 DirectQuery 模式下的查询，或者使用定义的连接。  在 DirectQuery 模式下的模型只能有一个**数据源**对象。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+到数据源模型期间导入将数据添加到模型，或在传递通过 DirectQuery 模式下的查询，或者使用定义的连接。  在 DirectQuery 模式下的模型只能有一个**数据源**对象。  
   
  除非您要创建的更换，或更改数据的源对象本身，任何在脚本 （如分区脚本） 中引用的数据源必须是现有**数据源**模型中的对象。  
   
 ## <a name="object-definition"></a>对象定义  
  所有对象都有一组通用的属性，包括名称、 类型、 说明、 一个属性集合和批注。 **数据源**对象还具有以下属性。  
   
- 类型  
+ type  
  DataSource 的类型。 目前，唯一有效的值是提供程序 (1)-标准连接字符串。  
   
  connectionString  
@@ -192,7 +188,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>另请参阅  
  [表格模型脚本语言 (TMSL) 参考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [DirectQuery 模式（SSAS 表格）](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [在 Internet 信息服务 &#40; IIS &#41; 上配置对 Analysis Services 的 HTTP 访问8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

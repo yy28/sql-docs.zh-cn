@@ -2,28 +2,32 @@
 title: "步骤 4：使用 T-SQL 创建数据功能 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 3adcfd4a53da9f0e61c7ae62d1367cff48194782
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>步骤 4：使用 T-SQL 创建数据功能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 数据浏览之后, 从这些数据中收集了一些见解，就可以转到*功能工程*。 从原始数据创建特征的此过程可能会在建模的高级分析中，一个关键步骤。
 
@@ -67,7 +71,7 @@ ms.lasthandoff: 11/09/2017
     END
     GO
     ```
-**注意：**
+**说明：**
 
 - 该函数为标量值函数，返回预定义类型的单个数据值。
 - 它将从行程接客位置和落客位置获取的纬度和经度值作为输入。 半正矢公式会将位置转换为弧度值，并使用这些值以英里计算这两个位置之间的直接距离。

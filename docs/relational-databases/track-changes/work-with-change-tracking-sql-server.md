@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - change tracking [SQL Server], ensuring consistent results
 - change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f0d5a22242be81f68c218cb5f89f36d4853641f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 359afda249ede3ddfcf05e2f1f8b973fa578dd28
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用更改跟踪 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  下面的示例说明了如何获取初始同步版本和初始数据集。  
   
-```tsql  
+```sql  
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>使用更改跟踪函数获取更改  
  若要获取表中更改的行以及有关这些更改的信息，请使用 CHANGETABLE(CHANGES…)。 例如，下面的查询获取 `SalesLT.Product` 表的更改。  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
@@ -94,7 +95,7 @@ FROM
   
  通常，客户端需要获取行的最新数据，而不仅仅是行的主键。 因此，应用程序将来自 CHANGETABLE(CHANGES …) 的结果与用户表中的数据联接在一起。 例如，下面的查询与 `SalesLT.Product` 表联接在一起以获取 `Name` 和 `ListPrice` 列的值。 请注意，本例中使用了 `OUTER JOIN`。 若要确保返回有关从用户表中删除的那些行的更改信息，则必须使用此运算符。  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, P.Name, P.ListPrice,  
     CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
@@ -109,13 +110,13 @@ ON
   
  若要获取在下次更改枚举中使用的版本，请使用 CHANGE_TRACKING_CURRENT_VERSION()，如下面的示例所示。  
   
-```tsql  
+```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
  当应用程序获取更改时，它必须同时使用 CHANGETABLE(CHANGES…) 和 CHANGE_TRACKING_CURRENT_VERSION()，如下面的示例所示。  
   
-```tsql  
+```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -142,7 +143,7 @@ ON
   
  下面的示例说明了如何验证每个表的 `last_synchronization_version` 值的有效性。  
   
-```tsql  
+```sql  
 -- Check individual table.  
 IF (@last_synchronization_version < CHANGE_TRACKING_MIN_VALID_VERSION(  
                                    OBJECT_ID('SalesLT.Product')))  
@@ -154,7 +155,7 @@ END
   
  正如下面的示例所示，可以对照数据库中的所有表检查 `last_synchronization_version` 值的有效性。  
   
-```tsql  
+```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
   SELECT COUNT(*) FROM sys.change_tracking_tables  
@@ -174,7 +175,7 @@ END
   
  在下面的示例中，如果 `CT_ThumbnailPhoto` 列未更改，则为该列返回 `NULL` 。 该列本身也可能为 `NULL` ，因为已将其更改为 `NULL` ；应用程序可以使用 `CT_ThumbNailPhoto_Changed` 列来确定是否更改了该列。  
   
-```tsql  
+```sql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
     OBJECT_ID('SalesLT.Product'),'ThumbNailPhoto', 'ColumnId')  
   
@@ -252,7 +253,7 @@ ON
   
  下面的示例说明了如何为数据库启用快照隔离。  
   
-```tsql  
+```sql  
 -- The database must be configured to enable snapshot isolation.  
 ALTER DATABASE AdventureWorksLT  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
@@ -260,7 +261,7 @@ ALTER DATABASE AdventureWorksLT
   
  快照事务是按如下方式使用的：  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
   -- Verify that version of the previous synchronization is valid.  
@@ -321,7 +322,7 @@ COMMIT TRAN
   
  下面的示例说明了如何使用 CHANGETABLE(VERSION …) 函数以最有效的方式检查冲突，而不是使用单独的查询。 在该示例中， `CHANGETABLE(VERSION …)` 确定 `SYS_CHANGE_VERSION` 所指定的行的 `@product id`。 `CHANGETABLE(CHANGES …)` 可以获取相同的信息，但效率较低。 如果该行的 `SYS_CHANGE_VERSION` 值大于 `@last_sync_version`值，则说明有冲突。 如果有冲突，则不会更新该行。 `ISNULL()` 检查是必需的，因为该行可能没有可用的更改信息。 如果在启用更改跟踪或清除更改信息后没有更新该行，则不存在任何更改信息。  
   
-```tsql  
+```sql  
 -- Assumption: @last_sync_version has been validated.  
   
 UPDATE  
@@ -341,7 +342,7 @@ WHERE
   
  以下代码可以检查更新的行数以及找出有关冲突的更多信息。  
   
-```tsql  
+```sql  
 -- If the change cannot be made, find out more information.  
 IF (@@ROWCOUNT = 0)  
 BEGIN  
@@ -367,7 +368,7 @@ END
   
  上下文信息通常用于确定更改源。 如果可以确定更改源，数据存储区在重新同步时可使用该信息来避免获取更改。  
   
-```tsql  
+```sql  
   -- Try to update the row and check for a conflict.  
   WITH CHANGE_TRACKING_CONTEXT (@source_id)  
   UPDATE  
@@ -390,7 +391,7 @@ END
 > [!IMPORTANT]  
 >  建议您使用快照隔离，并在快照事务中进行更改。  
   
-```tsql  
+```sql  
 -- Prerequisite is to ensure ALLOW_SNAPSHOT_ISOLATION is ON for the database.  
   
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  

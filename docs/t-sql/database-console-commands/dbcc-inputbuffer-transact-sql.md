@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - INPUTBUFFER
 - DBCC_INPUTBUFFER_TSQL
 - INPUTBUFFER_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - input buffers [SQL Server]
 - last statement from client
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23ac916dccb2f8d4c6511f9e672aa07834001cad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,8 +75,8 @@ DBCC INPUTBUFFER 返回包含如下列的行集。
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**事件类型**|**nvarchar (30)**|事件类型。 这可能是**RPC 事件**或**语言事件**。 输出将为**否事件**时检测到没有最后一个事件。|  
-|**参数**|**int**|0 = 文本<br /><br /> 1-  *n*  = 参数|  
+|**EventType**|**nvarchar(30)**|事件类型。 这可能是**RPC 事件**或**语言事件**。 输出将为**否事件**时检测到没有最后一个事件。|  
+|**Parameters**|**int**|0 = 文本<br /><br /> 1-  *n*  = 参数|  
 |**EventInfo**|**nvarchar(4000)**|有关**EventType**的 RPC， **EventInfo**仅包含过程名称。 有关**EventType**的语言中，显示仅事件前 4000 个字符。|  
   
 例如，当缓冲区中的最后一个事件是 DBCC INPUTBUFFER(11) 时，DBCC INPUTBUFFER 将返回以下结果集。
@@ -92,7 +94,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]
 > 从开始[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2，使用[sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)返回有关语句提交到的实例信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要以下项之一：
 -   用户必须是属于**sysadmin**固定的服务器角色。  
 -   用户必须具有 VIEW SERVER STATE 权限。  
@@ -126,6 +128,6 @@ DBCC INPUTBUFFER (52);
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[sys.dm_exec_input_buffer &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   

@@ -3,8 +3,11 @@ title: "设置作业步骤的成功流或失败流 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,16 +20,16 @@ ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e292b73ccee64aa9f573f9497a949ecc5e523e14
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: da1f795a7f31a39550e1833fcd4e51021aba4c5a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
-创建 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业时，可以指定如果在作业执行期间失败， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 应执行什么操作。 根据每个作业步骤的成功或失败确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 应执行的操作。 然后通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理使用以下过程配置作业步骤的操作流逻辑。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 创建 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业时，可以指定如果在作业执行期间失败，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 应执行的操作。 根据每个作业步骤的成功或失败确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 应执行的操作。 然后通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理使用以下过程配置作业步骤的操作流逻辑。  
   
 -   **开始之前：**  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE msdb;  

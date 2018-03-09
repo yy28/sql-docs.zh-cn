@@ -2,15 +2,13 @@
 title: "查看时序公式模型 （数据挖掘） |Microsoft 文档"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +19,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a84f9cefb4793cd03536b228c52db3452d7937b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7dc0ec5be4d6a0189e844ddfa24595b0cadade24
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>查看时序模型的公式（数据挖掘）
-  如果已使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘创建时序模型，查看模型的回归公式的最简单方法是使用 **Microsoft 时序查看器** 中的 [挖掘图例](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)，该图例将以可读格式显示所有常量。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+如果已使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘创建时序模型，查看模型的回归公式的最简单方法是使用 **Microsoft 时序查看器** 中的 [挖掘图例](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)，该图例将以可读格式显示所有常量。  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>查看时序模型的 ARTXP 回归公式  
   

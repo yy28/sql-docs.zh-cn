@@ -2,31 +2,34 @@
 title: "分发数据库 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.configuredistributionwizard.distributiondatabase.f1
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c8fa43976b147dc95ab3d6975813d40be43fbd0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e409092572a5bc495eafe2da77c91eb99faea029
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distribution-database"></a>分发数据库
-  分发数据库用于存储所有类型复制的元数据和历史记录数据，并存储事务复制的事务。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]分发数据库存储事务性复制的所有复制和事务类型的元数据和历史记录数据。  
   
  在许多情况下，单个分发数据库就能够满足需要。 不过，如果多个发布服务器使用单个分发服务器，则应考虑为每个发布服务器都创建一个分发数据库。 这样可确保通过每个分发数据库的数据流是不同的。 使用配置分发向导可以为分发服务器指定一个分发数据库。 如果需要，可以在 **“分发服务器属性”** 对话框中指定其他分发数据库。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **分发数据库名称**  
  为分发数据库输入名称。 分发数据库的默认名称为“distribution”。 如果您指定名称，名称最多可包含 128 个字符，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中必须是唯一的，并且必须符合标识符的规则。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/09/2017
 >  通过将分发数据库日志放置在与分发数据库不同的磁盘驱动器上，可以减少事务写入操作所需的时间并提高复制的性能。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置分发](../../relational-databases/replication/configure-distribution.md)   
+ [“配置分发”](../../relational-databases/replication/configure-distribution.md)   
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
   

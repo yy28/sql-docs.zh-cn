@@ -8,28 +8,30 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PolyBase, installation
+helpviewer_keywords:
+- PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05ac029c0e4ef807a5d6586882f7655753d1bfbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-installation"></a>PolyBase 安装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   若要安装 SQL Server 试用版，请转到 [SQL Server 评估](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)。 
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 -   64 位 SQL Server 评估版  
   
@@ -51,7 +53,8 @@ ms.lasthandoff: 11/17/2017
 开始在 SQL Server 实例上安装 PolyBase 之前，最好规划一下你是需要单节点安装还是需要 PolyBase 横向扩展组。 对于 PolyBase 横向扩展组，你将需要确保： 
 - 所有计算机都位于同一域中。
 - 你在安装期间使用相同的服务帐户和密码。
-- 你的 SQL Server 实例彼此之间可以通过网络进行通信。
+- SQL Server 实例彼此之间可以通过网络进行通信。
+- SQL Server 实例的 SQL Server 版本相同。
 
 无论是以独立模式还是以横向扩展组模式安装 PolyBase，在安装后都无法更改。 若要更改此设置，你必须卸载并重新安装该功能。
 
@@ -83,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="installing"></a> 使用命令提示符进行安装  
  使用此表中的值来创建安装脚本。 **SQL Server PolyBase 引擎** 和 **SQL Server PolyBase 数据移动服务** 这两项服务必须在同一帐户下运行。 在 PolyBase 横向扩展组中，所有节点上的 PolyBase 服务必须在同一个域帐户下运行。  
   
-|SQL Server 组件 (SQL Server component)|参数和值|说明|  
+|SQL Server 组件 (SQL Server component)|参数和值|Description|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 安装程序控件|**必需**<br /><br /> /FEATURES=PolyBase|选择 PolyBase 功能。|  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCACCOUNT|指定引擎服务的帐户。 默认为 **NT Authority\NETWORK SERVICE**。|  
@@ -116,7 +119,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ### <a name="how-to-confirm-installation"></a>如何确认安装  
  运行以下命令。 如果已安装 PolyBase，则返回 1；否则返回 0。  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   

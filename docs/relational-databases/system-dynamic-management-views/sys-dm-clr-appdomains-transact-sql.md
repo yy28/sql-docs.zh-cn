@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_appdomains
 - dm_clr_appdomains_TSQL
 - sys.dm_clr_appdomains_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_appdomains dynamic management dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16f729bc78a42984716d2f30fc2bf30badc1ade5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +44,16 @@ ms.lasthandoff: 11/27/2017
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary （8)**|地址**AppDomain**。 在同一个始终加载用户所拥有的对象的所有托管的数据库**AppDomain**。 你可以使用此列来查找此当前加载的所有程序集**AppDomain**中**sys.dm_clr_loaded_assemblies**。|  
+|**appdomain_address**|**varbinary(8)**|地址**AppDomain**。 在同一个始终加载用户所拥有的对象的所有托管的数据库**AppDomain**。 你可以使用此列来查找此当前加载的所有程序集**AppDomain**中**sys.dm_clr_loaded_assemblies**。|  
 |**appdomain_id**|**int**|ID **AppDomain**。 每个**AppDomain**具有唯一的 id。|  
 |**appdomain_name**|**varchar(386)**|名称**AppDomain**分配[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**creation_time**|**datetime**|时间**AppDomain**已创建。 因为**AppDomains**缓存和重用为了提高性能， **creation_time**不一定是执行的代码时的时间。|  
 |**db_id**|**int**|在此数据库 ID **AppDomain**已创建。 存储在两个不同的数据库中的代码不能共享一个**AppDomain**。|  
 |**user_id**|**int**|在此可以执行其对象的用户 ID **AppDomain**。|  
-|**状态**|**nvarchar （128)**|当前状态的描述符**AppDomain**。 AppDomain 可以处于从创建到删除的不同状态中。 有关详细信息，请参阅本主题的“备注”部分。|  
+|**状态**|**nvarchar(128)**|当前状态的描述符**AppDomain**。 AppDomain 可以处于从创建到删除的不同状态中。 有关详细信息，请参阅本主题的“备注”部分。|  
 |**strong_refcount**|**int**|强引用数目**AppDomain**。 这反映当前正在执行使用此选项的批处理数**AppDomain**。 请注意，将创建此视图执行**强引用计数**; 即使当前正在执行，没有代码**strong_refcount**将具有值为 1。|  
 |**weak_refcount**|**int**|弱引用数目**AppDomain**。 这表示多少对象内**AppDomain**进行缓存。 当您执行托管的数据库对象，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将其内部缓存**AppDomain**以备将来再使用。 这提高了性能。|  
-|**成本**|**int**|成本的**AppDomain**。 成本较高、 更有可能此**AppDomain**是卸载内存压力下。 成本通常依赖于需要多少内存来重新创建此**AppDomain**。|  
+|**cost**|**int**|成本的**AppDomain**。 成本较高、 更有可能此**AppDomain**是卸载内存压力下。 成本通常依赖于需要多少内存来重新创建此**AppDomain**。|  
 |**值**|**int**|值**AppDomain**。 值越低，更有可能此**AppDomain**是卸载内存压力下。 值通常依赖于多少连接或批处理正在使用此**AppDomain**。|  
 |**total_processor_time_ms**|**bigint**|自进程启动后在当前应用程序域中执行的过程中所有线程所用的处理器总时间（毫秒）。 这相当于**System.AppDomain.MonitoringTotalProcessorTime**。|  
 |**total_allocated_memory_kb**|**bigint**|应用程序域自创建以来进行的所有内存分配的总大小 (KB)（不减去已收集的内存大小）。 这相当于**System.AppDomain.MonitoringTotalAllocatedMemorySize**。|  
@@ -79,13 +82,13 @@ ms.lasthandoff: 11/27/2017
   
 |State|Description|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已请求 CLR 卸载**AppDomain**，通常是由于更改包含托管的数据库对象的程序集或将其删除。|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已请求 CLR 卸载**AppDomain**，通常是由于更改包含托管的数据库对象的程序集或将其删除。|  
 |E_APPDOMAIN_UNLOADED|已卸载 CLR **AppDomain**。 这通常是由于升级过程的结果**ThreadAbort**， **OutOfMemory**，或在用户代码中未经处理的异常。|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain**已卸载的 CLR 和设置被破坏[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |E_APPDOMAIN_DESTROY|**AppDomain**处于销毁通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |E_APPDOMAIN_ZOMBIE|**AppDomain**已通过销毁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 但是，并非所有对引用**AppDomain**已清除了。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -114,7 +117,7 @@ where appdomain_id = 15);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_clr_loaded_assemblies &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [公共语言运行时相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

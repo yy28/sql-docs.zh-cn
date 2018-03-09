@@ -2,32 +2,32 @@
 title: "DISCOVER_MEMORYGRANT 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 68bbbbcebe6c3f47f8b3868ba7a67b79f75503cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 行集
-  返回由当前正在服务器上运行的作业占用的内部内存配额授予的列表。 若要查明作业是否在服务器上运行，请使用 `Select * from $System.Discover_Jobs`。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+返回由当前正在服务器上运行的作业占用的内部内存配额授予的列表。 若要查明作业是否在服务器上运行，请使用 `Select * from $System.Discover_Jobs`。  
   
  **适用于：**表格模型、 多维模型  
   
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/17/2017
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**MEMORY_ID**|**是 DBTYPE_I8**||用于标识内存配额授予的数字。 在单个 DISCOVER_MEMORYGRANT 请求的上下文中是唯一的。|  
+|**MEMORY_ID**|**DBTYPE_I8**||用于标识内存配额授予的数字。 在单个 DISCOVER_MEMORYGRANT 请求的上下文中是唯一的。|  
 |**SPID**|**DBTYPE_I4**|必需|SPID，可通过运行 `Select * from $System.Discover_Sessions` 获得它。|  
-|**CreationTime**|**是 DBTYPE_I8 DBTYPE_DBTIMESTAMP**||授予配额的时间。|  
+|**CreationTime**|**DBTYPE_I8 DBTYPE_DBTIMESTAMP**||授予配额的时间。|  
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||上次修改配额请求的时间。|  
 |**MemoryUsed**|**DBTYPE_I4**||在与配额建立关联时使用的内存量。|  
 |**MemoryGranted**|**DBTYPE_I4**||授予给获取内存配额的作业以供其使用的内存量。|  
-|**阻止**|**DBTYPE_BOOL**||一个布尔值，该值指示作业的阻止状态。 如果为 True，则表示将阻止作业以等待其他作业释放足够的配额来授予其配额请求。 如果为 False，则表示作业已收到其配额且可执行。|  
+|**Blocked**|**DBTYPE_BOOL**||一个布尔值，该值指示作业的阻止状态。 如果为 True，则表示将阻止作业以等待其他作业释放足够的配额来授予其配额请求。 如果为 False，则表示作业已收到其配额且可执行。|  
   
  未对此架构行集进行排序。  
   

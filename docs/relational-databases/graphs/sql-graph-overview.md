@@ -8,28 +8,29 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale
-manager: jhubbard
+ms.author: shkale;barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab17b98a23afa3d209716145d7de39a6955cdf6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77a50d48ee5c6d5baa8b05b327146e74b5eff815
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>图形处理与 SQL Server 和 Azure SQL 数据库
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供对多对多关系建模图数据库功能。 关系图关系都已集成到[!INCLUDE[tsql-md](../../includes/tsql-md.md)]和接收的使用好处[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为基础数据库管理系统。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供对多对多关系建模图数据库功能。 关系图关系都已集成到[!INCLUDE[tsql-md](../../includes/tsql-md.md)]和接收的使用好处[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为基础数据库管理系统。
 
 
 ## <a name="what-is-a-graph-database"></a>什么是图形数据库  
@@ -46,12 +47,12 @@ ms.lasthandoff: 11/17/2017
 -   你的应用程序具有复杂的多对多关系;当应用程序升级后，将添加新关系。
 -   你需要分析互连的数据和关系。
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>关系图中引入的功能[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>关系图中引入的功能 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 我们正在启动将关系图扩展添加到 SQL Server，以简化存储和查询关系图数据。 以下功能已在第一个版本中引入。 
 
 
 ### <a name="create-graph-objects"></a>创建图形对象
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]扩展将允许用户创建节点或边缘表。 节点和边缘可以具有与它们关联的属性。 作为表存储节点和边缘，支持对节点或边缘表关系的表支持的所有操作。 以下是示例：  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 扩展将允许用户创建节点或边缘表。 节点和边缘可以具有与它们关联的属性。 作为表存储节点和边缘，支持对节点或边缘表关系的表支持的所有操作。 以下是示例：  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

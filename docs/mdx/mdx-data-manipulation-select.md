@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: SELECT
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 2a8b90fca4585047873c919c5aa90d1d6d3b8f17
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 数据操作的选择
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -122,7 +122,7 @@ FROM
  *MemberProperty_Name*  
  表示成员属性的有效字符串。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  `<SELECT slicer axis clause>` 表达式必须包含维度和层次结构中的成员，而不是包含指定的 `<SELECT query axis clause>` 表达式中所引用的成员。  
   
  如果指定的 `<SELECT query axis clause>` 表达式和 `<SELECT slicer axis clause>` 值中省略了多维数据集中的某个属性，则该属性的默认成员将隐式添加到切片器轴中。  
@@ -390,7 +390,7 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**Clothing**|**Components**|  
+||**All Products**|**Accessories**|**Bikes**|服装|**Components**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -442,7 +442,7 @@ WHERE
 |||||  
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
-|All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
+|所有分销商|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
   

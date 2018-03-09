@@ -2,15 +2,13 @@
 title: "DISCOVER_DATASOURCES 行集 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_DATASOURCES
@@ -23,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 行集
-  返回服务器或 Web 服务上可用的 XML for Analysis (XMLA) 访问接口数据源的列表。 发布的数据源从应用程序 Web 服务器的 URL 返回。 客户端可以连接到该列表中的一个数据源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]返回 XML for Analysis (XMLA) 提供程序数据源上的服务器或 Web 服务可用的列表。 发布的数据源从应用程序 Web 服务器的 URL 返回。 客户端可以连接到该列表中的一个数据源。  
   
  如果调用[发现](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法替换**DISCOVER_DATASOURCES**中的枚举值[RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)元素，**发现**方法返回**DISCOVER_DATASOURCES**行集。  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||发布服务器输入的数据源的说明。<br /><br /> 可能会返回**NULL**。|  
 |**URL**|**DBTYPE_WSTR**|是|显示为该数据源调用 XML for Analysis (XMLA) 方法的位置的唯一路径。<br /><br /> 可能会返回**NULL**。|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||包含连接到数据源所需的任何附加信息的字符串。<br /><br /> 可能会返回**NULL**。|  
-|**ProviderName**|**DBTYPE_WSTR**|是|数据源的访问接口的名称。<br /><br /> 示例：`"MSOLAP"`<br /><br /> 可能会返回**NULL**。|  
+|**ProviderName**|**DBTYPE_WSTR**|是|数据源的访问接口的名称。<br /><br /> 例如：`"MSOLAP"`<br /><br /> 可能会返回**NULL**。|  
 |**提供程序类型**|**DBTYPE_WSTR**|是|访问接口支持的数据的类型。 此数组可包含一个或多个以下类型：<br /><br /> **MDP**： 多维数据提供程序。<br /><br /> **TDP**： 表格数据提供程序。<br /><br /> **DMP**： 数据挖掘提供程序 （实现 OLE DB for Data Mining 规范）。|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|是|数据源使用的安全模式类型的规范。 可以是下列值之一：<br /><br /> **未经身份验证**： 没有用户 ID 或密码已发送。<br /><br /> **身份验证**： 必须连接到数据源所需的信息中包含用户 ID 和密码。<br /><br /> **集成**： 数据源使用的基础安全来确定授权，例如所提供的集成安全性[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Internet 信息服务 (IIS)。|  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
  下表提供了用于标识此行集的 GUID 和字符串值。  
   
-|参数|值|  
+|参数|ReplTest1|  
 |--------------|-----------|  
 |GUID|06c03d41-f66d-49f3-b1b8-987f7af4cf18|  
 |ADOMDNAME|DataSources|  

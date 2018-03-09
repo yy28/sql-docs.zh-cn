@@ -2,15 +2,13 @@
 title: "时序模型查询示例 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,19 +22,20 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd37cd530af23d04f98866eebcaaad824a66f150
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="time-series-model-query-examples"></a>时序模型查询示例
-  在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 例如，时序模型的内容查询可能提供有关检测到的周期性结构的其他详细信息，而预测查询可能给出接下来 5-10 个时间段的预测。 您还可以使用查询来检索有关模型的元数据。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 例如，时序模型的内容查询可能提供有关检测到的周期性结构的其他详细信息，而预测查询可能给出接下来 5-10 个时间段的预测。 您还可以使用查询来检索有关模型的元数据。  
   
  本节介绍如何为基于 Microsoft 时序算法的模型创建这两种查询。  
   
@@ -112,11 +111,11 @@ WHERE NODE_NAME = 'TA00000007'
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- 有关如何解释此信息的详细信息，请参阅 [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 有关如何解释此信息的详细信息，请参阅[时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
   
 ###  <a name="bkmk_Query3"></a> 示例查询 3：检索 ARTXP 模型的公式  
- 对于 ARTxp 模型，将在树的每个级别存储不同的信息。 有关 ARTxp 模型的结构，以及如何解释公式中的信息的详细信息，请参阅 [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 对于 ARTxp 模型，将在树的每个级别存储不同的信息。 有关 ARTxp 模型的结构，以及如何解释公式中的信息的详细信息，请参阅[时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
  下面的 DMX 语句检索部分 ARTxp 树的信息，表示 R250 型号在 Europe 的销售数量。  
   
@@ -133,7 +132,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- 有关如何解释此信息的详细信息，请参阅 [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 有关如何解释此信息的详细信息，请参阅[时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>创建针对时序模型的预测  
@@ -223,11 +222,11 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |预测函数|用法|  
-|[Lag (DMX)](../../dmx/lag-dmx.md)|返回当前事例的日期与定型集的最近日期之间的若干时间段。<br /><br /> 该函数的一个典型用途是标识最近的定型事例，以使您可以检索有关这些事例的详细数据。|  
-|[PredictNodeId (DMX)](../../dmx/predictnodeid-dmx.md)|返回指定的可预测列的节点 ID。<br /><br /> 该函数的一个典型用途是标识生成特定预测值的节点，以使您可以查看与该节点关联的事例，或者检索公式和其他详细信息。|  
-|[PredictStdev (DMX)](../../dmx/predictstdev-dmx.md)|返回指定的可预测列中预测的标准偏差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
-|[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|返回指定可预测列的预测方差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
-|[PredictTimeSeries (DMX)](../../dmx/predicttimeseries-dmx.md)|返回时序的历史预测值或未来预测值。<br /><br /> 还可以通过使用常规预测函数 [Predict (DMX)](../../dmx/predict-dmx.md) 来查询时序模型。|  
+|[Lag &#40; DMX &#41;](../../dmx/lag-dmx.md)|返回当前事例的日期与定型集的最近日期之间的若干时间段。<br /><br /> 该函数的一个典型用途是标识最近的定型事例，以使您可以检索有关这些事例的详细数据。|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|返回指定的可预测列的节点 ID。<br /><br /> 该函数的一个典型用途是标识生成特定预测值的节点，以使您可以查看与该节点关联的事例，或者检索公式和其他详细信息。|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|返回指定的可预测列中预测的标准偏差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|返回指定可预测列的预测方差。<br /><br /> 该函数取代时序模型不支持的 INCLUDE_STATISTICS 参数。|  
+|[PredictTimeSeries &#40; DMX &#41;](../../dmx/predicttimeseries-dmx.md)|返回时序的历史预测值或未来预测值。<br /><br /> 还可以通过使用常规预测函数 [Predict (DMX)](../../dmx/predict-dmx.md) 来查询时序模型。|  
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](../../dmx/general-prediction-functions-dmx.md)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -236,6 +235,6 @@ AND NODE_TYPE = 15
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 时序算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型 &#40; 的挖掘模型内容Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

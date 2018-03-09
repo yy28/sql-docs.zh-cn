@@ -2,9 +2,12 @@
 title: "数据库属性（“常规”页）| Microsoft Docs"
 ms.custom: 
 ms.date: 10/27/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,20 +16,20 @@ f1_keywords:
 - sql13.swb.databaseproperties.segments.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae88366757fb76d7b0c2a18b99de949b86a0e27a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b5239b20134c58cf828b9c35a3bd3802e4b15bf9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-general-page"></a>数据库属性（“常规”页）
-  使用此页可以查看或修改所选数据库的属性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此页可以查看或修改所选数据库的属性。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **数据库上次备份日期**  
  显示数据库上次备份的日期。  
   
@@ -36,16 +39,16 @@ ms.lasthandoff: 11/09/2017
  **名称**  
  显示数据库的名称。  
   
- **状态**  
+ **“状态”**  
  显示数据库状态。 有关详细信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
   
- **所有者**  
+ **“所有者”**  
  显示数据库所有者的名称。 可以在 **“文件”** 页上更改所有者。  
   
  **创建日期**  
  显示数据库的创建日期和时间。  
   
- **Size**  
+ **大小**  
  显示数据库的大小 (MB)。  
   
  **可用空间**  

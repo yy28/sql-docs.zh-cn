@@ -3,8 +3,11 @@ title: "为多个列指定多个搜索条件 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d97db8a777c9ba47f4b986033ee583dfb89a3abc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 44f66f8b551962c6737db71f8e058514cc69c5b1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>为多个列指定多个搜索条件 (Visual Database Tools)
-通过在搜索条件中包括多个数据列，可以扩大或缩小查询范围。 例如，您可能希望：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 通过在搜索条件中包括多个数据列，可以扩大或缩小查询范围。 例如，您可能希望：  
   
 -   搜索在公司工作五年以上或出任某些职位的雇员。  
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>为两个不同的列指定 AND 条件  
   
-1.  在[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
+1.  在 [“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中，添加要搜索的列。  
   
 2.  在要搜索的第一个数据列的“筛选器”列中，指定第一个条件。  
   

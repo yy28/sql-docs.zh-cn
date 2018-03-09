@@ -1,19 +1,18 @@
 ---
 title: "设计聚合 (XMLA) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da7a6639d68c6b97725fea152d4d7f8be1224273
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>设计聚合 (XMLA)
   聚合设计与特定度量值组的分区相关联，以确保分区在存储聚合时使用相同的结构。 为分区使用相同的存储结构可让你轻松地定义可以使用更高版本合并的分区[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="specifying-queries"></a>指定的查询  
  DesignAggregations 命令通过包括一个或多个支持基于使用情况的优化命令**查询**中的元素[查询](../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)属性。 **查询**属性可以包含一个或多个[查询](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)元素。 如果**查询**属性不包含任何**查询**中指定的元素，聚合设计**对象**元素使用包含的默认结构聚合常规集。 聚合此常规组旨在满足中指定的条件**优化**和**存储**属性**DesignAggregations**命令。  
   
- 每个 **Query** 元素表示一个目标查询，设计进程使用这些查询定义以最常用的查询为目标的聚合。 你可以指定您自己的目标查询，也可以使用存储的实例的信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在要检索信息是最常用的查询日志中使用查询。 基于使用情况的优化向导使用查询日志来检索基于时间、 使用情况或指定的用户，在发送时的目标查询**DesignAggregations**命令。 有关详细信息，请参阅[基于使用情况的优化向导的 F1 帮助](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)。  
+ 每个 **Query** 元素表示一个目标查询，设计进程使用这些查询定义以最常用的查询为目标的聚合。 您可以指定自己的目标查询，也可以使用查询日志中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例存储的信息来检索最常用查询的相关信息。 基于使用情况的优化向导使用查询日志来检索基于时间、 使用情况或指定的用户，在发送时的目标查询**DesignAggregations**命令。 有关详细信息，请参阅[基于使用情况的优化向导的 F1 帮助](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)。  
   
  以迭代方式设计聚合，如果你只需在第一个传递目标查询**DesignAggregations**命令因为[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例将存储这些目标查询，并在后续期间使用这些查询**DesignAggregations**命令。 在迭代进程的第一个 **DesignAggregations** 命令中传递目标查询后，任何在 **DesignAggregations** 属性中包含目标查询的后续 **Queries** 命令都会生成错误。  
   
@@ -122,6 +121,6 @@ ms.lasthandoff: 11/17/2017
  你可以使用包含在返回每一个之后的行集的设计统计信息**DesignAggregations**迭代中的命令和批处理设计。 在迭代设计过程中，您可以使用设计统计信息来确定并显示进度。 以批处理方式设计聚合时，您可以使用设计统计信息来确定命令所创建的聚合数。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [使用 Analysis Services 中的 XMLA 进行开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

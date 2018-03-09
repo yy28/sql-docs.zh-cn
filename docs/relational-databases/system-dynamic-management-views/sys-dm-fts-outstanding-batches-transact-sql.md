@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - sys.dm_fts_outstanding_batches dynamic management view
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab9d21dfa1c3aefb34f59dde7d4af5141e483682
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 06490fd099957c3636f05dcfe4e8f0ba9deab8d3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,9 +45,9 @@ ms.lasthandoff: 11/17/2017
 |catalog_id|**int**|全文目录的 ID|  
 |table_id|**int**|包含此全文索引的表 ID 的 ID|  
 |batch_id|**int**|批次 ID|  
-|memory_address|**varbinary （8)**|批次对象内存地址|  
-|crawl_memory_address|**varbinary （8)**|爬网对象内存地址（父对象）|  
-|memregion_memory_address|**varbinary （8)**|筛选器后台程序宿主 (fdhost.exe) 的出站共享内存的内存区域内存地址|  
+|memory_address|**varbinary(8)**|批次对象内存地址|  
+|crawl_memory_address|**varbinary(8)**|爬网对象内存地址（父对象）|  
+|memregion_memory_address|**varbinary(8)**|筛选器后台程序宿主 (fdhost.exe) 的出站共享内存的内存区域内存地址|  
 |hr_batch|**int**|批次的最新错误代码|  
 |is_retry_batch|**bit**|指示是否为重试批次：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
 |retry_hints|**int**|批次所需重试的类型：<br /><br /> 0 = 不重试<br /><br /> 1 = 多线程重试<br /><br /> 2 = 单线程重试<br /><br /> 3 = 单线程和多线程重试<br /><br /> 5 = 多线程最终重试<br /><br /> 6 = 单线程最终重试<br /><br /> 7 = 单线程和多线程最终重试|  
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |doc_failed|**bigint**|批次中失败的文档的数目|  
 |batch_timestamp|**timestamp**|创建批次时获取的时间戳值|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
  

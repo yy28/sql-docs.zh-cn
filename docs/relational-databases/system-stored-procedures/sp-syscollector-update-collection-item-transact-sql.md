@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_item
 - sp_syscollector_update_collection_item_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2adc56a28af1216b1eaca3b7bcdd48365812dc2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 680a82e86a1d958a81c9b5c238ac4015307ce51c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +53,18 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  标识收集项的唯一标识符。 *collection_item_id*是**int**默认值为 NULL。 *collection_item_id*必须具有一个值，如果*名称*为 NULL。  
   
- [ @name =] '*名称*  
+ [ @name = ] '*name*'  
  收集项的名称。 *名称*是**sysname**默认值为 NULL。 *名称*必须具有一个值，如果*collection_item_id*为 NULL。  
   
- [ @new_name =] '*new_name*  
+ [ @new_name = ] '*new_name*'  
  收集项的新名称。 *new_name*是**sysname**，并且如果使用，不能为空字符串。  
   
  *new_name*必须是唯一的。 有关当前收集项名称的列表，请查询 syscollector_collection_items 系统视图。  
   
- [ @frequency =]*频率*  
+ [ @frequency = ] *frequency*  
  此收集项收集数据的频率（以秒为单位）。 *频率*是**int**，默认值为 5，可以指定的最小值。  
   
  [ @parameters =] '*参数*  
@@ -86,7 +88,7 @@ ON ci.collection_set_id = cs.collection_set_id
 WHERE collection_item_id = <collection_item_id>;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 dc_admin 或 dc_operator（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。 尽管 dc_operator 可以运行此存储过程，但是此角色的成员在其属性更改权限方面受到限制。 下列属性只能由 dc_admin 更改：  
   
 -   @new_name  
@@ -145,7 +147,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

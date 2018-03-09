@@ -2,9 +2,12 @@
 title: "使用分层方法填充层次结构表 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,17 +16,18 @@ f1_keywords: HierarchyID
 helpviewer_keywords: HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d102ce8d0d2e33829961ff95834be20128828624
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24e6481c9f9122786d46cf7b813fdbdddac2ef74
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-2---populating-a-hierarchical-table-using-hierarchical-methods"></a>第 2-2 课 - 使用分层方法填充层次结构表
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 有 8 名在市场营销部门工作的雇员。 雇员的层次结构如下所示：  
   
 **David**（ **EmployeeID** 为 6）是市场营销经理。 **David**下辖三名市场营销专员，他们分别是：  

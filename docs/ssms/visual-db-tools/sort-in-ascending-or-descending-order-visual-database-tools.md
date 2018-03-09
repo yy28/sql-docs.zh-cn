@@ -3,8 +3,11 @@ title: "按升序或降序进行排序 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dda95a29640a5f026db2f9f57d73b84b7a1bd561
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 55bf29f06db61577240aedfcb0dcab74ae30f8fd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>按升序或降序进行排序 (Visual Database Tools)
-通过在 **ORDER BY** 子句中使用 **ASC** 或 **DESC** 关键字，可以按结果集中的一列或多列以升序或降序对查询结果进行排序。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 通过在 ORDER BY 子句中使用 ASC 或 DESC 关键字，可以按结果集中的一列或多列以升序或降序对查询结果进行排序。  
   
 > [!NOTE]  
 > 排序顺序在一定程度上由列的排序规则顺序来决定。 可以在 [“排序规则”对话框](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)中更改排序规则顺序。  

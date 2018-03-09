@@ -2,18 +2,17 @@
 title: "维度 (Analysis Services-多维数据) 简介 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - dimensions [Analysis Services], about dimensions
 - storage [Analysis Services], dimensions
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - storing data [Analysis Services], dimensions
 - storage [Analysis Services]
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bb0acf4e658ca1184cfb7a019454b89e72221e46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e6b39e6f8e91217dbc2de28575571e3043c7358
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimensions---introduction"></a>维度-简介
-  所有 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度是基于从表或视图中的数据源视图的列的属性的组合。 独立于多维数据集存在的维度既可以在多个多维数据集中使用，也可以在一个多维数据集中多次使用，还可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间链接。 独立于多维数据集存在的维度称为数据库维度，多维数据集中的数据库维度实例称为多维数据集维度。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+所有 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度是基于从表或视图中的数据源视图的列的属性的组合。 独立于多维数据集存在的维度既可以在多个多维数据集中使用，也可以在一个多维数据集中多次使用，还可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间链接。 独立于多维数据集存在的维度称为数据库维度，多维数据集中的数据库维度实例称为多维数据集维度。  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>基于星型架构设计的维度  
  维度的结构主要由一个或多个基础维度表的结构决定。 最简单的结构称为星型架构，在该架构中，每个维度均基于一个通过主键-外键关系直接链接到事实数据表的维度表。  
@@ -61,12 +61,12 @@ ms.lasthandoff: 11/17/2017
 ## <a name="processing-a-dimension"></a>处理维度  
  创建维度之后，必须先处理维度，然后才能查看该维度中属性和层次结构的成员。 更改了维度的结构，或者更新了该维度基础表中的信息之后，必须再次对维度进行处理，然后才能查看更改。 在发生结构更改后对维度进行处理时，还必须处理任何包括该维度的多维数据集，否则无法查看多维数据集。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  维度的所有从属对象（包括层次结构、级别以及成员）都使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的角色进行保护。 维度安全性可应用于数据库中使用该维度的所有多维数据集，或者只应用于特定的多维数据集。 有关维度安全性的详细信息，请参阅[授予对维度 &#40; 的权限Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md).  
   
 ## <a name="see-also"></a>另请参阅  
  [维度存储](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [维度翻译](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
- [启用写操作的维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
+ [写入的维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

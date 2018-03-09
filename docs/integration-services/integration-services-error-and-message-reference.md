@@ -1,11 +1,11 @@
 ---
-title: "Integration Services 错误和消息引用 |Microsoft 文档"
+title: "Integration Services 错误和消息引用 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 44
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 16f1793a182cf762882a90889ec8576c9fc6d99e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
@@ -619,12 +618,12 @@ ms.lasthandoff: 09/26/2017
 |0xC00291EF|-1073573393|DTS_E_SQLTASKCONN_ERR_NO_DISCONNECTED_RS|没有用于 Transact-SQL 语句的断开连接的记录集。|  
 |0xC00291F0|-1073573392|DTS_E_SQLTASKCONN_ERR_UNSUPPORTED_TYPE|不支持的类型。|  
 |0xC00291F1|-1073573391|DTS_E_SQLTASKCONN_ERR_UNKNOWN_TYPE|未知类型。|  
-|0xC00291F2|-1073573390|DTS_E_SQLTASKCONN_ERR_PARAM_DATA_TYPE|不支持参数绑定上的数据类型\\"%s\\"。|  
+|0xC00291F2|-1073573390|DTS_E_SQLTASKCONN_ERR_PARAM_DATA_TYPE|参数绑定 \\"%s\\" 不支持的数据类型。|  
 |0xC00291F3|-1073573389|DTS_E_SQLTASKCONN_ERR_PARAM_NAME_MIX|参数名称不能由序号和已命名类型混合组成。|  
-|0xC00291F4|-1073573388|DTS_E_SQLTASKCONN_ERR_PARAM_DIR|参数绑定的参数方向\\"%s\\"无效。|  
-|0xC00291F5|-1073573387|DTS_E_SQLTASKCONN_ERR_RESULT_DATA_TYPE|结果集绑定中的数据类型\\"%s\\"不支持。|  
+|0xC00291F4|-1073573388|DTS_E_SQLTASKCONN_ERR_PARAM_DIR|参数绑定 \\"%s\\" 的参数方向无效。|  
+|0xC00291F5|-1073573387|DTS_E_SQLTASKCONN_ERR_RESULT_DATA_TYPE|不支持结果集绑定 \\"%s\\" 的数据类型。|  
 |0xC00291F6|-1073573386|DTS_E_SQLTASKCONN_ERR_RESULT_COL_INDEX|结果列索引 %d 无效。|  
-|0xC00291F7|-1073573385|DTS_E_SQLTASKCONN_ERR_UNKNOWN_RESULT_COL|找不到列\\"%s\\"在结果集中。|  
+|0xC00291F7|-1073573385|DTS_E_SQLTASKCONN_ERR_UNKNOWN_RESULT_COL|在该结果集中找不到列 \\"%s\\"。|  
 |0xC00291F9|-1073573383|DTS_E_SQLTASKCONN_ERR_NOROWSET|没有与执行此查询相关联的结果行集。|  
 |0xC00291FA|-1073573382|DTS_E_SQLTASKCONN_ERR_ODBC_DISCONNECTED|无法通过 ODBC 连接获得已断开连接的记录集。|  
 |0xC00291FB|-1073573381|DTS_E_SQLTASKCONN_ERR_RESULT_SET_DATA_TYPE|不支持该结果集内列 %hd 中的数据类型。|  
@@ -1071,7 +1070,7 @@ ms.lasthandoff: 09/26/2017
 |0xC00470B8|-1073450824|DTS_E_EXPREVALILLEGALESCAPEINSTRINGLITERAL|字符串文字“%1”包含非法的转义序列“\\%2!c!”。 表达式计算器中的字符串文字不支持此转义序列。 如果字符串中需要反斜杠，请使用双反斜杠符号 "\\\\"。|  
 |0xC00470B9|-1073450823|DTS_E_NOOUTPUTCOLUMNS|“%1”不包含输出列。 异步输出必须包含输出列。|  
 |0xC00470BA|-1073450822|DTS_E_LOBDATATYPENOTSUPPORTED|“%1”的长对象数据类型为 DT_TEXT、DT_NTEXT 或 DT_IMAGE，不支持该对象数据类型。|  
-|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|为输出 ID %1!d! 提供了多个错误输出配置， 首先提供了 %2!d! 和 %3!d!，然后又提供了 %4!d! 和 %5!d!。|  
+|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|为输出 ID %1!d!  提供了多个错误输出配置， 首先提供了 %2!d! 和 %3!d!，然后又提供了 %4!d! 和 %5!d!。|  
 |0xC00470BC|-1073450820|DTS_E_FAILEDDURINGOLEDBDATATYPECONVERSIONCHECK|OLE DB 访问接口在为“%1”进行数据类型转换验证时失败。|  
 |0xC00470BD|-1073450819|DTS_E_BUFFERISEOR|此缓冲区表示行集的结尾，其行计数无法更改。  尝试对一个带有行集结尾标志的缓冲区调用 AddRow 或 RemoveRow。|  
 |0xC00470BE|-1073450818|DTS_E_EXPREVALUNSUPPORTEDTYPE|表达式中不支持数据类型“%1”。 不支持指定的类型或该类型无效。|  
@@ -1082,7 +1081,7 @@ ms.lasthandoff: 09/26/2017
 |0xC00470C3|-1073450813|DTS_E_EXPREVALCONDITIONALOPERATIONFAILED|条件运算“%1”失败，错误代码为 0x%2!8.8X!。 发生了内部错误或内存不足错误。|  
 |0xC00470C4|-1073450812|DTS_E_EXPREVALCASTFAILED|将表达式“%1”从数据类型“%2”转换为数据类型“%3”失败，错误代码为 0x%4!8.8X!。|  
 |0xC00470C5|-1073450811|DTS_E_EXPREVALFUNCTIONCOMPUTEFAILED|对函数“%1”求值失败，错误代码为 0x%2!8.8X!。|  
-|0xC00470C6|-1073450810|DTS_E_EXPREVALFUNCTIONCONVERTPARAMTOMEMBERFAILED|函数 NULL 中数据类型为“%2”的参数 %1!d! 转换为静态值。|  
+|0xC00470C6|-1073450810|DTS_E_EXPREVALFUNCTIONCONVERTPARAMTOMEMBERFAILED|函数 NULL 中数据类型为“%2”的参数 %1!d!  转换为静态值。|  
 |0xC00470C7|-1073450809|DTS_E_REDIRECTROWUNAVAILABLEWITHFASTLOADANDZEROMAXINSERTCOMMITSIZE|当启用了快速加载选项而最大插入提交大小设置为零时，不能将“%1”的错误行处理设置为重定向行。|  
 |0xC00470CE|-1073450802|DTS_E_EXPREVALBINARYOPERATORCODEPAGEMISMATCH|对于“%2”类型的二元运算符“%1”的操作数，它们的代码页必须匹配。 左操作数的代码页和右操作数的代码页当前不匹配。 对于指定类型的指定二元运算符，代码页必须相同。|  
 |0xC00470CF|-1073450801|DTS_E_EXPREVALVARIABLECOMPUTEFAILED|检索变量“%1”的值失败，错误代码为 0x%2!8.8X!。|  
@@ -1264,7 +1263,7 @@ ms.lasthandoff: 09/26/2017
 |0xC0202017|-1071636457|DTS_E_INCORRECTMINIMUMNUMBEROFOUTPUTS|输出个数不正确。 至少应该有 %1!d! 个输出。|  
 |0xC0202018|-1071636456|DTS_E_INCORRECTEXACTNUMBEROFOUTPUTS|输出个数不正确。 应该正好有 %1!d! 个输出。|  
 |0xC0202019|-1071636455|DTS_E_STRINGCONVERSIONTOOLONG|字符串太长，无法转换。|  
-|0xC020201A|-1071636454|DTS_E_INCORRECTEXACTNUMBEROFINPUTS|输入个数不正确。 应该正好有 %1!d! 个输入。|  
+|0xC020201A|-1071636454|DTS_E_INCORRECTEXACTNUMBEROFINPUTS|输入个数不正确。 应该正好有 %1!d!  个输入。|  
 |0xC020201B|-1071636453|DTS_E_CANNOTHAVEZEROINPUTCOLUMNS|%1 的输入列数不能为零。|  
 |0xC020201C|-1071636452|DTS_E_CANNOTHAVEINPUTS|此组件有 %1!d! 个输入。  此组件不允许有输入。|  
 |0xC020201D|-1071636451|DTS_E_PROCESSINPUTCALLEDWITHINVALIDINPUTID|调用 ProcessInput 所使用的输入 ID %1!d! 无效。|  
@@ -2021,7 +2020,7 @@ ms.lasthandoff: 09/26/2017
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|在联接或复制中没有使用 %1。 请从输入列列表中删除未使用的列。|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|由于排序传入缓冲区时堆栈溢出，排序失败。  请减小该数据流任务的 DefaultBufferMaxRows 属性。|  
 |0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|请考虑将连接字符串中的 PROVIDER 更改为 %1，或者访问 http://www.microsoft.com/downloads 以查找并安装 %2 的支持。|  
-|||DTS_E_INITTASKOBJECTFAILED|由于错误 0x%3!8.8X!“%4!s!”，无法初始化类型为“%2!s!”的 XML 创建 任务对象。|  
+|||DTS_E_INITTASKOBJECTFAILED|由于错误 0x%3!8.8X!“%4!s!”，无法初始化类型为“%2!s!”的 任务“%1!s!”的 任务对象。|  
 |||DTS_E_GETCATMANAGERFAILED|由于错误 0x%1!8.8X!“%2!s!”，无法创建 COM 组件类别管理器 。|  
 |||DTS_E_COMPONENTINITFAILED|由于错误 0x%2!8.8X!“%3!s!”，组件 %1!s! 无法初始化 “%3!s!”。|  
   
@@ -2244,7 +2243,7 @@ ms.lasthandoff: 09/26/2017
 |0x4004300B|1074016267|DTS_I_ROWS_WRITTEN|“%1”已写入 %2!ld! 行。|  
 |0x4004300C|1074016268|DTS_I_EXECUTIONPHASE_EXECUTE|正开始执行阶段。|  
 |0x4004800C|1074036748|DTS_I_CANTRELIEVEPRESSURE|缓冲区管理器检测到系统的虚拟内存不足，但无法换出任何缓冲区。 考虑了 %1!d! 个缓冲区，但锁定了 %2!d! 个缓冲区。 或者是因未安装足够的内存或其他进程正在使用内存，以致于没有足够的内存可供该管道使用；或者锁定了过多的缓冲区。|  
-|0x4004800D|1074036749|DTS_I_CANTALLOCATEMEMORYPRESSURE|缓冲区管理器调用 %3!d! 个字节的内存分配量失败，但无法换出任何缓冲区来缓解内存不足的压力。 考虑了 %1!d! 个缓冲区，但锁定了 %2!d! 个缓冲区。 或者是因未安装足够的内存或其他进程正在使用内存，以致于没有足够的内存可供该管道使用；或者锁定了过多的缓冲区。|  
+|0x4004800D|1074036749|DTS_I_CANTALLOCATEMEMORYPRESSURE|缓冲区管理器调用 %3!d! 个字节的内存分配量失败，但无法换出任何缓冲区来缓解内存不足的压力。 考虑了 %1!d!  个缓冲区，但锁定了 %2!d! 个缓冲区。 或者是因未安装足够的内存或其他进程正在使用内存，以致于没有足够的内存可供该管道使用；或者锁定了过多的缓冲区。|  
 |0x4004800E|1074036750|DTS_I_ALLOCATEDDURINGMEMORYPRESSURE|即使已检测到内存不足并且多次尝试交换缓冲区已失败，缓冲区管理器仍分配了 %1!d! 个字节。|  
 |0x400490F4|1074041076|DTS_I_TXLOOKUP_CACHE_PROGRESS|%1 已缓存了 %2!d! 行。|  
 |0x400490F5|1074041077|DTS_I_TXLOOKUP_CACHE_FINAL|%1 共缓存了 %2!d! 行。|  
@@ -2275,7 +2274,7 @@ ms.lasthandoff: 09/26/2017
   
 |十六进制代码|十进制代码|符号名称|Description|  
 |----------------------|------------------|-------------------|-----------------|  
-|0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|函数不正确。|  
+|0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|函数不正确。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|系统找不到指定的文件。|  
 |0x100|256|DTS_MSG_SERVER_STARTING|正在启动 Microsoft SSIS 服务。<br /><br /> 服务器版本 %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS 服务已启动。<br /><br /> 服务器版本 %1|  
@@ -2345,4 +2344,3 @@ ms.lasthandoff: 09/26/2017
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 不允许插入外部元数据列。|  
   
   
-

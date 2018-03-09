@@ -2,26 +2,31 @@
 title: "选择数据库引擎升级方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/19/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: server-general
+ms.suite: sql
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 418cb013fddfa58783babbee63e00524f411a39c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   当为了最小化停机时间和风险而计划将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 从 SQL Server 的先前版本进行升级时，有几种方法可以考虑。 你可以执行就地升级、迁移到新安装或者执行滚动升级。 下面的图表将帮助你在这些方法中进行选择。 图表中的每个方法也会在下面进行讨论。 为了有助于你了解图表中的决策点，也请查阅 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
  ![数据库引擎升级方法决策树](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "数据库引擎升级方法决策树")  
@@ -33,10 +38,10 @@ ms.lasthandoff: 11/09/2017
 -   是否拥有 Azure 帐户？  然后转到**[此处](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)**启动装有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 开发人员版的虚拟机。  
   
 > [!NOTE]  
->  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些主题已超出本主题的范围，但这里有一些链接：
+>  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些文章已超出本文的范围，但这里有一些链接：
 >   - [Azure 虚拟机上 SQL Server 的概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL 数据库](https://azure.microsoft.com/en-us/services/sql-database/) 
->   - [在 Azure 中选择 SQL Server 选项(https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
+>   - [选择 Azure 中的 SQL Server 选项](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
   
 ##  <a name="UpgradeInPlace"></a> 就地升级  
  使用此方法时，SQL Server 安装程序会通过将现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位替换为新的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 位来升级现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装，然后升级每个系统和用户数据库。  就地升级方法是最简单的，需要一定的停机时间，如果需要进行回退的话，则会花费更长时间进行回退操作，且并非所有方案都支持这一方法。 有关支持和不支持就地升级方法的方案详细信息，请参阅 [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。  
@@ -103,7 +108,7 @@ ms.lasthandoff: 11/09/2017
      ![为 SAN 存储使用分离和附加的新安装升级方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "为 SAN 存储使用分离和附加的新安装升级方法")  
   
 ##  <a name="RollingUpgrade"></a> 滚动升级  
- 在涉及多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（这些实例必须以特定顺序进行升级以最大化运行时间、最小化风险和保留功能）的 SQL Server 解决方案环境中，需要执行滚动升级。 滚动升级实质上是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例按特定顺序进行的升级，此方法在每个现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上执行就地升级，或者执行新安装升级作为升级项目的一部分来简化硬件和/或操作系统的升级。 在很多方案中你都需要使用滚动升级方法。 以下主题中记录了这些方案：  
+ 在涉及多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（这些实例必须以特定顺序进行升级以最大化运行时间、最小化风险和保留功能）的 SQL Server 解决方案环境中，需要执行滚动升级。 滚动升级实质上是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例按特定顺序进行的升级，此方法在每个现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上执行就地升级，或者执行新安装升级作为升级项目的一部分来简化硬件和/或操作系统的升级。 在很多方案中你都需要使用滚动升级方法。 以下文章中记录了这些方案：  
   
 -   AlwaysOn 可用性组：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级AlwaysOn 可用性组副本实例](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。  
   

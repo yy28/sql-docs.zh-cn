@@ -2,9 +2,12 @@
 title: "使用在 SQL Server Profiler SHOWPLAN 结果来分析查询 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,18 +17,18 @@ helpviewer_keywords:
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
-  可以将导致 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在跟踪中收集和显示查询计划信息的 Showplan 事件类添加到跟踪定义。 也可能从跟踪中收集的其他事件中提取显示计划事件，并将这些显示计划事件保存在单独的 XML 文件中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]你可以将 Showplan 事件类添加到跟踪定义导致[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]收集和显示在跟踪中的查询计划信息。 也可能从跟踪中收集的其他事件中提取显示计划事件，并将这些显示计划事件保存在单独的 XML 文件中。  
   
  可以用下列一种方法从跟踪中提取显示计划事件：  
   
@@ -51,6 +54,6 @@ ms.lasthandoff: 11/09/2017
 |**Showplan XML Statistics Profile**|显示查询计划，列出 XML 格式的完整运行时详细信息。 例如，此事件类捕获通过已执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的每个运算符的行数。 有关详细信息，请参阅 [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Performance 事件类别](../../relational-databases/event-classes/performance-event-category.md)  
+ [“性能”事件类别](../../relational-databases/event-classes/performance-event-category.md)  
   
   

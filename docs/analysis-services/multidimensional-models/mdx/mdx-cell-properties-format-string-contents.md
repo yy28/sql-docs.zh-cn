@@ -2,16 +2,13 @@
 title: "FORMAT_STRING 内容 (MDX) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 单元格属性-FORMAT_STRING 内容
-  **FORMAT_STRING** 单元属性格式化 **VALUE** 单元属性以生成 **FORMATTED_VALUE** 单元属性的值。 **FORMAT_STRING** 单元属性可以处理字符串和数字原始值，它对该值应用格式表达式以返回 **FORMATTED_VALUE** 单元属性的格式化值。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+**FORMAT_STRING** 单元属性格式化 **VALUE** 单元属性以生成 **FORMATTED_VALUE** 单元属性的值。 **FORMAT_STRING** 单元属性可以处理字符串和数字原始值，它对该值应用格式表达式以返回 **FORMATTED_VALUE** 单元属性的格式化值。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
   
 ## <a name="string-values"></a>字符串值  
  字符串的格式表达式可以是一部分，也可以是由分号 (;) 分隔开的两部分。  
@@ -161,6 +159,6 @@ ms.lasthandoff: 11/17/2017
  [LANGUAGE 和 FORMAT_STRING 的 FORMATTED_VALUE 上](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [使用单元属性 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [创建和使用属性值 &#40;MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

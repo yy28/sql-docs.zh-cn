@@ -2,10 +2,14 @@
 title: "插入 Transact-SQL 代码段 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,19 @@ helpviewer_keywords:
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd2463b84505c7dbbd617e4a700725147e01c336
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0086861b57793457f8a8d2bd735f808b1587759e
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="insert-transact-sql-snippets"></a>插入 Transact-SQL 代码段
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码段是一个模板，您可将其作为在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中编写新 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 语句的起点。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 代码片段是一个模板，可将其作为在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中编写新 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起点。  
   
 ## <a name="inserting-snippets"></a>插入代码段  
  可以使用 **“插入代码段”** 菜单打开可供选择的代码段的分类列表。  

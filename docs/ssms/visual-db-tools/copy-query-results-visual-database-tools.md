@@ -3,8 +3,11 @@ title: "复制查询结果 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a256975fbeed9461b13cd579382c3a0dbbd4d5ab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 02f030c6336cb90de2d5adf040f9ee170e24187e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="copy-query-results-visual-database-tools"></a>复制查询结果 (Visual Database Tools)
-可以从“结果”窗格中以制表符分隔文本的形式复制结果集。 可以复制整个结果集或任意数量的连续或非连续行或单元。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以从“结果”窗格中以制表符分隔文本的形式复制结果集。 可以复制整个结果集或任意数量的连续或非连续行或单元。  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>从结果窗格中复制结果集文本  
   

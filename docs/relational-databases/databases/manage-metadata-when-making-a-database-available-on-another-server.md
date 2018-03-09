@@ -2,10 +2,14 @@
 title: "使数据库在其他服务器上可用时管理元数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,19 +37,20 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 40cf09270cb121e7d88b2828aeb6bbc680839bf5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
-  本主题与下列情况有关：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题与下列情况有关：  
   
 -   配置 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性组的可用性副本。  
   
@@ -132,7 +137,7 @@ ms.lasthandoff: 11/09/2017
   
  若要对服务器实例上的数据库主密钥启用自动解密，请使用服务主密钥对此密钥的副本进行加密。 此加密副本存储在此数据库以及 **master**中。 通常，每当主密钥更改时，便会在不进行提示的情况下更新存储在 **master** 中的副本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初尝试使用实例的服务主密钥解密数据库主密钥。 如果解密失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。 必须使用 OPEN MASTER KEY 语句和密码打开未使用服务主密钥进行加密的主密钥。  
   
- 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**。 建议您通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
+ 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD ='password'。 建议您通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
  有关如何启用镜像数据库主秘钥自动加密的详细信息，请参阅[设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
@@ -209,13 +214,13 @@ ms.lasthandoff: 11/09/2017
   
 -   作业使用的登录名  
   
-     若要创建或执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，首先必须将作业所需的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到目标服务器实例。 有关详细信息，请参阅 [配置帐户以创建和管理 SQL Server 代理作业](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)。  
+     若要创建或执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，首先必须将作业所需的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到目标服务器实例。 有关详细信息，请参阅[配置帐户以创建和管理 SQL Server 代理作业](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务启动帐户  
   
      服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 代理服务的上下文会影响作业及其运行环境的设置。 帐户必须有权访问作业所需的资源（如网络共享）。 有关如何选择和修改服务启动帐户的信息，请参阅 [选择 SQL Server 代理服务帐户](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7)。  
   
-     为了正常操作，必须对服务启动帐户进行配置，使其具有正确的域、文件系统和注册表权限。 此外，作业可能还需要必须针对服务帐户配置的共享网络资源。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+     为了正常操作，必须对服务启动帐户进行配置，使其具有正确的域、文件系统和注册表权限。 此外，作业可能还需要必须针对服务帐户配置的共享网络资源。 有关详细信息，请参阅[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务与特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例关联，具有自己的注册表配置单元，并且其作业通常与此注册表配置单元中的一个或多个设置具有依赖关系。 若要按预期方式运行，作业需要这些注册表设置。 如果使用脚本在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务中重新创建一个作业，则此服务的注册表中可能没有用于该作业的正确设置。 为使重新创建的作业在目标服务器实例上正常运行，原始和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务应具有相同的注册表设置。  
   
@@ -266,7 +271,7 @@ ms.lasthandoff: 11/09/2017
 > **注意：**有关如何为镜像数据库设置登录名的信息，请参阅[数据库镜像或 AlwaysOn 可用性组设置登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
-##  <a name="permissions"></a> 权限  
+##  <a name="permissions"></a> Permissions  
  当数据库在其他服务器实例上可用时，下列类型的权限可能受到影响。  
   
 -   对系统对象的 GRANT、REVOKE 或 DENY 权限  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,31 +17,33 @@ f1_keywords:
 - dbo.sysoperators
 - dbo.sysoperators_TSQL
 - sysoperators_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysoperators system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysoperators system table
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0b48cdf057e17d0c043f2716071868b9188874d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4196ed656febfa2ea8f3815bb1819e2426280a7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员包含一行。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|操作员 ID。|  
 |**名称**|**sysname**|运算符名称。|  
-|**启用**|**tinyint**|警报通知的状态 (Boolean)。 如果**1**，发生警报时，此运算符可以接收通知。|  
-|**电子邮件地址**|**nvarchar(100)**|该操作员的电子邮件地址。|  
+|**enabled**|**tinyint**|警报通知的状态 (Boolean)。 如果**1**，发生警报时，此运算符可以接收通知。|  
+|**email_address**|**nvarchar(100)**|该操作员的电子邮件地址。|  
 |**last_email_date**|**int**|该操作员上次接收电子邮件警报通知的日期。|  
 |**last_email_time**|**int**|该操作员上次接收电子邮件警报通知的时间。|  
 |**pager_address**|**nvarchar(100)**|该操作员的寻呼地址。|  

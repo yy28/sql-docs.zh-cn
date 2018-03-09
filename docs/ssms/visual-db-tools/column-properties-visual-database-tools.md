@@ -3,8 +3,11 @@ title: "列属性 (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2927394b094a21e5e854f28974387e61fb31c0f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3605540ac694a2597e607428d5928d42f42ce14b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
-有两种列属性集：可在表设计器的“列属性”选项卡中看到的完整集（仅适用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库）以及可使用服务器资源管理器在“属性”窗口中看到的子集。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 有两种列属性集：可在表设计器的“列属性”选项卡中看到的完整集（仅适用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库）以及可使用服务器资源管理器在“属性”窗口中看到的子集。  
   
 > [!NOTE]  
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 **名称**  
 显示列的名称。  
   
-**数据库**  
+**“数据库”**  
 显示所选列的数据源的名称。 （仅适用于 OLE DB。）  
   
 **杂项类别**  

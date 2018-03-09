@@ -3,8 +3,9 @@ title: "记录集对象 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: Recordset
-helpviewer_keywords: Recordset object [ADO]
+f1_keywords:
+- Recordset
+helpviewer_keywords:
+- Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02d767f733ed8cb3767d49cf092ff67d1e37ef54
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e28a7413bc510865e1553e9a548ac1f00d46b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-object-ado"></a>记录集对象 (ADO)
 表示整个组记录从基表或执行命令的结果。 在任何时候，**记录集**对象是指仅为当前记录集内的单个记录。  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  你可以使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， **MoveLast**， **MoveNext**，和**MovePrevious**方法;[移动](../../../ado/reference/ado-api/move-method-ado.md)方法;与[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)， [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)，和[筛选器](../../../ado/reference/ado-api/filter-property.md)属性重新定位假定该提供程序支持相关的当前记录功能。 只进**记录集**对象仅支持[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。 当你使用**移动**方法访问每个记录 (或枚举**记录集**)，你可以使用**BOF**和**EOF**属性设置为确定是否您已移动到开头或末尾以外**记录集**。  
   
- 在使用的任何功能之前**记录集**对象，必须调用**支持**上要验证的功能是支持或不可用的对象的方法。 你必须未使用的功能时**支持**方法返回 false。 例如，你可以使用**MovePrevious**方法才`Recordset.Supports(adMovePrevious)`返回**True**。 否则，将收到错误，因为**记录集**对象可能已关闭，功能呈现的实例上不可用。 如果不支持你感兴趣的功能，则**支持**也将返回 false。 在这种情况下，应避免调用对应的属性或方法**Recrodset**对象。  
+ 在使用的任何功能之前**记录集**对象，必须调用**支持**上要验证的功能是支持或不可用的对象的方法。 你必须未使用的功能时**支持**方法返回 false。 例如，你可以使用**MovePrevious**方法才`Recordset.Supports(adMovePrevious)`返回**True**。 否则，将收到错误，因为**记录集**对象可能已关闭，功能呈现的实例上不可用。 如果不支持你感兴趣的功能，则**支持**也将返回 false。 在这种情况下，应避免调用对应的属性或方法**记录集**对象。  
   
  **记录集**对象可以支持两种类型的更新： 立即和批处理。 在即时更新中，对数据的所有更改都写入立即到基础数据源一旦调用[更新](../../../ado/reference/ado-api/update-method.md)方法。 你还可以通过以下方式传递值的数组作为参数使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)和**更新**方法并同时更新记录中的多个字段。  
   

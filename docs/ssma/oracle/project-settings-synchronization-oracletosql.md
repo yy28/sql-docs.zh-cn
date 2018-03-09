@@ -1,10 +1,13 @@
 ---
 title: "项目 Settings(Synchronization) (OracleToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 81a3c4860c3916753435e2b5c608628650bae255
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 030b6346a174d83234216e9c779b01026abe7b07
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>项目 Settings(Synchronization) (OracleToSQL)
 同步页**项目设置**对话框中包含自定义如何 SSMA 加载和刷新到数据库对象，如表和存储的过程，设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: AGGREGATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6e0905531658202c86ef5deac9e20d4db36fd9d6
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,14 +45,14 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定了一组空元组或一个空集，则此函数返回一个空值。  
   
  下表描述了如何**聚合**函数的行为与不同的聚合函数。  
   
 |聚合运算符|结果|  
 |--------------------------|------------|  
-|Sum|返回对集求得的值之和。|  
+|SUM|返回对集求得的值之和。|  
 |Count|返回对集求得的值数。|  
 |Max|返回对集求得的最大值。|  
 |Min|返回对集求得的最小值。|  

@@ -2,22 +2,26 @@
 title: "本机评分 |Microsoft 文档"
 ms.custom: 
 ms.date: 09/19/2017
-ms.prod: sql-server-2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="native-scoring"></a>本机评分
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本主题介绍 SQL Server 2017 对以近实时的机器学习模型提供评分的功能。
 
@@ -74,7 +78,7 @@ _评分_过程分为两步。 首先，你指定一个预先训练的模型，�
 + 部署你的 ML 脚本：[使用 Python 模型](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
 + 部署你的 ML 脚本：[使用 R 模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
 支持的平台是，如下所示：
 

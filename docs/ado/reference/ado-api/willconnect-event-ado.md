@@ -3,8 +3,9 @@ title: "WillConnect 事件 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillConnect
 - Connection::WillConnect
-helpviewer_keywords: WillConnect event [ADO]
+helpviewer_keywords:
+- WillConnect event [ADO]
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7113fadf60c58478173287f331822798df9aeb63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f80b08a53784a215d58d7f36697207f4d8c3c942
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 **WillConnect**连接开始之前，将调用事件。  
@@ -44,13 +46,13 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *ConnectionString*  
  A**字符串**包含挂起的连接的连接信息。  
   
- *用户 Id*  
+ *UserID*  
  A**字符串**包含挂起的连接的用户名。  
   
  *密码*  
  A**字符串**包含密码的挂起的连接。  
   
- *选项*  
+ *Options*  
  A**长**值，该值指示提供程序应如何评估*ConnectionString*。 唯一的选项是**adAsyncOpen**。  
   
  *adStatus*  

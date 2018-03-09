@@ -1,5 +1,5 @@
 ---
-title: "sys.sp_rda_set_query_mode (Transact SQL) |Microsoft 文档"
+title: sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,30 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_set_query_mode
 - sys.sp_rda_set_query_mode_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_set_query_mode stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a98d67b6d6cec581cdfcff31f7f9c0fd692b2520
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 75040d59b21772d4089fce38074ff22895937e48
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (TRANSACT-SQL)
+# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   指定针对当前已启用延伸的数据库和其表的查询返回本地和远程数据 （默认值） 或仅限本地数据。  
@@ -59,7 +62,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 权限。  
   
 ## <a name="remarks"></a>注释  
@@ -78,7 +81,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
      当你运行[sys.sp_rda_reauthorize_db &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新连接到远程 Azure 数据库，此操作会自动重置的查询模式 LOCAL_AND_REMOTE，到它是 Stretch Database 的默认行为。 也就是说，查询返回结果从本地和远程数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.sp_rda_deauthorize_db &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

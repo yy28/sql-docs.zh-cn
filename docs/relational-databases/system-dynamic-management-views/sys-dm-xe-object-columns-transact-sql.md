@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_xe_object_columns (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_xe_object_columns (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_xe_object_columns_TSQL
 - dm_xe_object_columns_TSQL
 - dm_xe_object_columns
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b34bdaa5cafac9ba4df73a0b784fa39ac471be5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cc39214e7902da325e228630fcfdbb780a49c8d2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  事件对象可为只读数据和读写数据公开固定架构。  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|列的名称。 名称是在对象中是唯一的。 不可为 null。|  
 |column_id|**int**|列的标识符。 column_id 内是唯一的对象与 column_type 一起使用时。 不可为 null。|  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |capabilities_desc|**nvarchar(256)**|此对象列的功能的说明。 此值可以为下列值之一：<br /><br /> Mandatory。 将父对象绑定到一个事件会话时必须设置该值。<br /><br /> NULL|  
 |description|**nvarchar(256)**|此对象列的说明。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  

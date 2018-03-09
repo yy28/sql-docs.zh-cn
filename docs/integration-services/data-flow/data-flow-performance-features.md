@@ -1,5 +1,5 @@
 ---
-title: "数据流性能功能 |Microsoft 文档"
+title: "数据流性能特点 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,17 +26,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 508d0f2774033dee83ba600036ab09efd39eaa58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
@@ -106,7 +105,7 @@ ms.lasthandoff: 08/03/2017
  无论采用何种数据流组件，为了改善性能您应该遵循下面两个通用指导原则：优化查询和避免不必要的字符串。  
   
 #### <a name="optimize-queries"></a>优化查询  
- 大量数据流组件都将在从源中提取数据时，或在查询操作中创建引用表时使用查询。 默认查询使用 SELECT * FROM \<tableName > 语法。 这种类型的查询返回源表中的所有列。 在设计时使所有列可用，这意味着可以选择任意列作为查找列、传递列或源列。 但是，在选择了要使用的列后，您应该修改查询使其只包括那些所选择的列。 删除多余的列可以使包中的数据流更高效，因为列越少则创建的行越小。 因为行越小，可以置入一个缓冲区的行就越多，对数据集中所有行进行处理的工作量也就越少。  
+ 大量数据流组件都将在从源中提取数据时，或在查询操作中创建引用表时使用查询。 默认查询使用 SELECT * FROM \<表名> 语法。 这种类型的查询返回源表中的所有列。 在设计时使所有列可用，这意味着可以选择任意列作为查找列、传递列或源列。 但是，在选择了要使用的列后，您应该修改查询使其只包括那些所选择的列。 删除多余的列可以使包中的数据流更高效，因为列越少则创建的行越小。 因为行越小，可以置入一个缓冲区的行就越多，对数据集中所有行进行处理的工作量也就越少。  
   
  您可以键入查询或使用查询生成器来构造查询。  
   
@@ -167,13 +166,13 @@ ms.lasthandoff: 08/03/2017
  您可能会发现将数据保存到目标时所花的时间比预期的要长。 为了确定速度缓慢是否是由于目标处理数据的能力不足造成的，可以暂时将目标替换为行计数转换。 如果吞吐量显著提高，很可能是加载数据的目标导致速度减缓。  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>查看“进度”选项卡上的信息  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器提供了关于控制流和数据流的信息，以运行包时[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 **“进度”** 选项卡按执行顺序列出任务和容器，而且还包括每个任务和容器及包自身的开始时间和结束时间、警告以及错误消息。 它还按执行顺序列出数据流组件并包括进度信息（显示为完成百分比）和处理的行数。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中运行包时控制流和数据流的信息。 **“进度”** 选项卡按执行顺序列出任务和容器，而且还包括每个任务和容器及包自身的开始时间和结束时间、警告以及错误消息。 它还按执行顺序列出数据流组件并包括进度信息（显示为完成百分比）和处理的行数。  
   
  若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。 禁用进度报告有助于在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行复杂包时改进性能。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
--   [合并和合并联接转换对数据进行排序](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [为合并转换和合并联接转换排序数据](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>相关内容  
  **文章和博客文章**  
@@ -210,7 +209,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [包开发的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [包执行的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85bb9f9c5e389c80f3316b6a62dea8e82ac25d77
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ab59a2912f51882954420a81514b0fe2089f9a8f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**file_in_group**|**sysname**|文件组中文件的逻辑名称。|  
 |**fileid**|**int**|数字文件标识符。|  
 |**文件名**|**nchar(260)**|文件的物理名称，包括目录路径。|  
-|**大小**|**nvarchar(15)**|文件大小 (KB)。|  
+|size|**nvarchar(15)**|文件大小 (KB)。|  
 |**最大大小**|**nvarchar(15)**|文件的最大大小。<br /><br /> 这是文件可增长到的最大大小。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新的空间时给文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -76,7 +76,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ### <a name="a-returning-all-filegroups-in-a-database"></a>A. 返回数据库中的所有文件组  
  下面的示例返回有关 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中文件组的信息。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup;  
@@ -86,7 +86,7 @@ GO
 ### <a name="b-returning-all-files-in-a-filegroup"></a>B. 返回文件组中的所有文件  
  下面的示例返回有关 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库的 `PRIMARY` 文件组中所有文件的信息。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup 'PRIMARY';  

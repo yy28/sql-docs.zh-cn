@@ -2,15 +2,13 @@
 title: "AllMemberTranslations 元素 (ASSL) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AllMemberTranslations Element
@@ -25,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63eb22e9012da8043a57956bada680f0c30dfbf7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba8c3348e99f89a7d4668113636418deccbae6c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="allmembertranslations-element-assl"></a>AllMemberTranslations 元素 (ASSL)
-  包含的集合[转换](../../../analysis-services/scripting/objects/translation-element-assl.md)的所有成员的标题元素[层次结构](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)元素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含的集合[转换](../../../analysis-services/scripting/objects/translation-element-assl.md)的所有成员的标题元素[层次结构](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)元素。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|说明|  
+|特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|无（集合）|  
 |默认值|无（集合）|  
@@ -63,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |父元素|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
 |子元素|[AllMemberTranslation](../../../analysis-services/scripting/objects/allmembertranslation-element-assl.md)|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  对父级的对应的元素**AllMemberTranslations**在分析管理对象 (AMO) 对象模型并<xref:Microsoft.AnalysisServices.Hierarchy>。  
   
 ## <a name="see-also"></a>另请参阅  

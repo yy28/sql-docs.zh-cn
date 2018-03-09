@@ -1,5 +1,5 @@
 ---
-title: "管理 Oracle CDC 服务 |Microsoft 文档"
+title: "管理 Oracle CDC 服务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,19 +15,18 @@ ms.topic: article
 f1_keywords:
 - createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f54659eeb98bd72edf2addbb0d68df8519d2eb0b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="manage-an-oracle-cdc-service"></a>管理 Oracle CDC 服务
+# <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   您可以使用 CDC 服务配置控制台管理特定的 CDC 服务。  
   
  **选择要使用的 CDC 服务**  
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
      也可以右键单击要使用的 CDC 服务，然后选择所需操作。 请参阅 [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
   
- **或**  
+ **OR**  
   
 1.  从 CDC 服务配置控制台的左侧窗格中选择 **“本地 CDC 服务”** 。  
   
@@ -69,4 +68,3 @@ ms.lasthandoff: 08/03/2017
  [如何管理本地 CDC 服务](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   
-

@@ -2,28 +2,32 @@
 title: "步骤 5： 训练和保存使用 T-SQL 的 Python 模型 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: python-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 11fa031229d8bc08a9091c3fa6f85e81468d7379
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: a2f0ffafb466030802b87dc96f905e9c875dd548
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>步骤 5： 训练和保存 Python 模型使用 T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 使用本教程，本文摘自[SQL 开发人员的数据库中 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
@@ -124,12 +128,12 @@ ms.lasthandoff: 11/09/2017
 
     处理的数据和拟合模型可能需要几分钟。 消息将传送到 Python 的**stdout**流将显示在**消息**窗口[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如：
 
-    *来自外部脚本的 STDOUT 消息：*
-  *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *STDOUT message(s) from external script:*
+  *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. 打开表*nyc\_taxi_models*。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -189,12 +193,12 @@ ms.lasthandoff: 11/09/2017
 
     处理的数据和拟合模型可能需要一些时间。 消息将传送到 Python 的**stdout**流将显示在**消息**窗口[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如：
 
-    *来自外部脚本的 STDOUT 消息：*
-  *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *STDOUT message(s) from external script:*
+  *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. 打开表 nyc_taxi_models。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
 
-    *rx_model* *0x8003637265766F7363616c...*
+    *rx_model* *0x8003637265766F7363616c....*
 
 在下一步的步骤中，你可以使用训练的模型创建预测。
 

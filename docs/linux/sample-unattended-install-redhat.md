@@ -2,36 +2,36 @@
 title: "Red Hat Enterprise Linux 上的 SQL Server 的无人参与的安装 |Microsoft 文档"
 description: "SQL Server 脚本示例-Red Hat Enterprise Linux 上的无人参与安装"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f8b30f6fcef4a0091871a5a1c4639143671197cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 67f9d71c2a5bd1f57e270c07028f6e8c0ac036a1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>示例： 无人参与的 SQL Server 安装脚本以 Red Hat Enterprise Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 此示例 Bash 脚本安装 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 而无需交互式输入。 它提供的安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 或者，你可以安装全文搜索，并创建一个管理用户。
 
 > [!TIP]
-> 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[Red Hat 的快速入门教程](quickstart-install-connect-red-hat.md)。 有关安装程序的其他信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
+> 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[Red Hat 的快速入门](quickstart-install-connect-red-hat.md)。 有关安装程序的其他信息，请参阅[在 Linux 上的 SQL Server 安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
-- 你需要至少 3.25 GB 的内存来运行在 Linux 上的 SQL Server。
+- 你需要至少 2 GB 的内存来运行在 Linux 上的 SQL Server。
 - 文件系统必须是**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
 - 其他系统要求，请参阅[在 Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 保存到文件的示例脚本，然后要自定义它，可替换该脚本中的变量值。 你可以设置的任何脚本变量作为环境变量，只要删除从脚本文件。
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

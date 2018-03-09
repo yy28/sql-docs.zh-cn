@@ -2,35 +2,33 @@
 title: "在管理中心中创建 Power Pivot 站点的受信任的位置 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcfb1bb5f17a912178b20c9ff96ef8feaed76e2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>在管理中心中为 Power Pivot 站点创建受信任位置
-  通过 Excel Services，您可以指定哪些位置是您在 SharePoint 服务器上打开的工作簿的有效存储库。 这些位置称为“受信任位置”，您可以对您创建的每个受信任位置使用不同的配置设置。 对于部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 而言，可以考虑为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的站点创建一个受信任位置，以便可以应用最适合进行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的设置，同时为场的剩余部分保留默认设置。  
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Create a trusted location for Power Pivot sites in Central Administration
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+通过 Excel Services，您可以指定哪些位置是您在 SharePoint 服务器上打开的工作簿的有效存储库。 这些位置称为“受信任位置”，您可以对您创建的每个受信任位置使用不同的配置设置。 对于部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 而言，可以考虑为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的站点创建一个受信任位置，以便可以应用最适合进行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的设置，同时为场的剩余部分保留默认设置。  
   
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必要條件  
  您必须是场或服务管理员才能将某一 URL 指定为受信任位置。  
   
  必须知道包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库或用于存储工作簿的其他库的 SharePoint 站点的 URL 地址。 若要获取该地址，请打开包含库的站点，右键单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”，选择“属性”，然后复制包含服务器名称和站点路径的“地址 (URL)”的第一部分。  

@@ -3,25 +3,29 @@ title: "为索引指定填充因子 | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - fill factor [SQL Server]
 - page splits [SQL Server]
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
-caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3145ece1536701b112f5ffddc55c12a6f0d5369c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 4f22e84a17cb2401dec70f4855c5afd3cff1c319
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-fill-factor-for-an-index"></a>为索引指定填充因子
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +45,7 @@ ms.lasthandoff: 12/01/2017
   
      [性能注意事项](#Performance)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **为索引指定填充因子，使用：**  
   
@@ -63,7 +67,7 @@ ms.lasthandoff: 12/01/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -84,7 +88,7 @@ ms.lasthandoff: 12/01/2017
   
 7.  单击 **“关闭”**。  
   
-8.  在“文件”菜单上，选择“保存”以保存 *table_name*。  
+8.  在“文件”菜单上，选择“保存table_name”。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用对象资源管理器为索引指定填充因子  
   
@@ -102,17 +106,17 @@ ms.lasthandoff: 12/01/2017
   
 7.  在 **“填充因子”** 行中，输入所需的填充因子。  
   
-8.  单击 **“确定”**。  
+8.  单击“确定” 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>在现有索引中指定填充因子  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 该示例重新生成现有索引，并在重新生成操作过程中应用指定的填充因子。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例重新生成现有索引，并在重新生成操作过程中应用指定的填充因子。  
   
     ```  
     USE AdventureWorks2012;  
@@ -127,11 +131,11 @@ ms.lasthandoff: 12/01/2017
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>为索引指定填充因子的其他方法  
   
-1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+1.  在 **“对象资源管理器”**中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     USE AdventureWorks2012;  

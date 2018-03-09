@@ -16,19 +16,19 @@ helpviewer_keywords:
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c5e3f669cd2789676e334beedb4e8ee410c5cd6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,20 +95,18 @@ ms.lasthandoff: 11/17/2017
 ## <a name="resumable-index-rebuild-considerations"></a>可恢复索引重新生成注意事项
 
 > [!NOTE]
-> 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 
->
+> 可恢复的索引选项适用于 SQL Server（从 SQL Server 2017 起）和 SQL Server。 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 执行可恢复的联机索引重新生成操作时，请参考下列准则：
 -   管理、规划和延长索引维护时段。 为适应维护时段，可多次暂停并重启索引重新生成操作。
 - 从索引重新生成故障（如数据库故障转移或磁盘空间不足）恢复。
 - 索引操作暂停时，原始索引和新创建的索引都需要磁盘空间，并且都需要在 DML 操作期间更新。
 
-- 在索引重新生成操作期间对截断日志启用截断（不能对常规联机索引操作执行此操作）。
+- 启用在索引重新生成操作期间截断事务日志（无法对常规联机索引操作执行此操作）。
 - 不支持 SORT_IN_TEMPDB=ON 选项
 
 > [!IMPORTANT]
-> 可恢复重新生成不需要始终打开长时间运行的截断，因此可在此操作期间执行日志截断并实现更好的日志空间管理。 采用新设计后，我们可以将数据库中的所有必要数据和重启可恢复操作所需的所有引用存放在一起。
->
+> 可恢复重新生成操作不要求长时间运行的事务一直处于打开状态，允许在此操作期间执行日志截断，并提升日志空间管理效果。 采用新设计后，我们可以将数据库中的所有必要数据和重启可恢复操作所需的所有引用存放在一起。
 
 通常情况下，可恢复和非可恢复的联机索引重新生成之间没有性能差异。 如果在索引重新生成操作暂停时更新可恢复索引：
 - 对以读取为主的工作负载无明显性能影响。 

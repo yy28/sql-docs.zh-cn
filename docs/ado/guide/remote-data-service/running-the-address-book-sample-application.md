@@ -3,8 +3,9 @@ title: "运行通讯簿示例应用程序 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df6396d83c993c41e59bb2fcb6c1a87734049b07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 24b1cac0950ec41087998edfe2c1393509cac8ab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="running-the-address-book-sample-application"></a>运行通讯簿示例应用程序
 > [!IMPORTANT]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Microsoft Internet Explorer 4.0 版或更高版本中，键入以下地址：  
   
-     **http://** *web 服务器* **/RDS/AddressBook/AddrBook.asp**  
+     **http://** *webserver* **/RDS/AddressBook/AddrBook.asp**  
   
      其中*web 服务器*是 RDS 服务器组件已安装 Web 服务器的名称。  
   

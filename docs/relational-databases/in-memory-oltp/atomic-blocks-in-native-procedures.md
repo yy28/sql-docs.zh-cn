@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebc75200894e27976911f2c7413e027fbb1c5b14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>本机过程中的 ATOMIC 块
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
  下面的示例说明针对原子块和本机编译存储过程的错误处理行为：  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -149,7 +150,7 @@ GO
 |----------------------|-----------------|  
 |**DATEFORMAT**|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定后， **DATEFORMAT** 将取代与 **LANGUAGE**相关联的默认日期格式。|  
 |**DATEFIRST**|指定后， **DATEFIRST** 将取代与 **LANGUAGE**相关联的默认设置。|  
-|**DELAYED_DURABILITY**|支持的值为 **OFF** 和 **ON**。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、默认或延迟的持久。有关详细信息，请参阅[控制事务持久性](../../relational-databases/logs/control-transaction-durability.md)。|  
+|**DELAYED_DURABILITY**|支持的值为 **OFF** 和 **ON**。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、默认或延迟的持久。有关详细信息，请参阅 [控制事务持久性](../../relational-databases/logs/control-transaction-durability.md)。|  
   
  下面的 SET 选项对于所有本机编译存储过程中的所有原子块具有相同的系统默认值：  
   

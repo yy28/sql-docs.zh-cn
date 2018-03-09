@@ -3,8 +3,9 @@ title: "ParentRow 属性 (ADO) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - ADORecordConstruction::put_ParentRow
 - ADORecordConstruction::ParentRow
 - ADORecordConstruction::putParentRow
-helpviewer_keywords: ParentRow property [ADO]
+helpviewer_keywords:
+- ParentRow property [ADO]
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8869e091c0f48981d60893ed0d3f698aeee0c8b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1305304afaa06f8e96dc4160b466d87271f537d9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 属性 (ADO)
 设置 OLE DB 的容器**行**对象上**ADORecordConstruction**对象，以便父行转换为 ADO**记录**对象。  

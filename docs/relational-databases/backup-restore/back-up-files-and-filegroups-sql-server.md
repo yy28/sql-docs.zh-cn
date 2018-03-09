@@ -2,10 +2,14 @@
 title: "备份文件和文件组 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46a167f5f492618b9011afe09147aad713503503
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 65b1141e3d47a947f9b1c90b25c6ba875373c266
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>备份文件和文件组 (SQL Server)
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份文件和文件组。 当数据库大小和性能要求使完整数据库备份显得不切实际，则可以创建文件备份。 文件备份包含一个或多个文件（或文件组）中的所有数据。 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份文件和文件组。 当数据库大小和性能要求使完整数据库备份显得不切实际，则可以创建文件备份。 文件备份包含一个或多个文件（或文件组）中的所有数据。 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
 
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -45,7 +50,7 @@ ms.lasthandoff: 11/09/2017
 -   默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地备份日志，这些成功消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
  
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
  备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
@@ -75,7 +80,7 @@ ms.lasthandoff: 11/09/2017
   
     -   若要让备份集在特定天数之后过期，请单击“之后”（默认选项）。 然后，输入备份集自创建后到过期日之间的天数。 此值范围为 0 到 99999 天；0 天表示备份集将永不过期。  
   
-         默认值在“服务器属性”对话框（位于“数据库设置”页上）的“默认备份媒体保持期(天)”选项中设置。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，并选择“属性”，然后选择“数据库设置”页。  
+         默认值在 **“服务器属性”**对话框（位于 **“数据库设置”**页上）的 **“默认备份媒体保持期(天)”**选项中设置。 若要访问此选项，请在对象资源管理器中右键单击服务器名称，并选择“属性”，然后选择“数据库设置”页。  
   
     -   若要使备份集在特定日期过期，请单击 **“在”**，并输入备份集的过期日期。  
   
@@ -107,11 +112,11 @@ ms.lasthandoff: 11/09/2017
   
     -   **“写入介质前检查校验和”**和 **“出现校验和错误时继续”**（可选）。 有关校验和的详细信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
-15. 如果备份到磁带驱动器（如同“常规”页的“目标”部分指定的一样），则“备份后卸载磁带”选项处于活动状态。 单击此选项可以启用 **“卸载前倒带”** 选项。  
+15. 如果备份到磁带驱动器（如同 **“常规”**页的 **“目标”**部分指定的一样），则 **“备份后卸载磁带”**选项处于活动状态。 单击此选项可以启用 **“卸载前倒带”** 选项。  
   
     > **注意：**除非备份的是事务日志（如同“常规”页的“备份类型”部分中指定的一样），否则“事务日志”部分中的选项处于不活动状态。  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中“压缩备份”来压缩备份，并且可以通过选中“不压缩备份”来防止压缩备份。  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中 **“压缩备份”**来压缩备份，并且可以通过选中 **“不压缩备份”**来防止压缩备份。  
   
      **查看当前备份压缩默认值**  
   
@@ -132,7 +137,7 @@ ms.lasthandoff: 11/09/2017
   
      BACKUP DATABASE *database*  
   
-     { FILE **=**logical_file_name | FILEGROUP **=**logical_filegroup_name } [ **,**...f ]  
+     { FILE =logical_file_name | FILEGROUP =logical_filegroup_name } [ ,...f ]  
   
      TO backup_device [ **,**...n ]  
   
@@ -141,10 +146,10 @@ ms.lasthandoff: 11/09/2017
     |选项|“说明”|  
     |------------|-----------------|  
     |*database*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
-    |FILE **=**logical_file_name|指定要包含在文件备份中的文件的逻辑名称。|  
-    |FILEGROUP **=**logical_filegroup_name|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
+    |FILE **=***logical_file_name*|指定要包含在文件备份中的文件的逻辑名称。|  
+    |FILEGROUP =logical_filegroup_name|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
     |[ **,**...*f* ]|表示可以指定多个文件和文件组的占位符。 不限制文件或文件组的数量。|  
-    |*backup_device* [ **或 PowerShell 在**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 有关详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
+    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } =physical_backup_device_name<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
     |WITH with_options [ **,**...*o* ]|您也可以指定一个或多个附加选项，如 DIFFERENTIAL。<br /><br /> 注意：差异文件备份需要以完整文件备份为基础。 有关详细信息，请参阅[创建差异数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)。|  
   
 2.  在完整恢复模式下，还必须备份事务日志。 若要使用一整套文件的完整备份来还原数据库，您还必须拥有足够的日志备份，以便涵盖从第一个文件备份开始的所有文件备份。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)中准备镜像数据库。  
@@ -159,7 +164,7 @@ ms.lasthandoff: 11/09/2017
 #### <a name="a-create-a-file-backup-of-two-files"></a>A. 为两个文件创建文件备份  
  下面的示例仅为 `SGrp1Fi2` 文件组的 `SalesGroup1` 文件和 `SGrp2Fi2` 文件组的 `SalesGroup2` 文件创建差异文件备份。  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -171,7 +176,7 @@ GO
 #### <a name="b-create-a-full-file-backup-of-the-secondary-filegroups"></a>B. 创建辅助文件组的完整文件备份  
  下面的示例将对两个辅助文件组中的各个文件创建完整文件备份。  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -183,7 +188,7 @@ GO
 #### <a name="c-create-a-differential-file-backup-of-the-secondary-filegroups"></a>C. 创建辅助文件组的差异文件备份  
  下面的示例将对两个辅助文件组中的各个文件创建差异文件备份。  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -198,9 +203,9 @@ GO
   
 1.  使用 **Backup-SqlDatabase** cmdlet 并为 **-BackupAction** 参数的值指定 **Files** 。 此外，还指定下列参数之一：  
   
-    -   若要备份某个特定文件，请指定**-DatabaseFile**String 参数，其中 String 是要备份的一个或多个数据库文件。  
+    -   若要备份某个特定文件，请指定-DatabaseFileString 参数，其中 String 是要备份的一个或多个数据库文件。  
   
-    -   若要备份某个给定文件组中的所有文件，请指定 **-DatabaseFileGroup**String 参数，其中 String 是要备份的一个或多个数据库文件组。  
+    -   若要备份某个给定文件组中的所有文件，请指定 -DatabaseFileGroupString 参数，其中 String 是要备份的一个或多个数据库文件组。  
   
      下面的示例在 `MyDB` 数据库中创建辅助文件组“FileGroup1”和“FileGroup2”中的每个文件的完整文件备份。 将在服务器实例 `Computer\Instance`的默认备份位置上创建备份。  
   
@@ -216,7 +221,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
  [备份数据库（“常规”页）](../../relational-databases/backup-restore/back-up-database-general-page.md)   
  [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)   

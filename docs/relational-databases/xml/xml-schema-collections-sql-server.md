@@ -2,10 +2,14 @@
 title: "XML 架构集合 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-xml
+ms.suite: sql
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +24,20 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90af09f6d1ce768405c824e76e9ad746624b2245
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c8c7a11c64d487aa6f08d616d6bae70b24a742dc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
-  如主题 [xml (Transact-SQL) ](../../t-sql/xml/xml-transact-sql.md)中所述，SQL Server 使用 **xml** 数据类型对 XML 数据进行本机存储。 您可以选择通过 XML 架构集合将 XSD 架构与 **xml** 类型的变量或列关联。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+如主题 [xml (Transact-SQL) ](../../t-sql/xml/xml-transact-sql.md)中所述，SQL Server 使用 **xml** 数据类型对 XML 数据进行本机存储。 您可以选择通过 XML 架构集合将 XSD 架构与 **xml** 类型的变量或列关联。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
   
 -   验证 XML 实例  
   

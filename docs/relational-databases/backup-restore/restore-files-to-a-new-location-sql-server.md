@@ -20,15 +20,15 @@ helpviewer_keywords:
 - restoring filegroups [SQL Server]
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 212e32ce69ae1b5bef4502227bdc4aafca5e5be2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a62f4a16fc89beee450493caca9b2cd81c42f71
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>将文件还原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [限制和局限](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要将文件还原到新位置，可使用：**  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
@@ -100,10 +100,10 @@ ms.lasthandoff: 11/17/2017
     |**类型**|执行的备份类型有： **“完整”**、 **“差异”**或 **“事务日志”**。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**文件逻辑名称**|文件的逻辑名称。|  
-    |**数据库**|备份操作中涉及的数据库的名称。|  
+    |**“数据库”**|备份操作中涉及的数据库的名称。|  
     |**开始日期**|备份操作开始的日期和时间，按客户端的区域设置显示。|  
     |**完成日期**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
-    |**Size**|备份集的大小（字节）。|  
+    |**大小**|备份集的大小（字节）。|  
     |**用户名**|执行备份操作的用户的名称。|  
   
 6.  在 **“选择页”** 窗格中，单击 **“选项”** 页。  
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例将 `MyNwind` 数据库中原来位于驱动器 C 上的两个文件还原到驱动器 D 上的新位置。为了将数据库还原到当前时间，还将应用两个事务日志。 `RESTORE FILELISTONLY` 语句用于确定待还原数据库内的文件的数目及其逻辑名称和物理名称。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  
@@ -174,7 +174,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [还原文件和文件组 (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

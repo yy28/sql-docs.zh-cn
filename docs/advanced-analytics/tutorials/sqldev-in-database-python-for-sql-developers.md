@@ -2,28 +2,32 @@
 title: "数据库中 Python 分析 SQL 开发人员 |Microsoft 文档"
 ms.custom: 
 ms.date: 10/13/2017
-ms.prod: sql-server-2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2017
+ms.topic: tutorial
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 725d69f4c0799cf5911cb8764aa7d0f3b6cbc48d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+manager: cgronlund
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 开发人员的数据库中 Python 分析
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 此演练的目的是 SQL 程序员提供生成机器学习解决方案使用在 SQL Server 中运行的 Python 的实践经验。 在本演练中，你将了解如何将 Python 代码添加到存储过程和运行存储的过程生成并从模型预测。
 
@@ -43,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 
 数据是来自已知 NYC Taxi 数据集。 若要快速而方便地使本演练中，对数据进行采样。 你将创建用于预测特定行程是否有可能收到一条提示，或不是，基于例如天、 距离和提取位置的时间的列的二元分类模型。
 
-可以完成所有任务使用[!INCLUDE[tsql](../../includes/tsql-md.md)]的熟悉的环境中的存储过程[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+可以完成所有任务使用[!INCLUDE[tsql](../../includes/tsql-md.md)]的熟悉的环境中的存储过程 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [步骤 1：下载示例数据](sqldev-py1-download-the-sample-data.md)
 
@@ -72,9 +76,9 @@ ms.lasthandoff: 11/09/2017
 
     模型已保存到数据库后，调用模型预测使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>必要條件
 
 + 使用机器学习服务和启用的 Python 安装 SQL Server 2017 的实例。 有关详细信息，请参阅[设置 SQL Server 计算机学习 Services 与 Python 一起](../python/setup-python-machine-learning-services.md)。
 + 本演练中使用的登录名必须有权创建数据库和其他对象，有权上载数据、选择数据和运行存储过程。

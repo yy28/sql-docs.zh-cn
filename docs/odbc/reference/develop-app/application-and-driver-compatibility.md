@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4502dda43876dce2c8421c75d008dcaedfe87987
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba98b68cd760b4256429c74ee2f06ab2486b4b73
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-and-driver-compatibility"></a>应用程序和驱动程序兼容性
 ODBC 应用程序和驱动程序都属于的除了其版本的类别数。 一些这些应用程序是与某些驱动程序; 不兼容在其他情况下，此应用程序或驱动程序的类型可能会对它们之间的向后兼容性问题影响。  

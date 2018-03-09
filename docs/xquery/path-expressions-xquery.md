@@ -3,31 +3,37 @@ title: "路径表达式 (XQuery) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - axis step [XQuery]
 - path expressions [XQuery]
 - expressions [XQuery], path
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ef1984885b5b35d93fa680d677321287d6daf33
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e47b66d37e7b43f2921d8d6edf626a6b9178b7e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions-xquery"></a>路径表达式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery 路径表达式用于定位文档中的节点，如元素节点、属性节点和文本节点。 路径表达式的结果始终以文档顺序显示，结果序列中不会出现重复的节点。 指定路径时，可以使用全文拼写的语法，也可以使用缩写语法。 以下信息主要介绍了全文拼写的语法。 缩写语法将在本主题的后面进行介绍。  
   
@@ -84,7 +90,7 @@ id(/a/b)
   
  Id 函数，请参阅有关详细信息[id 函数 &#40;XQuery &#41;](../xquery/functions-on-sequences-id.md).  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
  [在路径表达式步骤中指定轴](../xquery/path-expressions-specifying-axis.md)  
  说明如何使用路径表达式中的轴步骤。  
   

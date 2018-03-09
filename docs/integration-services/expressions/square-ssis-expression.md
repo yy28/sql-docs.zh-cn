@@ -1,5 +1,5 @@
 ---
-title: "SQUARE （SSIS 表达式） |Microsoft 文档"
+title: "SQUARE（SSIS 表达式）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 18be83801a35d9b3512d85f69c91256147fb81a9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2b7181bce75dfe667a643b5ef149c7b9d61f16a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="square-ssis-expression"></a>SQUARE（SSIS 表达式）
   返回数值表达式的平方。  
@@ -45,7 +44,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果参数为空，SQUARE 将返回空结果。  
   
  执行 SQUARE 操作前，参数会转换为 DT_R8 数据类型。  
@@ -73,7 +72,6 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 >  在表达式中，变量名必须包含前缀 @。  
   
 ## <a name="see-also"></a>另请参阅  
- [函数 &#40;SSIS 表达式 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

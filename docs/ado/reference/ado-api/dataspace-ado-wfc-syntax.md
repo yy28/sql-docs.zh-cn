@@ -3,8 +3,9 @@ title: "DataSpace (ADO-WFC 语法) |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,23 +13,24 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: DataSpace collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- DataSpace collection [ADO], ADO/WFC syntax
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49037463f954e0d254111fb133d0c6d92c6b6999
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a393ae11d8248bc10c7d9831743426e2687ae76
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO-WFC 语法)
 **CreateObject**方法**DataSpace**类指定这两个业务对象用于处理客户端应用程序请求 (*progid*) 和通信协议和服务器 (*连接*)。 **createObject**返回[ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)表示服务器的对象。  
   
-## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>构造函数  
   

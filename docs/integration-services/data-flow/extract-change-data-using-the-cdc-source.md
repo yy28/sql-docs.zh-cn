@@ -1,5 +1,5 @@
 ---
-title: "使用 CDC 源提取更改数据 |Microsoft 文档"
+title: "使用 CDC 源提取更改数据 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 343efa882f37276c6921edc72d2bf1e615ff1a18
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 545f7593878688f8b0d792410e363c738460fd90
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 源提取更改数据
   若要添加并配置 CDC 源，则包必须已包含至少一个数据流任务和一个 CDC 控制任务。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  选择或键入具有要读取的 CDC 表的 **“CDC 捕获实例”** 的名称。  
   
-     一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [架构] 默认捕获实例名称。[表] 是\<架构 > _\<表 >，但在使用实际的捕获实例名称可能不同。 从读取的实际表是 CDC 表**cdc。\<捕获实例 > _CT**。  
+     一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 读取的实际表是 CDC 表 cdc .\<capture-instance>_CT。  
   
 8.  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **净值**：对于当前 CDC 处理范围中修改的每个源行，仅返回一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
   
-    -   **具有更新掩码的净值**： 这种模式十分类似于常规 Net 模式，但它还添加了具有名称模式的布尔值列**__ $\<列名称 >\__Changed** ，可指示在当前已更改的列更改行。  
+    -   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$\<column-name>\__Changed 的布尔值列（指示当前更改行中已更改的列）。  
   
     -   **净值且具有合并**：此模式类似于一般的净值模式，但具有合并到单个合并操作中的插入和更新操作 (UPSERT)。  
   
@@ -76,12 +75,11 @@ ms.lasthandoff: 08/03/2017
   
 14. 可以单击 **“预览”** ，查看最多 200 行 CDC 源所提取的数据。  
   
-15. 单击 **“确定”**。  
+15. 单击“确定” 。  
   
 ## <a name="see-also"></a>另请参阅  
- [CDC 源编辑器 &#40;连接管理器页 &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [CDC 源编辑器 &#40;列页 &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [CDC 源编辑器 &#40;错误输出页 &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC 源编辑器（“连接管理器”页）](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
+ [CDC 源编辑器（“列”页）](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
+ [CDC 源编辑器（“错误输出”页）](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   
-

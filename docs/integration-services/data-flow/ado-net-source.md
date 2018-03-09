@@ -1,5 +1,5 @@
 ---
-title: "ADO NET 源 |Microsoft 文档"
+title: "ADO NET 源 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 101
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>ADO NET 源
   ADO NET 源使用来自 .NET 提供程序的数据，并使这些数据对数据流可用。  
@@ -86,7 +85,7 @@ ms.lasthandoff: 08/17/2017
   
  ADO NET 源有一个常规输出和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -128,7 +127,7 @@ ms.lasthandoff: 08/17/2017
  通过使用“数据视图”对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
->  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 改为值\<值太大，无法显示 > 或 System.Byte [] 显示。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
+>  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
@@ -143,7 +142,7 @@ ms.lasthandoff: 08/17/2017
  **生成查询**  
  使用“查询生成器”对话框可直观地构造 SQL 查询。  
   
- **浏览**  
+ **“浏览”**  
  使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
   
 ## <a name="ado-net-source-editor-columns-page"></a>ADO NET 源编辑器（“列”页）
@@ -159,7 +158,7 @@ ms.lasthandoff: 08/17/2017
   
 3.  在 **“ADO NET 源编辑器”**中，单击 **“列”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -182,7 +181,7 @@ ms.lasthandoff: 08/17/2017
   
 3.  在 **“ADO NET 源编辑器”**中，单击 **“错误输出”**。  
   
-### <a name="options"></a>选项  
+### <a name="options"></a>“常规”  
  **输入/输出**  
  查看数据源的名称。  
   
@@ -212,4 +211,3 @@ ms.lasthandoff: 08/17/2017
  [数据流](../../integration-services/data-flow/data-flow.md)  
   
   
-

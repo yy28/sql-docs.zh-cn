@@ -2,29 +2,34 @@
 title: "将数据库恢复到数据库快照 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: "58"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1aff08fa0edd0f2376114478499a6ac8bec7df8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
-  如果联机数据库中的数据损坏，在某些情况下，将数据库恢复到发生损坏之前的数据库快照可能是一种合适的替代方案，替代从备份中还原数据库。 例如，通过恢复数据库可能会有助于从最近出现的严重用户错误（如删除的表）中恢复。 但是，在该快照创建以后进行的所有更改都会丢失。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+如果联机数据库中的数据损坏，在某些情况下，将数据库恢复到发生损坏之前的数据库快照可能是一种合适的替代方案，替代从备份中还原数据库。 例如，通过恢复数据库可能会有助于从最近出现的严重用户错误（如删除的表）中恢复。 但是，在该快照创建以后进行的所有更改都会丢失。  
   
 -   **开始之前：**  
   
@@ -32,9 +37,9 @@ ms.lasthandoff: 11/09/2017
   
      [先决条件](#Prerequisites)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
--   **将数据库恢复到数据库快照，使用：**  [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -49,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
  在恢复数据库之前，请考虑以下限制：  
   
--   恢复并不适用于介质恢复。 . 数据库快照是不完整的数据库文件副本，因此，如果数据库或数据库快照损坏，则不可能从快照进行恢复。 另外，如果损坏的话，即便可以恢复，也可能无法更正该问题。 因此，定期执行备份并对还原计划进行测试对于保护数据库至关重要。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   恢复并不适用于介质恢复。 实例时都提供 SQL Server 登录名。 数据库快照是不完整的数据库文件副本，因此，如果数据库或数据库快照损坏，则不可能从快照进行恢复。 另外，如果损坏的话，即便可以恢复，也可能无法更正该问题。 因此，定期执行备份并对还原计划进行测试对于保护数据库至关重要。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
     > [!NOTE]  
     >  如果需要能够将源数据库还原至创建数据库快照的时点，请使用完整恢复模式并实施允许您执行该操作的备份策略。  
@@ -83,7 +88,7 @@ ms.lasthandoff: 11/09/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="Permissions"></a> Permissions  
  任何具有源数据库 RESTORE DATABASE 权限的用户都可以将其恢复至创建数据库快照时的状态。  
   
 ##  <a name="TsqlProcedure"></a> 如何将数据库恢复到数据库快照（使用 Transact-SQL）  
@@ -102,7 +107,7 @@ ms.lasthandoff: 11/09/2017
   
      恢复操作要求对源数据库具有 RESTORE DATABASE 权限。 若要恢复数据库，请使用下列 Transact-SQL 语句：  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE database_name FROM DATABASE_SNAPSHOT =database_snapshot_name  
   
      其中， *database_name* 是源数据库的名称， *database_snapshot_name* 是要将数据库恢复到的快照的名称。 注意，必须在此语句中指定快照名称而非备份设备。  
   
@@ -170,7 +175,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [数据库镜像和数据库快照 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   

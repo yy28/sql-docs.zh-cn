@@ -1,5 +1,5 @@
 ---
-title: "使用 CDC 服务 |Microsoft 文档"
+title: "使用 CDC 服务 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -15,22 +15,21 @@ ms.topic: article
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dace3763da446c75677288d15401a7c749740677
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="work-with-cdc-services"></a>使用 CDC 服务
   您可以使用 CDC 服务配置控制台创建新的 CDC 服务以及为 CDC 准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **准备 SQL Server**  
  从 CDC 服务配置控制台右侧的 **“操作”** 窗格中选择此选项。  
   
@@ -52,4 +51,3 @@ ms.lasthandoff: 08/03/2017
  [创建和编辑 Oracle CDC 服务](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
-

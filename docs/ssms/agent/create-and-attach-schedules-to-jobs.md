@@ -3,8 +3,11 @@ title: "创建计划并将计划附加到作业 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,16 +23,16 @@ ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ad28993e894bc45ad25e5db296777c66d36328
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9d367f1a130f9bcdffa1ab28af8bac99fec00deb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>创建计划并将计划附加到作业
-计划 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业就是定义使作业在没有用户交互的情况下开始运行的条件。 通过为作业创建新计划或将现有计划附加到作业可以将作业计划为自动运行。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 计划 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业就是定义使作业在没有用户交互的情况下开始运行的条件。 通过为作业创建新计划或将现有计划附加到作业可以将作业计划为自动运行。  
   
 以下是两种用来创建计划的方法：  
   
@@ -84,7 +87,7 @@ ms.lasthandoff: 11/09/2017
   
 将 CPU 空闲条件定义为一个百分比，在该百分比以下，CPU 使用率必须持续指定的时间。 然后，设置持续时间长度。 如果 CPU 使用率在指定时间内低于指定的百分比，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理将启动具有 CPU 空闲时间计划的所有作业。 有关使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] 或性能监视器来监视 CPU 使用率的详细信息，请参阅 [监视 CPU 使用率](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

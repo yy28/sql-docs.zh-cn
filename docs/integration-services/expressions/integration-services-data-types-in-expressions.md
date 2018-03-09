@@ -1,10 +1,13 @@
 ---
-title: "Integration Services Data Types in Expressions |Microsoft 文档"
+title: "表达式中的 Integration Services 数据类型 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,16 +16,16 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 83b16b04dfe061c3953dc7dd593fbf328588129f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
   表达式计算器使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 当数据首次进入 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中时，数据流引擎将所有列数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，因此，表达式使用的列数据已具有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 有条件拆分和派生列转换中使用的表达式可以引用列，因为它们是包含列数据的数据流的一部分。  
@@ -38,13 +41,13 @@ ms.lasthandoff: 08/03/2017
 ## <a name="strings"></a>字符串  
  可以使用 DT_STR 或 DT_WSTR 作为表达式的返回类型。 但在表达式中，仅支持 DT_WSTR，而 DT_STR 值将转换为 DT_WSTR 值。 在写入表达式时，此行为具有多个含义。  
   
--   在表达式中，使用 NULL(DT_WSTR, ...) 而非 NULL(DT_STR, ...)。 有关此函数的详细信息，请参阅 [NULL（SSIS 表达式）](../../integration-services/expressions/null-ssis-expression.md)。  
+-   在表达式中，使用 NULL(DT_WSTR, ...) 而非 NULL(DT_STR, ...)。有关此函数的详细信息，请参阅 [NULL（SSIS 表达式）](../../integration-services/expressions/null-ssis-expression.md)。  
   
 -   在表达式中，只能使用 CAST 函数在表达的根级别将值转换为 DT_STR 类型，即当返回表达式的最终结果时。 否则，请在表达式中使用 DT_WSTR 类型。  
   
  请考虑使用以下屏幕快照中的表达式。  
   
- ![字符串 SSIS 表达式中的数据类型](../../integration-services/expressions/media/stringsinssisexpressions.png "字符串 SSIS 表达式中的数据类型")  
+ ![SSIS 表达式中的字符串数据类型](../../integration-services/expressions/media/stringsinssisexpressions.png "String data types in SSIS expressions")  
   
 1.  第一个表达式运行时没有出错，因为 NULL(DT_STR, ...) 函数处于表达式的根级别。  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 08/03/2017
   
  下面的示例演示转换的效果。  
   
- ![将字符串转换 SSIS 表达式中](../../integration-services/expressions/media/stringsinssisexpressions2.png "SSIS 表达式中转换字符串")  
+ ![SSIS 表达式中的字符串转换](../../integration-services/expressions/media/stringsinssisexpressions2.png "Casting strings in SSIS expressions")  
   
 1.  在第一个表达式中，转换不在表达式的根级别进行。 表达式计算器以智能方式处理这种转换，并转换为 DT_WSTR，而非 DT_STR。 表达式返回 DT_WSTR。  
   
@@ -71,7 +74,7 @@ ms.lasthandoff: 08/03/2017
   
  以下关系图显示了 BINARY 运算的隐式转换的结果类型。 该表中列和行的交集为二元运算的结果类型，该运算中操作数的类型为左 (From) 和右 (To)。  
   
- ![隐式数据类型转换，则数据类型之间](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "隐式数据类型的数据类型之间的转换")  
+ ![数据类型之间的隐式数据类型转换](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Implicit data type conversion between data types")  
   
  有符号整数和无符号整数的交集是可能大于这两者中任何一个的有符号整数。  
   
@@ -88,7 +91,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [==（等于）（SSIS 表达式）](../../integration-services/expressions/equal-ssis-expression.md)  
   
--   [!=（不等于）（SSIS 表达式）](../../integration-services/expressions/unequal-ssis-expression.md)  
+-   [\!=（不等于）（SSIS 表达式）](../../integration-services/expressions/unequal-ssis-expression.md)  
   
 -   [>（大于）（SSIS 表达式）](../../integration-services/expressions/greater-than-ssis-expression.md)  
   
@@ -133,7 +136,7 @@ ms.lasthandoff: 08/03/2017
   
  许多运算和函数的结果具有预设的数据类型。 该类型可能是参数的数据类型，也可能是表达式计算器将结果转换到的数据类型。 例如，逻辑或运算符 (||) 的计算结果始终为布尔值，ABS 函数的计算结果是参数的数值数据类型，乘法运算的结果是可完整保存结果的最小数值数据类型。 有关结果的数据类型的详细信息，请参阅[运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [在数据流组件中使用表达式](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>相关内容  

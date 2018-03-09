@@ -2,9 +2,12 @@
 title: "使用具有 SQL 加密功能的 SQL Server 连接器 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,16 @@ ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abf7e20335fd15fc4e06971558d8ec32b5620f41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>使用具有 SQL 加密功能的 SQL Server 连接器
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
-  使用由 Azure 密钥保管库保护的非对称密钥的常见 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活动包括以下三个方面。  
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]使用由 Azure 密钥保管库保护的非对称密钥的常见 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活动包括以下三个方面。  
   
 -   使用 Azure 密钥保管库的非对称密钥实现透明数据加密  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
         - 如果使用 **公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
-        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含“https://”。   
+        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。   
   
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/09/2017
   
     -   使用第 I 部分的 `SECRET` 客户端密码 **完成** 参数的第二部分。在此示例中，第 I 部分的 **客户端密码** 为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串 *不带连字符*的字母和数字。  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/09/2017
   
      创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名并向其添加步骤 1 中的凭据。 此 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 示例使用之前导入的密钥。  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/09/2017
   
      DEK 将对数据库实例中的数据和日志文件进行加密，并且反过来被 Azure 密钥保管库的非对称密钥加密。 可使用任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持的算法或密钥长度来创建 DEK。  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/09/2017
   
 4.  **启用 TDE**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -126,7 +127,7 @@ ms.lasthandoff: 11/09/2017
   
      或者，你可以执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本。 加密状态 3 表示已加密的数据库。  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/09/2017
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
         - 如果使用 **公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
-        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含“https://”。    
+        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。    
   
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/09/2017
   
     -   使用第 I 部分的 `SECRET` 客户端密码 **完成** 参数的第二部分。在此示例中，第 I 部分的 **客户端密码** 为 `Replace-With-AAD-Client-Secret`。 `SECRET` 参数的最终字符串是一长串 *不带连字符*的字母和数字。   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -180,7 +181,7 @@ ms.lasthandoff: 11/09/2017
   
      此示例使用存储在密钥保管库中的 `CONTOSO_KEY_BACKUP` 非对称密钥，该密钥可以是之前为 master 数据库导入或创建的，如前面的第 IV 部分第 5 步所述。  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -202,7 +203,7 @@ ms.lasthandoff: 11/09/2017
      
      请注意，在下面的示例中，如果数据库已使用 TDE 加密，且非对称密钥 `CONTOSO_KEY_BACKUP` 不同于 TDE 非对称密钥，则会同时通过 TDE 非对称密钥和 `CONTOSO_KEY_BACKUP` 加密备份。 目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将需要两个密钥才能解密备份。
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -225,7 +226,7 @@ ms.lasthandoff: 11/09/2017
     
      示例还原代码：  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -242,7 +243,7 @@ ms.lasthandoff: 11/09/2017
   
  此示例使用存储在密钥保管库中的 `CONTOSO_KEY_COLUMNS` 非对称密钥，该密钥可能是以前导入或创建的，如 [Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)的第 3 部分的步骤 3 所述。 若要在 `ContosoDatabase` 数据库中使用此非对称密钥，必须再次执行 `CREATE ASYMMETRIC KEY` 语句，以便为 `ContosoDatabase` 数据库提供对该密钥的引用。  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   

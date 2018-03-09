@@ -2,10 +2,14 @@
 title: "使用 bcp 指定数据文件中的前缀长度 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca1efc1c50be62f0be6fb0d75cfa585f127940f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cf8736be942f9edd7c23da9f7acf6191b6eab625
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
-  当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符” 。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符” 。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>bcp 的前缀长度提示  
  如果交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-n**或 **-N**或 **in**或 **-N**选项，则该命令会提示输入每个数据字段的前缀长度，如下所示：  
@@ -64,21 +69,21 @@ ms.lasthandoff: 11/09/2017
 |**binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
-|**smalldatetime**|0|1|0|1|  
-|**decimal**|1|1|1|1|  
-|**numeric**|1|1|1|1|  
-|**float**|0|1|0|1|  
-|**real**|0|1|0|1|  
-|**int**|0|1|0|1|  
-|**bigint**|0|1|0|1|  
-|**smallint**|0|1|0|1|  
-|**tinyint**|0|1|0|1|  
-|**money**|0|1|0|1|  
-|**smallmoney**|0|1|0|1|  
-|**bit**|0|1|0|1|  
-|**uniqueidentifier**|1|1|0|1|  
-|**timestamp**|1|1|1|1|  
+|**datetime**|0|@shouldalert|0|@shouldalert|  
+|**smalldatetime**|0|@shouldalert|0|@shouldalert|  
+|**decimal**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**numeric**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**float**|0|@shouldalert|0|@shouldalert|  
+|**real**|0|@shouldalert|0|@shouldalert|  
+|**int**|0|@shouldalert|0|@shouldalert|  
+|**bigint**|0|@shouldalert|0|@shouldalert|  
+|**int**|0|@shouldalert|0|@shouldalert|  
+|**tinyint**|0|@shouldalert|0|@shouldalert|  
+|**money**|0|@shouldalert|0|@shouldalert|  
+|**smallmoney**|0|@shouldalert|0|@shouldalert|  
+|**bit**|0|@shouldalert|0|@shouldalert|  
+|**uniqueidentifier**|@shouldalert|@shouldalert|0|@shouldalert|  
+|**timestamp**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
 |**varchar(max)**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
 |**UDT** （用户定义的数据类型）|8|8|8|8|  

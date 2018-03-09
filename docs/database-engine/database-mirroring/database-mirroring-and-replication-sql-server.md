@@ -2,31 +2,36 @@
 title: "数据库镜像和复制 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ff0a3a8086a9bd54aedcc8e10ef5254a28ada307
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 31e0e930a3ebc1d81d3182de30e8cb3ae5b4d701
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>数据库镜像和复制 (SQL Server)
-  数据库镜像可以与复制一起使用以改进发布数据库的可用性。 数据库镜像涉及一个数据库的两个副本，这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主体数据库。 客户端对主体数据库所做的更新应用到数据库的另一副本（称为镜像数据库）。 镜像涉及将在主体数据库上执行的每个插入、更新或删除操作的事务日志应用到镜像数据库上。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+数据库镜像可以与复制一起使用以改进发布数据库的可用性。 数据库镜像涉及一个数据库的两个副本，这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主体数据库。 客户端对主体数据库所做的更新应用到数据库的另一副本（称为镜像数据库）。 镜像涉及将在主体数据库上执行的每个插入、更新或删除操作的事务日志应用到镜像数据库上。  
   
- 对发布数据库完全支持将复制故障转移到镜像数据库的功能；而对订阅数据库则提供有限支持。 对于分发数据库则不支持数据库镜像。 有关无需重新配置复制就可以恢复分发数据库或订阅数据库的信息，请参阅 [备份和还原复制数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。 有关镜像订阅服务器数据库的信息，请参阅  
+ 对发布数据库完全支持将复制故障转移到镜像数据库的功能；而对订阅数据库则提供有限支持。 对于分发数据库则不支持数据库镜像。 有关无需重新配置复制就可以恢复分发数据库或订阅数据库的信息，请参阅 [备份和还原复制数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。   
   
 > [!NOTE]  
 >  故障转移后，镜像数据库变为主体数据库。 在本主题中，“主体”和“镜像”始终是指原始主体和镜像。  

@@ -2,9 +2,12 @@
 title: "监视可用性组 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 242af04e1cca57357c7df266d6a58de86d094c65
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bc061ce1dd4ea316daefa7a5dee7212c387d7820
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>监视可用性组 (SQL Server)
-  若要监视 AlwaysOn 可用性组的属性和状态，可以使用以下工具。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]要监视 AlwaysOn 可用性组的属性和状态，可以使用以下工具。  
   
 |工具|简短说明|链接|  
 |----------|-----------------------|-----------|  

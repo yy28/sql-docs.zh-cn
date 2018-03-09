@@ -3,13 +3,19 @@ title: "表达式上下文和查询计算 (XQuery) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - expression context [XQuery]
 - XQuery, expression context
@@ -17,19 +23,19 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdd5e399aa713cab6fced82662f5531a48bd1a7b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b387ebe6649cca113e4974b3275498bb9b3b970e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>表达式上下文和查询计算 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   表达式的上下文是用于分析和计算表达式的信息。 下面是计算 XQuery 的两个阶段：  
   
@@ -40,7 +46,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="static-context"></a>静态上下文  
  静态上下文初始化指的是将有关对表达式进行的静态分析的所有信息放在一起的过程。 在静态上下文初始化中，要完成下列内容：  
   
--   **边界的空白区域**策略设置为最小化。 因此，边界空白区域不会保留**任何元素**和**属性**查询中的构造函数。 例如：  
+-   **边界的空白区域** 策略设置为最小化。 因此，边界空白区域不会保留**任何元素**和**属性**查询中的构造函数。 例如：  
   
     ```  
     declare @x xml  

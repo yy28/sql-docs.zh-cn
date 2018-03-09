@@ -3,8 +3,11 @@ title: "启用运行自定义报表警告 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b5a60793878be13b453e89d67d4be4fa323778c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef82982f5a18595c28fd8fb20a1ba28c43936f9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>启用运行自定义报表警告
-对于自定义报表，有两个警告对话框。 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中取消显示这些对话框。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 对于自定义报表，有两个警告对话框。 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]中取消显示这些对话框。  
   
 默认情况下，在运行自定义报表之前会显示“运行自定义报表”对话框。 如果选中“请不要再显示此警告”复选框，将不再显示此对话框。 此外，在默认情况下，如果打开一个自定义报表然后单击链接打开另外一个自定义报表，则也将显示此“运行自定义报表”对话框。 此对话框显示钻取自定义报表文件的填写路径。 如果选中“请不要再显示此警告”复选框，将不再显示此对话框。  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/09/2017
 4.  重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  
-[Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)  
+[Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)  
 [向 Management Studio 添加自定义报表](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [将自定义报表与对象资源管理器节点属性一起使用](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   

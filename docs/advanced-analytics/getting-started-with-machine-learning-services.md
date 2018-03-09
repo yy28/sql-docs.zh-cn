@@ -1,24 +1,28 @@
 ---
 title: "开始使用 SQL Server 中的机器学习 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-server-2017
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: b61de3dcbe239ec1bffdabc734e8e5d624519df6
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/28/2018
 ---
-# <a name="getting-started-with-machine-learning-in-sql-server"></a>开始使用 SQL Server 中的机器学习
+# <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server 机器学习入门
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本地和云：
 
@@ -33,7 +37,7 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
 
   从 SQL Server 自 2017 年开始，你现在可以使用 Python 代码在 SQL Server 中。 以反映多种语言 （的更多内容 ！），和名称的解决方案更广泛的支持已更改为[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]。 现在您可以通过使用 SQL 工具运行 R 或 Python 代码来自动化机器学习任务。 或者，使用 SQL Server 计算机作为_计算上下文_从远程开发环境中启动的作业。
 
-    + [SQL Server 中的 Python 的体系结构概述](/python/architecture-overview-sql-server-python.md)
+    + [SQL Server 中的 Python 的体系结构概述](../advanced-analytics/python/architecture-overview-sql-server-python.md)
     + [设置 SQL Server R Services 或机器学习服务](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
@@ -80,7 +84,7 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
 
 + [机器学习教程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  从此处开始查找可用于了解计算机学习解决方案使用的所有资源列表[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]或[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]。
+  从此处开始用于了解与使用 SQL Server 2016 和 SQL Server 自 2017 年的计算机学习解决方案中找到的所有资源的列表。
 
 ### <a name="r-tutorials"></a>R 教程
 
@@ -92,7 +96,7 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
 
 + [浏览 R 和 ScaleR 在 25 短函数中](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   不熟悉 R？ 想知道 Microsoft R （或 RevoScaleR） 如何比较到标准 R？ R Server，请参阅这些快速启动。
+   不熟悉 R？ 想知道 Microsoft R （或 RevoScaleR） 如何比较到标准 R？ R Server 和机器学习 Server，请参阅这些快速启动。
 
 ### <a name="python-tutorials"></a>Python 教程
 

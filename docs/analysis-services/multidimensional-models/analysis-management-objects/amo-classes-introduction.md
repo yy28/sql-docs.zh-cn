@@ -1,33 +1,32 @@
 ---
 title: "引入 AMO 类 |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a688b9544642ecb9dc5cbca1d7c5e3af90a5ebd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b288d323d4de3272afb434f3782c1df133e304af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-classes---introduction"></a>AMO 类-简介
   分析管理对象 (AMO) 是用于管理的实例的类的库[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]从客户端应用程序。 AMO 类可用于管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象，例如数据库、维度、多维数据集、挖掘结构和模型、角色和权限、异常以及其他对象。  

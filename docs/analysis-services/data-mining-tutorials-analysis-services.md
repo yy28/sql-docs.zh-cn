@@ -2,13 +2,13 @@
 title: "数据挖掘教程 (Analysis Services) |Microsoft 文档"
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -19,13 +19,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e1c600dddc4ab87c0f5290d90fdecda49f95045
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>数据挖掘教程 (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用向导和集成可视化更加方便地创建数据挖掘解决方案。 特别是如果你刚接触机器学习，则使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具是设计、定型和探索数据挖掘模型的轻松方法。 模型中的数据可以存储在多维数据集、关系数据库或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持的任何其他源中。 创建模型之后，可以通过使用多个预测客户端（包括 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 ASP.NET）访问模型以创建预测，来将它投入生产。  
   
 > [!NOTE]  

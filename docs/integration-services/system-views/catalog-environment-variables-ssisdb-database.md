@@ -1,5 +1,5 @@
 ---
-title: "catalog.environment_variables （SSISDB 数据库） |Microsoft 文档"
+title: "catalog.environment_variables（SSISDB 数据库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -13,17 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40e31b9697c453f6a9d60dfcc8d9302dfefe0ac4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cb3d2a6db5f17bb8c180e590426cec34b6dbc359
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,26 +33,25 @@ ms.lasthandoff: 09/26/2017
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|环境变量的唯一标识符 (ID)。|  
 |environment_id|**bigint**|与环境变量关联的环境的唯一 ID。|  
-|name|**sysname**|环境变量的名称。|  
+|NAME|**sysname**|环境变量的名称。|  
 |description|**nvarchar(1024)**|环境变量的说明。|  
-|类型|**nvarchar （128)**|环境变量的数据类型。|  
+|type|**nvarchar(128)**|环境变量的数据类型。|  
 |sensitive|**bit**|当值为 `1` 时，变量是敏感的并在存储时加密。 当值为 `0` 时，变量是不敏感的并以纯文本形式存储值。|  
-|值|**sql_variant**|环境变量的值。 当敏感是`0`，显示纯文本值。 当敏感是`1`、 **NULL**显示值。|  
+|值|**sql_variant**|环境变量的值。 当 sensitive 为 `0` 时，显示纯文本值。 当 sensitive 为 `1` 时，显示 **NULL** 值。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图对于目录中的每个环境变量显示一行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对相应环境的 READ 权限  
   
--   成员资格**ssis_admin**数据库角色  
+-   ssis_admin 数据库角色的成员资格  
   
--   成员资格**sysadmin**服务器角色  
+-   sysadmin 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  
   
   
-

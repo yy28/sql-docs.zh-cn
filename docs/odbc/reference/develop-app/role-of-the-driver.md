@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 984ba3de2b9071032bb34a12efff80396f01d095
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7381b239b87d4979545504e01f552a9be21fd694
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="role-of-the-driver"></a>该驱动程序的角色
 该驱动程序检查所有错误和警告不会检查由驱动程序管理器，并对它所生成的状态记录进行排序。 (一个 ODBC 2。*x*驱动程序不排序状态记录。)这包括数据截断、 数据转换、 语法和某些状态转换中的错误和警告。 错误和警告部分选中的驱动程序管理器，还可以检查驱动程序。 例如，尽管的驱动程序管理器检查是否的值*操作*中**SQLSetPos**是合法的该驱动程序必须检查是否支持。  

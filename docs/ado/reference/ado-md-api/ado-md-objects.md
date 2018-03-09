@@ -3,8 +3,9 @@ title: "ADO MD 对象 |Microsoft 文档"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
-ms.technology: drivers
+ms.component: ado
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,28 +16,28 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f2828b7c39ba721401ad35598a3f0c767b9f6d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9967930e6ee7ff1310a1ea331fb972f93d902f88
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-objects"></a>ADO MD 对象
 |||  
 |-|-|  
-|[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|表示一个位置或筛选器轴的单元集，包含所选的成员的一个或多个维度。|  
+|[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|表示一个位置或筛选器轴的单元集，包含所选的成员的一个或多个维度。|  
 |[目录](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|包含特定于多维数据提供程序 (MDP) 的多维架构信息 （即，多维数据集和基础维度、 层次结构、 级别和成员）。|  
 |[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|表示包含在单元集中的轴坐标的交叉点处的数据。|  
-|[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|表示多维查询的结果。 它是从多维数据集或其他单元集中选定单元格的集合。|  
+|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|表示多维查询的结果。 它是从多维数据集或其他单元集中选定单元格的集合。|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|从包含一组相关的维度的多维架构表示多维数据集。|  
-|[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|表示多维数据集中，包含一个或多个层次结构的成员的维度之一。|  
-|[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|表示一种方式在其中一个维度的成员可以为聚集的或"汇总。" 可以在一个或多个层次结构上聚合的维度。|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含一组的成员，其中每个具有相同的排名层次结构中。|  
+|[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|表示多维数据集中，包含一个或多个层次结构的成员的维度之一。|  
+|[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|表示一种方式在其中一个维度的成员可以为聚集的或"汇总。" 可以在一个或多个层次结构上聚合的维度。|  
+|[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含一组的成员，其中每个具有相同的排名层次结构中。|  
 |[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)|表示多维数据集中，某一级别的成员级别的成员或沿 x 轴的单元集的位置的成员的子级。|  
 |[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)|表示一组定义的点沿 x 轴的不同维度的一个或多个成员。|  
   

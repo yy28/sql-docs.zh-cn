@@ -1,33 +1,31 @@
 ---
-title: "新 PowerPivotSystemServiceInstance cmdlet |Microsoft 文档"
+title: New-PowerPivotSystemServiceInstance cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eeaa2b9b696f70a9a72e439e0a6a5a66ae132905
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2e412047e4d859de637da933d2335232961ee13
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>New-PowerPivotSystemServiceInstance cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  向应用程序服务器添加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务的新实例。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+向应用程序服务器添加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务的新实例。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -45,7 +43,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
   
 ## <a name="parameters"></a>Parameters  
   
-### <a name="-parentservice-powerpivotmidtierservicepipebind"></a>-ParentService \<PowerPivotMidTierServicePipeBind >  
+### <a name="-parentservice-powerpivotmidtierservicepipebind"></a>-ParentService \<PowerPivotMidTierServicePipeBind>  
  指定场中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务父对象的 GUID。 在此版本中，仅允许一个父对象。 您可以使用 Get-PowerPivotSystemService 返回服务对象或其 GUID。  
   
 |||  
@@ -56,7 +54,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |接受管道输入？|true|  
 |接受通配符？|false|  
   
-### <a name="-systemserviceinstancename-string"></a>-SystemServiceInstanceName\<字符串 >  
+### <a name="-systemserviceinstancename-string"></a>-SystemServiceInstanceName \<string>  
  指定标识此对象的名称。  
   
 |||  
@@ -78,7 +76,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
 |接受管道输入？|false|  
 |接受通配符？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  此 cmdlet 支持以下常用参数：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 有关详细信息，请参阅 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>输入和输出  

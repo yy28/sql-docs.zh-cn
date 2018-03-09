@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_maintenance_plan_db_TSQL
 - sp_add_maintenance_plan_db
-dev_langs: TSQL
-helpviewer_keywords: sp_add_maintenance_plan_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_maintenance_plan_db
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac70fd615a087acc885d4c561deda2dbc96493f9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e401da48e84b24f2e8fd1f59b4beb9af9f56cc1b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +52,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@plan_id =**] *plan_id*  
+ [ **@plan_id =**] **'***plan_id***'**  
  指定维护计划的计划 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效的 id。  
   
- [  **@db_name =**] *database_name*  
+ [ **@db_name =**] **'***database_name***'**  
  指定要添加到维护计划中的数据库的名称。 在添加到计划中之前，数据库必须已创建或存在。 *database_name*是**sysname**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -61,7 +64,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="remarks"></a>注释  
  **sp_add_maintenance_plan_db**必须从运行**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_add_maintenance_plan_db**。  
   
 ## <a name="examples"></a>示例  

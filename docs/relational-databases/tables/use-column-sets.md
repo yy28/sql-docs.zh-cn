@@ -16,15 +16,15 @@ helpviewer_keywords:
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0871c2e084749a9ceb79192e55e3a99cb24eb351
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fece12352dc2691fdab3906a00f8cb64151590b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-column-sets"></a>使用列集
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -133,7 +133,7 @@ GO
   
  ** 不适用 = 在针对列集的选择操作期间不会为这些属性输出值。 当调用方在插入或更新操作期间使用为列集提供的 XML 表达形式为该属性指定值时，会生成错误。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
  列集的安全模式的工作原理类似于表与列之间存在的安全模式。 可以将列集视为一个小型表，选择操作类似于针对该微型表的 SELECT * 操作。 但是，列集与稀疏列之间的关系是分组关系，而不是严格意义上的容器关系。 安全模式检查列集列的安全性，并允许对基础稀疏列执行 DENY 操作。 安全模式的其他特征有：  
   
 -   可以为列集列授予安全权限，也可以撤消这一权限，这与表中的其他任何列类似。  

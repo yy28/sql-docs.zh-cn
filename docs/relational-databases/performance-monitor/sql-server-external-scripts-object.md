@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQLServer:External Scripts
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66add2dde2f00196aae611fa6757b9098fcea870
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa53d84e29b23d73f73c93641306b11a328fc2e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server，外部脚本对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **外部脚本** 计数器。  
   
-|SQL Server 外部脚本计数器|说明|  
+|SQL Server 外部脚本计数器|Description|  
 |------------------------------------------|-----------------|  
 |**执行错误**|执行外部脚本时的错误数量。|  
 |**隐含身份验证登录**|通过使用默示身份验证从附属进程验证的登录次数。|  

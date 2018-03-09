@@ -1,10 +1,13 @@
 ---
 title: "项目设置 （转换） (MySQLToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19c450dbb2f30c4cb7dd571305c25084e964d02f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>项目设置 （转换） (MySQLToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将 MySQL 语法转换为 SQL Server 或 SQL Azure 语法的设置。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
 -   若要对指定为当前项目中，设置**工具**菜单上，单击**项目设置**，然后单击**常规**中左窗格中，然后单击底部**转换**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 ### <a name="collate-clause"></a>Collate 子句  
   

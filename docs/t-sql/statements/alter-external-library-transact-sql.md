@@ -3,12 +3,12 @@ title: "ALTER 外部库 (Transact SQL) |Microsoft 文档"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,16 +18,16 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 8365e364c9769af139be2b8dd4e7f5943afc58ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER 外部库 (Transact SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 修改现有的外部包库的内容。
 
@@ -94,7 +94,7 @@ WITH ( LANGUAGE = 'R' )
 
 `ALTER EXTERNAL LIBRARY`语句仅将库 bits 上载到数据库。 已修改的库用户运行的外部脚本之后，通过执行之前未实际安装[sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要`ALTER ANY EXTERNAL LIBRARY`权限。 创建外部库，用户可以更改该外部的库。
 
@@ -137,7 +137,7 @@ ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 
 
 ## <a name="see-also"></a>另请参阅  
 
-[创建外部库 (Transact SQL)](create-external-library-transact-sql.md)
-[删除外部库 (Transact SQL)](drop-external-library-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

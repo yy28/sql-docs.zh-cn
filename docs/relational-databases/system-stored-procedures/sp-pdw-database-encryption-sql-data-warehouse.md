@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e70d3a09e94a5e54f119934ec2c63ea90fa932f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8e63022bd135d7c5fc78dd717b6a0bdd27dc5311
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,14 +33,14 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>语法  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;  
 ```  
   
 #### <a name="parameters"></a>Parameters  
- [  **@enabled=** ]*启用*  
+ [ **@enabled=** ] *enabled*  
  确定是否启用透明数据加密。 *启用*是**int**，和可以是以下值之一：  
   
 -   0 = 禁用  
@@ -53,13 +55,13 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="remarks"></a>注释  
  当使用启用 TDE **sp_pdw_database_encryption**，tempdb 数据库进行删除、 重新创建和加密。 为此，TDE 时不能启用在设备上使用 tempdb 其他活动会话。 启用或禁用设备上的 TDE 是设备的操作更改状态，在大多数情况下应执行一次中的设备生存期内，和在设备上没有流量时应执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定数据库角色或**CONTROL SERVER**权限。  
   
 ## <a name="example"></a>示例  
  下面的示例在设备上启用 TDE。  
   
-```tsql  
+```sql  
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   

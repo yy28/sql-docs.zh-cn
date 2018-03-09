@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLUPLEVEL
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 14a7dccbecdb3f33cfbecb9ddfee328c0f1e928d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ec561536a098e927731a3359edae3f2e35f3d481
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  *Level_Expression*  
  返回级别的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **DrillupLevel**函数将返回一组的成员按层次结构组织基于包含在指定组的成员。 指定集中的成员顺序将予以保留。  
   
  如果指定一个级别表达式，则**DrillupLevel**函数构造一个集通过检索指定的级别高于那些成员。 如果指定一个级别表达式，并且不存在该指定集内的指定级别的成员，则返回指定的集。  

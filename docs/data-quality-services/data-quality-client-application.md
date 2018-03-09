@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0e15b684c3bce4b0f4c0b08f915077c68afb05e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 92da55879e2d7dddd982eaba66fb2ff5c2c7ba27
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-client-application"></a>数据质量客户端应用程序
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序允许您使用独立工具执行数据质量操作。 此应用程序使您能够创建知识库、创建和运行数据质量项目以及执行管理任务。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="installing-the-data-quality-client-application"></a>安装数据质量客户端应用程序  
  使用 SQL Server 安装程序安装 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序。 可以在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]所在的计算机上安装该客户端应用程序，也可以在远程计算机上安装它。 有关安装 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序的详细信息，请参阅[安装 Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  

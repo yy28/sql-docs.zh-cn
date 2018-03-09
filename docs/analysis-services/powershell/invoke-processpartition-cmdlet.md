@@ -2,13 +2,13 @@
 title: "调用 ProcessPartition cmdlet |Microsoft 文档"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: powershell
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 552bd130a7182a3993c9e6742e7fcb1d1ecfd50c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f36ab9dbb5054c4014e03718a99fc28033e4d9ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processpartition-cmdlet"></a>Invoke-ProcessPartition cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  使用特定的处理类型变量处理分区。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]处理使用特定的处理类型变量的分区。  
 
 >[!NOTE] 
 >这篇文章可能包含过期的信息和示例。 有关最新的使用 Get-help cmdlet。
@@ -59,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |必需？|true|  
-|位置？|1|  
+|位置？|@shouldalert|  
 |默认值||  
 |接受管道输入？|false|  
 |接受通配符？|false|  

@@ -1,19 +1,18 @@
 ---
 title: "编程 AMO Fundamental Objects |Microsoft 文档"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.date: 02/14/2018
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - server objects [AMO]
 - programming [AMO]
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6eda664b7dbe009d5f82e0daffe0b428b26098d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基础对象的编程
   基础对象通常是简单直接的对象。 通常会创建和实例化这些对象，然后在不再需要它们时，用户可以断开与它们的连接。 基础类包括以下对象：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 AMO 基础对象中的唯一一个复杂对象是 <xref:Microsoft.AnalysisServices.DataSourceView>，它需要详细信息来生成表示数据源视图的抽象模型。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [DataSourceView 对象](#DSV)  
   
-##  <a name="ServerObjects"></a>服务器对象  
+##  <a name="ServerObjects"></a> 服务器对象  
  使用 <xref:Microsoft.AnalysisServices.Server> 对象需要以下步骤：连接服务器，验证 <xref:Microsoft.AnalysisServices.Server> 对象是否已连接到服务器，如果已连接，断开 <xref:Microsoft.AnalysisServices.Server> 与服务器的连接。  
   
 ### <a name="connecting-to-the-server-object"></a>连接服务器对象  
@@ -111,7 +110,7 @@ if ( (svr != null) && ( svr.Connected))
 }  
 ```  
   
-###  <a name="AMO"></a>AmoException 异常对象  
+###  <a name="AMO"></a> AmoException 异常对象  
  AMO 将在发现各种不同的问题时引发异常。 有关异常的详细说明，请参阅[AMO 其他类和方法](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)。 下面的示例代码演示了捕获 AMO 中的异常的正确方法：  
   
 ```  
@@ -150,7 +149,7 @@ catch (  AMOException e)
 }  
 ```  
   
-##  <a name="DatabaseObjects"></a>数据库对象  
+##  <a name="DatabaseObjects"></a> 数据库对象  
  使用 <xref:Microsoft.AnalysisServices.Database> 对象非常简单直接。 您可以从 <xref:Microsoft.AnalysisServices.Server> 对象的数据库集合中获取现有数据库。  
   
 ### <a name="creating-dropping-and-finding-a-database"></a>创建、删除和查找数据库  
@@ -197,7 +196,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource"></a>数据源对象  
+##  <a name="DataSource">数据源对象</a>  
  <xref:Microsoft.AnalysisServices.DataSource> 对象将 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 与数据所驻留的数据库相链接。 表示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 基础模型的架构由 <xref:Microsoft.AnalysisServices.DataSourceView> 对象定义。 <xref:Microsoft.AnalysisServices.DataSource> 对象可视为数据所驻留的数据库的连接字符串。  
   
  下面的示例代码演示如何创建 <xref:Microsoft.AnalysisServices.DataSource> 对象。 该示例验证服务器是否仍然存在，<xref:Microsoft.AnalysisServices.Server> 对象是否已连接以及数据库是否存在。 如果已存在 <xref:Microsoft.AnalysisServices.DataSource> 对象，则将其删除并重新创建。 创建的 <xref:Microsoft.AnalysisServices.DataSource> 对象使用同一名称和内部 ID。 在此示例中，不对连接字符串执行检查来进行验证。  
@@ -220,7 +219,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV"></a>DataSourceView 对象  
+##  <a name="DSV">DataSourceView 对象</a>  
  <xref:Microsoft.AnalysisServices.DataSourceView> 对象负责保存 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的架构模型。 为使 <xref:Microsoft.AnalysisServices.DataSourceView> 对象保存架构，必须先构造架构。 架构基于 System.Data 命名空间中的 DataSet 对象构造。  
   
  下面的示例代码将创建包括在基于 AdventureWorks 的 Analysis Services 示例项目中的部分架构。 该示例创建表、计算列、关系和复合关系的架构定义。 架构是持久化的数据集。  

@@ -2,10 +2,14 @@
 title: "填充全文索引 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-search
+ms.suite: sql
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +27,20 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2c1d56c9d50735bb3a97bbfc150359ae06941dc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
-  创建和维护全文索引涉及使用称为“填充”（也称为“爬网”）的过程填充索引。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+创建和维护全文索引涉及使用称为“填充”（也称为“爬网”）的过程填充索引。  
   
 ##  <a name="types"></a> Types of population  
 全文索引支持以下填充类型：
@@ -55,7 +60,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>示例 - 创建全文索引但不运行完全填充  
  以下示例对 `Production.Document` 示例数据库的 `AdventureWorks` 表创建全文索引。 此示例使用 `WITH CHANGE_TRACKING OFF, NO POPULATION` 来延迟初始完全填充。  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -74,7 +79,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>示例 - 对表运行完全填充  
  以下示例对 `Production.Document` 示例数据库的 `AdventureWorks` 表运行完全填充。  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -107,7 +112,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **示例 - 更改全文索引以使用自动更改跟踪**  
     以下示例更改 `HumanResources.JobCandidate` 示例数据库的 `AdventureWorks` 表的全文索引以使用自动填充的更改跟踪。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -127,7 +132,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **示例 - 使用手动更改跟踪创建全文索引**  
     以下示例对 `HumanResources.JobCandidate` 示例数据库的 `AdventureWorks` 表创建全文索引，该全文索引将使用具有手动填充的更改跟踪。  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -141,7 +146,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **示例 - 运行手动填充**  
     以下示例对 `HumanResources.JobCandidate` 示例数据库的 `AdventureWorks` 表的更改跟踪全文索引运行手动填充。  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  

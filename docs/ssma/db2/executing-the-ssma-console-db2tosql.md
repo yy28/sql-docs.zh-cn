@@ -1,27 +1,31 @@
 ---
 title: "执行 SSMA 控制台 (DB2ToSQL) |Microsoft 文档"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology: sql-ssma
+ms.suite: sql
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ae2f531642d8701861b217bb53951c8dad07d2d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>执行 SSMA 控制台 (DB2ToSQL)
 Microsoft 为你提供一组可靠的脚本来执行和控制 SSMA 活动的文件命令。 接下来的部分详细介绍相同。 控制台应用程序在此部分中使用作为枚举的某些标准脚本文件命令。  
@@ -165,7 +169,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
   metabase="<source/target>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <force-load>  
@@ -278,7 +282,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <generate-assessment-report  
@@ -350,7 +354,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <convert-schema  
@@ -416,7 +420,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
 </migrate-data>  
 ```  
-或  
+或多个  
   
 ```xml  
 <migrate-data  
@@ -526,7 +530,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target  
@@ -535,7 +539,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
    object-type="<object-category>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <synchronize-target>  
@@ -591,7 +595,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database  
@@ -600,7 +604,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
    object-type="<object-category>"/>  
 ```  
-或  
+或多个  
   
 ```xml  
 <refresh-from-database>  
@@ -650,7 +654,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
 />  
 ```  
-或  
+或多个  
   
 ```xml  
 <save-as-script  
@@ -689,7 +693,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
 -   `write-summary-report-to`指定将生成报表的路径。 如果只提到的文件夹路径，然后按名称文件**ConvertSQLReport.XML**创建。 （可选属性）  
   
-    创建具有 viz 进一步子类别的 2 的报表。。，：  
+    创建具有 viz 进一步子类别的 2 的报表..,:  
   
     -   报告错误 （="true/false"，使用默认为"false"（可选属性））。  
   
@@ -726,7 +730,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
 </convert-sql-statement>  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  
@@ -749,7 +753,7 @@ DB2 控制台应用程序的 SSMA 支持向后兼容性。 你将能够打开创
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-或  
+或多个  
   
 ```  
 <convert-sql-statement  

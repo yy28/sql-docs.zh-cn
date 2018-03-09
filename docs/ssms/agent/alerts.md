@@ -3,8 +3,11 @@ title: "警报 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,16 +27,16 @@ ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6506dcef18d066ff7432d3e8ce9ee62255a82d89
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 64de30ec59f69764c5f4fe0a1f28570da2b4d0a0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="alerts"></a>警报
-事件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 生成并被输入到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 应用程序日志中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理读取应用程序日志，并将写入的事件与定义的警报比较。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理找到匹配项时，它将发出自动响应事件的警报。 除了监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理还监视性能条件和 Windows Management Instrumentation (WMI) 事件。  
+# <a name="alerts"></a>Alerts
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 事件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 生成并被输入到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 应用程序日志中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理读取应用程序日志，并将写入的事件与定义的警报比较。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理找到匹配项时，它将发出自动响应事件的警报。 除了监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理还监视性能条件和 Windows Management Instrumentation (WMI) 事件。  
   
 若要定义警报，需要指定：  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在发生特定级别的严重错误时发出警报。 例如，可以指定严重级别 15 来响应 Transact-SQL 语句中的语法错误。  
   
--   **数据库**  
+-   **“数据库”**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理仅在特定数据库中发生事件时才发出警报。 此选项是对错误号或严重级别的补充。 例如，如果实例中包含一个用于生产的数据库和一个用于报告的数据库，可以定义仅响应生产数据库中的语法错误的警报。  
   

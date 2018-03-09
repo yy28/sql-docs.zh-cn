@@ -1,11 +1,11 @@
 ---
-title: "第 2 课： 在 SSIS 中创建部署包 |Microsoft 文档"
+title: "第 2 课：在 SSIS 中创建部署捆绑 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -15,17 +15,16 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 54ee445b2458955a4b2f7834c4a4fee74f4aeb1e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e047268e658c5b5aa0df933fd4152864b873ef2a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>第 2 课：在 SSIS 中创建部署捆绑
 在 [第 1 课：准备创建部署捆绑](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)中，创建了名为 Deployment Tutorial 的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，将包和支持文件添加到该项目，并在包中实现了配置。  
@@ -39,13 +38,12 @@ ms.lasthandoff: 08/03/2017
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [步骤 1： 生成部署实用工具](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [步骤 1：生成部署实用工具](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
--   [步骤 2： 验证部署捆绑](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+-   [步骤 2：验证部署捆绑](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
 [步骤 1：生成部署实用工具](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
   
   
-

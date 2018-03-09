@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_profile_sp
 - sysmail_update_profile_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_update_profile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_update_profile_sp
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1439aacc8aba119c63c246f2980c2ef673af7846
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1da9b999f30a31928849f5a31a2144117d94e1f7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +47,13 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  要更新的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
   
- [  **@profile_name**  =] *profile_name*  
+ [ **@profile_name** = ] **'***profile_name***'**  
  要更新的配置文件名称或配置文件的新的名称。 *profile_name*是**sysname**，默认值为 NULL。 至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
   
- [  **@description**  =] *说明*  
+ [ **@description** = ] **'***description***'**  
  对配置文件的新的说明。 *说明*是**nvarchar(256)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -61,7 +64,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
  存储的过程**sysmail_update_profile_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称执行过程**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认为成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

@@ -2,15 +2,13 @@
 title: "数据挖掘向导 (Analysis Services-数据挖掘) |Microsoft 文档"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ad9dd40bb7f7f8da0820d9ccbefafed9079650b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
-  每次向数据挖掘项目中添加新的挖掘结构时，都会启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导。 该向导可帮助您选择数据源并设置可定义要用于分析的数据的数据源视图，然后帮助您创建初始模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+每次向数据挖掘项目中添加新的挖掘结构时，都会启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导。 该向导可帮助您选择数据源并设置可定义要用于分析的数据的数据源视图，然后帮助您创建初始模型。  
   
  在该向导的最后阶段，您可以选择将数据划分为定型集和测试集，并启用钻取等功能。  
   
@@ -78,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="choosing-an-algorithm"></a>选择算法  
  接下来，您必须决定处理数据时要使用的算法。 此决定可能很难做出。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的每种算法都有不同的功能并会产生不同的结果，因此，在确定最适合您的数据和业务问题的模型之前，您可以试用多种不同的模型。 请参阅以下主题以查看每种算法最适合的任务的说明：  
   
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  同样，可以使用不同的算法创建多个模型，也可以更改算法的参数来创建不同的模型。 您不应局限于所选的算法，最好的方法是对同一数据创建几个不同的模型。  
   
@@ -112,17 +111,17 @@ ms.lasthandoff: 11/17/2017
 ## <a name="related-content"></a>相关内容  
  若要了解有关在创建数据挖掘模型时需做出的决策的详细信息，请参阅以下链接：  
   
- [数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [内容类型 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [数据类型（数据挖掘）](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [数据类型 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [功能选择（数据挖掘）](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [功能选择 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [缺失值 &#40;Analysis Services-数据挖掘 &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
- [对挖掘模型的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
+ [在挖掘模型的钻取](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   

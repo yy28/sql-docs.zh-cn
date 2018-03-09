@@ -18,13 +18,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0ed6831a89d77f60e77e012ba36febdddc88a5a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>向可用性组添加增强的数据库故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SQL Server 2016 引入了一个新的可选行为，名为“增强的数据库�
 
 在实例 A 和实例 B 之间配置一个可用性组，其中包含两个数据库：DB1 和 DB2。 可用性模式设置为随自动故障转移模式同步提交，同时启用增强的数据库故障转移。 无法访问包含 DB2 的数据和事务日志文件的磁盘。 检测到问题时，可用性组将自动故障转移到实例 B。
 
-## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>配置和查看增强的数据库故障转移选项
+## <a name="configure-and-view-the-enhanced-database-failover-option"></a>配置和查看增强的数据库故障转移选项
 
 可使用 SQL Server Management Studio 或 Transact-SQL 配置增强的数据库故障转移。 PowerShell cmdlet 当前不具有此功能。 默认情况下，增强的数据库故障转移处于禁用状态。
 
@@ -55,11 +55,11 @@ SQL Server 2016 引入了一个新的可选行为，名为“增强的数据库�
 
 *手动创建可用性组*
 
-利用[使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 主题中的说明创建可用性组。 若要启用增强的数据库故障转移，请在“数据库级别运行状况检测”旁边选中它的复选框。
+利用[使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 一文中的说明创建可用性组。 若要启用增强的数据库故障转移，请在“数据库级别运行状况检测”旁边选中它的复选框。
 
 *使用可用性组向导*
 
-利用[使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md) 主题中的说明执行操作。 可在“指定可用性组名称”对话框中找到启用增强的数据故障转移的选项。 若要启用，请勾选“数据库级别运行状况检测”旁边的框。
+利用[使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md) 一文中的说明执行操作。 可在“指定可用性组名称”对话框中找到启用增强的数据故障转移的选项。 若要启用，请勾选“数据库级别运行状况检测”旁边的框。
 
 ### <a name="transact-sql"></a>Transact-SQL
 
@@ -79,7 +79,7 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>动态管理视图
-若要查看可用性组是否已启用增强的数据库故障转移，请查询动态管理视图 `sys.availablity_groups`。 如果已禁用，`db_failover` 列将显示 0；如果已启用，则显示 1. 
+若要查看可用性组是否已启用增强的数据库故障转移，请查询动态管理视图 `sys.availability_groups`。 如果已禁用，`db_failover` 列将显示 0；如果已启用，则显示 1. 
 
 ## <a name="next-steps"></a>后续步骤 
 

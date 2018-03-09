@@ -2,37 +2,40 @@
 title: "分发服务器信息，代理 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 732843c1a3d3e659b08ab5e88bca333aa7e804d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a60816a7220a5d1c2b9f15aeeac98e1a74da21ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-information-agents"></a>分发服务器信息，代理
-  **“代理”** 选项卡显示与发布服务器和订阅服务器关联的代理和维护作业的相关信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]“代理”选项卡显示与发布服务器和订阅服务器关联的代理和维护作业的相关信息。  
   
  在分发服务器视图中分发服务器的 **“代理”** 选项卡中可用的代理包括在发布服务器的 **“代理”** 选项卡中可用的所有代理。 不过，分发服务器视图中分发服务器的 **“代理”** 选项卡还包括一个分发服务器代理和一个合并代理。  
   
  有关快照代理、日志读取器代理和队列读取器代理的详细信息，请参阅 [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)。 请注意，当您查看分发服务器的 **“代理”** 选项卡上的代理信息时，将提供快照代理和日志读取器代理的发布服务器信息。 不过，在分发服务器视图中分发服务器的 **“代理”** 选项卡中，您还可以选择 **“分发服务器代理”** 和 **“合并代理”**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  以下各节说明了此选项卡上为分发服务器代理和合并代理显示的数据。  
   
 ### <a name="distributor-agent"></a>“分发服务器代理”  
- **状态**  
+ **“状态”**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  
@@ -81,8 +84,8 @@ ms.lasthandoff: 11/09/2017
  **平均命令数**  
  在此代理最近一次运行期间平均每个事务的命令数。  
   
-### <a name="merge-agent"></a>“合并代理”  
- **状态**  
+### <a name="merge-agent"></a>合并代理  
+ **“状态”**  
  此代理的状态。 下面列出了可能的状态值：  
   
 -   错误  

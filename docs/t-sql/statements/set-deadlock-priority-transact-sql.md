@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DEADLOCK_PRIORITY_TSQL
 - SET_DEADLOCK_PRIORITY_TSQL
 - DEADLOCK_PRIORITY
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - deadlocks [SQL Server], priority settings
 - DEADLOCK_PRIORITY option
@@ -24,16 +26,16 @@ helpviewer_keywords:
 - priority deadlock settings [SQL Server]
 - SET DEADLOCK_PRIORITY statement
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa43f93003240c41fefdc589392f936c60a2333d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -70,18 +72,18 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@***deadlock_intvar*  
  指定死锁优先级的整数变量。 此变量必须设置为 -10 到 10 范围中的一个整数值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当两个会话同时等待访问由其他会话锁定的资源时，便会发生死锁。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例检测到两个会话发生死锁时，将选择其中一个会话作为死锁牺牲品来解决死锁。 此牺牲品的当前事务将回滚，且死锁错误消息 1205 返回客户端。 这样可释放由该会话所控制的所有锁，从而允许其他会话继续进行。  
   
  将哪个会话选为死锁牺牲品取决于每个会话的死锁优先级：  
   
--   如果两个会话的死锁优先级相同，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将回滚开销较低的会话选为死锁牺牲品。 例如，如果两个会话都将其死锁优先级设置为 HIGH，则此实例便将它估计回滚开销较低的会话选为牺牲品。  
+-   如果两个会话的死锁优先级相同，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将回滚开销较低的会话选为死锁牺牲品。 例如，如果两个会话都将其死锁优先级设置为 HIGH，则此实例便将它估计回滚开销较低的会话选为牺牲品。 成本取决于比较的写入到该点在各事务中的日志字节数。 （你可以看到此值为"日志使用"死锁图形中）。
   
 -   如果会话的死锁优先级不同，则将死锁优先级最低的会话选为死锁牺牲品。  
   
  SET DEADLOCK_PRIORITY 是在执行或运行时设置，而不是在分析时设置。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER PARTITION FUNCTION
 - ALTER_PARTITION_FUNCTION_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - splitting partitions [SQL Server]
 - partitioned tables [SQL Server], splitting
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - partition functions [SQL Server], modifying
 - partitioned tables [SQL Server], merging
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5fc84614d46bdf32bcbcc4bfa9ace7cf049baa9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 66b921eb3bd6378d20de11a0197a20c957d14ac6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -103,7 +105,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不对修改分区函数提供复制支持。 必须在订阅数据库中手动应用对发布数据库中的分区函数的更改。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  可以使用以下任意权限执行 ALTER PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -117,7 +119,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 ### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. 将已分区表或索引的一个分区拆分为两个分区  
  以下示例创建一个分区函数，将表或索引分为四个分区。 `ALTER PARTITION FUNCTION` 将某个分区拆分为两个分区，从而总共创建五个分区。  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  
@@ -135,7 +137,7 @@ SPLIT RANGE (500);
 ### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>B. 将已分区表的两个分区合并为一个分区  
  以下示例与上例创建同一分区函数，然后将两个分区合并为一个分区，从而总共创建了三个分区。  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  

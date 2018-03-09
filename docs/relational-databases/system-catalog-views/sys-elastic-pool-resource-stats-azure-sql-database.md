@@ -8,27 +8,30 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: Azure SQL Database
-f1_keywords: sys.elastic_pool_resource_stats catalog view
+applies_to:
+- Azure SQL Database
+f1_keywords:
+- sys.elastic_pool_resource_stats catalog view
 helpviewer_keywords:
 - sys.elastic_pool_resource_stats_TSQL
 - sys.elastic_pool_resource_stats
 - elastic_pool_resource_stats_TSQL
 - elastic_pool_resource_stats
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9505470a81f88e457a8b2f0b9429cee60cef7dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7af69bdd1f98560d3a6ae9699551b4f3062f68c6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|指示的报告间隔为 15 秒起始的 UTC 时间。|  
 |**end_time**|**datetime2**|该值指示的报告间隔为 15 秒结束的 UTC 时间。|  
-|**elastic_pool_name**|**nvarchar （128)**|弹性数据库池的名称。|  
+|**elastic_pool_name**|**nvarchar(128)**|弹性数据库池的名称。|  
 |**avg_cpu_percent**|**decimal(5,2)**|平均计算利用率，以百分比表示的池的限制。|  
 |**avg_data_io_percent**|**decimal(5,2)**|在基于池的限制数的百分比的平均 I/O 使用率。|  
 |**avg_log_write_percent**|**decimal(5,2)**|平均写入资源使用率的池限制百分比。|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="remarks"></a>注释  
  此视图在逻辑服务器的 master 数据库中存在。 你必须连接到 master 数据库查询**sys.elastic_pool_resource_stats**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**dbmanager**角色。  
   
 ## <a name="examples"></a>示例  

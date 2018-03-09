@@ -5,10 +5,11 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69ab566f5ad04cb52219c08bb6e9842da7415b87
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6348d7477123e993edc2223b874ac15f11da2897
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以创建模型中主数据的多个版本。 在验证数据时可以锁定版本，并在验证数据之后提交。 提交的版本组成可审核的更改记录。 创建的每个版本包含模型的所有成员、属性值、层次结构成员、层次结构关系和集合。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  创建模型并使用公司的主数据填充 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库时，自动创建初始版本。 用户基于权限在需要时可以更改此版本。  
   
-2.  当您要提交模型的一个版本时，锁定该版本，以便只有模型管理员可以更新数据。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。 如果配置了通知，则每次版本的状态发生更改时，电子邮件通知都会发送给模型管理员。 有关详细信息，请参阅[配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)。  
+2.  当您要提交模型的一个版本时，锁定该版本，以便只有模型管理员可以更新数据。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。 如果配置了通知，则每次版本的状态发生更改时，电子邮件通知都会发送给模型管理员。 有关详细信息，请参阅[配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)。  
   
 3.  将业务规则应用于锁定的版本的数据并查看任何验证问题。 如有必要，可以填写缺少的信息或恢复导致问题的事务。 还可以解锁该版本，以便用户进行更改。  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的设置确定是复制所有版本还是仅复制那些已提交的版本。 若要创建同时版本，必须配置 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 以允许您复制所有版本。 此设置在“系统设置”表中也提供。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  

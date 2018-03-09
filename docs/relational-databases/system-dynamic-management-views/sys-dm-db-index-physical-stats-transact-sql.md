@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_db_index_physical_stats (TRANSACT-SQL) |Microsoft 文档"
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_index_physical_stats_TSQL
 - sys.dm_db_index_physical_stats
 - dm_db_index_physical_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: "95"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f04fd96c367fc01225b57db6d04831748a618ed2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bdad59aebb96a2afd2f11172c6068d54213c095
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,19 +68,19 @@ sys.dm_db_index_physical_stats (
   
  内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 如果在不指定数据库名称的情况下使用 DB_ID，则当前数据库的兼容级别必须是 90 或更高。  
   
- *object_id* |NULL |0 |默认值  
+ *object_id* | NULL | 0 | DEFAULT  
  索引所在的表或视图的对象 ID。 *object_id* 是 **int**。  
   
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，有效的输入也包括 service broker 队列名称或队列内部表名称。 何时应用默认参数 （即所有对象，所有索引，等等），对于所有队列的碎片信息包含在结果集。  
   
  指定 NULL 可返回指定数据库中的所有表和视图的信息。 如果指定 NULL 为*object_id*，还必须指定为 NULL *index_id*和*partition_number*。  
   
- *index_id* | 0 |NULL |为-1 |默认值  
+ *index_id* | 0 | NULL | -1 | DEFAULT  
  是索引的 ID。 *index_id*是**int**。有效输入包括索引，0 的 ID 号，如果*object_id*是堆，NULL，则为-1 或默认值。 默认值为-1。 为 NULL，-1，并且默认值是此上下文中的等效值。  
   
  指定 NULL 可返回基表或视图的所有索引的信息。 如果指定 NULL 为*index_id*，还必须指定为 NULL *partition_number*。  
   
- *partition_number* |NULL |0 |默认值  
+ *partition_number* | NULL | 0 | DEFAULT  
  对象中的分区号。 *partition_number*是**int**。有效输入包括*partion_number*索引或堆，NULL、 0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。  
   
  指定 NULL，以返回有关所属对象的所有分区的信息。  
@@ -225,7 +227,7 @@ GO
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不返回聚集列存储索引的数据。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要下列权限：  
   
 -   对数据库中的指定对象具有 CONTROL 权限。  
@@ -429,11 +431,11 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [索引相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [系统视图 &#40;Transact SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

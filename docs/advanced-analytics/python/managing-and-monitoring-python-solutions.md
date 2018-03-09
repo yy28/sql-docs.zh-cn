@@ -1,32 +1,31 @@
 ---
-title: "监视 |Microsoft 文档"
+title: "监视 SQL Server 中的 Python |Microsoft 文档"
 ms.custom: 
-ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.date: 03/06/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a56a4d2618d374bc4b39e8f798ca60ed805fe843
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 034d58a26ef111a89bc88aace8d49c89f1664278
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="monitoring"></a>监视
+# <a name="monitoring-python-in-sql-server"></a>监视 SQL Server 中的 Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+For Python 支持是在 SQL Server，可从 SQL Server 自 2017 年开始的新功能。
 
-> [!NOTE]
-> Python 支持是 SQL Server 自 2017 年中的新功能，并在预发行版。
-
-For Python 支持是在 SQL Server，SQL Server 自 2017 年 1 CTP 2.0 中提供的新功能。
-
-但是，外部脚本执行和数据安全的整体框架是与。 相同包括一个运行 Python，使用为 SQL Server 2016 中的 R 脚本执行提供的相同框架，你可以监视任何外部脚本。 有关详细信息，请参阅[Monitoring R Solutions](../r/managing-and-monitoring-r-solutions.md)。
+外部脚本执行和数据安全的整体框架是与。 相同包括一个运行 Python，使用为 SQL Server 2016 中的 R 脚本执行提供的相同框架，你可以监视任何外部脚本。 有关详细信息，请参阅[Monitoring R Solutions](../r/managing-and-monitoring-r-solutions.md)。
 
 请参阅下列相关的主题的详细信息：
 

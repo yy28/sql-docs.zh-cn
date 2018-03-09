@@ -2,33 +2,32 @@
 title: "管理数据挖掘解决方案和对象 |Microsoft 文档"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
 ms.component: data-mining
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41239f58ecdcea9f5d60e1ebdd83bc010b2c3bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用于管理现有挖掘结构和挖掘模型的客户端工具。 本节介绍使用每种环境可以执行的管理操作。  
   
  除了这些工具之外，还可以使用 AMO 以编程方式管理数据挖掘对象，或使用连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的其他客户端，如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 的数据挖掘外接程序。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [更改挖掘模型的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [查看或更改建模标志（数据挖掘）](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [查看或更改建模标志 &#40; 数据挖掘 &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [查看或更改算法参数](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中管理数据挖掘对象  
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，可以编写挖掘结构和挖掘模型的脚本、处理或删除挖掘结构和挖掘模型。 使用对象资源管理器仅可以查看有限的一组属性；但是，您可以通过打开 **“DMX 查询”** 窗口并选择挖掘结构，以查看有关挖掘模型的其他元数据。  
   
--   [在 SQL Server Management Studio 中创建一个 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+-   [在 SQL Server Management Studio 中创建 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="managing-data-mining-objects-programmatically"></a>以编程方式管理数据挖掘对象  
  使用以下编程语言可创建、更改、处理和删除数据挖掘对象。 每种语言都是针对不同任务设计的，因此，对您可执行的操作类型可能有一些限制。 例如，数据挖掘对象的某些属性不能通过使用数据挖掘扩展插件 (DMX) 进行更改，而必须使用 XMLA 或 AMO。  
