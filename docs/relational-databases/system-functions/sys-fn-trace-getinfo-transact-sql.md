@@ -29,10 +29,10 @@ ms.author: jroth
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ce69679a348fdb29b334f45fa5e3a61f8dd14e2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,15 +59,15 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|跟踪的 ID。|  
-|属性|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请参阅@options中[sp_trace_create &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
+|属性|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请参阅@options中[sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
 |值|**sql_variant**|有关指定跟踪的属性的信息。|  
   
 ## <a name="remarks"></a>注释  
  当传递特定跟踪的 ID 时，fn_trace_getinfo 将返回有关该跟踪的信息。 传递无效 ID 时，此函数将返回空行集。  
   
- fn_trace_getinfo 会将 .trc 扩展名附加到其结果集中包含的所有跟踪文件名。 有关定义跟踪的信息，请参阅[sp_trace_create &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). 有关跟踪筛选器的类似信息，请参阅[sys.fn_trace_getfilterinfo &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
+ fn_trace_getinfo 会将 .trc 扩展名附加到其结果集中包含的所有跟踪文件名。 有关定义跟踪的信息，请参阅[sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。 有关跟踪筛选器的类似信息，请参阅[sys.fn_trace_getfilterinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)。  
   
- 有关使用跟踪存储过程的完整示例，请参阅[创建跟踪 &#40;Transact SQL &#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
+ 有关使用跟踪存储过程的完整示例，请参阅[创建跟踪&#40;TRANSACT-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 ALTER TRACE 权限。  
