@@ -1,4 +1,4 @@
-﻿---
+---
 title: "有关在 Linux 上的 SQL Server 2017 发行说明 |Microsoft 文档"
 description: "本文包含的发行说明，并支持在 Linux 上运行的 SQL Server 2017 的功能。 发行说明也包括针对最新版本和多个以前的版本。"
 author: rothja
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/24/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-以下发行说明适用于 Linux 上运行的 SQL Server 2017。 本文分为每个版本的部分。 GA 版具有详细可支持性并被称之为列出的问题。 每个累积更新 (CU) 版本具有描述 CU 更改以及指向包下载的 Linux 支持文章的链接。
+以下发行说明适用于 Linux 上运行的 SQL Server 2017。 本文分为每个版本的部分。 GA 版具有详细可支持性和已知问题列表。 每个累积更新 (CU) 版本具有描述 CU 更改以及指向包下载的 Linux 支持文章的链接。
 
 ## <a name="supported-platforms"></a>支持的平台
 

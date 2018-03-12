@@ -1,4 +1,4 @@
-﻿---
+---
 title: "在 Linux 上的 SQL Server 自 2017 年 1 的新增功能 |Microsoft 文档"
 description: "本文重点介绍什么是用于在 Linux 上的 SQL Server 2017 的新功能。"
 author: rothja
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/24/2018
 本文介绍在 Linux 上运行的 SQL Server 2017 的主要功能和可用服务。
 
 > [!NOTE]
-> 除了这些功能在本文中，累积更新定期发布后 GA 版。 这些累积更新提供许多改进和修复。 有关最新 CU 版本的信息，请参阅[http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)。 包下载和已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
+> 除了本文中的这些功能外, 在 GA 发布之后, 还会定期发布累积更新。 这些累积更新提供许多改进和修复。 有关最新CU版本的信息，请参阅[http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)。 有关包下载和已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md)。
 
 ## <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
 
