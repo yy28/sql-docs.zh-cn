@@ -16,10 +16,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Microsoft 机学习服务旨在提供一个可扩展、 可缩放平台，使用
 
 在 SQL Server 2016 中，Microsoft 将启动两个服务器平台将受欢迎的开源 R 语言与业务应用程序相集成：
 
-+ **SQL Server R Services （数据库）**，与的集成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **集成的**SQL Server R Services（数据库内） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**，对于 Windows 和 Linux 服务器上的企业级 R 部署
 
 在 SQL Server 自 2017 年 1，名称已更改以反映的常用 Python 语言的支持。
