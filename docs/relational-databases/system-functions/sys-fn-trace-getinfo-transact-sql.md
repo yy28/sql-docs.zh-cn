@@ -59,7 +59,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|跟踪的 ID。|  
-|属性|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请参阅@options中[sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
+|属性|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请参阅@options 中 [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
 |值|**sql_variant**|有关指定跟踪的属性的信息。|  
   
 ## <a name="remarks"></a>注释  

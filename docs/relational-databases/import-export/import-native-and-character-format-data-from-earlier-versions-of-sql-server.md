@@ -24,14 +24,14 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b80ad93883e5ef5d1fa907116e2c4fa5b4a264f5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过将 **bcp** 与 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-V [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开关一起使用，从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 **或** 中导入本机和字符格式数据。 **-V** 开关将使 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本中的数据类型，并且数据文件格式与早期版本中的格式相同。  
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过将 **bcp** 与 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-V [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开关一起使用，从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 **或** 中导入本机和字符格式数据。 **-V** 开关将使 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本中的数据类型，并且数据文件格式与早期版本中的格式相同。  
   
  若要为数据文件指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本，可将 **-V** 开关与以下的任一限定符一起使用：  
   
@@ -51,9 +51,9 @@ ms.lasthandoff: 02/03/2018
 |**sql_variant**|**text**|**nvarchar(4000)**|*|  
 |**varchar(max)**|**text**|**text**|**text**|  
 |**nvarchar(max)**|**ntext**|**ntext**|**ntext**|  
-|**varbinary(max)**|**图像**|**图像**|**图像**|  
+|**varbinary(max)**|**image**|**image**|**image**|  
 |XML|**ntext**|**ntext**|**ntext**|  
-|UDT**|**图像**|**图像**|**图像**|  
+|UDT**|**image**|**image**|**image**|  
   
  *此类型受本机支持。  
   

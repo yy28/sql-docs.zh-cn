@@ -30,14 +30,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="modeling-flags-data-mining"></a>建模标志（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，可以使用建模标志为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，可以使用建模标志为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
   
  某些建模标志是在挖掘结构级别定义的，而其他标志则是在挖掘模型列级别定义的。 例如，可以将 **NOT NULL** 建模标志与挖掘结构列一起使用。 您可以根据用于创建模型的算法，在挖掘模型列上定义其他建模标志。  
   

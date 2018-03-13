@@ -29,13 +29,13 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色（SSIS 服务）
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了某些固定数据库级角色，以帮助安全访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的包。 可用的角色有所不同，具体取决于是将包保存在 SSIS 目录数据库 (SSISDB) 中还是 msdb 数据库中。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了某些固定数据库级角色，以帮助安全访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的包。 可用的角色有所不同，具体取决于是将包保存在 SSIS 目录数据库 (SSISDB) 中还是 msdb 数据库中。  
   
 ## <a name="roles-in-the-ssis-catalog-database-ssisdb"></a>SSIS 目录数据库 (SSISDB) 中的角色  
  SSIS 目录数据库 (SSISDB) 提供了以下固定数据库级角色，以帮助安全访问包和有关包的信息。  
@@ -47,14 +47,14 @@ ms.lasthandoff: 02/15/2018
      视图的列表包括：[catalog].[projects]、[catalog].[packages]、[catalog].[operations]、[catalog].[extended_operation_info]、[catalog].[operation_messages]、[catalog].[event_messages]、[catalog].[execution_data_statistics]、[catalog].[execution_component_phases]、[catalog].[execution_data_taps]、[catalog].[event_message_context]、[catalog].[executions]、[catalog].[executables]、[catalog].[executable_statistics]、[catalog].[validations]、[catalog].[execution_parameter_values] 和 [catalog].[execution_property_override_values]。  
   
 ## <a name="roles-in-the-msdb-database"></a>msdb 数据库中的角色  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括三个固定数据库级角色（db_ssisadmin、db_ssisltduser 和 db_ssisoperator），用于控制对保存到 msdb 数据库的包的访问。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将角色分配给包。 角色分配保存到 **msdb** 数据库中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括三个保存到 **msdb**数据库的用于控制对包的访问的固定数据库级角色： **db_ssisadmin**、 **db_ssisltduser**和 **db_ssisoperator** 。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将角色分配给包。 角色分配保存到 **msdb** 数据库中。  
   
 ### <a name="read-and-write-actions"></a>读取和写入操作  
  下表介绍了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中 Windows 和固定数据库级角色的读写操作。  
   
 |角色|读操作|写操作|  
 |----------|-----------------|------------------|  
-|**msdb**<br /><br /> 或多个<br /><br /> **sysadmin**|枚举自己的包。<br /><br /> 枚举所有包。<br /><br /> 查看自己的包。<br /><br /> 查看所有包。<br /><br /> 执行自己的包。<br /><br /> 执行所有包。<br /><br /> 导出自己的包。<br /><br /> 导出所有包。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中执行所有包。|导入包。<br /><br /> 删除自己的包。<br /><br /> 删除所有包。<br /><br /> 更改自己的包角色。<br /><br /> 更改所有包角色。<br /><br /> <br /><br /> **\*\* 警告 \*\***db_ssisadmin 角色和 dc_admin 角色的成员可以将其特权提升为 sysadmin。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 sysadmin 安全上下文可以执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包，所以可以实现特权提升。 若要在运行维护计划、数据收集组和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时防止此权限提升，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为使用具有有限权限的代理帐户，或只将 sysadmin 成员添加到 db_ssisadmin 和 dc_admin 角色。|  
+|**msdb**<br /><br /> 或<br /><br /> **sysadmin**|枚举自己的包。<br /><br /> 枚举所有包。<br /><br /> 查看自己的包。<br /><br /> 查看所有包。<br /><br /> 执行自己的包。<br /><br /> 执行所有包。<br /><br /> 导出自己的包。<br /><br /> 导出所有包。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中执行所有包。|导入包。<br /><br /> 删除自己的包。<br /><br /> 删除所有包。<br /><br /> 更改自己的包角色。<br /><br /> 更改所有包角色。<br /><br /> <br /><br /> **\*\* 警告 \*\***db_ssisadmin 角色和 dc_admin 角色的成员可以将其特权提升为 sysadmin。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 sysadmin 安全上下文可以执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包，所以可以实现特权提升。 若要在运行维护计划、数据收集组和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时防止此权限提升，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为使用具有有限权限的代理帐户，或只将 sysadmin 成员添加到 db_ssisadmin 和 dc_admin 角色。|  
 |**db_ssisadmin**|枚举自己的包。<br /><br /> 枚举所有包。<br /><br /> 查看自己的包。<br /><br /> 执行自己的包。<br /><br /> 导出自己的包。|导入包。<br /><br /> 删除自己的包。<br /><br /> 更改自己的包角色。|  
 |**db_ssisltduser**|枚举所有包。<br /><br /> 查看所有包。<br /><br /> 执行所有包。<br /><br /> 导出所有包。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中执行所有包。|InclusionThresholdSetting|  
 |**Windows 管理员**|查看所有正在运行的包的详细执行信息。|停止所有当前正在运行的包。|  
@@ -109,7 +109,7 @@ ms.lasthandoff: 02/15/2018
   
 4.  在 **“包角色”** 对话框中，从 **“读取者角色”** 列表中选择一个读取者角色，并从 **“写入者角色”** 列表中选择一个写入者角色。  
   
-5.  单击“确定” 。
+5.  单击 **“确定”**。
 
 ## <a name="create"></a> 创建用户定义的角色
     
@@ -135,7 +135,7 @@ ms.lasthandoff: 02/15/2018
   
 10. 还可以单击 **“扩展属性”** ，配置任何扩展属性。  
   
-11. 单击“确定” 。
+11. 单击 **“确定”**。
 
 ## <a name="roles_dialog"></a>“包角色”对话框 UI 参考
   可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“包角色”对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 数据库中存储的包。  
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/15/2018
   
  **sysssispackages** 表中的 **ownersid** 列列出了创建包的用户的唯一安全标识符。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **包名称**  
  指定包的名称。  
   

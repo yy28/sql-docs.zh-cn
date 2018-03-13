@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
   如果计算机上当前安装了 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本，可以升级到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -47,8 +47,8 @@ ms.lasthandoff: 02/15/2018
 >   
 >  -   DTS 运行时  
 > -   DTS API  
-> -   用于将 DTS 包迁移到下一版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
-> -   中对 DTS 包维护的支持 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+> -   用于将 DTS 包迁移到下一版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的包迁移向导  
+> -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对 DTS 包维护的支持  
 > -   执行 DTS 2000 包任务  
 > -   升级 DTS 包的顾问扫描。  
 >   
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/15/2018
   
 -   运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序，然后选择“从 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升级 **”选项**。  
   
--   在命令提示符处运行 **setup.exe**，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅[从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的“[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安装脚本”部分。  
+-   在命令提示符处运行 **setup.exe**，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中“的安装脚本”部分。  
   
  不能通过升级执行下列操作：  
   

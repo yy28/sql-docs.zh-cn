@@ -25,17 +25,17 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0b3ea3ad1c9c467925e50e4fdc337d2dd99c858b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>使用 bcp 指定文件存储类型 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-“文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 **int** 形式复制 **smallint**。用户定义的数据类型将按其基类型导出。  
+  “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 **int** 形式复制 **smallint**。用户定义的数据类型将按其基类型导出。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>用于文件存储类型的 bcp 提示符  
- 如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-n**或 **-N**或 **in**或 **-N**选项，则该命令会提示输入每个数据字段的文件存储类型，如下所示：  
+ 如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的文件存储类型，如下所示：  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   

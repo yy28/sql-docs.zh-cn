@@ -25,14 +25,14 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符” 标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
+  对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符” 标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
   
 > [!IMPORTANT]  
 >  使用本机格式或 Unicode 本机格式时，请使用长度前缀而不要使用字段终止符。 本机格式数据可能与终止符冲突，因为本机格式的数据文件是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部二进制数据格式存储的。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/23/2018
   
  **bcp** 命令包含以下开关。  
   
-|开关|Description|  
+|开关|说明|  
 |------------|-----------------|  
 |**-c**|指定将数据字段作为字符数据加载。|  
 |**-t** `,`|指定逗号 (,) 作为字段终止符。|  
