@@ -19,18 +19,19 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5690ea80bfe12a6995e80987e11bdaa59a30d150
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ec6dfe48d0d12626ff908efd24b810c276249f7c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]对于合并复制，请定期备份以下数据库：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  对于合并复制，请定期备份下列数据库：  
   
 -   发布服务器上的发布数据库  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/18/2018
   
  若要重新初始化订阅，请参阅 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)。  
   
- 若要创建并应用快照，请参阅 [Create 和 Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 和 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+ 若要创建并应用快照，请参阅 [Create 和 Apply the Initial Snapshot 和 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>备份和还原分发数据库  
  对于合并复制，应定期备份分发数据库，而且，只要所用备份的时间不超过使用分发服务器的所有发布的最短保持期，则无须考虑任何特殊事项即可还原分发数据库。 例如，如果三个发布的保持期分别为 10 天、20 天和 30 天，则用于还原数据库的备份的保持时间不应超过 10 天。 分发数据库在合并复制中的作用有限：它不存储更改跟踪中使用的任何数据，也不对将要转发到订阅数据库的合并复制更改提供临时存储（而事务复制中提供）。  
