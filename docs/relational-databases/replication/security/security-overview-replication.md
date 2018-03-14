@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - security [SQL Server replication], about security
 - authentication [SQL Server replication]
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
-caps.latest.revision: "45"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e0bcbe317e86f9562f28a339bb4e5ce4c81dfe5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6aeaff943dfd5a20c7e8cd68424a0294b7e694b7
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="security-overview-replication"></a>安全性概述（复制）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]基本上，要保护复制环境的安全，你需要了解身份验证和授权选项，了解如何正确使用复制筛选功能以及了解保护复制环境的各个部分的具体措施。 复制环境包括分发服务器、发布服务器、订阅服务器和快照文件夹。 本章介绍复制安全性，但复制安全性是建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性和 Windows 安全性基础上的。 因此应了解复制安全性的基础以及具体内容。 有关安全性的详细信息，请参阅 [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)（安装 SQL Server 的安全注意事项）。 有关 Oracle 发布的安全注意事项的详细信息，请参阅主题 [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)中的“复制安全模式”部分。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  基本上，要保护复制环境的安全，您需要了解身份验证和授权选项，了解如何正确使用复制筛选功能以及了解保护复制环境的各个部分的具体措施。 复制环境包括分发服务器、发布服务器、订阅服务器和快照文件夹。 本章介绍复制安全性，但复制安全性是建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性和 Windows 安全性基础上的。 因此应了解复制安全性的基础以及具体内容。 有关安全性的详细信息，请参阅 [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)（安装 SQL Server 的安全注意事项）。 有关 Oracle 发布的安全注意事项的详细信息，请参阅主题 [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)中的“复制安全模式”部分。  
   
 ## <a name="in-this-section"></a>本节内容  
  [威胁和漏洞缓解（复制）](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  

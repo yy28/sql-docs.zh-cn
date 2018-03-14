@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Web publishing [SQL Server replication], VPNs
 - Internet [SQL Server replication], VPNs
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
-caps.latest.revision: "33"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a851ec36920e6300a25ebf815e8f1c6998263d5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 760dd1341cc9a6aab18644b3777b007519322c7b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>使用 VPN 通过 Internet 发布数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]通过使用虚拟专用网络 (VPN) 技术，用户可以在家中、分支机构、远程客户端和其他公司通过 Internet 连接到企业网络进行工作，同时保持通信安全。 用户可以像在局域网 (LAN) 上那样使用 Windows 身份验证。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的所有类型都可以通过 VPN 复制数据，但如果使用的是合并复制，则应该考虑使用 Web 同步。因为 Web 同步不需要使用 VPN。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  通过使用虚拟专用网络 (VPN) 技术，用户可以在家中、分支机构、远程客户端和其他公司通过 Internet 连接到企业网络进行工作，同时保持通信安全。 用户可以像在局域网 (LAN) 上那样使用 Windows 身份验证。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的所有类型都可以通过 VPN 复制数据，但如果使用的是合并复制，则应该考虑使用 Web 同步。因为 Web 同步不需要使用 VPN。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)。  
   
  VPN 包含客户端软件，以便计算机可以通过 Internet（特殊情况下甚至可以是 Intranet）连接到专用计算机或服务器上的软件。 用户可以选择使用两端加密和用户身份验证的方法。 Internet 上的 VPN 连接逻辑上可以像站点间的广域网 (WAN) 链接一样使用。  
   

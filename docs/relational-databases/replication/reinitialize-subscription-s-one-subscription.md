@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.reinit.single.f1
-helpviewer_keywords: Reinitialize Subscription(s) dialog box
+f1_keywords:
+- sql13.rep.reinit.single.f1
+helpviewer_keywords:
+- Reinitialize Subscription(s) dialog box
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
-caps.latest.revision: "11"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f880d02edec3fdd62aba702781c290b985e5dafd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c8661d832e511c5e905ac71a65b17c2b5095d8a8
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>重新初始化订阅 - 一个订阅
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]可以使用“重新初始化订阅”对话框标记需要重新初始化的订阅。 重新初始化会涉及将快照应用于订阅服务器；对于事务发布的订阅，是由分发代理执行的；而对于合并发布的订阅，则是由合并代理执行的。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  可以使用 **“重新初始化订阅”** 对话框标记需要重新初始化的订阅。 重新初始化会涉及将快照应用于订阅服务器；对于事务发布的订阅，是由分发代理执行的；而对于合并发布的订阅，则是由合并代理执行的。  
   
 ## <a name="options"></a>“常规”  
  **使用当前快照**  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newsubwizard.agentlocation.f1
+f1_keywords:
+- sql13.rep.newsubwizard.agentlocation.f1
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
-caps.latest.revision: "20"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebdc5fb07a4ef25fab241b0707f9f329f184460e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2af484091c650656a09f03b9547d005172b48696
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;AgentName&gt; 代理位置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]合并代理（对于合并订阅）和分发代理（对于事务订阅和快照订阅）在分发服务器或订阅服务器上运行。 如果代理运行在分发服务器上，则订阅称为推送订阅；如果代理运行在订阅服务器上，则订阅称为请求订阅。 有关推送订阅和请求订阅的详细信息，请参阅[订阅发布](../../relational-databases/replication/subscribe-to-publications.md)。 通过执行向导创建的所有订阅，其类型均为在向导中所选择的类型。 若要创建两种类型的订阅，必须运行两次向导。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  合并代理（对于合并订阅）和分发代理（对于事务订阅和快照订阅）运行在分发服务器或订阅服务器上。 如果代理运行在分发服务器上，则订阅称为推送订阅；如果代理运行在订阅服务器上，则订阅称为请求订阅。 有关推送订阅和请求订阅的详细信息，请参阅[订阅发布](../../relational-databases/replication/subscribe-to-publications.md)。 通过执行向导创建的所有订阅，其类型均为在向导中所选择的类型。 若要创建两种类型的订阅，必须运行两次向导。  
   
 > [!NOTE]  
 >  创建订阅之后，不能更改订阅类型。  
