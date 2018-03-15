@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 36a844cb2dcda45701c29066b825e64a864d5757
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>将 SQL Server Integration Services 工作负荷直接迁移到云
 现在，可将 SQL Server Integration Services (SSIS) 包和工作负荷移到 Azure 云。
@@ -91,6 +91,8 @@ Azure 数据工厂为 Azure 上的 SSIS 包承载运行时引擎。 运行时引
 -   命令行工具
 -   PowerShell
 -   C# 和 SSIS 管理对象模型
+
+若要开始使用，请参阅[在 Azure 上部署、运行和监视 SSIS 包](ssis-azure-deploy-run-monitor-tutorial.md)。
 
 ### <a name="monitor-packages"></a>监视包
 要监视 SSMS 中运行的包，可在其中使用下列报表工具之一。

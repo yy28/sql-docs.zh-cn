@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6233878fdf7d0eadcfd837fd3640bdb041cdcf24
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: cd24872a05d4d8c210cc3b54e70b22cdb1ec799c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/29/2018
 在将托管 Always On 可用性组 (AG) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例升级到新的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务包或积累更新，或在安装到新的 Windows 服务包或积累更新时，可以通过执行滚动升级将主要副本的故障时间降低到仅需一次手动故障转移（或者如果无法故障转移回原始的主要副本，则需两次手动故障转移）。 在升级过程中，次要副本将不可用于故障转移或只读操作，并且在升级之后，次要副本可能需要花费一些时间来与主要副本节点保持同步，具体时间取决于主要副本节点上的活动量（因此需要较高的网络流量）。 另请注意，初始故障转移到运行较新版本 SQL Server 的次要副本后，可用性组中的数据库会运行升级进程，将其升级到最新版本。 在此期间这些数据库都没有可读副本。 初始故障转移之后的故障时间取决于可用性组中的数据库数量。 若计划故障回复至原始的主副本，那么在故障回复时将不会重复此步骤。
   
 >[!NOTE]  
->本文仅讨论 SQL Server 本身的升级。 它不涵盖升级包含 Windows Server 故障转移群集 (WSFC) 的操作系统。 Windows Server 2012 R2 之前的操作系统不支持升级承载故障转移群集的 Windows 操作系统。 若要升级在 Windows Server 2012 R2 上运行的群集节点，请参阅 [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)（群集操作系统滚动升级）  
+>本文仅讨论 SQL Server 本身的升级。 它不涵盖升级包含 Windows Server 故障转移群集 (WSFC) 的操作系统。 Windows Server 2012 R2 之前的操作系统不支持升级承载故障转移群集的 Windows 操作系统。 若要升级在 Windows Server 2012 R2 上运行的群集节点，请参阅[群集操作系统滚动升级](http://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)。  
   
 ## <a name="prerequisites"></a>必备条件  
 开始之前，请仔细阅读以下重要信息：  

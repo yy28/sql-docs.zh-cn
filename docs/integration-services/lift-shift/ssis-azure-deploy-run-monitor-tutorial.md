@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>在 Azure 上部署、运行和监视 SSIS 包
 本教程演示如何将 SQL Server Integration Services 项目部署到 Azure SQL 数据库上的 SSISDB 目录数据库、在 Azure-SSIS Integration Runtime 中运行包，以及监视正在运行的包。
@@ -29,9 +29,16 @@ ms.lasthandoff: 03/02/2018
 
 另外确保已经设置 SSISDB 数据库并预配 Azure-SSIS Integration Runtime。 有关如何在 Azure 上预配 SSIS 的信息，请参阅[将 SSIS 包部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
 
+> [!NOTE]
+> 若要部署到 Azure，只能使用项目部署模型。
+
 ## <a name="connect-to-the-ssisdb-database"></a>连接到 SSISDB 数据库
 
-使用 SQL Server Management Studio 连接到 Azure SQL 数据库服务器上的 SSIS 目录。 有关详细信息，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。
+使用 SQL Server Management Studio 连接到 Azure SQL 数据库服务器上的 SSIS 目录。 有关详细信息和屏幕截图，请参阅[连接到 Azure 上的 SSISDB 目录数据库](ssis-azure-connect-to-catalog-database.md)。
+
+请务必注意下面最重要的两点。 有关具体步骤，请参阅以下过程。
+-   采用格式“mysqldbserver.database.windows.net”，输入 Azure SQL 数据库服务器的完全限定的名称。
+-   选择 `SSISDB` 数据库以供连接。
 
 > [!IMPORTANT]
 > Azure SQL 数据库服务器侦听端口 1433。 如果尝试从企业防火墙内连接到 Azure SQL 数据库服务器，必须在企业防火墙中打开该端口，才能成功连接。
@@ -56,12 +63,18 @@ ms.lasthandoff: 03/02/2018
 
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>使用部署向导部署项目
 
+若要详细了解如何部署包和部署向导，请参阅[部署 Integration Services (SSIS) 项目和包](../packages/deploy-integration-services-ssis-projects-and-packages.md)和 [Integration Services 部署向导](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
+
 ### <a name="start-the-integration-services-deployment-wizard"></a>启动 Integration Services 部署向导
 1. 在 SSMS 的对象资源管理器中，在展开“Integration Services 目录”节点和“SSISDB”节点后，展开一个项目文件夹。
 
 2.  选择“项目”节点。
 
 3.  右键单击“项目”节点，选择“部署项目”。 Integration Services 部署向导随即打开。 可以从 SSIS 目录数据库或从文件系统部署项目。
+
+    ![通过 SSMS 部署项目](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![此时，SSIS 部署向导对话框打开](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>使用部署向导部署项目
 1. 在部署向导的“简介”页上查看简介。 选择“下一步”打开“选择源”页。
