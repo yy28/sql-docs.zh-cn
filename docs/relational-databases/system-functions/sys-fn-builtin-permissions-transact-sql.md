@@ -34,16 +34,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0aeedb143b94958e949466ea84def760614478c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回服务器内置权限层次结构的说明。 `sys.fn_builtin_permissions`只能在调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，并返回而不考虑是否受支持当前平台上的所有权限。 大多数权限适用于所有平台，但有些则不适用。 例如无法在 SQL 数据库上授予服务器级别权限。 有关哪些平台支持每个权限的信息，请参阅[权限 &#40; 数据库引擎 &#41;](../../relational-databases/security/permissions-database-engine.md)。  
+  返回服务器内置权限层次结构的说明。 `sys.fn_builtin_permissions` 只能在调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，并返回而不考虑是否受支持当前平台上的所有权限。 大多数权限适用于所有平台，但有些则不适用。 例如无法在 SQL 数据库上授予服务器级别权限。 有关哪些平台支持每个权限的信息，请参阅[权限&#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -340,7 +340,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 ![数据库引擎权限](../../relational-databases/security/media/database-engine-permissions.PNG) 
 
 >[!NOTE]
-> 作为本主题的一部分，海报太小了，因此无法查看。 请从 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)下载数据库引擎权限海报。  
+> 作为本主题的一部分，海报太小了，因此无法查看。 下载数据库引擎权限海报从[ https://aka.ms/sql-permissions-poster ](https://aka.ms/sql-permissions-poster)。  
    
   
 ## <a name="permissions"></a>权限  
@@ -372,7 +372,7 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
  [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [删除架构 &#40;Transact SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [拖放架构&#40;Transact SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  

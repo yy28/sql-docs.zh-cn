@@ -1,6 +1,6 @@
 ---
-title: "什么 &#39; 机器学习服务中的新增功能 |Microsoft 文档"
-ms.date: 01/08/2018
+title: "什么&#39;SQL Server 计算机学习 Services 中的新增功能 |Microsoft 文档"
+ms.date: 03/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -10,125 +10,60 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
+ms.assetid: 
 caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: cgronlund
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: c5f9810dfb057045fd1ec0ba25fd7651b2e10ea1
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4a3b7c8c389d471abe932faea64b44a14ac034ab
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="whats-new-in-machine-learning-services-in-sql-server"></a>什么是 SQL Server 中的机器学习服务中的新增功能
+# <a name="whats-new-in-sql-server-machine-learning-services"></a>什么是 SQL Server 计算机学习 Services 中的新增功能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在 SQL Server 2016，Microsoft 引入了 SQL Server R Services，通过与 SQL Server 数据库引擎集成 R 语言支持企业级数据科学的功能。
+机器学习功能将添加到 SQL Server 中每个版本随着我们继续展开、 扩展和深化数据平台和数据科学，分析，之间的集成和监督的学习想要实现针对您的数据。 
 
-在 SQL Server 自 2017 年，数据库集成机器学习变得更加强大，添加了对常用 Python 语言的支持。 对新语言的支持以及附带的新名称：**机器学习服务 （数据库）**。
+## <a name="new-in-sql-server-2017"></a>SQL Server 自 2017 年中的新增功能
 
-捕获的最新的公告 ！ [在 SQL Server 2017 Python： 增强数据库中机器学习](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
+此版本添加 Python 支持和行业领先的机器学习算法。 重命名以反映新作用域，SQL Server 2017 标记为 SQL Server 计算机学习 Services （数据库中），引入语言支持 Python 和。 
 
-## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
+此版本还引入了 SQL Server 计算机学习服务器 （独立） 完全独立于 SQL Server，对于你想要的专用系统上运行的 R 和 Python 的工作负荷。 与独立服务器，您可以分发，而无需使用 SQL Server 扩展 R 或 Python 代码。
 
-SQL Server 中的计算机学习服务器提供用于生成和部署 R 或 Python 中的计算机学习解决方案的全面支持。 下面是此版本的要点：
+| 发行版本 | 功能更新 |
+|---------|---------------|
+| CU 4 | Bug 修复程序和包刷新，但不是新的功能公告。 |
+| CU 3 | 1.Python 模型 revoscalepy 中的序列化使用[rx_serialize_model 函数](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)。<br/><br/>2.[本机评分](sql-native-scoring.md)plus 的增强功能[实时评分](real-time-scoring.md)。 与数据库中评分，吞吐量是基于每 100 万行倒数第二次使用 R 模型。 在此更新中，实时评分和本机评分提供更好的性能单行更行和批处理评分。 本机评分使用快速评分的 T-SQL 的函数可以运行在任何版本的 SQL Server，即使在 Linux 上。 该函数不需要安装的 R 或额外的配置。 这意味着你可以训练模型在其他位置，将其保存在 SQL Server，然后执行评分而不会调用。计分方法的详细信息，请参阅[如何执行实时评分或本机评分](r/how-to-do-realtime-scoring.md)。 |
+| CU 2 | Bug 修复程序和包刷新，但不是新的功能公告。 |
+| CU 1 | 1.在 revoscalepy，添加用于从 SQL Server 数据源，类似于返回架构信息 rx_create_col_info [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo)为。 <br/><br/>2.增强功能[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)以支持使用的并行方案`RxLocalParallel`计算上下文。|
+| 初始版本 |[**数据库中分析的 Python 支持**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>[Revoscalepy](python/what-is-revoscalepy.md)包是 RevoScaleR 的 Python 等效项。 你可以创建用于线性和逻辑回归、 决策树，提升的树和随机林，所有可并行化，并且能够在远程计算上下文中运行的 Python 模型。 此包支持使用多个数据源和远程计算上下文。 在远程 SQL 服务器上，若要浏览数据或生成模型，而无需移动数据，数据科研人员或开发人员可以执行 Python 代码。 <br/><br/>[Microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)包是 MicrosoftML R 包的 Python 等效项。<br/><br/>通过的 T-SQL 和 Python 集成[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)。 你可以调用任何使用此存储的过程的 Python 代码。 此安全基础结构支持 Python 模型和脚本，可以从使用简单的存储的过程的应用程序调用的企业级部署。 可通过从 SQL Python 进程和 MPI 环并行化的流式处理数据来实现更多的性能提升。 |
+| 初始版本 | [**MicrosoftML (R)** ](using-the-microsoftml-package.md)包含最先进的机器学习算法和数据可以是缩放或运行在远程计算上下文的转换。 算法包括可自定义深层神经网络、 快速决策树和决策林、 线性回归和逻辑回归。 |
+| 初始版本 | [**预先训练的模型**](r/install-pretrained-models-sql-server.md)图像识别和正负观点分析。 使用这些模型来生成在你自己的数据的预测。 |
+| 初始版本 | [**包管理**](r/r-package-management-for-sql-server-r-services.md)，包括以下突出显示： 数据库角色，以帮助 DBA 管理包和分配权限以安装程序包[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)中到 T-SQL 语句帮助 Dba 管理包而无需知道 R，和一组丰富的 R 函数中[RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)来帮助安装、 删除或列出程序包拥有的用户。 |
+| 初始版本 | [**通过 mrsdeploy 操作化**](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)用于部署和托管作为 web 服务的 R 脚本。 适用于仅限用于 R 脚本 （无 Python 等效项）。 适用于 （独立） 服务器选项，以避免与其他 SQL Server 操作的资源竞争。 |
 
-### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>什么是 SQL Server 自 2017 年的累积更新 3 中的新增功能
 
-此版本包含 Python 和 R 组件的更新。 
+## <a name="new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
 
-+ 添加了对 revoscalepy，使用 rx_serialize_model 函数中的 Python 模型序列化支持
+此发行版引入了机器学习功能编程到 SQL Server 通过**SQL Server 2016 R Services**，对数据库引擎实例内的常驻数据处理 R 脚本的数据库中分析引擎。
 
-### <a name="in-database-python-integration"></a>数据库 Python 集成
+此外， **SQL Server 2016 R Server （独立）**发布为一种方法在 Windows server 上安装 R Server。 最初，SQL Server 安装程序提供安装 R Server for Windows 的唯一方法。 在更高版本中，开发人员和数据科学家他们希望在 Windows 上的 R Server 可以使用另一个独立安装程序来完成相同的目标。 SQL Server 中的独立服务器在功能上等效于独立服务器产品， [Microsoft R Server for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
-可以在存储过程中运行 Python，也可以执行 Python 远程作为计算上下文中使用 SQL Server 计算机。 此集成将打开新的途径为 Python 开发人员和数据科研人员要使用的 SQL Server 功能的大型社区。
+| 发行版本 |功能更新 |
+|---------|----------------|
+| CU | [实时评分](real-time-scoring.md)。 实时评分依赖于本机 c + + 库读取优化的二进制格式，存储在模型，然后无需调用 R 运行时生成预测。 这使得评分操作快得多。 与实时评分，可以运行存储的过程或执行实时评分 R 代码中。 也可用于 SQL Server 2016 中，如果实例升级到最新版本的实时评分是[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。 |
+| 初始版本 | R 包和调用解释器函数中 T-SQL，反之亦然。<br/>RevoScaleR 函数通过分为组件的字符串，协调分块数据提供大规模的 R 分析和管理分布式处理和聚合结果。 在 SQL Server 2016 R Services （数据库），RevoScaleR 引擎与数据库引擎实例，或数据和分析一起相同处理上下文中相集成。 |
 
-SQL Server 开发人员访问到广泛的 Python 库从开放源生态系统，包括如 scikit 常用框架的了解，TensorFlow、 Caffe 和 Theano/Keras。 并且请务必从 Microsoft 如浏览创新**revoscalepy**和**microsoftml**！
-
-数据库中不只是关于运行 Python 机器学习，顺便说一下。 有大量的其他可能的应用程序将与 SQL，集成 Python 和使用每个语言的强大以提供更智能、 功能强大的解决方案。
-
-+ **revoscalepy**
-
-    此版本包括的最终版本**revoscalepy**，其中提供的算法在 RevoScaleR Python 等效项。 你可以创建用于线性和逻辑回归、 决策树，提升的树和随机林，所有可并行化，并且能够在远程计算上下文中运行的 Python 模型。
-
-    有关详细信息，请参阅[什么是 revoscalepy](python/what-is-revoscalepy.md)。
-
-+ Python 远程计算上下文
-
-    此版本支持使用多个数据源和远程计算上下文。 在远程 SQL 服务器上，若要浏览数据或生成模型，而无需移动数据，数据科研人员或开发人员可以执行 Python 代码。 使用远程计算上下文要求**revoscalepy**。
-
-+ 在 Microsoft 机器学习 Server （独立版） 中的 Python 支持
-
-    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] 包括 Microsoft 机器学习 Server 的独立版本安装的选项。 通过使用机器学习服务器，您可以分发，而无需使用 SQL Server 扩展 R 或 Python 代码。
-
-### <a name="linux-support"></a>Linux 支持
+## <a name="linux-support-roadmap"></a>Linux 支持路线图
 
 在 Linux 上的 SQL Server 中，当前不支持使用 R 或 Python 数据库中的机器学习。 查看我们的更高版本中的通知。
 
 但是，在 Linux 上可以执行[本机评分](sql-native-scoring.md)使用 T-SQL 的预测函数。 本机评分，可以从预先训练的模型非常快，评分而无需调用或甚至需要的 R 运行时。 这意味着可以在 Linux 上使用 SQL Server 来生成预测非常快，以便为客户端应用程序提供服务。
 
-### <a name="new-algorithms"></a>新的算法
+### <a name="next-steps"></a>后续步骤
 
-**MicrosoftML** R 和 Python 的包将包含最先进的机器学习算法和数据转换可缩放或运行在远程计算上下文。 算法包括可自定义深层神经网络、 快速决策树和决策林、 线性回归和逻辑回归。 MicrosoftML 包附带 R 和 Python 的接口。
-
-有关详细信息，请参阅[简介 MicrosoftML](using-the-microsoftml-package.md)和[for Python microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)。
-
-### <a name="operationalization"></a>操作化
-
-此版本包含多个选项和功能来帮助你部署和分发机器学习任务：
-
-+ 部署和集成计算机 Python 解决方案，使用 T-SQL
-
-    使用 T-SQL 的 Python 的集成意味着你可以调用任何 Python 代码使用`sp_execute_external_script`。 此安全基础结构支持 Python 模型和脚本，可以从使用简单的存储的过程的应用程序调用的企业级部署。 其他性能是从 SQL Python 进程和 MPI 环并行化的流式处理数据。
-
-+ **mrsdeploy** for Python
-
-    **Mrsdeploy**程序包以进行[!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)]和[!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]支持 Python 模型和脚本作为 web 服务的部署。 它的工作原理的示例，请参阅[发布和使用的 Python 代码](python/publish-consume-python-code.md)。
-
-+ 性能
-
-    Microsoft 已推送的边界进行评分的性能。 与数据库中评分，我们处理每 100 万行倒数第二次使用 R 模型。 在此版本中，为新功能**实时评分**和**本机评分**单行更行和批处理计分中支持更好的性能。
-
-### <a name="realtime-scoring-and-native-scoring"></a>实时评分和本机评分
-
-实时评分依赖于本机 c + + 库读取优化的二进制格式，存储在模型，然后无需调用 R 运行时生成预测。 这使得评分操作快得多。
-
-此外，此版本的[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]包括本机 T-SQL 的函数，用于快速评分，可以在任何版本的 SQL Server，即使在 Linux 上运行。 该函数不需要安装的 R 或额外的配置。 这意味着你可以训练模型在其他位置，将其保存在 SQL Server，然后执行评分而不会调用。此功能被称为_本机评分_。
-
-  - 本机评分是仅适用于[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]。 它使用 T-SQL 的函数，可以在任何版本的 SQL Server，包括 Linux 中运行。
- - 实时评分支持[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]，和在 Microsoft 机器学习 Server 中。 你可以运行存储的过程或执行实时评分 R 代码中。
- - 也可用于 SQL Server 2016 中，如果实例升级到最新版本的实时评分是[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]。
-
-有关详细信息，请参阅以下文章：
-
- + [实时评分](real-time-scoring.md)
- + [本机评分](sql-native-scoring.md)
- + [如何执行实时评分或本机评分](r/how-to-do-realtime-scoring.md)
-
-### <a name="upgrade-your-machine-learning-experience-and-get-pre-trained-models"></a>升级你的机器学习体验并获取预先训练的模型
-
-如果你安装 SQL Server 2016 R Services 的早期版本，你可以现在升级到最新版本，通过切换服务器以使用现代软件生命周期策略。 通过这样做，可以利用的更快的发行周期，并自动升级所有 R 组件。 有关详细信息，请参阅[机器学习服务器中的新增](https://docs.microsoft.com/machine-learning-server/whats-new-in-machine-learning-server)。
-
-安装程序还提供了安装的预先训练的模型集合以二进制格式的选项。 在图像识别，所以可能很难客户若要查找大型数据集来训练某个模型等的情况下，这些模型支持机器学习。 安装的预先训练的模型之一后，你可以在自己而无需的时间和费用参与此类大型和复杂模型定型的数据进行预测使用它。
-
-有关详细信息，请参阅[安装在 SQL Server 中预先训练的模型](r/install-pretrained-models-sql-server.md)
-
-### <a name="package-management"></a>管理包
-
-此版本包括 SQL Server 的程序包管理中的许多改进。 其中包括：
-
-- 数据库角色，以帮助 DBA 管理包和分配权限以安装包
-- T-SQL，以帮助 Dba 而无需知道 R 管理包中的创建外部库语句
-- 一组丰富的 R 函数，来帮助安装，请删除，或列出用户拥有的包
-
-有关详细信息，请参阅[包管理](r/r-package-management-for-sql-server-r-services.md)。
-
-### <a name="get-started"></a>要开始
-
-+ [设置 SQL Server 计算机学习 Services 中的 Python](../advanced-analytics/python/setup-python-machine-learning-services.md)
-
-+ [设置 SQL Server 计算机学习 Services 中的 R](r/set-up-sql-server-r-services-in-database.md)
-
++ [安装 SQL Server 机器学习服务](../advanced-analytics/python/setup-python-machine-learning-services.md)
 + [机器学习教程和示例](tutorials/machine-learning-services-tutorials.md)

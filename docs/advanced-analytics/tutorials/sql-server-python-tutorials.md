@@ -19,11 +19,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: a9ba77cd6ec26e21136aa8ebfebfe67725b94ba2
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 82c340775eadef642a4775c3984db195f80bfd19
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,9 +52,6 @@ ms.lasthandoff: 03/08/2018
 
     本端到端演练演示了生成使用 T-SQL 存储过程的完整 Python 解决方案的过程。 包含所有 Python 代码都。
 
-+ [部署和使用 Python 模型](..\python\publish-consume-python-code.md)
-
-  了解如何将 Python 模型部署作为 web 服务，使用 Microsoft 机器学习 Server 的最新版本。
 
 ## <a name="python-samples"></a>Python 示例
 

@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server 机器学习入门
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,9 +106,6 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
 
    SQL 开发人员的端到端解决方案提供了你需要从 SQL Server Management Studio 中运行 Python 的所有代码。
 
-+ [发布和使用的 Python 代码](../advanced-analytics/python/publish-consume-python-code.md)
-
-  本演练中附带了将模型部署到 web 服务使用机器学习服务器所需的所有代码。
 
 ### <a name="product-samples-with-code"></a>使用代码的产品示例
 

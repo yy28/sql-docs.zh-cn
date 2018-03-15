@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4b439725c8c9e522ed500f717686b8a9cf7d972a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>部署和使用使用 mrsdeploy 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +56,6 @@ R Server 此部署功能可以提供这些优势：
   
   可以使用实时的一个受支持的 R 模型对象评分来提高评分操作的速度。
 
-+ 作为 web 服务中发布的 Python 代码
-
-  有关示例，请参阅[发布和使用的 Python 代码](./python/publish-consume-python-code.md)。
-
 + 异步批处理消耗
 
   现在可以通过批处理执行以异步方式使用大量的输入数据调用的 web 服务。
@@ -88,7 +84,7 @@ SQL Server 自 2017 年 1 CTP 2.0 及更高版本包括此功能，因此只能�
 
 3. 完成的安装程序后**Microsoft 机器学习 Server**，请手动添加的以下注册表项**mrsdeploy**，它指定 R_SERVER 文件的基本文件夹。 
 
-    + 创建新的注册表项`H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
+    + 创建新的注册表项 `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + 设置的关键值`"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`。
 
 4. 完成后，打开[管理员实用工具](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility)。

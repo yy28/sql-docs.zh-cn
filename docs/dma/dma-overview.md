@@ -1,7 +1,7 @@
 ---
 title: "数据迁移助手 (SQL Server) 概述 |Microsoft 文档"
 ms.custom: 
-ms.date: 02/07/2018
+ms.date: 03/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c387e5bb2a0b5cef10217b32807f88a8aee6c627
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>数据迁移助手的概述
 
@@ -45,27 +45,20 @@ ms.lasthandoff: 02/09/2018
 - 发现可能会影响到本地 SQL Server 升级的问题。 这些被称为兼容性问题，而且必须组织在以下类别：
 
   - 重大更改
-
   - 行为更改
-
   - 已弃用的功能
 
 - 发现数据库可以受益于升级后的目标 SQL Server 平台中的新增功能。 这些被称为功能建议和分为以下类别：
 
   - 性能
-
   - Security
-
   - 存储器
 
 - 将本地 SQL Server 实例迁移到托管在本地或 Azure 虚拟机 (VM)，可从你的本地网络访问的现代 SQL Server 实例。 可以使用 VPN 或其他技术访问 Azure VM。 迁移工作流可帮助你迁移以下组件：
 
   - 数据库的架构
-
   - 数据和用户
-
   - 服务器角色
-
   - SQL Server 和 Windows 登录名
 
 - 成功迁移之后，应用程序可以连接到目标 SQL server 数据库无缝。
@@ -89,6 +82,9 @@ DMA 替换所有以前版本的 SQL Server 升级顾问，并应该用于大多�
 - SQL Server 2016
 - 在 Windows 和 Linux 上的 SQL Server 自 2017 年 1
 - Azure SQL Database
+
+> [!NOTE] 
+> DMA 当前不支持 Azure SQL 数据库托管实例作为目标。
 
 ## <a name="installation"></a>安装
 
