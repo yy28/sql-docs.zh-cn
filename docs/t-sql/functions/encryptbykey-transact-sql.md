@@ -1,5 +1,5 @@
 ---
-title: "ENCRYPTBYKEY (TRANSACT-SQL) |Microsoft 文档"
+title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,33 +51,33 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ```  
   
 ## <a name="arguments"></a>参数  
- *key_GUID*  
- 是要用于加密密钥的 GUID*明文形式*。 **uniqueidentifier**。  
+ key_GUID  
+ 用于加密 cleartext 的密钥的 GUID。 Uniqueidentifier。  
   
- *明文形式*  
+ 'cleartext'  
  要使用密钥加密的数据。  
   
  @cleartext  
- 是类型的变量**nvarchar**， **char**， **varchar**，**二进制**， **varbinary**，或**nchar**包含是使用密钥加密的数据。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含要使用密钥加密的数据。  
   
- *add_authenticator*  
- 指示验证器是否将加密连同*明文形式*。 在使用验证器时必须为 1。 **int**。  
+ add_authenticator  
+ 指示是否将验证器与 cleartext 一起加密。 在使用验证器时必须为 1。 int。  
   
  @add_authenticator  
- 指示验证器是否将加密连同*明文形式*。 在使用验证器时必须为 1。 **int**。  
+ 指示是否将验证器与 cleartext 一起加密。 在使用验证器时必须为 1。 int。  
   
- *身份验证器*  
- 从中派生验证器的数据。 **sysname**。  
+ authenticator  
+ 从中派生验证器的数据。 sysname。  
   
  @authenticator  
  包含用于派生验证器的数据的变量。  
   
 ## <a name="return-types"></a>返回类型  
- **varbinary** 8000 个字节的最大大小。  
+ varbinary（最大大小为 8000 个字节）。  
   
  如果密钥未打开，如果密钥不存在，或者如果密钥是不推荐使用的 RC4 密钥且数据库不处于兼容性级别 110 或更高级别，则返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  EncryptByKey 使用对称密钥。 该密钥必须打开。 如果在当前会话中已打开该对称密钥，则无需在查询上下文中再次打开它。  
   
  验证器有助于禁止对加密字段进行整个值替换。 例如，请考虑下面的工资单数据表。  
@@ -97,13 +97,13 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  对称加密和解密速度相对较快，适于处理大量数据。  
   
 > [!IMPORTANT]  
->  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加密函数与 ANSI_PADDING OFF 设置一起使用会因隐式转换而导致数据可能丢失。 有关 ANSI_PADDING 的详细信息，请参阅[SET ANSI_PADDING &#40;Transact SQL &#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 加密函数与 ANSI_PADDING OFF 设置一起使用会因隐式转换而导致数据可能丢失。 有关 ANSI_PADDING 的详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例所示的功能依赖于密钥和证书在中创建[How To： 加密列数据](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)。  
+ 以下示例所说明的功能依赖于在[如何加密数据列](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)中创建的密钥和证书。  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. 使用对称密钥加密字符串  
- 下面的示例添加的列`Employee`表，然后加密的身份证号存储在列中的值`NationalIDNumber`。  
+ 以下示例向 `Employee` 表添加列，然后加密存储在 `NationalIDNumber` 列中的社会安全号码的值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -150,11 +150,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DECRYPTBYKEY &#40;Transact SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY (Transact-SQL)](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES &#40;Transact SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES (Transact-SQL)](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

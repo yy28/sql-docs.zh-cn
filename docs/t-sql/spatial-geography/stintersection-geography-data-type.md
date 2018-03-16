@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (geography 数据类型) |Microsoft 文档"
+title: "STIntersection（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geography-data-type"></a>STIntersection（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回一个对象，表示点其中**geography**实例与另一个相交**geography**实例。  
+  返回一个对象，该对象表示一个 geography 实例与另一个 geography 实例的交点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,20 +44,20 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- *other_geography*  
- 是另一种**geography**实例与对其调用 STIntersection() 实例进行比较。  
+ other_geography  
+ 与调用 STIntersection() 的实例进行比较的另一个 geography 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  返回两个 geography 实例的交集。  
   
- 如果 STIntersection() 则始终返回 null 的空间引用标识符 (Srid) **geography**实例不匹配。  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则 STIntersection() 始终返回 NULL。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能包括**FullGlobe**在服务器上返回中的可能结果集的实例。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在服务器上返回的可能结果集中可能包含 FullGlobe 实例。  
   
  只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   

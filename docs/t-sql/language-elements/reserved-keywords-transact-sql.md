@@ -1,5 +1,5 @@
 ---
-title: "保留关键字 (Transact SQL) |Microsoft 文档"
+title: "保留关键字 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -84,13 +84,13 @@ ms.lasthandoff: 01/25/2018
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|DELETE|ON|UNION|  
+|删除|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|USER|  
+|DOUBLE|OPTION|User|  
 |DROP|或|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/25/2018
  此外，ISO 标准定义了保留关键字列表。 不要使用 ISO 保留关键字作为对象名和标识符。 ODBC 保留关键字列表（如下表所示）与 ISO 保留关键字列表相同。  
   
 > [!NOTE]  
->  ISO 标准保留关键字有时可能比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 限制更多，有时则更少。 例如，ISO 保留的关键字列表包含**INT**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不必将此区分为保留关键字。  
+>  ISO 标准保留关键字有时可能比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 限制更多，有时则更少。 例如，ISO 保留关键字列表包含 **INT**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不必将此区分为保留关键字。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 保留关键字可用作数据库或数据库对象（如表、列、视图等）的标识符或名称。 使用带引号的标识符或分隔标识符。 不限制将保留关键字用作变量和存储过程参数的名称。  
   
@@ -118,82 +118,82 @@ ms.lasthandoff: 01/25/2018
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**操作**|**EXECUTE**|**填充**|  
-|**ADA**|**EXISTS**|**部分**|  
+|**ACTION**|**EXECUTE**|**PAD**|  
+|**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|EXTERNAL|**PASCAL**|  
-|**ALL**|**EXTRACT**|**位置**|  
-|**ALLOCATE**|**FALSE**|**精度**|  
-|**ALTER**|**FETCH**|**准备**|  
-|**和**|**FIRST**|**PRESERVE**|  
+|**ALL**|**EXTRACT**|**POSITION**|  
+|**ALLOCATE**|**FALSE**|**PRECISION**|  
+|**ALTER**|**FETCH**|**PREPARE**|  
+|**AND**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
-|**ARE**|**有关**|**之前**|  
-|**AS**|**外**|**权限**|  
+|**ARE**|**FOR**|**PRIOR**|  
+|**AS**|**FOREIGN**|**PRIVILEGES**|  
 |**ASC**|**FORTRAN**|**PROCEDURE**|  
-|**断言**|**找到**|**PUBLIC**|  
+|**ASSERTION**|**FOUND**|**PUBLIC**|  
 |**AT**|**FROM**|**READ**|  
-|**AUTHORIZATION**|**FULL**|**实际**|  
+|**AUTHORIZATION**|**FULL**|**REAL**|  
 |**AVG**|**GET**|**REFERENCES**|  
-|**BEGIN**|**GLOBAL**|**相对**|  
+|**BEGIN**|**GLOBAL**|**RELATIVE**|  
 |**BETWEEN**|**GO**|**RESTRICT**|  
 |**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**BOTH**|**GROUP**|**ROLLBACK**|  
 |**BY**|**HAVING**|**ROWS**|  
-|**CASCADE**|**小时**|**SCHEMA**|  
+|**CASCADE**|HOUR|**SCHEMA**|  
 |**CASCADED**|**IDENTITY**|**SCROLL**|  
 |**CASE**|**IMMEDIATE**|**SECOND**|  
-|**CAST**|**在**|**部分**|  
+|**CAST**|**IN**|**SECTION**|  
 |**CATALOG**|**INCLUDE**|**SELECT**|  
 |**CHAR**|**INDEX**|**SESSION**|  
-|**CHAR_LENGTH**|**指示器**|**SESSION_USER**|  
-|**字符**|**最初**|**SET**|  
+|**CHAR_LENGTH**|**INDICATOR**|**SESSION_USER**|  
+|**CHARACTER**|**INITIALLY**|**SET**|  
 |**CHARACTER_LENGTH**|**INNER**|**SIZE**|  
-|**CHECK**|**输入**|**SMALLINT**|  
-|**CLOSE**|**不区分大小写**|**SOME**|  
+|**CHECK**|**INPUT**|**SMALLINT**|  
+|**CLOSE**|**INSENSITIVE**|**SOME**|  
 |**COALESCE**|**INSERT**|**SPACE**|  
-|**逐份打印**|**INT**|**SQL**|  
-|**排序规则**|**INTEGER**|**SQLCA**|  
+|**COLLATE**|**INT**|**SQL**|  
+|**COLLATION**|**INTEGER**|**SQLCA**|  
 |**COLUMN**|**INTERSECT**|**SQLCODE**|  
 |**COMMIT**|**INTERVAL**|**SQLERROR**|  
-|**CONNECT**|**到**|**SQLSTATE**|  
-|**连接**|**是**|**SQLWARNING**|  
-|**约束**|**隔离**|**SUBSTRING**|  
-|**约束**|**JOIN**|**SUM**|  
+|**CONNECT**|**INTO**|**SQLSTATE**|  
+|**CONNECTION**|**IS**|**SQLWARNING**|  
+|**CONSTRAINT**|**ISOLATION**|**SUBSTRING**|  
+|**CONSTRAINTS**|**JOIN**|**SUM**|  
 |**CONTINUE**|**KEY**|**SYSTEM_USER**|  
 |**CONVERT**|**LANGUAGE**|**TABLE**|  
 |**CORRESPONDING**|**LAST**|**TEMPORARY**|  
-|**COUNT**|**前导**|**然后**|  
-|**CREATE**|**LEFT**|**时间**|  
+|**COUNT**|**LEADING**|**THEN**|  
+|**CREATE**|**LEFT**|**TIME**|  
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
-|**当前**|**LIKE**|**TIMEZONE_HOUR**|  
-|**CURRENT_DATE**|**本地**|**TIMEZONE_MINUTE**|  
+|**CURRENT**|**LIKE**|TIMEZONE_HOUR|  
+|**CURRENT_DATE**|**LOCAL**|TIMEZONE_MINUTE|  
 |**CURRENT_TIME**|**LOWER**|TO|  
-|**CURRENT_TIMESTAMP**|**MATCH**|**尾随**|  
-|**CURRENT_USER**|**MAX**|**事务**|  
+|**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
+|**CURRENT_USER**|**MAX**|**TRANSACTION**|  
 |**CURSOR**|**MIN**|**TRANSLATE**|  
-|**DATE**|**MINUTE**|**转换**|  
-|**DAY**|**模块**|**TRIM**|  
+|**DATE**|MINUTE|**TRANSLATION**|  
+|**DAY**|**MODULE**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
-|**DEC**|**NAMES**|**联合**|  
-|**DECIMAL**|**国家/地区**|**唯一**|  
-|**DECLARE**|**自然**|**UNKNOWN**|  
+|**DEC**|**NAMES**|**UNION**|  
+|**DECIMAL**|**NATIONAL**|**UNIQUE**|  
+|**DECLARE**|**NATURAL**|UNKNOWN|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
 |**DEFERRABLE**|**NEXT**|**UPPER**|  
 |**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**不**|**使用**|  
+|**DESC**|**NOT**|**USING**|  
 |**DESCRIBE**|**NULL**|**VALUE**|  
-|**描述符**|**NULLIF**|**VALUES**|  
-|**DIAGNOSTICS**|**数值**|**VARCHAR**|  
-|**DISCONNECT**|**OCTET_LENGTH**|**不同的**|  
+|**DESCRIPTOR**|**NULLIF**|**VALUES**|  
+|**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**VARYING**|  
 |**DISTINCT**|**OF**|**VIEW**|  
 |**DOMAIN**|**ON**|**WHEN**|  
 |**DOUBLE**|**ONLY**|**WHENEVER**|  
 |**DROP**|**OPEN**|**WHERE**|  
-|**ELSE**|**选项**|**WITH**|  
-|**END**|**或**|**WORK**|  
+|**ELSE**|**OPTION**|**WITH**|  
+|**END**|**OR**|**WORK**|  
 |**END-EXEC**|**ORDER**|**WRITE**|  
-|**ESCAPE**|**外部**|**YEAR**|  
+|**ESCAPE**|**OUTER**|**YEAR**|  
 |**EXCEPT**|**OUTPUT**|**ZONE**|  
 |**EXCEPTION**|||  
   
@@ -246,7 +246,7 @@ ms.lasthandoff: 01/25/2018
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|TIMESTAMP|  
+|CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|是|TIMEZONE_MINUTE|  
 |CURRENT_PATH|无|TRAILING|  
@@ -260,7 +260,7 @@ ms.lasthandoff: 01/25/2018
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|VALUE|  
+|DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|参数|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -280,7 +280,7 @@ ms.lasthandoff: 01/25/2018
 |EVERY|PRIVILEGES|XMLCONCAT|  
 |EXCEPTION|RANGE|XMLDOCUMENT|  
 |FALSE|READS|XMLELEMENT|  
-|FILTER|REAL|XMLEXISTS|  
+|FILTER|real|XMLEXISTS|  
 |FIRST|RECURSIVE|XMLFOREST|  
 |FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
@@ -295,7 +295,7 @@ ms.lasthandoff: 01/25/2018
 |HOLD|REGR_SYY|ZONE|  
   
 ## <a name="see-also"></a>另请参阅  
- [设置 QUOTED_IDENTIFIER &#40;Transact SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

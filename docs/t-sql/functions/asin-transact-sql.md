@@ -1,5 +1,5 @@
 ---
-title: "ASIN (Transact SQL) |Microsoft 文档"
+title: ASIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回以弧度表示，其正弦为指定的角度， **float**表达式。 也称为反正弦。
+返回以弧度表示的角，其正弦为指定 **float** 表达式。 也称为反正弦。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>参数  
 *float_expression*  
-是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)类型的**float**或可以隐式转换为 float，-1 到 1 的值的类型。 对超出此范围的值，将返回 NULL 并报告域错误。
+类型为 **float** 或类型可以隐式转换为 float 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，其取值范围从 -1 到 1。 对超出此范围的值，将返回 NULL 并报告域错误。
   
 ## <a name="return-types"></a>返回类型
 **float**
   
 ## <a name="examples"></a>示例  
-下面的示例将**float**表达式并返回指定角度的反正弦值。
+下面的示例采用 **float** 表达式并返回指定角的 ASIN 值。
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -95,24 +95,24 @@ The ASIN of the angle is: 0.147811
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-下面的示例返回的反正弦值为 1.00。
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+下面的示例返回 1.00 的反正弦。
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-下面的示例返回一个错误，因为它要求的值超出了允许的范围内的反正弦。
+下面的示例返回错误，因为它请求获得超出允许范围的值的反正弦。
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[上限 &#40;Transact SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[设置 ARITHIGNORE &#40;Transact SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
-[设置 ARITHABORT &#40;Transact SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
+[CEILING (Transact-SQL)](../../t-sql/functions/ceiling-transact-sql.md)  
+[数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[SET ARITHIGNORE (Transact-SQL)](../../t-sql/statements/set-arithignore-transact-sql.md)  
+[SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)
   
   
 

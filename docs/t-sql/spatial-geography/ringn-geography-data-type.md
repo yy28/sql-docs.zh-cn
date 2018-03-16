@@ -1,5 +1,5 @@
 ---
-title: "RingN (geography 数据类型) |Microsoft 文档"
+title: "RingN（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ringn-geography-data-type"></a>RingN（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回指定的环**geography**实例： `1 ≤ n ≤ NumRings()`。  
+  返回 geography 实例的指定环：`1 ≤ n ≤ NumRings()`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是**int**介于 1 和中的环数的表达式**多边形**实例。  
+ 一个 int 表达式，其值介于 1 与 polygon 实例中的环数之间。  
   
 ## <a name="return-value"></a>返回值  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- 如果的环索引值 **n** 小于 1，此方法将引发**ArgumentOutOfRangeException。** 环索引值必须大于或等于 1，且应小于或等于返回的版本号`NumRings()`。  
+## <a name="remarks"></a>Remarks  
+ 如果环索引 n 的值小于 1，此方法引发 ArgumentOutOfRangeException。 该环索引的值必须大于或等于 1，而且应当小于或等于 `NumRings()` 返回的数字。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个具有两个环的 `Polygon` 实例并返回第二个环。  
@@ -65,7 +65,7 @@ SELECT @g.RingN(2).ToString();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例的扩展的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Geography 实例上的扩展方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [NumRings（geography 数据类型）](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
   

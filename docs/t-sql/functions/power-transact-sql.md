@@ -1,5 +1,5 @@
 ---
-title: "电源 (Transact SQL) |Microsoft 文档"
+title: POWER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -46,13 +46,13 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>参数  
  *float_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)类型的**float**或可以隐式转换为的类型**float**。  
+ float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *y*  
- 是要提升到幂*float_expression*。 *y*可以是除精确数字或近似数值数据类型类别的表达式**位**数据类型。  
+ 要将 float_expression 提升到的幂。 y 可以是精确或近似数值数据类型类别（bit 数据类型除外）的表达式。  
   
 ## <a name="return-types"></a>返回类型  
- 返回相同的类型，如在中提交*float_expression*。 例如，如果**十进制**(2,0) 作为提交*float_expression*，返回的结果是**十进制**(2,0)。  
+ 在 float_expression 中提交时返回相同类型。 例如，如果 decimal(2,0) 提交为 float_expression，则返回的结果是 decimal(2,0)。  
   
 ## <a name="examples"></a>示例  
   
@@ -78,7 +78,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. 使用 POWER 显示数据类型转换的结果  
- 下面的示例演示如何*float_expression*保留的数据类型可返回意外的结果。  
+ 以下示例演示 float_expression 如何保留会返回意外结果的数据类型。  
   
 ```  
 SELECT   
@@ -141,10 +141,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D： 使用 POWER 返回大量的多维数据集  
- 下面的示例演示返回`POWER`结果`2.0`的第三次幂。  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D：使用 POWER 返回一个数字的立方  
+ 下例演示将返回 `2.0` 的 3 次幂的 `POWER` 结果。  
   
 ```  
 SELECT POWER(2.0, 3);  
@@ -158,11 +158,11 @@ SELECT POWER(2.0, 3);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [小数和数值 &#40;Transact SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [float 和 real &#40;Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int、 bigint、 smallint 和 tinyint &#40;Transact SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [money 和 smallmoney &#40;Transact SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+ [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [float 和 real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int、bigint、smallint 和 tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [money 和 smallmoney (Transact-SQL)](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 

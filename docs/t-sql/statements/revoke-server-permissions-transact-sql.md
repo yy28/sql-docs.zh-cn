@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 服务器权限 (Transact SQL) |Microsoft 文档"
+title: "REVOKE 服务器权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,12 +62,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ *permission*  
  指定可对服务器授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- {到 |FROM} \<grantee_principal > 指定要从中撤消权限的主体。  
+ { TO | FROM } \<grantee_principal> 指定要从中撤消权限的主体。  
   
- AS \<grantor_principal > 指定从其执行此查询的主体派生其权限以撤消的权限的主体。  
+ AS \<grantor_principal> 指定一个主体，执行此查询的主体从该主体获得撤消权限的权利。  
   
  GRANT OPTION FOR  
  指示要撤消向其他主体授予指定权限的权限。 不会撤消该权限本身。  
@@ -81,32 +81,32 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- *SQL_Server_login*  
+ SQL_Server_login  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login_mapped_to_Windows_login*  
+ SQL_Server_login_mapped_to_Windows_login  
  指定映射到 Windows 登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login_mapped_to_Windows_group*  
+ SQL_Server_login_mapped_to_Windows_group  
  指定映射到 Windows 组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login_mapped_to_certificate*  
+ SQL_Server_login_mapped_to_certificate  
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login_mapped_to_asymmetric_key*  
+ SQL_Server_login_mapped_to_asymmetric_key  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
  *server_role*  
  指定用户定义的服务器角色。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  只有在当前数据库为 master 时，才可撤消其服务器作用域内的权限。  
   
  REVOKE 操作可同时删除 GRANT 和 DENY 权限。  
   
  可以使用 REVOKE GRANT OPTION FOR 撤消重新授予指定权限的权限。 如果主体所具有的权限还带有授予该权限的权限，则将撤消授予该权限的权限，而不会撤消权限本身。 但是，如果主体具有不带 GRANT 选项的指定权限，则会撤消权限本身。  
   
- 有关服务器权限的信息可在[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目录视图，以及有关服务器主体的信息可在[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目录视图。 有关成员身份的服务器角色的信息可在[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)目录视图。  
+ 可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目录视图中查看有关服务器权限的信息；在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中查看有关服务器主体的信息。 以及在 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目录视图中查看有关服务器角色成员身份的信息。  
   
  服务器是权限层次结构的最高级别。 下表列出了可撤消的对服务器最为具体的限定权限。  
   
@@ -147,7 +147,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 CONTROL SERVER 权限，或者具有 sysadmin 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -175,11 +175,11 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
- [拒绝服务器权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOKE 服务器权限 (TRANSACT-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY 服务器权限 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE 服务器权限 (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

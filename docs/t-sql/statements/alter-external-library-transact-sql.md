@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: e2fb628e2f832b7d1b73a2e3fefae1fb1d6b8e2b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-指定现有包库的名称。 库的应用范围限定为用户。 也就是说，在特定用户或所有者的上下文中，库名称是唯一的。
+指定现有包库的名称。 库的应用范围限定为用户。 在特定用户或所有者的上下文中，库名称必须是唯一的。
 
 不能任意分配库名称。 也就是说，必须使用调用运行时在加载包时需要的名称。
 
@@ -76,13 +76,6 @@ WITH ( LANGUAGE = 'R' )
 可以是以本地路径或网络路径的形式指定的文件。 如果指定了数据源选项，则文件名称可以是关于 `EXTERNAL DATA SOURCE` 中引用的容器的相对路径。
 
 还可以为文件指定一个 OS 平台。 针对特定语言或运行时，每个 OS 平台只允许一个文件项目或内容。
-
-**DATA_SOURCE = external_data_source_name**
-
-指定包含库文件位置的外部数据源的名称。 此位置应引用 Azure blob 存储路径。 若要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)。
-
-> [!IMPORTANT] 
-> 目前，SQL Server 2017 版本不支持 blob 作为数据源。
 
 **library_bits**
 
@@ -104,11 +97,11 @@ WITH ( LANGUAGE = 'R' )
 
 ## <a name="permissions"></a>权限
 
-需要 `ALTER ANY EXTERNAL LIBRARY` 权限。 创建外部库的用户可以更改该外部库。
+默认情况下，dbo 用户或担任 db_owner 角色的任何成员都有权运行 ALTER EXTERNAL LIBRARY。 此外，创建了外部库的用户还可以更改相应外部库。
 
 ## <a name="examples"></a>示例
 
-下面的示例修改一个名为 `customPackage` 的外部库。
+下面的示例更改 `customPackage` 外部库。
 
 ### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. 使用文件替换库的内容
 
@@ -135,10 +128,12 @@ EXEC sp_execute_external_script
 下面的示例通过将新位传递为十六进制文本来更改现有库。
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-在此代码示例中，截断变量内容以提高可读性。
+> [!NOTE]
+> 此代码示例只用于展示语法；为了提高可读性，`CONTENT =` 中的二进制值已遭截断，无法创建能够正常运行的库。 二进制变量的实际内容要长得多。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: "类型 _ 名称 (Transact SQL) |Microsoft 文档"
+title: TYPE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,8 +49,8 @@ TYPE_NAME ( type_id )
 ```  
   
 ## <a name="arguments"></a>参数  
- *type_id*  
- 要使用的类型的 ID。 *type_id*是**int**，而且它可以引用调用方有权访问任何架构中的类型。  
+ type_id  
+ 要使用的类型的 ID。 type_id 的数据类型为 int，它可以引用调用方有权访问的任意架构中的类型。  
   
 ## <a name="return-types"></a>返回类型  
  **sysname**  
@@ -60,12 +60,12 @@ TYPE_NAME ( type_id )
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 也就是说，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 TYPE_NAME）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>注释  
- 类型 _ 名称将返回 NULL 时*type_id*无效或调用方没有足够的权限引用的类型。  
+## <a name="remarks"></a>Remarks  
+ 当 type_id 无效或当调用方没有足够权限引用类型时，TYPE_NAME 将返回 NULL。  
   
- TYPE_NAME 既可用于系统数据类型，也可用于用户定义数据类型。 类型可以包含在任意架构中，但是始终返回一个未限定的类型名称。 这意味着名称没有*架构***。** 前缀。  
+ TYPE_NAME 既可用于系统数据类型，也可用于用户定义数据类型。 类型可以包含在任意架构中，但是始终返回一个未限定的类型名称。 这表示名称不具有 schema. 前缀。  
   
- 在选择列表中，在 WHERE 子句中，可以使用系统函数和允许的表达式的任意位置。 有关详细信息，请参阅[表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)和[其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md).  
+ 系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
  以下示例针对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 `Vendor` 表中的每列返回对象名称、列名以及类型名称。  
@@ -97,15 +97,15 @@ Vendor          PurchasingWebServiceURL  nvarchar
 (8 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回`TYPE ID`具有 id 的数据类型`1`。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下面的示例返回具有 `1` ID 的数据类型的 `TYPE ID`。  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  
 GO  
 ```  
   
- 有关类型的列表，查询 sys.types。  
+ 有关类型列表，请查询 sys.types。  
   
 ```  
 SELECT * FROM sys.types;  
@@ -113,10 +113,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [TYPE_ID &#40;Transact SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPEPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [TYPE_ID (Transact-SQL)](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPEPROPERTY (Transact-SQL)](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

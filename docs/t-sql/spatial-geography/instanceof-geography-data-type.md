@@ -1,5 +1,5 @@
 ---
-title: "InstanceOf (geography 数据类型) |Microsoft 文档"
+title: "InstanceOf（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geography-data-type"></a>InstanceOf（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  如果测试**geography**实例是否与指定的类型相同。  
+  测试 **geography** 实例是否与指定的类型相同。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,26 +45,26 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *geography_type*  
- 是**nvarchar （4000)** 16 中公开的类型之一指定字符串**geography**类型层次结构。  
+ 一个 **nvarchar(4000)** 字符串，用于指定 **geography** 类型层次结构中公开的 16 个类型之一。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 如果返回 1 的一种**geography**实例与指定的类型相同，或如果指定的类型是祖先的实例类型; 否则，返回 0。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geography** 实例的类型与指定的类型相同，或者指定的类型是该实例类型的上级，则返回 1；否则，返回 0。  
   
- 这**geography**数据类型方法支持**FullGlobe**实例或大于半球的空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
- 该方法的输入必须是以下之一： Geometry、 点、 曲线、 LineString、 CircularString、 面、 Polygon、 CurvePolygon， **GeometryCollection**， **MultiSurface**， **MultiPolygon、 MultiCurve、 MultiLineString**， **MultiPoint**，或**FullGlobe**。  
+ 该方法的输入必须是以下各项之一：Geometry、Point、Curve、LineString、CircularString、Surface、Polygon、CurvePolygon、**GeometryCollection**、**MultiSurface**、**MultiPolygon、MultiCurve、MultiLineString**、**MultiPoint** 或 **FullGlobe**。  
   
  如果将任何其他字符串用于输入，此方法将引发 `ArgumentException`。  
   
  此方法不精确。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建`MultiPoint`实例并使用`InstanceOf()`实例是否为`GeometryCollection`。  
+ 以下示例创建一个 `MultiPoint` 实例，并使用 `InstanceOf()` 查看该实例是否为 `GeometryCollection`。  
   
 ```  
 DECLARE @g geography;  

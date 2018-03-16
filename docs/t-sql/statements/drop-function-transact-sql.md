@@ -1,5 +1,5 @@
 ---
-title: "放置函数 (Transact SQL) |Microsoft 文档"
+title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -38,9 +38,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  从当前数据库中删除一个或多个用户定义函数。 用户定义函数通过使用创建[CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)和可通过修改[ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md)。  
+  从当前数据库中删除一个或多个用户定义函数。 用户定义函数使用 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 创建，使用 [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md) 修改。  
   
- 放置函数支持本机编译标量用户定义函数。 有关详细信息，请参阅[内存中 OLTP 的标量用户定义函数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
+ DROP 函数支持本机编译的标量用户定义函数。 有关详细信息，请参阅[内存中 OLTP 的标量用户定义函数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,8 +62,8 @@ DROP FUNCTION [ schema_name. ] function_name
    
   
 ## <a name="arguments"></a>参数  
- *如果存在*    
- 有条件地删除函数，仅当它已存在。 可用开头[!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)]2016年并在[!INCLUDE[sssds_md](../../includes/sssds_md.md)]。
+ *IF EXISTS*    
+ 只有在函数已存在时才对其进行有条件地删除。 在 [!INCLUDE[sssds_md](../../includes/sssds_md.md)] 中以及从 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 开始可用。
   
  *schema_name*  
  用户定义函数所属的架构的名称。  
@@ -71,18 +71,18 @@ DROP FUNCTION [ schema_name. ] function_name
  *function_name*  
  要删除的用户定义函数的名称。 可以选择是否指定架构名称。 不能指定服务器名称和数据库名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果数据库中存在引用 DROP FUNCTION 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或视图并且这些函数或视图通过使用 SCHEMABINDING 创建，或者存在引用该函数的计算列、CHECK 约束或 DEFAULT 约束，则 DROP FUNCTION 将失败。  
   
  如果存在引用此函数并且已生成索引的计算列，则 DROP FUNCTION 将失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行 DROP FUNCTION，用户至少应对函数所属架构具有 ALTER 权限，或对函数具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-function"></a>A. 删除函数  
- 下面的示例删除`fn_SalesByStore`从用户定义函数`Sales`架构中的[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]示例数据库。 若要创建此函数，请参阅中的示例 B [CREATE FUNCTION &#40;Transact SQL &#41;](../../t-sql/statements/create-function-transact-sql.md).  
+ 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 `Sales` 架构中删除 `fn_SalesByStore` 用户定义函数。 若要创建此函数，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的示例 B。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  
@@ -91,9 +91,9 @@ DROP FUNCTION Sales.fn_SalesByStore;
 ## <a name="see-also"></a>另请参阅  
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   
- [OBJECT_ID &#40;Transact SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+ [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.parameters &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "LEN (Transact SQL) |Microsoft 文档"
+title: LEN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/03/2015
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/18/2018
   返回指定字符串表达式的字符数，其中不包含尾随空格。  
   
 > [!NOTE]  
->  若要返回用于表示表达式的字节数，使用[datalength 之外](../../t-sql/functions/datalength-transact-sql.md)函数。  
+>  若要返回用于表示表达式的字节数，请使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 函数。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,16 +50,16 @@ LEN ( string_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
- *string_expression*  
- 为字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)要进行求值。 *string_expression*可以是常量、 变量或列的字符或二进制数据。  
+ string_expression  
+ 要计算的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
   
 ## <a name="return-types"></a>返回类型  
- **bigint**如果*表达式*的**varchar （max)**， **nvarchar (max)**或**varbinary （max)**数据类型;否则为**int**。  
+ bigint（如果 expression 的数据类型为 varchar(max)、nvarchar (max) 或 varbinary(max)）；否则为 int。  
   
  如果使用 SC 排序规则，则返回的整数值将 UTF-16 代理项对作为单个字符计数。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
-## <a name="remarks"></a>注释  
- LEN 不包括尾随空格。 如果这是个问题，请考虑使用[datalength 之外 &#40;Transact SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)不会修整字符串的函数。 如果在处理 unicode 字符串，datalength 之外将返回两次的字符数。 下面的示例演示如何 LEN 和 datalength 之外尾随空格。  
+## <a name="remarks"></a>Remarks  
+ LEN 不包括尾随空格。 如果这是个问题，请考虑使用 [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md) 函数，该函数不会修整字符串。 如果处理的是 unicode 字符串，DATALENGTH 将返回两倍的字符数。 以下示例演示 LEN 和带有尾随空格的 DATALENGTH。  
   
 ```  
 DECLARE @v1 varchar(40),  
@@ -82,8 +82,8 @@ WHERE CountryRegionName = 'Australia';
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回列中的字符数`FirstName`，员工的第一个和最后一个名称位于`Australia`。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例返回 `FirstName` 列中的字符数，以及位于 `Australia` 中的员工的姓氏和名字。  
   
 ```  
 -- Uses AdventureWorks  
@@ -104,13 +104,13 @@ FNameLength  FirstName  LastName
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Datalength 之外 &#40;Transact SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
- [PATINDEX &#40;Transact SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)  
- [左 &#40;Transact SQL &#41;](../../t-sql/functions/left-transact-sql.md)   
- [右 &#40;Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md)   
+ [CHARINDEX (Transact-SQL)](../../t-sql/functions/charindex-transact-sql.md)  
+ [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)  
+ [LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)   
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

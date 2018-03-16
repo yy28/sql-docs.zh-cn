@@ -1,35 +1,35 @@
 ---
-title: "SESSION_ID (Transact SQL) |Microsoft 文档"
+title: SESSION_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: 
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
-ms.assetid: 2a0d500a-f6c8-490f-9abd-3ae824986404
-caps.latest.revision: "9"
+dev_langs:
+- TSQL
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07c52331f64cd9104deb8956b893cc2759371feb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: fbc453282e442e9adb5a378c216b2e5a83eb2bb0
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sessionid-transact-sql"></a>SESSION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  返回当前的 ID[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)]会话。  
+  返回当前 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] 会话的 ID。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,24 +39,24 @@ SESSION_ID ( )
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回**nvarchar(32)**值。  
+ 返回 nvarchar(32) 值。  
   
 ## <a name="general-remarks"></a>一般备注  
- 建立连接时，将每个用户连接到分配的会话 ID。 它保存为连接的持续时间。 当连接结束时，被释放了会话 ID。  
+ 会话 ID 在连接建立时分配给每个用户连接。 它在连接期间都存在。 连接结束时，会话 ID 也会解除。  
   
- 会话 ID 以字母字符 SID 开头。 这些都是区分大小写，当在中使用会话 ID 必须大写[!INCLUDE[DWsql](../../includes/dwsql-md.md)]命令。  
+ 会话 ID 以字母字符“SID”开头。 这些字母字符区分大小写，在 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 命令中使用会话 ID 时必须大写。  
   
- 你可以查询视图[sys.dm_pdw_exec_sessions](http://msdn.microsoft.com/en-us/5b656c55-427f-4306-8bd9-9d7987c203d9)检索此函数与相同的信息。  
+ 可以查询视图 [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) 以检索与此函数相同的信息。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回当前会话 id。  
+ 以下示例返回当前会话 ID。  
   
 ```  
 SELECT SESSION_ID();  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
- [版本 &#40;SQL 数据仓库 &#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)
+ [DB_NAME (Transact-SQL)](../../t-sql/functions/db-name-transact-sql.md)   
+ [VERSION（SQL 数据仓库）](../../t-sql/functions/version-transact-sql-configuration-functions.md)
   
   

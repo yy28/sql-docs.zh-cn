@@ -1,5 +1,5 @@
 ---
-title: "+ （添加）(Transact SQL) |Microsoft 文档"
+title: "+ （加法）(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-addition-transact-sql"></a>+ （添加） (Transact SQL)
+# <a name="-addition-transact-sql"></a>+（加法）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   两个数相加。 这个加法算术运算符也可以将一个以天为单位的数字加到日期中。  
@@ -52,7 +52,7 @@ expression + expression
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何数据类型之一除数值类别中**位**数据类型。 不能与使用**日期**，**时间**， **datetime2**，或**datetimeoffset**数据类型。  
+ 数值类别中任意数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不能与 date、time、datetime2 或 datetimeoffset 数据类型一起使用。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
@@ -60,7 +60,7 @@ expression + expression
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. 使用加法运算符计算每个雇员离岗的总小时数。  
- 本示例查找总离开工作的小时数为每个员工加上花费的休假，作为因病缺勤的小时数的小时数。  
+ 此示例通过将休假小时数和病假小时数相加来计算每个雇员离岗的总小时数。  
   
 ```  
 -- Uses AdventureWorks  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>B. 使用加法运算符将天数添加到日期和时间值中  
- 此示例中添加的第一天到数`datetime`日期。  
+ 此示例将若干天添加到 `datetime` 日期上。  
   
 ```  
   
@@ -98,7 +98,7 @@ Start Date                  Add Date
  ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>C. 将字符和整数数据类型相加  
- 下面的示例添加**int**数据类型值和字符值，通过将转换字符数据类型设置为**int**。如果不是有效的字符位于**char**字符串，[!INCLUDE[tsql](../../includes/tsql-md.md)]返回错误。  
+ 以下示例通过将字符数据类型转换为 int，将 int 数据类型值与字符值相加。如果 char 字符串中具有无效字符，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 返回一个错误。  
   
 ```  
 DECLARE @addvalue int;  
@@ -115,10 +115,10 @@ SELECT '125127' + @addvalue;
 (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D： 使用加法运算符来计算总离开为每个员工的工作的小时数  
- 下面的示例查找每个雇员的总离开工作的小时数，加上花费的休假，作为因病缺勤的小时数的小时数，并进行排序以升序结果。  
+### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D. 使用加法运算符计算每个雇员离岗的总小时数  
+ 以下示例通过将休假小时数和病假小时数相加来计算每个雇员离岗的总小时数，并将结果按升序排列。  
   
 ```  
 -- Uses AdventureWorks  
@@ -130,11 +130,11 @@ ORDER BY TotalHoursAway ASC;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [+ = &#40;加法赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [数据类型转换 &#40; 数据库引擎 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [（加法赋值）(Transact-SQL)](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  

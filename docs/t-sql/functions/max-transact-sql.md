@@ -1,5 +1,5 @@
 ---
-title: "最大 (Transact SQL) |Microsoft 文档"
+title: MAX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -55,17 +55,17 @@ MAX ( [ ALL | DISTINCT ] expression )
  指定考虑每一个唯一值。 DISTINCT 对于 MAX 无意义，使用它仅仅是为了与 ISO 实现兼容。  
   
  *expression*  
- 常量、列名、函数以及算术运算符、位运算符和字符串运算符的任意组合。 最大可与**数值**，**字符**， **uniqueidentifier**，和**datetime**列，但不是能与**位**列。 不允许使用聚合函数和子查询。  
+ 常量、列名、函数以及算术运算符、位运算符和字符串运算符的任意组合。 MAX 可用于 numeric、character、uniqueidentifier 和 datetime 列，但不能用于 bit 列。 不允许使用聚合函数和子查询。  
   
  有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 通过**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*将划分为分区函数应用到的 FROM 子句生成的结果集。 如果未指定，则此函数将查询结果集的所有行视为单个组。 *order_by_clause*确定在其中执行该操作的逻辑顺序。 *order_by_clause*是必需的。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER ( [ partition_by_clause ] order_by_clause)  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回一个值与相同*表达式*。  
+ 返回与 expression 相同的值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  MAX 忽略任何空值。  
   
  对于字符列，MAX 将按排序顺序来查找最大值。  
@@ -94,7 +94,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 下面的示例使用 MIN、 MAX、 AVG 和 COUNT 函数与 OVER 子句中的每个部门为提供聚合的值`HumanResources.Department`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
+ 以下示例将 MIN、MAX、AVG 和 COUNT 函数与 OVER 子句结合使用，为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `HumanResources.Department` 表中的每个部门提供聚合值。  
   
 ```sql  
 SELECT DISTINCT Name  
@@ -136,16 +136,16 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-### <a name="c-using-max-with-character-data"></a>C. 使用字符数据的最大值   
-下面的示例返回作为最后一个名称的字母顺序排列的数据库名称。 该示例使用`WHERE database_id < 5`，要考虑仅系统数据库。  
+### <a name="c-using-max-with-character-data"></a>C. 对字符数据使用 MAX   
+以下示例返回按字母顺序排列时，排在最后的数据库的名称。 若仅考虑系统数据库，该示例使用 `WHERE database_id < 5`。  
 ```sql   
 SELECT MAX(name) FROM sys.databases WHERE database_id < 5;
 ```
-最后一个系统数据库是`tempdb`。  
+最后一个系统数据库为 `tempdb`。  
   
 ## <a name="see-also"></a>另请参阅  
- [聚合函数 &#40;Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [通过子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

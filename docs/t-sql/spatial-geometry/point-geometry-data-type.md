@@ -1,5 +1,5 @@
 ---
-title: "点 (geometry 数据类型) |Microsoft 文档"
+title: "Point（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geometry-data-type"></a>Point（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-构造**几何图形**实例表示**点**从其 X 和 Y 值且 SRID 的实例。
+构造一个 geometry 实例，该实例表示一个根据其 X 和 Y 值以及 SRID 构造的 Point 实例。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,20 +45,20 @@ Point ( X, Y, SRID )
   
 ## <a name="arguments"></a>参数  
  *X*  
- 是**float**表达式表示的 X 坐标**点**正在生成。  
+ 一个 float 表达式，表示正在生成的 Point 的 X 坐标。  
   
  *是*  
- 是**float**表达式表示的 Y 坐标**点**正在生成。  
+ 一个 float 表达式，表示正在生成的 Point 的 Y 坐标。  
   
- *SRID*  
- 是**int**表达式表示空间引用标识符 (SRID) 的**几何图形**您希望返回的实例。  
+ SRID  
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `Point()` 创建 `geometry` 实例。  

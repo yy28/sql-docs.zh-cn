@@ -1,5 +1,5 @@
 ---
-title: "NULLIF (Transact SQL) |Microsoft 文档"
+title: NULLIF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  如果两个指定的表达式相等，则返回空值。 例如， `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` （4 和 4） 的第一列返回 NULL，因为两个输入的值都是相同。 因为两个输入的值不同，第二列将返回第一个值 (5)。 
+  如果两个指定的表达式相等，则返回空值。 例如，`SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` 为第一列（4 和 4）返回 NULL，因为两个输入值相同。 第二列返回第一个值 (5)，因为两个输入值不同。 
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ NULLIF ( expression , expression )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是任何有效的标量[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 为任意有效的标量[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回相同的类型与第一个*表达式*。  
+ 返回类型与第一个 expression 相同。  
   
- NULLIF 返回第一个*表达式*如果两个表达式是否不相等。 如果表达式相等，则 NULLIF 返回的第一个类型的 null 值*表达式*。  
+ 如果两个表达式不相等，则 NULLIF 返回第一个 expression 的值。 如果表达式相等，则 NULLIF 返回第一个 expression 类型的空值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果两个表达式相等且结果表达式为 NULL，则 NULLIF 等价于 CASE 搜索表达式。  
   
- 我们建议在 NULLIF 函数内不要使用依赖于时间的函数，如 RAND()。 这可能会导致函数两次计算，并从两个调用返回不同的结果。  
+ 我们建议在 NULLIF 函数内不要使用依赖于时间的函数，如 RAND()。 这会使函数计算两次并从两次调用中返回不同的结果。  
   
 ## <a name="examples"></a>示例  
   
@@ -117,8 +117,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C： 返回不包含数据的预算金额  
- 下面的示例创建`budgets`表，将加载数据，并使用`NULLIF`返回 null，如果既没有`current_year`也不`previous_year`包含数据。  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. 返回不包含数据的预算数量  
+ 如果 `current_year` 和 `previous_year` 都不包含数据，则以下示例创建 `budgets` 表、加载数据，并使用 `NULLIF` 返回 null。  
   
 ```sql  
 CREATE TABLE budgets (  
@@ -151,9 +151,9 @@ FROM budgets;
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [小数和数值 &#40;Transact SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

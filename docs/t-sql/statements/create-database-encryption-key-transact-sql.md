@@ -1,5 +1,5 @@
 ---
-title: "创建数据库加密密钥 (Transact SQL) |Microsoft 文档"
+title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
- 创建用于以透明方式加密数据库的加密密钥。 有关透明数据库加密的详细信息，请参阅[透明数据加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ 创建用于以透明方式加密数据库的加密密钥。 有关透明数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,16 +76,16 @@ CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }  
 指定用于加密密钥的加密算法。   
 >  [!NOTE]
->    从 SQL Server 2016 开始，已弃用 AES_128、 AES_192 和 AES_256 以外的所有算法。 若要使用旧算法（不推荐），必须将数据库设置为兼容级别 120 或更低。  
+>    从 SQL Server 2016 开始，除 AES_128、AES_192 和 AES_256 以外的所有算法都不再使用。 若要使用旧算法（不推荐），必须将数据库设置为兼容级别 120 或更低。  
   
-通过服务器证书 Encryptor_Name 加密  
+ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
 指定用于加密数据库加密密钥的加密程序的名称。  
   
-通过服务器非对称密钥 Encryptor_Name 加密  
+ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
 指定用于加密数据库加密密钥的非对称密钥的名称。 要使用非对称密钥对数据库加密密钥进行加密，非对称密钥必须驻留在可扩展密钥管理提供程序上。  
   
-## <a name="remarks"></a>注释  
-可以通过使用加密数据库之前需要数据库加密密钥*透明数据库加密*(TDE)。 以透明方式加密数据库时，将在文件级别上加密整个数据库，而无需对代码进行特殊修改。 用于加密数据库加密密钥的证书或非对称密钥必须位于 master 系统数据库中。  
+## <a name="remarks"></a>Remarks  
+在可使用“透明数据库加密”(TDE) 加密数据库之前，需要设置一个数据库加密密钥。 以透明方式加密数据库时，将在文件级别上加密整个数据库，而无需对代码进行特殊修改。 用于加密数据库加密密钥的证书或非对称密钥必须位于 master 系统数据库中。  
   
 只允许对用户数据库使用数据库加密语句。  
   
@@ -93,13 +93,13 @@ WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }
   
 数据库所有者 (dbo) 发生更改时不必重新生成数据库加密密钥。  
   
-为自动创建数据库加密密钥[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库。 不需要使用 CREATE DATABASE ENCRYPTION KEY 语句来创建项。  
+系统会为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据库自动创建一个数据库加密密钥。 用户无需使用 CREATE DATABASE ENCRYPTION KEY 语句创建密钥。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要数据库的 CONTROL 权限和用于加密数据库加密密钥的证书或非对称密钥的 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
-有关使用 TDE 的其他示例，请参阅[透明数据加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)，[在使用 EKM 的 SQL Server 上启用 TDE](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)，和[使用 Azure Key Vault &#40; 可扩展密钥管理SQL server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+有关使用 TDE 的其他示例，请参阅[透明数据加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)、[使用 EKM 在 SQL Server 上启用 TDE](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md) 和[使用 Azure Key Vault 的可扩展密钥管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  
   
 下面的示例使用 `AES_256` 算法创建一个数据库加密密钥，并使用名为 `MyServerCert` 的证书保护私钥。  
   
@@ -118,7 +118,7 @@ GO
 [SQL Server 和数据库加密密钥（数据库引擎）](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
 [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
-[ALTER DATABASE ENCRYPTION KEY &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
-[DROP DATABASE ENCRYPTION KEY &#40;Transact SQL &#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
+[ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+[DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
 [sys.dm_database_encryption_keys (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
     

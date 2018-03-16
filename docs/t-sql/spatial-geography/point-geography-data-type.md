@@ -1,5 +1,5 @@
 ---
-title: "点 (geography 数据类型) |Microsoft 文档"
+title: "Point（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-构造**geography**实例表示**点**从其纬度和经度值和空间引用标识符 (SRID) 的实例。
+根据 Point 实例的纬度值和经度值以及空间引用 ID (SRID) 构造一个表示该实例的 geography 实例。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,19 +45,19 @@ Point ( Lat, Long, SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- *Lat*  
- 是**float**表达式表示的 x 坐标**点**正在生成。  
+ Lat  
+ 一个 float 表达式，表示正在生成的 Point 的 X 坐标。  
   
- *Long*  
- 是**float**表达式表示的 y 坐标**点**正在生成。 有关有效的纬度和经度值的详细信息，请参阅[点](../../relational-databases/spatial/point.md)。  
+ Long  
+ 一个 float 表达式，表示正在生成的 Point 的 Y 坐标。 有关有效的纬度值和经度值的详细信息，请参阅 [Point](../../relational-databases/spatial/point.md)。  
   
- *SRID*  
- 是**int**表达式表示的 SRID **geography**您希望返回的实例。  
+ SRID  
+ 一个 int 表达式，表示希望返回的 geography 实例的 SRID。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
 > [!NOTE]  
 >  Point（地理数据类型）方法的参数具有与 WKT 相反的坐标。  

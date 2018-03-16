@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (geometry 数据类型) |Microsoft 文档"
+title: "STNumCurves（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-此方法返回中的曲线数目**几何图形**实例的一维空间数据类型实例时。 一维空间数据类型包括**LineString**， **CircularString**，和**CompoundCurve**。 `STNumCurves`（） 仅适用于简单类型;它并不适用于**几何图形**集合喜欢**MultiLineString**。
+当 **geometry** 实例是一维空间数据类型时，此方法返回该实例中的曲线数。 一维空间数据类型包括 LineString、CircularString 和 CompoundCurve。 `STNumCurves`() 仅适用于简单类型；它不适用于 **MultiLineString** 之类的 **geometry** 集合。
   
 ## <a name="syntax"></a>语法  
   
@@ -41,12 +41,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
- 一维空**几何图形**实例，则返回 0。 **NULL**时返回**几何图形**实例不是一维实例或未初始化的实例。  
+## <a name="remarks"></a>Remarks  
+ 空的一维 **geometry** 实例返回 0。 当 **geometry** 实例不是一维实例或为未初始化的实例时，将返回 **NULL**。  
   
 ## <a name="examples"></a>示例  
   

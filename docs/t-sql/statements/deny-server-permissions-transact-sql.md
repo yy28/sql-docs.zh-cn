@@ -1,5 +1,5 @@
 ---
-title: "DENY 服务器权限 (Transact SQL) |Microsoft 文档"
+title: "DENY 服务器权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -62,40 +62,40 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ *permission*  
  指定可对服务器拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- 到\<server_principal >  
+ TO \<server_principal>  
  指定对其拒绝权限的主体。  
   
- AS \<grantor_principal >  
+ AS \<grantor_principal>  
  指定执行此查询的主体要从哪个主体派生其拒绝该权限的权利。  
   
- *SQL_Server_login*  
+ SQL_Server_login  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login_mapped_to_Windows_login*  
+ SQL_Server_login_mapped_to_Windows_login  
  指定映射到 Windows 登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login_mapped_to_Windows_group*  
+ SQL_Server_login_mapped_to_Windows_group  
  指定映射到 Windows 组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login_mapped_to_certificate*  
+ SQL_Server_login_mapped_to_certificate  
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login_mapped_to_asymmetric_key*  
+ SQL_Server_login_mapped_to_asymmetric_key  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
  *server_role*  
  指定服务器角色。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  只有在当前数据库为 master 时，才可拒绝其服务器范围内的权限。  
   
- 有关服务器权限的信息可在[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目录视图，以及有关服务器主体的信息可在[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目录视图。 有关成员身份的服务器角色的信息可在[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)目录视图。  
+ 可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目录视图中查看有关服务器权限的信息；在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中查看有关服务器主体的信息。 以及在 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目录视图中查看有关服务器角色成员身份的信息。  
   
  服务器是权限层次结构的最高级别。 下表列出了可拒绝的对服务器最为具体的限定权限。  
   
@@ -136,19 +136,19 @@ DENY permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中添加了以下三个服务器权限。  
   
- **连接任何数据库**权限  
- 授予**连接 ANY DATABASE**到必须连接到当前存在的所有数据库和任何可能在将来创建的新数据库的登录名。 不要在任何数据库中授予超过连接的任何权限。 结合**选择所有的用户安全对象**或**VIEW SERVER STATE**以允许审核的过程，以查看实例上的所有数据或所有数据库状态[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ CONNECT ANY DATABASE 权限  
+ 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。 不要在任何数据库中授予超过连接的任何权限。 与 SELECT ALL USER SECURABLES 或 VIEW SERVER STATE 结合使用，可审核进程查看所有数据或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的所有数据库状态。  
   
- **模拟任何登录名**权限  
- 授予后，当连接到数据库时，允许中间层进程模拟连接到它的客户端帐户。 被拒绝时，高特权的登录名可以阻止模拟其他登录名。 例如，具有的登录名**CONTROL SERVER**权限可以阻止模拟其他登录名。  
+ IMPERSONATE ANY LOGIN 权限  
+ 授予后，当连接到数据库时，允许中间层进程模拟连接到它的客户端帐户。 被拒绝时，高特权的登录名可以阻止模拟其他登录名。 例如，可通过模拟其他登录名来阻止具有 CONTROL SERVER 权限的登录名。  
   
- **选择所有用户的安全对象**权限  
- 授予后，作者等登录名可以查看用户可连接到的所有数据库中的数据。 当拒绝时，将阻止对访问对象除非它们是在**sys**架构。  
+ SELECT ALL USER SECURABLES 权限  
+ 授予后，作者等登录名可以查看用户可连接到的所有数据库中的数据。 被拒绝时，阻止访问对象，除非这些对象处于 sys 架构中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 CONTROL SERVER 权限或者安全对象的所有权。 如果使用 AS 子句，则指定的主体必须拥有要对其拒绝权限的安全对象。  
   
 ## <a name="examples"></a>示例  
@@ -174,11 +174,11 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
- [DENY 服务器权限 (TRANSACT-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOKE 服务器权限 &#40;Transact SQL &#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY 服务器权限 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE 服务器权限 (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

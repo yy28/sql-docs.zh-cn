@@ -1,5 +1,5 @@
 ---
-title: "更改加密提供程序 (Transact SQL) |Microsoft 文档"
+title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *provider_name*  
+ provider_name  
  可扩展密钥管理提供程序的名称。  
   
- *Path_of_DLL*  
+ Path_of_DLL  
  实现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可扩展密钥管理接口的 .dll 文件的路径。  
   
  ENABLE | DISABLE  
  启用或禁用某个提供程序。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果提供程序更改了用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中实现可扩展密钥管理的 .dll 文件，则您必须使用 ALTER CRYPTOGRAPHIC PROVIDER 语句。  
   
  使用 ALTER CRYPTOGRAPHIC PROVIDER 语句更新 .dll 文件路径时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行以下操作：  
@@ -79,20 +79,20 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有加密提供程序的 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例更改加密提供程序，调用`SecurityProvider`中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，到.dll 文件的较新版本。 此新版本被命名为`c:\SecurityProvider\SecurityProvider_v2.dll`和服务器上安装。 服务器上必须安装有该提供程序的证书。  
+ 以下示例将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中一个名为 `SecurityProvider` 的加密提供程序更改为更新版本的 .dll 文件。 该新版本名为 `c:\SecurityProvider\SecurityProvider_v2.dll` 并且安装在服务器上。 服务器上必须安装有该提供程序的证书。  
   
-1. 禁用此提供程序以执行升级。 这将终止所有打开的加密会话。  
+1. 禁止该提供程序执行升级。 这样会终止所有打开的加密会话。  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. 升级提供程序.dll 文件。 GUID 必须与以前的版本相同，但该版本可以是不同。  
+2. 升级提供程序 .dll 文件。 GUID 必须与之前的版本相同，但该版本可以不同。  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  

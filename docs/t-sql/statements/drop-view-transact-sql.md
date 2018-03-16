@@ -1,5 +1,5 @@
 ---
-title: "删除视图 (Transact SQL) |Microsoft 文档"
+title: DROP VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -59,32 +59,32 @@ DROP VIEW [ schema_name . ] view_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *如果存在*  
- **适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)， [!INCLUDE[sssds](../../includes/sssds-md.md)])。 |  
+ IF EXISTS  
+ **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)、[!INCLUDE[sssds](../../includes/sssds-md.md)]）。  
   
- 有条件地删除视图，仅当它已存在。  
+ 只有在视图已存在时才对其进行有条件地删除。  
   
  *schema_name*  
  视图所属架构的名称。  
   
  *view_name*  
- 是要删除的视图的名称。  
+ 要删除的视图的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  删除视图时，将从系统目录中删除视图的定义和有关视图的其他信息。 还将删除视图的所有权限。  
   
  使用 DROP TABLE 删除的表上的任何视图都必须使用 DROP VIEW 显式删除。  
   
- 对索引视图执行 DROP VIEW 时，将自动删除视图上的所有索引。 若要在视图上显示的所有索引，使用[sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  
+ 对索引视图执行 DROP VIEW 时，将自动删除视图上的所有索引。 若要显示视图上的所有索引，请使用 [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  
   
  通过视图进行查询时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将进行检查以确保语句中引用的所有数据库对象都存在，这些对象在语句的上下文中有效，以及数据修改语句没有违反任何数据完整性规则。 如果检查失败，将返回错误消息。 如果检查成功，则将操作转换为对基础表的操作。 如果基础表或视图自最初创建视图以来已发生更改，则删除并重新创建视图可能很有用。  
   
- 有关确定特定的视图的依赖关系的详细信息，请参阅[sys.sql_dependencies &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md).  
+ 有关确定特定视图的依赖关系的详细信息，请参阅 [sys.sql_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)。  
   
- 有关查看视图的文本的详细信息，请参阅[sp_helptext &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
+ 有关查看视图文本的详细信息，请参阅 [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
- 需要**控件**在视图中，权限**ALTER**包含视图中或中的成员身份的架构权限**db_ddladmin**固定的服务器角色。  
+## <a name="permissions"></a>权限  
+ 需要对视图拥有 **CONTROL** 权限，对包含视图的架构拥有 **ALTER** 权限，或者拥有 **db_ddladmin** 固定服务器角色中的成员身份。  
   
 ## <a name="examples"></a>示例  
   
@@ -101,7 +101,7 @@ GO
  [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [使用 &#40;Transact SQL &#41;](../../t-sql/language-elements/use-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
  

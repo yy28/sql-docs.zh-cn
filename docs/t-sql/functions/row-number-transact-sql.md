@@ -1,5 +1,5 @@
 ---
-title: "方式 (Transact SQL) |Microsoft 文档"
+title: ROW_NUMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
@@ -37,12 +37,12 @@ ms.lasthandoff: 01/02/2018
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  设置数字结果的输出。 更具体地说，返回的顺序中分区的结果集，从每个分区中的第一行的 1 开始的行数。 
+  对结果集的输出进行编号。 具体来说，返回结果集分区内行的序列号，每个分区的第一行从 1 开始。 
   
-`ROW_NUMBER`和`RANK`类似。 `ROW_NUMBER`所有数字按顺序都行 （例如 1、 2、 3、 4、 5）。 `RANK`对于版本号 （例如 1、 2、 2、 4、 5） 提供的数值相同。   
+`ROW_NUMBER` 和 `RANK` 类似。 `ROW_NUMBER` 按顺序对所有行进行编号（例如 1、2、3、4、5）。 `RANK` 为关系提供相同的数值（例如 1、2、2、4、5）。   
   
 > [!NOTE]
-> `ROW_NUMBER`运行查询时计算的临时值。 若要保存在表中的数字，请参阅[标识属性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和[序列](../../t-sql/statements/create-sequence-transact-sql.md)。 
+> `ROW_NUMBER` 是运行查询时计算出的临时值。 若要将数值保存在表中，请参阅 [IDENTITY 属性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。 
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -55,29 +55,29 @@ ROW_NUMBER ( )
 ```  
   
 ## <a name="arguments"></a>参数  
- PARTITION BY *value_expression*  
- 将通过生成的结果集划分[FROM](../../t-sql/queries/from-transact-sql.md)方式函数应用到分区到子句。 *value_expression*指定结果集进行分区所依据的列。 如果`PARTITION BY`未指定，则该函数将所有行的查询结果集作为一个组。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ PARTITION BY value_expression  
+ 将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为应用 ROW_NUMBER 函数的分区。 value_expression 指定对结果集进行分区所依据的列。 如果未指定 `PARTITION BY`，则此函数将查询结果集的所有行视为单个组。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
- *order_by_clause*  
- `ORDER BY`子句用于确定其唯一分配利用行序列`ROW_NUMBER`中指定的分区。 它是必需的。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ order_by_clause  
+ `ORDER BY` 子句可确定在特定分区中为行分配唯一 `ROW_NUMBER` 的顺序。 它是必需的。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  **bigint**  
   
 ## <a name="general-remarks"></a>一般备注  
- 返回的行不能保证查询使用`ROW_NUMBER()`将进行排序完全相同，但有每次执行除非下列条件为真。  
+ 除非以下条件成立，否则不保证在每次执行时，使用 `ROW_NUMBER()` 的查询所返回行的顺序都完全相同。  
   
 1.  分区列的值是唯一的。  
   
-2.  值的`ORDER BY`列是唯一的。  
+2.  `ORDER BY` 列的值是唯一的。  
   
-3.  分区列的值的组合和`ORDER BY`列是唯一的。  
+3.  分区列和 `ORDER BY` 列的值的组合是唯一的。  
   
- `ROW_NUMBER()`具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+ `ROW_NUMBER()` 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-simple-examples"></a>A. 简单的示例 
+### <a name="a-simple-examples"></a>A. 简单示例 
 
 以下查询按字母顺序返回四个系统表。
 
@@ -98,7 +98,7 @@ ORDER BY name ASC;
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
 
-若要添加的每一行的前面行号列，添加具有的列`ROW_NUMBER`函数，在这种情况下名为`Row#`。 你必须将移动`ORDER BY`达子句`OVER`子句。
+要在每行的前面添加一个行编号列，请使用 `ROW_NUMBER` 函数添加一个列（此示例中名为 `Row#`）。 必须将 `ORDER BY` 子句向前移动到 `OVER` 子句处。
 
 ```sql
 SELECT 
@@ -110,14 +110,14 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|行号 |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |@shouldalert |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-添加`PARTITION BY`上的子句`recovery_model_desc`列中，将重新启动时的编号`recovery_model_desc`值更改。 
+若是在 `recovery_model_desc` 列上添加 `PARTITION BY` 子句，当 `recovery_model_desc` 值发生更改时将重新开始编号。 
  
 ```sql
 SELECT 
@@ -129,7 +129,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|行号 |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |@shouldalert |model |FULL |
 |@shouldalert |master |SIMPLE |
@@ -224,10 +224,10 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. 返回销售人员的行号  
- 下面的示例返回`ROW_NUMBER`销售代表基于其分配的销售定额。  
+ 以下示例根据销售代表所分配的销售配额返回各自的 `ROW_NUMBER`。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -256,7 +256,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ```
 
 ### <a name="f-using-rownumber-with-partition"></a>F. 将 ROW_NUMBER () 与 PARTITION 一起使用  
- 以下示例显示了将 `ROW_NUMBER` 函数与 `PARTITION BY` 参数结合使用的情况。 这将导致`ROW_NUMBER`函数对行进行编号每个分区中。  
+ 以下示例显示了将 `ROW_NUMBER` 函数与 `PARTITION BY` 参数结合使用的情况。 这样会让 `ROW_NUMBER` 函数对每个分区中的行进行编号。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -288,9 +288,9 @@ RowNumber  LastName            Territory  SalesQuota
 ```
   
 ## <a name="see-also"></a>另请参阅  
- [级别 &#40;Transact SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40;Transact SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [NTILE &#40;Transact SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)  
+ [RANK (Transact-SQL)](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK (Transact-SQL)](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [NTILE (Transact-SQL)](../../t-sql/functions/ntile-transact-sql.md)  
   
   
 

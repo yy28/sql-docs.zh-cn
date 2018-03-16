@@ -1,5 +1,5 @@
 ---
-title: "解压缩 (Transact SQL) |Microsoft 文档"
+title: DECOMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/30/2015
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="decompress-transact-sql"></a>解压缩 (Transact SQL)
+# <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  解压缩使用 GZIP 算法的输入的表达式。 压缩的结果是字节数组 （varbinary （max） 类型）。  
+  使用 GZIP 算法解压缩输入表达式。 压缩的结果是字节数组（varbinary(max) 类型）。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,17 +44,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是**varbinary (***n***)**， **varbinary （max)**，或**二进制 (** *n***)**. 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ varbinary(n)、varbinary(max) 或 binary(n)。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回的数据类型**varbinary （max)**类型。 输入自变量被解压缩使用 ZIP 算法。 如果需要用户应显式强制转换为目标类型的结果。  
+ 返回 varbinary(max) 类型的数据类型。 输入参数使用 ZIP 算法进行了解压缩。 如果需要，用户应显式将结果强制转换为目标类型。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-decompress-data-at-query-time"></a>A. 在查询时解压缩的数据  
- 下面的示例演示如何显示从表的压缩数据：  
+### <a name="a-decompress-data-at-query-time"></a>A. 在查询时解压缩数据  
+ 以下示例演示如何显示表中的压缩数据：  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -62,8 +62,8 @@ SELECT _id, name, surname, datemodified,
 FROM player;  
 ```  
   
-### <a name="b-display-compressed-data-using-computed-column"></a>B. 显示使用计算的列的压缩的数据  
- 下面的示例演示如何创建用于存储解压缩的数据的表：  
+### <a name="b-display-compressed-data-using-computed-column"></a>B. 使用计算列显示已压缩数据  
+ 下面的示例演示如何创建表来存储解压缩的数据：  
   
 ```  
 CREATE TABLE (  
@@ -76,7 +76,7 @@ CREATE TABLE (
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [COMPRESS &#40;Transact SQL &#41;](../../t-sql/functions/compress-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+ [COMPRESS (Transact-SQL)](../../t-sql/functions/compress-transact-sql.md)  
   
   

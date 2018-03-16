@@ -1,5 +1,5 @@
 ---
-title: "OPENDATASOURCE (Transact SQL) |Microsoft 文档"
+title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,25 +52,25 @@ OPENDATASOURCE ( provider_name, init_string )
   
 ## <a name="arguments"></a>参数  
  *provider_name*  
- 注册为用于访问数据源的 OLE DB 访问接口的 PROGID 的名称。 *provider_name*是**char**数据类型，没有默认值。  
+ 注册为用于访问数据源的 OLE DB 访问接口的 PROGID 的名称。 provider_name 的数据类型为 char，并且没有默认值。  
   
  *init_string*  
- 连接字符串传递给目标提供程序的 IDataInitialize 接口。 提供程序字符串语法基于关键字 / 值对由分号分隔，例如： *keyword1*=*值***;***keyword2*=*值*。  
+ 连接字符串，该字符串将要传递给目标提供程序的 IDataInitialize 接口。 提供程序字符串语法是以关键字值对为基础的，这些关键字值对由分号隔开，例如：'keyword1=value;keyword2=value'。  
   
- 若要了解提供程序上支持的特定关键字值对，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK。 该文档定义了基本语法。 下表中的列表最常使用关键字*init_string*自变量。  
+ 若要了解提供程序上支持的特定关键字值对，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK。 该文档定义了基本语法。 下表列出了 init_string 参数中最常用的关键字。  
   
 |关键字|OLE DB 属性|有效值和说明|  
 |-------------|---------------------|----------------------------------|  
 |数据源|DBPROP_INIT_DATASOURCE|要连接的数据源的名称。 不同的提供程序用不同的方法对此进行解释。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口，这指示服务器的名称。 对于 Jet OLE DB 访问接口来说，这指示 .mdb 文件或 .xls 文件的完整路径。|  
 |位置|DBPROP_INIT_LOCATION|要连接的数据库的位置。|  
-|扩展的属性|DBPROP_INIT_PROVIDERSTRING|提供程序特定的连接字符串。|  
+|扩展属性|DBPROP_INIT_PROVIDERSTRING|提供程序特定的连接字符串。|  
 |连接超时|DBPROP_INIT_TIMEOUT|达到该超时值后，连接尝试将失败。|  
 |用户 ID|DBPROP_AUTH_USERID|用于该连接的用户 ID。|  
-|密码|DBPROP_AUTH_PASSWORD|用于该连接的密码。|  
+|Password|DBPROP_AUTH_PASSWORD|用于该连接的密码。|  
 |目录|DBPROP_INIT_CATALOG|连接到数据源时的初始或默认的目录名称。|  
 |集成安全性|DBPROP_AUTH_INTEGRATED|SSPI，指定 Windows 身份验证|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  仅当 DisallowAdhocAccess 注册表选项针对指定的提供程序显式设置为 0，并且启用 Ad Hoc Distributed Queries 高级配置选项时，OPENDATASOURCE 才可用于访问 OLE DB 数据源中的远程数据。 如果未设置这些选项，则默认行为不允许即席访问。  
   
  OPENDATASOURCE 函数可以在能够使用链接服务器名的相同 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法位置中使用。 因此，可以将 OPENDATASOURCE 用作四部分名称的第一部分，该部分名称引用 SELECT、INSERT、UPDATE 或 DELETE 语句中的表或视图的名称；或者引用 EXECUTE 语句中的远程存储过程。 当执行远程存储过程时，OPENDATASOURCE 应该引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一个实例。 OPENDATASOURCE 不接受参数变量。  
@@ -80,11 +80,11 @@ OPENDATASOURCE ( provider_name, init_string )
 > [!IMPORTANT]  
 >  Windows 身份验证比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证要安全得多。 应尽量使用 Windows 身份验证。 OPENDATASOURCE 不应该用于连接字符串中的显式密码。  
   
- 每个提供程序的连接要求与创建链接服务器时的参数要求相似。 主题中列出的很多常见的提供程序的详细信息[sp_addlinkedserver &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ 每个提供程序的连接要求与创建链接服务器时的参数要求相似。 在 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 主题中列出了很多常见提供程序的详细信息。  
   
  FROM 子句中对 OPENDATASOURCE、OPENQUERY 或 OPENROWSET 的任何调用与对用作更新目标的这些函数的任何调用都是分开独立计算的，即使为两个调用提供的参数相同也是如此。 具体而言，应用到上述任一调用的结果的筛选器或联接条件不会影响其他调用的结果。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户都可以执行 OPENDATASOURCE。 用于连接到远程服务器的权限由连接字符串确定。  
   
 ## <a name="examples"></a>示例  

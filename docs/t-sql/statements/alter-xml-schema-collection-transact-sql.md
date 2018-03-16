@@ -1,5 +1,5 @@
 ---
-title: "ALTER XML SCHEMA COLLECTION (Transact SQL) |Microsoft 文档"
+title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,19 +57,19 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ```  
   
 ## <a name="arguments"></a>参数  
- *relational_schema*  
+ relational_schema  
  标识关系架构的名称。 如果未指定，则假定为默认的关系架构。  
   
- *sql_identifier*  
+ sql_identifier  
  是 XML 架构集合的 SQL 标识符。  
   
-  *架构组件*   
+ ' Schema Component '  
  要插入的架构组件。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  使用 ALTER XML SCHEMA COLLECTION 添加其命名空间尚不在 XML 架构集合中的新 XML 架构，或向已存在于该集合的命名空间中添加新组件。  
   
- 下面的示例添加一个新\<元素 > 到现有的命名空间`http://MySchema/test_xml_schema`集合中`MyColl`。  
+ 以下示例将新的 \<element> 添加到集合 `MyColl` 的现有命名空间 `http://MySchema/test_xml_schema` 中。  
   
 ```  
 -- First create an XML schema collection.  
@@ -91,9 +91,9 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  注意，如果要在集合中添加的某些组件引用同一集合中已经存在的组件，则必须使用 `<import namespace="referenced_component_namespace" />`。 但是，在 `<xsd:import>` 中使用当前架构命名空间是无效的，因此将自动导入与当前架构命名空间相同的目标命名空间中的组件。  
   
- 若要删除的集合，使用[DROP XML SCHEMA COLLECTION &#40;Transact SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ 若要删除集合，请使用 [DROP XML SCHEMA COLLECTION (Transact SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)。  
   
- 如果架构集合已包含宽松验证通配符或类型的元素**xs: anytype**，将新的全局元素、 类型或属性声明添加到架构集合将导致所有重新验证存储通过架构集合约束的数据。  
+ 如果架构集合已经包含宽松验证通配符或 xs:anyType 类型的元素，则向架构集合中添加新的全局元素、类型或属性声明将导致重新验证该架构集合所约束的所有存储的数据。  
   
 ## <a name="permissions"></a>权限  
  更改 XML SCHEMA COLLECTION 需要对集合具有 ALTER 权限。  
@@ -181,13 +181,13 @@ SET @MySchemaCollection  = N' copy the schema collection here';
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
 ```  
   
- 示例中的变量为 `nvarchar(max)` 类型。 也可以是变量**xml**数据类型，在这种情况下，隐式转换为字符串。  
+ 示例中的变量为 `nvarchar(max)` 类型。 该变量也可以为 xml 数据类型，在这种情况下，它将隐式转换为字符串。  
   
  有关详细信息，请参阅 [查看存储 XML 架构集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)。  
   
- 你可以存储中的架构集合**xml**类型列。 在这种情况下，若要创建 XML 架构集合，请执行以下步骤：  
+ 可在 xml 类型列中存储架构集合。 在这种情况下，若要创建 XML 架构集合，请执行以下步骤：  
   
-1.  通过使用 SELECT 语句从该列检索的架构集合并将其分配给变量的**xml**类型，或**varchar**类型。  
+1.  使用 SELECT 语句从列中检索该架构集合，然后将它分配给一个类型为 xml 或 varchar 的变量。  
   
 2.  在 CREATE XML SCHEMA COLLECTION 语句中指定变量名称。  
   
@@ -249,7 +249,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 导入未指定目标命名空间的架构  
- 如果不包含架构**targetNamespace**属性导入集合、 其组件是与空字符串目标命名空间关联，如下面的示例中所示。 注意，如果在集合中导入的一个或多个架构之间没有任何关联，将导致多个架构组件（可能不相关）都与默认的空字符串命名空间关联。  
+ 如果向集合中导入未包含 targetNamespace 属性的架构，该架构的组件将与空字符串目标命名空间相关联，如下面的示例所示。 注意，如果在集合中导入的一个或多个架构之间没有任何关联，将导致多个架构组件（可能不相关）都与默认的空字符串命名空间关联。  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -269,8 +269,8 @@ WHERE  sys.xml_schema_namespaces.name='';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建 XML 架构集合 &#40;Transact SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [删除 XML 架构集合 &#40;Transact SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION (Transact SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [在服务器上使用 XML 架构集合的要求和限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: "表达式 (Transact SQL) |Microsoft 文档"
+title: "表达式 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -89,28 +89,28 @@ ms.lasthandoff: 01/25/2018
   
 |术语|定义|  
 |----------|----------------|  
-|*constant*|表示单个特定数据值的符号。 有关详细信息，请参阅[常量 &#40;Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md).|  
-|*scalar_function*|是一套[!INCLUDE[tsql](../../includes/tsql-md.md)]提供特定的服务并返回单个值的语法。 *scalar_function*可以是内置标量函数，如 SUM、 GETDATE 或强制转换函数或标量用户定义函数。|  
-|[ *table_name***.** ]|表的名称或别名。|  
-|column|是一个列的名称。 表达式中只允许列的名称。|  
-|*variable*|变量或参数的名称。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
-|**(** *expression*  **)**|本主题中定义的任意一个有效表达式。 括号是分组运算符，用于确保先运算括号内表达式中的运算符，然后再将结果与别的表达式组合。|  
-|**(** *scalar_subquery* **)**|返回一个值的子查询。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
-|{ *unary_operator* }|一元运算符只能用于计算结果数据类型属于数字数据类型类别的表达式。 只有一个数字操作数的运算符：<br /><br /> ＋ 指示正数。<br /><br /> - 指示负数。<br /><br /> ~ 指示一的补数运算符。|  
-|{ *binary_operator* }|用于定义如何组合两个表达式以得到一个结果的运算符。 *binary_operator*可以是算术运算符、 赋值运算符 （=）、 一个按位运算符、 比较运算符，一个逻辑运算符、 字符串串联运算符 （+） 或一个一元运算符。 有关运算符的详细信息，请参阅[运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
-|*ranking_windowed_function*|任意 [!INCLUDE[tsql](../../includes/tsql-md.md)] 排名函数。 有关详细信息，请参阅[排名函数 &#40;Transact SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
-|*aggregate_windowed_function*|任意包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] OVER 子句的聚合函数。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
+|constant|表示单个特定数据值的符号。 有关详细信息，请参阅[常量 (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)。|  
+|scalar_function|一个提供特定服务并返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法单元。 scalar_function 可以是内置标量函数（如 SUM、GETDATE 或 CAST 函数），也可以是标量用户定义函数。|  
+|[ table_name. ]|表的名称或别名。|  
+|*column*|列的名称。 表达式中只允许列的名称。|  
+|variable|变量或参数的名称。 有关详细信息，请参阅 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
+|( expression )|本主题中定义的任意一个有效表达式。 括号是分组运算符，用于确保先运算括号内表达式中的运算符，然后再将结果与别的表达式组合。|  
+|( scalar_subquery )|返回一个值的子查询。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|{ unary_operator }|一元运算符只能用于计算结果数据类型属于数字数据类型类别的表达式。 只有一个数字操作数的运算符：<br /><br /> ＋ 指示正数。<br /><br /> - 指示负数。<br /><br /> ~ 指示一的补数运算符。|  
+|{ binary_operator }|用于定义如何组合两个表达式以得到一个结果的运算符。 binary_operator 可以是算术运算符、赋值运算符 (=)、位运算符、比较运算符、逻辑运算符、字符串连接运算符 (+) 或一元运算符。 有关运算符的详细信息，请参阅[运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)。|  
+|ranking_windowed_function|任意 [!INCLUDE[tsql](../../includes/tsql-md.md)] 排名函数。 有关详细信息，请参阅[排名函数 (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)。|  
+|aggregate_windowed_function|任意包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] OVER 子句的聚合函数。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。|  
   
 ## <a name="expression-results"></a>表达式结果  
  对于由单个常量、变量、标量函数或列名组成的简单表达式，其数据类型、排序规则、精度、小数位数和值就是它所引用的元素的数据类型、排序规则、精度、小数位数和值。  
   
- 用比较运算符或逻辑运算符组合两个表达式时，生成的数据类型为 Boolean，并且值为下列类型之一：TRUE、FALSE 或 UNKNOWN。 Boolean 数据类型的详细信息，请参阅[比较运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
+ 用比较运算符或逻辑运算符组合两个表达式时，生成的数据类型为 Boolean，并且值为下列类型之一：TRUE、FALSE 或 UNKNOWN。 有关 Boolean 数据类型的详细信息，请参阅[比较运算符 (Transact SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)。  
   
  用算术运算符、位运算符或字符串运算符组合两个表达式时，生成的数据类型取决于运算符。  
   
  由多个符号和运算符组成的复杂表达式的计算结果为单值结果。 生成的表达式的数据类型、排序规则、精度和值由进行组合的两个表达式决定，并按每次两个表达式的顺序递延，直到得出最后结果。 表达式中元素组合的顺序由表达式中运算符的优先级决定。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  两个表达式可以由一个运算符组合起来，只要它们具有该运算符支持的数据类型，并且满足至少下列一个条件：  
   
 -   两个表达式有相同的数据类型。  
@@ -121,9 +121,9 @@ ms.lasthandoff: 01/25/2018
   
  如果没有支持的隐式或显式转换，则两个表达式将无法组合。  
   
- 任何计算结果为字符串的表达式的排序规则都应遵循排序规则优先顺序规则。 有关详细信息，请参阅[排序规则优先顺序 &#40;Transact SQL &#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+ 任何计算结果为字符串的表达式的排序规则都应遵循排序规则优先顺序规则。 有关详细信息，请参阅[排序规则优先顺序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。  
   
- 如 C 编程语言中或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]，始终在表达式计算结果为单个结果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 选择列表中的表达式按以下规则进行变体：分别对结果集中的每一行计算表达式的值。 同一个表达式对结果集内的每一行可能会有不同的值，但该表达式在每一行的值是唯一的。 例如，在 `SELECT` 语句中，对 `ProductID` 的引用以及选择列表中的术语 `1+2` 都是表达式：  
+ 在 C 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 这类编程语言中，表达式的计算结果始终为单值结果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 选择列表中的表达式按以下规则进行变体：分别对结果集中的每一行计算表达式的值。 同一个表达式对结果集内的每一行可能会有不同的值，但该表达式在每一行的值是唯一的。 例如，在 `SELECT` 语句中，对 `ProductID` 的引用以及选择列表中的术语 `1+2` 都是表达式：  
   
 ```  
 USE AdventureWorks2012;  
@@ -136,17 +136,17 @@ GO
  结果集中的每个行的表达式 `1+2` 的计算结果都为 `3`。 虽然表达式 `ProductID` 在结果集的每一行中产生一个唯一值，但每一行只有一个 `ProductID` 值。  
   
 ## <a name="see-also"></a>另请参阅  
- [时区 &AMP;#40;Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [将合并 &#40;Transact SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [数据类型转换 &#40; 数据库引擎 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [数据类型优先级 &#40;Transact SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
+ [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [NULLIF &#40;Transact SQL &#41;](../../t-sql/language-elements/nullif-transact-sql.md)   
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [NULLIF (Transact-SQL)](../../t-sql/language-elements/nullif-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   

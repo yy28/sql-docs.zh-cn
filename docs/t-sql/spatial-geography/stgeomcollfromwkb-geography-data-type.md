@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromWKB (geography 数据类型) |Microsoft 文档"
+title: "STGeomCollFromWKB（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回**GeometryCollection**开放地理空间联盟 (OGC) 熟知二进制 (WKB) 表示形式的实例。
+从开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式中返回 GeometryCollection 实例。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,21 +44,21 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- *WKB_geometrycollection*  
- 是的 WKB 表示形式**GeometryCollection**您希望返回的实例。 *WKB_geometrycollection*是**varbinary （max)**表达式。  
+ WKB_geometrycollection  
+ 希望返回的 GeometryCollection 实例的 WKB 表示形式。 WKB_geometrycollection 是一个 varbinary(max) 表达式。  
   
- *SRID*  
- 是**int**表达式表示空间引用标识符 (SRID) 的**GeometryCollection**您希望返回的实例。  
+ SRID  
+ 一个 int 表达式，表示希望返回的 GeometryCollection 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- OGC 种**geography**返回 STGeomCollFromWKB() 实例设置为**GeometryCollection**， **MultiPolygon**， **MultiLineString**，或**MultiPoint**，取决于相应的 WKB 输入。  
+## <a name="remarks"></a>Remarks  
+ STGeomCollFromWKB() 返回的 geography 实例的 OGC 类型设为 GeometryCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入。  
   
- 此方法将引发**FormatException**如果输入不是格式正确的异常。  
+ 如果输入的格式不正确，此方法将引发 FormatException 异常。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomCollFromWKB()` 创建 `geography` 实例。  

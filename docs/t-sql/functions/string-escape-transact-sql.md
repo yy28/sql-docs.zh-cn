@@ -1,5 +1,5 @@
 ---
-title: "STRING_ESCAPE (Transact SQL) |Microsoft 文档"
+title: STRING_ESCAPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/25/2016
 ms.prod: sql-non-specified
@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact SQL)
+# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  在文本中的特殊字符进行转义，并返回带有转义字符的文本。 **STRING_ESCAPE**是确定性函数。  
+  对文本中的特殊字符进行转义并返回有转义字符的文本。 STRING_ESCAPE 是一个确定性的函数。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,19 +46,19 @@ STRING_ESCAPE( text , type )
   
 ## <a name="arguments"></a>参数  
  *text*  
- 是**nvarchar**[表达式](../../t-sql/language-elements/expressions-transact-sql.md)表示应进行转义的对象的表达式。  
+ 表示应转义对象的 nvarchar [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- *类型*  
- 将应用的转义规则。 目前支持的值是`'json'`。  
+ *type*  
+ 对将要应用的规则进行转义。 目前支持的值是 `'json'`。  
   
 ## <a name="return-types"></a>返回类型  
- **nvarchar (max)**带有转义的特殊和控制字符的文本。 当前**STRING_ESCAPE**仅转义 JSON 中的以下表所示的特殊字符。  
+ 带有已转义的特殊和控制字符的 nvarchar(max) 文本。 当前，STRING_ESCAPE 仅能对下表中的 JSON 特殊字符进行转义。  
   
 |特殊字符|编码的序列|  
 |-----------------------|----------------------|  
 |引号 (")|\\"|  
 |反斜线号 (\\)|\\\|  
-|斜线号 （/）|\\/|  
+|斜线号 (/)|\\/|  
 |退格键|\b|  
 |换页符|\f|  
 |换行符|\n|  
@@ -72,12 +72,12 @@ STRING_ESCAPE( text , type )
 |...|...|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  转义根据格式设置规则的 JSON 文本  
- 以下查询使用 JSON 规则的特殊字符进行转义，并返回转义的文本。  
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  根据 JSON 格式设置对文本进行转义  
+ 以下查询使用 JSON 规则对特殊字符进行转义，并返回已转义的文本。  
   
 ```  
 SELECT STRING_ESCAPE('\   /  
@@ -92,8 +92,8 @@ escapedText
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>B. 格式 JSON 对象  
- 下面的查询创建 JSON 文本，并从数字和字符串变量，并在变量中的任何特殊 JSON 字符进行转义。  
+### <a name="b-format-json-object"></a>B. 设置 JSON 对象格式  
+ 下面的查询从数字和字符串变量创建 JSON 文本，并对变量中的任意特殊 JSON 字符进行转义。  
   
 ```  
 SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',   
@@ -101,15 +101,15 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CONCAT &#40;Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

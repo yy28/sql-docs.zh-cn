@@ -1,5 +1,5 @@
 ---
-title: "复合运算符 (Transact SQL) |Microsoft 文档"
+title: "复合运算符 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,20 +35,20 @@ ms.lasthandoff: 01/25/2018
 # <a name="compound-operators-transact-sql"></a>复合运算符 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  复合运算符执行一些运算并将原始值设置为运算的结果。 例如，如果变量@x等于 35，则@x+ = 2 采用的原始值@x，将 2 和集添加@x为该新值 (37)。  
+  复合运算符执行一些运算并将原始值设置为运算的结果。 例如，如果变量 @x 等于 35，则 @x += 2 会将 @x 的原始值加上 2 并将 @x 设置为该新值 (37)。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 提供了以下复合运算符：  
   
 |运算符|详细信息链接|操作|  
 |--------------|------------------------------|------------|  
-|+=|[+ = &#40;添加分配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|将原始值加上一定的量，并将原始值设置为结果。|  
-|-=|[-= &#40;减去分配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|将原始值减去一定的量，并将原始值设置为结果。|  
-|*=|[&#42; = &#40;乘法赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|将原始值乘上一定的量，并将原始值设置为结果。|  
-|/=|[&#40; 除分配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为结果。|  
-|%=|[取模赋值 &#40;Transact SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为余数。|  
-|&=|[& = &#40;按位与赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|对原始值执行位与运算，并将原始值设置为结果。|  
-|^=|[^ = &#40;按位异或赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|对原始值执行位异或运算，并将原始值设置为结果。|  
-|&#124;=|[&#124; = &#40;按位 OR 赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|对原始值执行位或运算，并将原始值设置为结果。|  
+|+=|[+=（加法赋值）(Transact-SQL)](../../t-sql/language-elements/add-equals-transact-sql.md)|将原始值加上一定的量，并将原始值设置为结果。|  
+|-=|[-=（减法赋值）(Transact-SQL)](../../t-sql/language-elements/subtract-equals-transact-sql.md)|将原始值减去一定的量，并将原始值设置为结果。|  
+|*=|[*=（乘法赋值）(Transact-SQL)](../../t-sql/language-elements/multiply-equals-transact-sql.md)|将原始值乘上一定的量，并将原始值设置为结果。|  
+|/=|[（除法赋值）(Transact-SQL)](../../t-sql/language-elements/divide-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为结果。|  
+|%=|[取模赋值 (Transact-SQL)](../../t-sql/language-elements/modulo-equals-transact-sql.md)|将原始值除以一定的量，并将原始值设置为余数。|  
+|&=|[&=（位与赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|对原始值执行位与运算，并将原始值设置为结果。|  
+|^=|[^=（位异或赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|对原始值执行位异或运算，并将原始值设置为结果。|  
+|&#124;=|[|=（位或赋值）(Transact-SQL)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|对原始值执行位或运算，并将原始值设置为结果。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,12 +59,12 @@ expression operator expression
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何数据类型之一数值类别中。  
+ 数值类别中任意一种数据类型的任意有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  有关详细信息，请参阅与每个运算符相关的主题。  
   
 ## <a name="examples"></a>示例  
@@ -106,7 +106,7 @@ SELECT @x8 AS Bitwise_OR;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [按位运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [位运算符 (Transact-SQL)](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   

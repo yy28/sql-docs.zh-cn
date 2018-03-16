@@ -1,5 +1,5 @@
 ---
-title: "STDistance (geography 数据类型) |Microsoft 文档"
+title: "STDistance（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geography-data-type"></a>STDistance（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回的点之间的距离最短**geography**实例，并在另一个点**geography**实例。  
+  返回一个 **geography** 实例中的点与另一个 **geography** 实例中的点之间的最短距离。  
   
 > [!NOTE]  
->  `STDistance()`返回最短路线**LineString**两个 geography 类型之间。 这与测地距离十分相似。 偏差`STDistance()`从确切测地学距离的常见地球模型上是不能超过。 25%。 这将避免混淆测地类型中长度和距离之间的细微差别。  
+>  `STDistance()` 返回两个 geography 类型之间的最短 **LineString**。 这与测地距离十分相似。 普通地球模型上 `STDistance()` 与精确测地距离之间的偏差不超过 .25%。 这将避免混淆测地类型中长度和距离之间的细微差别。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,21 +48,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geography*  
- 是另一种**geography**从中测量对其调用 stdistance （） 的实例之间的距离的实例。 如果*other_geography*设置为空，stdistance （） 返回 null。  
+ 另一个 geography 实例，将度量该实例与调用 STDistance() 的实例之间的距离。 如果 other_geography 是一个空集，则 STDistance() 返回 null。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float  
   
- CLR 返回类型： **SqlDouble**  
+ CLR 返回类型：SqlDouble  
   
-## <a name="remarks"></a>注释  
- 如果 stdistance （） 方法始终返回 null 的空间引用 Id 为 (Srid) **geography**实例不匹配。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则 STDistance() 始终返回 null。  
   
 > [!NOTE]  
->  上的方法**geography**计算区域或距离的数据类型将返回基于在方法中使用的实例的 SRID 不同结果。   有关 Srid 的详细信息，请参阅[空间引用标识符 &#40;Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  geography 数据类型上用于计算面积或距离的方法将根据在该方法中使用的实例的 SRID 返回不同结果。   有关 SRID 的详细信息，请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例查找两个之间的距离**geography**实例。  
+ 以下示例查找两个 **geography** 实例之间的距离。  
   
 ```  
 DECLARE @g geography;  

@@ -1,5 +1,5 @@
 ---
-title: "月 (Transact SQL) |Microsoft 文档"
+title: MONTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -41,9 +41,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回一个整数，表示指定的月份*日期*。  
+  返回表示指定日期的月份的整数。  
   
- 有关的所有概述[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和时间数据类型和函数，请参阅[日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,15 +55,15 @@ MONTH ( date )
   
 ## <a name="arguments"></a>参数  
  *date*  
- 是可被解析为一个表达式**时间**，**日期**， **smalldatetime**， **datetime**， **datetime2**，或**datetimeoffset**值。 *日期*参数可以是表达式、 列表达式、 用户定义变量或字符串文本。  
+ 一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字。  
   
 ## <a name="return-type"></a>返回类型  
  **int**  
   
 ## <a name="return-value"></a>返回值  
- 相同的值，则 MONTH 返回[DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**月**，*日期*)。  
+ MONTH 返回的值与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (month, date) 所返回的值相同。  
   
- 如果*日期*时间部分，则返回值为 1，基月仅包含。  
+ 如果 date 只包含时间部分，则返回值为 1，即基准月。  
   
 ## <a name="examples"></a>示例  
  下面的语句将返回 `4`。 这是月份的数字。  
@@ -72,14 +72,14 @@ MONTH ( date )
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
 ```  
   
- 下面的语句将返回 `1900, 1, 1`。 自变量*日期*是数`0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```  
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回`4`。 这是月份的数字。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下面的示例将返回 `4`。 这是月份的数字。  
   
 ```  
 -- Uses AdventureWorks  
@@ -88,7 +88,7 @@ SELECT TOP 1 MONTH('2007-04-30T01:01:01.1234')
 FROM dbo.DimCustomer;  
 ```  
   
- 下面的示例返回`1900, 1, 1`。 自变量*日期*是数`0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的示例将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```  
 -- Uses AdventureWorks  

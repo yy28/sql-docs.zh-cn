@@ -1,5 +1,5 @@
 ---
-title: "移动对话 (Transact SQL) |Microsoft 文档"
+title: MOVE CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,18 +55,18 @@ MOVE CONVERSATION conversation_handle
   
 ## <a name="arguments"></a>参数  
  *conversation_handle*  
- 一个变量或常量，包含要移动的会话的会话句柄。 *conversation_handle*的类型必须为**uniqueidentifier**。  
+ 一个变量或常量，包含要移动的会话的会话句柄。 conversation_handle 的类型必须为 uniqueidentifier。  
   
- TO *conversation_group_id*  
- 一个变量或常量，包含会话将要移至的会话组的标识符。 *conversation_group_id*的类型必须为**uniqueidentifier**。  
+ TO conversation_group_id  
+ 一个变量或常量，包含会话将要移至的会话组的标识符。 conversation_group_id 的类型必须为 uniqueidentifier。  
   
-## <a name="remarks"></a>注释  
- 移动 CONVERSATION 语句移动指定的会话*conversation_handle*到由标识的会话组*conversation_group_id*。 只能在与相同队列关联的会话组之间重定向对话框。  
+## <a name="remarks"></a>Remarks  
+ MOVE CONVERSATION 语句将由 conversation_handle 指定的会话移动到由 conversation_group_id 标识的会话组。 只能在与相同队列关联的会话组之间重定向对话框。  
   
 > [!IMPORTANT]  
->  如果移动对话语句不是在批处理或存储的过程的第一个语句，必须以分号结尾前面的语句 (**;**)，则[!INCLUDE[tsql](../../includes/tsql-md.md)]语句终止符。  
+>  如果 MOVE CONVERSATION 语句不是批处理或存储过程中的第一个语句，前面的语句必须以分号 (;)（[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符）结尾。  
   
- 移动 CONVERSATION 语句锁定与关联的会话组*conversation_handle*和按指定的会话组*conversation_group_id*直到事务包含该语句提交或回滚。  
+ MOVE CONVERSATION 语句将锁定与 conversation_handle 关联的会话组和由 conversation_group_id 指定的会话组，直到包含该语句的事务提交或回滚。  
   
  MOVE CONVERSATION 在用户定义函数中无效。  
   
@@ -89,10 +89,10 @@ MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [BEGIN DIALOG CONVERSATION &#40;Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [GET CONVERSATION GROUP &#40;Transact SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [END CONVERSATION &#40;Transact SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [sys.conversation_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   
+ [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "无 (Transact SQL) |Microsoft 文档"
+title: HAVING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/28/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---having-transact-sql"></a>SELECT-无 (Transact SQL)
+# <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定组或聚合的搜索条件。 HAVING 只能与 SELECT 语句一起使用。 HAVING 通常用于 GROUP BY 子句。 如果不使用 GROUP BY，没有隐式的单一的聚合组。   
+  指定组或聚合的搜索条件。 HAVING 只能与 SELECT 语句一起使用。 HAVING 通常与 GROUP BY 子句一起使用。 如果未使用 GROUP BY，则会有隐式的单一、聚合组。   
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
-\<search_condition > 指定以满足组和/或聚合的一个或多个谓词。 有关搜索条件和谓词的详细信息，请参阅[搜索条件 &#40;Transact SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition> 指定需要组和/或聚合需要满足的一个或更多谓词。 有关搜索条件和谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
   
- **文本**，**映像**，和**ntext**数据类型不能在 HAVING 子句。  
+ 不能在 HAVING 子句中使用 text、image 和 ntext 数据类型。  
   
 ## <a name="examples"></a>示例  
  以下示例使用简单 `HAVING` 子句从 `SalesOrderID` 表中检索超过 `SalesOrderDetail` 的每个 `$100000.00` 的总计。  
@@ -65,8 +65,8 @@ HAVING SUM(LineTotal) > 100000.00
 ORDER BY SalesOrderID ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例使用`HAVING`子句来检索每个总`SalesAmount`从`FactInternetSales`表时`OrderDateKey`2004年或更高版本的年份。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下例使用 `HAVING` 子句检索 `FactInternetSales` 表中每个 `SalesAmount` 的总计，其中 `OrderDateKey` 是 2004 年或更晚。  
   
 ```  
 -- Uses AdventureWorks  
@@ -79,8 +79,8 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [GROUP BY (Transact-SQL)](../../t-sql/queries/select-group-by-transact-sql.md)   
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

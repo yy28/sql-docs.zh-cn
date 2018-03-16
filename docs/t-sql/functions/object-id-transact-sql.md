@@ -1,5 +1,5 @@
 ---
-title: "OBJECT_ID (Transact SQL) |Microsoft 文档"
+title: OBJECT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/09/2018
   返回架构范围内对象的数据库对象标识号。  
   
 > [!IMPORTANT]  
->  使用 OBJECT_ID 不能查询非架构范围内的对象（如 DDL 触发器）。 中找不到的对象[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目录视图，通过查询相应目录视图以获取的对象标识号。 例如，若要返回的 DDL 触发器的对象标识号，请使用`SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`。  
+>  使用 OBJECT_ID 不能查询非架构范围内的对象（如 DDL 触发器）。 对于在 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 目录视图中找不到的对象，需要通过查询适当的目录视图来获取该对象的标识号。 例如，若要返回 DDL 触发器的对象标识号，请使用 `SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'`。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,11 +57,11 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ```  
   
 ## <a name="arguments"></a>参数  
-  *object_name*   
- 是要使用的对象。 *object_name*是**varchar**或**nvarchar**。 如果*object_name*是**varchar**，它将隐式转换为**nvarchar**。 可以选择是否指定数据库和架构名称。  
+ **'** object_name **'**  
+ 要使用的对象。 object_name 为 varchar 或 nvarchar。 如果 object_name 为 varchar，则它会隐式转换为 nvarchar。 可以选择是否指定数据库和架构名称。  
   
-  *object_type*   
- 架构范围的对象类型。 *object_type*是**varchar**或**nvarchar**。 如果*object_type*是**varchar**，它将隐式转换为**nvarchar**。 对象类型的列表，请参阅**类型**中的列[sys.objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+ **'** *object_type* **'**  
+ 架构范围的对象类型。 object_type 为 varchar 或 nvarchar。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -76,9 +76,9 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ## <a name="remarks"></a>Remarks  
  当该参数对系统函数可选时，则采用当前数据库、主机、服务器用户或数据库用户。 内置函数后面必须跟括号。  
   
- 除非当前数据库是指定一个临时表名时，数据库名称必须出现在临时表名之前**tempdb**。 例如： `SELECT OBJECT_ID('tempdb..#mytemptable')`。  
+ 当指定临时表名时，除非当前数据库为 tempdb，否则必须在该临时表名之前加上数据库名称。 例如： `SELECT OBJECT_ID('tempdb..#mytemptable')`。  
   
- 在选择列表中，在 WHERE 子句中，可以使用系统函数和允许的表达式的任意位置。 有关详细信息，请参阅[表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)和[其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md).  
+ 系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -104,10 +104,10 @@ GO
 ```  
   
 ### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 OBJECT_ID 指定系统函数的参数值  
- 下面的示例返回的所有索引和分区的信息`Person.Address`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]通过使用数据库[sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)函数。  
+ 以下示例使用 [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 函数返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person.Address` 表的所有索引和分区信息。  
   
 > [!IMPORTANT]  
->  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 **Sys.dm_db_index_operational_stats**函数将 NULL 解释为指定所有数据库或所有对象的通配符值。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。  
+>  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 sys.dm_db_index_operational_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。  
   
 ```  
 DECLARE @db_id int;  
@@ -129,9 +129,9 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D： 返回指定对象的对象 ID  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>D：返回指定对象的对象 ID  
  以下示例返回 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库中 `FactFinance` 表的对象 ID。  
   
 ```  
@@ -139,11 +139,11 @@ SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)   
- [OBJECT_NAME &#40;Transact SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)  
+ [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)  
   
   
 

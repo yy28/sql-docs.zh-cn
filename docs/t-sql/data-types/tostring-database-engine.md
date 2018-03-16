@@ -1,5 +1,5 @@
 ---
-title: "ToString （数据库引擎） |Microsoft 文档"
+title: "ToString（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="tostring-database-engine"></a>ToString（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回一个字符串的逻辑表示形式*这*。 当从转换时，隐式调用 ToString **hierarchyid**发生类型为字符串。 充当相反[分析 &#40; 数据库引擎 &#41;](../../t-sql/data-types/parse-database-engine.md)。
+返回具有 this 逻辑表示形式的字符串。 进行从 hierarchyid 到字符串类型的转换时将隐式调用 ToString。 作用与 [Parse（数据库引擎）](../../t-sql/data-types/parse-database-engine.md)相反。
   
 ## <a name="syntax"></a>语法  
   
@@ -52,12 +52,12 @@ string ToString  ( )
 ```  
   
 ## <a name="return-types"></a>返回类型
-**SQL Server 返回 type:nvarchar(4000)**
+SQL Server 返回类型：nvarchar(4000)
   
-**CLR 返回类型： 字符串**
+CLR 返回类型：String
   
-## <a name="remarks"></a>注释  
-返回层次结构中的逻辑位置。 例如，`/2/1/`表示第四行 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中的文件系统的以下层次结构：
+## <a name="remarks"></a>Remarks  
+返回层次结构中的逻辑位置。 例如，`/2/1/` 表示以下文件系统层次结构的第四行 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])：
   
 ```sql
 /        C:\  
@@ -71,7 +71,7 @@ string ToString  ( )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-transact-sql-example-in-a-table"></a>A. 表中的 Transact-SQL 示例  
-下面的示例返回同时`OrgNode`为这两者的列**hierarchyid**数据类型和更易读的字符串格式：
+下面的示例以 hierarchyid 数据类型和可读性更强的字符串格式返回 `OrgNode` 列：
   
 ```sql
 SELECT OrgNode,  
@@ -95,7 +95,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>B. 不使用表转换 Transact-SQL 值  
-下面的代码示例使用`ToString`要转换**hierarchyid**为一个字符串，值和`Parse`要转换到的字符串值**hierarchyid**。
+下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用 `Parse` 将字符串值转换为 hierarchyid。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -116,7 +116,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="c-clr-example"></a>C. CLR 示例  
-下面的代码段调用 tostring （） 方法：
+下面的代码段调用 ToString() 方法：
   
 ```sql
 this.ToString()  

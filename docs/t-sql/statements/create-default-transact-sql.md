@@ -1,5 +1,5 @@
 ---
-title: "CREATE DEFAULT (Transact SQL) |Microsoft 文档"
+title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -57,22 +57,22 @@ AS constant_expression [ ; ]
  *schema_name*  
  默认值所属架构的名称。  
   
- *default_name*  
- 默认值的名称。 默认名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 可以选择是否指定默认值所有者名称。  
+ default_name  
+ 默认值的名称。 默认值名称必须遵守[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定默认值所有者名称。  
   
- *constant_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，其中包含仅常量 （它不能包含任何列或其他数据库对象的名称） 的值。 除了那些包含别名数据类型的表达式，可以使用任何常量、内置函数或数学表达式。 用户定义函数不能使用... 将字符和日期常量括在单引号 (); 资金，整数和浮点常量不需要引号引起来。 二进制数据必须以 0x 开头，货币数据必须以美元符号 ($) 开头。 默认值必须与列数据类型兼容。  
+ constant_expression  
+ 只包含常量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（它不能包括任何列或其他数据库对象的名称）。 除了那些包含别名数据类型的表达式，可以使用任何常量、内置函数或数学表达式。 不能使用用户定义函数。 字符和日期常量要放在单引号 (') 内；货币、整数和浮点常量不需要引号。 二进制数据必须以 0x 开头，货币数据必须以美元符号 ($) 开头。 默认值必须与列数据类型兼容。  
   
 ## <a name="remarks"></a>Remarks  
- 只能在当前数据库中创建默认值名称。 按照架构，在数据库内默认值名称必须是唯一的。 当创建默认值时，使用**sp_bindefault**以将其绑定到列或别名数据类型。  
+ 只能在当前数据库中创建默认值名称。 按照架构，在数据库内默认值名称必须是唯一的。 创建默认值时，请使用 sp_bindefault 将其绑定到列或别名数据类型。  
   
- 如果默认值与其绑定的列不兼容，则在试图插入默认值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会生成错误消息。 例如，不适用不能用作默认为**数值**列。  
+ 如果默认值与其绑定的列不兼容，则在试图插入默认值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会生成错误消息。 例如，N/A 不能用作“numeric”列的默认值。  
   
  如果默认值对于它所绑定的列而言太长，则该值就会被截断。  
   
  不能将 CREATE DEFAULT 语句与其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组合到单个批处理中。  
   
- 必须先删除默认值，然后创建一个新的相同的名称，才能和默认值必须通过执行未绑定**sp_unbindefault**则会丢弃之前。  
+ 在以相同的名称创建新的默认值之前，必须删除原有默认值，在删除前，必须通过执行 sp_unbindefault 来取消对该默认值的绑定。  
   
  如果列同时有默认值以及与之关联的规则，则默认值不能违反该规则。 永远不会插入与规则冲突的默认值，每次试图插入这样的默认值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会生成错误消息。  
   
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
 |**NULL**|NULL|默认值|NULL|NULL|  
 |**NOT NULL**|错误|默认值|error|error|  
   
- 若要重命名默认值，使用**sp_rename**。 对于在默认报表，使用**sp_help**。  
+ 若要重命名默认值，请使用 sp_rename。 若要获得默认值的报告，请使用 sp_help。  
   
 ## <a name="permissions"></a>权限  
  若要执行 CREATE DEFAULT，用户必须至少在当前数据库中拥有 CREATE DEFAULT 权限，并对在其中创建默认值的架构拥有 ALTER 权限。  
@@ -120,14 +120,14 @@ sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [删除默认 &#40;Transact SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [删除规则 &#40;Transact SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [DROP DEFAULT (Transact-SQL)](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP RULE (Transact-SQL)](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [sp_bindefault &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

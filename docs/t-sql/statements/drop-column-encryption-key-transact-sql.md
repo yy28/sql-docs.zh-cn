@@ -1,5 +1,5 @@
 ---
-title: "删除列加密密钥 (Transact SQL) |Microsoft 文档"
+title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  从数据库中删除列加密密钥。  
+  删除数据库中的列加密密钥。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,19 +49,19 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
 ```  
   
 ## <a name="arguments"></a>参数  
- *key_name*  
- 是所依据的列加密密钥以从数据库中删除的名称。  
+ key_name  
+ 从数据库中删除列加密密钥所依据的名称。  
   
-## <a name="remarks"></a>注释  
- 无法删除列加密密钥，如果它用于加密数据库中的任何列。 必须首先删除所有列使用列加密密钥。  
+## <a name="remarks"></a>Remarks  
+ 如果列加密密钥用于对数据库中的任何列进行加密，则无法将其删除。 必须首先删除所有使用列加密密钥的列。  
   
-## <a name="permissions"></a>Permissions  
- 需要**ALTER ANY COLUMN ENCRYPTION KEY**对数据库拥有权限。  
+## <a name="permissions"></a>权限  
+ 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-column-encryption-key"></a>A. 删除列加密密钥  
- 下面的示例删除列加密密钥调用`MyCEK`。  
+ 以下示例删除名为 `MyCEK` 的列加密密钥。  
   
 ```  
 DROP COLUMN ENCRYPTION KEY MyCEK;  
@@ -71,7 +71,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [ALTER COLUMN ENCRYPTION KEY &#40;Transact SQL &#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [创建列主密钥 (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)  
   
   

@@ -50,11 +50,11 @@ USE { database_name }
   
 ## <a name="arguments"></a>参数  
  *database_name*  
- 用户上下文要切换到的数据库或数据库快照的名称。 数据库和数据库快照名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
+ 用户上下文要切换到的数据库或数据库快照的名称。 数据库和数据库快照名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，数据库参数只能引用当前数据库。 如果提供了当前数据库之外的数据库，则`USE`语句不在数据库之间切换，并返回错误代码 40508。 若要更改数据库，您必须直接连接到数据库。 USE 语句被标记为不适用于在此页上，顶部的 SQL 数据库，因为即使可以具有`USE`语句到批处理中，它不执行任何操作。
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，数据库参数只能引用当前数据库。 如果提供的数据库不是当前数据库，则 `USE` 语句不会在数据库之间切换，并返回错误代码 40508。 若要更改数据库，您必须直接连接到数据库。 在本页顶部，USE 语句标记为不适用于 SQL 数据库，因为即使可以在批处理中使用 `USE` 语句，它也不会起任何作用。
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，该登录将自动连接到它的默认数据库，并获得数据库用户的安全上下文。 如果还没有为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录创建数据库用户，则登录将作为 guest 进行连接。 如果数据库用户在数据库上没有 CONNECT 权限，则 USE 语句将失败。 如果还没有为登录分配默认数据库，则它的默认数据库将设置为 master。  
   
  USE 在编译和执行期间均可执行，并且立即生效。 因此，出现在批处理中 USE 语句之后的语句将在指定数据库中执行。  

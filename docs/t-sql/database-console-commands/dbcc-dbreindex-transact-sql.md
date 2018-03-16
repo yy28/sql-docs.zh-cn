@@ -37,12 +37,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]重新生成指定的数据库的表中的一个或多个索引。
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 对指定数据库中的表重新生成一个或多个索引。
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]使用[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,27 +59,27 @@ DBCC DBREINDEX
   
 ## <a name="arguments"></a>参数  
  *table_name*  
- 包含要重新生成的指定索引的表的名称。 表名称必须遵循的规则[标识符](../../relational-databases/databases/database-identifiers.md)*。*  
+ 包含要重新生成的指定索引的表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- *index_name*  
- 要重新生成的索引名。 索引名称必须符合标识符规则。 如果*index_name*指定，则*table_name*必须指定。 如果*index_name*未指定或为""，重新生成所有索引的表。  
+ index_name  
+ 要重新生成的索引名。 索引名称必须符合标识符规则。 如果已指定 index_name，则必须指定 table_name。 如果未指定 index_name 或者该值为“ ”，则重新生成表的所有索引。  
   
- *fillfactor*  
- 在创建或重新生成索引时，每个索引页上用于存储数据的空间的百分比。 *填充因子*，则当创建索引，成为新的默认值为索引和重新生成因为重新生成聚集的索引的任何其他非聚集索引将填充因子。  
- 当*fillfactor*为 0，DBCC DBREINDEX 使用上次为该索引指定填充因子值。 此值存储在**sys.indexes**目录视图。   
- 如果*fillfactor*指定，则*table_name*和*index_name*必须指定。 如果*fillfactor*未指定，则使用默认的填充因子，100。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
+ fillfactor  
+ 在创建或重新生成索引时，每个索引页上用于存储数据的空间的百分比。 创建索引后，fillfactor 将替换填充因子，从而成为该索引以及重新生成的任何其他非聚集索引（因为重新生成了聚集索引）的新默认值。  
+ 当 fillfactor 为 0 时，DBCC DBREINDEX 将使用上次为索引指定的填充因子值。 该值存储在 sys.indexes 目录视图中。   
+ 如果已指定 fillfactor，则必须指定 index_name。 如果未指定 fillfactor，则使用默认填充因子 100。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
  WITH NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 DBCC DBREINDEX 重新生成表的一个索引或为表定义的所有索引。 通过允许动态重新生成索引，可以重新生成强制 PRIMARY KEY 或 UNIQUE 约束的索引，而不必删除并重新创建这些约束。 这意味着无需了解表的结构或其约束，即可重新生成索引。 这可能在将数据大容量复制到表中以后发生。
 
 DBCC DBREINDEX 可以在一条语句中重新生成表的所有索引。 这要比对多条 DROP INDEX 和 CREATE INDEX 语句进行编码更容易。 由于这项工作是通过一条语句执行的，因此 DBCC DBREINDEX 自动成为原子性的，而单个 DROP INDEX 和 CREATE INDEX 语句则必须包含在事务中才能成为原子性的。 此外，DBCC DBREINDEX 提供了比单个 DROP INDEX 和 CREATE INDEX 语句更多的优化性能。
 
 与 DBCC INDEXDEFRAG 或具有 REORGANIZE 选项的 ALTER INDEX 不同，DBCC DBREINDEX 是一个脱机操作。 如果重新生成了非聚集索引，则在该操作的持续时间内，相关表持有共享锁。 这可以禁止对表进行修改。 如果重新生成了聚集索引，则持有排他表锁。 这可以禁止任何表访问，因此可以有效地使表脱机。 为了执行联机索引重新生成，或控制索引重新生成操作期间的并行度，可使用具有 ONLINE 选项的 ALTER INDEX REBUILD 语句。
 
-有关选择一种方法以重新生成或重新组织索引的详细信息，请参阅[Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md) 。
+有关选择方法来重新生成或重新组织索引的详细信息，请参阅[重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。
   
 ## <a name="restrictions"></a>限制  
 不支持对以下对象使用 DBCC DBREINDEX：
@@ -95,7 +95,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>权限  
-调用方必须拥有某个表，或者是的成员**sysadmin**固定服务器角色、 **db_owner**固定数据库角色或**db_ddladmin**固定的数据库角色。
+调用方必须拥有此表，或是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员。
   
 ## <a name="examples"></a>示例  
 ### <a name="a-rebuilding-an-index"></a>A. 重新生成索引  

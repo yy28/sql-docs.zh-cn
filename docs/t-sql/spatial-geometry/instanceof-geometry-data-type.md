@@ -1,5 +1,5 @@
 ---
-title: "InstanceOf (geometry 数据类型) |Microsoft 文档"
+title: "InstanceOf（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geometry-data-type"></a>InstanceOf（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-测试方法**几何图形**实例是否与指定的类型相同。 如果返回 1 的一种**几何图形**实例与指定的类型相同，或如果指定的类型是祖先的实例类型; 否则，返回 0。
+一个方法，用于测试 **geometry** 实例是否与指定的类型相同。 如果 **geometry** 实例的类型与指定的类型相同，或者指定的类型是该实例类型的上级，则返回 1；否则，返回 0。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *geometry_type*  
- 是**nvarchar （4000)** 15 中公开的类型之一指定字符串**几何图形**类型层次结构。  
+ 一个 **nvarchar(4000)** 字符串，用于指定 **geometry** 类型层次结构中公开的 15 个类型之一。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 该方法的输入必须是以下之一：**几何图形**，**点**，**曲线**， **LineString**， **CircularString**， **CompoundCurve**，**面**，**多边形**， **CurvePolygon**， **GeometryCollection**， **MultiSurface**， **MultiPolygon**， **MultiCurve**， **MultiLineString**，和**MultiPoint**。 此方法将引发**ArgumentException**如果其他任何字符串用于输入。  
+## <a name="remarks"></a>Remarks  
+ 该方法的输入必须是以下各项之一：Geometry、Point、Curve、LineString、CircularString、CompoundCurve、Surface、Polygon、CurvePolygon、GeometryCollection、MultiSurface、MultiPolygon、MultiCurve、MultiLineString 和 MultiPoint。 如果将任何其他字符串用于输入，此方法会引发 **ArgumentException**。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `MultiPoint` 实例，并使用 `InstanceOf()` 查看该实例是否为 `GeometryCollection`。  

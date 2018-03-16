@@ -1,5 +1,5 @@
 ---
-title: "%（取模） (Transact SQL) |Microsoft 文档"
+title: "%（取模）(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-modulus-transact-sql"></a>%（取模） (Transact SQL)
+# <a name="-modulus-transact-sql"></a>%（取模）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回两数相除后的余数。  
@@ -53,21 +53,21 @@ dividend % divisor
   
 ## <a name="arguments"></a>参数  
  *被除数*  
- 被除数的数值表达式。 *被除数*必须为有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)任何一种整数和货币数据类型类别中的数据类型的或**数值**数据类型。  
+ 被除数的数值表达式。 *dividend* 必须为整数和货币数据类型类别中任意一种数据类型的有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，或者为 **numeric** 数据类型。  
   
  *除数*  
- 是用于除以被除数的数值表达式。 *除数*必须为任何一种整数和货币数据类型类别中的数据类型的任何有效表达式或**数值**数据类型。  
+ 除数的数值表达式。 divisor 必须为整数和货币数据类型类别中任意一种数据类型的任意有效表达式，或者为 numeric 数据类型。  
   
 ## <a name="result-types"></a>结果类型  
  由两个参数的数据类型确定。  
   
-## <a name="remarks"></a>注释  
- 你可以使用取模与任何列名称的组合的 SELECT 语句的选择列表中的算术运算符，数值常量或任何有效表达式的整数部分和货币数据类型类别或**数值**数据类型。  
+## <a name="remarks"></a>Remarks  
+ 取模算术运算符可以和列名、数值常量或任何具有整数和货币数据类型类别或 numeric 数据类型的有效表达式组合一起用于 SELECT 语句的选择列表中。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-simple-example"></a>A. 简单示例  
- 下面的示例用 38 除以数字 5。 这导致 7 作为结果的整数部分，并演示如何取模返回 3 的剩余部分。  
+ 下面的示例用 38 除以数字 5。 所得结果的整数部分为 7。该示例演示了取模运算如何返回余数 3。  
   
 ```  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
@@ -86,10 +86,10 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C： 简单的示例  
- 下面的示例显示结果`%`运算符除 3 通过 2 时。  
+### <a name="c-simple-example"></a>C：简单示例  
+ 以下示例显示将 3 除以 2 时运算符 `%` 的结果。  
   
 ```  
 -- Uses AdventureWorks  
@@ -106,11 +106,11 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
   
 ## <a name="see-also"></a>另请参阅  
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [%= &#40;取模赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
- [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [%=（取模赋值）(Transact-SQL)](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

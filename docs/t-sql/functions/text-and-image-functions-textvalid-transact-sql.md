@@ -1,5 +1,5 @@
 ---
-title: "TEXTVALID (Transact SQL) |Microsoft 文档"
+title: TEXTVALID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="text-and-image-functions---textvalid-transact-sql"></a>文本和图像函数-TEXTVALID (Transact SQL)
+# <a name="text-and-image-functions---textvalid-transact-sql"></a>文本与图像函数 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A**文本**， **ntext**，或**映像**检查特定的文本指针是否为有效的函数。  
+  检查特定文本指针是否有效的 text、ntext 或 image 函数。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]没有可用的替代功能。  
@@ -57,7 +57,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  *table*  
  要使用的表的名称。  
   
- *列*  
+ *column*  
  要使用的列的名称。  
   
  *text_ptr*  
@@ -66,22 +66,22 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
- 如果指针有效则返回 1，无效则返回 0。 请注意，标识符**文本**列必须包含表名。 在没有有效的文本指针的情况下，不能使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
+## <a name="remarks"></a>Remarks  
+ 如果指针有效则返回 1，无效则返回 0。 请注意，text 列的标识符必须包含表名。 在没有有效的文本指针的情况下，不能使用 UPDATETEXT、WRITETEXT 或 READTEXT。  
   
- 以下函数和语句也是有用当您使用时**文本**， **ntext**，和**映像**数据。  
+ 当使用 text、ntext 和 image 数据时，下列函数和语句也非常有用。  
   
 |函数或语句|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**(***%模式 %***，** *表达式***)**|返回指定的字符串的字符位置**文本**和**ntext**列。|  
-|Datalength 之外**(***表达式***)**|返回中的数据长度**文本**， **ntext**，和**映像**列。|  
-|SET TEXTSIZE|返回的限制，以字节为单位，**文本**， **ntext**，或**映像**与 SELECT 语句返回的数据。|  
+|PATINDEX**(**'*%pattern%**'***,** *expression***)**|返回指定字符串在 text 和 ntext 列中所处的字符位置。|  
+|DATALENGTH**(***expression***)**|返回 text、ntext 和 image 列中数据的长度。|  
+|SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）。|  
   
 ## <a name="examples"></a>示例  
  以下示例报告是否存在用于 `logo` 表的 `pub_info` 列中的各个值的有效文本指针。  
   
 > [!NOTE]  
->  若要运行此示例，你必须安装**pubs**数据库。  
+>  若要运行此示例，必须安装 pubs 数据库。  
   
 ```  
 USE pubs;  
@@ -111,10 +111,10 @@ pub_id Valid (if 1) Text data
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Datalength 之外 &#40;Transact SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40;Transact SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [设置 TEXTSIZE &#40;Transact SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [文本和图像函数 &#40;Transact SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
- [TEXTPTR &#40;Transact SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
+ [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)   
+ [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [文本与图像函数 (Transact-SQL)](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [TEXTPTR (Transact-SQL)](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
   
   

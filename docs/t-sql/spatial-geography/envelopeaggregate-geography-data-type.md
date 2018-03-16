@@ -1,5 +1,5 @@
 ---
-title: "EnvelopeAggregate (geography 数据类型) |Microsoft 文档"
+title: "EnvelopeAggregate（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回给定的一组的边界对象**geography**对象。 生成**geography**对象包含多条圆弧线段。
+为一组给定的 geography 对象返回边界对象。 所生成的 geography 对象包含多个圆弧段。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,24 +44,24 @@ EnvelopeAggregate ( geography_operand )
 ```  
   
 ## <a name="arguments"></a>参数  
- *geography_operand*  
- 是**geography**类型表列包含的一套**geography**对象在其上执行信封聚合操作。  
+ geography_operand  
+ geography 类型的表列，其中保存要对其执行包络线聚合操作的 geography 对象的集合。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
-## <a name="remarks"></a>注释  
- A **FullGlobe**时生成的边界对象大于半球返回对象。 此方法不精确。  
+## <a name="remarks"></a>Remarks  
+ 当产生的边界对象大于半球时，将返回 FullGlobe 对象。 此方法不精确。  
   
- 方法返回**null**如果输入具有不同 Srid。 请参阅[空间引用标识符 &#40;Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+ 如果输入具有不同的 SRID，方法返回 null。 请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
- 方法将忽略**null**输入。  
+ 方法忽略 null 输入。  
   
 > [!NOTE]  
->  方法返回**null**如果所有输入的值为**null**。  
+>  如果所有输入值均为 null，则方法返回 null。  
   
 ## <a name="examples"></a>示例  
- 下面的示例执行`EnvelopeAggregate`对一组**geography**位置内城市的点。  
+ 下面的示例对城市内的一组 geography 位置点执行 `EnvelopeAggregate`。  
   
  ```
  USE AdventureWorks2012  

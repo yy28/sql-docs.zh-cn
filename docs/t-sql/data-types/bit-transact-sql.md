@@ -1,5 +1,5 @@
 ---
-title: "位 (Transact SQL) |Microsoft 文档"
+title: bit (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/21/2017
 
   可以取值为 1、0 或 NULL 的 integer 数据类型。  
   
-## <a name="remarks"></a>注释  
-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]优化存储**位**列。 如果有 8 或更小**位**列在表中，列存储为 1 个字节。 如果来自最多支持 16 9**位**列，列存储为 2 个字节，依次类推。
+## <a name="remarks"></a>Remarks  
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可优化 **bit** 列的存储。 如果表中的 **bit** 列为 8 列或更少，则这些列作为 1 个字节存储。 如果 **bit** 列为 9 到 16 列，则这些列作为 2 个字节存储，以此类推。
   
-TRUE 和 FALSE 的字符串值可以转换为**位**值： TRUE 转换为 1，FALSE 转换为 0。
+字符串值 TRUE 和 FALSE 可转换为 **bit** 值：TRUE 将转换为 1，FALSE 将转换为 0。
   
 转换为 bit 会将任何非零值升为 1。
   
@@ -47,10 +47,10 @@ TRUE 和 FALSE 的字符串值可以转换为**位**值： TRUE 转换为 1，FA
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
-[数据类型转换 &#40; 数据库引擎 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[sys.types &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

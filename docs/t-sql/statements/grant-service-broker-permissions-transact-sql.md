@@ -1,5 +1,5 @@
 ---
-title: "授予 Service Broker 权限 (Transact SQL) |Microsoft 文档"
+title: "GRANT Service Broker 权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -59,25 +59,25 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- *permission*  
+ permission  
  指定可对 Service Broker 安全对象授予的权限。  如下所列。  
   
- 协定 **:: * * * contract_name*  
- 指定将对其授予权限的约定。 作用域限定符"::"是必需的。  
+ CONTRACT ::contract_name  
+ 指定将对其授予权限的约定。 需要使用作用域限定符“::”。  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE ::message_type_name  
  指定将对其授予权限的消息类型。 需要使用作用域限定符“::”。  
   
- 远程服务绑定 **:: * * * remote_binding_name*  
+ REMOTE SERVICE BINDING ::remote_binding_name  
  指定将对其授予权限的远程服务绑定。 需要使用作用域限定符“::”。  
   
- ROUTE **::***route_name*  
+ ROUTE ::route_name  
  指定将对其授予权限的路由。 需要使用作用域限定符“::”。  
   
- SERVICE **::***service_name*  
+ SERVICE ::service_name  
  指定将对其授予权限的服务。 需要使用作用域限定符“::”。  
   
- *database_principal*  
+ database_principal  
  指定要向其授予权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -99,7 +99,7 @@ GRANT permission  [ ,...n ] ON
  GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- *granting_principal*  
+ granting_principal  
  指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -118,7 +118,7 @@ GRANT permission  [ ,...n ] ON
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Service Broker 约定  
  Service Broker 约定是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可对 Service Broker 约定授予的最特定、最有限的权限，以及暗含这些权限的更一般的权限。  
@@ -178,20 +178,20 @@ GRANT permission  [ ,...n ] ON
   
  如果使用 AS 选项，还必须满足以下附加要求：  
   
-|AS *granting_principal*|所需的其他权限|  
+|AS granting_principal|所需的其他权限|  
 |------------------------------|------------------------------------|  
-|数据库用户|针对用户、 中的成员身份的 IMPERSONATE 权限**db_securityadmin**固定的数据库角色、 中的成员身份**db_owner**固定数据库角色或中的成员身份**sysadmin**固定的服务器角色。|  
-|映射到 Windows 登录名的数据库用户|针对用户、 中的成员身份的 IMPERSONATE 权限**db_securityadmin**固定的数据库角色、 中的成员身份**db_owner**固定数据库角色或中的成员身份**sysadmin**固定的服务器角色。|  
-|映射到 Windows 组的数据库用户|中的 Windows 组中中的成员身份的成员身份**db_securityadmin**固定的数据库角色、 中的成员身份**db_owner**固定数据库角色或中的成员身份**sysadmin**固定的服务器角色。|  
-|映射到证书的数据库用户|中的成员身份**db_securityadmin**固定的数据库角色、 中的成员身份**db_owner**固定数据库角色或中的成员身份**sysadmin**固定的服务器角色。|  
-|映射到非对称密钥的数据库用户|中的成员身份**db_securityadmin**固定的数据库角色、 中的成员身份**db_owner**固定数据库角色或中的成员身份**sysadmin**固定的服务器角色。|  
-|未映射到任何服务器主体的数据库用户|针对用户、 中的成员身份的 IMPERSONATE 权限**db_securityadmin**固定的数据库角色、 中的成员身份**db_owner**固定数据库角色或中的成员身份**sysadmin**固定的服务器角色。|  
-|数据库角色|在角色中的成员身份的 ALTER 权限**db_securityadmin**固定的数据库角色、 中的成员身份**db_owner**固定数据库角色或中的成员身份**sysadmin**固定的服务器角色。|  
-|应用程序角色|在角色中的成员身份的 ALTER 权限**db_securityadmin**固定的数据库角色、 中的成员身份**db_owner**固定数据库角色或中的成员身份**sysadmin**固定的服务器角色。|  
+|数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
+|映射到 Windows 登录名的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
+|映射到 Windows 组的数据库用户|Windows 组的成员身份、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
+|映射到证书的数据库用户|db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
+|映射到非对称密钥的数据库用户|db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
+|未映射到任何服务器主体的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
+|数据库角色|对角色的 ALTER 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
+|应用程序角色|对角色的 ALTER 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
   
  对象所有者可以授予对其所拥有的对象的权限。 对某安全对象具有 CONTROL 权限的主体可以授予对该安全对象的权限。  
   
- 被授权者的 CONTROL SERVER 权限，例如成员**sysadmin**固定的服务器角色，可以授予任何权限上任何服务器中安全对象。 数据库，如的成员拥有 CONTROL 权限的被授权者**db_owner**固定的数据库角色，可以授予任何权限对任何数据库中安全对象。 被授权 CONTROL 权限的用户可以授予对相应架构中任一个对象的任意权限。  
+ 被授予 CONTROL SERVER 权限的用户（例如，sysadmin 固定服务器角色的成员）可以授予对相应服务器中任一个安全对象的任意权限。 将某一数据库的 CONTROL 权限授予用户（例如，db_owner 固定数据库角色的成员）后，该用户就可授予对该数据库中任何一个安全对象的任意权限。 被授权 CONTROL 权限的用户可以授予对相应架构中任一个对象的任意权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   

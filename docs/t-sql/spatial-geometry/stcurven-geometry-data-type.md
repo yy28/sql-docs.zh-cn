@@ -1,5 +1,5 @@
 ---
-title: "STCurveN (geometry 数据类型) |Microsoft 文档"
+title: "STCurveN（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geometry-data-type"></a>STCurveN（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回从指定的曲线**几何图形**实例，它是**LineString**， **CircularString**， **CompoundCurve**，或**MultiLineString**。
+返回从 geometry 实例中指定的曲线，该实例的数据类型为 LineString、CircularString、CompoundCurve 或 MultiLineString。
   
 ## <a name="syntax"></a>语法  
   
@@ -42,26 +42,26 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *curve_index*  
- 是**int**介于 1 和中的曲线数之间的表达式**几何图形**实例。  
+ 一个 **int** 表达式，其值介于 1 和 **geometry** 实例中的曲线数之间。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="exceptions"></a>异常  
- 如果*curve_index* < 1 则`ArgumentOutOfRangeException`引发。  
+ 如果 *curve_index* < 1，则引发 `ArgumentOutOfRangeException`。  
   
-## <a name="remarks"></a>注释  
- **NULL**时返回发生以下任一情况：  
+## <a name="remarks"></a>Remarks  
+ 如果出现以下任何情况，则会返回 **NULL**：  
   
--   **几何图形**实例已声明，但未实例化  
+-   声明 **geometry** 实例，但未将其实例化  
   
--   **几何图形**实例为空  
+-   **geometry** 实例为空  
   
--   *curve_index*超过中的曲线数目**几何图形**实例  
+-   *curve_index* 超过 **geometry** 实例中的曲线数  
   
--   **几何图形**实例是**点**， **MultiPoint**，**多边形**， **CurvePolygon**，或**MultiPolygon**  
+-   **geometry** 实例为 **Point**、**MultiPoint**、**Polygon**、**CurvePolygon** 或 **MultiPolygon**  
   
 ## <a name="examples"></a>示例  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
  请注意，前面的三个示例的结果是相同的。 无论使用哪种 WKT（熟知文本）格式输入相同的曲线序列，在使用 `STCurveN()` 实例时，`CompoundCurve` 返回的结果都是相同的。  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. 在调用 STCurveN() 之前验证参数  
- 下面的示例演示如何确保`@n`是否有效，然后才能调用`STCurveN()`方法：  
+ 以下示例说明如何在调用 `STCurveN()` 方法之前确保 `@n` 有效：  
   
 ```
  DECLARE @g geometry;  
@@ -118,7 +118,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [STNumCurves &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
+ [STNumCurves（geometry 数据类型）](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [几何图形实例上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

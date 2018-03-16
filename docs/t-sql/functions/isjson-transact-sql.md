@@ -1,5 +1,5 @@
 ---
-title: "ISJSON (TRANSACT-SQL) |Microsoft 文档"
+title: ISJSON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/17/2017
 ---
-# <a name="isjson-transact-sql"></a>ISJSON (TRANSACT-SQL)
+# <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   测试字符串是否包含有效 JSON。  
@@ -48,17 +48,17 @@ ISJSON ( expression )
  要测试的字符串。  
   
 ## <a name="return-value"></a>返回值  
- 返回该字符串包含有效 JSON; 如果为 1否则，返回 0。 返回 null 如果*表达式*为 null。  
+ 如果字符串包含有效 JSON，则返回 1；否则，返回 0。 如果 expression 为 NULL，则返回 NULL。  
   
  不返回错误。  
   
-## <a name="remarks"></a>注释  
- **ISJSON**不会检查在同一级别的键的唯一性。  
+## <a name="remarks"></a>Remarks  
+ **ISJSON** 不检查在相同级别的键的唯一性。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="example-1"></a>示例 1  
-下面的示例运行语句块有条件地如果参数值`@param`包含有效 JSON。  
+如果参数值 `@param` 包含有效 JSON，则下面的示例有条件地运行语句块。  
   
 ```sql  
 DECLARE @param <data type>
@@ -81,6 +81,6 @@ WHERE ISJSON(json_col) > 0
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [JSON 数据 &#40;SQL server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "SWITCHOFFSET (Transact SQL) |Microsoft 文档"
+title: SWITCHOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
@@ -40,9 +40,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回**datetimeoffset**从存储的时区偏移量更改为指定的新时区偏移量的值。  
+  返回从存储的时区偏移量变为指定的新时区偏移量时得到的 datetimeoffset 值。  
   
- 有关的所有概述[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和时间数据类型和函数，请参阅[日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,21 +53,21 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 ```  
   
 ## <a name="arguments"></a>参数  
- *DATETIMEOFFSET*  
- 是可被解析为一个表达式**datetimeoffset(n)**值。  
+ DATETIMEOFFSET  
+ 是一个可以解析为 datetimeoffset(n) 值的表达式。  
   
- *time_zone*  
+ time_zone  
  是一个格式为 [+|-]TZH:TZM 的字符串，或是一个表示时区偏移量的带符号的整数（分钟数），假定它能够感知夏时制并作出相应的调整。  
   
 ## <a name="return-type"></a>返回类型  
- **datetimeoffset**使用的小数部分精度*DATETIMEOFFSET*自变量。  
+ 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset。  
   
-## <a name="remarks"></a>注释  
- 使用 SWITCHOFFSET 选择**datetimeoffset**值转换为不同于最初存储的时区偏移量的时区偏移量。 SWITCHOFFSET 不会更新存储*time_zone*值。  
+## <a name="remarks"></a>Remarks  
+ 使用 SWITCHOFFSET 可选择与最初存储的时区偏移量不同的时区偏移量的 datetimeoffset 值。 SWITCHOFFSET 不会更新存储的 time_zone 值。  
   
- SWITCHOFFSET 可以用于更新**datetimeoffset**列。  
+ SWITCHOFFSET 可用于更新 datetimeoffset 列。  
   
- 将 SWITCHOFFSET 用于函数 GETDATE() 可能导致查询运行缓慢。 这是因为查询优化器无法获取 datetime 值的准确基数估计值。 要解决此问题，请使用 OPTION (RECOMPILE) 查询提示以强制查询优化器在下次执行同一查询时重新编译查询计划。 优化器将得到准确的基数估计值并生成更高效的查询计划。 有关 RECOMPILE 查询提示的详细信息，请参阅[查询提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ 将 SWITCHOFFSET 用于函数 GETDATE() 可能导致查询运行缓慢。 这是因为查询优化器无法获取 datetime 值的准确基数估计值。 要解决此问题，请使用 OPTION (RECOMPILE) 查询提示以强制查询优化器在下次执行同一查询时重新编译查询计划。 优化器将得到准确的基数估计值并生成更高效的查询计划。 有关 RECOMPILE 查询提示的详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -98,8 +98,8 @@ FROM dbo.test;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [时区 &AMP;#40;Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

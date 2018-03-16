@@ -1,5 +1,5 @@
 ---
-title: "STLength (geometry 数据类型) |Microsoft 文档"
+title: "STLength（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlength-geometry-data-type"></a>STLength（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回中的元素的总长度**几何图形**实例。
+返回 **geometry** 实例中的元素的总长度。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float  
   
- CLR 返回类型： **SqlDouble**  
+ CLR 返回类型：SqlDouble  
   
-## <a name="remarks"></a>注释  
- 如果**几何图形**实例是否闭合、 其长度的计算方式解决该实例的总长度为; 任何多边形的长度是其外围和点的长度为 0。 任何的长度**geometrycollection**类型是其包含的长度的总和**几何图形**实例。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 实例是闭合的，则其长度按围绕该实例的总长度进行计算；任何多边形的长度均为其周长，点的长度为 0。 任何 **geometrycollection** 类型的长度均为它所包含的 **geometry** 实例的长度之和。  
   
  STLength() 对有效和无效的 LineString 均适用。 通常，LineString 会因可能由 GPS 跟踪不准确之类的异常引起的段重叠而无效。 STLength() 不会删除重叠或无效的段。 它将重叠和无效的段包括在其返回的长度值中。 MakeValid() 方法可以从 LineString 中删除重叠段。  
   

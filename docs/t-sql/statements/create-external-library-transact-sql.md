@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -23,11 +23,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: e28716314837225586cf4bd1f80a37c5c6b824ab
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: a8c77b86fac722d43b1634ea7dc5052655bf560d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -67,7 +67,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-将库添加到作用域为该用户的数据库中。 也就是说，在特定用户或所有者的上下文中，库名称是唯一的，且每个用户的库名称也是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2`。
+将库添加到作用域为该用户的数据库中。 在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2`。 不过，如果 RUser1 要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。 
 
 不能随意分配库名称；库名称应与从 R 上传 R 库时所需的名称相同。
 
@@ -107,11 +107,9 @@ WITH ( LANGUAGE = 'R' )
 
 上传到实例的库可以是公共的也可以是私有的。 如果是由 `dbo` 成员创建的库，则该库是公共的且所有的用户都可以共享。 否则，该库就仅为用户私有。
 
-不能将 blob 用作 SQL Server 2017 版本中的数据源。
-
 ## <a name="permissions"></a>权限
 
-需要 `CREATE ANY EXTERNAL LIBRARY` 权限。
+需要 `CREATE EXTERNAL LIBRARY` 权限。 默认情况下，dbo 用户或担任 db_owner 角色的任何成员都有权创建外部库。 对于其他所有用户，必须使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 语句显式授予他们权限，同时将 CREATE EXTERNAL LIBRARY 指定为特权。
 
 更改库需要单独的权限，`ALTER ANY EXTERNAL LIBRARY`。
 
@@ -124,7 +122,7 @@ WITH ( LANGUAGE = 'R' )
 ```sql
 CREATE EXTERNAL LIBRARY customPackage
 FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip') WITH (LANGUAGE = 'R');
-```  
+```
 
 在库成功上传到实例之后，用户可执行 `sp_execute_external_script` 步骤来安装库。
 
@@ -145,9 +143,9 @@ EXEC sp_execute_external_script
 
 若要成功安装 `packageA`，则必须在将 `packageA` 添加到 SQL Server 的同时为 `packageB` 和 `packageC` 创建库。 同时请务必检查所需的包版本。
 
-在实践中，常用包的依赖项通常比简单示例复杂得多。 例如，ggplot2 可能需要超过 30 个包，而这些包可能还需要无法在服务器上使用的其他包。 任何缺少的包或错误的包版本都可能会导致安装失败。
+在实践中，常用包的依赖项通常比简单示例复杂得多。 例如，ggplot2 可能需要超过 30 个包，而这些包可能还需要服务器上没有的其他包。 任何缺少的包或错误的包版本都可能会导致安装失败。
 
-由于仅通过查看包清单来确定所有依赖项可能会比较困难，因此建议使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 或 [iGraph](http://igraph.org/redirect.html) 等包来标识成功完成安装可能需要的所有包。
+由于仅通过查看程序包清单可能很难确定所有依赖项，因此建议使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 等包，以标识成功完成安装可能需要的所有包。
 
 + 上传目标包及其依赖项。 所有文件都必须位于服务器可访问的文件夹中。
 
@@ -180,38 +178,26 @@ EXEC sp_execute_external_script
     @script=N'
     # load the desired package packageA
     library(packageA)
-    # call function from package
-    OutputDataSet <- packageA.function()
+    print(packageVersion("packageA"))
     '
-    with result sets (([result] int));    
     ```
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. 从字节流创建库
 
-如果无法将包文件保存到服务器上的某个位置，也可以在变量中传递包内容。 下面的示例通过将位传递为十六进制文本来创建库。
+如果无法将包文件保存到服务器上的某个位置，可以在变量中传递包内容。 下面的示例通过将位传递为十六进制文本来创建库。
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-此处的十六进制值被截断，以增强可读性。
+> [!NOTE]
+> 此代码示例只用于展示语法；为了提高可读性，`CONTENT =` 中的二进制值已遭截断，无法创建能够正常运行的库。 二进制变量的实际内容要长得多。
 
 ### <a name="d-change-an-existing-package-library"></a>D. 更改现有包库
 
 `ALTER EXTERNAL LIBRARY` DDL 语句可用于向新库添加内容或更改现有库的内容。 修改现有库需要 `ALTER ANY EXTERNAL LIBRARY` 权限。
 
 有关详细信息，请参阅 [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)。
-
-### <a name="e-delete-a-package-library"></a>E. 删除包库
-
-若要从数据库删除包库，请运行此语句：
-
-```sql
-DROP EXTERNAL LIBRARY customPackage <user_name>;
-```
-
-> [!NOTE]
-> 与 [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] 中的其他 `DROP` 语句不同，此语句支持选择用于指定用户授权的参数。 此选项允许具有所有权角色的用户删除常规用户上传的库。
 
 ## <a name="see-also"></a>另请参阅
 

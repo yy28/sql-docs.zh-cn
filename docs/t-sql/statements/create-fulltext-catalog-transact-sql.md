@@ -1,5 +1,5 @@
 ---
-title: "CREATE FULLTEXT CATALOG (TRANSACT-SQL) |Microsoft 文档"
+title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 
   为数据库创建全文目录。 一个全文目录可以包含多个全文索引，但一个全文索引只能用于构成一个全文目录。 每个数据库可以不包含全文目录或包含多个全文目录。  
   
- 无法创建全文目录中的**master**，**模型**，或**tempdb**数据库。  
+ 不能在 master、model 或 tempdb 数据库中创建全文目录。  
   
 > [!IMPORTANT]  
 >  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，全文目录为虚拟对象且不再属于任何文件组。 全文目录是表示一组全文索引的逻辑概念。  
@@ -69,7 +69,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *catalog_name*  
+ catalog_name  
  新目录的名称。 在当前数据库的所有目录名中，该目录名必须唯一。 与全文目录对应的文件名（请参阅 ON FILEGROUP）在数据库的所有文件中也必须唯一。 如果该目录名已用于数据库中的其他目录，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
  目录名的长度不能超过 120 个字符。  
@@ -77,24 +77,24 @@ CREATE FULLTEXT CATALOG catalog_name
  ON FILEGROUP *filegroup*  
  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。  
   
- 在路径中*rootpath*  
+ IN PATH 'rootpath'  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。  
   
  ACCENT_SENSITIVITY = {ON|OFF}  
- 指定该目录的全文索引是否区分重音。 在更改此属性后，必须重新生成索引。 默认情况下，将使用数据库排序规则中所指定的区分重音设置。 若要显示的数据库排序规则，请使用**sys.databases**目录视图。  
+ 指定该目录的全文索引是否区分重音。 在更改此属性后，必须重新生成索引。 默认情况下，将使用数据库排序规则中所指定的区分重音设置。 若要显示数据库排序规则，请使用 sys.databases 目录视图。  
   
- 若要确定的全文目录的当前区分重音属性设置，请使用具有的 FULLTEXTCATALOGPROPERTY 函数**accentsensitivity**针对的属性值*catalog_name*。 如果返回值为“1”，则全文目录区分重音；如果该值为“0”，则该目录不区分重音。  
+ 若要确定全文目录当前的区分重音属性的设置，请对 catalog_name 使用具有 accentsensitivity 属性值的 FULLTEXTCATALOGPROPERTY 函数。 如果返回值为“1”，则全文目录区分重音；如果该值为“0”，则该目录不区分重音。  
   
  AS DEFAULT  
  指定该目录为默认目录。 如果在未显式指定全文目录的情况下创建全文索引，则将使用默认目录。 如果现有全文目录已标记为 AS DEFAULT，则将新目录设置为 AS DEFAULT 将使该目录成为默认全文目录。  
   
- 授权*owner_name*  
- 将全文目录的所有者设置为数据库用户名或角色的名称。 如果*owner_name*是一种角色、 角色必须是当前用户是的成员的角色的名称或运行该语句的用户必须是数据库所有者或系统管理员联系。  
+ AUTHORIZATION owner_name  
+ 将全文目录的所有者设置为数据库用户名或角色的名称。 如果 owner_name 是角色，则该角色必须是当前用户所属角色的名称，或者运行语句的用户必须是数据库所有者或系统管理员。  
   
- 如果*owner_name*是用户名称，用户名称必须是以下项之一：  
+ 如果 owner_name 是用户名，则该用户名必须是下列名称之一：  
   
 -   运行语句的用户的名称。  
   
@@ -102,13 +102,13 @@ CREATE FULLTEXT CATALOG catalog_name
   
 -   或者，执行命令的用户必须是数据库所有者或系统管理员。  
   
- *owner_name*还必须授予对指定的全文目录的 TAKE OWNERSHIP 权限。  
+ owner_name 还必须拥有对指定全文目录的 TAKE OWNERSHIP 权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  全文目录 ID 从 00005 开始，每创建一个新目录，ID 值就会递增 1。  
   
-## <a name="permissions"></a>Permissions  
- 用户必须在数据库中，具有 CREATE FULLTEXT CATALOG 权限，或者是属于**db_owner**，或**db_ddladmin**固定数据库角色的成员。  
+## <a name="permissions"></a>权限  
+ 用户必须对数据库具有 CREATE FULLTEXT CATALOG 权限，或者是 db_owner 或 db_ddladmin 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  
  下面的示例将创建一个全文目录和一个全文索引。  
@@ -123,9 +123,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fulltext_catalogs &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [DROP FULLTEXT CATALOG &#40;Transact SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)   
  
   

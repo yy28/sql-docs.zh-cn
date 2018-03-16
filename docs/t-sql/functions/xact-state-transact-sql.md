@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d8b98cf6f7ddd80e3952b82ae13cea75a81abd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f8b63625f4e0af0e1f6c55b2d85ae8bb10d53b02
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
 |------------------|-------------|  
 |@shouldalert|当前请求有活动的用户事务。 请求可以执行任何操作，包括写入数据和提交事务。|  
 |0|当前请求没有活动的用户事务。|  
-|-1|当前请求具有活动的用户事务，但出现了致使事务被归类为无法提交的事务的错误。 请求无法提交事务或回滚到保存点；它只能请求完全回滚事务。 请求在回滚事务之前无法执行任何写操作。 请求在回滚事务之前只能执行读操作。 事务回滚之后，请求便可执行读写操作并可开始新的事务。<br /><br /> 当批处理结束运行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将自动回滚所有不可提交的活动事务。 如果事务进入不可提交状态时未发送错误消息，则当批处理结束时，将向客户端应用程序发送一个错误消息。 此消息指示检测到并回滚了一个不可提交的事务。|  
+|-1|当前请求具有活动的用户事务，但出现了致使事务被归类为无法提交的事务的错误。 请求无法提交事务或回滚到保存点；它只能请求完全回滚事务。 请求在回滚事务之前无法执行任何写操作。 请求在回滚事务之前只能执行读操作。 事务回滚之后，请求便可执行读写操作并可开始新的事务。<br /><br /> 当最外面的批处理运行完时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 会自动回滚所有不可提交的活跃事务。 如果事务进入不可提交状态时未发送错误消息，则当批处理结束时，将向客户端应用程序发送一个错误消息。 此消息指示检测到并回滚了一个不可提交的事务。|  
   
  XACT_STATE 和 @@TRANCOUNT 函数都可用于检测当前请求是否具有活动的用户事务。 @@TRANCOUNT 不能用于确定事务是否已分类为不可提交的事务。 XACT_STATE 不能用于确定是否有嵌套事务。  
   

@@ -1,5 +1,5 @@
 ---
-title: "INDEXPROPERTY (TRANSACT-SQL) |Microsoft 文档"
+title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -47,19 +47,19 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 ```  
   
 ## <a name="arguments"></a>参数  
- *object_ID*  
- 一个表达式，包含要为其提供索引属性信息的表或索引视图的对象标识号。 *object_ID*是**int**。  
+ object_ID  
+ 一个表达式，包含要为其提供索引属性信息的表或索引视图的对象标识号。 object_id 的数据类型为 int。  
   
- *index_or_statistics_name*  
- 一个表达式，包含要为其返回属性信息的索引或统计信息的名称。 *index_or_statistics_name*是**nvarchar （128)**。  
+ index_or_statistics_name  
+ 一个表达式，包含要为其返回属性信息的索引或统计信息的名称。 index_or_statistics_name 的数据类型为 nvarchar(128)。  
   
- *属性*  
- 一个表达式，包含要返回的数据库属性的名称。 *属性*是**varchar （128)**，并且可以为这些值之一。  
+ property  
+ 一个表达式，包含要返回的数据库属性的名称。 property 的数据类型为 varchar(128)，它可以为以下值之一。  
   
 > [!NOTE]  
->  除非另行说明，否则返回 NULL 时*属性*不是有效的属性名称， *object_ID*不是有效的对象 ID， *object_ID*是不支持的对象类型指定的属性或调用方没有权限查看对象的元数据。  
+>  除非另外注明，否则出现以下情况时将返回 NULL：property 不是有效的属性名称；object_ID 不是有效的对象 ID；object_ID 不是指定属性支持的对象类型；调用方无权查看对象的元数据。  
   
-|属性|Description|值|  
+|“属性”|Description|ReplTest1|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|索引的深度。|索引级别数。<br /><br /> NULL = XML 索引或输入无效。|  
 |**IndexFillFactor**|创建索引或最后重新生成索引时使用的填充因子值。|填充因子|  
@@ -72,8 +72,8 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsPadIndex**|索引指定每个内部节点上将要保持空闲的空间。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsPageLockDisallowed**|通过 ALTER INDEX 的 ALLOW_PAGE_LOCKS 选项设置的页锁定值。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允许页锁定。<br /><br /> 0 = 允许页锁定。<br /><br /> NULL = 输入无效。|  
 |**IsRowLockDisallowed**|通过 ALTER INDEX 的 ALLOW_ROW_LOCKS 选项设置的行锁定值。|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 不允许行锁定。<br /><br /> 0 = 允许行锁定。<br /><br /> NULL = 输入无效。|  
-|**IsStatistics**|*index_or_statistics_name*是由 CREATE STATISTICS 语句或 ALTER DATABASE AUTO_CREATE_STATISTICS 选项创建的统计信息。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
-|**是唯一的**|索引是唯一的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsStatistics**|index_or_statistics_name 是通过 CREATE STATISTICS 语句或 ALTER DATABASE 的 AUTO_CREATE_STATISTICS 选项创建的统计信息。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
+|**IsUnique**|索引是唯一的。|1 = True<br /><br /> 0 = False 或 XML 索引。|  
 |**IsColumnstore**|索引为 xVelocity 内存优化的列存储索引。|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 ## <a name="return-types"></a>返回类型  
@@ -85,7 +85,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 INDEXPROPERTY）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回的值**IsClustered**， **IndexDepth**，和**IndexFillFactor**属性`PK_Employee_BusinessEntityID`索引`Employee`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
+ 以下示例针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Employee` 表的 `PK_Employee_BusinessEntityID` 索引返回 IsClustered、IndexDepth 和 IndexFillFactor 属性的值。  
   
 ```  
 SELECT   
@@ -108,8 +108,8 @@ Is Clustered Index Depth Fill Factor
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例检查某一索引的属性上`FactResellerSales`表。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例检查 `FactResellerSales` 表上某一索引的属性。  
   
 ```  
 -- Uses AdventureWorks  
@@ -130,7 +130,7 @@ GO
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
 

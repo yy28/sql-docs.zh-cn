@@ -1,5 +1,5 @@
 ---
-title: "STNumGeometries (geography 数据类型) |Microsoft 文档"
+title: "STNumGeometries（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回的数目**几何图形**构成**geography**实例。  
+  返回构成 geography 实例的几何图形的数目。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型： **SqlInt32**  
+ CLR 返回类型：SqlInt32  
   
-## <a name="remarks"></a>注释  
- 如果此方法返回 1 **geography**实例不是**MultiPoint**， **MultiLineString**， **MultiPolygon**，或**GeometryCollection**实例，或者，如果**geography**实例为空。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例不是 MultiPoint、MultiLineString、MultiPolygon 或 GeometryCollection 实例，则此方法返回 1；如果 geography 实例为空，则返回 0。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建`MultiPoint`实例并使用`STNumGeometries()`若要了解如何许多**几何图形**包含的实例。  
+ 下面的示例创建一个 `MultiPoint` 实例，并使用 `STNumGeometries()` 来确定该实例包含多少个 geometry。  
   
 ```  
 DECLARE @g geography;  

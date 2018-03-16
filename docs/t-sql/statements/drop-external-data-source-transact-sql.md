@@ -1,5 +1,5 @@
 ---
-title: "删除外部数据源 (Transact SQL) |Microsoft 文档"
+title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (TRANSACT-SQL)
+# <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   删除 PolyBase 外部数据源。  
@@ -46,17 +46,17 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
  要删除的外部数据源的名称。  
   
 ## <a name="metadata"></a>元数据  
- 若要查看列表的外部数据源，请使用 sys.external_data_sources 系统视图。  
+ 若要查看外部数据源的列表，请使用 sys.external_data_sources 系统视图。  
   
 ```  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
 ## <a name="permissions"></a>权限  
- 需要更改任何外部数据源。  
+ 需要 ALTER ANY EXTERNAL DATA SOURCE。  
   
 ## <a name="locking"></a>锁定  
- 外部数据源对象上采用共享的锁。  
+ 在外部数据源对象上采用共享锁。  
   
 ## <a name="general-remarks"></a>一般备注  
  删除外部数据源不会删除外部数据。  

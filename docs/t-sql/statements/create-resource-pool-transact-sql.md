@@ -1,5 +1,5 @@
 ---
-title: "创建资源池 (Transact SQL) |Microsoft 文档"
+title: CREATE RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建资源调控器资源池。 资源池表示数据库引擎实例的部分物理资源（内存、CPU 和 IO）。 数据库管理员可以使用资源调控器在多个资源池之间分发服务器资源，最多可为 64 个池。 资源调控器并非在每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中都提供。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,27 +70,27 @@ CREATE RESOURCE POOL pool_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *pool_name*  
- 资源池的用户定义名称。 *pool_name*是字母数字，可以是最多为 128 个字符，必须是唯一的实例内[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，且必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
+ pool_name  
+ 资源池的用户定义名称。 pool_name 由字母数字组成，最多可包含 128 个字符，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中必须是唯一的，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
- MIN_CPU_PERCENT =*value*  
- 指定在出现 CPU 争用时资源池中的所有请求保证能接收的平均 CPU 带宽。 *值*是一个整数，它默认设置为 0。 所允许的范围*值*是从 0 到 100 之间。  
+ MIN_CPU_PERCENT = value  
+ 指定在出现 CPU 争用时资源池中的所有请求保证能接收的平均 CPU 带宽。 value 为整数且默认设置为 0。 value 的允许范围是 0 到 100。  
   
- MAX_CPU_PERCENT =*value*  
- 指定出现 CPU 争用时资源池中的所有请求将都收到的最大平均 CPU 带宽。 *值*是一个整数，它默认设置为 100。 所允许的范围*值*是从 1 到 100 之间。  
+ MAX_CPU_PERCENT = value  
+ 指定存在 CPU 争用时，资源池中的所有请求将接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。  
   
- CAP_CPU_PERCENT =*value*  
+ CAP_CPU_PERCENT = value  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定资源池中的所有请求都将收到的 CPU 带宽硬性上限。 将 CPU 最大带宽级别限制为与指定值相同。 *值*是一个整数，它默认设置为 100。 所允许的范围*值*是从 1 到 100 之间。  
+ 指定资源池中的所有请求都将收到的 CPU 带宽硬性上限。 将 CPU 最大带宽级别限制为与指定值相同。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。  
   
- 相关性 {计划程序 = AUTO |( \<scheduler_range_spec >) |NUMANODE = (\<NUMA_node_range_spec >)}**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} 适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  将资源池附加到特定的计划程序。 默认值为 AUTO。  
   
- 关联计划程序 = **(** \<scheduler_range_spec > **)**映射到的资源池[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由给定 Id 标识的计划。 这些 Id 映射到 scheduler_id 列中的值[sys.dm_os_schedulers &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
+ AFFINITY SCHEDULER = (\< Scheduler_range_spec) 将资源池映射到由给定 ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划********。 这些 ID 映射到 [sys.dm_os_schedulers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) 的 scheduler_id 列中的值。 
   
- 当你使用相关性 NUMANODE = **(** \<NUMA_node_range_spec > **)**，资源池关联到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]映射到对应于在物理 Cpu 的计划程序给定的 NUMA 节点或之间的组节点中。 您可以使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询发现物理 NUMA 配置与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划程序 ID 之间的映射。 
+ 当使用 AFFINITY NUMANODE = (\<NUMA_node_range_spec> ) 时，资源池关联到映射至物理 CPU 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划程序，而这些 CPU 与给定的一个 NUMA 节点或一系列节点相对应。 您可以使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询发现物理 NUMA 配置与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计划程序 ID 之间的映射。 
   
 ```  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
@@ -100,25 +100,25 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*value*  
- 指定为此资源池保留的、不能与其他资源池共享的最小内存量。 *值*是所允许的范围的默认设置 0 整数*值*是从 0 到 100。  
+ MIN_MEMORY_PERCENT = value  
+ 指定为此资源池保留的、不能与其他资源池共享的最小内存量。 value 为整数，默认设置为 0，value 的允许范围为 0 到 100。  
   
- MAX_MEMORY_PERCENT =*value*  
- 指定此资源池中的请求可使用的总服务器内存量。 *值*是一个整数，它默认设置为 100。 所允许的范围*值*是从 1 到 100 之间。  
+ MAX_MEMORY_PERCENT =value  
+ 指定此资源池中的请求可使用的总服务器内存量。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。  
   
- MIN_IOPS_PER_VOLUME =*value*  
+ MIN_IOPS_PER_VOLUME = value  
  **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 所允许的范围*值*为 0 到 2 ^31-1 (2,147,483,647)。 指定 0 表示池没有最小值阈值。 默认值为 0。  
+ 指定为资源池保留的每个磁盘卷每秒的最小 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)。 指定 0 表示池没有最小值阈值。 默认值为 0。  
   
- MAX_IOPS_PER_VOLUME =*value*  
+ MAX_IOPS_PER_VOLUME = value  
  **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 所允许的范围*值*为 0 到 2 ^31-1 (2,147,483,647)。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
+ 指定可用于该资源池的每个磁盘卷每秒的最大 I/O 操作数 (IOPS)。 value 的允许范围是 0 到 2^31-1 (2,147,483,647)。 指定 0 表示为池设置无限制的阈值。 默认值为 0。  
   
  如果池的 MAX_IOPS_PER_VOLUME 设置为 0，则该池根本不受管控，可以采用系统中的所有 IOPS，即使其他池设置了 MIN_IOPS_PER_VOLUME 也是如此。 对于这种情况，我们建议您在希望管控此池的 IO 时将此池的 MAX_IOPS_PER_VOLUME 值设置为较高的数字（例如，最大值 2^31-1）。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 指定每秒的最小和最大的读取或写入数。 这些读取或写入可以是任何大小，并且不指示最小或最大流量。  
   
  MAX_CPU_PERCENT 和 MAX_MEMORY_PERCENT 的值必须分别大于或等于 MIN_CPU_PERCENT 和 MIN_MEMORY_PERCENT 的值。  
@@ -157,7 +157,7 @@ WITH (
   
 ```  
   
- 下面的示例设置`MIN_IOPS_PER_VOLUME`到\<某些值 > 和`MAX_IOPS_PER_VOLUME`到\<某些值 >。 这些值控制可用于资源池的物理 I/O 读取和写入操作。  
+ 以下示例设置将 `MIN_IOPS_PER_VOLUME` 设置为 \<某个值>，并将 `MAX_IOPS_PER_VOLUME` 设置为 \<某个值>。 这些值控制可用于资源池的物理 I/O 读取和写入操作。  
   
 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   

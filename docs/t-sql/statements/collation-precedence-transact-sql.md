@@ -1,5 +1,5 @@
 ---
-title: "排序规则优先顺序 (Transact SQL) |Microsoft 文档"
+title: "排序规则优先级 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,12 +48,12 @@ ms.lasthandoff: 11/21/2017
   
 -   区分排序规则的运算符所使用的排序规则，这些运算符使用字符串输入但不返回字符串，如 LIKE 和 IN。  
   
- 排序规则优先规则仅适用于字符串数据类型： **char**， **varchar**，**文本**， **nchar**， **nvarchar**，和**ntext**。 具有其他数据类型的对象不参与排序规则计算。  
+ 排序规则的优先顺序规则只应用于下列字符串数据类型：char、varchar、text、nchar、nvarchar 和 ntext。 具有其他数据类型的对象不参与排序规则计算。  
   
 ## <a name="collation-labels"></a>排序规则标签  
  下表列出并说明了四个用于标识所有对象的排序规则的类别。 每个类别的名称叫做排序规则标签。  
   
-|排序规则标签|类型的对象|  
+|排序规则标签|对象类型|  
 |---------------------|----------------------|  
 |强制默认|任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 字符串变量、参数、文字、目录内置函数的输出或不使用字符串输入但生成字符串输出的内置函数。<br /><br /> 如果在用户定义函数、存储过程或触发器中声明对象，则为该对象分配创建函数、存储过程或触发器所采用的数据库默认排序规则。 如果在批处理中声明对象，则为该对象分配用于连接的当前数据库的默认排序规则。|  
 |隐式 X|列引用。 从为表或视图中的列定义的排序规则得到表达式 (X) 的排序规则。<br /><br /> 即使使用 CREATE TABLE 或 CREATE VIEW 语句中的 COLLATE 子句为列显式分配了排序规则，该列引用仍归为隐式。|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
      `WHERE ColumnA = ( 'abc' COLLATE French_CI_AS) COLLATE French_CS_AS`  
   
--   代码页转换**文本**不允许数据类型。 不能强制转换**文本**表达式从一个排序规则与另一个如果它们具有不同的代码页。 如果右边文本操作数的排序规则代码页与左边文本操作数的排序规则代码页不同，则不能为赋值运算符赋值。  
+-   不允许进行 text 数据类型的代码页转换。 如果排序规则的代码页不同，则不能将 text 表达式从一种排序规则转换为另一种排序规则。 如果右边文本操作数的排序规则代码页与左边文本操作数的排序规则代码页不同，则不能为赋值运算符赋值。  
   
  在数据类型转换之后确定排序规则优先顺序。 生成结果排序规则的操作数可以与提供最终结果数据类型的操作数不同。 例如，请看下面的批处理：  
   
@@ -228,7 +228,7 @@ a
  字符串串联运算符区分排序规则，两个字符串操作数和结果被赋以排序规则优先级最高的操作数的排序规则标签。 UNION ALL 和 CASE 运算符不区分排序规则，所有的字符串操作数和最终结果都被赋以具有最高优先顺序的操作数的排序规则标签。 按列评估 UNION ALL 操作数和结果的排序规则优先顺序。  
   
 ### <a name="functions-and-collation"></a>函数和排序规则  
- 强制转换、 转换和 COLLATE 函数是敏感的排序规则**char**， **varchar**，和**文本**数据类型。 如果 CAST 和 CONVERT 函数的输入和输出是字符串，则输出字符串具有输入字符串的排序规则标签。 如果输入不是字符串，则输出字符串为强制默认并被赋以连接所使用的当前数据库的排序规则，或是包含引用 CAST 或 CONVERT 的用户定义函数、存储过程或触发器的数据库的排序规则。  
+ 对于 char、varchar 和 text 数据类型，CAST、CONVERT 和 COLLATE 函数区分排序规则。 如果 CAST 和 CONVERT 函数的输入和输出是字符串，则输出字符串具有输入字符串的排序规则标签。 如果输入不是字符串，则输出字符串为强制默认并被赋以连接所使用的当前数据库的排序规则，或是包含引用 CAST 或 CONVERT 的用户定义函数、存储过程或触发器的数据库的排序规则。  
   
  对于返回字符串但不使用字符串输入的内置函数，结果字符串为强制默认并被赋以当前数据库的排序规则，或是包含引用该函数的用户定义函数、存储过程或触发器的数据库的排序规则。  
   
@@ -246,8 +246,8 @@ a
   
 ## <a name="see-also"></a>另请参阅  
  [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)   
- [数据类型转换 &#40; 数据库引擎 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

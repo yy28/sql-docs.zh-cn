@@ -1,5 +1,5 @@
 ---
-title: "EnvelopeAngle (geography 数据类型) |Microsoft 文档"
+title: "EnvelopeAngle（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回由的点之间的最大的角度`EnvelopeCenter()`和中的点**geography**以度为单位的实例。  
+  返回由 `EnvelopeCenter()` 返回的点与 geography 实例中的点之间的最大角度（以度数为单位）。  
   
- 这**geography**数据类型方法支持**FullGlobe**实例或大于半球的空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,16 +46,16 @@ EnvelopeAngle( )
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float  
   
- CLR 返回类型： **SqlDouble**  
+ CLR 返回类型：SqlDouble  
   
-## <a name="remarks"></a>注释  
- 此方法返回中的点**geography**以度为单位的实例。 与 EnvelopeCenter()，一起使用时`EnvelopeAngle()`返回边界圆的**geography**实例。  
+## <a name="remarks"></a>Remarks  
+ 此方法返回 geography 实例中的点（以度数为单位）。 在与 EnvelopeCenter() 一起使用时，`EnvelopeAngle()` 返回 geography 实例的一个边框圆。  
   
- 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，此方法已扩展到**FullGlobe**实例。  
+ 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此方法已扩展到 FullGlobe 实例。  
   
- 应用于的半球限制`EnvelopeAngle()`中[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]已删除。 但是，对于角度大于 90 度的实例将返回 180 度。 `EnvelopeAngle()`不是精确的**geography**跨越多个半球的实例。  
+ 已删除应用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 `EnvelopeAngle()` 的半球限制。 但是，对于角度大于 90 度的实例将返回 180 度。 对于跨越多个半球的 geography 实例而言，`EnvelopeAngle()` 并不精确。  
   
 ## <a name="examples"></a>示例  
   
@@ -65,7 +65,7 @@ SELECT @g.EnvelopeAngle();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例的扩展的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [EnvelopeCenter &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
+ [Geography 实例上的扩展方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [EnvelopeCenter（geography 数据类型）](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
   

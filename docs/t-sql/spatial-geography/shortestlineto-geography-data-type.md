@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (geography 数据类型) |Microsoft 文档"
+title: "ShortestLineTo（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回**LineString**实例表示的最短距离两者之间的两个点**geography**实例。 长度**LineString**返回实例是这两者之间的距离**geography**实例。  
+  返回一个包含两个点的 LineString 实例，这两个点表示两个 geography 实例之间的最短距离。 返回的 LineString 实例长度是两个 geography 实例之间的距离。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *geography_other*  
- 指定第二个**geography**实例调用**geography**实例尝试确定到的最短距离。  
+ 指定第二个 geography 实例，调用 geography 实例尝试确定与该实例之间的最短距离。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- 该方法返回**LineString**实例与终结点上的两个非交叉边框**geography**要比较的实例。 长度**LineString**返回的等于之间的两个的最短距离**geography**实例。 一个空**LineString**实例时返回两个**geography**实例相互交叉。  
+## <a name="remarks"></a>Remarks  
+ 该方法返回一个 LineString 实例，它包含的端点位于所比较的两个不相交 geography 实例的边界上。 返回的 LineString 长度等于两个 geography 实例之间的最短距离。 当两个 geography 实例彼此相交时，将返回空 LineString 实例。  
   
 ## <a name="examples"></a>示例  
   

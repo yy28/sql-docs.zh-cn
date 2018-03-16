@@ -1,5 +1,5 @@
 ---
-title: "STLength (geography 数据类型) |Microsoft 文档"
+title: "STLength（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlength-geography-data-type"></a>STLength（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回中的元素的总长度**geography**实例或**geography**实例内**GeometryCollection**。  
+  返回 geography 实例中元素的总长度或 GeometryCollection 内的 geography 实例的总长度。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float  
   
- CLR 返回类型： **SqlDouble**  
+ CLR 返回类型：SqlDouble  
   
-## <a name="remarks"></a>注释  
- 如果**geography**实例是否闭合、 其长度的计算方式解决该实例的总长度为; 任何多边形的长度是其外围和点的长度为 0。 长度**GeometryCollection**通过计算的各种长度的总和找到**geography**集合内包含的实例。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例是闭合的，则其长度按围绕该实例的总长度进行计算；任何多边形的长度为其周长，点的长度为 0。 GeometryCollection 的长度通过计算该集合内包含的所有 geography 实例的长度和得到。  
   
  STLength() 对有效和无效的 LineString 均适用。 通常，LineString 会因可能由 GPS 跟踪不准确之类的异常引起的段重叠而无效。 STLength() 不会删除重叠或无效的段。 它将重叠和无效的段包括在其返回的长度值中。 MakeValid() 方法可以从 LineString 中删除重叠段。  
   

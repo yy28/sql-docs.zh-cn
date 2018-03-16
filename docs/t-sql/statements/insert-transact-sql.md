@@ -39,11 +39,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +148,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  INTO  
  一个可选的关键字，可以将它用在 INSERT 和目标表之间。  
   
- *server_name*  
+ server_name  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  表或视图所在的链接服务器的名称。 server_name 可以指定为[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)名称，或通过使用 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数。  
@@ -175,7 +175,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数。 使用这些函数受到访问远程对象的 OLE DB 访问接口的性能的限制。  
   
- WITH ( \<table_hint_limited> [... *n* ] )  
+ WITH ( \<table_hint_limited> [... n ] )  
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。  
   
  不允许 READPAST、NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
@@ -222,7 +222,7 @@ OUTPUT 子句
   
  当引用 Unicode 字符数据类型 nchar、nvarchar 和 ntext 时，“expression”应采用大写字母“N”作为前缀。 如果未指定“N”，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将字符串转换为与数据库或列的默认排序规则相对应的代码页。 此代码页中没有的字符都将丢失。  
   
- *derived_table*  
+ derived_table  
  任何有效的 SELECT 语句，它返回将加载到表中的数据行。 SELECT 语句不能包含公用表表达式 (CTE)。  
   
  *execute_statement*  
@@ -398,7 +398,9 @@ OUTPUT 子句
   
  在将 TOP 与 INSERT 结合使用时，被引用行不按任何顺序排列，不能直接在此语句中指定 ORDER BY 子句。 如果需要使用 TOP 来插入按有意义的时间顺序排列的行，您必须同时使用 TOP 和在嵌套 select 语句中指定的 ORDER BY 子句。 请参阅本主题后面的“示例”一节。
  
-使用 SELECT 和 ORDER BY 填充行的 INSERT 查询保证了标识值的计算方式，但不能保证行的插入顺序。    
+使用 SELECT 和 ORDER BY 填充行的 INSERT 查询保证了标识值的计算方式，但不能保证行的插入顺序。
+
+在并行数据仓库中，除非另外还指定了 TOP，否则 ORDER BY 子句在 VIEWS、CREATE TABLE AS SELECT、INSERT SELECT、内联函数、派生表、子查询和常见表表达式中无效。
   
 ## <a name="logging-behavior"></a>日志记录行为  
  INSERT 语句始终完全记入日志，只有在将 OPENROWSET 函数与 BULK 关键字一起使用或者在使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 时除外。 这些操作可进行最小日志记录。 有关详细信息，请参阅本主题前面的“大容量加载数据的最佳做法”一节。  

@@ -1,5 +1,5 @@
 ---
-title: "TRY_CONVERT (Transact SQL) |Microsoft 文档"
+title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,28 +46,28 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- *data_type （长度）*  
- 要强制转换到其中的数据类型*表达式*。  
+ data_type [ ( length ) ]  
+ 要将 expression 强制转换为的数据类型。  
   
  *expression*  
- 要转换的值。  
+ 要强制转换的值。  
   
- *样式*  
- 可选整数表达式，它指定如何**TRY_CONVERT**函数是转换*表达式*。  
+ style  
+ 一个可选的整数表达式，指定 TRY_CONVERT 函数如何转换 expression。  
   
- *样式*接受与相同的值*样式*参数**转换**函数。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+ style 接受与 CONVERT 函数的 style 参数相同的值。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
- 可接受的值的范围由值*data_type*。 如果*样式*为 null，则**TRY_CONVERT** ，则返回 null。  
+ 可接受值的范围由 data_type 的值确定。 如果 style 为 NULL，则 TRY_CONVERT 返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  返回转换为指定数据类型的值（如果转换成功）；否则返回 Null。  
   
 ## <a name="remarks"></a>Remarks  
- **TRY_CONVERT**采用传递给它的值，并尝试将其转换为指定*data_type*。 如果转换成功， **TRY_CONVERT**返回的值与指定*data_type*; 如果发生错误，则返回 null。 但是如果请求为显式不允许使用，然后转换**TRY_CONVERT**失败并出现错误。  
+ TRY_CONVERT 接收传递给它的值，并尝试将该值转换为指定的 data_type。 如果强制转换成功，TRY_CONVERT 按指定的 data_type 返回值；如果发生错误，则返回 NULL。 但是，如果请求的转换是显式不允许执行的转换，则 TRY_CONVERT 失败并显示错误。  
   
- **TRY_CONVERT** 110 和更高版本是兼容级别中的保留的关键字。  
+ TRY_CONVERT 是兼容级别 110 和更高级别中的保留关键字。  
   
- 此功能可以在某个 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本以及更高版本的服务器上远程执行。 它将不到具有以下版本的服务器进行远程处理[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+ 此功能可以在某个 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本以及更高版本的服务器上远程执行。 但在低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的服务器版本中无法远程执行。  
   
 ## <a name="examples"></a>示例  
   

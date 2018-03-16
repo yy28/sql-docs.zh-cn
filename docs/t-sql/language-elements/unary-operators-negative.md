@@ -1,5 +1,5 @@
 ---
-title: "- （负号）(Transact SQL) |Microsoft 文档"
+title: "- （负值）(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---negative"></a>一元运算符的负
+# <a name="unary-operators---negative"></a>一元运算符 - 负值
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回数值表达式的值的负值（一元运算符）。 一元运算符只对一个表达式执行操作，该表达式可以是 numeric 数据类型类别中的任何一种数据类型。   
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何一种数据类型的数值数据类型类别，除日期和时间类别。  
+ 数值数据类型类别中任何数据类型（日期和时间类别除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
- 返回的数据类型*numeric_expression*，只不过 unsigned **tinyint**表达式将提升为一个有符号**smallint**结果。  
+ 除了无符号 tinyint 表达式被提升为有符号的 smallint 结果之外，返回 numeric_expression 的数据类型。  
   
 ## <a name="examples"></a>示例  
   
@@ -109,10 +109,10 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 返回的负数正的常量  
- 下面的示例返回正数的常量的负值。  
+### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 返回正常量的负值  
+ 下面的示例返回正常量的负值。  
   
 ```  
 USE ssawPDW;  
@@ -126,8 +126,8 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
   
-### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. 返回负常量的正  
- 下面的示例返回负常量的正。  
+### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. 返回负常量的正值  
+ 下面的示例返回负常量的正值。  
   
 ```  
 USE ssawPDW;  
@@ -142,7 +142,7 @@ SELECT TOP (1) – ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 返回列的负值  
- 下面的示例返回的负数`BaseRate`值为每个雇员`dimEmployee`表。  
+ 下面的示例返回 `dimEmployee` 表中每位员工的 `BaseRate` 值的负值。  
   
 ```  
 USE ssawPDW;  
@@ -152,8 +152,8 @@ SELECT - BaseRate FROM DimEmployee;
   
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
 

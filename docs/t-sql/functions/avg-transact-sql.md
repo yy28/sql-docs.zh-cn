@@ -1,5 +1,5 @@
 ---
-title: "AVG (Transact SQL) |Microsoft 文档"
+title: AVG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -57,13 +57,13 @@ DISTINCT
 指定 AVG 只在每个值的唯一实例上执行，而不管该值出现了多少次。
   
 *expression*  
-是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的精确数字或近似数字数据类型类别，除**位**数据类型。 不允许使用聚合函数和子查询。
+是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。
   
-通过**(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause*将划分为分区函数应用到的 FROM 子句生成的结果集。 如果未指定，则此函数将查询结果集的所有行视为单个组。 *order_by_clause*确定在其中执行该操作的逻辑顺序。 *order_by_clause*是必需的。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER ( [ partition_by_clause ] order_by_clause)  
+partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
-返回类型由的计算结果的类型确定*表达式*。
+返回类型由 expression 的计算结果类型确定。
   
 |表达式结果|返回类型|  
 |---|---|
@@ -71,12 +71,12 @@ DISTINCT
 |**int**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**十进制**类别 （p、 s）|**decimal (38，s)**除以**decimal （10，0）**|  
-|**money**和**smallmoney**类别|**money**|  
-|**float**和**实际**类别|**float**|  
+|decimal 类别 (p, s)|decimal(38, s) 除以 decimal(10, 0)|  
+|money 和 smallmoney 类别|**money**|  
+|float 和 real 类别|**float**|  
   
-## <a name="remarks"></a>注释  
-如果数据类型的*表达式*是别名数据类型，返回类型也是该别名数据类型。 但是，如果的基数据类型别名数据类型将提升，例如从**tinyint**到**int**，返回值是提升数据类型而不是别名数据类型。
+## <a name="remarks"></a>Remarks  
+如果 expression 的数据类型是别名数据类型，则返回类型也具有别名数据类型。 但是，如果别名数据类型的基本数据类型得到提升（例如，从 tinyint 提升到 int），则返回值具有提升的数据类型，而非别名数据类型。
   
 AVG () 可计算一组值的平均值，方法是用一组值的总和除以非 Null 值的计数。 如果值的总和超过返回值数据类型的最大值，将返回错误。
   
@@ -240,7 +240,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[聚合函数 &#40;Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[通过子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

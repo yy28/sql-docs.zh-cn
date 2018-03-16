@@ -1,5 +1,5 @@
 ---
-title: "CERTPRIVATEKEY (Transact SQL) |Microsoft 文档"
+title: CERTPRIVATEKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -53,23 +53,23 @@ CERTPRIVATEKEY
 ```  
   
 ## <a name="arguments"></a>参数  
-*certificate_ID*  
-是**certificate_id**的证书。 这是可从 sys.certificates 或通过使用[CERT_ID &#40;Transact SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)函数。 *cert_id*是类型**int**
+certificate_ID  
+证书的 certificate_id。 可通过 sys.certificates 或通过使用 [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 函数提供。 cert_id 的数据类型为 int
   
-*encryption_password*  
+encryption_password  
 用于对返回的二进制值进行加密的密码。
   
-*decryption_password*  
+decryption_password  
 用于对返回的二进制值进行解密的密码。
   
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
-## <a name="remarks"></a>注释  
-**CERTENCODED**和**CERTPRIVATEKEY**一起用于二进制形式返回证书的不同部分。
+## <a name="remarks"></a>Remarks  
+CERTENCODED 和 CERTPRIVATEKEY 一起用于返回二进制格式证书的不同部分。
   
-## <a name="permissions"></a>Permissions  
-**CERTPRIVATEKEY**可供公用。
+## <a name="permissions"></a>权限  
+CERTPRIVATEKEY 向用户开放使用。
   
 ## <a name="examples"></a>示例  
   
@@ -86,12 +86,12 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-有关的更复杂示例，使用**CERTPRIVATEKEY**和**CERTENCODED**若要将证书复制到另一个数据库，请参阅主题中的示例 B [CERTENCODED &#40;Transact SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md).
+有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的更为复杂的示例，请参阅主题 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B。
   
 ## <a name="see-also"></a>另请参阅
 [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  
-[创建证书 &#40;Transact SQL &#41;](../../t-sql/statements/create-certificate-transact-sql.md) 
-[安全函数 &#40;Transact SQL &#41;](../../t-sql/functions/security-functions-transact-sql.md) 
- [sys.certificates &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+[安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)
+[sys.certificates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

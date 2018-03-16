@@ -1,5 +1,5 @@
 ---
-title: "减少 (geography 数据类型) |Microsoft 文档"
+title: "Reduce（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reduce-geography-data-type-"></a>Reduce（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回可大概了解给定**geography**实例生成的具有给定容差的实例上运行道格拉斯 • Peucker 算法。  
+  返回给定 geography 实例的近似值，该值通过对实例运行具有给定公差的 Douglas-Peucker 算法来生成。  
   
- 这**geography**数据类型方法支持**FullGlobe**实例或大于半球的空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |术语|定义|  
-|*tolerance*|是类型的值**float**。 *容差*是要输入到道格拉斯 • Peucker 算法的容差。 *容差*必须为正数。|  
+|tolerance|类型为 float 的值。 tolerance 是输入到 Douglas-Peucker 算法的公差。 tolerance 必须为正数。|  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- 有关集合类型，此算法对独立每**geography**实例中包含。 此算法不会修改**点**实例。  
+## <a name="remarks"></a>Remarks  
+ 对于集合类型，此算法单独作用于包含在该实例中的每个 tolerance。 此算法不修改 Point 实例。  
   
- 此方法将尝试保留的终结点**LineString**实例，但可能会失败，若要这样做以保持有效的结果。  
+ 此方法将尝试保留 LineString 实例的终结，但是可能为了保留有效结果而无法实现此目的。  
   
- 如果`Reduce()`调用此方法将生成一个含有负值， **ArgumentException**。 在 `Reduce()` 中使用的公差必须为正数。  
+ 如果使用负值调用 `Reduce()`，此方法将产生 ArgumentException。 在 `Reduce()` 中使用的公差必须为正数。  
   
- · 道格拉斯 Peucker 算法在每个的工作原理曲线或环位于**geography**通过删除起点和终点除外的所有点的实例。 删除每个点随后将被添加回来，直到没有点开头最远的美属外点，多个*容差*结果中。 然后，如果必要，使结果变得有效，因为必须保证有一个有效的结果。  
+ 通过删除除起点和终点之外的所有点，Douglas-Peucker 算法可用于 geography 实例中的每个曲线或圆环。 然后，它再将已删除的点添加回去，从偏离中心最远的点开始，直到所有点与结果的距离都在 tolerance 范围之内。 然后，如果必要，使结果变得有效，因为必须保证有一个有效的结果。  
   
- 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，此方法已扩展到**FullGlobe**实例。  
+ 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此方法已扩展到 FullGlobe 实例。  
   
  此方法不精确。  
   

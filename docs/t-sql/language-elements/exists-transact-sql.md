@@ -1,5 +1,5 @@
 ---
-title: "存在 (Transact SQL) |Microsoft 文档"
+title: EXISTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -52,8 +52,8 @@ EXISTS ( subquery )
 ```  
   
 ## <a name="arguments"></a>参数  
- *subquery*  
- 受限制的 SELECT 语句。 不允许使用 INTO 关键字。 有关详细信息，请参阅有关中的子查询的信息[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
+ subquery  
+ 受限制的 SELECT 语句。 不允许使用 INTO 关键字。 有关详细信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md) 中有关子查询的信息。  
   
 ## <a name="result-types"></a>结果类型  
  **Boolean**  
@@ -119,7 +119,7 @@ Willis                                             Johnson
  ```  
   
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. 比较使用 EXISTS 和 = ANY 的查询  
- 以下示例显示两个查找其名称与供应商名称相同的商店的查询。 第一个查询使用`EXISTS`和第二个使用`=``ANY`。  
+ 以下示例显示两个查找其名称与供应商名称相同的商店的查询。 第一个查询使用 `EXISTS`，第二个查询使用 `=``ANY`。  
   
 ```  
 -- Uses AdventureWorks  
@@ -302,10 +302,10 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-using-exists"></a>F. 使用 EXISTS  
- 下面的示例确定是否有任何行中`ProspectiveBuyer`表可能是匹配项中的行`DimCustomer`表。 该查询将返回行仅当同时`LastName`和`BirthDate`两个表匹配项中的值。  
+ 以下示例确定 `ProspectiveBuyer` 表中的行是否与 `DimCustomer` 表中的行匹配。 该查询仅在两个表中的 `LastName` 和 `BirthDate` 值都匹配时返回行。  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. 使用 NOT EXISTS  
- NOT EXISTS 的作用是作为 EXISTS 相反。 如果子查询没有返回行，则满足 NOT EXISTS 中的 WHERE 子句。 下面的示例查找中的行`DimCustomer`表 where`LastName`和`BirthDate`不匹配任何条目`ProspectiveBuyers`表。  
+ NOT EXISTS 与 EXISTS 的作用相反。 如果子查询没有返回行，则满足 NOT EXISTS 中的 WHERE 子句。 以下示例查找 `DimCustomer` 表中的行，其中的 `LastName` 和 `BirthDate` 不匹配 `ProspectiveBuyers` 表中的任何条目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -333,9 +333,9 @@ WHERE NOT EXISTS
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

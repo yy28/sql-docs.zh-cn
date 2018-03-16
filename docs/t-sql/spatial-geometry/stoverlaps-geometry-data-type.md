@@ -1,5 +1,5 @@
 ---
-title: "STOverlaps (geometry 数据类型) |Microsoft 文档"
+title: "STOverlaps（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-如果返回 1**几何图形**实例与另重叠**几何图形**实例。 如果它不，返回 0。
+如果一个 **geometry** 实例与另一个 **geometry** 实例重叠，则返回 1。 否则，返回 0。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,22 +45,22 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 是另一种**几何图形**实例要针对的实例上进行比较`STOverlaps()`调用。  
+ 将与调用 `STOverlaps()` 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 两个**几何图形**实例重叠如果实例执行操作以及区域不等于任一实例，表示它们的交集的区域具有同一维度。  
+## <a name="remarks"></a>Remarks  
+ 如果表示两个 **geometry** 实例交集的区域与这两个实例具有相同的维度，而且该区域不等于这两个实例当中的任意一个，则说明这两个实例重叠。  
   
- `STOverlaps()`始终返回 0，如果点其中**几何图形**实例相交不是同一维度。  
+ 如果两个 **geometry** 实例的交点与这两个实例具有不同的维度，则 `STOverlaps()` 始终返回 0。  
   
- 如果此方法将始终返回 null 的空间引用 Id 为 (Srid)**几何图形**实例不匹配。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`STOverlaps()`向测试两个**几何图形**的重叠的实例。  
+ 以下示例使用 `STOverlaps()` 测试两个 **geometry** 实例是否重叠。  
   
 ```  
 DECLARE @g geometry;  

@@ -1,5 +1,5 @@
 ---
-title: "ALTER BROKER 优先级 (Transact SQL) |Microsoft 文档"
+title: ALTER BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -64,63 +64,63 @@ FOR CONVERSATION
  SET  
  指定用于确定会话优先级是否应用于会话的条件。 SET 是必需的并且必须至少包含一个条件：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。  
   
- CONTRACT_NAME = {*ContractName* | **ANY**}  
- 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 *ContractName*是[!INCLUDE[ssDE](../../includes/ssde-md.md)]标识符，并且必须在当前数据库中指定协定的名称。  
+ CONTRACT_NAME = {ContractName | ANY}  
+ 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的协定的名称。  
   
- *ContractName*  
- 指定，可以仅对其中启动会话的 BEGIN DIALOG 语句指定 ON CONTRACT 会话应用会话优先级*ContractName*。  
+ ContractName  
+ 指定此会话优先级只能应用于启动会话的 BEGIN DIALOG 语句指定了 ON CONTRACT ContractName 的会话。  
   
  ANY  
  指定此会话优先级可应用于任何会话，而不考虑它使用的约定如何。  
   
  如果未指定 CONTRACT_NAME，则会话优先级的约定属性不会更改。  
   
- LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
+ LOCAL_SERVICE_NAME = {LocalServiceName | ANY}  
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- *LocalServiceName*是[!INCLUDE[ssDE](../../includes/ssde-md.md)]标识符和必须在当前数据库中指定服务的名称。  
+ LocalServiceName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的服务的名称。  
   
- *LocalServiceName*  
+ LocalServiceName  
  指定此会话优先级可以应用于以下各项：  
   
--   发起方服务名称与匹配任何发起方会话端点*LocalServiceName*。  
+-   其发起方服务名称与 LocalServiceName 匹配的任何发起方会话端点。  
   
--   其目标服务名称匹配任何目标会话端点*LocalServiceName*。  
+-   其目标服务名称与 LocalServiceName 匹配的任何目标会话端点。  
   
  ANY  
  -   指定此会话优先级可应用于任何会话端点，而不管端点使用的本地服务的名称如何。  
   
  如果未指定 LOCAL_SERVICE_NAME，则会话优先级的本地服务属性不会更改。  
   
- REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
+ REMOTE_SERVICE_NAME = {'RemoteServiceName' | ANY}  
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- *RemoteServiceName*是类型的文字值**nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用逐字节比较，以匹配*RemoteServiceName*字符串。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
+ RemoteServiceName 是 nvarchar(256) 类型的文本。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 RemoteServiceName 字符串匹配。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
   
  '*RemoteServiceName*'  
  指定将会话优先级分配给以下各项：  
   
--   相关联的目标服务名称与匹配任何发起方会话端点*RemoteServiceName*。  
+-   其关联目标服务名称与 RemoteServiceName 匹配的任何发起方会话端点。  
   
--   其关联的发起程序服务名称匹配任何目标会话端点*RemoteServiceName*。  
+-   其关联发起方服务名称与 RemoteServiceName 匹配的任何目标会话端点。  
   
  ANY  
  指定会话优先级应用于任何会话端点，而不管与端点关联的远程服务的名称如何。  
   
  如果未指定 REMOTE_SERVICE_NAME，则会话优先级的远程服务属性不会更改。  
   
- PRIORITY_LEVEL = { *PriorityValue* | **默认**}  
- 指定要将使用的协定和服务中的会话优先级指定任何会话终结点分配的优先级级别。 *PriorityValue*必须是整数文本从 1 （最低优先级） 到 10 （最高优先级）。  
+ PRIORITY_LEVEL = { PriorityValue | DEFAULT }  
+ 指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 PriorityValue 必须是一个从 1（优先级最低）到 10（优先级最高）的整数文本。  
   
  如果未指定 PRIORITY_LEVEL，则会话优先级的优先级属性不会更改。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  由 ALTER BROKER PRIORITY 更改的任何属性都不会应用于现有会话。 现有会话将继续使用启动时所分配的优先级。  
   
- 有关详细信息，请参阅[CREATE BROKER PRIORITY &#40;Transact SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md).  
+ 有关详细信息，请参阅 [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
- 权限创建的成员的默认值的会话优先级**db_ddladmin**或**db_owner**固定数据库角色的成员，并对其**sysadmin**固定的服务器角色。 需要对数据库拥有 ALTER 权限。  
+ 创建会话优先级的权限默认授予 db_ddladmin 或 db_owner 固定数据库角色以及 sysadmin 固定服务器角色的成员。 需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -146,8 +146,8 @@ ALTER BROKER PRIORITY SimpleContractPriority
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建 BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [删除 BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

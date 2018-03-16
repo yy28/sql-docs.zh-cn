@@ -1,5 +1,5 @@
 ---
-title: "COLUMNS_UPDATED (Transact SQL) |Microsoft 文档"
+title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回**varbinary**指示表或视图中插入或更新了的列的位模式。 COLUMNS_UPDATED 可用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体内部的任意位置，以测试该触发器是否应执行某些操作。
+返回 varbinary 位模式，它指示表或视图中插入或更新了哪些列。 COLUMNS_UPDATED 可用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体内部的任意位置，以测试该触发器是否应执行某些操作。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,12 +50,12 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
-## <a name="remarks"></a>注释  
-COLUMNS_UPDATED 针对多列执行的 UPDATE 或 INSERT 操作的进行测试。 若要对其进行更新或插入一个列上尝试测试，使用[update （)](../../t-sql/functions/update-trigger-functions-transact-sql.md)。
+## <a name="remarks"></a>Remarks  
+COLUMNS_UPDATED 针对多列执行的 UPDATE 或 INSERT 操作的进行测试。 若要对一列的 UPDATE 或 INSERT 尝试进行测试，请使用 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)。
   
 COLUMNS_UPDATED 返回一个或多个从左至右排序的字节，每字节中最不重要的位位于最右侧。 最左侧字节的最右侧位表示表中的第一列；向左的下一位表示第二列，依此类推。 如果创建了触发器的表包含八列以上，则 COLUMNS_UPDATED 返回多个字节，最左侧的为最不重要的字节。 在 INSERT 操作中 COLUMNS_UPDATED 将对所有列返回 TRUE，因为这些列插入了显式值或隐式 (NULL) 值。
   
-若要测试针对特定列的更新或插入操作，请遵循使用位运算符和所测试列的整数位掩码的语法。 例如，表**t1**包含列**C1**， **C2**， **C3**， **C4**，和**C5**. 若要验证该列**C2**， **C3**，和**C4**是否所有更新 (与表**t1**具有 UPDATE 触发器)，按照与语法**和 14**。 若要测试是否唯一列**C2**是更新，指定**& 2**。
+若要测试针对特定列的更新或插入操作，请遵循使用位运算符和所测试列的整数位掩码的语法。 例如，表 t1 包含列 C1、C2、C3、C4 和 C5。 若要验证列 C2、C3 和 C4 是否已全部更新（使用具有 UPDATE 触发器的表 t1），请遵循使用 &14;的语法。 若要测试是否只更新了列 C2，请指定 & 2。
   
 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器内部的任意位置使用 COLUMNS_UPDATED。
   
@@ -80,7 +80,7 @@ WHERE TABLE_NAME = 'Person';
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. 使用 COLUMNS_UPDATED 测试表的前八列  
-下面的示例创建两个表：`employeeData`和`auditEmployeeData`。 人力资源部的成员可以修改 `employeeData` 表，该表包含敏感的雇员薪水信息。 如果更改了雇员的社会保险号码 (SSN)、年薪或银行帐户，则生成审核记录并插入到 `auditEmployeeData` 审核表。
+以下示例创建两个表：`employeeData` 和 `auditEmployeeData`。 人力资源部的成员可以修改 `employeeData` 表，该表包含敏感的雇员薪水信息。 如果更改了雇员的社会保险号码 (SSN)、年薪或银行帐户，则生成审核记录并插入到 `auditEmployeeData` 审核表。
   
 通过使用 `COLUMNS_UPDATED()`，可以快速测试对包含敏感雇员信息的列所进行的任何更改。 仅当您尝试检测对表的前八列进行的更改时，以这种方式使用 `COLUMNS_UPDATED()` 才有效。
   
@@ -188,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. 使用 COLUMNS_UPDATED 测试八个以上的列  
-若要对影响表中前八列以外的列的更新进行测试，请使用 `SUBSTRING` 函数测试 `COLUMNS_UPDATED` 返回的更正位。 下面的示例测试影响的字段的更新`3`， `5`，和`9`中`AdventureWorks2012.Person.Person`表。
+若要对影响表中前八列以外的列的更新进行测试，请使用 `SUBSTRING` 函数测试 `COLUMNS_UPDATED` 返回的更正位。 以下示例对影响 `AdventureWorks2012.Person.Person` 表中的列 `3`、`5` 和 `9` 的更新进行测试。
   
 ```sql
 USE AdventureWorks2012;  
@@ -211,8 +211,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[按位运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+[位运算符 (Transact-SQL)](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  
-[更新 &#40; &#41;&#40;Transact SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE() (Transact-SQL)](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

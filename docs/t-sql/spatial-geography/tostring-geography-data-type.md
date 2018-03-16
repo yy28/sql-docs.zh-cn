@@ -1,5 +1,5 @@
 ---
-title: "ToString (geography 数据类型) |Microsoft 文档"
+title: "ToString（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,9 +33,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="tostring-geography-data-type"></a>ToString（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回的开放地理空间联盟 (OGC) 熟知文本 (WKT) 表示形式**geography**扩充任何 Z （仰角） 和 M （度量） 值的实例执行的实例。  
+  返回 geography 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值。  
   
- 此 geography 数据类型方法支持**FullGlobe**实例或大于半球的空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **nvarchar (max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)  
   
- CLR 返回类型： **SqlString**  
+ CLR 返回类型：SqlString  
   
-## <a name="remarks"></a>注释  
- 在针对 Null 实例调用时，此方法将返回字符串“Null”。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的服务器上的可能结果集已扩展到**FullGlobe**实例。 此方法将返回与 `AsTextZM()` 相同的值。  
+## <a name="remarks"></a>Remarks  
+ 在针对 Null 实例调用时，此方法将返回字符串“Null”。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，服务器上可能的结果集已扩展到 FullGlobe 实例。 此方法将返回与 `AsTextZM()` 相同的值。  
   
  此方法不精确。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建`LineString`实例并使用`ToString()`返回实例的文本说明。  
+ 下面的示例创建一个`LineString` 实例，并使用 `ToString()` 返回该实例的文本说明。  
   
 ```  
 DECLARE @g geography;  
@@ -64,7 +64,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例的扩展的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Geography 实例上的扩展方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [AsTextZM（geography 数据类型）](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "GRANT 数据库权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9ba4b5f1200a3280418304bda6c0fbc5e2d3fafd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 30ff1650f0db79758aaff5dac37d0964807aafd2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 数据库权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,8 @@ permission | ALL [ PRIVILEGES ]
   | Database_user_with_no_login    
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
  permission  
  指定可对数据库授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
@@ -111,10 +112,10 @@ permission | ALL [ PRIVILEGES ]
  Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
   
 > [!IMPORTANT]  
->  在某些情况下，如果同时拥有 ALTER 权限和 REFERENCE 权限，被授权者将可以查看数据或执行未经授权的函数。 例如：对表拥有 ALTER 权限和对函数拥有 REFERENCE 权限的用户可对函数创建计算列并执行该函数。 在此情况下，用户必须还对计算列具有 SELECT 权限。  
+>  在某些情况下，如果同时拥有 ALTER 权限和 REFERENCE 权限，被授权者将可以查看数据或执行未经授权的函数。 例如：对表拥有 ALTER 权限和对函数拥有 REFERENCE 权限的用户可对函数创建计算列并执行该函数。 在此情况下，用户必须还对计算列具有 SELECT 权限。
   
  数据库是安全对象，包含于权限层次结构中作为其父级的服务器中。 下表列出了可授予的对数据库最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
   
@@ -157,6 +158,7 @@ permission | ALL [ PRIVILEGES ]
 |CONNECT REPLICATION|CONTROL|CONTROL SERVER|  
 |CONTROL|CONTROL|CONTROL SERVER|  
 |CREATE AGGREGATE|ALTER|CONTROL SERVER|  
+|CREATE ANY EXTERNAL LIBRARY <br /> **适用于**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。|CONTROL|CONTROL SERVER |    
 |CREATE ASSEMBLY|ALTER ANY ASSEMBLY|CONTROL SERVER|  
 |CREATE ASYMMETRIC KEY|ALTER ANY ASYMMETRIC KEY|CONTROL SERVER|  
 |CREATE CERTIFICATE|ALTER ANY CERTIFICATE|CONTROL SERVER|  

@@ -1,5 +1,5 @@
 ---
-title: "筛选器 (geometry 数据类型) |Microsoft 文档"
+title: "Filter（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geometry-data-type"></a>Filter（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-提供快速、 只索引交集方法可确定一个方法**几何图形**实例与另一个相交**几何图形**实例，假设索引可用。
+一种方法，可提供一种快速、仅索引相交的方法，用于确定一个 **geometry** 实例是否与另一个 **geometry** 实例相交（假定有可用索引）。
   
-如果返回 1**几何图形**实例可能与另一个相交**几何图形**实例。 此方法可能会产生 false 正返回时，，则准确结果可能为计划依赖项。 返回准确的 0 值 （true 负返回），如果没有的交集**几何图形**找到实例。
+如果一个 **geometry** 实例与另一个 **geometry** 实例存在相交的可能，则返回 1。 该方法可能产生假正返回，并且确切结果可能依赖于计划。 如果 **geometry** 实例之间不存在相交，则返回精确的 0 值（真负返回）。
   
-在索引不可用，或未使用的位置的情况下，该方法将返回与相同的值**STIntersects()**使用相同的参数调用时。
+在无可用索引或未使用索引的情况下，该方法返回的值将与使用相同参数调用 STIntersects() 返回的值相同。
   
 ## <a name="syntax"></a>语法  
   
@@ -50,14 +50,14 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 是另一种**几何图形**实例要针对对其调用 Filter() 实例进行比较。  
+ 将与调用 Filter() 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此方法是不具有确定性的方法，而且不精确。  
   
 ## <a name="examples"></a>示例  
@@ -82,7 +82,7 @@ WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [在几何图形实例的扩展的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [Geometry 实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [STIntersects（geography 数据类型）](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   
   

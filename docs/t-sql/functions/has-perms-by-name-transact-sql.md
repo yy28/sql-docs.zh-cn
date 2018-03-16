@@ -1,5 +1,5 @@
 ---
-title: "HAS_PERMS_BY_NAME (Transact SQL) |Microsoft 文档"
+title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  评估当前用户对安全对象的有效权限。 相关的函数是[fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)。  
+  评估当前用户对安全对象的有效权限。 相关函数为 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,34 +52,34 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>参数  
- *安全对象*  
- 安全对象的名称。 如果安全对象是服务器本身，则此值应设置为 NULL。 *安全*是类型的标量表达式**sysname**。 没有默认值。  
+ *securable*  
+ 安全对象的名称。 如果安全对象是服务器本身，则此值应设置为 NULL。 securable 是 sysname 类型的标量表达式。 没有默认值。  
   
  *securable_class*  
- 测试权限的安全对象的类名。 *securable_class*是类型的标量表达式**nvarchar(60)**。  
+ 测试权限的安全对象的类名。 securable_class 是 nvarchar(60) 类型的标量表达式。  
   
- 在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，securable_class 参数必须设置为以下项之一：**数据库**，**对象**，**角色**，**架构**，或**用户**。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，securable_class 参数必须设置为以下值之一：DATABASE、OBJECT、ROLE、SCHEMA 或 USER。  
   
- *权限*  
- 类型的非空标量表达式**sysname** ，表示要检查的权限名称。 没有默认值。 权限名称 ANY 是通配符。  
+ *permission*  
+ 类型为 sysname 的非空标量表达式，表示要检查的权限名称。 没有默认值。 权限名称 ANY 是通配符。  
   
- *子安全对象*  
- 类型的可选标量表达式**sysname** ，它表示对其测试权限的安全对象子实体的名称。 默认值为 NULL。  
+ *sub-securable*  
+ 类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称。 默认值为 NULL。  
   
 > [!NOTE]  
->  在新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，子安全对象不能在窗体中使用括号**[***子名称***]**。 使用*子名称*相反。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全对象不能使用 **'[***sub name***]'** 形式的括号。 请改用 **'***sub name***'**。  
   
- *sub securable_class*  
- 类型的可选标量表达式**nvarchar(60)** ，可表示的对其测试权限的安全对象 subentity 类。 默认值为 NULL。  
+ *sub-securable_class*  
+ 类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类。 默认值为 NULL。  
   
- 在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，子 securable_class 自变量无效，只有当 securable_class 参数设置为**对象**。 如果 securable_class 参数设置为**对象**，子 securable_class 参数必须设置为**列**。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，只有在 securable_class 参数设置为 OBJECT 时 sub-securable_class 参数才有效。 如果 securable_class 参数设置为 OBJECT，则 sub-securable_class 参数必须设置为 COLUMN。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
  如果查询失败，则返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此内置函数将测试当前主体对于指定的安全对象是否具有特定的有效权限。 如果用户具有针对安全对象的有效权限，HAS_PERMS_BY_NAME 返回 1；如果用户不具有针对安全对象的有效权限，返回 0；如果安全对象类或权限无效，返回 NULL。 有效权限可以是下列任意一种：  
   
 -   直接授予主体并且不被拒绝的权限。  
@@ -112,7 +112,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. 我具有服务器级 VIEW SERVER STATE 权限吗？  
   
-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -120,7 +120,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. 我可以 IMPERSONATE 服务器主体 Ps 吗？  
   
-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

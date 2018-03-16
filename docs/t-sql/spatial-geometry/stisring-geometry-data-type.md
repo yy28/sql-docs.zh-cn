@@ -1,5 +1,5 @@
 ---
-title: "STIsRing (geometry 数据类型) |Microsoft 文档"
+title: "STIsRing（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisring-geometry-data-type"></a>STIsRing（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-如果返回 1**几何图形**实例满足以下要求：
--   它是**LineString**实例。  
+如果 **geometry** 实例符合下列要求，则返回 1：
+-   它是 **LineString** 实例。  
 -   该实例为闭合类型。  
 -   该实例为简单类型。  
--   如果将返回 0 **LineString**实例不满足要求。  
+-   如果 **LineString** 实例不符合这些要求，则返回 0。  
 
- 有关**几何图形**实例设置为已关闭和简单，同时[STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)和[STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)必须返回 1 时调用的实例上。 若要确定的实例类型**几何图形**，使用[STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)。  
+ 为了使 **geometry** 实例成为简单的闭合类型，当对该实例调用 [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md) 和 [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md) 时，这两种方法都必须返回 1。 若要确定 **geometry** 的实例类型，请使用 [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,12 +50,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 此方法将返回 null 如果实例不是**LineString**。  
+## <a name="remarks"></a>Remarks  
+ 如果该实例不是 **LineString**，则此方法返回 null。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `LineString` 实例并使用 `STIsRing()` 来测试该实例是否为一个环。  
@@ -68,8 +68,8 @@ SELECT @g.STIsRing();
   
 ## <a name="see-also"></a>另请参阅  
  [STIsClosed（geometry 数据类型）](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
- [STGeometryType &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
- [STIsSimple &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   
+ [STGeometryType（geometry 数据类型）](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
+ [STIsSimple（geometry 数据类型）](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   
  [几何图形实例上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "geometry (TRANSACT-SQL) |Microsoft 文档"
+title: geometry (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geometry-transact-sql"></a>空间类型的几何图形 (TRANSACT-SQL)
+# <a name="spatial-types---geometry-transact-sql"></a>空间类型 - geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  平面空间数据类型，**几何图形**，作为公共语言运行时 (CLR) 数据类型中实现[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类型表示欧几里得（平面）坐标系中的数据。  
+  平面空间数据类型 **geometry** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中作为公共语言运行时 (CLR) 数据类型实现。 此类型表示欧几里得（平面）坐标系中的数据。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的方法的一组**几何图形**空间数据类型。 这些方法包括方法上**几何图形**由开放地理空间联盟 (OGC) 标准和一组定义[!INCLUDE[msCoName](../../includes/msconame-md.md)]该标准的扩展。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 **geometry** 空间数据类型的一组方法。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 扩展所定义的 **geometry** 方法。  
  
- 最大为 1.0 e 可以几何图形方法的错误容差-7 * 扩展盘区。 范围，该引用的点之间的近似的最大距离**几何图形**对象。
+ geometry 方法的公差可高达 1.0e-7 * extents。 extents 表示 **geometry** 对象的各点之间的近似最大距离。
   
 ## <a name="registering-the-geometry-type"></a>注册 geometry 类型  
  **geometry** 类型已进行预定义，可在每个数据库中使用。 您可以创建 **geometry** 类型的表列并对 **geometry** 数据进行操作，就像使用其他 CLR 类型一样。 可以用在持久化和非持久化计算列中。  
@@ -82,7 +82,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geometry-in-a-computed-column"></a>C. 在计算列中使用几何图形数据  
- 下面的示例创建一个表与持久化计算的列使用**几何图形**类型。  
+ 以下示例使用 **geometry** 类型创建具有持久化计算列的表。  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

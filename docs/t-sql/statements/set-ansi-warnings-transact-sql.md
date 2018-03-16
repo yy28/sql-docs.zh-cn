@@ -1,5 +1,5 @@
 ---
-title: "集 ANSI_WARNINGS (TRANSACT-SQL) |Microsoft 文档"
+title: SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,28 +57,28 @@ SET ANSI_WARNINGS { ON | OFF }
 SET ANSI_WARNINGS ON
 ```
 
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SET ANSI_WARNINGS 可以影响下列情况：  
   
 -   设置为 ON 时，如果聚合函数（如 SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP 或 COUNT）中出现空值，将生成警告消息。 设置为 OFF 时，不发出警告。  
   
--   设置为 ON 时，被零除错误和算术溢出错误将导致回滚语句，并生成错误消息。 设置为 OFF 时，被零除错误和算术溢出错误将导致返回空值。 如果插入或更新尝试对，则会发生在其中通过零除或算术溢出错误导致返回空值的行为**字符**，Unicode，或**二进制**在其中的列长度新值超过了列的最大大小。 如果 SET ANSI_WARNINGS 为 ON 时，将取消 INSERT 或 UPDATE 所指定的 ISO 标准。 字符列的尾随空格和二进制列的尾随零都将被忽略。 设置为 OFF 时，数据将剪裁为列的大小，并且语句执行成功。  
+-   设置为 ON 时，被零除错误和算术溢出错误将导致回滚语句，并生成错误消息。 设置为 OFF 时，被零除错误和算术溢出错误将导致返回空值。 如果尝试对 character、Unicode 或 binary 列执行 INSERT 或 UPDATE 操作，而这些列中的新值长度超出列的最大大小，那么，在发生被零除错误或算术溢出错误时，将导致返回 NULL 值。 如果 SET ANSI_WARNINGS 为 ON，则根据 ISO 标准，将取消 INSERT 或 UPDATE。 字符列的尾随空格和二进制列的尾随零都将被忽略。 设置为 OFF 时，数据将剪裁为列的大小，并且语句执行成功。  
   
     > [!NOTE]  
-    >  当截断发生在任何转换或从**二进制**或**varbinary**发出任何警告或错误的数据，而不考虑 SET 选项。  
+    >  在 binary 或 varbinary 数据转换中发生截断时，不管 SET 选项如何设置，都不发出警告或错误消息。  
   
     > [!NOTE]  
-    >  在存储过程和用户定义函数中传递参数，或者在批处理语句中声明和设置变量时，不执行 ANSI_WARNINGS。 例如，如果变量指**char （3)**，然后设置为值大于三个字符，数据将剪裁为定义的大小和插入或更新语句会成功。  
+    >  在存储过程和用户定义函数中传递参数，或者在批处理语句中声明和设置变量时，不执行 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 INSERT 或 UPDATE 语句可以成功执行。  
   
  可以使用 sp_configure 的 user options 选项，为服务器的所有连接设置 ANSI_WARNINGS 的默认设置。 有关详细信息，请参阅本主题后面的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)不熟悉的读者。  
   
- 创建或操作对索引视图或计算列的索引时，SET ANSI_WARNINGS 必须为 ON。 如果 SET ANSI_WARNINGS 为 OFF，对计算列或索引视图的索引所在的表执行 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 对计算列所需的 SET 选项设置的索引的视图和索引的详细信息，请参阅"当你使用 SET 语句的注意事项"中[SET 语句 &#40;Transact SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+ 创建或操作对索引视图或计算列的索引时，SET ANSI_WARNINGS 必须为 ON。 如果 SET ANSI_WARNINGS 为 OFF，对计算列或索引视图的索引所在的表执行 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 有关计算列的索引视图和索引需要的 SET 选项设置的详细信息，请参阅 [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md) 中的“使用 SET 语句时的注意事项”。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 ANSI_WARNINGS 数据库选项。 此选项与 SET ANSI_WARNINGS 等效。 如果 SET ANSI_WARNINGS 为 ON，则发生被零除、字符串超出数据库列及其他类似错误时，将引发错误或警告。 如果 SET ANSI_WARNINGS 为 OFF，则不会引发这些错误和警告。 model 数据库中的 SET ANSI_WARNINGS 默认值为 OFF。 如果未指定，则应用 ANSI_WARNINGS 设置。 如果 SET ANSI_WARNINGS 为 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用中的 is_ansi_warnings_on 列的值[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 ANSI_WARNINGS 数据库选项。 此选项与 SET ANSI_WARNINGS 等效。 如果 SET ANSI_WARNINGS 为 ON，则发生被零除、字符串超出数据库列及其他类似错误时，将引发错误或警告。 如果 SET ANSI_WARNINGS 为 OFF，则不会引发这些错误和警告。 model 数据库中的 SET ANSI_WARNINGS 默认值为 OFF。 如果未指定，则应用 ANSI_WARNINGS 设置。 如果 SET ANSI_WARNINGS 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中 is_ansi_warnings_on 列的值。  
   
  执行分布式查询时，应将 ANSI_WARNINGS 设置为 ON。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接时自动将 ANSI_WARNINGS 设置为 ON。 这可以在 ODBC 数据源、ODBC 连接属性（它们在连接前在应用程序中设置）中进行配置。 从 DB-Library 应用程序连接时，SET ANSI_WARNINGS 的默认值为 OFF。  
+ 进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序会自动将 ANSI_WARNINGS 设置为 ON。 这可以在 ODBC 数据源、ODBC 连接属性（它们在连接前在应用程序中设置）中进行配置。 从 DB-Library 应用程序连接时，SET ANSI_WARNINGS 的默认值为 OFF。  
   
  SET ANSI_DEFAULTS 为 ON 时，将启用 SET ANSI_WARNINGS。  
   
@@ -94,7 +94,7 @@ IF ( (8 & @@OPTIONS) = 8 ) SET @ANSI_WARN = 'ON';
 SELECT @ANSI_WARN AS ANSI_WARNINGS;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -183,7 +183,7 @@ DROP TABLE T1
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40;Transact SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [SESSIONPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ANSI_DEFAULTS (Transact-SQL)](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

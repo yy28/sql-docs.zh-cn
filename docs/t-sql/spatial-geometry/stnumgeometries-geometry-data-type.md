@@ -1,5 +1,5 @@
 ---
-title: "STNumGeometries (geometry 数据类型) |Microsoft 文档"
+title: "STNumGeometries（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回构成的几何图形数目**几何图形**实例。
+返回构成 **geometry** 实例的几何图形的数目。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型： **SqlInt32**  
+ CLR 返回类型：SqlInt32  
   
-## <a name="remarks"></a>注释  
- 如果此方法返回 1**几何图形**实例不是**MultiPoint**， **MultiLineString**， **MultiPolygon**，或**GeometryCollection**实例和 0 如果**几何图形**实例为空。  
+## <a name="remarks"></a>Remarks  
+ 如果 geometry 实例不是 MultiPoint、MultiLineString、MultiPolygon 或 GeometryCollection 实例，则此方法返回 1；如果 geometry 实例为空，则返回 0。  
   
 > [!NOTE]  
->  如果**GeometryCollection**有嵌套的空元素，`STNumGeometries()`不会返回 0。 尽管中的元素**GeometryCollection**实例为空，该实例本身不是一个空集。  
+>  如果 GeometryCollection 嵌套了空元素，则 `STNumGeometries()` 不会返回 0。 虽然 GeometryCollection 实例中的元素为空，但该实例本身不是空集。  
   
   
 

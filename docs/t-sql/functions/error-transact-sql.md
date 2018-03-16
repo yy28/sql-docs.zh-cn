@@ -1,5 +1,5 @@
 ---
-title: "@@ERROR (Transact SQL) |Microsoft 文档"
+title: '@@ERROR (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="x40x40error-transact-sql"></a>&#x40;&#x40;错误 (Transact SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回执行的上一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的错误号。  
@@ -49,18 +49,18 @@ ms.lasthandoff: 01/18/2018
 ## <a name="return-types"></a>返回类型  
  integer  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果前一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行没有错误，则返回 0。  
   
- 如果前一个语句遇到错误，则返回错误号。 如果错误是在 sys.messages 目录视图中，错误之一，然后@ERROR包含从该错误的 sys.messages.message_id 列的值。 你可以查看与关联的文本 @@ERROR sys.messages 中的错误号。  
+ 如果前一个语句遇到错误，则返回错误号。 如果错误是 sys.messages 目录视图中的错误之一，则 @@ERROR 将包含 sys.messages.message_id 列中表示该错误的值。 可以在 sys.messages 中查看与 @@ERROR 错误号相关的文本信息。  
   
- 因为 @@ERROR处于未选中状态和上执行每个语句重置、 正在验证该语句后立即检查它或将其保存到本地变量更高版本可以进行检查。  
+ 由于 @@ERROR 在每一条语句执行后被清除并且重置，因此应在语句验证后立即查看它，或将其保存到一个局部变量中以备以后查看。  
   
- 使用 TRY...CATCH 构造来处理错误。 重试...CATCH 构造还支持其他系统函数 （ERROR_LINE、 ERROR_MESSAGE、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE），返回更多的错误信息比 @@ERROR 。 TRY...CATCH 也支持 ERROR_NUMBER 函数，但不限制该函数在语句产生错误后立即在语句中返回错误号。 有关详细信息，请参阅 [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)。  
+ 使用 TRY...CATCH 构造来处理错误。 TRY...CATCH 构造也支持返回错误信息多于 @@ERROR 的其他系统函数（ERROR_LINE、ERROR_MESSAGE、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE）。 TRY...CATCH 也支持 ERROR_NUMBER 函数，但不限制该函数在语句产生错误后立即在语句中返回错误号。 有关详细信息，请参阅 [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. 使用 @@ERROR 检测特定错误  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. 用 @@ERROR 检测一个特定错误  
  以下示例用 `@@ERROR` 在 `UPDATE` 语句中检测约束检查冲突（错误 #547）。  
   
 ```  
@@ -74,8 +74,8 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 使用 @@ERROR 有条件地退出过程  
- 下面的示例使用`IF...ELSE`语句来测试`@@ERROR`后`DELETE`存储过程中的语句。 `@@ERROR` 变量的值将确定发送给调用程序的返回代码，以指示此过程的成功与失败。  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 用 @@ERROR 有条件地退出一个过程  
+ 以下示例使用 `IF...ELSE` 语句在存储过程中测试 `@@ERROR` 语句后的 `DELETE`。 `@@ERROR` 变量的值将确定发送给调用程序的返回代码，以指示此过程的成功与失败。  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,7 +109,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. 使用@ERROR与 @@ROWCOUNT   
+### <a name="c-using-error-with-rowcount"></a>C. 将 @@ERROR 与 @@ROWCOUNT 一起使用  
  下面的示例将 `@@ERROR` 与 `@@ROWCOUNT` 一起使用来验证一条 `UPDATE` 语句的操作。 为任何可能出现的错误而检验 `@@ERROR` 的值，并且用 `@@ROWCOUNT` 保证更新已成功应用于表中的某行。  
   
 ```  
@@ -179,9 +179,9 @@ GO
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+ [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
 

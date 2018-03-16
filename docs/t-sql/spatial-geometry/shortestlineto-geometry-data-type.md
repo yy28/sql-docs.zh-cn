@@ -1,5 +1,5 @@
 ---
-title: "ShortestLineTo (geometry 数据类型) |Microsoft 文档"
+title: "ShortestLineTo（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回**LineString**实例表示的最短距离两者之间的两个点**几何图形**实例。 长度**LineString**返回实例是这两者之间的距离**几何图形**实例。
+返回一个包含两个点的 **LineString** 实例，这两个点表示两个 **geometry** 实例之间的最短距离。 返回的 **LineString** 实例长度是两个 **geometry** 实例之间的距离。
   
 ## <a name="syntax"></a>语法  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *geometry_other*  
- 第二个**几何图形**实例调用**几何图形**实例尝试确定到的最短距离。  
+ 第二个 **geometry** 实例，执行调用的 **geometry** 实例尝试确定与该实例之间的最短距离。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
- 该方法返回**LineString**实例与终结点上的两个非交叉边框**几何图形**要比较的实例。 长度**LineString**返回的等于之间的两个的最短距离**几何图形**实例。 一个空**LineString**实例时返回两个**几何图形**实例相互交叉。  
+## <a name="remarks"></a>Remarks  
+ 该方法返回一个 **LineString** 实例，它包含的端点位于所比较的两个不相交 **geometry** 实例的边界上。 返回的 **LineString** 长度等于两个 **geometry** 实例之间的最短距离。 当两个 **geometry** 实例彼此相交时，将返回空的 **LineString** 实例。  
   
 ## <a name="examples"></a>示例  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ShortestLineTo &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+ [ShortestLineTo（geography 数据类型）](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

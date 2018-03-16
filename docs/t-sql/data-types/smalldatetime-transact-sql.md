@@ -1,5 +1,5 @@
 ---
-title: "smalldatetime (Transact SQL) |Microsoft 文档"
+title: smalldatetime (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -41,14 +41,14 @@ ms.lasthandoff: 11/21/2017
 定义结合了一天中的时间的日期。 此时间为 24 小时制，秒始终为零 (:00)，并且不带秒小数部分。
   
 > [!NOTE]  
->  使用**时间**，**日期**， **datetime2**和**datetimeoffset**对于新的工作的数据类型。 这些类型符合 SQL 标准。 它们更易于移植。 **时间**， **datetime2**和**datetimeoffset**提供更大秒精度。 **datetimeoffset**为全局已部署的应用程序提供的时区支持。  
+>  为新的工作使用 time、date、datetime2 和 datetimeoffset 数据类型。 这些类型符合 SQL 标准。 它们更易于移植。 time、datetime2 和 datetimeoffset 提供更高精度的秒数。 datetimeoffset 为全局部署的应用程序提供时区支持。  
   
 ## <a name="smalldatetime-description"></a>smalldatetime 说明
   
 |||  
 |-|-|  
 |语法|**smalldatetime**|  
-|用法|声明@MySmalldatetime **smalldatetime**<br /><br /> 创建表 Table1 (Column1 **smalldatetime** )|  
+|用法|DECLARE @MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 smalldatetime )|  
 |默认的字符串文字格式<br /><br /> （用于下级客户端）|不适用|  
 |日期范围|1900-01-01 到 2079-06-06<br /><br /> 1900 年 1 月 1 日到 2079 年 6 月 6 日|  
 |时间范围|00:00:00 到 23:59:59<br /><br /> 2007-05-09 23:59:59 将舍入为<br /><br /> 2007-05-10 00:00:00|  
@@ -63,15 +63,15 @@ ms.lasthandoff: 11/21/2017
 |夏时制感知|是|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>对 ANSI 和 ISO 8601 的遵从性  
-**smalldatetime**不是 ANSI 或 ISO 8601 符合。
+smalldatetime 不遵从 ANSI 或 ISO 8601。
   
-## <a name="converting-date-and-time-data"></a>将日期和时间数据转换
-当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 CAST 和 CONVERT 函数中使用的日期和时间数据的信息，请参阅[CAST 和 CONVERT &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+## <a name="converting-date-and-time-data"></a>转换日期和时间数据
+当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 有关对日期和时间数据使用 CAST 和 CONVERT 函数的信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。
   
-### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>将 smalldatetime 数据类型转换为其他日期和时间类型
-本部分介绍所发生的情况时**smalldatetime**数据类型转换为其他日期和时间数据类型。
+### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>将 smalldatetime 转换为其他日期和时间类型
+本部分介绍当 smalldatetime 数据类型转换为其他日期和时间数据类型时发生的情况。
   
-在转换到的情况下**日期**，复制年、 月和日。 下面的代码显示将 `smalldatetime` 值转换为 `date` 值的结果。
+转换成 date 时，会复制年、月和日。 下面的代码显示将 `smalldatetime` 值转换为 `date` 值的结果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -87,7 +87,7 @@ SELECT @smalldatetime AS '@smalldatetime', @date AS 'date';
 --(1 row(s) affected)  
 ```  
   
-当该转换是**time(n)**，复制小时、 分钟和秒。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `time(4)` 值的结果。
+转换到 time(n) 时，会复制小时、分钟和秒钟。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `time(4)` 值的结果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -103,7 +103,7 @@ SELECT @smalldatetime AS '@smalldatetime', @time AS 'time';
 --(1 row(s) affected)  
 ```  
   
-当该转换是**datetime**、 **smalldatetime**值复制到**datetime**值。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `datetime` 值的结果。
+转换成 datetime 时，会将 smalldatetime 值复制到 datetime 值。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `datetime` 值的结果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -119,7 +119,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-在转换到的情况下**datetimeoffset(n)**、 **smalldatetime**值复制到**datetimeoffset(n)**值。 秒的小数部分设置为 0，时区偏移量设置为 +00:0。 下面的代码显示将 `smalldatetime` 值转换为 `datetimeoffset(4)` 值的结果。
+转换成 datetimeoffset(n) 时，会将 smalldatetime 值复制到 datetimeoffset(n) 值。 秒的小数部分设置为 0，时区偏移量设置为 +00:0。 下面的代码显示将 `smalldatetime` 值转换为 `datetimeoffset(4)` 值的结果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -135,7 +135,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-转换为**datetime2(n)**、 **smalldatetime**值复制到**datetime2(n)**值。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `datetime2(4)` 值的结果。
+转换成 datetime2(n) 时，会将 smalldatetime 值复制到 datetime2(n) 值。 秒的小数部分设置为 0。 下面的代码显示将 `smalldatetime` 值转换为 `datetime2(4)` 值的结果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  

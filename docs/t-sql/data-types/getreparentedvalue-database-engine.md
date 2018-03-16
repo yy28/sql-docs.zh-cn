@@ -1,5 +1,5 @@
 ---
-title: "GetReparentedValue （数据库引擎） |Microsoft 文档"
+title: "GetReparentedValue（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回从根的路径是路径的节点到*newRoot*后, 跟从路径*oldRoot*到*这*。
+返回其相对于根的路径是到 newRoot 路径的节点，后跟从 oldRoot 到 this 的路径。
   
 ## <a name="syntax"></a>语法  
   
@@ -49,24 +49,24 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 ```  
   
 ## <a name="arguments"></a>参数  
-*oldRoot*  
-A **hierarchyid** ，它是表示要修改的层次结构级别的节点。
+oldRoot  
+hierarchyid，它是表示将要修改的层次结构级别的节点。
   
-*newRoot*  
-A **hierarchyid**表示将替换的节点*oldRoot*以便将该节点移动当前节点的部分。
+newRoot  
+hierarchyid，它表示将替换当前节点的 oldRoot 部分以移动该节点的节点。
   
 ## <a name="return-types"></a>返回类型  
-**SQL Server 返回类型： hierarchyid**
+SQL Server 返回类型：hierarchyid
   
-**CLR 返回类型： SqlHierarchyId**
+CLR 返回类型：SqlHierarchyId
   
-## <a name="remarks"></a>注释  
-可以用于通过移动从节点来修改树*oldRoot*到*newRoot*。 GetReparentedValue 可用于将层次结构中的某个节点移动到层次结构中的新位置。 **Hierarchyid**数据类型表示，但不会强制的层次结构。 用户必须确保 hierarchyid 针对新的位置适当地结构化。 唯一索引**hierarchyid**数据类型可以帮助防止重复项。 移动整个子树的示例，请参阅[层次结构数据 &#40;SQL server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
+## <a name="remarks"></a>Remarks  
+可用于通过将节点从 oldRoot 移动到 newRoot 来修改树。 GetReparentedValue 可用于将层次结构中的某个节点移动到层次结构中的新位置。 hierarchyid 数据类型表示层次结构，但并不强制实现层次结构。 用户必须确保 hierarchyid 针对新的位置适当地结构化。 hierarchyid 数据类型的唯一索引有助于避免重复条目。 有关移动整个子树的示例，请参阅[分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-comparing-two-node-locations"></a>A. 比较两个节点位置  
-以下示例显示了节点的当前 hierarchyid。 它还演示了**hierarchyid**的节点将节点已移动变得的子代 **@NewParent** 节点。 它使用 `ToString()` 方法来显示层次结构关系。
+以下示例显示了节点的当前 hierarchyid。 它还显示了如果节点没有移动为 @NewParent 节点的后代，节点的 hierarchyid 将会是什么。 它使用 `ToString()` 方法来显示层次结构关系。
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -110,7 +110,7 @@ WHERE LoginID = 'adventure-works\gail0' ; -- Now node /2/3/2/
 ```  
   
 ### <a name="c-clr-example"></a>C. CLR 示例  
-下面的代码段调用 GetReparentedValue （） 方法：
+下面的代码段调用 GetReparentedValue () 方法：
   
 ```sql
 this. GetReparentedValue(oldParent, newParent)  

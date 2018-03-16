@@ -1,5 +1,5 @@
 ---
-title: "ReorientObject (geography 数据类型) |Microsoft 文档"
+title: "ReorientObject（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reorientobject-geography-data-type"></a>ReorientObject（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回**geography**互换内部区域与外部区域的实例。  
+  返回 geography 实例以及互换的内部区域和外部区域。  
   
- 这**geography**数据类型方法支持**FullGlobe**实例或大于半球的空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,17 +47,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *地理*  
- 是另一种**geography**实例，在其中`ReorientObject()`调用。  
+ 对其调用 `ReorientObject()` 的另一个 geography 实例。  
   
 ## <a name="return-value"></a>返回值  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- 此方法可更改所有的环方向**多边形**中**GeometryCollection**但不删除或更改任何**点**或**Linestrings**给定集合中。  
+## <a name="remarks"></a>Remarks  
+ 此方法将更改 GeometryCollection 中所有多边形的环方向，但不会删除或更改给定集合中的任何点或 Linestring。  
   
- 如果**GeometryCollection**传递给此方法中，集合中的每个实例是重定向，但作为一个整体集合不是重定向。  
+ 如果将 GeometryCollection 传递给此方法，则将重新定向集合中的每个实例，但不会整体重新定位此集合。  
   
 ## <a name="examples"></a>示例  
   

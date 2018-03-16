@@ -1,5 +1,5 @@
 ---
-title: "STArea (geography 数据类型) |Microsoft 文档"
+title: "STArea（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geography-data-type"></a>STArea（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回的总表面积**geography**实例。 在使用的空间引用标识符的度量值的单元方形内返回结果为 STArea() **geography**实例; 例如，如果实例的 SRID 4326，STArea() 返回的结果中平方米。  
+  返回 geography 实例的总表面积。 STArea() 的结果以 geography 实例的空间引用标识符所使用的度量单位的平方形式返回；例如，如果实例的 SRID 为 4326，则 STArea() 以平方米的形式返回结果。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float  
   
- CLR 返回类型： **SqlDouble**  
+ CLR 返回类型：SqlDouble  
   
-## <a name="remarks"></a>注释  
- 如果将 STArea() 返回 0 **geography**实例包含仅 0 和 1 维图形，或是否为空。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例仅包含 0 维和 1 维图形，或者为空，则 STArea() 返回 0。  
   
 > [!NOTE]  
->  上的方法**geography**数据类型的生成一个度量值返回值将具有不同的结果基于在方法中使用的实例的 SRID。 Srid 的详细信息，请参阅[空间引用标识符 &#40;Srid &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  geography 数据类型上生成标准返回值的方法将根据在该方法中使用的实例的 SRID 生成不同结果。 有关 SRID 的详细信息，请参阅[空间引用标识符 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`STArea()`创建`Polygon``geography`实例，并计算在多边形区域。  
+ 以下示例使用 `STArea()` 创建 `Polygon``geography` 实例，并计算该多边形的面积。  
   
 ```  
 DECLARE @g geography;  

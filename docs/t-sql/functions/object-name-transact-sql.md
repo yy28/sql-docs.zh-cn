@@ -1,5 +1,5 @@
 ---
-title: "OBJECT_NAME (Transact SQL) |Microsoft 文档"
+title: OBJECT_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回架构范围内对象的数据库对象名称。 架构范围的对象的列表，请参阅[sys.objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+  返回架构范围内对象的数据库对象名称。 有关架构范围内对象的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +52,10 @@ OBJECT_NAME ( object_id [, database_id ] )
   
 ## <a name="arguments"></a>参数  
  *object_id*  
- 要使用的对象的 ID。 *object_id*是**int** ，假定在指定的数据库中，或在当前数据库上下文中为架构范围的对象。  
+ 要使用的对象的 ID。 object_id 的数据类型为 int，并假定为指定数据库或当前数据库上下文中的架构范围内的对象。  
   
  *database_id*  
- 要在其中查找对象的数据库的 ID。 *database_id*是**int**。  
+ 要在其中查找对象的数据库的 ID。 database_id 的数据类型为 int。  
   
 ## <a name="return-types"></a>返回类型  
  **sysname**  
@@ -65,15 +65,15 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 OBJECT_NAME）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对象拥有 ANY 权限。 若要指定数据库 ID，还需要对数据库拥有 CONNECT 权限，或者必须启用 guest 帐户。  
   
-## <a name="remarks"></a>注释  
- 在选择列表中，在 WHERE 子句中，可以使用系统函数和允许的表达式的任意位置。 有关详细信息，请参阅[表达式](../../t-sql/language-elements/expressions-transact-sql.md)和[其中](../../t-sql/queries/where-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ 系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式](../../t-sql/language-elements/expressions-transact-sql.md)和 [WHERE](../../t-sql/queries/where-transact-sql.md)。  
   
  由此系统函数返回的值使用当前数据库的排序规则。  
   
- 默认情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]假定*object_id*位于当前数据库上下文中。 引用的查询*object_id*另一个数据库中返回 NULL 或错误的结果。 例如，以下查询中当前数据库上下文是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尝试返回在该数据库（而非查询的 FROM 子句中指定的数据库）中指定的对象 ID 的对象名称。 因此，会返回不正确的信息。  
+ 默认情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]假定 object_id 在当前数据库的上下文中。 在其他数据库中引用 object_id 的查询将返回 NULL 或错误的结果。 例如，以下查询中当前数据库上下文是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尝试返回在该数据库（而非查询的 FROM 子句中指定的数据库）中指定的对象 ID 的对象名称。 因此，会返回不正确的信息。  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,10 +138,10 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-objectname-in-a-where-clause"></a>D. 在 WHERE 子句中使用 OBJECT_NAME  
- 以下示例将返回来自对象的 `sys.objects` 目录视图的列，该对象是通过 `OBJECT_NAME` 在 `WHERE` 语句的 `SELECT` 子句中指定的。 （你对象编号 (在下面的示例 274100017) 将不同。  若要测试此示例中，查找有效的对象数通过执行`SELECT name, object_id FROM sys.objects;`数据库中。)  
+ 以下示例将返回来自对象的 `sys.objects` 目录视图的列，该对象是通过 `OBJECT_NAME` 在 `WHERE` 语句的 `SELECT` 子句中指定的。 （对象编号（在下面的示例中为 274100017）各不相同。  若要测试此示例，请通过在数据库中执行 `SELECT name, object_id FROM sys.objects;` 来查看有效的对象编号。）  
   
 ```  
 SELECT name, object_id, type_desc  
@@ -150,7 +150,7 @@ WHERE name = OBJECT_NAME(274100017);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)  
   

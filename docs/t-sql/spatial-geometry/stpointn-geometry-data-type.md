@@ -1,5 +1,5 @@
 ---
-title: "STPointN (geometry 数据类型) |Microsoft 文档"
+title: "STPointN（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geometry-data-type"></a>STPointN（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回中的指定的点**几何图形**实例。
+返回 **geometry** 实例中的指定点。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是**int**介于 1 和中的点的数目的表达式**几何图形**实例。  
+ 一个 **int** 表达式，其值介于 1 和 **geometry** 实例中的点数之间。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
- 打开地理空间联盟 (OGC) 类型：**点**  
+ 开放地理空间信息联盟 (OGC) 类型：Point  
   
-## <a name="remarks"></a>注释  
- 如果**几何图形**实例是用户创建，`STPointN()`返回由指定的点*表达式*由在其中它们最初已输入的顺序排序的点。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 实例是用户创建的，则 `STPointN()` 返回由 *expression* 通过按照点的原始输入顺序对点进行排序而指定的点。  
   
- 如果**几何图形**构造实例时由系统`STPointN()`返回由指定的点*表达式*通过相同顺序排序的所有点，它们将为输出： 先几何图形，然后按由环内的几何图形 （如果适用），然后在环内的点。 此顺序是确定的。  
+ 如果 **geometry** 实例是系统构建的，则 `STPointN()` 返回由 *expression* 通过按照点的输出顺序对所有点进行排序而指定的点，点的排序顺序为：首先按几何图形，然后按几何图形中的环（如果适用），最后按环中的点。 此顺序是确定的。  
   
- 如果使用等于或大于 1 的值调用此方法，则它将引发**ArgumentOutOfRangeException**。  
+ 如果使用小于 1 的值来调用此方法，则会引发 ArgumentOutOfRangeException。  
   
  如果使用大于实例中点数的值来调用此方法，则返回 Null。  
   

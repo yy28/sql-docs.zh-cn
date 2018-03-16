@@ -1,5 +1,5 @@
 ---
-title: "级别 (Transact SQL) |Microsoft 文档"
+title: RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 
   返回结果集的分区内每行的排名。 行的排名是相关行之前的排名数加一。  
 
-  方式和级别很相似。 所有的方式数字按顺序行 （例如 1、 2、 3、 4、 5）。 级别对于版本号 （例如 1、 2、 2、 4、 5） 提供的数值相同。   
+  ROW_NUMBER 和 RANK 类似。 ROW_NUMBER 按顺序对所有行进行编号（例如 1、2、3、4、5）。 RANK 为相应关联提供相同的数值（例如 1、2、2、4、5）。   
   
 > [!NOTE]
-> 级别是临时值计算运行查询时。 若要保存在表中的数字，请参阅[标识属性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和[序列](../../t-sql/statements/create-sequence-transact-sql.md)。 
+> RANK 是运行查询时计算出的临时值。 若要将数值保存在表中，请参阅 [IDENTITY 属性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。 
    
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>参数  
- 通过**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*将划分为分区函数应用到的 FROM 子句生成的结果集。 如果未指定，则此函数将查询结果集的所有行视为单个组。 *order_by_clause*应用函数之前确定数据的顺序。 *Order_by_clause*是必需的。 \<行或 range 子句 > 的 OVER 子句不能为指定排名函数。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 在应用函数之前确定数据的顺序。 需要 order_by_clause。 不能为 RANK 函数指定 OVER 子句的 \<rows 或 range 子句>。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  **bigint**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果两个或多个行与一个排名关联，则每个关联行将得到相同的排名。 例如，如果两位顶尖销售员具有相同的 SalesYTD 值，则他们将并列第一。 由于已有两行排名在前，所以具有下一个最大 SalesYTD 的销售人员将排名第三。 因此，RANK 函数并不总返回连续整数。  
   
  用于整个查询的排序顺序决定了行在结果集中的显示顺序。  
@@ -135,10 +135,10 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C： 在一个分区内的排名行  
- 下面的示例在其总销售额根据每个销售区域排名销售代表。 行集按 `SalesTerritoryGroup` 分区，按 `SalesAmountQuota` 排序。  
+### <a name="c-ranking-rows-within-a-partition"></a>C. 对分区中的行进行排名  
+ 下面的示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 行集按 `SalesTerritoryGroup` 分区，按 `SalesAmountQuota` 排序。  
   
 ```  
 -- Uses AdventureWorks  
@@ -174,10 +174,10 @@ Pak               10514000.0000  United Kingdom       1
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DENSE_RANK &#40;Transact SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [方式 &#40;Transact SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40;Transact SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [排名函数 &#40;Transact SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [DENSE_RANK (Transact-SQL)](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER (Transact-SQL)](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE (Transact-SQL)](../../t-sql/functions/ntile-transact-sql.md)   
+ [排名函数 (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

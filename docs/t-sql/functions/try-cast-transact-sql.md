@@ -1,5 +1,5 @@
 ---
-title: "TRY_CAST (Transact SQL) |Microsoft 文档"
+title: TRY_CAST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -47,23 +47,23 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 要转换的值。 任何有效的表达式。  
+ 要强制转换的值。 任何有效的表达式。  
   
- *data_type*  
- 要强制转换到其中的数据类型*表达式*。  
+ data_type  
+ 要将 expression 强制转换为的数据类型。  
   
  *length*  
- 可选整数，指定目标数据类型的长度。  
+ 指定目标数据类型长度的可选整数。  
   
- 可接受的值的范围由值*data_type*。  
+ 可接受值的范围由 data_type 的值确定。  
   
 ## <a name="return-types"></a>返回类型  
  返回转换为指定数据类型的值（如果转换成功）；否则返回 Null。  
   
 ## <a name="remarks"></a>Remarks  
- **TRY_CAST**采用传递给它的值，并尝试将其转换为指定*data_type*。 如果转换成功， **TRY_CAST**返回的值与指定*data_type*; 如果发生错误，则返回 null。 但是如果请求为显式不允许使用，然后转换**TRY_CAST**失败并出现错误。  
+ TRY_CAST 接收传递给它的值，并尝试将该值转换为指定的 data_type。 如果强制转换成功，TRY_CAST 按指定的 data_type 返回值；如果发生错误，则返回 null。 但是，如果请求的转换是显式不允许执行的转换，则 TRY_CAST 失败并显示错误。  
   
- **TRY_CAST**不是一个新的保留关键字和所有兼容性级别处于可以使用。 **TRY_CAST**具有相同的语义**TRY_CONVERT**时连接到远程服务器。  
+ TRY_CAST 不是新的保留关键字，且可用于所有兼容级别。 当连接到远程服务器时，TRY_CAST 与 TRY_CONVERT 具有相同的语义。  
   
 ## <a name="examples"></a>示例  
   
@@ -141,7 +141,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [TRY_CONVERT &#40;Transact SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+ [TRY_CONVERT (Transact-SQL)](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

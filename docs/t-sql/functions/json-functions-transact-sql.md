@@ -1,5 +1,5 @@
 ---
-title: "JSON 函数 (Transact SQL) |Microsoft 文档"
+title: "JSON 函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -26,23 +26,23 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/17/2017
 ---
-# <a name="json-functions-transact-sql"></a>JSON 函数 (TRANSACT-SQL)
+# <a name="json-functions-transact-sql"></a>JSON 函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-若要验证或更改 JSON 文本，或提取简单或复杂的值，请使用本部分中的页面上描述的函数。  
+使用本部分中的页面上介绍的函数可验证或更改 JSON 文本，或是提取简单或复杂值。  
   
 |函数|Description|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|测试字符串是否包含有效 JSON。|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|从 JSON 字符串中提取标量值。|  
 |[JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md)|从 JSON 字符串中提取对象或数组。|  
-|[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|更新的 JSON 字符串中属性的值并返回更新的 JSON 字符串。|
+|[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串。|
 
- 有关详细信息中 JSON 的内置支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[JSON 数据 &#40;SQL server&#41;](../../relational-databases/json/json-data-sql-server.md).  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中对 JSON 的内置支持的详细信息，请参阅 [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)。  
     
 ## <a name="see-also"></a>另请参阅  
- [验证、 查询和更改 JSON 数据使用内置函数 &#40;SQL server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
- [JSON 路径表达式 &#40;SQL server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON 数据 &#40;SQL server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [使用内置函数验证、查询和更改 JSON 数据 (SQL Server)](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
+ [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
   
   

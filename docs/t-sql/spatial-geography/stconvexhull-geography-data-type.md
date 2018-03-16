@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (geography 数据类型) |Microsoft 文档"
+title: "STConvexHull（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回一个对象，表示的凸包**geography**实例。  
+  返回表示 geography 实例的凸包的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,21 +41,21 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- 返回`FullGlobe`对象**geography**实例具有大于 90 度的信封角度。  
+## <a name="remarks"></a>Remarks  
+ 针对具有大于 90 度的信封角的 geography 实例返回一个 `FullGlobe` 对象。  
   
- 返回一个空**geography**为一个空集合**geography**实例。  
+ 针对空的 geography 实例返回空的 geography 集合。  
   
- 返回**null**为未初始化**geography**实例。  
+ 为未初始化的 geography 实例返回 null。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 对未初始化的 geography 实例使用 STConvexHull()  
- 下面的示例使用`STConvexHull()`对未初始化**geography**实例。  
+ 以下示例对未初始化的 geography 示例使用 `STConvexHull()`。  
   
 ```
  DECLARE @g geography;  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. 在一个信封角大于 90 度的 geography 实例上查找凸包  
- 下面的示例使用`STConvexHull()`上**geography**信封角度大于 90 度的实例。  
+ 以下示例在一个信封角大于 90 度的 geography 实例上使用 `STConvexHull()`。  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

@@ -47,18 +47,18 @@ dividend / divisor
 ```  
   
 ## <a name="arguments"></a>参数  
- *被除数*  
- 被除数的数值表达式。 *被除数*可以是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)任何一种数值数据类型的数据类型类别中，除**datetime**和**smalldatetime**数据类型。  
+ dividend  
+ 被除数的数值表达式。 dividend 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- *除数*  
- 是用于除以被除数的数值表达式。 *除数*可以是除之外的任何一种数值数据类型类别的数据类型的任何有效表达式**datetime**和**smalldatetime**数据类型。  
+ divisor  
+ 除数的数值表达式。 divisor 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效表达式。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
- 如果整数*被除数*除以整数*除数*，结果是一个整数，已截断的任何的结果小数部分。  
+ 如果整数的 divisor 除以整数的 dividend，其结果是一个整数，小数部分被截断。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  / 运算符返回的实际值是用第一个表达式除以第二个表达式所得的商。  
   
 ## <a name="examples"></a>示例  
@@ -88,8 +88,8 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例使用除法算术运算符来计算简单到名病小时的每个员工的休假小时数的比率。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例使用除法算术运算符来计算每位员工的休假时间与病假时间的简单比值。  
   
 ```  
 -- Uses AdventureWorks  
@@ -102,11 +102,11 @@ FROM DimEmployee;
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [/ = &#40; 除法赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
+ [/=（除法赋值）(Transact-SQL)](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

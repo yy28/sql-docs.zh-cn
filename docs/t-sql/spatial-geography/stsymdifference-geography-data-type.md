@@ -1,5 +1,5 @@
 ---
-title: "STSymDifference (geography 数据类型) |Microsoft 文档"
+title: "STSymDifference（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回一个对象，表示之一中的所有点**geography**实例或另一个**geography**实例，但不是在两个实例的那些点。  
+  返回一个对象，它表示位于一个 **geography** 实例或另一个 **geography** 实例中的所有点，但不包含同时位于这两个实例中的点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geography*  
- 是另一种**geography**除了对其调用 STSymDistance() 实例之外的实例。  
+ 调用 STSymDistance() 的实例以外的另一个 geography 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- 如果此方法将始终返回 null 的空间引用标识符 (Srid) **geography**实例不匹配。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的服务器上的可能结果集已扩展到**FullGlobe**实例。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能的结果集已扩展到 FullGlobe 实例。  
   
  只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   

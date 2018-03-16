@@ -1,5 +1,5 @@
 ---
-title: "日志 (Transact SQL) |Microsoft 文档"
+title: LOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回指定的自然对数**float**中的表达式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定 float 表达式的自然对数。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,28 +55,28 @@ LOG ( float_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
- *float_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)类型的**float**或可以隐式转换为的类型**float**。  
+ float_expression  
+ float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- *基*  
+ base  
  可选的整型参数，设置对数的底数。  
   
-**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ## <a name="return-types"></a>返回类型  
  **float**  
   
-## <a name="remarks"></a>注释  
- 默认情况下， **log （)**返回自然对数。 从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，你可以通过使用可选改为其他值对数的底*基*参数。  
+## <a name="remarks"></a>Remarks  
+ 默认情况下，LOG() 返回自然对数。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，可使用可选的 base 参数将对数的底数更改为其他值 。  
   
- 自然对数是底数的对数**e**，其中**e**是一个无理常数约等于 2.718281828。  
+ 自然对数是底数为 e 的对数，其中 e 是一个无理数常数，约等于 2.718281828**e**。  
   
- 数字的指数的自然对数是数字本身： 日志 (EXP (  *n*  )) =  *n* 。 并且数字的自然对数的指数是该数字本身： EXP (日志 (  *n*  )) =  *n* 。  
+ 某数指数值的自然对数是该数自身：LOG( EXP( n ) ) = n。 且某数指数值的自然对数是该数自身：EXP( LOG( n ) ) = n。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 计算某数的对数。  
- 下面的示例计算`LOG`指定**float**表达式。  
+ 以下示例计算指定 float 表达式的 `LOG`。  
   
 ```  
 DECLARE @var float = 10;  
@@ -109,10 +109,10 @@ SELECT LOG (EXP (10));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 计算一个数字的对数  
- 下面的示例计算`LOG`指定**float**表达式。  
+### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 计算某数的对数  
+ 以下示例计算指定 float 表达式的 `LOG`。  
   
 ```  
 SELECT LOG(10);  
@@ -127,9 +127,9 @@ SELECT LOG(10);
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [EXP &#40;Transact SQL &#41;](../../t-sql/functions/exp-transact-sql.md)   
- [LOG10 &#40;Transact SQL &#41;](../../t-sql/functions/log10-transact-sql.md)  
+ [数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [EXP (Transact-SQL)](../../t-sql/functions/exp-transact-sql.md)   
+ [LOG10 (Transact-SQL)](../../t-sql/functions/log10-transact-sql.md)  
   
   
 

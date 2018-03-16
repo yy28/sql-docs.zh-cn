@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,6 +115,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="converting-date-and-time-data"></a>转换日期和时间数据
 当转换为日期和时间数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会拒绝它无法识别为日期或时间的所有值。 有关日期和时间数据使用 CAST 和 CONVERT 函数的信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
+  
+### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>将 datetimeoffset 数据类型转换为其他日期和时间类型
+此部分介绍了在 datetimeoffset 数据类型转换为其他日期和时间数据类型时发生的具体情况。
   
 转换成 date 时，会复制年、月和日。 下面的代码显示将 `datetimeoffset(4)` 值转换为 `date` 值的结果。  
   
@@ -198,9 +201,6 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
   
 --(1 row(s) affected)  
 ```  
-  
-### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>将 datetimeoffset 数据类型转换为其他日期和时间类型
-下表介绍当 datetimeoffset 数据类型转换为其他日期和时间数据类型时发生的情况。
   
 ### <a name="converting-string-literals-to-datetimeoffset"></a>将字符串文字转换为 datetimeoffset
 如果字符串所有部分的格式均有效，则允许从字符串文字转换为日期和时间类型。 否则，将引发运行时错误。 从日期和时间类型向字符串文字进行的未指定样式的隐式转换或显式转换将采用当前会话的默认格式。 下表显示用于将字符串文字转换为 datetimeoffset 数据类型的规则。

@@ -1,5 +1,5 @@
 ---
-title: "拒绝 Service Broker 权限 (Transact SQL) |Microsoft 文档"
+title: "DENY Service Broker 权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -64,20 +64,20 @@ DENY permission  [ ,...n ] ON
  *permission*  
  指定可拒绝授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全对象的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- 协定 **:: * * * contract_name*  
- 指定拒绝将其权限授权他人的约定。 作用域限定符**::**是必需的。  
+ CONTRACT ::contract_name  
+ 指定拒绝将其权限授权他人的约定。 需要使用作用域限定符 ::。  
   
- MESSAGE TYPE **::***message_type_name*  
- 指定拒绝将其权限授予他人的消息类型。 作用域限定符**::**是必需的。  
+ MESSAGE TYPE ::message_type_name  
+ 指定拒绝将其权限授予他人的消息类型。 需要使用作用域限定符 ::。  
   
- 远程服务绑定 **:: * * * remote_binding_name*  
- 指定拒绝将其权限授予他人的远程服务绑定。 作用域限定符**::**是必需的。  
+ REMOTE SERVICE BINDING ::remote_binding_name  
+ 指定拒绝将其权限授予他人的远程服务绑定。 需要使用作用域限定符 ::。  
   
- ROUTE **::***route_name*  
- 指定拒绝将其权限授予他人的路由。 作用域限定符**::**是必需的。  
+ ROUTE ::route_name  
+ 指定拒绝将其权限授予他人的路由。 需要使用作用域限定符 ::。  
   
- SERVICE **::***message_type_name*  
- 指定拒绝将其权限授予他人的服务。 作用域限定符**::**是必需的。  
+ SERVICE ::message_type_name  
+ 指定拒绝将其权限授予他人的服务。 需要使用作用域限定符 ::。  
   
  *database_principal*  
  指定要对其拒绝权限的主体。 可以是以下类型之一：  
@@ -106,10 +106,10 @@ CASCADE
 -   映射到非对称密钥的数据库用户  
 -   未映射到服务器主体的数据库用户  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Service Broker 约定  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定是权限层次结构中其父级数据库包含的数据库级安全对象。 最特定和受限的权限可能会遭到拒绝[!INCLUDE[ssSB](../../includes/sssb-md.md)]协定列出以下表，以及将其包含是通过默示的更多常规权限中。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定是权限层次结构中其父级数据库包含的数据库级安全对象。 下表列出了可拒绝授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定的最特定和最受限的权限，以及隐含这些权限的更常用权限。  
   
 |Service Broker 约定权限|Service Broker 约定权限隐含的权限|数据库权限隐含的权限|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -141,7 +141,7 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Service Broker 路由  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由是权限层次结构中其父级数据库包含的数据库级安全对象。 最特定和受限的权限可能会遭到拒绝[!INCLUDE[ssSB](../../includes/sssb-md.md)]路由列示在以下表中，以及将其包含是通过默示的更多常规权限。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由是权限层次结构中其父级数据库包含的数据库级安全对象。 下表列出了可拒绝授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 路由的最特定和最受限的权限，以及隐含这些权限的更常用权限。  
   
 |Service Broker 路由权限|Service Broker 路由权限隐含的权限|数据库权限隐含的权限|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -151,7 +151,7 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Service Broker 服务  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务是权限层次结构中其父级数据库包含的数据库级安全对象。 最特定和受限的权限可能会遭到拒绝[!INCLUDE[ssSB](../../includes/sssb-md.md)]服务将在下表中，以及将其包含是通过默示的更多常规权限中列出。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务是权限层次结构中其父级数据库包含的数据库级安全对象。 下表列出了可拒绝授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务的最特定和最受限的权限，以及隐含这些权限的更常用权限。  
   
 |Service Broker 服务权限|Service Broker 服务权限隐含的权限|数据库权限隐含的权限|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -166,8 +166,8 @@ CASCADE
   
 ## <a name="see-also"></a>另请参阅  
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [REVOKE Service Broker 权限 &#40;Transact SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
+ [REVOKE Service Broker 权限 (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
- [权限 &#40; 数据库引擎 &#41;](../../relational-databases/security/permissions-database-engine.md)  
+ [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)  
   
   

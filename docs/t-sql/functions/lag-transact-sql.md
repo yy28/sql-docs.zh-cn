@@ -1,5 +1,5 @@
 ---
-title: "延隔时间 (Transact SQL) |Microsoft 文档"
+title: LAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  在相同结果集中，而不使用自联接起点与上一行从访问数据[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 LAG 以当前行之前的给定物理偏移量来提供对行的访问。 在 SELECT 语句中使用此分析函数可将当前行中的值与先前行中的值进行比较。  
+  访问相同结果集中先前行的数据，而不使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始提供的自联接。 LAG 以当前行之前的给定物理偏移量来提供对行的访问。 在 SELECT 语句中使用此分析函数可将当前行中的值与先前行中的值进行比较。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,19 +48,19 @@ LAG (scalar_expression [,offset] [,default])
   
 ## <a name="arguments"></a>参数  
  *scalar_expression*  
- 要根据指定偏移量返回的值。 这是一个返回单个（标量）值的任何类型的表达式。 *scalar_expression*不能为分析的函数。  
+ 要根据指定偏移量返回的值。 这是一个返回单个（标量）值的任何类型的表达式。 scalar_expression 不能为分析函数。  
   
- *偏移量*  
- 当前行（从中获得取值）后的行数。 如果未指定，则默认值为 1。 *偏移量*可以是列、 子查询或计算结果为正整数其他表达式或可以隐式转换为**bigint**。 *偏移量*不能为负值或分析函数。  
+ *offset*  
+ 当前行（从中获得取值）后的行数。 如果未指定，则默认值为 1。 offset 可以是列、子查询或其他表达式，它们的计算值为正整数，或可隐式转换为 bigint。 offset 不能是负数值或分析函数。  
   
- *默认值*  
- 要返回时的值*scalar_expression*在*偏移量*为 NULL。 如果未指定默认值，则返回 NULL。 *默认*可以是列、 子查询或其他表达式，但不是能为分析的函数。 *默认*必须是类型兼容与*scalar_expression*。  
+ default  
+ 当 offset 处的 scalar_expression 为 NULL 时要返回的值。 如果未指定默认值，则返回 NULL。 default 可以是列、子查询或其他表达式，但它不能是分析函数。 default 的类型与 scalar_expression 的类型必须兼容。  
   
- 通过**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*将划分为分区函数应用到的 FROM 子句生成的结果集。 如果未指定，则此函数将查询结果集的所有行视为单个组。 *order_by_clause*应用函数之前确定数据的顺序。 如果*partition_by_clause*指定，它确定分区中的数据的顺序。 *Order_by_clause*是必需的。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 在应用函数之前确定数据的顺序。 当指定 partition_by_clause 时，它确定分区中数据的顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 指定的数据类型*scalar_expression*。 如果返回 NULL *scalar_expression*可以为 null 或*默认*设置为 NULL。  
+ 指定 scalar_expression 的数据类型。 如果 scalar_expression 可以为 null 或 default 被设置为 NULL，则返回 NULL。  
   
 ## <a name="general-remarks"></a>一般备注  
  LAG 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
@@ -145,10 +145,10 @@ b           c           i
 1           5           NULL  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D： 比较季度之间的值  
- 下面的示例演示 LAG 函数。 查询使用 LAG 函数返回的特定员工在以前的日历季度销售配额中的差异。 请注意，因为第一行没有提供滞后值，所以将返回默认值零 (0)。  
+### <a name="d-compare-values-between-quarters"></a>D：比较季度之间的值  
+ 以下示例演示了 LAG 函数。 该查询使用 LAG 函数返回特定员工前几个日历季度的销售配额差异。 请注意，因为第一行没有提供滞后值，所以将返回默认值零 (0)。  
   
 ```sql   
 -- Uses AdventureWorks  
@@ -175,7 +175,7 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [主管 &#40;Transact SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
+ [LEAD (Transact-SQL)](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "column_constraint (Transact SQL) |Microsoft 文档"
+title: column_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (TRANSACT-SQL)
+# <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定是通过使用添加到表的新列定义的一部分的主键、 外键、 唯一、 或检查约束的属性[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。  
+  指定 PRIMARY KEY、FOREIGN KEY、UNIQUE 或 CHECK 约束的属性，约束是使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 添加到表中的新列定义的一部分。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,8 +67,8 @@ ms.lasthandoff: 11/21/2017
  CONSTRAINT  
  指定 PRIMARY KEY、UNIQUE、FOREIGN KEY 或 CHECK 约束的定义的开始。  
   
- *constraint_name*  
- 约束的名称。 约束名称必须遵循的规则[标识符](../../relational-databases/databases/database-identifiers.md)，只不过该名称不能以数字符号开头 （#）。 如果*constraint_name*是未提供，系统生成的名称分配给该约束。  
+ constraint_name  
+ 约束的名称。 除了不能以数字符号 (#) 开头以外，约束名称还必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 如果未提供 constraint_name，则会将系统生成的名称分配给约束。  
   
  NULL | NOT NULL  
  指定列是否可接受空值。 只有在指定了默认值的情况下，才能添加不允许 Null 值的列。 如果新列允许 Null 值，而且未指定默认值，则表中每一行的新列将包含 NULL。 如果新列允许 Null 值并且指定了新列的默认值，那么可以使用 WITH VALUES 选项在表中所有现有行的新列中存储默认值。  
@@ -90,20 +90,20 @@ ms.lasthandoff: 11/21/2017
   
  如果表中已存在聚集约束或聚集索引，则不能指定 CLUSTERED。 如果表中已存在聚集约束或索引，则 PRIMARY KEY 约束默认为 NONCLUSTERED。  
   
- 列的**ntext**，**文本**， **varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**，或**映像**数据类型不能指定为索引的列。  
+ 无法将 ntext、text、varchar(max)、nvarchar(max)、varbinary(max)、xml 或 image 数据类型的列指定为索引的列。  
   
- 使用填充因子 **=** *填充因子*  
- 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]在存储索引数据时使用的每个索引页的填充程度。 用户指定填充因子值可以是从 1 到 100 之间。 如果未指定值，则默认值为 0。  
+ WITH FILLFACTOR =fillfactor  
+ 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]在存储索引数据时使用的每个索引页的填充程度。 用户指定的填充因子值的范围可以为 1 到 100。 如果未指定值，则默认值为 0。  
   
 > [!IMPORTANT]  
->  生成文档与 FILLFACTOR = *fillfactor*作为适用于 PRIMARY KEY 或 UNIQUE 约束的唯一索引选项保留是为了向后兼容，但将不会记录在这种方式在将来释放。 可以在指定了其他索引选项[index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md)子句的 ALTER TABLE。  
+>  将 WITH FILLFACTOR = fillfactor 记录为适用于 PRIMARY KEY 或 UNIQUE 约束的唯一索引选项是为了保持向后兼容，但在未来的版本中将不会以此方式进行记录。 可在 ALTER TABLE 的 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中指定其他索引选项。  
   
- ON { *partition_scheme_name***(***partition_column_name***)** | *文件组*  |  **"**默认**"** }  
+ ON { partition_scheme_name(partition_column_name) | filegroup | "default" }  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定为约束创建的索引的存储位置。 如果*partition_scheme_name*指定，则索引进行分区和分区映射到由指定的文件组*partition_scheme_name*。 如果*文件组*索引创建在指定的文件组中的指定。 如果**"**默认**"**指定或根本未指定 ON，如果在表所在的文件组中创建索引。 当为 PRIMARY KEY 约束或 UNIQUE 约束添加聚集索引时，如果指定了 ON，则创建聚集索引时将把整个表移动到指定的文件组中。  
+ 指定为约束创建的索引的存储位置。 如果指定了 partition_scheme_name，则将对该索引进行分区，并将分区映射到由 partition_scheme_name 指定的文件组。 如果指定了 filegroup，则将在命名文件组内创建索引。 如果指定了 "default" 或者根本没有指定 ON，将在创建表的同一个文件组中创建索引。 当为 PRIMARY KEY 约束或 UNIQUE 约束添加聚集索引时，如果指定了 ON，则创建聚集索引时将把整个表移动到指定的文件组中。  
   
- 在此上下文中，默认值不是关键字。 它是默认文件组的标识符和必须分隔，如下所示 ON **"**默认**"**或亮**[**默认**]**。 如果**"**默认**"** QUOTED_IDENTIFIER 选项必须为当前会话中为 ON 的指定。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+ 在此上下文中，默认值不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示。 如果指定了“default”，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  FOREIGN KEY REFERENCES  
  为列中数据提供引用完整性的约束。 FOREIGN KEY 约束要求列中的每个值在引用的表中对应的被引用列中都存在。  
@@ -111,14 +111,14 @@ ms.lasthandoff: 11/21/2017
  *schema_name*  
  FOREIGN KEY 约束引用的表所属的架构的名称。  
   
- *referenced_table_name*  
+ referenced_table_name  
  FOREIGN KEY 约束引用的表。  
   
- *ref_column*  
+ ref_column  
  新 FOREIGN KEY 约束引用的带括号的列。  
   
- ON DELETE {**任何操作**|级联 |SET NULL |SET DEFAULT}  
- 指定哪些操作时将发生改变，如果这些行有引用关系，并且从父表中删除引用的行的表中的行。 默认值为 NO ACTION。  
+ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT }  
+ 指定如果已更改的表中的行具有引用关系，并且被引用行已从父表中删除，则对这些行所采取的操作。 默认值为 NO ACTION。  
   
  NO ACTION  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]将引发错误，并回滚对父表中行的删除操作。  
@@ -136,13 +136,13 @@ ms.lasthandoff: 11/21/2017
   
  如果要更改的表已存在 INSTEAD OF 触发器 ON DELETE，则不能定义 ON DELETE CASCADE 操作。  
   
- 例如，在[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库， **ProductVendor**表具有引用关系**供应商**表。 **ProductVendor.VendorID**外键引用**Vendor.VendorID**主键。  
+ 例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键。  
   
- 如果在行上执行 DELETE 语句**供应商**表和 ON DELETE CASCADE 操作为指定**ProductVendor.VendorID**、[!INCLUDE[ssDE](../../includes/ssde-md.md)]检查中的一个或多个相关行**ProductVendor**表。 如果存在任何，依赖项的行中**ProductVendor**将删除表中引用的行除了**供应商**表。  
+ 如果对 Vendor 表的某行执行 DELETE 语句，并且为 ProductVendor.VendorID 指定 ON DELETE CASCADE 操作，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将检查 ProductVendor 表中的一个或多个依赖行。 如果存在依赖行，则除了删除 Vendor 表中被引用的行外，还将删除 ProductVendor 表中的依赖行。  
   
- 相反，如果指定了 NO ACTION，[!INCLUDE[ssDE](../../includes/ssde-md.md)]引发错误，并回滚删除操作上**供应商**行中的至少有一行时**ProductVendor**引用它的表。  
+ 相反，如果指定了 NO ACTION，并且 ProductVendor 表中至少有一行引用 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误并回滚对 Vendor 行执行的删除操作。  
   
- 在更新 {**任何操作**|级联 |SET NULL |SET DEFAULT}  
+ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT }  
  指定在发生更改的表中，如果行有引用关系且引用的行在父表中被更新，则对这些行采取什么操作。 默认值为 NO ACTION。  
   
  NO ACTION  
@@ -161,11 +161,11 @@ ms.lasthandoff: 11/21/2017
   
  如果要更改的表已存在 INSTEAD OF 触发器 ON UPDATE，则不能定义 ON UPDATE CASCADE、SET NULL 或 SET DEFAULT 操作。  
   
- 例如，在[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库， **ProductVendor**表具有引用关系**供应商**表。 **ProductVendor.VendorID**外键引用**Vendor.VendorID**主键。  
+ 例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键。  
   
- 如果在行上执行 UPDATE 语句**供应商**表和 ON UPDATE CASCADE 操作为指定**ProductVendor.VendorID**、[!INCLUDE[ssDE](../../includes/ssde-md.md)]检查中的一个或多个相关行**ProductVendor**表。 如果存在任何中的相关行**ProductVendor**将更新表中引用的行除了**供应商**表。  
+ 如果对 Vendor 表中的某行执行了 UPDATE 语句，并且为 ProductVendor.VendorID 指定了 ON UPDATE CASCADE 操作，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将检查 ProductVendor 表中是否有一个或多个依赖行。 如果存在依赖行，则 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新。  
   
- 相反，如果指定了 NO ACTION，[!INCLUDE[ssDE](../../includes/ssde-md.md)]引发错误，并回滚更新操作上**供应商**行中的至少有一行时**ProductVendor**引用它的表。  
+ 相反，如果指定了 NO ACTION，则当 ProductVendor 表中至少有一行引用了 Vendor 行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误，并回滚对 Vendor 行的更新操作。  
   
  NOT FOR REPLICATION  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -175,16 +175,16 @@ ms.lasthandoff: 11/21/2017
  CHECK  
  一个约束，该约束通过限制可输入一列或多列中的可能值来强制实现域完整性。  
   
- *logical_expression*  
- 用于 CHECK 约束的逻辑表达式，返回 TRUE 或 FALSE。 *logical_expression*使用带有检查约束不能引用另一个表，但可以引用同一行的同一表中的其他列。 该表达式不能引用别名数据类型。  
+ logical_expression  
+ 用于 CHECK 约束的逻辑表达式，返回 TRUE 或 FALSE。 与 CHECK 约束一起使用的 logical_expression 无法引用其他表，但可以引用同一表中同一行的其他列。 该表达式不能引用别名数据类型。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当添加 FOREIGN KEY 或 CHECK 约束时，所有现有数据都要进行约束违反验证，除非指定了 WITH NOCHECK 选项。 如果违反了约束，ALTER TABLE 将失败并返回一个错误。 当在现有列上添加新 PRIMARY KEY 或 UNIQUE 约束时，该列中的数据必须唯一。 如果存在重复值，ALTER TABLE 语句将失败。 当添加 PRIMARY KEY 或 UNIQUE 约束时，WITH NOCHECK 选项不起作用。  
   
  每个 PRIMARY KEY 和 UNIQUE 约束都将生成一个索引。 UNIQUE 和 PRIMARY KEY 约束的数目不能导致表上非聚集索引的数目大于 999，也不能导致聚集索引的数目大于 1。 外键约束不会自动生成索引。 然而，经常在查询的联接条件中使用外键列，方法是将一个表的外键约束中的列与另一个表中的主键列或唯一键列匹配。 针对外键列的索引使[!INCLUDE[ssDE](../../includes/ssde-md.md)]可以在外键表中快速查找相关数据。  
   
 ## <a name="examples"></a>示例  
- 有关示例，请参阅[ALTER TABLE &#40;Transact SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md).  
+ 有关示例，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "设置 STATISTICS IO (Transact SQL) |Microsoft 文档"
+title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/23/2018
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果 STATISTICS IO 为 ON，则显示统计信息。 如果为 OFF，则不显示统计信息。  
   
  如果将此选项设置为 ON，则所有后续的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将返回统计信息，直到将该选项设置为 OFF 为止。  
@@ -63,13 +63,13 @@ SET STATISTICS IO { ON | OFF }
 |输出项|含义|  
 |-----------------|-------------|  
 |**表**|表的名称。|  
-|**扫描计数**|在任何方向都达到叶级别后启动的查询/扫描数，目的在于检索用于构造输出的最终数据集的所有值。<br /><br /> 如果使用的索引是主键的唯一索引或聚集索引并且您仅查找一个值，则扫描计数为 0。 例如 `WHERE Primary_Key_Column = <value>`。<br /><br /> 使用非唯一聚集的索引非主键列上定义的一个值搜索时，扫描计数为 1。 这是为了针对您正在搜索的键值检查重复值。 例如 `WHERE Clustered_Index_Key_Column = <value>`。<br /><br /> 当 N 为通过使用索引键定位键值后，在叶级别的左侧或右侧启动的不同查找/扫描数时，则扫描计数为 N。|  
+|**扫描计数**|在任何方向都达到叶级别后启动的查询/扫描数，目的在于检索用于构造输出的最终数据集的所有值。<br /><br /> 如果使用的索引是主键的唯一索引或聚集索引并且您仅查找一个值，则扫描计数为 0。 例如 `WHERE Primary_Key_Column = <value>`。<br /><br /> 当使用对非主键列定义的非唯一的聚集索引搜索一个值时，扫描计数为 1。 这是为了针对您正在搜索的键值检查重复值。 例如 `WHERE Clustered_Index_Key_Column = <value>`。<br /><br /> 当 N 为通过使用索引键定位键值后，在叶级别的左侧或右侧启动的不同查找/扫描数时，则扫描计数为 N。|  
 |**逻辑读取次数**|从数据缓存读取的页数。|  
 |**物理读取次数**|从磁盘读取的页数。|  
 |**预读次数**|为进行查询而放入缓存的页数。|  
-|**lob 逻辑读取次数**|数**文本**， **ntext**，**映像**，或较大的值类型 (**varchar （max)**， **nvarchar (max)**，**varbinary （max)**) 从数据缓存中读取页。|  
-|**lob 物理读取次数**|数**文本**， **ntext**，**映像**或从磁盘读取较大的值类型页。|  
-|**lob 预读读取次数**|数**文本**， **ntext**，**映像**或较大的值类型放入缓存中用于查询的页。|  
+|**lob 逻辑读取次数**|从数据缓存读取的 text、ntext、image 或大值类型（varchar(max)、nvarchar(max)、varbinary(max)）页的数目。|  
+|**lob 物理读取次数**|从磁盘读取的 text、ntext、image 或大值类型页的数目。|  
+|**lob 预读次数**|为进行查询而放入缓存的 text、ntext、image 或大值类型页的数目。|  
   
  SET STATISTICS IO 是在执行或运行时设置，而不是在分析时设置。  
   
@@ -105,7 +105,7 @@ lob read-ahead reads 0.
   
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [设置 SHOWPLAN_ALL &#40;Transact SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [设置统计信息时间 &#40;Transact SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
+ [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET STATISTICS TIME (Transact-SQL)](../../t-sql/statements/set-statistics-time-transact-sql.md)  
   
   

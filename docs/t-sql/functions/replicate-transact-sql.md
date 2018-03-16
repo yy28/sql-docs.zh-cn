@@ -48,16 +48,16 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="arguments"></a>参数  
  *string_expression*  
- 字符串或二进制数据类型的表达式。 *string_expression*可以是字符或二进制数据。  
+ 字符串或二进制数据类型的表达式。 string_expression 可以是字符或二进制数据。  
   
 > [!NOTE]  
->  如果*string_expression*的类型不是**varchar （max)**或**nvarchar (max)**，复制将截断为 8000 个字节的返回值。 返回值大于 8000 个字节， *string_expression*必须显式转换为相应的大型值数据类型。  
+>  如果 string_expression 的类型不是 varchar(max) 或 nvarchar(max)，则 REPLICATE 将返回值截断为 8000 字节。 若要返回大于 8,000 字节的值，则必须将 string_expression 显式转换为适当的大值数据类型。  
   
  *integer_expression*  
- 是一个表达式的任何整数类型，包括**bigint**。 如果*integer_expression*为负，则返回 NULL。  
+ 是任何整数类型的表达式，包括 bigint。 如果 integer_expression 为负，则返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与相同的类型*string_expression*。  
+ 返回与 string_expression 相同的类型。  
   
 ## <a name="examples"></a>示例  
   
@@ -123,10 +123,10 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C： 使用复制  
- 下面的示例将复制`0`四次前端中的字符`ItemCode`值。  
+### <a name="c-using-replicate"></a>C. 使用 REPLICATE  
+ 以下示例在 `ItemCode` 值的前面将 `0` 字符复制四次。  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,7 +138,7 @@ FROM dbo.DimProduct
 ORDER BY Name;  
 ```  
   
- 以下是在结果集中的前几行。  
+ 结果集中的首行如下。  
   
  ```
 Name                     ItemCode       FullItemCode
@@ -152,9 +152,9 @@ BB Ball Bearing          BE-2349        0000BE-2349
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SPACE &#40;Transact-SQL&#41;](../../t-sql/functions/space-transact-sql.md)  
+ [SPACE (Transact-SQL)](../../t-sql/functions/space-transact-sql.md)  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

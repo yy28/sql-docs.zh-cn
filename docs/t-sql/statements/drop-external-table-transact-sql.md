@@ -1,5 +1,5 @@
 ---
-title: "删除外部表 (Transact SQL) |Microsoft 文档"
+title: DROP EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -26,10 +26,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (TRANSACT-SQL)
+# <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  删除从 PolyBase 外部表。 这不会删除外部数据。  
+  删除 PolyBase 外部表格式。 该操作不会删除外部数据。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,15 +42,15 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>参数  
- [ *database_name* 。 [*schema_name*]。 | *schema_name* 。 ] *table_name*  
- 若要删除的外部表的一到三部分名称。 架构，或数据库和架构，可以根据需要包含的表名称。  
+ [ database_name . [schema_name] . | schema_name . ] *table_name*  
+ 要删除的外部表的一到三部分名称。 表名称可以根据需要包括架构或者数据库和架构。  
   
 ## <a name="permissions"></a>权限  
   
--   需要**ALTER**表所属的架构上的权限。  
+-   该表所属架构需要 ALTER 权限。  
   
 ## <a name="general-remarks"></a>一般备注  
- 删除外部表中删除所有与表相关的元数据。 它不会删除外部数据。  
+ 删除外部表会删除所有与表相关的元数据。 该操作不会删除外部数据。  
   
 ## <a name="examples"></a>示例  
   
@@ -62,14 +62,14 @@ DROP EXTERNAL TABLE dbo.SalesPerson;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-### <a name="b-dropping-an-external-table-from-the-current-database"></a>B. 从当前数据库中删除外部表  
- 下面的示例删除`ProductVendor1`表、 其数据、 索引和任何相关的视图，从当前数据库。  
+### <a name="b-dropping-an-external-table-from-the-current-database"></a>B. 删除当前数据库中的外部表  
+ 以下示例删除当前数据库中的 `ProductVendor1` 表及其数据、索引和任何相关视图。  
   
 ```  
 DROP EXTERNAL TABLE ProductVendor1;  
 ```  
   
-### <a name="c-dropping-a-table-from-another-database"></a>C. 另一个数据库中删除表  
+### <a name="c-dropping-a-table-from-another-database"></a>C. 删除其他数据库中的表  
  以下示例将删除 `EasternDivision` 数据库中的 `SalesPerson` 表。  
   
 ```  

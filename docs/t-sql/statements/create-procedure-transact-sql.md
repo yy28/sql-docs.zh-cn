@@ -53,11 +53,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 086151e2916335ae0d7cda3eef11a79363d3ce53
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8762890c81c5ff2b03ba07a44ef6c559c6d57ab7
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -100,7 +100,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for CLR Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -113,7 +113,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Natively Compiled Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -137,7 +137,7 @@ sql_statement [;] [ ... n ]
   | [ DELAYED_DURABILITY = { OFF | ON } ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in Azure SQL Data Warehouse
 -- and Parallel Data Warehouse  
   
@@ -157,7 +157,7 @@ OR ALTER
  *schema_name*  
  过程所属架构的名称。 过程是绑定到架构的。 如果在创建过程时未指定架构名称，则自动分配正在创建过程的用户的默认架构。  
   
- *procedure_name*  
+ procedure_name  
  过程的名称。 过程名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则，并且在架构中必须唯一。  
   
  在命名过程时避免使用 sp_ 前缀。 此前缀由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用来指定系统过程。 如果存在同名的系统过程，则使用前缀可能导致应用程序代码中断。  
@@ -166,7 +166,7 @@ OR ALTER
   
  过程或全局临时程序的完整名称（包括 ##）不能超过 128 个字符。 局部临时程序的完整名称（包括 #）不能超过 116 个字符。  
   
- **;** *number*  
+ ; number  
  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  用于对同名的过程分组的可选整数。 使用一个 DROP PROCEDURE 语句可将这些分组过程一起删除。  
@@ -183,7 +183,7 @@ OR ALTER
   
  如果指定了 FOR REPLICATION，则无法声明参数。  
   
- [ type_schema_name. [ =] data_type  
+ [ type_schema_name***.* ] data_type  
  参数的数据类型以及该数据类型所属的架构。  
   
 针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程的准则：  
@@ -244,7 +244,7 @@ FOR REPLICATION
   
  `FOR REPLICATION` 过程在 sys.objects 和 sys.procedures 中包含 RF 对象类型。  
   
- { [ BEGIN ] sql_statement [;] [ ... ] [ END ] }*n*  
+ { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }  
  构成过程主体的一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 您可以使用可选的 BEGIN 和 END 关键字将这些语句括起来。 有关信息，请参阅后面的“最佳实践”、“一般备注”以及“限制和局限”部分。  
   
 EXTERNAL NAME assembly_name.class_name.method_name  
@@ -426,7 +426,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
   
  不能将某一函数名称指定为参数默认值或者在执行过程时传递给参数的值。 但是，您可以将函数作为变量传递，如以下示例中所示：  
   
-```  
+```sql
 -- Passing the function value as a variable.  
 DECLARE @CheckDate datetime = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;   
@@ -589,7 +589,7 @@ GO
   
  可以通过以下方式执行 `uspGetEmployees` 过程：  
   
-```  
+```sql
 EXECUTE HumanResources.uspGetEmployees N'Ackerman', N'Pilar';  
 -- Or  
 EXEC HumanResources.uspGetEmployees @LastName = N'Ackerman', @FirstName = N'Pilar';  

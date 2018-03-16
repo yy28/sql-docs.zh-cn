@@ -1,5 +1,5 @@
 ---
-title: "释放 (Transact SQL) |Microsoft 文档"
+title: DEALLOCATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  删除游标引用。 包含光标的数据结构时的最后一个光标引用被释放时，将通过释放[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  删除游标引用。 当释放最后的游标引用时，组成该游标的数据结构由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 释放。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>参数  
  *cursor_name*  
- 已声明游标的名称。 全局和局部游标是否存在与*cursor_name*作为其名称， *cursor_name*引用到全局游标如果指定全局和局部游标，如果未指定全局。  
+ 已声明游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 指全局游标，如果未指定 GLOBAL，则指局部游标。  
   
  @*cursor_variable_name*  
- 是的名称**光标**变量。 @*cursor_variable_name*的类型必须为**光标**。  
+ cursor 变量的名称。 @cursor_variable_name 必须为 cursor 类型。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  对游标进行操作的语句使用游标名称或游标变量引用游标。 DEALLOCATE 删除游标与游标名称或游标变量之间的关联。 如果一个名称或变量是最后引用游标的名称或变量，则将释放游标，游标使用的任何资源也随之释放。 用于保护提取隔离的滚动锁在 DEALLOCATE 上释放。 用于保护更新（包括通过游标进行的定位更新）的事务锁一直到事务结束才释放。  
   
  DECLARE CURSOR 语句分配游标并将其与游标名称关联。  
@@ -85,7 +85,7 @@ SELECT * FROM Person.Person;
     SELECT * FROM Person.Person;  
     ```  
   
- @ 释放*cursor_variable_name*语句中删除仅引用的已命名的变量到光标处。 直到批处理、存储过程或触发器结束时变量离开作用域，才释放变量。 @ 释放后*cursor_variable_name*语句，该变量可以与相关联使用 SET 语句的另一个游标。  
+ A DEALLOCATE @cursor_variable_name 语句只删除对游标命名变量的引用。 直到批处理、存储过程或触发器结束时变量离开作用域，才释放变量。 在 DEALLOCATE @cursor_variable_name 语句之后，可以使用 SET 语句将变量与另一个游标关联。  
   
 ```  
 USE AdventureWorks2012;  
@@ -108,7 +108,7 @@ GO
  默认情况下，将 DEALLOCATE 权限授予任何有效用户。  
   
 ## <a name="examples"></a>示例  
- 以下脚本显示如何游标存留直到最后一个名称，或直到已释放引用它们的变量。  
+ 以下脚本显示游标如何持续到最后的名称或持续到引用它们的变量已释放。  
   
 ```  
 USE AdventureWorks2012;  
@@ -148,10 +148,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE (Transact-SQL)](../../t-sql/language-elements/close-transact-sql.md)   
  [游标](../../relational-databases/cursors.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [提取 &#40;Transact SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [打开 &#40;Transact SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [FETCH (Transact-SQL)](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)  
   
   

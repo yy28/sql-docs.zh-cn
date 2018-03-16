@@ -1,5 +1,5 @@
 ---
-title: "END CONVERSATION (Transact SQL) |Microsoft 文档"
+title: END CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -61,24 +61,24 @@ END CONVERSATION conversation_handle
  要结束的会话的会话句柄。  
   
  WITH ERROR =*failure_code*  
- 是错误代码。 *Failure_code*属于类型**int**。失败代码是用户定义代码，包含在发送给会话另一方的错误消息中。 失败代码必须大于 0。  
+ 是错误代码。 failure_code 属于 **int** 类型。失败代码是用户定义代码，包含在发送给会话另一方的错误消息中。 失败代码必须大于 0。  
   
  DESCRIPTION =*failure_text*  
- 是错误消息。 *Failure_text*属于类型**nvarchar(3000)**。 失败文本是用户定义文本，包含在发送给会话另一方的错误消息中。  
+ 是错误消息。 failure_text 属于 **nvarchar(3000)** 类型。 失败文本是用户定义文本，包含在发送给会话另一方的错误消息中。  
   
  WITH CLEANUP  
- 删除无法正常完成的会话一方的所有消息和目录视图条目。 不会向会话的另一方通知此清除操作。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务队列中删除的会话端点、 在传输队列中，会话的所有消息和会话的所有消息。 管理员可以使用此选项删除无法正常完成的会话。 例如，如果某个远程服务已被永久删除，则管理员可以使用 WITH CLEANUP 删除指向该服务的会话。 不要在代码中使用 WITH CLEANUP[!INCLUDE[ssSB](../../includes/sssb-md.md)]应用程序。 如果在接收端点确认收到消息之前运行 END CONVERSATION WITH CLEANUP，则发送端点将再次发送该消息。 这可能导致再次运行该对话。  
+ 删除无法正常完成的会话一方的所有消息和目录视图条目。 不会向会话的另一方通知此清除操作。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将删除会话端点、传输队列中该会话的所有消息以及服务队列中该会话的所有消息。 管理员可以使用此选项删除无法正常完成的会话。 例如，如果某个远程服务已被永久删除，则管理员可以使用 WITH CLEANUP 删除指向该服务的会话。 请不要在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序的代码中使用 WITH CLEANUP。 如果在接收端点确认收到消息之前运行 END CONVERSATION WITH CLEANUP，则发送端点将再次发送该消息。 这可能导致再次运行该对话。  
   
-## <a name="remarks"></a>注释  
- 结束会话锁会话组提供*conversation_handle*属于。 当会话结束时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将从服务队列中删除该会话的所有消息。  
+## <a name="remarks"></a>Remarks  
+ 结束会话将锁定所提供的 conversation_handle 所属的会话组。 当会话结束时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将从服务队列中删除该会话的所有消息。  
   
  会话结束后，应用程序不能再发送或接收有关该会话的消息。 会话中的参与双方必须调用 END CONVERSATION 才能完成该会话。 如果 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 未从会话的另一个参与者那里收到结束对话消息或错误消息，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会向会话中的该参与者发出会话已结束的通知。 在这种情况下，尽管会话的会话句柄已经无效，但会话的端点仍保持活动状态，直到承载远程服务的实例确认该消息。  
   
  如果 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 尚未处理会话的结束对话消息或错误消息，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会向远程会话方发出会话已结束通知。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 发送给远程服务的消息取决于指定的选项：  
   
--   如果会话结束且不错误和对话转接到的远程服务是否仍处于活动状态，[!INCLUDE[ssSB](../../includes/sssb-md.md)]发送类型的消息的`http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`向远程服务。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 按会话顺序将此消息添加到传输队列中。 在发送此消息之前，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将发送该会话当前在传输队列中的所有消息。  
+-   如果会话在无错误的情况下结束，并且指向远程服务的会话仍处于活动状态，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将向远程服务发送一条类型为 `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` 的消息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 按会话顺序将此消息添加到传输队列中。 在发送此消息之前，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将发送该会话当前在传输队列中的所有消息。  
   
--   如果以错误结束会话，并且向远程服务会话仍处于活动状态，[!INCLUDE[ssSB](../../includes/sssb-md.md)]发送类型的消息的`http://schemas.microsoft.com/SQL/ServiceBroker/Error`向远程服务。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将删除该会话当前在传输队列中的任何其他消息。  
+-   如果会话在出现错误的情况下结束，并且指向远程服务的会话仍处于活动状态，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将向远程服务发送一条类型为 `http://schemas.microsoft.com/SQL/ServiceBroker/Error` 的消息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将删除该会话当前在传输队列中的任何其他消息。  
   
 -   使用 WITH CLEANUP 子句，数据库管理员可以删除无法正常完成的会话。 此选项会删除会话中的所有消息和目录视图条目。 请注意，在这种情况下，远程会话方不会收到会话已结束的指示，而且也可能收不到应用程序已发送但尚未通过网络传输的消息。 除非会话不能正常完成，否则请避免使用此选项。  
   
@@ -130,15 +130,15 @@ COMMIT TRANSACTION ;
 ```  
   
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. 清理无法正常完成的会话  
- 下例将结束由 `@dialog_handle` 指定的对话。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将立即从服务队列和传输队列中删除所有消息而不通知远程服务。 由于结束与清理进行对话，则不通知远程服务，应仅使用此参数不能接收远程服务的情况下**EndDialog**或**错误**消息。  
+ 下例将结束由 `@dialog_handle` 指定的对话。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将立即从服务队列和传输队列中删除所有消息而不通知远程服务。 由于使用清除方法结束对话时，不会通知远程服务，因此仅当远程服务无法接收 **EndDialog** 或 **Error** 消息时，才应使用此示例。  
   
 ```  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [开始会话定时器 &#40;Transact SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40;Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [BEGIN CONVERSATION TIMER (Transact-SQL)](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

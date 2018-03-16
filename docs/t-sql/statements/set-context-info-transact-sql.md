@@ -1,5 +1,5 @@
 ---
-title: "SET CONTEXT_INFO (Transact SQL) |Microsoft 文档"
+title: SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="arguments"></a>参数  
  *binary_str*  
- 是**二进制**常量或隐式转换为一个常数**二进制**、 要与当前会话或连接关联。  
+ 一个 **binary** 常量或可以隐式转换为 **binary** 的常量，用于与当前会话或连接关联。  
   
- **@***binary_var*  
- 是**varbinary**或**二进制**保存某上下文的值要与当前会话或连接关联的变量。  
+ **@** *binary_var*  
+ **varbinary** 或 **binary** 变量，保存用于与当前会话或连接关联的上下文值。  
   
-## <a name="remarks"></a>注释  
- 检索当前会话的上下文信息的首选方式是使用 CONTEXT_INFO 函数。 会话上下文信息也存储在**context_info**以下系统视图中的列：  
+## <a name="remarks"></a>Remarks  
+ 检索当前会话的上下文信息的首选方式是使用 CONTEXT_INFO 函数。 会话上下文信息也存储在以下系统视图的 **context_info** 列中：  
   
 -   **sys.dm_exec_requests**  
   
@@ -65,7 +65,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
  不能在用户定义函数中指定 SET CONTEXT_INFO。 不能向 SET CONTEXT_INFO 提供一个 NULL 值，因为保存值的视图不允许使用 NULL 值。  
   
- SET CONTEXT_INFO 不接受常量名或变量名以外的表达式。 若要设置的上下文信息为函数调用的结果，必须首先包含中的函数调用的结果**二进制**或**varbinary**变量。  
+ SET CONTEXT_INFO 不接受常量名或变量名以外的表达式。 若要将上下文信息设置为函数调用的结果，必须先将函数调用的结果包括在 **binary** 或 **varbinary** 变量中。  
   
  与其他 SET 语句不同，在存储过程或触发器中发出 SET CONTEXT_INFO 时，为上下文信息设置的新值在存储过程或触发器完成后会继续存在。  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-setting-context-information-by-using-a-function"></a>B. 使用函数设置上下文信息  
- 下面的示例演示了如何使用函数的输出设置上下文值，其中的值从函数必须先将放在**二进制**变量。  
+ 以下示例演示使用函数输出设置上下文值，其中函数的结果值必须先放到一个 **binary** 变量中。  
   
 ```  
 DECLARE @BinVar varbinary(128);  
@@ -97,8 +97,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO &#40;Transact SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)  
+ [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [CONTEXT_INFO (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)  
   
   
