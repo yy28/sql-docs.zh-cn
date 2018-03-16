@@ -1,5 +1,5 @@
 ---
-title: "STIsSimple (geometry 数据类型) |Microsoft 文档"
+title: "STIsSimple（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stissimple-geometry-data-type"></a>STIsSimple（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-如果返回 1**几何图形**实例很简单，定义通过开放地理空间联盟 (OGC)。 如果将返回 0**几何图形**实例不是简单。
+如果 **geometry** 实例是开放地理空间信息联盟 (OGC) 所定义的简单实例，则返回 1。 如果 **geometry** 实例不是简单实例，则返回 0。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 为简单，**几何图形**实例必须满足所有以下要求：  
+## <a name="remarks"></a>Remarks  
+ 简单的 **geometry** 实例必须符合以下所有要求：  
   
 -   实例的每个图形不能与自身相交，但其终点除外。  
   

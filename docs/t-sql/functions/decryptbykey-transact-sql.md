@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYKEY (TRANSACT-SQL) |Microsoft 文档"
+title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,31 +50,31 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>参数  
- *已加密文本*  
- 已使用密钥进行加密的数据。 *已加密文本*是**varbinary**。  
+ *ciphertext*  
+ 已使用密钥进行加密的数据。 ciphertext 的数据类型为 varbinary。  
   
  **@ciphertext**  
- 是类型的变量**varbinary**包含具有键已加密的数据。  
+ 是 **varbinary** 类型的变量，包含已使用密钥进行加密的数据。  
   
- *add_authenticator*  
- 指示是否与明文一起加密验证器。 对数据进行加密时，该值必须与传递给 EncryptByKey 的值相同。 *add_authenticator*是**int**。  
+ add_authenticator  
+ 指示是否与明文一起加密验证器。 对数据进行加密时，该值必须与传递给 EncryptByKey 的值相同。 add_authenticator 的数据类型为 int。  
   
- *身份验证器*  
- 用于生成验证器的数据。 必须与提供给 EncryptByKey 的值相匹配。 *身份验证器*是**sysname**。  
+ authenticator  
+ 用于生成验证器的数据。 必须与提供给 EncryptByKey 的值相匹配。 authenticator 的数据类型为 sysname。  
   
  **@authenticator**  
  包含用于生成验证器的数据的变量。 必须与提供给 EncryptByKey 的值相匹配。  
   
 ## <a name="return-types"></a>返回类型  
- **varbinary** 8000 个字节的最大大小。  
+ varbinary（最大大小为 8000 个字节）。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  DecryptByKey 使用对称密钥。 该对称密钥必须已经在数据库中打开。 可以同时打开多个密钥。 不必只在解密密码之前才打开密钥。  
   
  对称加密和解密速度相对较快，适于处理大量数据。  
   
-## <a name="permissions"></a>Permissions  
- 需要已在当前会话中打开对称密钥。 有关详细信息，请参阅[OPEN SYMMETRIC KEY &#40;Transact SQL &#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+## <a name="permissions"></a>权限  
+ 需要已在当前会话中打开对称密钥。 有关详细信息，请参阅 [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ENCRYPTBYKEY &#40;Transact SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY (Transact-SQL)](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   

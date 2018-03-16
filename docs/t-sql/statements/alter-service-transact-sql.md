@@ -1,5 +1,5 @@
 ---
-title: "ALTER SERVICE (Transact SQL) |Microsoft 文档"
+title: ALTER SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,22 +58,22 @@ ALTER SERVICE service_name
  *service_name*  
  要更改的服务的名称。 不能指定服务器、数据库和架构名称。  
   
- ON 队列 [ *schema_name***。** ] *queue_name*  
+ ON QUEUE [ schema_name. ] queue_name  
  为此服务指定新队列。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将此服务的所有消息从当前队列移动到新队列。  
   
- 添加协定*contract_name*  
+ ADD CONTRACT *contract_name*  
  指定要添加到由此服务公开的约定集中的约定。  
   
- 删除协定*contract_name*  
+ DROP CONTRACT *contract_name*  
  指定要从由此服务公开的约定集中删除的约定。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将对使用该约定的、与此服务进行的所有现有会话发送错误消息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当 ALTER SERVICE 语句从某个服务中删除一条约定后，此服务便不可再作为使用该约定的会话的目标。 因此，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将不允许使用该约定与此服务建立新会话。 使用该约定的现有会话不受影响。  
   
  若要更改服务的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  
   
-## <a name="permissions"></a>Permissions  
- 更改服务的权限默认为服务的成员的所有者**db_ddladmin**或**db_owner**固定数据库角色和成员的**sysadmin**固定的服务器角色。  
+## <a name="permissions"></a>权限  
+ 默认情况下，服务所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有更改服务的权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -104,7 +104,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE SERVICE (Transact SQL)](../../t-sql/statements/create-service-transact-sql.md)   
- [删除服务 &#40;Transact SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+ [DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

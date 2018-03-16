@@ -1,5 +1,5 @@
 ---
-title: "拖放聚合 (Transact SQL) |Microsoft 文档"
+title: DROP AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  从当前数据库中删除用户定义的聚合函数。 用户定义聚合函数通过使用创建[CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md)。  
+  从当前数据库中删除用户定义的聚合函数。 用户定义聚合函数是使用 [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md) 创建的。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *IF EXISTS*  
+ IF EXISTS  
  **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
- 仅当它已存在，则有条件地将删除聚合。  
+ 仅当聚合已存在时对其进行有条件地删除。  
   
  *schema_name*  
  用户定义聚合函数所属的架构的名称。  
@@ -61,7 +61,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
  *aggregate_name*  
  要删除的用户定义聚合函数的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果存在使用了引用要删除的用户定义聚合函数的架构绑定而创建的任何视图、函数或存储过程，则不会执行 DROP AGGREGATE。  
   
 ## <a name="permissions"></a>权限  
@@ -75,7 +75,7 @@ DROP AGGREGATE dbo.Concatenate;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE (Transact-SQL)](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [创建用户定义的聚合](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)  
   
   

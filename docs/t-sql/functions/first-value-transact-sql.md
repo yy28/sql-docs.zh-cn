@@ -1,5 +1,5 @@
 ---
-title: "FIRST_VALUE (Transact SQL) |Microsoft 文档"
+title: FIRST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="arguments"></a>参数  
  *scalar_expression*  
- 是要返回的值。 *scalar_expression*可以是列、 子查询或单个值会导致其他任意表达式。 不允许使用其他分析函数。  
+ 是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他任意表达式。 不允许使用其他分析函数。  
   
- 通过**(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause*将划分为分区函数应用到的 FROM 子句生成的结果集。 如果未指定，则此函数将查询结果集的所有行视为单个组。 *order_by_clause*确定在其中执行该操作的逻辑顺序。 *order_by_clause*是必需的。 *rows_range_clause*进一步限制在分区内的行，通过指定开始和结束点。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 rows_range_clause 通过指定起点和终点，限制分区中的行数。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 相同类型与*scalar_expression*。  
+ 是与 scalar_expression 相同的类型。  
   
 ## <a name="general-remarks"></a>一般备注  
  FIRST_VALUE 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
@@ -128,6 +128,6 @@ Accounts Receivable Specialist      Walton                    62            Poe
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [通过子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

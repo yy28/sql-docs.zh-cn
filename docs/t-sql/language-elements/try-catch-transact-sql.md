@@ -62,13 +62,13 @@ END CATCH
 ```  
   
 ## <a name="arguments"></a>参数  
- *sql_statement*  
+ sql_statement  
  任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
- *statement_block*  
+ statement_block  
  批处理或包含于 BEGIN…END 块中的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  TRY…CATCH 构造可对严重程度高于 10 但不关闭数据库连接的所有执行错误进行缓存。  
   
  TRY 块后必须紧跟相关联的 CATCH 块。 在 END TRY 和 BEGIN CATCH 语句之间放置任何其他语句都将生成语法错误。  
@@ -96,17 +96,17 @@ END CATCH
 ## <a name="retrieving-error-information"></a>检索错误信息  
  在 CATCH 块的作用域内，可以使用以下系统函数来获取导致 CATCH 块执行的错误消息：  
   
--   [Error_number （)](../../t-sql/functions/error-number-transact-sql.md)返回的错误数。  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) 返回错误编号。  
   
--   [Error_severity （)](../../t-sql/functions/error-severity-transact-sql.md)返回严重性。  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) 返回严重性。  
   
--   [Error_state （)](../../t-sql/functions/error-state-transact-sql.md)返回的错误状态号。  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) 返回错误状态号。  
   
--   [Error_procedure （)](../../t-sql/functions/error-procedure-transact-sql.md)返回发生错误的位置的存储的过程或触发器的名称。  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) 返回出现错误的存储过程或触发器的名称。  
   
--   [Error_line （)](../../t-sql/functions/error-line-transact-sql.md)返回导致错误的例程中的行号。  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) 返回导致错误的例程中的行号。  
   
--   [Error_message （)](../../t-sql/functions/error-message-transact-sql.md)返回的错误消息的完整文本。 该文本包括为所有可替换参数提供的值，如长度、对象名或时间。  
+-   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) 返回错误消息的完整文本。 该文本包括为所有可替换参数提供的值，如长度、对象名或时间。  
   
  如果是在 CATCH 块的作用域之外调用这些函数，则这些函数返回空值。 可以从 CATCH 块作用域内的任何位置使用这些函数检索错误消息。 例如，下面的脚本显示了包含错误处理函数的存储过程。 在 `CATCH` 构造的 `TRY…CATCH` 块中，调用了该存储过程并返回有关错误的信息。  
   
@@ -138,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- 错误\_\*函数也适用于`CATCH`内阻止[本机编译存储的过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ ERROR\_\* 函数也适用于[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)内的 `CATCH` 块。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY…CATCH 构造影响的错误  
  TRY…CATCH 构造在下列情况下不捕获错误：  
@@ -206,7 +206,7 @@ END CATCH;
 ## <a name="uncommittable-transactions-and-xactstate"></a>不可提交的事务和 XACT_STATE  
  如果 TRY 块内生成的错误导致当前事务的状态失效，则将该事务归类为不可提交的事务。 如果通常在 TRY 块外中止事务的错误在 TRY 内发生时，就会导致事务进入不可提交状态。 不可提交的事务只能执行读操作或 ROLLBACK TRANSACTION。 该事务不能执行任何可能生成写操作或 COMMIT TRANSACTION 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 如果事务被分类为不可提交的事务，则 XACT_STATE 函数会返回值 -1。 当批处理结束时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将回滚所有不可提交的活动事务。 如果事务进入不可提交状态时未发送错误消息，则当批处理结束时，将向客户端应用程序发送一个错误消息。 该消息指示检测到并回滚了一个不可提交的事务。  
   
- 有关不可提交的事务和 XACT_STATE 函数的详细信息，请参阅[XACT_STATE &#40;Transact SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md).  
+ 有关不可提交的事务和 XACT_STATE 函数的详细信息，请参阅 [XACT_STATE (Transact-SQL)](../../t-sql/functions/xact-state-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -326,7 +326,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>D. 使用 TRY…CATCH  
  以下示例显示一个会生成被零除错误的 `SELECT` 语句。 该错误会使执行跳转到关联的 `CATCH` 块。  
@@ -348,20 +348,20 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [THROW &#40;Transact SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+ [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   
  [数据库引擎错误严重性](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)   
- [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   
- [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
- [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
+ [GOTO (Transact-SQL)](../../t-sql/language-elements/goto-transact-sql.md)   
+ [BEGIN...END (Transact-SQL)](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [XACT_STATE (Transact-SQL)](../../t-sql/functions/xact-state-transact-sql.md)   
+ [SET XACT_ABORT (Transact-SQL)](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
 

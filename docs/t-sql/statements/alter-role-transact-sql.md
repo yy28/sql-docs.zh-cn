@@ -1,5 +1,5 @@
 ---
-title: "ALTER 角色 (Transact SQL) |Microsoft 文档"
+title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.lasthandoff: 01/02/2018
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  添加或移除成员到或从数据库角色，或更改用户定义的数据库角色的名称。  
+  为数据库角色添加或删除成员，或更改用户定义的数据库角色的名称。  
   
 > [!NOTE]  
->  若要更改中的角色[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用[sp_addrolemember &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)和[sp_droprolemember &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
+>  若要更改 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中的角色，请使用 [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,52 +70,52 @@ ALTER ROLE role_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *role_name*  
- **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 2008年开始，）  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ role_name  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 版开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  指定要更改的数据库角色。  
   
- 添加成员*database_principal*l  
- **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 2012年开始，）  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ ADD MEMBER database_principall  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 版开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 指定将数据库主体添加到数据库角色的成员身份。  
+ 指定向数据库角色的成员身份添加数据库主体。  
   
--   *database_principal*是数据库用户定义的数据库角色。  
+-   database_principal 是数据库用户或用户定义的数据库角色。  
   
--   *database_principal*不能为固定的数据库角色或服务器主体。  
+-   database_principal 不能是固定的数据库角色或是服务器主体。  
   
-删除成员*database_principal*  
- **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 2012年开始，）  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+DROP MEMBER database_principal  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 版开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 指定要从数据库角色的成员身份中删除数据库主体。  
+ 指定从数据库角色的成员身份删除数据库主体。  
   
--   *database_principal*是数据库用户定义的数据库角色。  
+-   database_principal 是数据库用户或用户定义的数据库角色。  
   
--   *database_principal*不能为固定的数据库角色或服务器主体。  
+-   database_principal 不能是固定的数据库角色或是服务器主体。  
   
-NAME = *new_name*  
- **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 2008年开始，）  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+WITH NAME = new_name  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 版开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 指定要更改用户定义的数据库角色的名称。 新名称必须已存在数据库中。  
+ 指定更改用户定义的数据库角色的名称。 数据库中必须尚未包含新名称。  
   
  更改数据库角色的名称不会更改角色的 ID 号、所有者或权限。  
   
 ## <a name="permissions"></a>权限  
- 若要运行此命令需要一个或多个这些权限或成员身份：  
+ 需具有以下一项或多项权限或成员身份才能运行此命令：  
   
--   **ALTER**在角色上的权限  
--   **ALTER ANY ROLE**对数据库拥有权限  
--   中的成员身份**db_securityadmin**固定的数据库角色  
+-   对角色具有 ALTER 权限  
+-   对数据库具有 ALTER ANY ROLE 权限  
+-   具有 db_securityadmin 固定数据库角色的成员身份  
   
-此外，若要更改在固定的数据库角色的成员身份你需要：  
+此外，若要更改固定数据库角色中的成员身份还需要：  
   
--   中的成员身份**db_owner**固定的数据库角色  
+-   具有 db_owner 固定数据库角色的成员身份  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
- 无法更改固定的数据库角色的名称。  
+ 不能更改固定数据库角色的名称。  
   
 ## <a name="metadata"></a>元数据  
- 这些系统视图包含有关数据库角色和数据库主体的信息。  
+ 这些系统视图中包含有关数据库角色和数据库主体的信息。  
   
 -   [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)  
   
@@ -124,7 +124,7 @@ NAME = *new_name*
 ## <a name="examples"></a>示例  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. 更改数据库角色的名称  
- **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 2008年开始，）  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 版开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  以下示例将角色 `buyers` 的名称更改为 `purchasing`。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
@@ -133,9 +133,9 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. 添加或删除角色成员  
- **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从 2012年开始，）  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 版开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- 此示例创建名为的数据库角色`Sales`。 它将添加名 Barry 为成员资格的数据库用户，然后显示如何删除成员 Barry。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ 此示例创建一个名为 `Sales` 的数据库角色。 示例向成员身份添加一个名为 Barry 的数据库用户，然后演示如何删除成员 Barry。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
 ```sql  
 CREATE ROLE Sales;  
@@ -144,9 +144,9 @@ ALTER ROLE Sales DROP MEMBER Barry;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [删除角色 &#40;Transact SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  

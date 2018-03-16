@@ -1,5 +1,5 @@
 ---
-title: "使用透视和逆透视 |Microsoft 文档"
+title: "使用 PIVOT 和 UNPIVOT | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -37,15 +37,15 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="from---using-pivot-and-unpivot"></a>从-使用数据透视和逆透视
+# <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  你可以使用`PIVOT`和`UNPIVOT`关系运算符，若要更改到另一个表的表值的表达式。 `PIVOT`将表值的表达式旋转到多个列在输出中，表达式中打开某一列中的唯一值，并执行聚合中需要的任何想最终输出中的剩余列值。 `UNPIVOT`通过旋转列到列的值的表值表达式中执行相反操作为透视。  
+  可以使用 `PIVOT` 和 `UNPIVOT` 关系运算符将表值表达式更改为另一个表。 `PIVOT` 通过将表达式某一列中的唯一值转换为输出中的多个列来旋转表值表达式，并在必要时对最终输出中所需的任何其余列值执行聚合。 `UNPIVOT` 与 PIVOT 执行相反的操作，将表值表达式的列转换为列值。  
   
- 语法`PIVOT`提供更简单且更具可读性，否则可能在一系列复杂的中指定的语法比`SELECT...CASE`语句。 有关语法的完整说明`PIVOT`，请参阅[(Transact SQL) 从](../../t-sql/queries/from-transact-sql.md)。  
+ `PIVOT` 提供的语法比一系列复杂的 `SELECT...CASE` 语句中所指定的语法更简单和更具可读性。 有关 `PIVOT` 语法的完整说明，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
- 以下语法总结了如何使用`PIVOT`运算符。  
+ 以下语法总结了如何使用 `PIVOT` 运算符。  
   
 ```  
 SELECT <non-pivoted column>,  
@@ -67,8 +67,8 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>注释  
-中的列标识符`UNPIVOT`子句按照目录排序规则。 有关[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，排序规则是始终`SQL_Latin1_General_CP1_CI_AS`。 有关[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]部分包含的数据库，排序规则是始终`Latin1_General_100_CI_AS_KS_WS_SC`。 如果与其他列，然后 collate 子句结合使用的列 (`COLLATE DATABASE_DEFAULT`) 要求，以避免冲突。  
+## <a name="remarks"></a>Remarks  
+`UNPIVOT` 子句中的列标识符需遵循目录排序规则。 对于 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，排序规则始终是 `SQL_Latin1_General_CP1_CI_AS`。 对于 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 部分包含的数据库，排序规则始终是 `Latin1_General_100_CI_AS_KS_WS_SC`。 如果将该列与与其他列合并，则需要 collate 子句 (`COLLATE DATABASE_DEFAULT`) 以避免冲突。  
 
   
 ## <a name="basic-pivot-example"></a>简单 PIVOT 示例  
@@ -162,9 +162,9 @@ FROM PurchaseOrderHeader;
  这意味着 `EmployeeID` 列返回的唯一值自行变成了最终结果集中的字段。 因此，在透视子句中指定的每个 `EmployeeID` 号都有相应的一列：在本例中为雇员 `164`、`198`、`223`、`231` 和 `233`。 `PurchaseOrderID` 列作为值列，将根据此列对最终输出中返回的列（称为分组列）进行分组。 在本例中，通过 `COUNT` 函数聚合分组列。 请注意，将显示一条警告消息，指出为每个雇员计算 `PurchaseOrderID` 时未考虑显示在 `COUNT` 列中的任何空值。  
   
 > [!IMPORTANT]  
->  当与使用聚合函数`PIVOT`，计算一个聚合时，不会考虑在值列中所有 null 值的状态。  
+>  如果聚合函数与 `PIVOT` 一起使用，则计算聚合时将不考虑出现在值列中的任何空值。  
   
- `UNPIVOT`执行的反向操作几乎`PIVOT`，通过旋转到行的列。 假设以上示例中生成的表在数据库中存储为 `pvt`，并且您需要将列标识符 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋转为对应于特定供应商的行值。 这意味着必须标识另外两个列。 包含要旋转的列值（`Emp1`、`Emp2`...）的列将被称为 `Employee`，将保存当前位于待旋转列下的值的列被称为 `Orders`。 这些列对应于*pivot_column*和*value_column*分别在[!INCLUDE[tsql](../../includes/tsql-md.md)]定义。 以下为该查询。  
+ `UNPIVOT` 将与 `PIVOT` 执行几乎完全相反的操作，将列转换为行。 假设以上示例中生成的表在数据库中存储为 `pvt`，并且您需要将列标识符 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋转为对应于特定供应商的行值。 这意味着必须标识另外两个列。 包含要旋转的列值（`Emp1`、`Emp2`...）的列将被称为 `Employee`，将保存当前位于待旋转列下的值的列被称为 `Orders`。 这些列分别对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义中的 pivot_column 和 value_column。 以下为该查询。  
   
 ```  
 -- Create the table and insert values as portrayed in the previous example.  
@@ -207,9 +207,9 @@ VendorID    Employee    Orders
 ...
 ```
   
- 请注意，`UNPIVOT`不是完全相反的`PIVOT`。 `PIVOT`执行聚合，并因此，可能多个会将行合并为单个行在输出中。 `UNPIVOT`因为行有合并，则不会重现原始表值的表达式的结果。 此外，null 值的输入中`UNPIVOT`消失在输出中，而可能进行了原始的 null 值的输入`PIVOT`操作。  
+ 请注意，`UNPIVOT` 并不完全是 `PIVOT` 的逆操作。 `PIVOT` 会执行一次聚合，从而将多个可能的行合并为输出中的单个行。 而 `UNPIVOT` 不会重现原始表值表达式的结果，因为行已经被合并了。 另外，`UNPIVOT` 的输入中的 null 值不会显示在输出中，而在执行 `PIVOT` 操作之前，输入中可能有原始的 null 值。  
   
- `Sales.vSalesPersonSalesByFiscalYears`中查看[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]示例数据库使用`PIVOT`要为每个会计年度中返回每个销售人员的总销售额。 若要编写脚本中的视图[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中**对象资源管理器**，找到下的视图**视图**文件夹[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库。 右键单击该视图名称，然后选择**视图脚本为**。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中的 `Sales.vSalesPersonSalesByFiscalYears` 视图将使用 `PIVOT` 返回每个销售人员在每个会计年度的总销售额。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中编写视图脚本，请在“对象资源管理器”中的“视图”文件夹下找到 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库对应的视图。 右键单击该视图名称，再选择“编写视图脚本为”。  
   
 ## <a name="see-also"></a>另请参阅  
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

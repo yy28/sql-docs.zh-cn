@@ -1,5 +1,5 @@
 ---
-title: "FILEGROUP_ID (Transact SQL) |Microsoft 文档"
+title: FILEGROUP_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ FILEGROUP_ID ( 'filegroup_name' )
 ```  
   
 ## <a name="arguments"></a>参数  
-  *filegroup_name*   
- 类型的表达式**sysname**表示文件组名称为其返回文件组 id。  
+ **'** filegroup_name **'**  
+ sysname 类型的表达式，表示要为其返回文件组 ID 的文件组名。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
- *filegroup_name*对应于**名称**中的列**sys.filegroups**目录视图。  
+## <a name="remarks"></a>Remarks  
+ filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应。  
   
 ## <a name="examples"></a>示例  
  以下示例将返回 `PRIMARY` 数据库中名为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的文件组的 ID。  
@@ -79,8 +79,8 @@ Filegroup ID
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [FILEGROUP_NAME &#40;Transact SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.filegroups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [FILEGROUP_NAME (Transact-SQL)](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

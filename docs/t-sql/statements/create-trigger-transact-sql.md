@@ -1,5 +1,5 @@
 ---
-title: "创建触发器 (Transact SQL) |Microsoft 文档"
+title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -47,13 +47,13 @@ ms.lasthandoff: 11/21/2017
 
   创建 DML、DDL 或登录触发器。 触发器是数据库服务器中发生事件时自动执行的特种存储过程。 如果用户要通过数据操作语言 (DML) 事件编辑数据，则执行 DML 触发器。 DML 事件是针对表或视图的 INSERT、UPDATE 或 DELETE 语句。 在激发任何有效的事件时，将会激发这些触发器，而无论是否会影响任何表行。 有关详细信息，请参阅 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
   
- DDL 触发器用于响应各种数据定义语言 (DDL) 事件。 这些事件主要对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE、ALTER 和 DROP 语句，以及执行类似 DDL 操作的某些系统存储过程。 登录触发器在遇到 LOGON 事件时触发。LOGON 事件是在建立用户会话时引发的。 可以直接从创建触发器[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或从方法中创建的程序集[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时 (CLR) 并上载到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许为任何特定语句创建多个触发器。  
+ DDL 触发器用于响应各种数据定义语言 (DDL) 事件。 这些事件主要对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE、ALTER 和 DROP 语句，以及执行类似 DDL 操作的某些系统存储过程。 登录触发器在遇到 LOGON 事件时触发。LOGON 事件是在建立用户会话时引发的。 触发器可以由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接创建，也可以由程序集方法创建，这些方法在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建并上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许为任何特定语句创建多个触发器。  
   
 > [!IMPORTANT]  
->  触发器内部的恶意代码可以在升级后的权限下运行。 有关如何减轻此威胁的详细信息，请参阅[管理触发器安全性](../../relational-databases/triggers/manage-trigger-security.md)。  
+>  触发器内部的恶意代码可以在升级后的权限下运行。 有关如何缓解此威胁的详细信息，请参阅[管理触发器安全](../../relational-databases/triggers/manage-trigger-security.md)。  
   
 > [!NOTE]  
->  本主题将讨论 SQL Server 的.NET Framework CLR 集成。 CLR 集成不适用于 Azure SQL 数据库。  
+>  本主题讨论 .NET Framework CLR 与 SQL Server 的集成。 CLR 集成不适用于 Azure SQL 数据库。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -165,27 +165,27 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
 ```  
   
 ## <a name="arguments"></a>参数
-或 ALTER  
- **适用于**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1)。 
+OR ALTER  
+ 适用范围：Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）。 
   
- 有条件地更改该触发器，仅当它已存在。 
+ 只有在触发器已存在时才对其进行有条件地更改。 
   
  *schema_name*  
- DML 触发器所属架构的名称。 DML 触发器的作用域是为其创建该触发器的表或视图的架构。 *schema_name*不能指定 DDL 或登录触发器。  
+ DML 触发器所属架构的名称。 DML 触发器的作用域是为其创建该触发器的表或视图的架构。 不能为 DDL 或登录触发器指定 schema_name。  
   
  *trigger_name*  
- 是触发器的名称。 A *trigger_name*必须遵从的规则[标识符](../../relational-databases/databases/database-identifiers.md)，只不过*trigger_name*不能以 # 开头或 # #。  
+ 触发器的名称。 *trigger_name* 必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则，但 *trigger_name* 不能以 # 或 ## 开头。  
   
- *表* | *视图*  
+ table | view  
  对其执行 DML 触发器的表或视图，有时称为触发器表或触发器视图。 可以根据需要指定表或视图的完全限定名称。 视图只能被 INSTEAD OF 触发器引用。 不能对局部或全局临时表定义 DML 触发器。  
   
  DATABASE  
- 将 DDL 触发器的作用域应用于当前数据库。 如果指定，该触发器将触发*event_type*或*event_group*当前数据库中发生。  
+ 将 DDL 触发器的作用域应用于当前数据库。 如果指定了此参数，则只要当前数据库中出现 event_type 或 event_group，就会激发该触发器。  
   
  ALL SERVER  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定，该触发器将触发*event_type*或*event_group*当前服务器中的任何位置发生。  
+ 将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定了此参数，则只要当前服务器中的任何位置出现 event_type 或 event_group，就会激发该触发器。  
   
  WITH ENCRYPTION  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -195,19 +195,19 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
  EXECUTE AS  
  指定用于执行该触发器的安全上下文。 允许您控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例用于验证被触发器引用的任意数据库对象的权限的用户帐户。  
   
- 此选项是必需的内存优化表上的触发器。  
+ 内存优化表上的触发器需要使用此选项。  
   
- 有关详细信息，请参阅[EXECUTE AS 子句 &#40;Transact SQL &#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+ 有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
  NATIVE_COMPILATION  
- 指示已本机编译触发器。  
+ 指示触发器已本机编译。  
   
- 此选项是必需的内存优化表上的触发器。  
+ 内存优化表上的触发器需要使用此选项。  
   
  SCHEMABINDING  
- 可确保不能删除或更改了触发器引用的表。  
+ 确保不能删除或更改触发器引用的表。  
   
- 此选项，才能使用内存优化表上的触发器，并不支持传统的表上的触发器。  
+ 内存优化表上的触发器需要使用此选项，但此选项不支持传统表上的触发器。  
   
  FOR | AFTER  
  AFTER 指定 DML 触发器仅在触发 SQL 语句中指定的所有操作都已成功执行时才被触发。 所有的引用级联操作和约束检查也必须在激发此触发器之前成功完成。  
@@ -217,7 +217,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
  不能对视图定义 AFTER 触发器。  
   
  INSTEAD OF  
- 指定 DML 触发器执行*而不是*触发 SQL 语句，因此，重写触发语句的操作。 不能为 DDL 或登录触发器指定 INSTEAD OF。  
+ 指定执行 DML 触发器*而不是*触发 SQL 语句，因此，其优先级高于触发语句的操作。 不能为 DDL 或登录触发器指定 INSTEAD OF。  
   
  对于表或视图，每个 INSERT、UPDATE 或 DELETE 语句最多可定义一个 INSTEAD OF 触发器。 但是，可以为具有自己的 INSTEAD OF 触发器的多个视图定义视图。  
   
@@ -234,24 +234,24 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
  指定应该再添加一个现有类型的触发器。 WITH APPEND 不能与 INSTEAD OF 触发器一起使用。如果显式声明了 AFTER 触发器，则也不能使用该子句。 仅当为了向后兼容而指定了 FOR 时（但没有 INSTEAD OF 或 AFTER）时，才能使用 WITH APPEND。 如果指定了 EXTERNAL NAME（即触发器为 CLR 触发器），则不能指定 WITH APPEND。  
   
  *event_type*  
- 执行之后将导致激发 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件的名称。 中列出的 DDL 触发器的有效事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
+ 执行之后将导致激发 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件的名称。 [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出了 DDL 触发器的有效事件。  
   
  *event_group*  
- 预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 在执行任何后激发 DDL 触发器[!INCLUDE[tsql](../../includes/tsql-md.md)]所属的语言事件*event_group*。 DDL 触发器的有效事件组中列出[DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)。  
+ 预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 执行任何属于 event_group 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件之后，都将激发 DDL 触发器。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。  
   
- CREATE TRIGGER 已经完成运行后, *event_group*还可充当宏通过将事件类型添加它 sys.trigger_events 目录视图的介绍。  
+ CREATE TRIGGER 运行完成后，*event_group* 还将充当宏，将它涉及的事件类型添加到 sys.trigger_events 目录视图中。  
   
  NOT FOR REPLICATION  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指示当复制代理修改涉及到触发器的表时，不应执行触发器。  
   
- *sql_statement*  
+ sql_statement  
  触发条件和操作。 触发器条件指定其他标准，用于确定尝试的 DML、DDL 或 logon 事件是否导致执行触发器操作。  
   
  尝试上述操作时，将执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中指定的触发器操作。  
   
- 触发器可以包含任意数量和种类的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，但也有例外。 有关详细信息，请参阅“备注”。 触发器的用途是根据数据修改或定义语句来检查或更改数据；它不应向用户返回数据。 [!INCLUDE[tsql](../../includes/tsql-md.md)]在触发器中的语句经常包含[控制流语言](~/t-sql/language-elements/control-of-flow.md)。  
+ 触发器可以包含任意数量和种类的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，但也有例外。 有关详细信息，请参阅“备注”。 触发器的用途是根据数据修改或定义语句来检查或更改数据；它不应向用户返回数据。 触发器中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句常常包含[控制流语言](~/t-sql/language-elements/control-of-flow.md)。  
   
  DML 触发器使用 deleted 和 inserted 逻辑（概念）表。 它们在结构上类似于定义了触发器的表，即对其尝试执行了用户操作的表。 deleted 和 inserted 表保存了可能会被用户更改的行的旧值或新值。 例如，若要检索 `deleted` 表中的所有值，则使用：  
   
@@ -259,25 +259,25 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
 SELECT * FROM deleted;  
 ```  
   
- 有关详细信息，请参阅[使用插入和删除的表](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)。  
+ 有关详细信息，请参阅[使用插入的和删除的表](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)。  
   
- DDL 和登录触发器通过捕获有关触发的事件的信息[EVENTDATA &#40;Transact SQL &#41;](../../t-sql/functions/eventdata-transact-sql.md)函数。 有关详细信息，请参阅[使用 EVENTDATA 函数](../../relational-databases/triggers/use-the-eventdata-function.md)。  
+ DDL 和登录触发器使用 [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md) 函数来捕获有关触发事件的信息。 有关详细信息，请参阅[使用 EVENTDATA 函数](../../relational-databases/triggers/use-the-eventdata-function.md)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]允许进行更新的**文本**， **ntext**，或**映像**列 INSTEAD OF 触发的表或视图。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许通过表或视图的 INSTEAD OF 触发器来更新 **text**、**ntext** 或 **image** 列。  
   
 > [!IMPORTANT]  
->  **ntext**，**文本**，和**映像**的未来版本中将删除数据类型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 同时 AFTER 和 INSTEAD OF 触发器支持**varchar （max)**， **nvarchar (max)**，和**varbinary （max)**插入的和删除表中的数据。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 **ntext**、**text** 和 **image** 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(MAX)**、**nvarchar(MAX)** 和 **varbinary(MAX)** 数据。  
   
- 为内存优化表上的触发器的唯一*sql_statement*允许在顶级块是原子块。 T-SQL 原子块内部允许受 T-SQL 本机过程内允许的限制。  
+ 对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  
   
- \<method_specifier >**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ \< method_specifier > **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 对于 CLR 触发器，指定程序集与触发器绑定的方法。 该方法不能带有任何参数，并且必须返回空值。 *class_name*必须为有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符并且必须具有程序集可见性的程序集中的类作为存在。 如果该类有一个使用“.”来分隔命名空间部分的命名空间限定名称，则类名必须用 [] 或“ ”分隔符分隔。 该类不能为嵌套类。  
+ 对于 CLR 触发器，指定程序集与触发器绑定的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中。 如果该类有一个使用“.”来分隔命名空间部分的命名空间限定名称，则类名必须用 [] 或“ ”分隔符分隔。 该类不能为嵌套类。  
   
 > [!NOTE]  
->  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法运行 CLR 代码。 但你可以创建、 修改和删除引用托管的代码模块的数据库对象中的实例将不执行这些引用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除非[clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)通过使用[sp_配置](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+>  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法运行 CLR 代码。 你可以创建、修改和删除引用托管代码模块的数据库对象，但是，除非使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 启用了 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)，否则不会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中执行这些引用。  
   
-## <a name="remarks-dml-triggers"></a>备注 DML 触发器  
+## <a name="remarks-dml-triggers"></a>注释 DML 触发器  
  DML 触发器经常用于强制执行业务规则和数据完整性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 ALTER TABLE 和 CREATE TABLE 语句来提供声明性引用完整性 (DRI)。 但是，DRI 不提供跨数据库引用完整性。 引用完整性是指有关表的主键和外键之间的关系的规则。 若要强制实现引用完整性，请在 ALTER TABLE 和 CREATE TABLE 中使用 PRIMARY KEY 和 FOREIGN KEY 约束。 如果触发器表存在约束，则在 INSTEAD OF 触发器执行之后和 AFTER 触发器执行之前检查这些约束。 如果违反了约束，则将回滚 INSTEAD OF 触发器操作，并且不激活 AFTER 触发器。  
   
  可以使用 sp_settriggerorder 来指定要对表执行的第一个和最后一个 AFTER 触发器。 对于一个表，只能为每个 INSERT、UPDATE 和 DELETE 操作指定一个第一个和最后一个 AFTER 触发器。 如果在同一个表上还有其他 AFTER 触发器，这些触发器将随机执行。  
@@ -293,7 +293,7 @@ SELECT * FROM deleted;
  例如，如果触发器定义为视图的 INSTEAD OF UPDATE 触发器，并且触发器执行引用同一视图的 UPDATE 语句，则由 INSTEAD OF 触发器执行的 UPDATE 语句不会再次调用该触发器。 对视图处理由该触发器执行的 UPDATE 语句时，就像该视图没有 INSTEAD OF 触发器一样。 由 UPDATE 更改的列必须解析到一个基表。 对基表的每次修改都将应用约束并触发为该表定义的 AFTER 触发器。  
   
 ### <a name="testing-for-update-or-insert-actions-to-specific-columns"></a>测试对指定列的 UPDATE 或 INSERT 操作  
- 您可以设计一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器，根据对特定列的 UPDATE 或 INSERT 修改来执行某些操作。 使用[update （)](../../t-sql/functions/update-trigger-functions-transact-sql.md)或[COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md)为此目的的触发器的正文中。 UPDATE() 可以测试对某个列的 UPDATE 或 INSERT 尝试。 COLUMNS_UPDATED 可以测试对多个列执行的 UPDATE 或 INSERT 操作，并返回一个位模式，指示插入或更新的列。  
+ 您可以设计一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器，根据对特定列的 UPDATE 或 INSERT 修改来执行某些操作。 可在触发器的主体中使用 [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) 或 [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) 来达到此目的。 UPDATE() 可以测试对某个列的 UPDATE 或 INSERT 尝试。 COLUMNS_UPDATED 可以测试对多个列执行的 UPDATE 或 INSERT 操作，并返回一个位模式，指示插入或更新的列。  
   
 ### <a name="trigger-limitations"></a>触发器限制  
  CREATE TRIGGER 必须是批处理中的第一条语句，并且只能应用于一个表。  
@@ -332,20 +332,20 @@ SELECT * FROM deleted;
 > [!NOTE]  
 >  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持针对系统表的用户定义的触发器，因此我们建议不要为系统表创建用户定义触发器。  
   
-## <a name="remarks-ddl-triggers"></a>备注 DDL 触发器  
+## <a name="remarks-ddl-triggers"></a>注释 DDL 触发器  
  DDL 触发器像标准触发器一样，在响应事件时执行存储过程。 但与标准触发器不同的是，它们并不在响应对表或视图的 UPDATE、INSERT 或 DELETE 语句时执行存储过程。 它们主要在响应数据定义语言 (DDL) 语句执行存储过程。 这些语句包括 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 和 UPDATE STATISTICS 等语句。 执行 DDL 式操作的系统存储过程也可以激发 DDL 触发器。  
   
 > [!IMPORTANT]  
 >  测试 DDL 触发器，以确定它们对执行系统存储过程的响应。 例如，CREATE TYPE 语句以及 sp_addtype 和 sp_rename 存储过程都将激发针对 CREATE_TYPE 事件创建的 DDL 触发器。  
   
- 有关 DDL 触发器的详细信息，请参阅[DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)。  
+ 有关 DDL 触发器的详细信息，请参阅 [DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)。  
   
  对于影响局部或全局临时表和存储过程的事件，不会触发 DDL 触发器。  
   
- 与 DML 触发器不同，DDL 触发器的作用域不是架构。 因此，不能将 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 之类的函数用于查询有关 DDL 触发器的元数据。 请改用目录视图。 有关详细信息，请参阅[将信息获取有关 DDL 触发器](../../relational-databases/triggers/get-information-about-ddl-triggers.md)。  
+ 与 DML 触发器不同，DDL 触发器的作用域不是架构。 因此，不能将 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 之类的函数用于查询有关 DDL 触发器的元数据。 请改用目录视图。 有关详细信息，请参阅[获取有关 DDL 触发器的信息](../../relational-databases/triggers/get-information-about-ddl-triggers.md)。  
   
 > [!NOTE]  
->  服务器范围的 DDL 触发器显示在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对象资源管理器中**触发器**文件夹。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围的 DDL 触发器显示在**数据库触发器**文件夹。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
+>  服务器范围内的 DDL 触发器显示在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器的“触发器”文件夹中。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围内的 DDL 触发器显示在“数据库触发器”文件夹中。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
   
 ## <a name="logon-triggers"></a>登录触发器  
  登录触发器将为响应 LOGON 事件而执行存储过程。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例建立用户会话时将引发此事件。 登录触发器将在登录的身份验证阶段完成之后且用户会话实际建立之前激发。 因此，来自触发器内部且通常将到达用户的所有消息（例如错误消息和来自 PRINT 语句的消息）会传送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。 有关详细信息，请参阅[登录触发器](../../relational-databases/triggers/logon-triggers.md)。  
@@ -360,7 +360,7 @@ SELECT * FROM deleted;
 ## <a name="general-trigger-considerations"></a>常规触发器注意事项  
   
 ### <a name="returning-results"></a>返回结果  
- SQL Server 的未来版本中将删除从触发器返回结果的功能。 返回结果集的触发器可能会导致应用程序出现意外的行为，而这些行为并不符合它们的设计意图。 避免在新的开发工作中从触发器返回结果集，并计划修改当前执行此操作的应用程序。 若要防止触发器返回结果集，设置[disallow results from triggers 选项](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md)为 1。  
+ SQL Server 的未来版本中将删除从触发器返回结果的功能。 返回结果集的触发器可能会导致应用程序出现意外的行为，而这些行为并不符合它们的设计意图。 避免在新的开发工作中从触发器返回结果集，并计划修改当前执行此操作的应用程序。 若要防止触发器返回结果集，请将 [disallow results from triggers 选项](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md)设置为 1。  
   
  登录触发器始终不允许返回结果集，并且这种行为不可配置。 如果登录触发器确实生成了结果集，则此触发器将无法执行，并且将拒绝触发此触发器的登录尝试。  
   
@@ -394,12 +394,12 @@ SELECT * FROM deleted;
   
  若要禁用嵌套触发器，请用 sp_configure 将 nested triggers 选项设置为 0（关闭）。 默认配置允许嵌套触发器。 如果关闭嵌套触发器，则不管使用 ALTER DATABASE 设置的 RECURSIVE_TRIGGERS 设置如何，都将同时禁用递归触发器。  
   
- 第一个后触发器嵌套触发器激发即使 INSTEAD**嵌套触发器**服务器配置选项设置为 0。 但是，在此设置下，不会激发以后的 AFTER 触发器。 我们建议你查看适用于嵌套触发器，以确定应用程序是否符合您的业务规则，此行为与应用程序时**嵌套触发器**服务器配置选项设置为 0，然后进行适当的修改。  
+ 即使 **nested triggers** 服务器配置选项设置为 0，也会激发嵌套在 INSTEAD OF 触发器内的第一个 AFTER 触发器。 但是，在此设置下，不会激发以后的 AFTER 触发器。 建议你检查应用程序中的嵌套触发器，确定当 **nested triggers** 服务器配置选项设置为 0 时，应用程序是否遵循有关此行为的业务规则，然后进行适当的修改。  
   
-### <a name="deferred-name-resolution"></a>延迟的名称解析  
+### <a name="deferred-name-resolution"></a>延迟名称解析  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程、触发器和批处理引用编译时不存在的表。 这种功能称为延迟名称解析。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要创建 DML 触发器，则需要对要创建触发器的表或视图具有 ALTER 权限。  
   
  若要创建具有服务器范围的 DDL 触发器 (ON ALL SERVER) 或登录触发器，则需要对服务器拥有 CONTROL SERVER 权限。 若要创建具有数据库范围的 DDL 触发器 (ON DATABASE)，则需要在当前数据库中有 ALTER ANY DATABASE DDL TRIGGER 权限。  
@@ -436,7 +436,7 @@ GO
 ### <a name="c-using-a-dml-after-trigger-to-enforce-a-business-rule-between-the-purchaseorderheader-and-vendor-tables"></a>C. 使用 DML AFTER 触发器在 PurchaseOrderHeader 和 Vendor 表之间强制实现业务规则  
  由于 CHECK 约束只能引用定义了列级或表级约束的列，表间的任何约束（在本例中是业务规则）都必须定义为触发器。  
   
- 以下示例在 AdventureWorks2012 数据库中创建 DML 触发器。 此触发器将进行检查以确保供应商具有良好的信用等级 (不是 5) 时尝试插入到一个新采购订单`PurchaseOrderHeader`表。 若要获取供应商的信用等级，必须引用 `Vendor` 表。 如果信用等级太低，则显示信息，并且不执行该插入操作。  
+ 以下示例在 AdventureWorks2012 数据库中创建 DML 触发器。 如果有人试图将一个新采购订单插入到 `PurchaseOrderHeader` 表中，此触发器会进行检查以确保供应商具有良好的信用等级（不为 5）。 若要获取供应商的信用等级，必须引用 `Vendor` 表。 如果信用等级太低，则显示信息，并且不执行该插入操作。  
   
 ```  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
@@ -499,7 +499,7 @@ GO
 ```  
   
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. 使用具有服务器范围的 DDL 触发器  
- 在以下示例中，如果当前服务器实例上出现任何 CREATE DATABASE 事件，则使用 DDL 触发器输出一条消息，并使用 `EVENTDATA` 函数检索对应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 在 DDL 触发器中使用 EVENTDATA 的更多示例，请参阅[使用 EVENTDATA 函数](../../relational-databases/triggers/use-the-eventdata-function.md)。  
+ 在以下示例中，如果当前服务器实例上出现任何 CREATE DATABASE 事件，则使用 DDL 触发器输出一条消息，并使用 `EVENTDATA` 函数检索对应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 有关在 DDL 触发器中使用 EVENTDATA 的更多示例，请参阅[使用 EVENTDATA 函数](../../relational-databases/triggers/use-the-eventdata-function.md)。  
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -517,7 +517,7 @@ GO
 ```  
   
 ### <a name="f-using-a-logon-trigger"></a>F. 使用登录触发器  
- 下面的登录触发器示例拒绝尝试登录到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为的成员*login_test*如果已在该登录名下运行的三个用户会话的登录名。  
+ 下面的登录触发器示例拒绝了作为 *login_test* 登录名的成员登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的尝试（如果在此登录名下已运行三个用户会话）。  
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -557,12 +557,12 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [COLUMNS_UPDATED &#40;Transact SQL &#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
+ [COLUMNS_UPDATED (Transact-SQL)](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER (Transact-SQL)](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER (Transact-SQL)](../../t-sql/statements/disable-trigger-transact-sql.md)   
- [TRIGGER_NESTLEVEL &#40;Transact SQL &#41;](../../t-sql/functions/trigger-nestlevel-transact-sql.md)   
+ [TRIGGER_NESTLEVEL (Transact-SQL)](../../t-sql/functions/trigger-nestlevel-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
@@ -571,8 +571,8 @@ GO
  [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_settriggerorder &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
- [更新 &#40; &#41;&#40;Transact SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)   
+ [sp_settriggerorder (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
+ [UPDATE() (Transact-SQL)](../../t-sql/functions/update-trigger-functions-transact-sql.md)   
  [获取有关 DML 触发器的信息](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [获取有关 DDL 触发器的信息](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
  [sys.triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   

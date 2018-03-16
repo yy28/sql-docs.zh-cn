@@ -1,5 +1,5 @@
 ---
-title: "GRANT Full-text 权限 (Transact SQL) |Microsoft 文档"
+title: "GRANT 全文权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -57,16 +57,16 @@ GRANT permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- *permission*  
+ permission  
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- 对全文目录 **:: * * * 完整 text_catalog_name*  
- 指定对其授予权限的全文目录。 作用域限定符**::**是必需的。  
+ ON FULLTEXT CATALOG ::full-text_catalog_name  
+ 指定对其授予权限的全文目录。 需要使用作用域限定符 ::。  
   
- 在全文非索引字表 **:: * * * 完整 text_stoplist_name*  
- 指定要对其授予权限的全文非索引字表。 作用域限定符**::**是必需的。  
+ ON FULLTEXT STOPLIST ::full-text_stoplist_name  
+ 指定要对其授予权限的全文非索引字表。 需要使用作用域限定符 ::。  
   
- *database_principal*  
+ database_principal  
  指定要向其授予权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -81,7 +81,7 @@ GRANT permission [ ,...n ] ON
 GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
-AS *granting_principal*  
+AS granting_principal  
  指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -93,7 +93,7 @@ AS *granting_principal*
 -   映射到非对称密钥的数据库用户  
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG 权限  
  全文目录是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下表列出了可授予的对全文目录最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
@@ -122,7 +122,7 @@ AS *granting_principal*
   
  如果使用 AS 选项，还必须满足以下附加要求：  
   
-|AS *granting_principal*|所需的其他权限|  
+|AS granting_principal|所需的其他权限|  
 |------------------------------|------------------------------------|  
 |数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
 |映射到 Windows 登录名的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
@@ -158,19 +158,19 @@ GRANT VIEW DEFINITION
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建应用程序角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [创建 FULLTEXT CATALOG &#40;Transact SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [创建全文非索引字表 &#40;Transact SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sys.fulltext_stoplists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
   
   

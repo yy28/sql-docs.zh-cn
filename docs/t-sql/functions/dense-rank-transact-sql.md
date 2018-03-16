@@ -1,5 +1,5 @@
 ---
-title: "DENSE_RANK (Transact SQL) |Microsoft 文档"
+title: DENSE_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ```  
   
 ## <a name="arguments"></a>参数  
- \<partition_by_clause >  
- 将通过生成的结果集划分[FROM](../../t-sql/queries/from-transact-sql.md) DENSE_RANK 函数应用到分区到子句。 PARTITION BY 语法，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ 将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为数个应用 DENSE_RANK 函数的分区。 有关 PARTITION BY 语法的信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
- \<order_by_clause >  
+ \<order_by_clause>  
  确定将 DENSE_RANK 函数应用于分区中各行的顺序。  
   
 ## <a name="return-types"></a>返回类型  
  **bigint**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果有两个或多个行受同一个分区中排名的约束，则每个约束行将接收相同的排名。 例如，如果两位顶尖销售员具有相同的 SalesYTD 值，则他们将并列第一。 接下来 SalesYTD 最高的销售人员排名第二。 该排名等于该行之前的所有行数加一。 因此，DENSE_RANK 函数返回的数字没有间断，并且始终具有连续的排名。  
   
  整个查询所用的排序顺序确定了各行在结果中的显示顺序。 这说明排名第一的行可以不是分区中的第一行。  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
 274              48.101                8  
 ```  
   
-## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. 在相同的查询中使用的四个排名函数  
+## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. 用在同一查询中的四个排名函数  
  以下示例显示了用在同一查询中的四个排名函数。 有关函数特定的示例，请参阅每个排名函数。  
   
 ```  
@@ -156,11 +156,11 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
-|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
-|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
-|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
-|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
+|Michael|Blythe|@shouldalert|@shouldalert|@shouldalert|@shouldalert|4557045.0459|98027|  
+|Linda|Mitchell|2|@shouldalert|@shouldalert|@shouldalert|5200475.2313|98027|  
+|Jillian|Carson|3|@shouldalert|@shouldalert|@shouldalert|3857163.6332|98027|  
+|Garrett|Vargas|4|@shouldalert|@shouldalert|@shouldalert|1764938.9859|98027|  
+|Tsvi|Reiter|5|@shouldalert|@shouldalert|2|2811012.7151|98027|  
 |Shu|Ito|6|6|2|2|3018725.4858|98055|  
 |José|Saraiva|7|6|2|2|3189356.2465|98055|  
 |David|Campbell|8|6|2|3|3587378.4257|98055|  
@@ -171,10 +171,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D： 排名在一个分区内的行  
- 下面的示例在其总销售额根据每个销售区域排名销售代表。 行集按 `SalesTerritoryGroup` 分区，按 `SalesAmountQuota` 排序。  
+### <a name="d-ranking-rows-within-a-partition"></a>D. 对分区中的行进行排名  
+ 下面的示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 行集按 `SalesTerritoryGroup` 分区，按 `SalesAmountQuota` 排序。  
   
 ```  
 -- Uses AdventureWorks  
@@ -210,10 +210,10 @@ Tsoflias           1687000.0000  Pacific              1
 ```  
 
 ## <a name="see-also"></a>另请参阅  
- [级别 &#40;Transact SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [方式 &#40;Transact SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40;Transact SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [排名函数 &#40;Transact SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [RANK (Transact-SQL)](../../t-sql/functions/rank-transact-sql.md)   
+ [ROW_NUMBER (Transact-SQL)](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE (Transact-SQL)](../../t-sql/functions/ntile-transact-sql.md)   
+ [排名函数 (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [函数](../../t-sql/functions/functions.md)  
   
   

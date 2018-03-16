@@ -1,5 +1,5 @@
 ---
-title: "搜索条件 (Transact SQL) |Microsoft 文档"
+title: "搜索条件 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/15/2018
 ms.prod: sql-non-specified
@@ -104,24 +104,24 @@ ms.lasthandoff: 01/25/2018
  指定要在 SELECT 语句、查询表达式或子查询的结果集中返回的行的条件。 对于 UPDATE 语句，指定要更新的行。 对于 DELETE 语句，指定要删除的行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句搜索条件中可以包含任意多个谓词。  
   
  NOT  
- 对谓词指定的布尔表达式求反。 有关详细信息，请参阅[不 &#40;Transact SQL &#41;](../../t-sql/language-elements/not-transact-sql.md).  
+ 对谓词指定的布尔表达式求反。 有关详细信息，请参阅 [NOT (Transact-SQL)](../../t-sql/language-elements/not-transact-sql.md)。  
   
  和  
- 组合两个条件，并在两个条件都为 TRUE 时取值为 TRUE。 有关详细信息，请参阅[AND &#40;Transact SQL &#41;](../../t-sql/language-elements/and-transact-sql.md).  
+ 组合两个条件，并在两个条件都为 TRUE 时取值为 TRUE。 有关详细信息，请参阅 [AND (Transact-SQL)](../../t-sql/language-elements/and-transact-sql.md)。  
   
  或  
- 组合两个条件，并在任何一个条件为 TRUE 时取值为 TRUE。 有关详细信息，请参阅[或者 &#40;Transact SQL &#41;](../../t-sql/language-elements/or-transact-sql.md).  
+ 组合两个条件，并在任何一个条件为 TRUE 时取值为 TRUE。 有关详细信息，请参阅 [OR (Transact-SQL)](../../t-sql/language-elements/or-transact-sql.md)。  
   
- \<谓词 >  
+ \< predicate >  
  返回 TRUE、FALSE 或 UNKNOWN 的表达式。  
   
  *expression*  
  列名、常量、函数、变量、标量子查询，或者是通过运算符或子查询连接的列名、常量和函数的任意组合。 表达式还可以包含 CASE 表达式。  
   
 > [!NOTE]  
->  非 Unicode 字符串常量和变量使用对应于数据库的默认排序规则代码页。 代码页转换可以发生，使用仅非 Unicode 字符数据时，并引用非 Unicode 字符数据类型**char**， **varchar**，和**文本**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将非 Unicode 字符串常量和变量转换为对应于被引用列的排序规则或使用指定的排序规则，则该代码页不同于对应于数据库的默认排序规则代码页时的代码页。 在新的代码页中找不到任何字符将转换为类似的字符，如果[最佳的映射](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)可以找到，否则将转换为默认替换字符的"？"。  
+>  非 Unicode 字符串常量和变量使用与数据库的默认排序规则相对应的代码页。 仅使用非 Unicode 字符数据并引用 char、varchar 和 text 类型的非 Unicode 字符数据时，可能发生代码页转换。 如果该代码页与数据库的默认排序规则对应的代码页不同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将把非 Unicode 字符串常量和变量转换为与引用列的排序规则或使用 COLLATE 指定的排序规则相对应的代码页。 如果可以找到[最佳匹配映射](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)，则无法在新代码页中找到的任何字符都将转换为相似字符，否则将转换为默认替换字符“?”。  
 >  
-> 字符常量时使用多个代码页，可以使用大写字母作为前缀 ' N '，和 Unicode 变量可用，以避免代码页转换。  
+> 使用多个代码页时，字符常量可能以大写字母“N”为前缀；为避免发生代码页转换，还可能使用 Unicode 变量。  
   
  =  
  用于测试两个表达式是否相等的运算符。  
@@ -150,49 +150,49 @@ ms.lasthandoff: 01/25/2018
  !<  
  用于测试一个表达式是否不小于另一个表达式的运算符。  
   
- *string_expression*  
+ string_expression  
  字符串和通配符。  
   
  [ NOT ] LIKE  
- 指示后续字符串使用时要进行模式匹配。 有关详细信息，请参阅[如 &#40;Transact SQL &#41;](../../t-sql/language-elements/like-transact-sql.md).  
+ 指示后续字符串使用时要进行模式匹配。 有关详细信息，请参阅 [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)。  
   
- 转义*****escape_ 字符*****  
- 允许在字符串中搜索通配符，而不是将其作为通配符使用。 *escape_character*是放置要指明此特殊用途的通配符字符的前面的字符。  
+ ESCAPE 'escape_ character'  
+ 允许在字符串中搜索通配符，而不是将其作为通配符使用。 escape_character 是放在通配符前表示此特殊用法的字符。  
   
  [ NOT ] BETWEEN  
- 指定值的包含范围。 使用 AND 分隔开始值和结束值。 有关详细信息，请参阅[BETWEEN &#40;Transact SQL &#41;](../../t-sql/language-elements/between-transact-sql.md).  
+ 指定值的包含范围。 使用 AND 分隔开始值和结束值。 有关详细信息，请参阅 [BETWEEN (Transact-SQL)](../../t-sql/language-elements/between-transact-sql.md)。  
   
- IS [NOT] NULL  
+ IS [ NOT ] NULL  
  根据使用的关键字，指定是否搜索空值或非空值。 如果有任何一个操作数为 NULL，则包含位运算符或算术运算符的表达式的计算结果为 NULL。  
   
  CONTAINS  
- 搜索包含基于字符的精确或不太精确的数据列 (*模糊*) 到单个词和短语，另一个，和加权匹配项的一定范围之内的词的邻近匹配。 此选项只能与 SELECT 语句一起使用。 有关详细信息，请参阅[CONTAINS &#40;Transact SQL &#41;](../../t-sql/queries/contains-transact-sql.md).  
+ 在包含基于字符的数据的列中，搜索单个词和短语的精确或不精确（“模糊”）匹配项、在一定范围内相同的近似词以及加权匹配项。 此选项只能与 SELECT 语句一起使用。 有关详细信息，请参阅 [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)。  
   
  FREETEXT  
- 在包含基于字符的数据的列中，搜索与谓词中的词的含义相符而非精确匹配的值，从而提供一种形式简单的自然语言查询。 此选项只能与 SELECT 语句一起使用。 有关详细信息，请参阅[FREETEXT &#40;Transact SQL &#41;](../../t-sql/queries/freetext-transact-sql.md).  
+ 在包含基于字符的数据的列中，搜索与谓词中的词的含义相符而非精确匹配的值，从而提供一种形式简单的自然语言查询。 此选项只能与 SELECT 语句一起使用。 有关详细信息，请参阅 [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)。  
   
  [ NOT ] IN  
  根据是在列表中包含还是排除某表达式，指定对该表达式的搜索。 搜索表达式可以是常量或列名，而列表可以是一组常量，更常用的是子查询。 将一组值用圆括号括起来。 有关详细信息，请参阅 [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)。  
   
- *subquery*  
- 就被认为是受限制的 SELECT 语句，它类似于\<query_expresssion > SELECT 语句中。 不允许使用 ORDER BY 子句和 INTO 关键字。 有关详细信息，请参阅[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md).  
+ subquery  
+ 可以视为受限的 SELECT 语句，与 SELECT 语句中的 \<query_expresssion> 相似。 不允许使用 ORDER BY 子句和 INTO 关键字。 有关详细信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
   
  ALL  
- 与比较运算符和子查询一起使用。 返回时为 TRUE，\<谓词 > 当子查询检索到的所有值都满足的比较操作，或 FALSE 时并不是所有的值都满足比较或当子查询在外部语句中返回了任何行。 有关详细信息，请参阅[所有 &#40;Transact SQL &#41;](../../t-sql/language-elements/all-transact-sql.md).  
+ 与比较运算符和子查询一起使用。 如果为子查询检索的所有值都满足比较运算，则为 \<predicate> 返回 TRUE；如果并非所有值都满足比较运算或子查询未向外部语句返回行，则返回 FALSE。 有关详细信息，请参阅 [ALL (Transact SQL)](../../t-sql/language-elements/all-transact-sql.md)。  
   
  { SOME | ANY }  
- 与比较运算符和子查询一起使用。 返回时为 TRUE，\<谓词 > 任何中检索值时为子查询满足的比较操作，或 FALSE 时，子查询中的任何值满足比较或当子查询在外部语句中返回了任何行。 其他情况下，表达式为 UNKNOWN。 有关详细信息，请参阅[一些 &#124;任何 &#40;Transact SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
+ 与比较运算符和子查询一起使用。 如果为子查询检索的任何值都满足比较运算，则为 \<predicate> 返回 TRUE；如果子查询内没有值满足比较运算或子查询未向外部语句返回行，则返回 FALSE。 其他情况下，表达式为 UNKNOWN。 有关详细信息，请参阅 [SOME | ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md)。  
   
  EXISTS  
- 与子查询一起使用，用于测试是否存在子查询返回的行。 有关详细信息，请参阅[EXISTS &#40;Transact SQL &#41;](../../t-sql/language-elements/exists-transact-sql.md).  
+ 与子查询一起使用，用于测试是否存在子查询返回的行。 有关详细信息，请参阅 [EXISTS (Transact-SQL)](../../t-sql/language-elements/exists-transact-sql.md)。  
   
-## <a name="remarks"></a>注释  
- 逻辑运算符的优先顺序是 NOT（最高），然后是 AND，最后是 OR。 不过，可以在搜索条件内使用括号来表示优于此优先顺序的运算符。 根据查询优化器所做的选择，逻辑运算符的求值顺序可能有所不同。 有关逻辑运算符中如何工作的逻辑值的详细信息，请参阅[AND &#40;Transact SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)，[或者 &#40;Transact SQL &#41;](../../t-sql/language-elements/or-transact-sql.md)，和[不 &#40;Transact SQL &#41;](../../t-sql/language-elements/not-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 逻辑运算符的优先顺序是 NOT（最高），然后是 AND，最后是 OR。 不过，可以在搜索条件内使用括号来表示优于此优先顺序的运算符。 根据查询优化器所做的选择，逻辑运算符的求值顺序可能有所不同。 有关逻辑运算符如何对逻辑值进行运算的详细信息，请参阅 [AND (Transact-SQL)](../../t-sql/language-elements/and-transact-sql.md)、[OR (Transact-SQL)](../../t-sql/language-elements/or-transact-sql.md) 和 [NOT (Transact-SQL)](../../t-sql/language-elements/not-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. 在 WHERE 中使用 LIKE 和 ESCAPE 语法  
- 下面的示例搜索中行`LargePhotoFileName`列包含字符`green_`，并使用`ESCAPE`选项，因为 _ 是通配符字符。 而无需指定`ESCAPE`选项，该查询将搜索包含单词任何说明值`green`跟 _ 字符以外的任何单个字符。  
+ 下面的示例将搜索以下行，其中的 `LargePhotoFileName` 列包含字符 `green_`；由于 _ 是通配符，因此使用了 `ESCAPE` 选项。 如果不指定 `ESCAPE` 选项，则查询搜索到的任何说明值中将包含后跟一个非 _ 字符的 `green` 一词。  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -215,10 +215,10 @@ WHERE CountryRegionCode NOT IN ('US')
 AND City LIKE N'Pa%' ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-where-with-like"></a>C. 与 LIKE 一起使用的位置  
- 下面的示例搜索中行`LastName`列包含字符`and`。  
+### <a name="c-using-where-with-like"></a>C. 将 WHERE 与 LIKE 一起使用  
+ 下面的示例将搜索以下行，其中的 `LastName` 列包含字符 `and`。  
   
 ```  
 -- Uses AdventureWorks  
@@ -229,7 +229,7 @@ WHERE LastName LIKE '%and%';
 ```  
   
 ### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>D. 对 Unicode 数据使用 WHERE 和 LIKE 语法  
- 下面的示例使用`WHERE`子句，以执行 Unicode 搜索`LastName`列。  
+ 下面的示例使用 `WHERE` 子句对 `LastName` 列执行 Unicode 搜索。  
   
 ```  
 -- Uses AdventureWorks  
@@ -240,15 +240,15 @@ WHERE LastName LIKE N'%and%';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [聚合函数 &#40;Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [游标 (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  
   
   

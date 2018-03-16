@@ -1,5 +1,5 @@
 ---
-title: "SYSTEM_USER (Transact SQL) |Microsoft 文档"
+title: SYSTEM_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,12 +55,12 @@ SYSTEM_USER
 ## <a name="return-types"></a>返回类型  
  **nchar**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  您可以在 CREATE TABLE 和 ALTER TABLE 语句中将 SYSTEM_USER 函数与 DEFAULT 约束一起使用。 还可以将此函数用作任意标准函数。  
   
  如果用户名与登录名不同，则 SYSTEM_USER 返回登录名。  
   
- 如果当前用户登录到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用 Windows 身份验证，SYSTEM_USER Windows 登录名标识名称的形式返回：*域*\\*user_login_name*. 但是，如果当前用户使用 SQL Server 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录标识名称，例如为作为  `WillisJo` 登录的用户返回 `WillisJo`。  
+ 如果当前用户使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回如下形式的 Windows 登录标识名称：DOMAIN\\user_login_name。 但是，如果当前用户使用 SQL Server 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录标识名称，例如为作为  `WillisJo` 登录的用户返回 `WillisJo`。  
   
  SYSTEM_USER 返回当前执行的上下文的名称。 如果已使用 EXECUTE AS 语句进行上下文切换，则 SYSTEM_USER 将返回模拟的上下文的名称。  
   
@@ -133,10 +133,10 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C： 使用 SYSTEM_USER 返回当前系统用户名称  
- 下面的示例返回的当前值`SYSTEM_USER`。  
+### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C. 使用 SYSTEM_USER 返回当前系统用户名  
+ 以下示例返回 `SYSTEM_USER` 的当前值。  
   
 ```  
 SELECT SYSTEM_USER;  
@@ -145,11 +145,11 @@ SELECT SYSTEM_USER;
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;Transact SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40;Transact SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER &#40;Transact SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
  [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [用户 &#40;Transact SQL &#41;](../../t-sql/functions/user-transact-sql.md)  
+ [USER (Transact-SQL)](../../t-sql/functions/user-transact-sql.md)  
   
   
 

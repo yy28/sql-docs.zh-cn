@@ -1,5 +1,5 @@
 ---
-title: "较低 (Transact SQL) |Microsoft 文档"
+title: LOWER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ LOWER ( character_expression )
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)字符或二进制数据。 *character_expression*可以是常量、 变量或列。 *character_expression*的隐式转换为数据类型必须为**varchar**。 否则，请使用[强制转换](../../t-sql/functions/cast-and-convert-transact-sql.md)可以显式转换*character_expression*。  
+ 字符或二进制数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。 character_expression 的数据类型必须可隐式转换为 varchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression。  
   
 ## <a name="return-types"></a>返回类型  
- **varchar**或**nvarchar**  
+ varchar 或 nvarchar  
   
 ## <a name="examples"></a>示例  
  以下示例将使用 `LOWER` 函数、`UPPER` 函数，并将 `UPPER` 函数嵌套在 `LOWER` 函数中，选择价格在 $11 到 $20 之间的产品名称。  
@@ -81,8 +81,8 @@ taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
   
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
- [上限 &#40;Transact SQL &#41;](../../t-sql/functions/upper-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [UPPER (Transact-SQL)](../../t-sql/functions/upper-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "更改列加密密钥 (Transact SQL) |Microsoft 文档"
+title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  更改列加密密钥在数据库中，添加或删除加密的值。 CEK 可以具有最多两个值用于进行相应的列主密钥的轮换。 加密使用的列时使用 CEK[始终加密 &#40; 数据库引擎 &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能。 在添加之前 CEK 值，必须定义列主密钥用于加密值，通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)语句。  
+  在数据库中更改列加密密钥，添加或删除加密的值。 CEK 最多可具有两个值，以便相应的列主密钥进行轮换。 使用[始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能对列进行加密时会使用 CEK。 添加 CEK 值之前，必须使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 语句定义用于加密该值的列主密钥。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,32 +54,32 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 ## <a name="arguments"></a>参数  
  *key_name*  
- 要更改列加密密钥。  
+ 要更改的列加密密钥。  
   
  *column_master_key_name*  
- 指定用于加密列加密密钥 (CEK) 的列主密钥 (CMK) 的名称。  
+ 指定用于对列加密密钥 (CEK) 进行加密的列主密钥 (CMK) 的名称。  
   
  *algorithm_name*  
- 用于加密值的加密算法的名称。 系统提供的算法必须**RSA_OAEP**。 删除列加密密钥值时，此自变量无效。  
+ 用于对值进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP。 删除列加密密钥值时，此参数无效。  
   
  *varbinary_literal*  
- 加密 CEK BLOB 与指定的主加密密钥。 实例时都提供 SQL Server 登录名。 删除列加密密钥值时，此自变量无效。  
+ 使用指定的主加密密钥加密的 CEK BLOB。 实例时都提供 SQL Server 登录名。 删除列加密密钥值时，此参数无效。  
   
 > [!WARNING]  
->  决不要将传递纯文本 CEK 值在此语句中。 这样将构成此功能的好处。  
+>  切勿在此语句中传递纯文本 CEK 值。 这样做不利于发挥此功能的优点。  
   
-## <a name="remarks"></a>注释  
- 通常情况下，使用一个加密值创建列加密密钥。 当列主密匙需要要旋转 （当前列主密钥需要将替换为新的列主密钥），你可以添加新值的列加密密钥，使用新的列主密钥加密。 这将允许你以确保客户端应用程序可以访问新的列主密钥在进行对客户端应用程序可用时使用的列加密密钥加密的数据。 驱动程序的客户端应用程序不具有对新的主密钥的访问，将能够使用旧列主密钥加密列加密密钥值访问敏感数据中启用了始终加密。 加密算法，始终加密支持的功能，需要具有 256 位的纯文本值。 应使用密钥存储提供程序，用于封装包含列主密钥的密钥存储生成的加密的值。  
+## <a name="remarks"></a>Remarks  
+ 通常情况下，创建列加密密钥时，密钥只具有一个加密值。 列主密钥需要进行轮换（需要将当前的列主密钥替换为新的列主密钥）时，可以为列加密密钥添加一个新值，并使用新的列主密钥进行加密。 这样可以确保客户端应用程序能访问使用列加密密钥加密的数据，同时客户端应用程序将能使用新的列主密钥。 通过 Always Encrypted 功能，无权访问新主密钥的客户端应用程序中的驱动程序将能够通过列加密密钥值（使用旧的列主密钥进行加密）来访问敏感数据。 Always Encrypted 支持的加密算法要求纯文本值具有 256 位。 应使用密钥存储提供程序生成加密值，该提供程序封装了存储有列主密钥的密钥存储。  
   
- 使用[sys.columns &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)， [sys.column_encryption_keys &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)和[sys.column_encryption_key_values &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)若要查看有关列加密密钥的信息。  
+ 可使用 [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看有关列加密密钥的相关信息。  
   
-## <a name="permissions"></a>Permissions  
- 需要**ALTER ANY COLUMN ENCRYPTION KEY**对数据库拥有权限。  
+## <a name="permissions"></a>权限  
+ 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-adding-a-column-encryption-key-value"></a>A. 添加的列加密密钥值  
- 以下示例更改列加密密钥调用`MyCEK`。  
+### <a name="a-adding-a-column-encryption-key-value"></a>A. 添加列加密密钥值  
+ 下面的示例更改名为 `MyCEK` 的列加密密钥。  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="b-dropping-a-column-encryption-key-value"></a>B. 删除列加密密钥值  
- 以下示例更改列加密密钥调用`MyCEK`通过将一个值。  
+ 下面的示例删除了一个值，对名为 `MyCEK` 的列加密密钥进行了更改。  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -107,7 +107,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40;Transact SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   

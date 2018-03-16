@@ -1,5 +1,5 @@
 ---
-title: "PUBLISHINGSERVERNAME (Transact SQL) |Microsoft 文档"
+title: PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="replication-functions---publishingservername"></a>复制功能-PUBLISHINGSERVERNAME
+# <a name="replication-functions---publishingservername"></a>复制函数 - PUBLISHINGSERVERNAME
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为参与数据库镜像会话的已发布数据库返回起始发布服务器的名称。 此函数在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器实例的发布数据库中执行。 使用它可确定已发布数据库的起始发布服务器。  
@@ -49,7 +49,7 @@ PUBLISHINGSERVERNAME()
 ## <a name="return-types"></a>返回类型  
  **nvarchar**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  PUBLISHINGSERVERNAME 用于所有类型的复制。  
   
  当数据库镜像会话存在于发布服务器与镜像伙伴实例之间的发布数据库中时，将使用 PUBLISHINGSERVERNAME。  
@@ -58,6 +58,6 @@ PUBLISHINGSERVERNAME()
   
 ## <a name="see-also"></a>另请参阅  
  [数据库镜像和复制 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [复制的功能 &#40;Transact SQL &#41;](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
+ [复制函数 (Transact-SQL)](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   
   

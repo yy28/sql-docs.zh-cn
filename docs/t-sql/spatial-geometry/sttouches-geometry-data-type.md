@@ -1,5 +1,5 @@
 ---
-title: "STTouches (geometry 数据类型) |Microsoft 文档"
+title: "STTouches（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sttouches-geometry-data-type"></a>STTouches（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-如果返回 1**几何图形**实例逐项涉及另一个**几何图形**实例。 如果它不，返回 0。
+如果一个**geometry** 实例在空间上与另一个 **geometry** 实例接触，则返回 1。 否则，返回 0。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 是另一种**几何图形**实例要针对的实例上进行比较`STTouches()`调用。  
+ 将与调用 `STTouches()` 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 两个**几何图形**实例 touch 如果它们的点集相交，但其内部并不相交。  
+## <a name="remarks"></a>Remarks  
+ 如果两个 **geometry** 实例的点集相交，但是它们的内部不相交，则表明这两个实例接触。  
   
- 如果此方法将始终返回 null 的空间引用 Id 为 (Srid)**几何图形**实例不匹配。  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STTouches()` 来测试两个 `geometry` 实例，以查看它们是否接触。  

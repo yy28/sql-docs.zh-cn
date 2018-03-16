@@ -65,8 +65,8 @@ DBCC UPDATEUSAGE
 ```  
   
 ## <a name="arguments"></a>参数  
-*database_name* | *database_id* | 0  
-要对其空间使用统计信息进行报告和更正的数据库的名称或 ID。 如果指定 0，则使用当前数据库。 数据库名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
+database_name | database_id | 0  
+要对其空间使用统计信息进行报告和更正的数据库的名称或 ID。 如果指定 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 要对其空间使用统计信息进行报告和更正的表或索引视图的名称或 ID。 表和视图的名称必须符合有关标识符的规则。  
@@ -83,13 +83,13 @@ NO_INFOMSGS
 COUNT_ROWS  
 指定使用表或视图中的行数的当前计数更新 row count 列。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 DBCC UPDATEUSAGE 将针对表或索引中的每个分区更正行、已用页、保留页、叶级页和数据页的计数。 如果系统表中没有错误，则 DBCC UPDATEUSAGE 不返回数据。 如果发现错误，并对其进行了更正，同时没有使用 WITH NO_INFOMSGS，DBCC UPDATEUSAGE 将返回系统表中更新的行和列。
   
 DBCC CHECKDB 已得到增强，可以检测页计数或行计数变为负值的情况。 检测到上述问题后，DBCC CHECKDB 的输出会包含一个警告和一个建议，建议运行 DBCC UPDATEUSAGE 解决该问题。
   
 ## <a name="best-practices"></a>最佳实践  
-我们的建议如下：
+建议如下：
 -   请不要定期运行 DBCC UPDATEUSAGE。 由于对大型表或数据库运行 DBCC UPDATEUSAGE 会耗费一定的时间，因此不应使用此语句，除非您怀疑 sp_spaceused 返回了不正确的值。
 -   只有数据库的 CREATE、ALTER 或 DROP 语句等数据定义语言 (DDL) 经常受到修改时，才应考虑定期运行 DBCC UPDATEUSAGE（例如，每周运行一次）。  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. 为 Employee 表更新页计数或行计数，或同时更新这两者  
-以下示例将报告更新的页或行计数信息`Employee`表中[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库。
+下面的示例报告 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中 `Employee` 表的已更新页计数或行计数信息。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  
@@ -137,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+[sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)
   
   

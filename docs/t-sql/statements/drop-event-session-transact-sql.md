@@ -1,5 +1,5 @@
 ---
-title: "删除事件会话 (Transact SQL) |Microsoft 文档"
+title: DROP EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ON SERVER
  *event_session_name*  
  是现有事件会话的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在删除事件会话时，将完全删除所有配置信息，例如，目标和会话参数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 ALTER ANY EVENT SESSION 权限。  
   
 ## <a name="examples"></a>示例  

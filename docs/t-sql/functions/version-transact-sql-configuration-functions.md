@@ -1,5 +1,5 @@
 ---
-title: "@@VERSION (Transact SQL) |Microsoft 文档"
+title: '@@VERSION (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40version---transact-sql-configuration-functions"></a>& #x 40; 和 #x 40;版本-Transact SQL 配置函数
+# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Transact SQL 配置函数
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前安装的系统和生成信息。  
@@ -50,12 +50,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型  
  **nvarchar**  
   
-## <a name="remarks"></a>注释  
- @@VERSION结果显示为一个 nvarchar 字符串。 你可以使用[SERVERPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/serverproperty-transact-sql.md)函数来检索单个属性值。  
+## <a name="remarks"></a>Remarks  
+ @@VERSION 结果显示为一个 nvarchar 字符串。 可以使用 [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md) 函数检索各个属性值。  
   
  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，返回以下信息。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本  
   
 -   处理器体系结构  
   
@@ -81,16 +81,16 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>答： 返回的当前版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A：返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前版本  
  以下示例显示返回当前安装的版本信息。  
   
 ```  
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. 返回当前版本的[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. 返回 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 的当前版本  
   
 ```  
 SELECT @@VERSION AS 'SQL Server PDW Version';  

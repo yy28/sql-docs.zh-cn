@@ -1,5 +1,5 @@
 ---
-title: "HasM (geography 数据类型) |Microsoft 文档"
+title: "HasM（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型：**布尔**  
+ CLR 返回类型：Boolean  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
   
@@ -59,7 +59,7 @@ SELECT @p.HasM
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例的扩展的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [&#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)  
+ [Geography 实例上的扩展方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M（geography 数据类型）](../../t-sql/spatial-geography/m-geography-data-type.md)  
   
   

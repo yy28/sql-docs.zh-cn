@@ -1,5 +1,5 @@
 ---
-title: "EXECUTE AS (Transact SQL) |Microsoft 文档"
+title: EXECUTE AS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   设置会话的执行上下文。  
   
- 默认情况下，会话在用户登录时开始，在用户注销时结束。 会话过程中的所有操作都受限于对该用户进行的权限检查。 当**EXECUTE AS**运行语句，该会话的执行上下文切换为指定的登录名或用户名称。 上下文切换后，将检查权限而不是呼叫的人该帐户的登录名和用户安全令牌针对**EXECUTE AS**语句。 实际上，在会话或模块的执行期间模拟了用户或登录帐户，或显式恢复了上下文切换。  
+ 默认情况下，会话在用户登录时开始，在用户注销时结束。 会话过程中的所有操作都受限于对该用户进行的权限检查。 当运行 EXECUTE AS 语句时，会话的执行上下文将切换到指定的登录名或用户名。 上下文切换后，将根据登录名和用户安全令牌检查该帐户（而非调用 EXECUTE AS 语句的用户）的权限。 实际上，在会话或模块的执行期间模拟了用户或登录帐户，或显式恢复了上下文切换。  
   
 
   
@@ -66,42 +66,42 @@ ms.lasthandoff: 11/21/2017
  指定要模拟的执行上下文是一个登录名。 模拟范围处于服务器级别。  
   
 > [!NOTE]  
->  此选项不可用在包含的数据库或 SQL 数据库中。  
+>  此选项在包含的数据库或 SQL 数据库中不可用。  
   
  User  
  指定要模拟的上下文是当前数据库中的用户。 模拟范围只限于当前数据库。 对数据库用户的上下文切换不会继承该用户的服务器级别权限。  
   
 > [!IMPORTANT]  
->  当到数据库用户的上下文切换处于活动状态时，任何对数据库以外资源的访问尝试都将导致语句失败。 这包括使用*数据库*语句、 分布式的查询和引用使用三个-或四部分部分组成的标识符的另一个数据库的查询。  
+>  当到数据库用户的上下文切换处于活动状态时，任何对数据库以外资源的访问尝试都将导致语句失败。 这包括 USE database 语句、分布式查询以及引用其他数据库（使用由三或四部分构成的标识符）的查询。  
   
-  *名称*   
- 有效的用户或登录名。 *名称*必须属于**sysadmin**固定服务器角色，或作为中的主体存在[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)或[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)，分别。  
+ ' name '  
+ 有效的用户或登录名。 name 必须是 sysadmin 固定服务器角色的成员，或者分别作为 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 或 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 中的主体而存在。  
   
- *名称*可以指定为本地变量。  
+ 可以将 name 指定为局部变量。  
   
- *名称*必须为一个单独的帐户，并且不能组、 角色、 证书、 密钥或内置帐户，如 NT AUTHORITY\LocalService、 NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
+ name 必须是单一实例帐户，而不能是组、角色、证书、密钥或内置帐户，如 NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService 或 NT AUTHORITY\LocalSystem。  
   
- 有关详细信息，请参阅[指定用户或登录名](#_user)本主题中更高版本。  
+ 有关详细信息，请参阅本主题后面的[指定用户名或登录名](#_user)。  
   
  NO REVERT  
- 指定上下文切换不能恢复到以前的上下文。 **NO REVERT**选项仅用于在即席级别。  
+ 指定上下文切换不能恢复到以前的上下文。 NO REVERT 选项只能在临时级别使用。  
   
- 有关还原到前一个上下文的详细信息，请参阅[REVERT &#40;Transact SQL &#41;](../../t-sql/statements/revert-transact-sql.md).  
+ 有关恢复到以前上下文的详细信息，请参阅 [REVERT (Transact-SQL)](../../t-sql/statements/revert-transact-sql.md)。  
   
- COOKIE 到 **@**  *varbinary_variable*  
- 指定仅为执行上下文恢复为以前的上下文，是否调用方 REVERT COOKIE 语句包含正确 **@**  *varbinary_variable*值。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将传递到 cookie  **@**  *varbinary_variable*。 **COOKIE 到**选项仅用于在即席级别。  
+ COOKIE INTO @varbinary_variable  
+ 指定仅当调用 REVERT WITH COOKIE 语句包含正确的 @varbinary_variable 值时，执行上下文才能恢复回以前的上下文。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将 cookie 传递到 @varbinary_variable。 COOKIE INTO 选项只能在临时级别使用。  
   
- **@***varbinary_variable*是**varbinary （8000)**。  
+ @varbinary_variable 是 varbinary(8000)。  
   
 > [!NOTE]  
->  Cookie**输出**参数现记载为**varbinary （8000)**这是正确的最大长度。 但是，目前执行返回**varbinary(100)**。 应用程序应保留**varbinary （8000)** ，以便应用程序将继续正常运行，如果 cookie 返回大小增加的未来版本中。  
+>  cookie OUTPUT 参数现记载为 varbinary(8000)，这是正确的最大长度。 但是，当前执行返回 varbinary(100)。 应用程序应保留 varbinary(8000)，以便当 cookie 在将来的版本中返回大小增量时，应用程序可继续正确运行。  
   
  CALLER  
  当在模块内部使用时，指定模块内部的语句在模块调用方的上下文中执行。  
   
  当在模块外部使用时，语句没有任何操作。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  执行上下文中的更改在下列操作之一发生之前一直有效：  
   
 -   运行另一个 EXECUTE AS 语句。  
@@ -112,18 +112,18 @@ ms.lasthandoff: 11/21/2017
   
 -   命令已执行退出的存储过程或触发器。  
   
-可以通过对多个主体多次调用 EXECUTE AS 语句来创建执行上下文堆栈。 在调用时，REVERT 语句将把上下文切换为上下文堆栈中上一级的登录帐户或用户。 此行为的演示，请参阅[示例 A](#_exampleA)。  
+可以通过对多个主体多次调用 EXECUTE AS 语句来创建执行上下文堆栈。 在调用时，REVERT 语句将把上下文切换为上下文堆栈中上一级的登录帐户或用户。 有关此行为的示例，请参阅[示例 A](#_exampleA)。  
   
-##  <a name="_user"></a>指定用户或登录名  
- EXECUTE AS 中指定的用户名或登录名\<context_specification > 作为中的主体必须存在**sys.database_principals**或**sys.server_principals**分别，或EXECUTE AS 语句将失败。 此外，还必须为该主体授予 IMPERSONATE 权限。 除非调用方是属于数据库所有者，或者为属于**sysadmin**固定服务器角色，主体必须存在即使当用户访问数据库或实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过 Windows 组成员资格。 例如，假设条件如下： 
+##  <a name="_user"></a>指定用户名或登录名  
+ EXECUTE AS \<context_specification> 中指定的用户或登录名必须分别作为 sys.database_principals 或 sys.server_principals 中的主体存在，否则 EXECUTE AS 语句将失败。 此外，还必须为该主体授予 IMPERSONATE 权限。 除非调用方是数据库所有者或 sysadmin 固定服务器角色的成员，否则即使用户通过 Windows 组成员身份访问数据库或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，主体也必须存在。 例如，假设条件如下： 
   
--   **CompanyDomain\SQLUsers**组具有访问权限**销售**数据库。  
+-   CompanyDomain\SQLUsers 组拥有 Sales 数据库的访问权限。  
   
--   **CompanyDomain\SqlUser1**为属于**SQLUsers**并因此，具有隐式访问**销售**数据库。  
+-   CompanyDomain\SqlUser1 是 SQLUsers 的成员，因此具有对 Sales 数据库的隐式访问权限。  
   
- 尽管**CompanyDomain\SqlUser1**有权访问通过中的成员资格数据库**SQLUsers**组，该语句`EXECUTE AS USER = 'CompanyDomain\SqlUser1'`失败，因为`CompanyDomain\SqlUser1`不是中的主体数据库中。  
+ 虽然 CompanyDomain\SqlUser1 可通过 SQLUsers 组的成员身份访问数据库，但语句 `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` 失败，因为 `CompanyDomain\SqlUser1` 未在数据库中作为主体存在。  
   
-如果用户孤立 （不再存在关联的登录名），并且用户未创建与**WITHOUT LOGIN**， **EXECUTE AS**的用户将会失败。  
+如果用户处于孤立状态（关联登录名不再存在），并且该用户不是使用 WITHOUT LOGIN 创建的，EXECUTE AS 将针对此用户失败。  
   
 ## <a name="best-practice"></a>最佳实践  
  指定具有执行会话中操作所需的最低特权的登录名或用户。 例如，如果只需要数据库级别的权限，则不要指定具有服务器级别权限的登录名；或者除非需要这些权限，否则不要指定数据库所有者帐户。  
@@ -134,15 +134,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="using-with-no-revert"></a>使用 WITH NO REVERT  
  当 EXECUTE AS 语句包含可选的 WITH NO REVERT 子句时，不能通过 REVERT 语句或执行另一个 EXECUTE AS 语句来重置会话的执行上下文。 由该语句设置的上下文在删除会话之前一直保持有效。  
   
- 当 WITH NO REVERT COOKIE = @*varbinary_variabl*指定 e 子句， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] cookie 将值传递给 @*varbinary_variabl*e。 设置执行上下文，如果调用还原使用 COOKIE，语句仅可以还原到前一个上下文 = @*varbinary_variable*语句包含相同 *@varbinary_variable* 值。  
+ 当指定 WITH NO REVERT COOKIE = @varbinary_variable 子句时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将 cookie 值传递给 @varbinary_variable。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable 语句包含相同的 @varbinary_variable 值时，该语句设置的执行上下文才能恢复为以前的上下文。  
   
- 该选项在使用连接池的环境中非常有用。 连接池是指维护一组数据库连接，以使应用程序服务器上的应用程序能够重用它们。 因为的值传递给 *@varbinary_variable* 已知仅向调用方的 EXECUTE AS 语句中，调用方可以保证，它们建立的执行上下文不能更改任何其他人。  
+ 该选项在使用连接池的环境中非常有用。 连接池是指维护一组数据库连接，以使应用程序服务器上的应用程序能够重用它们。 由于传递给 @varbinary_variable 的值仅对于 EXECUTE AS 语句的调用方是已知的，因此该调用方可以保证它们建立的执行上下文不能被任何其他用户更改。  
   
 ## <a name="determining-the-original-login"></a>确定原始登录  
- 使用[ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md)函数以返回连接到的实例的登录名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以在具有众多显式或隐式上下文切换的会话中使用该函数返回原始登录的标识。  
+ 使用 [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 函数可以返回连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的登录名。 您可以在具有众多显式或隐式上下文切换的会话中使用该函数返回原始登录的标识。  
   
-## <a name="permissions"></a>Permissions  
- 若要指定**EXECUTE AS**上一个登录名，调用方必须拥有**IMPERSONATE**上指定的登录名的权限命名并没有必须拒绝**模拟 ANY LOGIN**权限. 若要指定**EXECUTE AS**上的数据库用户，调用方必须拥有**IMPERSONATE**上指定的用户名称的权限。 当**EXECUTE AS CALLER**指定，则**IMPERSONATE**则无需权限。  
+## <a name="permissions"></a>权限  
+ 若要对某登录名指定 EXECUTE AS，调用方必须具有对所指定登录名的 IMPERSONATE 权限，并且不得被拒绝 IMPERSONATE ANY LOGIN 权限。 若要对某数据库用户指定 EXECUTE AS，调用方必须具有对所指定用户名的 IMPERSONATE 权限。 指定 EXECUTE AS CALLER 时，不需要 IMPERSONATE 权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -191,7 +191,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
- 下面的示例设置为指定用户的会话的执行上下文，并指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句。 `REVERT` 语句必须指定传递给 `@cookie` 语句中的 `EXECUTE AS` 变量的值，否则，无法成功将上下文恢复为该调用方。 若要执行此示例，必须存在示例 A 中所创建的 `login1` 登录名和 `user1` 用户。  
+ 下面的示例将会话的执行上下文设置为指定的用户，并指定 WITH NO REVERT COOKIE = @varbinary_variable 子句。 `REVERT` 语句必须指定传递给 `@cookie` 语句中的 `EXECUTE AS` 变量的值，否则，无法成功将上下文恢复为该调用方。 若要执行此示例，必须存在示例 A 中所创建的 `login1` 登录名和 `user1` 用户。  
   
 ```  
 DECLARE @cookie varbinary(8000);  
@@ -213,8 +213,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [还原 &#40;Transact SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
- [EXECUTE AS 子句 &#40;Transact SQL &#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)  
+ [REVERT (Transact-SQL)](../../t-sql/statements/revert-transact-sql.md)   
+ [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)  
   
   
 

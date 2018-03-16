@@ -1,5 +1,5 @@
 ---
-title: "STCentroid (geometry 数据类型) |Microsoft 文档"
+title: "STCentroid（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回的几何中心**几何图形**包含一个或多个多边形的实例。
+返回由一个或多个多边形组成的 **geometry** 实例的几何中心。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +44,19 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
- 打开地理空间联盟 (OGC) 类型：**点**  
+ 开放地理空间信息联盟 (OGC) 类型：Point  
   
-## <a name="remarks"></a>注释  
- `STCentroid()`返回 null 如果**几何图形**实例不是**Polygon，CurvePolygon**，或**MultiPolygon**类型。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 实例的类型不是 **Polygon、CurvePolygon** 或 **MultiPolygon**，则 `STCentroid()` 返回 null。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. 计算 Polygon 实例的形心  
- 下面的示例使用`STCentroid()`来计算的质心`polygon``geometry`实例：  
+ 以下示例使用 `STCentroid()` 计算 `polygon``geometry` 实例的形心：  
   
 ```  
 DECLARE @g geometry;  

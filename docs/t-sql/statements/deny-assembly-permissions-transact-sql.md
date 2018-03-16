@@ -1,5 +1,5 @@
 ---
-title: "拒绝程序集的权限 (Transact SQL) |Microsoft 文档"
+title: "DENY 程序集权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ permission  
  指定可拒绝授予程序集的权限。 如下所列。  
   
- 程序集上**::***程序集 _ 名称*  
+ ON ASSEMBLY ::assembly_name  
  指定拒绝将其权限授予他人的程序集。 需要使用作用域限定符“::”。  
   
- *database_principal*  
+ database_principal  
  指定要对其拒绝权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -78,7 +78,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- *denying_principal*  
+ denying_principal  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -97,7 +97,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  程序集是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可拒绝授予程序集的最特定和最受限的权限，以及隐含这些权限的更常用权限。  
   
 |程序集权限|程序集权限隐含的权限|数据库权限隐含的权限|  
@@ -108,7 +108,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对程序集具有 CONTROL 权限。 如果使用 AS 选项，则指定的主体必须拥有程序集。  
   
 ## <a name="see-also"></a>另请参阅  
@@ -117,8 +117,8 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [创建应用程序角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [创建程序集 &#40;Transact SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

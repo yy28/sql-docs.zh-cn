@@ -1,5 +1,5 @@
 ---
-title: "游标 (Transact SQL) |Microsoft 文档"
+title: "游标 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>游标 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句生成完整的结果集，但有时的结果是最佳时间一次处理一行。 打开结果集中的游标，即可对结果集进行逐行处理。 你可以为变量或参数分配游标**光标**数据类型。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句产生完整的结果集，但有时候最好对结果进行逐行处理。 打开结果集中的游标，即可对结果集进行逐行处理。 可以将游标分配给具有光标数据类型的变量或参数。  
   
  下面这些语句支持游标操作：  
   

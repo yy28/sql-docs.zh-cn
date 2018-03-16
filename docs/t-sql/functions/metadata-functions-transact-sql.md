@@ -1,5 +1,5 @@
 ---
-title: "元数据函数 (Transact SQL) |Microsoft 文档"
+title: "元数据函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified

@@ -1,5 +1,5 @@
 ---
-title: "BACKUP SERVICE MASTER KEY (TRANSACT-SQL) |Microsoft 文档"
+title: BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,16 +54,16 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- 文件**=***path_to_file*  
+ FILE ='path_to_file'  
  指定要将服务主密钥导出到的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。  
   
- 密码**=***密码*  
+ PASSWORD ='password'  
  用于对备份文件中的服务主密钥进行加密的密码。 此密码应通过复杂性检查。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  应当对服务主密钥进行备份，并将其存储在另外一个单独的安全位置。 创建该备份应该是首先在服务器上执行的管理操作之一。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对服务器的 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -74,7 +74,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' EN
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER SERVICE MASTER KEY &#40;Transact SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [ALTER SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [RESTORE SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
   
   

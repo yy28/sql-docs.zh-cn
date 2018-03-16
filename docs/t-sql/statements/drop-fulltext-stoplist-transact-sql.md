@@ -1,5 +1,5 @@
 ---
-title: "DROP FULLTEXT STOPLIST (TRANSACT-SQL) |Microsoft 文档"
+title: DROP FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,11 +57,11 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  要从数据库中删除的全文本非索引字表的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果有任何全文索引引用了已删除的全文本非索引字表，则 DROP FULLTEXT STOPLIST 会失败。  
   
-## <a name="permissions"></a>Permissions  
- 若要删除非索引字表，需要具有删除权限的非索引字表或中的成员身份**db_owner**或**db_ddladmin**固定数据库角色的成员。  
+## <a name="permissions"></a>权限  
+ 若要删除非索引字表，则必须对该非索引字表具有 DROP 权限，或者必须是 **db_owner** 或 **db_ddladmin** 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  
  下面的示例将删除名为 `myStoplist` 的全文非索引字表。  
@@ -71,9 +71,9 @@ DROP FULLTEXT STOPLIST myStoplist;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER FULLTEXT STOPLIST &#40;Transact SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [创建全文非索引字表 &#40;Transact SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [sys.fulltext_stoplists &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [ALTER FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [sys.fulltext_stoplists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_stopwords (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
   
   

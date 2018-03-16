@@ -1,5 +1,5 @@
 ---
-title: "提示 (Transact SQL) |Microsoft 文档"
+title: "提示 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -37,14 +37,14 @@ ms.lasthandoff: 01/25/2018
 # <a name="hints-transact-sql"></a>提示 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  提示是指定的强制选项或策略，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询处理器针对 SELECT、INSERT、UPDATE 或 DELETE 语句执行。 提示将替换查询优化器可能会为查询选择的任何执行计划。  
+  提示是指定的强制选项或策略，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询处理器针对 SELECT、INSERT、UPDATE 或 DELETE 语句执行。 提示将覆盖查询优化器可能为查询选择的任何执行计划。  
   
 > [!CAUTION]  
->  因为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查询优化器通常选择查询的最佳执行计划，我们建议， \<join_hint >， \<query_hint >，和\<table_hint > 只可用作最后一招由有经验开发人员和数据库管理员。
+>  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器通常会为查询选择最优执行计划，因此我们建议，只有在万般无奈的情况下才由经验丰富的开发人员和数据库管理员使用 \<join_hint>、\<query_hint> 和 \<table_hint>。
   
  本节将介绍下列提示：  
   
--   [联接提示](../../t-sql/queries/hints-transact-sql-join.md)  
+-   [联接提示 ](../../t-sql/queries/hints-transact-sql-join.md)  
   
 -   [查询提示](../../t-sql/queries/hints-transact-sql-query.md)  
   

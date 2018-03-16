@@ -1,5 +1,5 @@
 ---
-title: "SOUNDEX (Transact SQL) |Microsoft 文档"
+title: SOUNDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ SOUNDEX ( character_expression )
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 是一个字母数字[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的字符数据。 *character_expression*可以是常量、 变量或列。  
+ 字符数据的字母数字[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。  
   
 ## <a name="return-types"></a>返回类型  
  **varchar**  
   
-## <a name="remarks"></a>注释  
- SOUNDEX 会根据字符串的发音，将字母数字字符串转换成一个由四个字符组成的代码。 代码的第一个字符是第一个字符的*character_expression*，并且被转换为大写形式。 代码的第二个字符到第四个字符是表示表达式中的字母的数字。 除非字母 A、E、I、O、U、H、W 和 Y 是字符串的首字母，否则将忽略这些字母。 如果需要生成一个四字符代码，将在末尾添加零。 有关 SOUNDEX 代码的详细信息，请参阅[Soundex 索引系统](https://www.archives.gov/research/census/soundex.html)。  
+## <a name="remarks"></a>Remarks  
+ SOUNDEX 会根据字符串的发音，将字母数字字符串转换成一个由四个字符组成的代码。 该代码的第一个字符是 character_expression 的第一个字符，已转换为大写。 代码的第二个字符到第四个字符是表示表达式中的字母的数字。 除非字母 A、E、I、O、U、H、W 和 Y 是字符串的首字母，否则将忽略这些字母。 如果需要生成一个四字符代码，将在末尾添加零。 有关 SOUNDEX 代码的详细信息，请参阅 [Soundex 索引系统](https://www.archives.gov/research/census/soundex.html)。  
   
  可比较不同字符串中的 SOUNDEX 代码以查看这些字符串发音的相似度。 DIFFERENCE 函数在两个字符串上执行一个 SOUNDEX，并返回一个整数，表示这些字符串的 SOUNDEX 代码的相似度。  
   
@@ -81,7 +81,7 @@ SOUNDEX ( character_expression )
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]有效的 Latin1_General 排序规则。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 对 Latin1_General 排序规则有效。  
   
 ```  
   
@@ -99,7 +99,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]有效的 Latin1_General 排序规则。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 对 Latin1_General 排序规则有效。  
   
 ```  
 -----------   
@@ -115,7 +115,7 @@ SELECT DIFFERENCE('Anothers', 'Brothers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]有效的 Latin1_General 排序规则。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 对 Latin1_General 排序规则有效。  
   
 ```  
 -----------   
@@ -125,8 +125,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [差异 &#40;Transact SQL &#41;](../../t-sql/functions/difference-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [DIFFERENCE (Transact-SQL)](../../t-sql/functions/difference-transact-sql.md)   
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
  [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

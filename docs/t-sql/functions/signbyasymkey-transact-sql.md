@@ -1,5 +1,5 @@
 ---
-title: "SIGNBYASYMKEY (Transact SQL) |Microsoft 文档"
+title: SIGNBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,19 +52,19 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- *Asym_Key_ID*  
- 当前数据库中非对称密钥的 ID。 *Asym_Key_ID*是**int**。  
+ Asym_Key_ID  
+ 当前数据库中非对称密钥的 ID。 Asym_Key_ID 的数据类型为 int。  
   
  **@plaintext**  
- 是类型的变量**nvarchar**， **char**， **varchar**，或**nchar**包含将使用的非对称密钥签名的数据。  
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含将使用非对称密钥进行签名的数据。  
   
- *密码*  
- 用于保护私钥的密码。 *密码*是**nvarchar （128)**。  
+ password  
+ 用于保护私钥的密码。 password 的数据类型为 nvarchar(128)。  
   
 ## <a name="return-types"></a>返回类型  
- **varbinary** 8000 个字节的最大大小。  
+ varbinary（最大大小为 8000 个字节）。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  需要对非对称密钥具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
@@ -87,8 +87,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ASYMKEY_ID &#40;Transact SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [VERIFYSIGNEDBYASYMKEY &#40;Transact SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
+ [ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [VERIFYSIGNEDBYASYMKEY (Transact-SQL)](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

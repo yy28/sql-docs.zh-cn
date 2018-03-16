@@ -1,5 +1,5 @@
 ---
-title: "DROP FULLTEXT CATALOG (TRANSACT-SQL) |Microsoft 文档"
+title: DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ DROP FULLTEXT CATALOG catalog_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *catalog_name*  
- 要删除的目录名。 如果*catalog_name*不存在， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回一个错误并且不执行 DROP 操作。 要使该命令成功执行，不能将全文目录的文件组标记为 OFFLINE 或 READONLY。  
+ catalog_name  
+ 要删除的目录名。 如果 catalog_name 不存在，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误，并且不执行 DROP 操作。 要使该命令成功执行，不能将全文目录的文件组标记为 OFFLINE 或 READONLY。  
   
-## <a name="permissions"></a>Permissions  
- 用户必须具有删除权限的全文目录或是的成员**db_owner**，或**db_ddladmin**固定数据库角色的成员。  
+## <a name="permissions"></a>权限  
+ 用户必须对全文目录有 DROP 权限，或者是 db_owner 或 db_ddladmin 固定数据库角色的成员。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fulltext_catalogs &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [创建 FULLTEXT CATALOG &#40;Transact SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)  
   
   

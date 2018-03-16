@@ -1,5 +1,5 @@
 ---
-title: "时 (Transact SQL) |Microsoft 文档"
+title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -62,18 +62,18 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>参数  
  *Boolean_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)返回**TRUE**或**FALSE**。 如果布尔表达式中含有 SELECT 语句，则必须用括号将 SELECT 语句括起来。  
+ 返回 TRUE 或 FALSE 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 如果布尔表达式中含有 SELECT 语句，则必须用括号将 SELECT 语句括起来。  
   
- {*sql_statement* | *statement_block*}  
+ {sql_statement | statement_block}  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或用语句块定义的语句分组。 若要定义语句块，请使用控制流关键字 BEGIN 和 END。  
   
  BREAK  
- 导致从最内层的 WHILE 循环中退出。 执行标记的末尾循环中，在结束关键字后显示的任何语句。  
+ 导致从最内层的 WHILE 循环中退出。 将执行出现在 END 关键字后面的任何语句，END 关键字为循环结束标记。  
   
  CONTINUE  
  使 WHILE 循环重新开始执行，忽略 CONTINUE 关键字后面的任何语句。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果嵌套了两个或多个 WHILE 循环，则内层的 BREAK 将退出到下一个外层循环。 将首先运行内层循环结束之后的所有语句，然后重新开始下一个外层循环。  
   
 ## <a name="examples"></a>示例  
@@ -116,10 +116,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: While 循环简单的  
- 在以下示例中，如果产品的平均标价小于 `$300`，则 `WHILE` 循环将价格乘 2，然后选择最高价格。 如果最高价格小于或等于 `$500`，则 `WHILE` 循环重新开始，并再次将价格乘 2。 此循环继续将价格加倍直到最高价格大于`$500`，，然后退出`WHILE`循环。  
+### <a name="c-simple-while-loop"></a>C. 简单 While 循环  
+ 在以下示例中，如果产品的平均标价小于 `$300`，则 `WHILE` 循环将价格乘 2，然后选择最高价格。 如果最高价格小于或等于 `$500`，则 `WHILE` 循环重新开始，并再次将价格乘 2。 该循环不断地将价格乘 2，直到最高价格超过 `$500`，然后退出 `WHILE` 循环。  
   
 ```  
 -- Uses AdventureWorks  
@@ -137,7 +137,7 @@ END
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [游标 (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  

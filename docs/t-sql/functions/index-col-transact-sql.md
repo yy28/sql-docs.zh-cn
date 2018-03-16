@@ -1,5 +1,5 @@
 ---
-title: "INDEX_COL (Transact SQL) |Microsoft 文档"
+title: INDEX_COL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -57,14 +57,14 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  *schema_name*  
  该索引所属架构的名称。  
   
- *table_or_view_name*  
- 是表或索引的视图的名称。 *table_or_view_name*必须由单引号分隔并可以完全限定的数据库名称和架构名称。  
+ table_or_view_name  
+ 表或索引视图的名称。 table_or_view_name 必须使用单引号分隔，并且可由数据库名称和架构名称完全限定。  
   
- *index_id*  
- 是索引的 ID。 *index_ID*是**int**。  
+ index_id  
+ 索引的 ID。 index_ID 的数据类型为 int。  
   
- *key_id*  
- 索引键列的位置。 *key_ID*是**int**。  
+ key_id  
+ 索引键列的位置。 key_ID 的数据类型为 int。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar (128** **)**  
@@ -100,8 +100,8 @@ SalesOrderID        SalesOrderDetailID
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

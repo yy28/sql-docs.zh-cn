@@ -1,5 +1,5 @@
 ---
-title: "-= （减法赋值） (Transact SQL) |Microsoft 文档"
+title: "-=（减法赋值）(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,10 +35,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--subtraction-assignment-transact-sql"></a>-= （减法赋值） (Transact SQL)
+# <a name="--subtraction-assignment-transact-sql"></a>-=（减法赋值）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  两个数字相减并将一个值设置为该运算的结果。 例如，如果变量@x等于 35，则@x-2 = 采用的原始值@x、 减去 2 和设置@x为该新值 (33)。  
+  两个数字相减并将一个值设置为该运算的结果。 例如，如果变量 @x 等于 35，则 @x -= 2 会将 @x 的原始值减去 2 并将 @x 设置为该新值 (33)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,17 +48,17 @@ expression -= expression
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何数据类型之一除数值类别中**位**数据类型。  
+ 数值类别中任意数据类型（bit 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>注释  
- 有关详细信息，请参阅[-&#40;减法 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/subtract-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 有关详细信息，请参阅 [-（减法）(Transact-SQL)](../../t-sql/language-elements/subtract-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "扩展静态 Geometry 方法 |Microsoft 文档"
+title: "扩展静态几何图形方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC specifications，地域标记语言规范](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [OGC 规范：地理标记语言](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [GeomFromGML](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
@@ -49,12 +49,12 @@ ms.lasthandoff: 01/25/2018
   
 -   [分析](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
--   [点](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
+-   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [静态聚合的几何图形方法](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
- [在几何图形实例的扩展的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [在几何图形实例的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+ [静态聚合几何图形方法](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
+ [Geometry 实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [Geometry 实例上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [OGC 静态几何图形方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "删除加密提供程序 (Transact SQL) |Microsoft 文档"
+title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  可扩展密钥管理提供程序的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要删除某个可扩展密钥管理 (EKM) 提供程序，必须停止使用此提供程序的所有会话。  
   
  仅在没有凭据映射到某一 EKM 提供程序时才可以删除该提供程序。  
   
  如果在删除 EKM 提供程序时存在映射到该提供程序的密钥，则这些密钥的 GUID 将仍存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 如果稍后使用相同的密钥 GUID 创建了一个提供程序，则会重新使用这些密钥。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对对称密钥具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

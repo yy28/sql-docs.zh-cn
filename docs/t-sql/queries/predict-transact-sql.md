@@ -1,7 +1,7 @@
 ---
-title: "预测 (Transact SQL) |Microsoft 文档"
+title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 02/25/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -14,21 +14,23 @@ ms.topic: language-reference
 f1_keywords:
 - PREDICT
 - PREDICT_TSQL
-dev_langs: TSQL
-helpviewer_keywords: PREDICT clause
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PREDICT clause
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: c4d6b3967807c83db75dd3171313e9a5869336a1
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="predict-transact-sql"></a>预测 (Transact SQL)  
+# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-生成预测的值或基于存储模型的分数。  
+基于存储模型生成预测值或评分。  
 
 ## <a name="syntax"></a>语法
 
@@ -57,64 +59,67 @@ MODEL = @model | model_literal
 
 **model**
 
-`MODEL`参数用于指定用于评分或预测的模型。 模型指定为变量或文字或标量表达式。
+`MODEL` 参数用于指定用于评分或预测的模型。 将模型指定为变量或文字或标量表达式。
 
-可以通过使用 R 或 Python 或其他工具创建的模型对象。
+可以通过使用 R 或 Python 或其他工具创建模型对象。
 
-**data**
+data
 
-数据参数用于指定用于评分或预测的数据。 在查询中的表源的形式指定数据。 表源可以是表、 表别名，CTE 别名、 视图或表值函数。
+DATA 参数用于指定用于评分或预测的数据。 在查询中以表源的形式指定数据。 表源可以是表、表别名、CTE 别名、视图或表值函数.
 
-**parameters**
+**参数**
 
-参数参数用于指定用于评分或预测的可选用户定义参数。
+PARAMETERS 参数用于指定用于评分或预测的可选用户定义参数。
 
-每个参数的名称是特定于模型类型。 例如，在 RevoScaleR rxPredict 函数支持参数_@computeResiduals位_以支持剩余的计算，则在评分逻辑回归模型时。  你可以将传递到值参数名称和它`PREDICT`函数。
+每个参数的名称特定于模型类型。 例如，RevoScaleR 中的 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 函数支持参数 `@computeResiduals`，指示在对逻辑回归模型评分时是否应计算残差。 如果正在调用兼容模型，无法将该参数名称和 TRUE 或 FALSE 值传递到 `PREDICT` 函数。
 
-> [注意]此选项中的 SQL Server 自 2017 年的预发行版不支持而且包含仅用于向前兼容性。
+> [!NOTE]
+> 此选项在 SQL Server 2017 的预发行版本中无效。
 
-**WITH ( \<result_set_definition> )**
+WITH ( <result_set_definition> )
 
-WITH 子句用于指定由返回的输出的架构`PREDICT`函数。
+WITH 子句用于指定 `PREDICT` 函数返回的输出的架构。
 
-除了返回的列`PREDICT`函数本身，所有的列的数据的一部分输入可用于在查询中使用。
+除了 `PREDICT` 函数本身返回的列之外，所有在数据输入中包含的列都可以在查询中使用。
 
 ### <a name="return-values"></a>返回值
 
-没有预定义的架构是可用;SQL Server 不会验证模型的内容，并不验证返回的列的值。  
-- `PREDICT`列通过传递作为输入的函数  
-- `PREDICT`函数也会生成新列，但列数以及它们的数据类型取决于用于预测的模型的类型。  
+没有可用的预定义架构，SQL Server 不验证模型的内容，且不验证返回的列值。
 
-与数据相关的任何错误消息，该模型或列格式返回与模型关联的基础预测函数。  
-- 对于 RevoScaleR，等效的函数是[rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict)  
-- 对于 MicrosoftML，等效的函数是[rxPredict.mlModel](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxpredict)  
+- `PREDICT` 函数作为输入通过列传递。
+- `PREDICT` 函数还生成新列，但列数以及其数据类型取决于用于预测的模型类型。
 
-不能查看内部模型结构使用`PREDICT`。 如果你想要了解模型本身的内容，必须加载的模型对象、 反序列化，并使用相应的 R 代码分析模型。
+任何与数据、模型或列格式相关的错误消息都由与模型关联的基础预测函数返回。
 
-## <a name="remarks"></a>注释
+- 对于 RevoScaleR，等效的函数是 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)  
+- 对于 MicrosoftML，等效的函数是 [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict)  
 
-`PREDICT`函数支持在所有版本的 SQL Server，包括 Linux。
+不能使用 `PREDICT` 查看内部模型结构。 如果要了解模型本身的内容，必须加载模型对象，将其反序列化，然后使用相应的 R 代码来分析模型。
 
-不需要在要使用的服务器上安装 R、 Python 或另一台机器学习语言`PREDICT`函数。 可以在另一个环境中的对模型进行训练，还可以将其保存到与一起使用的 SQL Server 表`PREDICT`，或从另一个已保存的模型的 SQL Server 实例中调用模型。
+## <a name="remarks"></a>Remarks
+
+无论是否启用其他机器学习功能，所有版本的 SQL Server（包括 Linux 和 Azure SQL 数据库）都支持 `PREDICT` 函数。 但需要 SQL Server 2017 或更高版本。 
+
+不需要在服务器上安装 R、Python 或另一种机器学习语言就可以使用 `PREDICT` 函数。 可以在另一个环境中对模型进行训练，还可以将其保存到 SQL Server 表中以与 `PREDICT` 结合使用，或从另一个已保存该模型的 SQL Server 实例中调用该模型。
 
 ### <a name="supported-algorithms"></a>支持的算法
 
-你使用的模型必须已创建使用 RevoScaleR 包从支持的算法之一。 有关当前支持的型号的列表，请参阅[实时评分](../../advanced-analytics/real-time-scoring.md)。
+使用的模型必须是使用 RevoScaleR 包中支持的算法之一创建的。 有关当前支持的型号的列表，请参阅[实时评分](../../advanced-analytics/real-time-scoring.md)。
 
 ### <a name="permissions"></a>权限
 
-不所需的任何权限`PREDICT`; 但是，用户需求`EXECUTE`对数据库的权限和权限来查询任何用作输入的数据。 如果已在表中存储的模型，用户还必须能够从表中读取模型。
+`PREDICT` 不需要任何权限；但是，用户需要数据库 `EXECUTE` 权限，以及查询用作输入的任何数据的权限。 如果模型已存储在表中，则用户还须能够从表中读取模型。
 
 ## <a name="examples"></a>示例
 
-下面的示例演示调用的语法`PREDICT`。
+以下示例展示了调用 `PREDICT` 的语法。
 
 ### <a name="call-a-stored-model-and-use-it-for-prediction"></a>调用存储的模型并将其用于预测
 
-此示例调用存储在表 [models_table] 中的现有逻辑回归模型。 获取最新经过训练的模型，使用 SELECT 语句，并随后将二进制模型传递给预测函数。 输入的值表示功能;输出表示分配由模型的分类。
+此示例调用存储在表 [models_table] 中的现有逻辑回归模型。 它使用 SELECT 语句获取最新经过训练的模型，并随后将二进制模型传递给 PREDICT 函数。 输入值表示功能；输出值表示由模型分配的分类。
 
 ```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 @model from [models_table]";
+DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
@@ -122,9 +127,9 @@ FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
 WITH (class string);
 ```
 
-### <a name="using-predict-in-a-from-clause"></a>在 FROM 子句中使用预测
+### <a name="using-predict-in-a-from-clause"></a>在 FROM 子句中使用 PREDICT
 
-此示例引用`PREDICT`函数中`FROM`子句`SELECT`语句：
+此示例引用 `SELECT` 语句的 `FROM` 子句中的 `PREDICT` 函数：
 
 ```sql
 SELECT d.*, p.Score
@@ -132,11 +137,11 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-别名**d**为表源指定_数据_参数用于引用属于 dbo.mytable 的列。 别名**p**指定的**预测**函数用于引用预测函数返回的列。
+`DATA` 参数中为表源指定的别名 d 用于引用属于 dbo.mytable 的列。 为 PREDICT 函数指定的别名 p 用于引用 PREDICT 函数返回的列。
 
-### <a name="combining-predict-with-an-insert-statement"></a>将与 INSERT 语句结合使用预测
+### <a name="combining-predict-with-an-insert-statement"></a>将 PREDICT 与 INSERT 语句相结合
 
-预测的常见使用案例之一是生成输入数据的评分，然后将插入表中的预测的值。 下面的示例假定，调用应用程序使用存储的过程插入到表中包含的预测的值的行：
+常见的预测使用案例之一是生成输入数据的评分，然后将预测值插入到表中。 下面的示例假定，应用程序调用操作会使用存储过程将包含预测值的行插入到表中：
 
 ```sql
 CREATE PROCEDURE InsertLoanApplication
@@ -154,7 +159,7 @@ BEGIN
 END;
 ```
 
-如果该过程将通过表值参数的多个行，然后它可以进行编写，如下所示：
+如果该过程通过一个表值参数接受多个行，那么它可以编写如下：
 
 ```sql
 CREATE PROCEDURE InsertLoanApplications (@new_applications dbo.loan_application_type)
@@ -168,26 +173,26 @@ BEGIN
 END;
 ```
 
-### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>创建 R 模型和生成评分使用可选的模型参数
+### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>创建 R 模型并使用可选模型参数生成评分
 
 > [!NOTE]
-> 在候选发布版 1 中不支持使用参数自变量。
+> 候选发布版 1 不支持使用参数自变量。
 
-此示例假定你已创建逻辑回归模型拟合的协方差矩阵，与使用对 RevoScaleR 这样的调用：
+此示例假定已使用对 RevoScaleR 的调用创建了一个拟合协方差矩阵的逻辑回归模型，如下所示：
 
 ```R
 logitObj <- rxLogit(Kyphosis ~ Age + Start + Number, data = kyphosis, covCoef = TRUE)
 ```
 
-如果采用二进制格式，可以在 SQL Server 中存储模型，你可以使用预测函数来生成不只是预测，但支持的模型类型，如错误或置信度间隔的其他信息。
+如果采用二进制格式在 SQL Server 中存储模型，不仅可以使用 PREDICT 函数生成预测，还可以生成模型类型支持的其他信息，如错误或置信区间。
 
-下面的代码演示从 R 到 rxPredict 等价的调用：
+下面的代码演示 R 对 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 的等效调用：
 
 ```R
 rxPredict(logitObj, data = new_kyphosis_data, computeStdErr = TRUE, interval = "confidence")
 ```
 
-等效的调用使用`PREDICT`函数还提供了分数 （预测值），错误和置信度间隔：
+使用 `PREDICT` 函数的等效调用还提供评分（预测值）、错误和置信区间：
 
 ```sql
 SELECT d.Age, d.Start, d.Number, p.pred AS Kyphosis_Pred, p.stdErr, p.pred_lower, p.pred_higher
@@ -196,5 +201,3 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
-
-

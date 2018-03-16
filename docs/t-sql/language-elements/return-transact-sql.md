@@ -1,5 +1,5 @@
 ---
-title: "返回 (Transact SQL) |Microsoft 文档"
+title: RETURN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,15 +57,15 @@ RETURN [ integer_expression ]
  返回的整数值。 存储过程可向执行调用的过程或应用程序返回一个整数值。  
   
 ## <a name="return-types"></a>返回类型  
- （可选） 返回**int**。  
+ 可以选择返回 int。  
   
 > [!NOTE]  
 >  除非另外说明，否则所有系统存储过程都将返回一个 0 值。 此值表示成功，非 0 值表示失败。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果用于存储过程，RETURN 不能返回 null 值。 如果某个过程试图返回空值（例如，使用 @status，而 @status 为 NULL），则将生成警告消息并返回 0 值。  
   
- 返回状态值可以包含在后续[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理或执行当前过程，过程中的语句，但它必须采用以下格式输入： `EXECUTE @return_status = <procedure_name>`。  
+ 在执行了当前过程的 batch 或过程中，返回状态值可包含在后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中，但必须按以下格式输入：`EXECUTE @return_status = <procedure_name>`。  
   
 ## <a name="examples"></a>示例  
   

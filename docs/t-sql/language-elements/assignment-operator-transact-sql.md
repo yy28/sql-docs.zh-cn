@@ -1,5 +1,5 @@
 ---
-title: "= （赋值运算符） (Transact SQL) |Microsoft 文档"
+title: "=（赋值运算符）(Transact SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-assignment-operator-transact-sql"></a>= （赋值运算符） (Transact SQL)
+# <a name="-assignment-operator-transact-sql"></a>=（赋值运算符）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   等号 (=) 是唯一的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 赋值运算符。 在以下示例中，将创建一个 `@MyCounter` 变量，然后赋值运算符将 `@MyCounter` 设置为表达式返回的值。  
@@ -54,8 +54,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

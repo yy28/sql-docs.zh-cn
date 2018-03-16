@@ -1,5 +1,5 @@
 ---
-title: "地域实例上的 OGC 方法 |Microsoft 文档"
+title: "Geography 实例上的 OGC 方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ogc-methods-on-geography-instances"></a>地域实例上的 OGC 方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上支持开放地理空间联盟 (OGC) 方法**geography**实例。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 geography 实例上支持开放地理空间信息联盟 (OGC) 方法。  
   
  有关 OGC 规范的详细信息，请参阅以下资源：  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [STArea](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STBuffer](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)  
   
--   [STCurveN &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
+-   [STCurveN（geography 数据类型）](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
   
--   [STCurveToLine &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
+-   [STCurveToLine（geography 数据类型）](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
@@ -96,8 +96,8 @@ ms.lasthandoff: 01/25/2018
 -   [STUnion](../../t-sql/spatial-geography/stunion-geography-data-type.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例的扩展的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [OGC 静态地域方法](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
+ [Geography 实例上的扩展方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [OGC 静态地理方法](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [扩展静态地理方法](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

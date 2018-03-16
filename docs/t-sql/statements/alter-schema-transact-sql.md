@@ -1,5 +1,5 @@
 ---
-title: "ALTER 架构 (Transact SQL) |Microsoft 文档"
+title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -67,28 +67,28 @@ ALTER SCHEMA schema_name
   
 ## <a name="arguments"></a>参数  
  *schema_name*  
- 是在当前数据库中，在其中对安全对象将被移动的名称。 其数据类型不能为 SYS 或 INFORMATION_SCHEMA。  
+ 当前数据库中的架构名称，安全对象将移入其中。 其数据类型不能为 SYS 或 INFORMATION_SCHEMA。  
   
  \<entity_type>  
  更改其所有者的实体的类。 Object 是默认值。  
   
- *securable_name*  
- 是安全对象移动到架构的架构范围的一部分或两个部分构成的名称。  
+ securable_name  
+ 要移入架构中的架构范围内的安全对象的一部分或两部分名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  用户与架构完全分离。  
   
  ALTER SCHEMA 仅可用于在同一数据库中的架构之间移动安全对象。 若要更改或删除架构中的安全对象，请使用特定于该安全对象的 ALTER 或 DROP 语句。  
   
- 如果一个部分名称用于*securable_name*，名称解析规则当前实际上将用于查找对安全对象。  
+ 如果对 securable_name 使用了由一部分组成的名称，则将使用当前生效的名称解析规则查找该安全对象。  
   
  将安全对象移入新架构时，将删除与该安全对象关联的全部权限。 如果已显式设置安全对象的所有者，则该所有者保持不变。 如果安全对象的所有者已设置为 SCHEMA OWNER，则该所有者将保持为 SCHEMA OWNER；但移动之后，SCHEMA OWNER 将解析为新架构的所有者。 新所有者的 principal_id 将为 NULL。  
   
- 移动存储的过程、 函数、 视图或触发器不会更改架构名称，如果存在，则相应对象的定义列在[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图或使用获取[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)内置函数。 因此，我们建议，ALTER SCHEMA 不用于移动这些对象类型。 相反，除去并重新创建其新的架构中的对象。  
+ 无论是 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 目录视图的 definition 列中的相应对象，还是使用 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 内置函数获取的相应对象，移动存储过程、函数、视图或触发器都不会更改其架构名称（如有）。 因此，我们建议不要使用 ALTER SCHEMA 移动这些对象类型。 而是删除对象，然后在新架构中重新创建该对象。  
   
- 移动如表或同义词的对象不会自动更新对该对象的引用。 您必须修改任何手动引用传输的对象的对象。 例如，如果移动表和触发器中引用该表，则必须修改触发器以反映新的架构名称。 使用[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)之前将其移动列表对象上的依赖项。  
+ 移动表或同义词不会自动更新对该对象的引用。 必须手动修改引用已移动对象的任何对象。 例如，如果移动了某个表，并且触发器中引用了该表，则必须修改触发器以反映新的架构名称。 请使用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 列出该对象上的依赖关系，然后再进行移动。  
 
- 若要使用更改的表架构[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器，右键单击该表，然后单击**设计**。 按**F4**以打开属性窗口。 在**架构**框中，选择新的架构。  
+ 若要通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改表的架构，请在对象资源管理器中右键单击该表，然后单击“设计”。 按 F4 以打开“属性”窗口。 在“架构”框中，选择新架构。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -96,7 +96,7 @@ ALTER SCHEMA schema_name
 ## <a name="permissions"></a>权限  
  若要从另一个架构中传输安全对象，当前用户必须拥有对该安全对象（非架构）的 CONTROL 权限，并拥有对目标架构的 ALTER 权限。  
   
- 如果对安全对象在其上具有 EXECUTE AS OWNER 规范并且的所有者设置为架构所有者，用户还必须在目标架构的所有者具有 IMPERSONATE 权限。  
+ 如果已为安全对象指定 EXECUTE AS OWNER，且所有者已设置为 SCHEMA OWNER，则用户还必须拥有对目标架构所有者的 IMPERSONATE 权限。  
   
  在移动安全对象后，将删除与所传输的安全对象相关联的所有权限。  
   
@@ -141,10 +141,10 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 传递表的所有权  
- 下面的示例创建一个表`Region`中`dbo`架构，创建`Sales`架构，然后移动`Region`表从`dbo`架构`Sales`架构。  
+ 下面的示例在 `dbo` 架构中创建一个表 `Region`，创建一个 `Sales` 架构，然后将 `Region` 表从 `dbo` 架构移动到 `Sales` 架构。  
   
 ```  
 CREATE TABLE dbo.Region   
@@ -161,8 +161,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [删除架构 &#40;Transact SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

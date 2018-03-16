@@ -1,5 +1,5 @@
 ---
-title: "SQRT (Transact SQL) |Microsoft 文档"
+title: SQRT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ SQRT ( float_expression )
   
 ## <a name="arguments"></a>参数  
  *float_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)类型的**float**或可以隐式转换为 float 的类型。  
+ float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  
@@ -89,8 +89,8 @@ GO
 3.0  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回数字的平方根`1.00`和`10.00`。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例将返回数字 `1.00` 和 `10.00` 的平方根。  
   
 ```  
 SELECT SQRT(1.00), SQRT(10.00);  
@@ -104,7 +104,7 @@ SELECT SQRT(1.00), SQRT(10.00);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

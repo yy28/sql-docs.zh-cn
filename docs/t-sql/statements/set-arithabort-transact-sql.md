@@ -1,5 +1,5 @@
 ---
-title: "集 ARITHABORT (TRANSACT-SQL) |Microsoft 文档"
+title: SET ARITHABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -61,8 +61,8 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>注释  
- 在登录会话中，应始终将 ARITHABORT 设置为 ON。 设置 ARITHABORT 为 OFF 可以产生负面影响查询优化的性能问题。  
+## <a name="remarks"></a>Remarks  
+ 在登录会话中，应始终将 ARITHABORT 设置为 ON。 将 ARITHABORT 设置为 OFF 可能对查询优化产生负面影响，进而导致性能问题。  
   
 > [!WARNING]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的默认 ARITHABORT 设置为 ON。 客户端应用程序将 ARITHABORT 设置为 OFF 可以接收不同的查询计划，使得对性能较差的查询进行故障排除变得困难。 即，同一个查询可以在 Management Studio 中快速执行，但在应用程序中却比较慢。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 排除查询故障时始终与客户端 ARITHABORT 设置匹配。  
@@ -82,13 +82,13 @@ SET ARITHABORT ON
   
  如果 SET ARITHABORT 或 SET ARITHIGNORE 为 OFF，而 SET ANSI_WARNINGS 为 ON，则遇到被零除或溢出错误时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会返回错误消息。  
   
- 如果 SET ARITHABORT 设置为 OFF 并且 IF 语句的布尔条件评估过程中发生中止错误，则执行 FALSE 的分支。
+ 如果 SET ARITHABORT 设置为 OFF，并且对 IF 语句的 Boolean 条件求值过程中发生中止错误，则执行 FALSE 分支。
   
  在对计算列或索引视图创建或更改索引时，SET ARITHABORT 必须为 ON。 如果 SET ARITHABORT 为 OFF，则对包含计算列或索引视图索引的表执行 CREATE、UPDATE、INSERT 和 DELETE 语句时将失败。
   
  SET ARITHABORT 的设置是在执行或运行时设置的，而不是在分析时设置的。  
   
- 若要查看此设置的当前设置，请运行以下查询：
+ 要查看此设置的当前设置，请运行以下查询：
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -97,7 +97,7 @@ SELECT @ARITHABORT AS ARITHABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -198,7 +198,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [设置 ARITHIGNORE &#40;Transact SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ARITHIGNORE (Transact-SQL)](../../t-sql/statements/set-arithignore-transact-sql.md)   
+ [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "格式 (Transact SQL) |Microsoft 文档"
+title: FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -48,49 +48,49 @@ FORMAT ( value, format [, culture ] )
  *值*  
  支持格式化的数据类型的表达式。 有关有效类型的列表，请参阅下面“备注”部分中的表。  
   
- *format*  
- **nvarchar**格式模式。  
+ format  
+ nvarchar 格式模式。  
   
- *格式*参数必须包含一个有效的.NET Framework 格式字符串，为标准格式字符串 （例如，"C"或"D"），或作为自定义字符的模式的日期和数字值 (例如，"MMMM DD，yyyy (dddd)"). 不支持组合格式。 这些格式设置模式的完整说明，请查阅上格式设置的常规字符串、 自定义日期和时间格式和自定义数字格式的.NET Framework 文档。 很好的起点是主题中，"[格式类型](http://go.microsoft.com/fwlink/?LinkId=211776)。"  
+ format 参数必须包含一个有效的 .NET Framework 格式字符串，要么作为标准格式字符串（例如，“C”或“D”），要么作为日期值和数值的自定义字符模式（例如，“MMMM DD, yyyy (dddd)”）。 不支持组合格式。 有关这些格式模式的完整解释，请查阅有关常规字符串格式、自定义日期和时间格式以及自定义数字格式的 .NET Framework 文档。 一个好的起点是主题“[格式类型](http://go.microsoft.com/fwlink/?LinkId=211776)”。  
   
- *culture*  
- 可选**nvarchar**指定区域性的自变量。  
+ culture  
+ 指定区域性的可选 nvarchar 参数。  
   
- 如果*区域性*既未提供参数，则使用当前会话的语言。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 *区域性*接受任何作为自变量;.NET Framework 支持的区域性并不局限于显式支持的语言[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果*区域性*自变量无效，格式将引发错误。  
+ 如果未提供 culture 参数，则使用当前会话的语言。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性作为参数；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言。 如果 culture 参数无效，FORMAT 将引发错误。  
   
 ## <a name="return-types"></a>返回类型  
- **nvarchar**或 null  
+ nvarchar 或 Null  
   
- 返回值的长度由*格式*。  
+ 返回值的长度由 format 确定。  
   
-## <a name="remarks"></a>注释  
- 格式错误对于返回 NULL 以外*区域性*不*有效*。 例如，如果在指定的值返回 NULL*格式*无效。  
+## <a name="remarks"></a>Remarks  
+ FORMAT 将返回 NULL 错误，而不是非 valid 的 culture。 例如，如果 format 中指定的值无效，则返回 NULL。  
  
  FORMAT 函数具有不确定性。   
   
- 格式依赖于存在的.NET Framework 公共语言运行时 (CLR)。  
+ FORMAT 依赖于 .NET Framework 公共语言运行时 (CLR) 的存在。  
   
- 此函数不能为进行远程处理，因为它依赖于 CLR 的存在状态。 远程服务器上，远程处理某个函数需要 CLR，可能会导致错误。  
+ 此函数无法进行远程处理，因为它依赖于 CLR 的存在。 远程处理需要 CLR 的函数可能导致在远程服务器上出现错误。  
   
- 格式依赖于 CLR 格式设置规则，规定冒号和期间必须进行转义。 因此，当的格式字符串 （第二个参数） 时，才包含冒号或句点、 冒号或段必须与输入值时的反斜杠转义 （第一个参数） 属于**时间**数据类型。 请参阅[时间数据类型与D.格式](#ExampleD)。  
+ FORMAT 依赖于 CLR 格式设置规则，规则规定冒号和句点必须进行转义。 因此，当格式字符串（第二个参数）包含冒号或句点时，如果输入值（第一个参数）属于 time 数据类型，则冒号或句点必须使用反斜杠转义。 请参阅[时间数据类型的 D. FORMAT](#ExampleD)。  
   
- 下表列出的可接受的数据类型*值*及其.NET Framework 映射等效类型的自变量。  
+ 下表列出了 value 参数可接受的数据类型，其中还有相关的 .NET Framework 映射等效类型。  
   
 |类别|类型|.NET 类型|  
 |--------------|----------|---------------|  
 |数字|bigint|Int64|  
-|数字|int|Int32|  
-|数字|smallint|Int16|  
-|数字|tinyint|Byte|  
+|数字|ssNoversion|Int32|  
+|数字|SMALLINT|Int16|  
+|数字|TINYINT|Byte|  
 |数字|decimal|SqlDecimal|  
-|数字|numeric|SqlDecimal|  
-|数字|float|双精度|  
-|数字|real|Single|  
-|数字|smallmoney|Decimal|  
+|数字|NUMERIC|SqlDecimal|  
+|数字|FLOAT|双精度|  
+|数字|REAL|Single|  
+|数字|SMALLMONEY|Decimal|  
 |数字|money|Decimal|  
-|日期和时间|date|DateTime|  
+|日期和时间|日期|DateTime|  
 |日期和时间|time|TimeSpan|  
-|日期和时间|datetime|DateTime|  
+|日期和时间|DATETIME|DateTime|  
 |日期和时间|smalldatetime|DateTime|  
 |日期和时间|datetime2|DateTime|  
 |日期和时间|datetimeoffset|DateTimeOffset|  
@@ -130,7 +130,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 ```  
   
 ### <a name="b-format-with-custom-formatting-strings"></a>B. 使用自定义格式字符串执行 FORMAT  
- 以下示例通过指定自定义格式显示格式数值。 该示例假定当前日期是 2012 年 9 月 27 日。 有关这些及其他自定义格式的详细信息，请参阅[自定义数字格式字符串](http://msdn.microsoft.com/library/0c899ak8.aspx)。  
+ 以下示例通过指定自定义格式显示格式数值。 该示例假定当前日期为 2012 年 9 月 27 日。 有关这些格式和其他自定义格式的详细信息，请参阅[自定义数字格式字符串](http://msdn.microsoft.com/library/0c899ak8.aspx)。  
   
 ```sql  
 DECLARE @d DATETIME = GETDATE();  
@@ -149,7 +149,7 @@ DateTime Result  Custom Number Result
 ```  
   
 ### <a name="c-format-with-numeric-types"></a>C. 用于数值类型的 FORMAT  
- 下面的示例返回从 5 行**Sales.CurrencyRate**表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。 列**EndOfDateRate**存储类型为**money**表中。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些及其他数值格式的详细信息，请参阅[标准数字格式字符串](http://msdn.microsoft.com/library/dwhawy9k.aspx)。  
+ 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 Sales.CurrencyRate 表中的 5 个行。 EndOfDateRate 列在该表中作为 money 类型存储。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些格式和其他数字格式的详细信息，请参阅[标准数字格式字符串](http://msdn.microsoft.com/library/dwhawy9k.aspx)。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  
@@ -198,15 +198,15 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
  (5 row(s) affected)  
 ```  
   
-###  <a name="ExampleD"></a> D. 带有时间数据类型格式  
- 格式在这些情况下返回 NULL，因为`.`和`:`未转义。  
+###  <a name="ExampleD"></a> D. 时间数据类型的 D. FORMAT  
+ FORMAT 在这些情况下返回 NULL，因为 `.` 和 `:` 未进行转义。  
   
 ```sql  
 SELECT FORMAT(cast('07:35' as time), N'hh.mm');   --> returns NULL  
 SELECT FORMAT(cast('07:35' as time), N'hh:mm');   --> returns NULL  
 ```  
   
- 格式返回的格式化的字符串，因为`.`和`:`都会经过转义。  
+ Format 返回格式化的字符串，因为 `.` 和 `:` 已进行转义。  
   
 ```sql  
 SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35  
@@ -215,7 +215,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>另请参阅  
  [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [STR (Transact-SQL)](../../t-sql/functions/str-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

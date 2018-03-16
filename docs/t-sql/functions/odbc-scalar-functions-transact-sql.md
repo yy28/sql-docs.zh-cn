@@ -1,5 +1,5 @@
 ---
-title: "ODBC 标量函数 (Transact SQL) |Microsoft 文档"
+title: "ODBC 标量函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 标量函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  你可以使用[ODBC 标量函数](http://go.microsoft.com/fwlink/?LinkID=88579)中[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 这些语句由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解释。 它们可以用在存储过程和用户定义函数中。 这些函数包括字符串函数、数值函数、时间函数、日期函数、时间间隔函数和系统函数。  
+  可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用 [ODBC 标量函数](http://go.microsoft.com/fwlink/?LinkID=88579)。 这些语句由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解释。 它们可以用在存储过程和用户定义函数中。 这些函数包括字符串函数、数值函数、时间函数、日期函数、时间间隔函数和系统函数。  
   
 ## <a name="usage"></a>用法  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/21/2017
   
 |函数|Description|  
 |--------------|-----------------|  
-|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|返回截断到小数点右侧 integer_exp 位置的 numeric_exp。 如果 integer_exp 为负，numeric_exp 截断为 &#124; integer_exp &#124;小数点的左侧位置。|  
+|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|返回截断到小数点右侧 integer_exp 位置的 numeric_exp。 如果 integer_exp 为负数，则 numeric_exp 会截断到小数点左侧 &#124;integer_exp&#124; 位置。|  
   
 ### <a name="time-date-and-interval-functions"></a>时间、日期和时间间隔函数  
   
@@ -183,7 +183,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. 在存储过程中使用 ODBC 函数  
  下例在存储过程中使用了 ODBC 函数：  

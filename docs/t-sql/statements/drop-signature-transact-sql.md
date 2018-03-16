@@ -1,5 +1,5 @@
 ---
-title: "拖放签名 (Transact SQL) |Microsoft 文档"
+title: DROP SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,19 +56,19 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *模块名*  
+ module_name  
  存储过程、函数、程序集或触发器的名称。  
   
- 证书*cert_name*  
+ CERTIFICATE cert_name  
  用于对存储过程、函数、程序集或触发器进行签名的证书的名称。  
   
- 非对称密钥*Asym_key_name*  
+ ASYMMETRIC KEY Asym_key_name  
  用于对存储过程、函数、程序集或触发器进行签名的非对称密钥的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以在 sys.crypt_properties 目录视图中看到有关签名的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对象拥有 ALTER 权限，并且对证书或非对称密钥拥有 CONTROL 权限。 如果关联的私钥受密码保护，则用户还必须具有相应的密码。  
   
 ## <a name="examples"></a>示例  
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.crypt_properties &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [添加签名 &#40;Transact SQL &#41;](../../t-sql/statements/add-signature-transact-sql.md)  
+ [sys.crypt_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [ADD SIGNATURE (Transact-SQL)](../../t-sql/statements/add-signature-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "集 FORCEPLAN (Transact SQL) |Microsoft 文档"
+title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,14 +51,14 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SET FORCEPLAN 从本质上覆盖了查询优化器处理 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句所使用的逻辑。 SELECT 语句返回的数据同样与该设置无关。 唯一的差别是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为满足查询对表进行处理的方式。  
   
  在查询中也可以使用查询优化器提示影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理 SELECT 语句的方式。  
   
  SET FORCEPLAN 在执行或运行时应用，而不是在分析时应用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  SET FORCEPLAN 权限默认授予所有用户。  
   
 ## <a name="examples"></a>示例  
@@ -110,7 +110,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [设置 SHOWPLAN_ALL &#40;Transact SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [设置 SHOWPLAN_TEXT &#40;Transact SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT (Transact-SQL)](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

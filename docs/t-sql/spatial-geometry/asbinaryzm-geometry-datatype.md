@@ -1,5 +1,5 @@
 ---
-title: "AsBinaryZM (geometry 数据类型) |Microsoft 文档"
+title: "AsBinaryZM（geometry 数据类型）| Microsoft 文档"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回的开放地理空间联盟 (OGC) 熟知二进制 (WKB) 表示形式**几何图形**实例扩充与任意**Z** （仰角） 和**M** （度量值）实例传送的值。
+返回 geometry 实例的开放地理空间信息联盟 (OGC) 已知二进制 (WKB) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值。
   
 ## <a name="syntax"></a>语法  
   
@@ -41,11 +41,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **varbinary （max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：varbinary(max)  
   
- CLR 返回类型：**对**  
+ CLR 返回类型：SqlBytes  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
   
@@ -60,9 +60,9 @@ SELECT @g1.AsBinaryZM();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [在几何图形实例的扩展的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [&#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Z &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+ [Geometry 实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [M（geometry 数据类型）](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z（geometry 数据类型）](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

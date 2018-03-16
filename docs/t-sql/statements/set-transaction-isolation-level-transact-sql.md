@@ -1,5 +1,5 @@
 ---
-title: "将事务隔离级别 (Transact SQL) 设置 |Microsoft 文档"
+title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -84,7 +84,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  READ COMMITTED 的行为取决于 READ_COMMITTED_SNAPSHOT 数据库选项的设置：  
   
--   如果将 READ_COMMITTED_SNAPSHOT 设置为 OFF（默认设置），则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用共享锁防止其他事务在当前事务执行读取操作期间修改行。 共享锁还会阻止语句在其他事务完成之前读取由这些事务修改的行。 共享锁类型确定它将于何时释放。 行锁在处理下一行之前释放。 时读取下一个页面，并且表锁被释放该语句完成后释放页锁。  
+-   如果将 READ_COMMITTED_SNAPSHOT 设置为 OFF（默认设置），则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用共享锁防止其他事务在当前事务执行读取操作期间修改行。 共享锁还会阻止语句在其他事务完成之前读取由这些事务修改的行。 共享锁类型确定它将于何时释放。 行锁在处理下一行之前释放。 页锁在读取下一页时释放，表锁在语句完成时释放。  
   
     > [!NOTE]  
     >  如果将 READ_COMMITTED_SNAPSHOT 设置为 ON，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用行版本控制为每个语句提供一个在事务上一致的数据快照，因为该数据在语句开始时就存在。 不使用锁来防止其他事务更新数据。  
@@ -128,7 +128,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  范围锁处于与事务中执行的每个语句的搜索条件相匹配的键值范围之内。 这样可以阻止其他事务更新或插入任何行，从而限定当前事务所执行的任何语句。 这意味着如果再次执行事务中的任何语句，则这些语句便会读取同一组行。 在事务完成之前将一直保持范围锁。 这是限制最多的隔离级别，因为它锁定了键的整个范围，并在事务完成之前一直保持范围锁。 因为并发级别较低，所以应只在必要时才使用该选项。 该选项的作用与在事务内所有 SELECT 语句中的所有表上设置 HOLDLOCK 相同。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  一次只能设置一个隔离级别选项，而且设置的选项将一直对那个连接始终有效，直到显式更改该选项为止。 事务中执行的所有读取操作都会在指定的隔离级别的规则下运行，除非语句的 FROM 子句中的表提示为表指定了其他锁定行为或版本控制行为。  
   
  事务隔离级别定义了可为读取操作获取的锁类型。 针对 READ COMMITTED 或 REPEATABLE READ 获取的共享锁通常为行锁，尽管当读取引用了页或表中大量的行时，行锁可以升级为页锁或表锁。 如果某行在被读取之后由事务进行了修改，则该事务会获取一个用于保护该行的排他锁，并且该排他锁在事务完成之前将一直保持。 例如，如果 REPEATABLE READ 事务具有用于某行的共享锁，并且该事务随后修改了该行，则共享行锁便会转换为排他行锁。  
@@ -154,7 +154,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   使用行版本控制的 READ COMMITTED  
   
- 相反，运行在这些隔离级别下面的查询阻塞了针对堆的优化大容量负载操作。 有关大容量加载操作的详细信息，请参阅[大容量导入和导出数据 &#40;SQL server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ 相反，运行在这些隔离级别下面的查询阻塞了针对堆的优化大容量负载操作。 有关大容量加载操作的详细信息，请参阅[批量导入和导出数据 (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
  已启用 FILESTREAM 的数据库支持下列事务隔离级别。  
   
@@ -189,7 +189,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC USEROPTIONS &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  

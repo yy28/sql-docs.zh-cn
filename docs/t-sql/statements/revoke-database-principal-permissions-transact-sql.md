@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 数据库主体权限 (Transact SQL) |Microsoft 文档"
+title: "REVOKE 数据库主体权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -65,19 +65,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ permission  
  指定可以撤消的对数据库主体的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- 用户::*database_user*  
- 指定要撤消对其权限的用户的类和名称。 作用域限定符 (**::**) 是必需的。  
+ USER ::database_user  
+ 指定要撤消对其权限的用户的类和名称。 需要使用作用域限定符 (::)。  
   
- 角色::*database_role*  
- 指定要撤消对其权限的角色的类和名称。 作用域限定符 (**::**) 是必需的。  
+ ROLE ::database_role  
+ 指定要撤消对其权限的角色的类和名称。 需要使用作用域限定符 (::)。  
   
- 应用程序角色::*application_role*  
-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+ APPLICATION ROLE ::application_role  
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- 指定要撤消对其权限的应用程序角色的类和名称。 作用域限定符 (**::**) 是必需的。  
+ 指定要撤消对其权限的应用程序角色的类和名称。 需要使用作用域限定符 (::)。  
   
  GRANT OPTION  
  指示要撤消向其他主体授予指定权限的权限。 不会撤消该权限本身。  
@@ -91,43 +91,43 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS \<database_principal > 指定的主体执行此查询的主体从中派生其权限以撤消的权限。  
+ AS \<database_principal> 指定一个主体，执行此查询的主体从该主体获得撤销该权限的权利。  
   
- *Database_user*  
+ Database_user  
  指定数据库用户。  
   
- *Database_role*  
+ Database_role  
  指定数据库角色。  
   
- *Application_role*  
-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+ Application_role  
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  指定应用程序角色。  
   
- *Database_user_mapped_to_Windows_User*  
-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ Database_user_mapped_to_Windows_User  
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定映射到 Windows 用户的数据库用户。  
   
- *Database_user_mapped_to_Windows_Group*  
-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ Database_user_mapped_to_Windows_Group  
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定映射到 Windows 组的数据库用户。  
   
- *Database_user_mapped_to_certificate*  
-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ Database_user_mapped_to_certificate  
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定映射到证书的数据库用户。  
   
- *Database_user_mapped_to_asymmetric_key*  
-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ Database_user_mapped_to_asymmetric_key  
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定映射到非对称密钥的数据库用户。  
   
- *Database_user_with_no_login*  
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="database-user-permissions"></a>数据库用户权限  
  数据库用户是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下表列出了可撤消的对数据库用户最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
@@ -158,10 +158,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对指定主体的 CONTROL 权限或隐含 CONTROL 权限的更高权限。  
   
- 数据库，如的成员拥有 CONTROL 权限的被授权者**db_owner**固定的数据库角色，可以授予任何权限对任何数据库中安全对象。  
+ 将某一数据库的 CONTROL 权限授予用户（例如，db_owner 固定数据库角色的成员）后，该用户就可授予对该数据库中任何一个安全对象的任意权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -187,7 +187,7 @@ GO
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 撤消应用程序角色对用户的 IMPERSONATE 权限  
  下面的示例撤消 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 应用程序角色 `IMPERSONATE` 对用户 `HamithaL` 的 `AccountsPayable17` 权限。  
   
-**适用于**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  
@@ -196,13 +196,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [GRANT 数据库主体权限 &#40;Transact SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
- [DENY 数据库主体权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
+ [GRANT 数据库主体权限 (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [DENY 数据库主体权限 (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys.database_permissions &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
- [创建应用程序角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [创建角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)  

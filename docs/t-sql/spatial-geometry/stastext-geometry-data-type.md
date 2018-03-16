@@ -1,5 +1,5 @@
 ---
-title: "STAsText (geometry 数据类型) |Microsoft 文档"
+title: "STAsText（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geometry-data-type"></a>STAsText（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回的开放地理空间联盟 (OGC) 熟知文本 (WKT) 表示形式**几何图形**实例。 此文本将不包含该实例传递的任何 Z（标高）或 M（度量）值。
+返回 geometry 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式。 此文本将不包含该实例传递的任何 Z（标高）或 M（度量）值。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **nvarchar (max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)  
   
- CLR 返回类型：**对**  
+ CLR 返回类型：SqlChars  
   
 ## <a name="examples"></a>示例  
  以下示例根据文本创建一个从 (0,0) 到 (2,3) 的 `LineString` geometry 实例。 `STAsText()` 以文本形式返回结果。  

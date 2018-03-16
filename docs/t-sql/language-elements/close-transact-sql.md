@@ -49,12 +49,12 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>参数  
  GLOBAL  
- 指定*cursor_name*指全局游标。  
+ 指定 cursor_name 是指全局游标。  
   
- *cursor_name*  
- 打开的游标的名称。 如果全局和局部游标存在与*cursor_name*作为其名称， *cursor_name*全局时指定; 否则为是指全局游标*cursor_name*指局部游标。  
+ cursor_name  
+ 打开的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标。  
   
- *cursor_variable_name*  
+ cursor_variable_name  
  与打开的游标关联的游标变量的名称。  
   
 ## <a name="examples"></a>示例  
@@ -77,8 +77,8 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [游标](../../relational-databases/cursors.md)   
  [游标 (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
- [提取 &#40;Transact SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
- [打开 &#40;Transact SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [DEALLOCATE (Transact-SQL)](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [FETCH (Transact-SQL)](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)  
   
   

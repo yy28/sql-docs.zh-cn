@@ -1,5 +1,5 @@
 ---
-title: "exist （) 方法 (xml 数据类型) |Microsoft 文档"
+title: "exist() 方法（xml 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,13 +32,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="exist-method-xml-data-type"></a>exist() 方法（xml 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回**位**表示以下条件之一：  
+  返回位，表示下列条件之一：  
   
 -   1，表示 True（如果查询中的 XQuery 表达式返回一个非空结果）。 即，它至少返回一个 XML 节点。  
   
 -   0，表示 False（如果它返回一个空结果）。  
   
--   如果**xml**执行查询时所依据的数据类型实例包含空值。  
+-   NULL（如果执行查询的 xml 数据类型实例包含 NULL）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,10 +51,10 @@ exist (XQuery)
  XQuery  
  是一个 XQuery 表达式，字符串文字。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
->  **Exist （)**方法返回 1 返回非空的结果的 XQuery 表达式。 如果指定**true()**或**false （)**函数内**exist （)**方法， **exist （)**方法将返回 1，因为函数**true()**和**false （)**分别返回布尔值 True 和 False。 也就是说，它们将返回非空结果。 因此， **exist （)**将返回 1 (True)，如下面的示例中所示：  
+>  对于返回非空结果的 XQuery 表达式，exist() 方法返回 1。 如果在 exist() 方法中指定 true() 或 false() 函数，exist() 方法将返回 1，因为函数 true() 和 false() 将分别返回布尔值 True 和 False。 也就是说，它们将返回非空结果。 因此，exist() 将返回 1 (True)，如以下示例所示：  
   
 ```  
 declare @x xml;  
@@ -63,10 +63,10 @@ select @x.exist('true()');
 ```  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何指定**exist （)**方法。  
+ 以下示例演示如何指定 exist() 方法。  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>示例：对 xml 类型变量指定 exist() 方法  
- 在下面的示例中，@x是**xml**类型变量 (非类型化 xml) 和@f是一个整数类型变量，将存储返回的值**exist （)**方法。 **Exist （)**方法返回 True (1)，如果 XML 实例中存储的日期值是`2002-01-01`。  
+ 以下示例中，@x 是一个 xml 类型变量（非类型化的 xml），@f 是一个整数类型变量，用于存储 exist() 方法返回的值。 如果 XML 实例中存储的日期值为 `2002-01-01`，exist() 方法返回 True (1)。  
   
 ```  
 declare @x xml;  
@@ -76,13 +76,13 @@ set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]
 select @f;  
 ```  
   
- 在比较中的日期**exist （)**方法，请注意以下事项：  
+ 用 exist() 方法比较日期时，请注意下列事项：  
   
--   代码`cast as xs:date?`用于将值强制转换**xs: date**的用途的比较类型。  
+-   代码 `cast as xs:date?` 用于将值强制转换为 xs:date 类型，以进行比较。  
   
--   值 **@Somedate** 属性是非类型化。 在将此值进行比较，它被隐式强制转换为比较的右侧类型**xs: date**类型。  
+-   @Somedate 属性的值是非类型化的。 进行比较时，此值将隐式强制转换为比较右侧的类型（xs:date 类型）。  
   
--   而不是**强制转换为 xs:date()**，你可以使用**xs:date()**构造函数。 有关详细信息，请参阅[构造函数 &#40;XQuery &#41;](../../xquery/constructor-functions-xquery.md).  
+-   可使用 xs:date() 构造函数，而非 cast as xs:date()。 有关详细信息，请参阅[构造函数 (XQuery)](../../xquery/constructor-functions-xquery.md)。  
   
  下面的示例与上一示例类似，不同之处在于它具有 <`Somedate`> 元素。  
   
@@ -96,14 +96,14 @@ SELECT @f;
   
  请注意上述查询的以下方面：  
   
--   **Text （)**方法返回一个包含非类型化的值的文本节点`2002-01-01`。 (XQuery 类型是**xdt:untypedAtomic**。)必须显式强制转换此类型化的值从**x**到**xsd:date**，因为在这种情况下不支持隐式强制转换。  
+-   text() 方法返回一个文本节点，其中包含非类型化的值 `2002-01-01`。 （XQuery 类型为 xdt:untypedAtomic。）必须将此类型化的值从 x 显式强制转换为 xsd:date，因为本示例中不支持隐式转换。  
   
 ### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>示例：对类型化 xml 变量指定 exist() 方法  
- 下面的示例演示如何使用**exist （)**方法依据**xml**类型变量。 它是类型化的 XML 变量，因为它指定了架构命名空间集合名称 `ManuInstructionsSchemaCollection`。  
+ 以下示例说明了如何对 xml 类型变量使用 exist() 方法。 它是类型化的 XML 变量，因为它指定了架构命名空间集合名称 `ManuInstructionsSchemaCollection`。  
   
- 在示例中，文档首先分配给此变量生产说明，然后**exist （)**使用方法来查找该文档是否包含 <`Location`> 元素其**LocationID**属性值为 50。  
+ 在该示例中，首先将生产说明文档分配给此变量，然后使用 exist() 方法查看文档中是否包含 LocationID 属性值为 50 的 <`Location`> 元素。  
   
- **Exist （)**方法对指定@x变量返回 1 (True)，如果文档包含的生产说明 <`Location`> 元素，该元素`LocationID=50`。 否则，该方法返回 0 (False)。  
+ 如果生产说明文档包含具有 `LocationID=50` 的 <`Location`> 元素，对 @x 变量指定的 exist() 方法返回 1 (True)。 否则，该方法返回 0 (False)。  
   
 ```  
 DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
@@ -137,15 +137,15 @@ WHERE CatalogDescription.exist('
   
  请注意上述查询的以下方面：  
   
--   WHERE 子句选择仅从这些行**ProductDescription**满足针对指定的条件的表**CatalogDescription xml**类型列。  
+-   WHERE 子句只选择 ProductDescription 表中符合根据 CatalogDescription xml 类型列指定的条件的那些行。  
   
--   **Exist （)**方法中的 WHERE 子句将返回 1 (True)，如果 XML 中不包括任何 <`Specifications`> 元素。 请注意，使用[not() 函数 (XQuery)](../../xquery/functions-on-boolean-values-not-function.md)。  
+-   如果 XML 不包括任何 <`Specifications`> 元素，则 WHERE 子句中的 exist() 方法返回 1 (True)。 请注意 [not() 函数 (XQuery)](../../xquery/functions-on-boolean-values-not-function.md) 的使用方法。  
   
--   [Sql:column() 函数 (XQuery)](../../xquery/xquery-extension-functions-sql-column.md)函数用于从非 XML 列中值引入。  
+-   [sql:column() 函数 (XQuery)](../../xquery/xquery-extension-functions-sql-column.md) 用于从非 XML 列中引入值。  
   
 -   此查询返回一个空的行集。  
   
- 该查询指定**query （)**和**exist （)** xml 数据类型方法，这两种方法声明相同的命名空间在查询 prolog 中。 在本例中，可能需要使用 WITH XMLNAMESPACES 来声明前缀并在查询中使用它。  
+ 此查询指定 xml 数据类型的 query() 和 exist() 方法，并且这两种方法在查询 prolog 中声明了相同的命名空间。 在本例中，可能需要使用 WITH XMLNAMESPACES 来声明前缀并在查询中使用它。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -164,7 +164,7 @@ WHERE CatalogDescription.exist('
  [使用 WITH XMLNAMESPACES 将命名空间添加到查询](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 数据修改语言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML 数据修改语言 (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

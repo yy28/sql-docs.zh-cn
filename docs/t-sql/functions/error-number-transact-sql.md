@@ -1,5 +1,5 @@
 ---
-title: "ERROR_NUMBER (Transact SQL) |Microsoft 文档"
+title: ERROR_NUMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_NUMBER ( )
   
  如果在 CATCH 块作用域以外调用，则返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以在 CATCH 块的作用域内的任何位置调用此函数。  
   
- 不管在 CATCH 块的作用域内运行的次数和位置，ERROR_NUMBER 都返回错误号。 这是与此相反，@ERROR、 其只返回立即后导致的错误的一个语句中的错误号或 CATCH 的第一个语句块。  
+ 不管在 CATCH 块的作用域内运行的次数和位置，ERROR_NUMBER 都返回错误号。 这与 @@ERROR 不同，后者只在紧跟导致错误的语句的语句中或 CATCH 块的第一个语句中返回错误号。  
   
  在嵌套的 CATCH 块中，ERROR_NUMBER 返回特定于其被引用的 CATCH 块作用域的错误号。 例如，外部 TRY...CATCH 构造的 CATCH 块可能具有嵌套 TRY...CATCH 构造。 在嵌套的 CATCH 块中，ERROR_NUMBER 返回调用嵌套的 CATCH 块的错误的编号。 如果 ERROR_NUMBER 在外部 CATCH 块中运行，则返回调用此 CATCH 块的错误的编号。  
   
@@ -100,7 +100,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_NUMBER  
  下面的代码示例显示生成被零除错误的 `SELECT` 语句。 返回错误号的同时，还将返回与错误相关的信息。  
@@ -129,7 +129,7 @@ GO
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)  
   

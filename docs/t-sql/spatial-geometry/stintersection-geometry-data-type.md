@@ -1,5 +1,5 @@
 ---
-title: "STIntersection (geometry 数据类型) |Microsoft 文档"
+title: "STIntersection（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geometry-data-type"></a>STIntersection（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回一个对象，表示点其中**几何图形**实例与另一个相交**几何图形**实例。
+返回一个对象，它表示一个 **geometry** 实例与另一个 **geometry** 实例的交点。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 是另一种**几何图形**实例进行比较的实例上的`STIntersection()`从中调用，以确定它们的相交处。  
+ 将与调用 `STIntersection()` 的实例进行比较的另一个 **geometry** 实例，进行比较的目的是确定这两个实例是否相交。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
- `STIntersection()`始终返回 null 如果的空间引用 Id 为 (Srid)**几何图形**实例不匹配。 只有在输入实例包含它们时，结果才可能包含圆弧段。  
+## <a name="remarks"></a>Remarks  
+ 如果 **geometry** 实例的空间引用 ID (SRID) 不匹配，则 `STIntersection()` 始终返回 null。 只有在输入实例包含它们时，结果才可能包含圆弧段。  
   
 ## <a name="examples"></a>示例  
   

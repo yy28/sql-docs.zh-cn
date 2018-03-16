@@ -53,10 +53,10 @@ GOTO label
 ```  
   
 ## <a name="arguments"></a>参数  
- *label*  
- 如果 GOTO 语句指向该标签，则其为处理的起点。 标签必须遵循的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 无论是否使用 GOTO 语句，标签均可作为注释方法使用。  
+ label  
+ 如果 GOTO 语句指向该标签，则其为处理的起点。 标签必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 无论是否使用 GOTO 语句，标签均可作为注释方法使用。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  GOTO 可出现在条件控制流语句、语句块或过程中，但它不能跳转到该批以外的标签。 GOTO 分支可跳转到定义在 GOTO 之前或之后的标签。  
   
 ## <a name="permissions"></a>权限  
@@ -85,12 +85,12 @@ Branch_Three:
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [中断 &#40;Transact SQL &#41;](../../t-sql/language-elements/break-transact-sql.md)   
- [继续 &#40;Transact SQL &#41;](../../t-sql/language-elements/continue-transact-sql.md)   
- [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [WAITFOR &#40;Transact SQL &#41;](../../t-sql/language-elements/waitfor-transact-sql.md)   
+ [控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
+ [BEGIN...END (Transact-SQL)](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [BREAK (Transact-SQL)](../../t-sql/language-elements/break-transact-sql.md)   
+ [CONTINUE (Transact-SQL)](../../t-sql/language-elements/continue-transact-sql.md)   
+ [IF...ELSE (Transact-SQL)](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [WAITFOR (Transact-SQL)](../../t-sql/language-elements/waitfor-transact-sql.md)   
  [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md)  
   
   

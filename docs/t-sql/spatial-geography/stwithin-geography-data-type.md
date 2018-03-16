@@ -1,5 +1,5 @@
 ---
-title: "STWithin (geography 数据类型) |Microsoft 文档"
+title: "STWithin（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stwithin-geography-data-type"></a>STWithin（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  如果返回 1 **geography**实例空间是在另一个**geography**实例; 否则，返回 0。  
+  如果 geography 实例在空间上包含在另一个 geography 实例中，则返回 1；否则，返回 0。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,16 +41,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- *other_geography*  
- 是另一种**geography**实例要针对的实例上进行比较`STWithin()`调用。  
+ other_geography  
+ 与对其调用 `STWithin()` 的实例进行比较的其他 geography 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 如果此方法将始终返回 null 的空间引用 Id 为 (Srid) **geography**实例不匹配。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STWithin()` 来测试两个 `geography` 实例，以查看第一个实例是否完全包含在第二个实例中。  

@@ -1,5 +1,5 @@
 ---
-title: "AsTextZM (geometry 数据类型) |Microsoft 文档"
+title: "AsTextZM（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="astextzm-geometry-data-type"></a>AsTextZM（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回几何图形实例的开放地理空间联盟 (OGC) 熟知文本 (WKT) 表示扩充与任意**Z** （仰角） 和**M**实例传送 （度量） 值。
+返回几何图形实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式，增加了该实例传递的任何 Z（标高）和 M（度量）值。
   
 ## <a name="syntax"></a>语法  
   
@@ -46,14 +46,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **nvarchar (max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)  
   
- CLR 返回类型：**对**  
+ CLR 返回类型：SqlChars  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建`Point`实例，其中包含**Z** （仰角） 和**M** （度量） 值。 `STAsText()`选择 WKT 值，(1 2);`AsTextZM()`选择相同的 WKT 值，并返回的值**Z**和**M**，以生成 (1 2 3 4)。  
+ 下面的示例创建一个带有 Z（标高）和 M（度量）值的 `Point` 实例。 `STAsText()` 选择 WKT 值 (1 2)；`AsTextZM()` 选择相同的 WKT 值，还返回 Z 和 M 的值，从而生成 (1 2 3 4)。  
   
 ```  
 DECLARE @g geometry;  
@@ -63,9 +63,9 @@ SELECT @g.AsTextZM();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [在几何图形实例的扩展的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [&#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Z &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+ [Geometry 实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [M（geometry 数据类型）](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z（geometry 数据类型）](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

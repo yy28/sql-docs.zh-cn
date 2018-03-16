@@ -1,5 +1,5 @@
 ---
-title: "ALTER 凭据 (Transact SQL) |Microsoft 文档"
+title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -51,23 +51,23 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- *credential_name*  
+ credential_name  
  指定将要更改的凭据的名称。  
   
- 标识**=***identity_name*  
+ IDENTITY = 'identity_name'  
  指定从服务器外部进行连接时要使用的帐户名称。  
   
- 机密**=***机密*  
- 指定发送身份验证所需的机密内容。 *机密*是可选的。  
+ SECRET = 'secret'  
+ 指定发送身份验证所需的机密内容。 *secret* 是可选项。  
   
-## <a name="remarks"></a>注释  
- 当更改凭据，这两者的值*identity_name*和*机密*将重置。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
+## <a name="remarks"></a>Remarks  
+ 当凭据发生更改时，identity_name 和 secret 的值都将重置。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
   
  使用服务主密钥对密码进行加密。 如果重新生成服务主密钥，则需要使用新服务主密钥对该密码重新加密。  
   
- 有关凭据的信息会显示在**sys.credentials**目录视图。  
+ 可以在 sys.credentials 目录视图中查看有关凭据的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY CREDENTIAL 权限。 如果该凭据是系统凭据，则要求具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -90,10 +90,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [凭据 &#40; 数据库引擎 &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [DROP CREDENTIAL &#40;Transact SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP CREDENTIAL (Transact-SQL)](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "PATINDEX (Transact SQL) |Microsoft 文档"
+title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -49,29 +49,29 @@ PATINDEX ( '%pattern%' , expression )
 ```  
   
 ## <a name="arguments"></a>参数  
- *pattern*  
- 包含要查找的序列的字符表达式。 可以使用通配符;但是，字符 %必须早于并遵循*模式*（除外，当您搜索的第一个或最后一个字符）。 *模式*字符字符串数据类型类别的表达式。 *模式*限制为 8000 个字符。  
+ pattern  
+ 包含要查找的序列的字符表达式。 可以使用通配符；但 pattern 之前和之后必须有 % 字符（搜索第一个或最后一个字符时除外）。 pattern 是字符串数据类型类别的表达式。 pattern最多包含 8000 个字符。  
   
  *expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，通常会为指定的模式搜索的列。 *表达式*的字符字符串数据类型类别。  
+ 是一个[expression](../../t-sql/language-elements/expressions-transact-sql.md)，通常是针对指定模式搜索的列。 expression 是字符串数据类型类别的表达式。  
   
 ## <a name="return-types"></a>返回类型  
- **bigint**如果*表达式*的**varchar （max)**或**nvarchar (max)**数据类型; 否则为**int**。  
+ bigint（如果 expression 的数据类型为 varchar(max) 或 nvarchar(max)）；否则为 int。  
   
-## <a name="remarks"></a>注释  
- 如果任一*模式*或*表达式*为 NULL，PATINDEX 返回 NULL。  
+## <a name="remarks"></a>Remarks  
+ 如果 pattern 或 expression 为 NULL，则 PATINDEX 返回 NULL。  
   
  PATINDEX 基于输入的排序规则执行比较。 若要以指定排序规则进行比较，则可以使用 COLLATE 将显式排序规则应用于输入。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- 在使用 SC 排序规则时，返回计数的值将任何 utf-16 代理项对*表达式*单个字符的形式的参数。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 在使用 SC 排序规则时，返回值将 expression 参数中的任何 UTF-16 代理项对计为一个字符。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
- 0x0000 (**char(0)**) 是 Windows 排序规则中未定义的字符，不能包含在 PATINDEX。  
+ 0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 PATINDEX 中。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-simple-patindex-example"></a>A. 简单 PATINDEX 示例  
- 下面的示例检查短字符串 (`interesting data`) 字符的起始位置`ter`。  
+ 以下示例检查字符 `ter` 起始位置的短字符串 (`interesting data`)。  
   
 ```  
 SELECT PATINDEX('%ter%', 'interesting data');  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. 使用变量指定模式  
- 下面的示例使用变量来传递到值*模式*参数。 此示例使用[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
+ 下面的示例使用变量将值传递到 pattern 参数。 此示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库。  
   
 ```  
 DECLARE @MyValue varchar(10) = 'safety';   
@@ -149,14 +149,14 @@ WHERE DocumentNode = 0x7B40;
 
   
 ## <a name="see-also"></a>另请参阅  
- [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
- [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
+ [CHARINDEX (Transact-SQL)](../../t-sql/functions/charindex-transact-sql.md)  
+ [LEN (Transact-SQL)](../../t-sql/functions/len-transact-sql.md)  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [&#40;通配符-字符 &#40; &#41;到匹配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#40;通配符-字符 &#40; &#41;不到匹配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
- [_ &#40;通配符-匹配一个字符 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
- [百分比字符 &#40;通配符-字符 &#40; &#41;到匹配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+ [（通配符 - 需匹配的字符）(Transact-SQL)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [（通配符 - 无需匹配的字符）(Transact-SQL)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
+ [_（通配符 - 匹配一个字符）(Transact-SQL)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
+ [百分比字符（通配符 - 需匹配的字符）(Transact-SQL)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
 

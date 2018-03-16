@@ -1,5 +1,5 @@
 ---
-title: "逻辑运算符 (Transact SQL) |Microsoft 文档"
+title: "逻辑运算符 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>逻辑运算符 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  逻辑运算符对某些条件进行测试，以获得其真实情况。 逻辑运算符，比较运算符一样，将返回**布尔**数据类型值为 TRUE、 FALSE 或 UNKNOWN。  
+  逻辑运算符对某些条件进行测试，以获得其真实情况。 逻辑运算符和比较运算符一样，返回带有 TRUE、FALSE 或 UNKNOWN 值的布尔数据类型。  
   
 |运算符|含义|  
 |--------------|-------------|  
@@ -52,6 +52,6 @@ ms.lasthandoff: 01/25/2018
 |[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|如果在一组比较中，有些为 TRUE，那么就为 TRUE。|  
   
 ## <a name="see-also"></a>另请参阅  
- [运算符优先级 &#40;Transact SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+ [运算符优先级 (Transact-SQL)](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

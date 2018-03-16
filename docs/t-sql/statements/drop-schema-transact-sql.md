@@ -1,5 +1,5 @@
 ---
-title: "拖放架构 (Transact SQL) |Microsoft 文档"
+title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -57,22 +57,22 @@ DROP SCHEMA schema_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *如果存在*  
+ IF EXISTS  
  **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
- 仅当它已存在，则有条件地删除的架构。  
+ 只有在架构已存在时才对其进行有条件地删除。  
   
  *schema_name*  
  架构在数据库中所使用的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  要删除的架构不能包含任何对象。 如果架构包含对象，则 DROP 语句将失败。  
   
- 有关架构的信息会显示在[sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)目录视图。  
+ 可以在 [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) 目录视图中查看有关架构的信息。  
   
- **警告：**[!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **警告** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对架构具有 CONTROL 权限，或者对数据库具有 ALTER ANY SCHEMA 权限。  
   
 ## <a name="examples"></a>示例  
@@ -96,7 +96,7 @@ GO
   
   
 ## <a name="see-also"></a>另请参阅  
- [创建架构 &#40;Transact SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [ALTER 架构 &#40;Transact SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
- [删除架构 (Transact SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   
+ [ALTER SCHEMA (Transact-SQL)](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  

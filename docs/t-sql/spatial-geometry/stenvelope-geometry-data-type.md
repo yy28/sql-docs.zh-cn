@@ -1,5 +1,5 @@
 ---
-title: "STEnvelope (geometry 数据类型) |Microsoft 文档"
+title: "STEnvelope（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,9 +44,9 @@ STEnvelope ( )
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomFromText()` 创建从 (0,0) 到 (2,3) 的 `LineString` 实例，并使用 `STEnvelope()` 返回 `LineString` 的边界框。  

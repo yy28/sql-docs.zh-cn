@@ -50,36 +50,36 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 ```  
   
 ## <a name="arguments"></a>参数  
- *test_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)要测试是否在定义的范围*begin_expression*和*end_expression*。 *test_expression*必须为这两者具有相同数据类型*begin_expression*和*end_expression*。  
+ test_expression  
+ 要在由 begin_expression 和 end_expression 定义的范围内测试的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 test_expression 的数据类型必须与 begin_expression 和 end_expression 的数据类型相同。  
   
  NOT  
  指定谓词的结果被取反。  
   
- *begin_expression*  
- 为任意有效的表达式。 *begin_expression*必须为这两者具有相同数据类型*test_expression*和*end_expression*。  
+ begin_expression  
+ 为任意有效的表达式。 begin_expression 的数据类型必须与 test_expression 和 end_expression 的数据类型相同。  
   
- *end_expression*  
- 为任意有效的表达式。 *end_expression*必须为这两者具有相同数据类型*test_expression*和*begin_expression*。  
+ end_expression  
+ 为任意有效的表达式。 end_expression 的数据类型必须与 test_expression 和 begin_expression 的数据类型相同。  
   
  和  
- 用作一个占位符，该值指示*test_expression*应由指定的范围内*begin_expression*和*end_expression*。  
+ 充当一个占位符，用于指示 test_expression 应该在 begin_expression 和 end_expression 指定的范围内。  
   
 ## <a name="result-types"></a>结果类型  
  **Boolean**  
   
 ## <a name="result-value"></a>结果值  
- 返回之间**TRUE**如果的值*test_expression*大于或等于的值*begin_expression*且小于或等于的值*end_expression*。  
+ 如果 test_expression 的值大于或等于 begin_expression 的值，并且小于或等于 end_expression 的值，则 BETWEEN 返回 TRUE。  
   
- 不之间返回**TRUE**如果的值*test_expression*小于的值*begin_expression*或更高的值*end_expression*.  
+ 如果 test_expression 的值小于 begin_expression 的值，或大于 end_expression 的值，则 NOT BETWEEN 返回 TRUE。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要指定排他范围，请使用大于 (>) 和小于 (<) 运算符。 如果任何 BETWEEN 或 NOT BETWEEN 谓词的输入为 NULL，则结果为 UNKNOWN。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-between"></a>A. 使用 BETWEEN  
- 下面的示例数据库中返回有关数据库角色的信息。 第一个查询返回的所有角色。 第二个示例使用`BETWEEN`子句以限制为指定的角色`database_id`值。  
+ 以下示例返回有关数据库中数据库角色的信息。 第一个查询返回所有角色。 第二个示例使用 `BETWEEN` 子句将角色限制为指定的 `database_id` 值。  
   
 ```sql  
 SELECT principal_id, name 
@@ -165,7 +165,7 @@ GO
 ```  
   
 ### <a name="d-using-between-with-datetime-values"></a>D. 使用带有日期时间值的 BETWEEN   
- 下面的示例检索所在的行**datetime**值可以介于`'20011212'`和`'20020105'`(含） 之间。  
+ 以下示例检索 datetime 值介于 `'20011212'` 和 `'20020105'`（含）之间的行。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -184,17 +184,17 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- 该查询将检索预期的行，因为在查询中的日期值和**datetime**值存储在`RateChangeDate`而无需在日期的时间部分中指定了列。 未指定时间部分时，将默认使用 12:00 A.M。 请注意，若某行的时间部分晚于 2002-01-05 12:00 A.M.， 则由于它处于范围之外，因此此查询不返回该行。  
+ 由于指定查询中的日期值和 `RateChangeDate` 列中存储的 datetime 值时未指定日期的时间部分，因此该查询将检索预期行。 未指定时间部分时，将默认使用 12:00 A.M。 请注意，若某行的时间部分晚于 2002-01-05 12:00 A.M.， 则由于它处于范围之外，因此此查询不返回该行。  
   
   
 ## <a name="see-also"></a>另请参阅  
- [&#62;&#40;大于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
- [&#60;&#40;小于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [&#62;（大于）(Transact-SQL)](../../t-sql/language-elements/greater-than-transact-sql.md)   
+ [&#60;（小于）(Transact-SQL)](../../t-sql/language-elements/less-than-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   
 

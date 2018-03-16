@@ -1,5 +1,5 @@
 ---
-title: "VERIFYSIGNEDBYASYMKEY (Transact SQL) |Microsoft 文档"
+title: VERIFYSIGNEDBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,24 +51,24 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ```  
   
 ## <a name="arguments"></a>参数  
- *Asym_Key_ID*  
+ Asym_Key_ID  
  数据库中非对称密钥证书的 ID。  
   
- *clear_text*  
+ clear_text  
  正在验证的明文数据。  
   
- *签名*  
- 附加到已签名数据中的签名。 *签名*是**varbinary**。  
+ signature  
+ 附加到已签名数据中的签名。 signature 的数据类型为 varbinary。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
  如果签名匹配，则返回 1；否则返回 0。  
   
-## <a name="remarks"></a>注释  
- **VerifySignedByAsymKey**通过使用指定的非对称密钥的公钥解密的数据和数据的新计算 MD5 哈希处理的解密的值进行比较。 如果值匹配，则确认签名有效。  
+## <a name="remarks"></a>Remarks  
+ VerifySignedByAsymKey 使用指定的非对称密钥的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较。 如果值匹配，则确认签名有效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对非对称密钥具有 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
@@ -99,8 +99,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ASYMKEY_ID &#40;Transact SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [SIGNBYASYMKEY &#40;Transact SQL &#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
+ [ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

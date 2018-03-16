@@ -1,5 +1,5 @@
 ---
-title: "ALTER PARTITION FUNCTION (Transact SQL) |Microsoft 文档"
+title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -61,24 +61,24 @@ ALTER PARTITION FUNCTION partition_function_name()
 ```  
   
 ## <a name="arguments"></a>参数  
- *partition_function_name*  
+ partition_function_name  
  要修改的分区函数的名称。  
   
- SPLIT RANGE (*小于 boundary_value* )  
- 在分区函数中添加一个分区。 *小于 boundary_value*确定新的分区，范围和必须不同于分区函数的现有边界范围。 基于*小于 boundary_value*、[!INCLUDE[ssDE](../../includes/ssde-md.md)]将一个现有的范围拆分为两个。 这两个，其中新*小于 boundary_value*驻留被视为新的分区。  
+ SPLIT RANGE ( boundary_value )  
+ 在分区函数中添加一个分区。 boundary_value 确定新分区的范围，因此它必须不同于分区函数的现有边界范围。 根据 boundary_value，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将某个现有范围拆分为两个范围。 在这两个范围中，新 boundary_value 所在的范围被视为是新分区。  
   
  文件组必须处于联机状态，并且必须由使用此分区函数的分区方案标记为 NEXT USED，以保存新分区。 在 CREATE PARTITION SCHEME 语句中，将把文件组分配给分区。 如果 CREATE PARTITION SCHEME 语句分配了多余的文件组（在 CREATE PARTITION FUNCTION 语句中创建的分区数少于用于保存它们的文件组），则存在未分配的文件组，分区方案将把其中的某个文件组标记为 NEXT USED。 该文件组将保存新的分区。 如果分区方案未将任何文件组标记为 NEXT USED，则必须使用 ALTER PARTITION SCHEME 添加一个文件组或指定一个现有文件组来保存新分区。 可以指定已保存分区的文件组来保存附加分区。 由于一个分区函数可以参与多个分区方案，因此所有使用分区函数（您向其中添加了分区）的分区方案都必须拥有一个 NEXT USED 文件组。 否则，ALTER PARTITION FUNCTION 将失败并出现错误，该错误显示缺少 NEXT USED 文件组的一个或多个分区方案。  
   
  如果在同一文件组创建所有分区，则最初自动将该文件组分配为 NEXT USED 文件组。 但是，在执行拆分操作后，将不再有指定的 NEXT USED 文件组。 您必须通过使用 ALTER PARITION SCHEME 显式将该文件组分配为 NEXT USED 文件组，否则后续的拆分操作将失败。  
   
 > [!NOTE]  
->  具有列存储索引的限制： 当表上存在列存储索引时，可以在将拆分的空的分区。 你将需要删除或在执行此操作前禁用列存储索引  
+>  列存储索引限制：当表上存在列存储索引时，仅可拆分空分区。 需要先删除或禁用此列存储索引才能执行此操作  
   
- 合并 [范围 (*小于 boundary_value*)]  
- 删除一个分区并将该分区中存在的所有值都合并到剩余的某个分区中。 范围 (*小于 boundary_value*) 必须是从已删除的分区值将合并到其中的现有边界值。 最初保存的文件组*小于 boundary_value*会从分区方案，除非它由一个剩余的分区，或用 NEXT USED 属性标记。 合并的分区所驻留在最初未持有的文件组*小于 boundary_value*。 *小于 boundary_value*是常量表达式可以引用 （包括用户定义类型的变量） 的变量或函数 （包括用户定义函数）。 它无法引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 *小于 boundary_value*必须是匹配或进行隐式转换为其相应的分区依据列，数据类型和不能被截断的方式的隐式转换的过程的大小和值的小数位数不匹配的其对应*input_parameter_type*。  
+ MERGE [ RANGE ( boundary_value) ]  
+ 删除一个分区并将该分区中存在的所有值都合并到剩余的某个分区中。 RANGE (boundary_value) 必须是一个现有边界值，已删除分区中的值将合并到该值中。 如果最初保存 boundary_value 的文件组没有被剩余分区使用，也没有使用 NEXT USED 属性进行标记，则将从分区方案中删除该文件组。 合并的分区驻留在最初不保存 boundary_value 的文件组中。 boundary_value 是一个可以引用变量（包括用户定义类型变量）或函数（包括用户定义函数）的常量表达式。 它无法引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 boundary_value 必须匹配或可以隐式转换为其对应分区依据列的数据类型，并且当值的大小和小数位数不匹配其对应 input_parameter_type 时，将无法在隐式转换过程中被截断。  
   
 > [!NOTE]  
->  具有列存储索引的限制： 不能合并包含列存储索引的两个非空分区。 你将需要删除或在执行此操作前禁用列存储索引  
+>  列存储索引限制：不能合并包含列存储索引的两个非空分区。 需要先删除或禁用此列存储索引才能执行此操作  
   
 ## <a name="best-practices"></a>最佳实践  
  始终在分区范围的两端保留空分区，以便确保分区拆分（在加载新数据前）和分区合并（在加载旧数据后）不会产生任何数据移动。 避免拆分或合并填充的分区。 这样做可能效率非常低下，因为这可能导致生成多达四次日志，并且还可能导致严重的锁定问题。  
@@ -153,19 +153,19 @@ MERGE RANGE (100);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [已分区的表和索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
+ [已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [删除分区函数 &#40;Transact SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [ALTER 分区方案 &#40;Transact SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [删除分区方案 &#40;Transact SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [sys.partition_functions &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys.partition_parameters &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [sys.partition_range_values &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [sys.partitions &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_functions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
+ [sys.partition_parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
+ [sys.partition_range_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

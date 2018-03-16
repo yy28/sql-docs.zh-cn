@@ -1,5 +1,5 @@
 ---
-title: "IS_SRVROLEMEMBER (Transact SQL) |Microsoft 文档"
+title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,10 +48,10 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
-  *角色*   
- 要检查的服务器角色的名称。 *角色*是**sysname**。  
+ 'role'  
+ 要检查的服务器角色的名称。 role 为 sysname。  
   
- 有效值为*角色*是用户定义的服务器角色和以下固定服务器角色：  
+ role 的有效值是用户定义的服务器角色和以下固定服务器角色：  
   
 |||  
 |-|-|  
@@ -61,24 +61,24 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |diskadmin|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> public|  
 |processadmin||  
   
-  *登录*   
- 是的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名来检查。 *登录名*是**sysname**，默认值为 NULL。 如果未不指定任何值，结果基于当前的执行上下文。 如果此参数包含词 NULL，将返回 NULL。  
+ 'login'  
+ 要检查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的名称。 login 的数据类型为 sysname，默认值为 NULL。 如果未指定值，则结果视当前执行上下文而定。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 |返回值|Description|  
 |------------------|-----------------|  
-|0|*登录名*不是成员的*角色*。<br /><br /> 在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，此语句始终返回 0。|  
-|1|*登录名*为属于*角色*。|  
-|NULL|*角色*或*登录*无效，或者您没有权限查看的角色成员资格。|  
+|0|login 不是 role 的成员。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，此语句始终返回 0。|  
+|@shouldalert|login 是 role 的成员。|  
+|NULL|role 或 login 无效，或者没有查看角色成员身份的权限。|  
   
-## <a name="remarks"></a>注释  
- UseIS_SRVROLEMEMBER 以确定当前用户是否可以执行的操作需要的服务器角色的权限。  
+## <a name="remarks"></a>Remarks  
+ 使用 IS_SRVROLEMEMBER 可确定当前用户是否可以执行需要服务器角色权限的操作。  
   
- 如果为指定 Windows 登录名，例如 Contoso\Mary5，*登录*， **IS_SRVROLEMEMBER**返回**NULL**，除非授予或拒绝直接访问权限登录名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ 如果为 login 指定了 Windows 登录名（例如 Contoso\Mary5），那么除非针对该登录名授予或拒绝了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的直接访问权限，否则 IS_SRVROLEMEMBER 将返回 NULL。  
   
- 如果可选*登录*参数是未提供，并且如果*登录*是 Windows 域登录名，它可能是通过在 Windows 组的成员资格固定的服务器角色的成员。 要解析这种间接成员身份，IS_SRVROLEMEMBER 将从域控制器中请求 Windows 组成员身份信息。 如果域控制器不可访问或不响应， **IS_SRVROLEMEMBER**的适用于用户和其本地组的记帐返回角色成员身份信息。 如果指定的用户不是当前用户，则 IS_SRVROLEMEMBER 返回的值可能不同于验证器（例如 Active Directory）对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行的最后一次数据更新。  
+ 如果未提供可选的 login 参数，且 login 是 Windows 域登录名，则它可以通过 Windows 组中的成员身份作为固定服务器角色的成员。 要解析这种间接成员身份，IS_SRVROLEMEMBER 将从域控制器中请求 Windows 组成员身份信息。 如果无法访问域控制器或域控制器没有响应，则 IS_SRVROLEMEMBER 在返回角色成员身份信息时只考虑用户及其本地组。 如果指定的用户不是当前用户，则 IS_SRVROLEMEMBER 返回的值可能不同于验证器（例如 Active Directory）对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行的最后一次数据更新。  
   
  如果提供了可选的 login 参数，则 sys.server_principals 中必须存在要查询的 Windows 登录名，否则 IS_SRVROLEMEMBER 将返回 NULL。 这指示该登录名无效。  
   
@@ -86,16 +86,16 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
  如果域控制器不可用，则当 Windows 主体可在本地进行身份验证时（例如本地 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名），对 IS_SRVROLEMEMBER 的调用将返回准确的信息。  
   
- **IS_SRVROLEMEMBER**始终返回 0，在使用 Windows 组为登录名参数，并且此 Windows 组是另一个 Windows 组，即，反过来，指定的服务器角色的成员的成员。  
+ 在某一 Windows 组用作登录参数，并且此 Windows 组是另一个 Windows 组的成员，而该组又是指定服务器角色的成员时，IS_SRVROLEMEMBER 始终返回 0。  
   
- 用户帐户控制 (UAC) 设置还可能会导致返回不同的结果。 这取决于用户在访问服务器时是作为 Windows 组成员还是特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。  
+ 用户帐户控制 (UAC) 设置也可能导致返回不同的结果。 这取决于用户在访问服务器时是作为 Windows 组成员还是特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。  
   
- 此函数计算角色成员身份，而不是基础权限。 例如， **sysadmin**固定的服务器角色具有**CONTROL SERVER**权限。 如果用户具有**CONTROL SERVER**权限但不是角色的成员，此函数将正确地报告用户不是成员的**sysadmin**角色，即使用户具有相同权限。  
+ 此函数计算角色成员身份，而不是基础权限。 例如，sysadmin 固定服务器角色具有 CONTROL SERVER 权限。 如果用户具有 CONTROL SERVER 权限但不是该角色的成员，此函数将正确报告用户不是 sysadmin 角色的成员，即使用户具有相同的权限也是如此。  
   
 ## <a name="related-functions"></a>相关函数  
- 若要确定当前用户是否为指定的 Windows 组的成员或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库角色，使用[IS_MEMBER &#40;Transact SQL &#41;](../../t-sql/functions/is-member-transact-sql.md). 若要确定是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名是数据库角色的成员，请使用[IS_ROLEMEMBER &#40;Transact SQL &#41;](../../t-sql/functions/is-rolemember-transact-sql.md).  
+ 若要确定当前用户是否为指定 Windows 组或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色的成员，请使用 [IS_MEMBER (Transact-SQL)](../../t-sql/functions/is-member-transact-sql.md)。 若要确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名是否为数据库角色的成员，请使用 [IS_ROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-rolemember-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器角色的 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
@@ -110,14 +110,14 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
    print 'ERROR: The server role specified is not valid.';  
 ```  
   
- 下面的示例指示 Pat 的域登录名是否为属于**diskadmin**固定的服务器角色。  
+ 以下示例指示域登录名 Pat 是否是 diskadmin 固定服务器角色的成员。  
   
 ```  
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [IS_MEMBER &#40;Transact SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
+ [IS_MEMBER (Transact-SQL)](../../t-sql/functions/is-member-transact-sql.md)   
  [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

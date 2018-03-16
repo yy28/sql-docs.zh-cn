@@ -1,5 +1,5 @@
 ---
-title: "字符串运算符 (Transact SQL) |Microsoft 文档"
+title: "字符串运算符 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
   
  [%（通配符 - 需匹配的字符）](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91;&#93;（通配符-到匹配项的字符）](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+ [[ ]（通配符 - 需匹配的字符）](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; ^ &#93;（通配符的字符不到匹配项）](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+ [[^]（通配符 - 无需匹配的字符）](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
  [_（通配符 - 匹配一个字符）](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

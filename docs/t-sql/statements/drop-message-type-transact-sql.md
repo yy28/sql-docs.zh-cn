@@ -1,5 +1,5 @@
 ---
-title: "删除消息类型 (Transact SQL) |Microsoft 文档"
+title: DROP MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>权限  
  默认情况下，消息类型的所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有删除消息类型的权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果有任何约定引用了某个消息类型，则无法删除该消息类型。  
   
 ## <a name="examples"></a>示例  
@@ -68,8 +68,8 @@ DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER 消息类型 &#40;Transact SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [创建消息类型 &#40;Transact SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [ALTER MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

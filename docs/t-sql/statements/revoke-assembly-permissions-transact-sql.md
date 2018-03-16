@@ -1,5 +1,5 @@
 ---
-title: "撤消程序集的权限 (Transact SQL) |Microsoft 文档"
+title: "REVOKE 程序集权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- *权限*  
+ permission  
  指定可对程序集撤消的权限。 如下所列。  
   
- 程序集上**::***程序集 _ 名称*  
- 指定对其撤消权限的程序集。 作用域限定符**::**是必需的。  
+ ON ASSEMBLY ::assembly_name  
+ 指定对其撤消权限的程序集。 需要使用作用域限定符 ::。  
   
- *database_principal*  
+ database_principal  
  指定要从中撤消权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -85,7 +85,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS *revoking_principal*  
+ AS revoking_principal  
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  程序集是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可对程序集撤消的最特定、最有限的权限，以及暗含这些权限的更一般的权限。  
   
 |程序集权限|程序集权限隐含的权限|数据库权限隐含的权限|  
@@ -115,17 +115,17 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对程序集的 CONTROL 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [创建程序集 &#40;Transact SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [创建应用程序角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

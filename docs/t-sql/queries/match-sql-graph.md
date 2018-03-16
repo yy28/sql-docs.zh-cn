@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="match-transact-sql"></a>匹配 (Transact SQL)
+# <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  指定关系图的搜索条件。 只能与图形节点和边缘表，请在 SELECT 语句作为 WHERE 子句的一部分，可以使用匹配。 
+  指定图形的搜索条件。 MATCH 只能在 SELECT 语句中作为 WHERE 子句的一部分，与图形节点和边缘表一起使用。 
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,25 +62,25 @@ MATCH (<graph_search_pattern>)
 ```
 
 ## <a name="arguments"></a>参数  
-*graph_search_pattern*  
-指定搜索或路径遍历关系图中的模式。 此模式使用 ASCII 艺术作品语法来遍历关系图中的路径。 模式将转从一个节点到另一个通过中提供的箭头的方向的边缘。 在括号内提供了边缘名称或别名。 节点名称或别名显示在两个箭头。 箭头可以在任一方向模式中。
+graph_search_pattern  
+指定图形中的搜索模式或遍历路径。 此模式使用 ASCII 图表语法来遍历图形中的路径。 模式将按照所提供的箭头方向通过边缘从一个节点转到另一个节点。 括号内提供边缘名或别名。 节点名称或别名显示在箭头两端。 模式中，箭头可以指向两个方向中的任意一个方向。
 
-*node_alias*  
-名称或别名的 FROM 子句中提供的节点表。
+node_alias  
+FROM 子句中提供的节点表的名称或别名。
 
-*edge_alias*  
-名称或别名边缘表在 FROM 子句中提供。
+edge_alias  
+FROM 子句中提供的边缘表的名称或别名。
 
 
-## <a name="remarks"></a>注释  
-可以重复内匹配的节点名称。  换而言之，节点可以是遍历在同一查询中的任意次数。  
-边缘名称不能重复内匹配。  
-一条边可以点的两个方向，但是它必须具有显式的方向。  
-或和匹配模式中不支持 NOT 运算符。 与使用其他表达式和 WHERE 子句中，可以结合匹配。 但是，结合使用其他表达式或或不受支持。 
+## <a name="remarks"></a>Remarks  
+MATCH 中的节点名称可以重复。  换而言之，在同一个查询中可以按任意次数遍历节点。  
+MATCH 中的边缘名不能重复。  
+边缘可以指向两个方向中的任意一个方向，但它必须具有显式方向。  
+MATCH 模式中不支持 OR 和 NOT 运算符。 在 WHERE 子句中使用 AND 可以将 MATCH 与其他表达式结合使用。 但是不支持使用 OR 或 NOT 将其与其他表达式结合使用。 
 
 ## <a name="examples"></a>示例  
-### <a name="a--find-a-friend"></a>A.  查找友元 
- 下面的示例创建一个 Person 节点表和好友边缘表、 插入一些数据，然后使用匹配查找 Alice 的人员在关系图的友元。
+### <a name="a--find-a-friend"></a>A.  查找好友 
+ 以下示例创建了一个 Person 节点表和好友边缘表，在其中插入一些数据，然后使用 MATCH 查找图中人物 Alice 的好友。
 
  ```
  -- Create person node table
@@ -110,8 +110,8 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>B.  查找友元的友元
- 下面的示例尝试查找 Alice 的友元的友元。 
+ ### <a name="b--find-friend-of-a-friend"></a>B.  查找好友的好友
+ 以下示例尝试查找 Alice 好友的好友。 
 
  ```
 SELECT Person3.name AS FriendName 
@@ -121,8 +121,8 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>C.  详细`MATCH`模式
- 以下是一些更多的方法，在其中一种模式可以指定在匹配。
+### <a name="c--more-match-patterns"></a>C.  更多 `MATCH` 模式
+ 以下提供了更多在 MATCH 中指定模式的方法。
 
  ```
  -- Find a friend
@@ -153,6 +153,6 @@ AND Person1.name = 'Alice';
  
 
 ## <a name="see-also"></a>另请参阅  
- [创建 TABLE &#40;SQL Graph &#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [使用 SQL Server 2017 处理的关系图](../../relational-databases/graphs/sql-graph-overview.md)  
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT（SQL 图形）](../../t-sql/statements/insert-sql-graph.md)]  
+ [使用 SQL Server 2017 进行图形处理](../../relational-databases/graphs/sql-graph-overview.md)  

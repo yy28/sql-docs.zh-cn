@@ -1,5 +1,5 @@
 ---
-title: "删除服务器角色 (Transact SQL) |Microsoft 文档"
+title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ DROP SERVER ROLE role_name
  *role_name*  
  指定要从服务器中删除的用户定义的服务器角色。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  无法从服务器中删除拥有安全对象的用户定义服务器角色。 若要删除拥有安全对象的用户定义服务器角色，必须先转移这些安全对象的所有权或删除这些安全对象。  
   
- 无法删除拥有成员的用户定义服务器角色。 若要删除具有成员的用户定义的服务器角色，你必须首先删除角色的成员使用[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。  
+ 无法删除拥有成员的用户定义服务器角色。 若要删除拥有成员的用户定义服务器角色，必须先使用 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 删除该角色的成员。  
   
  无法删除固定服务器角色。  
   
- 你可以通过查询来查看有关角色成员身份的信息[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)目录视图。  
+ 通过查询 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目录视图可查看有关角色成员身份的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器角色的 CONTROL 权限或 ALTER ANY SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. 查看角色成员身份  
- 若要查看角色成员身份，使用**服务器角色 (成员**) 页中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或执行以下查询：  
+ 若要查看角色成员身份，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“服务器角色(成员)”页或执行以下查询：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -99,10 +99,10 @@ ORDER BY SP1.name ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER 角色 &#40;Transact SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [创建角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [删除角色 &#40;Transact SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

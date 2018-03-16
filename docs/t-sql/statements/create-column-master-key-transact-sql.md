@@ -1,5 +1,5 @@
 ---
-title: "创建列主密钥 (Transact SQL) |Microsoft 文档"
+title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  在数据库中创建列主密钥元数据对象。 表示一个密钥，列主密钥元数据条目存储在外部存储，用于保护 （加密） 列加密密钥时使用[始终加密 &#40; 数据库引擎 &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能。 密钥轮换; 的允许多个列主密钥定期更改密钥以增强安全性。 你可以通过对象资源管理器中创建的密钥存储和数据库中其相应的元数据对象中列主密匙[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell。 有关详细信息，请参阅[密钥管理概述 Always encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
+  在数据库中创建列主密钥元数据对象。 列主密钥元数据条目代表一个密钥，该密钥存储在外部密钥存储中，在使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能时用于保护（加密）列加密密钥。 多列主密钥允许密钥轮换；定期更改密钥以增强安全性。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象资源管理器或 PowerShell 在密钥存储中创建列主密钥，并在数据库中创建对应的元数据对象。 有关详细信息，请参阅 [Always Encrypted 密钥管理概述](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,48 +59,48 @@ CREATE COLUMN MASTER KEY key_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *key_name*  
- 是依据列主密钥将已知的数据库中的名称。  
+ key_name  
+ 列主密钥在数据库中所使用的名称。  
   
- *key_store_provider_name*  
- 指定的密钥存储提供程序，它是封装包含列主密钥的密钥存储的客户端软件组件的名称。 启用始终加密的客户端驱动程序使用密钥存储提供程序名称来查找的密钥存储提供程序的驱动程序的注册表中的密钥存储提供程序。 该驱动程序使用提供程序解密列加密密钥，受列主密匙，存储在基础的密钥存储。 列加密密钥的纯文本值然后用于加密查询参数，对应于加密的数据库列，或以解密从加密列的查询结果。  
+ key_store_provider_name  
+ 指定密钥存储提供程序的名称，该提供程序是一个客户端软件组件，用于封装包含列主密钥的密钥存储。 启用了 Always Encrypted 的客户端驱动程序使用密钥存储提供程序名称在密钥存储提供程序的驱动程序注册表中查找密钥存储提供程序。 驱动程序使用提供程序解密存储在基础密钥存储中并由列主密钥保护的列加密密钥。 然后使用列加密密钥的明文值来加密与加密数据库列相对应的查询参数，或者解密来自加密列的查询结果。  
   
- 启用始终加密的客户端驱动程序库包含常用的密钥存储的密钥存储提供程序。   
+ 启用了 Always Encrypted 的客户端驱动程序库包括热门密钥存储的密钥存储提供程序。   
   
-可用的提供程序集依赖于类型和版本的客户端驱动程序。 请参阅特定驱动程序的始终加密文档：
+可用的提供程序集取决于客户端驱动程序的类型和版本。 有关特定驱动程序的信息，请参阅 Always Encrypted 文档：
 
-[开发应用程序使用始终加密的.NET Framework 提供的 SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+[将 Always Encrypted 与用于 SQL Server 的 .NET Framework 提供程序配合使用来开发应用程序](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
 
-下表捕获系统提供程序的名称：  
+下表收集了系统提供程序的名称：  
   
-|密钥存储提供程序名称|基础的密钥存储|  
+|密钥存储提供程序名称|基础密钥存储|  
     |-----------------------------|--------------------------|
-    |MSSQL_CERTIFICATE_STORE|Windows 证书存储区| 
-    |MSSQL_CSP_PROVIDER|存储区中，如支持 Microsoft CryptoAPI 硬件安全模块 (HSM)。|
-    |MSSQL_CNG_STORE|存储区中的，例如硬件安全模块 (HSM)，支持加密 API： 下一代。|  
-    |Azure_Key_Vault|请参阅[Getting Started with Azure 密钥保管库](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'MSSQL_CERTIFICATE_STORE'|Windows 证书存储| 
+    |'MSSQL_CSP_PROVIDER'|支持 Microsoft CryptoAPI 的存储，如硬件安全模块 (HSM)。|
+    |'MSSQL_CNG_STORE'|支持下一代加密技术 API 的存储，如硬件安全模块 (HSM)。|  
+    |'Azure_Key_Vault'|请参阅 [Azure Key Vault 入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
   
 
- 你可以实现自定义密钥存储提供程序，以存储没有任何内置密钥存储中的列主密钥存储提供程序中启用始终加密的客户端驱动程序。  请注意，自定义密钥存储提供程序的名称不能以 MSSQL_，是一个前缀开头留待[!INCLUDE[msCoName](../../includes/msconame-md.md)]密钥存储提供程序。 
+ 可以实现自定义密钥存储提供程序，以存储启用了 Always Encrypted 的客户端驱动程序中没有任何内置密钥存储提供程序的存储中的列主密钥。  请注意，自定义密钥存储提供程序的名称不能以 MSSQL_ 开头，因为它是为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 密钥存储提供程序保留的前缀。 
 
   
  key_path  
- 路径中的列主密钥的密钥存储。 密钥路径必须是有效的预期要加密或解密数据 （间接） 引用的列主密钥保护列中存储每个客户端应用程序的上下文中，客户端应用程序需要有权访问该密钥。 密钥路径的格式是特定于密钥存储提供程序。 以下列表描述为特定的 Microsoft 系统密钥存储提供程序的密钥路径的格式。  
+ 列主密钥存储中的密钥路径。 密钥路径必须在每个客户端应用程序的上下文中有效（这些客户端应用程序预期用于加密或解密存储在列中、由被引用列主密钥（间接）保护的数据），并且客户端应用程序需要具有密钥访问权限。 密钥路径的格式特定于密钥存储提供程序。 以下列表描述了特定的 Microsoft 系统密钥存储提供程序的密钥路径的格式。  
   
--   **提供程序名称：** MSSQL_CERTIFICATE_STORE  
+-   提供程序名称：MSSQL_CERTIFICATE_STORE  
   
-     **密钥路径格式：** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
+     密钥路径格式：CertificateStoreName/CertificateStoreLocation/CertificateThumbprint  
   
      其中：  
   
-     *CertificateStoreLocation*  
-     证书存储位置，它必须是当前用户或本地计算机。 有关详细信息，请参阅[本地计算机和当前用户证书存储](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx)。  
+     CertificateStoreLocation  
+     证书存储位置，必须为当前用户或本地计算机。 有关详细信息，请参阅 [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx)（本地计算机和当前用户证书存储）。  
   
-     *CertificateStore*  
-     证书存储名称，例如我。  
+     CertificateStore  
+     证书存储名称，例如 My。  
   
-     *CertificateThumbprint*  
+     CertificateThumbprint  
      证书指纹。  
   
      **示例：**  
@@ -111,17 +111,17 @@ CREATE COLUMN MASTER KEY key_name
     N'LocalMachine/My/CA5BFA8878FB94BBF037EC4A133ADCA89FFAEC16'  
     ```  
   
--   **提供程序名称：** MSSQL_CSP_PROVIDER  
+-   提供程序名称：MSSQL_CSP_PROVIDER  
   
-     **密钥路径格式：** *ProviderName*/*KeyIdentifier*  
+     密钥路径格式：ProviderName/KeyIdentifier  
   
      其中：  
   
      *ProviderName*  
-     名称的列主密钥存储实现 CAPI，加密服务提供程序 (CSP)。 如果 HSM 将用作密钥存储中时，这必须是 CSP HSM 供应商的名称提供。 必须在客户端计算机上安装提供程序。  
+     列主密钥存储的加密服务提供程序（CSP，用于实现 CAPI）的名称。 如果使用 HSM 作为密钥存储，则此名称必须是你的 HSM 供应商提供的 CSP 的名称。 提供程序必须安装在客户端计算机上。  
   
-     *KeyIdentifier*  
-     密钥标识符用作列主密钥的密钥存储中。  
+     KeyIdentifier  
+     密钥存储中的密钥标识符，用作列主密钥。  
   
      **示例：**  
   
@@ -129,17 +129,17 @@ CREATE COLUMN MASTER KEY key_name
     N'My HSM CSP Provider/AlwaysEncryptedKey1'  
     ```  
   
--   **提供程序名称：** MSSQL_CNG_STORE  
+-   提供程序名称：MSSQL_CNG_STORE  
   
-     **密钥路径格式：** *ProviderName*/*KeyIdentifier*  
+     密钥路径格式：ProviderName/KeyIdentifier  
   
      其中：  
   
      *ProviderName*  
-     名称的密钥存储提供程序 (KSP)，这将实现加密： 下一代 (CNG) API，列主密钥存储。 如果 HSM 将用作密钥存储中时，这必须是 KSP HSM 供应商的名称提供。 需要客户端计算机上安装提供程序。  
+     列主密钥存储的密钥存储提供程序（KSP，用于实现下一代加密技术 (CNG) API）的名称。 如果使用 HSM 作为密钥存储，则此名称必须是你的 HSM 供应商提供的 KSP 的名称。 提供程序需要安装在客户端计算机上。  
   
-     *KeyIdentifier*  
-     密钥标识符用作列主密钥的密钥存储中。  
+     KeyIdentifier  
+     密钥存储中的密钥标识符，用作列主密钥。  
   
      **示例：**  
   
@@ -147,33 +147,33 @@ CREATE COLUMN MASTER KEY key_name
     N'My HSM CNG Provider/AlwaysEncryptedKey1'  
     ```  
 
--   **提供程序名称：** AZURE_KEY_STORE  
+-   提供程序名称：AZURE_KEY_STORE  
   
-     **密钥路径格式：** *KeyUrl*  
+     密钥路径格式：KeyUrl  
   
      其中：  
   
-     *KeyUrl*  
-     Azure 密钥保管库中密钥的 URL
+     KeyUrl  
+     Azure Key Vault 中密钥的 URL
 
 
 例如：
  
 `N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700'`  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 
-在数据库中，可以使用始终加密对数据库中的任何列进行加密之前，可以创建列加密密钥元数据条目之前，创建列主密钥元数据条目是必需的。 请注意，元数据中的列主密钥条目不包含实际的列主密钥必须存储在外部列的密钥存储区 （在外部 SQL Server)。 密钥存储提供程序名称和元数据中的列主密钥路径必须是有效的客户端应用程序要能够使用列主密钥，使用列主密钥加密列加密密钥进行解密并查询加密的列。
+必须在列加密密钥元数据条目可以在数据库中创建之前，以及数据库中的任何列可以使用 Always Encrypted 加密之前，创建列主密钥元数据条目。 请注意，元数据中的列主密钥条目不包含实际的列主密钥，实际的列主密钥必须存储在外部列密钥存储（SQL Server 外部）中。 元数据中的密钥存储提供程序名称和列主密钥路径必须对客户端应用程序有效，以便能够使用列主密钥解密由列主密钥加密的列加密密钥，以及查询加密的列。
 
 
   
-## <a name="permissions"></a>Permissions  
- 需要**更改任意列主密钥**权限。  
+## <a name="permissions"></a>权限  
+ 需要 ALTER ANY COLUMN MASTER KEY 权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-column-master-key"></a>A. 创建列主密钥  
- 创建列主密钥的客户端应用程序使用 MSSQL_CERTIFICATE_STORE 提供程序访问列主密钥存储在证书存储，列主密钥元数据条目：  
+ 对于使用 MSSQL_CERTIFICATE_STORE 提供程序访问列主密钥的客户端应用程序，为存储在证书存储中的列主密钥创建列主密钥元数据条目：  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -183,7 +183,7 @@ WITH (
    );  
 ```  
   
- 创建使用 MSSQL_CNG_STORE 提供程序的客户端应用程序访问列主密钥的列主密钥元数据条目：  
+ 为由使用 MSSQL_CNG_STORE 提供程序的客户端应用程序访问的列主密钥创建列主密钥元数据条目：  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -193,7 +193,7 @@ WITH (
 );  
 ```  
   
- 创建列主密钥存储在 Azure 密钥保管库，AZURE_KEY_VAULT 提供程序，用于访问列主密钥的客户端应用程序。  
+ 对于使用 AZURE_KEY_VAULT 提供程序的客户端应用程序，创建存储在 Azure Key Vault 中的列主密钥以访问列主密钥。  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -203,7 +203,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- 创建自定义列主密钥存储中存储 CMK:  
+ 创建存储在自定义列主密钥存储中的 CMK：  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -215,7 +215,7 @@ WITH (
   
 ## <a name="see-also"></a>另请参阅
  
-* [删除列主密钥 &#40;Transact SQL &#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
+* [DROP COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [创建列加密密钥 (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 * [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  

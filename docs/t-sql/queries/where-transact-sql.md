@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
-\<*search_condition* > 用于定义要返回的行，需满足的条件。 对搜索条件中可以包含的谓词数量没有限制。 有关搜索条件和谓词的详细信息，请参阅[搜索条件 &#40;Transact SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\< search_condition > 定义要返回的行应满足的条件。 对搜索条件中可以包含的谓词数量没有限制。 有关搜索条件和谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何在 `WHERE` 子句中使用某些常见的搜索条件。  
@@ -64,7 +64,7 @@ FROM DimEmployee
 WHERE LastName = 'Smith' ;  
 ```  
   
-### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. 查找作为字符串的一部分包含的值的行  
+### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. 查找包含作为字符串一部分的值的行  
   
 ```  
 -- Uses AdventureWorks  
@@ -126,8 +126,8 @@ WHERE EmployeeKey Between 100 AND 200;
   
 ## <a name="see-also"></a>另请参阅  
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
- [谓词 &#40;Transact SQL &#41;](~/t-sql/queries/predicates.md)   
- [搜索条件 &#40;Transact SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
+ [谓词(Transact-SQL)](~/t-sql/queries/predicates.md)   
+ [搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)  

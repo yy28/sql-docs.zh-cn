@@ -1,5 +1,5 @@
 ---
-title: "REVOKE 系统对象权限 (Transact SQL) |Microsoft 文档"
+title: "REVOKE 系统对象权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -44,19 +44,19 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ```  
   
 ## <a name="arguments"></a>参数  
- [**sys。**] .  
- **Sys**限定符时是必需的仅指目录视图和动态管理视图。  
+ [sys.] .  
+ 只有在引用目录视图和动态管理视图时才需要 sys 限定符。  
   
- *system_object*  
+ system_object  
  指定要对其撤消权限的对象。  
   
- *主体*  
+ principal  
  指定要从中撤消权限的主体。  
   
-## <a name="remarks"></a>注释  
- 可使用该语句撤消对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的特定存储过程、扩展存储过程、表值函数、标量函数、视图、目录视图、兼容性视图、INFORMATION_SCHEMA 视图、动态管理视图以及系统表的权限。 每个这些系统对象作为资源数据库中的唯一记录存在 (**mssqlsystemresource**)。 该资源数据库为只读。 指向对象的公开为中的记录**sys**的每个数据库的架构。  
+## <a name="remarks"></a>Remarks  
+ 可使用该语句撤消对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的特定存储过程、扩展存储过程、表值函数、标量函数、视图、目录视图、兼容性视图、INFORMATION_SCHEMA 视图、动态管理视图以及系统表的权限。 每个系统对象都作为唯一的一条记录存在于资源数据库 (mssqlsystemresource) 中。 该资源数据库为只读。 指向对象的链接作为各数据库的 sys 架构中的一条记录显示。  
   
- 默认名称解析将解析资源数据库的非限定过程名称。 因此， **sys。** 仅当您在指定目录视图和动态管理视图时，限定符是必需的。  
+ 默认名称解析将解析资源数据库的非限定过程名称。 因此， 只有当指定目录视图和动态管理视图时，才需要 sys. 限定符。  
   
 > [!CAUTION]  
 >  撤消对系统对象的权限会导致依赖这些权限的应用程序失败。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用目录视图，并且在更改了对目录视图的默认权限之后可能无法发挥预期的作用。  
@@ -67,7 +67,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
   
  在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目录视图中可以查看系统对象。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -79,9 +79,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.system_objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
- [sys.database_permissions &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [授予系统对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
- [拒绝系统对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
+ [sys.system_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [GRANT 系统对象权限 (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
+ [DENY 系统对象权限 (Transact-SQL)](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)  
   
   

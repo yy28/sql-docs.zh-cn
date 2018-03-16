@@ -1,5 +1,5 @@
 ---
-title: "ERROR_LINE (Transact SQL) |Microsoft 文档"
+title: ERROR_LINE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,16 +56,16 @@ ERROR_LINE ( )
 ## <a name="return-value"></a>返回值  
  当在 CATCH 块中调用时：  
   
--   返回发生错误的行号。  
+-   返回出现错误的行号。  
   
 -   如果错误发生在存储过程或触发器中，则返回例程中的行号。  
   
  如果在 CATCH 块作用域以外调用，则返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以在 CATCH 块的作用域内的任何位置调用此函数。  
   
- ERROR_LINE 返回发生错误的行号，而不考虑它被调用的次数或在 CATCH 块的作用域内被调用的位置。 这形成了鲜明对比与函数，如@ERROR，这紧跟会导致错误的一个语句中或在 CATCH 块的第一个语句中返回的错误号。  
+ ERROR_LINE 返回发生错误的行号，而不考虑它被调用的次数或在 CATCH 块的作用域内被调用的位置。 它与 @@ERROR 之类的函数不同，后者会在导致错误的语句之后的语句中立即返回错误号，或在 CATCH 块的第一个语句中返回错误号。  
   
  在嵌套 CATCH 块中，ERROR_LINE 返回特定于引用它的 CATCH 块作用域的错误行号。 例如，TRY…CATCH 构造的 CATCH 块可以包含一个嵌套 TRY…CATCH 构造。 在嵌套 CATCH 块中，ERROR_LINE 返回调用嵌套 CATCH 块的错误的行号。 如果 ERROR_LINE 在 CATCH 块以外运行，则会返回调用该 CATCH 块的错误的行号。  
   
@@ -138,7 +138,7 @@ GO
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)  
   

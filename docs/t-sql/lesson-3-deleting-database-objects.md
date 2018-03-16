@@ -1,5 +1,5 @@
 ---
-title: "第 3 课： 删除数据库对象 |Microsoft 文档"
+title: "第 3 课：删除数据库对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-deleting-database-objects"></a>第 3 课：删除数据库对象
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]本简短的课程中移除的对象在第 1 课和第 2 课中创建并再删除数据库。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]这篇简短的课程将删除第 1 课和第 2 课中创建的对象，再删除数据库。  
   
 本课包含一个主题：  
   

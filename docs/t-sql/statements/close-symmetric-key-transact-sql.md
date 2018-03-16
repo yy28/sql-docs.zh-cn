@@ -1,5 +1,5 @@
 ---
-title: "关闭对称密钥 (Transact SQL) |Microsoft 文档"
+title: CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  要关闭的对称密钥的名称。  
   
-## <a name="remarks"></a>注释  
- 打开的对称密钥将绑定到会话而不是安全上下文。 打开的密钥将持续有效，直到它显式关闭或会话终止。 关闭所有对称密钥将关闭通过当前会话中打开任何数据库主密钥[OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md)语句。  有关打开密钥的信息会显示在[sys.openkeys &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md)目录视图。  
+## <a name="remarks"></a>Remarks  
+ 打开的对称密钥将绑定到会话而不是安全上下文。 打开的密钥将持续有效，直到它显式关闭或会话终止。 CLOSE ALL SYMMETRIC KEYS 将通过使用 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) 语句，关闭在当前会话中打开的任何数据库主密钥。  有关打开密钥的信息，请参阅 [sys.openkeys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  关闭对称密钥不需要显式权限。  
   
 ## <a name="examples"></a>示例  
@@ -81,6 +81,6 @@ GO
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [删除对称密钥 &#40;Transact SQL &#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
+ [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
   
   

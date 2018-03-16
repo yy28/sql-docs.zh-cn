@@ -1,5 +1,5 @@
 ---
-title: "语言元素 (Transact SQL) |Microsoft 文档"
+title: "语言元素 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -31,16 +31,16 @@ ms.lasthandoff: 01/25/2018
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下语言元素。  
   
-## <a name="in-this-section"></a>本節內容  
-[-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
+## <a name="in-this-section"></a>本节内容  
+[-- (注释) (Transact-SQL)](../../t-sql/language-elements/comment-transact-sql.md)  
   
-[斜杠星型 &#40;块注释 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
+[斜杠星型（块注释）(Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
  
 [CREATE DIAGNOSTICS SESSION (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
 
-[NULL 和未知 (Transact SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
+[NULL 和 UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
-[事务 （SQL 数据仓库）](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
+[事务（SQL 数据仓库）](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   
 [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)  
   

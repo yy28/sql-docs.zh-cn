@@ -1,5 +1,5 @@
 ---
-title: "STConvexHull (geometry 数据类型) |Microsoft 文档"
+title: "STConvexHull（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回一个对象，该对象表示的凸包**几何图形**实例。
+返回表示 geometry 实例的凸包的对象。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
- `STConvexHull()`返回包含最小凸多边形给定**几何图形**实例。 **点**或 co 线性**LineString**实例将生成的输入的相同类型的一个实例。  
+## <a name="remarks"></a>Remarks  
+ `STConvexHull()` 返回包含给定 geometry 实例的最小凸多边形。 Points 或共线 LineString 实例将生成与该输入具有相同类型的实例。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STConvexHull()` 查找非凸 `Polygon``geometry` 实例的凸包。  

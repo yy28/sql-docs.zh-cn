@@ -1,5 +1,5 @@
 ---
-title: "将合并 (Transact SQL) |Microsoft 文档"
+title: COALESCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-计算自变量的顺序并返回最初计算结果不是第一个表达式的当前值`NULL`。 例如，`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');`返回的第三个值，因为第三个值是第一个不为 null 的值。 
+按顺序计算变量并返回最初不等于 `NULL` 的第一个表达式的当前值。 例如，`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` 返回第三个值，因为第三个值是首个为非 Null 的值。 
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,16 +49,16 @@ COALESCE ( expression [ ,...n ] )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何类型。  
+ 是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回的数据类型*表达式*具有最高的数据类型优先级。 如果所有表达式都不可为 Null，则结果的类型也不可为 Null。  
+ 返回数据类型优先级最高的 expression 的数据类型。 如果所有表达式都不可为 Null，则结果的类型也不可为 Null。  
   
-## <a name="remarks"></a>注释  
- 如果所有参数都均`NULL`，`COALESCE`返回`NULL`。 至少一个 null 值必须是类型化`NULL`。  
+## <a name="remarks"></a>Remarks  
+ 如果所有参数都为 `NULL`，则 `COALESCE` 返回 `NULL`。 至少应有一个 Null 值为 `NULL` 类型。  
   
 ## <a name="comparing-coalesce-and-case"></a>比较 COALESCE 和 CASE  
- `COALESCE`表达式是的语法快捷方式`CASE`表达式。  即代码`COALESCE`(*expression1*，*...n*) 重写的查询优化器按如下所示`CASE`表达式：  
+ `COALESCE` 表达式是 `CASE` 表达式的语法快捷方式。  即查询优化器将代码 `COALESCE`(expression1,...n) 重写为以下 `CASE` 表达式：  
   
  ```sql  
  CASE  
@@ -69,9 +69,9 @@ COALESCE ( expression [ ,...n ] )
  END  
  ```  
   
- 这意味着，输入的值 (*expression1*， *expression2*，*表达式*等) 计算多次。 此外，为了符合 SQL 标准，包含子查询的值表达式被视为不确定的且子查询被计算两次。 在每种情况中，第一次计算和后续计算可能返回不同的结果。  
+ 这意味着，输入值（expression1、expression2、expressionN 等）被计算多次。 此外，为了符合 SQL 标准，包含子查询的值表达式被视为不确定的且子查询被计算两次。 在每种情况中，第一次计算和后续计算可能返回不同的结果。  
   
- 例如，执行代码 `COALESCE((subquery), 1)` 时，计算子查询两次。 因此，您可能得到不同的结果，具体取决于查询的隔离级别。 例如，代码可以返回`NULL`下`READ COMMITTED`多用户环境中的隔离级别。 若要确保稳定的结果返回，使用`SNAPSHOT ISOLATION`隔离级别或替换`COALESCE`与`ISNULL`函数。 或者，您可以重新编写查询以将子查询推入嵌套 select 语句，如下面的示例中所示：  
+ 例如，执行代码 `COALESCE((subquery), 1)` 时，计算子查询两次。 因此，您可能得到不同的结果，具体取决于查询的隔离级别。 例如，在多用户环境中，代码在 `READ COMMITTED` 隔离级别下可能返回 `NULL`。 要确保返回稳定的结果，请使用 `SNAPSHOT ISOLATION` 隔离级别，或使用 `ISNULL` 函数替换 `COALESCE`。 此外，你可以重写查询以将子查询推送为嵌套 select，如以下示例中所示：  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -83,13 +83,13 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
 ```  
   
 ## <a name="comparing-coalesce-and-isnull"></a>比较 COALESCE 和 ISNULL  
- `ISNULL`函数和`COALESCE`表达式具有类似的目的，但可以以不同方式行为。  
+ `ISNULL` 函数和 `COALESCE` 表达式具有相似的用途，但是行为可能不同。  
   
-1.  因为`ISNULL`是一个函数，它只计算一次。  如上所述，输入值`COALESCE`表达式可计算多次。  
+1.  因为 `ISNULL` 是函数，它只能被计算一次。  如上所述，可以多次计算 `COALESCE` 表达式的输入值。  
   
-2.  确定结果表达式的数据类型方式不同。 `ISNULL`使用的第一个参数的数据类型`COALESCE`遵循`CASE`表达式规则，并返回具有最高优先级的值的数据类型。  
+2.  确定结果表达式的数据类型方式不同。 `ISNULL` 使用第一个参数的数据类型，`COALESCE` 则遵循 `CASE` 表达式规则并返回具有最高优先级的值的数据类型。  
   
-3.  结果表达式的为 Null 是不同的`ISNULL`和`COALESCE`。 `ISNULL`返回值始终被认为是不可以为 Null （假定返回的值一个不可为 null） 而`COALESCE`具有非 null 参数被视为可`NULL`。 因此表达式`ISNULL(NULL, 1)`和`COALESCE(NULL, 1)`，等效，但具有不同可为 null 值。 如果你在计算列中使用这些表达式，创建键约束或使的标量 UDF 的返回值的确定性，以便可以在下面的示例所示进行索引，这会有所不同：  
+3.  结果表达式是否可为 NULL 对于 `ISNULL` 和 `COALESCE` 是不同的。 `ISNULL` 返回值始终被视为不可为 NULL（假定返回值不可为 null），而具有非 null 参数的 `COALESCE` 可以为 `NULL`。 因此表达式 `ISNULL(NULL, 1)` 和 `COALESCE(NULL, 1)` 尽管是等效的，但是在结果是否为 null 方面是不同的。 如果正在计算列中使用这些表达式、创建键约束或生成标量 UDF 确定性的返回值以便可以编入索引，则可能得到不同结果，如以下示例中所示：  
   
     ```sql  
     USE tempdb;  
@@ -115,9 +115,9 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  验证`ISNULL`和`COALESCE`还有不同。 例如，`NULL`值`ISNULL`转换为**int**而为`COALESCE`，你必须提供一种数据类型。  
+4.  `ISNULL` 和 `COALESCE` 的验证也不同。 例如，可以将 `ISNULL` 的 `NULL` 值转换为 int；而对于 `COALESCE`，则必须提供数据类型。  
   
-5.  `ISNULL`采用只有两个参数，而`COALESCE`采用数量可变的参数。  
+5.  `ISNULL` 只取 2 个参数而 `COALESCE` 可取不同数目的参数。  
   
 ## <a name="examples"></a>示例  
   
@@ -195,8 +195,8 @@ GO
  (12 row(s) affected)
  ```  
   
-### <a name="c-simple-example"></a>C： 简单的示例  
- 下面的示例演示如何`COALESCE`从具有非 null 值的第一列中选择数据。 对于此示例假定，`Products`表包含此数据：  
+### <a name="c-simple-example"></a>C：简单示例  
+ 下面的示例演示 `COALESCE` 如何从第一个具有非 Null 值的列中选择数据。 对于此示例，假定 `Products` 表包含此数据：  
   
  ```  
  Name         Color      ProductNumber  
@@ -206,7 +206,7 @@ GO
  NULL         White      PN9876
  ```  
   
- 我们然后运行以下 COALESCE 查询：  
+ 然后，我们运行以下 COALESCE 查询：  
   
 ```sql  
 SELECT Name, Color, ProductNumber, COALESCE(Color, ProductNumber) AS FirstNotNull   
@@ -223,10 +223,10 @@ FROM Products ;
  NULL         White      PN9876         White
  ```  
   
- 请注意，在第一行中，`FirstNotNull`值是`PN1278`，而不`Socks, Mens`。 这是因为`Name`的参数未指定列`COALESCE`在示例中。  
+ 请注意，在第一行中，`FirstNotNull` 值是 `PN1278`，而不是 `Socks, Mens`。 这是因为示例中未将 `Name` 列指定为 `COALESCE` 的参数。  
   
-### <a name="d-complex-example"></a>D： 复杂的示例  
- 下面的示例使用`COALESCE`比较三个列中的值并返回列中找到的非 null 值。  
+### <a name="d-complex-example"></a>D：复杂示例  
+ 以下示例使用 `COALESCE` 来比较三个列中的值，并仅返回列中找到的非 null 值。  
   
 ```sql  
 CREATE TABLE dbo.wages  
@@ -300,7 +300,7 @@ ORDER BY TotalSalary;
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ISNULL &#40;Transact SQL &#41;](../../t-sql/functions/isnull-transact-sql.md)   
+ [ISNULL (Transact-SQL)](../../t-sql/functions/isnull-transact-sql.md)   
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   

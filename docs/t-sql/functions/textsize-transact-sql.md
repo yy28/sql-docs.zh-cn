@@ -1,5 +1,5 @@
 ---
-title: "@@TEXTSIZE (Transact SQL) |Microsoft 文档"
+title: '@@TEXTSIZE (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,10 +35,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40textsize-transact-sql"></a>& #x 40; 和 #x 40;TEXTSIZE (Transact SQL)
+# <a name="x40x40textsize-transact-sql"></a>@@TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回的当前值[TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)选项。  
+  返回 [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) 选项的当前值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
  **integer**  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`SELECT`以显示`@@TEXTSIZE`值之前和之后更改与`SET``TEXTSIZE`语句。  
+ 下面的示例使用 `SELECT` 语句来显示使用 `SET``TEXTSIZE` 语句更改前后的 `@@TEXTSIZE` 值。  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
@@ -75,6 +75,6 @@ Text Size
   
 ## <a name="see-also"></a>另请参阅  
  [配置函数 (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [设置 TEXTSIZE &#40;Transact SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)  
+ [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md)  
   
   

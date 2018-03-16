@@ -1,5 +1,5 @@
 ---
-title: "继续 (Transact SQL) |Microsoft 文档"
+title: CONTINUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -36,6 +36,6 @@ ms.lasthandoff: 01/25/2018
 # <a name="continue-transact-sql"></a>CONTINUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  重新开始 WHILE 循环。 在 CONTINUE 关键字之后的任何语句都将被忽略。 CONTINUE 通常由一个 IF 测试打开，但并不始终这样。 有关详细信息，请参阅[时 &#40;Transact SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)和[控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md).  
+  重新开始 WHILE 循环。 在 CONTINUE 关键字之后的任何语句都将被忽略。 CONTINUE 通常由一个 IF 测试打开，但并不始终这样。 有关详细信息，请参阅 [WHILE (Transact SQL)](../../t-sql/language-elements/while-transact-sql.md) 和[控制流语言 (Transact SQL)](~/t-sql/language-elements/control-of-flow.md)。  
   
   

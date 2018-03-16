@@ -1,5 +1,5 @@
 ---
-title: "BufferWithCurves (geography 数据类型) |Microsoft 文档"
+title: "BufferWithCurves（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回**geography**表示的所有组的实例中调用的点的距离**geography**实例小于或等于*距离*参数。  
+  返回一个 geography 实例，它表示与执行调用的 geography 实例的距离小于或等于 distance 参数的所有点的集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,37 +44,37 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- *distance*  
- 是**float** ，表示点构成缓冲区的最大距离可以来自地域实例。  
+ distance  
+ 一个 **float**，它表示组成缓冲区的点与 geography 实例之间的最大距离。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
 ## <a name="exceptions"></a>异常  
- 以下条件将引发**ArgumentException**。  
+ 以下条件将引发 ArgumentException。  
   
 -   没有为方法传递任何参数，例如，`@g.BufferWithCurves()`  
   
 -   为方法传递了非数值参数，例如，`@g.BufferWithCurves('a')`  
   
--   **NULL**传递给方法，如`@g.BufferWithCurves(NULL)`  
+-   向方法传递了 NULL，例如，`@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下表显示为不同距离值返回的结果。  
   
 |距离值|类型维度|返回的空间类型|  
 |--------------------|---------------------|---------------------------|  
-|距离 < 0|0 或 1|空**GeometryCollection**实例|  
-|距离\<0|2 或更大|A **CurvePolygon**或**GeometryCollection**与负缓冲区的实例。<br /><br /> 注意： 负缓冲区可能创建一个空**GeometryCollection**|
-|距离 = 0|所有维度|调用的复制**geography**实例|  
-|distance > 0|所有维度|**CurvePolygon**或**GeometryCollection**实例|  
+|距离 < 0|0 或 1|空的 GeometryCollection 实例|  
+|distance \< 0|2 或更大|具有负缓冲区的 CurvePolygon 或 GeometryCollection 实例。<br /><br /> 注意：负缓冲区可能会创建空的 GeometryCollection|
+|距离 = 0|所有维度|执行调用的 **geography** 实例的副本|  
+|distance > 0|所有维度|CurvePolygon 或 GeometryCollection 实例|  
   
 > [!NOTE]  
->  由于*距离*是**float**，可以相当非常小的值为零的计算中。  在这种情况，然后调用一份**geography**返回实例。  
+>  由于 distance 的类型为 float，因此，很小的值可能在计算中等于零。  如果发生这种情况，则会返回执行调用的 geography 实例的副本。  
   
- 如果**字符串**参数传递给方法，则它将转换为**float**或它会引发`ArgumentException`。  
+ 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发 `ArgumentException`。  
   
 ## <a name="examples"></a>示例  
   
@@ -95,17 +95,17 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. 使用 < 0 的参数值调用 BufferWithCurves()，它返回一个空 GeometryCollection  
- 下面的示例演示所发生的情况时*距离*参数等于-2:  
+ 以下示例显示当 distance 参数等于 -2 时出现的情况：  
   
  ```sql
  DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- 这**选择**语句返回`GEOMETRYCOLLECTION EMPTY`  
+ 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 使用 = 0 的参数值调用 BufferWithCurves()  
- 下面的示例返回一份调用**geography**实例：  
+ 以下示例返回执行调用的 geography 实例的副本：  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. 使用极小的非零参数值调用 BufferWithCurves()  
- 下面的示例也会返回一份调用**geography**实例：  
+ 以下示例还返回执行调用的 geography 实例的副本：  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/25/2018
  请注意，前面的两个示例为 `BufferWithCurves()` 方法传递字符串文字。 第一个示例有效，因为可以将字符串文字转换为数值。 但第二个示例引发 `ArgumentException`。  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例的扩展的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [BufferWithCurves &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+ [Geography 实例上的扩展方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [BufferWithCurves（geometry 数据类型）](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   

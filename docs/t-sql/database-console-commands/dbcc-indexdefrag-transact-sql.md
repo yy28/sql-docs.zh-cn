@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 指定表或视图的索引碎片整理。
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]使用[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)相反。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -62,8 +62,8 @@ DBCC INDEXDEFRAG
 ```  
   
 ## <a name="arguments"></a>参数  
- *database_name* | *database_id* | 0  
- 包含要进行碎片整理的索引的数据库。 如果指定 0，则使用当前数据库。 数据库名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
+ database_name | database_id | 0  
+ 包含要进行碎片整理的索引的数据库。 如果指定 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
  包含要进行碎片整理的索引的表或视图。 表和视图的名称必须符合有关标识符的规则。  
@@ -77,7 +77,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 DBCC INDEXDEFRAG 对索引的叶级进行碎片整理，以便页的物理顺序与叶节点从左到右的逻辑顺序相匹配，因此可提高索引扫描性能。
   
 > [!NOTE]  
@@ -116,11 +116,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>权限  
-调用方必须拥有某个表，或者是的成员**sysadmin**固定服务器角色、 **db_owner**固定数据库角色或**db_ddladmin**固定的数据库角色。
+调用方必须拥有此表，或是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员。
   
 ## <a name="examples"></a>示例  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. 使用 DBCC INDEXDEFRAG 对索引进行碎片整理  
-下面的示例进行碎片整理的所有分区`PK_Product_ProductID`索引中`Production.Product`表中`AdventureWorks`数据库。
+下面的示例对 `AdventureWorks` 数据库的 `Production.Product` 表中的 `PK_Product_ProductID` 索引的所有分区进行碎片整理。
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

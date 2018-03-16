@@ -1,5 +1,5 @@
 ---
-title: "NumRings (geography 数据类型) |Microsoft 文档"
+title: "NumRings（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="numrings-geography-data-type"></a>NumRings（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回的环中总数**多边形**实例。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography**键入，外部和内部环没有区分开，因为可将任何环是外部环。  
+  返回 Polygon 实例中的总环数。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geography 类型中，由于可以将任何环视为外部环，因此不对外部环和内部环进行区分。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-type"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型： **SqlInt32**  
+ CLR 返回类型：SqlInt32  
   
-## <a name="remarks"></a>注释  
- 如果这不是，此方法将返回 NULL**多边形**实例，并将返回 0，如果该实例为空。 此方法是精确方法。  
+## <a name="remarks"></a>Remarks  
+ 如果该实例不是 Polygon 实例，则此方法返回 NULL；如果该实例为空，则将返回 0。 此方法是精确方法。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个具有两个环的 `Polygon` 实例并确认该实例具有两个环。  

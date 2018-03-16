@@ -1,5 +1,5 @@
 ---
-title: "在几何图形实例的 OGC 方法 |Microsoft 文档"
+title: "Geometry 实例上的 OGC 方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
@@ -59,9 +59,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STCrosses](../../t-sql/spatial-geometry/stcrosses-geometry-data-type.md)  
   
--   [STCurveN &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
+-   [STCurveN（geometry 数据类型）](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
   
--   [STCurveToLine &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+-   [STCurveToLine（geometry 数据类型）](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geometry/stdifference-geometry-data-type.md)  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 01/25/2018
 -   [STY](../../t-sql/spatial-geometry/sty-geometry-data-type.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [在几何图形实例的扩展的方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [Geometry 实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [OGC 静态几何图形方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [扩展静态几何图形方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "OPENQUERY (Transact SQL) |Microsoft 文档"
+title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ OPENQUERY ( linked_server ,'query' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *linked_server*  
+ linked_server  
  表示链接服务器名称的标识符。  
   
-  *查询*   
+ ' query '  
  在链接服务器中执行的查询字符串。 该字符串的最大长度为 8 KB。  
   
 ## <a name="remarks"></a>Remarks  
@@ -96,7 +96,7 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. 执行 SELECT 传递查询  
- 下面的示例使用传递`SELECT`查询，以便选择示例 C.中插入的行  
+ 以下示例使用 `SELECT` 传递查询选择示例 C 中插入的行。  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
@@ -108,11 +108,11 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [行集函数 &#40;Transact SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [行集函数 (Transact-SQL)](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   

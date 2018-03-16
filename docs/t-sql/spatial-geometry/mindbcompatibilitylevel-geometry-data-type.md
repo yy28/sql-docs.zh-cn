@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (geometry 数据类型) |Microsoft 文档"
+title: "MinDbCompatibilityLevel（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回可识别的最小的数据库兼容性级别**几何图形**数据类型实例。
+返回识别 geometry 数据类型实例的最基本的数据库兼容级别。
   
 ## <a name="syntax"></a>语法  
   
@@ -41,11 +41,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型： **int**  
+ CLR 返回类型：int  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在更改数据库的兼容级别之前应使用 `MinDbCompatibilityLevel()` 测试空间对象的兼容性。  
   
 ## <a name="examples"></a>示例  

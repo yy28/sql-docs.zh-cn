@@ -1,5 +1,5 @@
 ---
-title: "ToString (geometry 数据类型) |Microsoft 文档"
+title: "ToString（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -43,17 +43,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **nvarchar (max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)  
   
- CLR 返回类型： **SqlString**  
+ CLR 返回类型：SqlString  
   
-## <a name="remarks"></a>注释  
- 此方法将返回字符串"Null"时调用的 null 实例。  
+## <a name="remarks"></a>Remarks  
+ 在针对 Null 实例调用时，此方法将返回字符串“Null”。  
   
  对于非 Null 实例，此方法与使用 `AsTextZM().` 等效。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建`LineString`实例并使用`ToString()`提取实例的文本说明。  
+ 下面的示例创建一个 `LineString` 实例，并使用 `ToString()` 提取该实例的文本说明。  
   
 ```  
 DECLARE @g geometry;  
@@ -62,7 +62,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [STAsText &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
+ [STAsText（geometry 数据类型）](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [几何图形实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

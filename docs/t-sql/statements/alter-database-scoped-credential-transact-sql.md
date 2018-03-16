@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE SCOPED CREDENTIAL (Transact SQL) |Microsoft 文档"
+title: ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
@@ -30,10 +30,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/01/2018
 ---
-# <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact SQL)
+# <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  更改数据库属性范围的凭据。  
+  更改数据库作用域凭据的属性。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,32 +46,32 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- *credential_name*  
- 指定正在更改的数据库范围凭据的名称。  
+ credential_name  
+ 指定要更改的数据库作用域凭据的名称。  
   
- IDENTITY **='***identity_name***'**  
- 指定从服务器外部进行连接时要使用的帐户名称。 若要从 Azure Blob 存储导入文件，标识名称必须是`SHARED ACCESS SIGNATURE`。  有关共享的访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。  
+ IDENTITY ='identity_name'  
+ 指定从服务器外部进行连接时要使用的帐户名称。 要从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。  有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。  
     
   
- SECRET **='***secret***'**  
- 指定发送身份验证所需的机密内容。 *机密*需从 Azure Blob 存储导入文件。 *机密*可能是可选的用于其他目的。   
+ SECRET ='secret'  
+ 指定发送身份验证所需的机密内容。 从 Azure Blob 存储导入文件时需要 *secret*。 在其他用途中，*secret* 可能是可选的。   
 >  [!WARNING]
->  SAS 密钥值可能会开始使用？（问号）。 如果你使用 SAS 密钥，你必须删除前导？。 否则可能会阻止你的工作。    
+>  SAS 密钥值可以“?”（问号）开头。 使用 SAS 密钥时，必须删除前导“?”。 否则会阻止操作。    
   
-## <a name="remarks"></a>注释  
- 当数据库范围凭据发生更改，这两者的值*identity_name*和*机密*将重置。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
+## <a name="remarks"></a>Remarks  
+ 当数据库作用域凭据发生更改时，identity_name 和 secret 的值都将重置。 如果未指定可选参数 SECRET 的值，则存储的密码值将设置为 NULL。  
   
  使用服务主密钥对密码进行加密。 如果重新生成服务主密钥，则需要使用新服务主密钥对该密码重新加密。  
   
- 有关数据库范围凭据的信息会显示在[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)目录视图。  
+ 可在 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 目录视图中查看有关数据库范围凭据的信息。  
   
 ## <a name="permissions"></a>权限  
- 需要`ALTER`凭据的权限。  
+ 需要对凭据拥有 `ALTER` 权限。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. 密码的数据库更改范围的凭据  
- 下面的示例更改名为数据库范围凭据中存储的机密`Saddles`。 数据库范围凭据包含 Windows 登录`RettigB`及其密码。 新密码添加到使用机密的子句的数据库范围凭据。  
+### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. 更改数据库作用域凭据的密码  
+ 以下示例将更改存储在名为 `Saddles` 的数据库作用域凭据中的密码。 该数据库作用域凭据包含 Windows 登录名 `RettigB` 及其密码。 使用 SECRET 子句将新密码添加到数据库作用域凭据。  
   
 ```  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
@@ -80,7 +80,7 @@ GO
 ```  
   
 ### <a name="b-removing-the-password-from-a-credential"></a>B. 删除凭据的密码  
- 下面的示例从名为数据库范围的凭据中移除密码`Frames`。 数据库范围凭据包含 Windows 登录名`Aboulrus8`和密码。 执行该语句后，数据库范围凭据将具有空密码，因为未指定密钥的选项。  
+ 以下示例将删除名为 `Frames` 的数据库作用域凭据中的密码。 该数据库作用域凭据包含 Windows 登录名 `Aboulrus8` 和一个密码。 因为未指定 SECRET 选项，所以执行该语句后，数据库作用域凭据的密码为空。  
   
 ```  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
@@ -88,9 +88,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [凭据 &#40; 数据库引擎 &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [创建 DATABASE SCOPED CREDENTIAL &#40;Transact SQL &#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
- [DROP DATABASE SCOPED CREDENTIAL &#40;Transact SQL &#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+ [DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  

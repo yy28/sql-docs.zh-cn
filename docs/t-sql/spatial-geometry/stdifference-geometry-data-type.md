@@ -1,5 +1,5 @@
 ---
-title: "STDifference (geometry 数据类型) |Microsoft 文档"
+title: "STDifference（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geometry-data-type"></a>STDifference（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回一个对象，表示该点集从一个**几何图形**不在另一个实例**几何图形**实例。
+返回一个对象，它表示来自一个 **geometry** 实例的点集，这些点不在另一个 **geometry** 实例中。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 是另一种**几何图形**实例，该值指示该点以从在其上实例中删除`STDifference()`从中调用。  
+ 另一个 **geometry** 实例，指示要从调用 `STDifference()` 的实例中删除哪些点。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
- 如果此方法将始终返回 null 的空间引用 Id 为 (Srid)**几何图形**实例不匹配。   只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
+## <a name="remarks"></a>Remarks  
+ 如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null。   只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   
 ## <a name="examples"></a>示例  
   

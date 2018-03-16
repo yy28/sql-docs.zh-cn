@@ -1,5 +1,5 @@
 ---
-title: "DROP INDEX （选择性 XML 索引） |Microsoft 文档"
+title: "DROP INDEX（选择性 XML 索引）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  要删除的现有索引的名称。  
   
- *\<对象 >*是包含索引的 XML 列的表。 使用以下格式之一：  
+ *\< object>* 是包含已建立索引的 XML 列的表。 使用以下格式之一：  
   
 -   `database_name.schema_name.table_name`  
   
@@ -68,7 +68,7 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *\<drop_index_option >*放索引选项有关的信息，请参阅[DROP INDEX &#40;Transact SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md).  
+ *\<drop_index_option>* 有关删除索引选项的信息，请参阅 [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)。  
   
 ## <a name="security"></a>Security  
   

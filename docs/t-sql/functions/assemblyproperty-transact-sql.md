@@ -1,5 +1,5 @@
 ---
-title: "ASSEMBLYPROPERTY (Transact SQL) |Microsoft 文档"
+title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,13 +46,13 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 ```  
   
 ## <a name="arguments"></a>参数  
-*assembly_name*  
+assembly_name  
 程序集的名称。
   
-*property_name*  
-要检索其有关信息的属性的名称。 *property_name*可以是以下值之一。
+property_name  
+要检索其有关信息的属性的名称。 property_name 可以是下列值之一。
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |---|---|
 |**CultureInfo**|程序集的区域设置。|  
 |**PublicKey**|程序集的公钥或公钥令牌。|  
@@ -69,7 +69,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 **sql_variant**
   
 ## <a name="examples"></a>示例  
-以下示例假定在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中注册了 `HelloWorld` 程序集。 有关详细信息，请参阅[Hello World 示例](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
+以下示例假定在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中注册了 `HelloWorld` 程序集。 有关详细信息，请参阅 [Hello World 示例](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
   
 ```sql
 USE AdventureWorks2012;  

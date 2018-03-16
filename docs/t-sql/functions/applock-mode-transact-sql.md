@@ -1,5 +1,5 @@
 ---
-title: "APPLOCK_MODE (Transact SQL) |Microsoft 文档"
+title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 ```  
   
 ## <a name="arguments"></a>参数  
-*database_principal*  
-可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 该函数的调用方必须是属于*database_principal*，dbo 或 db_owner 固定数据库角色，以成功调用函数。
+'database_principal'  
+可将对数据库中对象的权限授予它们的用户、角色或应用程序角色。 该函数的调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员，才可成功调用该函数。
   
-*resource_name*  
-由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*是**nvarchar （255)**无默认值。 *resource_name*是二进制比较，并且区分大小写，无论当前数据库的排序规则设置如何。
+'resource_name'  
+由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 resource_name 为 nvarchar(255)，无默认值。 resource_name 使用二进制比较并区分大小写，无论当前数据库的排序规则设置为何。
   
-*lock_owner*  
-所有者的锁定，这是*lock_owner*时请求该锁的值。 *lock_owner*是**nvarchar(32)**，和值可以是**事务**（默认值） 或**会话**。
+'lock_owner'  
+锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 为 nvarchar(32)，值可以是 Transaction（默认值）或 Session。
   
 ## <a name="return-types"></a>返回类型
 **nvarchar(32)**
@@ -67,12 +67,12 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |-|-|-|  
 |**NoLock**|**Update**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**共享**|**排他**||  
+|**Shared**|**排他**||  
   
 *该锁模式是其他锁模式的组合，并且无法使用 sp_getapplock 显式获取。
   
 ## <a name="function-properties"></a>函数属性
-**具有不确定性**
+**Nondeterministic**
   
 **Nonindexable**
   
@@ -137,8 +137,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[APPLOCK_TEST &#40;Transact SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)  
-[sp_getapplock &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_TEST (Transact-SQL)](../../t-sql/functions/applock-test-transact-sql.md)  
+[sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

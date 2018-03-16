@@ -1,5 +1,5 @@
 ---
-title: "子字符串 (Transact SQL) |Microsoft 文档"
+title: SUBSTRING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
@@ -52,16 +52,16 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是**字符**，**二进制**，**文本**， **ntext**，或**映像**[表达式](../../t-sql/language-elements/expressions-transact-sql.md).  
+ 是 character、binary、text、ntext 或者 image[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *start*  
- 是一个整数或**bigint**指定返回的字符的起始位置的表达式。 （编号是 1 基于，表示在表达式中的第一个字符为 1）。 如果*启动*小于 1，则返回的表达式将在中指定的第一个字符开始*表达式*。 在这种情况下，返回的字符数是的总和的最大值*启动* + *长度*-1 或 0。 如果*启动*大于数中的字符的值表达式，返回一个零长度表达式。  
+ 指定返回字符的起始位置的整数或 bigint 表达式。 （编号从 1 开始，意味着表达式中的第一个字符为 1）。 如果 start 小于 1，则返回的表达式的起始位置为表达式中指定的第一个字符。 在这种情况下，返回的字符数是后两者中的较大值：*start* + *length* 之和减去 1，0。 如果 start 大于值表达式中的字符数，将返回一个零长度的表达式。  
   
  *length*  
- 是一个正整数或**bigint**表达式，它指定的多少个字符*表达式*将返回。 如果*长度*为负，则会生成错误并终止该语句。 如果的总和*启动*和*长度*大于中的字符数*表达式*，开始整个值表达式*启动*返回。  
+ 是正整数或用于指定要返回的 expression 的字符数的 bigint 表达式。 如果 length 是负数，会生成错误并终止语句。 如果 start 和 length 的总和大于表达式中的字符数，则会返回从 start 开始的整个值表达式。  
   
 ## <a name="return-types"></a>返回类型  
- 返回字符数据，如果*表达式*是一种受支持的字符数据类型。 如果返回二进制数据*表达式*是支持之一**二进制**数据类型。 返回的字符串类型与指定表达式的类型相同（表中显示的除外）。  
+ 如果 expression 是支持的字符数据类型之一，则返回字符数据。 如果 expression 是 binary 支持的字符数据类型之一，则返回字符数据。 返回的字符串类型与指定表达式的类型相同（表中显示的除外）。  
   
 |指定的表达式|返回类型|  
 |--------------------------|-----------------|  
@@ -69,18 +69,18 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>注释  
- 值*启动*和*长度*中的字符数必须指定**ntext**， **char**，或**varchar**数据类型和字节**文本**，**映像**，**二进制**，或**varbinary**数据类型。  
+## <a name="remarks"></a>Remarks  
+ start 和 length 的值对于 ntext、char 或 varchar 数据类型必须以字符数指定，对于 text、image、binary 或 varbinary 数据类型，则以字节数指定。  
   
- *表达式*必须**varchar （max)**或**varbinary （max)**时*启动*或*长度*包含的值大于 2147483647。  
+ start 或 length 包含大于 2147483647 的值时，expression 必须是 varchar(max) 或 varbinary(max)。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- 当使用增补字符 (SC) 排序规则，同时*启动*和*长度*计数的每个代理项对*表达式*单个字符的形式。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 在使用增补字符 (SC) 排序规则时，start 和 length 将 expression 中的每个代理项对计为一个字符。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-substring-with-a-character-string"></a>A. 对字符串使用 SUBSTRING  
- 以下示例说明如何仅返回字符串的一部分。 从`sys.databases`表，此查询返回系统数据库中名称的第一列，在第二个列中，数据库和中的最后一列的第三个和第四个字符的第一个字母。  
+ 以下示例说明如何仅返回字符串的一部分。 从 `sys.databases` 表中，此查询返回第一列中的系统数据库名称、第二列中的数据库的第一个字母和最后一列中的第三和第四个字符。  
   
 ```  
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
@@ -91,7 +91,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|name |初始 |ThirdAndFourthCharacters|
+|NAME |初始 |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |
@@ -119,9 +119,9 @@ bcd
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. 对 text、ntext 和 image 数据使用 SUBSTRING  
   
 > [!NOTE]  
->  若要运行下面的示例，必须安装**pubs**数据库。  
+>  若要运行以下示例，必须安装 pubs 数据库。  
   
- 下面的示例演示如何从每个返回前 10 个字符**文本**和**映像**中的数据列`pub_info`表`pubs`数据库。 **文本**数据返回为**varchar**，和**映像**数据返回为**varbinary**。  
+ 以下示例说明如何返回 `pubs` 数据库的 `pub_info` 表内每个 text 和 image 数据列的前 10 个字符。 text 数据返回为 varchar，而 image 数据返回为 varbinary。  
   
 ```  
 USE pubs;  
@@ -141,7 +141,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- 下面的示例演示上的子字符串的效果**文本**和**ntext**数据。 首先，该示例在 `pubs` 数据库内创建一个名为 `npub_info` 的新表。 接着，该示例使用 `pr_info` 列的前 80 个字符在 `npub_info` 表中创建 `pub_info.pr_info` 列，然后将添加 `ü` 为第一个字符。 最后，`INNER JOIN`检索所有发布服务器标识号和`SUBSTRING`这两者的**文本**和**ntext**发布服务器信息列。  
+ 以下示例说明 SUBSTRING 对 text 和 ntext 数据的影响。 首先，该示例在 `pubs` 数据库内创建一个名为 `npub_info` 的新表。 接着，该示例使用 `pr_info` 列的前 80 个字符在 `npub_info` 表中创建 `pub_info.pr_info` 列，然后将添加 `ü` 为第一个字符。 最后，`INNER JOIN` 检索所有出版商标识号以及 text 和 ntext 出版商信息列的`SUBSTRING`。  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
@@ -183,7 +183,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. 对字符串使用 SUBSTRING  
  以下示例说明如何仅返回字符串的一部分。 该查询在一列中返回 `dbo.DimEmployee` 表中的姓氏，在另一列中只返回名字首字母。  
@@ -207,7 +207,7 @@ Barber               D
 Barreto de Mattos    P
 ```  
   
- 下面的示例演示如何返回第二、 三和第四个字符的字符串常量`abcdef`。  
+ 以下示例显示如何返回字符串常量 `abcdef` 的第二个、第三个和第四个字符。  
   
 ```  
 USE ssawPDW;  
@@ -224,13 +224,13 @@ bcd
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [右 &#40;Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

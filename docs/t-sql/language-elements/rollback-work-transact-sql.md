@@ -1,5 +1,5 @@
 ---
-title: "回滚工作 (Transact SQL) |Microsoft 文档"
+title: ROLLBACK WORK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,10 +52,10 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此语句的功能与 ROLLBACK TRANSACTION 相同，但 ROLLBACK TRANSACTION 接受用户定义的事务名称。 无论是否指定可选的 WORK 关键字，此 ROLLBACK 语法都兼容 ISO 标准。  
   
- 嵌套事务时, 回滚工作始终回滚到的最外面的 BEGIN TRANSACTION 语句和递减 @@TRANCOUNT为 0 的系统函数。  
+ 嵌套事务时，ROLLBACK WORK 始终回滚到最远的 BEGIN TRANSACTION 语句，并将 @@TRANCOUNT 系统函数减为 0。  
   
 ## <a name="permissions"></a>权限  
  默认情况下，所有有效用户都有权执行 ROLLBACK WORK。  
@@ -64,7 +64,7 @@ ROLLBACK [ WORK ]
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [提交工作 &#40;Transact SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK (Transact-SQL)](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "集 NOCOUNT (Transact SQL) |Microsoft 文档"
+title: SET NOCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当 SET NOCOUNT 为 ON 时，不返回计数。 当 SET NOCOUNT 为 OFF 时，返回计数。  
   
- @@ROWCOUNT函数将更新，即使在 SET NOCOUNT ON。  
+ 即使当 SET NOCOUNT 为 ON 时，也更新 @@ROWCOUNT 函数。  
   
  当 SET NOCOUNT 为 ON 时，将不向客户端发送存储过程中每个语句的 DONE_IN_PROC 消息。 如果存储过程中包含一些并不返回许多实际数据的语句，或者如果过程包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 循环，网络通信流量便会大量减少，因此，将 SET NOCOUNT 设置为 ON 可显著提高性能。  
   
@@ -69,7 +69,7 @@ SELECT @NOCOUNT AS NOCOUNT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

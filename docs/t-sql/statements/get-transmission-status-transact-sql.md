@@ -1,5 +1,5 @@
 ---
-title: "GET_TRANSMISSION_STATUS (Transact SQL) |Microsoft 文档"
+title: GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
   
 ## <a name="arguments"></a>参数  
  *conversation_id*  
- 会话的会话句柄。 此参数属于类型**uniqueidentifier**。  
+ 会话的会话句柄。 此参数的类型为 uniqueidentifier。  
   
 ## <a name="return-types"></a>返回类型  
  **nchar**  
   
-## <a name="remarks"></a>注释  
- 返回一个字符串，该字符串说明指定会话上次传输尝试的状态。 返回一个空字符串，如果最后一次传输尝试成功，如果尚未做了没有传输尝试，或如果*conversation_handle*不存在。  
+## <a name="remarks"></a>Remarks  
+ 返回一个字符串，该字符串说明指定会话上次传输尝试的状态。 在下列情况下都将返回一个空字符串：上次传输尝试成功；尚未进行任何传输尝试；或 conversation_handle 不存在。  
   
  该函数返回的信息与管理视图 sys.transmission_queue 的 last_transmission_error 列中显示的信息相同。 但是，该函数可用于查找那些当前传输队列中没有消息的会话的传输状态。  
   
@@ -87,7 +87,7 @@ SELECT Status =
  在这种情况下，没有将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为允许 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 通过网络进行通信。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.conversation_endpoints &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.transmission_queue &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+ [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

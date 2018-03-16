@@ -1,5 +1,5 @@
 ---
-title: "OPEN MASTER KEY (TRANSACT-SQL) |Microsoft 文档"
+title: OPEN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,11 +56,11 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
 ```  
   
 ## <a name="arguments"></a>参数  
- *密码*  
+ '*password*'  
  对数据库主密钥加密的密码。  
   
-## <a name="remarks"></a>注释  
- 如果数据库主密钥使用服务主密钥进行加密，则在需要此数据库主密钥进行解密或加密时，它将自动打开。 在这种情况下，不需要使用**OPEN MASTER KEY**语句。  
+## <a name="remarks"></a>Remarks  
+ 如果数据库主密钥使用服务主密钥进行加密，则在需要此数据库主密钥进行解密或加密时，它将自动打开。 在这种情况下，不必使用 **OPEN MASTER KEY** 语句。  
   
  当数据库第一次附加或还原到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，数据库主密钥（由服务主密钥加密）的副本尚未存储在服务器中。 必须使用 **OPEN MASTER KEY** 语句解密数据库主密钥 (DMK)。 一旦 DMK 解密后，通过使用 **ALTER MASTER KEY REGENERATE** 语句向服务器提供 DMK（使用服务主密钥 (SMK) 加密）的副本，即可拥有将来启用自动解密的选项。 当数据库已从较早版本升级后，应重新生成 DMK 以使用更新的 AES 算法。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。 重新生成 DMK 密钥以升级到 AES 所需的时间取决于 DMK 保护的对象数。 重新生成 DMK 密钥以升级到 AES 只在必需时执行一次，不影响将来作为密钥循环策略的一部分而重新生成的过程。  
   
@@ -68,7 +68,7 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
   
  如果数据库主密钥在其中显式打开的事务回滚，则此密钥将保持打开。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
@@ -80,8 +80,8 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例打开数据库主，已使用密码加密。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例将打开使用密码加密的 master 数据库。  
   
 ```  
 USE master;  
@@ -93,11 +93,11 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)   
- [关闭 MASTER KEY &#40;Transact SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [备份主密钥 &#40;Transact SQL &#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
- [还原 MASTER KEY &#40;Transact SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY (Transact-SQL)](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [BACKUP MASTER KEY (Transact-SQL)](../../t-sql/statements/backup-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY (Transact-SQL)](../../t-sql/statements/restore-master-key-transact-sql.md)   
  [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [删除 MASTER KEY &#40;Transact SQL &#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [DROP MASTER KEY (Transact-SQL)](../../t-sql/statements/drop-master-key-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

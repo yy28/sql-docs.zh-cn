@@ -1,5 +1,5 @@
 ---
-title: "SESSION_CONTEXT (TRANSACT-SQL) |Microsoft 文档"
+title: SESSION_CONTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/22/2016
 ms.prod: sql-non-specified
@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (TRANSACT-SQL)
+# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  返回当前会话上下文中指定的键的值。 该数值将通过使用[sp_set_session_context &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)过程。  
+  返回当前会话上下文中指定键的值。 使用 [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) 步骤设置值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,23 +45,23 @@ SESSION_CONTEXT(N'key')
 ```  
   
 ## <a name="arguments"></a>参数  
- key  
- 正在检索的值的键 (sysname 类型)。  
+ “key”  
+ 正在检索的值的键（类型为 sysname）。  
   
 ## <a name="return-type"></a>返回类型  
  **sql_variant**  
   
 ## <a name="return-value"></a>返回值  
- 如果已为该注册表项不设置任何值与中的会话上下文或为 NULL 的指定键关联的值。  
+ 如果未为该键设置值，则为与会话上下文中指定值相关联的值，或者为 NULL。  
   
-## <a name="permissions"></a>Permissions  
- 任何用户可以读取其会话的会话上下文。  
+## <a name="permissions"></a>权限  
+ 任何用户都可以读取其会话的会话上下文。  
   
-## <a name="remarks"></a>注释  
- SESSION_CONTEXT 的 MARS 行为是类似于 CONTEXT_INFO。 如果在 MARS 批处理设置键 / 值对，新值将不会以返回其他 MARS 批处理同一个连接上除非它们启动后设置新值的批处理已完成。 如果多个 MARS 批处理上处于活动状态的连接，无法将值设置为"read_only。" 这样可以防止争用条件和非确定性有关的值"wins"。  
+## <a name="remarks"></a>Remarks  
+ SESSION_CONTEXT 的 MARS 行为类似于 CONTEXT_INFO 的该行为。 如果 MARS 批设置键值对，则新值不会返回到相同连接上的其他 MARS 批，除非它们在设置新值的批完成后开始。 如果连接上有多个活动的 MARS 批，那么值不能设置为“read_only”。 这样可以避免有关哪一个值“胜出”的争用条件和非确定性。  
   
 ## <a name="examples"></a>示例  
- 下面的简单示例设置键的会话上下文值`user_id`到 4，然后使用**SESSION_CONTEXT**函数以检索值。  
+ 下面这个简单的示例将键 `user_id` 的会话上下文值设置为 4，然后使用 SESSION_CONTEXT 函数检索值。  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4;  
@@ -70,9 +70,9 @@ SELECT SESSION_CONTEXT(N'user_id');
   
 ## <a name="see-also"></a>另请参阅  
  [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)   
- [CURRENT_TRANSACTION_ID &#40;Transact SQL &#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [CURRENT_TRANSACTION_ID (Transact-SQL)](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [行级安全性](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO &#40;Transact SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)   
- [设置 CONTEXT_INFO &#40;Transact SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
+ [CONTEXT_INFO (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)   
+ [SET CONTEXT_INFO (Transact-SQL)](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "STATS_DATE (Transact SQL) |Microsoft 文档"
+title: STATS_DATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/18/2017
 ms.prod: sql-non-specified
@@ -58,14 +58,14 @@ STATS_DATE ( object_id , stats_id )
  统计信息对象的 ID。  
   
 ## <a name="return-types"></a>返回类型  
- 返回**datetime**成功。 返回**NULL**如果未创建统计信息的 blob。  
+ 如果成功，则返回 datetime。 如果未创建统计信息 blob，则返回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。  
  
- 统计信息更新日期存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，而不是在元数据。 当读取数据以生成统计信息数据时，不创建统计信息 blob，并且日期不可用。 这种情况的谓词不返回任何行，或为新的空表的筛选统计信息。
+ 统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 如果未读取到任何数据，无法生成统计信息数据，则不会创建统计信息 blob，且该日期不可用。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
  
- 如果统计信息对应于索引， *stats_id*中的值[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)目录视图等同于*index_id*中的值[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。
+ 如果统计信息对应于索引，则 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目录视图中的 stats_id 值与 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图中的 index_id 值相同。
   
 ## <a name="permissions"></a>权限  
  若要查看表或索引视图的元数据，需要 db_owner 固定数据库角色中的成员身份或权限。  
@@ -85,7 +85,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- 如果统计信息对应于索引， *stats_id*中的值[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)目录视图等同于*index_id*中的值[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图和以下查询将返回与前面的查询相同的结果。 如果统计信息不对应于索引，它们是 sys.stats 结果中但不是在 sys.indexes 结果。  
+ 如果统计信息对应于索引，则 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目录视图中的 stats_id 值与 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图中的 index_id 值相同，以下查询返回与上一查询相同的结果。 如果统计信息不对应于索引，则它们位于 sys.stats 结果中，但是不在 sys.indexes 结果中。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -97,10 +97,10 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>B. 了解上次更新命名统计信息  
- 下面的示例在 DimCustomer 表的 LastName 列上创建统计信息。 然后，它将运行查询以显示统计信息的日期。 然后对其进行更新统计信息和运行查询后，再次以显示更新的日期。  
+### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>B. 了解已命名统计信息的上次更新时间  
+ 以下示例在 DimCustomer 表的 LastName 列上创建统计信息。 然后运行查询来显示统计信息的日期。 之后更新统计信息，并再次运行查询来显示更新后的日期。  
   
 ```sql
 --First, create a statistics object  
@@ -134,8 +134,8 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer')
 GO    
 ```  
   
-### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>C. 查看表中的所有统计信息的上次更新日期  
- 上次更新 DimCustomer 表上的每个统计信息对象时，此示例将返回的日期。  
+### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>C. 查看表中所有统计信息的上次更新日期  
+ 此示例返回 DimCustomer 表中的每个统计信息对象最后一次更新的日期。  
   
 ```sql  
 --Return the dates all statistics on the table were last updated.  
@@ -146,7 +146,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- 如果统计信息对应于索引， *stats_id*中的值[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)目录视图等同于*index_id*中的值[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图和以下查询将返回与前面的查询相同的结果。 如果统计信息不对应于索引，它们是 sys.stats 结果中但不是在 sys.indexes 结果。  
+ 如果统计信息对应于索引，则 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目录视图中的 stats_id 值与 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图中的 index_id 值相同，以下查询返回与上一查询相同的结果。 如果统计信息不对应于索引，则它们位于 sys.stats 结果中，但是不在 sys.indexes 结果中。  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -161,7 +161,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [统计信息](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   

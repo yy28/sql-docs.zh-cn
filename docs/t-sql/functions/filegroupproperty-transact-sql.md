@@ -1,5 +1,5 @@
 ---
-title: "FILEGROUPPROPERTY (Transact SQL) |Microsoft 文档"
+title: FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ FILEGROUPPROPERTY ( filegroup_name , property )
 ```  
   
 ## <a name="arguments"></a>参数  
- *filegroup_name*  
- 类型的表达式**sysname** ，表示为其返回命名的属性信息的文件组的名称。  
+ filegroup_name  
+ 类型为 sysname 的表达式，它表示要为之返回指定属性信息的文件组名称。  
   
- *属性*  
- 类型的表达式**varchar （128)**包含要返回的文件组属性的名称。 *属性*可以是下列值之一。  
+ property  
+ 类型为 varchar(128) 的表达式，它包含要返回的文件组属性的名称。 property 可以为下列值之一。  
   
-|值|Description|返回的值|  
+|ReplTest1|Description|返回的值|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|文件组是只读的。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
 |**IsUserDefinedFG**|文件组是用户定义文件组。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
@@ -64,8 +64,8 @@ FILEGROUPPROPERTY ( filegroup_name , property )
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
- *filegroup_name*对应于**名称**中的列**sys.filegroups**目录视图。  
+## <a name="remarks"></a>Remarks  
+ filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应。  
   
 ## <a name="examples"></a>示例  
  此示例返回 `IsDefault` 数据库中主文件组的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 属性的设置。  
@@ -87,10 +87,10 @@ Default Filegroup
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [FILEGROUP_ID &#40;Transact SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
- [FILEGROUP_NAME &#40;Transact SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILEGROUP_ID (Transact-SQL)](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_NAME (Transact-SQL)](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [sys.filegroups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

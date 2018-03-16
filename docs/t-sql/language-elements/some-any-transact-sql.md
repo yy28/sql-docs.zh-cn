@@ -1,5 +1,5 @@
 ---
-title: "某些 |任何 (Transact SQL) |Microsoft 文档"
+title: SOME | ANY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -54,8 +54,8 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ```  
   
 ## <a name="arguments"></a>参数  
- *scalar_expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ scalar_expression  
+ 为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  任何有效的比较运算符。  
@@ -63,17 +63,17 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  指定应进行比较。  
   
- *subquery*  
- 包含某列结果集的子查询。 返回的列的数据类型必须是与相同的数据类型*scalar_expression*。  
+ subquery  
+ 包含某列结果集的子查询。 所返回列的数据类型必须是与 scalar_expression 相同的数据类型。  
   
 ## <a name="result-types"></a>结果类型  
  **Boolean**  
   
 ## <a name="result-value"></a>结果值  
- 部分或任何返回**TRUE**时指定比较为 TRUE 时为的任何对 (*scalar_expression***，***x*) 其中*x*是中的值单列集;否则，返回**FALSE**。  
+ 对于任何对 (scalar_expression,x)（其中 x 是单列集中的值），当指定的比较是 TRUE 时，SOME 或 ANY 返回 TRUE。否则返回 FALSE。  
   
-## <a name="remarks"></a>注释  
- 某些需要*scalar_expression*要产生积极与至少一个子查询返回的值进行比较。 对于需要的语句， *scalar_expression*要产生积极与子查询返回的每个值进行比较，请参阅[所有 &#40;Transact SQL &#41;](../../t-sql/language-elements/all-transact-sql.md). 例如，如果子查询将返回值为 2 和 3， *scalar_expression* = 一些 （子查询），则计算结果为 TRUE 作为*scalar_express*为 2。 如果子查询将返回值为 2 和 3， *scalar_expression* = 所有 （子查询），则计算结果为 FALSE，因为某些子查询 （3 的值） 的值将不满足的条件表达式。  
+## <a name="remarks"></a>Remarks  
+ SOME 要求 scalar_expression 与子查询返回的至少一个值比较时满足比较条件。 有关要求 scalar_expression 与子查询返回的每个值比较时都符合比较条件的语句，请参阅 [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md).。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_express，scalar_expression = SOME（子查询）的计算结果为 TRUE。 如果子查询返回的值为 2 和 3，则 scalar_expression = ALL（子查询）的计算结果将为 FALSE，因为子查询的某些值（等于 3 的值）不满足表达式的条件。  
   
 ## <a name="examples"></a>示例  
   
@@ -109,7 +109,7 @@ PRINT 'FALSE' ;
 ```  
   
 ### <a name="b-running-a-practical-example"></a>B. 运行实际示例  
- 下面的示例创建存储的过程，用于确定是否指定的所有组件`SalesOrderID`中`AdventureWorks2012`可以在指定的天数内生产数据库。 该示例使用子查询为具有特定 `DaysToManufacture` 的所有组件创建 `SalesOrderID` 值的列表，然后测试子查询返回的值中是否有大于指定天数的值。 如果返回的所有 `DaysToManufacture` 的值都小于规定的天数，则条件为 TRUE，并输出第一个消息。  
+ 以下示例创建一个存储过程，该过程确定是否能够在指定的天数中制造出 `AdventureWorks2012` 数据库中具有指定 `SalesOrderID` 的所有组件。 该示例使用子查询为具有特定 `DaysToManufacture` 的所有组件创建 `SalesOrderID` 值的列表，然后测试子查询返回的值中是否有大于指定天数的值。 如果返回的所有 `DaysToManufacture` 的值都小于规定的天数，则条件为 TRUE，并输出第一个消息。  
   
 ```  
 -- Uses AdventureWorks  
@@ -131,7 +131,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
 ```  
   
- 若要测试的过程，执行过程，通过使用`SalesOrderID``49080`，具有需要的一个组件`2`天数和需要 0 天的两个组件。 第一个语句符合条件。 第二个查询不符合条件。  
+ 若要测试该过程，请使用 `SalesOrderID``49080`（具有一个需要 `2` 天的组件和两个需要 0 天的组件）来执行该过程。 第一个语句符合条件。 第二个查询不符合条件。  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -150,12 +150,12 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>另请参阅  
- [所有 &#40;Transact SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
+ [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)  
   
   

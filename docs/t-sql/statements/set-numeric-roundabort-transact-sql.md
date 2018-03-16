@@ -1,5 +1,5 @@
 ---
-title: "集 NUMERIC_ROUNDABORT (TRANSACT-SQL) |Microsoft 文档"
+title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当 SET NUMERIC_ROUNDABORT 为 ON 时，在表达式中出现精度损失时将生成错误。 当设置为 OFF 时，精度损失不生成错误信息，并且将结果舍入为存储结果的列或变量的精度。  
   
  在精度较低的列或变量中，当尝试以固定精度存储值时，会出现精度损失。  
@@ -65,9 +65,9 @@ SET NUMERIC_ROUNDABORT { ON | OFF }
 
  SET NUMERIC_ROUNDABORT 的设置是在执行或运行时设置，而不是在分析时设置。
 
- 在对计算列或索引视图创建或更改索引时，SET NUMERIC_ROUNDABORT 必须为 OFF。 如果 SET NUMERIC_ROUNDABORT 为 ON，创建、 更新、 插入和删除语句在表上使用的计算的列或索引的视图上的索引将失败。 对计算列所需的 SET 选项设置的索引的视图和索引的详细信息，请参阅"当你使用 SET 语句的注意事项"中[SET 语句 &#40;Transact SQL &#41;](../../t-sql/statements/set-statements-transact-sql.md).
+ 在对计算列或索引视图创建或更改索引时，SET NUMERIC_ROUNDABORT 必须为 OFF。 如果 SET NUMERIC_ROUNDABORT 为 ON，则用于计算列或索引视图中带索引的表的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 有关计算列的索引视图和索引需要的 SET 选项设置的详细信息，请参阅 [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md) 中的“使用 SET 语句时的注意事项”。
   
- 若要查看此设置的当前设置，请运行以下查询：
+ 要查看此设置的当前设置，请运行以下查询：
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  
@@ -76,7 +76,7 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -149,6 +149,6 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [设置 ARITHABORT &#40;Transact SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   

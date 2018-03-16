@@ -1,5 +1,5 @@
 ---
-title: "删除远程服务绑定 (Transact SQL) |Microsoft 文档"
+title: DROP REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ DROP REMOTE SERVICE BINDING binding_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *binding_name*  
+ binding_name  
  要删除的远程服务绑定的名称。 不能指定服务器、数据库和架构名称。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  远程服务绑定的所有者、db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员默认拥有删除远程服务绑定的权限。  
   
 ## <a name="examples"></a>示例  
@@ -66,7 +66,7 @@ DROP REMOTE SERVICE BINDING APBinding ;
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [ALTER 远程服务绑定 &#40;Transact SQL &#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
+ [ALTER REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

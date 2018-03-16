@@ -1,5 +1,5 @@
 ---
-title: "USER_NAME (Transact SQL) |Microsoft 文档"
+title: USER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,13 +52,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>参数  
  *id*  
- 与数据库用户关联的标识号。 *id*是**int**。需要使用括号。  
+ 与数据库用户关联的标识号。 id 的数据类型为 int。需要使用括号。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(256)**  
   
-## <a name="remarks"></a>注释  
- 当*id*是省略，则假定为当前用户的当前上下文中。 如果此参数包含词 NULL，将返回 NULL。 当 USER_NAME 调用而无需指定*id*后 EXECUTE 语句中 USER_NAME 返回模拟的用户的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 USER_NAME 将返回 Windows 主体的名称，而不是该组的名称。  
+## <a name="remarks"></a>Remarks  
+ 省略 id 时，则假定为当前上下文中的当前用户。 如果此参数包含词 NULL，将返回 NULL。 如果在 EXECUTE AS 语句之后调用 USER_NAME，但不指定 id，则 USER_NAME 将返回模拟用户的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 USER_NAME 将返回 Windows 主体的名称，而不是该组的名称。  
   
 ## <a name="examples"></a>示例  
   
@@ -129,7 +129,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-username-without-an-id"></a>E. 使用不指定 ID 的 USER_NAME  
  以下示例在不指定 ID 的情况下查找当前用户的名称。  
@@ -138,7 +138,7 @@ DBO
 SELECT USER_NAME();  
 ```  
   
- 下面是当前登录的用户的结果集。  
+ 下面是当前登录用户的结果集。  
   
 ```  
 ------------------------------   
@@ -163,11 +163,11 @@ User7
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;Transact SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40;Transact SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER &#40;Transact SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
  [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SYSTEM_USER &#40;Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+ [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)  
   
   
 

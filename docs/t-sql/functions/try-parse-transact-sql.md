@@ -1,5 +1,5 @@
 ---
-title: "TRY_PARSE (Transact SQL) |Microsoft 文档"
+title: TRY_PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,23 +46,23 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- *string_value*  
- **nvarchar （4000)**值，该值表示要将解析到指定的数据类型的格式化的值。  
+ string_value  
+ nvarchar(4000) 值，表示要分析为指定数据类型的格式化值。  
   
- *string_value*必须是有效的表示形式的请求的数据类型或 TRY_PARSE 返回为 null。  
+ string_value 必须为所请求的数据类型的有效表示形式，否则 TRY_PARSE 将返回 Null。  
   
- *data_type*  
+ data_type  
  表示结果的所请求数据类型的文本。  
   
- *区域性*  
- 标识在其中的区域性的可选字符串*string_value*设置的格式。  
+ culture  
+ 可选字符串，它标识对 string_value 进行格式化的区域性。  
   
- 如果*区域性*既未提供参数，则使用当前会话的语言。 此语言使用 SET LANGUAGE 语句隐式或显式设置。 *区域性*接受任何.NET Framework 中; 支持的区域性并不局限于显式支持的语言[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果*区域性*自变量无效，分析引发错误。  
+ 如果未提供 culture 参数，则使用当前会话的语言。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言。 如果 culture 参数无效，PARSE 将引发错误。  
   
 ## <a name="return-types"></a>返回类型  
  返回表达式的结果（已转换为请求的数据类型）；如果强制转换失败，则返回 Null。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  TRY_PARSE 仅用于从字符串转换为日期/时间和数字类型。 对于一般的类型转换，请继续使用 CAST 或 CONVERT。 请记住，分析字符串值会带来一定的性能开销。  
   
  TRY_PARSE 依赖于 .NET Framework 公共语言运行时 (CLR) 的存在。  
@@ -71,28 +71,28 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
  **有关 data_type 参数的详细信息**  
   
- 值*data_type*参数仅限于下表，以及样式中所示的类型。 提供的样式信息有助于确定允许使用哪些类型的模式。 样式的详细信息，请参阅的.NET Framework 文档**System.Globalization.NumberStyles**和**DateTimeStyles**枚举。  
+ data_type 参数的值局限于下表中显示的类型以及样式。 提供的样式信息有助于确定允许使用哪些类型的模式。 有关样式的详细信息，请参阅 System.Globalization.NumberStyles 和 DateTimeStyles 枚举的 .NET Framework 文档。  
   
 |类别|类型|.NET 类型|使用的样式|  
 |--------------|----------|---------------|-----------------|  
 |数字|bigint|Int64|NumberStyles.Number|  
-|数字|int|Int32|NumberStyles.Number|  
-|数字|smallint|Int16|NumberStyles.Number|  
-|数字|tinyint|Byte|NumberStyles.Number|  
-|数字|decimal|Decimal|NumberStyles.Number|  
-|数字|numeric|Decimal|NumberStyles.Number|  
-|数字|float|双精度|NumberStyles.Float|  
-|数字|real|Single|NumberStyles.Float|  
-|数字|smallmoney|Decimal|NumberStyles.Currency|  
+|数字|ssNoversion|Int32|NumberStyles.Number|  
+|数字|SMALLINT|Int16|NumberStyles.Number|  
+|数字|TINYINT|Byte|NumberStyles.Number|  
+|数字|Decimal|Decimal|NumberStyles.Number|  
+|数字|NUMERIC|Decimal|NumberStyles.Number|  
+|数字|FLOAT|双精度|NumberStyles.Float|  
+|数字|REAL|Single|NumberStyles.Float|  
+|数字|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |数字|money|Decimal|NumberStyles.Currency|  
-|日期和时间|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期和时间|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期和时间|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期和时间|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期和时间|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
-|日期和时间|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124;DateTimeStyles.AssumeUniversal|  
+|日期和时间|日期|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期和时间|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期和时间|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期和时间|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期和时间|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日期和时间|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
- **区域性参数有关的详细信息**  
+ **有关 culture 参数的详细信息**  
   
  下表显示从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言到 .NET Framework 区域性的映射。  
   
@@ -190,9 +190,9 @@ False
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [分析 &#40;Transact SQL &#41;](../../t-sql/functions/parse-transact-sql.md)   
- [转换函数 &#40;Transact SQL &#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
- [TRY_CONVERT &#40;Transact SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+ [PARSE (Transact-SQL)](../../t-sql/functions/parse-transact-sql.md)   
+ [转换函数 (Transact-SQL)](../../t-sql/functions/conversion-functions-transact-sql.md)   
+ [TRY_CONVERT (Transact-SQL)](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

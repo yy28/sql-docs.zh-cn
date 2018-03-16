@@ -1,5 +1,5 @@
 ---
-title: "UPPER (Transact SQL) |Microsoft 文档"
+title: UPPER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ UPPER ( character_expression )
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的字符数据。 *character_expression*可以是常量、 变量或列的字符或二进制数据。  
+ 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
   
- *character_expression*的隐式转换为数据类型必须为**varchar**。 否则，请使用[强制转换](../../t-sql/functions/cast-and-convert-transact-sql.md)可以显式转换*character_expression*。  
+ character_expression 的数据类型必须可隐式转换为 varchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression。  
   
 ## <a name="return-types"></a>返回类型  
- **varchar**或**nvarchar**  
+ varchar 或 nvarchar  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`UPPER`和`RTRIM`函数以返回中的人员的姓氏`dbo.DimEmployee`表，以便它在大写、 修整，和串联的第一个名称。  
+ 以下示例使用 `UPPER` 和 `RTRIM` 函数返回 `dbo.DimEmployee` 表中人员的姓氏，以便使它大写、得到修整并与名字连在一起。  
   
 ```  
 -- Uses AdventureWorks  
@@ -81,8 +81,8 @@ ABOLROUS, Hazem
   
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
- [较低 &#40;Transact SQL &#41;](../../t-sql/functions/lower-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [LOWER (Transact-SQL)](../../t-sql/functions/lower-transact-sql.md)  
   
   
 

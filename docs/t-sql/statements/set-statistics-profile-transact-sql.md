@@ -1,5 +1,5 @@
 ---
-title: "将统计信息配置文件 (Transact SQL) 设置 |Microsoft 文档"
+title: SET STATISTICS PROFILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  STATISTICS PROFILE 为 ON 时，执行的各个查询都返回其常规结果集，后面跟一个附加结果集，显示查询执行的配置文件。  
   
  附加结果集包含查询的 SHOWPLAN_ALL 列以及下面的附加列。  
@@ -59,9 +59,9 @@ SET STATISTICS PROFILE { ON | OFF }
 |列名|Description|  
 |-----------------|-----------------|  
 |**行**|各运算符生成的实际行数|  
-|**执行**|运算符执行的次数|  
+|**Executes**|运算符执行的次数|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要使用 SET STATISTICS PROFILE 并查看输出，用户必须拥有下列权限：  
   
 -   执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。  
@@ -72,8 +72,8 @@ SET STATISTICS PROFILE { ON | OFF }
   
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [设置 SHOWPLAN_ALL &#40;Transact SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [设置统计信息时间 &#40;Transact SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)   
- [设置 STATISTICS IO &#40;Transact SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET STATISTICS TIME (Transact-SQL)](../../t-sql/statements/set-statistics-time-transact-sql.md)   
+ [SET STATISTICS TIME (Transact-SQL)](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

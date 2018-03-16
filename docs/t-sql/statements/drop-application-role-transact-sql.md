@@ -1,5 +1,5 @@
 ---
-title: "删除应用程序角色 (Transact SQL) |Microsoft 文档"
+title: DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ DROP APPLICATION ROLE rolename
 ```  
   
 ## <a name="arguments"></a>参数  
- *rolename*  
+ rolename  
  指定要删除的应用程序角色的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果应用程序角色拥有任何安全对象，则无法删除它。 在删除拥有安全对象的应用程序角色之前，必须首先移交安全对象的所有权或将其删除。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY APPLICATION ROLE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -72,8 +72,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [应用程序角色](../../relational-databases/security/authentication-access/application-roles.md)   
- [创建应用程序角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [ALTER APPLICATION ROLE &#40;Transact SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [ALTER APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/alter-application-role-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

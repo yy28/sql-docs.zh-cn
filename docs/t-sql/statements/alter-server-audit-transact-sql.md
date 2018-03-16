@@ -1,5 +1,5 @@
 ---
-title: "ALTER SERVER AUDIT (TRANSACT-SQL) |Microsoft 文档"
+title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/02/2018
 ---
-# <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (TRANSACT-SQL)
+# <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 功能更改服务器审核对象。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
@@ -84,42 +84,42 @@ ALTER SERVER AUDIT audit_name
  TO { FILE | APPLICATION_LOG | SECURITY }  
  确定审核目标的位置。 可用的选项包括二进制文件、Windows 应用程序日志或 Windows 安全日志。  
   
- FILEPATH **=***os_file_path*  
+ FILEPATH = 'os_file_path'  
  审核记录的路径。 文件名是基于审核名称和审核 GUID 生成的。  
   
- MAXSIZE  **=**  *max_size*  
- 指定审核文件可增大到的最大大小。 *Max_size*值必须跟一个整数**MB**， **GB**， **TB**，或**无限制**。 你可以为指定的最小大小*max_size*为 2 **MB**最大值为 2,147,483,647 **TB**。 当**无限制**指定，则该文件增长，直到磁盘已满。 指定值低于 2MB 引发 MSG_MAXSIZE_TOO_SMALL 错误。 默认值是**无限制**。  
+ MAXSIZE = max_size  
+ 指定审核文件可增大到的最大大小。 max_size 值必须是后跟 MB、GB、TB 或 UNLIMITED 的整数。 可以为 max_size 指定的最小大小为 2 MB，最大大小为 2,147,483,647 TB。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止。 指定一个小于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED。  
   
- MAX_ROLLOVER_FILES  **=** *整数* | **无限制**  
- 指定要保留在文件系统中的最大文件数。 当 MAX_ROLLOVER_FILES 的设置 = 0，对创建的滚动更新文件数没有限制。 默认值为 0。 可以指定的最大文件数为 2,147,483,647。  
+ MAX_ROLLOVER_FILES =integer | UNLIMITED  
+ 指定要保留在文件系统中的最大文件数。 设置为 MAX_ROLLOVER_FILES=0 时，可创建的滚动更新文件的数量不受任何限制。 默认值为 0。 可以指定的最大文件数为 2,147,483,647。  
   
- MAX_FILES =*整数*  
- 指定可创建的审核文件的最大数目。 不会不会累计到第一个文件时达到的限制。 当达到 MAX_FILES 限制时，导致生成附加审核事件任何操作都将失败并出现错误。  
+ MAX_FILES = integer  
+ 指定可创建的审核文件的最大数目。 当达到此限制时，不滚动更新到第一个文件。 在达到 MAX_FILES 限制时，导致生成附加审核事件的任何操作都会失败并报告错误。  
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- RESERVE_DISK_SPACE  **=**  {ON |关闭}  
+ RESERVE_DISK_SPACE = { ON | OFF }  
  此选项会按 MAXSIZE 值为磁盘上的文件预先分配大小。 仅在 MAXSIZE 不等于 UNLIMITED 时适用。 默认值为 OFF。  
   
- QUEUE_DELAY  **=** *整数*  
- 确定在强制处理审核操作之前可能经过的时间（以毫秒为单位）。 值 0 指示同步传递。 可设置的最小延迟值为 1000（1 秒），这是默认值。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。 指定数量无效，将引发错误 MSG_INVALID_QUEUE_DELAY。  
+ QUEUE_DELAY = integer  
+ 确定在强制处理审核操作之前可能经过的时间（以毫秒为单位）。 值 0 指示同步传递。 可设置的最小延迟值为 1000（1 秒），这是默认值。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。 指定无效数字将引发 MSG_INVALID_QUEUE_DELAY 错误。  
   
- ON_FAILURE  **=**  {继续 |关闭 |FAIL_OPERATION}  
+ ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
  指示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法写入审核日志时写入目标的实例是应失败、继续还是停止。  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作将继续。 审核记录将不会保留。 审核将继续尝试登录事件和恢复，如果故障条件得到解决。 选择继续选项可以允许未经审核的活动，这可能违反您的安全策略。 在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的继续操作比维护完整审核更重要时，使用此选项。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作将继续。 审核记录将不会保留。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后恢复。 选择继续选项可以允许未经审核的活动，但可能违反了你的安全策略。 在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的继续操作比维护完整审核更重要时，使用此选项。  
   
 SHUTDOWN  
-强制的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]才可关闭，如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将数据写入审核目标出于任何原因而失败。 登录名执行`ALTER`语句必须具有`SHUTDOWN`内的权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 关机问题仍然存在即使`SHUTDOWN`权限更高版本吊销从正在执行的登录名。 如果用户不具有此权限，然后该语句将失败，并将不会修改审核。 在审核失败可能损害系统的安全或完整性时，使用此选项。 有关详细信息，请参阅[关闭](../../t-sql/language-elements/shutdown-transact-sql.md)。 
+如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 出于任何原因无法将数据写入到审核目标，则强制关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 执行 `ALTER` 语句的登录名必须具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内的 `SHUTDOWN` 权限。 即使稍后从执行的登录名中撤销 `SHUTDOWN` 权限，关闭行为仍然存在。 如果用户不具有此权限，则语句失败且无法修改审核。 在审核失败可能损害系统的安全或完整性时，使用此选项。 有关详细信息，请参阅 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)。 
   
  FAIL_OPERATION  
- 如果数据库操作会导致审核的事件，则数据库操作将失败。 可以继续操作，不会导致审核的事件，但是可能会发生任何审核的事件。 审核将继续尝试登录事件和恢复，如果故障条件得到解决。 在维护完整审核比对[!INCLUDE[ssDE](../../includes/ssde-md.md)]的完全访问权限更重要时，使用此选项。  
+ 如果数据库操作会导致审核的事件，则数据库操作将失败。 不会导致审核事件的操作可以继续，但也不会发生审核的事件。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后恢复。 在维护完整审核比对[!INCLUDE[ssDE](../../includes/ssde-md.md)]的完全访问权限更重要时，使用此选项。  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。   
   
- 状态 **=**  {ON |关闭}  
+ STATE = { ON | OFF }  
  启用或禁用审核收集记录。 更改运行的审核的状态（从 ON 到 OFF）将创建审核停止时的审核项、停止审核的主体以及停止审核的时间。  
   
- MODIFY NAME = *new_audit_name*  
+ MODIFY NAME = new_audit_name  
  更改审核的名称。 不能与任何其他选项一起使用。  
   
  predicate_expression  
@@ -127,11 +127,11 @@ SHUTDOWN
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  event_field_name  
- 表示标识谓词源的事件字段的名称。 审核字段描述的[sys.fn_get_audit_file &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). 除 `file_name` 和 `audit_file_offset` 之外的所有字段都可以进行审核。  
+ 表示标识谓词源的事件字段的名称。 [ sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 中描述审核字段。 除 `file_name` 和 `audit_file_offset` 之外的所有字段都可以进行审核。  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  number  
- 任何数值类型包括**十进制**。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
+ 任何数值类型，包括 decimal。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  ' string '  
@@ -141,7 +141,7 @@ SHUTDOWN
 ## <a name="remarks"></a>Remarks  
  调用 ALTER AUDIT 时，必须指定至少一个 TO、WITH 或 MODIFY NAME 子句。  
   
- 为了更改审核，必须将审核的状态设置为 OFF 选项。 如果启用审核后状态以外的其他任何选项与 ALTER AUDIT 运行 = OFF，你收到 MSG_NEED_AUDIT_DISABLED 错误消息。  
+ 为了更改审核，必须将审核的状态设置为 OFF 选项。 使用 STATE=OFF 以外的任何选项启用审核时，如果 ALTER AUDIT 正在运行，将接收到 MSG_NEED_AUDIT_DISABLED 错误消息。  
   
  无需停止审核即可添加、更改和删除审核规范。  
   
@@ -191,7 +191,7 @@ GO
 ```  
   
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. 更改服务器审核 WHERE 子句  
- 下面的示例修改 where 子句中的示例 C 创建[CREATE SERVER AUDIT &#40;Transact SQL &#41;](../../t-sql/statements/create-server-audit-transact-sql.md). 如果 27 的情况下，新的 WHERE 子句筛选用户定义的事件的状态。  
+ 下面的示例修改在 [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md) 的示例 C 中创建的 where 子句。 如果为 27，则新的 WHERE 子句将筛选用户定义的事件。  
   
 ```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
@@ -230,23 +230,23 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DROP SERVER AUDIT &#40;Transact SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [创建服务器审核规范 &#40;Transact SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [删除服务器审核规范 &#40;Transact SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [创建数据库审核规范 &#40;Transact SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [删除数据库审核规范 &#40;Transact SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.fn_get_audit_file &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [sys.server_audits &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [创建服务器审核和服务器审核规范](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

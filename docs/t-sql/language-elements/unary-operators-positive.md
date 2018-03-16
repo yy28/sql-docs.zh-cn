@@ -1,5 +1,5 @@
 ---
-title: "+ （一元加号）(Transact SQL) |Microsoft 文档"
+title: + (Unary Plus) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---positive"></a>一元运算符的正数
+# <a name="unary-operators---positive"></a>一元运算符 - 正
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 返回数值表达式（一个一元运算符）的值。 一元运算符只对一个表达式执行操作，该表达式可以是 numeric 数据类型类别中的任何一种数据类型。   
@@ -61,13 +61,13 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何数据类型之一的数值数据类型类别中，除**datetime**和**smalldatetime**数据类型。  
+ 具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
  返回 *numeric_expression*的数据类型。  
   
-## <a name="remarks"></a>注释  
- 尽管一元加号可以出现在任何数值表达式之前，但它对表达式返回的值不执行操作。 很明显，负表达式不会返回正值。 若要返回的负数表达式正值，使用[ABS](../../t-sql/functions/abs-transact-sql.md)函数。  
+## <a name="remarks"></a>Remarks  
+ 尽管一元加号可以出现在任何数值表达式之前，但它对表达式返回的值不执行操作。 很明显，负表达式不会返回正值。 若要返回负表达式的正值，请使用 [ABS](../../t-sql/functions/abs-transact-sql.md) 函数。  
   
 ## <a name="examples"></a>示例  
   
@@ -113,8 +113,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [ABS &#40;Transact SQL &#41;](../../t-sql/functions/abs-transact-sql.md)  
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [ABS (Transact-SQL)](../../t-sql/functions/abs-transact-sql.md)  
   
   

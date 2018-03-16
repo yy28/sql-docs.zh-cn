@@ -1,5 +1,5 @@
 ---
-title: "MinDbCompatibilityLevel (geography 数据类型) |Microsoft 文档"
+title: "MinDbCompatibilityLevel（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回可识别的最小的数据库兼容性**geography**数据类型。  
+  返回识别 geography 数据类型的最基本的数据库兼容级别。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型： **int**  
+ CLR 返回类型：int  
   
-## <a name="remarks"></a>注释  
- 在更改数据库的兼容级别之前应使用 `MinDbCompatibilityLevel()` 测试空间对象的兼容性。 无效**geography**键入返回 110。  
+## <a name="remarks"></a>Remarks  
+ 在更改数据库的兼容级别之前应使用 `MinDbCompatibilityLevel()` 测试空间对象的兼容性。 无效的 geography 类型返回 110。  
   
 ## <a name="examples"></a>示例  
   
@@ -98,6 +98,6 @@ END
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server 数据库引擎向后兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+ [SQL Server 数据库引擎的后向兼容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

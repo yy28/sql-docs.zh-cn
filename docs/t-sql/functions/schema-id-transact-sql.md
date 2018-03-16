@@ -1,5 +1,5 @@
 ---
-title: "SCHEMA_ID (Transact SQL) |Microsoft 文档"
+title: SCHEMA_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,14 +52,14 @@ SCHEMA_ID ( [ schema_name ] )
   
 |术语|定义|  
 |----------|----------------|  
-|*schema_name*|是的架构的名称。 *schema_name*是**sysname**。 如果*schema_name*未指定，则 SCHEMA_ID 将返回调用方的默认架构的 ID。|  
+|*schema_name*|是架构的名称。 schema_name 为 sysname。 如果未指定 schema_name，则 SCHEMA_ID 将返回调用方的默认架构的 ID。|  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
- 如果将返回 NULL *schema_name*不是有效的架构。  
+ 如果 schema_name 不是有效架构，将返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SCHEMA_ID 将返回系统架构的 ID 和用户定义架构的 ID。 SCHEMA_ID 可以在选择列表、WHERE 子句和任何允许使用表达式的地方调用。  
   
 ## <a name="examples"></a>示例  
@@ -77,9 +77,9 @@ SELECT SCHEMA_ID('dbo');
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [SCHEMA_NAME &#40;Transact SQL &#41;](../../t-sql/functions/schema-name-transact-sql.md)   
- [sys.schemas &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [SCHEMA_NAME (Transact-SQL)](../../t-sql/functions/schema-name-transact-sql.md)   
+ [sys.schemas (Transact-SQL)](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
   
   
 

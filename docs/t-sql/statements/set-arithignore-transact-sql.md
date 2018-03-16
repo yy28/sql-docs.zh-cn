@@ -1,5 +1,5 @@
 ---
-title: "集 ARITHIGNORE (Transact SQL) |Microsoft 文档"
+title: SET ARITHIGNORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SET ARITHIGNORE 设置只控制是否返回错误消息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在计算中出现溢出或被零除错误时将返回 NULL，不考虑此设置。 可以使用 SET ARITHABORT 设置来确定是否终止查询。 此设置不影响 INSERT、UPDATE 和 DELETE 语句执行过程中发生的错误。  
   
  如果 SET ARITHABORT 或 SET ARITHIGNORE 为 OFF，而 SET ANSI_WARNINGS 为 ON，则遇到被零除或溢出错误时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会返回错误消息。  
@@ -73,7 +73,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -105,8 +105,8 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例演示除以零和溢出错误。 此示例不返回这些错误的错误消息，因为 ARITHIGNORE 为 OFF。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例演示了被零除错误和溢出错误。 对于这些错误，该示例不返回错误消息，因为 ARITHIGNORE 为 OFF。  
   
 ```  
 -- SET ARITHIGNORE OFF and testing.  
@@ -118,7 +118,7 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
   
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [设置 ARITHABORT &#40;Transact SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
 

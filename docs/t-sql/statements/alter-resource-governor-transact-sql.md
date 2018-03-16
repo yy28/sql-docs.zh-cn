@@ -1,5 +1,5 @@
 ---
-title: "更改资源调控器 (Transact SQL) |Microsoft 文档"
+title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,9 +37,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  此语句用于执行中的以下资源调控器操作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  此语句用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行以下资源调控器操作：  
   
--   应用配置更改时，指定创建 |ALTER |DROP WORKLOAD GROUP 或创建 |ALTER |DROP RESOURCE POOL 或创建 |ALTER |发出 DROP EXTERNAL RESOURCE POOL 语句。  
+-   应用在发出 CREATE|ALTER|DROP WORKLOAD GROUP 或 CREATE|ALTER|DROP RESOURCE POOL 或 CREATE|ALTER|DROP EXTERNAL RESOURCE POOL 语句时指定的配置更改。  
   
 -   启用或禁用资源调控器。  
   
@@ -76,41 +76,41 @@ ALTER RESOURCE GOVERNOR
   
 -   正常的系统监视不受影响。  
   
--   可以进行配置更改，但所做的更改直到启用资源调控器不会生效。  
+-   可以进行配置更改，但是这些更改直到启用资源调控器之后才会生效。  
   
 -   在重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，资源调控器不会加载其配置，而是只具有默认的和内部的组和池。  
   
  RECONFIGURE  
- 当未启用资源调控器时，RECONFIGURE 可启用资源调控器。 启用资源调控器会产生以下结果：  
+ 当未启用资源调控器时，RECONFIGURE 可启用资源调控器。 启用资源调控器会产生下列结果：  
   
 -   为新连接执行分类器函数，以便可以将其工作负荷分配到工作负荷组。  
   
 -   遵守并强制执行资源调控器配置中指定的资源限制。  
   
--   资源调控器已被禁用时所做的任何配置更改会影响启用资源调控器之前已存在的请求。  
+-   禁用资源调控器时所做的任何配置更改会影响在启用资源调控器之前就已存在的请求。  
   
- 当运行资源调控器时，重新配置应用任何配置更改请求时创建 |ALTER |DROP WORKLOAD GROUP 或创建 |ALTER |DROP RESOURCE POOL 或创建 |ALTER |DROP EXTERNAL RESOURCE POOL 语句执行。  
+ 当资源调控器正在运行时，RECONFIGURE 可应用执行 CREATE|ALTER|DROP WORKLOAD GROUP 或 CREATE|ALTER|DROP RESOURCE POOL 或 CREATE|ALTER|DROP EXTERNAL RESOURCE POOL 语句时请求的任何配置更改。  
   
 > [!IMPORTANT]  
 >  必须发出 ALTER RESOURCE GOVERNOR RECONFIGURE 才能使任何配置更改生效。  
   
- CLASSIFIER_FUNCTION = { *schema_name***。***function_name* |NULL}  
- 注册指定的分类函数*schema_name.function_name*。 该函数将每个新会话进行分类并将会话请求和查询分配到工作负荷组。 如果使用 NULL，新会话将自动分配到默认工作负荷组。  
+ CLASSIFIER_FUNCTION = { schema_name.function_name | NULL }  
+ 注册由 schema_name.function_name 指定的分类函数。 该函数将每个新会话进行分类并将会话请求和查询分配到工作负荷组。 如果使用 NULL，新会话将自动分配到默认工作负荷组。  
   
  RESET STATISTICS  
- 重置有关所有工作负荷组和资源池的统计信息。 有关详细信息，请参阅[sys.dm_resource_governor_workload_groups &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)和[sys.dm_resource_governor_resource_pools &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ 重置有关所有工作负荷组和资源池的统计信息。 有关详细信息，请参阅 [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 和 [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
- MAX_OUTSTANDING_IO_PER_VOLUME =*值*  
+ MAX_OUTSTANDING_IO_PER_VOLUME = value  
  **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 设置每个磁盘卷的最大排队 I/O 操作数。 这些 I/O 操作可以是任何大小的读取或写入。  MAX_OUTSTANDING_IO_PER_VOLUME 的最大值为 100。 它不是百分比。 此设置用于将 IO 资源调控优化为磁盘卷的 IO 特性。 我们建议你的不同值进行试验，并考虑使用等 IOMeter，校准工具[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)，或 SQLIO （已弃用） 来标识存储子系统的最大值。 此设置进行系统级安全检查，它使 SQL Server 可满足资源池的最小 IOPS，即使其他池将 MAX_IOPS_PER_VOLUME 设置为无限也是如此。 有关 MAX_IOPS_PER_VOLUME 的详细信息，请参阅[CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)。  
+ 设置每个磁盘卷的最大排队 I/O 操作数。 这些 I/O 操作可以是任何大小的读取或写入。  MAX_OUTSTANDING_IO_PER_VOLUME 的最大值为 100。 它不是百分比。 此设置用于将 IO 资源调控优化为磁盘卷的 IO 特性。 我们建议试验不同的值并考虑使用 IOMeter、[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) 或 SQLIO（不推荐使用）等校准工具以找出存储子系统的最大值。 此设置进行系统级安全检查，它使 SQL Server 可满足资源池的最小 IOPS，即使其他池将 MAX_IOPS_PER_VOLUME 设置为无限也是如此。 有关 MAX_IOPS_PER_VOLUME 的详细信息，请参阅 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ALTER RESOURCE GOVERNOR DISABLE、ALTER RESOURCE GOVERNOR RECONFIGURE 和 ALTER RESOURCE GOVERNOR RESET STATISTICS 无法在用户事务内部使用。  
   
- RECONFIGURE 参数是资源调控器语法的一部分，不应与混淆[重新配置](../../t-sql/language-elements/reconfigure-transact-sql.md)，这是一个单独的 DDL 语句。  
+ RECONFIGURE 参数是资源调控器语法的一部分，不应与 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) 混淆，后者是一个单独的 DDL 语句。  
   
- 建议您先了解资源调控器的状态，然后再执行 DDL 语句。 有关详细信息，请参阅[资源调控器](../../relational-databases/resource-governor/resource-governor.md)。  
+ 建议您先了解资源调控器的状态，然后再执行 DDL 语句。 有关详细信息，请参阅 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
 ## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
@@ -199,12 +199,12 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
- [ALTER 外部资源池 &#40;Transact SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [资源调控器](../../relational-databases/resource-governor/resource-governor.md)   
- [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
+ [“资源调控器”](../../relational-databases/resource-governor/resource-governor.md)   
+ [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   
   

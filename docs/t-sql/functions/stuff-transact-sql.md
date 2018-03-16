@@ -1,5 +1,5 @@
 ---
-title: "内容 (Transact SQL) |Microsoft 文档"
+title: STUFF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -52,27 +52,27 @@ STUFF ( character_expression , start , length , replaceWith_expression )
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的字符数据。 *character_expression*可以是常量、 变量或列的字符或二进制数据。  
+ 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
   
- *start*  
- 一个整数值，指定删除和插入的开始位置。 如果*启动*为负数或零，则返回一个 null 字符串。 如果*启动*长于第一个*character_expression*，则返回 null 字符串。 *启动*可以是类型**bigint**。  
+ start  
+ 一个整数值，指定删除和插入的开始位置。 如果 start 为负或为零，则返回空字符串。 如果 start 的长度大于第一个 character_expression，则返回空字符串。 start 的类型可以是 bigint。  
   
  *length*  
- 一个整数，指定要删除的字符数。 如果*长度*为负，则返回一个 null 字符串。 如果*长度*长于第一个*character_expression*，则最多删除到最后一个字符在最后一个*character_expression*。  如果*长度*为零，插入在字符串中的第一个字符之前发生。 *长度*可以是类型**bigint**。
+ 一个整数，指定要删除的字符数。 如果 length 为负，则返回空字符串。 如果 length 的长度大于第一个 character_expression，则最多可以删除到最后一个 character_expression 中的最后一个字符。  如果 length 为零，则在字符串中第一个字符之前插入内容。 length 的类型可以是 bigint。
 
- *replaceWith_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的字符数据。 *character_expression*可以是常量、 变量或列的字符或二进制数据。 此表达式替换*长度*字符*character_expression*开始*启动*。 提供`NULL`作为*replaceWith_expression*，删除字符，而不插入任何内容。   
+ replaceWith_expression  
+ 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列。 此表达式从 start 开始替换 length 个字符的 character_expression。 如果 replaceWith_expression 为 `NULL`，则在不插入任何内容的情况下删除字符。   
   
 ## <a name="return-types"></a>返回类型  
- 返回字符数据，如果*character_expression*是一种受支持的字符数据类型。 如果返回二进制数据*character_expression*是支持的二进制数据类型之一。  
+ 如果 character_expression 是支持的字符数据类型之一，则返回字符数据。 如果 character_expression 是支持的二进制数据类型之一，则返回二进制数据。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果开始位置或长度值是负数，或者开始位置大于第一个字符串的长度，则返回 Null 字符串。 如果开始位置为 0，则返回 Null 值。 如果要删除的长度大于第一个字符串的长度，则删除到第一个字符串中的第一个字符。  
 
 如果结果值大于返回类型支持的最大值，则会引发错误。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
- 当使用 SC 排序规则，同时*character_expression*和*replaceWith_expression*可以包含代理项对。 长度参数对每个代理项计数*character_expression*单个字符的形式。  
+ 使用 SC 排序规则时，character_expression 和 replaceWith_expression 都可以包含代理项对。 length 参数将 character_expression 中的每个代理项计为一个字符。  
   
 ## <a name="examples"></a>示例  
  以下示例从第一个字符串 `abcdef` 的第 `2` 个位置 (`b`) 开始删除三个字符，然后在删除位置插入第二个字符串，从而创建并返回一个字符串。  
@@ -92,14 +92,14 @@ aijklmnef
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CONCAT &#40;Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: "UPDATETEXT (TRANSACT-SQL) |Microsoft 文档"
+title: UPDATETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  更新现有**文本**， **ntext**，或**映像**字段。 使用 UPDATETEXT 更改仅的一部分**文本**， **ntext**，或**映像**位置中的列。 使用 WRITETEXT 更新并替换整个**文本**， **ntext**，或**映像**字段。  
+  更新现有 text、ntext 或 image 字段。 使用 UPDATETEXT 可以只更改 text、ntext 或 image 列的一部分。 使用 WRITETEXT 可以更新和替换整个 text、ntext 或 image 字段。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用大值数据类型和**。**写入子句[更新](../../t-sql/queries/update-transact-sql.md)语句相反。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用大值数据类型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句的 .WRITE 子句。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,47 +63,47 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!IMPORTANT]  
 >  我们建议不要在基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序中使用 BULK 选项。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中可能会更改或删除该选项。  
   
- *table_name* **。** *dest_column_name*  
- 是表名称和**文本**， **ntext**，或**映像**更新的列。 表名称和列名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 可以选择是否指定数据库名和所有者名。  
+ table_name . dest_column_name  
+ 要更新的表以及 text、ntext 或 image 列的名称。 表名和列名必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定数据库名和所有者名。  
   
- *dest_text_ptr*  
- 为文本指针指向的值 （由 TEXTPTR 函数返回）**文本**， **ntext**，或**映像**要更新的数据。 *dest_text_ptr*必须**二进制 (**16**)**。  
+ dest_text_ptr  
+ 指向要更新的 text、ntext 或 image 数据的文本指针的值（由 TEXTPTR 函数返回）。 dest_text_ptr 必须是二进制 (16)。  
   
- *insert_offset*  
- 以零为基的更新起始位置。 有关**文本**或**映像**列， *insert_offset*是要在插入新数据之前跳过从开始处的现有列的字节数。 有关**ntext**列， *insert_offset*字符数 (每个**ntext**字符使用 2 个字节)。 现有**文本**， **ntext**，或**映像**此从零开始的起始位置开始的数据移动到右侧，以便腾出空间供新的数据。 值为 0 表示将新数据插入现有数据的开始处。 值为 NULL 则将新数据追加到现有数据值后。  
+ insert_offset  
+ 以零为基的更新起始位置。 对于 text 或 image 列，insert_offset 是在插入新数据前要从现有列的起点跳过的字节数。 对于 ntext 列，insert_offset 是字符数（每个 ntext 字符占用 2 个字节）。 从此基数为零的起始点开始的现有 text、ntext 或 image 数据向右移，为新数据留出空间。 值为 0 表示将新数据插入现有数据的开始处。 值为 NULL 则将新数据追加到现有数据值后。  
   
- *delete_length*  
- 是要删除现有的数据的长度**文本**， **ntext**，或**映像**开始，列*insert_offset*位置。 *Delete_length*以字节为单位的指定值**文本**和**映像**列并以字符为**ntext**列。 每个**ntext**字符使用 2 个字节。 值为 0 表示不删除数据。 值为 NULL 删除中的所有数据*insert_offset*位置到末尾的现有**文本**或**映像**列。  
+ delete_length  
+ 从 insert_offset 位置开始的、要从现有 text、ntext 或 image 列中删除的数据长度。 delete_length 值为 text 和 image 列指定时以字节为单位，为 ntext 列指定时以字符为单位。 每个 ntext 字符占用 2 个字节。 值为 0 表示不删除数据。 值为 NULL 则删除现有 text 或 image 列中从 insert_offset 位置开始到末尾的所有数据。  
   
  WITH LOG  
  日志记录由数据库的当前恢复模式决定。  
   
- *inserted_data*  
- 是要插入到现有的数据**文本**， **ntext**，或**映像**处列*insert_offset*位置。 这是单个**char**， **nchar**， **varchar**， **nvarchar**，**二进制**， **varbinary**，**文本**， **ntext**，或**映像**值。 *inserted_data*可以是文本或变量。  
+ inserted_data  
+ 要插入到 insert_offset 位置现有 text、ntext 或 image 列中的数据。 这是单个 char、nchar、varchar、nvarchar、binary、varbinary、text、ntext 或 image 值。 inserted_data 可以是文字或变量。  
   
- *table_name.src_column_name*  
- 是表名称和**文本**， **ntext**，或**映像**用作插入的数据源的列。 表名和列名必须符合标识符规则。  
+ table_name.src_column_name  
+ 用作插入数据源的表和 text、ntext 或 image 列的名称。 表名和列名必须符合标识符规则。  
   
- *src_text_ptr*  
- 为文本指针指向的值 （由 TEXTPTR 函数返回）**文本**， **ntext**，或**映像**用作插入的数据源的列。  
+ src_text_ptr  
+ 指向用作插入数据源的 text、ntext 或 image 列的文本指针值（由 TEXTPTR 函数返回）。  
   
 > [!NOTE]  
->  *scr_text_ptr*值不能与相同*dest_text_ptr*值。  
+>  scr_text_ptr 值不能与 dest_text_ptr 值相同。  
   
-## <a name="remarks"></a>注释  
- 新插入的数据可以是单个*inserted_data*常量、 表名称、 列名称或文本指针。  
+## <a name="remarks"></a>Remarks  
+ 新插入的数据可以是单个 inserted_data 常量、表名、列名或文本指针。  
   
 |Update 操作|UPDATETEXT 参数|  
 |-------------------|---------------------------|  
-|替换现有数据|指定非空*insert_offset*值，则为非 0 *delete_length*值，并将新的数据要插入。|  
-|删除现有数据|指定非空*insert_offset*值、 非零*delete_length*。 不指定要插入的新数据。|  
-|插入新数据|指定*insert_offset*值， *delete_length* 0，并将新的数据要插入。|  
+|替换现有数据|指定一个非空 insert_offset 值、非零 delete_length 值和要插入的新数据。|  
+|删除现有数据|指定非空 insert_offset 值和非零 delete_length。 不指定要插入的新数据。|  
+|插入新数据|指定 insert_offset 值、为 0 的 delete_length 和要插入的新数据。|  
   
- 为了获得最佳性能，建议**文本**， **ntext**和**映像**数据要插入或更新 8,040 字节的倍数的区块大小。  
+ 为获得最佳性能，建议按照块区大小为 8,040 字节倍数的方式插入或更新数据。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，行内文本指针到**文本**， **ntext**，或**映像**数据可能存在，但可能不会有效。 有关 text in row 选项的信息，请参阅[sp_tableoption &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). 有关使文本指针无效的信息，请参阅[sp_invalidate_textptr &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，可能存在指向 text、ntext 或 image 数据的行内文本指针，但可能无效。 有关 text in row 选项的信息，请参阅 [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。 有关使文本指针无效的信息，请参阅 [sp_invalidate_textptr (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)。  
   
- 若要初始化**文本**为 NULL，列使用 WRITETEXT;UPDATETEXT 初始化**文本**为空字符串的列。  
+ 若要将 text 列初始化为 NULL，请使用 WRITETEXT；UPDATETEXT 将 text 列初始化为空字符串。  
   
 ## <a name="permissions"></a>权限  
  需要对指定表的 UPDATE 权限。  
@@ -131,8 +131,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [READTEXT &#40;Transact SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [TEXTPTR &#40;Transact SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
+ [READTEXT (Transact-SQL)](../../t-sql/queries/readtext-transact-sql.md)   
+ [TEXTPTR (Transact-SQL)](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   
   

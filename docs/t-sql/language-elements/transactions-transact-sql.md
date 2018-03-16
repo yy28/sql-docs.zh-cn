@@ -1,5 +1,5 @@
 ---
-title: "事务 (Transact SQL) |Microsoft 文档"
+title: "事务 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 
   事务是单个工作单元。 如果某一事务成功，则在该事务中进行的所有数据修改均会提交，成为数据库中的永久组成部分。 如果事务遇到错误且必须取消或回滚，则所有数据修改均被清除。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在以下的事务模式进行操作：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以下列事务模式运行：  
   
  自动提交事务  
  每条单独的语句都是一个事务。  
@@ -54,10 +54,10 @@ ms.lasthandoff: 01/25/2018
  只能应用于多个活动结果集 (MARS)，在 MARS 会话中启动的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 显式或隐式事务变为批处理级事务。 当批处理完成时没有提交或回滚的批处理级事务自动由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行回滚。  
 
 > [!NOTE] 
-> 与数据仓库产品相关的特殊注意事项，请参阅[事务 （SQL 数据仓库）](transactions-sql-data-warehouse.md)。   
+> 有关与数据仓库产品相关的特殊注意事项，请参阅[事务（SQL 数据仓库）](transactions-sql-data-warehouse.md)。   
 
-## <a name="in-this-section"></a>本節內容  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了下列事务语句：  
+## <a name="in-this-section"></a>本节内容  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供以下事务语句：  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/25/2018
 |[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
 ## <a name="see-also"></a>另请参阅  
- [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
+ [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT (Transact-SQL)](../../t-sql/functions/trancount-transact-sql.md)  
   
   

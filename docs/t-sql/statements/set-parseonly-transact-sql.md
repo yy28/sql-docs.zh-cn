@@ -1,5 +1,5 @@
 ---
-title: "集 PARSEONLY (Transact SQL) |Microsoft 文档"
+title: SET PARSEONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/27/2017
 ms.prod: sql-non-specified
@@ -52,18 +52,18 @@ ms.lasthandoff: 12/01/2017
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当 SET PARSEONLY 为 ON 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只分析语句。 当 SET PARSEONLY 为 OFF 时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 编译并执行语句。  
   
  SET PARSEONLY 的设置是在分析时设置，而不是在执行或运行时设置。  
   
  在存储过程或触发器中不要使用 PARSEONLY。 如果 OFFSETS 选项为 ON 而且没有出现错误，则 SET PARSEONLY 返回偏移量。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [设置偏移量 &#40;Transact SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
+ [SET OFFSETS (Transact-SQL)](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   

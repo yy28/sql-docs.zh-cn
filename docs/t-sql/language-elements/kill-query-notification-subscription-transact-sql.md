@@ -1,5 +1,5 @@
 ---
-title: "终止查询通知订阅 (Transact SQL) |Microsoft 文档"
+title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -53,18 +53,18 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  ALL  
  删除实例中的所有订阅。  
   
- *subscription_id*  
- 删除订阅的订阅 id *subscription_id*。  
+ subscription_id  
+ 删除订阅 ID 为 subscription_id 的订阅。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  KILL QUERY NOTIFICATION SUBSCRIPTION 语句删除查询通知订阅，而不生成通知消息。  
   
- *subscription_id*是订阅的 id，如动态管理视图中所示[sys.dm_qn_subscriptions &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ subscription_id 是动态管理视图 [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) 中显示的订阅 ID。  
   
  如果指定的订阅 ID 不存在，该语句将生成错误。  
   
 ## <a name="permissions"></a>权限  
- 执行此语句的权限被限制为成员的**sysadmin**固定的服务器角色。  
+ 该语句的执行权限只限于 sysadmin 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
   
@@ -83,6 +83,6 @@ KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
+ [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
   
   

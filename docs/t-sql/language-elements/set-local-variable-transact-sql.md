@@ -1,5 +1,5 @@
 ---
-title: "设置@local_variable(Transact SQL) |Microsoft 文档"
+title: SET @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-localvariable-transact-sql"></a>设置@local_variable(Transact SQL)
+# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  设置指定本地创建的变量，以前通过使用 DECLARE @*local_variable*语句，为指定的值。  
+  将先前使用 DECLARE @local_variable 语句创建的指定局部变量设置为指定值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,56 +76,56 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>参数  
- **@** *local_variable*  
- 是除之外的任何类型的变量的名称**光标**，**文本**， **ntext**，**映像**，或**表**。 变量名称必须以一个 at 符号开头 (**@**)。 变量名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
+ @ local_variable  
+ 是除 cursor、text、ntext、image 或 table 之外的任何类型的变量的名称。 变量名称必须以 at 符号 (@) 开头。 变量名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
- *property_name*  
+ property_name  
  用户定义类型的属性。  
   
- *field_name*  
+ field_name  
  用户定义类型的公共字段。  
   
- *udt_name*  
+ udt_name  
  公共语言运行时 (CLR) 用户定义类型的名称。  
   
- { **.** | **::** }  
- 指定 CLR 用户定义类型的方法。 对于一个实例 （非静态） 方法，使用句点 (**。**)。 对于静态方法，使用两个冒号 (**::**)。 若要调用 CLR 用户定义类型的方法、属性或字段，必须对类型具有 EXECUTE 权限。  
+ { . | :: }  
+ 指定 CLR 用户定义类型的方法。 对于实例（非静态）方法，请使用句点 (.)。 对于静态方法，请使用两个冒号 (::)。 若要调用 CLR 用户定义类型的方法、属性或字段，必须对类型具有 EXECUTE 权限。  
   
- *method_name* **(** *参数*[ **，**...*n* ] **)**  
+ method_name ( argument [ ,...n ] )  
  用户定义类型的方法，它带有一个或多个参数以修改类型实例的状态。 静态方法必须是公共的。  
   
- **@** *SQLCLR_local_variable*  
+ @ SQLCLR_local_variable  
  其类型位于程序集内的变量。 有关详细信息，请参阅[公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)。  
   
- *mutator_method*  
+ mutator_method  
  程序集中可更改对象状态的方法。 SQLMethodAttribute.IsMutator 将应用于此方法。  
   
- { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+ { += | -= | \*= | /= | %= | &= | ^= | |= }  
  复合赋值运算符：  
   
- + = 添加和分配  
+ += 相加并赋值  
   
- -= 减去和分配  
+ -= 相减并赋值  
   
- * = Multiply 和分配  
+ *= 相乘并赋值  
   
- / = 分割和分配  
+ /= 相除并赋值  
   
- %= 取模和分配  
+ %= 取模并赋值  
   
- & = 按位和分配  
+ &=“位与”并赋值  
   
- ^ = 按位异或和分配  
+ ^=“位异或”并赋值  
   
- | = 按位或和分配  
+ |=“位或”并赋值  
   
  *expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- *cursor_variable*  
- 是游标变量的名称。 如果目标游标变量先前引用了不同游标，则删除先前的引用。  
+ cursor_variable  
+ cursor 变量的名称。 如果目标游标变量先前引用了不同游标，则删除先前的引用。  
   
- *cursor_name*  
+ cursor_name  
  使用 DECLARE CURSOR 语句声明的游标名称。  
   
  CURSOR  
@@ -141,9 +141,9 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  定义一个游标，以创建将由该游标使用的数据的临时副本。 对游标的所有请求都从 tempdb 中的这一临时表中得到应答；因此，对该游标进行提取操作时返回的数据不反映对基表所做的修改，并且不允许对该游标进行修改。  
   
  KEYSET  
- 指定当游标打开时，游标中行的成员身份和顺序已经固定。 唯一标识行的键的一套内置 keysettable tempdb 中。 对基表中的非键值所做的更改（由游标所有者更改或其他用户提交）在游标所有者滚动游标时可见。 其他用户进行的插入不可见，且不能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标进行插入。  
+ 指定当游标打开时，游标中行的成员身份和顺序已经固定。 对行进行唯一标识的键集内置在 tempdb 内的 keysettable 中。 对基表中的非键值所做的更改（由游标所有者更改或其他用户提交）在游标所有者滚动游标时可见。 其他用户进行的插入不可见，且不能通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标进行插入。  
   
- 如果删除了某行，尝试读取的行返回 @@FETCH_STATUS为-2。 在游标外部所的键值的更新都类似于删除旧行后跟新行的插入。 具有新值的行不可见，并且尝试提取具有旧值的行返回 @@FETCH_STATUS为-2。 新值是通过指定 WHERE CURRENT OF 子句通过游标执行更新时可见。  
+ 如果删除某一行，则在尝试提取该行时返回的 @@FETCH_STATUS 为 -2。 从游标外部更新键值类似于删除旧行后再插入新行。 具有新值的行不可见，且尝试提取具有旧值的行时返回的 @@FETCH_STATUS 为 -2。 如果通过指定 WHERE CURRENT OF 子句来通过游标执行更新，则新值可见。  
   
  DYNAMIC  
  定义一个游标，以反映游标所有者滚动游标时对结果集内的行所做的所有数据更改。 行的数据值、顺序和成员身份在每次提取时都会更改。 动态游标不支持绝对和相对提取选项。  
@@ -152,7 +152,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  指定启用了优化的 FORWARD_ONLY 和 READ_ONLY 游标。 如果还指定了 SCROLL，则不能指定 FAST_FORWARD。  
   
  READ_ONLY  
- 防止通过此游标进行的更新。 在 UPDATE 或 DELETE 语句的 WHERE CURRENT OF 子句中不能引用游标。 该选项优先于要更新的游标的默认功能。  
+ 禁止通过该游标进行更新。 在 UPDATE 或 DELETE 语句的 WHERE CURRENT OF 子句中不能引用游标。 该选项优先于要更新的游标的默认功能。  
   
  SCROLL LOCKS  
  指定通过游标进行的定位更新或删除一定会成功。 将行读入游标时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将锁定这些行，以确保随后可对它们进行修改。 如果还指定了 FAST_FORWARD，则不能指定 SCROLL_LOCKS。  
@@ -163,43 +163,43 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  TYPE_WARNING  
  指定如果游标从所请求的类型隐式转换为另一种类型，则向客户端发送警告消息。  
   
- 有关*select_statement*  
- 定义游标结果集的标准 SELECT 语句。 内不允许使用关键字的浏览和 INTO *select_statement*游标声明。  
+ FOR select_statement  
+ 定义游标结果集的标准 SELECT 语句。 在游标声明的 select_statement 中不允许使用关键字 FOR BROWSE 和 INTO。  
   
- 如果使用 DISTINCT、 UNION、 GROUP BY 或 HAVING，或中包含的聚合表达式*select_list*，光标将创建为静态。  
+ 如果使用了 DISTINCT、UNION、GROUP BY 或 HAVING，或者 select_list 中包含聚合表达式，游标将创建为 STATIC。  
   
  如果每个基础表都没有唯一索引，并且请求了 ISO SCROLL 游标或 [!INCLUDE[tsql](../../includes/tsql-md.md)] KEYSET 游标，则游标将自动成为 STATIC 游标。  
   
- 如果*select_statement*包含 ORDER BY 子句在其中的列不唯一行标识符，动态游标转换到键集游标，或静态游标如果无法打开键集游标。 这一点同样适用于使用不带 STATIC 关键字的 ISO 语法定义的游标。  
+ 如果 select_statement 包含 ORDER BY 子句，且其中的列不是唯一的行标识符，则 DYNAMIC 游标将转换为 KEYSET 游标，而如果 KEYSET 游标不能打开，则该游标转换为 STATIC 游标。 这一点同样适用于使用不带 STATIC 关键字的 ISO 语法定义的游标。  
   
  READ ONLY  
- 防止通过此游标进行的更新。 在 UPDATE 或 DELETE 语句的 WHERE CURRENT OF 子句中不能引用游标。 该选项优先于要更新的游标的默认功能。 该关键字与早期的 READ_ONLY 关键字的不同之处是 READ 和 ONLY 之间是一个空格，而不是下划线。  
+ 禁止通过该游标进行更新。 在 UPDATE 或 DELETE 语句的 WHERE CURRENT OF 子句中不能引用游标。 该选项优先于要更新的游标的默认功能。 该关键字与早期的 READ_ONLY 关键字的不同之处是 READ 和 ONLY 之间是一个空格，而不是下划线。  
   
- 更新 [OF *column_name*[ **，**...*n* ] ]  
- 定义游标中可更新的列。 如果的*column_name* [**，**... *n* ] 提供，仅列出的列将允许修改。 如果没有提供列表，则可更新所有列，除非已将游标定义为 READ_ONLY。  
+ UPDATE [OF column_name[ ,... n ] ]  
+ 定义游标中可更新的列。 如果提供了 OF column_name [,...n]，则只允许修改列出的列。 如果没有提供列表，则可更新所有列，除非已将游标定义为 READ_ONLY。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  声明一个变量后，该变量将被初始化为 NULL。 使用 SET 语句将一个不是 NULL 的值赋给声明的变量。 给变量赋值的 SET 语句返回单值。 在初始化多个变量时，为每个局部变量使用单独的 SET 语句。  
   
  变量只能用在表达式中，不能代替对象名或关键字。 若要构造动态 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，请使用 EXECUTE。  
   
- 组的语法规则 **@ * * * cursor_variable*不包括本地和全局关键字。 当集 **@ * * * cursor_variable* = 光标...使用语法，作为全局或本地，具体取决于与局部游标数据库选项的默认设置创建光标。  
+ SET @cursor_variable 的语法规则不包含 LOCAL 和 GLOBAL 关键字。 当使用 SET @cursor_variable = CURSOR... 语法时，根据 default to local cursor 数据库选项的设置，游标将创建为 GLOBAL 或 LOCAL。  
   
  即使游标变量引用全局游标，它们也始终是局部变量。 如果游标变量引用全局游标，则该游标既有全局游标引用，也有局部游标引用。 有关详细信息，请参阅示例 C。  
   
- 有关详细信息，请参阅[DECLARE CURSOR &#40;Transact SQL &#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ 有关详细信息，请参阅 [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)。  
   
  复合赋值运算符可以用在存在赋值（在运算符的右侧有一个表达式，包括变量）的任何地方以及 UPDATE、SELECT 和 RECEIVE 语句的 SET 语句中。  
   
  不要在 SELECT 语句中使用变量来连接值（即来计算聚合值）。 可能发生了意外查询结果。 这是因为 SELECT 列表中的所有表达式（包括赋值）不保证对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](http://support.microsoft.com/kb/287515)。  
   
 ## <a name="permissions"></a>权限  
- 要求具有 public 角色的成员身份。 所有用户都可以都使用组 **@ * * * local_variable*。  
+ 要求具有 public 角色的成员身份。 所有用户都可以使用 SET @local_variable。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. 输出使用 SET 初始化的变量值  
- 下面的示例创建`@myvar`变量，将一个字符串值放入变量，并将的值打印`@myvar`变量。  
+ 以下示例创建 `@myvar` 变量，将字符串值放入该变量，然后输出 `@myvar` 变量的值。  
   
 ```  
 DECLARE @myvar char(20);  
@@ -298,7 +298,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 通过调用类型的方法为用户定义类型的变量赋值  
- 下面的示例设置用户定义类型的值**点**通过调用方法`SetXY`的类型。  
+ 以下示例通过调用类型的 `SetXY` 方法设置用户定义类型 point 的值。  
   
 ```  
 DECLARE @p Point;  
@@ -316,10 +316,10 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. 输出使用 SET 初始化的变量值  
- 下面的示例创建`@myvar`变量，将一个字符串值放入变量，并将的值打印`@myvar`变量。  
+ 以下示例创建 `@myvar` 变量，将字符串值放入该变量，然后输出 `@myvar` 变量的值。  
   
 ```  
 DECLARE @myvar char(20);  
@@ -329,7 +329,7 @@ SELECT top 1 @myvar FROM sys.databases;
 ```  
   
 ### <a name="k-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>K. 在 SELECT 语句中使用由 SET 赋值的局部变量  
- 下面的示例创建一个名为的本地变量`@dept`，并使用在此本地变量`SELECT`语句来查找所有雇员的姓名中的工作的第一个和最后一个名称`Marketing`部门。  
+ 以下示例创建一个名为 `@dept` 的局部变量，并在 `SELECT` 语句中使用该局部变量来查找 `Marketing` 部门的所有雇员的姓氏与名字。  
   
 ```  
 -- Uses AdventureWorks  
@@ -369,7 +369,7 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "创建同义词 (Transact SQL) |Microsoft 文档"
+title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -69,8 +69,8 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 ```  
   
 ## <a name="arguments"></a>参数  
- *schema_name_1*  
- 指定创建同义词所使用的架构。 如果*架构*未指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用当前用户的默认架构。  
+ schema_name_1  
+ 指定创建同义词所使用的架构。 如果未指定 *schema*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用当前用户的默认架构。  
   
  *synonym_name*  
  新同义词的名称。  
@@ -81,17 +81,17 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  基对象所在服务器的名称。  
   
  *database_name*  
- 基对象所在数据库的名称。 如果*database_name*未指定，则使用当前数据库的名称。  
+ 基对象所在数据库的名称。 如果未指定 database_name，则使用当前数据库的名称。  
   
- *schema_name_2*  
- 基对象的架构的名称。 如果*schema_name*未指定使用当前用户的默认架构。  
+ schema_name_2  
+ 基对象的架构的名称。 如果未指定 schema_name，则使用当前用户的默认架构。  
   
  *object_name*  
  同义词被引用基对象的名称。  
   
  Windows Azure SQL Database 支持由三部分组成的格式 database_name.[schema_name].object_name，其中 database_name 为当前数据库，database_name 为 tempdb，object_name 以 # 开头。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  创建同义词时不需要基对象存在。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在运行时检查基对象是否存在。  
   
  可以为下列对象类型创建同义词：  
@@ -103,15 +103,15 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |复制筛选过程|扩展存储过程|  
 |SQL 标量函数|SQL 表值函数|  
 |SQL 内联表值函数|SQL 存储过程|  
-|视图|表<sup>1</sup> （用户定义的）|  
+|“查看”|表<sup>1</sup>（用户定义）|  
   
- <sup>1 包括本地和全局临时表</sup>  
+ <sup>1 包括局部临时表和全局临时表</sup>  
   
  不支持使用函数基对象的四部分名称。  
   
  在动态 SQL 中可以创建、删除和引用同义词。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要在给定架构中创建同义词，则用户必须具有 CREATE SYNONYM 权限，并拥有架构或具有 ALTER SCHEMA 权限。  
   
  CREATE SYNONYM 权限是可授予的权限。  
@@ -200,7 +200,7 @@ SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [删除同义词 &#40;Transact SQL &#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+ [DROP SYNONYM (Transact-SQL)](../../t-sql/statements/drop-synonym-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   

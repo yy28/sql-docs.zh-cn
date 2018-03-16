@@ -1,5 +1,5 @@
 ---
-title: "ALTER 消息类型 (Transact SQL) |Microsoft 文档"
+title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -70,15 +70,15 @@ ALTER MESSAGE TYPE message_type_name
  消息正文必须包含格式正确的 XML。  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- 消息正文必须包含符合指定架构集合中的某一架构的 XML。 *Schema_collection_name*必须是现有 XML 架构集合的名称。  
+ 消息正文必须包含符合指定架构集合中的某一架构的 XML。 *schema_collection_name* 必须是现有 XML 架构集合的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  更改消息类型的验证不会影响已传递到队列的消息。  
   
  若要更改消息类型的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  
   
 ## <a name="permissions"></a>权限  
- 更改消息类型的权限默认为消息类型的成员的所有者**db_ddladmin**或**db_owner**固定数据库角色和成员的**sysadmin**固定的服务器角色。  
+ 默认情况下，消息类型的所有者、**db_ddladmin** 或 **db_owner** 固定数据库角色以及 **sysadmin** 固定服务器角色的成员拥有更改消息类型的权限。  
   
  如果 ALTER MESSAGE TYPE 语句指定了一个架构集合，则执行该语句的用户必须对指定的架构集合具有 REFERENCES 权限。  
   
@@ -92,9 +92,9 @@ ALTER MESSAGE TYPE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER AUTHORIZATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [创建消息类型 &#40;Transact SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [删除消息类型 &#40;Transact SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [CREATE MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

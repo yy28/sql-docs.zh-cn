@@ -1,5 +1,5 @@
 ---
-title: "排序规则 |Microsoft 文档"
+title: "排序规则 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ COLLATE { <collation_name> | database_default }
   
 ## <a name="arguments"></a>参数  
  *collation_name*  
- 应用于表达式、列定义或数据库定义的排序规则的名称。 *collation_name*可以仅指定*Windows_collation_name*或*SQL_collation_name*。 *collation_name*必须是文字值。 *collation_name*不能通过变量或表达式表示。  
+ 应用于表达式、列定义或数据库定义的排序规则的名称。 collation_name 只能是指定的 Windows_collation_name 或 SQL_collation_name。 collation_name 必须是文本值。 collation_name 不能用变量或表达式表示。  
   
- *Windows_collation_name*是的排序规则名称[Windows 排序规则名称](../../t-sql/statements/windows-collation-name-transact-sql.md)。  
+ Windows_collation_name 是 [Windows 排序规则名称](../../t-sql/statements/windows-collation-name-transact-sql.md)的排序规则名称。  
   
- *SQL_collation_name*是的排序规则名称[SQL Server 排序规则名称](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。  
+ SQL_collation_name 是 [SQL Server 排序规则名称](../../t-sql/statements/sql-server-collation-name-transact-sql.md)的排序规则名称。  
   
  在数据库定义级别应用排序规则时，仅 Unicode 的 Windows 排序规则不能与 COLLATE 子句一起使用。  
   
  **database_default**  
  使 COLLATE 子句继承当前数据库的排序规则。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  可以在多个级别指定 COLLATE 子句。 其中包括：  
   
 1.  创建或更改数据库。  
@@ -68,13 +68,13 @@ COLLATE { <collation_name> | database_default }
      可以使用 CREATE DATABASE 或 ALTER DATABASE 语句的 COLLATE 子句指定数据库的默认排序规则。 还可以在使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建数据库时指定排序规则。 如果不指定排序规则，则将为数据库分配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则。  
   
     > [!NOTE]  
-    >  Windows 仅限 Unicode 的排序规则只能与 COLLATE 子句要应用到的排序规则**nchar**， **nvarchar**，和**ntext**在列级别上的数据类型和表达式级数据;它们不能与 COLLATE 子句来更改数据库或服务器实例的排序规则。  
+    >  Windows 的仅 Unicode 排序规则只能与 COLLATE 子句一起使用，将排序规则应用于列级和表达式级数据的 nchar、nvarchar 和 ntext 数据类型，而不能与 COLLATE 子句一起使用来更改数据库或服务器实例的排序规则。  
   
 2.  创建或更改表列。  
   
      可以使用 CREATE TABLE 或 ALTER TABLE 语句的 COLLATE 子句指定每个字符串列的排序规则。 还可以在使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建表时指定排序规则。 如果不指定排序规则，将为列分配数据库的默认排序规则。  
   
-     你还可以使用`database_default`COLLATE 子句中的选项以指定临时表中的列，而不是连接使用的当前用户数据库的默认排序规则**tempdb**。  
+     还可使用 COLLATE 子句中的 `database_default` 选项，指定临时表中的列使用连接的当前用户数据库（而不是 tempdb）的默认排序规则。  
   
 3.  转换表达式的排序规则。  
   
@@ -84,13 +84,13 @@ COLLATE { <collation_name> | database_default }
   
  当连接上下文与某个数据库相关时，可以创建变量、GOTO 标签、临时存储过程和临时表，且当已将上下文切换到其他数据库时引用它们。 变量、GOTO 标签、临时存储过程和临时表的标识符位于服务器实例的默认排序规则中。  
   
- COLLATE 子句可以应用于仅**char**， **varchar**，**文本**， **nchar**， **nvarchar**和**ntext**数据类型。  
+ COLLATE 子句仅适用于 char、varchar、text、nchar、nvarchar 和 ntext 数据类型。  
   
- COLLATE 使用*collate_name*来指代的 SQL Server 排序规则或要应用于表达式、 列定义或数据库定义的 Windows 排序规则的名称。 *collation_name*可以仅指定*Windows_collation_name*或*SQL_collation_name*和该参数必须包含一个文本值。 *collation_name*不能通过变量或表达式表示。  
+ COLLATE 使用 collate_name 来引用 SQL Server 排序规则或 Windows 排序规则的名称，以应用于表达式、列定义或数据库定义。 collation_name 只能是指定的 Windows_collation_name 或 SQL_collation_name，并且参数必须包含文本值。 collation_name 不能用变量或表达式表示。  
   
- 排序规则一般由排序规则名称标识，安装过程中除外。 在设置中，你将改为指定 Windows 排序规则的根排序规则指示符 （排序规则区域设置），然后指定敏感或不区分大小写大小写或重音的排序选项。  
+ 排序规则一般由排序规则名称标识，安装过程中除外。 在安装过程中，应该为 Windows 排序规则指定根排序规则指示符（排序规则区域设置），然后指定区分或不区分大小写或重音的排序选项。  
   
- 你可以执行系统函数[fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)若要检索的 Windows 排序规则和 SQL Server 排序规则的所有有效的排序规则名称的列表：  
+ 可以执行系统函数 [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 来检索 Windows 排序规则和 SQL Server 排序规则的所有有效排序规则名称的列表：  
   
 ```sql  
 SELECT name, description  
@@ -103,13 +103,13 @@ FROM fn_helpcollations();
   
 -   当创建或更改表时，为列指定排序规则。  
   
--   当还原或附加数据库、 数据库的默认排序规则和任何的排序规则**char**， **varchar**，和**文本**列或数据库中的参数必须由操作系统支持。  
+-   还原或附加数据库时，操作系统必须支持数据库的默认排序规则，并支持数据库中的任何 char、varchar 和 text 列或参数的排序规则。  
   
 > [!NOTE]
-> 支持代码页转换**char**和**varchar**数据类型，但不是能为**文本**数据类型。 不报告代码页转换过程中的数据丢失。  
+> char 和 varchar 数据类型支持代码页转换，但是 text 数据类型不支持。 不报告代码页转换过程中的数据丢失。  
   
 > [!NOTE]
-> 如果指定的排序规则或者被引用的对象使用的排序规则使用 Windows，不支持代码页[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]显示错误。  
+> 如果被引用的对象所使用或指定的排序规则使用 Windows 不支持的代码页，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会显示错误。  
   
 ## <a name="examples"></a>示例  
   
@@ -158,16 +158,16 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>B. 其他示例  
- 有关使用的其他示例**COLLATE**，请参阅[CREATE DATABASE &#40;SQL Server Transact SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples)示例**G.创建数据库并指定排序规则名称和选项**，和[ALTER TABLE &#40;Transact SQL &#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column)示例**V.更改列排序规则**。  
+ 有关使用 COLLATE 的其他示例，请参阅 [CREATE DATABASE (SQL Server Transact SQL )](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) 示例 **G. 创建数据库并指定排序规则名称和选项**，以及 [ALTER TABLE (Transact SQL)](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 示例 **V. 更改列排序规则**。  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)    
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
  [排序规则优先级 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [常量 &#40;Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [常量 (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)     
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
- [table &#40;Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)     
+ [表 (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)     
   
   

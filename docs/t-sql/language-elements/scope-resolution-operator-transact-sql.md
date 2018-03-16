@@ -1,5 +1,5 @@
 ---
-title: ":: （范围解析) (Transact SQL) |Microsoft 文档"
+title: "::（作用域解析）(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-scope-resolution-transact-sql"></a>:: （范围解析) (Transact SQL)
+# <a name="-scope-resolution-transact-sql"></a>::（作用域解析）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  范围解析运算符**::**提供对复合数据类型的静态成员的访问。 复合数据类型是指包含多个简单数据类型和方法，如内置的 CLR 类型和自定义 SQLCLR User-Defined 类型 (Udt)。  
+  作用域解析运算符 :: 提供对复合数据类型的静态成员的访问。 复合数据类型包含多个简单数据类型和方法，例如内置 CLR 类型和自定义 SQL CLR 用户定义类型 (UDT)。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何使用作用域解析运算符访问 `GetRoot()` 类型的 `hierarchyid` 成员。  
@@ -47,6 +47,6 @@ PRINT @hid.ToString();
  `/`  
   
 ## <a name="see-also"></a>另请参阅  
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

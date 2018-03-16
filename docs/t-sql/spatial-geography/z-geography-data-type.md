@@ -1,5 +1,5 @@
 ---
-title: "Z (geography 数据类型) |Microsoft 文档"
+title: "Z（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
   
- CLR 类型： **SqlDouble**  
+ CLR 类型：SqlDouble  
   
-## <a name="remarks"></a>注释  
- 此属性的值为 null 如果**geography**实例不是一个点，以及与任何**点**实例未设置它。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例不是 point，则此属性的值为 Null；对于未设置此属性的任何 Point 实例，此属性的值也为 Null。  
   
  该属性为只读。  
   
@@ -65,8 +65,8 @@ SELECT @g.Z;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [地域实例的扩展的方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [&#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [Geography 实例上的扩展方法](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M（geography 数据类型）](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [AsTextZM（geography 数据类型）](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

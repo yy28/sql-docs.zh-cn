@@ -1,5 +1,5 @@
 ---
-title: "子查询 （Azure SQL 数据仓库，并行数据仓库） |Microsoft 文档"
+title: "子查询（Azure SQL 数据仓库、并行数据仓库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -24,33 +24,33 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查询 （Azure SQL 数据仓库，并行数据仓库）
+# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查询（Azure SQL 数据仓库、并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  本主题提供了使用中的子查询的示例[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
+  本主题提供在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中使用子查询的示例。  
   
- SELECT 语句中，请参阅[选择 &#40;Transact SQL &#41;](../../t-sql/queries/select-transact-sql.md)  
+ 有关 SELECT 语句，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
   
 ## <a name="contents"></a>目录  
   
 -   [基础知识](#Basics)  
   
--   [示例： SQL 数据仓库和并行数据仓库](#Examples)  
+-   [示例：SQL 数据仓库和并行数据仓库](#Examples)  
   
-##  <a name="Basics"></a>基础知识  
+##  <a name="Basics"></a> 基础知识  
  子查询  
- 子查询是一个嵌套在 SELECT、INSERT、UPDATE 或 DELETE 语句或其他子查询中的查询。 这也称为内部查询或内部的选择。  
+ 子查询是一个嵌套在 SELECT、INSERT、UPDATE 或 DELETE 语句或其他子查询中的查询。 子查询亦称内部查询或内部选择。  
   
  外部查询  
- 包含子查询语句。 这也称为外部的选择。  
+ 包含子查询的语句， 亦称外部选择。  
   
  相关子查询  
- 外部查询中的表是指子查询。  
+ 引用外部查询中的表的子查询。  
   
-##  <a name="Examples"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 本部分提供的子查询中支持示例[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
+##  <a name="Examples"></a> 示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 本节提供 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]支持的子查询的示例。  
   
-### <a name="a-top-and-order-by-in-a-subquery"></a>A. TOP 和 ORDER BY 在子查询  
+### <a name="a-top-and-order-by-in-a-subquery"></a>A. 子查询中的 TOP 和 ORDER BY  
   
 ```  
 SELECT * FROM tblA  
@@ -59,7 +59,7 @@ WHERE col1 IN
   
 ```  
   
-### <a name="b-having-clause-with-a-correlated-subquery"></a>B. HAVING 子句与相关子查询  
+### <a name="b-having-clause-with-a-correlated-subquery"></a>B. 包含相关子查询的 HAVING 子句  
   
 ```  
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -73,7 +73,7 @@ ORDER BY EmployeeKey;
   
 ```  
   
-### <a name="c-correlated-subqueries-with-analytics"></a>C. 使用分析相关子查询  
+### <a name="c-correlated-subqueries-with-analytics"></a>C. 使用分析的相关子查询  
   
 ```  
 SELECT * FROM ReplA AS A   
@@ -81,7 +81,7 @@ WHERE A.ID IN
     (SELECT sum(B.ID2) OVER() FROM ReplB AS B WHERE A.ID2 = B.ID);  
 ```  
   
-### <a name="d-correlated-union-statements-in-a-subquery"></a>D. 在子查询的相关 union 语句  
+### <a name="d-correlated-union-statements-in-a-subquery"></a>D. 子查询中的相关联合语句  
   
 ```  
 SELECT * FROM RA   
@@ -90,14 +90,14 @@ WHERE EXISTS
      UNION ALL SELECT 1 FROM RC);  
 ```  
   
-### <a name="e-join-predicates-in-a-subquery"></a>E. 在子查询中联接谓词  
+### <a name="e-join-predicates-in-a-subquery"></a>E. 子查询中的联接谓词  
   
 ```  
 SELECT * FROM RA INNER JOIN RB   
     ON RA.a1 = (SELECT COUNT(*) FROM RC);  
 ```  
   
-### <a name="f-correlated-join-predicates-in-a-subquery"></a>F. 在子查询相关的联接谓词  
+### <a name="f-correlated-join-predicates-in-a-subquery"></a>F. 子查询中的相关联接谓词  
   
 ```  
 SELECT * FROM RA   
@@ -113,14 +113,14 @@ SELECT * FROM RA
         FROM (SELECT b1 FROM RB WHERE RB.b1 = RA.a1) X);  
 ```  
   
-### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. 中用于聚合的数据值的相关子查询  
+### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. 用于聚合的数据值中的相关子查询  
   
 ```  
 SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;  
 ```  
   
-### <a name="i-using-in-with-a-correlated-subquery"></a>I. 使用使用相关子查询  
- 以下示例在相关或重复子查询中使用 `IN`。 该查询依赖于外部查询来查询其值。 重复运行内部查询，每个行的一次，可以选择由外部查询。 此查询检索的一个实例`EmployeeKey`加上为其每个雇员的第一个和最后一个名称`OrderQuantity`中`FactResellerSales`表是`5`和中匹配的雇员标识号`DimEmployee`和`FactResellerSales`表。  
+### <a name="i-using-in-with-a-correlated-subquery"></a>I. 在相关子查询中使用 IN  
+ 以下示例在相关或重复子查询中使用 `IN`。 该查询依赖于外部查询来查询其值。 该内部查询为外部查询可能选择的每一行各重复运行一次。 该查询检索 `FactResellerSales` 表中 `OrderQuantity` 为 `5` 且雇员标识号在 `DimEmployee` 和 `FactResellerSales` 表中相匹配的每个雇员的 `EmployeeKey` 加姓名的一个实例。  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   
@@ -132,8 +132,8 @@ WHERE 5 IN
 ORDER BY EmployeeKey;  
 ```  
   
-### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. 使用子查询使用 EXISTS 与  
- 下面的示例演示在语义上等效，以演示了使用之间的差异的查询`EXISTS`关键字和`IN`关键字。 都检索产品子类别是为其每个产品名称的一个实例的子查询的示例`Road Bikes`。 `ProductSubcategoryKey`匹配之间`DimProduct`和`DimProductSubcategory`表。  
+### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. 在子查询中使用 EXISTS 和 IN  
+ 以下示例展示了语义等效的查询，以说明使用 `EXISTS` 关键字和 `IN` 关键字的区别。 两者都是子查询示例，用于检索产品子类别为 `Road Bikes` 的每个产品名称的一个实例。 `ProductSubcategoryKey` 在 `DimProduct` 和 `DimProductSubcategory` 表之间进行匹配。  
   
 ```  
 SELECT DISTINCT EnglishProductName  

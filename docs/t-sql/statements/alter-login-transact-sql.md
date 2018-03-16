@@ -1,5 +1,5 @@
 ---
-title: "ALTER LOGIN (Transact SQL) |Microsoft 文档"
+title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -129,18 +129,18 @@ ALTER LOGIN login_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *login_name*  
+ login_name  
  指定正在更改的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的名称。 域登录名必须用方括号括起来，其格式为 [domain\user]。  
   
  ENABLE | DISABLE  
- 启用或禁用此登录名。 禁用登录名不会影响已连接登录名的行为。 (使用`KILL`语句终止现有连接。)禁用的登录名将保留它们的权限，且仍然可以模拟。  
+ 启用或禁用此登录名。 禁用登录名不会影响已连接登录名的行为。 （使用 `KILL` 语句终止现有连接。）禁用的登录名将保留它们的权限，且仍然可以模拟。  
   
- 密码**=***密码*  
+ PASSWORD ='password'  
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定正在更改的登录名的密码。 密码是区分大小写的。  
   
- 连续活动连接到 SQL 数据库需要重新授权 （由数据库引擎执行） 至少每隔 10 小时。 数据库引擎将尝试使用最初提交的密码重新授权与需不需要用户输入。 出于性能原因，在 SQL 数据库中，重置密码时将不会对连接重新进行身份验证，即使该连接由于连接池而重置。 这是从本地 SQL Server 的行为不同。 如果已更改了密码，因为最初授权连接，必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可以使用 KILL 命令显式终止与 SQL 数据库的连接。 有关详细信息，请参阅[KILL &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md).  
+ 与 SQL 数据库持续保持活动连接需要至少每隔 10 小时进行重新授权（由数据库引擎执行）。 数据库引擎使用最初提交的密码尝试重新授权，且无需用户输入。 出于性能原因，在 SQL 数据库中重置密码时，连接将不会重新进行身份验证，即使该连接因连接池而重置。 这与本地 SQL Server 的行为不同。 如果自最初授权连接时已更改密码，则必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可使用 KILL 命令，显式终止与 SQL 数据库的连接。 有关详细信息，请参阅 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)。  
   
- 密码 **=**  *hashed_password*  
+ PASSWORD =hashed_password  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  仅适用于 HASHED 关键字。 指定要创建的登录名的密码的哈希值。  
@@ -152,9 +152,9 @@ ALTER LOGIN login_name
    
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 适用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]仅限的登录。 指定在 PASSWORD 参数后输入的密码已经过哈希运算。 如果未选择此选项，则在将密码存储到数据库之前，对其进行哈希运算。 此选项只能用于在两台服务器之间同步登录名。 切勿使用 HASHED 选项定期更改密码。  
+ 仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定在 PASSWORD 参数后输入的密码已经过哈希运算。 如果未选择此选项，则在将密码存储到数据库之前，对其进行哈希运算。 此选项只能用于在两台服务器之间同步登录名。 切勿使用 HASHED 选项定期更改密码。  
   
- OLD_PASSWORD **=***oldpassword*  
+ OLD_PASSWORD ='oldpassword'  
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 要指派新密码的登录的当前密码。 密码是区分大小写的。  
   
  MUST_CHANGE  
@@ -162,39 +162,39 @@ ALTER LOGIN login_name
   
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果包括此选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在首次使用已更改的登录名时提示输入更新的密码。  
   
- DEFAULT_DATABASE  **=** *数据库*  
+ DEFAULT_DATABASE =database  
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定将指派给登录名的默认数据库。  
   
- DEFAULT_LANGUAGE  **=** *语言*  
+ DEFAULT_LANGUAGE =language  
  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定将指派给登录名的默认语言。 所有 SQL 数据库登录名的默认语言为英语，并且无法更改。 默认语言`sa`登录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 Linux 上，为英语，但它可以更改。  
+ 指定将指派给登录名的默认语言。 所有 SQL 数据库登录名的默认语言为英语，并且无法更改。 Linux 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `sa` 登录名的默认语言是英语，但可以更改。  
   
- 名称 = *login_name*  
- 正在重命名的登录的新名称。 如果是 Windows 登录，则与新名称对应的 Windows 主体的 SID 必须匹配与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的登录相关联的 SID。 新名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名不能包含反斜杠字符 (\\)。  
+ NAME = login_name  
+ 正在重命名的登录的新名称。 如果是 Windows 登录，则与新名称对应的 Windows 主体的 SID 必须匹配与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的登录相关联的 SID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的新名称不能包含反斜杠字符 (\\)。  
   
- CHECK_EXPIRATION = {ON |**OFF** }  
+ CHECK_EXPIRATION = { ON | OFF }  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定是否应对此登录帐户强制实施密码过期策略。 默认值为 OFF。  
   
- CHECK_POLICY  **=**  { **ON** |关闭}  
+ CHECK_POLICY = { ON | OFF }  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定应对此登录名强制实施运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的 Windows 密码策略。 默认值为 ON。  
   
- 凭据 = *credential_name*  
+ CREDENTIAL = credential_name  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的凭据的名称。 该凭据必须已存在于服务器中。 有关详细信息请参阅[凭据 &#40; 数据库引擎 &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。 凭据不能映射到 sa 登录名。  
+ 将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的凭据的名称。 该凭据必须已存在于服务器中。 有关详细信息，请参阅[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。 凭据不能映射到 sa 登录名。  
   
  NO CREDENTIAL  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 删除登录到服务器凭据的当前所有映射。 有关详细信息请参阅[凭据 &#40; 数据库引擎 &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
+ 删除登录到服务器凭据的当前所有映射。 有关详细信息，请参阅[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
  UNLOCK  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -204,12 +204,12 @@ ALTER LOGIN login_name
  ADD CREDENTIAL  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 将可扩展的密钥管理 (EKM) 提供程序凭据添加到登录名。 有关详细信息，请参阅[可扩展密钥管理 &#40;Ekm&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ 将可扩展的密钥管理 (EKM) 提供程序凭据添加到登录名。 有关详细信息，请参阅[可扩展的密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
  DROP CREDENTIAL  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-删除从登录名的可扩展密钥管理 (EKM) 提供程序凭据。 有关详细信息请参阅[可扩展密钥管理 &#40;Ekm&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+从登录名删除可扩展密钥管理 (EKM) 提供程序凭据。 有关详细信息，请参阅[可扩展的密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
 ## <a name="remarks"></a>Remarks  
  如果 CHECK_POLICY 设置为 ON，则无法使用 HASHED 参数。  
@@ -224,28 +224,28 @@ ALTER LOGIN login_name
   
 -   清除密码历史记录。  
   
--   值*lockout_time*重置。  
+-   重置 lockout_time 的值。  
   
 如果指定 MUST_CHANGE，则 CHECK_EXPIRATION 和 CHECK_POLICY 必须设置为 ON。 否则，该语句将失败。  
   
 如果 CHECK_POLICY 设置为 OFF，则 CHECK_EXPIRATION 不能设置为 ON。 包含此选项组合的 ALTER LOGIN 语句将失败。  
   
-不能使用带 DISABLE 参数的 ALTER_LOGIN 来拒绝对 Windows 组的访问。 例如，ALTER_LOGIN [*域 \ 组*] 禁用将返回以下错误消息：  
+不能使用带 DISABLE 参数的 ALTER_LOGIN 来拒绝对 Windows 组的访问。 例如，ALTER_LOGIN [domain\group] DISABLE 将返回下列错误信息：  
   
  “消息 15151，级别 16，状态 1，第 1 行”  
   
- "无法更改该登录名*域 \ 组*，因为它不存在或者您没有权限。"  
+ “无法更改登录名 'Domain\Group'，因为它不存在，或者你没有相应权限。”  
   
  这是设计的结果。  
   
-在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 登录数据需要进行身份验证连接和服务器级防火墙规则暂时缓存在每个数据库。 定期刷新此缓存。 若要强制执行身份验证缓存的刷新，并确保数据库具有登录名表的最新版本，执行[DBCC FLUSHAUTHCACHE &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录名表，请执行 [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  需要 ALTER ANY LOGIN 权限。  
   
  如果使用 CREDENTIAL 选项，则还需要 ALTER ANY CREDENTIAL 权限。  
   
- 如果正在更改的登录名为属于**sysadmin**固定的服务器角色或 CONTROL SERVER 权限的被授权者还需要 CONTROL SERVER 权限时进行以下更改：  
+ 如果正在更改的登录名是 sysadmin 固定服务器角色的成员或 CONTROL SERVER 权限的被授权者，则进行以下更改时还需要 CONTROL SERVER 权限：  
   
 -   在不提供旧密码的情况下重置密码。  
   
@@ -333,9 +333,9 @@ GO
  
   
 ## <a name="see-also"></a>另请参阅  
- [凭据 &#40; 数据库引擎 &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [DROP LOGIN &#40;Transact SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN (Transact-SQL)](../../t-sql/statements/drop-login-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [可扩展密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

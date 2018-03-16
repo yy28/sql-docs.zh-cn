@@ -1,5 +1,5 @@
 ---
-title: "STNumPoints (geography 数据类型) |Microsoft 文档"
+title: "STNumPoints（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  每个中的图表中返回的点总数**geography**实例。  
+  返回 geography 实例的每个图形中的总点数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：int  
   
- CLR 返回类型： **SqlInt32**  
+ CLR 返回类型：SqlInt32  
   
-## <a name="remarks"></a>注释  
- 此方法计算中的说明的点**geography**实例。 重复的点被计算在内；但是，段之间的连接点只计算一次。 如果此实例为集合，则此方法将返回该集合内的总点数。  
+## <a name="remarks"></a>Remarks  
+ 此方法对 geography 实例说明中的点进行计数。 重复的点被计算在内；但是，段之间的连接点只计算一次。 如果此实例为集合，则此方法将返回该集合内的总点数。  
   
 ## <a name="examples"></a>示例  
   

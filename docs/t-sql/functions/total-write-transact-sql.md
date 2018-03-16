@@ -1,5 +1,5 @@
 ---
-title: "@@TOTAL_WRITE (Transact SQL) |Microsoft 文档"
+title: '@@TOTAL_WRITE (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40totalwrite-transact-sql"></a>& #x 40; 和 #x 40;TOTAL_WRITE (Transact SQL)
+# <a name="x40x40totalwrite-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回自上次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以来 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所执行的磁盘写入数。  
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型  
  **integer**  
   
-## <a name="remarks"></a>注释  
- 若要显示报表包含若干个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]统计信息，包括读取和写入活动，运行**sp_monitor**。  
+## <a name="remarks"></a>Remarks  
+ 要显示包含多项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括读写活动）的报表，请运行 sp_monitor。  
   
 ## <a name="examples"></a>示例  
  以下示例显示了如何返回到当前日期和时间为止总的磁盘读写操作的次数。  
@@ -71,8 +71,8 @@ Reads       Writes      As of
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [系统统计函数 &#40;Transact SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
+ [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [系统统计函数 (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
  [@@TOTAL_READ (Transact-SQL)](../../t-sql/functions/total-read-transact-sql.md)  
   
   

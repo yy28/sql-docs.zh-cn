@@ -1,5 +1,5 @@
 ---
-title: "&lt;&gt;（不等于）(Transact SQL) |Microsoft 文档"
+title: "&lt;&gt;（不等于）(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---traditional"></a>不等于 (Transact SQL) 的传统
+# <a name="not-equal-to-transact-sql---traditional"></a>不等于 (Transact SQL) - 传统
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  比较两个表达式（比较运算符）。 当比较非空表达式时，如果左操作数不等于右操作数，则结果为 TRUE；否则结果为 FALSE。 如果一个或两个操作数都是 NULL，请参阅主题[SET ANSI_NULLS &#40;Transact SQL &#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  比较两个表达式（比较运算符）。 当比较非空表达式时，如果左操作数不等于右操作数，则结果为 TRUE；否则结果为 FALSE。 如果任何一个操作数为 NULL 或两个都为 NULL，则请参阅主题 [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,14 +52,14 @@ expression <> expression
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 两个表达式都必须包含可隐式转换的数据类型。 转换取决于的规则[数据类型优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+ 为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 两个表达式都必须包含可隐式转换的数据类型。 转换方式取决于[数据类型优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)的相关规则。  
   
 ## <a name="result-types"></a>结果类型  
  **Boolean**  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using--in-a-simple-query"></a>A. 在简单的查询中使用 <>  
+### <a name="a-using--in-a-simple-query"></a>A. 在简单查询中使用 <>  
  下面的示例返回 `Production.ProductCategory` 表中其 `ProductCategoryID` 的值不为 3 或 2 的所有行。  
   
 ```  
@@ -85,7 +85,7 @@ ProductCategoryID Name
   
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [比较运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [比较运算符 (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "授予拒绝撤消 Perms Azure SQL 数据和并行数据仓库 |Microsoft 文档"
+title: "GRANT-DENY-REVOKE 权限-Azure SQL 数据和并行数据仓库 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -26,22 +26,22 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>权限： GRANT、 DENY、 REVOKE （Azure SQL 数据仓库，并行数据仓库）
+# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>权限：GRANT、DENY、REVOKE（Azure SQL 数据仓库、并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  使用[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**授予**和**拒绝**语句来授予或拒绝权限 (如**更新**) 对安全对象 （如数据库、 表、 视图等等。)向安全主体 （登录名、 数据库用户或数据库角色）。 使用**撤消**删除授予或拒绝的权限。  
+  使用 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] GRANT 和 DENY 语句授予或拒绝安全主体（例如登录名、数据库用户或数据库角色）对安全对象（例如数据库、表、视图等）的某个权限（例如 UPDATE）。 使用 REVOKE 删除对某个权限的授予或拒绝。  
   
- 服务器级别权限适用于登录名。 数据库级别权限适用于数据库用户和数据库角色。  
+ 服务器级权限适用于登录名。 数据库级权限适用于数据库用户和数据库角色。  
   
- 若要查看哪些权限已授予和拒绝，查询的 sys.server_permissions 和 sys.database_permissions 视图。 可以由采用具有权限的角色的成员资格继承权限未显式授予或拒绝对安全主体。 固定的数据库角色的权限不能更改，并不会出现在 sys.server_permissions 和 sys.database_permissions 视图。  
+ 若要查看已授予和拒绝授予的权限，请查询 sys.server_permissions 和 sys.database_permissions 视图。 可通过在具有权限的角色中获得成员身份来继承非显式授予或拒绝授予安全主体的权限。 固定数据库角色的权限无法更改，而且不会出现在 sys.server_permissions 和 sys.database_permissions 视图中。  
   
--   **授予**显式授予一个或多个权限。  
+-   GRANT 显式授予一个或多个权限。  
   
--   **拒绝**显式具有一个或多个权限将拒绝主体。  
+-   DENY 显式拒绝授予主体一个或多个权限。  
   
--   **撤消**会删除存在**授予**或**拒绝**权限。  
+-   REVOKE 删除现有的 GRANT 或 DENY 权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -83,63 +83,63 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>参数  
- \<权限 > [ **，**...*n* ]  
- 一个或多个权限授予、 拒绝或撤消。  
+ \<permission>[ ,...n ]  
+ 要授予、拒绝授予或撤消的一个或多个权限。  
   
- ON [ \<class_type >::]*安全* **ON**子句描述用于授予、 拒绝或撤消权限的安全对象参数。  
+ ON [ \<class_type> :: ] securable ON 子句描述要授予、拒绝授予或撤消权限的安全对象参数。  
   
- \<class_type > 的安全对象的类类型。 这可以是**登录**，**数据库**，**对象**，**架构**，**角色**，或**用户**. 此外可授予权限 **服务器 * * * class_type*，但**服务器**未指定这些权限。 **数据库**未指定时权限包括单词**数据库**(例如**ALTER ANY DATABASE**)。 如果没有*class_type*指定和权限类型并不局限于服务器或数据库类，该类假定为**对象**。  
+ \<class_type> 安全对象的类类型。 它可以是 LOGIN、DATABASE、OBJECT、SCHEMA、ROLE 或 USER。 此外，可向 SERVERclass_type 授予权限，但没有为这些权限指定 SERVER。 权限包含单词 DATABASE（例如 ALTER ANY DATABASE）时，不指定 DATABASE。 如果未指定 class_type，并且权限类型不限于服务器或数据库类，则该类假定为 OBJECT。  
   
- *securable*  
- 登录名、 数据库、 表、 视图、 架构、 过程、 角色或授予，所依据的用户的名称拒绝或撤消权限。 可以使用中所述的由三部分命名规则指定的对象名称[TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ securable  
+ 要授予、拒绝授予或撤销权限的登录名、数据库、表、视图、架构、过程、角色或用户。 可使用 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 中所述的三部分命名规则来指定对象名称。  
   
- 到*主体*[ **，**...*n* ]  
- 一个或多个主体授予、 拒绝或撤消权限。 主体是登录名、 数据库用户或数据库角色的名称。  
+ TO principal [ ,...n ]  
+ 被授予、拒绝授予或撤销权限的一个或多个主体。 主体是登录名、数据库用户或数据库角色。  
   
- 从*主体*[ **，**...*n* ]  
- 若要撤消的权限的一个或多个主体。  主体是登录名、 数据库用户或数据库角色的名称。 **从**只能与使用**撤消**语句。 **到**可以与使用**授予**，**拒绝**，或**撤消**。  
+ FROM principal [ ,...n ]  
+ 要从其撤销权限的一个或多个主体。  主体是登录名、数据库用户或数据库角色。 FROM 只能与 REVOKE 语句配合使用。 TO 可与 GRANT、DENY 或 REVOKE 配合使用。  
   
  WITH GRANT OPTION  
  指示被授权者在获得指定权限的同时还可以将指定权限授予其他主体。  
   
  CASCADE  
- 指示权限是拒绝或撤消对指定的主体和向主体授予权限的所有其他主体。 在主体拥有使用权限时需要**GRANT 选项**。  
+ 指示拒绝授予或撤销指定主体该权限，同时，对该主体授予了该权限的所有其他主体，也拒绝授予或撤销该权限。 当主体具有带 GRANT OPTION 的权限时，为必选项。  
   
  GRANT OPTION FOR  
- 指示将撤消授予指定权限的能力。 这是必需的当你使用**CASCADE**自变量。  
+ 指示将撤消授予指定权限的能力。 使用 CASCADE 参数时，为必选项。  
   
 > [!IMPORTANT]  
->  如果主体拥有指定的权限而无需**授予**选项，将吊销本身的权限。  
+>  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
 ## <a name="permissions"></a>权限  
- 若要授予权限，授权者必须具有自身的任一权限与**WITH GRANT OPTION**，或者必须具有隐含授予该权限更高权限。  对象所有者可以授予对其所拥有的对象的权限。 具有主体**控件**对安全对象的权限可以授予权限，在该安全对象。  成员**db_owner**和**db_securityadmin**固定的数据库角色可以授予数据库中的任何权限。  
+ 若要授予某个权限，授权者必须具有带 WITH GRANT OPTION 的权限本身，或必须具有隐含授予该权限的更高权限。  对象所有者可以授予对其所拥有的对象的权限。 对某安全对象具有 CONTROL 权限的主体可以授予对该安全对象的权限。  db_owner 和 db_securityadmin 固定数据库角色的成员可以授予数据库中的任何权限。  
   
 ## <a name="general-remarks"></a>一般备注  
- 拒绝或撤消向主体的权限将不会影响已通过授权和当前运行的请求。 若要限制访问立即，你必须取消活动请求或终止当前会话。  
+ 拒绝或撤消授予给某主体的权限不会影响已通过授权和当前运行的请求。 若要立即限制访问，则必须取消活动请求或终止当前会话。  
   
 > [!NOTE]  
->  最固定的服务器角色不是此版本中可用的。 改为使用用户定义的数据库角色。 无法将登录名添加到**sysadmin**固定的服务器角色。 授予**CONTROL SERVER**权限总数接近于中的成员身份**sysadmin**固定的服务器角色。  
+>  大部分固定服务器角色在此版本中不可用。 请改用用户定义数据库角色。 无法将登录名添加到 sysadmin 固定服务器角色。 授予 CONTROL SERVER 权限近似拥有 sysadmin 固定服务器角色的成员身份。  
   
- 某些语句需要多种权限。 例如，若要创建表需要**CREATE TABLE**在数据库中，权限和**ALTER SCHEMA**将包含表的表的权限。  
+ 某些语句需要多个权限。 例如，若要创建表，则需要数据库中的 CREATE TABLE 权限以及将包含该表的表的 ALTER SCHEMA 权限。  
   
- PDW 有时执行存储的过程将分发到计算节点的用户操作。 因此，不能对整个数据库的 execute 权限被拒绝。 (例如`DENY EXECUTE ON DATABASE::<name> TO <user>;`将失败。)作为替代，拒绝对特定对象 （过程） 或用户架构的 execute 权限。  
+ PDW 有时会执行存储过程，以将用户操作分发到计算节点。 因此，不能拒绝对整个数据库的 execute 权限。 （例如，`DENY EXECUTE ON DATABASE::<name> TO <user>;` 将失败。）作为替代方案，可拒绝对用户架构或特定对象（过程）的 execute 权限。  
   
 ### <a name="implicit-and-explicit-permissions"></a>隐式和显式权限  
- *显式权限*是**授予**或**拒绝**向通过主体授予的权限**授予**或**拒绝**语句。  
+ 显式权限是 GRANT 或 DENY 语句给授予某主体的 GRANT 或 DENY 权限。  
   
- *隐式权限*是**授予**或**拒绝**主体 （登录名、 用户或数据库角色） 已从另一个数据库角色继承的权限。  
+ 隐式权限是主体（登录名、用户或数据库角色）从另一数据库角色继承的 GRANT 或 DENY 权限。  
   
- 隐式权限还可以从覆盖或父权限继承。 例如，**更新**对表的权限可以继承通过让**更新**上包含的表的架构的权限或**控件**对表的权限。  
+ 隐式权限还可继承自覆盖的权限或父级权限。 例如，通过对包含该表的架构具有 UPDATE 权限，或对该表具有 CONTROL 权限，可以继承对某个表的 UPDATE 权限。  
   
 ### <a name="ownership-chaining"></a>所有权链接  
- 当多个数据库对象按顺序相互访问时，该序列称为*链*。 尽管这样的链不会单独存在，但是当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遍历链中的链接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 评估对构成对象的权限时的方式与单独访问对象时不同。 所有权链接具有重要的意义，用于管理安全性。 有关所有权链的详细信息，请参阅[所有权链](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx)和[教程： 所有权链和上下文切换](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx)。  
+ 当多个数据库对象按顺序互相访问时，该序列便称为“链”。 尽管这样的链不会单独存在，但是当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遍历链中的链接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 评估对构成对象的权限时的方式与单独访问对象时不同。 所有权链对管理安全性具有重要的影响。 有关所有权链的详细信息，请参阅[所有权链](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx)和[教程：所有权链和上下文切换](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx)。  
   
 ## <a name="permission-list"></a>权限列表  
   
-### <a name="server-level-permissions"></a>服务器级别权限  
- 服务器级别权限可以授予、 拒绝，并吊销从登录名。  
+### <a name="server-level-permissions"></a>服务器级权限  
+ 可从登录名授予、拒绝授予或撤销服务器级权限。  
   
- **将应用到服务器的权限**  
+ **适用于服务器的权限**  
   
 -   CONTROL SERVER  
   
@@ -169,16 +169,16 @@ REVOKE
   
  **适用于登录名的权限**  
   
--   在登录控制  
+-   CONTROL ON LOGIN  
   
--   ALTER 登录  
+-   ALTER ON LOGIN  
   
--   模拟登录  
+-   IMPERSONATE ON LOGIN  
   
 -   VIEW DEFINITION  
   
-### <a name="database-level-permissions"></a>数据库级别权限  
- 数据库级别权限可以授予，被拒绝，和吊销从数据库用户和用户定义的数据库角色。  
+### <a name="database-level-permissions"></a>数据库级权限  
+ 可从数据库用户和用户定义数据库角色授予、拒绝和撤销数据库级权限。  
   
  **适用于所有数据库类的权限**  
   
@@ -196,7 +196,7 @@ REVOKE
   
 -   ALTER ANY DATABASE  
   
--   更改数据库上  
+-   ALTER ON DATABASE  
   
 -   ALTER ANY DATASPACE  
   
@@ -208,7 +208,7 @@ REVOKE
   
 -   BACKUP DATABASE  
   
--   在数据库上连接  
+-   CONNECT ON DATABASE  
   
 -   CREATE PROCEDURE  
   
@@ -226,11 +226,11 @@ REVOKE
   
 -   IMPERSONATE  
   
- **将应用于数据库、 架构和对象的权限**  
+ **适用于数据库、架构和对象的权限**  
   
 -   ALTER  
   
--   DELETE  
+-   删除  
   
 -   在运行 CREATE 语句前执行  
   
@@ -240,38 +240,38 @@ REVOKE
   
 -   UPDATE  
   
--   引用  
+-   REFRENCES  
   
- 有关每种类型的权限的定义，请参阅[权限 （数据库引擎）](http://msdn.microsoft.com/library/ms191291.aspx)。  
+ 有关每种类型的权限定义，请参阅[权限（数据库引擎）](http://msdn.microsoft.com/library/ms191291.aspx)。  
   
 ### <a name="chart-of-permissions"></a>权限的图表  
- 此海报上以图形方式表示的所有权限。 这是查看的权限的嵌套层次结构的最简单方法。 例如**ALTER ON LOGIN**权限可授予其本身而言，但如果授予登录名，它会还包含**控件**权限对该登录名，或如果授予登录名**ALTER ANY登录名**权限。  
+ 所有权限均以图形方式呈现在此发布程序上。 这是查看权限的嵌套层次结构最简单的方法。 例如，ALTER ON LOGIN 权限可由其本身授予，但如果授予某一登录名对该登录名的 CONTROL 权限，或者授予某一登录名 ALTER ANY LOGIN 权限，它也包含在内。  
   
- ![AP 安全权限海报](../../t-sql/statements/media/aps-security-perms-poster.png "AP 安全权限海报")  
+ ![APS 安全性权限发布程序](../../t-sql/statements/media/aps-security-perms-poster.png "APS 安全性权限发布程序")  
   
- 若要下载该海报的全尺寸版本，请参阅[SQL Server PDW 权限](http://go.microsoft.com/fwlink/?LinkId=244249)AP Yammer 站点的文件部分中 (或通过从电子邮件请求 **apsdoc@microsoft.com** 。  
+ 若要下载此发布程序的完整版本，请参阅 APS Yammer 站点文件部分中的 [SQL Server PDW 权限](http://go.microsoft.com/fwlink/?LinkId=244249)（或通过 apsdoc@microsoft.com 发送电子邮件请求）。  
   
 ## <a name="default-permissions"></a>默认权限  
- 以下列表描述了默认权限：  
+ 以下列表对默认权限进行了说明：  
   
--   当通过使用创建一个登录名**CREATE LOGIN**语句新登录名接收**CONNECT SQL**权限。  
+-   使用 CREATE LOGIN 语句创建登录名时，新登录名会收到 CONNECT SQL 权限。  
   
--   所有登录名都属于**公共**服务器角色并且不能删除从**公共**。  
+-   所有登录名都是公共服务器角色的成员，无法从其删除。  
   
--   通过使用创建数据库用户时**CREATE USER**权限，数据库用户会收到**连接**数据库中的权限。  
+-   使用 CREATE USER 权限创建数据库用户时，数据库用户会收到数据库中的 CONNECT 权限。  
   
--   包括的所有主体**公共**角色，默认情况下有任何显式或隐式权限。  
+-   包括公共角色在内的所有主体，默认情况下都无任何显式或隐式权限。  
   
--   当登录名或用户将成为数据库或对象的所有者时，登录名或用户始终具有在数据库或对象上的所有权限。 所有权权限不能更改并且不显示为显式权限。 **授予**，**拒绝**，和**撤消**语句具有所有者没有影响。  
+-   登录名或用户成为数据库或对象的所有者时，登录名或用户始终拥有对数据库或对象的所有权限。 所有者权限无法更改，也不能显示为显式权限。 GRANT、DENY 和 REVOKE 语句不会对所有者产生任何影响。  
   
--   **Sa**登录名在设备上具有所有权限。 类似于所有权权限**sa**权限不能更改，并不显示为显式权限。 **授予**，**拒绝**，和**撤消**语句不起任何作用**sa**登录名。 **Sa**登录名不能重命名。  
+-   sa 登录名具有设备上的所有权限。 类似于所有者权限，sa 权限无法更改，也不能显示为显式权限。 GRANT、DENY 和 REVOKE 语句不会对 sa 登录名产生任何影响。 无法重命名 sa 登录名。  
   
--   **使用**语句不需要权限。 可以运行所有主体**使用**对任何数据库的语句。  
+-   USE 语句不需要权限。 所有主体都可在任何数据库上运行 USE 语句。  
   
-##  <a name="Examples"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="Examples"></a> 示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. 授予向登录名的服务器级权限  
- 下面的两个语句授予到登录名的服务器级权限。  
+### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. 为登录名授予服务器级权限  
+ 以下两个语句为登录名授予服务器级权限。  
   
 ```  
 GRANT CONTROL SERVER TO [Ted];  
@@ -281,41 +281,41 @@ GRANT CONTROL SERVER TO [Ted];
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
-### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. 授予向登录名的服务器级权限  
- 下面的示例授予登录名添加到的服务器主体 （另一个登录名） 上的服务器级权限。  
+### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. 为登录名授予服务器级权限  
+ 以下示例为服务器主体（另一登录名）授予对某一登录名的服务器级权限。  
   
 ```  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
-### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. 向用户授予数据库级别权限  
- 下面的示例授予一名用户访问数据库主体 （另一个用户） 上的数据库级权限。  
+### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. 为用户授予数据库级权限  
+ 以下示例为数据库主体（另一用户）授予对某一用户的数据库级权限。  
   
 ```  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
-### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. 授予、 拒绝和撤消架构权限  
- 以下**授予**语句授予 Yuen 从任何表或在 dbo 架构视图中选择数据的功能。  
+### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. 授予、拒绝授予和撤消架构权限  
+ 以下 GRANT 语句授予 Yuen 从 dbo 架构的任何表或视图中选择数据的能力。  
   
 ```  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- 以下**拒绝**语句可以防止 Yuen 选择从任何表或视图 dbo 架构中的数据。 Yuen 无法读取数据，即使他具有权限以某种其他方式，例如通过角色成员身份。  
+ 以下 DENY 语句阻止 Yuen 从 dbo 架构的任何表或视图中选择数据。 即使 Yuen 以某种其他方式（例如，通过角色成员身份）获得权限，他也无法读取数据。  
   
 ```  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- 以下**撤消**语句中删除**拒绝**权限。 现在不中性 Yuen 的显式权限。 Yuen 可能能够从通过某些其他隐式的权限，如角色成员身份的任何表中选择数据。  
+ 以下 REVOKE 语句会删除 DENY 权限。 现在，Yuen 的显式权限为中性。 Yuen 可以通过其他隐式权限（如角色成员身份）从任何表中选择数据。  
   
 ```  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
-### <a name="e-demonstrating-the-optional-object-clause"></a>E. 演示的可选对象:: 子句  
- 对象是权限语句的默认类，因为以下两个语句是相同的。 **对象::**子句是可选的。  
+### <a name="e-demonstrating-the-optional-object-clause"></a>E. 演示可选的 OBJECT:: 子句  
+ OBJECT 是权限语句的默认类，因此以下两个语句相同。 OBJECT:: 子句为可选项。  
   
 ```  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  

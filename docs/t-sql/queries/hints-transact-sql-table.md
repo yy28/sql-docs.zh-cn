@@ -1,5 +1,5 @@
 ---
-title: "表提示 (Transact SQL) |Microsoft 文档"
+title: "表提示 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---table"></a>提示 (TRANSACT-SQL) 的表
+# <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   通过指定锁定方法、一个或多个索引、查询处理操作（如表扫描或索引查找）或其他选项，表提示在数据操作语言 (DML) 语句执行期间覆盖查询优化器的默认行为。 表提示在 DML 语句的 FROM 子句中指定，仅影响在该子句中引用的表或视图。  
@@ -150,7 +150,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  建议在表提示之间使用逗号。  
   
 > [!IMPORTANT]  
->  将空格而不是逗号的提示是弃用的功能：[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+>  用空格而不用逗号分隔提示是一项已弃用的功能：[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
  NOEXPAND  
  指定查询优化器处理查询时，不扩展任何索引视图来访问基础表。 查询优化器将视图当成包含聚集索引的表处理。 NOEXPAND 仅适用于索引视图。 有关详细信息，请参阅“备注”。  
@@ -168,29 +168,29 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  表提示中的最大索引数为 250 个非聚集索引。  
   
  KEEPIDENTITY  
- 是仅在 INSERT 语句中，在使用大容量选项的[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  
+ 只适用于 INSERT 语句（当 BULK 选项与 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 一起使用时）。  
   
  指定导入数据文件中的标识值用于标识列。 如果不指定 KEEPIDENTITY，则将验证但不导入此列的标识值。查询优化器将根据创建表时指定的种子值和增量值自动分配唯一值。  
   
 > [!IMPORTANT]  
->  如果数据文件不包含表或视图中的标识列的值，并且标识列不是表中的最后一列，则必须跳过标识列。 有关详细信息，请参阅[使用格式化文件跳过数据字段 &#40;SQL server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). 如果成功跳过了一个标识列，则查询优化器自动将标识列的唯一值分配到导入的表行中。  
+>  如果数据文件不包含表或视图中的标识列的值，并且标识列不是表中的最后一列，则必须跳过标识列。 有关详细信息，请参阅[使用格式化文件跳过数据字段 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)。 如果成功跳过了一个标识列，则查询优化器自动将标识列的唯一值分配到导入的表行中。  
   
- 有关在 INSERT ...选择 * FROM openrowset （bulk） 语句，请参阅[保留标识值大容量导入数据时 &#40;SQL server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+ 有关在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句中使用此提示的示例，请参阅[批量导入数据时保留标识值 (SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)。  
   
- 有关检查表的标识值的信息，请参阅[DBCC CHECKIDENT &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ 有关检查表的标识值的信息，请参阅 [DBCC CHECKIDENT (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。  
   
  KEEPDEFAULTS  
- 是仅在 INSERT 语句中，在使用大容量选项的[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  
+ 只适用于 INSERT 语句（当 BULK 选项与 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 一起使用时）。  
   
  指定数据记录在某一表列缺少值时插入此列的默认值（如果有），而不是插入 NULL。  
   
- 有关在 INSERT ...选择 * FROM openrowset （bulk） 语句，请参阅[保留 Null 或使用默认值在大容量导入 &#40;SQL server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+ 有关在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句中使用此提示的示例，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
  FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
  指定查询优化器仅使用索引查找操作作为表或视图中的数据的访问途径。 从 SQL Server 2008 R2 SP1 开始，还可以指定索引参数。 在这种情况下，查询优化器仅考虑通过指定的索引（至少使用指定的索引列）执行索引查找操作。  
   
  *index_value*  
- 是索引名称或索引 ID 值。 不能指定索引 ID 0（堆）。 若要返回的索引名称或 ID，请查询**sys.indexes**目录视图。  
+ 是索引名称或索引 ID 值。 不能指定索引 ID 0（堆）。 若要返回索引名称或 ID，请查询 **sys.indexes** 目录视图。  
   
  *index_column_name*  
  是要包含在查找操作中的索引列的名称。 指定带索引参数的 FORCESEEK 类似于将 FORCESEEK 与 INDEX 提示一起使用。 但是，您可以通过指定要查找的索引和查找操作中要考虑的索引列，更好地控制查询优化器使用的访问路径。 该优化器可以根据需要考虑其他列。 例如，如果指定非聚集索引，优化器除了使用指定的列之外，还可以选择使用聚集索引键列。  
@@ -205,7 +205,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  使用 FORCESEEK 提示（具有或不带索引参数）时，考虑以下准则。  
   
--   该提示可以指定为表提示或查询提示。 有关查询提示的详细信息，请参阅[查询提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+-   该提示可以指定为表提示或查询提示。 有关查询提示的详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 -   若要将 FORCESEEK 应用到索引视图，还必须指定 NOEXPAND 提示。  
   
@@ -265,16 +265,16 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  等同于 SERIALIZABLE。 有关详细信息，请参阅本主题后面的 SERIALIZABLE。 HOLDLOCK 仅应用于那些为其指定了 HOLDLOCK 的表或视图，并且仅在使用了 HOLDLOCK 的语句定义的事务的持续时间内应用。 HOLDLOCK 不能被用于包含 FOR BROWSE 选项的 SELECT 语句。  
   
  IGNORE_CONSTRAINTS  
- 是仅在 INSERT 语句中，在使用大容量选项的[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  
+ 只适用于 INSERT 语句（当 BULK 选项与 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 一起使用时）。  
   
- 指定大容量导入操作将忽略对表的任何约束。 默认情况下，会插入检查[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)和[Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。 当为大容量导入操作指定 IGNORE_CONSTRAINTS 时，INSERT 必须忽略对目标表的这些约束。 注意，您无法禁用 UNIQUE、PRIMARY KEY 或 NOT NULL 约束。  
+ 指定大容量导入操作将忽略对表的任何约束。 默认情况下，INSERT 会检查[唯一约束和 CHECK 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)以及[主键和外键约束](../../relational-databases/tables/primary-and-foreign-key-constraints.md)。 当为大容量导入操作指定 IGNORE_CONSTRAINTS 时，INSERT 必须忽略对目标表的这些约束。 注意，您无法禁用 UNIQUE、PRIMARY KEY 或 NOT NULL 约束。  
   
  如果输入数据包含违反约束的行，则您可能希望禁用 CHECK 和 FOREIGN KEY 约束。 通过禁用 CHECK 和 FOREIGN KEY 约束，可以导入数据，然后使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句清除该数据。  
   
- 但是，当 CHECK 和 FOREIGN KEY 约束将被忽略，则在表上的每个忽略的约束标记为**is_not_trusted**中[sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)或[sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)操作后目录视图。 在某一时刻，应该检查全表约束。 如果在大容量导入操作之前表不为空，则重新验证约束的开销可能超过对增量数据应用 CHECK 和 FOREIGN KEY 约束的开销。  
+ 不过，如果忽略了 CHECK 和 FOREIGN KEY 约束，在执行操作后，表的每个已忽略约束会在 [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) 或 [sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md) 目录视图中标记为 **is_not_trusted**。 在某一时刻，应该检查全表约束。 如果在大容量导入操作之前表不为空，则重新验证约束的开销可能超过对增量数据应用 CHECK 和 FOREIGN KEY 约束的开销。  
   
  IGNORE_TRIGGERS  
- 是仅在 INSERT 语句中，在使用大容量选项的[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)。  
+ 只适用于 INSERT 语句（当 BULK 选项与 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 一起使用时）。  
   
  指定大容量导入操作将忽略为表定义的所有触发器。 默认情况下，INSERT 将应用触发器。  
   
@@ -293,16 +293,16 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  在通常行或键采用单个锁的地方，或者通常采用单个表锁的地方，请采用页锁。 默认情况下，请使用与操作相对应的锁模式。 在从 SNAPSHOT 隔离级别操作的事务中指定时，除非将 PAGLOCK 与需要锁的其他表提示（例如，UPDLOCK 和 HOLDLOCK）组合，否则不会取得页锁。  
   
  READCOMMITTED  
- 指定读操作使用锁定或行版本控制来遵循有关 READ COMMITTED 隔离级别的规则。 如果数据库选项 READ_COMMITTED_SNAPSHOT OFF，[!INCLUDE[ssDE](../../includes/ssde-md.md)]获取共享的锁，因为数据读取和读取的操作完成后释放这些锁。 如果数据库选项 READ_COMMITTED_SNAPSHOT 为 ON，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]不获取锁，并使用行版本控制。 有关隔离级别的详细信息，请参阅[SET TRANSACTION ISOLATION LEVEL &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 指定读操作使用锁定或行版本控制来遵循有关 READ COMMITTED 隔离级别的规则。 如果 READ_COMMITTED_SNAPSHOT 数据库选项为 OFF，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会在读取数据时获取共享锁，在读操作完成后释放这些锁。 如果数据库选项 READ_COMMITTED_SNAPSHOT 为 ON，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]不获取锁，并使用行版本控制。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 > [!NOTE]  
 >  对于 UPDATE 或 DELETE 语句：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  READCOMMITTEDLOCK  
- 指定读操作使用锁定来遵循有关 READ COMMITTED 隔离级别的规则。 无论 READ_COMMITTED_SNAPSHOT 数据库选项的设置如何，[!INCLUDE[ssDE](../../includes/ssde-md.md)]都将在读取数据时获取共享锁，在读操作完成后释放这些锁。 有关隔离级别的详细信息，请参阅[SET TRANSACTION ISOLATION LEVEL &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 不能对 INSERT 语句的目标表指定此提示；将返回错误 4140。  
+ 指定读操作使用锁定来遵循有关 READ COMMITTED 隔离级别的规则。 无论 READ_COMMITTED_SNAPSHOT 数据库选项的设置如何，[!INCLUDE[ssDE](../../includes/ssde-md.md)]都将在读取数据时获取共享锁，在读操作完成后释放这些锁。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。 不能对 INSERT 语句的目标表指定此提示；将返回错误 4140。  
   
  READPAST  
- 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]不读取由其他事务锁定的行。 当指定 READPAST 时，将跳过行级锁，但页级锁不跳过。 也就是说，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将跳过这些行，而不是阻塞当前事务直到锁被释放。 例如，假设表 `T1` 包含一个单精度整数列，其值为 1、2、3、4 和 5。 如果事务 A 将值 3 更改为 8，但尚未提交，则 SELECT * FROM T1 (READPAST) 将生成值 1、2、4 和 5。 READPAST 主要用于实现使用工作队列时减少锁定争用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。 使用 READPAST 的队列读取器会跳过被其他事务锁定的队列项，跳至下一个可用的队列项，而不是等待其他事务释放锁。  
+ 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]不读取由其他事务锁定的行。 如果指定 READPAST，则跳过行级锁，但不跳过页级锁。 也就是说，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将跳过这些行，而不是阻塞当前事务直到锁被释放。 例如，假设表 `T1` 包含一个单精度整数列，其值为 1、2、3、4 和 5。 如果事务 A 将值 3 更改为 8，但尚未提交，则 SELECT * FROM T1 (READPAST) 将生成值 1、2、4 和 5。 在实现使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的工作队列时，READPAST 主要用于减少锁定争用。 使用 READPAST 的队列读取器会跳过被其他事务锁定的队列项，跳至下一个可用的队列项，而不是等待其他事务释放锁。  
   
  可为 UPDATE 或 DELETE 语句中以及 FROM 子句中引用的任何表指定 READPAST。 如果 READPAST 是在 UPDATE 语句中指定的，则仅当读取数据以标识要更新的记录时才应用 READPAST，而不考虑语句中指定 READPAST 的位置。 不能为 INSERT 语句的 INTO 子句中的表指定 READPAST。 读取外键或索引视图或者修改辅助索引时，使用 READPAST 的更新或删除操作可能发生阻塞。  
   
@@ -332,19 +332,19 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   SNAPSHOT 隔离级别。  
   
- 有关隔离级别的详细信息，请参阅[SET TRANSACTION ISOLATION LEVEL &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
 > [!NOTE]  
 >  如果在指定了 READUNCOMMITTED 的情况下收到 601 号错误消息，则按解决死锁错误 (1205) 的方法解决该错误，然后重试语句。  
   
  REPEATABLEREAD  
- 指定事务在 REPEATABLE READ 隔离级别运行时，使用相同的锁定语义执行一次扫描。 有关隔离级别的详细信息，请参阅[SET TRANSACTION ISOLATION LEVEL &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 指定事务在 REPEATABLE READ 隔离级别运行时，使用相同的锁定语义执行一次扫描。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
  ROWLOCK  
- 指定通常采用页锁或表锁时，采用行锁。 在事务在 SNAPSHOT 隔离级别操作中指定，除非 ROWLOCK 结合需要锁，如 UPDLOCK 和 HOLDLOCK 其他表提示，也不会采取行锁。  
+ 指定通常采用页锁或表锁时，采用行锁。 在从 SNAPSHOT 隔离级别操作的事务中指定时，除非将 ROWLOCK 与需要锁的其他表提示（例如，UPDLOCK 和 HOLDLOCK）组合，否则不会取得行锁。  
   
  SERIALIZABLE  
- 等同于 HOLDLOCK。 保持共享锁直到事务完成，使共享锁更具有限制性；而不是无论事务是否完成，都在不再需要所需表或数据页时立即释放共享锁。 执行扫描时所用的语义与在 SERIALIZABLE 隔离级别运行的事务的语义相同。 有关隔离级别的详细信息，请参阅[SET TRANSACTION ISOLATION LEVEL &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 等同于 HOLDLOCK。 保持共享锁直到事务完成，使共享锁更具有限制性；而不是无论事务是否完成，都在不再需要所需表或数据页时立即释放共享锁。 执行扫描时所用的语义与在 SERIALIZABLE 隔离级别运行的事务的语义相同。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
  SNAPSHOT  
 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
@@ -361,7 +361,7 @@ LEFT JOIN dbo.[Order History] AS oh
  SPATIAL_WINDOW_MAX_CELLS = *integer*  
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定在分割 geometry 或 geography 对象时使用的最大单元格数。 *数*是介于 1 和 8192 之间的值。  
+ 指定在分割 geometry 或 geography 对象时使用的最大单元格数。 *number* 是介于 1 和 8192 之间的值。  
   
  通过使用此选项，可以在主要和辅助筛选器执行时间之间权衡性能以微调查询执行时间。 较大的数字将减少辅助筛选器执行时间，但会增加主要筛选器执行时间，而较小的数字恰相反。 对于较密的空间数据，较大的数字通过为主要筛选器提供更好的近似值并减少辅助筛选器执行时间，从而缩短了执行时间。 对于较稀疏的数据，较小的数字将减少主要筛选器执行时间。  
   
@@ -370,9 +370,9 @@ LEFT JOIN dbo.[Order History] AS oh
  TABLOCK  
  指定在表级别应用获取的锁。 获取的锁类型取决于正在执行的语句。 例如，SELECT 语句可能获取一个共享锁。 通过指定 TABLOCK，将该共享锁应用到整个表而非在行或页级别应用。 如果同时指定了 HOLDLOCK，则会一直持有表锁，直至事务结束。  
   
- 使用 INSERT INTO 到堆中导入数据时\<target_table > 选择\<列 > FROM \<source_table > 语句，可以启用优化的日志记录和通过指定锁定语句对目标表的 TABLOCK 提示。 此外，数据库的恢复模式必须设置为简单或大容量日志模式。 有关详细信息，请参阅 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。  
+ 在使用 INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> 语句将数据导入某个堆时，可通过为目标表指定 TABLOCK 提示，实现语句的优化日志记录和锁定。 此外，数据库的恢复模式必须设置为简单或大容量日志模式。 有关详细信息，请参阅 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。  
   
- 如果用于[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)大容量行集提供程序将数据导入的表，TABLOCK 允许多个客户端同时将数据加载到目标表具有优化日志记录和锁定。 有关详细信息，请参阅[Prerequisites for Minimal Logging 中大容量导入](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+ 在与 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) BULK 行集提供程序一起使用以将数据导入表时，TABLOCK 允许多个客户端使用优化日志记录和锁定，以并发方式将数据加载到目标表中。 有关详细信息，请参阅[在批量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
  TABLOCKX  
  指定对表采用排他锁。  
@@ -385,7 +385,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  指定采用排他锁并保持到事务完成。 如果同时指定了 ROWLOCK, PAGLOCK 或 TABLOCK，则排他锁将应用于相应的粒度级别。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果查询计划不访问表，则将忽略表提示。 这可能是由于优化器选择了完全不访问该表，也可能是因为改成了访问索引视图。 在后一种情况中，使用 OPTION (EXPAND VIEWS) 查询提示可阻止访问索引视图。  
   
  所有锁提示将传播到查询计划访问的所有表和视图，其中包括在视图中引用的表和视图。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还将执行对应的锁一致性检查。  
@@ -423,26 +423,26 @@ GO
  如果 SET 选项不包含筛选索引所需的值，查询优化器将不考虑使用索引提示。 有关详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="using-noexpand"></a>使用 NOEXPAND  
- NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯一聚集索引的视图。 如果查询包含对同时存在于索引视图和基表中的列的引用，而且查询优化器确定执行查询的最佳方法是使用索引视图，则查询优化器将对视图使用索引。 此功能称为*索引视图匹配*。 之前[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的特定版本中仅支持 SP1，索引视图查询优化器自动使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯一聚集索引的视图。 如果查询包含对同时存在于索引视图和基表中的列的引用，而且查询优化器确定执行查询的最佳方法是使用索引视图，则查询优化器将对视图使用索引。 此功能称为*索引视图匹配*。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，仅在特定版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持查询优化器自动使用索引视图。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  但是，为了使优化器考虑使用索引视图进行匹配，或者使用通过 NOEXPAND 提示引用的索引视图，则必须将以下 SET 选项设置为 ON。  
  
 > [!NOTE]  
->  Azure SQL 数据库支持自动使用索引视图，而无需指定了 NOEXPAND 提示。
+>  Azure SQL 数据库支持在不指定 NOEXPAND 提示的情况下自动使用索引视图。
   
 ||||  
 |-|-|-|  
 |ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
 |ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
   
- <sup>1</sup> ARITHABORT 隐式设置为 ON 时 ANSI_WARNINGS 设置为 ON。 因此，不必手动调整此设置。  
+ <sup>1</sup> 如果 ANSI_WARNINGS 设置为 ON，则 ARITHABORT 将隐式设置为 ON。 因此，不必手动调整此设置。  
   
  另外，必须将 NUMERIC_ROUNDABORT 选项设置为 OFF。  
   
  若要强制优化器对索引视图使用索引，请指定 NOEXPAND 选项。 仅当查询中也命名了此视图时才能使用此提示。 如果某个查询没有在 FROM 子句中直接命名特定索引视图，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供用于在此查询中强制使用此视图的提示；但是，即使查询中未直接引用索引视图，查询优化器仍会考虑使用索引视图。  
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>将表提示用作查询提示  
- *表提示*还可以指定通过使用 OPTION (TABLE HINT) 子句为查询提示。 我们建议作为查询提示的上下文中仅使用表提示[计划指南](../../relational-databases/performance/plan-guides.md)。 对于即席查询，请将这些提示仅指定为表提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
+ 也可以使用 OPTION (TABLE HINT) 子句将*表提示*指定为查询提示。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。 对于即席查询，请将这些提示仅指定为表提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="permissions"></a>权限  
  KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要具有对表的 ALTER 权限。  
@@ -503,7 +503,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
   
 ## <a name="see-also"></a>另请参阅  
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)   
  [查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)  
   
   

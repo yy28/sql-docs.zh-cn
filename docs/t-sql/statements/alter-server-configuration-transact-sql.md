@@ -1,5 +1,5 @@
 ---
-title: "ALTER SERVER CONFIGURATION (TRANSACT-SQL) |Microsoft 文档"
+title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -109,33 +109,33 @@ SET <optionspec>
 ```  
   
 ## <a name="arguments"></a>参数  
- **\<process_affinity >:: =**  
+ **\<process_affinity> ::=**  
   
  PROCESS AFFINITY  
  使硬件线程与 CPU 相关联。  
   
- CPU = {自动 |\<CPU_range_spec >}  
+ CPU = { AUTO | \<CPU_range_spec> }  
  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作线程分发到指定范围内的各 CPU。 超出了指定范围的 CPU 将不会分配有线程。  
   
  AUTO  
- 指定没有为 CPU 分配线程。 操作系统可以基于服务器工作负荷在 CPU 之间自由地移动线程。 这是默认设置，还是推荐设置。  
+ 指定没有为 CPU 分配线程。 操作系统可以基于服务器工作负荷在 CPU 之间自由地移动线程。 这是默认设置，也是推荐设置。  
   
- \<CPU_range_spec >:: =  
+ \<CPU_range_spec> ::=  
  指定要将线程指定给的 CPU 或 CPU 范围。  
   
  { CPU_ID | CPU_ID  TO  CPU_ID } [ ,...n ]  
- 一个或多个 CPU 的列表。 CPU Id 开始，以 0 和是否**整数**值。  
+ 一个或多个 CPU 的列表。 CPU ID 从 0 开始且为 **integer** 值。  
   
- NUMANODE = \<NUMA_node_range_spec >  
+ NUMANODE = \<NUMA_node_range_spec>  
  将线程分配给属于指定 NUMA 节点或节点范围的所有 CPU。  
   
- \<NUMA_node_range_spec >:: =  
+ \<NUMA_node_range_spec> ::=  
  指定 NUMA 节点或 NUMA 节点范围。  
   
  { NUMA_node_ID | NUMA_node_ID  TO NUMA_node_ID } [ ,...n ]  
- 一个或多个 NUMA 节点的列表。 NUMA 节点 Id 开始，以 0 和是否**整数**值。  
+ 一个或多个 NUMA 节点的列表。 NUMA 节点 ID 从 0 开始且为 **integer** 值。  
   
- **\<diagnostic_log >:: =**  
+ **\<diagnostic_log> ::=**  
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -149,7 +149,7 @@ SET <optionspec>
  停止对诊断数据的日志记录。  
   
  PATH = { 'os_file_path' | DEFAULT }  
- 指示诊断日志位置的路径。 默认位置是\<\MSSQL\Log > 中的安装文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例。  
+ 指示诊断日志位置的路径。 默认位置是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的安装文件夹中的 \<\MSSQL\Log>。  
   
  MAX_SIZE = { 'log_max_size' MB | DEFAULT }  
  每个诊断日志可以增长到的最大大小 (MB)。 默认值为 100 MB。  
@@ -157,7 +157,7 @@ SET <optionspec>
  MAX_FILES = { 'max_file_count' | DEFAULT }  
  可以存储在计算机上的诊断日志文件的最大数量，超过该数量后这些文件将被新的诊断日志所取代。  
   
- **\<failover_cluster_property >:: =**  
+ **\<failover_cluster_property> ::=**  
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -174,26 +174,26 @@ SET <optionspec>
 -   2 – 错误和警告  
   
 SQLDUMPEREDUMPFLAGS  
- 确定 SQL Server SQLDumper 实用工具生成的转储文件的类型。 默认设置为 0。 有关详细信息，请参阅[SQL Server 转储器实用工具知识库文章](http://go.microsoft.com/fwlink/?LinkId=206173)。  
+ 确定 SQL Server SQLDumper 实用工具生成的转储文件的类型。 默认设置为 0。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](http://go.microsoft.com/fwlink/?LinkId=206173)。  
   
  SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
- SQLDumper 实用工具存储转储文件的位置。 有关详细信息，请参阅[SQL Server 转储器实用工具知识库文章](http://go.microsoft.com/fwlink/?LinkId=206173)。  
+ SQLDumper 实用工具存储转储文件的位置。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](http://go.microsoft.com/fwlink/?LinkId=206173)。  
   
  SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
- 超时值（毫秒），一旦 SQL Server 失败，SQLDumper 实用工具即在该超时值后生成转储。 默认值为 0，表示完成该转储没有时间限制。 有关详细信息，请参阅[SQL Server 转储器实用工具知识库文章](http://go.microsoft.com/fwlink/?LinkId=206173)。  
+ 超时值（毫秒），一旦 SQL Server 失败，SQLDumper 实用工具即在该超时值后生成转储。 默认值为 0，表示完成该转储没有时间限制。 有关详细信息，请参阅 [SQL Server Dumper 实用工具知识库文章](http://go.microsoft.com/fwlink/?LinkId=206173)。  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
- SQL Server 故障转移群集实例应在什么状况下进行故障转移或重新启动。 默认值是 3，这表示 SQL Server 资源将在出现严重服务器错误时进行故障转移或重新启动。 有关此设置和其他故障条件级别的详细信息，请参阅[Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)。  
+ SQL Server 故障转移群集实例应在什么状况下进行故障转移或重新启动。 默认值是 3，这表示 SQL Server 资源将在出现严重服务器错误时进行故障转移或重新启动。 有关此故障条件级别和其他故障条件级别的详细信息，请参阅[配置 FailureConditionLevel 属性设置](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)。  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
  超时值，即 SQL Server 数据库引擎资源 DLL 在认定 SQL Server 实例不响应之前应等待服务器运行状况信息的时间。 该超时值用毫秒表示。 默认值为 60000 毫秒（60 秒）。  
   
- **\<hadr_cluster_context >:: =**  
+ **\<hadr_cluster_context> ::=**  
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- HADR 群集上下文 **=**  { *remote_windows_cluster* |本地}  
- 将服务器实例的 HADR 群集上下文切换到指定的 Windows Server 故障转移群集 (WSFC) 群集。 *HADR 群集上下文*确定哪些 Windows Server 故障转移群集 (WSFC) 群集管理的服务器实例承载可用性副本的元数据。 仅在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]跨群集迁移到新 WSFC 群集上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更高版本实例的过程中，才使用 SET HADR CLUSTER CONTEXT 选项。  
+ HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
+ 将服务器实例的 HADR 群集上下文切换到指定的 Windows Server 故障转移群集 (WSFC) 群集。 *HADR 群集上下文*用于确定哪一 Windows Server 故障转移群集 (WSFC) 群集管理由服务器实例承载的可用性副本的元数据。 仅在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]跨群集迁移到新 WSFC 群集上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更高版本实例的过程中，才使用 SET HADR CLUSTER CONTEXT 选项。  
   
  您只能将 HADR 群集上下文从本地 WSFC 群集切换到远程群集，然后再从远程群集切换回本地群集。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不承载任何可用性副本时，才能将 HADR 群集上下文切换到远程群集。  
   
@@ -207,20 +207,20 @@ SQLDUMPEREDUMPFLAGS
  LOCAL  
  本地 WSFC 群集。  
   
- 有关详细信息，请参阅[更改 HADR 群集上下文的服务器实例 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md).  
+ 有关详细信息，请参阅[更改服务器实例的 HADR 群集上下文 (SQL Server)](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)。  
   
- **\<buffer_pool_extension >:: =**  
+ **\<buffer_pool_extension>::=**  
   
 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  ON  
- 启用缓冲池扩展选项。 此选项通过使用固态硬盘 (SSD) 等非易失性存储在池中保持清洁的数据页来扩展缓冲池的大小。 有关此功能的详细信息，请参阅[缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。缓冲池扩展不是在每个 SQL Server 版本中可用的。 有关详细信息，请参阅[版本和 SQL Server 2016 的支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ 启用缓冲池扩展选项。 此选项通过使用固态硬盘 (SSD) 等非易失性存储在池中保持清洁的数据页来扩展缓冲池的大小。 有关此功能的详细信息，请参阅[缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)。不是所有 SQL Server 版本都提供缓冲池扩展。 有关详细信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  FILENAME = 'os_file_path_and_name'  
  定义缓冲池扩展缓存文件的目录路径和名称。 文件扩展名必须指定为 .BPE。 您必须先关闭 BUFFER POOL EXTENSION，然后才能修改 FILENAME。  
   
- 大小 =*大小*[ **KB** |MB |GB]  
- 定义缓存大小。 默认大小规格是 KB。 最小大小为 Max Server Memory 的大小。 最大限制为最大服务器内存大小的 32 倍。 有关最大服务器内存的详细信息，请参阅[sp_configure &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ SIZE = *size* [ **KB** | MB | GB ]  
+ 定义缓存大小。 默认大小规格是 KB。 最小大小为 Max Server Memory 的大小。 最大限制为最大服务器内存大小的 32 倍。 有关最大服务器内存的详细信息，请参阅 [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
  您必须先关闭 BUFFER POOL EXTENSION，然后才能修改文件的大小。 若要指定小于当前大小的大小，必须重新启动 SQL Server 实例以回收内存。 否则，指定的大小必须与当前大小相同或大于当前大小。  
   
@@ -230,37 +230,37 @@ SQLDUMPEREDUMPFLAGS
 > [!WARNING]  
 >  因为禁用缓冲池扩展会大大缩小缓冲池大小，所以可能会对服务器性能产生负面影响。  
   
- **\<软件 numa >**  
+ **\<soft_numa>**  
 
 **适用范围**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  ON  
- 启用自动分区，以将大型 NUMA 硬件节点拆分为较小的 NUMA 节点。 更改运行值需要重新启动数据库引擎。  
+ 启用自动分区，将大型 NUMA 硬件节点拆分为较小的 NUMA 节点。 更改当前使用的值需要重新启动数据库引擎。  
   
  OFF  
- 禁用自动软件大型 NUMA 硬件节点的分区到较小的 NUMA 节点。 更改运行值需要重新启动数据库引擎。  
+ 禁用将大型 NUMA 硬件节点拆分为较小 NUMA 节点的自动软件分区。 更改当前使用的值需要重新启动数据库引擎。  
 
 > [!WARNING]  
-> 存在一些已知问题与带有 SOFT NUMA 选项和 SQL Server 代理的 ALTER SERVER CONFIGURATION 语句的行为。  下面是建议的操作序列：  
-> 1) 停止 SQL Server 代理的实例。  
-> 2) 执行 ALTER 服务器配置 SOFT NUMA 选项。  
+> 使用 SOFT NUMA 选项和 SQL Server 代理时，ALTER SERVER CONFIGURATION 语句的行为存在一些已知问题。  下面是推荐的操作顺序：  
+> 1) 停止 SQL Server 代理实例。  
+> 2) 执行 ALTER SERVER CONFGURATION SOFT NUMA 选项。  
 > 3) 重新启动 SQL Server 实例。  
-> 4) 启动 SQL Server 代理的实例。  
+> 4) 启动 SQL Server 代理实例。  
   
-**详细信息：**如果 SQL Server 服务重新启动之前，然后在 SQL Server 代理服务已停止时执行带有 SET SOFTNUMA 命令的 ALTER 服务器配置，则它会执行将还原的 T-SQL 的重新配置的命令SOFTNUMA 设置改回原来在 ALTER SERVER CONFIGURATION 之前。 
+**详细信息：**如果在重新启动 SQL Server 服务之前执行了带有 SET SOFTNUMA 命令的 ALTER SERVER CONFIGURATION，那么当 SQL Server 代理服务停止时，它将执行 T-SQL RECONFIGURE 命令，该命令会将 SOFTNUMA 设置还原回执行 ALTER SERVER CONFIGURATION 之前的状态。 
   
 ## <a name="general-remarks"></a>一般备注  
- 此语句不需要重新启动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除非有其他显式声明。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，它不需要重新启动该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集资源。  
+ 除非另有明确说明，否则此语句不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，它不需要重新启动该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集资源。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  此语句不支持 DDL 触发器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  对于进程关联选项需要 ALTER SETTINGS 权限。 对于诊断日志和故障转移群集属性选项需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限，对于 HADR 群集上下文选项需要 CONTROL SERVER 权限。  
   
  需要对缓冲池扩展选项拥有 ALTER SERVER STATE 权限。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] DLL 运行在本地系统帐户下的资源。 因此，本地系统帐户必须对诊断日志选项中的指定路径具有读写访问权限。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 资源 DLL 以本地系统帐户身份运行。 因此，本地系统帐户必须对诊断日志选项中的指定路径具有读写访问权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -269,15 +269,15 @@ SQLDUMPEREDUMPFLAGS
 |[设置进程关联](#Affinity)|CPU • NUMANODE • AUTO|  
 |[设置诊断日志选项](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[设置故障转移群集属性](#Failover)|HealthCheckTimeout|  
-|[更改可用性副本的群集上下文](#ChangeClusterContextExample)| *windows_cluster* |  
+|[更改可用性副本的群集上下文](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
 |[设置缓冲池扩展](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
   
-###  <a name="Affinity"></a>设置进程关联  
+###  <a name="Affinity"></a> 设置进程关联  
  本节中的示例显示如何设置与 CPU 和 NUMA 节点的进程关联。 该示例假定服务器包含 256 个 CPU，这些 CPU 分为四组，每组各有 16 个 NUMA 节点。 线程未分配给任何 NUMA 节点或 CPU。  
   
--   组 0: NUMA 节点 0 到 3，0 到 63 个 Cpu  
--   组 1: NUMA 节点 4 到 7，Cpu 64-127  
--   组 2: NUMA 节点 8 至 12，Cpu 128 到 191  
+-   组 0：NUMA 节点 0 到 3，CPU 0 到 63  
+-   组 1：NUMA 节点 4 到 7，CPU 64 到 127  
+-   组 2：NUMA 节点 8 到 12，CPU 128 到 191  
 -   组 3：NUMA 节点 13 到 16，CPU 192 到 255  
   
 #### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. 设置与 0 和 2 组中所有 CPU 的关联  
@@ -355,7 +355,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a>设置故障转移群集属性  
+###  <a name="Failover"></a> 设置故障转移群集属性  
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -409,11 +409,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [软件 NUMA &#40;SQL server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
- [更改服务器实例 &#40; 的 HADR 群集上下文SQL server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
- [sys.dm_os_schedulers &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   
- [sys.dm_os_memory_nodes &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
+ [Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)   
+ [更改服务器实例的 HADR 群集上下文 (SQL Server)](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
+ [sys.dm_os_schedulers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   
+ [sys.dm_os_memory_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
+ [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
  [缓冲池扩展](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

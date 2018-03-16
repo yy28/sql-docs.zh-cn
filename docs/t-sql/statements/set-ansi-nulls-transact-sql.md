@@ -1,5 +1,5 @@
 ---
-title: "设置 ANSI_NULLS (Transact SQL) |Microsoft 文档"
+title: SET ANSI_NULLS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   指定在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中与 Null 值一起使用等于 (=) 和不等于 (<>) 比较运算符时采用符合 ISO 标准的行为。  
   
 > [!IMPORTANT]  
->  未来版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ANSI_NULLS 将为 ON，任何应用程序显式将选项设置为 OFF 将生成错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_NULLS 将为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -62,12 +62,12 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>注释  
- 当 SET ANSI_NULLS 为 ON，可使用 WHERE 的 SELECT 语句*column_name* = **NULL**即使有中的 null 值，则返回零行*column_name*。 使用 WHERE 的 SELECT 语句*column_name* <> **NULL**即使有中的非 null 值，则返回零行*column_name*。  
+## <a name="remarks"></a>Remarks  
+ 当 SET ANSI_NULLS 为 ON 时，即使 column_name 中包含空值，使用 WHERE column_name = NULL 的 SELECT 语句仍返回零行。 即使 column_name 中包含非空值，使用 WHERE column_name <> NULL 的 SELECT 语句仍返回零行。  
   
- 当 SET ANSI_NULLS 为 OFF 时，等于 (=) 和不等于 (<>) 比较运算符不遵守 ISO 标准。 使用 WHERE 的 SELECT 语句*column_name* = **NULL**返回中有 null 值的行*column_name*。 使用 WHERE 的 SELECT 语句*column_name* <> **NULL**返回的列中具有非 null 值的行。 此外，使用 WHERE 的 SELECT 语句*column_name* <> *XYZ_value*返回所有行不*XYZ_value*和不为 NULL。  
+ 当 SET ANSI_NULLS 为 OFF 时，等于 (=) 和不等于 (<>) 比较运算符不遵守 ISO 标准。 使用 WHERE column_name = NULL 的 SELECT 语句返回 column_name 中包含空值的行。 使用 WHERE column_name <> NULL 的 SELECT 语句返回列中包含非空值的行。 此外，使用 WHERE column_name <> XYZ_value 的 SELECT 语句返回所有不为 XYZ_value 也不为 NULL 的行。  
   
- 当 SET ANSI_NULLS 为 ON 时，所有对 null 值的比较均取值为 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，如果数据值为 NULL，则所有数据对空值的比较将取值为 TRUE。 如果未指定 SET ANSI_NULLS，则应用当前数据库的 ANSI_NULLS 选项设置。 有关 ANSI_NULLS 数据库选项的详细信息，请参阅[ALTER DATABASE &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ 当 SET ANSI_NULLS 为 ON 时，所有对 null 值的比较均取值为 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，如果数据值为 NULL，则所有数据对空值的比较将取值为 TRUE。 如果未指定 SET ANSI_NULLS，则应用当前数据库的 ANSI_NULLS 选项设置。 有关 ANSI_NULLS 数据库选项的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   
  仅当某个比较操作数是值为 NULL 的变量或文字 NULL 时，SET ANSI_NULLS ON 才会影响比较。 如果比较双方是列或复合表达式，则该设置不会影响比较。  
   
@@ -75,18 +75,18 @@ SET ANSI_NULLS ON
   
  在执行分布式查询时应将 SET ANSI_NULLS 设置为 ON。  
   
- 对计算列或索引视图创建或更改索引时，SET ANSI_NULLS 也必须为 ON。 如果 SET ANSI_NULLS 为 OFF，则针对表（包含计算列或索引视图的索引）的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回一个错误，其中列出所有违反所需的值的 SET 选项。 此外，当你执行 SELECT 语句，如果 SET ANSI_NULLS 为 OFF，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]忽略计算的列或视图上的索引值并解决选择操作，好像没有此类索引的表或视图上。  
+ 对计算列或索引视图创建或更改索引时，SET ANSI_NULLS 也必须为 ON。 如果 SET ANSI_NULLS 为 OFF，则针对表（包含计算列或索引视图的索引）的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误消息，该错误消息会列出所有违反所需值的 SET 选项。 另外，在执行 SELECT 语句时，如果 SET ANSI_NULLS 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略计算列或视图的索引值并解析选择操作，就好像表或视图没有这样的索引一样。  
   
 > [!NOTE]  
 >  ANSI_NULLS 是在处理计算列或索引视图的索引时必须设置为所需值的七个 SET 选项之一。 还必须将选项 ANSI_PADDING、ANSI_WARNINGS、ARITHABORT、QUOTED_IDENTIFIER 和 CONCAT_NULL_YIELDS_NULL 设置为 ON，而必须将 NUMERIC_ROUNDABORT 设置为 OFF。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动设置 ANSI_NULLS 为 ON 时连接。 该设置可以在 ODBC 数据源、ODBC 连接属性或 OLE DB 连接属性（它们在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之前在应用程序中设置）中进行配置。 SET ANSI_NULLS 的默认值为 OFF。  
+ 进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口会自动将 ANSI_NULLS 设置为 ON。 该设置可以在 ODBC 数据源、ODBC 连接属性或 OLE DB 连接属性（它们在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之前在应用程序中设置）中进行配置。 SET ANSI_NULLS 的默认值为 OFF。  
   
  当 SET ANSI_DEFAULTS 为 ON 时，将启用 SET ANSI_NULLS。  
   
  SET ANSI_NULLS 的设置是在执行或运行时设置，而不是在分析时设置。  
   
- 若要查看此设置的当前设置，请运行以下查询：
+ 要查看此设置的当前设置，请运行以下查询：
   
 ```  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
@@ -95,11 +95,11 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非空值进行比较。 该示例还演示`IS NULL`不受`SET ANSI_NULLS`设置。  
+ 以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非空值进行比较。 该示例还表明，`IS NULL` 不受 `SET ANSI_NULLS` 设置的影响。  
   
 ```  
 -- Create table t1 and insert values.  
@@ -171,13 +171,13 @@ DROP TABLE dbo.t1;
   
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
- [= &#40;等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/equals-transact-sql.md)   
- [如果...其他 &#40;Transact SQL &#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
- [&#60; &#62;&#40;不等于 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)   
+ [SESSIONPROPERTY (Transact-SQL)](../../t-sql/functions/sessionproperty-transact-sql.md)   
+ [= (Equals) (Transact-SQL)](../../t-sql/language-elements/equals-transact-sql.md)   
+ [IF...ELSE (Transact-SQL)](../../t-sql/language-elements/if-else-transact-sql.md)   
+ [<> (Not Equal To) (Transact-SQL)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40;Transact SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [其中 &#40;Transact SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [SET ANSI_DEFAULTS (Transact-SQL)](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md)  
   
   

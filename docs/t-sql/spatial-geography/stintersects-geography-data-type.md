@@ -1,5 +1,5 @@
 ---
-title: "STIntersects (geography 数据类型) |Microsoft 文档"
+title: "STIntersects（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersects-geography-data-type"></a>STIntersects（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  如果返回 1 **geography**实例与另一个相交**geography**实例。 如果它不，返回 0。  
+  如果 geography 实例与另一个 geography 实例相交，则返回 1。 否则，返回 0。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- *other_geography*  
- 是另一种**geography**实例要与对其实例进行比较`STIntersects()`调用。  
+ other_geography  
+ 与对其调用 `STIntersects()` 的实例进行比较的另一个 geography 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 此方法始终返回**NULL**如果的空间引用 Id 为 (Srid) **geography**实例不匹配。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 Null。  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `STIntersects()` 确定两个 `geography` 实例是否彼此相交。  

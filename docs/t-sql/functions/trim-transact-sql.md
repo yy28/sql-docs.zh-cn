@@ -1,5 +1,5 @@
 ---
-title: "TRIM (Transact SQL) |Microsoft 文档"
+title: TRIM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/20/2017
 ms.prod: sql-non-specified
@@ -31,35 +31,35 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="trim-transact-sql"></a>TRIM (Transact SQL)
+# <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-删除空格字符`char(32)`或其他指定的字符开始或字符串末尾。  
+从字符串的开头或末尾删除空格字符 `char(32)` 或其他指定字符。  
  
 ## <a name="syntax"></a>语法   
 ```
 TRIM ( [ characters FROM ] string ) 
 ```
-[//]: # "[同时 |前导 |尾随] 不尚未可用。"
+[//]: # "[ BOTH | LEADING | TRAILING ] 尚不可用。"
 
 ## <a name="arguments"></a>参数   
 
 字符   
-是文本、 变量或函数调用的任何非 LOB 字符类型 (`nvarchar`， `varchar`， `nchar`，或`char`) 包含应删除的字符。 `nvarchar(max)`和`varchar(max)`不允许类型。
+任何非 LOB 字符类型（`nvarchar`、`varchar`、`nchar` 或 `char`）的文本、变量或函数调用，其中包含应删除的字符。 不允许 `nvarchar(max)` 和 `varchar(max)` 类型。
 
 string   
-是任何字符类型的表达式 (`nvarchar`， `varchar`， `nchar`，或`char`) 应删除字符。
+任何字符类型（`nvarchar`、`varchar`、`nchar` 或 `char`）的表达式，其中应删除字符。
 
 ## <a name="return-types"></a>返回类型   
-返回类型为字符串自变量的字符表达式中的空白字符`char(32)`或其他指定的字符会从双方。 返回`NULL`输入的字符串是否`NULL`。
+返回一个字符串参数类型的字符表达式，其中已从两侧删除空格字符 `char(32)` 或其他指定字符。 如果输入字符串是 `NULL`，则返回 `NULL`。
 
-## <a name="remarks"></a>注释   
-默认情况下`TRIM`函数将移除空白字符`char(32)`从双方。 这等效于 `LTRIM(RTRIM(@string))`。 行为`TRIM `具有对指定字符函数等同于行为`REPLACE`函数其中将从开始或结束处的字符替换为空字符串。
+## <a name="remarks"></a>Remarks   
+默认情况下，`TRIM` 函数会删除 `char(32)` 两侧的空格字符。 这等效于 `LTRIM(RTRIM(@string))`。 具有指定字符的 `TRIM ` 函数的行为与 `REPLACE` 函数（其中开头或末尾处的字符替换为空字符串）的行为相同。
 
 
 ## <a name="examples"></a>示例
-### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  从字符串两端移除空白字符   
-下面的示例中删除空格，从之前和之后单词`test`。   
+### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  删除字符串两侧的空格字符   
+以下示例删除了 `test` 一词前后的空格。   
 ```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
@@ -69,8 +69,8 @@ SELECT TRIM( '     test    ') AS Result;
 `test`
 
 
-### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  移除指定的字符从字符串两端   
-下面的示例删除一个尾随句点和尾随空格。
+### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  删除字符串两侧的指定字符   
+以下示例删除了尾随句点和尾随空格。
 ```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
@@ -80,10 +80,10 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 
 
 ## <a name="see-also"></a>另请参阅
- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [右 &#40;Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: "删除 BROKER 优先级 (Transact SQL) |Microsoft 文档"
+title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,10 +47,10 @@ DROP BROKER PRIORITY ConversationPriorityName
 ```  
   
 ## <a name="arguments"></a>参数  
- *ConversationPriorityName*  
+ ConversationPriorityName  
  指定要删除的会话优先级的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  删除会话优先级时，现有会话将继续使用由该会话优先级分配的优先级来运行。  
   
 ## <a name="permissions"></a>权限  
@@ -65,8 +65,8 @@ DROP BROKER PRIORITY InitiatorAToTargetPriority;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [创建 BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "table (TRANSACT-SQL) |Microsoft 文档"
+title: "表 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="table-transact-sql"></a>表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-一种特殊的数据类型，可用于存储结果集以进行后续处理。 **表**主要用于临时存储的一组作为表值函数的结果集返回的行。 声明函数和变量的类型为**表**。 **表**变量可在函数、 存储的过程和批处理。 若要声明类型的变量**表**，使用[DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
+一种特殊的数据类型，可用于存储结果集以进行后续处理。 table 主要用于临时存储一组作为表值函数的结果集返回的行。 可将函数和变量声明为 table 类型。 table 变量可用于函数、存储过程和批处理中。 若要声明 table 类型的变量，请使用 [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
   
 
 **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -65,21 +65,21 @@ table_type_definition ::=
 ```  
   
 ## <a name="arguments"></a>参数  
-*table_type_definition*  
+table_type_definition  
 与在 CREATE TABLE 中定义表时所用的信息子集相同的信息子集。 表声明包括列定义、名称、数据类型和约束。 允许的约束类型仅为 PRIMARY KEY、UNIQUE KEY 和 NULL。  
-有关语法的详细信息，请参阅[CREATE TABLE &#40;Transact SQL &#41;](../../t-sql/statements/create-table-transact-sql.md)，[创建函数 &#40;Transact SQL &#41;](../../t-sql/statements/create-function-transact-sql.md)，和[DECLARE @local_variable &#40;Transact SQL &#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
+有关语法的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)、[CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 和 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
   
-*collation_definition*  
-是组成的列的排序规则[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 区域设置和比较样式、 Windows 区域设置和二进制表示法，或[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则。 如果*collation_definition*未指定，则该列继承当前数据库的排序规则。 另外，如果将此列定义为公共语言运行时 (CLR) 用户定义类型，则它将继承用户定义类型的排序规则。
+collation_definition  
+由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 区域设置和比较样式、Windows 区域设置和二进制表示法或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则组成的列的排序规则。 如果未指定 collation_definition，则此列将继承当前数据库的排序规则。 另外，如果将此列定义为公共语言运行时 (CLR) 用户定义类型，则它将继承用户定义类型的排序规则。
   
-## <a name="remarks"></a>注释  
-**表**可以按一批的 FROM 子句中的名称引用变量，如下面的示例所示：
+## <a name="remarks"></a>Remarks  
+可以在批处理的 FROM 子句中按名称引用 table 变量，如下例所示：
   
 ```sql
 SELECT Employee_ID, Department_ID FROM @MyTableVar;  
 ```  
   
-FROM 子句，外部**表**必须使用一个别名，来引用变量，如下面的示例中所示：
+在 FROM 子句外，必须使用别名来引用 table 变量，如下例所示：
   
 ```sql
 SELECT EmployeeID, DepartmentID   
@@ -88,40 +88,40 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
    m.DepartmentID = Employee.DepartmentID);  
 ```  
   
-**表**变量具有查询计划不会更改和重新编译问题何时主导的小规模查询提供了以下好处：
--   A**表**变量行为类似于本地变量。 有明确定义的作用域。 这就是在其中声明该变量的函数、存储过程或批处理。  
-     在其范围内，**表**可像常规表中使用变量。 该变量可应用于 SELECT、INSERT、UPDATE 和 DELETE 语句中用到表或表的表达式的任何地方。 但是，**表**不能在以下语句：  
+对于具有不更改的查询计划的小规模查询以及在主要考虑重新编译时，table 变量提供以下好处：
+-   table 变量的行为类似于局部变量。 有明确定义的作用域。 这就是在其中声明该变量的函数、存储过程或批处理。  
+     在其作用域内，table 变量可像常规表那样使用。 该变量可应用于 SELECT、INSERT、UPDATE 和 DELETE 语句中用到表或表的表达式的任何地方。 但是，table 不能用于以下语句中：  
   
 ```sql
 SELECT select_list INTO table_variable;
 ```
   
-**表**会自动将变量清除末尾的函数、 存储的过程或在其中定义的批处理。
+在定义 table 变量的函数、存储过程或批处理结束时，会自动清除此变量。
   
--   **表**存储过程中使用的变量会导致比时不会影响性能的基于开销的选项，当使用临时表较少的存储过程的重新编译。  
--   事务涉及**表**变量仅用于更新期间上次上**表**变量。 因此，**表**变量所需的小于锁定和日志记录资源。  
+-   在存储过程中使用 table 变量与使用临时表相比，减少了存储过程的重新编译量，并且没有影响性能的基于成本的选择。  
+-   涉及 table 变量的事务只在 table 变量更新期间存在。 因此，table 变量需要较少的锁定和记录资源。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限
-**表**变量不具有分发统计信息，它们不会触发重新编译。 因此，在许多情况下，优化器会在假定 table 变量没有行的前提下生成查询计划。 出于这一原因，如果您预计会存在大量行（超过 100 行），那么在使用 table 变量时应小心谨慎。 这种情况下，使用临时表可能是更好的解决方案。 或者，对于加入与其他表的表变量的查询，使用 RECOMPILE 提示，这将导致优化器为表变量使用正确的基数。
+Table 变量没有分发统计信息，不会触发重新编译。 因此，在许多情况下，优化器会在假定 table 变量没有行的前提下生成查询计划。 出于这一原因，如果您预计会存在大量行（超过 100 行），那么在使用 table 变量时应小心谨慎。 这种情况下，使用临时表可能是更好的解决方案。 或者，如果查询联接 table 变量和其他表，则可使用 RECOMPILE 提示，这使优化器会对 table 变量使用正确的基数。
   
-**表**中不支持变量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]优化器的基于开销的推理模型。 因此，在需要基于成本的选择来实现高效的查询计划时，不应使用这些变量。 在需要基于成本的选择时，临时表是首选。 这通常包含具有联接、并行度决策和索引选择选项的查询。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化器基于成本的原因模型中，不支持 table 变量。 因此，在需要基于成本的选择来实现高效的查询计划时，不应使用这些变量。 在需要基于成本的选择时，临时表是首选。 这通常包含具有联接、并行度决策和索引选择选项的查询。
   
-修改的查询**表**变量不会生成并行查询执行计划。 时非常大，可能会影响性能**表**变量，或**表**复杂的查询中的变量进行修改。 在这种情况下，请考虑改用临时表。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 读取的查询**表**仍可并行化变量，而不修改它们。
+修改 table 变量的查询不会生成并行查询执行计划。 修改特大型 table 变量或复杂查询中的 table 变量时，可能会影响性能。 在这种情况下，请考虑改用临时表。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 还可以并行执行读取 table 变量而不对变量进行修改的查询。
   
-不能显式上创建索引**表**变量和任何统计信息保存在**表**变量。 在某些情况下，可以通过改用支持索引和统计信息的临时表来改善性能。 有关临时表的详细信息，请参阅[CREATE TABLE &#40;Transact SQL &#41;](../../t-sql/statements/create-table-transact-sql.md).
+不能显式创建 table 变量的索引，也不保留 table 变量的任何统计信息。 在某些情况下，可以通过改用支持索引和统计信息的临时表来改善性能。 有关临时表的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
   
-请检查约束、 默认值和计算的列中**表**类型声明不能调用用户定义的函数。
+table 类型声明中的 CHECK 约束、DEFAULT 值和计算列不能调用用户定义函数。
   
-之间进行赋值操作**表**不支持变量。
+不支持在 table 变量之间进行赋值操作。
   
-因为**表**变量具有有限的范围，并不是持久的数据库的一部分，它们不受事务回滚。
+由于 table 变量作用域有限，并且不是持久数据库的一部分，因而不受事务回滚的影响。
   
 表变量在创建后就无法更改。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. 声明一个表类型的变量  
-下例将创建一个 `table` 变量，用于储存 UPDATE 语句的 OUTPUT 子句中指定的值。 在它后面的两个 `SELECT` 语句返回 `@MyTableVar` 中的值以及 `Employee` 表中更新操作的结果。 请注意，中的结果`INSERTED.ModifiedDate`列与中的值不同`ModifiedDate`中的列`Employee`表。 这是因为对 `AFTER UPDATE` 表定义了 `ModifiedDate` 触发器，该触发器可以将 `Employee` 的值更新为当前日期。 不过，从 `OUTPUT` 返回的列可反映触发器激发之前的数据。 有关详细信息，请参阅[OUTPUT 子句 &#40;Transact SQL &#41;](../../t-sql/queries/output-clause-transact-sql.md).
+下例将创建一个 `table` 变量，用于储存 UPDATE 语句的 OUTPUT 子句中指定的值。 在它后面的两个 `SELECT` 语句返回 `@MyTableVar` 中的值以及 `Employee` 表中更新操作的结果。 请注意，`INSERTED.ModifiedDate` 列中的结果与 `Employee` 表的 `ModifiedDate` 列中的值不同。 这是因为对 `AFTER UPDATE` 表定义了 `ModifiedDate` 触发器，该触发器可以将 `Employee` 的值更新为当前日期。 不过，从 `OUTPUT` 返回的列可反映触发器激发之前的数据。 有关详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。
   
 ```sql
 USE AdventureWorks2012;  
@@ -151,7 +151,7 @@ GO
 ```  
   
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. 创建内联表值函数  
-下面的示例将返回内联表值函数。 它返回三列`ProductID`，`Name`和由存储为年度截止到现在总计的聚合`YTD Total`的形式销售给存储每个产品。
+下面的示例将返回内联表值函数。 对于销售给商店的每个产品，该函数返回三列，分别为 `ProductID`、`Name` 以及各个商店年初至今总数的累计 `YTD Total`。
   
 ```sql
 USE AdventureWorks2012;  
@@ -182,12 +182,12 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[COLLATE &#40;Transact SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)  
 [用户定义函数](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[使用表值参数 &#40; 数据库引擎 &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
+[使用表值参数（数据库引擎）](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
   
   

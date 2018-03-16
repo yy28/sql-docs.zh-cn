@@ -1,5 +1,5 @@
 ---
-title: "DELETE (Transact SQL) |Microsoft 文档"
+title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  从表或视图中的删除一个或多个行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的表或视图中删除一行或多行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -95,24 +95,24 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ```  
   
 ## <a name="arguments"></a>参数  
- 与\<common_table_expression >  
+ WITH \<common_table_expression>  
  指定在 DELETE 语句作用域内定义的临时命名结果集，也称为公用表表达式。 结果集源自 SELECT 语句。  
   
- 公用表表达式还可与 SELECT、INSERT、UPDATE 和 CREATE VIEW 等语句一起使用。 有关详细信息，请参阅[使用 common_table_expression &#40;Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ 公用表表达式还可与 SELECT、INSERT、UPDATE 和 CREATE VIEW 等语句一起使用。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- 顶部**(***表达式***)** [百分比]  
- 指定将要删除的任意行数或任意行的百分比。 *expression* 可以是行数或行的百分比。 与 INSERT、UPDATE 或 DELETE 一起使用的 TOP 表达式中被引用行将不按任何顺序排列。 有关详细信息，请参阅[顶部 &#40;Transact SQL &#41;](../../t-sql/queries/top-transact-sql.md).  
+ TOP **(***expression***)** [ PERCENT ]  
+ 指定将要删除的任意行数或任意行的百分比。 *expression* 可以是行数或行的百分比。 与 INSERT、UPDATE 或 DELETE 一起使用的 TOP 表达式中被引用行将不按任何顺序排列。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
  FROM  
- 可以使用 DELETE 关键字和目标之间的可选关键字*table_or_view_name*，或*rowset_function_limited*。  
+ 一个可选关键字，可用在 DELETE 关键字与目标 table_or_view_name 或 rowset_function_limited 之间。  
   
  *table_alias*  
- 在从指定的别名*table_source*子句表示包含要删除行的表或视图。  
+ 在表示要从中删除行的表或视图的 FROM *table_source* 子句中指定的别名。  
   
  *server_name*  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 服务器的名称 (使用链接的服务器名称或[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)函数作为服务器名称) 在其上的表或视图所在。 如果*server_name*指定，则*database_name*和*schema_name*所需。  
+ 表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name。  
   
  *database_name*  
  数据库的名称。  
@@ -120,26 +120,26 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *schema_name*  
  表或视图所属架构的名称。  
   
- *table_or view_name*  
+ table_or view_name  
  要从中删除行的表或视图的名称。  
   
  在其作用域内还可用作 DELETE 语句中的表源的表变量。  
   
- 通过引用视图*table_or_view_name*必须可更新并引用恰好一个基表的视图定义的 FROM 子句中。 有关可更新视图的详细信息，请参阅[创建的视图 &#40;Transact SQL &#41;](../../t-sql/statements/create-view-transact-sql.md).  
+ table_or_view_name 引用的视图必须可更新，并且只在视图定义的 FROM 子句中引用一个基表。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
  *rowset_function_limited*  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 任一[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)或[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)函数，受制于提供程序功能。  
+ [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
- 与**(** \<table_hint_limited > [...*n*] **)**  
- 指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
+ 指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- \<OUTPUT_Clause >  
- 将已删除行或基于这些行的表达式作为 DELETE 操作的一部分返回。 在针对视图或远程表的任何 DML 语句中都不支持 OUTPUT 子句。 有关详细信息，请参阅[OUTPUT 子句 &#40;Transact SQL &#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ \<OUTPUT_Clause>  
+ 将已删除行或基于这些行的表达式作为 DELETE 操作的一部分返回。 在针对视图或远程表的任何 DML 语句中都不支持 OUTPUT 子句。 有关详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
   
- 从*table_source*  
- 指定附加的 FROM 子句。 这[!INCLUDE[tsql](../../includes/tsql-md.md)]删除扩展允许指定从数据\<table_source > 在第一个从表中删除相应行和子句。  
+ FROM *table_source*  
+ 指定附加的 FROM 子句。 这个对 DELETE 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 扩展允许从 \<table_source> 指定数据，并从第一个 FROM 子句内的表中删除相应的行。  
   
  这个扩展指定联接，可在 WHERE 子句中取代子查询来标识要删除的行。  
   
@@ -150,32 +150,32 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  基于 WHERE 子句中所指定的条件，有两种形式的删除操作：  
   
--   搜索删除指定搜索条件以限定要删除的行。 例如，其中*column_name* = *值*。  
+-   搜索删除指定搜索条件以限定要删除的行。 例如，WHERE *column_name* = *value*。  
   
--   定位删除使用 CURRENT OF 子句指定游标。 删除操作在游标的当前位置执行。 这可以是比使用 WHERE 搜索 DELETE 语句更准确*search_condition*子句来限定要删除的行。 如果搜索条件不唯一标识单行，则搜索 DELETE 语句删除多行。  
+-   定位删除使用 CURRENT OF 子句指定游标。 删除操作在游标的当前位置执行。 这比使用 WHERE *search_condition* 子句限定待删除行的搜索 DELETE 语句更为精确。 如果搜索条件不唯一标识单行，则搜索 DELETE 语句删除多行。  
   
-\<search_condition >  
- 指定删除行的限定条件。 对搜索条件中可以包含的谓词数量没有限制。 有关详细信息，请参阅[搜索条件 &#40;Transact SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition>  
+ 指定删除行的限定条件。 对搜索条件中可以包含的谓词数量没有限制。 有关详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
   
  CURRENT OF  
  指定 DELETE 在指定游标的当前位置执行。  
   
  GLOBAL  
- 指定*cursor_name*指全局游标。  
+ 指定 cursor_name 是指全局游标。  
   
  *cursor_name*  
- 从其中进行提取的打开游标的名称。 如果全局和局部游标同名*cursor_name*存在，此自变量引用全局游标全局是否指定; 否则为它是指局部游标。 游标必须允许更新。  
+ 从其中进行提取的打开游标的名称。 如果同时存在名为 cursor_name 的全局游标和局部游标，那么，在指定了 GLOBAL 时，该参数是指全局游标；否则是指局部游标。 游标必须允许更新。  
   
  *cursor_variable_name*  
  游标变量的名称。 游标变量必须引用允许更新的游标。  
   
- 选项**(** \<query_hint > [ **，**...*n*] **)**  
- 指示哪些优化器提示用于自定义的方式的关键字[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
+ OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ 关键字，指示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式的优化器提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
- 若要删除表中的所有行，请使用 TRUNCATE TABLE。 TRUNCATE TABLE 比 DELETE 速度快，且使用的系统和事务日志资源少。 TRUNCATE TABLE 具有限制，例如，表不能参与复制。 有关详细信息，请参阅[TRUNCATE TABLE &#40;Transact SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
+ 若要删除表中的所有行，请使用 TRUNCATE TABLE。 TRUNCATE TABLE 比 DELETE 速度快，且使用的系统和事务日志资源少。 TRUNCATE TABLE 具有限制，例如，表不能参与复制。 有关详细信息，请参阅 [TRUNCATE TABLE (Transact-SQL)](../../t-sql/statements/truncate-table-transact-sql.md)  
   
- 使用 @@ROWCOUNT函数返回的数目已删除的客户端应用程序的行。 有关详细信息，请参阅[@@ROWCOUNT &#40;Transact SQL &#41;](../../t-sql/functions/rowcount-transact-sql.md).  
+ 使用 @@ROWCOUNT 函数将删除的行数返回给客户端应用程序。 有关详细信息，请参阅 [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)。  
   
 ## <a name="error-handling"></a>错误处理  
  您可以通过在 TRY…CATCH 构造函数中指定 DELETE 语句，实现对该语句的错误处理。  
@@ -187,9 +187,9 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="interoperability"></a>互操作性  
  如果所修改的对象是表变量，则 DELETE 可用在用户定义函数的正文中。  
   
- 删除包含 FILESTREAM 列的行时，会同时删除其基础文件系统文件。 基础文件是由 FILESTREAM 垃圾回收器删除的。 有关详细信息，请参阅[使用 TRANSACT-SQL 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-transact-sql.md)。  
+ 删除包含 FILESTREAM 列的行时，会同时删除其基础文件系统文件。 基础文件是由 FILESTREAM 垃圾回收器删除的。 有关详细信息，请参阅[使用 Transact-SQL 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-transact-sql.md)。  
   
- 不能在直接或间接引用对其定义 INSTEAD OF 触发器的视图的 DELETE 语句中指定 FROM 子句。 INSTEAD of 触发器的详细信息，请参阅[CREATE TRIGGER &#40;Transact SQL &#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ 不能在直接或间接引用对其定义 INSTEAD OF 触发器的视图的 DELETE 语句中指定 FROM 子句。 有关 INSTEAD OF 触发器的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  在将 TOP 与 DELETE 结合使用时，被引用行不按任何顺序排列，不能直接在此语句中指定 ORDER BY 子句。 如果需要使用 TOP 来删除按有意义的时间顺序排列的行，您必须同时在嵌套 select 语句中使用 TOP 和 ORDER BY 子句。 请参阅本主题后面的“示例”一节。  
@@ -203,35 +203,35 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  若要删除堆中的行并释放页，请使用下列方法之一。  
   
--   在 DELETE 语句中指定 TABLOCK 提示。 使用 TABLOCK 提示会导致删除操作获取表的排他锁，而不是行锁或页锁。 这将允许释放页。 有关 TABLOCK 提示的详细信息，请参阅[表提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+-   在 DELETE 语句中指定 TABLOCK 提示。 使用 TABLOCK 提示会导致删除操作获取表的排他锁，而不是行锁或页锁。 这将允许释放页。 有关 TABLOCK 提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
 -   如果要从表中删除所有行，请使用 TRUNCATE TABLE。  
   
 -   删除行之前，请为堆创建聚集索引。 删除行之后，可以删除聚集索引。 与先前的方法相比，此方法非常耗时，并且使用更多的临时资源。  
   
 > [!NOTE]  
->  空页可能会从堆在任何时候通过使用`ALTER TABLE <table_name> REBUILD`语句。  
+>  通过使用 `ALTER TABLE <table_name> REBUILD` 语句，可随时将空白页从堆中删除。  
   
 ## <a name="logging-behavior"></a>日志记录行为  
  始终完全记录 DELETE 语句。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求对目标表具有 DELETE 权限。 如果语句包含 WHERE 子句，则还必须有 SELECT 权限。  
   
- 删除权限仅默认授予的成员**sysadmin**固定服务器角色、 **db_owner**和**db_datawriter**固定数据库角色和表所有者。 成员**sysadmin**， **db_owner**，和**db_securityadmin**角色和表所有者可将权限传输到其他用户。  
+ 默认情况下，将 DELETE 权限授予 **sysadmin** 固定服务器角色成员、**db_owner** 和 **db_datawriter** 固定数据库角色成员以及表所有者。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户。  
   
 ## <a name="examples"></a>示例  
   
 |类别|作为特征的语法元素|  
 |--------------|------------------------------|  
-|[基本语法](#BasicSyntax)|DELETE|  
+|[基本语法](#BasicSyntax)|删除|  
 |[限制删除的行数](#LimitRows)|WHERE • FROM • 游标 •|  
-|[从远程表删除行](#RemoteTables)|链接服务器 • OPENQUERY 行集函数 • OPENDATASOURCE 行集函数|  
+|[从远程表中删除行](#RemoteTables)|链接服务器 • OPENQUERY 行集函数 • OPENDATASOURCE 行集函数|  
 |[捕获 DELETE 语句的结果](#CaptureResults)|OUTPUT 子句|  
   
-###  <a name="BasicSyntax"></a>基本语法  
+###  <a name="BasicSyntax"></a> 基本语法  
  本节中的示例说明了使用最低要求的语法的 DELETE 语句的基本功能。  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. 使用不带 WHERE 子句的 DELETE  
@@ -242,11 +242,11 @@ DELETE FROM Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-###  <a name="LimitRows"></a>限制删除的行数  
+###  <a name="LimitRows"></a> 限制删除的行数  
  本节中的示例演示了如何限制将被删除的行数。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. 使用 WHERE 子句删除行集  
- 以下示例将删除所有行从`ProductCostHistory`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]在其中的数据库中的值`StandardCost`列是多个`1000.00`。  
+ 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ProductCostHistory` 表中删除 `StandardCost` 列的值大于 `1000.00` 的所有行。  
   
 ```    
 DELETE FROM Production.ProductCostHistory  
@@ -254,7 +254,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- 下面的示例演示一个更复杂的 WHERE 子句。 WHERE 子句定义要确定删除的行而必须满足的两个条件。 `StandardCost` 列中的值必须介于 `12.00` 与 `14.00` 之间，而 `SellEndDate` 列中的值必须为 Null。 该示例还输出中的值**@@ROWCOUNT** 函数返回的数目已删除的行。  
+ 下面的示例演示一个更复杂的 WHERE 子句。 WHERE 子句定义要确定删除的行而必须满足的两个条件。 `StandardCost` 列中的值必须介于 `12.00` 与 `14.00` 之间，而 `SellEndDate` 列中的值必须为 Null。 该示例还输出 **@@ROWCOUNT** 函数中的值，以返回已删除的行数。  
   
 ```  
 DELETE Production.ProductCostHistory  
@@ -264,7 +264,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 使用游标以确定要删除的行  
- 以下示例将删除从单个行`EmployeePayHistory`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库使用游标名为`my_cursor`。 删除操作只影响当前从游标提取的单行。  
+ 以下示例使用名为 `my_cursor` 的游标删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `EmployeePayHistory` 表中的单行。 删除操作只影响当前从游标提取的单行。  
   
 ```  
 DECLARE complex_cursor CURSOR FOR  
@@ -284,7 +284,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. 对一个表中的数据使用联接和子查询，以删除另一个表中的行  
- 下面的示例演示两种基于一个表中的数据删除另一个表中的行的方法。 在这两个示例中，行从`SalesPersonQuotaHistory`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]基于年度截止到现在销售存储中删除数据库`SalesPerson`表。 第一个`DELETE`语句显示 ISO 兼容子查询解决方案和第二个`DELETE`语句所示[!INCLUDE[tsql](../../includes/tsql-md.md)]来自扩展插件来联接两个表。  
+ 下面的示例演示两种基于一个表中的数据删除另一个表中的行的方法。 这两个示例均基于 `SalesPerson` 表中存储的年初至今的销售业绩，从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPersonQuotaHistory` 表中删除行。 第一个 `DELETE` 语句显示与 ISO 兼容的子查询解决方案，第二个 `DELETE` 语句显示联接这两个表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 扩展。  
   
 ```  
 -- SQL-2003 Standard subquery  
@@ -320,7 +320,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. 使用 TOP 限制删除的行数  
- 当 TOP (*n*) 子句与 DELETE 结合使用，在中随机选择的执行删除操作 *n* 的行数。 以下示例将删除`20`随机行`PurchaseOrderDetail`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库了其到期日期早于 2006 年 7 月 1 日。  
+ 当 TOP (*n*) 子句与 DELETE 一起使用时，将针对随机选择的 *n* 行执行删除操作。 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `PurchaseOrderDetail` 表中删除到期日期早于 2006 年 7 月 1 日的 `20` 个随机行。  
   
 ```  
 DELETE TOP (20)   
@@ -340,13 +340,13 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a>从远程表删除行  
- 本部分中的示例演示如何通过使用从远程表删除行[链接的服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[行集函数](../../t-sql/functions/rowset-functions-transact-sql.md)引用远程表。 远程表存在于不同的服务器或 SQL Server 实例上。  
+###  <a name="RemoteTables"></a> 从远程表中删除行  
+ 本节中的示例说明如何使用[链接服务器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[行集函数](../../t-sql/functions/rowset-functions-transact-sql.md)引用一个远程表，以便从该表中删除行。 远程表存在于不同的服务器或 SQL Server 实例上。  
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 通过使用链接服务器从远程表删除数据  
- 下面的示例将删除远程表中的行。 此示例通过使用创建远程数据源的链接从开始[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)。 链接的服务器名称， `MyLinkServer`，然后指定为窗体中由四部分组成的对象名称的一部分*server.catalog.schema.object*。  
+ 下面的示例将删除远程表中的行。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分。  
   
 ```  
 USE master;  
@@ -372,7 +372,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. 通过使用 OPENQUERY 函数从远程表删除数据  
- 下面的示例通过指定从远程表删除行[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)行集函数。 在之前例子中创建的链接服务器名称用于此示例。  
+ 以下示例通过指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行集函数从远程表中删除行。 在之前例子中创建的链接服务器名称用于此示例。  
   
 ```  
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -382,7 +382,7 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. 通过使用 OPENDATASOURCE 函数从远程表删除数据  
- 下面的示例通过指定从远程表删除行[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)行集函数。 使用以下格式指定数据源的有效的服务器名称*server_name*或*server_name\instance_name*。  
+ 以下示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数从远程表中删除行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称。  
   
 ```  
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
@@ -391,10 +391,10 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a>捕获 DELETE 语句的结果  
+###  <a name="CaptureResults"></a> 捕获 DELETE 语句的结果  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>I. 使用带有 OUTPUT 子句的 DELETE  
- 下面的示例演示如何将保存的结果`DELETE`语句中的表变量[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
+ 以下示例演示如何将 `DELETE` 语句的结果保存到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的表变量中。  
   
 ```  
 DELETE Sales.ShoppingCartItem  
@@ -409,7 +409,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. 在 DELETE 语句中同时使用 OUTPUT 与 <from_table_name>  
- 下面的示例中行的删除`ProductProductPhoto`表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库基于搜索条件中定义`FROM`子句`DELETE`语句。 `OUTPUT` 子句返回所删除表中的列（ `DELETED.ProductID`、 `DELETED.ProductPhotoID`）以及 `Product` 表中的列。 在 `FROM` 子句中使用该项来指定要删除的行。  
+ 以下示例根据 `DELETE` 语句的 `FROM` 子句中定义的搜索条件，删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ProductProductPhoto` 表中的行。 `OUTPUT` 子句返回所删除表中的列（ `DELETED.ProductID`、 `DELETED.ProductPhotoID`）以及 `Product` 表中的列。 在 `FROM` 子句中使用该项来指定要删除的行。  
   
 ```  
 DECLARE @MyTableVar table (  
@@ -436,7 +436,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="k-delete-all-rows-from-a-table"></a>K. 从表中删除所有行  
  下面的示例从 `Table1` 表中删除所有行，因为该例未使用 WHERE 子句限制删除的行数。  
@@ -446,15 +446,15 @@ DELETE FROM Table1;
 ```  
   
 ### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. 从表中删除一组行  
- 以下示例将删除所有行从`Table1`具有大于 1000.00 中的值的表`StandardCost`列。  
+ 以下示例从 `Table1` 表中删除 `StandardCost` 列的值大于 1000.00 的所有行。  
   
 ```  
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
   
-### <a name="m-using-label-with-a-delete-statement"></a>M. 使用 DELETE 语句标签  
- 下面的示例使用 DELETE 语句标签。  
+### <a name="m-using-label-with-a-delete-statement"></a>M. 通过 DELETE 语句使用 LABEL  
+ 以下示例将标签与 DELETE 语句一起使用。  
   
 ```  
 DELETE FROM Table1  
@@ -462,8 +462,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. DELETE 语句中使用标签和查询提示  
- 此查询显示使用 DELETE 语句的查询联接提示的基本语法。 有关联接提示以及如何使用 OPTION 子句的详细信息，请参阅[选项 (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc)。  
+### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. 通过 DELETE 语句使用标签和查询提示  
+ 此查询显示通过 DELETE 语句使用查询联接提示的基本语法。 有关联接提示以及如何使用 OPTION 子句的详细信息，请参阅 [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc)。  
   
 ```  
 -- Uses AdventureWorks  
@@ -481,9 +481,9 @@ OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [TRUNCATE TABLE &#40;Transact SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE (Transact-SQL)](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [使用 common_table_expression &#40;Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
+ [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)  
   
   

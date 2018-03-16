@@ -1,5 +1,5 @@
 ---
-title: "授予对数据库对象的访问权限 |Microsoft 文档"
+title: "授予访问数据库对象的权限 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>课 2-4-授予访问数据库对象
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]作为管理员，你可以执行从选择**产品**表和**vw_Names**查看和执行**pr_Names**过程; 但是，Mary 无法。 若要授予 Mary 必要的权限，请使用 GRANT 语句。  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>第 2-4 课 - 授予访问数据库对象的权限
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]作为管理员，可以从 Products 表和 vw_Names 视图执行 Select，以及执行 pr_Names 过程；但是 Mary 不能。 若要授予 Mary 必要的权限，请使用 GRANT 语句。  
   
 ### <a name="procedure-title"></a>过程标题  
   

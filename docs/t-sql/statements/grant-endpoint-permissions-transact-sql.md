@@ -1,5 +1,5 @@
 ---
-title: "GRANT 终结点权限 (Transact SQL) |Microsoft 文档"
+title: "GRANT 终结点权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -55,37 +55,37 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ permission  
  指定可对端点授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- 终结点上**::***endpoint_name*  
- 指定要授予对其的权限的端点。 作用域限定符 (**::**) 是必需的。  
+ ON ENDPOINT ::endpoint_name  
+ 指定要授予对其的权限的端点。 需要使用作用域限定符 (::)。  
   
- 到\<server_principal >  
+ TO \<server_principal>  
  指定要对其授予权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login*  
+ SQL_Server_login  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *SQL_Server_login_from_Windows_login*  
+ SQL_Server_login_from_Windows_login  
  指定通过 Windows 登录帐户创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *SQL_Server_login_from_certificate*  
+ SQL_Server_login_from_certificate  
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *SQL_Server_login_from_AsymKey*  
+ SQL_Server_login_from_AsymKey  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
  WITH GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- AS *SQL_Server_login*  
+ AS SQL_Server_login  
  指定执行此查询的主体要从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其授予该权限的权限。  
   
-## <a name="remarks"></a>注释  
- 仅当当前数据库时，可以授予服务器范围的权限**master**。  
+## <a name="remarks"></a>Remarks  
+ 只有在当前数据库为 master 时，才可授予其服务器作用域内的权限。  
   
- 有关终结点的信息会显示在[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)目录视图。 有关服务器权限的信息会显示在[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目录视图，以及有关服务器主体的信息会显示在[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目录视图。  
+ 可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目录视图中查看终结点的相关信息。 可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目录视图中查看服务器权限的相关信息，在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中查看服务器主体的相关信息。  
   
  端点为服务器级安全对象。 下表列出了可授予的对端点最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
   
@@ -97,7 +97,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对端点的 CONTROL 权限或对服务器的 ALTER ANY ENDPOINT 权限。  
   
 ## <a name="examples"></a>示例  
@@ -122,11 +122,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [拒绝终结点权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
- [REVOKE 终结点权限 &#40;Transact SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+ [DENY 终结点权限 (Transact-SQL)](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [REVOKE 终结点权限 (Transact-SQL)](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [终结点目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [sys.endpoints &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [终结点目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

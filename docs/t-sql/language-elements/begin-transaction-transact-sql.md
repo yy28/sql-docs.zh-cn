@@ -1,5 +1,5 @@
 ---
-title: "开始事务 (Transact SQL) |Microsoft 文档"
+title: BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  标记一个显式本地事务的起始点。 显式事务以 BEGIN TRANSACTION 语句开头且以提交或回滚语句结尾。  
+  标记一个显式本地事务的起始点。 显式事务以 BEGIN TRANSACTION 语句开始，并以 COMMIT 或 ROLLBACK 语句结束。  
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,25 +71,25 @@ BEGIN { TRAN | TRANSACTION }
 
   
 ## <a name="arguments"></a>参数  
- *transaction_name*  
- **适用于：** SQL Server （从 2008年开始），Azure SQL 数据库
+ transaction_name  
+ 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
  
- 分配给事务的名称。 *transaction_name*必须符合的规则的标识符，但超过不允许 32 个字符的标识符。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 *transaction_name*是始终案例敏感，即使实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不区分大小写。  
+ 分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
   
- @*tran_name_variable*  
- **适用于：** SQL Server （从 2008年开始），Azure SQL 数据库
+ @tran_name_variable  
+ 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
  
- 用户定义的、含有有效事务名称的变量的名称。 必须使用声明变量**char**， **varchar**， **nchar**，或**nvarchar**数据类型。 如果传递给该变量的字符多于 32 个，则仅使用前面的 32 个字符；其余的字符将被截断。  
+ 用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量。 如果传递给该变量的字符多于 32 个，则仅使用前面的 32 个字符；其余的字符将被截断。  
   
- 带有标记 [*说明*']  
-**适用于：** SQL Server （从 2008年开始），Azure SQL 数据库
+ WITH MARK [ 'description' ]  
+适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
 
-指定在日志中标记事务。 *说明*是描述标记的字符串。 A*说明*时间超过 128 个字符将存储在 msdb.dbo.logmarkhistory 表之前截断为 128 个字符。  
+指定在日志中标记事务。 description 是描述该标记的字符串。 在将长于 128 个字符的 description 存储到 msdb.dbo.logmarkhistory 表中之前，先将其截断为 128 个字符。  
   
  如果使用了 WITH MARK，则必须指定事务名。 WITH MARK 允许将事务日志还原到命名标记。  
   
 ## <a name="general-remarks"></a>一般备注
-BEGIN TRANSACTION 递增@TRANCOUNT1。
+BEGIN TRANSACTION 使 @@TRANCOUNT 按 1 递增。
   
 BEGIN TRANSACTION 代表一点，由连接引用的数据在该点逻辑和物理上都一致的。 如果遇上错误，在 BEGIN TRANSACTION 之后的所有数据改动都能进行回滚，以将数据返回到已知的一致状态。 每个事务继续执行直到它无误地完成并且用 COMMIT TRANSACTION 对数据库作永久的改动，或者遇上错误并且用 ROLLBACK TRANSACTION 语句擦除所有改动。  
   
@@ -101,24 +101,24 @@ BEGIN TRANSACTION 为发出本语句的连接启动一个本地事务。 根据�
   
  如果在语句提交或回滚之前执行了如下操作，由 BEGIN TRANSACTION 语句启动的本地事务将升级为分布式事务：  
   
--   执行一个引用链接服务器上的远程表的 INSERT、DELETE 或 UPDATE 语句。 如果用于访问链接的服务器的 OLE DB 访问接口不支持 ITransactionJoin 接口，INSERT、 UPDATE 或 DELETE 语句将失败。  
+-   执行一个引用链接服务器上的远程表的 INSERT、DELETE 或 UPDATE 语句。 如果用于访问链接服务器的 OLE DB 访问接口不支持 ITransactionJoin 接口，则 INSERT、UPDATE 或 DELETE 语句会失败。  
   
 -   当启用了 REMOTE_PROC_TRANSACTIONS 选项时，将调用远程存储过程。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本成为事务控制器并且使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 来管理分布式事务。  
   
- 使用 BEGIN DISTRIBUTED TRANSACTION 可以将事务作为分布式事务显式执行。 有关详细信息，请参阅[BEGIN DISTRIBUTED TRANSACTION &#40;Transact SQL &#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+ 使用 BEGIN DISTRIBUTED TRANSACTION 可以将事务作为分布式事务显式执行。 有关详细信息，请参阅 [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)。  
   
- SET IMPLICIT_TRANSACTIONS 设置为 ON 时，BEGIN TRANSACTION 语句创建两个嵌套的事务。 有关详细信息，请参阅[SET IMPLICIT_TRANSACTIONS &#40;Transact SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
+ SET IMPLICIT_TRANSACTIONS 设置为 ON 时，BEGIN TRANSACTION 语句创建两个嵌套的事务。 有关详细信息，请参阅 [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
 ## <a name="marked-transactions"></a>标记的事务  
- WITH MARK 选项使事务名被置于事务日志中。 将数据库还原到早期状态时，可使用标记事务代替日期和时间。 有关详细信息，请参阅[使用标记的事务一致恢复相关数据库 &#40;完整恢复模式 &#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)和[还原 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+ WITH MARK 选项使事务名被置于事务日志中。 将数据库还原到早期状态时，可使用标记事务代替日期和时间。 有关详细信息，请参阅 [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)和 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
  另外，若要将一组相关数据库恢复到逻辑上一致的状态，必须使用事务日志标记。 标记可由分布式事务置于相关数据库的事务日志中。 将这组相关数据库恢复到这些标记将产生一组在事务上一致的数据库。 在相关数据库中放置标记需要特殊的过程。  
   
  只有当数据库由标记事务更新时，才在事务日志中放置标记。 不修改数据的事务不被标记。  
   
- BEGIN TRAN *new_name* WITH MARK 可以嵌套在未标记为已现有事务中。 在这样做时*new_name*将成为事务，无论事务可能已提供的名称的标记名称。 在以下示例中，`M2` 是标记名。  
+ 在已存在的未标记事务中可以嵌套 BEGIN TRAN new_name WITH MARK。 嵌套后，new_name 便成为事务的标记名，不论是否已为事务提供了名称。 在以下示例中，`M2` 是标记名。  
   
 ```  
 BEGIN TRAN T1;  
@@ -151,9 +151,9 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 使用显式事务
-**适用于：** （从 2008年开始） 的 SQL Server、 Azure SQL 数据库、 Azure SQL 数据仓库、 并行数据仓库
+适用范围：SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库
 
-此示例使用 AdventureWorks。 
+本示例使用 AdventureWorks。 
 
 ```
 BEGIN TRANSACTION;  
@@ -163,9 +163,9 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>B. 回滚事务
-**适用于：** （从 2008年开始） 的 SQL Server、 Azure SQL 数据库、 Azure SQL 数据仓库、 并行数据仓库
+适用范围：SQL Server（从 2008 版开始）、Azure SQL 数据库、Azure SQL 数据仓库、并行数据仓库
 
-下面的示例演示了回滚事务的效果。 在此示例中，在 ROLLBACK 语句将回滚 INSERT 语句，但仍存在创建的表。
+以下示例显示了回滚事务的效果。 在此示例中，ROLLBACK 语句将回滚 INSERT 语句，但已创建的表仍会存在。
 
 ```
  
@@ -178,7 +178,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>C. 命名事务 
-**适用于：** SQL Server （从 2008年开始），Azure SQL 数据库
+适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
 
 下面的示例说明如何命名事务。  
   
@@ -196,7 +196,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>D. 标记事务  
-**适用于：** SQL Server （从 2008年开始），Azure SQL 数据库
+适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database
 
 以下示例显示如何标记事务。 将标记事务 `CandidateDelete`。  
   
@@ -216,9 +216,9 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [提交工作 &#40;Transact SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK (Transact-SQL)](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [回滚工作 &#40;Transact SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK (Transact-SQL)](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

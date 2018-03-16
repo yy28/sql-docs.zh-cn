@@ -1,5 +1,5 @@
 ---
-title: "设置统计信息时间 (Transact SQL) |Microsoft 文档"
+title: SET STATISTICS TIME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,18 +52,18 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当 SET STATISTICS TIME 为 ON 时，会显示语句的时间统计信息。 为 OFF 时，不显示时间统计信息。  
   
  SET STATISTICS TIME 的设置是在执行或运行时设置，而不是在分析时设置。  
   
- Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]无法提供精确的统计信息在纤程模式下，当你启用激活**轻型池**配置选项。  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在纤程模式下提供准确的统计信息，而纤程模式在启用“轻型池”配置选项时激活。  
   
- **Cpu**中的列**sysprocesses**查询执行使用 SET STATISTICS TIME ON 时，才会更新表。 OFF，SET STATISTICS TIME 时**0**返回。  
+ 只有当使用 SET STATISTICS TIME ON 执行查询时才更新 sysprocesses 表中的 cpu 列。 当 SET STATISTICS TIME 为 OFF 时，将返回 0。  
   
  ON 和 OFF 设置还影响 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内的“当前活动的进程信息视图”中的 CPU 列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要使用 SET STATISTICS TIME，用户必须具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。 但不需要 SHOWPLAN 权限。  
   
 ## <a name="examples"></a>示例  
@@ -101,6 +101,6 @@ SQL Server parse and compile time:
   
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [设置 STATISTICS IO &#40;Transact SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET STATISTICS TIME (Transact-SQL)](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

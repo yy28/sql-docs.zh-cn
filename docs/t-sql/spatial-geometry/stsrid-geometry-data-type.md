@@ -1,5 +1,5 @@
 ---
-title: "STSrid (geometry 数据类型) |Microsoft 文档"
+title: "STSrid（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geometry-data-type"></a>STSrid（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid**是一个整数，表示实例的空间引用标识符。  
+  **STSrid** 是一个整数，表示实例的空间引用标识符。  
   
 此属性可以进行修改。
   
@@ -46,12 +46,12 @@ STSrid
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型： **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：int  
   
- CLR 类型： **SqlInt32**  
+ CLR 类型：SqlInt32  
   
 ## <a name="examples"></a>示例  
- 第一个示例创建**几何图形**13 并使用实例的 SRID 值`STSrid`以确认 SRID。  
+ 第一个示例创建 SRID 值为 13 的 geometry 实例并使用 `STSrid` 确认该 SRID。  
   
 ```  
 DECLARE @g geometry;  

@@ -1,5 +1,5 @@
 ---
-title: "IS_OBJECTSIGNED (Transact SQL) |Microsoft 文档"
+title: IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/10/2016
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ IS_OBJECTSIGNED (
 ```  
   
 ## <a name="arguments"></a>参数  
- **OBJECT**  
+ **'OBJECT'**  
  安全对象类的类型。  
   
  *@object_id*  
- 要测试的对象的 object_id。 *@object_id*是类型**int**。  
+ 要测试的对象的 object_id。 @object_id 的类型为 int。  
   
  *@class*  
  对象的类：  
@@ -61,30 +61,30 @@ IS_OBJECTSIGNED (
   
 -   “非对称密钥”  
   
- *@class*是**sysname**。  
+ @class 的数据类型为 sysname。  
   
  *@thumbprint*  
- 对象的 SHA 指纹。 *@thumbprint*是类型**varbinary(32)**。  
+ 对象的 SHA 指纹。 @thumbprint 的类型为 varbinary(32)。  
   
 ## <a name="returned-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED 返回以下值。  
   
 |返回值|Description|  
 |------------------|-----------------|  
 |NULL|对象未签名，或对象无效。|  
 |0|对象已签名，但签名无效。|  
-|1|该对象已签名。|  
+|@shouldalert|该对象已签名。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对证书或非对称密钥拥有 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. 显示数据库的扩展属性  
- 下面的示例测试如果 spt_fallback_db 表中**master**数据库进行签名的签名证书的架构。  
+ 下面的示例测试 master 数据库中的 spt_fallback_db 表是否由架构签名证书进行签名。  
   
 ```  
 USE master;  
@@ -108,6 +108,6 @@ IS_OBJECTSIGNED(
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fn_check_object_signatures &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+ [sys.fn_check_object_signatures (Transact-SQL)](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

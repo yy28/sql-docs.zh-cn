@@ -1,5 +1,5 @@
 ---
-title: "保存事务 (Transact SQL) |Microsoft 文档"
+title: SAVE TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -56,13 +56,13 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>参数  
  *savepoint_name*  
- 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 *savepoint_name*是始终案例敏感，即使实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不区分大小写。  
+ 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 savepoint_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
   
  @*savepoint_variable*  
- 包含有效保存点名称的用户定义变量的名称。 必须使用声明变量**char**， **varchar**， **nchar**，或**nvarchar**数据类型。 如果长度超过 32 个字符，也可以传递到变量，但只使用前 32 个字符。  
+ 包含有效保存点名称的用户定义变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量。 如果长度超过 32 个字符，也可以传递到变量，但只使用前 32 个字符。  
   
-## <a name="remarks"></a>注释  
- 用户可以在事务内设置保存点或标记。 保存点可以定义在按条件取消某个事务的一部分后，该事务可以返回的一个位置。 如果将事务回滚到保存点，则根据需要必须完成其他剩余的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 COMMIT TRANSACTION 语句，或者必须通过将事务回滚到起始点完全取消事务。 若要取消整个事务，使用窗体 ROLLBACK TRANSACTION *transaction_name*。 这将撤消事务的所有语句和过程。  
+## <a name="remarks"></a>Remarks  
+ 用户可以在事务内设置保存点或标记。 保存点可以定义在按条件取消某个事务的一部分后，该事务可以返回的一个位置。 如果将事务回滚到保存点，则根据需要必须完成其他剩余的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 COMMIT TRANSACTION 语句，或者必须通过将事务回滚到起始点完全取消事务。 若要取消整个事务，请使用 ROLLBACK TRANSACTION transaction_name。 这将撤消事务的所有语句和过程。  
   
  在事务中允许有重复的保存点名称，但指定保存点名称的 ROLLBACK TRANSACTION 语句只将事务回滚到使用该名称的最近的 SAVE TRANSACTION。  
   
@@ -170,17 +170,17 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [提交工作 &#40;Transact SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [COMMIT WORK (Transact-SQL)](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [回滚工作 &#40;Transact SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [ROLLBACK WORK (Transact-SQL)](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)  
+ [XACT_STATE (Transact-SQL)](../../t-sql/functions/xact-state-transact-sql.md)  
   
   

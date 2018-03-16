@@ -1,5 +1,5 @@
 ---
-title: "创建诊断会话 (Transact SQL) |Microsoft 文档"
+title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -26,15 +26,15 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-diagnostics-session-transact-sql"></a>创建诊断会话 (TRANSACT-SQL)
+# <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  诊断会话可让你以保存对系统或查询的性能、 用户定义的详细诊断信息。  
+  使用诊断会话可以保存有关系统或查询性能的详细用户定义诊断信息。  
   
- 若要调试的特定查询性能，或以在设备操作过程中监视的特定设备组件的行为，通常使用诊断会话。  
+ 诊断会话通常用于针对特定查询调试性能，或在设备操作期间监视特定设备组件的行为。  
   
 > [!NOTE]  
->  你应该熟悉 XML 才能使用诊断会话。  
+>  使用诊断会话需要熟知 XML。  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,53 +63,53 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ```  
   
 ## <a name="arguments"></a>参数  
- *diagnostics_name*  
- 诊断会话的名称。 诊断会话名称只能包含字符 a 到 z、 A 到 Z 和 0-9 仅。 此外，诊断会话名称必须以字符开头。 *diagnostics_name*仅限于 127 个字符。  
+ diagnostics_name  
+ 诊断会话的名称。 诊断会话名称只能包含 a-z、A-Z 和 0-9 的字符。 此外，诊断会话名称必须以字符开头。 diagnostics_name 限制在 127 个字符以内。  
   
- *max_item_count_num*  
- 要在视图中保留的事件数。 例如，如果指定 100，则将到诊断会话中存在匹配的筛选条件的 100 个最新事件。 如果找到少于 100 匹配事件，诊断会话将包含少于 100 个事件。 *max_item_count_num*必须至少 100 且小于或等于 100000。  
+ max_item_count_num  
+ 要在视图中保留的事件数。 例如，如果指定 100，则将在诊断会话中保留 100 个匹配筛选条件的最新事件。 如果找到的匹配事件少于 100 个，则诊断会话将包含少于 100 个事件。 max_item_count_num 必须至少为 100 且小于或等于 100,000。  
   
- *event_name*  
- 定义要在诊断会话中收集的实际事件。  *event_name*是中列出的事件之一[sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587)其中`sys.pdw_diag_events.is_enabled='True'`。  
+ event_name  
+ 定义要在诊断会话中收集的实际事件。  event_name 是 [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587)（其中 `sys.pdw_diag_events.is_enabled='True'`）中列出的事件之一。  
   
- *filter_property_name*  
- 限制结果所依据的属性名称。 例如，如果你想要限制基于会话 id *filter_property_name*应*SessionId*。 请参阅*property_name*下面有关的潜在值列表*filter_property_name*。  
+ filter_property_name  
+ 基于其限制结果的属性名称。 例如，如果想要基于会话 ID 实施限制，则 filter_property_name 应为 SessionId。 有关 filter_property_name 的可能值的列表，请参阅下面的 property_name。  
   
  *值*  
- 一个值，以评估针对*filter_property_name*。 值类型必须与匹配的属性类型。 例如，如果该属性类型是十进制的一种*值*必须为十进制。  
+ 用于针对 filter_property_name 进行计算的值。 值类型必须与属性类型相匹配。 例如，如果属性类型是十进制，则值类型必须为十进制。  
   
- *comp_type*  
- 比较类型中。 可能值是： 等于、 EqualsOrGreaterThan、 EqualsOrLessThan、 GreaterThan、 LessThan、 NotEquals、 Contains、 正则表达式  
+ comp_type  
+ 比较类型。 可能值包括：Equals、EqualsOrGreaterThan、EqualsOrLessThan、GreaterThan、LessThan、NotEquals、Contains、RegEx  
   
- *property_name*  
- 一个与事件相关的属性。  属性名称可以是捕获标记的一部分，也用作筛选条件的一部分。  
+ property_name  
+ 与事件相关的属性。  属性名称可以是捕获标记的一部分，或用作筛选条件的一部分。  
   
 |属性名称|Description|  
 |-------------------|-----------------|  
-|UserName|用户 （登录名） 名称。|  
-|SessionId|会话 id。|  
-|QueryId|查询 id。|  
+|UserName|用户名（登录名）。|  
+|SessionId|会话 ID。|  
+|QueryId|查询 ID。|  
 |CommandType|命令类型。|  
-|CommandText|处理的命令中的文本。|  
-|OperationType|个事件的操作类型。|  
-|Duration|事件的持续时间。|  
-|SPID|服务进程 id。|  
+|CommandText|已处理的命令中的文本。|  
+|OperationType|事件的操作类型。|  
+|Duration|事件持续时间。|  
+|SPID|服务进程 ID。|  
   
-## <a name="remarks"></a>注释  
- 允许每个用户最多 10 个并发的诊断会话。 请参阅[sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9)有关的当前会话和任何不需要的会话使用的下拉列表`DROP DIAGNOSTICS SESSION`。  
+## <a name="remarks"></a>Remarks  
+ 允许每个用户最多拥有 10 个并发诊断会话。 请参阅 [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) 获取当前会话的列表，并使用 `DROP DIAGNOSTICS SESSION` 删除任何不需要的会话。  
   
- 诊断会话将继续收集之前删除的元数据。  
+ 诊断会话将持续收集元数据，直到被删除。  
   
 ## <a name="permissions"></a>权限  
- 需要**更改服务器状态**权限。  
+ 需要 ALTER SERVER STATE 权限。  
   
 ## <a name="locking"></a>锁定  
- 在诊断会话表上采用共享的锁。  
+ 对诊断会话表使用共享锁。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-diagnostics-session"></a>A. 创建诊断会话  
- 此示例创建一个诊断会话，以便记录的数据库引擎性能度量值。 该示例创建用于侦听的引擎查询运行/结束事件和阻止的 DMS 事件诊断会话。 返回的内容是命令文本、 计算机名、 请求 id (查询 id) 和创建该事件的会话。  
+ 此示例将创建诊断会话，用于记录数据库引擎性能指标。 该示例创建诊断会话，用于侦听引擎查询运行/结束事件和一个阻止的 DMS 事件。 返回的内容为命令文本、计算机名、请求 ID（查询 ID）和创建该事件的会话。  
   
 ```  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
@@ -133,30 +133,30 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
 </Session>';  
 ```  
   
- 创建后的诊断会话，运行查询。  
+ 创建诊断会话后，运行查询。  
   
 ```  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
- 通过选择从 sysdiag 架构，然后查看诊断会话结果。  
+ 然后通过选择 sysdiag 架构查看诊断会话结果。  
   
 ```  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
- 请注意 sysdiag 架构包含名为你的诊断会话名称的视图。  
+ 请注意，sysdiag 架构包含一个依据诊断会话名称进行命名的视图。  
   
- 若要查看仅为你的连接活动，添加`Session.SPID`属性并添加`WHERE [Session.SPID] = @@spid;`到查询。  
+ 若要仅查看连接的活动，请添加 `Session.SPID` 属性并向查询添加 `WHERE [Session.SPID] = @@spid;`。  
   
- 当你完成诊断会话时，使用删除该表**删除诊断**命令。  
+ 不再需要诊断会话后，请使用 DROP DIAGNOSTICS 命令将其删除。  
   
 ```  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
-### <a name="b-alternative-diagnostic-session"></a>B. 替代的诊断会话  
- 一个具有略有不同的属性的第二个示例。  
+### <a name="b-alternative-diagnostic-session"></a>B. 替代诊断会话  
+ 使用略有不同的属性的另一个示例。  
   
 ```  
 -- Determine the session_id of your current session  
@@ -195,7 +195,7 @@ GO
 SELECT * FROM dbo.FactFinance;  
 ```  
   
- 以下查询返回的授权计时：  
+ 以下查询将返回授权计时：  
   
 ```  
 SELECT *   
@@ -203,7 +203,7 @@ FROM master.sysdiag.PdwOptimizationDiagnostics
 ORDER BY DateTimePublished;  
 ```  
   
- 当你完成诊断会话时，使用删除该表**删除诊断**命令。  
+ 不再需要诊断会话后，请使用 DROP DIAGNOSTICS 命令将其删除。  
   
 ```  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  

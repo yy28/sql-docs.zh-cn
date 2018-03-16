@@ -1,5 +1,5 @@
 ---
-title: "空间 (Transact SQL) |Microsoft 文档"
+title: SPACE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ SPACE ( integer_expression )
   
 ## <a name="arguments"></a>参数  
  *integer_expression*  
- 指示空格个数的正整数。 如果*integer_expression*为负，则返回一个 null 字符串。  
+ 指示空格个数的正整数。 如果 integer_expression 为负，则返回空字符串。  
   
- 有关详细信息，请参阅[表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
   
 ## <a name="return-types"></a>返回类型  
  **varchar**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要在 Unicode 数据中包括空格或返回 8000 个以上的字符空格，请使用 REPLICATE 而不是 SPACE。  
   
 ## <a name="examples"></a>示例  
@@ -70,7 +70,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例剪裁姓氏，并将逗号、两个空格和 `DimCustomer` 中的 `AdventureWorksPDW2012` 表列出的人员名字串联起来。  
   
 ```  
@@ -83,8 +83,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [复制 &#40;Transact SQL &#41;](../../t-sql/functions/replicate-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [REPLICATE (Transact-SQL)](../../t-sql/functions/replicate-transact-sql.md)   
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

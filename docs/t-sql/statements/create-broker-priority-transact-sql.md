@@ -1,5 +1,5 @@
 ---
-title: "创建 BROKER 优先级 (Transact SQL) |Microsoft 文档"
+title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  定义一个优先级别和一组条件，这组条件用于决定要将此优先级分配给哪些 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话。 优先级别分配给任何使用的协定和指定的会话优先级中的服务的相同组合的会话端点。 优先级的值范围为 1（低）到 10（高）。 默认值为 5。  
+  定义一个优先级别和一组条件，这组条件用于决定要将此优先级分配给哪些 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话。 此优先级别分配给使用在会话优先级中指定的相同约定与服务组合的任何会话端点。 优先级的值范围为 1（低）到 10（高）。 默认值为 5。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,64 +63,64 @@ FOR CONVERSATION
 ```  
   
 ## <a name="arguments"></a>参数  
- *ConversationPriorityName*  
- 指定此会话优先级的名称。 名称在当前数据库中必须唯一，并且必须符合的规则[!INCLUDE[ssDE](../../includes/ssde-md.md)][标识符](../../relational-databases/databases/database-identifiers.md)。  
+ ConversationPriorityName  
+ 指定此会话优先级的名称。 该名称在当前数据库中必须唯一，并且必须符合[!INCLUDE[ssDE](../../includes/ssde-md.md)][标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
  SET  
  指定用于确定会话优先级是否应用于会话的条件。 如果指定了 SET，则它必须至少包含以下条件之一：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。 如果未指定 SET，则全部三个条件都设置为默认值。  
   
- CONTRACT_NAME = {*ContractName* | **ANY**}  
- 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 *ContractName*是[!INCLUDE[ssDE](../../includes/ssde-md.md)]标识符，并且必须在当前数据库中指定协定的名称。  
+ CONTRACT_NAME = {ContractName | ANY}  
+ 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的协定的名称。  
   
- *ContractName*  
- 指定，可以仅对其中启动会话的 BEGIN DIALOG 语句指定 ON CONTRACT 会话应用会话优先级*ContractName*。  
+ ContractName  
+ 指定此会话优先级只能应用于启动会话的 BEGIN DIALOG 语句指定了 ON CONTRACT ContractName 的会话。  
   
  ANY  
  指定此会话优先级可应用于任何会话，而不考虑它使用的约定如何。  
   
  默认值为 ANY。  
   
- LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
+ LOCAL_SERVICE_NAME = {LocalServiceName | ANY}  
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- *LocalServiceName*是[!INCLUDE[ssDE](../../includes/ssde-md.md)]标识符。 它必须指定当前数据库中的服务的名称。  
+ LocalServiceName 是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符。 它必须指定当前数据库中的服务的名称。  
   
- *LocalServiceName*  
+ LocalServiceName  
  指定此会话优先级可以应用于以下各项：  
   
--   发起方服务名称与匹配任何发起方会话端点*LocalServiceName*。  
+-   其发起方服务名称与 LocalServiceName 匹配的任何发起方会话端点。  
   
--   其目标服务名称匹配任何目标会话端点*LocalServiceName*。  
+-   其目标服务名称与 LocalServiceName 匹配的任何目标会话端点。  
   
  ANY  
  -   指定此会话优先级可应用于任何会话端点，而不管端点使用的本地服务的名称如何。  
   
  默认值为 ANY。  
   
- REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
+ REMOTE_SERVICE_NAME = {'RemoteServiceName' | ANY}  
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- *RemoteServiceName*是类型的文字值**nvarchar(256)**。 [!INCLUDE[ssSB](../../includes/sssb-md.md)]使用逐字节比较，以匹配*RemoteServiceName*字符串。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
+ RemoteServiceName 是 nvarchar(256) 类型的文本。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 RemoteServiceName 字符串匹配。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
   
- '*RemoteServiceName*'  
+ 'RemoteServiceName'  
  指定此会话优先级可以应用于以下各项：  
   
--   相关联的目标服务名称与匹配任何发起方会话端点*RemoteServiceName*。  
+-   其关联目标服务名称与 RemoteServiceName 匹配的任何发起方会话端点。  
   
--   其关联的发起程序服务名称匹配任何目标会话端点*RemoteServiceName*。  
+-   其关联发起方服务名称与 RemoteServiceName 匹配的任何目标会话端点。  
   
  ANY  
  指定此会话优先级可应用于任何会话端点，而不管与端点关联的远程服务的名称如何。  
   
  默认值为 ANY。  
   
- PRIORITY_LEVEL = { *PriorityValue* | **默认**}  
- 指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 *PriorityValue*必须是整数文本从 1 （最低优先级） 到 10 （最高优先级）。 默认值为 5。  
+ PRIORITY_LEVEL = { PriorityValue | DEFAULT }  
+ 指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 PriorityValue 必须是一个从 1（优先级最低）到 10（优先级最高）的整数文本。 默认值为 5。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为会话端点分配优先级别。 优先级别控制与端点关联的操作的优先级。 每个会话均有两个会话端点：  
   
--   发起方会话端点将会话的一端与发起方服务和发起方队列相关联。 发起方会话端点是在运行 BEGIN DIALOG 语句时创建的。 与发起方会话端点相关联的操作包括：  
+-   发起方会话端点将会话的一端与发起方服务和发起方队列相关联。 发起方会话端点是在运行 BEGIN DIALOG 语句时创建的。 与发起方会话端点关联的操作包括：  
   
     -   从发起方服务发送。  
   
@@ -128,7 +128,7 @@ FOR CONVERSATION
   
     -   从发起方队列获取下一个会话组。  
   
--   目标会话端点将会话的另一端与目标服务和队列相关联。 目标会话端点是在使用该会话向目标队列发送消息时创建的。 与目标会话端点相关联的操作包括：  
+-   目标会话端点将会话的另一端与目标服务和队列相关联。 目标会话端点是在使用该会话向目标队列发送消息时创建的。 与目标会话端点关联的操作包括：  
   
     -   从目标队列接收。  
   
@@ -138,17 +138,17 @@ FOR CONVERSATION
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 在创建会话端点时分配会话优先级别。 会话端点将优先级别一直保留到会话结束。 新的优先级或对现有优先级的更改都不会应用于现有会话。  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]从最佳其协定和服务条件匹配的终结点的属性的会话优先级分配会话端点的优先级别。 下表显示了匹配优先顺序：  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将协定和服务条件与端点属性最匹配的会话优先级中的优先级别分配给会话端点。 下表显示了匹配优先顺序：  
   
 |运营合同|操作本地服务|操作远程服务|  
 |------------------------|-----------------------------|------------------------------|  
-|*ContractName*|*LocalServiceName*|*RemoteServiceName*|  
-|*ContractName*|*LocalServiceName*|ANY|  
-|*ContractName*|ANY|*RemoteServiceName*|  
-|*ContractName*|ANY|ANY|  
-|ANY|*LocalServiceName*|*RemoteServiceName*|  
-|ANY|*LocalServiceName*|ANY|  
-|ANY|ANY|*RemoteServiceName*|  
+|ContractName|LocalServiceName|RemoteServiceName|  
+|ContractName|LocalServiceName|ANY|  
+|ContractName|ANY|RemoteServiceName|  
+|ContractName|ANY|ANY|  
+|ANY|LocalServiceName|RemoteServiceName|  
+|ANY|LocalServiceName|ANY|  
+|ANY|ANY|RemoteServiceName|  
 |ANY|ANY|ANY|  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 首先查找其指定的约定、本地服务和远程服务与操作所用的约定、本地服务和远程服务匹配的优先级。 如果找不到，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将查找约定以及本地服务与操作所用的约定和本地服务匹配且远程服务指定为 ANY 的优先级。 这一过程将按照优先顺序表中列出的所有变化情况继续下去。 如果未找到匹配项，将为操作分配默认优先级 5。  
@@ -163,7 +163,7 @@ FOR CONVERSATION
   
 -   在同一数据库引擎实例中的服务之间传输消息。  
   
--   所有[!INCLUDE[ssSB](../../includes/sssb-md.md)]数据库中的操作如果已在数据库中不创建任何会话优先级分配默认优先级为 5。  
+-   如果未在数据库中创建任何会话优先级，则会为数据库中的所有 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 操作分配默认优先级 5。  
   
 ## <a name="permissions"></a>权限  
  用于创建会话优先级的权限默认授予 db_ddladmin 或 db_owner 固定数据库角色以及 sysadmin 固定服务器角色的成员。 需要对数据库拥有 ALTER 权限。  
@@ -291,15 +291,15 @@ CREATE BROKER PRIORITY BronzePriority
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40;Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [创建协定 &#40;Transact SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE QUEUE (Transact SQL)](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE SERVICE (Transact SQL)](../../t-sql/statements/create-service-transact-sql.md)   
- [删除 BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [GET CONVERSATION GROUP &#40;Transact SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [接收 &#40;Transact SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
- [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [DROP BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)   
+ [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md)   
+ [sys.conversation_priorities (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

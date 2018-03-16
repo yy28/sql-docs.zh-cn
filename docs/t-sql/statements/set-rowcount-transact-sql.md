@@ -1,5 +1,5 @@
 ---
-title: "组行计数 (Transact SQL) |Microsoft 文档"
+title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>参数  
- *数*| @*number_var*  
+ number | @number_var  
  在停止特定查询之前要处理的行数（整数）。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  在 SQL Server 的将来版本中，使用 SET ROWCOUNT 将不会影响 DELETE、INSERT 和 UPDATE 语句。 应避免在新的开发工作中将 SET ROWCOUNT 与 DELETE、INSERT 和 UPDATE 语句一起使用，并计划修改当前使用它的应用程序。 对于类似行为，请使用 TOP 语法。 有关详细信息，请参阅[顶部 &#40;Transact SQL &#41;](../../t-sql/queries/top-transact-sql.md).  
+>  在 SQL Server 的将来版本中，使用 SET ROWCOUNT 将不会影响 DELETE、INSERT 和 UPDATE 语句。 应避免在新的开发工作中将 SET ROWCOUNT 与 DELETE、INSERT 和 UPDATE 语句一起使用，并计划修改当前使用它的应用程序。 对于类似行为，请使用 TOP 语法。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
  要将此选项设置为 off 以便返回所有的行，请将 SET ROWCOUNT 指定为 0。  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
   
  SET ROWCOUNT 的设置是在执行时或运行时设置，而不是在分析时设置。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -107,8 +107,8 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- SET ROWCOUNT 在达到指定的行数后停止处理。 在下面的示例，请注意，20 个以上的行都满足的条件`AccountType = 'Assets'`。 但是，应用 SET ROWCOUNT 后，您可以看到并未返回所有行。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ SET ROWCOUNT 在达到指定的行数后停止处理。 请注意，在下面的示例中共有 20 行满足 `AccountType = 'Assets'` 条件。 但是，应用 SET ROWCOUNT 后，您可以看到并未返回所有行。  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- 若要返回所有行，设置为 0 的行计数。  
+ 若要返回所有行，请将 ROWCOUNT 设置为 0。  
   
 ```  
 -- Uses AdventureWorks  

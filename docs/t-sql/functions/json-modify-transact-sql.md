@@ -1,5 +1,5 @@
 ---
-title: "JSON_MODIFY (TRANSACT-SQL) |Microsoft 文档"
+title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -24,10 +24,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/17/2017
 ---
-# <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (TRANSACT-SQL)
+# <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  更新的 JSON 字符串中属性的值并返回更新的 JSON 字符串。  
+  更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,63 +39,63 @@ JSON_MODIFY ( expression , path , newValue )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 一个表达式。 通常的变量或包含 JSON 文本的列的名称。  
+ 一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
   
- **JSON_MODIFY**如果返回错误*表达式*不包含有效 JSON。  
+ 如果 expression 不包含有效 JSON，则 **JSON_MODIFY** 返回错误。  
   
- *路径*  
- JSON 路径表达式，指定要更新的属性。
+ path  
+ 指定要更新的属性的 JSON 路径表达式。
 
- *路径*具有以下语法：  
+ path 具有以下语法：  
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *追加*  
-    指定应将新值追加到所引用的数组的可选修饰符 *\<json 路径 >*。  
+-   *append*  
+    指定应将新值追加到通过 \<json path> 引用的数组的可选修饰符。  
   
--   *宽松*  
-    指定该属性引用的 *\<json 路径 >*不必存在。 如果该属性不存在，JSON_MODIFY 尝试插入指定路径上的新值。 如果属性不能插入路径上，插入可能会失败。 如果没有指定*宽松*或*严格*，*宽松*是默认模式。  
+-   *lax*  
+    指定通过 \<json path> 引用的属性不是必须存在。 如果该属性不存在，则 JSON_MODIFY 尝试在指定路径上插入新值。 如果无法在路径上插入属性，则插入可能会失败。 如果未指定 lax 或 strict，则 lax 是默认模式。  
   
--   *严格*  
-    指定该属性引用的 *\<json 路径 >*必须在 JSON 表达式中。 如果该属性不存在，则 JSON_MODIFY 返回错误。  
+-   *strict*  
+    指定通过 \<json path> 引用的属性必须处于 JSON 表达式中。 如果该属性不存在，则 JSON_MODIFY 返回错误。  
   
--   *\<json 路径 >*  
-    指定要更新的属性的路径。 有关详细信息，请参阅[JSON 路径表达式 &#40;SQL server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+-   \<json path>  
+    为要更新的属性指定路径。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
-在[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]并在[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]，可以提供变量的值作为*路径*。
+在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] 中，可提供变量作为 path 的值。
 
-**JSON_MODIFY**如果返回错误的格式*路径*无效。  
+如果 path 格式无效，则 JSON_MODIFY 返回错误。  
   
  *newValue*  
- 指定的属性的新值*路径*。  
+ path 指定的属性的新值。  
   
- 在不严格模式下，JSON_MODIFY 删除指定的密钥，如果新值为 NULL。  
+ 在宽松模式下，如果新值为 NULL，则 JSON_MODIFY 会删除指定键。  
   
-JSON_MODIFY 如果值的类型是 NVARCHAR 或 VARCHAR 的新值中的所有特殊字符进行转义。 如果正确未转义的文本值的格式由 FOR JSON、 JSON_QUERY 或 JSON_MODIFY 的 JSON。  
+如果值的类型是 NVARCHAR 或 VARCHAR，则 JSON_MODIFY 会对新值中的所有特殊字符进行转义。 如果文本值是由 FOR JSON、JSON_QUERY 或 JSON_MODIFY 生成的正确格式化 JSON，则它不会进行转义。  
   
 ## <a name="return-value"></a>返回值  
- 返回的更新的值*表达式*为正确格式的 JSON 文本。  
+ 以正确格式化 JSON 文本的形式返回 expression 的更新值。  
   
-## <a name="remarks"></a>注释  
- JSON_MODIFY 函数可以更新现有属性的值、 插入新的键： 值对，或删除某一项基于模式的组合，提供的值。  
+## <a name="remarks"></a>Remarks  
+ 通过 JSON_MODIFY 函数可以基于模式和所提供值的组合，更新现有属性的值、插入新的键:值对或删除键。  
   
- 下表比较的行为**JSON_MODIFY**在不严格模式下和在严格模式下。 可选的路径模式规范 （lax 或 strict） 有关的详细信息，请参阅[JSON 路径表达式 &#40;SQL server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ 下表对宽松模式和严格模式下 **JSON_MODIFY** 的行为进行了比较。 有关可选路径模式规范（宽松或严格）的详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  
   
 |现有的值|路径存在|宽松模式|严格模式|  
 |--------------------|-----------------|--------------|-----------------|  
 |不为 NULL|是|更新现有值。|更新现有值。|  
-|不为 NULL|是|尝试在指定路径上创建新的键： 值对。<br /><br /> 这可能会失败。 例如，如果你指定的路径`$.user.setting.theme`，JSON_MODIFY 不会插入密钥`theme`如果`$.user`或`$.user.settings`对象不存在，或者如果设置为一个数组或标量值。|错误 – INVALID_PROPERTY|  
-|NULL|是|删除现有的属性。|将现有值设置为 null。|  
-|NULL|是|执行任何操作。 作为结果返回的第一个参数。|错误 – INVALID_PROPERTY|  
+|不为 NULL|是|尝试在指定路径上创建新的键:值对。<br /><br /> 这可能会失败。 例如，如果指定路径 `$.user.setting.theme`，则在 `$.user` 或 `$.user.settings` 对象不存在，或者设置是数组或标量值时，JSON_MODIFY 不会插入键 `theme`。|错误 – INVALID_PROPERTY|  
+|NULL|是|删除现有属性。|将现有值设置为 NULL。|  
+|NULL|是|无操作。 返回第一个参数作为结果。|错误 – INVALID_PROPERTY|  
   
- 在不严格模式下，JSON_MODIFY 尝试创建新的键： 值对，但在某些情况下可能会失败。  
+ 在宽松模式下，JSON_MODIFY 会尝试创建新的键:值对，但在某些情况下可能会失败。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="example---basic-operations"></a>示例-基本操作  
- 下面的示例演示可通过 JSON 文本的基本操作。  
+### <a name="example---basic-operations"></a>示例 - 基本操作  
+ 下面的示例演示可以对 JSON 文本进行的基本操作。  
   
- **Query**  
+ **“数据集属性”**  
   
 ```sql  
 
@@ -150,10 +150,10 @@ PRINT @info
 }
 ```  
   
-### <a name="example---multiple-updates"></a>示例-多个更新  
- 使用 JSON_MODIFY 可以更新仅一个属性。 如果你必须执行多个更新，你可以使用多个 JSON_MODIFY 调用。  
+### <a name="example---multiple-updates"></a>示例 - 多个更新  
+ 使用 JSON_MODIFY 时，只能更新一个属性。 如果必须执行多个更新，则可以使用多个 JSON_MODIFY 调用。  
   
- **Query**  
+ **“数据集属性”**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -180,10 +180,10 @@ PRINT @info
 }
 ```  
   
-### <a name="example---rename-a-key"></a>示例-重命名某个键  
- 下面的示例演示如何重命名使用 JSON_MODIFY 函数的 JSON 文本中的属性。 首先，你可以获取现有属性的值，并将其作为新的键： 值对插入。 然后，你可以通过将旧的属性的值设置为 NULL 来删除旧密钥。  
+### <a name="example---rename-a-key"></a>示例 - 重命名键  
+ 下面的示例演示如何使用 JSON_MODIFY 函数重命名 JSON 文本中的属性。 首先，可以获取现有属性的值，并将它作为新的键:值对插入。 随后可以通过将旧属性的值设置为 NULL 来删除旧键。  
   
- **Query**  
+ **“数据集属性”**  
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -212,12 +212,12 @@ PRINT @product
 }
 ```  
   
- 如果不强制转换为数值类型的新值，JSON_MODIFY 会将其视为文本，并在它用双引号。  
+ 如果不将新值强制转换为数值类型，则 JSON_MODIFY 会将它视为文本，并用双引号将它括起。  
   
-### <a name="example---increment-a-value"></a>示例-递增一个值  
- 下面的示例演示如何使用 JSON_MODIFY 函数的 JSON 文本中的属性的值递增。 首先，你可以获取现有属性的值，并将其作为新的键： 值对插入。 然后，你可以通过将旧的属性的值设置为 NULL 来删除旧密钥。  
+### <a name="example---increment-a-value"></a>示例 - 递增值  
+ 下面的示例演示如何使用 JSON_MODIFY 函数递增 JSON 文本中的属性值。 首先，可以获取现有属性的值，并将它作为新的键:值对插入。 随后可以通过将旧属性的值设置为 NULL 来删除旧键。  
   
- **Query**  
+ **“数据集属性”**  
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -242,10 +242,10 @@ PRINT @stats
 }
 ```  
   
-### <a name="example---modify-a-json-object"></a>示例-修改 JSON 对象  
- JSON_MODIFY 将*newValue*自变量作为即使它包含正确的纯文本格式的 JSON 文本。 因此，用双引号括的 JSON 输出的函数和的所有特殊字符进行转义，如下面的示例中所示。  
+### <a name="example---modify-a-json-object"></a>示例 - 修改 JSON 对象  
+ JSON_MODIFY 将 newValue 参数视为纯文本（即使它包含正确格式化 JSON 文本）。 因此，函数的 JSON 输出会使用双引号括起，并且所有特殊字符都会进行转义，如下面的示例中所示。  
   
- **Query**  
+ **“数据集属性”**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -271,9 +271,9 @@ PRINT @info
 }
 ```  
   
- 若要避免自动转义，提供*newValue*通过使用 JSON_QUERY 函数。 JSON_MODIFY 知道 JSON_MODIFY 返回的值是正确格式设置 JSON，因此它不能摆脱值。  
+ 若要避免自动转义，请使用 JSON_QUERY 函数提供 newValue。 JSON_MODIFY 知道 JSON_MODIFY 返回的值是正确格式化 JSON，因此它不会对值进行转义。  
   
- **Query**  
+ **“数据集属性”**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -299,7 +299,7 @@ PRINT @info
 }
 ```  
   
-### <a name="example---update-a-json-column"></a>示例-更新 JSON 列  
+### <a name="example---update-a-json-column"></a>示例 - 更新 JSON 列  
  下面的示例更新包含 JSON 的表列中属性的值。  
   
 ```sql  
@@ -310,7 +310,7 @@ WHERE EmployeeID=17
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [JSON 路径表达式 &#40;SQL server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON 数据 &#40;SQL server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON 数据 (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
   
   

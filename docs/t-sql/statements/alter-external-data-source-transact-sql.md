@@ -1,5 +1,5 @@
 ---
-title: "ALTER 外部数据源 (Transact SQL) |Microsoft 文档"
+title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-external-data-source-transact-sql"></a>ALTER 外部数据源 (Transact SQL)
+# <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   修改用于创建外部表的外部数据源。 外部数据源可以是 Hadoop 或 Azure blob 存储 (WASB)。
@@ -63,30 +63,30 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>参数  
  data_source_name 指定数据源的用户定义名称。 该名称必须是唯一的。
   
- 位置 = 'server_name_or_IP 指定的服务器或 IP 地址的名称。
+ LOCATION = ‘server_name_or_IP’ 指定服务器名称或 IP 地址。
   
- RESOURCE_MANAGER_LOCATION =\<IP 地址;端口 > 指定 Hadoop 资源管理器位置。 如果指定，查询优化器可以选择通过使用 Hadoop 的计算功能预处理 PolyBase 查询的数据。 这是基于开销的决策。 调用谓词下推，这可以显著减少 Hadoop 和 SQL、 之间传输的数据量，并因此提高查询性能。
+ RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’ 指定 Hadoop 资源管理器位置。 如果指定，查询优化器可以选择通过使用 Hadoop 的计算功能预处理 PolyBase 查询的数据。 这是基于开销的决策。 这称为谓词下推，可以显著减少 Hadoop 和 SQL之间传输的数据量，并因此提高查询性能。
   
- 凭据 = Credential_Name 指定的命名的凭据。 请参阅[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact SQL &#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+ CREDENTIAL = Credential_Name 指定命名凭据。 请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 
-类型 = BLOB_STORAGE   
+TYPE = BLOB_STORAGE   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
-对于大容量操作只，`LOCATION`必须是有效的 Azure Blob 存储的 URL。 不要将放在 **/** 、 文件名称，或共享访问签名参数末尾`LOCATION`URL。
-必须使用创建所使用，凭据`SHARED ACCESS SIGNATURE`作为标识。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
+仅对于大容量操作，`LOCATION` 必须是有效的 Azure Blob 存储 URL。 请勿将 /、文件名或共享访问签名参数放在 `LOCATION` URL 的末尾。
+必须使用 `SHARED ACCESS SIGNATURE` 作为标识创建所使用的凭据。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
 
   
   
-## <a name="remarks"></a>注释
- 仅单个源可以修改一次。 修改同一源的并发请求会导致一个语句等待。 但是，可以在同一时间修改不同的源。 此语句可以与其他语句并发运行。
+## <a name="remarks"></a>Remarks
+ 一次只能修改一个源。 修改同一个源的并发请求会导致一个语句等待。 但是，可以同时修改不同的源。 此语句可以与其他语句同时运行。
   
 ## <a name="permissions"></a>权限  
  需要 ALTER ANY EXTERNAL DATA SOURCE 权限。
  > [!IMPORTANT]  
- >  ALTER ANY EXTERNAL DATA SOURCE 权限授予任何主体能够创建和修改任何外部数据源对象，并因此，它还授予访问数据库上的所有数据库范围凭据的功能。 此权限必须被视为高特权级别，并因此必须被授予到受信任的主体仅在系统中。
+ >  ALTER ANY EXTERNAL DATA SOURCE 权限授予任何主体创建和修改任何外部数据源对象的权限，还授予访问数据库上所有数据库作用域凭据的权限。 必须将此权限视为高度特权，因此必须仅授予系统中受信任的主体。
 
   
 ## <a name="examples"></a>示例  
- 下面的示例将更改的位置和资源管理器位置的现有数据源。
+ 下面的示例更改了现有数据源的位置和资源管理器位置。
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
@@ -96,7 +96,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
   
 ```  
 
- 下面的示例将更改要连接到现有的数据源的凭据。
+ 下面的示例更改了用于连接到现有数据源的凭据。
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET

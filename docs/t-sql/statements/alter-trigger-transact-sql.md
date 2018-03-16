@@ -1,5 +1,5 @@
 ---
-title: "ALTER TRIGGER (TRANSACT-SQL) |Microsoft 文档"
+title: ALTER TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/08/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  修改 CREATE TRIGGER 语句以前创建的 DML、DDL 或登录触发器的定义。 触发器是通过使用 CREATE TRIGGER 创建的。 它们可直接从创建[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或从方法中创建的程序集[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时 (CLR) 并上载到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 ALTER TRIGGER 语句中使用的参数的详细信息，请参阅[CREATE TRIGGER &#40;Transact SQL &#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+  修改 CREATE TRIGGER 语句以前创建的 DML、DDL 或登录触发器的定义。 触发器是通过使用 CREATE TRIGGER 创建的。 这些触发器可以由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接创建，也可以由程序集方法创建，这些方法在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建并上传到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 有关 ALTER TRIGGER 语句中使用的参数的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -144,26 +144,26 @@ AS { sql_statement
   
 ## <a name="arguments"></a>参数  
  *schema_name*  
- DML 触发器所属架构的名称。 DML 触发器的作用域是为其创建该触发器的表或视图的架构。 *架构**_name*仅当 DML 触发器和其相应的表或视图所属的默认架构是可选的。 *schema_name*不能指定 DDL 或登录触发器。  
+ DML 触发器所属架构的名称。 DML 触发器的作用域是为其创建该触发器的表或视图的架构。 schema_name 仅在 DML 触发器及其对应的表或视图属于默认架构时可选。 不能为 DDL 或登录触发器指定 schema_name。  
   
- *trigger_name*  
+ trigger_name  
  要修改的现有触发器。  
   
- *表* | *视图*  
+ table | view  
  对其执行 DML 触发器的表或视图。 可以选择指定表或视图的完全限定名称。  
   
  DATABASE  
- 将 DDL 触发器的作用域应用于当前数据库。 如果指定，该触发器将触发*event_type*或*event_group*当前数据库中发生。  
+ 将 DDL 触发器的作用域应用于当前数据库。 如果指定了此参数，则只要当前数据库中出现 event_type 或 event_group，就会激发该触发器。  
   
  ALL SERVER  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定，该触发器将触发*event_type*或*event_group*当前服务器中的任何位置发生。  
+ 将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定了此参数，则只要当前服务器中的任何位置出现 event_type 或 event_group，就会激发该触发器。  
   
  WITH ENCRYPTION  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 对包含 ALTER TRIGGER 语句的文本的 sys.syscommentssys.sql_modules 条目进行加密。 使用 WITH ENCRYPTION 可以防止将触发器作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的一部分进行发布。 不能为 CLR 触发器指定 WITH ENCRYPTION。  
+ 加密包含 ALTER TRIGGER 语句文本的 sys.syscomments 和 sys.sql_modules 项。 使用 WITH ENCRYPTION 可以防止将触发器作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的一部分进行发布。 不能为 CLR 触发器指定 WITH ENCRYPTION。  
   
 > [!NOTE]  
 >  如果触发器是使用 WITH ENCRYPTION 创建的，则要使该选项保持启用，必须在 ALTER TRIGGER 语句中再次指定。  
@@ -174,14 +174,14 @@ AS { sql_statement
  有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
  NATIVE_COMPILATION  
- 指示已本机编译触发器。  
+ 指示触发器已本机编译。  
   
- 此选项是必需的内存优化表上的触发器。  
+ 内存优化表上的触发器需要使用此选项。  
   
  SCHEMABINDING  
- 可确保不能删除或更改了触发器引用的表。  
+ 确保不能删除或更改触发器引用的表。  
   
- 此选项，才能使用内存优化表上的触发器，并不支持传统的表上的触发器。  
+ 内存优化表上的触发器需要使用此选项，但此选项不支持传统表上的触发器。  
   
  AFTER  
  指定只有在触发 SQL 语句成功执行后，才会激发触发器。 所有的引用级联操作和约束检查都成功完成后，才能激发此触发器。  
@@ -202,29 +202,29 @@ AS { sql_statement
   
  对于 INSTEAD OF 触发器，不允许对具有指定级联操作 ON DELETE 的引用关系的表使用 DELETE 选项。 同样，也不允许对具有指定级联操作 ON UPDATE 的引用关系的表使用 UPDATE 选项。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)。  
   
- *event_type*  
- 执行之后将导致激发 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件的名称。 中列出的 DDL 触发器的有效事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
+ event_type  
+ 执行之后将导致激发 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件的名称。 [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出了 DDL 触发器的有效事件。  
   
- *event_group*  
- 预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 在执行任何后激发 DDL 触发器[!INCLUDE[tsql](../../includes/tsql-md.md)]所属的语言事件*event_group*。 DDL 触发器的有效事件组中列出[DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)。 ALTER TRIGGER 已经完成运行后, *event_group*还可充当宏通过将事件类型添加它 sys.trigger_events 目录视图的介绍。  
+ event_group  
+ 预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 执行任何属于 event_group 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件之后，都将激发 DDL 触发器。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。 ALTER TRIGGER 运行完成后，event_group 还将充当宏，将它涉及的事件类型添加到 sys.trigger_events 目录视图中。  
   
  NOT FOR REPLICATION  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  表示当复制代理修改触发器所涉及的表时，不应执行该触发器。  
   
- *sql_statement*  
+ sql_statement  
  触发条件和操作。  
   
- 为内存优化表上的触发器的唯一*sql_statement*允许在顶级块是原子块。 T-SQL 原子块内部允许受 T-SQL 本机过程内允许的限制。  
+ 对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  
   
- 外部名称\<method_specifier >  
+ EXTERNAL NAME \<method_specifier>  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定要与触发器绑定的程序集的方法。 该方法不能带有任何参数，并且必须返回空值。 *class_name*必须为有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符并且必须具有程序集可见性的程序集中的类作为存在。 该类不能为嵌套类。  
+ 指定要与触发器绑定的程序集的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中。 该类不能为嵌套类。  
   
-## <a name="remarks"></a>注释  
- ALTER TRIGGER 有关的详细信息，请参阅中的备注[CREATE TRIGGER &#40;Transact SQL &#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 有关 ALTER TRIGGER 的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md) 中的“备注”部分。  
   
 > [!NOTE]  
 >  EXTERNAL_NAME 和 ON_ALL_SERVER 选项在包含数据库中不可用。  
@@ -241,18 +241,18 @@ AS { sql_statement
  如果一个子表或引用表上的 DELETE 操作是由于父表的 CASCADE DELETE 操作所引起的，并且子表上定义了 DELETE 的 INSTEAD OF 触发器，那么将忽略该触发器并执行 DELETE 操作。  
   
 ## <a name="ddl-triggers"></a>DDL 触发器  
- 与 DML 触发器不同，DDL 触发器的作用域不是架构。 因此，在查询有关 DDL 触发器的元数据时，不能使用 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTY(EX)。 请改用目录视图。 有关详细信息，请参阅[将信息获取有关 DDL 触发器](../../relational-databases/triggers/get-information-about-ddl-triggers.md)。  
+ 与 DML 触发器不同，DDL 触发器的作用域不是架构。 因此，在查询有关 DDL 触发器的元数据时，不能使用 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTY(EX)。 请改用目录视图。 有关详细信息，请参阅[获取有关 DDL 触发器的信息](../../relational-databases/triggers/get-information-about-ddl-triggers.md)。  
   
 ## <a name="logon-triggers"></a>登录触发器  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支持针对登录事件的触发器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要更改 DML 触发器，需要对于定义该触发器所在的表或视图拥有 ALTER 权限。  
   
  若要更改定义了服务器范围 (ON ALL SERVER) 的 DDL 触发器或者更改登录触发器，需要对该服务器拥有 CONTROL SERVER 权限。 若要更改定义了数据库范围 (ON DATABASE) 的 DDL 触发器，需要对当前数据库拥有 ALTER ANY DATABASE DDL TRIGGER 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建一个 DML 触发器在 AdventureWorks 2012 数据库中，当用户尝试添加或更改中的数据打印到客户端用户定义的消息`SalesPersonQuotaHistory`表。 然后使用 `ALTER TRIGGER` 对该触发器进行了修改，以便只将其应用于 `INSERT` 活动。 此触发器十分有用，因为它可提醒向此表中插入行或更新行的用户也要通知 `Compensation` 部门。  
+ 以下示例在 AdventureWorks 2012 数据库中创建一个 DML 触发器，当用户尝试在 `SalesPersonQuotaHistory` 表中添加或更改数据时，该触发器将把用户定义消息打印到客户端。 然后使用 `ALTER TRIGGER` 对该触发器进行了修改，以便只将其应用于 `INSERT` 活动。 此触发器十分有用，因为它可提醒向此表中插入行或更新行的用户也要通知 `Compensation` 部门。  
   
 ```  
 CREATE TRIGGER Sales.bonus_reminder  
@@ -277,7 +277,7 @@ GO
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [创建存储过程](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [sp_addmessage &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [事务](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [获取有关 DML 触发器的信息](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [获取有关 DDL 触发器的信息](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   

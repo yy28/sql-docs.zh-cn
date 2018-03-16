@@ -1,5 +1,5 @@
 ---
-title: "拖放协定 (Transact SQL) |Microsoft 文档"
+title: DROP CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ DROP CONTRACT contract_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *contract_name*  
+ contract_name  
  要删除的约定的名称。 不能指定服务器、数据库和架构名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果有任何服务或会话优先级正在引用某个约定，则不能删除该约定。  
   
  删除约定时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 会结束使用该约定的所有现有会话并返回错误。  
@@ -71,11 +71,11 @@ DROP CONTRACT
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ALTER 服务 &#40;Transact SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
- [创建协定 &#40;Transact SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [删除 BROKER 优先级 &#40;Transact SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+ [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER SERVICE (Transact-SQL)](../../t-sql/statements/alter-service-transact-sql.md)   
+ [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)   
+ [DROP BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

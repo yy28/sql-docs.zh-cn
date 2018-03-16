@@ -1,5 +1,5 @@
 ---
-title: "SET DATEFIRST (Transact SQL) |Microsoft 文档"
+title: SET DATEFIRST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   将一周的第一天设置为从 1 到 7 的一个数字。  
   
- 有关的所有概述[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和时间数据类型和函数，请参阅[日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,10 +62,10 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>参数  
- *数* | **@***number_var*  
- 指示一周的第一天的一个整数。 它可以是以下值之一。  
+ number | @number_var  
+ 指示一周的第一天的一个整数。 可以是下列值之一。  
   
-|值|一周的第一天是|  
+|ReplTest1|一周的第一天是|  
 |-----------|------------------------------|  
 |**1**|星期一|  
 |**2**|星期二|  
@@ -73,16 +73,16 @@ SET DATEFIRST 7 ;
 |**4**|星期四|  
 |**5**|星期五|  
 |**6**|星期六|  
-|**7** （默认情况下，美国（默认值，美国英语）|星期日|  
+|**7**（默认值，美国英语）|星期日|  
   
-## <a name="remarks"></a>注释  
- 若要查看 SET DATEFIRST 的当前设置，使用[@@DATEFIRST ](../../t-sql/functions/datefirst-transact-sql.md)函数。  
+## <a name="remarks"></a>Remarks  
+ 若要查看 SET DATEFIRST 的当前设置，请使用 [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md) 函数。  
   
  SET DATEFIRST 的设置是在执行或运行时设置，而不是在分析时设置。  
   
  指定 SET DATEFIRST 对 DATEDIFF 不起作用。 DATEDIFF 始终使用星期日作为每周的第一天，以确保函数是确定性的。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: "Null (geometry 数据类型) |Microsoft 文档"
+title: "Null（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geometry-data-type"></a>Null（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-提供的 null 实例的只读属性**几何图形**类型。
+提供 **geometry** 类型的 Null 实例的只读属性。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,11 +45,11 @@ Null
 ## <a name="arguments"></a>参数  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：**geometry**  
   
- CLR 类型： **SqlGeometry**  
+ CLR 类型：**SqlGeometry**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
  下面的示例检索一个 Null `geometry` 实例。  

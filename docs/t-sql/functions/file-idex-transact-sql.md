@@ -1,5 +1,5 @@
 ---
-title: "改用 FILE_IDEX (Transact SQL) |Microsoft 文档"
+title: FILE_IDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ FILE_IDEX ( file_name )
 ```  
   
 ## <a name="arguments"></a>参数  
- *文件名*  
- 类型的表达式**sysname** ，表示为其返回文件 id。 该文件的名称  
+ file_name  
+ 一个 sysname 类型的表达式，表示要返回文件 ID 的文件的名称。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
- **NULL**错误  
+ 出现错误时，返回 NULL  
   
 ## <a name="remarks"></a>Remarks  
- *file_name*对应于显示中的逻辑文件名称**名称**中的列[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)或[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)目录视图。  
+ file_name 对应于 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图的 name 列中所显示的逻辑文件名。  
   
  FILE_IDEX 可以在选择列表、WHERE 子句和允许使用表达式的任何地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
@@ -85,7 +85,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. 在文件名未知时检索文件 ID  
-下面的示例返回的文件 ID`AdventureWorks`通过选择的逻辑文件名称的日志文件`sys.database_files`目录的视图文件类型不等同于`1`（日志）。  
+以下示例通过从文件类型等于 `1`（日志）的 `sys.database_files` 目录视图中选择逻辑文件名来返回 `AdventureWorks` 日志文件的文件 ID。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -103,7 +103,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. 检索全文目录文件的文件 ID  
-下面的示例通过选择的逻辑文件名称返回全文索引文件的文件 ID`sys.database_files`目录的视图文件类型不等同于`4`（全文）。 如果全文目录不存在，则此示例将返回 NULL。  
+以下示例通过从文件类型等于 `4`（全文本）的 `sys.database_files` 目录视图中选择逻辑文件名来返回全文本文件的文件 ID。 如果全文目录不存在，则此示例将返回 NULL。  
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
@@ -111,7 +111,7 @@ AS 'File_ID';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

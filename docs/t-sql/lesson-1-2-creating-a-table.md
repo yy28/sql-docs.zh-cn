@@ -1,5 +1,5 @@
 ---
-title: "创建表 （教程） |Microsoft 文档"
+title: "创建表（教程）| Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2016
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-2---creating-a-table"></a>课程 1-2-创建表
+# <a name="lesson-1-2---creating-a-table"></a>第 1-2 课 - 创建表
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 若要创建表，您必须提供该表的名称以及该表中每个列的名称和数据类型。 指出每个列中是否允许空值，也是一种很好的做法。 若要创建表时，必须具有 `CREATE TABLE` 权限，以及对包含该表的架构的 `ALTER SCHEMA` 权限。 `db_ddladmin` 固定数据库角色具有这些权限。  

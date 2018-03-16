@@ -1,5 +1,5 @@
 ---
-title: "包含 (Transact SQL) |Microsoft 文档"
+title: CONTAINS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中搜索单个词和短语的精确或模糊（不太精确的）匹配项、在一定差别范围内的相近词或加权匹配项。 CONTAINS 是采用一个谓词[WHERE 子句](../../t-sql/queries/where-transact-sql.md)的[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT 语句以执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的全文搜索上的全文索引列中包含基于字符的数据类型。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中搜索单个词和短语的精确或模糊（不太精确的）匹配项、在一定差别范围内的相近词或加权匹配项。 CONTAINS 是一个谓词，用于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 [WHERE 子句](../../t-sql/queries/where-transact-sql.md)中对包含基于字符的数据类型的全文检索列执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索。  
   
  CONTAINS 谓词可以搜索：  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/25/2018
   
 -   使用同义词库确定的另一个词的同义词（例如，“metal”一词可能有“aluminum”和“steel”等同义词）。  
   
- 有关支持的全文搜索的窗体信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的全文搜索形式的信息，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
  
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -148,39 +148,39 @@ CONTAINS (
   
 ## <a name="arguments"></a>参数  
  column_name  
- FROM 子句中所指定的表的全文索引列的名称。 列可以是类型**char**， **varchar**， **nchar**， **nvarchar**，**文本**， **ntext**，**映像**， **xml**， **varbinary**，或**varbinary （max)**。  
+ FROM 子句中所指定的表的全文索引列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型。  
   
- *column_list*  
- 指定以逗号分隔的两个或更多个列。 *column_list*必须括在括号中。 除非*language_term*指定的所有列的语言*column_list*必须相同。  
+ column_list  
+ 指定以逗号分隔的两个或更多个列。 column_list 必须用括号括起来。 除非指定 language_term，否则 column_list 中所有列的语言必须相同。  
   
  \*  
- 指定查询给定的搜索条件的 FROM 子句中指定的表中搜索所有全文索引的列。 CONTAINS 子句中的列必须来自包含全文索引的单个表。 除非*language_term*表的所有列的语言必须相同的指定。  
+ 指定查询按给定的搜索条件在 FROM 子句中指定的表中搜索所有全文检索列。 CONTAINS 子句中的列必须来自包含全文索引的单个表。 除非指定 language_term，否则表的所有列的语言必须相同。  
   
- 属性 ( *column_name* ，*property_name*)  
+ PROPERTY ( column_name , 'property_name')  
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
  指定在其中搜索指定搜索条件的文档属性。  
   
 > [!IMPORTANT]  
->  要返回任何行，使查询*property_name*必须指定在搜索属性中的全文索引和全文索引列表必须包含的特定属性条目*property_name*。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+>  要使查询返回任何行，必须在全文检索的搜索属性列表中指定 property_name，并且全文检索必须包含 property_name 的属性特定条目。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
- 语言*language_term*  
- 是要用于断字、 词干分析、 同义词库扩展和替换和干扰词的语言 (或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 作为查询的一部分删除。 此参数可选。  
+ LANGUAGE language_term  
+ 查询中用于断字、词干分析、同义词库扩展和替换，以及干扰词（或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)）删除的语言。 此参数可选。  
   
- 如果将采用不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则给定文档的区域设置标识符 (LCID) 将决定为其内容编制索引时使用的语言。 在查询这样的列时，指定语言*language_term*可以增加很好的匹配项的概率。  
+ 如果将采用不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则给定文档的区域设置标识符 (LCID) 将决定为其内容编制索引时使用的语言。 在对这种列进行查询时，指定 LANGUAGE language_term 可增大找到有效匹配项的可能性。  
   
- *language_term*可以指定为字符串、 整数或与一种语言的 LCID 对应的十六进制值。 如果*language_term*指定，它表示的语言应用到的搜索条件的所有元素。 如果未指定值，则使用该列的全文语言。  
+ language_term 可指定为与语言的 LCID 相对应的字符串、整数或十六进制值。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素。 如果未指定值，则使用该列的全文语言。  
   
- 当指定为一个字符串， *language_term*对应于**别名**中的列值[sys.syslanguages &#40;Transact SQL &#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)兼容性视图。 在情况下，字符串必须括在单引号中，*language_term*。 如果为一个整数，指定*language_term*是实际标识的语言的 LCID。 当指定为十六进制值， *language_term* 0x 后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
+ 如果指定为字符串，language_term 将对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中的 alias 列值。 字符串必须用单引号引起来，如 'language_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
   
- 如果值为双字节字符集 (dbcs) 格式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将其转换为 Unicode。  
+ 如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   
- 如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用的非特定语言资源，指定为 0x0 *language_term*。  
+ 如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term。  
   
- \<*contains_search_condition*>  
- 指定要在中搜索的文本*column_name*匹配项的条件。  
+ \<contains_search_condition>  
+ 指定要在 column_name 中搜索的文本和匹配条件。  
   
-*\<contains_search_condition >*是**nvarchar**。 将另一个字符数据类型用作输入时，将发生隐式转换。 不能使用大的字符串数据类型 nvarchar （max） 和 varchar （max）。 在下面的示例中，`@SearchWord` 变量（被定义为 `varchar(30)`）导致 `CONTAINS` 谓词中发生隐式转换。
+\<contains_search_condition> 属于 nvarchar. 将另一个字符数据类型用作输入时，将发生隐式转换。 不能使用大型字符串数据类型 nvarchar(max) 和 varchar(max)。 在下面的示例中，`@SearchWord` 变量（被定义为 `varchar(30)`）导致 `CONTAINS` 谓词中发生隐式转换。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -192,7 +192,7 @@ FROM Production.ProductDescription
 WHERE CONTAINS(Description, @SearchWord);  
 ```  
   
- 由于"参数查找"无法跨转换，使用**nvarchar**以提高性能。 在示例中，声明`@SearchWord`作为`nvarchar(30)`。  
+ 由于“参数截取”跨转换无效，因此请使用 nvarchar 以获得更好性能。 本示例将 `@SearchWord` 声明为 `nvarchar(30)`。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -206,57 +206,57 @@ WHERE CONTAINS(Description, @SearchWord);
   
  对于生成非最佳计划的情况，还可以使用 OPTIMIZE FOR 查询提示。  
   
- *word*  
+ word  
  不带空格或标点符号的字符串。  
   
- *phrase*  
+ phrase  
  在每个词之间有空格的一个或多个词。  
   
 > [!NOTE]  
 >  某些语言（如亚洲一些地区的书面语言）的短语可以由彼此之间没有空格的一个或多个词组成。  
   
 \<simple_term>  
-指定词或短语的完全匹配项。 有效的简单字词示例有 "blue berry"、blueberry 和 "Microsoft SQL Server"。 应该使用双引号 ("") 将短语引起来。 短语中的词必须中指定相同的顺序出现 *\<contains_search_condition >*在数据库列中显示。 搜索词或短语中的字符时不区分大小写。 干扰词 (或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (如，和，或) 的全文索引中未存储在全文索引列。 如果在单个词搜索中使用了干扰词，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误消息，指出查询仅包含干扰词。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 \Mssql\Binn\FTERef 目录下有一个标准的干扰词列表。  
+指定词或短语的完全匹配项。 有效的简单字词示例有 "blue berry"、blueberry 和 "Microsoft SQL Server"。 应该使用双引号 ("") 将短语引起来。 短语中的词在数据库列中出现的顺序必须与 \<contains_search_condition> 中指定的顺序相同。 搜索词或短语中的字符时不区分大小写。 全文检索列中的干扰词（或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)）（例如 a、and 或 the）不会存储在全文检索中。 如果在单个词搜索中使用了干扰词，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误消息，指出查询仅包含干扰词。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 \Mssql\Binn\FTERef 目录下有一个标准的干扰词列表。  
   
  标点将被忽略。 因此，`CONTAINS(testing, "computer failure")` 将匹配包含 "Where is my computer?  Failure to find it would be expensive" 这个值的行。 有关断字符行为的详细信息，请参阅[配置和管理断字符和词干分析器以便搜索](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
  \<prefix_term>  
- 指定以指定文本开始的词或短语的匹配项。 将前缀词括在双引号 ("") 并添加一个星号 (\*) 之前在结束引号，以便从开始简单词的所有文本前面都指定星号匹配。 该子句应按以下方式指定：`CONTAINS (column, '"text*"')`。 星号可匹配词或短语所含根词的 0 个、1 个或多个字符。 如果文本和星号不用英文双引号分隔，则谓词将读取 `CONTAINS (column, 'text*')`，全文搜索会将星号看作字符，搜索 `text*` 的完全匹配项。 全文引擎将找不到带星号的单词 (\*) 字符因为断字符通常忽略此类字符。  
+ 指定以指定文本开始的词或短语的匹配项。 将前缀字词用英文双引号 ("") 引起来，并在右引号前添加一个星号 (\*)，这样一来，以星号前指定的简单字词开头的所有文本都将被匹配。 该子句应按以下方式指定：`CONTAINS (column, '"text*"')`。 星号可匹配词或短语所含根词的 0 个、1 个或多个字符。 如果文本和星号不用英文双引号分隔，则谓词将读取 `CONTAINS (column, 'text*')`，全文搜索会将星号看作字符，搜索 `text*` 的完全匹配项。 由于断字符通常忽略星号 (\*) 这样的字符，因此全文引擎将不会查找带此类字符的词。  
   
- 当 *\<prefix_term >*是短语，短语中包含每个词都被看作是一个单独的前缀。 因此，指定了一个 "local wine*" 前缀字词的查询，将匹配所有包含 "local winery"、"locally wined and dined" 等文本的行。  
+ 如果 \<prefix_term> 是一个短语，则该短语中包含的每个词都将被看成一个单独的前缀。 因此，指定了一个 "local wine*" 前缀字词的查询，将匹配所有包含 "local winery"、"locally wined and dined" 等文本的行。  
   
  \<generation_term>  
  包含的简单字词包括要搜索的原始词的变体时，指定词的匹配项。  
   
  INFLECTIONAL  
- 指定要对指定的简单字词使用与语言相关的词干分析器。 词干分析器的行为是根据每种具体语言的词干确定规则定义的。 非特定语言没有关联的词干分析器。 使用被查询的列的列语言来引用所需的词干分析器。 如果*language_term*指定，则对应于使用语言的词干分析器。  
+ 指定要对指定的简单字词使用与语言相关的词干分析器。 词干分析器的行为是根据每种具体语言的词干确定规则定义的。 非特定语言没有关联的词干分析器。 使用被查询的列的列语言来引用所需的词干分析器。 如果指定了 language_term，则使用与该语言对应的词干分析器。  
   
- 给定 *\<simple_term >*内 *\<generation_term >*名词和动词将不匹配。  
+ \<generation_term> 中的给定 \<simple_term> 将不会匹配名词和动词。  
   
  THESAURUS  
- 指定使用对应于列全文语言或指定的查询语言的同义词库。 最长的模式或从模式 *\<simple_term >*针对同义词库匹配并生成附加条款的展开或替换原始的模式。 如果为所有或部分找不到匹配项 *\<simple_term >*，不匹配部分将被视为*simple_term*。 全文搜索同义词库的详细信息，请参阅[为配置和管理同义词库文件的全文搜索](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
+ 指定使用对应于列全文语言或指定的查询语言的同义词库。 最长模式或来自 \<simple_term> 的模式将与同义词库匹配，并生成其他字词以扩展或替换原始模式。 如果找不到与 \<simple_term> 完全或部分匹配的匹配项，不匹配部分将被视为 simple_term。 有关全文搜索同义词库的详细信息，请参阅 [为全文搜索配置和管理同义词库文件](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
  \<generic_proximity_term>  
  指定词或短语的匹配项必须处于所搜索的文档中。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]我们建议你使用\<custom_proximity_term >。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]我们建议使用 \<custom_proximity_term>。  
   
  NEAR | ~  
- 指示 NEAR 或 ~ 运算符两侧的词或短语必须存在于某个文档中，才能返回匹配项。 您必须指定两个搜索词。 给定的搜索词可以是单个单词或由双引号分隔的短语 ("*短语*")。  
+ 指示 NEAR 或 ~ 运算符两侧的词或短语必须存在于某个文档中，才能返回匹配项。 您必须指定两个搜索词。 给定的搜索词可以是由双引号分隔的单个词或短语 ("phrase")。  
   
  可将多个邻近词链接起来，例如 `a NEAR b NEAR c` 或 `a ~ b ~ c`。 链接在一起的邻近词必须均存在于文档中才能返回匹配项。  
   
- 例如，`CONTAINS(*column_name*, 'fox NEAR chicken')`和`CONTAINSTABLE(*table_name*, *column_name*, 'fox ~ chicken')`将同时返回任何文档指定列中包含"fox"和"小鸡"。 此外，CONTAINSTABLE 还会按照 "fox" 和 "chicken" 的邻近程度返回每个文档的排名。 例如，如果文档包含句子“The fox ate the chicken”，该文档的排名将很高，因为这两个词比其他文档近。  
+ 例如，`CONTAINS(*column_name*, 'fox NEAR chicken')` 和 `CONTAINSTABLE(*table_name*, *column_name*, 'fox ~ chicken')` 均将返回指定列中同时包含“fox”和“chicken”的所有文档。 此外，CONTAINSTABLE 还会按照 "fox" 和 "chicken" 的邻近程度返回每个文档的排名。 例如，如果文档包含句子“The fox ate the chicken”，该文档的排名将很高，因为这两个词比其他文档近。  
   
- 了解通用邻近术语的详细信息，请参阅[邻近的词到另一个单词使用 NEAR 搜索](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。  
+ 有关通用临近词的详细信息，请参阅[使用 NEAR 搜索与另一个词邻近的词](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。  
   
  \<custom_proximity_term>  
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
- 指定词或短语的匹配项，并且可以选择指定搜索词之间允许的最大距离。 你还可以指定搜索词必须位于指定它们的确切顺序 (\<match_order >)。  
+ 指定词或短语的匹配项，并且可以选择指定搜索词之间允许的最大距离。 你还可以指定必须按你指定的确切顺序查找搜索词 (\<match_order>)。  
   
- 给定的搜索词可以是单个单词或由双引号分隔的短语 ("*短语*")。 文档中必须包含每个指定的词才能返回匹配项。 您必须至少指定两个搜索词。 最大的搜索词数为 64 个。  
+ 给定的搜索词可以是由双引号分隔的单个词或短语 ("phrase")。 文档中必须包含每个指定的词才能返回匹配项。 您必须至少指定两个搜索词。 最大的搜索词数为 64 个。  
   
  默认情况下，自定义近似词返回包含指定词的行，而不考虑间隔的距离及其顺序。 例如，若要匹配下面的查询，文档只需包含 `term1` 和 "`term3 term4`"，它们可以处于任意位置以及采用任意顺序：  
   
@@ -272,13 +272,13 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
  *integer*  
  指定 0 到 4294967295 之间的正整数。 该值控制第一个和最后一个搜索词之间可以包含多少个非搜索词，不包括任何其他指定的搜索词。  
   
- 例如，以下查询将搜索`AA`和`BB`，按任意顺序中的五个最大距离。  
+ 例如，以下查询按两种顺序搜索 `AA` 和 `BB`（最大距离为 5）。  
   
 ```  
 CONTAINS(column_name, 'NEAR((AA,BB),5)')  
 ```  
   
- 字符串`AA one two three four five BB`将匹配项。 在下面的示例中，该查询指定为三个搜索词， `AA`， `BB`，和`CC`内最大距离为 5:  
+ 字符串 `AA one two three four five BB` 就是一个匹配项。 在以下示例中，查询指定了三个搜索词 `AA`、`BB` 和 `CC`（最大距离为 5）：  
   
 ```  
 CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')  
@@ -288,15 +288,15 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  `BB   one two   CC   three four five A  A`  
   
- 请注意内部搜索词， `CC`，不会进行计数。  
+ 请注意，内部搜索词 `CC` 不计算在内。  
   
  **MAX**  
  返回所有包含指定词的行，而不考虑它们之间距离。 这是默认设置。  
   
  \<match_order>  
- 指定词是否必须按指定顺序出现，搜索查询才会返回这些词。 若要指定\<match_order >，则还必须指定\<maximum_distance >。  
+ 指定词是否必须按指定顺序出现，搜索查询才会返回这些词。 若要指定 \<match_order>，还必须指定 \<maximum_distance>。  
   
- \<match_order > 采用以下值之一：  
+ \<match_order> 采用下列值之一：  
   
  **TRUE**  
  强制在词中使用指定的顺序。 例如，`NEAR(A,B)` 仅匹配 `A … B`。  
@@ -312,16 +312,16 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
 CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')  
 ```  
   
- 有关使用自定义邻近词的详细信息，请参阅[邻近的词到另一个单词使用 NEAR 搜索](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。  
+ 有关使用自定义临近词的详细信息，请参阅[使用 NEAR 搜索与另一个词邻近的词](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)。  
   
  \<weighted_term>  
  指定（由查询返回的）匹配行与一组词和短语匹配，每个词和短语有一个可选的加权值。  
   
  ISABOUT  
- 指定 *\<weighted_term >*关键字。  
+ 指定 \<weighted_term> 关键字。  
   
- WEIGHT(*weight_value*)  
- 指定介于 0.0 和 1.0 之间的加权值。 在每个组件 *\<weighted_term >*可能包括*weight_value*。 *weight_value*是一种更改的查询的各个部分会影响分配到与查询匹配的每一行的排名值方法。 权重不会影响结果的 CONTAINS 查询，但中的权重影响级别[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)查询。  
+ WEIGHT(weight_value)  
+ 指定介于 0.0 和 1.0 之间的加权值。 \<weighted_term> 中的每个部分可能包含 weight_value。 使用 weight_value 可更改查询的各个部分如何影响赋予与该查询匹配的每行的排名值。 WEIGHT 不影响 CONTAINS 查询的结果，但 WEIGHT 会影响 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询中的排名。  
   
 > [!NOTE]  
 >  不管操作系统的区域设置如何，小数点分隔符始终为句点。  
@@ -329,16 +329,16 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { AND | & } | { AND NOT | &! } | { OR | | }  
  指定两个包含搜索条件之间的逻辑运算。  
   
- {和 | （& A)}  
+ { AND | & }  
  指示匹配项必须满足这两个包含搜索条件。 可以使用 And 符 (&) 代替关键字 AND 来表示 AND 运算符。  
   
- {而不 | & ！ }  
+ { AND NOT | &! }  
  指示匹配项中不能出现第二个搜索条件。 可以使用 And 符后跟感叹号 (&!) 代替关键字 AND NOT 来表示 AND NOT 运算符。  
   
- {或 | |}  
+ { OR | | }  
  指示匹配项必须满足这两个包含搜索条件之一。 可以使用竖线符号 (|) 代替关键字 OR 来表示 OR 运算符。  
   
- 当 *\<contains_search_condition >*包含括号中的组，首先评估组的这些用圆括号括起来。 计算了带括号的组之后，将这些逻辑运算符用于包含搜索条件时，适用以下规则：  
+ 如果 \<contains_search_condition> 包含带括号的组，则首先计算这些带括号的组。 计算了带括号的组之后，将这些逻辑运算符用于包含搜索条件时，适用以下规则：  
   
 -   NOT 用在 AND 之前。  
   
@@ -354,10 +354,10 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 ## <a name="general-remarks"></a>一般备注  
  全文谓词和函数作用于 FROM 谓词所示的单个表。 若要对多个表进行搜索，请在 FROM 子句中使用联接表，以搜索由两个或更多个表的乘积构成的结果集。  
   
- 中不允许使用全文谓词[OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)当数据库兼容级别设置为 100。  
+ 当数据库兼容级别设为 100 时，不允许在 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)中使用全文谓词。  
   
 ## <a name="querying-remote-servers"></a>查询远程服务器  
- 你可以在 CONTAINS 使用由四部分构成的名称或[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)谓词来查询的全文索引列中的链接服务器上的目标表。 若要准备远程服务器以接收全文查询，请在远程服务器上的目标表和列上创建全文索引，然后将该远程服务器添加为链接服务器。  
+ 可以在 CONTAINS 或 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 谓词中使用由四部分组成的名称对链接服务器上的目标表的全文索引列进行查询。 若要准备远程服务器以接收全文查询，请在远程服务器上的目标表和列上创建全文索引，然后将该远程服务器添加为链接服务器。  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>LIKE 与全文搜索的比较  
  与全文搜索不同，[LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 谓词仅对字符模式有效。 另外，不能使用 LIKE 谓词来查询格式化的二进制数据。 此外，对大量非结构化的文本数据执行 LIKE 查询要比对相同数据执行同样的全文查询慢得多。 对数百万行文本数据进行的 LIKE 查询可能需要几分钟的时间才能返回结果；而对于同样的数据，全文查询只需要几秒甚至更少的时间，具体取决于返回的行数及其大小。 另一个考虑因素是 LIKE 仅对整个表执行简单模式扫描。 相反，全文查询可识别语言，它在索引和查询时应用特定的转换，例如，筛选非索引字并进行同义词库和变形扩展。 这些转换可帮助全文查询改进其撤回以及结果的最终排名。  
@@ -365,7 +365,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 ## <a name="querying-multiple-columns-full-text-search"></a>查询多个列（全文搜索）  
  可通过指定一组要搜索的列来查询多个列。 这些列必须来自同一个表。  
   
- 例如，下面的 CONTAINS 查询搜索单词`Red`中`Name`和`Color`列`Production.Product`表[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]示例数据库。  
+ 例如，以下 CONTAINS 查询在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 `Production.Product` 表的 `Name` 和 `Color` 列中搜索 `Red` 一词。  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -377,7 +377,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. 使用与 CONTAINS \<simple_term >  
+### <a name="a-using-contains-with-simpleterm"></a>A. 将 CONTAINS 与 \<simple_term> 一起使用  
  下面的示例查找包含 `$80.99` 一词且价格为 `Mountain`的所有产品。  
   
 ```sql  
@@ -390,7 +390,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. 使用 CONTAINS 和带有短语\<simple_term >  
+### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. 将 CONTAINS 和短语与 \<simple_term> 一起使用  
  以下示例返回包含短语 `Mountain` 或 `Road` 的所有产品。  
   
 ```sql  
@@ -402,7 +402,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. 使用与 CONTAINS \<prefix_term >  
+### <a name="c-using-contains-with-prefixterm"></a>C. 将 CONTAINS 与 \<prefix_term> 一起使用  
  下面的示例返回的所有产品名称中，其 `Name` 列中至少有一个词以前辍 chain 开头。  
   
 ```sql  
@@ -414,7 +414,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. 使用 CONTAINS and \<prefix_term >  
+### <a name="d-using-contains-and-or-with-prefixterm"></a>D. 将 CONTAINS 和 OR 与 \<prefix_term> 一起使用  
  下面的示例将返回包含以 `chain` 或 `full` 为前缀的字符串的所有类别说明。  
   
 ```sql  
@@ -426,11 +426,11 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. 使用与 CONTAINS \<proximity_term >  
+### <a name="e-using-contains-with-proximityterm"></a>E. 将 CONTAINS 与 \<proximity_term> 一起使用  
   
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
- 下面的示例搜索`Production.ProductReview`包含单词的所有注释的表`bike`10 个词以内的单词"`control`"和以指定顺序 (即，其中"`bike`"之前"`control`")。  
+ 以下示例在 `Production.ProductReview` 表中搜索包含 `bike` 一词、在“`control`”词的 10 个词范围内且使用指定顺序（即，“`bike`”排在“`control`”前面）的所有注释。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -441,7 +441,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. 使用与 CONTAINS \<generation_term >  
+### <a name="f-using-contains-with-generationterm"></a>F. 将 CONTAINS 与 \<generation_term> 一起使用  
  下面的示例将搜索包含单词 `ride` 的各种形式（如 riding 和 ridden 等）的所有产品。  
   
 ```sql  
@@ -453,7 +453,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. 使用与 CONTAINS \<weighted_term >  
+### <a name="g-using-contains-with-weightedterm"></a>G. 将 CONTAINS 与 \<weighted_term> 一起使用  
  以下示例搜索包含 `performance`、`comfortable` 或 `smooth` 词并为每个词指定不同加权的所有产品名称。  
   
 ```sql  
@@ -481,7 +481,7 @@ GO
 ```  
   
 ### <a name="i-using-contains-with-a-logical-operator-and"></a>I. 将 CONTAINS 与逻辑运算符 (AND) 一起使用  
- 下面的示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 ProductDescription 表。 查询使用 CONTAINS 谓词搜索的说明中的说明 ID 不等于 5 和描述包含这两个词`Aluminum`和 word `spindle`。 该搜索条件使用 AND 布尔运算符。  
+ 下面的示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 ProductDescription 表。 该查询使用 CONTAINS 谓词搜索 ID 不等于 5 并且同时包含 `Aluminum` 和 `spindle` 词的说明。 该搜索条件使用 AND 布尔运算符。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -543,8 +543,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [全文搜索入门](../../relational-databases/search/get-started-with-full-text-search.md)   
- [创建和管理全文索引目录](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [创建 FULLTEXT CATALOG &#40;Transact SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [创建和管理全文目录](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
@@ -554,7 +554,7 @@ GO
  [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)   
  [创建全文搜索查询 (Visual Database Tools)](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

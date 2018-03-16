@@ -1,5 +1,5 @@
 ---
-title: "ALTER PROCEDURE (TRANSACT-SQL) |Microsoft 文档"
+title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
 
   修改先前在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中通过执行 CREATE PROCEDURE 语句创建的过程。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 (TRANSACT-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -86,51 +86,51 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
 ## <a name="arguments"></a>参数  
  *schema_name*  
- 该过程所属的架构的名称。  
+ 过程所属架构的名称。  
   
- *过程名称*  
- 若要更改过程的名称。 过程名称必须符合 [标识符](../../relational-databases/databases/database-identifiers.md)规则。  
+ procedure_name  
+ 要更改的过程的名称。 过程名称必须符合 [标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
- **;** *数*  
- 现有的可选整数，用于具有相同名称的组过程，以便可以通过使用一个 DROP PROCEDURE 语句一起删除它们。  
+ ; number  
+ 现有的可选整数，该整数用来对具有同一名称的过程进行分组，以便可以用一个 DROP PROCEDURE 语句全部删除它们。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- **@***参数*  
- 该过程中的参数。 最多可以指定 2,100 个参数。  
+ @ parameter  
+ 过程中的参数。 最多可以指定 2,100 个参数。  
   
- [ *type_schema_name***。** ] *data_type*  
+ [ type_schema_name. [ =] data_type  
  参数及其所属架构的数据类型。  
   
- 有关数据类型限制的信息，请参阅[CREATE PROCEDURE &#40;Transact SQL &#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
+ 有关数据类型限制的信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)。  
   
  VARYING  
  指定作为输出参数支持的结果集。 此参数由存储过程动态构造，并且其内容可以不同。 仅适用于游标参数。 该选项对于 CLR 过程无效。  
   
- *默认值*  
+ default  
  参数的默认值。  
   
  OUT | OUTPUT  
  指示参数是返回参数。  
   
  READONLY  
- 指示无法更新或在过程的正文内修改参数。 如果参数类型为表值类型，则必须指定 READONLY。  
+ 指示不能在过程的主体中更新或修改参数。 如果参数类型为表值类型，则必须指定 READONLY。  
   
  RECOMPILE  
  指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]不会缓存该过程的计划，该过程在运行时重新编译。   
   
  ENCRYPTION  
- **适用于**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将 ALTER PROCEDURE 语句的原始文本转换为模糊格式。 模糊处理的输出直接在中不可见的目录视图中的任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，文本将可供既可以通过访问系统表的特权用户[DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)或直接访问数据库文件。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索原始过程。 有关访问系统元数据的详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]会将 ALTER PROCEDURE 语句的原始文本转换为模糊格式。 模糊代码的输出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何目录视图中都不能直接显示。 对系统表或数据库文件没有访问权限的用户不能检索模糊文本。 但是，可以通过 [DAC 端口](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)访问系统表的特权用户或直接访问数据库文件的特权用户可以使用此文本。 此外，能够向服务器进程附加调试器的用户可在运行时从内存中检索原始过程。 有关如何访问系统元数据的详细信息，请参阅[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
- 使用此选项创建的过程不能作为的一部分发布[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]复制。  
+ 使用此选项创建的过程不能作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的一部分发布。  
   
  不能为公共语言运行时 (CLR) 存储过程指定此选项。  
   
 > [!NOTE]  
->  升级过程中，[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用存储在经过模糊处理的注释**sys.sql_modules**重新创建过程。  
+>  在升级过程中，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用存储在 sys.sql_modules 中的模糊注释来重新创建过程。  
   
  EXECUTE AS  
  指定访问存储过程后执行该存储过程所用的安全上下文。  
@@ -145,15 +145,15 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- {[BEGIN] *sql_statement* [;][ ... *n*  ] [结束]}  
- 构成过程主体的一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 您可以使用可选的 BEGIN 和 END 关键字将这些语句括起来。 有关详细信息，请参阅中的最佳做法，常规备注和限制和局限部分[CREATE PROCEDURE &#40;Transact SQL &#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
+ { [ BEGIN ] sql_statement [;] [ ... ] [ END ] }*n*  
+ 构成过程主体的一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 您可以使用可选的 BEGIN 和 END 关键字将这些语句括起来。 有关详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md) 中的“最佳做法”、“一般备注”以及“限制和局限”部分。  
   
- 外部名称*程序集 _ 名称***。***class_name***。***method_name*  
+ EXTERNAL NAME assembly_name.class_name.method_name  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定的方法[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]CLR 的程序集存储过程来引用。 *class_name*必须为有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符，并且为程序集中的类必须存在。 如果类具有的命名空间限定的名称使用句点 (**。**) 来分隔命名空间部分，类名必须由使用方括号分隔 (**[]**) 或引号 (**""**). 指定的方法必须为该类的静态方法。  
+ 指定 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集的方法，以便 CLR 存储过程引用。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中。 如果类具有使用句点 (.) 分隔命名空间部分的命名空间限定名称，则必须使用方括号 ([]) 或引号 ("") 来分隔类名。 指定的方法必须为该类的静态方法。  
   
- 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能执行 CLR 代码。 你可以创建、 修改和删除引用公共语言运行时模块; 的数据库对象但是，无法执行中的这些引用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用之前[clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。 若要启用该选项，使用[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+ 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能执行 CLR 代码。 可以创建、修改和删除引用公共语言运行时模块的数据库对象；不过，只有在启用 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之后，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用。 若要启用该选项，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
 > [!NOTE]  
 >  包含数据库中不支持 CLR 过程。  
@@ -165,12 +165,12 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
  如果原来的过程定义是使用 WITH ENCRYPTION 或 WITH RECOMPILE 创建的，那么只有在 ALTER PROCEDURE 中也包含这些选项时，这些选项才有效。  
   
- 有关存储过程的详细信息，请参阅[CREATE PROCEDURE &#40;Transact SQL &#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
+ 有关存储过程的详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)。  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 需要**ALTER**对该过程的权限或要求的成员身份**db_ddladmin**固定的数据库角色。  
+ 要求对过程具有 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份。  
   
 ## <a name="examples"></a>示例  
  以下示例将创建 `uspVendorAllInfo` 存储过程。 此过程返回提供 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的所有供应商的名称、所提供的产品、信用等级以及可用性。 创建过程之后，便可修改过程以返回不同的结果集。  
@@ -242,11 +242,11 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
 
 ## <a name="see-also"></a>另请参阅  
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
- [DROP PROCEDURE &#40;Transact SQL &#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE (Transact-SQL)](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
- [执行 AS &#40;Transact SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [存储过程（数据库引擎）](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [与 sys.procedures &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
+ [sys.procedures (Transact-SQL)](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
   
   

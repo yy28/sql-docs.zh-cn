@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回表示会话的当前事务上下文的标记。 应用程序使用令牌将 FILESTREAM 文件系统流式处理操作绑定到该事务。 有关 FILESTREAM 主题的列表，请参阅[二进制大型对象 &#40;Blob &#41;数据 &#40;SQL server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  返回表示会话的当前事务上下文的标记。 应用程序使用此标记可将 FILESTREAM 文件系统流式处理操作绑定到该事务。 有关 FILESTREAM 话题的列表，请参阅[二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>返回值  
  如果尚未启动事务或者已经取消或提交事务，则返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  事务必须为显式的。 使用 BEGIN TRANSACTION，后跟 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION。  
   
  调用 GET_FILESTREAM_TRANSACTION_CONTEXT 时，系统将在事务持续期间授予调用方对事务的文件系统访问权。 若要允许其他用户通过文件系统访问事务，则使用 EXECUTE AS 以其他用户身份运行 GET_FILESTREAM_TRANSACTION_CONTEXT。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用`GET_FILESTREAM_TRANSACTION_CONTEXT`中[!INCLUDE[tsql](../../includes/tsql-md.md)]事务可以获取的事务上下文。  
+ 下面的示例在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 事务中使用 `GET_FILESTREAM_TRANSACTION_CONTEXT` 获取事务上下文。  
   
 ```csharp  
 using System;  
@@ -283,7 +283,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [路径名 &#40;Transact SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
+ [PathName (Transact-SQL)](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

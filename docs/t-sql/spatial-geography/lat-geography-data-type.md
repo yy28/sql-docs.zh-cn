@@ -1,5 +1,5 @@
 ---
-title: "Lat (geography 数据类型) |Microsoft 文档"
+title: "Lat（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="lat-geography-data-type"></a>Lat（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  纬度属性**geography**实例。  
+  geography 实例的纬度属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,12 +43,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
   
- CLR 类型： **SqlDouble**  
+ CLR 类型：SqlDouble  
   
-## <a name="remarks"></a>注释  
- 在 OpenGIS 模型中，仅在定义 Lat **geography**实例组成的单一点。 此属性将返回 NULL，如果**geography**实例包含多个单一点。 此属性是精确属性，且是只读的。  
+## <a name="remarks"></a>Remarks  
+ 在 OpenGIS 模型中，仅对由一个点组成的 geography 实例定义 Lat。 如果 geography 实例包含多个点，则此属性返回 NULL。 此属性是精确属性，且是只读的。  
   
 ## <a name="examples"></a>示例  
  此示例创建一个点并返回该点的纬度。  

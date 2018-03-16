@@ -1,5 +1,5 @@
 ---
-title: "删除证书 (Transact SQL) |Microsoft 文档"
+title: DROP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,13 +52,13 @@ DROP CERTIFICATE certificate_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *certificate_name*  
+ certificate_name  
  数据库中标识证书的唯一名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  仅当没有实体与证书关联时才能删除证书。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
@@ -69,8 +69,8 @@ USE AdventureWorks2012;
 DROP CERTIFICATE Shipping04;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例删除该证书`Shipping04`。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下列示例将删除证书 `Shipping04`。  
   
 ```  
 USE master;  
@@ -80,7 +80,7 @@ DROP CERTIFICATE Shipping04;
 ## <a name="see-also"></a>另请参阅  
  [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   

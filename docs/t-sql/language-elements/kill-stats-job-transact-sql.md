@@ -1,5 +1,5 @@
 ---
-title: "KILL STATS JOB (Transact SQL) |Microsoft 文档"
+title: KILL STATS JOB (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ KILL STATS JOB job_id
  *job_id*  
  job_id 字段，由该作业的 sys.dm_exec_background_job_queue 动态管理视图返回。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  job_id 与在其他形式的 KILL 语句中所使用的 session_id 或工作单元无关。  
   
 ## <a name="permissions"></a>权限  
@@ -63,7 +63,7 @@ KILL STATS JOB job_id
  默认情况下，sysadmin 和 processadmin 固定数据库角色的成员具有 KILL STATS JOB 权限，并且该权限不可转移。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何终止与作业相关联的统计信息更新其中*job_id* = `53`。  
+ 以下示例演示如何终止与 *job_id* = `53` 的作业关联的统计信息更新。  
   
 ```  
 KILL STATS JOB 53;  
@@ -71,9 +71,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [KILL &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md)   
- [终止查询通知订阅 &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
- [sys.dm_exec_background_job_queue &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
+ [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [sys.dm_exec_background_job_queue (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
  [统计信息](../../relational-databases/statistics/statistics.md)  
   
   

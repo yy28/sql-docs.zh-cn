@@ -1,5 +1,5 @@
 ---
-title: "CERT_ID (Transact SQL) |Microsoft 文档"
+title: CERT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ Cert_ID ( 'cert_name' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *cert_name*   
+**'** *cert_name* **'**  
 数据库中证书的名称。
   
 ## <a name="return-types"></a>返回类型
  **int**  
   
-## <a name="remarks"></a>注释  
-证书名称将显示在[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)目录视图。
+## <a name="remarks"></a>Remarks  
+证书名称可以在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目录视图中看到。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要对证书具有某些权限，并且未拒绝向调用方授予该证书的 VIEW DEFINITION 权限。
   
 ## <a name="examples"></a>示例  

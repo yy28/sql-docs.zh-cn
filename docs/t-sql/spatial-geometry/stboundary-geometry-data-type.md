@@ -1,5 +1,5 @@
 ---
-title: "STBoundary (geometry 数据类型) |Microsoft 文档"
+title: "STBoundary（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回的边界**几何图形**实例。  
+  返回 **geometry** 实例的边界。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
- `STBoundary()`返回一个空**GeometryCollection**时的终结点**LineString**， **CircularString**，或**CompoundCurve**实例是相同的。  
+## <a name="remarks"></a>Remarks  
+ 当 LineString、CircularString 或 CompoundCurve 实例的端点相同时，`STBoundary()` 返回空的 GeometryCollection。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. 对具有不同终结点的 LineString 实例使用 STBoundary()  
- 下面的示例创建`LineString``geometry`实例。 `STBoundary()`返回的边界`LineString`。  
+ 下面的示例创建 `LineString``geometry` 实例。 `STBoundary()` 返回 `LineString` 的边界。  
   
 ```  
 DECLARE @g geometry;  

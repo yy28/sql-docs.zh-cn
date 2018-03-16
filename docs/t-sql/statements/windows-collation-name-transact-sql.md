@@ -1,5 +1,5 @@
 ---
-title: "Windows 排序规则名称 (Transact SQL) |Microsoft 文档"
+title: "Windows 排序规则名称 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,30 +52,30 @@ CollationDesignator_<ComparisonStyle>
 ```  
   
 ## <a name="arguments"></a>参数  
- *CollationDesignator*  
+ CollationDesignator  
  指定 Windows 排序规则使用的基本排序规则。 基本排序规则包括以下内容：  
   
 -   指定按字典排序时应用的排序规则。 排序规则基于字母表或语言。  
   
 -   用于存储非 Unicode 字符数据的代码页。  
   
- 是一些示例：  
+ 以下是一些示例：  
   
 -   Latin1_General 或法语：都使用代码页 1252。  
   
 -   土耳其语：使用代码页 1254。  
   
- *CaseSensitivity*  
- **CI**指定不区分大小写， **CS**指定区分大小写。  
+ CaseSensitivity  
+ CI 指定不区分大小写，CS 指定区分大小写。  
   
  *AccentSensitivity*  
- **AI**指定不区分重音， **AS**指定重音。  
+ AI 指定不区分重音，AS 指定区分重音。  
   
- *KanatypeSensitive*  
- **省略**指定假名敏感型**KS**指定区分假名的。  
+ KanatypeSensitive  
+ Omitted 指定不区分假名类型，KS 指定区分假名类型。  
   
- *WidthSensitivity*  
- **省略**指定宽度不区分**WS**指定区分全半角。  
+ WidthSensitivity  
+ Omitted 指定不区分全半角，WS 指定区分全半角。  
   
  **BIN**  
  指定使用向后兼容的二进制排序顺序。  
@@ -83,7 +83,7 @@ CollationDesignator_<ComparisonStyle>
  **BIN2**  
  指定使用码位比较语义的二进制排序顺序。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  根据排序规则的版本，有些码位也许是未定义的。 例如比较：  
   
 ```  
@@ -224,18 +224,18 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Lithuanian_Classic|Lithuanian_Classic|  
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Macedonian|Macedonian|  
   
- <sup>1</sup>仅限 Unicode 的 Windows 排序规则可以仅应用于列级别或表达式级别数据。 它们不能用作服务器或数据库排序规则。  
+ <sup>1</sup>仅 Unicode 的 Windows 排序规则只能应用于列级或表达式级数据。 它们不能用作服务器或数据库排序规则。  
   
- <sup>2</sup>中文 （台湾） 排序规则，如中文 （中国澳门） 使用的简体中文规则; 与中文 （台湾），它使用代码页 950。  
+ <sup>2</sup>与中文（台湾）排序规则类似，中文（澳门）使用简体中文的规则；与中文（台湾）不同，它使用代码页 950。  
   
 ## <a name="see-also"></a>另请参阅  
  [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
- [常量 &#40;Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [常量 (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [table &#40;Transact SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [表 (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

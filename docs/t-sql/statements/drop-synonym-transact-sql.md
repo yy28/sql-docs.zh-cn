@@ -1,5 +1,5 @@
 ---
-title: "删除同义词 (Transact SQL) |Microsoft 文档"
+title: DROP SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -50,23 +50,23 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *如果存在*  
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ IF EXISTS  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）
   
- 仅当它已存在，则有条件地删除同义词。  
+ 只有在同义词已存在时才对其进行有条件地删除。  
   
- *架构*  
+ *schema*  
  指定同义词所在的架构。 如果未指定架构，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用当前用户的默认架构。  
   
  *synonym_name*  
  要删除的同义词的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  对同义词的引用不受架构限制；因此，可随时删除同义词。 只有在运行时才能发现对已删除的同义词的引用。  
   
  在动态 SQL 中可以创建、删除和引用同义词。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要删除同义词，用户必须至少满足以下条件之一。 用户必须是：  
   
 -   同义词的当前拥有者。  
@@ -93,7 +93,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建同义词 &#40;Transact SQL &#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
+ [CREATE SYNONYM (Transact-SQL)](../../t-sql/statements/create-synonym-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

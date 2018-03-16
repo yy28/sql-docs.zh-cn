@@ -1,5 +1,5 @@
 ---
-title: "Z (geometry 数据类型) |Microsoft 文档"
+title: "Z（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型：float  
   
- CLR 类型： **SqlDouble**  
+ CLR 类型：SqlDouble  
   
-## <a name="remarks"></a>注释  
- 此属性的值将为 null 的几何图形实例不是一个点，以及如果对待任何**点**实例未设置它。  
+## <a name="remarks"></a>Remarks  
+ 如果 geometry 实例不是 point，则此属性的值为 null；对于未设置此属性的任何 **Point** 实例，此属性的值也为 null。  
   
  该属性为只读。  
   
- Z 坐标不使用任何计算所做的库中，并且不会传递任何库计算。  
+ Z 坐标未在库进行的任何计算中使用，因此不通过任何库计算传递。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个带有 Z（标高）和 M（度量）值的 `Point` 实例，并使用 `Z` 获取该实例的 Z 值。  
@@ -65,8 +65,8 @@ SELECT @g.Z;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [AsTextZM &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
+ [M（geometry 数据类型）](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [AsTextZM（geometry 数据类型）](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [几何图形实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

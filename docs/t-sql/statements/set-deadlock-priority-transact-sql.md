@@ -1,5 +1,5 @@
 ---
-title: "集 DEADLOCK_PRIORITY (Transact SQL) |Microsoft 文档"
+title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -63,13 +63,13 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  HIGH  
  指定如果死锁链中涉及的其他会话的死锁优先级设置为大于 5 的整数值，则当前会话将成为死锁牺牲品，或者如果其他会话的死锁优先级设置为 HIGH 或 5，则当前会话可能成为死锁牺牲品。  
   
- \<数字优先级 >  
+ \<numeric-priority>  
  用以提供 21 个死锁优先级别的整数值范围（-10 到 10）。 它指定如果死锁链中涉及的其他会话以更高的死锁优先级值运行，则当前会话将成为死锁牺牲品，但如果其他会话以低于当前会话的死锁优先级值运行，则当前会话不会成为死锁牺牲品。 它还指定如果其他会话以相同于当前会话的死锁优先级值运行，则当前会话可能成为死锁牺牲品。 LOW 对应于 -5、NORMAL 对应于 0 以及 HIGH 对应于 5。  
   
- **@***deadlock_var*  
+ **@** *deadlock_var*  
  指定死锁优先级的字符变量。 此变量必须设置为“LOW”、“NORMAL”或“HIGH”中的一个值。 而且必须足够大以保存整个字符串。  
   
- **@***deadlock_intvar*  
+ **@** *deadlock_intvar*  
  指定死锁优先级的整数变量。 此变量必须设置为 -10 到 10 范围中的一个整数值。  
   
 ## <a name="remarks"></a>Remarks  
@@ -77,7 +77,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  将哪个会话选为死锁牺牲品取决于每个会话的死锁优先级：  
   
--   如果两个会话的死锁优先级相同，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将回滚开销较低的会话选为死锁牺牲品。 例如，如果两个会话都将其死锁优先级设置为 HIGH，则此实例便将它估计回滚开销较低的会话选为牺牲品。 成本取决于比较的写入到该点在各事务中的日志字节数。 （你可以看到此值为"日志使用"死锁图形中）。
+-   如果两个会话的死锁优先级相同，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将回滚开销较低的会话选为死锁牺牲品。 例如，如果两个会话都将其死锁优先级设置为 HIGH，则此实例便将它估计回滚开销较低的会话选为牺牲品。 该成本是通过比较各事务此时已写入的日志字节数来确定的。 （可以在死锁图中将此值看作“已用日志”）。
   
 -   如果会话的死锁优先级不同，则将死锁优先级最低的会话选为死锁牺牲品。  
   
@@ -107,6 +107,6 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [@@LOCK_TIMEOUT (Transact-SQL)](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [设置 LOCK_TIMEOUT &#40;Transact SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT (Transact-SQL)](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "DISABLE TRIGGER (TRANSACT-SQL) |Microsoft 文档"
+title: DISABLE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
 ## <a name="arguments"></a>参数  
  *schema_name*  
- 触发器所属架构的名称。 *schema_name*不能指定 DDL 或登录触发器。  
+ 触发器所属架构的名称。 不能为 DDL 或登录触发器指定 schema_name。  
   
  *trigger_name*  
  要禁用的触发器的名称。  
@@ -65,31 +65,31 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为合并复制发布的数据库中创建触发器。 在已发布数据库中指定 ALL 可禁用这些触发器，这样会中断复制。 在指定 ALL 之前，请验证没有为合并复制发布当前数据库。  
   
  *object_name*  
- 是的名称的表或视图在其触发 DML *trigger_name*已创建以执行。  
+ 对其创建了要执行的 DML 触发器 *trigger_name* 的表或视图的名称。  
   
  DATABASE  
- DDL 触发器，该值指示*trigger_name*已创建或修改与数据库作用域执行。  
+ 对于 DDL 触发器，指示所创建或修改的 *trigger_name* 将在数据库作用域内执行。  
   
  ALL SERVER  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- DDL 触发器，该值指示*trigger_name*已创建或修改要执行与服务器作用域。 ALL SERVER 也适用于登录触发器。  
+ 对于 DDL 触发器，指示所创建或修改的 *trigger_name* 将在服务器作用域内执行。 ALL SERVER 也适用于登录触发器。  
   
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
-## <a name="remarks"></a>注释  
- 默认情况下，创建触发器后会启用触发器。 禁用触发器不会删除该触发器。 该触发器仍然作为对象存在于当前数据库中。 但是，当执行编写触发器程序所用的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，不会激发触发器。 可以通过使用重新启用触发器[ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md)。 在表上定义的 DML 触发器可以为还应禁用或启用通过[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ 默认情况下，创建触发器后会启用触发器。 禁用触发器不会删除该触发器。 该触发器仍然作为对象存在于当前数据库中。 但是，当执行编写触发器程序所用的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，不会激发触发器。 可以使用 [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) 重新启用触发器。 还可以通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 来禁用或启用为表定义的 DML 触发器。  
   
- 通过更改触发器**ALTER TRIGGER**语句启用触发器。  
+ 使用 **ALTER TRIGGER** 语句更改触发器将启用此触发器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要禁用 DML 触发器，用户必须至少对为其创建触发器的表或视图具有 ALTER 权限。  
   
  若要禁用具有服务器范围 (ON ALL SERVER) 的 DDL 触发器或登录触发器，用户必须对服务器拥有 CONTROL SERVER 权限。 若要禁用数据库范围 (ON DATABASE) 中的 DDL 触发器，用户必须至少对当前数据库具有 ALTER ANY DATABASE DDL TRIGGER 权限。  
   
 ## <a name="examples"></a>示例  
-下面的示例将 AdventureWorks2012 数据库中所述。
+AdventureWorks2012 数据库中介绍了以下示例。
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. 禁用对表的 DML 触发器  
  以下示例禁用对表 `uAddress` 创建的触发器 `Address`。  

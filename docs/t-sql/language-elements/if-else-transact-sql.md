@@ -54,12 +54,12 @@ IF Boolean_expression
  *Boolean_expression*  
  返回 TRUE 或 FALSE 的表达式。 如果布尔表达式中含有 SELECT 语句，则必须用括号将 SELECT 语句括起来。  
   
- { *sql_statement*| *statement_block* }  
+ { sql_statement| statement_block }  
  任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或用语句块定义的语句分组。 除非使用语句块，否则 IF 或 ELSE 条件只能影响一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的性能。  
   
  若要定义语句块，请使用控制流关键字 BEGIN 和 END。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  IF...ELSE 构造可用于批处理、存储过程和即席查询。 当此构造用于存储过程时，通常用于测试某个参数是否存在。  
   
  可以在其他 IF 之后或在 ELSE 下面，嵌套另一个 IF 测试。 嵌套级数的限制取决于可用内存。  
@@ -73,10 +73,10 @@ ELSE
        SELECT 'Weekday';
 ```  
   
- 有关更多示例，请参阅[ELSE &#40; 如果...其他 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md).  
+ 有关详细信息，请参阅 [ELSE (IF...ELSE) (Transact-SQL)](../../t-sql/language-elements/else-if-else-transact-sql.md)。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例使用`IF…ELSE`根据中的项的权重来确定这两个响应以向用户，`DimProduct`表。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下面的示例使用 `IF…ELSE`，根据 `DimProduct` 表中各项的权重来决定向用户显示两个响应中的哪一个响应。  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -98,12 +98,12 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
+ [BEGIN...END (Transact-SQL)](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [END (BEGIN...END) (Transact-SQL)](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [虽然 &#40;Transact SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)   
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; 如果...其他 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
+ [WHILE (Transact-SQL)](../../t-sql/language-elements/while-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md) [ELSE (IF...ELSE) (Transact-SQL)](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "还原 SERVICE MASTER KEY (TRANSACT-SQL) |Microsoft 文档"
+title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- 文件**=***path_to_file*  
- 指定存储服务主密钥的完整路径（包括文件名）。 *path_to_file*可以是本地路径或网络位置的 UNC 路径。  
+ FILE ='path_to_file'  
+ 指定存储服务主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径。  
   
- 密码**=***密码*  
+ PASSWORD ='password'  
  指定对从文件中导入的服务主密钥进行解密时所需的密码。  
   
  FORCE  
  即使存在数据丢失的风险，也要强制替换服务主密钥。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当还原服务主密钥时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对所有已使用当前服务主密钥加密的密钥和机密内容进行解密，然后使用从备份文件中加载的服务主密钥对这些密钥和机密内容进行加密。  
   
  如果有任意一种解密操作失败，则还原操作将会失败。 您可以使用 FORCE 选项忽略错误，但是该选项会使无法进行解密的数据丢失。  
@@ -72,7 +72,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
   
  重新生成加密层次结构是一种消耗大量资源的操作。 您应当将该操作安排在资源需求较低的时段进行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对服务器的 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -87,8 +87,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [服务主密钥](../../relational-databases/security/encryption/service-master-key.md)   
- [ALTER SERVICE MASTER KEY &#40;Transact SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [BACKUP SERVICE MASTER KEY &#40;Transact SQL &#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
+ [ALTER SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [BACKUP SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

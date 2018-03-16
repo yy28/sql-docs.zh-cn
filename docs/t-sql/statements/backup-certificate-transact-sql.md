@@ -1,5 +1,5 @@
 ---
-title: "备份证书 (Transact SQL) |Microsoft 文档"
+title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -75,26 +75,26 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- *path_to_file*  
+ path_to_file  
  指定要保存证书的文件的完整路径（包括文件名）。 此路径可能是本地路径，也可能是网络位置的 UNC 路径。 默认路径为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹的路径。  
   
- *path_to_private_key_file*  
+ path_to_private_key_file  
  指定要保存私钥的文件的完整路径（包括文件名）。 此路径可能是本地路径，也可能是网络位置的 UNC 路径。 默认路径为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹的路径。  
   
- *encryption_password*  
+ encryption_password  
  用于在将密钥写入备份文件之前对私钥进行加密的密码。 该密码需要进行复杂性检查。  
   
- *decryption_password*  
+ decryption_password  
  用于在备份密钥之前对私钥进行解密的密码。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果在数据库中使用密码对私钥进行加密，则必须指定解密密码。  
   
  将私钥备份到文件时，需要进行加密。 用于保护备份证书的密码与用于对证书的私钥进行加密的密码不是同一密码。  
   
- 若要还原已备份的证书，请使用[创建证书](../../t-sql/statements/create-certificate-transact-sql.md)语句。  
+ 若要还原备份的证书，请使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 语句。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对证书具有 CONTROL 权限，并且了解用于对私钥进行加密的密码的相关信息。 如果只备份证书的公共部分，则要求对证书具有某种权限，并且不拒绝调用方对证书的 VIEW 权限。  
   
 ## <a name="examples"></a>示例  
@@ -130,8 +130,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [删除证书 &#40;Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)  
   
   
 

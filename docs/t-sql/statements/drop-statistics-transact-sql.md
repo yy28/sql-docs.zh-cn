@@ -1,5 +1,5 @@
 ---
-title: "丢弃统计数据 (Transact SQL) |Microsoft 文档"
+title: DROP STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/22/2016
 ms.prod: sql-non-specified
@@ -60,20 +60,20 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *表* | *视图*  
- 其删除统计信息的目标表或索引视图的名称。 表和视图名称必须符合的规则[数据库标识符](../../relational-databases/databases/database-identifiers.md)。 可以选择是否指定表或视图所有者名称。  
+ table | view  
+ 其删除统计信息的目标表或索引视图的名称。 表和视图的名称必须符合[数据库标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定表或视图所有者名称。  
   
  *statistics_name*  
  要删除的统计信息组的名称。 统计信息名称必须符合有关标识符的规则。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  删除统计信息时，请谨慎从事。 这样做可能会影响查询优化器选择的执行计划。  
   
  不能使用 DROP STATISTICS 删除有关索引的统计信息。 统计信息的保留时间与索引存在的时间相同。  
   
- 有关显示统计信息的详细信息，请参阅[DBCC SHOW_STATISTICS &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ 有关显示统计信息的详细信息，请参阅 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对表或视图具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -96,10 +96,10 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>B. 从表中删除统计信息  
- 下面的示例删除`CustomerStats1`中表的统计信息`Customer`。  
+ 以下示例从表 `Customer` 中删除 `CustomerStats1` 统计信息。  
   
 ```  
 DROP STATISTICS Customer.CustomerStats1;  
@@ -112,10 +112,10 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
  [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [sys.stats_columns &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
+ [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
  [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)  

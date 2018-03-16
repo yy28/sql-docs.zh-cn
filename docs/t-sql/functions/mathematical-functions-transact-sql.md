@@ -1,5 +1,5 @@
 ---
-title: "数学函数 (Transact SQL) |Microsoft 文档"
+title: "数学函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 |[COT](../../t-sql/functions/cot-transact-sql.md)|[RADIANS](../../t-sql/functions/radians-transact-sql.md)||  
   
 > [!NOTE]  
->  算术函数（例如 ABS、CEILING、DEGREES、FLOOR、POWER、RADIANS 和 SIGN）返回与输入值具有相同数据类型的值。 三角函数和其他函数，包括 EXP、 日志、 LOG10、 方块和 SQRT、 强制转换为其输入的值**float**并返回**float**值。  
+>  算术函数（例如 ABS、CEILING、DEGREES、FLOOR、POWER、RADIANS 和 SIGN）返回与输入值具有相同数据类型的值。 三角函数和其他函数（包括 EXP、LOG、LOG10、SQUARE 和 SQRT）将输入值转换为 float 并返回 float 值。  
   
- 除 RAND 以外的所有数学函数都为确定性函数。 这意味着在每次使用特定的输入值集调用这些函数时，它们都将返回相同的结果。 仅当指定种子参数时 RAND 才是确定性函数。 有关函数的确定性的详细信息，请参阅[Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+ 除 RAND 以外的所有数学函数都为确定性函数。 这意味着在每次使用特定的输入值集调用这些函数时，它们都将返回相同的结果。 仅当指定种子参数时 RAND 才是确定性函数。 有关函数确定性的详细信息，请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-  [算术运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
+  [算术运算符 (Transact-SQL)](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
   [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "运算符优先级 (Transact SQL) |Microsoft 文档"
+title: "运算符优先级 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,12 +38,12 @@ ms.lasthandoff: 01/25/2018
   
  运算符的优先级别如下表中所示。 在较低级别的运算符之前先对较高级别的运算符进行求值。  
   
-|Level|运算符|  
+|级别|运算符|  
 |-----------|---------------|  
-|1|~（位非）|  
-|2|* （乘） / （除），%（取模）|  
-|3|+ （正）、-（负号），+ （加）、 （+ 串联），-（减） （& a) (按位 AND)、 ^ (按位异或)，&#124;（位或）|  
-|4|=、 >， \<，> =、 < =、 <>，！ =、 ！ >，！ < （比较运算符）|  
+|@shouldalert|~（位非）|  
+|2|*（乘）、/（除）、%（取模）|  
+|3|+（正）、-（负）、+（加）、（+ 串联）、-（减）、&（位与）、^（位异或）、|（位或）|  
+|4|=、>、\<、>=、<=、<>、!=、!>、!<（比较运算符）|  
 |5|NOT|  
 |6|和|  
 |7|ALL、ANY、BETWEEN、IN、LIKE、OR、SOME|  
@@ -89,8 +89,8 @@ SELECT @MyNumber;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [逻辑运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [逻辑运算符 (Transact-SQL)](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

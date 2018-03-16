@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE （并行数据仓库） |Microsoft 文档"
+title: "ALTER DATABASE（并行数据仓库）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE （并行数据仓库）
+# <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE（并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  修改复制的表、 分布式的表和中的事务日志的最大数据库大小选项[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 使用此语句可以管理数据库的磁盘空间分配，因为它的增长或收缩的大小。  
+  修改[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中复制表、分布式表和事务日志的最大数据库大小选项。 使用此语句可在数据库大小增长或收缩时管理数据库的磁盘空间分配。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,42 +53,42 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>参数  
  *database_name*  
- 要修改的数据库的名称。 若要在设备上显示的数据库列表，请使用[sys.databases &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ 要修改的数据库的名称。 要在设备上显示数据库列表，请使用 [sys.databases (Transact SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
   
- 自动增长 = {ON |关闭}  
- 更新的自动增长选项。 当自动增长为 ON，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]会自动增加为复制的表、 分布式的表和事务日志分配的空间，根据需要以适应存储需求的增长。 自动增长时 OFF，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]会返回一个错误，如果所复制表，分布式表，或事务日志文件超出最大大小设置。  
+ AUTOGROW = { ON | OFF }  
+ 更新 AUTOGROW 选项。 当 AUTOGROW 为 ON 时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 根据需要自动为复制表、分布式表和事务日志增大分配空间，以适应存储需求的增长。 当 AUTOGROW 为 OFF 时，如果复制表、分布式表或事务日志超出最大大小设置，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 会返回一个错误。  
   
- REPLICATED_SIZE = *size* [GB]  
- 指定每个在更改数据库中存储的所有复制的表的计算节点的新的最大千兆字节。 如果你打算设备存储空间，你将需要 REPLICATED_SIZE 乘以设备中的计算节点数。  
+ REPLICATED_SIZE = size [GB]  
+ 指定每个计算节点的新最大 GB 数，以便存储要更改的数据库中的所有复制表。 如果正在计划设备存储空间，需要用 REPLICATED_SIZE 乘以设备中的计算节点数。  
   
- DISTRIBUTED_SIZE = *size* [GB]  
- 指定每个数据库的更改数据库中存储的所有分布式表的新的最大千兆字节。 大小分布在所有设备的计算节点。  
+ DISTRIBUTED_SIZE = size [GB]  
+ 指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有分布式表。 该大小分布到设备的所有计算节点中。  
   
- LOG_SIZE = *size* [GB]  
- 指定每个数据库的更改数据库中存储的所有事务日志的新的最大千兆字节。 大小分布在所有设备的计算节点。  
+ LOG_SIZE = size [GB]  
+ 指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有事务日志。 该大小分布到设备的所有计算节点中。  
   
- 加密 {ON |关闭}  
- 将数据库设置为加密的 (ON) 或未加密的 (OFF)。 加密只能为配置[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]时[sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e)已设置为**1**。 必须创建数据库加密密钥，然后才能配置透明数据加密。 有关数据库加密的详细信息，请参阅[透明数据加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ ENCRYPTION { ON | OFF }  
+ 将数据库设置为加密的 (ON) 或未加密的 (OFF)。 只能在 [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) 已设置为 **1** 时为 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 配置加密。 必须先创建数据库加密密钥，然后才能配置透明数据加密。 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 ## <a name="permissions"></a>权限  
- 需要数据库拥有 ALTER 权限。  
+ 需要具有针对数据库的 ALTER 权限。  
   
 ## <a name="general-remarks"></a>一般备注  
- REPLICATED_SIZE、 DISTRIBUTED_SIZE 和 LOG_SIZE 值可以是晚于、 等于或小于数据库的当前值。  
+ REPLICATED_SIZE、DISTRIBUTED_SIZE 和 LOG_SIZE 的值可以大于、等于或小于数据库的当前值。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
- 增长和收缩操作都是近似值。 所得到的实际大小可能会因大小参数。  
+ 增长和收缩操作是近似的。 所得到的实际大小可能因大小参数而异。  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]不执行 ALTER DATABASE 语句以原子操作。 如果在执行期间中止该语句时，将保持已发生更改。  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 不会将 ALTER DATABASE 语句作为原子操作执行。 如果在执行期间中止该语句，将保持已发生的更改。  
   
 ## <a name="locking-behavior"></a>锁定行为  
- 数据库对象上采用共享的锁。 无法更改正在由另一个用户使用的读取或写入数据库。 这包括已颁发的会话[使用](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15)对数据库的语句。  
+ 在 DATABASE 对象上采用共享锁。 无法更改另个用户正在读取或写入的数据库。 这包括已在数据库上发出 [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) 语句的会话。  
   
-## <a name="performance"></a>性能  
- 收缩数据库可能需要大量的时间和系统资源，具体取决于数据库中的实际数据大小和磁盘上的碎片量。 例如，收缩数据库可能需要几小时或更。  
+## <a name="performance"></a>“性能”  
+ 收缩数据库可能需要大量时间和系统资源，具体取决于数据库中的实际数据大小和磁盘上的碎片量。 例如，收缩数据库可能需要几个小时或更长时间。  
   
 ## <a name="determining-encryption-progress"></a>确定加密进度  
- 使用以下查询来确定数据库，以百分比形式的透明数据加密的进度：  
+ 可使用以下查询来确定数据库透明数据加密进度的百分比：  
   
 ```  
 WITH  
@@ -132,20 +132,20 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
- 有关演示中实现 TDE 的所有步骤的完整示例，请参阅[透明数据加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ 有关演示实现 TDE 的所有步骤的完整示例，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. 更改自动增长设置  
- 针对数据库自动增长设置为 ON `CustomerSales`。  
+### <a name="a-altering-the-autogrow-setting"></a>A. 更改 AUTOGROW 设置  
+ 将数据库 `CustomerSales` 的 AUTOGROW 设置为 ON。  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 更改复制的表的最大存储  
- 下面的示例设置为 1 GB 的数据库的复制的表存储限制`CustomerSales`。 这是每个计算节点的存储限制。  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 更改复制表的最大存储  
+ 下面的示例将数据库 `CustomerSales` 的复制表存储限制设置为 1 GB。 这是每个计算节点的存储限制。  
   
 ```  
 ALTER DATABASE CustomerSales  
@@ -153,7 +153,7 @@ ALTER DATABASE CustomerSales
 ```  
   
 ### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 更改分布式表的最大存储  
- 下面的示例设置分布式的表存储限制为 1000 GB (一个 terabyte) 数据库`CustomerSales`。 这不是存储限制，每个计算节点的计算节点上，所有设备的组合的存储限制。  
+ 下面的示例将数据库 `CustomerSales` 的分布式表存储限制设置为 1000 GB (1 TB)。 这是设备上所有计算节点的组合存储限制，而不是每个计算节点的存储限制。  
   
 ```  
 ALTER DATABASE CustomerSales  
@@ -161,7 +161,7 @@ ALTER DATABASE CustomerSales
 ```  
   
 ### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 更改事务日志的最大存储  
- 下面的示例更新数据库`CustomerSales`以最多有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]装置事务日志大小的 10 GB。  
+ 下面的示例更新数据库 `CustomerSales`使设备的最大 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小为 10 GB。  
   
 ```  
 ALTER DATABASE CustomerSales  
@@ -169,7 +169,7 @@ ALTER DATABASE CustomerSales
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建数据库 &#40;并行数据仓库 &#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
+ [CREATE DATABASE（并行数据仓库）](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

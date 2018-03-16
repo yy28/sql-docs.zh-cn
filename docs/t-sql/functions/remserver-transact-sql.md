@@ -1,5 +1,5 @@
 ---
-title: "@@REMSERVER (Transact SQL) |Microsoft 文档"
+title: '@@REMSERVER (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40remserver-transact-sql"></a>& #x 40; 和 #x 40;REMSERVER (Transact SQL)
+# <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>返回类型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>注释  
- @@REMSERVER使存储的过程以检查运行该过程时数据库服务器的名称。  
+## <a name="remarks"></a>Remarks  
+ 使用 @@REMSERVER，存储过程可以检查其运行所在的数据库服务器的名称。  
   
 ## <a name="examples"></a>示例  
  以下示例将创建返回远程服务器名称的过程 `usp_CheckServer`。  

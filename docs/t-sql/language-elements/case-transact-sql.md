@@ -78,49 +78,49 @@ END
 ```  
   
 ## <a name="arguments"></a>参数  
- *input_expression*  
- 使用简单 CASE 格式时计算的表达式。 *input_expression*是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ input_expression  
+ 使用简单 CASE 格式时计算的表达式。 input_expression 是任何有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- WHEN *when_expression*  
- 是一个简单的表达式，向其*input_expression*进行比较时使用的简单的大小写格式。 *when_expression*为任何有效表达式。 数据类型的*input_expression*和每个*when_expression*必须相同或必须是隐式转换。  
+ WHEN when_expression  
+ 使用简单 CASE 格式时要与 input_expression 进行比较的简单表达式。 when_expression 是任何有效的表达式。 input_expression 及每个 when_expression 的数据类型必须相同或必须是隐式转换的数据类型。  
   
- THEN *result_expression*  
- 返回的表达式时*input_expression*等于*when_expression*计算结果为 TRUE，或*Boolean_expression*计算结果为 TRUE。 *导致表达式*是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ THEN result_expression  
+ 当 input_expression = when_expression 的计算结果为 TRUE 时，或 Boolean_expression 的计算结果为 TRUE 时返回的表达式。 result expression 是任何有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- ELSE *else_result_expression*  
- 比较运算计算结果不为 TRUE 时返回的表达式。 如果忽略此参数且比较运算计算结果不为 TRUE，则 CASE 返回 NULL。 *else_result_expression*为任何有效表达式。 数据类型的*else_result_expression*和任何*result_expression*必须相同或必须是隐式转换。  
+ ELSE else_result_expression  
+ 比较运算计算结果不为 TRUE 时返回的表达式。 如果忽略此参数且比较运算计算结果不为 TRUE，则 CASE 返回 NULL。 else_result_expression 是任何有效的表达式。 else_result_expression 及任何 result_expression 的数据类型必须相同或必须是隐式转换的数据类型。  
   
- 当*Boolean_expression*  
- 使用 CASE 搜索格式时所计算的布尔表达式。 *Boolean_expression*是任何有效的布尔表达式。  
+ WHEN Boolean_expression  
+ 使用 CASE 搜索格式时所计算的布尔表达式。 Boolean_expression 是任何有效的布尔表达式。  
   
 ## <a name="return-types"></a>返回类型  
- 从的类型集中返回优先级高的类型*result_expressions*和可选*else_result_expression*。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+ 从 result_expressions 和可选 else_result_expression 的类型集中返回优先级最高的类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
 ### <a name="return-values"></a>返回值  
- **简单 CASE 表达式：**  
+ **CASE 简单表达式：**  
   
  CASE 简单表达式的工作方式如下：将第一个表达式与每个 WHEN 子句中的表达式进行比较，以确定它们是否等效。 如果这些表达式等效，将返回 THEN 子句中的表达式。  
   
 -   仅用于等同性检查。  
   
--   在指定的顺序，将计算 input_expression = when_expression 为每个 WHEN 子句。  
+-   按指定的顺序计算每个 WHEN 子句的 input_expression = when_expression。  
   
--   返回*result_expression*的第一个*input_expression* = *when_expression*计算结果为 TRUE。  
+-   返回首个 input_expression = when_expression 的计算结果为 TRUE 的 result_expression。  
   
--   如果没有*input_expression* = *when_expression*计算结果为 TRUE，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]返回*else_result_expression*如果 ELSE 子句，则指定，或如果没有 ELSE 子句指定一个 NULL 值。  
+-   如果 input_expression = when_expression 的计算结果均不为 TRUE，则在指定了 ELSE 子句的情况下，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将返回 else_result_expression；若没有指定 ELSE 子句，则返回 NULL 值。  
   
- **搜索 CASE 表达式：**  
+ **CASE 搜索表达式：**  
   
--   计算结果，按顺序指定， *Boolean_expression*为每个 WHEN 子句。  
+-   按指定顺序对每个 WHEN 子句的 Boolean_expression 进行计算。  
   
--   返回*result_expression*的第一个*Boolean_expression*计算结果为 TRUE。  
+-   返回首个 Boolean_expression 的计算结果为 TRUE 的 result_expression。  
   
--   如果没有*Boolean_expression*计算结果为 TRUE，[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回*else_result_expression*如果指定了 ELSE 子句，或如果没有 ELSE 子句指定一个 NULL 值。  
+-   如果 Boolean_expression 的计算结果均不为 TRUE，则在指定了 ELSE 子句的情况下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将返回 else_result_expression；若没有指定 ELSE 子句，则返回 NULL 值。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅允许在 CASE 表达式中嵌套 10 个级别。  
   
- CASE 表达式不能用于控制 Transact-SQL 语句、语句块、用户定义函数以及存储过程的执行流。 控制流方法的列表，请参阅[控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md).  
+ CASE 表达式不能用于控制 Transact-SQL 语句、语句块、用户定义函数以及存储过程的执行流。 如需控制流方法的列表，请参阅[控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)。  
   
  CASE 语句按顺序评估其条件并在满足第一个条件时停止。 在某些情况下，将会先计算表达式，然后 CASE 语句会将表达式的结果作为其输入接收。 在计算这些表达式时可能会出现错误。 首先计算在 CASE 语句的 WHEN 参数中出现的聚合表达式，然后将结果提供给 CASE 语句。 例如，下面的查询将在生成 MAX 聚合的值时生成被零除错误。 在计算 CASE 表达式之前会出现这种情况。  
   
@@ -225,7 +225,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. 在 SET 语句中使用 CASE  
- 下面的示例在表值函数 `dbo.GetContactInfo` 中的 SET 语句中使用 CASE 表达式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，与人员有关的所有数据都存储在 `Person.Person` 表中。 例如，人员可能是一名员工、 供应商代表或客户。 该函数将返回的第一个和最后一个名称给定`BusinessEntityID`和该用户的联系人类型。SET 语句中的 CASE 表达式确定要显示的列的值`ContactType`基于是否存在`BusinessEntityID`中的列`Employee`， `Vendor`，或`Customer`表。  
+ 下面的示例在表值函数 `dbo.GetContactInfo` 中的 SET 语句中使用 CASE 表达式。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，与人员有关的所有数据都存储在 `Person.Person` 表中。 例如，该人员可以是员工、供应商代表或消费者。 该函数将返回给定 `BusinessEntityID` 的名字与姓氏以及该人员的联系人类型。SET 语句中的 CASE 表达式将根据该 `BusinessEntityID` 列是存在于 `Employee`、`Vendor` 还是存在于 `Customer` 表中来确定要为 `ContactType` 列显示的值。  
   
 ```  
   
@@ -299,7 +299,7 @@ FROM dbo.GetContactInformation(5);
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. 在 HAVING 子句中使用 CASE  
- 下面的示例在 HAVING 子句中使用 CASE 表达式，以限制由 SELECT 语句返回的行。 该语句返回为每个作业标题中的最大每小时速率`HumanResources.Employee`表。 HAVING 子句将职位限制为两类员工：一是最高每小时薪金超过 40 美元的男性员工，二是最高每小时薪金超过 42 美元的女性员工。  
+ 下面的示例在 HAVING 子句中使用 CASE 表达式，以限制由 SELECT 语句返回的行。 该语句将返回 `HumanResources.Employee` 表中针对每个职位的最高每小时薪金。 HAVING 子句将职位限制为两类员工：一是最高每小时薪金超过 40 美元的男性员工，二是最高每小时薪金超过 42 美元的女性员工。  
   
 ```  
 USE AdventureWorks2012;  
@@ -318,10 +318,10 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. SELECT 语句使用 CASE 表达式  
- SELECT 语句中 CASE 表达式允许在结果集中比较值为基础的替换值。 下面的示例使用 CASE 表达式来更改显示的产品行类别，以使它们更易于理解。 不存在一个值时，文本"不能为销售会显示。  
+### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. 将 SELECT 语句和 CASE 表达式结合使用  
+ 在 SELECT 语句中，CASE 表达式允许根据比较值替换结果集中的值。 下面的示例使用 CASE 表达式更改产品系列类别的显示，以使这些类别更易于理解。 不存在任何值时，则显示文本“Not for sale”。  
   
 ```  
 -- Uses AdventureWorks  
@@ -357,11 +357,11 @@ WHERE SalariedFlag = 0;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [将合并 &#40;Transact SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [IIF &#40;Transact SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF (Transact-SQL)](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [CHOOSE (Transact-SQL)](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

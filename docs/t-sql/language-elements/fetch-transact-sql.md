@@ -1,5 +1,5 @@
 ---
-title: "提取 (Transact SQL) |Microsoft 文档"
+title: FETCH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,25 +72,25 @@ FETCH
  LAST  
  返回游标中的最后一行并将其作为当前行。  
   
- 绝对 {  *n* | @*nvar*}  
- 如果 *n* 或 @*nvar*为正值，则返回的行 *n* 从光标开头的行并将新的当前行的返回的行。 如果 *n* 或 @*nvar*为负，返回一行 *n* 光标结束之前的行并将新的当前行的返回的行。 如果 *n* 或 @*nvar*为 0，则会返回任何行。 *n*必须是整数常量和 @*nvar*必须**smallint**， **tinyint**，或**int**。  
+ ABSOLUTE { n| @nvar}  
+ 如果 n 或 @nvar 为正，则返回从游标起始处开始向后的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为负，则返回从游标末尾处开始向前的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为 0，则不返回行。 n 必须是整数常量，并且 @nvar 必须是 smallint、tinyint 或 int。  
   
- 相对 {  *n* | @*nvar*}  
- 如果 *n* 或 @*nvar*为正值，则返回的行 *n* 超出当前行的行并将新的当前行的返回的行。 如果 *n* 或 @*nvar*为负，返回一行 *n* 在当前行之前的行并将新的当前行的返回的行。 如果 *n* 或 @*nvar*为 0，则返回当前行。 如果使用的提取相对指定 *n* 或 @*nvar*设置为负数或 0 上完成对游标第一次提取时，会返回任何行。 *n*必须是整数常量和 @*nvar*必须**smallint**， **tinyint**，或**int**。  
+ RELATIVE { n| @nvar}  
+ 如果 n 或 @nvar 为正，则返回从当前行开始向后的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为负，则返回从当前行开始向前的第 n 行，并将返回行变成新的当前行。 如果 n 或 @nvar 为 0，则返回当前行。 在对游标进行第一次提取时，如果在将 n 或 @nvar 设置为负数或 0 的情况下指定 FETCH RELATIVE，则不返回行。 n 必须是整数常量，并且 @nvar 必须是 smallint、tinyint 或 int。  
   
  GLOBAL  
- 指定*cursor_name*指全局游标。  
+ 指定 cursor_name 是指全局游标。  
   
- *cursor_name*  
- 要从中进行提取的开放游标的名称。 全局和局部游标是否存在与*cursor_name*作为其名称， *cursor_name*到全局游标如果指定全局和局部游标如果未指定全局。  
+ cursor_name  
+ 要从中进行提取的开放游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 指全局游标，如果未指定 GLOBAL，则指局部游标。  
   
- @*cursor_variable_name*  
+ @cursor_variable_name  
  游标变量名，引用要从中进行提取操作的打开的游标。  
   
- INTO @*variable_name*[ ,...*n*]  
+ INTO @variable_name[ ,...]n  
  允许将提取操作的列数据放到局部变量中。 列表中的各个变量从左到右与游标结果集中的相应列相关联。 各变量的数据类型必须与相应的结果集列的数据类型匹配，或是结果集列数据类型所支持的隐式转换。 变量的数目必须与游标选择列表中的列数一致。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果 SCROLL 选项未在 ISO 样式的 DECLARE CURSOR 语句中指定，则 NEXT 是唯一支持的 FETCH 选项。 如果在 ISO 样式的 DECLARE CURSOR 语句中指定了 SCROLL 选项，则支持所有 FETCH 选项。  
   
  如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE 游标扩展插件，则应用下列规则：  
@@ -101,7 +101,7 @@ FETCH
   
 -   DYNAMIC SCROLL 游标支持除 ABSOLUTE 以外的所有 FETCH 选项。  
   
- @@FETCH_STATUS函数报告的最后一个的 FETCH 语句的状态。 相同的信息记录在由 sp_describe_cursor 返回的游标中的 fetch_status 列中。 这些状态信息应该用于在对由 FETCH 语句返回的数据进行任何操作之前，以确定这些数据的有效性。 有关详细信息，请参阅[@@FETCH_STATUS &#40;Transact SQL &#41;](../../t-sql/functions/fetch-status-transact-sql.md).  
+ @@FETCH_STATUS 函数报告上一个 FETCH 语句的状态。 相同的信息记录在由 sp_describe_cursor 返回的游标中的 fetch_status 列中。 这些状态信息应该用于在对由 FETCH 语句返回的数据进行任何操作之前，以确定这些数据的有效性。 有关详细信息，请参阅 [@@FETCH_STATUS (Transact-SQL)](../../t-sql/functions/fetch-status-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  FETCH 权限默认授予任何有效的用户。  
@@ -215,9 +215,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [CLOSE (Transact-SQL)](../../t-sql/language-elements/close-transact-sql.md)   
+ [DEALLOCATE (Transact-SQL)](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [打开 &#40;Transact SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_USER (Transact SQL) |Microsoft 文档"
+title: CURRENT_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ CURRENT_USER
 ## <a name="return-types"></a>返回类型
 **sysname**
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 CURRENT_USER 返回当前安全上下文的名称。 如果在调用 EXECUTE AS 开关上下文之后执行 CURRENT_USER，CURRENT_USER 将返回模拟上下文的名称。 如果 Windows 主体以组的成员身份的方式访问数据库，将返回该 Windows 主体的名称，而不是这个组的名称。
   
-若要返回当前用户的登录名，请参阅[SUSER_NAME &#40;Transact SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)和[SYSTEM_USER &#40;Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md).
+若要返回当前用户的登录名，请参阅[SUSER_NAME (Transact-SQL)](../../t-sql/functions/suser-name-transact-sql.md) 和 [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
   
@@ -140,12 +140,12 @@ Wanida
 ```
   
 ## <a name="see-also"></a>另请参阅
-[USER_NAME &#40;Transact SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
-[SYSTEM_USER &#40;Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+[USER_NAME (Transact-SQL)](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
-[系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "BufferWithTolerance (geometry 数据类型) |Microsoft 文档"
+title: "BufferWithTolerance（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回表示所有点的联合的几何对象值从其距离**几何图形**实例小于或等于指定的值，从而使指定容差。
+返回一个几何图形对象，该对象表示所有与 **geometry** 实例的距离小于或等于指定值的点值的并集，允许存在指定的公差。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,50 +44,50 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- *distance*  
- 是**float**表达式指定的距离**几何图形**围绕其计算的缓冲区的实例。  
+ distance  
+ 一个 **float** 表达式，用于指定与围绕其计算缓冲区的 **geometry** 实例的距离。  
   
  *tolerance*  
- 是**float**表达式指定的缓冲区距离的容差。  
+ 一个 float 表达式，用于指定缓冲区距离的公差。  
   
- *容差*引用中返回的线性近似的理想的缓冲区距离的最大变体。  
+ *公差*是指理想的缓冲区距离与返回的线性近似值之间的最大偏差。  
   
  例如，点的理想缓冲区距离为圆圈，但是这必须与多边形近似。 公差越小，多边形具有的点就越多，这将增加结果的复杂度，但可减少错误。  
   
- *relative*  
- 是**位**指定是否*容差*值是相对或绝对。 如果 'TRUE' 或 1，然后容差是相对的。 而作为计算的产品*容差*参数和直径的实例的边界框。 如果 'FALSE' 或 0，容差是绝对和*容差*值是绝对的最大变体中返回的线性近似的理想的缓冲区距离。  
+ relative  
+ 一个指定 tolerance 值是相对值还是绝对值的 bit 值。 如果为“TRUE”或 1，则公差为相对值，并按 *tolerance* 参数与该实例的边框直径之间的乘积进行计算。 如果为“FALSE”或 0，则公差为绝对值，并且 tolerance 值为理想缓冲区距离与返回的线性近似值之间的绝对最大偏差。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="exceptions"></a>异常  
- *容差*参数必须是大于零。 如果*容差*< = 0 则`System.ArgumentOutOfRangeException`引发。  
+ *tolerance* 参数必须大于零。 如果 *tolerance* <= 0，则引发 `System.ArgumentOutOfRangeException`。  
   
 > [!NOTE]  
->  由于*容差*是**float**类型，`System.Runtime.InteropServices.COMException`容差的给定值是否很小，因舍入的浮点类型问题可能会引发。  
+>  由于 *tolerance* 的类型为 **float**，如果指定的 tolerance 值很小，则可能会由于浮点类型舍入问题而引发 `System.Runtime.InteropServices.COMException`。  
   
-## <a name="remarks"></a>注释  
- 当*距离*> 0，则请**多边形**或**MultiPolygon**返回实例。  
+## <a name="remarks"></a>Remarks  
+ 如果 distance > 0，则返回 Polygon 或 MultiPolygon 实例。  
   
 > [!NOTE]  
->  由于距离是**float**，可以相当极小的值为零的计算中。 在这种情况，调用一份**几何图形**返回实例。 请参阅[float 和 real &#40;Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  由于 distance 的类型为 float，因此，极小的值可能在计算中等于零。 如果发生这种情况，则会返回执行调用的 geometry 实例的副本。 请参阅 [float 和 real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)。  
   
- 当*距离*= 0，则调用一份**几何图形**返回实例。  
+ 如果 distance = 0，则会返回执行调用的 geometry 实例的副本。  
   
- 当*距离*< 0 然后  
+ 如果 distance < 0  
   
--   一个空**GeometryCollection**时实例的维度是 0 或 1，则返回实例。  
+-   当实例维度为 0 或 1 时，将返回空的 **GeometryCollection** 实例。  
   
 -   当实例维度为 2 或更大时，将返回负缓冲区。  
   
     > [!NOTE]  
-    >  负缓冲区还可以创建一个空**GeometryCollection**实例。  
+    >  负缓冲区还可能会创建空的 GeometryCollection 实例。  
   
- 负缓冲区中删除的边界的给定距离内的所有点**几何图形**实例。  
+ 负缓冲区将删除 **geometry** 实例的给定距离的边界内的所有点。  
   
- Theorectical 和计算的缓冲区之间的错误是最大 (容差，范围\*1.E 7) 容差所在的值*容差*参数。 有关扩展盘区的详细信息，请参阅[geometry 数据类型方法引用](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)。  
+ 理论缓冲区与计算缓冲区之间的误差为 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 tolerance 参数的值。 有关盘区的详细信息，请参阅 [geometry 数据类型方法引用](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建 `Point` 实例，并使用 `BufferWithTolerance()` 获取环绕该实例的大致缓冲区。  
@@ -99,7 +99,7 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [STBuffer &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
+ [STBuffer（geometry 数据类型）](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [几何图形实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

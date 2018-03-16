@@ -1,5 +1,5 @@
 ---
-title: "STGeomCollFromText (geometry 数据类型) |Microsoft 文档"
+title: "STGeomCollFromText（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回**几何图形**实例传送开放地理空间联盟 (OGC) 熟知文本 (WKT) 表示形式扩充任何 Z （仰角） 和 M （度量） 值的实例。
+从开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式返回 geometry 实例，增加了该实例传递的任何 Z（标高）和 M（度量）值。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,18 +45,18 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>参数  
  *geometrycollection_tagged_text*  
- 是的 WKT 表示形式**几何图形**您希望返回的实例。 *geometry_tagged_text*是**nvarchar (max)**表达式。  
+ 希望返回的 **geometry** 实例的 WKT 表示形式。 geometry_tagged_text 是一个 nvarchar(max) 表达式。  
   
- *SRID*  
- 是**int**表达式表示空间引用标识符 (SRID) 的**几何图形**您希望返回的实例。  
+ SRID  
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
- OGC 种**几何图形**返回实例`STGeomCollFromText()`设置为相应的 WKT 输入。  
+## <a name="remarks"></a>Remarks  
+ `STGeomCollFromText()` 返回的 **geometry** 实例的 OGC 类型设置为相应的 WKT 输入。  
   
  如果输入无效，此方法将引发异常。  
   

@@ -1,5 +1,5 @@
 ---
-title: "DATEDIFF (Transact SQL) |Microsoft 文档"
+title: DATEDIFF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_TSQL
 - DATEDIFF
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - DATEDIFF function [SQL Server]
@@ -31,23 +33,23 @@ helpviewer_keywords:
 - crossing date time boundaries [SQL Server]
 - calculating dates times [SQL Server]
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cbbe6e93122cb69253b960afe067635ee0a852d8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: c7eaab4807f87aca3de9d4fb318c9069f5efdc67
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回指定的计数 （带符号整数） *datepart*之间指定跨越边界*startdate*和*enddate*。
+返回指定的 startdate 和 enddate 之间所跨的指定 datepart 边界的计数（带符号整数）。
   
-对于更大的差异，请参阅[DATEDIFF_BIG &#40;Transact SQL &#41;](../../t-sql/functions/datediff-big-transact-sql.md). 有关的所有概述[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和时间数据类型和函数，请参阅[日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+有关更大的差值，请参阅 [DATEDIFF_BIG (Transact-SQL)](../../t-sql/functions/datediff-big-transact-sql.md)。 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,52 +61,52 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## <a name="arguments"></a>参数  
 *datepart*  
-是的一部分*startdate*和*enddate* ，指定删除线的边界的类型。 下表列出所有有效*datepart*自变量。 用户定义的变量等效项是无效的。
+是指定所跨边界类型的 startdate 和 enddate 的一部分。 下表列出了所有有效的 datepart 参数。 用户定义的变量等效项是无效的。
   
 |*datepart*|缩写形式|  
 |---|---|
-|**年**|**yy、 yyyy**|  
-|**季度**|**qq、 q**|  
-|**月**|**mm、 m**|  
-|**dayofyear**|**dy、 y**|  
-|**一天**|**dd、 d**|  
-|**周**|**wk、 ww**|  
-|**小时**|**hh**|  
-|**分钟**|**mi、 n**|  
-|**第二个**|**ss、 s**|  
-|**毫秒**|**ms**|  
-|**微秒**|**mcs**|  
-|**纳秒为**|**ns**|  
+|year|**yy, yyyy**|  
+|quarter|**qq, q**|  
+|month|**mm, m**|  
+|dayofyear|**dy, y**|  
+|day|**dd, d**|  
+|week|**wk, ww**|  
+|hour|**hh**|  
+|minute|**mi, n**|  
+|second|**ss, s**|  
+|millisecond|ms|  
+|microsecond|mcs|  
+|nanosecond|ns|  
   
 *startdate*  
-是可被解析为一个表达式**时间**，**日期**， **smalldatetime**， **datetime**， **datetime2**，或**datetimeoffset**值。 *日期*可以是表达式、 列表达式、 用户定义变量或字符串文本。 *startdate*减去*enddate*。
+一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值。 date 可以是表达式、列表达式、用户定义的变量或字符串文字。 从 enddate 中减去 startdate。
   
-为避免不确定性，请使用四位数年份。 两位数年份的相关信息，请参阅[配置两位数年份截止服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
+为避免不确定性，请使用四位数年份。 有关两位数年份的信息，请参阅[配置“two digit year cutoff”（两位数年份截止）服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
-*结束日期*  
-请参阅*startdate*。
+enddate  
+请参阅 startdate。
   
 ## <a name="return-type"></a>返回类型  
  **int**  
   
 ## <a name="return-value"></a>返回值  
   
--   每个*datepart*和其缩写返回相同的值。  
+-   每个 datepart 及其缩写都返回相同的值。  
   
-如果返回的值超出范围**int** (-2,147,483,648 到 + 2147483647 之间) 返回一个错误。 有关**毫秒**，之间的最大偏差*startdate*和*enddate*是 24 天，20 小时 31 分钟和 23.647 秒。 有关**第二个**，最大的区别是 68 年。
+如果返回值超出 **int** 的范围（-2,147,483,648 到 +2,147,483,647），则会返回一个错误。 对于 millisecond，startdate 和 enddate 之间的最大差值为 24 天 20 小时 31 分钟 23.647 秒。 对于 second，最大差值为 68 年。
   
-如果*startdate*和*enddate*都分配只有一个时间值与*datepart*不是时间*datepart*，则返回 0。
+如果为 startdate 和 enddate 都只指定了时间值，并且 datepart 不是时间 datepart，则返回 0。
   
-时区偏移量的组件*startdate*或*endate*不用于计算的返回值。
+在计算返回值时不使用 startdate 或 enddate 的时区偏移量部分。
   
-因为[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)精确到最的分钟数，仅当**smalldatetime**值用于*startdate*或*enddate*(秒）和毫秒始终设置为在返回值为 0。
+由于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 仅精确到分钟，因此将 smalldatetime 值用作 startdate 或 enddate 时，返回值中的秒和毫秒将始终设置为 0。
   
-如果仅时间值分配给日期数据类型的变量，则缺少的日期部分的值将设置为默认值： 1900年-01-01。 如果仅日期值分配给时间或日期数据类型的变量，缺少的时间部分的值将设置为默认值： 00:00:00。 如果任一*startdate*或*enddate*具有仅时间部分和其他仅日期部分、 缺少时间和日期部分设置为默认值。
+如果为某个日期数据类型的变量只指定时间值，则所缺日期部分的值将设置为默认值：1900-01-01。 如果为某个时间或日期数据类型的变量只指定日期值，则所缺时间部分的值将设置为默认值：00:00:00。 如果 startdate 和 enddate 中有一个只含时间部分，另一个只含日期部分，则所缺时间和日期部分将设置为各自的默认值。
   
-如果*startdate*和*enddate*不同日期数据类型和一个具有更多的时间部分或比另秒的小数部分精度，缺少的其他部分将设置为 0。
+如果 startdate 和 enddate 属于不同的日期数据类型，并且其中一个的时间部分或秒小数部分精度比另一个高，则另一个的所缺部分将设置为 0。
   
-## <a name="datepart-boundaries"></a>日期部分边界  
-以下语句具有相同*startdate*和同一*endate*。 这些日期是相邻的，在时间上相差 .0000001 秒。 之间的差异*startdate*和*endate*在每个语句中跨越一个日历或时间边界的其*datepart*。 每个语句都返回 1。 如果对于此示例使用了不同年份，如果这两个*startdate*和*endate*处于同一个日历周的返回值**周**将为 0。
+## <a name="datepart-boundaries"></a>datepart 边界  
+以下语句具有相同的 startdate 和相同的 enddate。 这些日期是相邻的，在时间上相差 .0000001 秒。 每个语句中 startdate 与 enddate 之间的差跨其 datepart 的一个日历或时间边界。 每个语句都返回 1。 如果本例使用不同的年份且 startdate 和 enddate 都在相同的日历周内，则 week 的返回值为 0。
   
 ```sql
 SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -119,15 +121,15 @@ SELECT DATEDIFF(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 DATEDIFF 可用在选择列表、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。
   
-DATEDIFF 隐式强制转换为字符串文本**datetime2**类型。 这就意味着，日期在作为字符串传递时，DATEDIFF 不会支持 YDM 格式。 必须显式强制转换为字符串**datetime**或**smalldatetime**要使用的 YDM 格式类型。
+DATEDIFF 将字符串文字隐式转换为 **datetime2** 类型。 这就意味着，日期在作为字符串传递时，DATEDIFF 不会支持 YDM 格式。 必须先将字符串显式转换为 datetime 或 smalldatetime 类型，然后才能使用 YDM 格式。
   
 指定 SET DATEFIRST 对 DATEDIFF 不起作用。 DATEDIFF 始终使用星期日作为每周的第一天，以确保函数是确定性的。
   
 ## <a name="examples"></a>示例  
-下面的示例使用不同类型的表达式作为自变量为*startdate*和*enddate*参数。
+以下示例使用不同类型的表达式作为 startdate 和 enddate 形参的实参。
   
 ### <a name="a-specifying-columns-for-startdate-and-enddate"></a>A. 为 startdate 和 enddate 指定列  
 下例计算一个表的两列中的日期之间所跨越的日边界数。
@@ -146,7 +148,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="b-specifying-user-defined-variables-for-startdate-and-enddate"></a>B. 为 startdate 和 enddate 指定用户定义的变量  
-下面的示例使用用户定义的变量作为自变量为*startdate*和*enddate*。
+以下示例使用用户定义的变量作为 startdate 和 enddate 的参数。
   
 ```sql
 DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
@@ -155,14 +157,14 @@ SELECT DATEDIFF(day, @startdate, @enddate);
 ```  
   
 ### <a name="c-specifying-scalar-system-functions-for-startdate-and-enddate"></a>C. 为 startdate 和 enddate 指定标量系统函数  
-下面的示例使用标量系统函数作为自变量为*startdate*和*enddate*。
+以下示例使用标量系统函数作为 startdate 和 enddate 的参数。
   
 ```sql
 SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());  
 ```  
   
 ### <a name="d-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>D. 为 startdate 和 enddate 指定标量子查询和标量函数  
-下面的示例使用标量子查询和标量函数作为自变量为*startdate*和*enddate*。
+以下示例使用标量子查询和标量函数作为 startdate 和 enddate 的参数。
   
 ```sql
 USE AdventureWorks2012;  
@@ -172,7 +174,7 @@ SELECT DATEDIFF(day,(SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),
 ```  
   
 ### <a name="e-specifying-constants-for-startdate-and-enddate"></a>E. 为 startdate 和 enddate 指定常量  
-下面的示例使用字符常量作为参数*startdate*和*enddate*。
+以下示例使用字符常量作为 startdate 和 enddate 的参数。
   
 ```sql
 SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'  
@@ -180,7 +182,7 @@ SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>F. 为 enddate 指定数值表达式和标量系统函数  
-下面的示例使用数值表达式， `(GETDATE ()+ 1)`，和标量系统函数`GETDATE`和`SYSDATETIME`，作为自变量为*enddate*。
+以下示例使用数值表达式（`(GETDATE ()+ 1)`）和标量系统函数（`GETDATE` 和 `SYSDATETIME`）作为 enddate 的参数。
   
 ```sql
 USE AdventureWorks2012;  
@@ -197,7 +199,7 @@ GO
 ```  
   
 ### <a name="g-specifying-ranking-functions-for-startdate"></a>G. 为 startdate 指定排名函数  
-下面的示例使用排名函数为的自变量*startdate*。
+以下示例使用排名函数作为 startdate 的参数。
   
 ```sql
 USE AdventureWorks2012;  
@@ -215,7 +217,7 @@ WHERE TerritoryID IS NOT NULL
 ```  
   
 ### <a name="h-specifying-an-aggregate-window-function-for-startdate"></a>H. 为 startdate 指定聚合开窗函数  
-下面的示例使用聚合开窗函数的自变量作为*startdate*。
+以下示例使用聚合开窗函数作为 startdate 的参数。
   
 ```sql
 USE AdventureWorks2012;  
@@ -230,8 +232,8 @@ WHERE soh.SalesOrderID IN(43659,58918);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-下面的示例使用不同类型的表达式作为自变量为*startdate*和*enddate*参数。
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+以下示例使用不同类型的表达式作为 startdate 和 enddate 形参的实参。
   
 ### <a name="i-specifying-columns-for-startdate-and-enddate"></a>I. 为 startdate 和 enddate 指定列  
 下例计算一个表的两列中的日期之间所跨越的日边界数。
@@ -249,7 +251,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>J. 为 startdate 和 enddate 指定标量子查询和标量函数  
-下面的示例使用标量子查询和标量函数作为自变量为*startdate*和*enddate*。
+以下示例使用标量子查询和标量函数作为 startdate 和 enddate 的参数。
   
 ```sql
 -- Uses AdventureWorks  
@@ -261,7 +263,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="k-specifying-constants-for-startdate-and-enddate"></a>K. 为 startdate 和 enddate 指定常量  
-下面的示例使用字符常量作为参数*startdate*和*enddate*。
+以下示例使用字符常量作为 startdate 和 enddate 的参数。
   
 ```sql
 -- Uses AdventureWorks  
@@ -271,7 +273,7 @@ SELECT TOP(1) DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="l-specifying-ranking-functions-for-startdate"></a>L. 为 startdate 指定排名函数  
-下面的示例使用排名函数为的自变量*startdate*。
+以下示例使用排名函数作为 startdate 的参数。
   
 ```sql
 -- Uses AdventureWorks  
@@ -283,7 +285,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>M. 为 startdate 指定聚合开窗函数  
-下面的示例使用聚合开窗函数的自变量作为*startdate*。
+以下示例使用聚合开窗函数作为 startdate 的参数。
   
 ```sql
 -- Uses AdventureWorks  
@@ -295,7 +297,7 @@ FROM dbo.DimEmployee
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[DATEDIFF_BIG &#40;Transact SQL &#41;](../../t-sql/functions/datediff-big-transact-sql.md)  
+[DATEDIFF_BIG (Transact-SQL)](../../t-sql/functions/datediff-big-transact-sql.md)  
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "事务隔离级别 |Microsoft 文档"
+title: "事务隔离级别 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,22 +44,22 @@ ms.lasthandoff: 01/25/2018
   
 -   元数据发出内置函数  
   
--   **sp_help**组的存储过程  
+-   存储过程的 **sp_help** 组  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端目录过程  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 目录过程  
   
 -   动态管理视图和函数  
   
- 有关隔离级别的详细信息，请参阅[SET TRANSACTION ISOLATION LEVEL &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
   
  下表概述了各种隔离级别下的元数据访问。  
   
-|隔离级别|Supported|遵守|  
+|隔离级别|是否支持|遵守|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|否|不保证|  
+|READ UNCOMMITTED|是|不保证|  
 |READ COMMITTED|是|是|  
-|REPEATABLE READ|否|否|  
-|SNAPSHOT ISOLATION|否|否|  
-|SERIALIZABLE|否|否|  
+|REPEATABLE READ|是|是|  
+|SNAPSHOT ISOLATION|是|是|  
+|SERIALIZABLE|是|是|  
   
   

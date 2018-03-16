@@ -1,5 +1,5 @@
 ---
-title: "@@DATEFIRST (Transact SQL) |Microsoft 文档"
+title: '@@DATEFIRST (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -45,12 +45,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; DATEFIRST (TRANSACT-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回当前值，适用于会话的[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)。
+针对会话返回 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) 的当前值。
   
-有关的所有概述[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和时间数据类型和函数，请参阅[日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-type"></a>返回类型  
 **tinyint**
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 SET DATEFIRST 指定一周中的第一天。 美国英语中默认 7 对应星期日。
   
 该语言设置会在字符串转换为用于存储在数据库中的日期值时影响字符串的解释，并会影响存储在数据库中的日期值的显示。 该设置不会影响日期数据的存储格式。 在下例中，语言首先设置为 `Italian`。 语句 `SELECT @@DATEFIRST;` 返回 `1`。 然后将语言设置为 `us_english`。 语句 `SELECT @@DATEFIRST;` 返回 `7`。
@@ -96,14 +96,14 @@ First Day         Today
 ```  
   
 ## <a name="example"></a>示例
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT @@DATEFIRST;  
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[配置函数 &#40;Transact SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
+[配置函数 (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
 

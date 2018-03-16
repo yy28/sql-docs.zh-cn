@@ -1,5 +1,5 @@
 ---
-title: "转到 (Transact SQL) |Microsoft 文档"
+title: GO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,12 +35,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---go"></a>SQL Server 实用工具语句-转到
+# <a name="sql-server-utilities-statements---go"></a>SQL Server 实用工具语句 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了命令不[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，但识别**sqlcmd**和**osql**实用程序和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]代码编辑器。 这些命令可用于提高批处理和脚本的可读性和执行效率。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供不在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中、但 sqlcmd 和 osql 实用工具以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器可识别的命令。 这些命令可用于提高批处理和脚本的可读性和执行效率。  
   
-  转到表示一批的结束[!INCLUDE[tsql](../../includes/tsql-md.md)]向语句[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实用程序。  
+  GO 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具发出一批 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句已结束的信号。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,8 +55,8 @@ GO [count]
  *计数*  
  为一个正整数。 GO 之前的批处理将执行指定的次数。  
   
-## <a name="remarks"></a>注释  
- 转到不是[!INCLUDE[tsql](../../includes/tsql-md.md)]语句; 它识别命令**sqlcmd**和**osql**实用程序和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]代码编辑器。  
+## <a name="remarks"></a>Remarks  
+ GO 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句；它是可由 sqlcmd 和 osql 实用工具以及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器识别的命令。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将 GO 解释为应该向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例发送当前批 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句的信号。 当前批语句由上一 GO 命令后输入的所有语句组成，如果是第一条 GO 命令，则由即席会话或脚本开始后输入的所有语句组成。  
   
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>示例  
- 以下示例创建两个批。 第一批包含仅`USE``AdventureWorks2012`语句将数据库上下文设置。 其余的语句使用局部变量。 因此，所有局部变量声明必须组成一个批。 为此，必须在最后一条引用此变量的语句之后才使用 `GO` 命令。  
+ 以下示例创建两个批。 第一个批只包含一条 `USE``AdventureWorks2012` 语句，用于设置数据库上下文。 其余的语句使用局部变量。 因此，所有局部变量声明必须组成一个批。 为此，必须在最后一条引用此变量的语句之后才使用 `GO` 命令。  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: "集 IDENTITY_INSERT (Transact SQL) |Microsoft 文档"
+title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
   
 ## <a name="arguments"></a>参数  
  *database_name*  
- 是在其中指定的表所在的数据库的名称。  
+ 指定的表所在的数据库的名称。  
   
  *schema_name*  
  表所属架构的名称。  
@@ -60,14 +60,14 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *table*  
  包含标识列的表的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  任何时候，一个会话中只有一个表的 IDENTITY_INSERT 属性可以设置为 ON。 如果某个表已将此属性设置为 ON，则对另一个表发出 SET IDENTITY_INSERT ON 语句时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误信息，指出 SET IDENTITY_INSERT 已设置为 ON，并报告已将其属性设置为 ON 的表。  
   
  如果插入值大于表的当前标识值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动将新插入值作为当前标识值使用。  
   
  SET IDENTITY_INSERT 的设置是在执行或运行时设置的，而不是在分析时设置的。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有表，或对表具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -122,7 +122,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENTITY（属性）&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
+ [SCOPE_IDENTITY (Transact-SQL)](../../t-sql/functions/scope-identity-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "撤消非对称密钥权限 (Transact SQL) |Microsoft 文档"
+title: "REVOKE 对称密钥权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -59,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ permission  
  指定可对对称密钥撤消的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON 对称密钥:: *asymmetric_key_name*  
+ ON SYMMETRIC KEY ::asymmetric_key_name  
  指定要对其撤消权限的对称密钥。 需要作用域限定符 ::。  
   
  GRANT OPTION  
@@ -77,37 +77,37 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- {到 |FROM} \< *database_principal*>  
+ { TO | FROM } \<database_principal>  
  指定要从中撤消权限的主体。  
   
- AS \<database_principal > 指定的主体执行此查询的主体从中派生其权限以撤消的权限。  
+ AS \<database_principal> 指定一个主体，执行此查询的主体从该主体获得撤销该权限的权利。  
   
- *Database_user*  
+ Database_user  
  指定数据库用户。  
   
- *Database_role*  
+ Database_role  
  指定数据库角色。  
   
- *Application_role*  
+ Application_role  
  指定应用程序角色。  
   
- *Database_user_mapped_to_Windows_User*  
+ Database_user_mapped_to_Windows_User  
  指定映射到 Windows 用户的数据库用户。  
   
- *Database_user_mapped_to_Windows_Group*  
+ Database_user_mapped_to_Windows_Group  
  指定映射到 Windows 组的数据库用户。  
   
- *Database_user_mapped_to_certificate*  
+ Database_user_mapped_to_certificate  
  指定映射到证书的数据库用户。  
   
- *Database_user_mapped_to_asymmetric_key*  
+ Database_user_mapped_to_asymmetric_key  
  指定映射到非对称密钥的数据库用户。  
   
- *Database_user_with_no_login*  
+ Database_user_with_no_login  
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>注释  
- 有关对称密钥的信息会显示在[sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)目录视图。  
+## <a name="remarks"></a>Remarks  
+ 可以在 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目录视图中查看对称密钥的有关信息。  
   
  如果从通过指定 GRANT OPTION 被授权的主体中撤消该权限，但是未指定 CASCADE，则语句将失败。  
   
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对称密钥的 CONTROL 权限或对数据库的 ALTER ANY SYMMETRIC KEY 权限。 若要使用 AS 选项，则指定的主体必须拥有对称密钥。  
   
 ## <a name="examples"></a>示例  
@@ -134,9 +134,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.symmetric_keys &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [授予非对称密钥权限 &#40;Transact SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [拒绝非对称密钥权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
+ [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [GRANT 对称密钥权限 (Transact-SQL)](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [DENY 对称密钥权限 (Transact-SQL)](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   

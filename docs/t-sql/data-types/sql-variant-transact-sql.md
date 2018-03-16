@@ -1,5 +1,5 @@
 ---
-title: "sql_variant (TRANSACT-SQL) |Microsoft 文档"
+title: sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 9/12/2017
 ms.prod: sql-non-specified
@@ -47,27 +47,27 @@ ms.lasthandoff: 11/21/2017
 sql_variant  
 ```  
   
-## <a name="remarks"></a>注释  
-**sql_variant**可在列、 参数、 变量和用户定义函数的返回值。 **sql_variant**使这些数据库对象以支持其他数据类型的值。
+## <a name="remarks"></a>Remarks  
+sql_variant 可以用在列、参数、变量和用户定义函数的返回值中。 借助 sql_variant，这些数据库对象可以支持其他数据类型的值。
   
-类型的列**sql_variant**可能包含不同数据类型的行。 例如，定义为一列**sql_variant**可以存储**int**，**二进制**，和**char**值。
+类型为 sql_variant 的列可能包含不同数据类型的行。 例如，定义为 sql_variant 的列可以存储 int、binary 和 char 类型的值。
   
-**sql_variant**可以 8016 字节的最大长度。 这包括基类型信息和基类型值。 实际基类型值的最大长度是 8,000 个字节。
+sql_variant 的最大长度可以是 8016 个字节。 这包括基类型信息和基类型值。 实际基类型值的最大长度是 8,000 个字节。
   
-A **sql_variant**数据类型必须首先转换为它的基数据类型值参与等加法和减法操作之前。
+对于 sql_variant 数据类型，必须先将它转换为其基本数据类型值，然后才能参与诸如加减这类运算。
   
-**sql_variant**可以分配默认值。 该数据类型还可以将 NULL 作为其基础值，但是 NULL 值没有关联的基类型。 此外， **sql_variant**不能有另一个**sql_variant**为其基类型。
+可以为 sql_variant 分配默认值。 该数据类型还可以将 NULL 作为其基础值，但是 NULL 值没有关联的基类型。 此外，sql_variant 不能使用其他 sql_variant 作为其基础类型。
   
-唯一、 主键或外键可能包含类型的列**sql_variant**，但构成的特定行键的数据值的总长度不应为多个索引的最大长度。 该最大长度是 900 个字节。
+唯一键、主键或外键可能包含类型为 sql_variant 的列，但是，组成指定行的键的数据值的总长度不应大于索引的最大长度。 该最大长度是 900 个字节。
   
-一个表可以有任意数量的**sql_variant**列。
+一个表可以包含任意多个 sql_variant 列。
   
-**sql_variant**不能在 CONTAINSTABLE 和 FREETEXTTABLE。
+不能在 CONTAINSTABLE 和 FREETEXTTABLE 中使用 sql_variant。
   
-ODBC 不完全支持**sql_variant**。 因此，查询的**sql_variant**列返回为二进制数据，当你使用 Microsoft OLE DB 提供程序的 ODBC （msdasql） 一起使用。 例如， **sql_variant**作为 0x505332303931 返回包含字符字符串数据 PS2091 的列。
+ODBC 不完全支持 sql_variant。 因此，使用 Microsoft OLE DB Provider for ODBC (MSDASQL) 时，sql_variant 列的查询将作为二进制数据返回。 例如，包含字符串数据 'PS2091' 的 sql_variant 列将作为 0x505332303931 返回。
   
 ## <a name="comparing-sqlvariant-values"></a>比较 sql_variant 值  
-**Sql_variant**数据类型属于转换数据类型层次结构列表的顶部。 有关**sql_variant**比较，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型层次结构顺序分组到数据类型系列。
+sql_variant 数据类型在用于转换的数据类型层次结构列表中位于顶部。 为了进行 sql_variant 比较，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型层次结构顺序划分为多个数据类型系列。
   
 |数据类型层次结构|数据类型系列|  
 |---|---|
@@ -96,31 +96,31 @@ ODBC 不完全支持**sql_variant**。 因此，查询的**sql_variant**列返�
 |**binary**|二进制|  
 |**uniqueidentifier**|Uniqueidentifier |  
   
-以下规则适用于**sql_variant**比较：
--   当**sql_variant**比较不同的基数据类型的值和位于不同的数据类型系列的基本数据类型，其数据类型系列较高层次结构图表中的值被视为两个值的更高版本。  
--   当**sql_variant**比较不同的基数据类型的值和的基本数据类型是相同的数据类型系列中，其基本数据类型层次结构图表中较低的值隐式转换为另一种数据类型和然后进行比较。  
--   当**sql_variant**值**char**， **varchar**， **nchar**，或**nvarchar**数据类型相比，其排序规则首先比较是根据以下条件： LCID、 LCID 版本、 比较标志和排序 id。 其中的每个条件都按所列出的顺序作为整数值进行比较。 如果所有这些条件都相等，则将按照排序规则来比较实际的字符串值。  
+下列规则适用于 sql_variant 比较：
+-   当不同基本数据类型的 sql_variant 值进行比较，而且基本数据类型属于不同的数据类型系列时，则在层次结构图中数据类型系列较高的值被认为在两个值中较大。  
+-   当不同基本数据类型的sql_variant 值进行比较，而且基本数据类型属于相同的数据类型系列时，则在层次结构图中基本数据类型较低的值先隐式转换为其他数据类型，然后再进行比较。  
+-   在比较 char、varchar、nchar 或 nvarchar 数据类型的 sql_variant 值时，将首先基于以下条件来比较这些值的排序规则：LCID、LCID 版本、比较标志和排序 ID。 其中的每个条件都按所列出的顺序作为整数值进行比较。 如果所有这些条件都相等，则将按照排序规则来比较实际的字符串值。  
   
 ## <a name="converting-sqlvariant-data"></a>转换 sql_variant 数据  
-在处理时**sql_variant**数据类型，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的对象与其他数据类型间的隐式转换**sql_variant**类型。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持从隐式转换**sql_variant**到具有另一个数据类型的对象的数据。
+当处理 sql_variant 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持将其他数据类型的对象隐式转换为 sql_variant 类型。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持从 sql_variant 数据隐式转换为其他数据类型的对象。
   
 ## <a name="restrictions"></a>限制  
-下表列出了不能通过使用存储的值的类型**sql_variant**:
+下表列出了无法使用 sql_variant 存储的值的类型：
   
 |||  
 |-|-|  
 |**varchar(max)**|**varbinary(max)**|  
 |**nvarchar(max)**|**xml**|  
 |**text**|**ntext**|  
-|**image**|**rowversion** (**时间戳**)|  
+|**图像**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**地理**|  
 |**hierarchyid**|**geometry**|  
 |用户定义类型|**datetimeoffset**|  
 
 ## <a name="examples"></a>示例  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>A. 表中使用 sql_variant  
- 下面的示例中，创建了 sql_variant 数据类型的表。 然后该示例将检索`SQL_VARIANT_PROPERTY`有关的信息`colA`值`46279.1`其中`colB`  = `1689`，鉴于`tableA`具有`colA`类型`sql_variant`和`colB`.  
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. 在表中使用 sql_variant  
+ 下面的示例创建一个 sql_variant 数据类型的表。 然后该示例检索有关 `colA` 值 `46279.1` 的 `SQL_VARIANT_PROPERTY` 信息，其中，`colB` =`1689`，并假设 `tableA` 有类型为 `sql_variant` 和 `colB` 的 `colA`。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -132,7 +132,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]请注意，其中每个三个值是**sql_variant**。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]请注意，这三个值中的每一个都是 sql_variant。  
   
 ```  
 Base Type    Precision    Scale  
@@ -143,7 +143,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. 使用 sql_variant 作为变量   
- 以下示例中，创建使用 sql_variant 数据类型、 一个变量，然后检索`SQL_VARIANT_PROPERTY`有关名为变量的信息@v1。  
+ 下面的示例使用 sql_variant 数据类型创建了一个变量，然后检索名为 @v1 的变量的 `SQL_VARIANT_PROPERTY` 信息。  
   
 ```sql    
 DECLARE @v1 sql_variant;  
@@ -156,6 +156,6 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 
 ## <a name="see-also"></a>另请参阅
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[SQL_VARIANT_PROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)
+[SQL_VARIANT_PROPERTY (Transact-SQL)](../../t-sql/functions/sql-variant-property-transact-sql.md)
   
   

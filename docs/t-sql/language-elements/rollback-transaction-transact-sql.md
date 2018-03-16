@@ -1,5 +1,5 @@
 ---
-title: "ROLLBACK TRANSACTION (TRANSACT-SQL) |Microsoft 文档"
+title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -56,32 +56,32 @@ ROLLBACK { TRAN | TRANSACTION }
 ```  
   
 ## <a name="arguments"></a>参数  
- *transaction_name*  
- 是为 BEGIN TRANSACTION 上的事务分配的名称。 *transaction_name*必须符合标识符规则，但使用只有事务名称的前 32 个字符。 当嵌套事务， *transaction_name*必须是从最外面的 BEGIN TRANSACTION 语句的名称。 *transaction_name*始终是区分大小写，即使实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不区分大小写。  
+ transaction_name  
+ 是为 BEGIN TRANSACTION 上的事务分配的名称。 transaction_name 必须符合标识符规则，但只使用事务名称的前 32 个字符。 嵌套事务时，transaction_name 必须是最外面的 BEGIN TRANSACTION 语句中的名称。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
   
- **@** *tran_name_variable*  
- 用户定义的、含有有效事务名称的变量的名称。 必须使用声明变量**char**， **varchar**， **nchar**，或**nvarchar**数据类型。  
+ @ tran_name_variable  
+ 用户定义的、含有有效事务名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量。  
   
- *savepoint_name*  
- 是*savepoint_name*从 SAVE TRANSACTION 语句。 *savepoint_name*必须符合标识符的规则。 使用*savepoint_name*条件回滚时应影响仅事务的一部分。  
+ savepoint_name  
+ SAVE TRANSACTION 语句中的 savepoint_name。 savepoint_name 必须遵守标识符规则。 当条件回滚应只影响事务的一部分时，可使用 savepoint_name。  
   
- **@** *savepoint_variable*  
- 是用户定义的、包含有效保存点名称的变量的名称。 必须使用声明变量**char**， **varchar**， **nchar**，或**nvarchar**数据类型。  
+ @ savepoint_variable  
+ 是用户定义的、包含有效保存点名称的变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量。  
   
 ## <a name="error-handling"></a>错误处理  
  ROLLBACK TRANSACTION 语句不生成显示给用户的消息。 如果在存储过程或触发器中需要警告，请使用 RAISERROR 或 PRINT 语句。 RAISERROR 是用于指出错误的首选语句。  
   
 ## <a name="general-remarks"></a>一般备注  
- 回滚事务，而无需*savepoint_name*或*transaction_name*回滚到事务开始。 嵌套事务时，该语句将所有内层事务回滚到最外面的 BEGIN TRANSACTION 语句。 在这两种情况下，ROLLBACK TRANSACTION 递减 @@TRANCOUNT为 0 的系统函数。 ROLLBACK TRANSACTION *savepoint_name*没有减少@TRANCOUNT。  
+ 不带 savepoint_name 和 transaction_name 的 ROLLBACK TRANSACTION 将回滚到事务的起点。 嵌套事务时，该语句将所有内层事务回滚到最外面的 BEGIN TRANSACTION 语句。 在这两种情况下，ROLLBACK TRANSACTION 都将 @@TRANCOUNT 系统函数减小为 0。 ROLLBACK TRANSACTION savepoint_name 不会减小 @@TRANCOUNT。  
   
- 不能引用 ROLLBACK TRANSACTION *savepoint_name*在分布式事务中显式使用开始分布式事务启动或从本地事务升级。  
+ 在由 BEGIN DISTRIBUTED TRANSACTION 显式启动或从本地事务升级而来的分布式事务中，ROLLBACK TRANSACTION 不能引用 savepoint_name。  
   
- 在执行 COMMIT TRANSACTION 语句后不能回滚事务，但是 COMMIT TRANSACTION 与包含在要回滚的事务中的嵌套事务关联时除外。 在此情况下，将嵌套的事务将回滚，即使已为其发出 COMMIT TRANSACTION。  
+ 在执行 COMMIT TRANSACTION 语句后不能回滚事务，但是 COMMIT TRANSACTION 与包含在要回滚的事务中的嵌套事务关联时除外。 在这种情况下，嵌套事务将会回滚，即使对它发出了 COMMIT TRANSACTION 也是如此。  
   
  在事务内允许有重复的保存点名称，但如果 ROLLBACK TRANSACTION 使用重复的保存点名称，则只回滚到最近的使用该保存点名称的 SAVE TRANSACTION。  
   
 ## <a name="interoperability"></a>互操作性  
- 在存储过程中，而无需 ROLLBACK TRANSACTION 语句*savepoint_name*或*transaction_name*回滚到最外层的 BEGIN TRANSACTION 的所有语句。 中的存储过程的 @ 导致的 ROLLBACK TRANSACTION 语句@TRANCOUNT要具有不同的值，当存储的过程完成后比 @@TRANCOUNT值调用存储的过程时将产生一条信息性消息。 该信息不影响后面的处理。  
+ 在存储过程中，不带 savepoint_name 或 transaction_name 的 ROLLBACK TRANSACTION 语句会将所有语句回滚到最外面的 BEGIN TRANSACTION。 在存储过程中，ROLLBACK TRANSACTION 语句使 @@TRANCOUNT 在存储过程完成时的值不同于调用此存储过程时的 @@TRANCOUNT 值，并且生成信息性消息。 该信息不影响后面的处理。  
   
  如果在触发器中发出 ROLLBACK TRANSACTION：  
   
@@ -91,7 +91,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   在批处理中，不执行所有位于激发触发器的语句之后的语句。  
   
-@@TRANCOUNT就会递增 1 时输入了触发器，即使是在自动提交模式。 （系统将触发器视为隐含的嵌套事务处理。）  
+当输入触发器时，@@TRANCOUNT 将以 1 递增，即使在自动提交模式下也是如此。 （系统将触发器视为隐含的嵌套事务处理。）  
   
 在存储过程中，ROLLBACK TRANSACTION 语句不影响调用该过程的批处理中的后续语句；将执行批处理中的后续语句。 在触发器中，ROLLBACK TRANSACTION 语句终止包含激发触发器的语句的批处理；不执行批处理中的后续语句。  
   
@@ -104,13 +104,13 @@ ROLLBACK 对游标的影响由下面三个规则定义：
 3.  终止批处理并生成内部回滚的错误将释放在包含错误声明的批处理中声明的所有游标。 将释放所有游标，而不考虑它们的类型或 CURSOR_CLOSE_ON_COMMIT 的设置情况。 这包括在错误批处理调用的存储过程中声明的游标。 在错误批处理之前的批处理中声明的游标遵循规则 1 和 2。 死锁错误便是此类错误的一个示例。 在触发器中发出的 ROLLBACK 语句也将自动生成此类错误。  
   
 ## <a name="locking-behavior"></a>锁定行为  
- ROLLBACK TRANSACTION 语句指定*savepoint_name*释放超出的保存点，但升级和转换除外获取任何锁。 这些锁不会被释放，而且不会转换回先前的锁模式。  
+ 指定了 savepoint_name 的 ROLLBACK TRANSACTION 语句释放在保存点之后获得的任何锁，但升级和转换除外。 这些锁不会被释放，而且不会转换回先前的锁模式。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
- 以下示例显示了回滚已命名事务的效果。 在创建表，以下语句将启动指定的事务，插入两行，并且然后回滚事务，在变量中名为@TransactionName。 在指定的事务之外的另一个语句中插入两行。 查询返回前面的语句的结果。   
+ 以下示例显示了回滚已命名事务的效果。 创建表后，下列语句将启动已命名事务，插入两行，然后回滚到在 @TransactionName 变量中命名的事务。 已命名的事务外的另一个语句将插入两行。 查询将返回前面的语句的结果。   
   
 ```sql    
 USE tempdb;  
@@ -143,8 +143,8 @@ value
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [提交工作 &#40;Transact SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
- [回滚工作 &#40;Transact SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [COMMIT WORK (Transact-SQL)](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [ROLLBACK WORK (Transact-SQL)](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

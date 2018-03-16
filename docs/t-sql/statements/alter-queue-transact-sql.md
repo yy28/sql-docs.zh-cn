@@ -1,5 +1,5 @@
 ---
-title: "ALTER 队列 (Transact SQL) |Microsoft 文档"
+title: ALTER QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2016
 ms.prod: sql-non-specified
@@ -92,13 +92,13 @@ WITH
 ```  
   
 ## <a name="arguments"></a>参数  
- *database_name* （对象）  
- 包含要更改队列的数据库的名称。 如果没有*database_name*提供，这将默认为当前数据库。  
+ Database_name（对象）  
+ 包含要更改队列的数据库的名称。 如果未提供 database_name，则默认为当前数据库。  
   
- *schema_name* (object)  
- 新队列所属架构的名称。 如果没有*schema_name*提供，这将默认为当前用户的默认架构。  
+ schema_name（对象）  
+ 新队列所属架构的名称。 如果未提供 schema_name，则默认为当前用户的默认架构。  
   
- *queue_name*  
+ queue_name  
  要更改的队列的名称。  
   
  STATUS（队列）  
@@ -108,7 +108,7 @@ WITH
  指定队列的保持期设置。 如果 RETENTION = ON，则在会话中使用此队列发送或接收的所有消息都将保持在队列中，直到会话结束为止。 这样便可保留消息以用于审核，或在发生错误时执行补偿事务。  
   
 > [!NOTE]  
->  设置保留期 = ON 可能会降低性能。 仅当需要符合应用程序的服务级别协议时，才应使用此设置。  
+>  设置 RETENTION = ON 会降低性能。 仅当需要符合应用程序的服务级别协议时，才应使用此设置。  
   
  ACTIVATION  
  指定有关存储过程的信息，该存储过程可被激活以处理到达此队列的消息。  
@@ -116,39 +116,39 @@ WITH
  STATUS（激活）  
  指定队列是否激活存储过程。 当 STATUS = ON 时，如果当前运行的过程数小于 MAX_QUEUE_READERS，并且消息抵达队列的速度比存储过程接收消息的速度快，则队列启动用 PROCEDURE_NAME 指定的存储过程。 当 STATUS = OFF 时，队列不激活存储过程。  
   
- 重新生成 [WITH \<queue_rebuild_options >]  
+ REBUILD [ WITH \<queue_rebuild_options> ]  
  **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 重新生成队列内部表上的所有索引。 当你遇到由于高负载的碎片问题，请使用此功能。 MAXDOP 是唯一受支持的队列的 rebuild 选项。 重新生成始终是脱机操作。  
+ 在队列内部表上重新生成所有索引。 遇到由于高负载而产生的碎片问题时请使用此功能。 MAXDOP 是唯一受支持的队列重新生成选项。 REBUILD 始终为脱机操作。  
   
- 重新组织 [与 (LOB_COMPACTION = {ON |关闭}）]  
+ REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
  **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 重新组织队列内部表上的所有索引。   
-与用户表的 REORGANIZE，不同队列上的重新组织都始终执行脱机操作因为上队列已显式禁用页级锁。  
+ 在队列内部表上重新组织所有索引。   
+由于在队列上已显式禁用页面级锁定，因此不同于在用户表上的 REORGANIZE，在队列上的 REORGANIZE 始终作为脱机操作执行。  
   
 > [!TIP]  
->  有关索引碎片的一般指南 5%到 30%之间碎片时，重新组织索引。 超过 30%碎片时，重新生成索引。 但是，这些数字仅适用于一个起始点，你的环境的常规指导。 若要确定索引碎片数量，使用[sys.dm_db_index_physical_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -请参阅有关示例该文章中的示例 G。  
+>  有关索引碎片的常规指南，当碎片在 5% 和 30% 之间时，重新组织索引。 当碎片超过 30% 时，请重新生成索引。 但这些数字仅适用于作为环境起始点的常规指南。 要确定索引碎片的数量，请使用 [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) - 有关示例，请参阅该文章中的示例 G。  
   
- 将移至 { *file_group* |"默认"}  
+ MOVE TO { file_group | "default" }  
  **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 将 （具有其索引） 的队列内部表移动到用户指定的文件组。  新的文件组中不能是只读的。  
+ 将队列内部表（及其索引）移动到用户指定的文件组中。  新文件组不得为只读。  
   
  PROCEDURE_NAME = \<procedure>  
  指定当队列包含要处理的消息时，要激活的存储过程的名称。 此值必须是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
   
- *database_name* （过程）  
+ database_name（过程）  
  包含存储过程的数据库的名称。  
   
- *schema_name* （过程）  
+ schema_name（过程）  
  拥有存储过程的架构的名称。  
   
- *stored_procedure_name*  
- 是存储过程的名称。  
+ stored_procedure_name  
+ 存储过程的名称。  
   
- MAX_QUEUE_READERS =*max_reader*  
- 指定的最大队列将同时启动的激活存储过程的实例数。 值*max_readers*必须是介于 0 和 32767 之间的数字。  
+ MAX_QUEUE_READERS = max_reader  
+ 指定队列同时启动的激活存储过程的最大实例数。 max_readers 值必须是 0 到 32767 之间的数字。  
   
  EXECUTE AS  
  指定用于运行激活存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能在队列激活存储过程时检查此用户的权限。 对于 Windows 域用户，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须连接到域，并能够在激活过程时验证指定用户的权限，否则激活失败。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户，服务器始终可检查权限。  
@@ -156,8 +156,8 @@ WITH
  SELF  
  指定存储过程以当前用户身份执行。 （执行该 ALTER QUEUE 语句的数据库主体。）  
   
- '*user_name*'  
- 存储过程执行时所用的用户的名称。 *user_name*必须为有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户指定为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符。 当前用户必须具有 IMPERSONATE 权限*user_name*指定。  
+ 'user_name'  
+ 存储过程执行时所用的用户的名称。 user_name 必须是指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限。  
   
  OWNER  
  指定存储过程以队列的所有者身份执行。  
@@ -170,14 +170,14 @@ WITH
   
  将有害消息处理设置为 OFF 的队列在五个连续的事务回滚之后不会被禁用。 这样，应用程序就可以定义自定义的有害消息处理系统。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当指定了激活存储过程的队列中包含消息时，如果将激活状态从 OFF 更改为 ON，则会立即激活该激活存储过程。 如果将激活状态从 ON 更改为 OFF，则会阻止代理激活存储过程的实例，但不会停止正在运行的存储过程实例。  
   
  修改队列以添加激活存储过程时，不会更改该队列的激活状态。 更改队列的激活存储过程时，也不会影响当前正在运行的激活存储过程实例。  
   
  激活过程中，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 会检查队列的最大队列读取器数。 因此，更改某一队列以增加最大队列读取器数时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 可以立即启动激活存储过程的更多实例。 修改某一队列以减少最大队列读取器数时，不会影响当前正在运行的激活存储过程实例。 但直到激活存储过程的实例数降至低于配置的最大数目时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 才会启动该存储过程的新实例。  
   
- 队列不可用时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将在数据库的传输队列中保存使用该队列的服务的消息。 [Sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)目录视图提供的传输队列的视图。  
+ 队列不可用时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将在数据库的传输队列中保存使用该队列的服务的消息。 [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) 目录视图提供传输队列的视图。  
   
  如果 RECEIVE 语句或 GET CONVERSATION GROUP 语句指定了不可用的队列，则该语句将失败，并出现 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误。  
   
@@ -238,23 +238,23 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 下面的示例重新生成队列索引  
+ 以下示例将重新生成队列索引'  
   
 ```  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
-### <a name="h-reorganizing-queue-indexes"></a>H. 重新组织队列索引  
+### <a name="h-reorganizing-queue-indexes"></a>H. 重组队列索引  
   
 **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 下面的示例将重组队列索引  
+ 以下示例重组队列索引  
   
 ```  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I： 将队列内部表移动到另一个文件组  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I：将队列内部表移动到另一个文件组  
   
 **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -264,7 +264,7 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE QUEUE (Transact SQL)](../../t-sql/statements/create-queue-transact-sql.md)   
- [删除队列 &#40;Transact SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [DROP QUEUE (Transact-SQL)](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   

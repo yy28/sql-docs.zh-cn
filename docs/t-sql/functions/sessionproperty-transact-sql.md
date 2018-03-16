@@ -1,5 +1,5 @@
 ---
-title: "SESSIONPROPERTY (Transact SQL) |Microsoft 文档"
+title: SESSIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ SESSIONPROPERTY (option)
   
 ## <a name="arguments"></a>参数  
  *option*  
- 该会话的当前选项设置。 *选项*可以是任何以下值。  
+ 该会话的当前选项设置。 option 可以是下列任意值。  
   
 |选项|Description|  
 |------------|-----------------|  
@@ -60,12 +60,12 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|控制是将串联结果视为 Null 还是空字符串值。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|指定当表达式中的舍入导致精度降低时是否生成错误消息和警告。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|指定是否遵从 ISO 关于如何使用引号来分隔标识符和文字字符串的规则。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<其他任何字符串 >|NULL = 输入无效。|  
+|\<任何其他字符串>|NULL = 输入无效。|  
   
 ## <a name="return-types"></a>返回类型  
  **sql_variant**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  通过组合服务器级、数据库级和用户指定的选项对 SET 选项进行配置。  
   
 ## <a name="examples"></a>示例  

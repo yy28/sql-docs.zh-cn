@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: 
 ms.component: performance
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a4f769cf73abdb85749cd7104a74602dd5863e9a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f17dd20a0a6c3ffd93cc89dd97140341ed893383
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL 数据库的性能中心
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本页提供的链接可帮助找到有关 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中的性能的必要信息。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本页提供的链接可帮助你找到有关 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中的性能的必要信息。  
   
  **图例**  
   
@@ -62,6 +64,8 @@ ms.lasthandoff: 01/18/2018
 |-|-|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [索引](../../relational-databases/indexes/indexes.md)|[重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />[为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />[用于索引的 SORT_IN_TEMPDB 选项](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />[改进全文索引的性能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)<br />[配置“每次查询占用的最小内存”服务器配置选项](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)<br />[Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)|[分区的优点](https://msdn.microsoft.com/library/ms190787.aspx#Anchor_0)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[联接](../../relational-databases/performance/joins.md)**|[联接基础知识](../../relational-databases/performance/joins.md#fundamentals)<br />[嵌套循环联接](../../relational-databases/performance/joins.md#nested_loops)<br />[合并联接](../../relational-databases/performance/joins.md#merge)<br />[联接](../../relational-databases/performance/joins.md#hash)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[子查询](../../relational-databases/performance/subqueries.md)**|[子查询基础知识](../../relational-databases/performance/subqueries.md#fundamentals)<br />[相关子查询](../../relational-databases/performance/subqueries.md#correlated)<br />[子查询类型](../../relational-databases/performance/subqueries.md#types)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [存储过程](../stored-procedures/stored-procedures-database-engine.md)|[CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md#best-practices)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [用户定义函数](../user-defined-functions/user-defined-functions.md)|[CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md#best-practices)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **并行优化**|[配置 max worker threads 服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  

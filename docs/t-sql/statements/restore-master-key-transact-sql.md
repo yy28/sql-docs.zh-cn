@@ -1,5 +1,5 @@
 ---
-title: "还原 MASTER KEY (TRANSACT-SQL) |Microsoft 文档"
+title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,19 +57,19 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- 文件 =*path_to_file*  
- 指定存储数据库主密钥的完整路径（包括文件名）。 *path_to_file*可以是本地路径或网络位置的 UNC 路径。  
+ FILE ='path_to_file'  
+ 指定存储数据库主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径。  
   
- DECRYPTION BY PASSWORD =*密码*  
+ DECRYPTION BY PASSWORD ='*password*'  
  指定对从文件中导入的数据库主密钥进行解密时所需的密码。  
   
- ENCRYPTION BY PASSWORD =*密码*  
+ ENCRYPTION BY PASSWORD ='password'  
  指定用于在将数据库主密钥加载到数据库之后对该密钥进行加密的密码。  
   
  FORCE  
  指定即使当前数据库主密钥未打开，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法对使用该主密钥加密的某些私钥进行解密，RESTORE 过程也应继续执行。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  还原主密钥之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对使用当前活动的主密钥加密的所有密钥进行解密，然后使用还原后的主密钥对这些密钥进行加密。 这种大量消耗资源的操作应当安排在资源需求较低的时段执行。 如果当前的数据库主密钥未打开或无法打开，或者无法对任何使用该主密钥加密的密钥进行解密，则还原操作将失败。  
   
  请仅在主密钥无法恢复或解密失败时，才使用 FORCE 选项。 仅由不可恢复密钥加密的信息将会丢失。  
@@ -78,7 +78,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
   
  如果当前数据库中没有主密钥，则 RESTORE MASTER KEY 将创建一个主密钥。 新的主密钥不会自动使用服务主密钥进行加密。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

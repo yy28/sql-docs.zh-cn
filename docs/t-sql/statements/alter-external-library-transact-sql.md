@@ -1,7 +1,7 @@
 ---
-title: "ALTER 外部库 (Transact SQL) |Microsoft 文档"
+title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 10/05/2017
+ms.date: 02/25/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -14,26 +14,28 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
 - ALTER_EXTERNAL_LIBRARY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: ALTER EXTERNAL LIBRARY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="alter-external-library-transact-sql"></a>ALTER 外部库 (Transact SQL)  
+# <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-修改现有的外部包库的内容。
+修改现有外部包库的内容。
 
 ## <a name="syntax"></a>语法
 
-```
+```text
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -59,85 +61,88 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-指定现有的包库的名称。 库的应用范围限定为用户。 也就是说，库名称被视为在特定用户或所有者的上下文中是唯一。
+指定现有包库的名称。 库的应用范围限定为用户。 也就是说，在特定用户或所有者的上下文中，库名称是唯一的。
+
+不能任意分配库名称。 也就是说，必须使用调用运行时在加载包时需要的名称。
 
 **owner_name**
 
-指定用户或角色拥有外部库的名称。
+指定拥有外部库的用户或角色的名称。
 
 **file_spec**
 
-指定特定平台的包的内容。 支持每个平台的一个文件项目。
+指定特定平台的包的内容。 每个平台仅支持一个文件项目。
 
-可以是本地路径或网络路径的形式指定的文件。 如果指定的数据源选项，则文件名称可以是与容器中引用的相对路径`EXTERNAL DATA SOURCE`。
+可以是以本地路径或网络路径的形式指定的文件。 如果指定了数据源选项，则文件名称可以是关于 `EXTERNAL DATA SOURCE` 中引用的容器的相对路径。
 
-（可选） 可以指定一个操作系统平台，该文件。 只有一个文件项目或内容被为了针对特定语言或运行每个操作系统平台。
+还可以为文件指定一个 OS 平台。 针对特定语言或运行时，每个 OS 平台只允许一个文件项目或内容。
 
 **DATA_SOURCE = external_data_source_name**
 
-指定包含库文件的位置的外部数据源的名称。 此位置应引用 Azure blob 存储路径。 若要创建外部数据源，使用[CREATE EXTERNAL DATA SOURCE (TRANSACT-SQL)](create-external-data-source-transact-sql.md)。
+指定包含库文件位置的外部数据源的名称。 此位置应引用 Azure blob 存储路径。 若要创建外部数据源，请使用 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)。
 
 > [!IMPORTANT] 
-> 目前，blob 不支持为 SQL Server 2017 版本中的数据源中。
+> 目前，SQL Server 2017 版本不支持 blob 作为数据源。
 
 **library_bits**
 
-为十六进制文字，类似于程序集指定包的内容。 此选项允许用户创建一个要更改库，如果它们有所要求的权限，但不是能文件路径访问服务器可访问的任何文件夹的库。
+将包的内容指定为十六进制文本，类似于程序集。 
 
-**平台 = WINDOWS**
+如果具有更改库所需的权限，但在服务器上访问文件受到限制，并且无法将内容保存到服务器可以访问的路径，则此选项非常有用。
 
-指定内容库的平台。 修改现有的库来添加不同的平台时，此值是必需的。 Windows 是唯一受支持的平台。
+相反，可以将包内容作为变量以二进制格式进行传递。
 
-## <a name="remarks"></a>注释
+**PLATFORM = WINDOWS**
 
-对于 R 语言中，包必须准备与压缩的存档文件的形式。适用于 Windows 的 ZIP 扩展。 目前，支持仅 Windows 平台。  
+为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。 Windows 是唯一支持的平台。
 
-`ALTER EXTERNAL LIBRARY`语句仅将库 bits 上载到数据库。 已修改的库用户运行的外部脚本之后，通过执行之前未实际安装[sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+## <a name="remarks"></a>Remarks
+
+对于 R 语言，准备包时，包的形式须为适用于 Windows 、扩展名为 .ZIP 的压缩存档文件。 目前仅支持 Windows 平台。  
+
+`ALTER EXTERNAL LIBRARY` 语句只将库位上载到数据库。 当用户在调用库的 [sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中运行代码时，安装已修改的库。
 
 ## <a name="permissions"></a>权限
 
-需要`ALTER ANY EXTERNAL LIBRARY`权限。 创建外部库，用户可以更改该外部的库。
+需要 `ALTER ANY EXTERNAL LIBRARY` 权限。 创建外部库的用户可以更改该外部库。
 
 ## <a name="examples"></a>示例
 
-下面的示例修改了名为 customPackage 外部库。
+下面的示例修改一个名为 `customPackage` 的外部库。
 
-### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. 使用文件的库的内容替换
+### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. 使用文件替换库的内容
 
-下面的示例修改外部库调用 customPackage，使用包含的更新的位的压缩的文件。
+下面的示例使用包含更新位的压缩文件修改名为 `customPackage` 的外部库。
 
 ```sql
 ALTER EXTERNAL LIBRARY customPackage 
 SET 
   (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
-```  
-
-若要安装更新的库，请执行存储的过程`sp_execute_external_script`。
-
-```sql   
-EXEC sp_execute_external_script 
-@language =N'R', 
-@script=N'
-# load customPackage
-library(customPackage)
-# call customPackageFunc
-OutputDataSet <- customPackageFunc()
-'
-WITH RESULT SETS (([result] int));
 ```
 
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. Alter 使用字节流的现有库
+若要安装更新的库，请执行存储过程 `sp_execute_external_script`。
 
-下面的示例通过将新的 bits 传递为十六进制文本更改现有的库。
+```sql
+EXEC sp_execute_external_script 
+@language =N'R', 
+@script=N'library(customPackage)'
+;
+```
+
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. 使用字节流更改现有库
+
+下面的示例通过将新位传递为十六进制文本来更改现有库。
 
 ```SQL
 ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-## <a name="see-also"></a>另请参阅  
+在此代码示例中，截断变量内容以提高可读性。
+
+## <a name="see-also"></a>另请参阅
 
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 

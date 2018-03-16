@@ -1,5 +1,5 @@
 ---
-title: "(Transact SQL) LAST_VALUE |Microsoft 文档"
+title: LAST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -49,15 +49,15 @@ LAST_VALUE ( [scalar_expression )
   
 ## <a name="arguments"></a>参数  
  *scalar_expression*  
- 是要返回的值。 *scalar_expression*可以是列、 子查询或单个值会导致其他表达式。 不允许使用其他分析函数。  
+ 是要返回的值。 scalar_expression 可以是产生单个值的列、子查询或其他表达式。 不允许使用其他分析函数。  
   
- 通过**(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause*将划分为分区函数应用到的 FROM 子句生成的结果集。 如果未指定，则此函数将查询结果集的所有行视为单个组。  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。  
   
- *order_by_clause*应用函数之前确定数据的顺序。 *Order_by_clause*是必需的。 *rows_range_clause*进一步限制在分区内的行，通过指定开始和结束点。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ order_by_clause 在应用函数之前确定数据的顺序。 需要 order_by_clause。 rows_range_clause 通过指定起点和终点，限制分区中的行数。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 相同类型与*scalar_expression*。  
+ 是与 scalar_expression 相同的类型。  
   
 ## <a name="general-remarks"></a>一般备注  
  LAST_VALUE 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
@@ -108,7 +108,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. 在计算表达式中使用 FIRST_VALUE 和 LAST_VALUE  
  以下示例在计算表达式中使用 FIRST_VALUE 和 LAST_VALUE 函数，显示给定数量的员工当前季度分别与一年中第一季度和最后一季度之间的销售配额值差异。 FIRST_VALUE 函数返回该年度第一季度的销售配额值，并将该值从当前季度的销售配额值中减去。 它在名为 DifferenceFromFirstQuarter 的派生列中返回。 对于一年的第一季度，DifferenceFromFirstQuarter 列的值为 0。 LAST_VALUE 函数返回该年度最后一个季度的销售配额值，并从当前季度的销售配额值中减去它。 它在名为 DifferenceFromLastQuarter 的派生列中返回。 对于一年的最后一个季度，DifferenceFromLastQuarter 列的值为 0。  
   
- 如下所示，对于要在 DifferenceFromLastQuarter 列中返回的非零值，子句“RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING”在此示例中是必需的。 默认范围为“RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”。 在此示例中，使用默认范围（或不包括范围，导致使用默认范围）将导致在 DifferenceFromLastQuarter 列中返回零。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ 如下所示，对于要在 DifferenceFromLastQuarter 列中返回的非零值，子句“RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING”在此示例中是必需的。 默认范围为“RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”。 在此示例中，使用默认范围（或不包括范围，导致使用默认范围）将导致在 DifferenceFromLastQuarter 列中返回零。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ```  
 USE AdventureWorks2012;  

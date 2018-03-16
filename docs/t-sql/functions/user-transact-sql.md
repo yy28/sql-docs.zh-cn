@@ -1,5 +1,5 @@
 ---
-title: "用户 (Transact SQL) |Microsoft 文档"
+title: USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ USER
 ## <a name="return-types"></a>返回类型  
  **char**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  USER 提供与 USER_NAME 系统函数相同的功能。  
   
  在 CREATE TABLE 或 ALTER TABLE 语句中将 USER 和 DEFAULT 约束一起使用，或者将 USER 作为任何标准函数使用。  
@@ -156,12 +156,12 @@ DBO
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;Transact SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40;Transact SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
  [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
- [SESSION_USER &#40;Transact SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [SYSTEM_USER &#40;Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)   
- [USER_NAME &#40;Transact SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
+ [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)   
+ [USER_NAME (Transact-SQL)](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

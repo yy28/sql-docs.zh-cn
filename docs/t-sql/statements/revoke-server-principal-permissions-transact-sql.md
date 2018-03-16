@@ -1,5 +1,5 @@
 ---
-title: "撤消服务器主体权限 (Transact SQL) |Microsoft 文档"
+title: "REVOKE 服务器主体权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -61,30 +61,30 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ permission  
  指定可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名撤消的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- 登录名**::** *SQL_Server_login*  
- 指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要在其撤消权限的登录名。 作用域限定符 (**::**) 是必需的。  
+ LOGIN :: SQL_Server_login  
+ 指定要撤消权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 需要使用作用域限定符 (::)。  
   
- 服务器角色**::** *server_role*  
- 指定要撤消权限的服务器角色。 作用域限定符 (**::**) 是必需的。  
+ SERVER ROLE :: server_role  
+ 指定要撤消权限的服务器角色。 需要使用作用域限定符 (::)。  
   
- {从 |为} \<server_principal > 指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从中撤销权限的登录名或服务器角色。  
+ { FROM | TO } \<server_principal> 指定要撤消权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或服务器角色。  
   
- *SQL_Server_login*  
+ SQL_Server_login  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *SQL_Server_login_from_Windows_login*  
+ SQL_Server_login_from_Windows_login  
  指定通过 Windows 登录帐户创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *SQL_Server_login_from_certificate*  
+ SQL_Server_login_from_certificate  
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *SQL_Server_login_from_AsymKey*  
+ SQL_Server_login_from_AsymKey  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *server_role*  
+ server_role  
  指定用户定义的服务器角色的名称。  
   
  GRANT OPTION  
@@ -99,10 +99,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS *SQL_Server_login*  
+ AS SQL_Server_login  
  指定执行此查询的主体从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其撤消该权限的权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和服务器角色是服务器级安全对象。 下表列出了可为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或服务器角色撤消的最具体的限定权限，以及隐含这些权限的更一般的权限。  
   
 |SQL Server 登录名或服务器角色权限|SQL Server 登录名或服务器角色权限隐含的权限|服务器权限隐含的权限|  
@@ -112,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  对于登录名，要求具有登录名的 CONTROL 权限或服务器上的 ALTER ANY LOGIN 权限。  
   
  对于服务器角色，要求具有服务器角色的 CONTROL 权限或服务器上的 ALTER ANY SERVER ROLE 权限。  
@@ -120,7 +120,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>示例  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. 撤消登录名的 IMPERSONATE 权限  
- 下面的示例撤消`IMPERSONATE`权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录`WanidaBenshoof`从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名从 Windows 用户创建`AdvWorks\YoonM`。  
+ 以下示例从通过 Windows 用户 `AdvWorks\YoonM` 创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名中撤消对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `WanidaBenshoof` 的 `IMPERSONATE` 权限。  
   
 ```  
 USE master;  

@@ -1,5 +1,5 @@
 ---
-title: "PARSENAME (Transact SQL) |Microsoft 文档"
+title: PARSENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,11 +52,11 @@ PARSENAME ( 'object_name' , object_piece )
 ```  
   
 ## <a name="arguments"></a>参数  
- '*object_name*'  
- 要检索其指定部分的对象的名称。 *object_name*是**sysname**。 此参数是可选的限定对象名称。 如果对象名称的所有部分都是限定的，则此名称可包含四部分：服务器名称、数据库名称、所有者名称以及对象名称。  
+ 'object_name'  
+ 要检索其指定部分的对象的名称。 object_name 为 sysname。 此参数是可选的限定对象名称。 如果对象名称的所有部分都是限定的，则此名称可包含四部分：服务器名称、数据库名称、所有者名称以及对象名称。  
   
- *object_piece*  
- 要返回的对象部分。 *object_piece*属于类型**int**，并且可能具有这些值：  
+ object_piece  
+ 要返回的对象部分。 object_piece 的数据类型为 int，可以为下列值：  
   
  1 = 对象名称  
   
@@ -69,14 +69,14 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>返回类型  
  **nchar**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果存在下列条件之一，则 PARSENAME 返回 NULL：  
   
--   任一*object_name*或*object_piece*为 NULL。  
+-   object_name 或 object_piece 为 NULL。  
   
 -   发生语法错误。  
   
- 请求的对象部分的长度为 0 和不是有效[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符。 长度为零的对象的名称将使整个限定名称无效。  
+ 请求的对象部分长度为 0，且不是有效的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。 长度为零的对象的名称将使整个限定名称无效。  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `PARSENAME` 返回有关 `Person` 数据库中 `AdventureWorks2012` 表的信息。  
@@ -119,10 +119,10 @@ Server Name
 ```
   
 ## <a name="see-also"></a>另请参阅  
- [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

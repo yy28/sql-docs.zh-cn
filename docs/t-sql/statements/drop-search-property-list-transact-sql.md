@@ -1,5 +1,5 @@
 ---
-title: "删除搜索属性列表 (Transact SQL) |Microsoft 文档"
+title: DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,34 +49,34 @@ DROP SEARCH PROPERTY LIST property_list_name
   
 ## <a name="arguments"></a>参数  
  *property_list_name*  
- 要删除的搜索属性列表的名称。 *property_list_name*是一个标识符。  
+ 要删除的搜索属性列表的名称。 *property_list_name* 是一个标识符。  
   
- 若要查看现有的属性列表的名称，请使用[sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)目录视图，，如下所示：  
+ 若要查看现有属性列表的名称，请使用 [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) 目录视图，如下所示：  
   
 ```  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>注释  
- 当搜索属性列表与任何全文检索关联时，无法从数据库中删除该列表。 若要从给定的全文索引中删除搜索属性列表，请使用[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)语句，并使用关闭指定 SET SEARCH PROPERTY LIST 子句或另一个名称搜索属性列表。  
+## <a name="remarks"></a>Remarks  
+ 当搜索属性列表与任何全文检索关联时，无法从数据库中删除该列表。 若要从给定全文检索中删除搜索属性列表，请使用 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 语句，并使用 OFF 或另一个搜索属性列表的名称指定 SET SEARCH PROPERTY LIST 子句。  
   
- **若要查看的属性列表上的服务器实例**  
+ **查看服务器实例上的属性列表**  
   
 -   [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
- **若要查看的属性列表与全文索引相关联**  
+ **查看与全文检索关联的属性列表**  
   
 -   [sys.fulltext_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   
- **若要删除的全文索引的属性列表**  
+ **从全文检索中删除属性列表**  
   
 -   [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  要求具有搜索属性列表的 CONTROL 权限。  
   
 > [!NOTE]  
->  属性列表所有者可以授予列表的 CONTROL 权限。 默认情况下，创建搜索属性列表的用户就是其所有者。 可以通过更改所有者[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]语句。  
+>  属性列表所有者可以授予列表的 CONTROL 权限。 默认情况下，创建搜索属性列表的用户就是其所有者。 可通过 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句更改所有者。  
   
 ## <a name="examples"></a>示例  
  以下示例从 `JobCandidateProperties` 数据库中删除 `AdventureWorks2012` 属性列表。  
@@ -87,11 +87,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER SEARCH PROPERTY LIST &#40;Transact SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
- [创建搜索属性列表 &#40;Transact SQL &#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
+ [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [CREATE SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [sys.registered_search_properties &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [sys.registered_search_property_lists &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "GeomFromGml (geometry 数据类型) |Microsoft 文档"
+title: "GeomFromGml（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,11 +34,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-构造**几何图形**中给定的表示形式的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]地理标记语言 (GML) 的子集。
+根据地理标记语言 (GML) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的给定表示形式构建 geometry 实例。
   
 有关地理标记语言的详细信息，请参阅以下开放地理空间信息联盟规范：
   
-[OGC specifications，地域标记语言规范](http://go.microsoft.com/fwlink/?LinkId=93629)
+[OGC 规范：地理标记语言](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## <a name="syntax"></a>语法  
   
@@ -48,19 +48,19 @@ GeomFromGml ( GML_input, SRID )
 ```  
   
 ## <a name="arguments"></a>参数  
- *GML_input*  
+ GML_input  
  XML 输入，GML 将从该输入返回值。  
   
- *SRID*  
- 是**int**表达式表示空间引用标识符 (SRID) 的**几何图形**您希望返回的实例。  
+ SRID  
+ 一个 int 表达式，表示希望返回的 geometry 实例的空间引用 ID (SRID)。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
- 此方法将引发**FormatException**如果输入不是格式正确。  
+## <a name="remarks"></a>Remarks  
+ 如果输入的格式不正确，此方法将引发 FormatException。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `GeomFromGml()` 创建 `geometry` 实例。  

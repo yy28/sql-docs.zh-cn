@@ -1,5 +1,5 @@
 ---
-title: "DENY 非对称密钥权限 (Transact SQL) |Microsoft 文档"
+title: "DENY 非对称密钥权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ DENY { permission  [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ *permission*  
  指定可拒绝授予非对称密钥的权限。 如下所列。  
   
- 非对称密钥**::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY ::asymmetric_key_name  
  指定拒绝将其权限授予他人的非对称密钥。 需要使用作用域限定符“::”。  
   
  *database_principal*  
@@ -100,7 +100,7 @@ DENY { permission  [ ,...n ] }
   
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  非对称密钥是一个数据库级的安全对象，包含于权限层次结构中作为其父级的数据库中。 下面列出了可授予非对称密钥的最特定和最受限的权限，以及隐含这些权限的更常用权限。  
   
 |非对称密钥权限|非对称密钥权限隐含的权限|数据库权限隐含的权限|  
@@ -111,7 +111,7 @@ DENY { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对非对称密钥具有 CONTROL 权限。 如果使用 AS 子句，则指定的主体必须拥有非对称密钥。  
   
 ## <a name="see-also"></a>另请参阅  

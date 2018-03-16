@@ -1,5 +1,5 @@
 ---
-title: "GRANT 架构权限 (Transact SQL) |Microsoft 文档"
+title: "GRANT 架构权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
- 指定可授予架构的权限。 有关权限的列表，请参阅本主题后面的备注一节...  
+ *permission*  
+ 指定可授予架构的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON 架构**::**架构*_name*  
- 指定将对其授予权限的架构。 作用域限定符**::**是必需的。  
+ ON SCHEMA :: schema_name  
+ 指定将对其授予权限的架构。 需要使用作用域限定符 ::。  
   
  *database_principal*  
  指定要向其授予权限的主体。 可以是以下类型之一：  
@@ -69,7 +69,7 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
-AS *granting_principal*  
+AS granting_principal  
  指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -81,7 +81,7 @@ AS *granting_principal*
 -   映射到非对称密钥的数据库用户  
 -   未映射到服务器主体的数据库用户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  在某些情况下，如果同时拥有 ALTER 权限和 REFERENCE 权限，被授权者将可以查看数据或执行未经授权的函数。 例如：对表拥有 ALTER 权限和对函数拥有 REFERENCE 权限的用户可对函数创建计算列并执行该函数。 在此情况下，用户必须还对计算列具有 SELECT 权限。  
@@ -93,7 +93,7 @@ AS *granting_principal*
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
+|删除|CONTROL|删除|  
 |在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
 |Insert|CONTROL|Insert|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -116,12 +116,12 @@ AS *granting_principal*
   
  有关详细信息，请参阅 Microsoft 知识库中编号为 914847 的文章。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  
   
  如果使用 AS 选项，还必须满足以下附加要求：  
   
-|AS *granting_principal*|所需的其他权限|  
+|AS granting_principal|所需的其他权限|  
 |------------------------------|------------------------------------|  
 |数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
 |映射到 Windows 登录名的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
@@ -151,17 +151,17 @@ GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DENY 架构权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
- [REVOKE 架构权限 &#40;Transact SQL &#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
+ [DENY 架构权限 (Transact-SQL)](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
+ [REVOKE 架构权限 (Transact-SQL)](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [创建应用程序角色 &#40;Transact SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

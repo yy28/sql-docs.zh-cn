@@ -1,5 +1,5 @@
 ---
-title: "删除 XML 架构集合 (Transact SQL) |Microsoft 文档"
+title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
  *sql_identifier*  
  要删除的 XML 架构集合的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  删除 XML 架构集合属于事务性操作。 这表示如果删除事务内的 XML 架构集合然后回滚此事务，则 XML 架构集合不会被删除。  
   
  当 XML 架构集合正在使用时，不能将其删除。 这表示删除的集合不能存在下列任何情况：  
   
--   与任何关联**xml**键入参数或列。  
+-   与任何 **xml** 类型参数或列关联。  
   
 -   在任何表约束中指定。  
   
@@ -92,8 +92,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建 XML 架构集合 & #40;Transact SQL & #41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [ALTER XML SCHEMA COLLECTION & #40;Transact SQL & #41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION (Transact SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [在服务器上使用 XML 架构集合的要求和限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

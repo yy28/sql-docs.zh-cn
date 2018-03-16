@@ -1,5 +1,5 @@
 ---
-title: "联接提示 (Transact SQL) |Microsoft 文档"
+title: "联接提示 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -36,13 +36,13 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---join"></a>提示 (TRANSACT-SQL)-加入
+# <a name="hints-transact-sql---join"></a>提示 (Transact-SQL) - 联接
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  联接提示用于指定查询优化器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的两个表之间强制执行联接策略。 有关联接和联接语法的常规信息，请参阅[FROM &#40;Transact SQL &#41;](../../t-sql/queries/from-transact-sql.md).  
+  联接提示用于指定查询优化器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的两个表之间强制执行联接策略。 有关联接和联接语法的一般信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   
 > [!IMPORTANT]  
->  因为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查询优化器通常会选择查询的最佳执行计划，我们建议，提示，包括\<join_hint >、 只可用作最后一招由经验丰富的开发人员和数据库管理员。
+>  由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器通常会为查询选择最佳执行计划，因此我们建议仅在最后迫不得已的情况下才可由资深的开发人员和数据库管理员使用提示（包括 \<join_hint>）。
   
  **适用范围：**  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
   
  REMOTE 只可用于 INNER JOIN 操作。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  联接提示在查询的 FROM 子句中指定。 联接提示可以在两个表之间强制执行联接策略。 如果为任意两个表指定了联接提示，查询优化器会根据 ON 关键字的位置，自动为查询中所有联接的表强制确定联接顺序。 如果使用了不带 ON 子句的 CROSS JOIN，则可使用括号指示联接顺序。  
   
 ## <a name="examples"></a>示例  
@@ -115,6 +115,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [提示 &#40;Transact SQL &#41;](../../t-sql/queries/hints-transact-sql.md)  
+ [提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)  
   
   

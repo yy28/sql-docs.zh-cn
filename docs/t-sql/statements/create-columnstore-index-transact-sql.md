@@ -1,5 +1,5 @@
 ---
-title: "创建列存储索引 (Transact SQL) |Microsoft 文档"
+title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -45,23 +45,23 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-将一个行存储表转换为聚集列存储索引，或创建一个非聚集列存储索引。 使用列存储索引，以便高效运行对 OLTP 工作负载的实时运行分析，或以提高数据仓库工作负荷的数据压缩和查询性能。  
+将行存储表转换为聚集列存储索引，或创建非聚集列存储索引。 使用列存储索引可对 OLTP 工作负载有效地运行实时运营分析，或提高数据仓库工作负载的数据压缩和查询性能。  
   
 > [!NOTE]  
-> 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，你可以将表创建为聚集列存储索引。   不再需要先创建行存储表，然后将其转换为聚集列存储索引。  
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以将表创建为聚集列存储索引。   再也不需要先创建行存储表，然后将其转换为聚集列存储索引。  
 
 > [!TIP]
-> 有关索引设计指南的信息，请参阅[SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)。
+> 有关索引设计指南的信息，请参阅 [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)。
 
-跳过对示例：  
--   [用于将行存储表转换为列存储的示例](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
--   [对于非聚集列存储索引的示例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
+跳转到示例：  
+-   [将行存储表转换为列存储的示例](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
+-   [非聚集列存储索引示例](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
-请转到方案：  
--   [列存储索引进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
--   [针对数据仓库的列存储索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
+跳转到方案：  
+-   [用于实时运营分析的列存储索引](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [用于数据仓库的列存储索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
-了解更多信息：  
+了解详细信息：  
 -   [列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 -   [列存储索引功能摘要](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
@@ -118,155 +118,155 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 ## <a name="arguments"></a>参数  
 CREATE CLUSTERED COLUMNSTORE INDEX  
-创建聚集列存储索引在其中的所有数据是压缩并存储列。 该索引包含表中的所有列，并且存储整个表。 如果现有表是堆或聚集的索引，则会将表转换为聚集列存储索引。 如果表已存储为聚集列存储索引，删除和重新生成现有的索引。  
+创建一个聚集列存储索引，并按列压缩和存储其中的所有数据。 该索引包含表中的所有列，并且存储整个表。 如果现有表是堆或聚集索引，则该表会转换为聚集列存储索引。 如果该表已作为聚集列存储索引存储，则会删除并重新生成现有索引。  
   
 *index_name*  
-指定用于新索引的名称。  
+指定新索引的名称。  
   
-如果表已具有聚集列存储索引，可以将现有索引，指定相同的名称，或可以使用 DROP EXISTING 选项以指定新名称。  
+如果该表已具有聚集列存储索引，则可以指定与现有索引相同的名称，也可以使用 DROP EXISTING 选项指定新名称。  
   
-ON [*database_name*。 [*schema_name* ] . | *schema_name* 。 ] *table_name*  
-   指定要作为聚集列存储索引存储的由一部分、两部分或三部分构成的名称。 如果表是堆或聚集的索引表从行存储转换为列存储。 如果该表已为列存储，此语句将重新生成聚集列存储索引。  
+ON [database_name. [schema_name ] . | schema_name . ] *table_name*  
+   指定要作为聚集列存储索引存储的由一部分、两部分或三部分构成的名称。 如果该表是堆或聚集索引，则会将其从行存储转换为列存储。 如果该表已经是列存储，则此语句会重新生成聚集列存储索引。  
   
 替换为  
-DROP_EXISTING = [关闭] |ON  
-   DROP_EXISTING = ON 指定要删除现有的聚集列存储索引，并创建新的列存储索引。  
+DROP_EXISTING = [OFF] | ON  
+   DROP_EXISTING = ON 指定删除现有的聚集列存储索引，并创建一个新的列存储索引。  
 
-   默认情况下，DROP_EXISTING = OFF 需要索引名称是与现有名称相同。 出错时指定的索引名称已存在。  
+   DROP_EXISTING = OFF（默认值）要求索引名称与现有名称相同。 如果指定的索引名称已存在，则会出错。  
   
-MAXDOP = *max_degree_of_parallelism*  
+MAXDOP = max_degree_of_parallelism  
    在索引操作期间覆盖现有的最大并行度服务器配置。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
-   *max_degree_of_parallelism*值可以是：  
+   max_degree_of_parallelism 可为以下值：  
    - 1 - 取消生成并行计划。  
-   - \>1-限制最大指定数目的并行索引操作中使用的处理器数或更少基于当前的系统工作负荷。 例如，当 MAXDOP = 4，使用的处理器数量为 4 或更小。  
+   - \>1 - 基于当前系统工作负载，将并行索引操作中使用的最大处理器数限制为指定数量或更少。 例如，当 MAXDOP = 4 时，使用的处理器数为 4 或更少。  
    - 0（默认值） - 根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。  
   
-   有关详细信息，请参阅[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)，和[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
+   有关详细信息，请参阅[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
  
-COMPRESSION_DELAY = **0** | *延迟*[分钟]  
-   适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+COMPRESSION_DELAY = 0 | delay [ Minutes ]  
+   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
-   对于基于磁盘的表，*延迟*SQL Server 可以将其压缩到压缩行组之前，增量行组中指定的最小必须保持为增量行组处于关闭状态的分钟数。 由于基于磁盘的表不跟踪插入和更新时间在上单个行，SQL Server 应用延迟到处于关闭状态的增量行组。  
-   默认值为 0 分钟。  
-   有关何时使用 COMPRESSION_DELAY，建议，请参阅[开始使用列存储适进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
+   对于基于磁盘的表，delay 指定处于关闭状态的增量行组在 SQL Server 可以将它压缩为压缩行组之前，必须保持为增量行组的最小分钟数。 由于基于磁盘的表不会跟踪各个行的插入和更新时间，因此，SQL Server 会向处于关闭状态的增量行组应用延迟。  
+   默认为 0 分钟。  
+   有关何时使用 COMPRESSION_DELAY 的建议，请参阅[开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
-DATA_COMPRESSION = COLUMNSTORE |COLUMNSTORE_ARCHIVE  
-   适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：   
 COLUMNSTORE  
-   列存储是默认设置，并指定使用大多数的高性能列存储压缩进行压缩。 这是典型的选择。  
+   COLUMNSTORE 是默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
   
 COLUMNSTORE_ARCHIVE  
-   进一步 COLUMNSTORE_ARCHIVE 压缩的表或分区到较小的大小。 使用此选项的情况下如存档需要较小的存储大小，可以提供存储和检索有关的更多时间。  
+   COLUMNSTORE_ARCHIVE 将表或分区进一步压缩为更小的大小。 可在许多情况下使用此选项，例如，用于要求存储更小并且可以付出更多时间来进行存储和检索的存档。  
   
    有关压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
 
 ON  
-   使用 ON 选项，您可为数据存储指定选项，例如分区架构、特定的文件组或默认文件组。 如果未指定 ON 选项，则索引使用现有的表设置分区或文件组设置。  
+   使用 ON 选项，您可为数据存储指定选项，例如分区架构、特定的文件组或默认文件组。 如果未指定 ON 选项，索引会使用现有表的分区设置或文件组设置。  
   
    *partition_scheme_name* **(** *column_name* **)**  
-   指定表的分区方案。 分区方案必须已在数据库中存在。 若要创建分区方案，请参阅[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)。  
+   指定表的分区方案。 分区方案必须已在数据库中存在。 若要创建分区方案，请参阅 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)。  
  
-   *column_name*指定对其分区已分区的索引的列。 此列必须与匹配的数据类型，长度，并且分区的自变量的精度函数*partition_scheme_name*正在使用。  
+   *column_name* 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配。  
 
    *filegroup_name*  
    指定用于存储聚集列存储索引的文件组。 如果未指定位置并且表未分区，则索引将与基础表或视图使用相同的文件组。 该文件组必须已存在。  
 
-   **"**default**"**  
-   若要在默认文件组上创建索引，请使用"默认值"或 [默认]。  
+   "default"  
+   若要对默认文件组创建索引，请使用 "default" 或 [ default ]。  
   
    如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 QUOTED_IDENTIFIER 默认为 ON。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-创建 [聚集] 列存储索引  
-在行存储表上创建内存中的非聚集列存储索引存储为堆或聚集的索引。 索引可以包含筛选的条件，并不需要包括所有的基础表的列。 列存储索引需要足够的空间来存储数据的副本。 它是可更新，并更改基础表时将更新。 聚集索引的非聚集列存储索引使实时分析。  
+CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+对存储为堆或聚集索引的行存储表创建内存中非聚集列存储索引。 该索引可以具有经过筛选的条件，并且不需要包含基础表的所有列。 列存储索引需要足够的空间来存储数据副本。 它是可更新的，在基础表发生更改时会进行更新。 聚集索引上的非聚集列存储索引可启用实时分析。  
   
 *index_name*  
-   指定索引的名称。 *index_name*必须是唯一在该表中，但不需要在数据库中是唯一。 索引名称必须遵循的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
+   指定索引的名称。 *index_name* 在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
  **(** *column*  [ **,**...*n* ] **)**  
-    指定要存储的列。 非聚集列存储索引被限制为 1024年列。  
-   每个列都必须采用列存储索引支持的数据类型。 请参阅[限制和局限](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)有关支持的数据类型的列表。  
+    指定要存储的列。 非聚集列存储索引限定为 1024 个列。  
+   每个列都必须采用列存储索引支持的数据类型。 有关受支持数据类型的列表，请参阅[限制和局限](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)。  
 
-ON [*database_name*。 [*schema_name* ] . | *schema_name* 。 ] *table_name*  
-   指定一个、 两个或三部分包含的索引的表名称。  
+ON [database_name. [schema_name ] . | schema_name . ] *table_name*  
+   指定包含该索引的由一部分、两部分或三部分名称组成的表。  
 
-使用 DROP_EXISTING = [关闭] |ON  
-   DROP_EXISTING = 的 ON 删除和重新生成现有的索引。 指定的索引名称必须与当前的现有索引相同；但可以修改索引定义。 例如，可以指定不同的列或索引选项。
+WITH DROP_EXISTING = [OFF] | ON  
+   DROP_EXISTING = ON：删除并重新生成现有索引。 指定的索引名称必须与当前的现有索引相同；但可以修改索引定义。 例如，可以指定不同的列或索引选项。
   
-   DROP_EXISTING = 的 OFF 的指定的索引名称已存在，则会显示错误。 使用 DROP_EXISTING 不能更改索引类型。 在向后兼容的语法中，WITH DROP_EXISTING 等效于 WITH DROP_EXISTING = ON。  
+   DROP_EXISTING = OFF：如果指定的索引名称已存在，则会显示一条错误。 使用 DROP_EXISTING 不能更改索引类型。 在向后兼容的语法中，WITH DROP_EXISTING 等效于 WITH DROP_EXISTING = ON。  
 
-MAXDOP = *max_degree_of_parallelism*  
-   重写[配置 max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)索引操作的持续时间的配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
+MAXDOP = max_degree_of_parallelism  
+   在索引操作期间覆盖[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
-   *max_degree_of_parallelism*值可以是：  
+   max_degree_of_parallelism 可为以下值：  
    - 1 - 取消生成并行计划。  
-   - \>1-限制最大指定数目的并行索引操作中使用的处理器数或更少基于当前的系统工作负荷。 例如，当 MAXDOP = 4，使用的处理器数量为 4 或更小。  
+   - \>1 - 基于当前系统工作负载，将并行索引操作中使用的最大处理器数限制为指定数量或更少。 例如，当 MAXDOP = 4 时，使用的处理器数为 4 或更少。  
    - 0（默认值） - 根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。  
   
    有关详细信息，请参阅 [配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
->  并行索引操作不可用的每个版本[!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  并非在 [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-ONLINE = [ON |关闭]   
-   适用于： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]，仅限非聚集列存储索引中。
-在指定的非聚集列存储索引保持联机和可用的新副本的索引时正在生成。
+ONLINE = [ON | OFF]   
+   适用范围：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]，仅限非聚集列存储索引。
+ON 指定非聚集列存储索引在生成新副本时保持联机并可用。
 
-   关闭指定的索引不可供使用时正在生成新的副本。 因为这是仅，非聚集索引的基表保持可用性，只有非聚集列存储索引不用于满足查询的新索引直到完成。 
+   OFF 指定索引在生成新副本时不可用。 由于这只是非聚集索引，因此基表仍然可用，只不过非聚集列存储索引在新索引完成前不能用于满足查询。 
 
-COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+COMPRESSION_DELAY = 0 | \<delay>[Minutes]  
+   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
   
-   在多长时间行应保留在增量行组之前文件迁移到压缩行组上指定下限。 例如，客户可以说，是否某行是不变时间为 120 分钟，使其适合压缩到列存储格式。 对于基于磁盘的表的列存储索引，我们不能跟踪插入或更新，行的时间时，我们使用增量行组关闭作为代理的行改为。 默认持续时间为 0 分钟。 行迁移到列存储后进行增量行组中累积 100 万行，并它已标记为已关闭。  
+   指定某一行在适合迁移到压缩行组之前，应在增量行组中保留的时间下限。 例如，客户可以说，如果某一行在 120 分钟内保持不变，则可以将其压缩为列存储格式。 对于基于磁盘的表中的列存储索引，我们不跟踪行的插入或更新时间，而是使用增量行组关闭时间作为行代理。 默认持续时间为 0 分钟。 一旦增量行组中累积了 100 万行，并且该行组标记为已关闭，就会将行迁移到列存储。  
   
 DATA_COMPRESSION  
    为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：  
 COLUMNSTORE  
-   适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 列存储是默认设置，并指定使用大多数的高性能列存储压缩进行压缩。 这是典型的选择。  
+   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE 是默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
   
 COLUMNSTORE_ARCHIVE  
-   适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 进一步 COLUMNSTORE_ARCHIVE 压缩的表或分区到较小的大小。 这可用于存档，或者用于要求更小存储大小并且可以付出更多时间来进行存储和检索的其他情形。  
+   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE_ARCHIVE 将表或分区进一步压缩为更小的大小。 这可用于存档，或者用于要求更小存储大小并且可以付出更多时间来进行存储和检索的其他情形。  
   
  有关压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
-其中\<filter_expression > [AND \<filter_expression >] 适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+WHERE \<filter_expression> [ AND \<filter_expression> ] 适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
-   这将调用筛选器谓词，指定要包含在索引将哪些行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]筛选索引中的数据行创建筛选的统计信息。  
+   调用一个筛选器谓词，它指定哪些行包含在索引中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对筛选索引中的数据行创建筛选统计信息。  
   
-   筛选器谓词使用简单比较逻辑。 比较运算符不允许使用 NULL 文本的比较。 请改用 IS NULL 和 IS NOT NULL 运算符。  
+   该筛选器谓词使用简单的比较逻辑。 比较运算符不允许使用 NULL 文本的比较。 请改用 IS NULL 和 IS NOT NULL 运算符。  
   
    下面是一些 `Production.BillOfMaterials` 表筛选谓词示例：  
    `WHERE StartDate > '20000101' AND EndDate <= '20000630'`    
    `WHERE ComponentID IN (533, 324, 753)`  
    `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
    
-   对筛选的索引的指南，请参阅[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
+   有关筛选索引的指南，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
 ON  
-   这些选项指定在其创建索引的文件组。  
+   这些选项指定创建该索引时所在的文件组。  
   
 *partition_scheme_name* **(** *column_name* **)**  
-   指定定义已分区索引的分区映射到其上的文件组的分区方案。 分区方案必须通过执行数据库中不存在[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)。 
-   *column_name*指定对其分区已分区的索引的列。 此列必须与匹配的数据类型，长度，并且分区的自变量的精度函数*partition_scheme_name*正在使用。 *column_name*不限于索引定义中的列。 在对列存储索引进行分区时，如果尚未指定分区依据列，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会添加分区依据列作为索引列。  
-   如果*partition_scheme_name*或*文件组*未指定和表分区、 检索均被放置在相同的分区方案中，使用相同的分区依据列，与基础表。  
+   指定分区方案，该方案定义要将已分区索引的分区映射到的文件组。 必须通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 使数据库中存在该分区方案。 
+   *column_name* 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配。 column_name 不限于索引定义中的列。 在对列存储索引进行分区时，如果尚未指定分区依据列，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会添加分区依据列作为索引列。  
+   如果未指定 partition_scheme_name 或 filegroup 且该表已分区，则索引会与基础表使用相同分区依据列并被放入同一分区方案中。  
    分区表的列存储索引必须实现分区对齐。  
-   有关分区索引的详细信息，请参阅[Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+   有关分区索引的详细信息，请参阅[已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
 
 *filegroup_name*  
-   指定要对其创建索引的文件组名称。 如果*filegroup_name*未指定和未分区表、 索引与基础表使用同一文件组。 该文件组必须已存在。  
+   指定要对其创建索引的文件组名称。 如果未指定 *filegroup_name* 并且该表未分区，则索引与基础表使用相同的文件组。 该文件组必须已存在。  
  
-**"**default**"**  
+"default"  
 为默认文件组创建指定索引。  
   
-在此上下文中，“default”一词不是关键字。 它是默认文件组的标识符和必须分隔，如下所示 ON **"**默认**"**或亮**[**默认**]**。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+在此上下文中，“default”一词不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-##  <a name="Permissions"></a> 权限  
+##  <a name="Permissions"></a> Permissions  
  需要对表的 ALTER 权限。  
   
-##  <a name="GenRemarks"></a>一般备注  
- 可以在临时表创建列存储索引。 在删除表或结束会话时，也将删除索引。  
+##  <a name="GenRemarks"></a> 一般备注  
+ 可以为临时表创建列存储索引。 在删除表或结束会话时，也将删除索引。  
  
 ## <a name="filtered-indexes"></a>筛选索引  
 筛选索引是一种经过优化的非聚集索引，适用于从表中选择少数行的查询。 筛选索引使用筛选谓词对表中的部分数据进行索引。 设计良好的筛选索引可以提高查询性能，降低存储成本和维护成本。  
@@ -275,9 +275,9 @@ ON
 如果下列任何条件成立，则需要“必需的值”列中的 SET 选项：  
 - 创建筛选索引。  
 - INSERT、UPDATE、DELETE 或 MERGE 操作修改筛选索引中的数据。  
-- 查询优化器使用筛选的索引来生成查询计划。  
+- 查询优化器使用该筛选索引生成查询计划。  
   
-    |SET 选项|必需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|  
+    |SET 选项|必需的值|默认服务器值|，则“默认”<br /><br /> OLE DB 和 ODBC 值|，则“默认”<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -297,78 +297,78 @@ ON
   
 -   查询优化器不考虑任何 Transact-SQL 语句的执行计划中的索引。  
   
- 有关筛选索引的详细信息，请参阅[Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。 
+ 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。 
   
 ##  <a name="LimitRest"></a> 限制和局限  
 
-**列存储索引中的每个列必须是以下常见业务数据类型之一：** 
+**列存储索引中的每一列都必须是以下常见业务数据类型之一：** 
 -   datetimeoffset [ ( *n* ) ]  
--   datetime2 [(  *n*  )]  
--   datetime  
+-   datetime2 [ ( *n* ) ]  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   日期  
 -   time [ ( *n* ) ]  
--   float [(  *n*  )]  
--   实际 [(  *n*  )]  
--   十进制 [(*精度*[ *，缩放*] **)** ]
--   数字 [(*精度*[ *，缩放*] **)** ]    
+-   float [ ( *n* ) ]  
+-   real [ ( *n* ) ]  
+-   decimal [ ( *precision* [ *, scale* ] **)** ]
+-   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   ssNoversion  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar (max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)   
+-   nvarchar(max)（适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和位于高级定价层的 Azure SQL 数据库，仅限聚集列存储索引）   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar （max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)
+-   varchar(max)（适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和位于高级定价层的 Azure SQL 数据库，仅限聚集列存储索引）
 -   char [ ( *n* ) ]  
--   varbinary [(  *n*  )] 
--   varbinary (max) (适用于[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]和高级层的 Azure SQL 数据库定价层，仅限聚集列存储索引中)
--   二进制 [(  *n*  )]  
--   uniqueidentifier (适用于[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]及更高版本)
+-   varbinary [ ( *n* ) ] 
+-   varbinary (max)（适用于 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和位于高级定价层的 Azure SQL 数据库，仅限聚集列存储索引）
+-   binary [ ( *n* ) ]  
+-   uniqueidentifier（适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）
   
-如果基础表具有列存储索引不支持数据类型的列，则必须省略该列从非聚集列存储索引。  
+如果基础表中包含的某一列的数据类型不受列存储索引支持，则必须从非聚集列存储索引中省略该列。  
   
-**使用任何以下数据类型的列不能包含列存储索引中：**
+**使用以下任何数据类型的列都不能包括在列存储索引中：**
 -   ntext、text 和 image  
--   nvarchar (max)、 varchar （max） 和 varbinary （max） (适用于[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和早期版本中，和非聚集列存储索引) 
+-   nvarchar(max)、varchar(max) 和 varbinary(max)（适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和早期版本，以及非聚集列存储索引） 
 -   rowversion（和 timestamp）  
 -   sql_variant  
 -   CLR 类型（hierarchyid 和空间类型）  
 -   xml  
--   uniqueidentifier (适用于[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+-   uniqueidentifier（适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）  
 
 **非聚集列存储索引：**
 -   包含的列数不能超过 1024。  
 -   具有非聚集列存储索引的表可以具有唯一约束、主键约束或外键约束，但这些约束不能包括在非聚集列存储索引中。  
 -   不能基于视图或索引视图创建。  
 -   不能包含稀疏列。  
--   无法使用更改**ALTER INDEX**语句。 若要更改非聚集索引，必须先删除该列存储索引，然后重新创建它。 你可以使用**ALTER INDEX**禁用和重新生成列存储索引。  
--   不能通过创建**包括**关键字。  
--   不能包括**ASC**或**DESC**排序索引的关键字。 根据压缩算法对列存储索引排序。 排序将抵销许多性能优势。  
--   无法在非聚集列存储索引中包括类型 nvarchar (max)、 varchar （max），和 varbinary （max） 的大型对象 (LOB) 列。 只有聚集列存储索引支持 LOB 类型，从[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]版本和配置在高级定价层的 Azure SQL 数据库。 请注意，之前的版本聚集和非聚集列存储索引中不支持 LOB 类型。
+-   不能使用 **ALTER INDEX** 语句进行更改。 若要更改非聚集索引，必须先删除该列存储索引，然后重新创建它。 可以使用 **ALTER INDEX** 禁用并重新生成列存储索引。  
+-   不能使用 **INCLUDE** 关键字创建。  
+-   不能包括用来对索引排序的 **ASC** 或 **DESC** 关键字。 根据压缩算法对列存储索引排序。 排序将抵销许多性能优势。  
+-   不能在非聚集列存储索引中包含 nvarchar(max)、varchar(max) 和 varbinary(max) 类型的大型对象 (LOB) 列。 仅从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版本开始以及在高级定价层配置的 Azure SQL 数据库中，聚集列存储索引才支持 LOB 类型。 请注意，以前的版本不管是在聚集列存储索引还是非聚集列存储索引中都不支持 LOB 类型。
 
 
- **列存储索引不能组合具有以下特点：**  
--   计算列。 从 SQL Server 自 2017 年开始，聚集列存储索引可以包含非持久化计算的列。 但是，在 SQL Server 自 2017 年，聚集列存储索引不能包含持久化计算的列，并且你不能对计算列创建非聚集的索引。 
--   页和行压缩和**vardecimal**存储格式 （列存储索引已压缩以不同的格式。）  
+ **列存储索引不能与以下功能结合使用：**  
+-   计算列。 从 SQL Server 2017 开始，聚集列存储索引可以包含非持久化计算列。 但是，在 SQL Server 2017 中，聚集列存储索引不能包含持久化计算列，并且你不能对计算列创建非聚集索引。 
+-   页和行压缩以及 **vardecimal** 存储格式（列存储索引已采用不同格式压缩）。  
 -   复制  
 -   Filestream
 
-不能在具有聚集列存储索引的表上使用游标或触发器。 此限制不适用于非聚集列存储索引。你可以在具有非聚集列存储索引的表上使用游标和触发器。
+不能在具有聚集列存储索引的表中使用游标或触发器。 此限制不适用于非聚集列存储索引；可以在具有非聚集列存储索引的表中使用游标和触发器。
 
 **SQL Server 2014 特定限制**  
-这些限制仅适用于 SQL Server 2014。 在此版本中，我们引入了可更新聚集列存储索引。 非聚集列存储索引已仍是只读的。  
+这些限制仅适用于 SQL Server 2014。 在此版本中，我们引入了可更新的聚集列存储索引。 非聚集列存储索引仍为只读。  
 
--   更改跟踪。 不能使用更改跟踪与非聚集列存储索引 (NCCI)，因为它们是只读的。 因此对于聚集列存储索引 (CCI) 工作。  
--   变更数据捕获。 不能使用的更改数据捕获的非聚集列存储索引 (NCCI)，因为它们是只读的。 因此对于聚集列存储索引 (CCI) 工作。  
--   可读辅助副本。 在可读辅助数据库始终 OnReadable 可用性组，无法访问群集的聚集列存储索引 (CCI)。  你可以从可读辅助数据库访问非聚集列存储索引 (NCCI)。  
--   多个活动结果集 (MARS)。 SQL Server 2014 只读连接到具有列存储索引的表使用 MARS。    但是，SQL Server 2014 不支持具有列存储索引的表上的并发数据操作语言 (DML) 操作 MARS。 当发生这种情况时，SQL Server 会终止连接，并中止事务。  
+-   更改跟踪。 不能对非聚集列存储索引 (NCCI) 使用更改跟踪，因为这类索引是只读的。 它适用于聚集列存储索引 (CCI)。  
+-   变更数据捕获。 不能对非聚集列存储索引 (NCCI) 使用变更数据捕获，因为这类索引是只读的。 它适用于聚集列存储索引 (CCI)。  
+-   可读辅助副本。 不能通过 Always OnReadable 可用性组的可读辅助副本访问聚集列存储索引 (CCI)。  可以通过可读辅助副本访问非聚集列存储索引 (NCCI)。  
+-   多重活动结果集 (MARS)。 SQL Server 2014 将 MARS 用于具有列存储索引的表的只读连接。    但是，SQL Server 2014 不支持将 MARS 用于具有列存储索引的表中的并发数据操作语言 (DML) 操作。 当发生这种情况时，SQL Server 会终止连接并中止事务。  
   
- 有关的性能优势和限制的列存储索引的信息，请参阅[列存储索引概述](../../relational-databases/indexes/columnstore-indexes-overview.md)。
+ 有关列存储索引的性能优势和限制的信息，请参阅[列存储索引概述](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
 ##  <a name="Metadata"></a> 元数据  
  列存储索引中的所有列在元数据中作为包含性列存储。 列存储索引中没有任何键列。 这些系统视图提供有关列存储索引的信息。  
@@ -380,7 +380,7 @@ ON
 -   [sys.column_store_dictionaries (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a>用于将行存储表转换为列存储的示例  
+##  <a name="convert"></a> 将行存储表转换为列存储的示例  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. 将堆转换为聚集列存储索引  
  此示例将一个表作为堆创建，然后将其转换为名为 cci_Simple 的聚集列存储索引。 这会将整个表的存储从行存储转换为列存储。  
@@ -413,12 +413,12 @@ WITH (DROP_EXISTING = ON);
 GO  
 ```  
   
-### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. 将一个行存储表转换为列存储索引时，请处理非聚集索引。  
- 此示例演示如何处理非聚集索引，将一个行存储表转换为列存储索引时。 实际上，开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]采取任何特殊操作是必需的;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自动定义和重新生成新的聚集列存储索引的非聚集索引。  
+### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. 将行存储表转换为列存储索引时处理非聚集索引。  
+ 此示例展示如何在将行存储表转换为列存储索引时处理非聚集索引。 实际上，从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，无需执行特别的操作；[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在新的聚集列存储索引上自动定义并重新生成非聚集索引。  
   
- 如果你想要删除的非聚集索引，使用 DROP INDEX 语句之前创建列存储索引。 DROP EXISTING 选项仅可删除要转换的聚集的索引。 它不删除非聚集索引。  
+ 如果要删除非聚集索引，请在创建列存储索引之前使用 DROP INDEX 语句。 DROP EXISTING 选项仅删除正在转换的聚集索引。 它不会删除非聚集索引。  
   
- 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，无法在列存储索引上创建非聚集索引。 此示例演示如何在早期版本中你需要在创建列存储索引之前删除的非聚集索引。  
+ 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，无法在列存储索引上创建非聚集索引。 此示例展示在早期版本中，如何在创建列存储索引之前删除非聚集索引。  
   
 ```  
   
@@ -479,10 +479,10 @@ GO
   
 3.  删除聚集索引。  
   
-    -   仅在您要在将它转换为聚集列存储索引时指定索引的新名称的情况下才这样做。 如果不删除聚集的索引，新的聚集列存储索引具有相同的名称。  
+    -   仅在您要在将它转换为聚集列存储索引时指定索引的新名称的情况下才这样做。 如果不删除聚集索引，新的聚集列存储索引将具有相同的名称。  
   
         > [!NOTE]  
-        >  如果您使用自己的名称，索引的名称可能更易于记住。 所有行存储聚集索引都使用该默认名称是 ClusteredIndex_\<GUID >。  
+        >  如果您使用自己的名称，索引的名称可能更易于记住。 所有行存储格式的聚集索引均使用以下默认名称：“ClusteredIndex_\<GUID>”。  
   
     ```  
     --Process for dropping a clustered index.  
@@ -539,13 +539,13 @@ ON MyFactTable;
 ```  
   
 
-### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. 重新生成整个聚集列存储索引进行碎片整理  
-   适用于： SQL Server 2014  
+### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. 重新生成整个聚集列存储索引以进行碎片整理  
+   适用范围：SQL Server 2014  
   
- 有两种方法可以重新生成完整的聚集列存储索引。 你可以使用创建聚集列存储索引，或[ALTER INDEX &#40;Transact SQL &#41;](../../t-sql/statements/alter-index-transact-sql.md)和重新生成选项。 这两种方法可以得到相同的结果。  
+ 有两种方法可以重新生成完整的聚集列存储索引。 可以使用 CREATE CLUSTERED COLUMNSTORE INDEX，或使用 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) 和 REBUILD 选项。 这两种方法可以得到相同的结果。  
   
 > [!NOTE]  
->  从 SQL Server 2016 开始，使用 ALTER INDEX REORGANIZE 而不是重新生成与在此示例中所述的方法。  
+>  从 SQL Server 2016 开始，可使用 ALTER INDEX REORGANIZE，而不是使用此示例所述的方法进行重新生成。  
   
 ```  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
@@ -568,10 +568,10 @@ WITH ( DROP_EXISTING = ON );
   
 ```  
   
-##  <a name="nonclustered"></a>对于非聚集列存储索引的示例  
+##  <a name="nonclustered"></a> 非聚集列存储索引示例  
   
-### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. 创建列存储索引作为一个行存储表上的辅助索引  
- 此示例在一个行存储表上创建非聚集列存储索引。 在此情况下，可以创建只有一个列存储索引。 列存储索引需要额外存储空间，因为它包含的行存储表中的数据副本。 此示例创建一个简单的表和聚集的索引，然后演示创建非聚集列存储索引的语法。  
+### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. 对行存储表创建列存储索引作为辅助索引  
+ 此示例会对行存储表创建非聚集列存储索引。 在这种情况下只能创建一个列存储索引。 列存储索引需要额外的存储空间，因为它包含行存储表中数据的副本。 此示例会创建一个简单表和聚集索引，然后演示创建非聚集列存储索引的语法。  
   
 ```  
 CREATE TABLE SimpleTable  
@@ -588,7 +588,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. 创建简单的非聚集列存储索引使用所有选项  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. 使用所有选项创建简单的非聚集列存储索引  
  下面的示例演示了通过使用所有选项创建非聚集列存储索引的语法。  
   
 ```  
@@ -601,10 +601,10 @@ ON "default"
 GO  
 ```  
   
- 使用已分区的表的更复杂示例，请参阅[列存储索引概述](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
+ 有关使用已分区表的更复杂示例，请参阅[列存储索引概述](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
   
-### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. 通过筛选谓词创建非聚集列存储索引  
- 下面的示例中的 Production.BillOfMaterials 表上创建筛选的非聚集列存储索引[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。 筛选谓词可包含那些不是筛选索引中的键列的列。 本示例中的谓词将仅选择其中的 EndDate 为非 NULL 的行。  
+### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. 使用筛选谓词创建非聚集列存储索引  
+ 以下示例会对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 Production.BillOfMaterials 表创建已筛选的非聚集列存储索引。 筛选谓词可包含那些不是筛选索引中的键列的列。 本示例中的谓词将仅选择其中的 EndDate 为非 NULL 的行。  
   
 ```  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -620,11 +620,11 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
 ```  
   
 ###  <a name="ncDML"></a> D. 更改非聚集列存储索引中的数据  
-   适用于：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。
+   适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。
   
- 在您在表上创建非聚集列存储索引后，不能直接在该表中修改数据。 具有插入、 更新、 删除或合并的查询将失败并返回一条错误消息。 若要添加或修改表中的数据，可以执行以下操作之一：  
+ 在您在表上创建非聚集列存储索引后，不能直接在该表中修改数据。 具有 INSERT、UPDATE、DELETE 或 MERGE 的查询会失败并且返回错误消息。 若要添加或修改表中的数据，可以执行以下操作之一：  
   
--   禁用或删除列存储索引。 然后可以更新表中的数据。 如果禁用列存储索引，则可以在完成数据更新后重新生成列存储索引。 例如：  
+-   禁用或删除列存储索引。 然后可以更新表中的数据。 如果禁用列存储索引，则可以在完成数据更新后重新生成列存储索引。 例如，  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -636,16 +636,16 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   将分区从具有列存储索引的表切换到一个空的临时表中。 如果在临时表上有某个列存储索引，则禁用该列存储索引。 执行任何更新。 生成（或重新生成）列存储索引。 将临时表切换回主表的（现在为空的）分区中。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. 将聚集的索引更改为聚集列存储索引  
- 创建聚集列存储索引语句使用 DROP_EXISTING = ON，你可以：  
+### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. 将聚集索引更改为聚集列存储索引  
+ 通过使用 DROP_EXISTING = ON 的 CREATE CLUSTERED COLUMNSTORE INDEX 语句，可以：  
   
--   将聚集的索引更改为聚集列存储索引。  
+-   将聚集索引更改为聚集列存储索引。  
   
 -   重新生成聚集列存储索引。  
   
- 此示例将 xDimProduct 表创建为行存储表具有聚集索引，，，然后使用创建聚集列存储索引的行存储表的表更改为列存储表。  
+ 此示例将 xDimProduct 表创建为具有聚集索引的行存储表，然后使用 CREATE CLUSTERED COLUMNSTORE INDEX 将该表从行存储表更改为列存储表。  
   
 ```  
 -- Uses AdventureWorks  
@@ -670,7 +670,7 @@ WITH ( DROP_EXISTING = ON );
 ```  
   
 ### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. 重新生成聚集列存储索引  
- 在前面的示例生成，此示例使用创建聚集列存储索引重新生成调用 cci_xDimProduct 现有聚集列存储索引。  
+ 基于上一示例，此示例使用 CREATE CLUSTERED COLUMNSTORE INDEX 重新生成名为 cci_xDimProduct 的现有聚集列存储索引。  
   
 ```  
 --Rebuild the existing clustered columnstore index.  
@@ -680,11 +680,11 @@ WITH ( DROP_EXISTING = ON );
 ```  
   
 ### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>C. 更改聚集列存储索引的名称  
- 若要更改的聚集列存储索引的名称，删除现有的聚集列存储索引，然后重新创建该索引使用新名称。  
+ 若要更改聚集列存储索引的名称，请删除现有的聚集列存储索引，然后使用新名称重新创建索引。  
   
- 我们建议仅此操作而一个小型表或一个空表。 它需要很长的时间，以删除大型聚集列存储索引并重新生成具有不同的名称。  
+ 建议仅对小型表或空表执行此操作。 删除大型聚集列存储索引并使用其他名称重新生成需要很长时间。  
   
- 使用上一示例中的 cci_xDimProduct 聚集列存储索引，此示例将删除 cci_xDimProduct 聚集列存储索引，并与名称 mycci_xDimProduct 聚集列存储索引，然后重新创建。  
+ 通过使用上一示例中的 cci_xDimProduct 聚集列存储索引，此示例将删除 cci_xDimProduct 聚集列存储索引，然后使用名称 mycci_xDimProduct 重新创建聚集列存储索引。  
   
 ```  
 --For illustration purposes, drop the clustered columnstore index.   
@@ -698,7 +698,7 @@ WITH ( DROP_EXISTING = OFF );
 ```  
   
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. 将列存储表转换为具有聚集索引的行存储表  
- 可能的情况下，你想要删除聚集列存储索引并创建聚集的索引。 这将表存储在行存储格式。 此示例将列存储表转换为行存储表具有聚集索引具有相同的名称。 所有数据将丢失。 所有数据将都转到行存储表，并列出的列将成为在聚集索引中的键列。  
+ 可能会出现想删除聚集列存储索引并创建聚集索引的情况。 这会以行存储格式存储表。 此示例会将列存储表转换为具有同名聚集索引的行存储表。 不会丢失任何数据。 所有数据都转到行存储表中，列出的列成为聚集索引中的键列。  
   
 ```  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
@@ -711,7 +711,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. 将列存储表转换回行存储堆  
- 使用[DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32)删除聚集列存储索引并将表转换为行存储堆。 此示例将 cci_xDimProduct 表转换为行存储堆。 表会继续分发，但存储为堆。  
+ 使用 [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) 删除聚集列存储索引并将表转换为行存储堆。 此示例会将 cci_xDimProduct 表转换为行存储堆。 可继续分配该表，但将其存储为堆。  
   
 ```  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

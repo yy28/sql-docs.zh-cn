@@ -1,5 +1,5 @@
 ---
-title: "设置语言 (Transact SQL) |Microsoft 文档"
+title: SET LANGUAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/05/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  指定会话的语言环境。 会话语言确定**datetime**格式以及系统消息。  
+  指定会话的语言环境。 会话语言确定 **datetime** 格式和系统消息。  
   
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -51,15 +51,15 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>参数  
- [**N**]*语言*  |   **@**  *language_var*  
- 是语言的名称，因为存储在[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。 此参数可以是 Unicode，或者是转换为 Unicode 的 DBCS。 若要指定以 Unicode 的一种语言，使用**N***语言*。 如果指定为一个变量，该变量必须是**sysname**。  
+ [**N**]**'***language***'** | **@***language_var*  
+ 存储在 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的语言的名称。 此参数可以是 Unicode，或者是转换为 Unicode 的 DBCS。 若要指定使用 Unicode 的语言，请使用 **N'***language***'**。 如果将语言指定为变量，则变量的数据类型必须为 **sysname**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SET LANGUAGE 的设置是在执行或运行时设置，而不是在分析时设置。  
   
- SET LANGUAGE 隐式设置的设置[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)。  
+ SET LANGUAGE 隐式设置 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 的设置。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -80,7 +80,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
- [sp_helplanguage &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
+ [sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

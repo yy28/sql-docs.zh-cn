@@ -1,5 +1,5 @@
 ---
-title: "ABS (Transact SQL) |Microsoft 文档"
+title: ABS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回指定数值表达式的绝对值（正值）的数学函数。 (`ABS`更改负为正值的值。 `ABS`零没有影响或正值。)
+返回指定数值表达式的绝对值（正值）的数学函数。 （`ABS` 将负值更改为正值。 `ABS` 对零或正值没有影响。）
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -87,7 +87,7 @@ GO
 ## <a name="see-also"></a>另请参阅
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [内置函数 (Transact-SQL)](../../t-sql/functions/functions.md)
   
   

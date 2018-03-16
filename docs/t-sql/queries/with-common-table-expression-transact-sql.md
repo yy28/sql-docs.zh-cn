@@ -1,5 +1,5 @@
 ---
-title: "与 common_table_expression (Transact SQL) |Microsoft 文档"
+title: WITH common_table_expression (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -60,17 +60,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *expression_name*  
-是公用表表达式的有效标识符。 *expression_name*必须与任何其他公用表表达式在相同 WITH 中定义的名称不同\<common_table_expression > 子句，但*expression_name*可以是相同的名称基表或视图。 任何引用*expression_name*在查询中使用公用表表达式和不是基对象。
+是公用表表达式的有效标识符。 expression_name 须不同于在同一 WITH \<common_table_expression> 子句中定义的任何其他公用表表达式的名称，但可以与基表或基视图的名称相同。 在查询中对 expression_name 的任何引用都会使用公用表表达式，而不使用基对象。
   
  column_name  
- 在公用表表达式中指定列名。 在一个 CTE 定义中不允许出现重复的名称。 指定的列名称的数量必须与匹配的结果集中的列数*CTE_query_definition*。 只有在查询定义中为所有结果列都提供了不同的名称时，列名列表才是可选的。  
+ 在公用表表达式中指定列名。 在一个 CTE 定义中不允许出现重复的名称。 指定的列名数必须与 CTE_query_definition 结果集中列数相匹配。 只有在查询定义中为所有结果列都提供了不同的名称时，列名列表才是可选的。  
   
  *CTE_query_definition*  
- 指定一个其结果集填充公用表表达式的 SELECT 语句。 SELECT 语句，以*CTE_query_definition*必须满足与创建视图，但 CTE 不能定义另一个 CTE 相同的要求。 有关详细信息，请参阅备注部分和[创建的视图 &#40;Transact SQL &#41;](../../t-sql/statements/create-view-transact-sql.md).  
+ 指定一个其结果集填充公用表表达式的 SELECT 语句。 除了 CTE 不能定义另一个 CTE 以外，CTE_query_definition 的 SELECT 语句必须满足与创建视图相同的要求。 有关详细信息，请参阅“注释”部分和 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
- 如果多个*CTE_query_definition*是定义，查询定义必须通过联接其中一种集运算符： UNION ALL、 UNION、 EXCEPT 或 INTERSECT。  
+ 如果定义了多个 CTE_query_definition，则这些查询定义必须用下列一个集合运算符联接起来：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>创建和使用公用表表达式的准则  
  下面的准则适用于非递归公用表表达式。 有关适用于递归公用表表达式的准则，请参阅后面的“定义和使用递归公用表表达式的准则”。  
@@ -81,9 +81,9 @@ ms.lasthandoff: 01/25/2018
   
 -   CTE 可以引用自身，也可以引用在同一 WITH 子句中预先定义的 CTE。 不允许前向引用。  
   
--   不允许在一个 CTE 中指定多个 WITH 子句。 例如，如果*CTE_query_definition*包含子查询，该子查询不能包含嵌套带有定义另一个 CTE 的子句。  
+-   不允许在一个 CTE 中指定多个 WITH 子句。 例如，如果 CTE_query_definition 包含一个子查询，则该子查询不能包括定义另一个 CTE 的嵌套 WITH 子句。  
   
--   不能用于以下子句*CTE_query_definition*:  
+-   不能在 CTE_query_definition 中使用以下子句：  
   
     -   ORDER BY（除非指定了 TOP 子句）  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/25/2018
   
 -   可以使用引用 CTE 的查询来定义游标。  
   
--   可以在 CTE 引用远程服务器上的表。  
+-   可以在 CTE 中引用远程服务器中的表。  
   
 -   在执行 CTE 时，任何引用 CTE 的提示都可能与该 CTE 访问其基础表时发现的其他提示相冲突，这种冲突与引用查询中的视图的提示所发生的冲突相同。 发生这种情况时，查询将返回错误。  
   
@@ -112,15 +112,15 @@ ms.lasthandoff: 01/25/2018
   
 -   递归成员中列的数据类型必须与定位点成员中相应列的数据类型一致。  
   
--   FROM 子句的递归成员必须引用一次 CTE *expression_name*。  
+-   递归成员的 FROM 子句只能引用一次 CTE expression_name。  
   
--   中不允许以下各项*CTE_query_definition*的递归成员：  
+-   在递归成员的 CTE_query_definition 中不能出现下列项：  
   
     -   SELECT DISTINCT  
   
     -   GROUP BY  
   
-    -   PIVOT（当数据库兼容级别为 110 或更高级别时。 请参阅[中 SQL Server 2016 数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。)  
+    -   PIVOT（当数据库兼容级别为 110 或更高级别时。 请参阅 [SQL Server 2016 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。）  
   
     -   HAVING  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 01/25/2018
   
     -   子查询  
   
-    -   提示应用于对内部 CTE 的递归引用*CTE_query_definition*。  
+    -   应用于 CTE_query_definition 中 CTE 的递归引用的提示。  
   
  下面的准则适用于使用递归公用表表达式：  
   
@@ -142,42 +142,42 @@ ms.lasthandoff: 01/25/2018
   
 -   不能使用包含递归公用表表达式的视图来更新数据。  
   
--   可以使用 CTE 在查询上定义游标。 CTE 是*select_statement*定义游标的结果集的自变量。 递归 CTE 只允许使用快速只进游标和静态（快照）游标。 如果在递归 CTE 中指定了其他游标类型，则该类型将转换为静态游标类型。  
+-   可以使用 CTE 在查询上定义游标。 CTE 是定义游标结果集的 select_statement 参数。 递归 CTE 只允许使用快速只进游标和静态（快照）游标。 如果在递归 CTE 中指定了其他游标类型，则该类型将转换为静态游标类型。  
   
 -   可以在 CTE 中引用远程服务器中的表。 如果在 CTE 的递归成员中引用了远程服务器，那么将为每个远程表创建一个假脱机，这样就可以在本地反复访问这些表。 如果为 CTE 查询，Index Spool/Lazy Spool 则显示在查询计划中，并具有额外的 WITH STACK 谓词。 这是一种确认正确递归的方法。  
   
--   CTE 递归部分中的分析和聚合函数适用于当前递归级别的集合而不适用于 CTE 集合。 ROW_NUMBER 之类的函数仅对当前递归级别传递给它们的数据子集执行运算，而不对传递给 CTE 的递归部分的整个数据集合执行运算。 有关详细信息，请参阅示例 k。 使用分析中的函数递归 CTE 后面。  
+-   CTE 递归部分中的分析和聚合函数适用于当前递归级别的集合而不适用于 CTE 集合。 ROW_NUMBER 之类的函数仅对当前递归级别传递给它们的数据子集执行运算，而不对传递给 CTE 的递归部分的整个数据集合执行运算。 有关详细信息，请参阅示例 K. 在随后的递归 CTE 中使用分析函数。  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>功能和限制的通用表中的表达式[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 中的 Cte 的当前实现[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]具有以下功能和限制：  
+## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中的公用表表达式的功能和限值  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中 CTE 的当前实现具有以下功能和限值：  
   
--   可以在中指定 CTE**选择**语句。  
+-   可以在 SELECT 语句中指定 CTE。  
   
--   可以在中指定 CTE **CREATE VIEW**语句。  
+-   可以在 CREATE VIEW 语句中指定 CTE。  
   
--   可以在中指定 CTE **CREATE TABLE AS SELECT** (CTAS) 语句。  
+-   可以在 CREATE TABLE AS SELECT (CTAS) 语句中指定 CTE。  
   
--   可以在中指定 CTE**远程 TABLE AS SELECT** (CRTAS) 语句。  
+-   可以在 CREATE REMOTE TABLE AS SELECT (CRTAS) 语句中指定 CTE。  
   
--   可以在中指定 CTE **EXTERNAL TABLE AS SELECT** (CETAS) 语句。  
+-   可以在 CREATE EXTERNAL TABLE AS SELECT (CETAS) 语句中指定 CTE。  
   
--   可以从 CTE 引用远程表。  
+-   可以从 CTE 中引用远程表。  
   
--   可以从 CTE 引用外部表。  
+-   可以从 CTE 中引用外部表。  
   
 -   可以在 CTE 中定义多个 CTE 查询定义。  
   
--   CTE 后面必须跟一个**选择**语句。 **插入**，**更新**，**删除**，和**合并**中不支持语句。  
+-   CTE 后须跟有单一 SELECT 语句。 不支持 INSERT、UPDATE、DELETE 和 MERGE 语句。  
   
--   不支持公用表表达式包含对自身 （递归公用表表达式） 的引用。  
+-   不支持包含对自身的引用的公用表表达式（递归公用表表达式）。  
   
--   指定多个**WITH**中 CTE 子句不允许。 例如，如果 CTE_query_definition 包含子查询，该子查询不能包含嵌套**WITH**定义另一个 CTE 的子句。  
+-   不允许在一个 CTE 中指定多个 WITH 子句。 例如，如果 CTE_query_definition 包含一个子查询，则该子查询不能包括定义另一个 CTE 的嵌套 WITH 子句。  
   
--   **ORDER BY**子句不能在 CTE_query_definition，除非**顶部**指定子句。  
+-   ORDER BY 子句不能用于 CTE_query_definition，指定了 TOP 子句的情况除外。  
   
 -   如果将 CTE 用在属于批处理的一部分的语句中，那么在它之前的语句必须以分号结尾。  
   
--   在准备的语句中使用时**sp_prepare**，Cte 的行为方式不同于其他**选择**PDW 中的语句。 但是，如果 Cte 用作的 CETAS 准备的一部分**sp_prepare**，可以延迟其他行为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且由于方式绑定其他 PDW 语句实现为**sp_prepare**。 如果**选择**，引用 CTE 使用错误的列不存在 CTE， **sp_prepare**将通过而无需检测错误，但该错误将引发期间**sp_execute**相反。  
+-   如果将 CTE 用于 sp_prepare 准备的语句中，则其与 PDW 中其他 SELECT 语句的行为相同。 但是，如果将 CTE 用作由 sp_prepare 准备的 CETAS 的一部分，则由于为 sp_prepare 实现绑定时所使用的方式，其行为可能与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他 PDW 语句不同。 如果引用 CTE 的 SELECT 使用 CTE 中不存在的错误列，则会通过 sp_prepare 而不检测错误，但会在 sp_execute 期间引发此错误。  
   
 ## <a name="examples"></a>示例  
   
@@ -456,7 +456,7 @@ GO
 ```  
   
 ### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. 在 UPDATE 语句中使用递归 CTE  
- 下面的示例更新`PerAssemblyQty`值为用于生成产品道路 550 W 黄色，44 的所有部分`(ProductAssemblyID``800`)。 公用表表达式将返回用于生成 `ProductAssemblyID 800` 的部件和用于生成这些部件的组件等的层次结构列表。 只修改公用表表达式所返回的行。  
+ 下例更新用于生成产品‘Road-550-W Yellow, 44’ `(ProductAssemblyID``800` 的所有部件的 `PerAssemblyQty` 值。 公用表表达式将返回用于生成 `ProductAssemblyID 800` 的部件和用于生成这些部件的组件等的层次结构列表。 只修改公用表表达式所返回的行。  
   
 ```  
 USE AdventureWorks2012;  
@@ -601,10 +601,10 @@ Lvl  N
   
  `N` 为 CTE 递归部分的每次传递返回 1，这是因为只向 `ROWNUMBER` 传递了该递归级别的数据子集。 对于查询递归部分的每次迭代，只向 `ROWNUMBER` 传递了一行。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. 使用 CTAS 语句中的公用表表达式  
- 下面的示例创建一个包含每年的销售订单的总数在每个销售代表的新表[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]。  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. 在 CTAS 语句中使用公用表表达式  
+ 下例创建一个新表，包括 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的每名销售代表每年的销售订单总数。  
   
 ```  
 -- Uses AdventureWorks  
@@ -632,8 +632,8 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. 使用 CETAS 语句中的公用表表达式  
- 下面的示例创建新的外部表包含每年的销售订单的总数在每个销售代表[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]。  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. 在 CETAS 语句中使用公用表表达式  
+ 下例创建一个新的外部表，包括 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的每名销售代表每年的销售订单总数。  
   
 ```  
 -- Uses AdventureWorks  
@@ -662,8 +662,8 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. 在语句中使用多个以逗号分隔 Cte  
- 下面的示例演示在单个语句中包括两个 Cte。 Cte 不能为嵌套 （不允许使用递归）。  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. 在语句中使用由多个逗号分隔的 CTE  
+ 下例演示在单个语句中包含两个 CTE。 CTE 不能嵌套（无递归）  
   
 ```  
 WITH   
@@ -683,7 +683,7 @@ SELECT TableName, TotalAvg FROM CountCustomer;
 ## <a name="see-also"></a>另请参阅  
  [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
- [除和 INTERSECT &#40;Transact SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPT 和 INTERSECT (Transact-SQL)](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  

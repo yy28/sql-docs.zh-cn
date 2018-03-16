@@ -1,5 +1,5 @@
 ---
-title: "插入和更新表 （教程） 中的数据 |Microsoft 文档"
+title: "插入和更新表中的数据（教程）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,12 +28,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>课程 1-3-插入和更新表中的数据
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]既然已经创建**产品**表，你就可以使用 INSERT 语句将数据插入到表。 插入数据后，将通过使用 UPDATE 语句更改行的内容。 您将使用 UPDATE 语句的 WHERE 子句，以限制对单个行的更新。 这四条语句将输入以下数据。  
+# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>第 1-3 课 - 插入和更新表中的数据
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 现在已经创建了 Products 表，可以通过使用 INSERT 语句将数据插入到表中。 插入数据后，将通过使用 UPDATE 语句更改行的内容。 您将使用 UPDATE 语句的 WHERE 子句，以限制对单个行的更新。 这四条语句将输入以下数据。  
   
 |ProductID|ProductName|价格|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
-|1|Clamp|12.48|Workbench clamp|  
+|@shouldalert|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  

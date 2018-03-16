@@ -1,5 +1,5 @@
 ---
-title: "删除数据库对象 |Microsoft 文档"
+title: "删除数据库对象 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-3-1---deleting-database-objects"></a>Lesson 3-1-删除数据库对象
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]若要删除在本教程中的所有跟踪，只需无法删除数据库。 但是，在本主题中，您将完成下列步骤执行与教程中每项操作相反的操作。  
+# <a name="lesson-3-1---deleting-database-objects"></a>第 3-1 课 - 删除数据库对象
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] 若要删除在本教程中的所有跟踪，只需删除数据库即可。 但是，在本主题中，您将完成下列步骤执行与教程中每项操作相反的操作。  
   
 ### <a name="removing-permissions-and-objects"></a>删除权限和对象  
   

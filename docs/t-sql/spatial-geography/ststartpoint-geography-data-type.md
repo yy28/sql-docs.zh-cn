@@ -1,5 +1,5 @@
 ---
-title: "STStartPoint (geography 数据类型) |Microsoft 文档"
+title: "STStartPoint（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回的起始点**geography**实例。  
+  返回 geography 实例的起点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
- 打开地理空间联盟 (OGC) 类型：**点**  
+ 开放地理空间信息联盟 (OGC) 类型：Point  
   
-## <a name="remarks"></a>注释  
- STStartPoint() 等同于[STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`。  
+## <a name="remarks"></a>Remarks  
+ STStartPoint() 等效于 [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `LineString` 实例，并使用 `STStartPoint()` 检索该实例的起点。  

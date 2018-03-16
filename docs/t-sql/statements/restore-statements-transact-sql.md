@@ -1,5 +1,5 @@
 ---
-title: "还原 (Transact SQL) |Microsoft 文档"
+title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-statements-transact-sql"></a>还原语句 (Transact SQL)
+# <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   还原使用 BACKUP 命令所做的备份。 通过此命令，您可以执行下列还原方案：  
@@ -70,9 +70,9 @@ ms.lasthandoff: 01/25/2018
   
 -   将数据库恢复到数据库快照捕获的时间点。  
   
- 有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]还原方案，请参阅[还原和恢复概述 &#40;SQL server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  有关参数说明的详细信息，请参阅[RESTORE 参数 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).   从其他实例还原数据库时，请考虑 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)中的信息。
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原方案的信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  有关参数说明的详细信息，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。   从其他实例还原数据库时，请考虑 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)中的信息。
   
-> **注意：**有关从 Windows Azure Blob 存储服务还原的详细信息，请参阅[Microsoft Azure Blob 存储服务使用 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+> 注意：有关从 Microsoft Azure Blob 存储服务还原的详细信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -233,7 +233,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ```  
   
 ## <a name="arguments"></a>参数  
- 自变量的说明，请参阅[RESTORE 参数 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ 有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
 ## <a name="about-restore-scenarios"></a>关于还原方案  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持各种还原方案：  
@@ -244,7 +244,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   文件还原  
   
-     还原多文件组数据库中的文件或文件组。 请注意，在简单恢复模式下，该文件必须属于只读文件组。 完整文件还原之后，便可还原差异文件备份。 有关详细信息，请参阅[文件还原 &#40;完整恢复模式 &#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)和[文件还原 &#40;简单恢复模式 &#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md).  
+     还原多文件组数据库中的文件或文件组。 请注意，在简单恢复模式下，该文件必须属于只读文件组。 完整文件还原之后，便可还原差异文件备份。 有关详细信息，请参阅[文件还原（完整恢复模式）](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)或[文件还原（简单恢复模式）](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)。  
   
 -   页面还原  
   
@@ -260,25 +260,25 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   事务日志还原。  
   
-     在完整恢复模式或大容量日志恢复模式下，必须还原日志备份才能到达所需的恢复点。 有关还原日志备份的详细信息，请参阅[应用事务日志备份 &#40;SQL server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
+     在完整恢复模式或大容量日志恢复模式下，必须还原日志备份才能到达所需的恢复点。 有关还原日志备份的详细信息，请参阅[应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
 -   为 Always On 可用性组准备可用性数据库  
   
-     有关详细信息，请参阅[手动为可用性组准备辅助数据库 (SQL Server)](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+     有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
 -   为数据库镜像准备镜像数据库  
   
-     有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)中若干功能的备份和还原注意事项。  
+     有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  
   
 -   联机还原  
   
-    > **注意：**仅在 Enterprise edition 中允许联机还原[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+    > 注意：只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的企业版才允许联机还原。  
   
      在支持联机还原的情况下，如果数据库为联机状态，则文件还原和页面还原将自动为联机还原，同时在段落还原的初始阶段之后，辅助文件组也变为联机还原。  
   
-    > **注意：**联机还原可能涉及[事务延迟](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。  
+    > 注意：联机还原可能会涉及[延迟的事务](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。  
   
-     有关详细信息，请参阅[联机还原 &#40;SQL server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     有关详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
 ## <a name="additional-considerations-about-restore-options"></a>有关 RESTORE 选项的其他注意事项  
   
@@ -294,7 +294,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ### <a name="restore-log"></a>RESTORE LOG  
  RESTORE LOG 可以包括一个文件列表，从而允许在前滚过程中创建文件。 这可用于下列情况：将文件添加到数据库时，日志备份包含了已写入的日志记录。  
   
-> **注意：**对于使用完整或大容量日志恢复模式数据库，在大多数情况下必须备份日志尾部在还原数据库之前。 还原数据库而不首先备份日志的末尾将导致错误，除非 RESTORE DATABASE 语句包含 WITH REPLACE 或 WITH STOPAT 子句，此子句必须指定数据备份的结束时间或在数据备份结束之后发生的事务。 有关结尾日志备份的详细信息，请参阅[结尾日志备份 (SQL Server) ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
+> 注意：对于使用完全恢复模式或大容量日志恢复模式的数据库，在大多数情况下，必须在还原数据库前备份日志的末尾。 还原数据库而不首先备份日志的末尾将导致错误，除非 RESTORE DATABASE 语句包含 WITH REPLACE 或 WITH STOPAT 子句，此子句必须指定数据备份的结束时间或在数据备份结束之后发生的事务。 有关结尾日志备份的详细信息，请参阅[结尾日志备份 (SQL Server) ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
 ### <a name="comparison-of-recovery-and-norecovery"></a>RECOVERY 和 NORECOVERY 的比较  
  回滚由 RESTORE 语句通过 [ RECOVERY | NORECOVERY ] 选项控制：  
@@ -305,14 +305,14 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   RECOVERY（默认值）表示，应在完成当前备份前滚之后执行回滚。  
   
-     数据库恢复，需要将整个设置正在还原的数据 (*回滚前滚集*) 与数据库一致。 如果前滚集尚未前滚到与数据库保持一致的地步，并且指定了 RECOVERY，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将发出错误。  
+     恢复数据库要求要还原的整个数据集（“前滚集”）必须与数据库一致。 如果前滚集尚未前滚到与数据库保持一致的地步，并且指定了 RECOVERY，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将发出错误。  
   
 ## <a name="compatibility-support"></a>兼容性支持  
- 备份的**master**，**模型**和**msdb**由使用的早期版本创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]无法还原[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 无法还原使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本创建的 master、model 和 msdb 备份。  
   
-> **注意：**否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份还原到早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]比在其创建备份的版本。  
+> 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份不会还原到比创建了备份的版本还早的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本使用的默认路径与早期版本不同。 因此，若要还原在早期版本备份的默认位置创建的数据库，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅[文件位置的默认实例和 Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本使用的默认路径与早期版本不同。 因此，若要还原在早期版本备份的默认位置创建的数据库，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。  
   
  在您将早期版本数据库还原到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，将自动升级该数据库。 通常，该数据库将立即可用。 但是，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库具有全文检索，则升级过程将导入、重置或重新生成它们，具体取决于  **upgrade_option** 服务器属性的设置。 如果将升级选项设置为“导入”(**upgrade_option** = 2) 或“重新生成”(**upgrade_option** = 0)，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，如果将升级选项设置为“导入”，并且全文目录不可用，则会重新生成关联的全文索引。 若要更改 **upgrade_option** 服务器属性的设置，请使用 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)。  
   
@@ -321,7 +321,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ## <a name="general-remarks"></a>一般备注  
  在脱机还原过程中，如果指定的数据库正在使用，则在短暂延迟之后，RESTORE 将强制用户离线。 对于非主文件组的联机还原，除非要还原的文件组为脱机状态，否则数据库可以保持使用状态。 指定数据库中的所有数据都将由还原的数据替换。  
   
- 有关数据库恢复的详细信息，请参阅[还原和恢复概述 &#40;SQL server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+ 有关数据库恢复的详细信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
   
  只要操作系统支持数据库排序规则，就可以跨平台执行还原操作，即使这些平台使用不同的处理器类型也不例外。  
   
@@ -329,7 +329,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  不允许在显式或隐式事务中使用 RESTORE。  
   
- 还原损坏**master**数据库使用的特殊过程来执行。 有关详细信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
+ 还原已损坏的 master 数据库需要使用特殊的过程。 有关详细信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   
  还原数据库将清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划高速缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划高速缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
@@ -346,19 +346,19 @@ Note: URL is the format used to specify the location and the file name for the W
  若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
   
 ### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>还原为 vardecimal 存储启用的数据库  
- 备份和还原正常运行的工作**vardecimal**存储格式。 有关详细信息**vardecimal**存储格式，请参阅[sp_db_vardecimal_storage_format &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
+ 使用 vardecimal 存储格式时，备份和还原可正常进行。 有关 vardecimal 存储格式的详细信息，请参阅 [sp_db_vardecimal_storage_format (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)。  
   
 ### <a name="restore-full-text-data"></a>还原全文数据  
  全文数据与其他数据库数据一同在完全还原过程中还原。 使用常规 `RESTORE DATABASE database_name FROM backup_device` 语法，将全文文件作为数据库文件还原的一部分进行还原。  
   
  RESTORE 语句也可用于对全文数据执行替代位置还原、差异还原、文件和文件组还原，以及差异文件和文件组还原。 此外，RESTORE 可以仅还原全文文件，也可以同时还原数据库数据。  
   
-> **注意：**的全文目录导入从[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]仍然被视为数据库文件。 对于这些目录，用于备份全文目录的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 过程仍然适用，只是在备份操作期间不再需要暂停和恢复。 有关详细信息，请参阅[备份和还原全文目录](http://go.microsoft.com/fwlink/?LinkId=107381)。  
+> 注意：从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 导入的全文目录仍被视为数据库文件。 对于这些目录，用于备份全文目录的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 过程仍然适用，只是在备份操作期间不再需要暂停和恢复。 有关详细信息，请参阅[备份和还原全文目录](http://go.microsoft.com/fwlink/?LinkId=107381)。  
   
 ## <a name="metadata"></a>元数据  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含备份和还原历史记录表，这些表可以跟踪每个服务器实例的备份和还原活动。 执行还原时，还将修改备份历史记录表。 有关这些表的信息，请参阅[备份历史记录和标头信息 &#40;SQL server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含备份和还原历史记录表，这些表可以跟踪每个服务器实例的备份和还原活动。 执行还原时，还将修改备份历史记录表。 有关这些表的信息，请参阅[备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)。  
   
-##  <a name="REPLACEoption"></a>替换选项的影响  
+##  <a name="REPLACEoption"></a> REPLACE 选项的影响  
  应尽可能避免使用 REPLACE，而且在使用该选项之前必须仔细考虑。 还原一般会防止意外使用一个数据库覆盖另一个数据库。 如果 RESTORE 语句中指定的数据库已存在于当前服务器上，并且指定的数据库系列 GUID 与备份集中记录的数据库系列 GUID 不同，则不还原该数据库。 这是一项重要的安全保护措施。  
   
  使用 REPLACE 选项后，就会忽略还原时通常执行的几项重要安全检查。 忽略的检查如下：  
@@ -380,8 +380,8 @@ Note: URL is the format used to specify the location and the file name for the W
   
  通过还原受影响文件的全部内容，可以中止并重新启动还原顺序。  
   
-## <a name="reverting-a-database-to-a-database-snapshot"></a>恢复到数据库快照数据库  
- A*还原数据库操作*（指定使用 DATABASE_SNAPSHOT 选项） 采用完整的源数据库返回时，它将它恢复到数据库快照的时间，从点的数据覆盖源数据库在指定的数据库快照中维护的时间。 当前只能存在可以恢复到的快照。 然后，恢复操作重新生成日志（因此，以后无法将已恢复的数据库前滚到用户错误点）。  
+## <a name="reverting-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照  
+ “恢复数据库操作”（使用 DATABASE_SNAPSHOT 选项指定）用于及时执行完整的源数据库恢复，该过程将使源数据库恢复到数据库快照时的状态，就是说，用在指定的数据库快照中维护的时间点数据覆盖源数据库。 当前只能存在可以恢复到的快照。 然后，恢复操作重新生成日志（因此，以后无法将已恢复的数据库前滚到用户错误点）。  
   
  丢失的数据仅限于创建快照后数据库更新的数据。 已恢复的数据库的元数据与创建快照时的元数据相同。 但是，恢复到快照将删除所有全文目录。  
   
@@ -396,15 +396,15 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   当前存在多个数据库快照。  
   
- 有关详细信息，请参阅[数据库恢复到数据库快照](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)。  
+ 有关详细信息，请参阅[将数据库恢复到数据库快照](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)。  
   
 ## <a name="security"></a>Security  
  在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权而使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作以及向介质追加备份集。 但是，可以通过 BACKUP 语句的 FORMAT 选项覆盖受密码保护的介质。  
   
 > [!IMPORTANT]  
->  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保护备份的最佳做法是在一个安全位置或备份到磁盘保护的文件，由足够的访问控制列表 (Acl) 来存储备份的磁带。 ACL 应设置在创建备份的根目录下。  
+>  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 保护备份的最佳做法是将备份磁带存储在安全位置，或者备份到由适当的访问控制列表 (ACL) 保护的磁盘文件。 ACL 应设置在创建备份的根目录下。  
 >   
->  特定于 SQL Server 备份和还原与 Windows Azure Blob 存储的信息，请参阅[Microsoft Azure Blob 存储服务使用 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+>  有关使用 Microsoft Azure Blob 存储进行 SQL Server 备份和还原的特定信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 ### <a name="permissions"></a>权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
@@ -418,27 +418,27 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   A. [还原完整数据库](#restoring_full_db)  
   
--   B. [还原完整和差异数据库备份](#restoring_full_n_differential_db_backups)  
+-   B. [还原完整数据库备份和差异数据库备份](#restoring_full_n_differential_db_backups)  
   
--   C. [使用重新启动语法还原数据库](#restoring_db_using_RESTART)  
+-   C. [使用 RESTART 语法还原数据库](#restoring_db_using_RESTART)  
   
 -   D. [还原数据库并移动文件](#restoring_db_n_move_files)  
   
--   E. [使用备份和还原复制数据库](#copying_db_using_bnr)  
+-   E. [使用 BACKUP 和 RESTORE 复制数据库](#copying_db_using_bnr)  
   
 -   F. [使用 STOPAT 还原到时间点](#restoring_to_pit_using_STOPAT)  
   
--   G. [还原到一个标记的事务日志](#restoring_transaction_log_to_mark)  
+-   G. [将事务日志还原到标记](#restoring_transaction_log_to_mark)  
   
--   H. [还原使用磁带语法](#restoring_using_TAPE)  
+-   H. [使用 TAPE 语法还原](#restoring_using_TAPE)  
   
--   I. [还原使用文件和文件组的语法](#restoring_using_FILE_n_FG)  
+-   I. [使用 FILE 和 FILEGROUP 语法还原](#restoring_using_FILE_n_FG)  
   
 -   J. [从数据库快照还原](#reverting_from_db_snapshot)  
   
 -   K. [从 Microsoft Azure Blob 存储服务还原](#Azure_Blob)  
   
-> **注意：**有关其他示例，请参阅中列出的还原操作方法主题[还原和恢复概述 &#40;SQL server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+> 注意：有关其他示例，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) 中列出的还原操作指南主题。  
   
 ###  <a name="restoring_full_db"></a> A. 还原完整数据库  
  下面的示例从 `AdventureWorksBackups` 逻辑备份设备还原完整数据库备份。 有关创建此设备的示例，请参阅[备份设备](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
@@ -448,9 +448,9 @@ RESTORE DATABASE AdventureWorks2012
    FROM AdventureWorks2012Backups;  
 ```  
   
-> **注意：**数据库使用完整或大容量日志恢复模式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要在大多数情况下，在还原数据库之前备份日志尾部。 有关详细信息，请参阅[结尾日志备份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
+> 注意：对于使用完全恢复模式或大容量日志恢复模式的数据库，在大多数情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都要求你在还原数据库前备份日志尾部。 有关详细信息，请参阅[结尾日志备份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="restoring_full_n_differential_db_backups"></a> B. 还原完整数据库备份和差异数据库备份  
  下面的示例还原完整数据库备份后，从同时还包含差异数据库备份的 `Z:\SQLServerBackups\AdventureWorks2012.bak` 备份设备还原差异备份。 要还原的完整数据库备份是设备上的第六个备份集 (`FILE = 6`)，差异数据库备份是设备上的第九个备份集 (`FILE = 9`)。 在恢复了差异备份之后，便恢复了数据库。  
@@ -466,7 +466,7 @@ RESTORE DATABASE AdventureWorks2012
       RECOVERY;  
 ```  
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="restoring_db_using_RESTART"></a> C. 使用 RESTART 语法还原数据库  
  下面的示例使用 `RESTART` 选项重新启动因服务器电源故障而中断的 `RESTORE` 操作。  
@@ -480,7 +480,7 @@ RESTORE DATABASE AdventureWorks2012
    FROM AdventureWorksBackups WITH RESTART;  
 ```  
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="restoring_db_n_move_files"></a> D. 还原数据库并移动文件  
  下面的示例还原完整数据库和事务日志，并将还原后的数据库移动到 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` 目录中。  
@@ -498,7 +498,7 @@ RESTORE LOG AdventureWorks2012
    WITH RECOVERY;  
 ```  
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="copying_db_using_bnr"></a> E. 使用 BACKUP 和 RESTORE 复制数据库  
  下面的示例使用 `BACKUP` 和 `RESTORE` 语句创建 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的副本。 `MOVE` 语句使数据和日志文件还原到指定的位置。 `RESTORE FILELISTONLY` 语句用于确定待还原数据库内的文件数及名称。 该数据库的新副本称为 `TestDB`。 有关详细信息，请参阅 [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
@@ -517,7 +517,7 @@ RESTORE DATABASE TestDB
 GO  
 ```  
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="restoring_to_pit_using_STOPAT"></a> F. 使用 STOPAT 还原到时间点  
  下面的示例将数据库还原到它在 `12:00 AM` 的 `April 15, 2020` 的状态，并显示涉及多个日志备份的还原操作。 在备份设备上，要还原的完整数据库备份 `AdventureWorksBackups`是设备上的第三个备份集 (`FILE = 3`)，第一个日志备份是第四个备份集 (`FILE = 4`)，第二个日志备份是第五个备份集 (`FILE = 5`)。  
@@ -538,7 +538,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
 ```  
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="restoring_transaction_log_to_mark"></a> G. 将事务日志还原到标记  
  下面的示例将事务日志还原到名为 `ListPriceUpdate`的标记事务中的标记处。  
@@ -576,7 +576,7 @@ RESTORE LOG AdventureWorks2012
    STOPATMARK = 'UPDATE Product list prices';  
 ```  
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="restoring_using_TAPE"></a> H. 使用 TAPE 语法还原  
  下面的示例从 `TAPE` 备份设备还原完整数据库备份。  
@@ -586,14 +586,14 @@ RESTORE DATABASE AdventureWorks2012
    FROM TAPE = '\\.\tape0';  
 ```  
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="restoring_using_FILE_n_FG"></a> I. 使用 FILE 和 FILEGROUP 语法还原  
  下面的示例还原名为 `MyDatabase` 的数据库，该数据库有两个文件、一个辅助文件组和一个事务日志。 数据库使用完整恢复模式。  
   
  该数据库备份是名为 `MyDatabaseBackups` 的逻辑备份设备上的介质集中的第九个备份集。 接下来，通过使用 `10` 来还原在 `11` 设备上的后续三个备份集（`12`、`MyDatabaseBackups` 和 `WITH NORECOVERY`）中的三个日志备份。 还原最后一个日志备份之后，应当恢复数据库。  
   
-> **注意：**恢复执行单独的步骤，以减少过早恢复你的可能性之前的所有日志, 已都还原备份。  
+> 注意：恢复应当作为单独的步骤执行，以减少在还原所有日志备份之前太早进行恢复的可能性。  
   
  在 `RESTORE DATABASE` 中，请注意有两种 `FILE` 选项类型。 在备份设备名称前面的 `FILE` 选项用于指定要从备份集还原的数据库文件的逻辑文件名；例如，`FILE = 'MyDatabase_data_1'`。 此备份集不是介质集中的第一个数据库备份；因此，应当通过在 `FILE` 子句中使用 `WITH` 选项（即 `FILE=9`）来指示它在介质集中的位置。  
   
@@ -628,27 +628,27 @@ RESTORE DATABASE MyDatabase WITH RECOVERY;
 GO  
 ```  
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="reverting_from_db_snapshot"></a> J. 从数据库快照恢复  
- 下面的示例将数据库恢复到数据库快照。 该示例假定该数据库当前仅存在一个快照。 有关如何创建此数据库快照的示例，请参阅[创建数据库快照 &#40;Transact SQL &#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+ 下面的示例将数据库恢复到数据库快照。 该示例假定该数据库当前仅存在一个快照。 有关如何创建此数据库快照的示例，请参阅[创建数据库快照 (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)。  
   
-> **注意：**恢复到快照将删除所有全文目录。  
+> 注意：恢复到快照将删除所有全文目录。  
   
 ```  
 USE master;    
 RESTORE DATABASE AdventureWorks2012 FROM DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';  
 GO  
 ```  
- 有关详细信息，请参阅[数据库恢复到数据库快照](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)。  
+ 有关详细信息，请参阅[将数据库恢复到数据库快照](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)。  
 
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
 ###  <a name="Azure_Blob"></a> K. 从 Microsoft Azure Blob 存储服务还原  
-下面的三个示例都涉及 Microsoft Azure 存储服务的使用。  存储帐户名称为 `mystorageaccount`。  数据文件的容器称为`myfirstcontainer`。  备份文件的容器称为`mysecondcontainer`。  使用每个容器的读取、 写入、 删除和列表中，权限已创建的存储的访问策略。  使用与存储访问策略相关联的共享访问签名创建 SQL Server 凭据。  特定于 SQL Server 备份和还原与 Microsoft Azure Blob 存储的信息，请参阅[Microsoft Azure Blob 存储服务使用 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+以下三个示例都涉及 Microsoft Azure 存储服务的使用。  存储帐户名称为 `mystorageaccount`。  数据文件的容器称为 `myfirstcontainer`。  备份文件的容器称为 `mysecondcontainer`。  已为每个容器创建具有读取、写入、删除和列表权限的存储访问策略。  已使用与存储访问策略相关联的共享访问签名创建 SQL Server 凭据。  针对使用 Microsoft Azure Blob 存储进行 SQL Server 备份和还原的信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
 
 **K1.从 Microsoft Azure 存储服务还原完整数据库备份**  
-完整数据库备份，位于`mysecondcontainer`的`Sales`将还原到`myfirstcontainer`。  `Sales`当前不存在服务器上。 
+位于 `mysecondcontainer` 的 `Sales` 的完整数据库备份将还原到 `myfirstcontainer`。  `Sales` 当前不在服务器上。 
 ```
 RESTORE DATABASE Sales
   FROM URL = 'https://mystorageaccount.blob.core.windows.net/mysecondcontainer/Sales.bak'   
@@ -657,8 +657,8 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2.从 Microsoft Azure 存储服务的完整数据库备份还原到本地存储**  
-完整数据库备份，位于`mysecondcontainer`的`Sales`将还原到本地存储。  `Sales`当前不存在服务器上。
+**K2.将完整数据库备份从 Microsoft Azure 存储服务还原到本地存储**  
+位于 `mysecondcontainer` 的 `Sales` 的完整数据库备份将还原到本地存储。  `Sales` 当前不在服务器上。
 ```
 RESTORE DATABASE Sales
   FROM URL = 'https://mystorageaccount.blob.core.windows.net/mysecondcontainer/Sales.bak'   
@@ -667,7 +667,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
   
-**K3.从本地存储的完整数据库备份还原到 Microsoft Azure 存储服务**  
+**K3.将完整数据库备份从本地存储还原到 Microsoft Azure 存储服务**  
 ```
 RESTORE DATABASE Sales
   FROM DISK = 'E:\BAK\Sales.bak'
@@ -678,20 +678,20 @@ RESTORE DATABASE Sales
   
 
   
- [&#91;示例和 #93; 的顶部](#examples)  
+ [[示例顶部]](#examples)  
   
-## <a name="much-more-information"></a>详细信息!!  
+## <a name="much-more-information"></a>更多信息！！  
  - [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 
-- [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
+- [系统数据库的备份和还原 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
  - [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
  - [备份和还原全文目录和索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  - [备份和还原复制的数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  - [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- - [RESTORE REWINDONLY &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ - [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
  - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
- - [RESTORE FILELISTONLY (Transact SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
- - [RESTORE HEADERONLY (Transact SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
+ - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
+ - [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
  - [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "DROP ENDPOINT (TRANSACT-SQL) |Microsoft 文档"
+title: DROP ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ DROP ENDPOINT endPointName
  *endPointName*  
  要删除的端点的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  不能在用户事务中执行 ENDPOINT DDL 语句。  
   
 ## <a name="permissions"></a>权限  
- 用户必须是属于**sysadmin**固定服务器角色，该终结点的所有者或已被授予在终结点上的控制权限。  
+ 用户必须是 **sysadmin** 固定服务器角色成员、端点的所有者，或必须被授予对端点的 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
  以下示例删除先前创建的名为 `sql_endpoint` 的端点。  

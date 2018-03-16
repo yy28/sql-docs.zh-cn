@@ -1,5 +1,5 @@
 ---
-title: "AsGml (geography 数据类型) |Microsoft 文档"
+title: "AsGml（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,12 +33,12 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-#  <a name="asgml---geography-data-type"></a>AsGml-geography 数据类型
+#  <a name="asgml---geography-data-type"></a>AsGml - geography 数据类型
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回的地理标记语言 (GML) 表示形式**geography**实例。  
+  返回 **geography** 实例的地理标记语言 (GML) 表示形式。  
   
- 有关地域标记语言的详细信息，请参阅开放地理空间联盟规范： [OGC 规范，地域标记语言。](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ 有关地理标记语言的详细信息，请参阅开放地理空间信息联盟规范：[OGC 规范：地理标记语言](http://go.microsoft.com/fwlink/?LinkId=93629)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,11 +48,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **xml**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml  
   
- CLR 返回类型： **SqlXml**  
+ CLR 返回类型：SqlXml  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>示例  
  下面的示例创建 `LineString` 实例，并使用 `AsGML()` 返回实例的 GML 说明。  

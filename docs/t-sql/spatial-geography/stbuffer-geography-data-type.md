@@ -1,5 +1,5 @@
 ---
-title: "STBuffer (geography 数据类型) |Microsoft 文档"
+title: "STBuffer（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stbuffer-geography-data-type"></a>STBuffer（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回表示的所有联合的地理位置对象点从其距离**geography**实例小于或等于指定的值。  
+  返回一个地理对象，该对象表示所有与 geography 实例的距离小于或等于指定值的点的并集。  
   
- 此 geography 数据类型方法支持**FullGlobe**实例或大于半球的空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,33 +46,33 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- *distance*  
- 是类型的值**float** (**double** .NET Framework 中) 指定的距离**geography**围绕其计算的缓冲区的实例。  
+ distance  
+ 类型为 float（在 .NET Framework 中为 double）的值，用于指定与围绕其计算缓冲区的 geography 实例的距离。  
   
- 缓冲区的最大距离不能超过 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 地球圆的周长) 或完整的全球范围。  
+ 缓冲区的最大距离不能超过 0.999 \* π * minorAxis \* minorAxis / majorAxis（~0.999 \* 1/2 的地球圆周）或整个地球。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- Stbuffer （） 中与相同的方式计算缓冲区[BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)，并指定*容差*= abs(distance) \* .001 和*相对* = **false**。  
+## <a name="remarks"></a>Remarks  
+ STBuffer() 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) 相同：指定 tolerance = abs(distance) \* .001 且 relative = false。  
   
- 负缓冲区中删除的边界的给定距离内的所有点**geography**实例。  
+ 负的缓冲区将删除 geography 实例的给定距离的边界内的所有点。  
   
- `STBuffer()`将返回**FullGlobe**实例在某些情况下; 例如，`STBuffer()`返回**FullGlobe**实例时的缓冲区距离大于从赤道到极地的距离。 缓冲区不能超过完整的地球。  
+ `STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到极地的距离时，`STBuffer()` 返回 FullGlobe 实例。 缓冲区不能超过完整的地球。  
   
- 此方法将引发**ArgumentException**中**FullGlobe**实例其中的缓冲区距离超过以下限制：  
+ 在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException：  
   
- 0.999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 地球圆的周长)  
+ 0.999 \* π * minorAxis \* minorAxis / majorAxis （~0.999 \* 1/2 地球的周长）  
   
  最大距离限制允许将缓冲区构造得尽可能灵活。  
   
- Theorectical 和计算的缓冲区之间的错误是最大 (容差，范围 * 1.E 7)，容差 = 距离\*.001。 有关扩展盘区的详细信息，请参阅[geography 数据类型方法引用](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
+ 理论缓冲区与所计算的缓冲区之间的误差是 max(tolerance, extents * 1.E-7)，其中 tolerance = distance \* .001。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建`LineString``geography`实例。 然后，它使用 `STBuffer()` 返回该实例的 1 米内的区域。  
+ 下面的示例创建 `LineString``geography` 实例。 然后，它使用 `STBuffer()` 返回该实例的 1 米内的区域。  
   
 ```  
 DECLARE @g geography;  
@@ -81,7 +81,7 @@ SELECT @g.STBuffer(1).ToString();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [BufferWithTolerance &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
+ [BufferWithTolerance（geography 数据类型）](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [地理实例上的 OGC 方法](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

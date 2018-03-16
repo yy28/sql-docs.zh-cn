@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHRINKFILE (Transact SQL) |Microsoft 文档"
+title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -65,35 +65,35 @@ DBCC SHRINKFILE
 ```  
   
 ## <a name="arguments"></a>参数  
-*file_name*  
+file_name  
 要收缩的文件的逻辑名称。
   
-*file_id*  
-要收缩的文件的标识 (ID) 号。 若要获取文件 ID，请使用[FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)系统函数或查询[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)目录视图中当前的数据库。
+file_id  
+要收缩的文件的标识 (ID) 号。 若要获得文件 ID，请使用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) 系统函数，或查询当前数据库中的 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图。
   
-*target_size*  
+target_size  
 用兆字节表示的文件大小（用整数表示）。 如果未指定，则 DBCC SHRINKFILE 将文件大小减少到默认文件大小。 默认大小为创建文件时指定的大小。
   
 > [!NOTE]  
->  你可以通过使用 DBCC SHRINKFILE 减少的空文件的默认大小*target_size*。 例如，如果创建一个 5 MB 的文件，然后在文件仍然为空的时候将文件收缩为 3 MB，默认文件大小将设置为 3 MB。 这只适用于永远不会包含数据的空文件。  
+>  可以使用 DBCC SHRINKFILE target_size 减小空文件的默认大小。 例如，如果创建一个 5 MB 的文件，然后在文件仍然为空的时候将文件收缩为 3 MB，默认文件大小将设置为 3 MB。 这只适用于永远不会包含数据的空文件。  
   
 FILESTREAM 文件组容器不支持此选项。  
-如果*target_size*指定，DBCC SHRINKFILE 尝试将文件收缩到指定的大小。 将要释放的文件部分中的已使用页重新定位到保留的文件部分中的可用空间。 例如，如果没有 10 MB 的数据文件，DBCC SHRINKFILE 操作*target_size* 8 原因的所有页中使用最后一个的 2 MB 的文件可以重新分配到第一个 8 MB 的文件中任何未分配的页。 DBCC SHRINKFILE 不会将文件收缩到小于存储文件中的数据所需要的大小。 例如，如果使用 7 MB 的 10 MB 的数据文件时，具有的 DBCC SHRINKFILE 语句*target_size*的 6 将文件收缩到仅 7 MB，可不 6 MB。
+如果指定了 target_size，则 DBCC SHRINKFILE 尝试将文件收缩到指定大小。 将要释放的文件部分中的已使用页重新定位到保留的文件部分中的可用空间。 例如，如果数据文件为 10 MB，则 target_size 为 8 的 DBCC SHRINKFILE 操作会将文件最后 2 MB 中所有的已使用页重新分配到文件前 8 MB 中的任何未分配页中。 DBCC SHRINKFILE 不会将文件收缩到小于存储文件中的数据所需要的大小。 例如，如果使用 10 MB 数据文件中的 7 MB，则带有 target_size 为 6 的 DBCC SHRINKFILE 语句只能将该文件收缩到 7 MB，而不能收缩到 6 MB。
   
 EMPTYFILE  
-将所有数据从指定的文件都迁移到其他文件**相同的文件组**。 换而言之，清空文件将迁移数据，从指定的文件到同一个文件组中的其他文件。 清空文件可确保你没有新数据将添加到文件。可以通过删除该文件[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)语句。
-对于 FILESTREAM 文件组容器，将无法使用 ALTER DATABASE 删除该文件，直到已运行垃圾收集器并删除了 EMPTYFILE 已复制到其他容器的所有多余文件组容器文件。 有关详细信息，请参阅[sp_filestream_force_garbage_collection &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
+将指定文件中的所有数据迁移到同一文件组中的其他文件。 也就是说，EmptyFile 会将指定文件中的数据迁移到同一文件组中的其他文件。 Emptyfile 可确保不向文件中添加新数据。可使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句删除该文件。
+对于 FILESTREAM 文件组容器，将无法使用 ALTER DATABASE 删除该文件，直到已运行垃圾收集器并删除了 EMPTYFILE 已复制到其他容器的所有多余文件组容器文件。 有关详细信息，请参阅 [sp_filestream_force_garbage_collection (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
 > [!NOTE]  
->  有关删除 FILESTREAM 容器的信息，请参阅中的相应部分[ALTER DATABASE 文件和文件组选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
+>  有关删除 FILESTREAM 容器的信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 中的相应章节  
   
 NOTRUNCATE  
-移动到未分配的页前面或还未指定的文件从数据文件的末尾分配页*target_percent*。 文件末尾的可用空间不会返回给操作系统，文件的物理大小也不会更改。 因此，指定 NOTRUNCATE 时，文件看起来未收缩。
+在指定或不指定 target_percent 的情况下，将已分配的页从数据文件的末尾移动到该文件前面的未分配页。 文件末尾的可用空间不会返回给操作系统，文件的物理大小也不会更改。 因此，指定 NOTRUNCATE 时，文件看起来未收缩。
 NOTRUNCATE 只适用于数据文件。 日志文件不受影响。   FILESTREAM 文件组容器不支持此选项。
   
 TRUNCATEONLY  
 将文件末尾的所有可用空间释放给操作系统，但不在文件内部执行任何页移动。 数据文件只收缩到最后分配的区。
-*target_size*如果使用 TRUNCATEONLY 指定将被忽略。  
+如果使用 TRUNCATEONLY 指定，则会忽略 target_size。  
 TRUNCATEONLY 选项不会移动日志中的信息，但会删除日志文件末尾的失效 VLF。 FILESTREAM 文件组容器不支持此选项。
   
 WITH NO_INFOMSGS  
@@ -111,17 +111,17 @@ WITH NO_INFOMSGS
 |**UsedPages**|文件当前使用的 8 KB 页数。|  
 |**EstimatedPages**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]估计文件能够收缩到的 8 KB 页数。|  
   
-## <a name="remarks"></a>注释  
-DBCC SHRINKFILE 适用于当前数据库中的文件。 有关如何更改当前数据库的详细信息，请参阅[使用 &#40;Transact SQL &#41;](../../t-sql/language-elements/use-transact-sql.md).
+## <a name="remarks"></a>Remarks  
+DBCC SHRINKFILE 适用于当前数据库中的文件。 有关如何更改当前数据库的详细信息，请参阅 [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)。
   
 可在进程中的任一点停止 DBCC SHRINKFILE 操作，任何已完成的工作都将保留。
   
-当的 DBCC SHRINKFILE 操作失败时，将引发错误。
+当 DBCC SHRINKFILE 操作失败时，则会引发错误。
   
  要收缩的数据库不必在单用户模式下；收缩文件时，其他用户也可使用该数据库。 不必在单用户模式下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以对系统数据库进行收缩。  
   
 ## <a name="shrinking-a-log-file"></a>收缩日志文件  
-为日志文件，[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用*target_size*来计算目标大小的整个日志; 因此， *target_size*后收缩操作日志中的可用空间量。 然后，整个日志的目标大小被转换为每个日志文件的目标大小。 DBCC SHRINKFILE 尝试立即将每个物理日志文件收缩到其目标大小。 但是，如果部分逻辑日志位于超出目标大小的虚拟日志中，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将释放尽可能多的空间，并发出一条信息性消息。 该消息说明需要执行哪些操作来将逻辑日志移出位于文件末尾的虚拟日志。 执行这些操作以后，DBCC SHRINKFILE 可用于释放剩余空间。
+对于日志文件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用 target_size 来计算整个日志的目标大小；因此，target_size 是收缩操作后日志中的可用空间大小。 之后，整个日志的目标大小转换为每个日志文件的目标大小。 DBCC SHRINKFILE 尝试立即将每个物理日志文件收缩到其目标大小。 但是，如果部分逻辑日志位于超出目标大小的虚拟日志中，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将释放尽可能多的空间，并发出一条信息性消息。 该消息说明需要执行哪些操作来将逻辑日志移出位于文件末尾的虚拟日志。 执行这些操作以后，DBCC SHRINKFILE 可用于释放剩余空间。
   
 因为日志文件只能收缩到虚拟日志文件边界，所以可能无法将日志文件收缩到比虚拟日志文件更小（即使现在没有使用该文件）。 虚拟日志文件的大小在创建或扩展这些日志文件时由[!INCLUDE[ssDE](../../includes/ssde-md.md)]动态选择。
   
@@ -144,13 +144,13 @@ SELECT name ,size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0 AS 
 FROM sys.database_files;
 ```
 
--   运行[DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)命令中来返回用于事务日志的空间。  
+-   运行 [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) 命令以返回事务日志中使用的空间。  
 如果可用空间不足，则收缩操作无法进一步减小文件大小。
   
 通常，日志文件看起来不收缩。 这通常是由于未截断日志文件的原因造成的。 可以通过将数据库恢复模式设置为 SIMPLE 或者通过备份日志然后再次运行 DBCC SHRINKFILE 操作来截断日志。
   
 ### <a name="the-shrink-operation-is-blocked"></a>收缩操作被阻塞  
-收缩操作才会被阻止下运行的事务可能[行基于版本控制的隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。 例如，执行 DBCC SHRINK DATABASE 操作时，如果在基于行版本控制的隔离级别下运行的大型删除操作正在进行中，则收缩操作将等到删除操作完成才会收缩文件。 出现这种情况时，DBCC SHRINKFILE 和 DBCC SHRINKDATABASE 操作会在第一个小时每五分钟将信息性消息（对于 SHRINKDATABASE 为 5202，对于 SHRINKFILE 为 5203）输出到 SQL Server 错误日志，之后每一个小时输出一次。 例如，如果错误日志包含以下错误消息，则会发生以下错误：
+在[基于行版本控制的隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)下运行的事务可能会阻塞收缩操作。 例如，执行 DBCC SHRINK DATABASE 操作时，如果在基于行版本控制的隔离级别下运行的大型删除操作正在进行中，则收缩操作将等到删除操作完成才会收缩文件。 出现这种情况时，DBCC SHRINKFILE 和 DBCC SHRINKDATABASE 操作会在第一个小时每五分钟将信息性消息（对于 SHRINKDATABASE 为 5202，对于 SHRINKFILE 为 5203）输出到 SQL Server 错误日志，之后每一个小时输出一次。 例如，如果错误日志包含以下错误消息，则会发生以下错误：
   
 ```sql
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
@@ -158,7 +158,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-这意味着收缩操作被时间戳早于 109 的快照事务阻塞，它是收缩操作所完成的上一事务。 它还指示**transaction_sequence_num**，或**first_snapshot_sequence_num**中的列[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)动态管理视图包含值为 15。 如果任一**transaction_sequence_num**，或**first_snapshot_sequence_num**列在视图中的包含的数字小于最后一个事务已完成通过执行收缩操作 (109)收缩操作将等待这些事务完成。
+这意味着收缩操作被时间戳早于 109 的快照事务阻塞，它是收缩操作所完成的上一事务。 它还说明 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 动态管理视图中的 transaction_sequence_num 或 first_snapshot_sequence_num 列包含值 15。 如果该视图中的 transaction_sequence_num 或 first_snapshot_sequence_num 列包含的数字小于收缩操作完成的上一事务 (109)，则收缩操作将等待这些事务完成。
   
 若要解决此问题，请执行下列任务之一：
 -   终止阻塞收缩操作的事务。
@@ -171,7 +171,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 ## <a name="examples"></a>示例  
   
 ### <a name="a-shrinking-a-data-file-to-a-specified-target-size"></a>A. 将数据文件收缩到指定的目标大小  
-下面的示例收缩的名为的数据文件大小`DataFile1`中`UserDB`到 7 MB 的用户数据库。
+以下示例将 `UserDB` 用户数据库中名为 `DataFile1` 的数据文件的大小收缩到 7 MB。
   
 ```sql  
 USE UserDB;  
@@ -238,7 +238,7 @@ GO
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
-[FILE_ID &#40;Transact SQL &#41;](../../t-sql/functions/file-id-transact-sql.md)  
+[FILE_ID (Transact-SQL)](../../t-sql/functions/file-id-transact-sql.md)  
 [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
 [收缩文件](../../relational-databases/databases/shrink-a-file.md)
   

@@ -1,5 +1,5 @@
 ---
-title: "STExteriorRing (geometry 数据类型) |Microsoft 文档"
+title: "STExteriorRing（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回的外环**几何图形**是某个多边形的实例。
+返回多边形 geometry 实例的外环。
   
 ## <a name="syntax"></a>语法  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
- 打开地理空间联盟 (OGC) 类型： **LineString**  
+ 开放地理空间信息联盟 (OGC) 类型：LineString  
   
-## <a name="remarks"></a>注释  
- 此方法返回**null**如果**几何图形**实例不是某个多边形。  
+## <a name="remarks"></a>Remarks  
+ 如果 geometry 实例不是多边形，则此方法返回 NULL。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建`Polygon`实例并使用`STExteriorRing()`返回作为此多边形的外环**LineString**。  
+ 以下示例创建 `Polygon` 实例，并使用 `STExteriorRing()` 以 LineString 的形式返回多边形的外环。  
   
 ```  
 DECLARE @g geometry;  
