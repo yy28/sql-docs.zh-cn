@@ -1,5 +1,5 @@
 ---
-title: "SYSDATETIME (Transact SQL) |Microsoft 文档"
+title: SYSDATETIME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -45,12 +45,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回**datetime2 （7)**值，该值包含的日期和时间的计算机上的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在运行。  
+  返回包含计算机的日期和时间的 datetime2(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行。  
   
 > [!NOTE]  
 >  与 GETDATE 和 GETUTCDATE 比较而言，SYSDATETIME 和 SYSUTCDATETIME 的秒的小数部分精度更高。 SYSDATETIMEOFFSET 包含系统时区偏移量。 SYSDATETIME、SYSUTCDATETIME 和 SYSDATETIMEOFFSET 可以分配给采用任意日期和时间类型的变量。  
   
- 有关的所有概述[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和时间数据类型和函数，请参阅[日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,16 +63,16 @@ SYSDATETIME ( )
 ## <a name="return-type"></a>返回类型  
  **datetime2(7)**  
   
-## <a name="remarks"></a>注释  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]语句可以指 SYSDATETIME 随处它们可引用**datetime2 （7)**表达式。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在 可以引用 datetime2(7) 表达式的任何位置，均可引用 SYSDATETIME。  
   
  SYSDATETIME 是不确定性函数。 不能对在列中引用该函数的视图和表达式建立索引。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用 GetSystemTimeAsFileTime() Windows API 中获取日期和时间值。 精确程度取决于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机硬件和 Windows 版本。 此 API 的精度固定为 100 纳秒。 可以使用 GetSystemTimeAdjustment() Windows API 确定准确性。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 GetSystemTimeAsFileTime() Windows API 来获取日期和时间值。 精确程度取决于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机硬件和 Windows 版本。 此 API 的精度固定为 100 纳秒。 可通过使用 GetSystemTimeAdjustment() Windows API 来确定该精确度。  
   
 ## <a name="examples"></a>示例  
- 下例使用六个返回当前日期和时间的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数来返回日期和/或时间。 序列; 中返回的值因此，其秒的小数部分可能会有所不同。  
+ 下例使用六个返回当前日期和时间的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数来返回日期和/或时间。 这些值是连续返回的；因此，它们的秒小数部分可能有所不同。  
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 获取当前系统日期和时间  
   
@@ -126,9 +126,9 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-getting-the-current-system-date-and-time"></a>D： 获取当前系统日期和时间  
+### <a name="d-getting-the-current-system-date-and-time"></a>D：获取当前系统日期和时间  
   
 ```  
 SELECT SYSDATETIME();  
@@ -142,8 +142,8 @@ SELECT SYSDATETIME();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
 

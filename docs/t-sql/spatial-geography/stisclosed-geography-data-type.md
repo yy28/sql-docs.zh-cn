@@ -1,5 +1,5 @@
 ---
-title: "STIsClosed (geography 数据类型) |Microsoft 文档"
+title: "STIsClosed（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geography-data-type"></a>STIsClosed（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  如果返回 1 的开始和结束点给定**geography**实例相同。 返回 1; 对于**geography**集合类型，如果它们分别包含**geography**实例是否闭合。 如果该实例不是闭合的，则返回 0。  
+  如果给定的 geography 实例的起点和终点相同，则返回 1。 如果每个包含的 geography 实例都是闭合的，则为 geography 集类型返回 1。 如果该实例不是闭合的，则返回 0。  
   
- 这**geography**数据类型方法支持**FullGlobe**实例或大于半球的空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,16 +46,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 此方法返回 0，如果有的图形**geography**实例是点，或如果该实例为空。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例的任何图形是点，或者如果该实例为空，则此方法返回 0。  
   
- 如果此方法返回 true **FullGlobe**实例是**多边形**或其他类型的实例。  
+ 如果 FullGlobe 实例是 Polygon 或其他类型的实例，则此方法返回 true。  
   
- 所有**多边形**实例被视为闭合。  
+ 所有 Polygon 实例被视为闭合的。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `Polygon` 实例，并使用 `STIsClosed()` 来测试 `Polygon` 是否为闭合的。  

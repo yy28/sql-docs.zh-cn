@@ -1,5 +1,5 @@
 ---
-title: "COL_NAME (Transact SQL) |Microsoft 文档"
+title: COL_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ COL_NAME ( table_id , column_id )
 ```  
   
 ## <a name="arguments"></a>参数  
-*针对 table_id 所*  
-包含列的表的标识号。 *针对 table_id 所*属于类型**int**。
+table_id  
+包含列的表的标识号。 table_id 的类型为 int。
   
-*column_id*  
-列的标识号。 *column_id*形参属于类型**int**。
+column_id  
+列的标识号。 column_id 参数的类型为 int。
   
 ## <a name="return-types"></a>返回类型
 **sysname**
@@ -62,13 +62,13 @@ COL_NAME ( table_id , column_id )
   
 用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 这意味着，如果用户对对象没有任何权限，则元数据生成的内置函数（如 COL_NAME）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
   
-## <a name="remarks"></a>注释  
-*针对 table_id 所*和*column_id*参数组合，可生成一个列名称字符串。
+## <a name="remarks"></a>Remarks  
+table_id 和 column_id 参数共同产生一个列名称字符串。
   
-有关获取表和列标识号的详细信息，请参阅[OBJECT_ID &#40;Transact SQL &#41;](../../t-sql/functions/object-id-transact-sql.md).
+有关获取表和列标识号的详细信息，请参阅 [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
-下面的示例在一个示例中返回的第一列的名称`Employee`表。
+以下示例将返回示例 `Employee` 表中首列的名称。
   
 ```sql
 -- Uses AdventureWorks  
@@ -87,9 +87,9 @@ BusinessEntityID
   
 ## <a name="see-also"></a>另请参阅
 [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
-[元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH &#40;Transact SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH (Transact-SQL)](../../t-sql/functions/col-length-transact-sql.md)
   
   
 

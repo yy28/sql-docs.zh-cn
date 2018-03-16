@@ -1,5 +1,5 @@
 ---
-title: "query （) 方法 (xml 数据类型) |Microsoft 文档"
+title: "query() 方法（xml 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="query-method-xml-data-type"></a>query() 方法（xml 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定实例的 XQuery **xml**数据类型。 结果为**xml**类型。 该方法返回非类型化的 XML 实例。  
+  对 xml 数据类型的实例指定 XQuery。 结果为 xml 类型。 该方法返回非类型化的 XML 实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,10 +46,10 @@ query ('XQuery')
  字符串，查询 XML 实例中的 XML 节点（如元素、属性）的 XQuery 表达式。  
   
 ## <a name="examples"></a>示例  
- 本部分提供使用 query （） 方法的示例**xml**数据类型。  
+ 本节提供使用 xml 数据类型的 query() 方法的示例。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. 对 xml 类型的变量使用 query() 方法  
- 下面的示例声明一个变量 **@myDoc** 的**xml**键入，然后将 XML 实例分配给它。 **Query （)**方法然后用于对文档指定 XQuery。  
+ 以下示例声明 xml 类型的变量 @myDoc 并将 XML 实例分配给它。 然后使用 query() 方法对文档指定 XQuery。  
   
  该查询检索 <`ProductDescription`> 元素的 <`Features`> 子元素：  
   
@@ -76,7 +76,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. 对 XML 类型列使用 query() 方法  
- 在下面的示例中， **query （)**方法用于对指定 XQuery **CatalogDescription**列**xml**键入**AdventureWorks**数据库：  
+ 在以下示例中，使用 query() 方法对 AdventureWorks 数据库中 xml 类型的 CatalogDescription 列指定 XQuery：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -92,11 +92,11 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
   
  请注意上述查询的以下方面：  
   
--   CatalogDescription 列是类型化**xml**列。 这表示它包含一个与之相关联的架构集合。 在[XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md)、**命名空间**关键字用于查询正文中定义的前缀，在以后使用。  
+-   CatalogDescription 列是类型化的 xml 列。 这表示它包含一个与之相关联的架构集合。 在 [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) 中，namespace 关键字用于定义以后在查询主体中使用的前缀。  
   
--   **Query （)**方法构造 XML，<`Product`> 元素，该元素**ProductModelID**属性，在其中**ProductModelID**属性值是从数据库中检索。 有关 XML 构造的详细信息，请参阅[XML 构造 &#40;XQuery &#41;](../../xquery/xml-construction-xquery.md).  
+-   query() 方法构造 XML，即包含 ProductModelID 属性的 <`Product`> 元素，其中 ProductModelID 属性值是从数据库中检索的。 有关 XML 构造的详细信息，请参阅 [XML 构造 (XQuery)](../../xquery/xml-construction-xquery.md)。  
   
--   [Exist （） 方法 （XML 数据类型）](../../t-sql/xml/exist-method-xml-data-type.md)在 WHERE 子句用于查找包含的行 <`Warranty`> 的 XML 中的元素。 同样，**命名空间**关键字用于定义两个命名空间前缀。  
+-   WHERE 子句中的 [exist() 方法（XML 数据类型）](../../t-sql/xml/exist-method-xml-data-type.md)用于仅查找包含 XML 中的 <`Warranty`> 元素的行。 namespace 关键字将再次用于定义两个命名空间前缀。  
   
  下面是部分结果：  
   
@@ -124,7 +124,7 @@ where CatalogDescription.exist('
  [使用 WITH XMLNAMESPACES 将命名空间添加到查询](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 数据修改语言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML 数据修改语言 (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

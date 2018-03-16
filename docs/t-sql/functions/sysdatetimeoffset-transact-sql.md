@@ -1,5 +1,5 @@
 ---
-title: "SYSDATETIMEOFFSET (Transact SQL) |Microsoft 文档"
+title: SYSDATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,9 +46,9 @@ ms.lasthandoff: 12/16/2017
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回**datetimeoffset(7)**值，该值包含的日期和时间的计算机上的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在运行。 时区偏移量包含在内。  
+  返回包含计算机的日期和时间的 datetimeoffset(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行。 时区偏移量包含在内。  
   
- 有关的所有概述[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和时间数据类型和函数，请参阅[日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,15 +62,15 @@ SYSDATETIMEOFFSET ( )
  **datetimeoffset(7)**  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]语句可以指 SYSDATETIMEOFFSET 随处它们可引用**datetimeoffset**表达式。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其可以引用 datetimeoffset 表达式的任何位置都可以引用 SYSDATETIMEOFFSET。  
   
  SYSDATETIMEOFFSET 是不确定性函数。 不能对在列中引用该函数的视图和表达式建立索引。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用 GetSystemTimeAsFileTime() Windows API 中获取日期和时间值。 精确程度取决于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机硬件和 Windows 版本。 此 API 的精度固定为 100 纳秒。 可以使用 GetSystemTimeAdjustment() Windows API 确定准确性。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 GetSystemTimeAsFileTime() Windows API 来获取日期和时间值。 精确程度取决于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机硬件和 Windows 版本。 此 API 的精度固定为 100 纳秒。 可通过使用 GetSystemTimeAdjustment() Windows API 来确定该精确度。  
   
 ## <a name="examples"></a>示例  
- 以下示例使用六个返回当前日期和时间的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数来返回日期和/或时间。 序列; 中返回的值因此，其秒的小数部分可能会有所不同。  
+ 以下示例使用六个返回当前日期和时间的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数来返回日期和/或时间。 这些值是连续返回的；因此，它们的秒小数部分可能有所不同。  
   
 ### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>A. 显示由日期和时间函数返回的格式  
  下面的示例显示由日期和时间函数返回的其他格式。  
@@ -142,8 +142,8 @@ GETUTCDATE()       20:18:45.3470000
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "RESTORE FILELISTONLY (Transact SQL) |Microsoft 文档"
+title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-statements---filelistonly-transact-sql"></a>还原语句的 FILELISTONLY (Transact SQL)
+# <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 语句 - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的备份集内包含的数据库和日志文件列表组成的结果集。  
   
 > [!NOTE]  
->  自变量的说明，请参阅[RESTORE 参数 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,22 +83,22 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>参数  
- RESTORE FILELISTONLY 自变量的说明，请参阅[RESTORE 参数 &#40;Transact SQL &#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ 有关 RESTORE FILELISTONLY 参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
 ## <a name="result-sets"></a>结果集  
  客户端可以使用 RESTORE FILELISTONLY 获得备份集中所含文件的列表。 此信息以结果集的形式返回，在结果集中每个文件占一行。  
   
 |列名|数据类型|Description|  
 |-|-|-|  
-|LogicalName|**nvarchar(128)**|文件逻辑名称。|  
+|LogicalName|**nvarchar(128)**|文件的逻辑名称。|  
 |PhysicalName|nvarchar(260)|文件的物理名称或操作系统名称。|  
-|类型|**char(1)**|文件的类型，其中包括：<br /><br /> **L** = Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件<br /><br /> **D**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据文件<br /><br /> **F** = 全文目录<br /><br /> **S** = FileStream、 FileTable，或[!INCLUDE[hek_2](../../includes/hek-2-md.md)]容器|  
+|类型|**char(1)**|文件的类型，其中包括：<br /><br /> L = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件<br /><br /> F = 全文目录<br /><br /> S = FileStream、FileTable 或 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 容器|  
 |FileGroupName|**nvarchar(128)**|包含文件的文件组的名称。|  
 |Size|**numeric(20,0)**|当前大小（以字节为单位）。|  
 |MaxSize|**numeric(20,0)**|允许的最大大小（以字节为单位）。|  
 |FileID|**bigint**|文件标识符，在数据库中唯一。|  
 |CreateLSN|**numeric(25,0)**|创建文件时的日志序列号。|  
-|DropLSN|**numeric(25,0)** NULL|该文件已删除的日志序列号。 如果文件尚未删除，该值为 NULL。|  
+|DropLSN|**numeric(25,0)** NULL|删除文件时的日志序列号。 如果文件尚未删除，该值为 NULL。|  
 |UniqueID|**uniqueidentifier**|文件的全局唯一标识符。|  
 |ReadOnlyLSN|**numeric(25,0) NULL**|包含该文件的文件组从读写属性更改为只读属性（最新更改）时的日志序列号。|  
 |ReadWriteLSN|**numeric(25,0)** NULL|包含该文件的文件组从只读属性更改为读写属性（最新更改）时的日志序列号。|  
@@ -106,15 +106,15 @@ FROM <backup_device>
 |SourceBlockSize|**int**|包含文件的物理设备（并非备份设备）的块大小（以字节为单位）。|  
 |FileGroupID|**int**|文件组的 ID。|  
 |LogGroupGUID|**uniqueidentifier NULL**|NULL。|  
-|DifferentialBaseLSN|**numeric(25,0)** NULL|差异备份，更改日志序列号大于或等于**DifferentialBaseLSN**纳入差异。<br /><br /> 对于其他备份类型，该值为 NULL。|  
+|DifferentialBaseLSN|**numeric(25,0)** NULL|对于差异备份，日志序列号大于或等于 DifferentialBaseLSN 的更改都包含在差异中。<br /><br /> 对于其他备份类型，该值为 NULL。|  
 |DifferentialBaseGUID|**uniqueidentifier**|对于差异备份，该值是差异基准的唯一标识符。<br /><br /> 对于其他备份类型，该值为 NULL。|  
-|IsReadOnly|**bit**|**1** = 文件是只读的。|  
-|IsPresent|**bit**|**1** = 的文件是否存在备份中。|  
-|TDEThumbprint|**varbinary(32)**|显示数据库加密密钥的指纹。 加密程序的指纹是带有加密密钥的证书的 SHA-1 哈希。 有关数据库加密的信息，请参阅[透明数据加密 &#40;TDE &#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
-|SnapshotURL|**nvarchar(360)**|对于 Azure 快照 FILE_SNAPSHOT 备份中包含的数据库文件的 URL。 如果没有 FILE_SNAPSHOT 备份，则返回 NULL。|  
+|IsReadOnly|**bit**|1 = 文件为只读文件。|  
+|IsPresent|**bit**|1 = 文件出现在备份中。|  
+|TDEThumbprint|**varbinary(32)**|显示数据库加密密钥的指纹。 加密程序的指纹是带有加密密钥的证书的 SHA-1 哈希。 有关数据库加密的信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。|  
+|SnapshotURL|**nvarchar(360)**|FILE_SNAPSHOT 备份中包含的数据库文件的 Azure 快照的 URL。 如果没有 FILE_SNAPSHOT 备份，则返回 NULL。|  
   
 ## <a name="security"></a>Security  
- 在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码防止未经授权的还原操作，并且未授权的媒体使用的备份集追加[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
+ 在备份时，可以根据需要为介质集、备份集或这两者指定密码。 如果已经在介质集或备份集上定义了密码，则必须在 RESTORE 语句中指定正确的密码。 这些密码可防止未经授权的用户使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行还原操作和向介质追加备份集。 但是，密码不会阻止使用 BACKUP 语句的 FORMAT 选项覆盖介质。  
   
 > [!IMPORTANT]  
 >  此密码提供的安全性较低。 它旨在防止经过授权的用户或未经授权的用户使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具执行不正确的还原操作。 但是不能防止通过其他方式或通过替换密码来读取备份数据。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]保护备份的最佳做法是将备份磁带存储在安全的位置，或者备份到由适当的访问控制列表 (ACL) 保护的磁盘文件。 ACL 应设置在创建备份的根目录下。  
@@ -136,7 +136,7 @@ GO
  [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
  [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "创建终结点 (Transact SQL) |Microsoft 文档"
+title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  创建端点并定义其属性，包括可用于客户端应用程序的方法。 相关的权限信息，请参阅[GRANT 终结点权限 &#40;Transact SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+  创建端点并定义其属性，包括可用于客户端应用程序的方法。 有关相关权限的信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
  CREATE ENDPOINT 的语法在逻辑上分为两部分：  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/25/2018
   
      在此部分中，需要定义端点上所支持的负载。 负载可以为以下多种支持类型中的一种：[!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker、数据库镜像。 在此部分中，还需要提供语言特定信息。  
   
-> **注意：**本机 XML Web 服务 （SOAP/HTTP 终结点） 中删除[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+> 请注意：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中已删除了本机 XML Web 服务（SOAP/HTTP 终结点）。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -115,17 +115,17 @@ FOR DATABASE_MIRRORING (
 ```  
   
 ## <a name="arguments"></a>参数  
- *endPointName*  
+ endPointName  
  所创建的端点的已分配名称。 在更新或删除端点时使用。  
   
- 授权*登录名*  
+ AUTHORIZATION login  
  指定被分配了新建端点对象的所有权的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Windows 登录帐户。 如果没有指定 AUTHORIZATION，默认情况下调用方将成为新建对象的所有者。  
   
- 若要通过指定授权分配所有权，调用方必须具有 IMPERSONATE 权限对指定*登录*。  
+ 若要通过指定 AUTHORIZATION 分配所有权，调用方必须对指定的 login 具有 IMPERSONATE 权限。  
   
- 若要将所有权重新分配，请参阅[ALTER ENDPOINT &#40;Transact SQL &#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 若要重新分配所有权，请参阅 [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)。  
   
- 状态 **=**  {已启动 |**已停止**|已禁用}  
+ STATE = { STARTED | STOPPED | DISABLED }  
  端点创建时的状态。 如果在创建端点时未指定状态，则默认值为 STOPPED。  
   
  STARTED  
@@ -134,10 +134,10 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  端点被禁用。 在该状态下，服务器侦听端口请求但向客户端返回错误。  
   
- **STOPPED**  
+ STOPPED  
  端点被停止。 在该状态下，服务器不侦听端点端口，也不对使用端点的任何尝试请求进行响应。  
   
- 若要更改的状态，使用[ALTER ENDPOINT &#40;Transact SQL &#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ 若要更改状态，请使用 [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)。  
   
  AS { TCP }  
  指定要使用的传输协议。  
@@ -151,10 +151,10 @@ FOR DATABASE_MIRRORING (
   
  下列参数仅适用于 TCP 协议选项。  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT =listenerPort  
  指定 Service Broker TCP/IP 协议在其上侦听连接的端口号。 按照约定，将使用 4022，但 1024 和 32767 之间的任何数字都有效。  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP = ALL | (4-part-ip ) | ( "ip_address_v6" )  
  指定端点将侦听的 IP 地址。 默认值为 ALL。 这表示侦听器将接受任何有效 IP 地址上的连接。  
   
  如果用 IP 地址而不是完全限定域名（`ALTER DATABASE SET PARTNER = partner_IP_address` 或 `ALTER DATABASE SET WITNESS = witness_IP_address`）配置数据库镜像，则在创建镜像端点时必须指定 `LISTENER_IP =IP_address` 而不是 `LISTENER_IP=ALL`。  
@@ -166,30 +166,30 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  有关特定于 SERVICE_BROKER 的选项，请参阅本节后面的“SERVICE_BROKER 选项”。 有关特定于 DATABASE_MIRRORING 的选项，请参阅本节后面的“DATABASE_MIRRORING 选项”。  
   
- 身份验证 **=**  \<authentication_options > 指定为此终结点的连接的 TCP/IP 身份验证要求。 默认值为 WINDOWS。  
+ AUTHENTICATION = \<authentication_options> 指定此端点连接需要的 TCP/IP 身份验证。 默认值为 WINDOWS。  
   
  支持的身份验证方法包括 NTLM 或 Kerberos 或这两种方法。  
   
 > [!IMPORTANT]  
 >  服务器实例上所有的镜像连接都只使用一个数据库镜像端点。 任何创建其他数据库镜像端点的尝试都将失败。  
   
- **\<authentication_options> ::=**  
+ \<authentication_options> ::=  
   
- **WINDOWS** [{NTLM |KERBEROS |**NEGOTIATE** }]  
+ WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]  
  指定端点使用 Windows 身份验证协议进行连接以验证端点。 这是默认设置。  
   
  如果指定某一授权方法（NTLM 或 KERBEROS），则始终将该方法用作身份验证协议。 默认值 NEGOTIATE 允许端点使用 Windows 协商协议在 NTLM 和 Kerberos 之间进行选择。  
   
- CERTIFICATE *certificate_name*  
- 指定要使用的证书由连接的身份验证终结点*certificate_name*才能建立标识进行授权。 远端点必须具有其公钥与指定证书的私钥相匹配的证书。  
+ CERTIFICATE certificate_name  
+ 指定端点使用 certificate_name 指定的证书验证连接以建立授权标识。 远端点必须具有其公钥与指定证书的私钥相匹配的证书。  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ] CERTIFICATE certificate_name  
  指定端点通过使用 Windows 身份验证尝试进行连接；如果该尝试失败，则尝试使用指定的证书。  
   
- 证书*certificate_name* WINDOWS [{NTLM |KERBEROS |**NEGOTIATE** }]  
+ CERTIFICATE certificate_name WINDOWS [ { NTLM | KERBEROS | NEGOTIATE } ]  
  指定端点通过使用指定的证书尝试进行连接；如果该尝试失败，则尝试使用 Windows 身份验证。  
   
- 加密 = {DISABLED |支持 |**必需**} [算法 { **AES** |RC4 |AES RC4 |RC4 AES}]  
+ ENCRYPTION = { DISABLED | SUPPORTED | REQUIRED } [ALGORITHM { AES | RC4 | AES RC4 | RC4 AES } ]  
  指定是否在过程中使用加密。 默认值为 REQUIRED。  
   
  DISABLED  
@@ -204,13 +204,13 @@ FOR DATABASE_MIRRORING (
  也可以使用 ALGORITHM 参数指定端点使用的加密形式，如下所示：  
   
  **AES**  
- 指定端点必须使用 AES 算法。 这是中的默认值[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]及更高版本。  
+ 指定端点必须使用 AES 算法。 这是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或更高版本中的默认值。  
   
  RC4  
- 指定端点必须使用 RC4 算法。 这是通过默认[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。  
+ 指定端点必须使用 RC4 算法。 这是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的默认值。  
   
 > [!NOTE]  
->  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高版本，使用 RC4 或 RC4_128 加密的材料可以进行解密在任何兼容级别。  
+>  RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本中，可以在任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。  
   
  AES RC4  
  指定两个端点将与优先使用 AES 算法的此端点协商加密算法。  
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
   
  下列参数专用于 SERVICE_BROKER 选项。  
   
- MESSAGE_FORWARDING  **=**  {已启用 |**禁用**}  
+ MESSAGE_FORWARDING = { ENABLED | DISABLED }  
  确定是否将转发此端点所收到的位于其他位置的服务的消息。  
   
  ENABLED  
@@ -236,14 +236,14 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  放弃位于其他位置的服务的消息。 这是默认设置。  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE =forward_size  
  指定存储要转发的消息时为要使用的端点分配的最大存储量 (MB)。  
   
  **DATABASE_MIRRORING 选项**  
   
  下列参数专用于 DATABASE_MIRRORING 选项。  
   
- 角色 **=**  {见证服务器 |合作伙伴 |所有}  
+ ROLE = { WITNESS | PARTNER | ALL }  
  指定端点支持的数据库镜像角色（一个或多个）。  
   
  WITNESS  
@@ -258,17 +258,17 @@ FOR DATABASE_MIRRORING (
  ALL  
  启用要在镜像过程中以见证角色兼伙伴角色执行的端点。  
   
- 有关这些角色的详细信息，请参阅[数据库镜像 &#40;SQL server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ 有关这些角色的详细信息，请参阅[数据库镜像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 > [!NOTE]  
 >  没有用于 DATABASE_MIRRORING 的默认端口。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ENDPOINT DDL 语句不能在用户事务内部执行。 即使活动的快照隔离级别事务正在使用被更改的端点，ENDPOINT DDL 语句也不会失败。  
   
  下列用户可以对 ENDPOINT 执行请求：  
   
--   成员**sysadmin**固定的服务器角色  
+-   sysadmin 固定服务器角色的成员  
   
 -   端点的所有者  
   
@@ -296,7 +296,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [选择加密算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [删除终结点 &#40;Transact SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT (Transact SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

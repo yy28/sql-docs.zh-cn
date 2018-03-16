@@ -1,5 +1,5 @@
 ---
-title: "扩展方法在几何图形实例 |Microsoft 文档"
+title: "Geometry 实例上的扩展方法 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="extended-methods-on-geometry-instances"></a>几何图形实例上的扩展方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开放地理空间联盟 (OGC) 几何图形实例上支持大量的扩展方法。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在开放地理空间信息联盟 (OGC) geometry 实例上支持多种扩展方法。  
   
  有关 OGC 规范的详细信息，请参阅以下内容：  
   
@@ -39,50 +39,50 @@ ms.lasthandoff: 01/25/2018
   
 -   [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [OGC specifications，地域标记语言规范](http://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [OGC 规范：地理标记语言](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
--   [AsBinaryZM &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/asbinaryzm-geometry-datatype.md)  
+-   [AsBinaryZM（geometry 数据类型）](../../t-sql/spatial-geometry/asbinaryzm-geometry-datatype.md)  
   
 -   [AsGml（geometry 数据类型）](../../t-sql/spatial-geometry/asgml-geometry-data-type.md)  
   
 -   [AsTextZM（geometry 数据类型）](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)  
   
--   [BufferWithCurves &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+-   [BufferWithCurves（geometry 数据类型）](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
 -   [BufferWithTolerance（geometry 数据类型）](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)  
   
--   [CurveToLineWithTolerance &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/curvetolinewithtolerance-geometry-data-type.md)  
+-   [CurveToLineWithTolerance（geometry 数据类型）](../../t-sql/spatial-geometry/curvetolinewithtolerance-geometry-data-type.md)  
   
 -   [InstanceOf（geometry 数据类型）](../../t-sql/spatial-geometry/instanceof-geometry-data-type.md)  
   
--   [筛选器 &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/filter-geometry-data-type.md)  
+-   [Filter（geometry 数据类型）](../../t-sql/spatial-geometry/filter-geometry-data-type.md)  
   
--   [HasM &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/hasm-geometry-datatype.md)  
+-   [HasM（geometry 数据类型）](../../t-sql/spatial-geometry/hasm-geometry-datatype.md)  
   
--   [HasZ &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/hasz-geometry-datatype.md)  
+-   [HasZ（geometry 数据类型）](../../t-sql/spatial-geometry/hasz-geometry-datatype.md)  
   
--   [IsNull &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/isnull-geometry-data-type.md)  
+-   [IsNull（geometry 数据类型）](../../t-sql/spatial-geometry/isnull-geometry-data-type.md)  
   
--   [IsValidDetailed &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/isvaliddetailed-geometry-datatype.md)  
+-   [IsValidDetailed（geometry 数据类型）](../../t-sql/spatial-geometry/isvaliddetailed-geometry-datatype.md)  
   
--   [&#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
+-   [M（geometry 数据类型）](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
   
 -   [MakeValid（geometry 数据类型）](../../t-sql/spatial-geometry/makevalid-geometry-data-type.md)  
   
--   [MinDbCompatibilityLevel &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/mindbcompatibilitylevel-geometry-data-type.md)  
+-   [MinDbCompatibilityLevel（geometry 数据类型）](../../t-sql/spatial-geometry/mindbcompatibilitylevel-geometry-data-type.md)  
   
 -   [Reduce（geometry 数据类型）](../../t-sql/spatial-geometry/reduce-geometry-data-type.md)  
   
--   [ShortestLineTo &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+-   [ShortestLineTo（geography 数据类型）](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
 -   [ToString（geometry 数据类型）](../../t-sql/spatial-geometry/tostring-geometry-data-type.md)  
   
--   [Z &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+-   [Z（geometry 数据类型）](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [在几何图形实例的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+ [Geometry 实例上的 OGC 方法](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [OGC 静态几何图形方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [扩展静态几何图形方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

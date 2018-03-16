@@ -1,20 +1,22 @@
 ---
-title: "集 SHOWPLAN_XML (Transact SQL) |Microsoft 文档"
+title: SET SHOWPLAN_XML (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 02/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SET SHOWPLAN_XML
 - SET_SHOWPLAN_XML_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - statements [SQL Server], estimates
 - SET SHOWPLAN_XML statement
@@ -24,40 +26,40 @@ helpviewer_keywords:
 - SHOWPLAN_XML option
 - estimated execution information [SQL Server]
 ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd4e6309f65bea4a71cc9e2de7d5bb5b806ab005
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 80a04971bb82b1d4857eb08e7ff65083855ed7b3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回有关如何以定义好的 XML 文档格式执行上述语句的详细信息。  
  
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>语法
   
 ```  
   
 SET SHOWPLAN_XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SET SHOWPLAN_XML 的设置是在执行或运行时设置的，而不是在分析时设置的。  
   
- 当 SET SHOWPLAN_XML 为 ON，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]无需执行它，返回为每个语句的执行计划信息和[!INCLUDE[tsql](../../includes/tsql-md.md)]不执行语句。 将该选项设置为 ON 以后，将返回有关所有后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行计划信息，直到将该选项设置为 OFF 为止。 例如，如果在 SET SHOWPLAN_XML 为 ON 时执行 CREATE TABLE 语句，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将从涉及同一个表的后续 SELECT 语句返回错误信息：指定的表不存在。 因此，对此表的后续引用将失败。 如果 SET SHOWPLAN_XML 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句，但不生成报表。  
+ 如果 SET SHOWPLAN_XML 为 ON，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在不执行语句的情况下返回每个语句的执行计划信息。不会执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 将该选项设置为 ON 以后，将返回有关所有后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行计划信息，直到将该选项设置为 OFF 为止。 例如，如果在 SET SHOWPLAN_XML 为 ON 时执行 CREATE TABLE 语句，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将从涉及同一个表的后续 SELECT 语句返回错误信息：指定的表不存在。 因此，对此表的后续引用将失败。 如果 SET SHOWPLAN_XML 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句，但不生成报表。  
   
- SET SHOWPLAN_XML 旨在返回作为输出**nvarchar (max)**为应用程序，如**sqlcmd**实用程序，其中的 XML 输出随后由其他工具来显示和处理查询计划信息。  
+ SET SHOWPLAN_XML 可以为应用程序（如 **sqlcmd** 实用工具）将输出返回为 **nvarchar(max)**，其中 XML 输出随后将由其他工具用来显示和处理查询计划信息。  
   
 > [!NOTE]  
->  动态管理视图中， **sys.dm_exec_query_plan**，返回与相同的信息在 SET SHOWPLAN XML **xml**数据类型。 此信息返回从**query_plan**列**sys.dm_exec_query_plan**。 有关详细信息，请参阅[sys.dm_exec_query_plan &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>  动态管理视图 **sys.dm_exec_query_plan** 将使用 **xml** 数据类型返回与 SET SHOWPLAN XML 相同的信息。 该信息是从 **sys.dm_exec_query_plan** 的 **query_plan** 列返回的。 有关详细信息，请参阅 [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)。  
   
  不能在存储过程内部指定 SET SHOWPLAN_XML。 该语句必须是批处理中的唯一语句。  
   
@@ -67,26 +69,26 @@ SET SHOWPLAN_XML { ON | OFF }
   
  \Microsoft SQL Server\130\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- Showplan 架构也可以位于[此网站](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)。  
+ 显示计划架构也可从[此网站](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)中找到。  
   
 > [!NOTE]  
->  如果**包括实际的执行计划**中选择[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，则此设置选项不会生成 XML 显示计划输出。 清除**包括实际的执行计划**按钮之前使用此设置选项。  
+>  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮。  
   
 ## <a name="permissions"></a>权限  
  必须对执行 SET SHOWPLAN_XML 的语句具有足够的执行权限，必须对包含被引用对象的所有数据库具有 SHOWPLAN 权限。  
   
- 为 SELECT、 INSERT、 UPDATE、 DELETE、 EXEC *stored_procedure*，和 EXEC *user_defined_function*语句，以便生成的 Showplan 用户必须：  
+ 对于 SELECT、INSERT、UPDATE、DELETE、EXEC stored_procedure 和 EXEC user_defined_function 语句，若要生成显示计划，用户必须：  
   
 -   具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。  
   
 -   对于包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句引用的对象（如表、视图等）的所有数据库，具有 SHOWPLAN 权限。  
   
- 对于所有其他语句，如 DDL，使用*database_name*，组、 DECLARE、 动态 SQL 和等等，仅执行的适当权限[!INCLUDE[tsql](../../includes/tsql-md.md)]需要语句。  
+ 对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。  
   
 ## <a name="examples"></a>示例  
  下面两个语句使用了 SET SHOWPLAN_XML 设置，以显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询中分析和优化索引的方法。  
   
- 第一个查询在 WHERE 子句中使用针对索引列的等于比较运算符 (=)。 第二个查询在 WHERE 子句中使用 LIKE 运算符。 这将强制[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要使用聚集的索引扫描和查找满足 WHERE 子句条件的数据。 中的值**EstimateRows**和**EstimatedTotalSubtreeCost**属性是更小，以指示它更快地处理，并使用更少的资源比第一个索引查询索引的查询。  
+ 第一个查询在 WHERE 子句中使用针对索引列的等于比较运算符 (=)。 第二个查询在 WHERE 子句中使用 LIKE 运算符。 这将强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用聚集索引扫描并查找满足 WHERE 子句条件的数据。 第一个索引查询的 **EstimateRows** 和 **EstimatedTotalSubtreeCost** 属性中的值较小，这表示与非索引查询相比，该查询的处理速度快得多且使用更少的资源。  
   
 ```  
 USE AdventureWorks2012;  

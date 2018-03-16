@@ -63,11 +63,11 @@ CREATE MESSAGE TYPE message_type_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *message_type_name*  
- 要创建的消息类型的名称。 在当前数据库中创建一条新消息，并归 AUTHORIZATION 子句定义的主体数据库所有。 不能指定服务器、数据库和架构名称。 *Message_type_name*可达 128 个字符。  
+ message_type_name  
+ 要创建的消息类型的名称。 在当前数据库中创建一条新消息，并归 AUTHORIZATION 子句定义的主体数据库所有。 不能指定服务器、数据库和架构名称。  message_type_name 最多可具有 128 个字符。  
   
- 授权*owner_name*  
- 将消息类型所有者设置为指定数据库用户或角色。 当前用户的工作时**dbo**或**sa**， *owner_name*可以是任何有效的用户或角色的名称。 否则为*owner_name*必须是当前用户的名称、 当前用户具有 IMPERSONATE 权限的用户的名称或当前用户所属角色的名称。 如果省略此子句，则消息类型属于当前用户。  
+ AUTHORIZATION owner_name  
+ 将消息类型所有者设置为指定数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可以为任意有效用户或角色的名称。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称。 如果省略此子句，则消息类型属于当前用户。  
   
  VALIDATION  
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对此类型消息的消息正文的验证方式。 如果未指定此子句，则验证默认为 NONE。  
@@ -81,20 +81,20 @@ CREATE MESSAGE TYPE message_type_name
  WELL_FORMED_XML  
  指定消息正文必须包含格式正确的 XML。  
   
- 架构集合与 VALID_XML *schema_collection_name*  
- 指定消息正文必须包含符合指定的架构集合中的架构的 XML *schema_collection_name*必须是现有 XML 架构集合的名称。  
+ VALID_XML WITH SCHEMA COLLECTION schema_collection_name  
+ 指定消息正文必须包含符合指定架构集合中的某一架构的 XML。schema_collection_name 必须是现有 XML 架构集合的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 验证传入消息。 如果消息包含的消息正文与指定的验证类型不符，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将放弃此无效消息，并向发送此消息的服务返回一条错误消息。  
   
  会话双方必须定义相同的消息类型名称。 为便于排除故障，尽管 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 不要求会话双方使用相同的验证，但通常会话双方还是会为消息类型指定相同的验证。  
   
- 消息类型不能是临时对象。 消息类型名称开头 **#** 可以，但是永久的对象。  
+ 消息类型不能是临时对象。 允许使用以 # 开头的消息类型名称，但它们是永久对象。  
   
 ## <a name="permissions"></a>权限  
- 有关创建消息类型的成员的默认值的权限**db_ddladmin**或**db_owner**固定数据库角色的成员和**sysadmin**固定的服务器角色。  
+ 默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建消息类型的权限。  
   
- 消息类型的 REFERENCES 权限默认为消息类型的成员的所有者**db_owner**固定数据库角色和成员的**sysadmin**固定的服务器角色。  
+ 默认情况下，消息类型的所有者、db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有消息类型的 REFERENCES 权限。  
   
  如果 CREATE MESSAGE TYPE 语句指定了架构集合，则执行该语句的用户必须对指定的架构集合拥有 REFERENCES 权限。  
   
@@ -167,8 +167,8 @@ CREATE MESSAGE TYPE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER 消息类型 &#40;Transact SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [删除消息类型 &#40;Transact SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+ [ALTER MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE (Transact-SQL)](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

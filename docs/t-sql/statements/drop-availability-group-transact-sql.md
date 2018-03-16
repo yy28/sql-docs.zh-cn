@@ -1,5 +1,5 @@
 ---
-title: "DROP AVAILABILITY GROUP (TRANSACT-SQL) |Microsoft 文档"
+title: DROP AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -40,9 +40,9 @@ ms.lasthandoff: 01/25/2018
   删除指定的可用性组或其所有副本。 如果在删除某一可用性组时承载可用性副本之一的服务器实例处于脱机状态，则在联机后，该服务器实例将删除本地可用性副本。 删除可用性组时，还会删除关联的可用性组侦听器（如果有）。  
   
 > [!IMPORTANT]  
->  如果可能，请仅在连接到承载主副本的服务器实例时删除此可用性组。 从主副本中删除此可用性组时，允许对以前的主数据库进行更改（不具有高可用性保护）。 从辅助副本中删除可用性组会使中的主副本**RESTORING**状态，并更改不允许对此数据库。  
+>  如果可能，请仅在连接到承载主副本的服务器实例时删除此可用性组。 从主副本中删除此可用性组时，允许对以前的主数据库进行更改（不具有高可用性保护）。 从辅助副本中删除可用性组会使主副本处于 **RESTORING** 状态，且不允许对此数据库进行更改。  
   
- 若要删除可用性组的替代方法的信息，请参阅[删除可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
+ 有关删除可用性组的其他方法的信息，请参阅[删除可用性组 (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,21 +60,21 @@ DROP AVAILABILITY GROUP group_name
   
 ## <a name="limitations-and-recommendations"></a>限制和建议  
   
--   执行**DROP AVAILABILITY GROUP**需要的服务器实例上是否启用了 Alwayson 可用性组功能。 有关详细信息，请参阅：[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
+-   执行 **DROP AVAILABILITY GROUP** 需要在服务器实例上启用 Always On 可用性组功能。 有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
--   **DROP AVAILABILITY GROUP**不能作为一部分的批处理或事务内执行。 此外，不支持表达式和变量。  
+-   **DROP AVAILABILITY GROUP** 不能作为批处理的一部分执行，也不能在事务内执行。 此外，不支持表达式和变量。  
   
 -   您可以从拥有某一可用性组的正确安全凭据的任何 Windows Server 故障转移群集 (WSFC) 节点删除该可用性组。 因此，在某一可用性组未保留任何可用性副本时，您可以删除该可用性组。  
   
     > [!IMPORTANT]  
     >  如果 Windows Server 故障转移群集 (WSFC) 群集没有仲裁，则避免删除可用性组。 如果在群集缺少仲裁时必须删除可用性组，则不删除群集中存储的元数据可用性组。 在群集重新获得仲裁后，将需要再次删除此可用性组以便将其从 WSFC 群集中删除。  
   
--   在辅助副本上， **DROP AVAILABILITY GROUP**只应仅用于紧急目的。 这是因为删除可用性组会使该可用性组脱机。 如果从辅助副本中删除该可用性组，则主副本无法确定是否**脱机**出现状态因为仲裁丢失，强制故障转移，或**DROP AVAILABILITY GROUP**命令。 主副本转换为**RESTORING**状态以避免可能的裂脑情况。 有关详细信息，请参阅 [工作方式：DROP AVAILABILITY GROUP 行为](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) （CSS SQL Server 工程师博客）。  
+-   在辅助副本上，**DROP AVAILABILITY GROUP** 应仅用于紧急情况。 这是因为删除可用性组会使该可用性组脱机。 如果从辅助副本中删除该可用性组，则主副本无法确定出现 **OFFLINE** 状态是因为仲裁丢失、强制故障转移还是 **DROP AVAILABILITY GROUP** 命令。 主副本将转换为 **RESTORING** 状态以避免出现可能的裂脑情况。 有关详细信息，请参阅 [工作方式：DROP AVAILABILITY GROUP 行为](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) （CSS SQL Server 工程师博客）。  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>权限  
- 需要**ALTER AVAILABILITY GROUP**可用性组中，权限**CONTROL AVAILABILITY GROUP**权限， **ALTER ANY AVAILABILITY GROUP**权限，或**CONTROL SERVER**权限。 若要删除并非由你需要在本地服务器实例承载可用性组**CONTROL SERVER**权限或**控件**针对该可用性组的权限。  
+ 对可用性组要求 **ALTER AVAILABILITY GROUP** 权限、**CONTROL AVAILABILITY GROUP** 权限、**ALTER ANY AVAILABILITY GROUP** 权限或 **CONTROL SERVER** 权限。 若要删除并非由本地服务器实例承载的某一可用性组，需要针对该可用性组的 **CONTROL SERVER** 权限或 **CONTROL** 权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例删除了 `AccountsAG` 可用性组。  
@@ -89,7 +89,7 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [创建可用性组 &#40;Transact SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [删除可用性组 &#40;SQL server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [删除可用性组 (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   

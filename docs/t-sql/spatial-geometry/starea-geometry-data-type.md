@@ -1,5 +1,5 @@
 ---
-title: "STArea (geometry 数据类型) |Microsoft 文档"
+title: "STArea（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geometry-data-type"></a>STArea（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  返回的总表面积**几何图形**实例。  
+  返回 geometry 实例的总表面积。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型： **float**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：float  
   
- CLR 返回类型： **SqlDouble**  
+ CLR 返回类型：SqlDouble  
   
-## <a name="remarks"></a>注释  
- `STArea()`如果将返回 0**几何图形**实例包含仅 0 和 1 维图形，或是否为空。 `STArea()`返回**NULL**如果**几何图形**尚未初始化实例。  
+## <a name="remarks"></a>Remarks  
+ 如果 geometry 实例仅包含 0 维和 1 维图形，或者为空，则 `STArea()` 返回 0。 如果 geometry 实例尚未初始化，则 `STArea()` 返回 NULL。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-computing-the-area-of-a-polygon-instance"></a>A. 计算 Polygon 实例的面积  
- 下面的示例创建`Polygon``geometry`实例，并计算在多边形区域。  
+ 以下示例创建一个 `Polygon``geometry` 实例并计算多边形的面积。  
   
 ```  
 DECLARE @g geometry;  

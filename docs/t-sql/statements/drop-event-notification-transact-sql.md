@@ -1,5 +1,5 @@
 ---
-title: "DROP EVENT NOTIFICATION (Transact SQL) |Microsoft 文档"
+title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>参数  
  *notification_name*  
- 要删除的事件通知名称。 可以指定多个事件通知。 若要查看当前创建的事件通知的列表，请使用[sys.event_notifications &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ 要删除的事件通知名称。 可以指定多个事件通知。 若要查看当前创建的事件通知列表，请使用 [sys.event_notifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)。  
   
  SERVER  
  指示应用于当前服务器的事件通知的作用域。 如果在创建事件通知时指定了 SERVER，则必须指定 SERVER。  
   
  DATABASE  
- 指示事件通知的作用域是适用于当前数据库。 如果在创建事件通知时指定了 DATABASE，则必须指定 DATABASE。  
+ 指示将事件通知的作用域应用于当前数据库。 如果在创建事件通知时指定了 DATABASE，则必须指定 DATABASE。  
   
- 队列*queue_name*  
- 指示事件通知的作用域是适用于指定的队列*queue_name*。 如果在创建事件通知时指定了 QUEUE，则必须指定 QUEUE。 *queue_name*是队列的名称，还必须指定。  
+ QUEUE queue_name  
+ 指示将事件通知的作用域应用于由 queue_name 指定的队列。 如果在创建事件通知时指定了 QUEUE，则必须指定 QUEUE。 queue_name 为队列名称，该参数也必须指定。  
   
 ## <a name="remarks"></a>Remarks  
  如果事件通知在事务中激发并在同一事务中删除，则发送事件通知实例，然后删除事件通知。  
@@ -91,9 +91,9 @@ ON DATABASE;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建事件通知 &#40;Transact SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+ [CREATE EVENT NOTIFICATION (Transact-SQL)](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.event_notifications &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [sys.events &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events (Transact-SQL)](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

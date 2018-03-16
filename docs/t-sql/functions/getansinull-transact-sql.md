@@ -1,5 +1,5 @@
 ---
-title: "GETANSINULL (Transact SQL) |Microsoft 文档"
+title: GETANSINULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ GETANSINULL ( [ 'database' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- *数据库*  
- 为其返回为空性信息的数据库的名称。 *数据库*是**char**或**nchar**。 如果**char**，*数据库*隐式转换为**nchar**。  
+ 'database'  
+ 为其返回为空性信息的数据库的名称。 database 是 char 或 nchar。 如果是 char，则数据库隐式转换为 nchar。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果指定数据库的为空性允许为 null 值，并且没有显式定义列或数据类型的为空性，则 GETANSINULL 返回 1。 这是 ANSI NULL 的默认值。  
   
  若要启用 ANSI NULL 默认行为，则必须设置下列条件之一:  
   
--   ALTER DATABASE *database_name* SET ANSI_NULL_DEFAULT ON  
+-   ALTER DATABASE database_name SET ANSI_NULL_DEFAULT ON  
   
 -   SET ANSI_NULL_DFLT_ON ON  
   
@@ -86,6 +86,6 @@ GO
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

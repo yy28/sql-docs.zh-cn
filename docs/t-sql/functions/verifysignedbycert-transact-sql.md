@@ -1,5 +1,5 @@
 ---
-title: "VERIFYSIGNEDBYCERT (Transact SQL) |Microsoft 文档"
+title: VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,24 +52,24 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ```  
   
 ## <a name="arguments"></a>参数  
- *Cert_ID*  
- 数据库中证书的 ID。 *Cert_ID*是**int**。  
+ Cert_ID  
+ 数据库中证书的 ID。 Cert_ID 的数据类型为 int。  
   
- *signed_data*  
- 是类型的变量**nvarchar**， **char**， **varchar**，或**nchar**包含使用证书进行签名的数据。  
+ signed_data  
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，上述类型包含已使用证书进行签名的数据。  
   
- *签名*  
- 附加到已签名数据中的签名。 *签名*是**varbinary**。  
+ signature  
+ 附加到已签名数据中的签名。 signature 的数据类型为 varbinary。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
  如果已签名的数据未更改，则返回 1；否则返回 0。  
   
-## <a name="remarks"></a>注释  
- **VerifySignedBycert**通过使用指定的证书的公钥解密的数据和数据的新计算 MD5 哈希处理的解密的值进行比较。 如果值匹配，则确认签名有效。  
+## <a name="remarks"></a>Remarks  
+ VerifySignedBycert 使用指定证书的公钥对数据的签名进行解密，并将解密所得到的值与数据新计算出的 MD5 哈希值进行比较。 如果值匹配，则确认签名有效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对证书拥有 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
@@ -97,11 +97,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CERT_ID &#40;Transact SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
- [SIGNBYCERT &#40;Transact SQL &#41;](../../t-sql/functions/signbycert-transact-sql.md)   
+ [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)   
+ [SIGNBYCERT (Transact-SQL)](../../t-sql/functions/signbycert-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [删除证书 &#40;Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

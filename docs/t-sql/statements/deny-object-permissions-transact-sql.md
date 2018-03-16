@@ -1,5 +1,5 @@
 ---
-title: "DENY 对象权限 (Transact SQL) |Microsoft 文档"
+title: "DENY 对象权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ DENY <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ *permission*  
  指定可对架构包含的对象拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  ALL  
@@ -69,29 +69,29 @@ DENY <permission> [ ,...n ] ON
   
  - 标量函数权限：EXECUTE、REFERENCES。  
  - 表值函数权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
- - 存储过程的权限： 执行。  
+ - 存储过程权限：EXECUTE。  
  - 表权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
  - 视图权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
 PRIVILEGES  
  包含此参数以符合 ANSI-92 标准。 请不要更改 ALL 的行为。  
   
-*列*  
- 指定表、视图或表值函数中要对其拒绝权限的列的名称。 括号**（)**所需。 仅可以拒绝对列的 SELECT、REFERENCES 和 UPDATE 权限。 *列*可以权限子句中或安全对象的名称后指定。  
+*column*  
+ 指定表、视图或表值函数中要对其拒绝权限的列的名称。 需要使用括号 **( )**。 仅可以拒绝对列的 SELECT、REFERENCES 和 UPDATE 权限。 可以在权限子句中或在安全对象名之后指定 column。  
   
 > [!CAUTION]  
 >  表级 DENY 并不优先于列级 GRANT。 保留了权限层次结构中的这种不一致性以保持向后兼容。  
   
- ON [对象**::** ] [ *schema_name* ] **。** *object_name*  
- 指定在其拒绝的权限的对象。 是可选的对象短语如果*schema_name*指定。 如果使用对象短语，则作用域限定符 (**::**) 是必需的。 如果*schema_name*未指定，则使用默认架构。 如果*schema_name*指定，则架构作用域限定符 (**。**) 是必需的。  
+ ON [ OBJECT :: ] [ schema_name ] . *object_name*  
+ 指定要对其拒绝权限的对象。 如果指定了 schema_name，则 OBJECT 短语是可选的。 如果使用了 OBJECT 短语，则需要使用作用域限定符 (**::**)。 如果未指定 schema_name，则使用默认架构。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)。  
   
- 到\<database_principal >  
+ TO \<database_principal>  
  指定要对其拒绝权限的主体。  
   
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。  
   
  *Database_user*  
@@ -112,14 +112,14 @@ PRIVILEGES
  *Database_user_mapped_to_certificate*  
  指定映射到证书的数据库用户。  
   
- *Database_user_mapped_to_asymmetric_key*  
+ Database_user_mapped_to_asymmetric_key  
  指定映射到非对称密钥的数据库用户。  
   
  *Database_user_with_no_login*  
  指定无相应服务器级主体的数据库用户。  
   
-## <a name="remarks"></a>注释  
- 可以在各种目录视图中查看对象的有关信息。 有关详细信息，请参阅[对象目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 可以在各种目录视图中查看对象的有关信息。 有关详细信息，请参阅[对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)。  
   
  对象是一个架构级的安全对象，包含于权限层次结构中作为其父级的架构中。 下表列出了可拒绝的对对象最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
   
@@ -127,7 +127,7 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
+|删除|CONTROL|删除|  
 |在运行 CREATE 语句前执行|CONTROL|在运行 CREATE 语句前执行|  
 |Insert|CONTROL|Insert|  
 |RECEIVE|CONTROL|CONTROL|  
@@ -138,16 +138,16 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对象的 CONTROL 权限。  
   
  如果使用 AS 子句，则指定的主体必须拥有要对其拒绝权限的对象。  
   
 ## <a name="examples"></a>示例  
-下面的示例使用 AdventureWorks 数据库。
+以下示例使用 AdventureWorks 数据库。
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. 拒绝对表的 SELECT 权限  
- 下面的示例拒绝`SELECT`对用户权限`RosaQdM`表`Person.Address`。  
+ 以下示例拒绝用户 `RosaQdM` 对表 `Person.Address` 的 `SELECT` 权限。  
   
 ```  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
@@ -174,13 +174,13 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [GRANT 对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
- [REVOKE 对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
- [对象目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [REVOKE 对象权限 (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [安全对象](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [sys.fn_my_permissions &#40;Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "打印 (Transact SQL) |Microsoft 文档"
+title: PRINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ PRINT msg_str | @local_variable | string_expr
 ```  
   
 ## <a name="arguments"></a>参数  
- *msg_str*  
- 字符串或 Unicode 字符串常量。 有关详细信息，请参阅[常量 &#40;Transact SQL &#41;](../../t-sql/data-types/constants-transact-sql.md).  
+ msg_str  
+ 字符串或 Unicode 字符串常量。 有关详细信息，请参阅[常量 (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md)。  
   
- **@** *local_variable*  
- 任何有效的字符数据类型的变量。 **@ * * * local_variable*必须**char**， **nchar**， **varchar**，或**nvarchar**，或它必须能够隐式转换为这些数据类型。  
+ local_variable**@**  
+ 任何有效的字符数据类型的变量。@local_variable 的数据类型必须为 char、nchar、varchar 或 nvarchar，或者必须能够隐式转换为这些数据类型 *。  
   
- *string_expr*  
+ string_expr  
  返回字符串的表达式。 可包括串联的文字值、函数和变量。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
-## <a name="remarks"></a>注释  
- 如果消息字符串为非 Unicode 字符串，则最长不得超过 8,000 个字符；如果消息字符串为 Unicode 字符串，则最长不得超过 4,000 个字符。 超过最大长度的字符串会被截断。 **Varchar （max)**和**nvarchar (max)**数据类型被截断为数据类型都不大于**varchar （8000)**和**nvarchar （4000)**.  
+## <a name="remarks"></a>Remarks  
+ 如果消息字符串为非 Unicode 字符串，则最长不得超过 8,000 个字符；如果消息字符串为 Unicode 字符串，则最长不得超过 4,000 个字符。 超过最大长度的字符串会被截断。 varchar(max) 和 nvarchar(max) 数据类型被截断为不大于 varchar(8000) 和 nvarchar(4000) 的数据类型。  
   
  RAISERROR 也可以用于返回消息。 RAISERROR 与 PRINT 相比具有以下优点：  
   
@@ -104,7 +104,7 @@ PRINT @PrintMessage;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-conditionally-executing-print"></a>C. 有条件地执行打印  
  以下示例使用 `PRINT` 语句有条件地返回消息。  
@@ -120,7 +120,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [RAISERROR &#40;Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
 

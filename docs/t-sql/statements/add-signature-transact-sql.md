@@ -1,5 +1,5 @@
 ---
-title: "添加签名 (Transact SQL) |Microsoft 文档"
+title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -58,25 +58,25 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *module_class*  
+ module_class  
  向其中添加签名的模块的类。 架构范围内的模块的默认类为 OBJECT。  
   
- *模块名*  
+ module_name  
  要签名或副署的存储过程、函数、程序集或触发器的名称。  
   
- 证书*cert_name*  
+ CERTIFICATE cert_name  
  对存储过程、函数、程序集或触发器进行签名或副署时所用证书的名称。  
   
- 使用密码 =*密码*  
+ WITH PASSWORD ='password'  
  是对证书私钥或非对称密钥进行解密时所需的密码。 仅当数据库主密钥不保护私钥时才需要该子句。  
   
- 签名 =*signed_blob*  
- 指定模块的已签名二进制大型对象 (BLOB)。 如果不提供私钥，而只提供模块时，则该子句非常有用。 当使用该子句时，只需要模块、签名和公钥便可将已签名的二进制大型对象添加到数据库。 *signed_blob*以十六进制格式是 blob 本身。  
+ SIGNATURE =signed_blob  
+ 指定模块的已签名二进制大型对象 (BLOB)。 如果不提供私钥，而只提供模块时，则该子句非常有用。 当使用该子句时，只需要模块、签名和公钥便可将已签名的二进制大型对象添加到数据库。 signed_blob 是以十六进制格式表示的 Blob 自身。  
   
- 非对称密钥*Asym_Key_Name*  
+ ASYMMETRIC KEY Asym_Key_Name  
  对存储过程、函数、程序集或触发器进行签名或副署时所用非对称密钥的名称。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  要签名或副署的模块以及用来对模块进行签名的证书或非对称密钥必须已经存在。 模块中的每个字符都包括在签名计算中。 这包括前导回车符和换行符。  
   
  可以使用任意数量的证书和非对称密钥对模块进行签名和副署。  
@@ -96,9 +96,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 >  当为签名重新创建过程时，原始批处理中的所有语句必须与重新创建批处理相匹配。 如果批处理的任何部分有所不同，即使是空格或注释不同，所生成的签名也将会不同。  
   
 ## <a name="countersignatures"></a>副署  
- 当执行已签名的模块，暂时将签名添加到 SQL 令牌中，但如果该模块执行另一个模块或模块终止执行签名都将丢失。 副署是签名的一种特殊形式。 副署本身并不授予任何权限，但它允许在对副署的对象进行调用的期间保留同一证书或非对称密钥创建的签名。  
+ 当执行签名的模块时，签名将临时添加到 SQL 标记中，但如果该模块执行其他模块或该模块终止执行，则会丢失签名。 副署是一种特殊形式的签名。 副署本身并不授予任何权限，但它允许在对副署的对象进行调用的期间保留同一证书或非对称密钥创建的签名。  
   
- 例如，假设用户 Alice 调用过程 ProcSelectT1ForAlice，此过程将调用过程 procSelectT1，而后者从表 T1 中进行选择。 Alice 对 ProcSelectT1ForAlice 和 procSelectT1 具有 EXECUTE 权限，但它对于 T1 不具备 SELECT 权限，并且在此整个链中不涉及任何所有权链。 Alice 无法访问表 T1，无论是直接访问，还是通过使用 ProcSelectT1ForAlice 和 procSelectT1。 由于我们希望 Alice 始终使用访问 ProcSelectT1ForAlice，我们不想授予她执行 procSelectT1 的权限。 如何实现呢？  
+ 例如，假设用户 Alice 调用过程 ProcSelectT1ForAlice，此过程将调用过程 procSelectT1，而后者从表 T1 中进行选择。 Alice 对 ProcSelectT1ForAlice 和 procSelectT1 具有 EXECUTE 权限，但它对于 T1 不具备 SELECT 权限，并且在此整个链中不涉及任何所有权链。 Alice 无法访问表 T1，无论是直接访问，还是通过使用 ProcSelectT1ForAlice 和 procSelectT1。 因为我们希望 Alice 始终使用 ProcSelectT1ForAlice 进行访问，所以我们不希望授予其执行 procSelectT1 的权限。 如何实现呢？  
   
 -   如果我们对 procSelectT1 进行签名，以便 procSelectT1 可以访问 T1，则 Alice 可以直接调用 procSelectT1，而不必调用 ProcSelectT1ForAlice。  
   
@@ -106,9 +106,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   对 ProcSelectT1ForAlice 签名本身也不会起作用，因为此签名在调用 procSelectT1 时将丢失。  
   
-但是，通过使用同一证书用于签署 ProcSelectT1ForAlice，countersigning procSelectT1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将保持签名跨调用链，将允许到 T1 访问。 如果 Alice 试图直接调用 procSelectT1，她将无法访问 T1，因为副署不授予任何权限。 下面的示例 C 显示了此示例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+然而，通过使用用于对 ProcSelectT1ForAlice 进行签名的相同证书来副署 procSelectT1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在整个调用链中保留此签名，并允许访问 T1。 如果 Alice 试图直接调用 procSelectT1，她将无法访问 T1，因为副署不授予任何权限。 下面的示例 C 显示了此示例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对象拥有 ALTER 权限，并且对证书或非对称密钥拥有 CONTROL 权限。 如果关联的私钥受密码保护，则用户还必须具有相应的密码。  
   
 ## <a name="examples"></a>示例  
@@ -256,7 +256,7 @@ DROP LOGIN Alice;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.crypt_properties &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [删除签名 &#40;Transact SQL &#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
+ [sys.crypt_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [DROP SIGNATURE (Transact-SQL)](../../t-sql/statements/drop-signature-transact-sql.md)  
   
   

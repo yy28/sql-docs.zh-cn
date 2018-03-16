@@ -1,5 +1,5 @@
 ---
-title: "REPLACE (Transact SQL) |Microsoft 文档"
+title: REPLACE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -49,26 +49,26 @@ REPLACE ( string_expression , string_pattern , string_replacement )
 ```  
   
 ## <a name="arguments"></a>参数  
- *string_expression*  
- 为字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)要搜索。 *string_expression*可以是字符串或二进制数据类型。  
+ string_expression  
+ 是要搜索的字符串[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是字符或二进制数据类型。  
   
  *string_*pattern  
- 是要查找的子字符串。 *string_pattern*可以是字符串或二进制数据类型。 *string_pattern*不能为空字符串 （"），且不能超过每页显示的最大字节数。  
+ 是要查找的子字符串。 string_pattern 可以是字符或二进制数据类型。 string_pattern 不能为空字符串 ('')，不能超过页容纳的最大字节数。  
   
- *string_*replacement  
- 替换字符串。 *string_replacement*可以是字符串或二进制数据类型。  
+ string_replacement  
+ 是替换字符串。 string_replacement 可以是字符或二进制数据类型。  
   
 ## <a name="return-types"></a>返回类型  
- 返回**nvarchar**如果输入自变量之一是**nvarchar**数据类型; 否则，将返回**varchar**。  
+ 如果其中的一个输入参数数据类型为 nvarchar，则返回 nvarchar；否则 REPLACE 返回 varchar。  
   
  如果任何一个参数为 NULL，则返回 NULL。  
   
- 如果*string_expression*的类型不是**varchar （max)**或**nvarchar （max)，替换**截断返回值为 8000 个字节。 返回值大于 8000 个字节， *string_expression*必须显式转换为大型值数据类型。  
+ 如果 string_expression 的类型不是 varchar(max) 或 nvarchar(max)，则 REPLACE 将返回值截断为 8000 个字节。 若要返回大于 8,000 字节的值，则必须将 string_expression 显式转换为大值数据类型。  
   
-## <a name="remarks"></a>注释  
- REPLACE 根据输入的排序规则执行比较操作。 若要在指定的排序规则执行比较，可以使用[COLLATE](~/t-sql/statements/collations.md)将显式排序规则应用于输入。  
+## <a name="remarks"></a>Remarks  
+ REPLACE 根据输入的排序规则执行比较操作。 若要以指定排序规则进行比较，则可以使用 [COLLATE](~/t-sql/statements/collations.md) 将显式排序规则应用于输入。  
   
- 0x0000 (**char(0)**) 是 Windows 排序规则中未定义的字符，不能包含在替换中。  
+ 0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 REPLACE 中。  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `cde` 替换 `abcdefghi` 中的字符串 `xxx`。  
@@ -104,15 +104,15 @@ This is a desk
 
   
 ## <a name="see-also"></a>另请参阅  
- [CONCAT &#40;Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   

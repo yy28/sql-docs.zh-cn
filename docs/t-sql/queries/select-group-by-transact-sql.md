@@ -1,5 +1,5 @@
 ---
-title: "GROUP BY (Transact SQL) |Microsoft 文档"
+title: GROUP BY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -45,14 +45,14 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---group-by--transact-sql"></a>选择的组 BY-TRANSACT-SQL
+# <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-SELECT 语句子句，用于将查询结果划分为组的行，其目的通常是对每个组执行一个或多个聚合。 SELECT 语句返回每个组的一行。  
+将查询结果划分为多个行组的 SELECT 语句子句，通常用于在每个组上执行一个或多个聚合。 SELECT 语句每组返回一行。  
   
 ## <a name="syntax"></a>语法  
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定 &#40;Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -103,11 +103,11 @@ GROUP BY {
 ## <a name="arguments"></a>参数 
  
 ### <a name="column-expression"></a>*column-expression*  
-在列上指定一列或非聚合计算。 此列可以属于表、 派生的表或视图。 列必须出现在 SELECT 语句的 FROM 子句，但不需要选择列表中显示。 
+指定列或列上的非聚合计算。 此列可以属于表、派生表或视图。 列必须出现在 SELECT 语句的 FROM 子句中，但不要求出现在 SELECT 列表中。 
 
-有关有效表达式，请参阅[表达式](~/t-sql/language-elements/expressions-transact-sql.md)。    
+关于有效的表达式，请参阅[表达式](~/t-sql/language-elements/expressions-transact-sql.md)。    
 
-列必须出现在 SELECT 语句的 FROM 子句，但不需要选择列表中显示。 但是，每个表或视图中的任何非聚合表达式中的列\<选择 > 列表必须包含在 GROUP BY 列表：  
+列必须出现在 SELECT 语句的 FROM 子句中，但不要求出现在 SELECT 列表中。 但是，\<select> 列表中任何非聚合表达式中的每个表列或视图列都必须包括在 GROUP BY 列表中：  
   
 允许使用下面的语句：  
   
@@ -126,17 +126,17 @@ GROUP BY {
     ```  
 列表达式不能包含：
 
-- 在选择列表中定义的列别名。 它可用于在 FROM 子句中定义的派生表的列别名。
-- 类型的列**文本**， **ntext**，或**映像**。 但是，你可以使用 text、 ntext 或 image 的列作为返回值为有效的数据类型的函数的自变量。 例如，表达式可以使用 substring （） 和 CAST()。 这也适用于 HAVING 子句中的表达式。
-- xml 数据类型方法。 它可以包括使用 xml 数据类型方法的用户定义函数。 它可以包括的计算的列，使用 xml 数据类型方法。 
+- SELECT 列表中定义的列别名。 它可以使用 FROM 子句中定义的派生表的列别名。
+- text、ntext 或 image 类型的列。 但是，可以使用 text、ntext 或 image 列作为返回有效数据类型值的函数的参数。 例如，表达式可以使用 SUBSTRING() 和 CAST()。 这也适用于 HAVING 子句中的表达式。
+- xml 数据类型方法。 它可以包含使用 xml 数据类型方法的用户定义函数。 它可以包含使用 xml 数据类型方法的计算列。 
 - 子查询。 返回错误 144。 
-- 从索引视图列。 
+- 来自索引视图中的列。 
  
-### <a name="group-by-column-expression--n-"></a>GROUP BY*列表达式*[，...n] 
+### <a name="group-by-column-expression--n-"></a>GROUP BY column-expression [ ,...n ]  
 
-根据值列表中的一个或多个列表达式的 SELECT 语句结果进行分组。 
+根据一个或多个列表达式列表中的值对 SELECT 语句结果进行分组。 
 
-例如，此查询创建 Sales 表包含列的国家/地区、 区域和销售。 它可以将插入四行和两个行的国家和地区有匹配的值。  
+例如，此查询创建包含 Country、Region 和 Sales 列的销量表。 它插入四行，其中两行具有与 Country 和 Region 匹配的值。  
 
 ```
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
@@ -146,45 +146,45 @@ INSERT INTO sales VALUES (N'Canada', N'British Columbia', 200);
 INSERT INTO sales VALUES (N'Canada', N'British Columbia', 300);
 INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 ```
-Sales 表包含这些行：
+销量表包含这些行：
 
 | Country | 地区 | Sales |
 |---------|--------|-------|
-| Canada | 艾伯塔 | 100 |
-| Canada | 不列颠哥伦比亚 | 200 |
-| Canada | 不列颠哥伦比亚 | 300 |
-| United States | 蒙 | 100 |
+| Canada | Alberta | 100 |
+| Canada | British Columbia | 200 |
+| Canada | British Columbia | 300 |
+| United States | Montana | 100 |
 
-此第二个查询分组国家和地区，并返回每个值组合的聚合总数。  
+下一个查询对 Country 和 Region 分组，并返回每个值组合的总和。  
  
 ``` 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
 ```
-查询结果具有 3 行，因为有 3 组合的国家和地区的值。 加拿大和不列颠哥伦比亚 TotalSales 是两个行的总数。 
+因为 Country 和 Region 的值有 3 种组合，所以查询结果有 3 行。 Canada 和 British Columbia 的 TotalSales 是两行的总和。 
 
-| Country | 地区 | 总销售额 |
+| Country | 地区 | TotalSales |
 |---------|--------|-------|
-| Canada | 艾伯塔 | 100 |
-| Canada | 不列颠哥伦比亚 | 500 |
-| United States | 蒙 | 100 |
+| Canada | Alberta | 100 |
+| Canada | British Columbia | 500 |
+| United States | Montana | 100 |
 
-### <a name="group-by-rollup"></a>组汇总
+### <a name="group-by-rollup"></a>GROUP BY ROLLUP
 
-创建列表达式的每个组合的组。 此外，它"汇总"结果到小计和总计。 若要执行此操作，它将移动从右到左减少，它会创建组和 aggregation(s) 的列表达式的数量。 
+为每个列表达式的组合创建一个组。 此外，它将结果“汇总”到小计和总计。 为此，它会从右向左减少创建的组和聚合的列表达式的数量。 
 
-列顺序会影响汇总输出，并可能会影响在结果集中的行数。  
+列的顺序会影响 ROLLUP 的输出，而且可能会影响结果集内的行数。  
 
-例如，`GROUP BY ROLLUP (col1, col2, col3, col4)`如下表中创建的每个组合的列表达式的组。  
+例如，`GROUP BY ROLLUP (col1, col2, col3, col4)` 为以下列表中的每个列表达式组合创建组。  
 
-- col1，col2，col3，第 4 列 
-- col1，col2，col3，NULL
-- col1，col2，NULL NULL
-- col1，NULL，NULL NULL
-- NULL、 空、 NULL、 空-这是计算总和
+- col1、col2、col3、col4 
+- col1、col2、col3、NULL
+- col1、col2、NULL、NULL
+- col1、NULL、NULL、NULL
+- NULL、NULL、NULL、NULL - 这是总计
 
-使用上一示例中的表，此代码将运行而不是简单分组依据组的汇总操作。
+此代码使用前面示例中的表格，运行 GROUP BY ROLLUP 操作而不是简单的 GROUP BY。
 
 ```
 SELECT Country, Region, SUM(Sales) AS TotalSales
@@ -192,22 +192,22 @@ FROM Sales
 GROUP BY ROLLUP (Country, Region);
 ```
 
-查询结果已作为简单 GROUP BY 而无需汇总相同的聚合。 此外，它将创建的每个值的国家/地区的小计。 最后，它使所有行的总计。 结果如下所示：
+查询结果与没有 ROLLUP 的简单 GROUP BY 具有相同的聚合。 此外，它为 Country 的每个值创建小计。 最后，它为所有行提供总计。 结果类似以下形式：
 
-| Country | 地区 | 总销售额 |
+| Country | 地区 | TotalSales |
 | :------ | :----- | ---------: |
-| Canada | 艾伯塔 | 100 |
-| Canada | 不列颠哥伦比亚 | 500 |
+| Canada | Alberta | 100 |
+| Canada | British Columbia | 500 |
 | Canada | NULL | 600 |
-| United States | 蒙 | 100 |
+| United States | Montana | 100 |
 | United States | NULL | 100 |
 | NULL | NULL | 700 |
 
-### <a name="group-by-cube--"></a>分组依据多维数据集 （）  
+### <a name="group-by-cube--"></a>GROUP BY CUBE ( )  
 
-组的多维数据集创建的列的所有可能组合的组。 为组的多维数据集 (a、 b) 结果具有唯一值的组的 (a、 b)、 （NULL、 b），(a，NULL) 和 （NULL，NULL）。
+GROUP BY CUBE 为所有可能的列组合创建组。 对于 GROUP BY CUBE (a, b)，结果具有 (a, b)、(NULL, b)、(a, NULL) 和 (NULL, NULL) 唯一值的组。
 
-使用前面示例中的表，此代码将运行在国家和地区组由多维数据集操作。 
+此代码使用前面示例中的表格，对 Country 和 Region 运行 GROUP BY CUBE 操作。 
 
 ```
 SELECT Country, Region, SUM(Sales) AS TotalSales
@@ -215,27 +215,27 @@ FROM Sales
 GROUP BY CUBE (Country, Region);
 ```
 
-查询结果具有唯一值的 （国家/地区，区域），组 （NULL、 区域），（Country、 NULL） 和 （NULL，NULL）。 结果如下所示：
+查询结果具有 (Country, Region)、(NULL, Region)、(Country, NULL) 和 (NULL, NULL) 的唯一值的组。 结果如下所示：
 
-| Country | 地区 | 总销售额 |
+| Country | 地区 | TotalSales |
 |---------|--------|-------|
-| Canada | 艾伯塔 | 100 |
-| NULL | 艾伯塔 | 100 |
-| Canada | 不列颠哥伦比亚 | 500 |
-| NULL | 不列颠哥伦比亚 | 500 |
-| United States | 蒙 | 100 |
-| NULL | 蒙 | 100 |
+| Canada | Alberta | 100 |
+| NULL | Alberta | 100 |
+| Canada | British Columbia | 500 |
+| NULL | British Columbia | 500 |
+| United States | Montana | 100 |
+| NULL | Montana | 100 |
 | NULL | NULL | 700
 | Canada | NULL | 600 |
 | United States | NULL | 100 |
    
- ### <a name="group-by-grouping-sets--"></a>通过将分组集 （） 的组  
+ ### <a name="group-by-grouping-sets--"></a>GROUP BY GROUPING SETS ( )  
  
-GROUPING SETS 选项使你能够将多个 GROUP BY 子句组合到一个 GROUP BY 子句。 其结果与针对指定的组执行 UNION ALL 运算等效。 
+GROUPING SETS 选项可将多个 GROUP BY 子句组合到一个 GROUP BY 子句中。 其结果与针对指定的组执行 UNION ALL 运算等效。 
 
-例如，`GROUP BY ROLLUP (Country, Region)`和`GROUP BY GROUPING SETS ( ROLLUP (Country, Region) )`返回相同的结果。 
+例如，`GROUP BY ROLLUP (Country, Region)` 和 `GROUP BY GROUPING SETS ( ROLLUP (Country, Region) )` 返回相同的结果。 
 
-当 GROUPING SETS 具有两个或多个元素时，则结果是元素的联合。 此示例返回国家/地区和区域汇总和多维数据集结果的联合。
+当 GROUPING SETS 具有两个或多个元素时，结果是元素的联合。 本示例返回 Country 和 Region 的 ROLLUP 和 CUBE 结果的联合。
 
 ```
 SELECT Country, Region, SUM(Sales) AS TotalSales
@@ -243,7 +243,7 @@ FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 ```
 
-结果将是此查询将返回两个 GROUP BY 语句的并集相同。
+结果与返回两个 GROUP BY 语句的联合的查询相同。
 
 ```
 SELECT Country, Region, SUM(Sales) AS TotalSales
@@ -256,10 +256,10 @@ GROUP BY CUBE (Country, Region)
 ;
 ```
 
-SQL 不会合并为 GROUPING SETS 列表生成的重复组。 例如，在`GROUP BY ( (), CUBE (Country, Region) )`，这两个元素返回总计的行并将结果中列出这两个行。 
+SQL 不会合并为 GROUPING SETS 列表生成的重复组。 例如，在 `GROUP BY ( (), CUBE (Country, Region) )` 中，两个元素都返回总计行并且这两行都会列在结果中。 
 
  ### <a name="group-by-"></a>GROUP BY ()  
-指定生成计算总和的空组。 这可以作为一个分组集的元素。 例如，此语句将授予的总销售额的每个国家/地区，然后将授予的所有国家/地区的总计。
+指定生成总计的空组。 这作为 GROUPING SET 的元素之一来说非常有用。 例如，此语句给出每个国家/地区的总销售额，然后给出了所有国家/地区的总和。
 
 ```
 SELECT Country, SUM(Sales) AS TotalSales
@@ -267,104 +267,104 @@ FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
 ```
 
-### <a name="group-by--all--column-expression--n-"></a>GROUP BY [全部] 列表达式 [，...n] 
+### <a name="group-by--all--column-expression--n-"></a>GROUP BY [ ALL ] column-expression [ ,...n ] 
 
-适用于： SQL Server 和 Azure SQL 数据库
+适用范围：SQL Server 和 Azure SQL 数据库
 
-注意： 此语法进行向后兼容性。 未来版本中，将删除它。 避免在新的开发工作中使用此语法，并计划修改当前使用此语法的应用程序。
+注意：提供此语法的目的只是为了实现向后兼容。 未来的版本中会将其删除。 请避免在新的开发工作中使用该语法，并考虑修改当前使用该语法的应用程序。
 
-指定要包括的结果而不考虑它们是否达到 WHERE 子句中的搜索条件中的所有组。 不能满足搜索条件的组的聚合中具有 NULL。 
+指定将所有组包含在结果中，无论它们是否满足 WHERE 子句中的搜索条件。 不满足搜索条件的组的聚合为 NULL。 
 
-所有组：
-- 如果还 WHERE 子句中没有查询访问远程表的查询中不支持。
-- 具有 FILESTREAM 属性的列上将失败。
+GROUP BY ALL：
+- 如果在访问远程表的查询中还有 WHERE 子句，则该查询不支持 GROUP BY ALL。
+- 对于具有 FILESTREAM 属性的列，GROUP BY ALL 将失败。
   
-### <a name="with-distributedagg"></a>使用 (DISTRIBUTED_AGG)
-适用范围： Azure SQL 数据仓库和并行数据仓库
+### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
+适用范围：Azure SQL 数据仓库和并行数据仓库
 
-DISTRIBUTED_AGG 查询提示将强制大规模并行处理 (MPP) 系统在执行聚合之前重新分发的特定列上的表。 GROUP BY 子句中的只有一个列可以具有 DISTRIBUTED_AGG 查询提示。 查询完成后，删除重新分发的表。 原始表不会更改。  
+DISTRIBUTED_AGG 查询提示强制大规模并行处理 (MPP) 系统以在执行聚合之前重新分发特定列上的表。 GROUP BY 子句中只有一列可以拥有 DISTRIBUTED_AGG 查询提示。 查询完成后，重新分发的表被删除。 不会更改原始表格。  
 
-注意： DISTRIBUTED_AGG 查询提示为了向后兼容早期并行数据仓库版本，并且不会提高对于大多数查询的性能。 默认情况下，MPP 已时会将重新分配数据根据需要以提高聚合的性能。 
+注意：提供 DISTRIBUTED_AGG 查询提示是为了与早期的并行数据仓库版本向后兼容，对大多数查询而言，并不会提高其性能。 默认情况下，MPP 已根据需要重新分发数据以提高聚合的性能。 
   
 ## <a name="general-remarks"></a>一般备注
 
-### <a name="how-group-by-interacts-with-the-select-statement"></a>GROUP BY 与交互的方式的 SELECT 语句
-选择列表：
-- 向量的聚合函数。 如果聚合函数包括在选择列表中，GROUP BY 将计算每个组的汇总值。 这些函数称为矢量聚合。 
-- Distinct 聚合。 聚合 AVG (DISTINCT *column_name*)，计数 (DISTINCT *column_name*)，和总和 (DISTINCT *column_name*) 与汇总、 多维数据集和 GROUPING SETS 支持。
+### <a name="how-group-by-interacts-with-the-select-statement"></a>GROUP BY 如何与 SELECT 语句进行交互
+SELECT 列表：
+- 矢量聚合。 如果 SELECT 列表中包含聚合函数，则 GROUP BY 将计算每组的汇总值。 这些函数称为矢量聚合。 
+- Distinct 聚合。 ROLLUP、CUBE 和 GROUPING SETS 支持聚合 AVG (DISTINCT column_name)、COUNT (DISTINCT column_name) 和 SUM (DISTINCT column_name)。
   
 WHERE 子句：
-- SQL 中删除任何分组操作执行前不满足 WHERE 子句中的条件的行。  
+- 执行任何分组操作之前，SQL 会删除不满足 WHERE 子句中条件的行。  
   
 HAVING 子句：
-- SQL 使用 having 子句为结果集中筛选组。 
+- SQL 使用 having 子句来筛选结果集内的组。 
   
 ORDER BY 子句：
 - 使用 ORDER BY 子句可以对结果集进行排序。 GROUP BY 子句不能对结果集进行排序。 
   
 NULL 值：
-- 如果分组列包含 NULL 值，所有 NULL 值被都视为相等，它们是收集到单个组。   
+- 如果组合列包含 NULL 值，则所有的 NULL 值都将被视为相等，并会置入一个组中。   
   
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-适用于： SQL Server （从 2008年开始） 和 Azure SQL 数据仓库
+适用范围：SQL Server（从 2008 版开始）和 Azure SQL 数据仓库
 
 ### <a name="maximum-capacity"></a>最大容量
 
-为 GROUP BY 子句使用 ROLLUP、 CUBE 或 GROUPING SETS，表达式的最大数目为 32。 最大组数为 4096 (2<sup>12</sup>)。 下面的示例失败，因为 GROUP BY 子句有多个 4096 组。  
+对于使用 ROLLUP、CUBE 或 GROUPING SETS 的 GROUP BY 子句，表达式的最大数量为 32。 组的最大数量为 4096 (2<sup>12</sup>)。 下面的示例中，由于 GROUP BY 子句的组超过 4096 个，因此这些示例将失败。  
  
--   下面的示例生成 4097 (2<sup>12</sup> + 1) 对集进行分组，并且将失败。  
+-   下面的示例生成 4097 (2<sup>12</sup> + 1) 个分组集，将会失败。  
   
     ```  
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
--   下面的示例生成 4097 (2<sup>12</sup> + 1) 分组，并将失败。 `CUBE ()` 和 `()` 分组集会生成一个总计行，而且将不删除重复的分组集。  
+-   下面的示例生成 4097 (2<sup>12</sup> + 1) 个组，将会失败。 `CUBE ()` 和 `()` 分组集会生成一个总计行，而且将不删除重复的分组集。  
   
     ```  
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
     ```  
 
--   此示例使用向后兼容语法。 它会生成 8192 (2<sup>13</sup>) 对集进行分组，并且将失败。  
+-   此示例使用向后兼容语法。 它生成 8192 (2<sup>13</sup>) 个分组集，将会失败。  
   
     ```  
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
-    向后兼容 GROUP BY 子句不包含 CUBE 或 ROLLUP，分组依据的项的数目受到分组依据列的大小，聚合的列，并在查询中涉及的聚合值。 该限制从 8,060 字节的限制开始，对保存中间查询结果所需的中间级工作表有 8,060 字节的限制。 如果指定了 CUBE 或 ROLLUP，则最多只能有 12 个分组表达式。
+    对于不包含 CUBE 或 ROLLUP 的向后兼容 GROUP BY 子句，group by 的项数受查询所涉及的 GROUP BY 列的大小、聚合列和聚合值的限制。 该限制从 8,060 字节的限制开始，对保存中间查询结果所需的中间级工作表有 8,060 字节的限制。 如果指定了 CUBE 或 ROLLUP，则最多只能有 12 个分组表达式。
 
 ### <a name="support-for-iso-and-ansi-sql-2006-group-by-features"></a>对 ISO 和 ANSI SQL-2006 GROUP BY 功能的支持
 
-GROUP BY 子句支持使用以下语法例外的 SQL 2006 标准中包含的所有 GROUP BY 功能：  
+除了下面的语法，GROUP BY 子句支持 SQL-2006 标准中包括的所有 GROUP BY 功能：  
   
--   不允许在 GROUP BY 子句中使用分组集，除非它们是显式 GROUPING SETS 列表的一部分。 例如， `GROUP BY Column1, (Column2, ...ColumnN`) 标准中但在 TRANSACT-SQL 中不允许。  TRANSACT-SQL 支持`GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`和`GROUP BY Column1, Column2, ... ColumnN`，这在语义上等效。 这些示例与上面的 `GROUP BY` 示例在语义上等效。 这是为了避免出现的情况， `GROUP BY Column1, (Column2, ...ColumnN`) 可能被错误解释为`GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`，哪些不是在语义上等效。  
+-   不允许在 GROUP BY 子句中使用分组集，除非它们是显式 GROUPING SETS 列表的一部分。 例如，在该标准中允许使用 `GROUP BY Column1, (Column2, ...ColumnN`)，但在 Transact-SQL 中不允许使用。  Transact-SQL 支持 `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` 和 `GROUP BY Column1, Column2, ... ColumnN`，它们在语义上等效。 这些示例与上面的 `GROUP BY` 示例在语义上等效。 这是为了避免 `GROUP BY Column1, (Column2, ...ColumnN` 被误解为 `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`，它们在语义上不等效。  
   
--   不允许在分组集内部使用分组集。 例如， `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` SQL 2006 标准中但在 TRANSACT-SQL 中不允许。 TRANSACT-SQL 允许`GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )`或`GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`，它在语义上等效于第一个 GROUP BY 示例并具有一个更清晰的语法。  
+-   不允许在分组集内部使用分组集。 例如，在 SQL-2006 标准中允许使用 `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))`，但在 Transact-SQL 中不允许使用。 Transact-SQL 允许使用 `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` 或 `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`，它们与第一个 GROUP BY 示例在语义上等效，但其语法更清楚。  
   
--   [ALL/DISTINCT] 是仅允许使用 GROUP BY 简单 GROUP BY 子句中，其中包含列表达式。 不允许使用 GROUPING SETS、 汇总、 多维数据集、 WITH CUBE 或 WITH ROLLUP 构造。 ALL 是隐式默认值。 它还仅允许用在向后兼容语法。
+-   仅允许在包含列表达式的简单 GROUP BY 子句中使用 GROUP BY [ALL/DISTINCT]。 不允许与 GROUPING SETS、ROLLUP、CUBE、WITH CUBE 或 WITH ROLLUP 构造一起使用。 ALL 是隐式默认值。 仅允许用在向后兼容语法中使用。
   
 ### <a name="comparison-of-supported-group-by-features"></a>对支持的 GROUP BY 功能的比较  
- 下表介绍支持基于 SQL 版本和数据库兼容性级别的 GROUP BY 功能。  
+ 下表描述了不同的 SQL 版本以及数据库兼容级别支持的 GROUP BY 功能。  
   
 |功能|SQL Server Integration Services|SQL Server 兼容级别 100 或更高|SQL Server 2008 或兼容级别为 90 的更高版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 聚合|WITH CUBE 或 WITH ROLLUP 不支持。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP 支持。|与兼容级别 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|用户定义函数**dbo.cube (***arg1***，***...argN***)**或**dbo.rollup (***arg1***，**...*argN * * *)** 在 GROUP BY 子句允许。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|用户定义函数**dbo.cube (***arg1***，**...argN**)**或**dbo.rollup (**arg1**，***...argN***)**在 GROUP BY 子句不允许。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 将返回以下错误消息:"关键字多维数据集 &#124; 附近有语法错误汇总。"<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 下面的示例被允许:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|用户定义函数 **dbo.cube (***arg1***，* * *...argN*) 或**dbo.rollup (***arg1***，***...argN***)**在 GROUP BY 子句允许<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|不支持|Supported|Supported|  
-|CUBE|不支持|Supported|不支持|  
-|ROLLUP|不支持|Supported|不支持|  
-|总计，如 GROUP BY ()|不支持|Supported|Supported|  
-|GROUPING_ID 函数|不支持|Supported|Supported|  
-|GROUPING 函数|Supported|Supported|Supported|  
-|WITH CUBE|Supported|Supported|Supported|  
-|WITH ROLLUP|Supported|Supported|Supported|  
-|WITH CUBE 或 WITH ROLLUP“重复”分组删除|Supported|Supported|Supported| 
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 子句中不允许使用用户定义函数 dbo.cube (arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 返回下面的错误消息：“关键字 'cube'&#124;'rollup' 附近有语法错误”。<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 允许使用下面的示例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|不支持|是否支持|是否支持|  
+|CUBE|不支持|是否支持|不支持|  
+|ROLLUP|不支持|是否支持|不支持|  
+|总计，如 GROUP BY ()|不支持|是否支持|是否支持|  
+|GROUPING_ID 函数|不支持|是否支持|是否支持|  
+|GROUPING 函数|是否支持|是否支持|是否支持|  
+|WITH CUBE|是否支持|是否支持|是否支持|  
+|WITH ROLLUP|是否支持|是否支持|是否支持|  
+|WITH CUBE 或 WITH ROLLUP“重复”分组删除|是否支持|是否支持|是否支持| 
  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-use-a-simple-group-by-clause"></a>A. 使用简单的 GROUP BY 子句  
- 以下示例检索 `SalesOrderID` 表中各 `SalesOrderDetail` 的总数。 此示例使用 AdventureWorks。  
+### <a name="a-use-a-simple-group-by-clause"></a>A. 使用简单 GROUP BY 子句  
+ 以下示例检索 `SalesOrderID` 表中各 `SalesOrderDetail` 的总数。 本示例使用 AdventureWorks。  
   
 ```  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
@@ -373,8 +373,8 @@ GROUP BY SalesOrderID
 ORDER BY SalesOrderID;  
 ```  
   
-### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. 多个表使用 GROUP BY 子句  
- 下面的示例检索与 `City` 表联接的 `Address` 表中的各 `EmployeeAddress` 的雇员数。 此示例使用 AdventureWorks。 
+### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. 将 GROUP BY 子句用于多个表  
+ 下面的示例检索与 `City` 表联接的 `Address` 表中的各 `EmployeeAddress` 的雇员数。 本示例使用 AdventureWorks。 
   
 ```  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
@@ -385,8 +385,8 @@ GROUP BY a.City
 ORDER BY a.City;  
 ```  
   
-### <a name="c-use-a-group-by-clause-with-an-expression"></a>C. 使用的表达式中使用 GROUP BY 子句  
- 以下示例使用 `DATEPART` 函数检索每年的销售总额。 同一个表达式必须存在于这两`SELECT`列表和`GROUP BY`子句。  
+### <a name="c-use-a-group-by-clause-with-an-expression"></a>C. 将 GROUP BY 子句用于表达式  
+ 以下示例使用 `DATEPART` 函数检索每年的销售总额。 `SELECT` 列表和 `GROUP BY` 子句中必须存在相同的表达式。  
   
 ```  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
@@ -396,7 +396,7 @@ GROUP BY DATEPART(yyyy,OrderDate)
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>D. HAVING 子句中使用 GROUP BY 子句  
+### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>D. 将 GROUP BY 子句与 HAVING 子句一起使用  
  下面的示例使用 `HAVING` 子句来指定应当将 `GROUP BY` 子句中生成的哪个组包括在结果集内。  
   
 ```  
@@ -408,10 +408,10 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>示例： SQL 数据仓库和并行数据仓库  
+## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>示例：SQL 数据仓库和并行数据仓库  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 子句的基本用法  
- 下面的示例查找每天所有销售的总金额。 针对每一天，返回一行，其中包含的所有销售额的总和。  
+ 下面的示例查找每天所有销售的总金额。 返回每天包含所有销售额的总金额。  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -420,8 +420,8 @@ SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales
 GROUP BY OrderDateKey ORDER BY OrderDateKey;  
 ```  
   
-### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. 基本使用 DISTRIBUTED_AGG 提示  
- 此示例使用 DISTRIBUTED_AGG 查询提示以强制设备可以随机表上排布`CustomerKey`之前执行聚合的列。  
+### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. DISTRIBUTED_AGG 提示的基本用法  
+ 此示例使用 DISTRIBUTED_AGG 查询提示强制设备在执行聚合之前对 `CustomerKey` 列上的表随意排布。  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -432,8 +432,8 @@ GROUP BY CustomerKey WITH (DISTRIBUTED_AGG)
 ORDER BY CustomerKey DESC;  
 ```  
   
-### <a name="g-syntax-variations-for-group-by"></a>G. 通过为组的的语法变体  
- 如果选择列表中不有任何聚合，选择列表中每一列必须包含在 GROUP BY 列表中。 选择列表中的计算的列可以列出，但不是必需的 GROUP BY 列表中。 这些是语法上有效的 SELECT 语句的示例：  
+### <a name="g-syntax-variations-for-group-by"></a>G. GROUP BY 的语法变体  
+ SELECT 列表中没有聚合时，SELECT 列表中的每一列都必须包括在 GROUP BY 列表中。 SELECT 列表中的计算列可以在 GROUP BY 列表中列出，但不是必需的。 下面是语法上有效的 SELECT 语句的示例：  
   
 ```  
 -- Uses AdventureWorks  
@@ -445,8 +445,8 @@ SELECT SalesAmount, SalesAmount*1.10 SalesTax FROM FactInternetSales GROUP BY Sa
 SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10;  
 ```  
   
-### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>H. 使用 GROUP BY 与多个 GROUP BY 表达式  
- 下面的示例使用多个的结果进行分组`GROUP BY`条件。 如果是，在每个`OrderDateKey`组，则有加以区分的子组`DueDateKey`，将为该结果集定义新的组合。  
+### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>H. 将 GROUP BY 与多个 GROUP BY 表达式一起使用  
+ 下面的示例使用多个 `GROUP BY` 条件对结果进行分组。 如果在每个 `OrderDateKey` 组中有可以通过 `DueDateKey` 进行区分的子组，则将为结果集定义一个新分组。  
   
 ```  
 -- Uses AdventureWorks  
@@ -457,7 +457,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>I. 将 GROUP BY 子句与 HAVING 子句一起使用  
- 下面的示例使用`HAVING`子句来指定在生成的组`GROUP BY`子句应包含在结果集。 仅在 2004年或更高版本中的订单日期具有这些组将包含在结果中。  
+ 下面的示例使用 `HAVING` 子句来指定应当包含在结果集中的 `GROUP BY` 子句中生成的组。 仅具有 2004 年或以后的订单日期的组才会包含在结果中。  
   
 ```  
 -- Uses AdventureWorks  
@@ -470,10 +470,10 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [GROUPING_ID &#40;Transact SQL &#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
- [分组 &#40;Transact SQL &#41;](~/t-sql/functions/grouping-transact-sql.md)   
+ [GROUPING_ID (Transact-SQL)](~/t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUPING (Transact-SQL)](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT (Transact-SQL)](~/t-sql/queries/select-transact-sql.md)   
- [SELECT 子句 &#40;Transact SQL &#41;](~/t-sql/queries/select-clause-transact-sql.md)  
+ [SELECT 子句 (Transact-SQL)](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
 

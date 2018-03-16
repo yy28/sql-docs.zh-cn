@@ -1,5 +1,5 @@
 ---
-title: "STDEVP (Transact SQL) |Microsoft 文档"
+title: STDEVP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -67,22 +67,22 @@ STDEVP (expression) OVER ( [ partition_by_clause ] order_by_clause)
  指定考虑每一个唯一值。  
   
  *expression*  
- 是一个数字[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。 *表达式*除是精确数字或近似数值数据类型类别的表达式**位**数据类型。  
+ 数值[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允许使用聚合函数和子查询。 expression 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式。  
   
- 通过**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*将划分为分区函数应用到的 FROM 子句生成的结果集。 如果未指定，则此函数将查询结果集的所有行视为单个组。 *order_by_clause*确定在其中执行该操作的逻辑顺序。 *order_by_clause*是必需的。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER ( [ partition_by_clause ] order_by_clause)  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果在 SELECT 语句中的所有项目上都使用 STDEVP，则计算中包括结果集内的每个值。 STDEVP 只能用于数字列。 Null 值会被忽略。  
   
  STDEVP 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-stdevp"></a>答： 使用 STDEVP  
+### <a name="a-using-stdevp"></a>A：使用 STDEVP  
  以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的总体标准偏差。  
   
 ```  
@@ -91,10 +91,10 @@ FROM Sales.SalesPerson;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-stdevp"></a>B： 使用 STDEVP  
- 下面的示例返回`STDEVP`的表中的销售配额值`dbo.FactSalesQuota`。 第一列包含所有非重复值的标准偏差和第二列包含包括任何重复项的值的所有值的标准偏差。  
+### <a name="b-using-stdevp"></a>B：使用 STDEVP  
+ 下面的示例返回表 `dbo.FactSalesQuota` 中的销售配额值的 `STDEVP`。 第一列中包含所有非重复值的标准差，第二列中包含所有值（包括任何重复值）的标准差。  
   
 ```  
 -- Uses AdventureWorks  
@@ -112,8 +112,8 @@ Distinct_Values   All_Values
 397676.79         397226.44
 ```  
   
-### <a name="c-using-stdevp-with-over"></a>C. STDEVP 使用转移  
- 下面的示例返回`STDEVP`日历年中每个季度的销售配额值。 注意，`ORDER BY` 子句中的 `OVER` 对 `STDEVP` 进行排序，`ORDER BY` 语句的 `SELECT` 对结果集进行排序。  
+### <a name="c-using-stdevp-with-over"></a>C. 通过 OVER 使用 STDEVP  
+ 下面的示例返回日历年中每季度的销售配额值的 `STDEVP`。 注意，`ORDER BY` 子句中的 `OVER` 对 `STDEVP` 进行排序，`ORDER BY` 语句的 `SELECT` 对结果集进行排序。  
   
 ```  
 -- Uses AdventureWorks  
@@ -137,8 +137,8 @@ Year  Quarter  SalesQuota              StdDeviation
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [聚合函数 &#40;Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [通过子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

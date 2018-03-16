@@ -1,5 +1,5 @@
 ---
-title: "WITH XMLNAMESPACES (TRANSACT-SQL) |Microsoft 文档"
+title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -69,13 +69,13 @@ DEFAULT <xml_namespace_uri>
 ```  
   
 ## <a name="arguments"></a>参数  
- *xml_namespace_uri*  
- 统一资源标识符 (URI)，用于标识正在声明的 XML 命名空间。 *xml_namespace_uri*为 SQL 字符串。  
+ xml_namespace_uri  
+ 统一资源标识符 (URI)，用于标识正在声明的 XML 命名空间。 xml_namespace_uri 是 SQL 字符串。  
   
- *xml_namespace_prefix*  
- 指定要映射和中指定的命名空间 URI 值相关联的前缀*xml_namespace_uri*。 *xml_namespace_prefix*必须[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]标识符。  
+ xml_namespace_prefix  
+ 指定一个要映射并与在 xml_namespace_uri 中指定的命名空间 URI 值关联的前缀。 xml_namespace_prefix 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在还包括公用表表达式的语句中使用 WITH XMLNAMESPACES 子句时，WITH XMLNAMESPACES 子句必须位于语句中的公用表表达式的前面。  
   
  下面是在使用 WITH XMLNAMESPACES 子句时所应用的常规语法规则：  
@@ -96,7 +96,7 @@ DEFAULT <xml_namespace_uri>
   
 -   URI 字符串值按照当前数据库排序规则代码页进行编码，并且将内部转换为 Unicode。  
   
--   XML 命名空间 URI 将空白折叠以下 XSD 空白折叠规则用于**xs: anyuri**。 另外，不会对 XML 命名空间 URI 值执行实体化和反实体化。  
+-   XML 命名空间 URI 将按照用于 xs:anyURI 的 XSD 空格折叠规则进行空格折叠。 另外，不会对 XML 命名空间 URI 值执行实体化和反实体化。  
   
 -   系统将检查 XML 命名空间 URI 中是否有无效的 XML 1.0 字符，如果发现这样的字符（例如，U+0007），将引发错误。  
   
@@ -105,7 +105,7 @@ DEFAULT <xml_namespace_uri>
 -   XMLNAMESPACES 关键字保留在 WITH 子句的上下文中。  
   
 ## <a name="examples"></a>示例  
- 有关示例，请参阅[将命名空间添加到查询使用 WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
+ 有关示例，请参阅[使用 WITH XMLNAMESPACES 将命名空间添加到查询](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  

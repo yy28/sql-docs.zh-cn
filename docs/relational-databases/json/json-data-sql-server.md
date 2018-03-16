@@ -1,7 +1,7 @@
 ---
 title: "在 SQL Server 中处理 JSON 数据 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/31/2017
+ms.date: 02/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
@@ -20,16 +20,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a59a53bb9c279a8f66a4aa259212269179d477b1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8ce81acc4134e1b8b9570d2eb871e1beb5565673
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON 是一种流行的数据格式，用于在现代 Web 和移动应用程序中交换数据。 JSON 还可用于在日志文件或 Microsoft Azure Cosmos DB 等 NoSQL 数据库中存储非结构化数据。 许多 REST Web 服务以 JSON 文本格式返回结果，或接受采用 JSON 格式的数据。 例如，大多数 Azure 服务（如 Azure 搜索、Azure 存储和 Azure Cosmos DB）都提供返回或使用 JSON 的 REST 终结点。 JSON 也是用于通过 AJAX 调用在网页与 Web 服务器之间交换数据的主要格式。 
+
+SQL Server 中的 JSON 函数使用户能在同一数据库中将 NoSQL 和相关概念合并。 现在，可以将经典关系列与同一表中包含格式化为 JSON 文本的文档的列合并，在关系结构中分析和导入 JSON 文档，或者将关系数据格式化为 JSON 文本。 在以下视频中可看到 JSON 函数如何在 SQL Server 和 Azure SQL 数据库中连接关系概念和 NoSQL 概念：
+
+JSON 充当 NoSQL 和关系环境之间的桥梁
+> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
  
 下面是 JSON 文本的示例： 
  
@@ -53,7 +58,10 @@ JSON 是一种流行的数据格式，用于在现代 Web 和移动应用程序�
 ![内置的 JSON 支持概述](../../relational-databases/json/media/jsonslides1overview.png "内置的 JSON 支持概述")  
   
 ## <a name="key-json-capabilities-of-sql-server-and-sql-database"></a>SQL Server 和 SQL 数据库的关键 JSON 功能
-下一部分介绍 SQL Server 随其内置 JSON 支持一起提供的主要功能。
+下一部分介绍 SQL Server 随其内置 JSON 支持一起提供的主要功能。 在以下视频中可看到如何使用 JSON 函数和运算符：
+
+SQL Server 2016 和 JSON 支持
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>从 JSON 文本中提取值并在查询中使用这些值
 如果使用存储在数据库表中的 JSON 文本，则可以使用以下内置函数来读取或修改 JSON 文本中的值：  
@@ -312,15 +320,12 @@ FOR JSON AUTO
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
 
-SQL Server 2016 和 JSON 支持
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
-
 在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
-JSON 充当 NoSQL 和关系环境之间的桥梁
-> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
-   
+在 SQL Server 中使用 JSON 函数构建 REST API
+> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+
 ### <a name="reference-articles"></a>参考文章  
   
 -   [FOR 子句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
@@ -330,5 +335,3 @@ JSON 充当 NoSQL 和关系环境之间的桥梁
     -   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)  
     -   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)  
     -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)  
-  
-  

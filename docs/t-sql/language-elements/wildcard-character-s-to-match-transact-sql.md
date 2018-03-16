@@ -1,5 +1,5 @@
 ---
-title: "[] （通配符-到匹配项的字符） (Transact SQL) |Microsoft 文档"
+title: "[ ]（通配符 - 要匹配的字符）(Transact-SQL)| Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -34,14 +34,14 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] （通配符-到匹配项个字符） (Transact SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \]（通配符 - 要匹配的字符）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  在指定的范围或括号之间指定集内的任何单个字符匹配`[ ]`。 可以在涉及模式匹配，如的字符串比较中使用这些通配符`LIKE`和`PATINDEX`。  
+  匹配指定范围内或者属于方括号 `[ ]` 所指定的集合中的任意单个字符。 可以在涉及模式匹配的字符串比较（例如，`LIKE` 和 `PATINDEX`）中使用这些通配符。  
   
 ## <a name="examples"></a>示例  
-### <a name="a-simple-example"></a>答： 简单的示例   
-下面的示例返回的字母开头的名称`m`。 `[n-z]`指定，使用某处范围内必须是第二个字母`n`到`z`。 百分号通配符`%`允许使用 3 字符开头的任何或任何字符。 `model`和`msdb`数据库满足此条件。 `master`数据库不并且不包括在结果集。
+### <a name="a-simple-example"></a>A：简单示例   
+以下示例返回以 `m` 开头的名称。 `[n-z]` 指定第二个字母必须是 `n` 到 `z` 范围内的某个字母。 百分号通配符 `%` 允许任何或不包含以 3 个字符开头的字符。 `model` 数据库和 `msdb` 数据库均符合此条件。 `master` 数据库不在结果集中，且被排除在结果集外。
  
 ```sql
 SELECT name FROM sys.databases
@@ -55,10 +55,10 @@ name
 model
 msdb
 ```   
- 您可能必须安装的其他符合条件的数据库。
+ 可能必须安装其他符合条件的数据库。
 
 
-### <a name="b-more-complex-example"></a>B： 更复杂示例   
+### <a name="b-more-complex-example"></a>B：更复杂的示例   
  以下示例使用 [] 运算符查找其地址中有四位邮政编码的所有 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 雇员的 ID 和姓名。  
   
 ```sql  
@@ -84,10 +84,10 @@ EmployeeID      FirstName      LastName      PostalCode
 
   
 ## <a name="see-also"></a>另请参阅  
- [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [PATINDEX &#40;Transact SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [%&#40;通配符-字符 &#40; &#41;到匹配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93;&#40;通配符-字符 &#40; &#41;不到匹配 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [\_&#40;通配符-匹配一个字符 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)   
+  [%（通配符 - 需匹配的字符）(Transact-SQL)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+ [[^]（通配符 - 无需匹配的字符）(Transact-SQL)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [\_（通配符 - 匹配一个字符）(Transact-SQL)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

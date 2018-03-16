@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYKEYAUTOASYMKEY (Transact SQL) |Microsoft 文档"
+title: DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
@@ -49,37 +49,37 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
 ```  
   
 ## <a name="arguments"></a>参数  
- *akey_ID*  
- 用于保护对称密钥的非对称密钥的 ID。 *akey_ID*是**int**。  
+ akey_ID  
+ 用于保护对称密钥的非对称密钥的 ID。 akey_ID 是 int。  
   
- *akey_password*  
- 用于保护非对称密钥私钥的密码。 如果私钥受数据库主密钥保护，则该值可以为 NULL。 *akey_password*是**nvarchar**。  
+ akey_password  
+ 用于保护非对称密钥私钥的密码。 如果私钥受数据库主密钥保护，则该值可以为 NULL。 akey_password 是 nvarchar。  
   
- *已加密文本*  
- 使用密钥进行加密的数据。 *已加密文本*是**varbinary**。  
+ 'ciphertext'  
+ 使用密钥进行加密的数据。 ciphertext 的数据类型为 varbinary。  
   
  @ciphertext  
- 是类型的变量**varbinary**包含使用密钥加密的数据。  
+ 包含已使用密钥进行加密的数据的 varbinary 类型变量。  
   
- *add_authenticator*  
- 指示是否与明文一起加密验证器。 必须是相同的值传递给 EncryptByKey 时的数据进行加密。 如果使用了验证器，则为 1。 *add_authenticator*是**int**。  
+ add_authenticator  
+ 指示是否与明文一起加密验证器。 对数据进行加密时，该值必须与传递给 EncryptByKey 的值相同。 如果使用了验证器，则为 1。 add_authenticator 的数据类型为 int。  
   
  @add_authenticator  
- 指示是否与明文一起加密验证器。 必须是相同的值传递给 EncryptByKey 时的数据进行加密。  
+ 指示是否与明文一起加密验证器。 对数据进行加密时，该值必须与传递给 EncryptByKey 的值相同。  
   
- *身份验证器*  
- 从中生成验证器的数据。 必须与提供给 EncryptByKey 的值相匹配。 *身份验证器*是**sysname**。  
+ authenticator  
+ 从中生成验证器的数据。 必须与提供给 EncryptByKey 的值相匹配。 authenticator 的数据类型为 sysname。  
   
  @authenticator  
  包含用于生成验证器的数据的变量。 必须与提供给 EncryptByKey 的值相匹配。  
   
 ## <a name="return-types"></a>返回类型  
- **varbinary** 8000 个字节的最大大小。  
+ varbinary（最大大小为 8000 个字节）。  
   
-## <a name="remarks"></a>注释  
- DecryptByKeyAutoAsymKey 组合了 OPEN SYMMETRIC KEY 和 DecryptByKey 的功能。 在单个操作中，它对对称密钥进行解密，并使用该密钥来解密已加密文本。  
+## <a name="remarks"></a>Remarks  
+ DecryptByKeyAutoAsymKey 组合了 OPEN SYMMETRIC KEY 和 DecryptByKey 的功能。 在单个操作中，它可以解密对称密钥，并使用该密钥解密密码文本。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对称密钥拥有 VIEW DEFINITION 权限以及对非对称密钥拥有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
@@ -135,8 +135,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [ENCRYPTBYKEY &#40;Transact SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEY &#40;Transact SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY (Transact-SQL)](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY (Transact-SQL)](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

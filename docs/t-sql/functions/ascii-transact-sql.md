@@ -1,5 +1,5 @@
 ---
-title: "ASCII (Transact SQL) |Microsoft 文档"
+title: ASCII (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>参数  
 *character_expression*  
-是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)类型的**char**或**varchar**。
+char 或 varchar 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
  **int**  
   
-## <a name="remarks"></a>注释
-ASCII 是美国信息交换的标准代码的缩写。 它是编码标准的计算机使用的字符。 ASCII 字符的列表，请参阅**可打印字符**部分[ASCII](https://www.wikipedia.org/wiki/ASCII)。
+## <a name="remarks"></a>Remarks
+ASCII 是美国信息交换标准码的缩写。 它是计算机使用的字符编码标准。 若要获取 ASCII 字符列表，请参阅 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的“可打印字符”部分。
 
 ## <a name="examples"></a>示例  
-下面的示例假定 ASCII 字符集，并返回`ASCII`6 个字符的值。
+以下示例假定一个 ASCII 字符集，并返回 6 个字符的 `ASCII` 值。
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -75,10 +75,10 @@ A           B           a           b           1           2
 ```  
   
 ## <a name="see-also"></a>另请参阅
- [CHAR &#40;Transact SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR &#40;Transact SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)  
- [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [CHAR (Transact-SQL)](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)  
+ [UNICODE (Transact-SQL)](../../t-sql/functions/unicode-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "DATETIME2FROMPARTS (Transact SQL) |Microsoft 文档"
+title: DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-返回**datetime2**值的指定的日期和时间并使用指定的精度。
+对指定的日期和时间返回 datetime2 值（具有指定精度）。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,38 +45,38 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 ```  
   
 ## <a name="arguments"></a>参数  
-*年*  
+year  
 用于指定年度的整数表达式。
   
-*月*  
+month  
 用于指定月份的整数表达式。
   
-*一天*  
+day  
 用于指定日期的整数表达式。
   
- *小时*  
+ hour  
 用于指定小时的整数表达式。
   
-*分钟*整数表达式，指定分钟。
+minute 用于指定分钟的整数表达式。
   
 *seconds*  
 用于指定秒的整数表达式。
   
-*分数 （竖式)*  
+fractions  
 用于指定小数部分的整数表达式。
   
 *精度*  
-指定的精度的整数文本**datetime2**要返回值。
+整数文字，用于指定要返回的 datetime2 值的精度。
   
 ## <a name="return-types"></a>返回类型
-**datetime2 (** *精度* **)**
+**datetime2(** precision **)**
   
-## <a name="remarks"></a>注释  
-**DATETIME2FROMPARTS**返回完全初始化**datetime2**值。 如果自变量不是有效的将引发错误。 如果所需的参数为 null，则返回 null。 但是，如果*精度*自变量为 null，则引发错误。
+## <a name="remarks"></a>Remarks  
+DATETIME2FROMPARTS 返回完全初始化的 datetime2 值。 如果参数无效，则引发错误。 如果所需的参数为 null，则返回 null。 但是，如果 precision 参数为 Null，则会引发错误。
   
-*分数 （竖式)*取决于自变量*精度*自变量。 例如，如果*精度*为 7，则每个部分表示 100 纳秒; 如果*精度*为 3，则每个部分表示以毫秒为单位。 如果值*精度*为零，则值*分数 （竖式)*还必须为零; 否则，将引发错误。
+fractions 参数取决于 precision 参数。 例如，如果 precision 为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒。 如果 precision 的值为零，则 fractions 的值也必须为零；否则将引发错误。
   
-此函数可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器以及更高版本上远程执行。 它将不到具有以下版本的服务器进行远程处理[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+此函数可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器以及更高版本上远程执行。 但在低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器版本中无法远程执行。
   
 ## <a name="examples"></a>示例  
   
@@ -97,13 +97,13 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. 包含秒的小数部分的示例  
-下面的示例演示了利用*分数 （竖式)*和*精度*参数：
+以下示例演示了 fractions 和 precision 参数的用法：
   
-1.  当*分数 （竖式)*的值为 5 和*精度*具有值为 1，然后将值*分数 （竖式)*表示 5/10 的第二个。  
+1.  如果 fractions 的值为 5、precision 的值为 1，则 fractions 的值表示 5/10 秒。  
   
-2.  当*分数 （竖式)*的值为 50 和*精度*具有值为 2，然后将值*分数 （竖式)*表示的第二个 50/100。  
+2.  如果 fractions 的值为 50、precision 的值为 2，则 fractions 的值表示 50/100 秒。  
   
-3.  当*分数 （竖式)*的值为 500 和*精度*具有值 3，然后将值*分数 （竖式)*表示 500/1000 的第二个。  
+3.  如果 fractions 的值为 500、precision 的值为 3，则 fractions 的值表示 500/1000 秒。  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  

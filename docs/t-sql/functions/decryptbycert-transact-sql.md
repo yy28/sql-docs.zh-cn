@@ -1,5 +1,5 @@
 ---
-title: "DECRYPTBYCERT (Transact SQL) |Microsoft 文档"
+title: DECRYPTBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,32 +49,32 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>参数  
- *certificate_ID*  
- 数据库中证书的 ID。 *证书*_ID 是**int**。  
+ certificate_ID  
+ 数据库中证书的 ID。 certificate_ID 为 int。  
   
- *已加密文本*  
+ ciphertext  
  已用证书的公钥加密的数据的字符串。  
   
  @ciphertext  
- 是类型的变量**varbinary**包含已使用证书加密的数据。  
+ 是 varbinary 类型的变量，包含已使用证书进行加密的数据。  
   
- *cert_password*  
+ cert_password  
  用来加密证书私钥的密码。 必须为 Unicode 字符。  
   
  @cert_password  
- 是类型的变量**nchar**或**nvarchar**包含用于加密证书的私钥的密码。 必须为 Unicode 字符。  
+ 类型为 nchar 或 nvarchar 的变量，其中包含用来加密证书私钥的密码。 必须为 Unicode 字符。  
   
 ## <a name="return-types"></a>返回类型  
- **varbinary** 8000 个字节的最大大小。  
+ varbinary（最大大小为 8000 个字节）。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此函数用证书的私钥解密数据。 使用非对称密钥进行的加密转换会消耗大量资源。 因此，EncryptByCert 和 DecryptByCert 不适合用于对用户数据的例行加密。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例从 `[AdventureWorks2012].[ProtectedData04]` 中选择标记为 `data encrypted by certificate JanainaCert02` 的行。 此示例使用证书 `JanainaCert02` 的私钥对密码进行解密，首次解密时使用的是证书的密码 `pGFD4bb925DGvbd2439587y`。 已解密的数据转换从**varbinary**到**nvarchar**。  
+ 下面的示例从 `[AdventureWorks2012].[ProtectedData04]` 中选择标记为 `data encrypted by certificate JanainaCert02` 的行。 此示例使用证书 `JanainaCert02` 的私钥对密码进行解密，首次解密时使用的是证书的密码 `pGFD4bb925DGvbd2439587y`。 解密后的数据将从 varbinary 转换为 nvarchar。  
   
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
@@ -86,10 +86,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ENCRYPTBYCERT &#40;Transact SQL &#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
+ [ENCRYPTBYCERT (Transact-SQL)](../../t-sql/functions/encryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [删除证书 &#40;Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "@@FETCH_STATUS (Transact SQL) |Microsoft 文档"
+title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>& #x 40; 和 #x 40;FETCH_STATUS (Transact SQL)
+# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回针对连接当前打开的任何游标发出的最后一条游标 FETCH 语句的状态。  
@@ -59,12 +59,12 @@ ms.lasthandoff: 11/21/2017
 |-2|提取的行不存在。|
 |-9|光标未执行提取操作。|  
   
-## <a name="remarks"></a>注释  
- 因为 @@FETCH_STATUS适用于所有游标连接时，使用 @@FETCH_STATUS仔细。 FETCH 语句执行后，测试 @@FETCH_STATUS对另一个游标执行任何其他 FETCH 语句之前，必须执行。 值 @@FETCH_STATUS之前连接上发生的所有读取操作是不确定。  
+## <a name="remarks"></a>Remarks  
+ 由于 @@FETCH_STATUS 对于在一个连接上的所有游标都是全局性的，所以要谨慎使用 @@FETCH_STATUS。 在执行一条 FETCH 语句后，必须在对另一游标执行另一 FETCH 语句前测试 @@FETCH_STATUS。 在此连接上出现任何提取操作之前，@@FETCH_STATUS 的值没有定义。  
   
- 例如，用户从一个游标执行一条 FETCH 语句，然后调用一个存储过程，此存储过程打开并处理另一个游标的结果。 从调用的存储过程，返回控件时@FETCH_STATUS反映上次提取在存储的过程中，不执行之前调用存储的过程的 FETCH 语句执行。  
+ 例如，用户从一个游标执行一条 FETCH 语句，然后调用一个存储过程，此存储过程打开并处理另一个游标的结果。 从被调用的存储过程返回控制后，@@FETCH_STATUS 反映的是在存储过程中执行的最后的 FETCH 语句的结果，而不是在存储过程被调用之前的 FETCH 语句的结果。  
   
- 若要检索特定光标的最后一个提取状态，查询**fetch_status**列**sys.dm_exec_cursors**动态管理函数。  
+ 若要检索特定游标的最后提取状态，请查询 sys.dm_exec_cursors 动态管理函数的 fetch_status 列。  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `@@FETCH_STATUS` 来控制 `WHILE` 循环中的游标活动。  
@@ -86,6 +86,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [游标函数 (Transact-SQL)](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [提取 &#40;Transact SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH (Transact-SQL)](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

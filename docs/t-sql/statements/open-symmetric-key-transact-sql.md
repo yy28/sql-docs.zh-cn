@@ -1,5 +1,5 @@
 ---
-title: "OPEN SYMMETRIC KEY (TRANSACT-SQL) |Microsoft 文档"
+title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -59,33 +59,33 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  *Key_name*  
  要打开的对称密钥的名称。  
   
- 证书*certificate_name*  
+ CERTIFICATE certificate_name  
  证书的名称，该证书的私钥将用于解密对称密钥。  
   
- 非对称密钥*asym_key_name*  
+ ASYMMETRIC KEY asym_key_name  
  非对称密钥的名称，该密钥的私钥将用于解密对称密钥。  
   
- 使用密码 =*密码*  
+ WITH PASSWORD ='password'  
  用于解密证书或非对称密钥的私钥的密码。  
   
- 对称密钥*decrypting_key_name*  
+ SYMMETRIC KEY *decrypting_key_name*  
  对称密钥的名称，该密钥将用于解密正在打开的对称密钥。  
   
- 密码 =*密码*  
+ PASSWORD ='password'  
  用于保护对称密钥的密码。  
   
-## <a name="remarks"></a>注释  
- 打开的对称密钥将绑定到会话而不是安全上下文。 打开的密钥将持续有效，直到它显式关闭或会话终止。 如果您打开一个对称密钥然后切换上下文，则该密钥将保持打开状态并在模拟的上下文中可用。 有关打开的对称密钥的信息会显示在[sys.openkeys &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md)目录视图。  
+## <a name="remarks"></a>Remarks  
+ 打开的对称密钥将绑定到会话而不是安全上下文。 打开的密钥将持续有效，直到它显式关闭或会话终止。 如果您打开一个对称密钥然后切换上下文，则该密钥将保持打开状态并在模拟的上下文中可用。 可以在 [sys.openkeys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 目录视图中查看有关打开的对称密钥的信息。  
   
  如果对称密钥由另一个密钥加密，则必须首先打开该密钥。  
   
- 对称密钥已打开，该查询是否**NO_OP**。  
+ 如果对称密钥已打开，则查询为 **NO_OP**。  
   
  如果所提供的用于解密对称密钥的密码、证书或密钥不正确，则查询将失败。  
   
- 无法打开使用加密提供程序创建的对称密钥。 使用这种类型的对称密钥的加密和解密操作成功的没有**打开**语句因为打开和关闭密钥加密提供程序。  
+ 无法打开使用加密提供程序创建的对称密钥。 没有 **OPEN** 语句，使用此类对称密钥的加密和解密操作也会成功，因为加密提供程序会打开和关闭密钥。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  调用方必须具有对密钥的某些权限，并且必须未被拒绝授予对密钥的 VIEW DEFINITION 权限。 其他权限要求因解密机制的而异：  
   
 -   DECRYPTION BY CERTIFICATE：具有对证书的 CONTROL 权限并且知道加密其私钥的密码。  
@@ -123,7 +123,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [关闭对称密钥 &#40;Transact SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [可扩展密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

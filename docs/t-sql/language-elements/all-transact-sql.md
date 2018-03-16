@@ -1,5 +1,5 @@
 ---
-title: "所有 (Transact SQL) |Microsoft 文档"
+title: ALL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ```  
   
 ## <a name="arguments"></a>参数  
- *scalar_expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ scalar_expression  
+ 为任意有效的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
- 是一个比较运算符。  
+ 一个比较运算符。  
   
- *subquery*  
- 返回单列结果集的子查询。 返回的列的数据类型必须是相同的数据类型的数据类型作为*scalar_expression*。  
+ subquery  
+ 返回单列结果集的子查询。 返回列的数据类型必须与 scalar_expression 的数据类型相同。  
   
  受限的 SELECT 语句，其中不允许使用 ORDER BY 子句和 INTO 关键字。  
   
@@ -65,17 +65,17 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>结果值  
- 指定比较为 TRUE 后，则返回 TRUE 的所有对 (*scalar_expression***，***x)*，当*x*是单列集合中的值; 否则返回 FALSE。  
+ 如果对于所有比较对 (scalar_expression,x) 指定的比较均为 TRUE（其中 x 是单列集中的值），则返回 TRUE；否则返回 FALSE。  
   
-## <a name="remarks"></a>注释  
- 需要所有*scalar_expression*要与子查询返回的每个值的明确进行比较。 例如，如果子查询将返回值为 2 和 3， *scalar_expression* < = 所有 （子查询），则计算结果为 TRUE 作为*scalar_expression*为 2。 如果子查询将返回值为 2 和 3， *scalar_expression* = 所有 （子查询），则计算结果为 FALSE，因为某些子查询 （3 的值） 的值将不满足的条件表达式。  
+## <a name="remarks"></a>Remarks  
+ ALL 要求 scalar_expression 与子查询返回的每个值进行比较时都应满足比较条件。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_expression，scalar_expression <= ALL（子查询）的计算结果为 TRUE。 如果子查询返回的值为 2 和 3，则 scalar_expression = ALL（子查询）的计算结果将为 FALSE，因为子查询的某些值（等于 3 的值）不满足表达式的条件。  
   
- 对于需要的语句， *scalar_expression*要只有一个子查询返回的值与明确进行比较，请参阅[一些 &#124;任何 &#40;Transact SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
+ 有关要求 scalar_expression 只与子查询返回的某一个值比较时满足比较条件的语句，请参阅 [SOME | ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md)。  
   
- 本主题讨论了 ALL 用于子查询的情况。 此外可以与使用所有[联合](../../t-sql/language-elements/set-operators-union-transact-sql.md)和[选择](../../t-sql/queries/select-transact-sql.md)。  
+ 本主题讨论了 ALL 用于子查询的情况。 ALL 也可以与 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 一起使用。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建存储的过程，用于确定是否指定的所有组件`SalesOrderID`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]可以在指定的天数内生产数据库。 该示例使用子查询为具有特定 `DaysToManufacture` 的所有组件创建 `SalesOrderID` 值的列表，然后确认所有 `DaysToManufacture` 都在指定的天数内。  
+ 以下示例创建一个存储过程，该过程确定是否能够在指定的天数中制造出 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中具有指定 `SalesOrderID` 的所有组件。 该示例使用子查询为具有特定 `DaysToManufacture` 的所有组件创建 `SalesOrderID` 值的列表，然后确认所有 `DaysToManufacture` 都在指定的天数内。  
   
 ```  
 -- Uses AdventureWorks  
@@ -116,13 +116,13 @@ EXECUTE DaysToBuild 49080, 1 ;
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a>另请参阅  
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
+ [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)  
   
   

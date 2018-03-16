@@ -1,5 +1,5 @@
 ---
-title: "STNumCurves (geography 数据类型) |Microsoft 文档"
+title: "STNumCurves（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  在一维返回的曲线数目**geography**实例。  
+  返回一维 geography 实例中的曲线数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- 一维空间数据类型包括**LineString**， **CircularString**，和**CompoundCurve**。 一维空**geography**实例，则返回 0。  
+## <a name="remarks"></a>Remarks  
+ 一维空间数据类型包括 LineString、CircularString 和 CompoundCurve。 空的一维 geography 实例返回 0。  
   
- `STNumCurves`（） 仅适用于简单类型;它并不适用于**geography**集合喜欢**MultiLineString**。 **NULL**时返回**geography**实例不是一维数据类型。  
+ `STNumCurves`() 仅适用于简单类型，它不适用于 MultiLineString 之类的 geography 集合。 当 geography 实例不是一维数据类型时，将返回 NULL。  
   
- **Null**为未初始化返回**geography**实例。  
+ 对于未初始化的 geography 实例，返回 Null。  
   
 ## <a name="examples"></a>示例  
   

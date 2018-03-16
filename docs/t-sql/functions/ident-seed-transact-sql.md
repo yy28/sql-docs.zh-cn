@@ -1,5 +1,5 @@
 ---
-title: "IDENT_SEED (Transact SQL) |Microsoft 文档"
+title: IDENT_SEED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回原始的种子值 (作为返回**数值**(**@@**MAXPRECISION，0)) 创建一个表或视图中的标识列时指定。 使用 DBCC CHECKIDENT 更改标识列的当前值不会更改此函数返回的值。  
+  返回原始种子值（返回形式为 numeric(@@MAXPRECISION,0)），该值是在表或视图中创建标识列时指定的。 使用 DBCC CHECKIDENT 更改标识列的当前值不会更改此函数返回的值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +48,8 @@ IDENT_SEED ( 'table_or_view' )
 ```  
   
 ## <a name="arguments"></a>参数  
-  *table_or_view*   
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)指定的表或视图以检查标识种子值。 *table_or_view*可以是括在引号、 变量、 一个函数或列名称的字符字符串常量。 *table_or_view*是**char**， **nchar**， **varchar**，或**nvarchar**。  
+ 'table_or_view'  
+ 指定表或视图以检查标识种子值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view 可以是带有引号的字符串常量，也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar。  
   
 ## <a name="return-types"></a>返回类型  
  **numeric**  
@@ -99,11 +99,11 @@ dbo                AWBuildVersion                         1
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
- [Ident_incr 和 &#40;Transact SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR (Transact-SQL)](../../t-sql/functions/ident-incr-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

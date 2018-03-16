@@ -1,5 +1,5 @@
 ---
-title: "TODATETIMEOFFSET (Transact SQL) |Microsoft 文档"
+title: TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回**datetimeoffset**从转换的值**datetime2**表达式。  
+  返回从 datetime2 表达式转换的 datetimeoffset 值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,19 +52,19 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)解析为[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)值。  
+ 一个解析为 [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 > [!NOTE]  
->  表达式的类型不能为**文本**， **ntext**，或**映像**因为这些类型不能隐式转换为**varchar**或**nvarchar**。  
+>  该表达式的类型不能为 text、ntext 或 image，因为这些类型无法隐式转换为 varchar 或 nvarchar。  
   
- *time_zone*  
+ time_zone  
  是表示时区偏移量（分钟）（如果为整数）的表达式，例如 -120；或表示小时和分钟数的表达式（如果为字符串），例如“+13.00”。 范围为 +14 到 -14（小时）。 该表达式被解释为指定 time_zone 的本地时间。  
   
 > [!NOTE]  
 >  如果表达式是字符串，其格式必须为 {+|-}TZH:THM。  
   
 ## <a name="return-type"></a>返回类型  
- **datetimeoffset**。 小数精度等同于*datetime*自变量。  
+ datetimeoffset。 小数精度与 datetime 参数相同。  
   
 ## <a name="examples"></a>示例  
   
@@ -98,9 +98,9 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [时区 &AMP;#40;Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

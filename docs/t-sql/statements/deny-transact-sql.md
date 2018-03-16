@@ -1,5 +1,5 @@
 ---
-title: "拒绝 (Transact SQL) |Microsoft 文档"
+title: DENY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -43,8 +43,8 @@ ms.lasthandoff: 11/21/2017
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  拒绝为主体授予权限。 防止该主体通过组或角色成员身份继承权限。 DENY 的优先于所有权限，但拒绝不适用于对象所有者或 sysadmin 固定的服务器角色的成员。
-  **安全说明**Sysadmin 固定服务器角色和对象所有者不能拒绝权限。"
+  拒绝为主体授予权限。 防止该主体通过组或角色成员身份继承权限。 DENY 优先于所有权限，但 DENY 不适用于 sysadmin 固定服务器角色的对象所有者或成员。
+  安全性注意事项：sysadmin 固定服务器角色的成员和对象所有者不能拒绝权限。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -114,30 +114,30 @@ DENY
  PRIVILEGES  
  包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的行为。  
   
- *权限*  
+ *permission*  
  权限的名称。 下面列出的子主题介绍了不同权限与安全对象之间的有效映射。  
   
- *列*  
+ *column*  
  指定表中拒绝授予其权限的列名。 需要使用圆括号 ()。  
   
- *类*  
- 指定拒绝授予其权限的安全对象的类。 作用域限定符**::**是必需的。  
+ class  
+ 指定拒绝授予其权限的安全对象的类。 需要使用作用域限定符 ::。  
   
- *安全对象*  
+ *securable*  
  指定拒绝授予其权限的安全对象。  
   
- 到*主体*  
- 是主体的名称。 可以对其拒绝安全对象权限的主体随安全对象而异。 有关有效的组合，请参阅下面列出的特定于安全对象的主题。  
+ TO principal  
+ 主体的名称。 可以对其拒绝安全对象权限的主体随安全对象而异。 有关有效的组合，请参阅下面列出的特定于安全对象的主题。  
   
  CASCADE  
  指示拒绝授予指定主体该权限，同时，对该主体授予了该权限的所有其他主体，也拒绝授予该权限。 当主体具有带 GRANT OPTION 的权限时，为必选项。  
   
- AS*主体*  
-  使用 AS 主体子句以指示主体记录的权限 denier 都应当以外的其他人执行语句主体。 例如，假设用户 Mary 是 principal_id 12，并且用户 Raul 为主体 15。 Mary 执行`DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`现在 sys.database_permissions 表将指示的 deny 语句 grantor_prinicpal_id 已 15 (Raul)，即使该语句实际执行了用户 13 (Mary)。
+ AS principal  
+  使用 AS principal 子句指示：记录为权限的拒绝者的主体应为执行该语句的用户以外的主体。 例如，假设用户 Mary 是 principal_id 12，用户 Raul 是主体 15。 Mary 执行 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` 现在，即使语句的实际执行者是用户 13 (Mary)，sys.database_permissions 表仍将指示 deny 语句的 grantor_prinicpal_id 为 15 (Raul)。
   
-使用此语句不意味着能够模拟其他用户。  
+在此语句中使用 AS 并不意味着能够模拟其他用户。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  DENY 语句的完整语法很复杂。 上面的语法关系图进行了简化以突出其结构。 下列主题说明了用于拒绝授予特定安全对象的权限的完整语法。  
   
  如果在拒绝为主体授予某种权限时未指定 CASCADE，而之前为该主体授予此权限时指定了 GRANT OPTION，则 DENY 将失败。  
@@ -153,56 +153,56 @@ DENY
 > [!CAUTION]  
 >  拒绝授予 CONTROL SERVER 权限将隐式拒绝授予对服务器的 CONNECT SQL 权限。 如果拒绝授予某一主体对某一服务器的 CONTROL SERVER 权限，该主体将无法连接到该服务器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  调用方（或使用 AS 选项指定的主体）必须对安全对象具有 CONTROL 权限，或对该安全对象具有隐含 CONTROL 权限的更高权限。 如果使用 AS 选项，那么指定主体必须拥有其权限被拒绝授予的安全对象。  
   
  被授予 CONTROL SERVER 权限的用户（如 sysadmin 固定服务器角色的成员）可以拒绝对服务器中任何安全对象授予权限。 被授予数据库 CONTROL 权限的用户（如 db_owner 固定数据库角色的成员）可以拒绝对数据库中任何安全对象授予权限。 被授予架构 CONTROL 权限的用户可以拒绝对架构中任何对象授予权限。 如果使用 AS 子句，那么指定主体必须拥有其权限被拒绝授予的安全对象。  
   
 ## <a name="examples"></a>示例  
- 下表列出的安全对象以及描述特定安全对象的语法的主题。  
+ 下表列出了安全对象以及描述特定于安全对象的语法的主题。  
   
 |||  
 |-|-|  
-|应用程序角色|[DENY 数据库主体权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|Assembly|[拒绝程序集权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
-|非对称密钥|[拒绝非对称密钥权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
-|可用性组|[拒绝可用性组权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
-|证书|[拒绝证书权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
-|约定|[拒绝 Service Broker 权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|数据库|[DENY 数据库权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
-|数据库范围的凭据|[拒绝数据库范围的凭据 (Transact SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
-|端点|[拒绝终结点权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
-|全文目录|[拒绝的全文权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
-|全文非索引字表|[拒绝的全文权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
-|函数|[DENY 对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|登录|[拒绝服务器主体权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
-|消息类型|[拒绝 Service Broker 权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|对象|[DENY 对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|队列|[DENY 对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|远程服务绑定|[拒绝 Service Broker 权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|角色|[DENY 数据库主体权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|路由|[拒绝 Service Broker 权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|架构|[DENY 架构权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
-|搜索属性列表|[拒绝搜索属性列表权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
-|Server|[拒绝服务器权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
-|服务|[拒绝 Service Broker 权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|存储过程|[DENY 对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|对称密钥|[拒绝非对称密钥权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
-|同义词|[DENY 对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|系统对象|[拒绝系统对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
-|表|[DENY 对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|类型|[DENY 类型权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
-|用户|[DENY 数据库主体权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|视图|[DENY 对象权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|XML 架构集合|[拒绝 XML 架构集合权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
+|应用程序角色|[DENY 数据库主体权限 (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|Assembly|[DENY 程序集权限 (Transact-SQL)](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
+|非对称密钥|[DENY 非对称密钥权限 (Transact-SQL)](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  
+|可用性组|[DENY 可用性组权限 (Transact-SQL)](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)|  
+|证书|[DENY 证书权限 (Transact-SQL)](../../t-sql/statements/deny-certificate-permissions-transact-sql.md)|  
+|约定|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|“数据库”|[DENY 数据库权限 (Transact-SQL)](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
+|数据库作用域凭据|[DENY 数据库作用域凭据 (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
+|端点|[DENY 终结点权限 (Transact-SQL)](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
+|全文目录|[DENY 全文权限 (Transact-SQL)](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
+|全文非索引字表|[DENY 全文权限 (Transact-SQL)](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
+|函数|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|登录|[DENY 服务器主体权限 (Transact-SQL)](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
+|消息类型|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|Object|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|队列|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|远程服务绑定|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|角色|[DENY 数据库主体权限 (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|路由|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|架构|[DENY 架构权限 (Transact-SQL)](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
+|搜索属性列表|[DENY 搜索属性列表权限 (Transact-SQL)](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
+|“服务器”|[DENY 服务器权限 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
+|服务|[DENY Service Broker 权限 (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|存储过程|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|对称密钥|[DENY 对称密钥权限 (Transact-SQL)](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
+|同义词|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|系统对象|[DENY 系统对象权限 (Transact-SQL)](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
+|表|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|类型|[DENY 类型权限 (Transact-SQL)](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
+|用户|[DENY 数据库主体权限 (Transact-SQL)](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|“查看”|[DENY 对象权限 (Transact-SQL)](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|XML 架构集合|[DENY XML 架构集合权限 (Transact-SQL)](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helprotect (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

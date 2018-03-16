@@ -1,5 +1,5 @@
 ---
-title: "* （乘）(Transact SQL) |Microsoft 文档"
+title: "* （乘法）(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-multiplication-transact-sql"></a>* （乘） (Transact SQL)
+# <a name="-multiplication-transact-sql"></a>*（乘法）(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   两个表达式相乘（算术乘法运算符）。  
@@ -48,7 +48,7 @@ expression * expression
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)任何一种数值数据类型的数据类型类别中，除**datetime**和**smalldatetime**数据类型。  
+ 数值数据类型类别中任意一种数据类型（**datetime** 和 **smalldatetime** 数据类型除外）的任意有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
@@ -66,8 +66,8 @@ ORDER BY ProductID ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例检索中的员工的第一个和最后一个名称`dimEmployee`表，并计算付费`VacationHours`每个...  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例在 `dimEmployee` 表中检索员工的姓氏和名字，并计算每位员工的 `VacationHours` 的薪水。  
   
 ```  
 -- Uses AdventureWorks  
@@ -79,13 +79,13 @@ ORDER BY lastName ASC;
   
 ## <a name="see-also"></a>另请参阅  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [&#42; = &#40;乘法赋值 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)   
- [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
+ [*=（乘法赋值）(Transact-SQL)](../../t-sql/language-elements/multiply-equals-transact-sql.md)   
+ [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "变量 (Transact SQL) |Microsoft 文档"
+title: "变量 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -29,14 +29,14 @@ ms.lasthandoff: 01/25/2018
 # <a name="variables-transact-sql"></a>变量 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-TRANSACT-SQL 本地变量是可以包含特定类型的单个数据值的对象。 批处理和脚本中的变量通常用于： 
+Transact-SQL 局部变量是可以保存单个特定类型数据值的对象。 批处理和脚本中的变量通常用于： 
 
 * 作为计数器计算循环执行的次数或控制循环执行的次数。
 * 保存数据值以供控制流语句测试。
 * 保存存储过程返回代码要返回的数据值或函数返回值。
 
 > [!NOTE]
-> 某些 TRANSACT-SQL 系统函数的名称开头使用两个*在*符号 （@ @）。 尽管在早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 @@functions被引用到作为全局变量，它们不是变量，但没有作为变量相同的行为。 @@functions是系统函数，以及其语法用法遵循函数的规则。
+> 某些 Transact-SQL 系统函数的名称以两个 *at* 符号 (@@) 开头。 虽然在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，@@functions 称为全局变量，但它们不是变量，也不具备变量的行为。 @@functions 是系统函数，并且其语法的使用遵循函数的规则。
 
 以下脚本创建一个小的测试表并向其填充 26 行。 脚本使用变量来执行下列三个操作： 
 
@@ -86,23 +86,23 @@ GO
 ```
 
 ## <a name="declaring-a-transact-sql-variable"></a>声明 Transact-SQL 变量
-DECLARE 语句初始化通过 TRANSACT-SQL 变量： 
+DECLARE 语句通过以下操作初始化 Transact-SQL 变量： 
 * 指定一个名称。 名称的第一个字符必须为一个 @。
 * 指定系统提供的或用户定义的数据类型和长度。 对于数值变量还指定精度和小数位数。 对于 XML 类型的变量，可以指定一个可选的架构集合。
 * 将值设置为 NULL。
 
-例如，以下**DECLARE**语句将创建一个名为的本地变量 **@mycounter** 属于 int 数据类型。  
+例如，下面的 **DECLARE** 语句使用 int 数据类型创建名为 **@mycounter** 的局部变量。  
 ```sql
 DECLARE @MyCounter int;
 ```
 若要声明多个局部变量，请在定义的第一个局部变量后使用一个逗号，然后指定下一个局部变量名称和数据类型。
 
-例如，以下**DECLARE**语句创建名为的三个本地变量 **@LastName** ，  **@FirstName** 和 **@StateProvince** ，并初始化每个为 NULL:  
+例如，下面的 **DECLARE** 语句创建名为 **@LastName**、**@FirstName** 和 **@StateProvince** 的三个局部变量，并将每个变量都初始化为 NULL：  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-变量的作用域是可以引用该变量的范围的 TRANSACT-SQL 语句。 变量的作用域从声明变量的地方开始到声明变量的批处理或存储过程的结尾。 例如，下面的脚本存在语法错误，因为在一个批处理中引用了在另一个批处理中声明的变量：  
+变量的作用域就是可以引用该变量的 Transact-SQL 语句的范围。 变量的作用域从声明变量的地方开始到声明变量的批处理或存储过程的结尾。 例如，下面的脚本存在语法错误，因为在一个批处理中引用了在另一个批处理中声明的变量：  
 ```sql
 USE AdventureWorks2014;
 GO
@@ -167,7 +167,7 @@ GO
 > [!WARNING]
 > 如果在单个 SELECT 语句中有多个赋值子句，则 SQL Server 不保证表达式求值的顺序。 请注意，只有当赋值之间有引用时才能看到影响。
 
-如果 SELECT 语句返回多个行，且变量引用非标量表达式，则会将变量设置为返回结果集的最后一行中的表达式的值。 例如，在以下批处理 **@EmpIDVariable** 设置为**BusinessEntityID**返回的最后一行的值，它是 1:  
+如果 SELECT 语句返回多行而且变量引用一个非标量表达式，则会将变量设置为结果集最后一行中表达式的返回值。 例如，在下面的批处理中将 **@EmpIDVariable** 设置为返回的最后一行的 **BusinessEntityID** 值，此值为 1：  
 
 ```sql
 USE AdventureWorks2014;
@@ -183,10 +183,10 @@ GO
 ```
 
 ## <a name="see-also"></a>另请参阅  
- [声明@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+ [Declare @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [复合运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [复合运算符 (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
   

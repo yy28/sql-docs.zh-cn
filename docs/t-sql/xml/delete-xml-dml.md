@@ -1,5 +1,5 @@
 ---
-title: "删除 (XML DML) |Microsoft 文档"
+title: delete (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -45,12 +45,12 @@ delete Expression
   
 ## <a name="arguments"></a>参数  
  *表达式*  
- 识别要删除的节点的 XQuery 表达式。 删除该表达式选择的所有节点，以及所选节点中的所有节点或值。 中所述[插入 (XML DML)](../../t-sql/xml/insert-xml-dml.md)，这必须是对文档中的现有节点的引用。 不能是构造的节点。 表达式不能是根 (/) 节点。 如果表达式返回空序列，则不进行删除，不返回错误。  
+ 识别要删除的节点的 XQuery 表达式。 删除该表达式选择的所有节点，以及所选节点中的所有节点或值。 如 [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md) 中所介绍的，在文档中必须保持对现有节点的引用。 不能是构造的节点。 表达式不能是根 (/) 节点。 如果表达式返回空序列，则不进行删除，不返回错误。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. 从存储在非类型化的 xml 变量中的文档中删除节点  
- 以下示例说明了如何从文档中删除各种节点。 首先，将 XML 实例分配给变量的**xml**类型。 然后，后续的 delete XML DML 语句从文档中删除各种节点。  
+ 以下示例说明了如何从文档中删除各种节点。 首先，将 XML 实例分配给 **xml** 类型的变量。 然后，后续的 delete XML DML 语句从文档中删除各种节点。  
   
 ```  
 DECLARE @myDoc xml  
@@ -92,7 +92,7 @@ SELECT @myDoc
 ```  
   
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. 从存储在非类型化的 xml 列中的文档中删除节点  
- 在下面的示例中，**删除**XML DML 语句中删除的第二个子元素 <`Features`> 从列中存储文档。  
+ 在以下示例中，**delete** XML DML 语句从存储在列中的文档中删除 <`Features`> 的第二个子元素。  
   
 ```  
 CREATE TABLE T (i int, x xml)  
@@ -119,14 +119,14 @@ FROM T
   
  请注意上述查询的以下方面：  
   
--   [Modify （) 方法 (xml 数据类型)](../../t-sql/xml/modify-method-xml-data-type.md)用于指定**删除**XML DML 关键字。  
+-   [modify() 方法（xml 数据类型）](../../t-sql/xml/modify-method-xml-data-type.md)用于指定 **delete** XML DML 关键字。  
   
--   [Query （) 方法 (xml 数据类型)](../../t-sql/xml/query-method-xml-data-type.md)用于查询文档。  
+-   [query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)用于查询文档。  
   
 ### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>C. 从非类型化的 xml 列中删除节点  
- 此示例将删除生产说明 XML 文档存储在从节点类型化**xml**列。  
+ 此示例从存储在类型化的 **xml** 列中的生产说明 XML 文档中删除节点。  
   
- 在示例中，你先创建一个表 (T，) 对于类型化**xml** AdventureWorks 数据库中的列。 然后将生产说明 XML 实例从 ProductModel 表的 Instructions 列复制到表 T 并从文档中删除节点。  
+ 在该示例中，首先在 AdventureWorks 数据库中创建带有类型化的 **xml** 列的表 (T)。 然后将生产说明 XML 实例从 ProductModel 表的 Instructions 列复制到表 T 并从文档中删除节点。  
   
 ```  
 use AdventureWorks  
@@ -195,7 +195,7 @@ go
 ## <a name="see-also"></a>另请参阅  
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 数据修改语言 &#40;XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML 数据修改语言 (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

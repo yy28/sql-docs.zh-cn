@@ -1,5 +1,5 @@
 ---
-title: "NEWID (Transact SQL) |Microsoft 文档"
+title: NEWID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  创建类型的唯一值**uniqueidentifier**。  
+  创建 uniqueidentifier 类型的唯一值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ NEWID ( )
 ## <a name="return-types"></a>返回类型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  `NEWID()` 遵从 RFC4122。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. 对变量使用 NEWID 函数  
- 下面的示例使用`NEWID()`将值分配给变量声明为**uniqueidentifier**数据类型。 值**uniqueidentifier**测试值，在打印数据类型的变量。  
+ 以下示例使用 `NEWID()` 对声明为 uniqueidentifier 数据类型的变量赋值。 在测试 uniqueidentifier 数据类型变量的值之前，先打印该值。  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -75,9 +75,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. 在 CREATE TABLE 语句中使用 NEWID  
   
-**适用于**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 下面的示例创建`cust`表与**uniqueidentifier**数据类型，并使用 NEWID 表填充默认值。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
+ 以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. 使用 uniqueidentifier 和变量赋值  
- 下面的示例声明名的本地变量`@myid`的变量作为**uniqueidentifier**数据类型。 然后使用 `SET` 语句为该变量赋值。  
+ 以下示例将名为 `@myid` 的局部变量声明为 uniqueidentifier 数据类型的变量。 然后使用 `SET` 语句为该变量赋值。  
   
 ```  
 DECLARE @myid uniqueidentifier ;  
@@ -125,13 +125,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [NEWSEQUENTIALID &#40;Transact SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
+ [NEWSEQUENTIALID (Transact-SQL)](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [uniqueidentifier &#40;Transact SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [uniqueidentifier (Transact-SQL)](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

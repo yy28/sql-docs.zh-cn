@@ -47,14 +47,14 @@ REVERSE ( string_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
- *string_expression*  
- *string_expression*是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的字符串或二进制数据类型。 *string_expression*可以是常量、 变量或列的字符或二进制数据。  
+ string_expression  
+ string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
   
 ## <a name="return-types"></a>返回类型  
- **varchar**或**nvarchar**  
+ varchar 或 nvarchar  
   
-## <a name="remarks"></a>注释  
- *string_expression*的隐式转换为数据类型必须为**varchar**。 否则，请使用[强制转换](../../t-sql/functions/cast-and-convert-transact-sql.md)可以显式转换*string_expression*。  
+## <a name="remarks"></a>Remarks  
+ string_expression 的数据类型必须可隐式转换为 varchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 string_expression。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
  使用 SC 排序规则时，REVERSE 函数将不反转代理项对的两部分的顺序。  
@@ -92,15 +92,15 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- 下面的示例使隐式转换**int**数据类型到**varchar**数据类型，然后反转结果。  
+ 以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果。  
   
 ```  
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回所有数据库的名称，其中包含的字符的名称取消。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例返回所有数据库的名称，以及字符被反转的名称。  
   
 ```  
 SELECT name, REVERSE(name) FROM sys.databases;  
@@ -108,18 +108,18 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CONCAT &#40;Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

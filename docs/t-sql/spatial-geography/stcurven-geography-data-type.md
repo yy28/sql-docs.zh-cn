@@ -1,5 +1,5 @@
 ---
-title: "STCurveN (geography 数据类型) |Microsoft 文档"
+title: "STCurveN（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurven-geography-data-type"></a>STCurveN（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回从指定的曲线**geography**实例，它是**LineString**， **CircularString**，或**CompoundCurve**。  
+  返回从 geography 实例中指定的曲线，该实例的数据类型为 LineString、CircularString 或 CompoundCurve。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,31 +45,31 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *n*  
- 是**int**介于 1 和中的曲线数之间的表达式**geography**实例。  
+ 一个 int 表达式，其值介于 1 与 geography 实例中的曲线数之间。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
 ## <a name="exceptions"></a>异常  
- 如果 n < 1 则**ArgumentOutOfRangeException**引发。  
+ 如果 n < 1，则会引发 ArgumentOutOfRangeException。  
   
-## <a name="remarks"></a>注释  
- **NULL**时返回以下条件时发生。  
+## <a name="remarks"></a>Remarks  
+ 如果满足以下条件，则会返回 NULL。  
   
--   **Geography**实例声明，但未实例化  
+-   已声明 geography 实例，但未将其实例化  
   
--   **Geography**实例为空  
+-   geography 实例为空  
   
--   n 超过中的曲线数目**geography**实例 (请参阅[STNumCurves &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)  
+-   n 超过 geography 实例中的曲线数目（请参阅 [STNumCurves（geography 数据类型）](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)）  
   
--   维度**geography**实例不等于 (请参阅[STDimension &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
+-   geography 实例的维度不相等（请参阅 [STDimension（geography 数据类型）](../../t-sql/spatial-geography/stdimension-geography-data-type.md)）  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-stcurven-on-a-circularstring"></a>A. 在 CircularString 上使用 STCurveN()  
- 下面的示例返回在第二个曲线**CircularString**实例：  
+ 以下示例返回 CircularString 实例中的第二条曲线：  
   
 ```
  DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="b-using-stcurven-on-a-compoundcurve"></a>B. 在 CompoundCurve 上使用 STCurveN()  
- 下面的示例返回在第二个曲线**CompoundCurve**实例：  
+ 以下示例返回 CompoundCurve 实例中的第二条曲线：  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
 ### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>C. 在包含三个 CircularString 的 CompoundCurve 实例上使用 STCurveN()  
- 下面的示例使用**CompoundCurve**将合并三个单独的实例**CircularString**入同一实例曲线序列与前面的示例：  
+ 以下示例使用 CompoundCurve 实例，该实例将三个单独的 CircularString 实例合并为与上一示例相同的曲线序列：  
   
 ```
  DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/25/2018
  `STCurveN()` 返回相同的结果，而无论使用的是哪种熟知文本 （WKT） 格式。  
   
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. 在调用 STCurve() 之前测试有效性  
- 下面的示例演示如何确保 *n* 是否有效，然后才能调用 STCurveN() 方法：  
+ 以下示例说明如何在调用 STCurveN() 方法之前确保 n 有效：  
   
 ```
  DECLARE @g geography;  

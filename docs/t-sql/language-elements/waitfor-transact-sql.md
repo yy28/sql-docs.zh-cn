@@ -1,5 +1,5 @@
 ---
-title: "WAITFOR (Transact SQL) |Microsoft 文档"
+title: WAITFOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -65,36 +65,36 @@ WAITFOR
  可以继续执行批处理、存储过程或事务之前必须经过的指定时段，最长可为 24 小时。  
   
  '*time_to_pass*'  
- 等待的时段。 *time_to_pass*可以中的可接受格式之一指定**datetime**数据，也可以指定为本地变量。 不能指定日期;因此，日期部分的**datetime**不允许值。  
+ 等待的时段。 可以使用 datetime 数据可接受的格式之一指定 time_to_pass，也可以将其指定为局部变量。 不能指定日期；因此，不允许指定 datetime 值的日期部分。  
   
  TIME  
  指定的运行批处理、存储过程或事务的时间。  
   
  '*time_to_execute*'  
- WAITFOR 语句完成的时间。 *time_to_execute*可以中的可接受格式之一指定**datetime**数据，也可以指定为本地变量。 不能指定日期;因此，日期部分的**datetime**不允许值。  
+ WAITFOR 语句完成的时间。 可以使用 datetime 数据可接受的格式之一指定 time_to_execute，也可以将其指定为局部变量。 不能指定日期；因此，不允许指定 datetime 值的日期部分。  
   
  *receive_statement*  
  有效的 RECEIVE 语句。  
   
 > [!IMPORTANT]  
->  使用 WAITFOR *receive_statement*仅适用于[!INCLUDE[ssSB](../../includes/sssb-md.md)]消息。 有关详细信息，请参阅[接收 &#40;Transact SQL &#41;](../../t-sql/statements/receive-transact-sql.md).  
+>  包含 receive_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)。  
   
  *get_conversation_group_statement*  
  有效的 GET CONVERSATION GROUP 语句。  
   
 > [!IMPORTANT]  
->  使用 WAITFOR *get_conversation_group_statement*仅适用于[!INCLUDE[ssSB](../../includes/sssb-md.md)]消息。 有关详细信息，请参阅[GET CONVERSATION GROUP &#40;Transact SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  包含 get_conversation_group_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息。 有关详细信息，请参阅 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
- 超时*超时*  
+ TIMEOUT timeout  
  指定消息到达队列前等待的时间（以毫秒为单位）。  
   
 > [!IMPORTANT]  
->  指定包含 TIMEOUT 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息。 有关详细信息，请参阅[接收 &#40;Transact SQL &#41;](../../t-sql/statements/receive-transact-sql.md)和[GET CONVERSATION GROUP &#40;Transact SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  指定包含 TIMEOUT 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md) 和 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  执行 WAITFOR 语句时，事务正在运行，并且其他请求不能在同一事务下运行。  
   
- 从指定的时间的实际时间延迟可能会有所不同*time_to_pass*， *time_to_execute*，或*超时*并且取决于服务器的活动级别。 时间计数器在计划完与 WAITFOR 语句关联的线程后启动。 如果服务器忙碌，则可能不会立即计划线程；因此，时间延迟可能比指定的时间要长。  
+ 实际的时间延迟可能与 time_to_pass、time_to_execute 或 timeout 中指定的时间不同，它依赖于服务器的活动级别。 时间计数器在计划完与 WAITFOR 语句关联的线程后启动。 如果服务器忙碌，则可能不会立即计划线程；因此，时间延迟可能比指定的时间要长。  
   
  WAITFOR 不更改查询的语义。 如果查询不能返回任何行，WAITFOR 将一直等待，或等到满足 TIMEOUT 条件（如果已指定）。  
   
@@ -102,7 +102,7 @@ WAITFOR
   
  不能为 WAITFOR 语句定义视图。  
   
- 如果查询超出了 query wait 选项的值，则 WAITFOR 语句参数不运行即可完成。 有关配置选项的详细信息，请参阅[配置查询等待值服务器配置选项](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。 若要查看活动的进程和正在等待的进程，使用[sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)。  
+ 如果查询超出了 query wait 选项的值，则 WAITFOR 语句参数不运行即可完成。 有关详细信息，请参阅[配置 query wait 服务器配置选项](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。 若要查看活动进程和正在等待的进程，请使用 [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)。  
   
  每个 WAITFOR 语句都有与其关联的线程。 如果对同一服务器指定了多个 WAITFOR 语句，可将等待这些语句运行的多个线程关联起来。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将监视与 WAITFOR 语句关联的线程数，并在服务器开始遇到线程资源不足的问题时，随机选择其中部分线程退出。  
   
@@ -114,7 +114,7 @@ WAITFOR
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-waitfor-time"></a>A. 使用 WAITFOR TIME  
- 下面的示例在晚上 10:20 在 msdb 数据库中执行 `sp_update_job` 存储过程。 (`22:20`).  
+ 下面的示例在晚上 10:20 在 msdb 数据库中执行 `sp_update_job` 存储过程。 (`22:20`)。  
   
 ```  
 EXECUTE sp_add_job @job_name = 'TestJob';  
@@ -176,8 +176,8 @@ GO
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
 ## <a name="see-also"></a>另请参阅  
- [控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
- [datetime &#40;Transact SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)   
+ [控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
+ [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

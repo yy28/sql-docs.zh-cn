@@ -1,5 +1,5 @@
 ---
-title: "ALTER DATABASE (Transact SQL) |Microsoft 文档"
+title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  修改一个数据库或与该数据库关联的文件和文件组。 在数据库中添加或删除文件和文件组、更改数据库的属性或其文件和文件组、更改数据库排序规则和设置数据库选项。 不能修改数据库快照。 若要修改与复制相关联的数据库选项，使用[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
+  修改一个数据库或与该数据库关联的文件和文件组。 在数据库中添加或删除文件和文件组、更改数据库的属性或其文件和文件组、更改数据库排序规则和设置数据库选项。 不能修改数据库快照。 若要修改与复制相关的数据库选项，请使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
    
  由于 ALTER DATABASE 语法的篇幅较长，因此分为以下主题：  
   
@@ -60,16 +60,16 @@ ms.lasthandoff: 11/21/2017
  介绍了 ALTER DATABASE 与数据库镜像相关的 SET 选项的语法。  
   
  [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)  
- 提供的语法[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]在 Always On 可用性组的辅助副本上配置辅助数据库的 ALTER DATABASE 选项。  
+ 提供 ALTER DATABASE 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 选项的语法，该语法用来在 AlwaysOn 可用性组的辅助副本上配置辅助数据库。  
   
  [ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
  介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
-有关 Azure SQL 数据库，请参阅[ALTER DATABASE &#40;Azure SQL Database &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-有关 Azure SQL 数据仓库，请参阅[ALTER DATABASE &#40;Azure SQL 数据仓库 &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
-有关并行数据仓库，请参阅[ALTER DATABASE &#40;并行数据仓库 &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
+有关 Azure SQL 数据库的详细信息，请参阅 [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)  
+有关 Azure SQL 数据仓库的详细信息，请参阅 [ALTER DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
+有关并行数据仓库的详细信息，请参阅 [ALTER DATABASE（并行数据仓库）](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -125,32 +125,32 @@ ALTER DATABASE { database_name  | CURRENT }
   
  指定应更改当前使用的数据库。  
   
- 修改名称 **=**  *new_database_name*  
- 重命名数据库名称指定为*new_database_name*。  
+ MODIFY NAME = new_database_name  
+ 使用指定的名称 new_database_name 重命名数据库。  
   
- COLLATE *collation_name*  
- 指定数据库的排序规则。 *collation_name*可以是 Windows 排序规则名称或 SQL 排序规则名称。 如果不指定排序规则，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的排序规则指定为数据库的排序规则。  
+ COLLATE collation_name  
+ 指定数据库的排序规则。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果不指定排序规则，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的排序规则指定为数据库的排序规则。  
   
- 在创建使用非默认排序规则的数据库时，数据库中的数据将始终遵循指定的排序规则。 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，当创建包含的数据库，使用保留的内部目录信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]默认排序规则， **Latin1_General_100_CI_AS_WS_KS_SC**。  
+ 在创建使用非默认排序规则的数据库时，数据库中的数据将始终遵循指定的排序规则。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，创建包含的数据库时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认排序规则 Latin1_General_100_CI_AS_WS_KS_SC 来维护内部目录信息。  
   
- 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅[COLLATE &#40;Transact SQL &#41;](~/t-sql/statements/collations.md).  
+ 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)。  
   
- **\<delayed_durability_option >:: =**  
+ \<delayed_durability_option> ::=  
  **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 有关详细信息请参阅[ALTER DATABASE SET 选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)和[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)。  
+ 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) 和[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)。  
   
- **\<file_and_filegroup_options >:: =**  
- 有关详细信息，请参阅[ALTER DATABASE 文件和文件组选项 &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+ \<file_and_filegroup_options>::=  
+ 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
-## <a name="remarks"></a>注释  
- 若要删除数据库，使用[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ 若要删除数据库，请使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。  
   
- 若要减小数据库大小，使用[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
+ 若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
  ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）下运行，且不允许用于显式或隐式事务中。  
   
- 对数据库文件状态（例如，联机或脱机）的维护是独立于数据库状态的。 有关详细信息，请参阅[文件状态](../../relational-databases/databases/file-states.md)。 文件组中的文件的状态决定整个文件组的可用性。 文件组中的所有文件都必须联机，文件组才可用。 如果文件组脱机，则使用 SQL 语句访问文件组的所有尝试都会失败并报告错误。 在为 SELECT 语句生成查询计划时，查询优化器会避免驻留在脱机文件组中的非聚集索引和索引视图。 这样，这些语句就会成功。 但是，如果脱机文件组包含目标表的堆或聚集索引，SELECT 语句将失败。 此外，如果 INSERT、UPDATE 或 DELETE 语句修改的表的索引包含在脱机文件组中，这些语句将失败。  
+ 对数据库文件状态（例如，联机或脱机）的维护是独立于数据库状态的。 有关详细信息，请参阅[文件状态](../../relational-databases/databases/file-states.md)。 文件组中文件的状态决定整个文件组的可用性。 文件组中的所有文件都必须联机，文件组才可用。 如果文件组脱机，则使用 SQL 语句访问文件组的所有尝试都会失败并报告错误。 在为 SELECT 语句生成查询计划时，查询优化器会避免驻留在脱机文件组中的非聚集索引和索引视图。 这样，这些语句就会成功。 但是，如果脱机文件组包含目标表的堆或聚集索引，SELECT 语句将失败。 此外，如果 INSERT、UPDATE 或 DELETE 语句修改的表的索引包含在脱机文件组中，这些语句将失败。  
   
  当数据库处于 RESTORING 状态时，多数 ALTER DATABASE 语句都将失败。 设置数据库镜像选项除外。 在活动还原操作期间，或者当数据库还原操作或日志文件还原操作由于备份文件损坏而失败时，数据库可以处于 RESTORING 状态。  
   
@@ -187,19 +187,19 @@ ALTER DATABASE { database_name  | CURRENT }
   
 -   没有依赖数据库排序规则的架构绑定对象。  
   
-     以下对象，依赖于数据库排序规则，如果存在在数据库中，ALTER DATABASE*database_name*COLLATE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对每个阻塞 ALTER 操作的对象返回一条错误消息：  
+     如果数据库中存在下列依赖于数据库排序规则的对象，则 ALTER DATABASE database_name COLLATE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对每个阻塞 ALTER 操作的对象返回一条错误消息：  
   
     -   通过 SCHEMABINDING 创建的用户定义函数和视图。  
   
     -   计算列。  
   
-    -   检查约束。  
+    -   CHECK 约束。  
   
     -   表值函数返回包含字符列的表，这些列继承了默认的数据库排序规则。  
   
      数据库排序规则更改时，非绑定到架构的实体的依赖关系信息将自动更新。  
   
- 改变数据库的排序规则不会在任何数据对象的系统名称中产生重复名称。 如果更改排序规则产生重复的名称，则以下命名空间可能会导致数据库排序规则更改的故障：  
+ 改变数据库的排序规则不会在任何数据对象的系统名称中产生重复名称。 如果改变排序规则后出现重复的名称，则下列命名空间可能导致改变数据库排序规则的操作失败：  
   
 -   对象名，如过程、表、触发器或视图。  
   
@@ -220,7 +220,7 @@ ALTER DATABASE { database_name  | CURRENT }
 ## <a name="viewing-database-information"></a>查看数据库信息  
  可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -255,19 +255,19 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-- [ALTER DATABASE &#40;Azure SQL Database &#41;](alter-database-azure-sql-database.md)  
+- [ALTER DATABASE（Azure SQL 数据库）](alter-database-azure-sql-database.md)  
 - [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)   
 - [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
 - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
-- [sp_spaceused &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+- [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
 - [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
 - [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
-- [sys.database_mirroring_witnesses &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
-- [sys.data_spaces &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
-- [sys.filegroups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+- [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+- [sys.data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+- [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [系统数据库](../../relational-databases/databases/system-databases.md)  
   

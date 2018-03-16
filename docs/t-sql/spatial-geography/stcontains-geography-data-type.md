@@ -1,5 +1,5 @@
 ---
-title: "STContains (geography 数据类型) |Microsoft 文档"
+title: "STContains（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="stcontains--geography-data-type"></a>STContains (geography 数据类型)
+# <a name="stcontains--geography-data-type"></a>STContains（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  指定是否调用**geography**实例空间上包含**geography**实例传递给方法。  
+  指定调用 geography 实例在空间上是否包含传递给该方法的 geography 实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geography*  
- 是另一种**geography**实例要针对的实例上进行比较`STContains()`调用。  
+ 与对其调用 `STContains()` 的实例进行比较的其他 geography 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**位**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型： **SqlBoolean**  
+ CLR 返回类型：SqlBoolean  
   
-## <a name="remarks"></a>注释  
- 返回 1，如果调用**geography**实例空间上包含**geography**实例传递给方法，并且如果它不返回 0。 返回**null**如果这两个 SRID **geography**实例是否不相同。  
+## <a name="remarks"></a>Remarks  
+ 如果调用 geography 实例在空间上包含传递给该方法的 geography 实例，则返回 1；否则，返回 0。 如果两个 geography 实例的 SRID 不同，则返回 null。  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `STContains()` 测试两个 `geography` 实例，以查看第一个实例是否包含第二个实例。  

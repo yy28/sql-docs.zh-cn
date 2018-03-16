@@ -1,5 +1,5 @@
 ---
-title: "DBCC TRACEON (Transact SQL) |Microsoft 文档"
+title: DBCC TRACEON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>参数  
-*trace#*  
+trace#  
 要打开的跟踪标记的编号。  
   
 *n*  
@@ -60,14 +60,14 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 WITH NO_INFOMSGS  
 取消显示所有信息性消息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 在生产服务器上，为了避免意外行为，建议您使用下列方法之一，仅在服务器范围内启用跟踪标记。
--   使用**-T**的 Sqlservr.exe 的命令行启动选项。 这是推荐的最佳实践，因为这样可确保在所有语句运行时使用已启用的跟踪标志。 这些语句包括启动脚本中的命令。 有关详细信息，请参阅 [sqlservr Application](../../tools/sqlservr-application.md)。  
--   使用 DBCC TRACEON  **(* * * 跟踪 #* [* *，**...*.n*]**、-1)**仅用户或应用程序不并发运行时语句系统上。  
+-   使用 Sqlservr.exe 的 -T 命令行启动选项。 这是推荐的最佳实践，因为这样可确保在所有语句运行时使用已启用的跟踪标志。 这些语句包括启动脚本中的命令。 有关详细信息，请参阅 [sqlservr Application](../../tools/sqlservr-application.md)。  
+-   仅在用户或应用程序未对系统以并行方式运行语句时，才使用 DBCC TRACEON (***trace# [**,* ....n],-1)。  
 
 跟踪标记用于通过控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的运行方式来自定义某些特征。 启用的跟踪标记将在服务器中一直保持启用状态，直到执行 DBCC TRACEOFF 语句将其禁用为止。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有两种跟踪标志：会话和全局。 会话跟踪标志对某个连接是有效的，只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。 若要确定跟踪标记的状态，请使用 DBCC TRACESTATUS。 若要禁用跟踪标记，请使用 DBCC TRACEOFF。
   
-开启跟踪标志影响查询计划之后, 执行`DBCC FREEPROCCACHE;`以便缓存的计划，将重新编译使用新的计划影响行为。
+开启影响查询计划的跟踪标志后，执行 `DBCC FREEPROCCACHE;`，以便使用新的影响计划的行为重新编译缓存计划。
   
 ## <a name="result-sets"></a>结果集  
  DBCC TRACEON 返回以下结果集（消息）：  
@@ -104,8 +104,8 @@ GO
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
-[DBCC TRACESTATUS &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
+[DBCC TRACESTATUS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-[启用计划影响 SQL Server 查询优化器行为，可以控制由特定查询级别上的不同的跟踪标志](https://support.microsoft.com/kb/2801413)
+[启用可通过特定查询级别上的不同跟踪标志控制的影响计划的 SQL Server 查询优化器行为](https://support.microsoft.com/kb/2801413)
   
   

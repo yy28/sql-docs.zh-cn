@@ -1,5 +1,5 @@
 ---
-title: "ALTER 分区方案 (Transact SQL) |Microsoft 文档"
+title: ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -42,9 +42,9 @@ ms.lasthandoff: 12/07/2017
   向分区方案中添加文件组或更改分区方案中 NEXT USED 文件组的指定。 
 
 >[!NOTE]
->在 Azure SQL 数据库支持仅对主文件组。  
+>Azure SQL 数据库中仅支持主文件组。  
   
- ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,22 +55,22 @@ NEXT USED [ filegroup_name ] [ ; ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *partition_scheme_name*  
- 是要更改的分区方案的名称。  
+ partition_scheme_name  
+ 要更改的分区方案的名称。  
   
- *filegroup_name*  
- 指定要由分区方案标记为 NEXT USED 的文件组。 这意味着该文件组将接受通过创建一个新分区[ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)语句。  
+ filegroup_name  
+ 指定要由分区方案标记为 NEXT USED 的文件组。 这意味着文件组将接受使用 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) 语句创建的新分区。  
   
- 在一个分区方案中，只能将一个文件组指定为 NEXT USED。 可以指定非空文件组。 如果*filegroup_name*指定和当前没有任何文件组标记为下一步使用*filegroup_name*标记下一步使用。 如果*filegroup_name*指定，并且具有 NEXT USED 属性的文件组已存在，则 NEXT USED 属性将从现有的文件组到传输*filegroup_name*。  
+ 在一个分区方案中，只能将一个文件组指定为 NEXT USED。 可以指定非空文件组。 如果指定了 filegroup_name 且当前没有文件组被标记为 NEXT USED，则将 filegroup_name 标记为 NEXT USED。 如果指定了 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则 NEXT USED 属性从现有的文件组转移到 filegroup_name。  
   
- 如果*filegroup_name*未指定并且具有 NEXT USED 属性的文件组已存在，则该文件组将失去其下一步使用状态，以便在任何 NEXT USED 文件组*partition_scheme_name*.  
+ 如果没有指定 filegroup_name 且已经存在具有 NEXT USED 属性的文件组，则该文件组将失去其 NEXT USED 状态，因此 partition_scheme_name 中将没有 NEXT USED 文件组。  
   
- 如果*filegroup_name*未指定，并且有任何文件组标记下一步使用，ALTER PARTITION SCHEME 返回一条警告。  
+ 如果指定了 filegroup_name 且没有文件组被标记为 NEXT USED，则 ALTER PARTITION SCHEME 将返回一个警告。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  受 ALTER PARTITION SCHEME 影响的所有文件组都必须处于联机状态。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  以下权限可用于执行 ALTER PARTITION SCHEME：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -91,17 +91,17 @@ NEXT USED test5fg;
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [删除分区方案 &#40;Transact SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [ALTER PARTITION FUNCTION &#40;Transact SQL &#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   
- [删除分区函数 &#40;Transact SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [ALTER PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/alter-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.partition_schemes &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [sys.data_spaces &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [sys.destination_data_spaces &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [sys.partitions &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
+ [sys.data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces (Transact-SQL)](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

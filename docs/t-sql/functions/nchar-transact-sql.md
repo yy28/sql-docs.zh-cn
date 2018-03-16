@@ -1,5 +1,5 @@
 ---
-title: "NCHAR (Transact SQL) |Microsoft 文档"
+title: NCHAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>参数  
  *integer_expression*  
- 在数据库的排序规则不包含增补字符 (SC) 标志时，这是从 0 到 65535（0 到 0xFFFF）的正整数。 如果指定的值超出此范围，则返回 NULL。 增补字符有关的详细信息，请参阅[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 在数据库的排序规则不包含增补字符 (SC) 标志时，这是从 0 到 65535（0 到 0xFFFF）的正整数。 如果指定的值超出此范围，则返回 NULL。 有关增补字符的详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
  在数据库的排序规则支持增补字符 (SC) 标志时，这是从 0 到 1114111（0 到 0x10FFFF）的正整数。 如果指定的值超出此范围，则返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
- **nchar(1)**默认数据库排序规则不支持补充字符。  
+ 当默认数据库排序规则不支持增补字符时，为 nchar(1)。  
   
- **nvarchar(2)**时的默认数据库排序规则支持增补字符。  
+ 当默认数据库排序规则支持增补字符时，为 nvarchar(2)。  
   
- 如果参数*integer_expression*在于范围 0-0xFFFF，则返回一个字符。 对于较高的值，NCHAR 返回相应的代理项对。 请勿使用 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` 构造代理项对。 而应使用支持增补字符的数据库排序规则，然后为代理项对指定 Unicode 码位。 下面的示例演示构建代理项对的旧式方法以及指定 Unicode 码位的首选方法。  
+ 如果 integer_expression 参数在范围 0 - 0xFFFF 内，则仅返回一个字符。 对于较高的值，NCHAR 返回相应的代理项对。 请勿使用 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` 构造代理项对。 而应使用支持增补字符的数据库排序规则，然后为代理项对指定 Unicode 码位。 下面的示例演示构建代理项对的旧式方法以及指定 Unicode 码位的首选方法。  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
@@ -219,11 +219,11 @@ Character # Unicode Character UNICODE Value
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40;Transact SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
+ [ASCII (Transact-SQL)](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR (Transact-SQL)](../../t-sql/functions/char-transact-sql.md)  
+ [UNICODE (Transact-SQL)](../../t-sql/functions/unicode-transact-sql.md)  
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

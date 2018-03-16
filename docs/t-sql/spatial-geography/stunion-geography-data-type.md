@@ -1,5 +1,5 @@
 ---
-title: "STUnion (geography 数据类型) |Microsoft 文档"
+title: "STUnion（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geography-data-type"></a>STUnion（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回一个对象，表示同时兼具**geography**与另一个实例**geography**实例。  
+  返回一个对象，它表示一个 **geography** 实例与另一个 **geography** 实例的并集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geography*  
- 是另一种**geography**实例以形成具有对其调用则的实例的联合。  
+ 与调用 STUnion() 的实例形成并集的另一个 **geography** 实例。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
 ## <a name="exceptions"></a>异常  
- 此方法将引发**ArgumentException**如果实例包含对跖边缘。  
+ 如果实例包含对拓边缘，此方法将引发 ArgumentException。  
   
-## <a name="remarks"></a>注释  
- 如果此方法将始终返回 null 的空间引用标识符 (Srid) **geography**实例不匹配。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能返回的结果集在服务器上已扩展到**FullGlobe**实例。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例。  
   
  只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。  
   

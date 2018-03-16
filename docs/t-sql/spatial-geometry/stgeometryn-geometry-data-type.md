@@ -1,5 +1,5 @@
 ---
-title: "STGeometryN (geometry 数据类型) |Microsoft 文档"
+title: "STGeometryN（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回在指定的几何图形**几何图形集合**。
+返回**几何图形集合**中的指定几何图形。
   
 ## <a name="syntax"></a>语法  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 是**int** 1 之间的数的表达式**几何图形**实例**geometrycollection**。  
+ 一个 **int** 表达式，其值介于 1 和 **geometrycollection** 中的 **geometry** 实例数之间。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
-## <a name="remarks"></a>注释  
- 此方法返回**null**如果参数大于的结果`STNumGeometries()`并且会在引发**ArgumentOutOfRangeException**如果*表达式*参数为小于 1。  
+## <a name="remarks"></a>Remarks  
+ 如果参数大于 `STNumGeometries()` 的结果，则此方法返回 **null**；如果 *expression* 参数小于 1，则将引发 **ArgumentOutOfRangeException**。  
   
 ## <a name="examples"></a>示例  
- 下面的示例创建`MultiPoint``geometry collection`并使用`STGeometryN()`查找第二个`geometry`集合实例。  
+ 以下示例创建 `MultiPoint``geometry collection` 并使用 `STGeometryN()` 查找该集合的第二个 `geometry` 实例。  
   
 ```  
 DECLARE @g geometry;  

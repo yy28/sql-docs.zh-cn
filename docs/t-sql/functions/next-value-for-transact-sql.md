@@ -1,5 +1,5 @@
 ---
-title: "接下来值 (Transact SQL) |Microsoft 文档"
+title: NEXT VALUE FOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   通过指定的序列对象生成序列号。  
   
- 有关创建和使用序列的完整讨论，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。 使用[sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)生成保留的一系列序列号。  
+ 有关创建和使用序列的完整讨论，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。 可以使用 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 保留一定范围内的序列号。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,28 +64,28 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  生成该编号的序列对象的名称。  
   
  *over_order_by_clause*  
- 确定将序列值分配给分区中的行的顺序。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ 确定将序列值分配给分区中的行的顺序。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  使用序列类型返回一个数字。  
   
-## <a name="remarks"></a>注释  
- **NEXT VALUE FOR**函数可在存储的过程和触发器。  
+## <a name="remarks"></a>Remarks  
+ 可以在存储过程和触发器中使用 **NEXT VALUE FOR** 函数。  
   
- 当**NEXT VALUE FOR**查询或默认的约束，使用函数，如果多次使用相同的序列对象，或在提供值，该语句和默认约束中使用相同的序列对象正在执行，将引用相同的序列中的结果集行中的所有列返回相同的值。  
+ 在查询或默认约束中使用 **NEXT VALUE FOR** 函数时，如果多次使用相同的序列对象，或者在提供这些值的语句以及执行的默认约束中使用相同的序列对象，则为结果集的行中引用同一序列的所有列返回相同的值。  
   
- **NEXT VALUE FOR**函数具有不确定性，并且只允许在生成的序列值的数目是定义完善的上下文中。 下面定义了给定语句中的每个引用的序列对象使用的值数目：  
+ **NEXT VALUE FOR** 函数具有不确定性，只允许在明确定义了生成的序列值数目的上下文中使用。 下面定义了给定语句中的每个引用的序列对象使用的值数目：  
   
--   **选择**-对于每个引用的序列对象，新值会生成一次语句的结果中的每一行。  
+-   **SELECT** - 对于每个引用的序列对象，将为语句结果中的每一行生成一次新值。  
   
--   **插入**... **值**-对于每个引用的序列对象，新值会生成一次为每个语句中插入的行。  
+-   **INSERT** … **VALUES** - 对于每个引用的序列对象，将为语句中的每一个插入行生成一个新值。  
   
--   **更新**-对于每个引用的序列对象，新值生成语句正在更新每个行。  
+-   **UPDATE** - 对于每个引用的序列对象，将为语句所更新的每一行生成一个新值。  
   
--   过程的语句 (如**DECLARE**，**设置**等)-对于每个引用的序列对象，新值为每个语句生成。  
+-   过程语句（如 **DECLARE**、**SET** 等）- 对于每个引用的序列对象，将为每个语句生成一个新值。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
- **NEXT VALUE FOR**函数不能在以下情况下：  
+ 不能在下列情况下使用 **NEXT VALUE FOR** 函数：  
   
 -   数据库处于只读模式时。  
   
@@ -97,15 +97,15 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   在视图、用户定义的函数或计算列中。  
   
--   在语句中使用**DISTINCT**，**联合**， **UNION ALL**， **EXCEPT**或**INTERSECT**运算符。  
+-   在使用 **DISTINCT****UNION****UNION ALL****EXCEPT** 或 **INTERSECT** 运算符的语句中。  
   
--   在语句中使用**ORDER BY**子句除非**NEXT VALUE FOR** ... **通过**(**ORDER BY** ...) 使用。  
+-   在使用 **ORDER BY** 子句的语句中，除非使用了 **NEXT VALUE FOR** … **OVER** (**ORDER BY** …)。  
   
--   在以下子句：**提取**，**通过**，**输出**， **ON**， **PIVOT**， **逆透视**，**分组依据**， **HAVING**，**计算**，**来计算**，或**FOR XML**.  
+-   在以下子句中：**FETCH****OVER****OUTPUT****ON****PIVOT****UNPIVOT****GROUP BY****HAVING****COMPUTE****COMPUTE BY** 或 **FOR XML**。  
   
--   在条件表达式中使用**用例**，**选择**， **COALESCE**， **IIF**， **ISNULL**，或**NULLIF**。  
+-   在使用 **CASE****CHOOSE****COALESCE****IIF****ISNULL** 或 **NULLIF** 的条件表达式中。  
   
--   在**值**子句不属于**插入**语句。  
+-   在不属于 **INSERT** 语句的 **VALUES** 子句中。  
   
 -   在检查约束的定义中。  
   
@@ -113,14 +113,14 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   作为用户定义表类型中的默认值。  
   
--   在语句中使用**顶部**，**偏移量**，或当**行计数**设置选项。  
+-   在使用 **TOP**、**OFFSET** 的语句中，或在设置 **ROWCOUNT** 选项时。  
   
--   在**其中**语句子句。  
+-   在语句的 **WHERE** 子句中。  
   
--   在**合并**语句。 (时除外**NEXT VALUE FOR**函数用于目标表中的默认约束中，在使用默认的**创建**的语句**合并**语句。)  
+-   在 **MERGE** 语句中。 （在目标表的默认约束中使用 **NEXT VALUE FOR** 函数并且在 **MERGE** 语句的 **CREATE** 语句中使用默认值的情况下例外。）  
   
 ## <a name="using-a-sequence-object-in-a-default-constraint"></a>在默认约束中使用序列对象  
- 使用时**NEXT VALUE FOR**函数中默认约束，适用以下规则：  
+ 在默认约束中使用 **NEXT VALUE FOR** 函数时，下列规则适用：  
   
 -   可以从多个表的默认约束中引用单个序列对象。  
   
@@ -132,49 +132,49 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   如果多个默认约束使用相同的序列对象，或者在提供这些值的语句以及执行的默认约束中使用相同的序列对象，则为行中的所有列返回相同的序列号。  
   
--   引用**NEXT VALUE FOR**默认约束中的函数不能指定**通过**子句。  
+-   默认约束中对 **NEXT VALUE FOR** 函数的引用不能指定 **OVER** 子句。  
   
 -   可以更改默认约束中引用的序列对象。  
   
--   情况下`INSERT … SELECT`或`INSERT … EXEC`插入的数据来自何处查询时使用的语句**ORDER BY**子句时，返回的值**NEXT VALUE FOR**函数将是中指定的顺序生成**ORDER BY**子句。  
+-   如果 `INSERT … SELECT` 或 `INSERT … EXEC` 语句中插入的数据来自使用 **ORDER BY** 子句的查询，则按照 **ORDER BY** 子句指定的顺序生成 **NEXT VALUE FOR** 函数返回的值。  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>通过 OVER ORDER BY 子句使用序列对象  
- **NEXT VALUE FOR**函数支持通过应用生成排序的序列值**通过**子句**NEXT VALUE FOR**调用。 通过使用**通过**子句，保证用户返回的值所生成的顺序**通过**子句的**顺序 B**Y 子子句。 使用时应用以下的其他规则**NEXT VALUE FOR**起作用**通过**子句：  
+ 通过将 **OVER** 子句应用于 **NEXT VALUE FOR** 调用，**NEXT VALUE FOR** 函数支持生成排序的序列值。 通过使用 **OVER** 子句，可以向用户保证返回的值是按照 **OVER** 子句的 **ORDER BY** 子句的顺序生成的。 将 **NEXT VALUE FOR** 函数与 **OVER** 子句一起使用时，下列附加规则适用：  
   
--   多次调用**NEXT VALUE FOR**函数在单个语句中的同一序列生成器必须都使用相同**通过**子句定义。  
+-   如果在单个语句中为相同序列生成器多次调用 **NEXT VALUE FOR** 函数，这些调用必须使用相同的 **OVER** 子句定义。  
   
--   多次调用**NEXT VALUE FOR**函数引用不同的序列生成器，在单个语句中可以具有不同**通过**子句定义。  
+-   如果在单个语句中多次调用 **NEXT VALUE FOR** 函数以引用不同的序列生成器，则这些调用可以具有不同的 **OVER** 子句定义。  
   
--   **通过**子句应用于**NEXT VALUE FOR**函数不支持**PARTITION BY**子子句。  
+-   为 **NEXT VALUE FOR** 函数应用的 **OVER** 子句不支持 **PARTITION BY** 子子句。  
   
--   如果所有调用**NEXT VALUE FOR**函数中**选择**语句指定**通过**子句， **ORDER BY**可能在中使用子句**选择**语句。  
+-   如果 **SELECT** 语句中对 **NEXT VALUE FOR** 函数的所有调用均指定 **OVER** 子句，则可以在 **SELECT** 语句中使用 **ORDER BY** 子句。  
   
--   **通过**子句允许与**NEXT VALUE FOR**函数中使用时**选择**语句或`INSERT … SELECT …`语句。 利用**通过**子句**NEXT VALUE FOR**中不允许函数**更新**或**合并**语句。  
+-   在 **SELECT** 语句或 `INSERT … SELECT …` 语句中使用时，允许将 **OVER** 子句与 **NEXT VALUE FOR** 函数一起使用。 不允许在 **UPDATE** 或 **MERGE** 语句中将 **OVER** 子句与 **NEXT VALUE FOR** 函数一起使用。  
   
 -   如果另一个进程同时访问序列对象，则返回的编号可能会出现间断。  
   
 ## <a name="metadata"></a>元数据  
- 有关序列的信息，请查询[sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)目录视图。  
+ 有关序列的信息，请查询 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md) 目录视图。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- 需要**更新**序列对象或序列的架构的权限。 有关授予权限的示例，请参阅本主题后面的示例 F。  
+### <a name="permissions"></a>权限  
+ 要求对序列对象或序列的架构具有 **UPDATE** 权限。 有关授予权限的示例，请参阅本主题后面的示例 F。  
   
 ### <a name="ownership-chaining"></a>所有权链接  
  序列对象支持所有权链接。 如果序列对象具有与调用存储过程、触发器或表相同的所有者（将序列对象作为默认约束），则不需要对序列对象进行权限检查。 如果序列对象与调用存储过程、触发器或表归不同的用户所有，则需要对序列对象进行权限检查。  
   
- 当**NEXT VALUE FOR**函数用作表中的默认值，用户需要两**插入**对表的权限和**更新**序列对象的权限若要使用默认值插入数据。  
+ 如果在表中将 **NEXT VALUE FOR** 函数作为默认值，则用户需要对表具有 **INSERT** 权限和对序列对象具有 **UPDATE** 权限，才能使用默认值插入数据。  
   
 -   如果默认约束具有与序列对象相同的所有者，则在调用默认约束时不需要具有序列对象的权限。  
   
 -   如果默认约束和序列对象归不同的用户所有，即使通过默认约束调用序列对象，也需要具有序列对象的权限。  
   
 ### <a name="audit"></a>审核  
- 审核**NEXT VALUE FOR**函数中，监视 SCHEMA_OBJECT_ACCESS_GROUP。  
+ 若要审核 **NEXT VALUE FOR** 函数，请监视 SCHEMA_OBJECT_ACCESS_GROUP。  
   
 ## <a name="examples"></a>示例  
- 有关创建序列和使用的示例**NEXT VALUE FOR**函数来生成序列号，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+ 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
  以下示例在名为 `CountBy1` 的架构中使用名为 `Test` 的序列。 将执行以下语句以创建 `Test.CountBy1` 序列。 示例 C 和 E 使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库，因此，将在该数据库中创建 `CountBy1` 序列。  
   
@@ -235,7 +235,7 @@ GO
 ```  
   
 ### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. 在默认约束定义中使用 NEXT VALUE FOR 函数  
- 使用**NEXT VALUE FOR**支持默认约束定义中的函数。 有关使用示例**NEXT VALUE FOR**中**CREATE TABLE**语句，请参阅示例 C[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。 以下示例使用 `ALTER TABLE` 将序列作为默认值添加到当前表中。  
+ 支持在默认约束定义中使用 **NEXT VALUE FOR** 函数。 有关在 **CREATE TABLE** 语句中使用 **NEXT VALUE FOR** 的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)中的示例 C。 以下示例使用 `ALTER TABLE` 将序列作为默认值添加到当前表中。  
   
 ```  
 CREATE TABLE Test.MyTable  
@@ -285,7 +285,7 @@ GO
 ```  
   
 ### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. 将 NEXT VALUE FOR 函数与 SELECT … 一起使用 INTO  
- 下面的示例使用`SELECT … INTO`语句以创建名为的表`Production.NewLocation`并使用`NEXT VALUE FOR`函数若要为每个行编号。  
+ 以下示例使用 `SELECT … INTO` 语句创建一个名为 `Production.NewLocation` 的表，然后使用 `NEXT VALUE FOR` 函数为每一行编号。  
   
 ```  
 USE AdventureWorks2012 ;   
@@ -301,15 +301,15 @@ GO
 ```  
   
 ### <a name="f-granting-permission-to-execute-next-value-for"></a>F. 授予执行 NEXT VALUE FOR 的权限  
- 下面的示例授予**更新**名为的用户权限`AdventureWorks\Larry`权执行`NEXT VALUE FOR`使用`Test.CounterSeq`序列。  
+ 以下示例为名为 `AdventureWorks\Larry` 的用户授予 **UPDATE** 权限以使用 `Test.CounterSeq` 序列执行 `NEXT VALUE FOR`。  
   
 ```  
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [创建序列 &#40;Transact SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER 序列 &#40;Transact SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

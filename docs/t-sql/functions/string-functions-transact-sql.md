@@ -1,5 +1,5 @@
 ---
-title: "字符串函数 (Transact SQL) |Microsoft 文档"
+title: "字符串函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
@@ -52,9 +52,9 @@ ms.lasthandoff: 11/21/2017
 
 
   
- 所有内置字符串函数除外`FORMAT`都具有确定性。 这意味着每次用一组特定的输入值调用它们时，都返回相同的值。 有关函数的确定性的详细信息，请参阅[Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+ 除 `FORMAT` 之外的所有内置字符串函数都是具有确定性的函数。 这意味着每次用一组特定的输入值调用它们时，都返回相同的值。 有关函数确定性的详细信息，请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
- 将不是字符串值的参数传递给字符串函数时，输入类型会隐式地转换为文本数据类型。. 有关详细信息，请参阅[数据类型转换 &#40; 数据库引擎 &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
+ 将不是字符串值的参数传递给字符串函数时，输入类型会隐式地转换为文本数据类型。 有关详细信息，请参阅[数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)  

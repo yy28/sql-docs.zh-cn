@@ -1,5 +1,5 @@
 ---
-title: "DATETIMEFROMPARTS (Transact SQL) |Microsoft 文档"
+title: DATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-返回**datetime**值的指定的日期和时间。
+为指定的日期和时间返回 datetime 值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,34 +45,34 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ```  
   
 ## <a name="arguments"></a>参数  
-*年*  
+year  
 用于指定年度的整数表达式。
   
-*月*  
+month  
 用于指定月份的整数表达式。
   
-*一天*  
+day  
 用于指定日期的整数表达式。
   
-*小时*  
+hour  
 用于指定小时的整数表达式。
   
-*分钟*  
+minute  
 用于指定分钟的整数表达式。
   
 *seconds*  
 用于指定秒的整数表达式。
   
-*毫秒*  
+milliseconds  
 用于指定毫秒的整数表达式。
   
 ## <a name="return-types"></a>返回类型
 **datetime**
   
-## <a name="remarks"></a>注释  
-**DATETIMEFROMPARTS**返回完全初始化**datetime**值。 如果自变量无效，则引发错误。 如果需要自变量为 null，则返回 null。
+## <a name="remarks"></a>Remarks  
+DATETIMEFROMPARTS 返回完全初始化的 datetime 值。 如果参数无效，则引发错误。 如果所需的参数为 null，则返回 null。
   
-此函数可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器以及更高版本上远程执行。 它将不到具有以下版本的服务器进行远程处理[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+此函数可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器以及更高版本上远程执行。 但在低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器版本中无法远程执行。
   
 ## <a name="examples"></a>示例  
   
@@ -91,7 +91,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[datetime &#40;Transact SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)
+[datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 

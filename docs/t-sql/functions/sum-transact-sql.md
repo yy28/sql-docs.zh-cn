@@ -1,5 +1,5 @@
 ---
-title: "SUM (Transact SQL) |Microsoft 文档"
+title: SUM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -68,13 +68,13 @@ SUM ( [ ALL | DISTINCT ] expression )
  指定 SUM 返回唯一值的和。  
   
  *expression*  
- 是一个常量、 列或函数，和、 位运算符、 任意组合和字符串运算符。 *表达式*除是精确数字或近似数值数据类型类别的表达式**位**数据类型。 不允许使用聚合函数和子查询。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 常量、列、函数以及算术运算符、位运算符和字符串运算符的任意组合。 expression 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式。 不允许使用聚合函数和子查询。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- 通过**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*将划分为分区函数应用到的 FROM 子句生成的结果集。 如果未指定，则此函数将查询结果集的所有行视为单个组。 *order_by_clause*确定在其中执行该操作的逻辑顺序。 *order_by_clause*是必需的。 有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ partition_by_clause ] order_by_clause**)**  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回所有的总和*表达式*中最精确值*表达式*数据类型。  
+ 以最精确的 expression 数据类型返回所有 expression 值的和。  
   
 |表达式结果|返回类型|  
 |-----------------------|-----------------|  
@@ -82,11 +82,11 @@ SUM ( [ ALL | DISTINCT ] expression )
 |**int**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**十进制**类别 （p、 s）|**decimal (38，s)**|  
-|**money**和**smallmoney**类别|**money**|  
-|**float**和**实际**类别|**float**|  
+|decimal 类别 (p, s)|**decimal(38, s)**|  
+|money 和 smallmoney 类别|**money**|  
+|float 和 real 类别|**float**|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SUM 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>示例  
@@ -189,10 +189,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-a-simple-sum-example"></a>C. 一个简单的总和示例  
- 下面的示例返回 2003 年销售的每个产品的总次数。  
+### <a name="c-a-simple-sum-example"></a>C. 一个简单的 SUM 示例  
+ 以下示例返回 2003 年销售的每件产品的总数。  
   
 ```  
 -- Uses AdventureWorks  
@@ -217,7 +217,7 @@ ProductKey  TotalPerProduct
 225          7956.1500
  ```
   
-### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 计算多个列组合的计  
+### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 计算多列的组合计  
  以下示例针对 `ListPrice` 表中列出的每种颜色计算 `StandardCost` 与 `Product` 的和。  
   
 ```  
@@ -230,7 +230,7 @@ GROUP BY Color
 ORDER BY Color;  
 ```  
   
- 结果集的第一部分所示：  
+ 结果集的第一部分如下所示：  
   
  ```
 Color       TotalList      TotalCost
@@ -243,8 +243,8 @@ NA            3162.3564     1360.6185
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [聚合函数 &#40;Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [通过子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

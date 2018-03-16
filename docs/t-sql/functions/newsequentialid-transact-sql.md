@@ -1,5 +1,5 @@
 ---
-title: "NEWSEQUENTIALID (Transact SQL) |Microsoft 文档"
+title: NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/08/2015
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  如果涉及保密问题，则不要使用该函数。 因为有可能猜到下一个生成的 GUID 的值，从而访问与该 GUID 关联的数据。  
   
- NEWSEQUENTIALID 是通过 Windows 的包装器[UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027)具有一些函数[字节随机排列应用](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)。
+ NEWSEQUENTIALID 是 Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) 函数的包装器，应用了某种[字节随机排列](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)。
   
 > [!WARNING]  
->  UuidCreateSequential 函数具有硬件依赖关系。 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在数据库 （例如包含的数据库） 移到其他计算机时，可以开发群集的连续值。 在使用 Alwayson 时并且在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，如果数据库故障转移到另一台计算机，可以开发群集的连续值。  
+>  UuidCreateSequential 函数具有硬件依赖关系。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，当数据库（如包含的数据库）移动到其他计算机时，可以开发顺序值的群集。 在使用 Always On 以及在 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 上时，如果数据库故障转移到另一台计算机，则可以开发顺序值的群集。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,8 +57,8 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>返回类型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>注释  
- Newsequentialid （） 仅用于类型的表列的默认约束**uniqueidentifier**。 例如：  
+## <a name="remarks"></a>Remarks  
+ NEWSEQUENTIALID() 只能与 **uniqueidentifier** 类型表列上的 DEFAULT 约束一起使用。 例如：  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
@@ -79,7 +79,7 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
  使用 NEWSEQUENTIALID 生成的每个 GUID 在该计算机上都是唯一的。 仅当源计算机具有网卡时，使用 NEWSEQUENTIALID 生成的 GUID 在多台计算机上才是唯一的。  
   
 ## <a name="see-also"></a>另请参阅  
- [NEWID &#40;Transact SQL &#41;](../../t-sql/functions/newid-transact-sql.md)   
- [比较运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+ [NEWID (Transact-SQL)](../../t-sql/functions/newid-transact-sql.md)   
+ [比较运算符 (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "创建 XML 架构集合 (Transact SQL) |Microsoft 文档"
+title: CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -61,12 +61,12 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  是 XML 架构集合的 SQL 标识符。  
   
  *表达式*  
- 字符串常量或标量变量。 是**varchar**， **varbinary**， **nvarchar**，或**xml**类型。  
+ 字符串常量或标量变量。 为 varchar、varbinary、nvarchar 或 xml 类型。  
   
-## <a name="remarks"></a>注释  
- 此外可以向集合添加新命名空间，或通过将新组件添加到集合中的现有命名空间[ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ 通过 [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)，还可以向集合中添加新命名空间或向集合的现有命名空间中添加新组件。  
   
- 若要删除的集合，使用[DROP XML SCHEMA COLLECTION &#40;Transact SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ 若要删除集合，请使用 [DROP XML SCHEMA COLLECTION (Transact SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)。  
   
 ## <a name="permissions"></a>权限  
  若要创建 XML SCHEMA COLLECTION，需要至少拥有下列权限集之一：  
@@ -165,13 +165,13 @@ Set @MySchemaCollection  = N' copy the schema collection here'
 CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection   
 ```  
   
- 示例中的变量为 `nvarchar(max)` 类型。 也可以是变量**xml**数据类型，在这种情况下，隐式转换为字符串。  
+ 示例中的变量为 `nvarchar(max)` 类型。 该变量也可以为 xml 数据类型，在这种情况下，它将隐式转换为字符串。  
   
  有关详细信息，请参阅 [查看存储 XML 架构集合](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)。  
   
- 你可以存储中的架构集合**xml**类型列。 在这种情况下，若要创建 XML 架构集合，请执行以下操作：  
+ 可以在 xml 类型列中存储架构集合。 在这种情况下，若要创建 XML 架构集合，请执行以下操作：  
   
-1.  通过使用 SELECT 语句从该列检索的架构集合并将其分配给变量的**xml**类型，或**varchar**类型。  
+1.  使用 SELECT 语句从列中检索该架构集合，然后将它分配给一个类型为 xml 或 varchar 的变量。  
   
 2.  在 CREATE XML SCHEMA COLLECTION 语句中指定变量名称。  
   
@@ -236,7 +236,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 导入未指定目标命名空间的架构  
- 如果不包含架构**targetNamespace**属性导入集合、 其组件是与空字符串目标命名空间关联，如下面的示例中所示。 注意，如果不关联在集合中导入的一个或多个架构，将导致多个架构组件（可能是无关的）与默认空字符串命名空间关联。  
+ 如果向集合中导入未包含 targetNamespace 属性的架构，该架构的组件将与空字符串目标命名空间相关联，如下面的示例所示。 注意，如果不关联在集合中导入的一个或多个架构，将导致多个架构组件（可能是无关的）与默认空字符串命名空间关联。  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -270,11 +270,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER XML SCHEMA COLLECTION &#40;Transact SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
- [删除 XML 架构集合 &#40;Transact SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION (Transact SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION (Transact SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [删除 XML 架构集合 &#40;Transact SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION (Transact SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [在服务器上使用 XML 架构集合的要求和限制](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "DBCC INPUTBUFFER (Transact SQL) |Microsoft 文档"
+title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-显示从客户端发送到的实例的最后一个语句[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+显示从客户端发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的最后一个语句。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,10 +55,10 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 *session_id*  
 与各活动主连接关联的会话 ID。  
   
-*request_id*  
+request_id  
 要在当前会话中搜索的精确请求（批）。  
 
-以下查询将返回*request_id*:  
+下面的查询返回 request_id：  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
@@ -75,9 +75,9 @@ DBCC INPUTBUFFER 返回包含如下列的行集。
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|事件类型。 这可能是**RPC 事件**或**语言事件**。 输出将为**否事件**时检测到没有最后一个事件。|  
-|**Parameters**|**int**|0 = 文本<br /><br /> 1-  *n*  = 参数|  
-|**EventInfo**|**nvarchar(4000)**|有关**EventType**的 RPC， **EventInfo**仅包含过程名称。 有关**EventType**的语言中，显示仅事件前 4000 个字符。|  
+|**EventType**|**nvarchar(30)**|事件类型。 这可能是 RPC 事件或 Language 事件。 检测不到上一个事件时，输出为 No Event。|  
+|**Parameters**|**int**|0 = 文本<br /><br /> 1- n = Parameters|  
+|**EventInfo**|**nvarchar(4000)**|对于 RPC 的 EventType，EventInfo 仅包含过程名。 对于 Language 的 EventType，仅显示事件的前 4000 个字符。|  
   
 例如，当缓冲区中的最后一个事件是 DBCC INPUTBUFFER(11) 时，DBCC INPUTBUFFER 将返回以下结果集。
   
@@ -92,19 +92,19 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
 
 > [!NOTE]
-> 从开始[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2，使用[sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)返回有关语句提交到的实例信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+> 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，使用 [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) 返回有关提交到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的语句的信息。
 
 ## <a name="permissions"></a>权限  
-上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要以下项之一：
--   用户必须是属于**sysadmin**固定的服务器角色。  
+对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，要求具有下列权限之一：
+-   用户必须是 sysadmin 固定服务器角色的成员。  
 -   用户必须具有 VIEW SERVER STATE 权限。  
--   *session_id*必须在其运行该命令的会话 ID 相同。 要确定会话 ID，请执行以下查询：  
+-   session_id 必须与正在运行该命令的会话 ID 相同。 要确定会话 ID，请执行以下查询：  
   
 ```sql
 SELECT @@spid;  
 ```
   
-上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。
+对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层，需要数据库的 VIEW DATABASE STATE 权限。 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 标准层和基本层，需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 管理员帐户。
   
 ## <a name="examples"></a>示例  
 以下示例在一个连接上运行一个时间较长的事务，而与此同时在另一个连接上运行 `DBCC INPUTBUFFER`。
@@ -128,6 +128,6 @@ DBCC INPUTBUFFER (52);
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-[sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
+[sys.dm_exec_input_buffer (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "授予可用性组的权限 (Transact SQL) |Microsoft 文档"
+title: "GRANT 可用性组权限 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
@@ -55,37 +55,37 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *权限*  
+ *permission*  
  指定可以授予的对可用性组的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- 可用性组上**::***availability_group_name*  
- 指定要授予权限的可用性组。 作用域限定符 (**::**) 是必需的。  
+ ON AVAILABILITY GROUP ::availability_group_name  
+ 指定要授予权限的可用性组。 需要使用作用域限定符 (::)。  
   
- 到\<server_principal >  
+ TO \<server_principal>  
  指定要对其授予权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- *SQL_Server_login*  
+ SQL_Server_login  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *SQL_Server_login_from_Windows_login*  
+ SQL_Server_login_from_Windows_login  
  指定通过 Windows 登录帐户创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *SQL_Server_login_from_certificate*  
+ SQL_Server_login_from_certificate  
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- *SQL_Server_login_from_AsymKey*  
+ SQL_Server_login_from_AsymKey  
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
  WITH GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- AS *SQL_Server_login*  
+ AS SQL_Server_login  
  指定执行此查询的主体要从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其授予该权限的权限。  
   
-## <a name="remarks"></a>注释  
- 仅当当前数据库时，可以授予服务器范围的权限**master**。  
+## <a name="remarks"></a>Remarks  
+ 只有在当前数据库为 master 时，才可授予其服务器作用域内的权限。  
   
- 有关可用性组的信息会显示在[sys.availability_groups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)目录视图。 有关服务器权限的信息会显示在[sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)目录视图，以及有关服务器主体的信息会显示在[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目录视图。  
+ 可以在 [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目录视图中查看可用性组的相关信息。 可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目录视图中查看服务器权限的相关信息，在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中查看服务器主体的相关信息。  
   
  可用性组为服务器级安全对象。 下表列出了可授予的对可用性组最为具体的限定权限，以及隐含这些权限的更为通用的权限。  
   
@@ -97,9 +97,9 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
- 有关所有活动的图表[!INCLUDE[ssDE](../../includes/ssde-md.md)]权限，请参阅[数据库引擎权限海报](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 有关所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]权限的图表，请参阅[数据库引擎权限招贴](http://go.microsoft.com/fwlink/?LinkId=229142)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对可用性组的 CONTROL 权限或对服务器的 ALTER ANY AVAILABILTIY GROUP 权限。  
   
 ## <a name="examples"></a>示例  
@@ -124,7 +124,7 @@ GO
 ```  
   
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>C. 授予对可用性组的 CONTROL 权限  
- 以下示例将对可用性组 `CONTROL` 的 `MyAg` 权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `PKomosinski`。 CONTROL 允许登录名完全控制可用性组，即使它们不是可用性组的所有者。 若要更改的所有权，请参阅[ALTER AUTHORIZATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ 以下示例将对可用性组 `CONTROL` 的 `MyAg` 权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `PKomosinski`。 CONTROL 允许登录名完全控制可用性组，即使它们不是可用性组的所有者。 若要更改所有权，请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
 ```  
 USE master;  
@@ -133,11 +133,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [REVOKE 可用性组权限 &#40;Transact SQL &#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
- [拒绝可用性组权限 &#40;Transact SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
+ [REVOKE 可用性组权限 (Transact-SQL)](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
+ [DENY 可用性组权限 (Transact-SQL)](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [sys.availability_groups &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
- [AlwaysOn 可用性组目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [权限 &#40; 数据库引擎 &#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性组目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

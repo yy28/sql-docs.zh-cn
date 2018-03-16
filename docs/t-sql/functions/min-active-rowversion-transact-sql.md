@@ -1,5 +1,5 @@
 ---
-title: "MIN_ACTIVE_ROWVERSION (Transact SQL) |Microsoft 文档"
+title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回当前数据库中最低的活动 **rowversion** 值。 如果 **rowversion** 值用在尚未提交的事务中，则它处于活动状态。 有关详细信息，请参阅[rowversion &#40;Transact SQL &#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
+  返回当前数据库中最低的活动 **rowversion** 值。 如果 **rowversion** 值用在尚未提交的事务中，则它处于活动状态。 有关详细信息，请参阅 [rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md)。  
   
 > [!NOTE]  
->  **Rowversion**数据类型是也称为**时间戳**。  
+>  rowversion 数据类型也称为“时间戳”。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ MIN_ACTIVE_ROWVERSION
 ```  
   
 ## <a name="return-types"></a>返回类型  
- 返回**binary （8)**值。  
+ 返回 binary(8) 值。  
   
-## <a name="remarks"></a>注释  
- MIN_ACTIVE_ROWVERSION 是返回最低的活动的非确定性函数**rowversion**当前数据库中的值。 对包含 **rowversion** 类型的列的表执行插入或更新操作时，通常会生成一个新的 **rowversion**值。 如果在数据库中没有活动的值，MIN_ACTIVE_ROWVERSION 返回 @ 相同的值@DBTS+ 1。  
+## <a name="remarks"></a>Remarks  
+ MIN_ACTIVE_ROWVERSION 是一个非确定性函数，可返回当前数据库中最低的活动 rowversion 值。 对包含 **rowversion** 类型的列的表执行插入或更新操作时，通常会生成一个新的 **rowversion**值。 如果数据库中没有活动的值，则 MIN_ACTIVE_ROWVERSION 会返回与 @@DBTS + 1 相同的值。  
   
- MIN_ACTIVE_ROWVERSION 可用于使用的方案例如数据同步**rowversion**到组的变更集组合在一起的值。 如果应用程序使用@DBTS而不是 MIN_ACTIVE_ROWVERSION，则可能会发生同步时处于活动状态的一定限制范围内更改。  
+ 对于诸如使用 rowversion 值将多组更改组合在一起的数据同步等情况，MIN_ACTIVE_ROWVERSION 很有用。 如果应用程序使用 @@DBTS 而不是 MIN_ACTIVE_ROWVERSION，则在进行同步时可能会丢失处于活动状态的更改。  
   
- 事务隔离级别中的更改不影响 MIN_ACTIVE_ROWVERSION 函数。  
+ MIN_ACTIVE_ROWVERSION 函数不受事务隔离级别中的更改影响。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回**rowversion**值使用`MIN_ACTIVE_ROWVERSION`和`@@DBTS`。 请注意，当数据库中没有活动事务时，值会有所不同。  
+ 下例使用 `MIN_ACTIVE_ROWVERSION` 和 `@@DBTS` 返回 rowversion 值。 请注意，当数据库中没有活动事务时，值会有所不同。  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

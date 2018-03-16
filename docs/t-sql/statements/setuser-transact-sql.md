@@ -1,5 +1,5 @@
 ---
-title: "SETUSER (Transact SQL) |Microsoft 文档"
+title: SETUSER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  允许的成员**sysadmin**固定服务器角色或模拟其他用户数据库的所有者。  
+  可使 sysadmin 固定服务器角色的成员或 db_owner 固定数据库角色的成员模拟另一用户。  
   
 > [!IMPORTANT]  
->  包含 SETUSER 只是为了保持向后兼容性。 在以后的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中可能不再支持 SETUSER。 我们建议你使用[EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)相反。  
+>  包含 SETUSER 只是为了保持向后兼容性。 在以后的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中可能不再支持 SETUSER。 建议改用 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,24 +52,24 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ```  
   
 ## <a name="arguments"></a>参数  
-  *用户名*   
- 当前数据库中被模拟的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名或 Windows 用户名。 当*用户名*未指定，则重置的系统管理员或数据库所有者模拟用户的原始标识。  
+ ' username '  
+ 当前数据库中被模拟的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户名或 Windows 用户名。 如果未指定 username，将重置模拟用户的系统管理员或数据库所有者的原始标识。  
   
  WITH NORESET  
- 指定，后续 SETUSER 语句 (具有未指定*用户名*) 应不会重置的用户标识为系统管理员或数据库所有者。  
+ 指定后续 SETUSER 语句（没有指定的 username）不应将用户标识重置为系统管理员或数据库所有者。  
   
-## <a name="remarks"></a>注释  
- 成员时可以使用 SETUSER **sysadmin**固定服务器角色或数据库的所有者以采用另一个要测试的其他用户的权限的用户的标识。 中的 db_owner 固定数据库角色的成员身份是不够的。  
+## <a name="remarks"></a>Remarks  
+ 为测试其他用户的权限，sysadmin 固定服务器角色的成员或数据库所有者可以使用 SETUSER 来使用另外一个用户的标识。 具有 db_owner 固定数据库角色中的成员身份还不够。  
   
- 仅对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户使用 SETUSER。 不支持 Windows 用户使用 SETUSER。 如果使用 SETUSER 来模拟其他用户的标识，则进行模拟的用户创建的任何对象均由被模拟的用户所有。 例如，如果数据库所有者假定用户的标识**Margaret**并创建一个名为表**订单**、**订单**表归**Margaret**，不是系统管理员。  
+ 仅对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户使用 SETUSER。 不支持 Windows 用户使用 SETUSER。 如果使用 SETUSER 来模拟其他用户的标识，则进行模拟的用户创建的任何对象均由被模拟的用户所有。 例如，如果数据库所有者模拟了用户 Margaret 的标识并创建了一个名为 orders 的表，则 orders 表将归 Margaret 所有，而不归系统管理员所有。  
   
  SETUSER 一直保持有效，直到发出其他 SETUSER 语句或用 USE 语句更改当前数据库为止。  
   
 > [!NOTE]  
 >  如果使用了 SETUSER WITH NORESET，数据库所有者或系统管理员必须注销然后重新登录，才能重新建立自己的权限。  
   
-## <a name="permissions"></a>Permissions  
- 要求的成员身份**sysadmin**固定服务器角色，或者必须是数据库的所有者。 中的成员身份**db_owner**固定的数据库角色不足  
+## <a name="permissions"></a>权限  
+ 要求具有 sysadmin 固定服务器角色的成员身份或数据库所有者身份。 具有 db_owner 固定数据库角色中的成员身份还不够  
   
 ## <a name="examples"></a>示例  
  以下示例显示了数据库所有者如何采用其他用户的标识。 用户 `mary` 已创建了一个名为 `computer_types` 的表。 通过使用 SETUSER，数据库所有者可以模拟 `mary` 授予用户 `joe` 访问 `computer_types` 表的权限，然后重置自己的标识。  

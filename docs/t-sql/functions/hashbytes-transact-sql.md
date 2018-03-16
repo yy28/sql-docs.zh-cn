@@ -1,5 +1,5 @@
 ---
-title: "HASHBYTES (Transact SQL) |Microsoft 文档"
+title: HASHBYTES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2016
 ms.prod: sql-non-specified
@@ -48,28 +48,28 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>参数  
- \<算法 >  
- 标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，SHA2_256 和 SHA2_512 以外的所有算法已都弃用。 较旧算法 （不推荐） 将继续工作，但它们将引发 deprecation 事件。  
+ **'**\<algorithm>**'**  
+ 标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，除 SHA2_256 和 SHA2_512 以外的所有算法都已过时。 较旧算法（不推荐）将继续工作，但它们将引发弃用事件。  
   
  **@input**  
- 指定包含要对其执行哈希操作的数据的变量。 **@input**是**varchar**， **nvarchar**，或**varbinary**。  
+ 指定包含要对其执行哈希操作的数据的变量。 @input 为 varchar、nvarchar 或 varbinary。  
   
-  *输入*   
+ **'** input **'**  
  指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
   
  输出符合算法标准：MD2、MD4 和 MD5 为 128 位（即 16 个字节）；SHA 和 SHA1 为 160 位（即 20 个字节）；SHA2_256 为 256 位（即 32 个字节），SHA2_512 为 512 位（即 64 个字节）。  
   
-**适用于**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- 有关[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和更早版本，允许的输入的值为限制为 8000 个字节。  
+ 对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更早版本，允许的输入值限制为 8000 个字节。  
   
 ## <a name="return-value"></a>返回值  
- **varbinary** （最大 8000 个字节）  
+ varbinary（最大 8000 个字节）  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-return-the-hash-of-a-variable"></a>答： 返回变量的哈希  
- 下面的示例返回`SHA1`的哈希**nvarchar**变量中存储数据`@HashThis`。  
+### <a name="a-return-the-hash-of-a-variable"></a>A：返回变量的哈希  
+ 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA1` 哈希值。  
   
 ```  
 DECLARE @HashThis nvarchar(4000);  
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA1', @HashThis);
   
 ```  
   
-### <a name="b-return-the-hash-of-a-table-column"></a>B： 返回的表列的哈希  
+### <a name="b-return-the-hash-of-a-table-column"></a>B：返回表列的哈希  
  下面的示例返回 `c1` 表 `Test1` 列中值的 SHA1 哈希。  
   
 ```  

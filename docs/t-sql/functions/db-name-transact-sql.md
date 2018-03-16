@@ -1,5 +1,5 @@
 ---
-title: "DB_NAME (Transact SQL) |Microsoft 文档"
+title: DB_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -49,17 +49,17 @@ DB_NAME ( [ database_id ] )
 ```  
   
 ## <a name="arguments"></a>参数  
-*database_id*  
-要返回的数据库的标识号 (ID)。 *database_id*是**int**，无默认值。 如果未指定 ID，则返回当前数据库名称。
+database_id  
+要返回的数据库的标识号 (ID)。 database_id 的数据类型为 int，无默认值。 如果未指定 ID，则返回当前数据库名称。
   
 ## <a name="return-types"></a>返回类型
-**nvarchar （128)**
+**nvarchar(128)**
   
-## <a name="permissions"></a>Permissions  
-如果调用方**DB_NAME**不是数据库的所有者和该数据库未**master**或**tempdb**，请参阅相应的行所需的最小权限是ALTER ANY DATABASE 或 VIEW ANY DATABASE 服务器级权限，或者在 CREATE DATABASE 权限**master**数据库。 始终可以在 **sys.databases**中查看调用方连接的数据库。
+## <a name="permissions"></a>权限  
+如果 DB_NAME 的调用方并非数据库的所有者，并且数据库不是 master 或 tempdb，则查看对应行所需的最低权限为 ALTER ANY DATABASE 或 VIEW ANY DATABASE 服务器级权限，或者为 master 数据库中的 CREATE DATABASE 权限。 始终可以在 **sys.databases**中查看调用方连接的数据库。
   
 > [!IMPORTANT]  
->  默认情况下，公共角色具有 VIEW ANY DATABASE 权限，允许所有登录名，若要查看数据库信息。 若要阻止来自能够检测到数据库的登录名，请撤消从公共的的 VIEW ANY DATABASE 权限或拒绝单个登录名的 VIEW ANY DATABASE 权限。  
+>  默认情况下，公共角色具有 VIEW ANY DATABASE 权限，允许所有登录名查看数据库信息。 要阻止登录名检测数据库，请撤销公共 VIEW ANY DATABASE 权限或拒绝单个登录名的 VIEW ANY DATABASE 权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -81,16 +81,16 @@ SELECT DB_NAME(3)AS [Database Name];
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-return-the-current-database-name"></a>C. 返回当前的数据库名称  
+### <a name="c-return-the-current-database-name"></a>C. 返回当前数据库名称  
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
 ```  
   
-### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. 使用的数据库 ID 返回数据库的名称  
-下面的示例返回的数据库名称和每个数据库的 database_id。
+### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. 使用数据库 ID 返回数据库名称  
+以下示例返回每个数据库的数据库名称和 database_id。
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  
@@ -98,8 +98,8 @@ FROM sys.databases;
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[DB_ID &#40;Transact SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[DB_ID (Transact-SQL)](../../t-sql/functions/db-id-transact-sql.md)  
+[元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
   
   

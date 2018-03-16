@@ -1,5 +1,5 @@
 ---
-title: "放置默认值 (Transact SQL) |Microsoft 文档"
+title: DROP DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   从当前数据库中删除一个或多个用户定义的默认值。  
   
 > [!IMPORTANT]  
->  中的下一个版本将删除 DROP DEFAULT [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请不要在新的开发工作中使用 DROP DEFAULT，并准备修改当前使用它的应用程序。 请改用可以使用的 DEFAULT 关键字创建的默认定义[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的下一版本中将删除 DROP DEFAULT。 请不要在新的开发工作中使用 DROP DEFAULT，并准备修改当前使用它的应用程序。 请改用通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 的 DEFAULT 关键字创建的默认定义。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,23 +49,23 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *如果存在*  
+ IF EXISTS  
  **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
- 仅当它已存在，则有条件地将删除默认值。  
+ 只有在默认值已存在时才对其进行有条件地删除。  
   
  *schema_name*  
  默认值所属架构的名称。  
   
  *default_name*  
- 现有默认值的名称。 若要查看存在的默认值的列表，请执行**sp_help**。 默认值必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。 可以选择是否指定默认架构名称。  
+ 现有默认值的名称。 若要查看现有默认值的列表，请执行 **sp_help**。 默认值必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定默认架构名称。  
   
-## <a name="remarks"></a>注释  
- 之后将删除默认值，通过执行解除默认**sp_unbindefault**如果默认值当前绑定到某一列或别名数据类型。  
+## <a name="remarks"></a>Remarks  
+ 删除默认值之前，如果默认值当前绑定到某个列或别名数据类型，请通过执行 **sp_unbindefault** 解除默认值的绑定。  
   
  从允许空值的列中删除默认值后，当添加行且没有显式提供值时，将在该位置插入 NULL。 从 NOT NULL 列中删除默认值后，当添加行且没有显式提供值时，将返回错误消息。 这些行以后作为典型 INSERT 语句行为的一部分添加。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行 DROP DEFAULT，用户至少应对默认值所属的架构具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -83,7 +83,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- 开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]可以使用以下语法。  
+ 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以使用以下语法。  
   
 ```  
 DROP DEFAULT IF EXISTS datedflt;  
@@ -107,6 +107,6 @@ GO
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_unbindefault &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

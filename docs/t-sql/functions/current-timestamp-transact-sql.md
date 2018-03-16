@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_TIMESTAMP (Transact SQL) |Microsoft 文档"
+title: CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,14 +47,14 @@ ms.lasthandoff: 11/21/2017
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回为当前数据库系统时间戳**datetime**而无需数据库时区偏移量的值。 此值得自运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统。
+返回当前数据库系统时间戳，返回值的类型为 datetime，并且不含数据库时区偏移量。 此值得自运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统。
   
 > [!NOTE]  
 >  SYSDATETIME 和 SYSUTCDATE 在秒的小数部分精度上要比 GETDATE 和 GETUTCDATE 高。 SYSDATETIMEOFFSET 包含系统时区偏移量。 SYSDATETIME、SYSUTCDATE 和 SYSDATETIMEOFFSET 可分配给采用任意日期和时间类型的变量。  
   
-此函数是 ANSI SQL 等效于[GETDATE](../../t-sql/functions/getdate-transact-sql.md)。
+此函数是 ANSI SQL，等价于 [GETDATE](../../t-sql/functions/getdate-transact-sql.md)。
   
-有关的所有概述[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和时间数据类型和函数，请参阅[日期和时间数据类型和函数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
+有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,13 +70,13 @@ CURRENT_TIMESTAMP
 ## <a name="return-type"></a>返回类型  
 **datetime**
   
-## <a name="remarks"></a>注释  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]语句可以指 CURRENT_TIMESTAMP 随处它们可引用**datetime**表达式。
+## <a name="remarks"></a>Remarks  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在其可以引用 datetime 表达式的任何环境下均可引用 CURRENT_TIMESTAMP。
   
 CURRENT_TIMESTAMP 是非确定性函数。 引用该列的视图和表达式无法进行索引。
   
 ## <a name="examples"></a>示例  
-下面的示例使用了六个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回当前日期和时间才能返回日期、 时间，或两者的系统函数。 这些值是连续返回的，因此，它们的秒小数部分可能有所不同。
+以下示例使用六个返回当前日期和时间的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数来返回日期和/或时间。 这些值是连续返回的，因此，它们的秒小数部分可能有所不同。
   
 ### <a name="a-get-the-current-system-date-and-time"></a>A. 获取当前系统日期和时间  
   
@@ -136,7 +136,7 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT CURRENT_TIMESTAMP;  

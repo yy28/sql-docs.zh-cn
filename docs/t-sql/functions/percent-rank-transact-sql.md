@@ -1,5 +1,5 @@
 ---
-title: "PERCENT_RANK (Transact SQL) |Microsoft 文档"
+title: PERCENT_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -46,8 +46,8 @@ PERCENT_RANK( )
 ```  
   
 ## <a name="arguments"></a>参数  
- 通过**(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause*将划分为分区函数应用到的 FROM 子句生成的结果集。 如果未指定，则此函数将查询结果集的所有行视为单个组。 *order_by_clause*确定在其中执行该操作的逻辑顺序。 *Order_by_clause*是必需的。 \<行或 range 子句 > 的转移不在 PERCENT_RANK 函数中指定的语法。  有关详细信息，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER ( [ partition_by_clause ] order_by_clause)  
+ partition_by_clause 将 FROM 子句生成的结果集划分为要应用函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 order_by_clause 确定执行操作的逻辑顺序。 需要 order_by_clause。 不能在 PERCENT_RANK 函数中指定 OVER 语法的 \<rows 或 range 子句>。  有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
  **float(53)**  
@@ -98,6 +98,6 @@ Information Services   Bueno                  27.4038               0.4         
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CUME_DIST &#40;Transact SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
+ [CUME_DIST (Transact-SQL)](../../t-sql/functions/cume-dist-transact-sql.md)  
   
   

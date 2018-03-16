@@ -1,5 +1,5 @@
 ---
-title: "MakeValid (geography 数据类型) |Microsoft 文档"
+title: "MakeValid（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,11 +31,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geography-data-type"></a>MakeValid（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  将转换**geography**实例化为有效无效**geography**与有效的开放地理空间联盟 (OGC) 类型的实例。  
+  将无效的 geography 实例转换为具有有效开放地理空间信息联盟 (OGC) 类型的有效 geography 实例。  
   
- 如果输入的对象 STIsValid()，返回 False`MakeValid()`将转换到有效实例无效的实例。  
+ 如果输入对象针对 STIsValid() 返回 False，则 `MakeValid()` 将无效实例转换为有效实例。  
   
- 此 geography 数据类型方法支持**FullGlobe**实例或大于半球的空间实例。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
-## <a name="remarks"></a>注释  
- 此方法可能会更改的一种**geography**实例。 此外的点**geography**实例可能会稍有变化。 在某些方法，如 NumPoint() 结果可能会更改。  
+## <a name="remarks"></a>Remarks  
+ 此方法可能更改 geography 实例的类型。 此外，geography 实例的点可能会略有偏移。 某些方法（如 NumPoint()）产生的结果可能会发生变化。  
   
- 在情况下，无效的空间实例相交赤道，必须 EnvelopeAngle() = 180， **FullGlobe**将返回实例。 `MakeValid()` **Geography**数据类型方法将使在返回有效的实例的最佳尝试但不是保证结果都是准确或精确。  
+ 在无效的空间实例与赤道相交且 EnvelopeAngle() = 180 的情况下，将返回 FullGlobe 实例。 `MakeValid()` geography 数据类型方法将以最佳方式尝试返回有效的实例，但不保证结果的准确性或精确性。  
   
 > [!NOTE]  
->  无效的对象可以存储在数据库中。 可以在无效的实例执行的方法 （哪些 STIsValid() 这些实例返回 False） 是检查有效性或允许导出的方法： STIsValid()、 MakeValid()、 stastext （）、 STAsBinary()、 tostring （）、 AsTextZM() 和 AsGml()。  
+>  无效的对象可以存储在数据库中。 可对无效实例（即 STIsValid() 对其返回 False 的那些实例）执行的方法是用于检查有效性或允许导出的方法：STIsValid()、MakeValid()、STAsText()、STAsBinary()、ToString()、AsTextZM() 和 AsGml()。  
   
  此方法不精确。  
   

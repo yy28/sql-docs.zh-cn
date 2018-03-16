@@ -1,5 +1,5 @@
 ---
-title: "GETDATE (Transact SQL) |Microsoft 文档"
+title: GETDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,12 +46,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回为当前数据库系统时间戳**datetime**而无需数据库时区偏移量的值。 此值得自运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统。  
+  返回当前数据库系统时间戳，返回值的类型为 datetime，并且不含数据库时区偏移量。 此值得自运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的操作系统。  
   
 > [!NOTE]  
 >  与 GETDATE 和 GETUTCDATE 比较而言，SYSDATETIME 和 SYSUTCDATETIME 的秒的小数部分精度更高。 SYSDATETIMEOFFSET 包含系统时区偏移量。 SYSDATETIME、SYSUTCDATETIME 和 SYSDATETIMEOFFSET 可以分配给采用任意日期和时间类型的变量。  
   
- 有关的所有概述[!INCLUDE[tsql](../../includes/tsql-md.md)]日期和时间数据类型和函数，请参阅[日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ 有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,12 +64,12 @@ GETDATE ( )
 ## <a name="return-type"></a>返回类型  
  **datetime**  
   
-## <a name="remarks"></a>注释  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]语句可以引用的 GETDATE 随处它们可引用**datetime**表达式。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以在能引用 datetime 表达式的所有位置引用 GETDATE。  
   
  GETDATE 是非确定性函数。 不能对在列中引用该函数的视图和表达式建立索引。  
   
- 将 SWITCHOFFSET 用于函数 GETDATE() 可能导致查询运行缓慢，这是因为查询优化器无法获取 GETDATE 值的准确基数估计值。 我们建议您预先计算 GETDATE 值，然后在查询中指定该值，如以下示例中所示。 此外，使用选项 （重新编译） 中的查询提示强制查询优化器重新编译查询计划在下次执行相同的查询。 优化器然后具有 GETDATE() 的准确基数估值，将生成更高效的查询计划。  
+ 将 SWITCHOFFSET 用于函数 GETDATE() 可能导致查询运行缓慢，这是因为查询优化器无法获取 GETDATE 值的准确基数估计值。 我们建议您预先计算 GETDATE 值，然后在查询中指定该值，如以下示例中所示。 此外，请使用 OPTION (RECOMPILE) 查询提示以强制查询优化器在下次执行同一查询时重新编译查询计划。 优化器然后具有 GETDATE() 的准确基数估值，将生成更高效的查询计划。  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -79,7 +79,7 @@ WHERE c1 > @dt OPTION (RECOMPILE);
 ```  
   
 ## <a name="examples"></a>示例  
- 以下示例使用六个返回当前日期和时间的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数来返回日期和/或时间。 序列; 中返回的值因此，其秒的小数部分可能会有所不同。  
+ 以下示例使用六个返回当前日期和时间的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数来返回日期和/或时间。 这些值是连续返回的；因此，它们的秒小数部分可能有所不同。  
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 获取当前系统日期和时间  
   
@@ -149,8 +149,8 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000  
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例使用三个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系统函数，返回当前日期和时间返回日期、 时间或两者。 序列; 中返回的值因此，其秒的小数部分可能会有所不同。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 以下示例使用三个返回当前日期和时间的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统函数来返回日期和/或时间。 这些值是连续返回的；因此，它们的秒小数部分可能有所不同。  
   
 ### <a name="d-getting-the-current-system-date-and-time"></a>D. 获取当前系统日期和时间  
   

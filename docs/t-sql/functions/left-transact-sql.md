@@ -1,5 +1,5 @@
 ---
-title: "左 (Transact SQL) |Microsoft 文档"
+title: LEFT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -49,20 +49,20 @@ LEFT ( character_expression , integer_expression )
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)字符或二进制数据。 *character_expression*可以是常量、 变量或列。 *character_expression*可以是任何数据类型，除**文本**或**ntext**，可以隐式转换为**varchar**或**nvarchar**。 否则，请使用[强制转换](../../t-sql/functions/cast-and-convert-transact-sql.md)函数可以显式转换*character_expression*。  
+ 字符或二进制数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。 character_expression 可以是除 text 或 ntext 外的任何数据类型，可隐式转换为 varchar 或 nvarchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数显式转换 character_expression。  
   
  *integer_expression*  
- 是一个正整数，指定的多少个字符*character_expression*将返回。 如果*integer_expression*为负，则返回一个错误。 如果*integer_expression*是类型**bigint**和包含较大的值， *character_expression*必须是较大的数据类型的如**varchar （max)**.  
+ 指定要返回的 character_expression 的字符数的正整数。 如果 integer_expression 为负，则返回错误。 如果 integer_expression 的数据类型为 bigint，且包含较大的值，则 character_expression 必须是较大的数据类型，如 varchar(max)。  
   
- *Integer_expression*参数计数为一个字符的 utf-16 代理项字符。  
+ integer_expression 参数将 UTF-16 代理项字符计为一个字符。  
   
 ## <a name="return-types"></a>返回类型  
- 返回**varchar**时*character_expression*是非 Unicode 字符数据类型。  
+ character_expression 为非 Unicode 字符数据类型时，返回 varchar。  
   
- 返回**nvarchar**时*character_expression*是 Unicode 字符数据类型。  
+ character_expression 为 Unicode 字符数据类型时，返回 nvarchar。  
   
-## <a name="remarks"></a>注释  
- 使用 SC 排序规则时*integer_expression*参数计数为一个字符的 utf-16 代理项对。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+## <a name="remarks"></a>Remarks  
+ 在使用 SC 排序规则时，integer_expression 参数将 UTF-16 代理项对计为一个字符。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -93,7 +93,7 @@ ab
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-left-with-a-column"></a>C. 带列使用 LEFT  
  以下示例返回每个产品名中最左边的五个字符。  
@@ -123,15 +123,15 @@ ab
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [右 &#40;Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)  
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

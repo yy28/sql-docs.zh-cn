@@ -1,5 +1,5 @@
 ---
-title: "RTRIM (Transact SQL) |Microsoft 文档"
+title: RTRIM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  截断所有尾随空格后返回的字符串。  
+  截断所有尾随空格后返回一个字符串。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,12 +49,12 @@ RTRIM ( character_expression )
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的字符数据。 *character_expression*可以是常量、 变量或列的字符或二进制数据。  
+ 字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
   
- *character_expression*的隐式转换为数据类型必须为**varchar**。 否则，请使用[强制转换](../../t-sql/functions/cast-and-convert-transact-sql.md)可以显式转换*character_expression*。  
+ character_expression 的数据类型必须可隐式转换为 varchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 character_expression。  
   
 ## <a name="return-types"></a>返回类型  
- **varchar**或**nvarchar**  
+ varchar 或 nvarchar  
   
 ## <a name="examples"></a>示例  
   
@@ -69,8 +69,8 @@ SELECT RTRIM('Removes trailing spaces.   ');
   
   `Removes trailing spaces.`  
   
-### <a name="b-simple-example"></a>B： 简单的示例  
- 下面的示例演示如何使用`RTRIM`删除尾随空格。 存在此时间是另一个连接到要显示空格都消失了第一个字符串的字符串。  
+### <a name="b-simple-example"></a>B. 简单示例  
+ 以下示例显示如何使用 `RTRIM` 删除尾随空格。 此时会有另一个字符串连接到第一个字符串，显示空格已删除。  
   
 ```  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
@@ -108,15 +108,15 @@ GO
 
   
 ## <a name="see-also"></a>另请参阅  
- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [右 &#40;Transact SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
- [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [强制转换和转换 &#40;Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)  
+ [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
+ [TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)  
+ [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

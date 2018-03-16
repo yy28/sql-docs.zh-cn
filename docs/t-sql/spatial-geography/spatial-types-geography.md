@@ -1,5 +1,5 @@
 ---
-title: "geography (TRANSACT-SQL) |Microsoft 文档"
+title: geography (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geography"></a>空间类型的地理位置
+# <a name="spatial-types---geography"></a>空间类型 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Geography 空间数据类型， **geography**，作为.NET 公共语言运行时 (CLR) 数据类型中实现[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类型表示圆形地球坐标系中的数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
+  地理空间数据类型 geography 是作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 .NET 公共语言运行时 (CLR) 数据类型实现的。 此类型表示圆形地球坐标系中的数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的方法的一组**geography**空间数据类型。 这包括方法上**geography**由开放地理空间联盟 (OGC) 标准和一组定义[!INCLUDE[msCoName](../../includes/msconame-md.md)]该标准的扩展。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 geography 空间数据类型的一组方法。 这些方法包括开放地理空间信息联盟 (OGC) 标准和对该标准的一组 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 扩展所定义的 geography 方法。  
  
- 错误容差**geography**方法可以是 1.0 e 一样大-7 * 扩展盘区。 范围，该引用的点之间的近似的最大距离**geography**对象。
+ geography 方法的容错可高达 1.0e-7 * extents。 extents 表示 geography 对象的各点之间的近似最大距离。
   
 
 ## <a name="registering-the-geography-type"></a>注册 geography 类型  
@@ -68,7 +68,7 @@ VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653 , -122.348 47.649, -
 GO  
 ```  
   
-### <a name="b-returning-the-intersection-of-two-geography-instances"></a>B. 返回两个地域实例的交集  
+### <a name="b-returning-the-intersection-of-two-geography-instances"></a>B. 返回两个 geography 实例的交集  
  下面的示例使用 `STIntersection()` 方法返回以前插入的两个 `geography` 实例相交的点。  
   
 ```  
@@ -83,7 +83,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geography-in-a-computed-column"></a>C. 在计算列中使用地理数据  
- 下面的示例创建一个表与持久化计算的列使用**geography**类型。  
+ 下面的示例使用 geography 类型创建具有持久化计算列的表。  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   

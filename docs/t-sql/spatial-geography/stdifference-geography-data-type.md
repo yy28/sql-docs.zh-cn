@@ -1,5 +1,5 @@
 ---
-title: "STDifference (geography 数据类型) |Microsoft 文档"
+title: "STDifference（geography 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geography-data-type"></a>STDifference（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回一个对象，表示该点集从一个**geography**位于外部另一个实例**geography**实例。  
+  返回一个对象，该对象表示来自一个 geography 实例的点集，该点集在另一个 geography 实例之外。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,25 +45,25 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>参数  
  *other_geography*  
- 是另一种**geography** ，该值指示该点以从对其调用 STDifference() 实例中删除的实例。  
+ 另一个 geography 实例，指示要从调用 STDifference() 的实例中删除的点。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**地理位置**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geography  
   
- CLR 返回类型： **SqlGeography**  
+ CLR 返回类型：SqlGeography  
   
 ## <a name="exceptions"></a>异常  
- 此方法将引发**ArgumentException**如果实例包含对跖边缘。  
+ 如果实例包含对拓边缘，此方法将引发 ArgumentException。  
   
-## <a name="remarks"></a>注释  
- 如果此方法将始终返回 null 的空间引用标识符 (Srid) **geography**实例不匹配。  
+## <a name="remarks"></a>Remarks  
+ 如果 geography 实例的空间引用标识符 (SRID) 不匹配，则此方法始终返回 null。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能返回的结果集在服务器上已扩展到**FullGlobe**实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。 此方法不精确。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持大于半球的空间实例。 只有在输入实例包含圆弧线段时，结果才会包含圆弧线段。 此方法不精确。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. 计算两个地理实例之间的差值  
- 下面的示例使用`STDifference()`来计算两个区别**geography**实例。  
+ 以下示例使用 `STDifference()` 计算两个 geography 实例之间的差别。  
   
 ```  
 DECLARE @g geography;  

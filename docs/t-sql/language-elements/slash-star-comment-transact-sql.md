@@ -1,5 +1,5 @@
 ---
-title: "正斜杠星型 （块注释） (Transact SQL) |Microsoft 文档"
+title: "斜杠星型（块注释）(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="slash-star-block-comment-transact-sql"></a>正斜杠星型 （块注释） (Transact SQL)
+# <a name="slash-star-block-comment-transact-sql"></a>斜杠星型（块注释）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  表示用户提供的文本。 之间的文本 / * 和\*/ 服务器不计。  
+  表示用户提供的文本。 服务器不计位于 /* 和 \*/ 之间的文本。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,12 +56,12 @@ text_of_comment
  *text_of_comment*  
  是注释的文本。 它是一个或多个字符串。  
   
-## <a name="remarks"></a>注释  
- 注释可以插入单独行中，也可以插入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。 必须由指示多行注释 / * 和\*/。 多行的注释，通常使用的样式规则是开始使用的第一行 /\*，因为在后续行用\* \*，且以结尾\*/。  
+## <a name="remarks"></a>Remarks  
+ 注释可以插入单独行中，也可以插入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中。 多行的注释必须用 /* 和 \*/ 指明。 用于多行注释的样式规则是，第一行用 /\* 开始，接下来的注释行用 \*\*，并且用 \*/ 结束注释。  
   
  注释没有最大长度限制。  
   
- 支持嵌套注释。 如果 / * 在现有的注释中的任何位置发生字符模式，它将被视为嵌套注释的开始和，因此，需要右\*/ 注释标记。 如果没有注释的结尾标记，便会生成错误。  
+ 支持嵌套注释。 如果在现有注释内的任意位置上出现 /* 字符模式，便会将其视为嵌套注释的开始，因此，需要使用注释的结尾标记 \*/。 如果没有注释的结尾标记，便会生成错误。  
   
  例如，以下代码生成一个错误。  
   
@@ -109,8 +109,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+ [-- (注释) (Transact-SQL)](../../t-sql/language-elements/comment-transact-sql.md)   
+ [控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "表值构造函数 (Transact SQL) |Microsoft 文档"
+title: "表值构造函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="table-value-constructor-transact-sql"></a>表值构造函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定要构建到某一表中的一组行值表达式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数允许在单个 DML 语句中指定多行数据。 可以在 VALUES 子句中使用 INSERT 语句中指定表值构造函数\<源表 > 子句的 MERGE 语句中，和的派生表中的 FROM 子句中的定义中。  
+  指定要构建到某一表中的一组行值表达式。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数允许在单个 DML 语句中指定多行数据。 该表值构造函数可以在 INSERT 语句的 VALUES 子句中指定，在 MERGE 语句的 USING \<源表> 子句中指定，以及在 FROM 子句的派生表定义中指定。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,13 +64,13 @@ VALUES ( <row value expression list> ) [ ,...n ]
  一个常量、变量或表达式。 表达式不能包含 EXECUTE 语句。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
- 可以在两种方式之一中使用表值构造函数： 直接在值的插入操作的列表... 值语句，或作为派生表随处派生表才允许。 如果行数超过了最大值，则返回错误 10738。 若要插入超出限制所允许的更多行，使用以下方法之一：  
+ 表值构造函数可以用以下两种方式之一进行使用：直接用在 INSERT … VALUES 语句的 VALUES 列表中， 或在任何允许派生表的位置用作派生表。 如果行数超过最大值，则返回错误 10738。 若要插入超过限制所允许的行数，请使用下列方法之一：  
   
 -   创建多个 INSERT 语句  
   
--   使用派生的表  
+-   使用派生表  
   
--   大容量导入数据，通过使用**bcp**实用工具或 BULK INSERT 语句  
+-   通过使用 bcp 实用工具或 BULK INSERT 语句批量导入数据  
   
  只允许单个标量值作为行值表达式。 涉及多列的子查询不允许作为行值表达式。 例如，以下代码导致语法错误，因为第三个行值表达式列表包含具有多列的子查询。  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>数据类型  
- 在多行 INSERT 语句中指定的值遵循 UNION ALL 语法的数据类型约定属性。 这将导致为更高版本的类型不匹配类型的隐式转换[优先](../../t-sql/data-types/data-type-precedence-transact-sql.md)。 如果此转换不是所支持的隐式转换，则返回错误。 例如，以下语句中插入一个整数值和字符值类型的列**char**。  
+ 在多行 INSERT 语句中指定的值遵循 UNION ALL 语法的数据类型约定属性。 这会导致不匹配类型隐式转换到更高[优先级](../../t-sql/data-types/data-type-precedence-transact-sql.md)的类型。 如果此转换不是所支持的隐式转换，则返回错误。 例如，以下语句将整数值和字符值插入到类型为 char 的列中。  
   
 ```  
 CREATE TABLE dbo.t (a int, b char);  
@@ -149,7 +149,7 @@ SELECT * FROM Sales.MySalesReason;
 ```  
   
 ### <a name="c-specifying-multiple-values-as-a-derived-table-in-a-from-clause"></a>C. 在 FROM 子句中将多个值指定为派生表  
- 下面的示例使用表值构造函数的 SELECT 语句的 FROM 子句中指定多个值。  
+ 下面的示例在 SELECT 语句的 FROM 子句中使用表值构造函数指定多个值。  
   
 ```  
 SELECT a, b FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);  
@@ -190,7 +190,7 @@ GROUP BY Change;
   
 ## <a name="see-also"></a>另请参阅  
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
+ [MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "分析 （数据库引擎） |Microsoft 文档"
+title: "Parse（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="parse-database-engine"></a>Parse（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-分析的规范字符串表示形式转换**hierarchyid**到**hierarchyid**值。 当从到的字符串类型的转换时，隐式调用分析**hierarchyid**时发生。 充当相反[ToString](../../t-sql/data-types/tostring-database-engine.md)。 Parse （） 是一种静态方法。
+Parse 将 hierarchyid 的规范字符串表示形式转换为 hierarchyid 值。 当发生从字符串类型到 hierarchyid 的转换时，将隐式调用 Parse。 作用与 [ToString](../../t-sql/data-types/tostring-database-engine.md) 相反。 Parse() 是静态方法。
   
 ## <a name="syntax"></a>语法  
   
@@ -52,23 +52,23 @@ static SqlHierarchyId Parse ( SqlString input )
 ```  
   
 ## <a name="arguments"></a>参数  
-*输入*  
+input  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]：要转换的字符数据类型值。
   
 CLR：要计算的字符串值。
   
 ## <a name="return-types"></a>返回类型  
-**SQL Server 返回类型： hierarchyid**
+SQL Server 返回类型：hierarchyid
   
-**CLR 返回类型： SqlHierarchyId**
+CLR 返回类型：SqlHierarchyId
   
-## <a name="remarks"></a>注释  
-如果分析收到一个值，不是有效的字符串表示形式**hierarchyid**，将引发异常。 例如，如果**char**数据类型包含尾随空格，则引发异常。
+## <a name="remarks"></a>Remarks  
+如果 Parse 收到的值不是 hierarchyid 的有效字符串表示形式，则会引发异常。 例如，如果 char 数据类型包含尾随空格，则会引发异常。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. 不使用表转换 Transact-SQL 值  
-下面的代码示例使用`ToString`要转换**hierarchyid**为一个字符串，值和`Parse`要转换到的字符串值**hierarchyid**。
+下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用 `Parse` 将字符串值转换为 hierarchyid。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -89,7 +89,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="b-clr-example"></a>B. CLR 示例  
-下面的代码段调用 parse （） 方法：
+下面的代码段调用 Parse() 方法：
   
 ```sql
 string input = “/1/2/”;  

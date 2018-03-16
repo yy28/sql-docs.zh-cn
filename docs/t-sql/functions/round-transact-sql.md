@@ -1,5 +1,5 @@
 ---
-title: "ROUND (Transact SQL) |Microsoft 文档"
+title: ROUND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/14/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的精确数字或近似数字数据类型类别，除**位**数据类型。  
+ 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *length*  
- 是指精度*numeric_expression*要舍入。 *长度*必须是类型的表达式**tinyint**， **smallint**，或**int**。当*长度*的正数值*numeric_expression*舍入到由指定的小数位数*长度*。 当*长度*为负数， *numeric_expression*所指定的小数点左侧舍入*长度*。  
+ 它是 numeric_expression 的舍入精度。 length 必须是 tinyint、smallint 或 int 类型的表达式。如果 length 为正数，则将 numeric_expression 舍入到 length 指定的小数位数。 如果 length 为负数，则将 numeric_expression 小数点左边部分舍入到 length 指定的长度。  
   
  *函数*  
- 要执行的操作的类型。 *函数*必须**tinyint**， **smallint**，或**int**。当*函数*省略或者它的值为 0 （默认值）、 *numeric_expression*舍入。 如果以外的值指定了 0， *numeric_expression*将被截断。  
+ 要执行的操作的类型。 function 的数据类型必须是 tinyint、smallint 或 int。如果 function 省略或其值为 0（默认值），则对 numeric_expression 进行舍入。 如果指定了 0 以外的值，则将截断 numeric_expression。  
   
 ## <a name="return-types"></a>返回类型  
  返回以下数据类型。  
@@ -65,23 +65,23 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**int**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|**十进制**和**数值**类别 （p、 s）|**十进制 （p、 s）**|  
-|**money**和**smallmoney**类别|**money**|  
-|**float**和**实际**类别|**float**|  
+|**decimal** 和 **numeric** 类别 (p, s)|**decimal(p, s)**|  
+|money 和 smallmoney 类别|**money**|  
+|float 和 real 类别|**float**|  
   
 ## <a name="remarks"></a>Remarks  
- ROUND 始终返回一个值。 如果*长度*为负数，大于小数点前的数字个数，则 ROUND 返回 0。  
+ ROUND 始终返回一个值。 如果 length 为负数，并且大于小数点前的数字个数，则 ROUND 将返回 0。  
   
 |示例|结果|  
 |-------------|------------|  
-|ROUND （748.58、-4）|0|  
+|ROUND(748.58, -4)|0|  
   
- ROUND 返回的圆形*numeric_expression*，数据类型，而不考虑时*长度*为负数。  
+ 如果 length 为负数，则无论什么数据类型，ROUND 都将返回一个舍入的 numeric_expression。  
   
 |示例|结果|  
 |--------------|------------|  
-|ROUND （748.58，则为-1）|750.00|  
-|ROUND （748.58，-2）|700.00|  
+|ROUND(748.58, -1)|750.00|  
+|ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|导致算术溢出，因为 748.58 默认为 decimal(5,2)，它无法返回 1000.00。|  
 |若要向上舍入到 4 位，请更改输入的数据类型。 例如：<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
@@ -141,8 +141,8 @@ GO
 ```
   
 ## <a name="see-also"></a>另请参阅  
- [上限 &#40;Transact SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   
+ [CEILING (Transact-SQL)](../../t-sql/functions/ceiling-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [FLOOR &#40;Transact SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [FLOOR (Transact-SQL)](../../t-sql/functions/floor-transact-sql.md)   
+ [数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)

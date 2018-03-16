@@ -1,5 +1,5 @@
 ---
-title: "CurveToLineWithTolerance (geometry 数据类型) |Microsoft 文档"
+title: "CurveToLineWithTolerance（geometry 数据类型）| Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-返回多边形的近似**几何图形**包含条圆弧线段实例。
+返回包含圆弧线段的 geometry 实例的多边形近似值。
   
 ## <a name="syntax"></a>语法  
   
@@ -41,45 +41,45 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- *tolerance*  
- 是**double**定义原始条圆弧线段和其线性近似值之间的最大错误的表达式。  
+ tolerance  
+ 一个 double 表达式，它定义原始圆弧线段与其线性近似值之间的最大误差。  
   
- *relative*  
- 是**bool**表达式，该值指示是否使用相对的最大偏差。 如果将 relative 设置为 false (0)，则为可能具有线性近似值的偏差设置绝对最大值。 如果将 relative 设置为 true (1)，则按 tolerance 参数与空间对象边界框直径的乘积来计算公差。  
+ relative  
+ 一个 bool 表达式，它指示是否使用偏差的相对最大值。 如果将 relative 设置为 false (0)，则为可能具有线性近似值的偏差设置绝对最大值。 如果将 relative 设置为 true (1)，则按 tolerance 参数与空间对象边界框直径的乘积来计算公差。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回类型：**几何图形**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
- CLR 返回类型： **SqlGeometry**  
+ CLR 返回类型：SqlGeometry  
   
 ## <a name="exceptions"></a>异常  
  设置 tolerance <= 0 将引发 `ArgumentOutOfRange` 异常。  
   
-## <a name="remarks"></a>注释  
- 此方法可指定所产生的错误容差金额**LineString**。  
+## <a name="remarks"></a>Remarks  
+ 此方法可以指定结果 LineString 的容错大小。  
   
  下表显示了 `CurveToLineWithTolerance()` 为各种类型返回的实例类型。  
   
 |调用实例类型|返回的空间类型|  
 |----------------------------|---------------------------|  
-|空 geometry 实例|空**GeometryCollection**实例|  
-|**点**和**MultiPoint**|**点**实例|  
-|**MultiPoint**|**点**或**MultiPoint**实例|  
-|**CircularString**， **CompoundCurve**，或**LineString**|**LineString**实例|  
-|**MultiLineString**|**LineString**或**MultiLineString**实例|  
-|**CurvePolygon**和**多边形**|**多边形**实例|  
-|**MultiPolygon**|**多边形**或**MultiPolygon**实例|  
-|**GeometryCollection**与不包含条圆弧线段的单个实例|中包含的实例**GeometryCollection**确定返回的实例的类型。|  
-|**GeometryCollection**与一维条圆弧线段实例 (**CircularString**， **CompoundCurve**)|**LineString**实例|  
-|**GeometryCollection**与二维条圆弧线段实例 (**CurvePolygon**)|**多边形**实例|  
-|**GeometryCollection**使用多个一维实例|**MultiLineString**实例|  
-|**GeometryCollection**与多个两维实例|**MultiPolygon**实例|  
-|**GeometryCollection**不同维度的多个实例|**GeometryCollection**实例|  
+|空 geometry 实例|空的 GeometryCollection 实例|  
+|Point 和 MultiPoint|Point 实例|  
+|**MultiPoint**|Point 或 MultiPoint 实例|  
+|CircularString、CompoundCurve 或 LineString|LineString 实例|  
+|**MultiLineString**|LineString 或 MultiLineString 实例|  
+|CurvePolygon 和 Polygon|Polygon 实例|  
+|**MultiPolygon**|Polygon 或 MultiPolygon 实例|  
+|具有一个不包含圆弧线段的实例的 GeometryCollection|GeometryCollection 中包含的实例决定了返回的实例类型。|  
+|具有一个一维圆弧线段实例（CircularString、CompoundCurve）的 GeometryCollection|LineString 实例|  
+|具有一个二维圆弧线段实例 (CurvePolygon) 的 GeometryCollection|Polygon 实例|  
+|具有多个一维实例的 GeometryCollection|MultiLineString 实例|  
+|具有多个二维实例的 GeometryCollection|MultiPolygon 实例|  
+|具有多个不同维度的实例的 GeometryCollection|GeometryCollection 实例|  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. 在 CircularString 实例上使用不同的公差值  
- 下面的示例演示如何设置容差影响`LineString`从返回的实例`CircularString`实例：  
+ 以下示例说明设置容差如何影响从 `CircularString` 实例返回的 `LineString` 实例：  
   
 ```
  DECLARE @g geometry; 
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 对于调用 CurvePolygon 实例，将 relative 设置为 true  
- 下面的示例使用`CurvePolygon`实例来调用`CurveToLineWithTolerance()`与*相对*设置为 true:  
+ 以下示例使用 `CurvePolygon` 实例调用 `CurveToLineWithTolerance()` 并将 relative 设置为 true：  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -123,8 +123,8 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ## <a name="see-also"></a>另请参阅  
- [CurveToLineWithTolerance &#40; geography 数据类型 &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine &#40; geometry 数据类型 &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+ [CurveToLineWithTolerance（geography 数据类型）](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
+ [STCurveToLine（geometry 数据类型）](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
 

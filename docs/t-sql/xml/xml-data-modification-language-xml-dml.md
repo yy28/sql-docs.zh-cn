@@ -1,5 +1,5 @@
 ---
-title: "XML 数据修改语言 (XML DML) |Microsoft 文档"
+title: "XML 数据修改语言 (XML DML) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,42 +38,42 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-data-modification-language-xml-dml"></a>XML 数据修改语言 (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML 数据修改语言 (XML DML) 是 XQuery 语言的扩展。 根据 W3C 的定义，XQuery 语言缺少数据操作 (DML) 部分。 在本主题中，以及 XQuery 语言中，引入 XML DML 提供完全正常运行的查询和数据修改语言，你可以使用针对**xml**数据类型。  
+  XML 数据修改语言 (XML DML) 是 XQuery 语言的扩展。 根据 W3C 的定义，XQuery 语言缺少数据操作 (DML) 部分。 本主题所介绍的 XML DML 以及 XQuery 语言，提供完整的功能查询和数据修改语言，你可以使用它们对 xml 数据类型进行操作。  
   
  XML DML 将下列区分大小写的关键字添加到 XQuery 中：  
   
 -   **insert**  
   
--   **删除**  
+-   **delete**  
   
--   **替换值**  
+-   **replace value of**  
   
- 中所述[XML 数据类型和列 &#40;SQL server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)，你可以创建的变量和列**xml**键入并向它们分配 XML 文档或片段。 若要修改或更新这些 XML 实例，请执行下列操作：  
+ 如 [XML 数据类型和列 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md) 中所述，可以创建 xml 类型的变量和列，并向它们分配 XML 文档或片断。 若要修改或更新这些 XML 实例，请执行下列操作：  
   
--   使用[modify （) 方法 xml 数据类型)](../../t-sql/xml/modify-method-xml-data-type.md)的**xml**数据类型。  
+-   使用 xml 数据类型的 [modify() 方法（xml 数据类型）](../../t-sql/xml/modify-method-xml-data-type.md)。  
   
--   指定适当的 XML DML 语句内**modify （)**方法。  
+-   指定 modify() 方法中相应的 XML DML 语句。  
   
  请注意，存在某些无法插入、删除或修改其值的属性。 例如：  
   
--   为类型化或非类型化**xml，**的属性将**xmlns**， **xmlns:\***，和**xml:base**。  
+-   对于类型化或非类型化的 xml 而言，这样的属性有 xmlns、xmlns:\* 和 xml:base。  
   
--   对于类型化**xml**仅，这些属性包括**xsi: nil**，和**xsi: type**。  
+-   仅对于类型化的 xml 而言，这样的属性有 xsi:nil 和 xsi:type。  
   
  下面列出了其他限制：  
   
--   为类型化或非类型化**xml**，这样的属性插入**xml:base**将失败。  
+-   对于类型化或非类型化的 xml，插入 xml:base 属性将失败。  
   
--   对于类型化**xml**、 删除和修改**xsi: nil**属性将会失败。 为非类型化**xml**，您可以删除该属性或修改其值。  
+-   对于类型化的 xml，删除和修改 xsi:nil 属性将失败。 对于非类型化的 xml，则可以删除此属性或修改此属性的值。  
   
--   对于类型化**xml**，修改的值**xs:type**属性将会失败。 为非类型化**xml**，你可以修改的属性值。  
+-   对于类型化的 xml，修改 xs:type 属性值将失败。 对于非类型化的 xml，则可以修改此属性值。  
   
  修改类型化的 XML 实例时，最终格式必须是该类型的有效实例。 否则，将返回一个验证错误。  
   
 ## <a name="see-also"></a>另请参阅  
- [insert &#40;XML DML &#41;](../../t-sql/xml/insert-xml-dml.md)   
- [删除 &#40;XML DML &#41;](../../t-sql/xml/delete-xml-dml.md)   
- [替换值的 &#40;XML DML &#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
+ [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md)   
+ [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md)   
+ [replace value of &#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
  [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [创建 XML 数据的实例](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)  

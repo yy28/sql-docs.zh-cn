@@ -1,5 +1,5 @@
 ---
-title: "获取会话组 (Transact SQL) |Microsoft 文档"
+title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -66,27 +66,27 @@ ms.lasthandoff: 01/25/2018
  指定如果当前没有消息，则 GET CONVERSATION GROUP 语句将等待消息到达队列。  
   
  *@conversation_group_id*  
- 用于存储 GET CONVERSATION GROUP 语句返回的会话组 ID 的变量。 变量必须为类型**uniqueidentifier**。 如果没有可用的会话组，则该变量设置为 NULL。  
+ 用于存储 GET CONVERSATION GROUP 语句返回的会话组 ID 的变量。 该变量的类型必须为 uniqueidentifier。 如果没有可用的会话组，则该变量设置为 NULL。  
   
  FROM  
  指定要从中获取会话组的队列。  
   
  *database_name*  
- 包含从中获取会话组的队列的数据库的名称。 如果没有*database_name*提供，则默认为当前数据库。  
+ 包含从中获取会话组的队列的数据库的名称。 如果未提供 database_name，则默认为当前数据库。  
   
  *schema_name*  
- 拥有从中获取会话组的队列的架构的名称。 如果没有*schema_name*提供，则默认为当前用户的默认架构。  
+ 拥有从中获取会话组的队列的架构的名称。 如果未提供 schema_name，则默认为当前用户的默认架构。  
   
- *queue_name*  
+ queue_name  
  要从中获取会话组的队列的名称。  
   
- 超时*超时*  
- 指定 Service Broker 等待消息到达队列的时间（毫秒）。 该子句只能与 WAITFOR 子句一起使用。 如果使用 WAITFOR 语句不包含此子句或*超时*为-1，则等待时间没有限制。 如果在超时到期，GET CONVERSATION GROUP 设置 *@conversation_group_id* 变量为 NULL。  
+ TIMEOUT timeout  
+ 指定 Service Broker 等待消息到达队列的时间（毫秒）。 该子句只能与 WAITFOR 子句一起使用。 如果使用 WAITFOR 的语句不包括该子句，或者 timeout 为 -1，则等待时间没有限制。 如果超时时间已到，则 GET CONVERSATION GROUP 将 @conversation_group_id 变量设置为 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  如果 GET CONVERSATION GROUP 语句不是在批处理或存储的过程的第一个语句，必须以分号结尾前面的语句 (**;**)，则[!INCLUDE[tsql](../../includes/tsql-md.md)]语句终止符。  
+>  如果 GET CONVERSATION GROUP 语句不是批处理或存储过程中的第一个语句，则必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符分号 (;) 终止前面的语句。  
   
  如果 GET CONVERSATION GROUP 语句中指定的队列不可用，则该语句将失败，并返回一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误。  
   
@@ -144,7 +144,7 @@ FROM AdventureWorks.dbo.ExpenseQueue ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [BEGIN DIALOG CONVERSATION &#40;Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [移动对话 &#40;Transact SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
+ [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [MOVE CONVERSATION (Transact-SQL)](../../t-sql/statements/move-conversation-transact-sql.md)  
   
   
