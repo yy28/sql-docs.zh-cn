@@ -1,5 +1,5 @@
 ---
-title: "GetRoot （数据库引擎） |Microsoft 文档"
+title: "GetRoot（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -49,11 +49,11 @@ static SqlHierarchyId GetRoot ( )
 ```  
   
 ## <a name="return-types"></a>返回类型  
-**SQL Server 返回类型： hierarchyid**
+SQL Server 返回类型：hierarchyid
   
-**CLR 返回类型： SqlHierarchyId**
+CLR 返回类型：SqlHierarchyId
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 用于确定层次结构树中的根节点。
   
 ## <a name="examples"></a>示例  

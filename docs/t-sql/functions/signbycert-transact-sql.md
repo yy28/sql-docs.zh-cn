@@ -1,5 +1,5 @@
 ---
-title: "SIGNBYCERT (Transact SQL) |Microsoft 文档"
+title: SIGNBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,22 +53,22 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
   
 ## <a name="arguments"></a>参数  
  *certificate_ID*  
- 当前数据库中证书的 ID。 *certificate_ID*是**int**。  
+ 当前数据库中证书的 ID。 certificate_ID 是 int。  
   
  *@cleartext*  
- 是类型的变量**nvarchar**， **char**， **varchar**，或**nchar**包含将签名的数据。  
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含要签名的数据。  
   
-  *密码*   
- 用来对证书私钥进行加密的密码。 *密码*是**nvarchar （128)**。  
+ ' password '  
+ 用来对证书私钥进行加密的密码。 password 的数据类型为 nvarchar(128)。  
   
 ## <a name="return-types"></a>返回类型  
- **varbinary** 8000 个字节的最大大小。  
+ varbinary（最大大小为 8000 个字节）。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例在登录文本`@SensitiveData`使用证书`ABerglundCert07`，具有第一次解密密码"pGFD4bb925DGvbd2439587y"的证书。 然后，它在 `SignedData04` 表中插入明文和签名。  
+ 以下示例将用证书 `ABerglundCert07` 来签署 `@SensitiveData` 中的文本，该证书已用密码“pGFD4bb925DGvbd2439587y”进行解密。 然后，它在 `SignedData04` 表中插入明文和签名。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  
@@ -82,11 +82,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [VERIFYSIGNEDBYCERT &#40;Transact SQL &#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
- [CERT_ID &#40;Transact SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+ [VERIFYSIGNEDBYCERT (Transact-SQL)](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
+ [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [删除证书 &#40;Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

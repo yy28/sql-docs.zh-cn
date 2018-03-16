@@ -1,5 +1,5 @@
 ---
-title: "IsDescendantOf （数据库引擎） |Microsoft 文档"
+title: "IsDescendantOf（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回 true 如果*这*是父级的后代。
+如果这是父级的后代，则返回 true。
   
 ## <a name="syntax"></a>语法  
   
@@ -49,15 +49,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>参数  
-*父*  
-**Hierarchyid**应为其执行 IsDescendantOf 测试的节点。
+parent  
+要执行 IsDescendantOf 测试的 Hierarchyid 节点。
   
 ## <a name="return-types"></a>返回类型  
-**SQL Server 返回类型： 位**
+SQL Server 返回类型：bit
   
-**CLR 返回类型： SqlBoolean**
+CLR 返回类型：SqlBoolean
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 对于以父级为根的子树中的所有节点，返回 true；对于其他所有节点，返回 false。
   
 父级被视为其本身的后代。

@@ -1,5 +1,5 @@
 ---
-title: "uniqueidentifier (Transact SQL) |Microsoft 文档"
+title: uniqueidentifier (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/1/2017
 ms.prod: sql-non-specified
@@ -39,22 +39,22 @@ ms.lasthandoff: 01/02/2018
 16 字节 GUID。
   
 ## <a name="remarks"></a>Remarks  
-列或的本地变量**uniqueidentifier**数据类型可以通过以下方式初始化为值：
--   通过使用[NEWID](../../t-sql/functions/newid-transact-sql.md)或[NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md)函数。    
--   通过从窗体中的字符串常量转换*xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*- *xxxxxxxxxxxx*，其中的每个*x*是范围 0-9 或 a-f 的十六进制数字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 是一个有效**uniqueidentifier**值。  
+uniqueidentifier 数据类型的列或局部变量可通过以下方式初始化为一个值：
+-   通过使用 [NEWID](../../t-sql/functions/newid-transact-sql.md) 或 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 函数。    
+-   通过从 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 形式的字符串常量进行转换，其中，每个 x 都是 0-9 或 a-f 范围内的十六进制数字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 为有效的 uniqueidentifier 值。  
   
-比较运算符可与**uniqueidentifier**值。 不过，排序不是通过比较两个值的位模式来实现的。 可以针对执行的唯一操作**uniqueidentifier**值是比较 (=、 <>， \<，>， \<=、 > =) 和检查是否为 NULL （IS NULL 和 IS NOT NULL）。 不能使用其他算术运算符。 所有列约束和属性，除了标识，可以都用在上**uniqueidentifier**数据类型。
+比较运算符可与 uniqueidentifier 值一起使用。 不过，排序不是通过比较两个值的位模式来实现的。 可针对 uniqueidentifier 值执行的运算只有比较运算（=、<>、\<、>、\<=、>=）以及检查是否为 NULL（IS NULL 和 IS NOT NULL）。 不能使用其他算术运算符。 除 IDENTITY 之外的所有列约束和属性均可对 uniqueidentifier 数据类型使用。
   
-合并复制和带有更新订阅使用事务复制**uniqueidentifier**列若要确保行进行唯一标识跨多个表的副本。
+具有更新订阅的合并复制和事务复制使用 uniqueidentifier 列来确保在表的多个副本中唯一地标识行。
   
 ## <a name="converting-uniqueidentifier-data"></a>转换 uniqueidentifier 数据  
-**Uniqueidentifier**类型被视为出于从字符表达式，转换的字符类型，并因此受到将转换为字符类型的截断规则。 也即，如果将字符表达式转换为不同大小的字符数据类型，则对于新数据类型而言过长的值将被截断。 请参阅“示例”部分。
+出于从字符表达式转换的目的将 uniqueidentifier 类型视为字符类型，因此在转换到字符类型时要遵循截断规则。 也即，如果将字符表达式转换为不同大小的字符数据类型，则对于新数据类型而言过长的值将被截断。 请参阅“示例”部分。
   
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
-这些工具和功能不支持`uniqueidentifier`数据类型：
+这些工具和功能不支持 `uniqueidentifier` 数据类型：
 - PolyBase
-- [dwloader 加载工具](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader)并行数据仓库
+- 适用于并行数据仓库的 [dwloader 加载工具](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader)
 
 ## <a name="examples"></a>示例  
 以下示例将 `uniqueidentifier` 值转换为 `char` 数据类型。
@@ -64,7 +64,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-以下示例演示在值过长而无法转换数据类型时如何截断数据。 因为**uniqueidentifier**类型仅限于 36 个字符，超过该长度的字符将被截断。
+以下示例演示在值过长而无法转换数据类型时如何截断数据。 因为 uniqueidentifier 类型限制为 36 个字符，所以，将截断超过该长度的字符。
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
@@ -87,8 +87,8 @@ String                                       TruncatedValue
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[NEWID &#40;Transact SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40;Transact SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[NEWID (Transact-SQL)](../../t-sql/functions/newid-transact-sql.md)  
+[NEWSEQUENTIALID (Transact-SQL)](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   

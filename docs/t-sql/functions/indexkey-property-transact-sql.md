@@ -1,5 +1,5 @@
 ---
-title: "INDEXKEY_PROPERTY (Transact SQL) |Microsoft 文档"
+title: INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
   返回有关索引键的信息。 对于 XML 索引，返回 NULL。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用[sys.index_columns &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 相反，则使用 [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,21 +53,21 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 ```  
   
 ## <a name="arguments"></a>参数  
- *object_ID*  
- 表或索引视图的对象标识号。 *object_ID*是**int**。  
+ object_ID  
+ 表或索引视图的对象标识号。 object_id 的数据类型为 int。  
   
- *index_ID*  
- 索引标识号。 *index_ID*是**int**。  
+ index_ID  
+ 索引标识号。 index_ID 的数据类型为 int。  
   
- *key_ID*  
- 索引键列的位置。 *key_ID*是**int**。  
+ key_ID  
+ 索引键列的位置。 key_ID 的数据类型为 int。  
   
- *属性*  
- 要返回其信息的属性的名称。 *属性*为字符字符串，可以为以下值之一。  
+ property  
+ 要返回其信息的属性的名称。 property 是字符串，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**ColumnId**|在列 ID *key_ID*的索引的位置。|  
+|**ColumnId**|索引的 key_ID 位置上的列 ID。|  
 |**IsDescending**|存储索引列的排序顺序。<br /><br /> 1 = 降序 0 = 升序|  
   
 ## <a name="return-types"></a>返回类型  
@@ -102,9 +102,9 @@ Column ID   Asc or Desc order
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [INDEX_COL &#40;Transact SQL &#41;](../../t-sql/functions/index-col-transact-sql.md)   
+ [INDEX_COL (Transact-SQL)](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
- [sys.objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

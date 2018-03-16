@@ -1,5 +1,5 @@
 ---
-title: "改用 DATABASE_PRINCIPAL_ID (Transact SQL) |Microsoft 文档"
+title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回当前数据库中的主体的 ID 号。 有关主体的详细信息，请参阅[主体 &#40; 数据库引擎 &#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。
+返回当前数据库中的主体的 ID 号。 有关主体的详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,15 +48,15 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 ```  
   
 ## <a name="arguments"></a>参数  
-*principal_name*  
-类型的表达式**sysname**表示主体。  
-当*principal_name*是省略，则返回当前用户的 ID。 需要使用括号。
+principal_name  
+是 sysname 类型的表达式，表示数据库主体。  
+如果省略 principal_name，则返回当前用户的 ID。 需要使用括号。
   
 ## <a name="return-types"></a>返回类型
 **int**  
 数据库主体不存在时为 NULL。
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 可以在选择列表、WHERE 子句或表达式允许的任意位置使用 DATABASE_PRINCIPAL_ID。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="examples"></a>示例  

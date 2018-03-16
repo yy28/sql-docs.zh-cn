@@ -1,5 +1,5 @@
 ---
-title: "数据库控制台命令 |Microsoft 文档"
+title: "数据库控制台命令 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供以下管理命令。
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
 
 |||  
 |-|-|  

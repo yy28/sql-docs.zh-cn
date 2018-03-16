@@ -1,5 +1,5 @@
 ---
-title: "@@MAX_PRECISION (Transact SQL) |Microsoft 文档"
+title: '@@MAX_PRECISION (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,10 +35,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40maxprecision-transact-sql"></a>& #x 40; 和 #x 40;MAX_PRECISION (Transact SQL)
+# <a name="x40x40maxprecision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回由的精度级别**十进制**和**数值**按当前在服务器中设置数据类型。  
+  按照服务器中的当前设置，返回 decimal 和 numeric 数据类型所用的精度级别。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型  
  **tinyint**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  默认情况下，最大精度返回 38。  
   
 ## <a name="examples"></a>示例  
@@ -63,7 +63,7 @@ SELECT @@MAX_PRECISION AS 'Max Precision'
   
 ## <a name="see-also"></a>另请参阅  
  [配置函数 (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [小数和数值 &#40;Transact SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [精度、 小数位数和长度 &#40;Transact SQL &#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
+ [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
   
   

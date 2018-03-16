@@ -1,5 +1,5 @@
 ---
-title: "分组 (Transact SQL) |Microsoft 文档"
+title: GROUPING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指示是否聚合 GROUP BY 列表中的指定列表达式。 在结果集中，如果 GROUPING 返回 1 则指示聚合；返回 0 则指示不聚合。 可以仅在选择中使用分组\<选择 > 列表，，和 ORDER BY 子句时指定了 GROUP BY。  
+  指示是否聚合 GROUP BY 列表中的指定列表达式。 在结果集中，如果 GROUPING 返回 1 则指示聚合；返回 0 则指示不聚合。 如果指定了 GROUP BY，则 GROUPING 只能用在 SELECT \<select> 列表、HAVING 和 ORDER BY 子句中。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ GROUPING ( <column_expression> )
 ```  
   
 ## <a name="arguments"></a>参数  
- \<column_expression >  
- 是列或包含中的列的表达式[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)子句。  
+ \<column_expression>  
+ 列或者 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句中包含列的表达式。  
   
 ## <a name="return-types"></a>返回类型  
  **tinyint**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  GROUPING 用于区分标准空值和由 ROLLUP、CUBE 或 GROUPING SETS 返回的空值。 作为 ROLLUP、CUBE 或 GROUPING SETS 操作结果返回的 NULL 是 NULL 的特殊应用。 它在结果集内作为列的占位符，表示全体。  
   
 ## <a name="examples"></a>示例  
@@ -70,7 +70,7 @@ GROUP BY SalesQuota WITH ROLLUP;
 GO  
 ```  
   
- 结果集在 `SalesQuota` 下面显示两个 null 值。 第一个 `NULL` 代表从表中的这一列得到的 null 值组。 第二个 `NULL` 位于 ROLLUP 操作所添加的汇总行之中。 摘要行显示`TotalSalesYTD`金额所有`SalesQuota`分组，并将由`1`中`Grouping`列。  
+ 结果集在 `SalesQuota` 下面显示两个 null 值。 第一个 `NULL` 代表从表中的这一列得到的 null 值组。 第二个 `NULL` 位于 ROLLUP 操作所添加的汇总行之中。 汇总行显示所有 `SalesQuota` 组的 `TotalSalesYTD` 金额，并以 `Grouping` 列中的 `1` 进行指示。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -86,7 +86,7 @@ NULL           44294026.1344         1
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [GROUPING_ID &#40;Transact SQL &#41;](../../t-sql/functions/grouping-id-transact-sql.md)   
- [GROUP BY &#40;Transact SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
+ [GROUPING_ID (Transact-SQL)](../../t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUP BY (Transact-SQL)](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

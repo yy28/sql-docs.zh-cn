@@ -1,5 +1,5 @@
 ---
-title: "度 (Transact SQL) |Microsoft 文档"
+title: DEGREES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的精确数字或近似数字数据类型类别，除**位**数据类型。  
+ 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-code-values"></a>返回代码值  
  返回与 numeric_expression 相同的类型。  
@@ -70,7 +70,7 @@ The number of degrees in PI/2 radians is 90
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

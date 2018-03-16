@@ -1,5 +1,5 @@
 ---
-title: "PI (Transact SQL) |Microsoft 文档"
+title: PI (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -66,7 +66,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

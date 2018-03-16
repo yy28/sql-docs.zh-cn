@@ -1,5 +1,5 @@
 ---
-title: "ERROR_SEVERITY (Transact SQL) |Microsoft 文档"
+title: ERROR_SEVERITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,17 +56,17 @@ ERROR_SEVERITY ( )
   
  如果在 CATCH 块作用域以外调用，则返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ERROR_SEVERITY 可以在 CATCH 块范围内的任意位置调用。  
   
- ERROR_SEVERITY 返回错误严重级别，不管它运行多少次，或它运行在 CATCH 块的范围内的什么位置。 这是相反功能，例如 @@ERROR，它仅返回的错误号或 CATCH 块的第一个语句中立即后导致的错误的一个语句。  
+ ERROR_SEVERITY 返回错误严重级别，不管它运行多少次，或它运行在 CATCH 块的范围内的什么位置。 这与 @@ERROR 之类的函数形成鲜明对比，后者只在导致错误的语句的下一个语句中或者在 CATCH 块的第一个语句中返回错误号。  
   
  在嵌套 CATCH 块中，ERROR_SEVERITY 返回特定于引用它的 CATCH 块的范围的错误严重级别。 例如，外部 TRY...CATCH 构造的 CATCH 块可能具有嵌套 TRY...CATCH 构造。 在嵌套 CATCH 块中，ERROR_SEVERITY 返回调用了嵌套 CATCH 块的错误的严重级别。 如果 ERROR_SEVERITY 运行在 CATCH 块以外，则它会返回调用该 CATCH 块的错误的严重级别。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_SEVERITY  
- 下面的示例演示`SELECT`生成一个由零除错误的语句。 返回错误的严重级别。  
+ 下面的示例显示生成被零除错误的 `SELECT` 语句。 返回错误的严重级别。  
   
 ```  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. 使用其他错误处理工具在 CATCH 块中使用 ERROR_SEVERITY  
  下面的示例显示一个会生成被零除错误的 `SELECT` 语句。 同时与严重级别一起返回与该错误相关的信息。  
@@ -130,7 +130,7 @@ GO
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "ENCRYPTBYCERT (Transact SQL) |Microsoft 文档"
+title: ENCRYPTBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
   
 ## <a name="arguments"></a>参数  
  *certificate_ID*  
- 数据库中证书的 ID。 **int**。  
+ 数据库中证书的 ID。 int。  
   
- *明文形式*  
+ cleartext  
  将使用证书进行加密的数据字符串。  
   
  **@cleartext**  
- 类型的变量的**nvarchar**， **char**， **varchar**，**二进制**， **varbinary**，或**nchar**包含将使用该证书的公钥加密的数据。  
+ 类型为 nvarchar、char、varchar、binary、varbinary 或 nchar 的变量，其中包含将使用证书的公钥进行加密的数据。  
   
 ## <a name="return-types"></a>返回类型  
- **varbinary** 8000 个字节的最大大小。  
+ varbinary（最大大小为 8000 个字节）。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  该函数使用证书的公钥对数据进行加密。 只能使用相应的私钥对加密文本进行解密。 此类非对称转换较比使用对称密钥进行加密和解密的方法，其开销更大。 因此，建议在处理大型数据集（如多个表中的用户数据）时不使用非对称加密。  
   
 ## <a name="examples"></a>示例  
@@ -74,10 +74,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [DECRYPTBYCERT &#40;Transact SQL &#41;](../../t-sql/functions/decryptbycert-transact-sql.md)   
+ [DECRYPTBYCERT (Transact-SQL)](../../t-sql/functions/decryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [删除证书 &#40;Transact SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

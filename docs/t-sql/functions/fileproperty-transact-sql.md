@@ -1,5 +1,5 @@
 ---
-title: "FILEPROPERTY (Transact SQL) |Microsoft 文档"
+title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ FILEPROPERTY ( file_name , property )
 ```  
   
 ## <a name="arguments"></a>参数  
- *文件名*  
- 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 *file_name*是**nchar(128)**。  
+ file_name  
+ 包含与将为之返回属性信息的当前数据库相关联的文件名的表达式。 file_name 是 nchar(128)。  
   
- *属性*  
- 包含将返回的文件属性名的表达式。 *属性*是**varchar （128)**，和可以是以下值之一。  
+ property  
+ 包含将返回的文件属性名的表达式。 property 是 varchar(128)，可以是下列值之一。  
   
-|值|Description|返回的值|  
+|ReplTest1|Description|返回的值|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|文件组是只读的。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
 |**IsPrimaryFile**|文件为主文件。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 输入无效。|  
@@ -67,8 +67,8 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
- *file_name*对应于**名称**中的列**sys.master_files**或**sys.database_files**目录视图。  
+## <a name="remarks"></a>Remarks  
+ file_name 与 sys.master_files 或 sys.database_files 目录视图中的 name 列相对应。  
   
 ## <a name="examples"></a>示例  
  以下示例返回 `IsPrimaryFile` 数据库中的 `AdventureWorks_Data` 文件名的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 属性的设置。  
@@ -89,8 +89,8 @@ Primary File
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [FILEGROUPPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILEGROUPPROPERTY (Transact-SQL)](../../t-sql/functions/filegroupproperty-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

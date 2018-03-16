@@ -1,5 +1,5 @@
 ---
-title: "转换函数 (Transact SQL) |Microsoft 文档"
+title: "转换函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,10 +33,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>本节内容  
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[分析 &#40;Transact SQL &#41;](../../t-sql/functions/parse-transact-sql.md)  
-[TRY_CAST &#40;Transact SQL &#41;](../../t-sql/functions/try-cast-transact-sql.md)  
-[TRY_CONVERT &#40;Transact SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)  
-[TRY_PARSE &#40;Transact SQL &#41;](../../t-sql/functions/try-parse-transact-sql.md)
+[PARSE (Transact-SQL)](../../t-sql/functions/parse-transact-sql.md)  
+[TRY_CAST (Transact-SQL)](../../t-sql/functions/try-cast-transact-sql.md)  
+[TRY_CONVERT (Transact-SQL)](../../t-sql/functions/try-convert-transact-sql.md)  
+[TRY_PARSE (Transact-SQL)](../../t-sql/functions/try-parse-transact-sql.md)
   
 ## <a name="see-also"></a>另请参阅
 [函数](../../t-sql/functions/functions.md)  

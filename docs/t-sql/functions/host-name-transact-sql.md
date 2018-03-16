@@ -1,5 +1,5 @@
 ---
-title: "HOST_NAME (Transact SQL) |Microsoft 文档"
+title: HOST_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/21/2017
 ms.prod: sql-non-specified
@@ -47,12 +47,12 @@ HOST_NAME ()
 ```  
   
 ## <a name="return-types"></a>返回类型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当该参数对系统函数可选时，则采用当前数据库、主机、服务器用户或数据库用户。 内置函数后面必须跟括号。  
   
- 在选择列表中，在 WHERE 子句中，可以使用系统函数和允许的表达式的任意位置。  
+ 系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。  
   
 > [!IMPORTANT]  
 >  客户端应用程序提供工作站名称，也会提供不准确的数据。 不要将 HOST_NAME 作为安全功能使用。  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

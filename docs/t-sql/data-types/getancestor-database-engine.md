@@ -1,5 +1,5 @@
 ---
-title: "GetAncestor （数据库引擎） |Microsoft 文档"
+title: "GetAncestor（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getancestor-database-engine"></a>GetAncestor（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回**hierarchyid**表示 *n* th 祖先*这*。
+返回表示 this 的第 n 个祖先的 hierarchyid。
   
 ## <a name="syntax"></a>语法  
   
@@ -50,17 +50,17 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>参数  
 *n*  
-**Int**，表示要在层次结构中上升的级别数。
+int，表示在层次结构中上升的级别数。
   
 ## <a name="return-types"></a>返回类型
-**SQL Server 返回类型： hierarchyid**
+SQL Server 返回类型：hierarchyid
   
-**CLR 返回类型： SqlHierarchyId**
+CLR 返回类型：SqlHierarchyId
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 用于测试输出中的每个节点是否将当前节点作为指定级别的祖先。
   
-如果数字大于[getlevel （)](../../t-sql/data-types/getlevel-database-engine.md)是传递，则返回 NULL。
+如果传递的数字大于 [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md)，则返回 NULL。
   
 如果传递的是负数，则引发异常。
   
@@ -93,7 +93,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>C. 返回当前行  
-若要使用返回当前节点`GetAncestor(0)`，执行以下代码。
+若要使用 `GetAncestor(0)` 返回当前节点，请执行以下代码。
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -124,7 +124,7 @@ this.GetAncestor(1)
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[IsDescendantOf &#40; 数据库引擎 &#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf（数据库引擎）](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid 数据类型方法引用](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

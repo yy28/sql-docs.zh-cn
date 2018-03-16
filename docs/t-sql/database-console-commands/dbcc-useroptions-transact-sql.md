@@ -1,5 +1,5 @@
 ---
-title: "DBCC USEROPTIONS (Transact SQL) |Microsoft 文档"
+title: DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -77,7 +77,7 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 当数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON 并且事务隔离级别设置为 'read committed' 时，DBCC USEROPTIONS 会报告 'read committed snapshot' 的隔离级别。 实际的隔离级别是已提交读。
   
 ## <a name="permissions"></a>权限  

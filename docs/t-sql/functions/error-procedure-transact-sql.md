@@ -1,5 +1,5 @@
 ---
-title: "ERROR_PROCEDURE (Transact SQL) |Microsoft 文档"
+title: ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>返回类型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
 ## <a name="return-value"></a>返回值  
  在 CATCH 块中调用时，返回出现错误的存储过程名称。  
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  如果在 CATCH 块作用域以外调用，则返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  ERROR_PROCEDURE 可以在 CATCH 块的作用域内的任何位置调用。  
   
- ERROR_PROCEDURE 返回出现错误的存储过程或触发器的名称，无论它被调用多少次或在 CATCH 块的作用域的哪个位置被调用。 这形成了鲜明对比与函数，如@ERROR，其返回的错误号，紧跟导致错误的一个语句中或在 CATCH 块的第一个语句。  
+ ERROR_PROCEDURE 返回出现错误的存储过程或触发器的名称，无论它被调用多少次或在 CATCH 块的作用域的哪个位置被调用。 这与函数完全不同，如 @@ERROR，该函数返回语句中的错误号（紧跟着导致该错误的语句或在 CATCH 块的第一个语句中）。  
   
  在嵌套的 CATCH 块中，ERROR_PROCEDURE 返回存储过程或触发器的名称，该存储过程或触发器与在其中引用它的 CATCH 块的作用域是特定相关的。 例如，TRY…CATCH 构造的 CATCH 块可以有嵌套的 TRY…CATCH。 在嵌套的 CATCH 块中，ERROR_PROCEDURE 返回调用嵌套 CATCH 块的出错的存储过程或触发器的名称。 如果 ERROR_PROCEDURE 在 CATCH 块之外运行，它将返回调用该 CATCH 块的出错的存储过程或触发器的名称。  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. 在 CATCH 块中使用 ERROR_PROCEDURE  
  下面的代码示例显示了一个会生成被零除错误的存储过程。 `ERROR_PROCEDURE` 返回发生错误的存储过程的名称。  
@@ -195,7 +195,7 @@ GO
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)  
   

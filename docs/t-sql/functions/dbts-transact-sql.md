@@ -1,5 +1,5 @@
 ---
-title: "@@DBTS (Transact SQL) |Microsoft 文档"
+title: '@@DBTS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型
 **varbinary**
   
-## <a name="remarks"></a>注释  
-@@DBTS返回当前数据库的最近使用的时间戳值。 插入或更新包含 **timestamp** 列的行时，将产生一个新的时间戳值。
+## <a name="remarks"></a>Remarks  
+@@DBTS 返回当前数据库最后使用的时间戳值。 插入或更新包含 **timestamp** 列的行时，将产生一个新的时间戳值。
   
-@@DBTS函数不受事务隔离级别中的更改。
+@@DBTS 函数不受事务隔离级别中的更改影响。
   
 ## <a name="examples"></a>示例  
-下面的示例返回当前**时间戳**从[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。
+以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库返回当前的 timestamp。
   
 ```sql
 USE AdventureWorks2012;  
@@ -63,9 +63,9 @@ SELECT @@DBTS;
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[配置函数 &#40;Transact SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[光标并发 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[配置函数 (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[游标并发 (ODBC)](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40;Transact SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION (Transact-SQL)](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

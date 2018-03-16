@@ -1,5 +1,5 @@
 ---
-title: "DBCC 帮助 (Transact SQL) |Microsoft 文档"
+title: DBCC HELP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *dbcc_statement* | *@dbcc_statement_var*  
+ dbcc_statement | @dbcc_statement_var  
  接收语法信息的 DBCC 命令的名称。 仅提供 DBCC 命令后面的一部分，例如 CHECKDB，而不是 DBCC CHECKDB。  
   
  ?  

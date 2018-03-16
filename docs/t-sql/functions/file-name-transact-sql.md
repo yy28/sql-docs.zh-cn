@@ -1,5 +1,5 @@
 ---
-title: "FILE_NAME (Transact SQL) |Microsoft 文档"
+title: FILE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,17 +52,17 @@ FILE_NAME ( file_id )
 ```  
   
 ## <a name="arguments"></a>参数  
- *file_id*  
- 要返回其文件名的文件的标识号。 *file_id*是**int**。  
+ file_id  
+ 要返回其文件名的文件的标识号。 stats_id 为 int。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- *file_ID*对应于在 sys.master_files 或 sys.database_files 目录视图的 file_id 列。  
+ file_ID 与 sys.master_files 或 sys.database_files 目录视图中的 file_id 列相对应。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回的文件名`file_ID 1`和`file_ID`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库。  
+ 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `file_ID 1` 和 `file_ID` 的文件名。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -80,8 +80,8 @@ AdventureWorks2012_Data   AdventureWorks2012_Log
 ``` 
   
 ## <a name="see-also"></a>另请参阅  
- [改用 FILE_IDEX &#40;Transact SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILE_IDEX (Transact-SQL)](../../t-sql/functions/file-idex-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "DBCC OPENTRAN (Transact SQL) |Microsoft 文档"
+title: DBCC OPENTRAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -62,8 +62,8 @@ DBCC OPENTRAN
 ```  
   
 ## <a name="arguments"></a>参数  
- *database_name* | *database_id*| 0  
- 显示其中的最早事务信息的数据库名称或 ID。 如果未指定，或者指定为 0，则使用当前数据库。 数据库名称必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)。  
+ database_name | database_id| 0  
+ 显示其中的最早事务信息的数据库名称或 ID。 如果未指定，或者指定为 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
  TABLERESULTS  
  以表格格式指定结果以便可以加载到表中。 使用此选项创建结果表，可以将该结果表插入到表中以进行比较。 未指定此选项时，对结果进行格式化以增加可读性。  
@@ -71,7 +71,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  取消显示所有信息性消息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 使用 DBCC OPENTRAN 确定打开的事务是否存在于事务日志中。 使用 BACKUP LOG 语句时，只能截断日志的非活动部分；打开的事务会阻止日志被完全截断。 若要标识打开的事务，请使用 sp_who 获取系统进程 ID。
   
 ## <a name="result-sets"></a>结果集  
@@ -139,9 +139,9 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
 [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
-[提交事务 &#40;Transact SQL &#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
+[COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[ROLLBACK TRANSACTION &#40;Transact SQL &#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+[DB_ID (Transact-SQL)](../../t-sql/functions/db-id-transact-sql.md)  
+[ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
   
   

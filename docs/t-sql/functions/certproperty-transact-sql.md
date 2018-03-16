@@ -1,5 +1,5 @@
 ---
-title: "CERTPROPERTY (Transact SQL) |Microsoft 文档"
+title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -51,42 +51,42 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 ```  
   
 ## <a name="arguments"></a>参数  
-*Cert_ID*  
-证书的 ID。 *Cert_ID*是整数。
+Cert_ID  
+证书的 ID。 cert_ID 是 int。
   
-*Expiry_Date*  
+Expiry_Date  
 证书的失效日期。
   
-*Start_Date*  
+Start_Date  
 证书开始生效的日期。
   
-*Issuer_Name*  
+Issuer_Name  
 证书颁发者的名称。
   
-*Cert_Serial_Number*  
+Cert_Serial_Number  
 证书序列号。
   
 *主题*  
 证书的主题。
   
- *SID*  
+ SID  
 证书的 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
-*String_SID*  
+String_SID  
 字符串形式的证书的 SID。 这也是映射到该证书的所有登录或用户的 SID。
   
 ## <a name="return-types"></a>返回类型
 属性规范必须以单引号 (') 括起。
   
-返回类型取决于在函数调用中指定的属性。 所有返回值将封装的返回类型在**sql_variant**。
--   *Expiry_Date*和*Start_Date*返回**datetime**。  
--   *Cert_Serial_Number*， *Issuer_Name*，*主题*，和*String_SID*返回**nvarchar**。  
--   *SID*返回**varbinary**。  
+返回类型取决于在函数调用中指定的属性。 所有的返回值都包装在 sql_variant 返回类型中。
+-   Expiry_Date 和 Start_Date 返回 datetime。  
+-   Cert_Serial_NumberIssuer_Name、Subject 和 String_SID 返回 nvarchar。  
+-   SID 返回 varbinary。  
   
-## <a name="remarks"></a>注释  
-有关证书的信息会显示在[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)目录视图。
+## <a name="remarks"></a>Remarks  
+可在 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目录视图中查阅证书的有关信息。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要对证书具有某些权限，并且未拒绝向调用方授予该证书的 VIEW DEFINITION 权限。
   
 ## <a name="examples"></a>示例  
@@ -110,10 +110,10 @@ GO
   
 ## <a name="see-also"></a>另请参阅
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)  
-[ALTER CERTIFICATE &#40;Transact SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
-[CERT_ID &#40;Transact SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md) 
+[ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)  
+[CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md) 
 [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)
-[sys.certificates &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 
-[安全性目录视图 &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+[sys.certificates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 
+[安全目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
   
   

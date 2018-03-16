@@ -1,5 +1,5 @@
 ---
-title: "@@ROWCOUNT (Transact SQL) |Microsoft 文档"
+title: '@@ROWCOUNT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -35,10 +35,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40rowcount-transact-sql"></a>& #x 40; 和 #x 40;行计数 (Transact SQL)
+# <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回受上一语句影响的行数。 如果多个 20 亿行数，则使用[ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)。  
+  返回受上一语句影响的行数。 如果行数大于 20 亿，请使用 [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,28 +51,28 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]语句可以设置中的值 @@ROWCOUNT通过以下方式：  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以通过下列方式设置 @@ROWCOUNT 的值：  
   
--   设置@ROWCOUNT到的行数受影响或读取。 可以将行发送到客户端，也可以不发送。  
+-   将 @@ROWCOUNT 设置为受影响或被读取的行的数目。 可以将行发送到客户端，也可以不发送。  
   
--   保留@ROWCOUNT从上一次的语句执行。  
+-   保留前一个语句执行中的 @@ROWCOUNT。  
   
--   重置@ROWCOUNT为 0，但不是返回到客户端的值。  
+-   将 @@ROWCOUNT 重置为 0 但不将该值返回到客户端。  
   
- 请始终设置简单赋值的语句 @@ROWCOUNT值设置为 1。 不将任何行发送到客户端。 这些语句的示例包括： 设置*local_variable*，则返回，READTEXT，然后选择而无需查询语句，例如选择 getdate （） 函数或选择*通用文本***'**.  
+ 执行简单分配的语句始终将 @@ROWCOUNT 值设置为 1。 不将任何行发送到客户端。 这些语句的示例如下：SET @local_variable、RETURN、READTEXT 以及不带查询 Select 语句，如 SELECT GETDATE() 或 SELECT 'Generic Text'。  
   
- 在查询中进行赋值或在查询集中使用返回的语句 @@ROWCOUNT到的行数的值影响，或者读取查询，例如： 选择*local_variable* = c1 FROM t1。  
+ 在查询中执行分配或使用 RETURN 的语句将 @@ROWCOUNT 值设置为受查询影响或由查询读取的行数，例如：SELECT @local_variable = c1 FROM t1。  
   
- 数据操作语言 (DML) 语句将设置 @@ROWCOUNT值的查询受影响的行数和该值返回到客户端。 DML 语句不会将任何行发送到客户端。  
+ 数据操作语言 (DML) 语句将 @@ROWCOUNT 值设置为受查询影响的行数，并将该值返回到客户端。 DML 语句不会将任何行发送到客户端。  
   
- DECLARE CURSOR 和设置的提取 @@ROWCOUNT值设置为 1。  
+ DECLARE CURSOR 和 FETCH 将 @@ROWCOUNT 值设置为 1。  
   
- EXECUTE 语句保留以前的 @@ROWCOUNT。  
+ EXECUTE 语句保留前一个 @@ROWCOUNT。  
   
- 语句使用，如设置\<选项 >、 释放 CURSOR、 关闭游标、 BEGIN TRANSACTION 或 COMMIT TRANSACTION 行计数值重置为 0。  
+ USE、SET \<选项>、DEALLOCATE CURSOR、CLOSE CURSOR、BEGIN TRANSACTION 或 COMMIT TRANSACTION 等语句将 ROWCOUNT 值重置为 0。  
   
- 本机编译存储的过程保留以前的 @@ROWCOUNT。 [!INCLUDE[tsql](../../includes/tsql-md.md)]本机编译存储过程中的语句不设置@ROWCOUNT。 有关详细信息，请参阅[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+ 本机编译存储过程保留以前的 @@ROWCOUNT。 本机编译存储过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句不设置 @@ROWCOUNT。 有关详细信息，请参阅[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
 ## <a name="examples"></a>示例  
  以下示例执行 `UPDATE` 语句并使用 `@@ROWCOUNT` 来检测是否更改了任何行。  
@@ -90,6 +90,6 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [设置行计数 &#40;Transact SQL &#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
+ [SET ROWCOUNT (Transact-SQL)](../../t-sql/statements/set-rowcount-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "FORMATMESSAGE (Transact SQL) |Microsoft 文档"
+title: FORMATMESSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  构造一条消息的 sys.messages 中现有消息或从提供的字符串。 FORMATMESSAGE 的功能与 RAISERROR 语句的功能类似。 但是，RAISERROR 会立即打印消息，而 FORMATMESSAGE 则返回供进一步处理的格式化消息。  
+  根据 sys.messages 中现有的消息或提供的字符串构造一条消息。 FORMATMESSAGE 的功能与 RAISERROR 语句的功能类似。 但是，RAISERROR 会立即打印消息，而 FORMATMESSAGE 则返回供进一步处理的格式化消息。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,22 +49,22 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- *msg_number*  
- 是存储在 sys.messages 的 ID。 如果*msg_number*是 < = 13000，或如果 sys.messages 中不存在消息，则返回 NULL。  
+ msg_number  
+ 存储在 sys.messages 中的消息的 ID。 如果 msg_number <= 13000，或者此消息不在 sys.messages 中，则返回 NULL。  
   
- *msg_string*  
+ msg_string  
  **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
- 是一个字符串括在单引号和包含参数值的占位符。 该错误消息最长可以有 2,047 个字符。 如果该消息包含的字符数等于或超过 2,048 个，则只能显示前 2,044 个并添加一个省略号以表示该消息已被截断。 请注意，由于内部存储行为的缘故，代替参数使用的字符数比输出所显示的字符数要多。  有关消息字符串的结构和用法的字符串中的参数的信息，请参阅说明*msg_str*中的参数[RAISERROR &#40;Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
+ 用单引号括起来的字符串，其中包含参数值占位符。 该错误消息最长可以有 2,047 个字符。 如果该消息包含的字符数等于或超过 2,048 个，则只能显示前 2,044 个并添加一个省略号以表示该消息已被截断。 请注意，由于内部存储行为的缘故，代替参数使用的字符数比输出所显示的字符数要多。  有关消息字符串结构及在字符串中使用参数的信息，请参阅 [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md) 中 msg_str 参数的说明。  
   
- *param_value*  
+ param_value  
  在消息中使用的参数值。 可以是多个参数值。 值的顺序必须与占位符变量在消息中出现的次序相同。 值的最大数目为 20。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar**  
   
-## <a name="remarks"></a>注释  
- 与 RAISERROR 语句相似，FORMATMESSAGE 用提供的参数值替换消息中的占位符变量来编辑消息。 有关错误消息并编辑过程中允许的占位符的详细信息，请参阅[RAISERROR &#40;Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ 与 RAISERROR 语句相似，FORMATMESSAGE 用提供的参数值替换消息中的占位符变量来编辑消息。 有关错误消息中允许使用的占位符和编辑过程的详细信息，请参阅 [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)。  
   
  FORMATMESSAGE 查找使用用户当前语言的消息。 如果消息没有本地化版本，则使用美国英语版本。  
   
@@ -72,8 +72,8 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-example-with-a-message-number"></a>A. 与大量消息的示例  
- 下面的示例使用复制邮件`20009`存储在 sys.messages 作为中，"%s 可能未将项目添加到发布 '%s'。"FORMATMESSAGE 将为参数占位符替换值 `First Variable` 和 `Second Variable`。 生成的字符串中，"项目第一个变量无法不添加到发布第二个变量。"，存储在本地变量`@var1`。  
+### <a name="a-example-with-a-message-number"></a>A. 带有消息号的示例  
+ 下面的示例使用在 sys.messages 中存储的复制消息 `20009`：“项目“%s”无法添加到发布“%s””。FORMATMESSAGE 将为参数占位符替换值 `First Variable` 和 `Second Variable`。 所得到的字符串“项目“First Variable”无法添加到发布“Second Variable””存储在局部变量 `@var1` 中。  
   
 ```  
 SELECT text FROM sys.messages WHERE message_id = 20009 AND language_id = 1033;  
@@ -82,11 +82,11 @@ SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');
 SELECT @var1;  
 ```  
   
-### <a name="b-example-with-a-message-string"></a>B. 使用的消息字符串的示例  
+### <a name="b-example-with-a-message-string"></a>B. 带有消息字符串的示例  
   
 **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
- 下面的示例接受的字符串作为输入。  
+ 以下示例采用字符串作为输入。  
   
 ```  
 SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'second variable') AS Result;  
@@ -94,8 +94,8 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
   
  返回：`This is the first variable and this is the second variable.`  
   
-### <a name="c-additional-message-string-formatting-examples"></a>C. 其他消息字符串设置格式示例  
- 下面的示例演示了各种的格式设置选项。  
+### <a name="c-additional-message-string-formatting-examples"></a>C. 其他消息字符串格式设置示例  
+ 以下示例演示了各种格式设置选项。  
   
 ```  
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);  
@@ -113,19 +113,19 @@ SELECT FORMATMESSAGE('Hello %20s!', 'TEST');
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [RAISERROR &#40;Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
- [THROW &#40;Transact SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   
+ [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [CONCAT &#40;Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [QUOTENAME &#40;Transact SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
   
   

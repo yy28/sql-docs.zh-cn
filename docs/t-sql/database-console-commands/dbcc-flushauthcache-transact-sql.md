@@ -1,5 +1,5 @@
 ---
-title: "DBCC FLUSHAUTHCACHE (Transact SQL) |Microsoft 文档"
+title: DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-清空数据库身份验证缓存包含登录名和防火墙规则中的当前用户数据库有关的信息[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 此语句不适用于的逻辑 master 数据库，因为 master 数据库包含登录名和防火墙规则有关的信息的物理存储。 执行该语句的用户和其他当前连接的用户保持连接状态。 (有关当前不支持 DBCC FLUSHAUTHCACHE [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。)
+为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中当前用户数据库清空包含有关登录名和防火墙规则信息的数据库身份验证缓存。 此语句不适用于逻辑 master 数据库，因为 master 数据库包含有关登录名和防火墙规则信息的物理存储。 执行该语句的用户和当前连接的其他用户保持连接状态。 （[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 当前不支持 DBCC FLUSHAUTHCACHE。）
  
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,15 +47,15 @@ DBCC FLUSHAUTHCACHE [ ; ]
 ## <a name="arguments"></a>参数  
 无。
   
-## <a name="remarks"></a>注释  
-身份验证缓存创建登录名和服务器防火墙规则存储在 master 中并将它们放在用户数据库中的内存的副本。  由于包含的数据库用户的信息已存储在用户数据库，包含的数据库用户都不是身份验证缓存的一部分。
-连续活动连接[!INCLUDE[ssSDS](../../includes/sssds-md.md)]需要重新授权 (由[!INCLUDE[ssDE](../../includes/ssde-md.md)]) 至少每隔 10 小时。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试重新授权使用最初提交的密码和无用户输入是必需的。 出于性能原因，在重置密码时[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，将不会对连接重新进行身份验证，即使该连接由于连接池而重置。 这是本地行为不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果已更改了密码，因为最初授权连接，必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可以显式终止与连接[!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用[KILL &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-transact-sql.md)命令。
+## <a name="remarks"></a>Remarks  
+身份验证缓存创建登录名和服务器防火墙规则（存储在 master 中）的副本并将它们放在用户数据库的内存中。  由于已包含数据库用户的信息已存储在用户数据库中，因此已包含数据库用户不是身份验证缓存的一部分。
+与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 持续保持活动连接需要至少每隔 10 小时进行重新授权（由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行）。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用最初提交的密码尝试重新授权，且无需用户输入。 出于性能原因，在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中重置密码时，连接将不会重新进行身份验证，即使该连接因连接池而重置。 这与本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行为不同。 如果自最初授权连接时已更改密码，则必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可使用 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md) 命令，显式终止与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的连接。
   
 ## <a name="permissions"></a>权限  
-需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。
+需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 管理员帐户。
   
 ## <a name="example"></a>示例  
-下面的语句清除当前数据库的身份验证缓存。
+以下语句会清除当前数据库的身份验证缓存。
   
 ```sql
 DBCC FLUSHAUTHCACHE;  

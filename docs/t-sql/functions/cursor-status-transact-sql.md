@@ -1,5 +1,5 @@
 ---
-title: "CURSOR_STATUS (Transact SQL) |Microsoft 文档"
+title: CURSOR_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ CURSOR_STATUS
 'local'  
 指定一个常量，该常量指示游标的源是一个本地游标名。
   
-*cursor_name*  
+'cursor_name'  
 游标的名称。 游标名必须符合有关标识符的规则。
   
 'global'  
@@ -64,15 +64,15 @@ CURSOR_STATUS
 'variable'  
 指定一个常量，该常量指示游标的源是一个本地变量。
   
-*cursor_variable*  
-游标变量的名称。 游标变量必须使用定义**光标**数据类型。
+'cursor_variable'  
+游标变量的名称。 必须使用 cursor 数据类型定义游标变量。
   
 ## <a name="return-types"></a>返回类型
 **int**
   
 |返回值|游标名|游标变量|  
 |---|---|---|
-|1|游标的结果集至少有一行。<br /><br /> 对于不区分的游标和键集游标，结果集至少有一行。<br /><br /> 对于动态游标，结果集可以有零行、一行或多行。|分配给该变量的游标已打开。<br /><br /> 对于不区分的游标和键集游标，结果集至少有一行。<br /><br /> 对于动态游标，结果集可以有零行、一行或多行。|  
+|@shouldalert|游标的结果集至少有一行。<br /><br /> 对于不区分的游标和键集游标，结果集至少有一行。<br /><br /> 对于动态游标，结果集可以有零行、一行或多行。|分配给该变量的游标已打开。<br /><br /> 对于不区分的游标和键集游标，结果集至少有一行。<br /><br /> 对于动态游标，结果集可以有零行、一行或多行。|  
 |0|游标的结果集为空。*|分配给该变量的游标已经打开，然而结果集肯定为空。*|  
 |-1|游标被关闭。|分配给该变量的游标被关闭。|  
 |-2|不适用。|可以是：<br /><br /> 先前调用的过程并没有将游标分配给 OUTPUT 变量。<br /><br /> 先前调用的过程为 OUTPUT 变量分配了游标，然而在过程结束时，游标处于关闭状态。 因此，游标被释放，并且没有返回调用过程。<br /><br /> 没有将游标分配给已声明的游标变量。|  
@@ -134,7 +134,7 @@ After Close
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[游标函数 &#40;Transact SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[游标函数 (Transact-SQL)](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
   
   

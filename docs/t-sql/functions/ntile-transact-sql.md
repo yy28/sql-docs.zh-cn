@@ -1,5 +1,5 @@
 ---
-title: "NTILE (Transact SQL) |Microsoft 文档"
+title: NTILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,19 +49,19 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>参数  
  *integer_expression*  
- 一个正整数常量表达式，用于指定每个分区必须被划分成的组数。 *integer_expression*可以是类型**int**，或**bigint**。  
+ 一个正整数常量表达式，用于指定每个分区必须被划分成的组数。 integer_expression 可以是 int 或 bigint 类型。  
   
- \<partition_by_clause >  
- 将通过生成的结果集划分[FROM](../../t-sql/queries/from-transact-sql.md)函数应用到分区到子句。 PARTITION BY 语法，请参阅[OVER 子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ 将由 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为要应用函数的分区。 有关 PARTITION BY 语法的信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
- \<order_by_clause >  
- 确定 NTILE 值分配到分区中各行的顺序。 一个整数，不能表示的列时\<order_by_clause > 排名函数中使用。  
+ \<order_by_clause>  
+ 确定 NTILE 值分配到分区中各行的顺序。 当在排名函数中使用 \<order_by_clause> 时，不能用整数表示列。  
   
 ## <a name="return-types"></a>返回类型  
  **bigint**  
   
-## <a name="remarks"></a>注释  
- 如果分区中的行数不是由可*integer_expression*，这将导致的一个成员通过两种大小不同的组。 按照 OVER 子句指定的顺序，较大的组排在较小的组前面。 例如，如果总行数是 53，组数是 5，则前三个组每组包含 11 行，其余两个组每组包含 10 行。 另一方面，如果总行数可被组数整除，则行数将在组之间平均分布。 例如，如果总行数为 50，有五个组，则每组将包含 10 行。  
+## <a name="remarks"></a>Remarks  
+ 如果分区的行数不能被 integer_expression 整除，则将导致一个成员有两种大小不同的组。 按照 OVER 子句指定的顺序，较大的组排在较小的组前面。 例如，如果总行数是 53，组数是 5，则前三个组每组包含 11 行，其余两个组每组包含 10 行。 另一方面，如果总行数可被组数整除，则行数将在组之间平均分布。 例如，如果总行数为 50，有五个组，则每组将包含 10 行。  
   
  NTILE 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
@@ -112,7 +112,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. 使用 PARTITION BY 划分结果集  
- 以下示例将 `PARTITION BY` 参数添加到示例 A 中的代码。首先按 `PostalCode` 将行分区，然后在每个 `PostalCode` 内将行分成四个组。 此示例还声明变量`@NTILE_Var`并使用该变量指定的值*integer_expression*参数。  
+ 以下示例将 `PARTITION BY` 参数添加到示例 A 中的代码。首先按 `PostalCode` 将行分区，然后在每个 `PostalCode` 内将行分成四个组。 该示例还声明一个变量 `@NTILE_Var` 并使用该变量指定 integer_expression 参数的值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,10 +156,10 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>C. 将行分为组  
- 下面的示例使用 NTILE 函数将销售人员的一组划分为四个组 2003 年基于其分配的销售定额。 因为总的行数并不被组数整除，第一个组具有五个行，剩余组将具有四个行。  
+ 以下示例使用 NTILE 函数根据其 2003 年的分配销售配额将一组销售人员划分为四个组。 由于总行数不能被组数整除，因此第一个组将包含五行，其余每组包含四行。  
   
 ```  
 -- Uses AdventureWorks  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 ```  
   
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. 使用 PARTITION BY 划分结果集  
- 下面的示例向示例 A 中的代码添加 PARTITION BY 参数第一次分区行`SalesTerritoryCountry`，然后划分为两个组中每个`SalesTerritoryCountry`。 请注意，OVER 子句中的 ORDER BY 顺序 NTILE 和 ORDER BY 的 SELECT 语句进行排序的结果集。  
+ 以下示例将 PARTITION BY 参数添加到示例 A 中的代码。首先按 `SalesTerritoryCountry` 将行分区，然后在每个 `SalesTerritoryCountry` 内将行分成两个组。 请注意，OVER 子句中的 ORDER BY 对 NTILE 进行排序，SELECT 中的 ORDER BY 则对结果集进行排序。  
   
 ```  
 -- Uses AdventureWorks  
@@ -242,10 +242,10 @@ Ansman-Wolfe      2        1,183,000.00     United States
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [级别 &#40;Transact SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40;Transact SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [方式 &#40;Transact SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [排名函数 &#40;Transact SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [RANK (Transact-SQL)](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK (Transact-SQL)](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER (Transact-SQL)](../../t-sql/functions/row-number-transact-sql.md)   
+ [排名函数 (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   

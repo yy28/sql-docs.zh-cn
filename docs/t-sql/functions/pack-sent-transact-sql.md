@@ -1,5 +1,5 @@
 ---
-title: "@@PACK_SENT (Transact SQL) |Microsoft 文档"
+title: '@@PACK_SENT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40packsent-transact-sql"></a>& #x 40; 和 #x 40;PACK_SENT (Transact SQL)
+# <a name="x40x40packsent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自上次启动后写入网络的输出数据包个数。  
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型  
  **integer**  
   
-## <a name="remarks"></a>注释  
- 若要显示报表包含若干个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行统计信息，包括发送和接收，数据包**sp_monitor**。  
+## <a name="remarks"></a>Remarks  
+ 若要显示包含多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括发送和接收的数据包）的报表，请运行 sp_monitor。  
   
 ## <a name="examples"></a>示例  
  下面的示例说明了 `@@PACK_SENT` 的用法：  
@@ -72,7 +72,7 @@ Pack Sent
   
 ## <a name="see-also"></a>另请参阅  
  [@@PACK_RECEIVED (Transact-SQL)](../../t-sql/functions/pack-received-transact-sql.md)   
- [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [系统统计函数 &#40;Transact-SQL&#41;1;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [系统统计函数 (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

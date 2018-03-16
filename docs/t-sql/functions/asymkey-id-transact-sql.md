@@ -1,5 +1,5 @@
 ---
-title: "ASYMKEY_ID (Transact SQL) |Microsoft 文档"
+title: ASYMKEY_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
 ## <a name="return-types"></a>返回类型
  **int**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要对非对称密钥具有某些权限，并且调用方对非对称密钥的 VIEW 权限没有被拒绝。
   
 ## <a name="examples"></a>示例  
@@ -69,14 +69,14 @@ GO
   
 ## <a name="see-also"></a>另请参阅
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC KEY &#40;Transact SQL &#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[删除非对称密钥 &#40;Transact SQL &#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+[ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+[DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40;Transact SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY (Transact-SQL)](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEYPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
-[KEY_ID &#40;Transact SQL &#41;](../../t-sql/functions/key-id-transact-sql.md)
+[ASYMKEYPROPERTY (Transact-SQL)](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+[KEY_ID (Transact-SQL)](../../t-sql/functions/key-id-transact-sql.md)
   
   

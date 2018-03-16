@@ -1,5 +1,5 @@
 ---
-title: "游标函数 (Transact SQL) |Microsoft 文档"
+title: "游标函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 |[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)|[CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)|  
 |[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)||  
   
-所有游标函数都是非确定性的。 这意味着即使同一组输入值，也不一定在每次调用这些函数时都返回相同的结果。 有关函数的确定性的详细信息，请参阅[Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+所有游标函数都是非确定性的。 这意味着即使同一组输入值，也不一定在每次调用这些函数时都返回相同的结果。 有关函数确定性的详细信息，请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="see-also"></a>另请参阅
 [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)

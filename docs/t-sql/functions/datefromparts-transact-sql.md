@@ -1,5 +1,5 @@
 ---
-title: "DATEFROMPARTS (Transact SQL) |Microsoft 文档"
+title: DATEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-返回**日期**指定的年、 月和日的值。
+返回表示指定年、月、日的 date 值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATEFROMPARTS ( year, month, day )
 ```  
   
 ## <a name="arguments"></a>参数  
-*年*  
+year  
 用于指定年度的整数表达式。
   
-*月*  
+month  
 指定月份（从 1 到 12）的整数表达式。
   
-*一天*  
+day  
 用于指定日期的整数表达式。
   
 ## <a name="return-types"></a>返回类型
 **date**
   
-## <a name="remarks"></a>注释  
-**DATEFROMPARTS**返回**日期**值，该值设置为指定的年、 月和日的日期部分，设置为默认的时间部分。 如果自变量无效，则引发错误。 如果所需的参数为 null，则返回 null。
+## <a name="remarks"></a>Remarks  
+DATEFROMPARTS 返回一个 date 值，日期部分设置为指定的年、月和日，而时间部分设置为默认值。 如果参数无效，则引发错误。 如果所需的参数为 null，则返回 null。
   
 此函数可以在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 服务器以及更高版本上远程执行。 但在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之下的服务器版本中无法远程执行。
   
 ## <a name="examples"></a>示例  
-下面的示例演示**DATEFROMPARTS**函数。
+以下示例说明了 DATEFROMPARTS 函数的用法。
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

@@ -1,5 +1,5 @@
 ---
-title: "DBCC TRACEOFF (Transact SQL) |Microsoft 文档"
+title: DBCC DBREPAIR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>参数  
-*trace#*  
+trace#  
 要禁用的跟踪标记号。  
   
 **-1**  
@@ -58,7 +58,7 @@ DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]
 WITH NO_INFOMSGS  
 取消严重级别从 0 到 10 的所有信息性消息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 跟踪表记用于自定义某些控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的操作方式的特征。
   
 ## <a name="result-sets"></a>结果集  
@@ -96,7 +96,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
-[DBCC TRACESTATUS &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
+[DBCC TRACESTATUS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   

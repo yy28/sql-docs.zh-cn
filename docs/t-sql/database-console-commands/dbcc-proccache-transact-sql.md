@@ -1,5 +1,5 @@
 ---
-title: "DBCC PROCCACHE (Transact SQL) |Microsoft 文档"
+title: DBCC PROCCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  取消所有严重级别为 0 到 10 的信息性消息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 使用过程缓存来缓存已编译计划和可执行计划，以加快批处理的执行速度。 过程缓存中的项处于批处理级别。 过程缓存包括以下项：
 -   已编译计划  
 -   执行计划  
@@ -67,12 +67,12 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
   
 |列名|Description|  
 |-----------------|-----------------|  
-|**num proc 爱好者共同**|过程缓存中所有项使用的总页数。|  
-|**num proc 爱好者共同使用**|当前正在使用的所有项使用的总页数。|  
-|**num proc 爱好者共同 active**|仅为保持向后兼容。 当前正在使用的所有项使用的总页数。|  
-|**proc 缓存大小**|过程缓存中的总项数。|  
-|**进程缓存使用**|当前正在使用的总项数。|  
-|**活动的进程缓存**|仅为保持向后兼容。 当前正在使用的总项数。|  
+|**num proc buffs**|过程缓存中所有项使用的总页数。|  
+|**num proc buffs used**|当前正在使用的所有项使用的总页数。|  
+|**num proc buffs active**|仅为保持向后兼容。 当前正在使用的所有项使用的总页数。|  
+|**proc cache size**|过程缓存中的总项数。|  
+|**proc cache used**|当前正在使用的总项数。|  
+|**proc cache active**|仅为保持向后兼容。 当前正在使用的总项数。|  
   
 ## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。

@@ -1,5 +1,5 @@
 ---
-title: "DBCC OUTPUTBUFFER (Transact SQL) |Microsoft 文档"
+title: DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-返回当前的输出缓冲区中十六进制转义序列和指定的 ASCII 格式*session_id*。
+以十六进制和 ASCII 格式返回指定 session_id 的当前输出缓冲区。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
   
  *request_id*  
  要在当前会话中搜索的精确请求（批）。  
- 以下查询将返回*request_id*:  
+ 下面的查询返回 request_id：  
   
 ```sql
 SELECT request_id   
@@ -68,8 +68,8 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
-## <a name="remarks"></a>注释  
-DBCC OUTPUTBUFFER 显示结果发送到指定的客户端 (*session_id*)。 对于不包含输出流的进程，则返回错误消息。
+## <a name="remarks"></a>Remarks  
+DBCC OUTPUTBUFFER 显示发送到指定客户端 (session_id) 的结果。 对于不包含输出流的进程，则返回错误消息。
   
 若要显示所执行的、其返回的结果由 DBCC OUTPUTBUFFER 所显示的语句，请执行 DBCC INPUTBUFFER。
   

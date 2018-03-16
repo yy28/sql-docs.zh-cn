@@ -1,5 +1,5 @@
 ---
-title: "@@TRANCOUNT (Transact SQL) |Microsoft 文档"
+title: '@@TRANCOUNT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40trancount-transact-sql"></a>& #x 40; 和 #x 40;Trancount (Transact SQL)
+# <a name="x40x40trancount-transact-sql"></a>@@TRANCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回在当前连接上执行的 BEGIN TRANSACTION 语句的数目。  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型  
  **integer**  
   
-## <a name="remarks"></a>注释  
- BEGIN TRANSACTION 语句递增@TRANCOUNT1。 @ ROLLBACK TRANSACTION 递减@TRANCOUNT为 0，除外 ROLLBACK TRANSACTION *savepoint_name*，这不影响@TRANCOUNT。 COMMIT TRANSACTION 或递减提交工作@TRANCOUNT1。  
+## <a name="remarks"></a>Remarks  
+ BEGIN TRANSACTION 语句将 @@TRANCOUNT 增加 1。 ROLLBACK TRANSACTION 将 @@TRANCOUNT 递减到 0，但 ROLLBACK TRANSACTION savepoint_name 除外，它不影响 @@TRANCOUNT。 COMMIT TRANSACTION 或 COMMIT WORK 将 @@TRANCOUNT 递减 1。  
   
 ## <a name="examples"></a>示例  
   
@@ -105,6 +105,6 @@ PRINT @@TRANCOUNT
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION (Transact-SQL)](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

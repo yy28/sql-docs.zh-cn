@@ -1,5 +1,5 @@
 ---
-title: "@@CONNECTIONS (Transact SQL) |Microsoft 文档"
+title: '@@CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;连接 (TRANSACT-SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自上次启动以来尝试的连接数，无论连接是成功还是失败。
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型
 **integer**
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 连接与用户不同。 例如，应用程序可以打开多个与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，而不需要用户监视这些连接。
   
-若要显示报表包含若干个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]统计信息，包括连接尝试，运行**sp_monitor**。
+若要显示一个包含几个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报表，包括试图连接统计信息，请运行 sp_monitor。
   
-@@MAX_CONNECTIONS 是最大同时允许到服务器的连接数。 @@CONNECTIONS 即会递增每次登录尝试，因此 @@CONNECTIONS 可以大于 @@MAX_CONNECTIONS 。
+@@MAX_CONNECTIONS 是允许同时连接到服务器的最大连接数。 @@CONNECTIONS 随每次登录尝试而增加，因此 @@CONNECTIONS 可以比 @@MAX_CONNECTIONS 大。
   
 ## <a name="examples"></a>示例  
 下面的示例显示了如何返回截至当前日期和时间的登录尝试次数。
@@ -76,7 +76,7 @@ Today's Date and Time  Login Attempts
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[系统统计函数 &#40;Transact-SQL&#41;1;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-[sp_monitor &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+[系统统计函数 (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+[sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
   
   

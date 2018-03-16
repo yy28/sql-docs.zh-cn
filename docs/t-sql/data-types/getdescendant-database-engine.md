@@ -1,5 +1,5 @@
 ---
-title: "GetDescendant （数据库引擎） |Microsoft 文档"
+title: "GetDescendant（数据库引擎）| Microsoft Docs"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
 ```  
   
 ## <a name="arguments"></a>参数  
-*child1*  
-NULL 或**hierarchyid**的当前节点的子级。
+child1  
+NULL 或当前节点的子节点的 hierarchyid。
   
-*child2*  
-NULL 或**hierarchyid**的当前节点的子级。
+child2  
+NULL 或当前节点的子节点的 hierarchyid。
   
 ## <a name="return-types"></a>返回类型  
-**SQL Server 返回类型： hierarchyid**
+SQL Server 返回类型：hierarchyid
   
-**CLR 返回类型： SqlHierarchyId**
+CLR 返回类型：SqlHierarchyId
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 返回作为父节点的后代的一个子节点。
 -   如果父级为 NULL，则返回 NULL。  
 -   如果父级不为 NULL，而 child1 和 child2 为 NULL，则返回父级的子级。  
@@ -71,12 +71,12 @@ NULL 或**hierarchyid**的当前节点的子级。
 -   如果 child2 不为 NULL 且不是父级的子级，则引发异常。  
 -   如果 child1 >= child2，则引发异常。  
   
-GetDescendant 是确定的。 因此，如果使用相同的输入调用 GetDescendant，则它将始终生成相同的输出。 不过，生成的子级的确切身份可能因其与其他节点的关系而异，如示例 C 所示。
+GetDescendant 是确定性的。 因此，如果使用相同的输入调用 GetDescendant，它将始终生成相同的输出。 不过，生成的子级的确切身份可能因其与其他节点的关系而异，如示例 C 所示。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. 插入一行作为最低级别的后代节点  
-新雇用了一名员工，该员工将成为位于 `/3/1/` 节点的现有员工的下属。 执行以下代码以使用不带参数的 GetDescendant 方法用于指定为的新行节点插入新行`/3/1/1/`:
+新雇用了一名员工，该员工将成为位于 `/3/1/` 节点的现有员工的下属。 执行以下代码，使用不含参数的 GetDescendant 方法插入新行，以将新行节点指定为 `/3/1/1/`：
   
 ```sql
 DECLARE @Manager hierarchyid;   
@@ -89,7 +89,7 @@ VALUES
 ```  
   
 ### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. 插入一行作为较高级别的后代节点  
-另一个新的员工加入，向报告如 A.执行的示例所示的相同管理器下面的代码将新行插入使用 GetDescendant 方法使用子 1 参数来指定新行的节点将按照示例 A 中的节点成为`/3/1/2/`:
+新雇用了另一名员工，该员工同样将成为示例 A 中的经理的下属。执行以下代码，使用带有子级 1 参数的 GetDescendant 方法插入新行，以指定新行的节点将紧跟示例 A 中的节点，成为 `/3/1/2/`：
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid;  
@@ -104,7 +104,7 @@ VALUES
 ```  
   
 ### <a name="c-inserting-a-row-between-two-existing-nodes"></a>C. 在两个现有节点之间插入一行  
-第三个员工加入，如示例 A.所示的相同管理器向报告此示例将插入到大于节点的新行`FirstNewEmployee`在示例 A，并小于`SecondNewEmployee`示例 B.执行下面的代码使用 GetDescendant 方法中。 同时使用 child1 参数和 child2 参数指定新行的节点将成为节点 `/3/1/1.1/`：
+雇用了第三名员工，该员工同样将成为示例 A 中的经理的下属。此示例将在比示例 A 中的 `FirstNewEmployee` 高、比示例 B 中的 `SecondNewEmployee` 低的节点中插入新行。使用 GetDescendant 方法执行以下代码。 同时使用 child1 参数和 child2 参数指定新行的节点将成为节点 `/3/1/1.1/`：
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid, @Child2 hierarchyid;  
@@ -120,7 +120,7 @@ VALUES
   
 ```  
   
-完成示例 A、 B 和 C 后, 添加到表中的节点将对等节点替换为以下**hierarchyid**值：
+完成示例 A、B 和 C 后，添加到表中的节点将成为具有下列 hierarchyid 值的对等方：
   
 `/3/1/1/`
   
@@ -131,7 +131,7 @@ VALUES
 节点 `/3/1/1.1/` 高于节点 `/3/1/1/`，但是在层次结构中处于同一级别。
   
 ### <a name="d-scalar-examples"></a>D. 标量示例  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持任意插入和删除的任何**hierarchyid**节点。 通过使用 GetDescendant()，并总是可以生成任何这两者之间的节点**hierarchyid**节点。 执行以下代码，使用 `GetDescendant` 生成示例节点：
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持随意插入和删除任何 hierarchyid 节点。 使用 GetDescendant()，始终可以在任何两个 hierarchyid 节点之间生成一个节点。 执行以下代码，使用 `GetDescendant` 生成示例节点：
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

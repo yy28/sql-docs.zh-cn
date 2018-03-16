@@ -1,5 +1,5 @@
 ---
-title: "EOMONTH (Transact SQL) |Microsoft 文档"
+title: EOMONTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -45,13 +45,13 @@ EOMONTH ( start_date [, month_to_add ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- *start_date*  
+ start_date  
  日期表达式，指定要为其返回该月的最后一天的日期。  
   
- *month_to_add*  
- 指定要添加的月数的可选整数表达式*start_date*。  
+ month_to_add  
+ 可选的整数表达式，指定要加到 start_date 的月份数。  
   
- 如果指定此参数，则**EOMONTH**将指定的月数到*start_date*，然后返回结果的日期的月份的最后一天。 如果增加后超过有效的日期范围，则将引发错误。  
+ 如果指定了此参数，则 EOMONTH 将指定的月份数加到 start_date，然后返回结果日期所在月份的最后一天。 如果增加后超过有效的日期范围，则将引发错误。  
   
 ## <a name="return-type"></a>返回类型  
  **date**  

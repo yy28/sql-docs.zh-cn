@@ -1,5 +1,5 @@
 ---
-title: "ATAN (Transact SQL) |Microsoft 文档"
+title: ATAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-返回的角度以弧度表示，其正切为指定**float**表达式。 它也称为反正切函数。
+返回以弧度表示的角，其正切为指定的 float 表达式。 它也称为反正切函数。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,14 +47,14 @@ ATAN ( float_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
-*float_expression*  
-是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)类型的**float**或可以隐式转换为的类型**float**。
+float_expression  
+float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
 **float**
   
 ## <a name="examples"></a>示例  
-下面的示例将**float**表达式并返回指定角度的反正切。
+以下示例采用 float 表达式并返回指定角的 ATAN 值。
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -95,8 +95,8 @@ The ATAN of 197.1099392 is: 1.56572
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-下面的示例将**float**表达式并返回指定角度的反正切值。
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+以下示例采用 float 表达式并返回指定角的 arctangent 值。
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  
@@ -115,8 +115,8 @@ atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
 ```
   
 ## <a name="see-also"></a>另请参阅
-[上限 &#40;Transact SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[CEILING (Transact-SQL)](../../t-sql/functions/ceiling-transact-sql.md)  
+[数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "-（注释） (Transact SQL) |Microsoft 文档"
+title: "--（注释）(Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>参数  
- *text_of_comment*  
- 是包含注释的文本的字符字符串。  
+ text_of_comment  
+ 包含注释文本的字符串。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  将两个连字符 (--) 用于单行或嵌套的注释。 用 -- 插入的注释由换行符终止。 注释没有最大长度限制。 下表列出了可用来注释或取消注释文本的键盘快捷键：  
   
 |操作|Standard|  
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/25/2018
 |将选定文本设为注释|Ctrl+K、Ctrl+C|  
 |取消注释所选文本|Ctrl+K、Ctrl+U|  
   
- 有关键盘快捷方式的详细信息，请参阅[SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
+ 有关键盘快捷方式的详细信息，请参阅 [SQL Server Management Studio 键盘快捷方式](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)。  
   
- 多行注释，请参阅[正斜杠星型 &#40;块注释 &#41;&#40;Transact SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ 有关多行注释的信息，请参阅[斜杠星型（块注释）(Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 -- 注释字符。  
@@ -81,6 +81,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [控制流语言 &#40;Transact SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+ [控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)  
   
   

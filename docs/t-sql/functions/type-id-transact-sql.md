@@ -1,5 +1,5 @@
 ---
-title: "TYPE_ID (Transact SQL) |Microsoft 文档"
+title: TYPE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,8 +48,8 @@ TYPE_ID ( [ schema_name ] type_name )
 ```  
   
 ## <a name="arguments"></a>参数  
- *类型 _ 名称*  
- 是数据类型的名称。 *类型 _ 名称*属于类型**nvarchar**。 *类型 _ 名称*可以是系统或用户定义数据类型。  
+ type_name  
+ 数据类型的名称。 type_name 的数据类型为 nvarchar。 type_name 可以是系统数据类型或用户定义的数据类型。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
@@ -59,7 +59,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 TYPE_ID）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果类型名称无效，或调用方没有足够权限来引用类型，则 TYPE_ID 返回 NULL。  
   
 ## <a name="examples"></a>示例  
@@ -90,9 +90,9 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C： 查找系统数据类型的类型 ID  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C. 查找系统数据类型的 TYPE ID  
  下面的示例返回 `TYPE ID` 系统数据类型的 `datetime`。  
   
 ```  
@@ -101,10 +101,10 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [类型 _ 名称 &#40;Transact SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [TYPEPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [TYPE_NAME (Transact-SQL)](../../t-sql/functions/type-name-transact-sql.md)   
+ [TYPEPROPERTY (Transact-SQL)](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

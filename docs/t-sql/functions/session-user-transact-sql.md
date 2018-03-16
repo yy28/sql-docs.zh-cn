@@ -1,5 +1,5 @@
 ---
-title: "SESSION_USER (Transact SQL) |Microsoft 文档"
+title: SESSION_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ SESSION_USER
 ```  
   
 ## <a name="return-types"></a>返回类型  
- **nvarchar （128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SESSION_USER 可在 CREATE TABLE 或 ALTER TABLE 语句中与 DEFAULT 约束一起使用，或者将它用作任何标准函数。 如果没有指定默认值，可以将 SESSION_USER 插入表中。 此函数没有参数。 SESSION_USER 可以在查询中使用。  
   
  如果在切换上下文之后调用 SESSION_USER，SESSION_USER 将返回模拟上下文的用户名。  
@@ -143,10 +143,10 @@ Order #   Customer #  When Delivered       Received By
 (5 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C： 使用 SESSION_USER 返回当前会话的用户名称  
- 下面的示例返回为当前会话的会话用户。  
+### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C：使用 SESSION_USER 返回当前会话的用户名  
+ 以下示例返回当前会话的会话用户。  
   
 ```  
 SELECT SESSION_USER;  
@@ -155,12 +155,12 @@ SELECT SESSION_USER;
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40;Transact SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40;Transact SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SYSTEM_USER &#40;Transact SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
+ [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)   
  [System Functions (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [用户 &#40;Transact SQL &#41;](../../t-sql/functions/user-transact-sql.md)   
- [USER_NAME &#40;Transact SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
+ [USER (Transact-SQL)](../../t-sql/functions/user-transact-sql.md)   
+ [USER_NAME (Transact-SQL)](../../t-sql/functions/user-name-transact-sql.md)  
   
   
 

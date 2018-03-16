@@ -1,5 +1,5 @@
 ---
-title: "ASYMKEYPROPERTY (Transact SQL) |Microsoft 文档"
+title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -45,22 +45,22 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 ```  
   
 ## <a name="arguments"></a>参数  
-*Key_ID*  
-是数据库中非对称密钥的 Key_ID。 若要查找您仅知道密钥名称的 Key_ID，请使用 ASYMKEY_ID。 *Key_ID*是数据类型**int**。
+Key_ID  
+是数据库中非对称密钥的 Key_ID。 若要查找您仅知道密钥名称的 Key_ID，请使用 ASYMKEY_ID。 Key_ID 为 int 数据类型。
   
-algorithm_desc  
+**'**algorithm_desc**'**  
 指定输出应返回非对称密钥的算法说明。 仅适用于从 EKM 模块创建的非对称密钥。
   
-string_sid  
-指定输出返回中的非对称密钥的 SID **nvarchar()**格式。
+'string_sid'  
+指定输出应以 nvarchar() 格式返回非对称密钥的 SID。
   
-sid  
+**'**sid**'**  
 指定输出应以二进制格式返回非对称密钥的 SID。
   
 ## <a name="return-types"></a>返回类型  
 **sql_variant**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要对非对称密钥具有某些权限，并且调用方对非对称密钥的 VIEW 权限没有被拒绝。
   
 ## <a name="examples"></a>示例  
@@ -76,14 +76,14 @@ GO
   
 ## <a name="see-also"></a>另请参阅
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC KEY &#40;Transact SQL &#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[删除非对称密钥 &#40;Transact SQL &#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+[ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+[DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40;Transact SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY (Transact-SQL)](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEY_ID &#40;Transact SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
-[SYMKEYPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)
+[ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)  
+[SYMKEYPROPERTY (Transact-SQL)](../../t-sql/functions/symkeyproperty-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "PWDENCRYPT (Transact SQL) |Microsoft 文档"
+title: PWDENCRYPT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 
   返回使用密码哈希算法的当前版本的输入值的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密码哈希。  
   
- PWDENCRYPT 是一个比较旧的函数，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的将来版本中可能不再支持。 使用[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)相反。 HASHBYTES 提供更多的哈希算法。  
+ PWDENCRYPT 是一个比较旧的函数，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的将来版本中可能不再支持。 改用 [HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)。 HASHBYTES 提供更多的哈希算法。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,17 +48,17 @@ PWDENCRYPT ( 'password' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *密码*  
- 要加密的密码。 *密码*是**sysname**。  
+ password  
+ 要加密的密码。 password 的数据类型为 sysname。  
   
 ## <a name="return-types"></a>返回类型  
  **varbinary(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  PWDENCRYPT 向用户开放使用。  
   
 ## <a name="see-also"></a>另请参阅  
  [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
- [PWDCOMPARE &#40;Transact SQL &#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
+ [PWDCOMPARE (Transact-SQL)](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   

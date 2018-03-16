@@ -1,5 +1,5 @@
 ---
-title: "日期和时间类型 |Microsoft 文档"
+title: "日期和时间类型 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -33,14 +33,14 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>在本节中
 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md)  
-[datetime &#40;Transact SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)  
+[datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)  
 [datetime2 (Transact-SQL)](../../t-sql/data-types/datetime2-transact-sql.md)  
 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[smalldatetime &#40;Transact SQL &#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
-[时间 &#40;Transact SQL &#41;](../../t-sql/data-types/time-transact-sql.md)
+[smalldatetime (Transact-SQL)](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+[time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)
   
 ## <a name="see-also"></a>另请参阅
-[日期和时间数据类型和函数 &#40;Transact SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-[时区 &AMP;#40;Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+[AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

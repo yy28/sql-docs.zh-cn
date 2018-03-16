@@ -1,5 +1,5 @@
 ---
-title: "数据类型优先级 (Transact SQL) |Microsoft 文档"
+title: "数据类型优先级 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-type-precedence-transact-sql"></a>数据类型优先级 (TRANSACT-SQL)
+# <a name="data-type-precedence-transact-sql"></a>数据类型优先级 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 当两个不同数据类型的表达式用运算符组合后，数据类型优先级规则指定将优先级较低的数据类型转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误。 当两个操作数表达式具有相同的数据类型时，运算的结果便为该数据类型。
@@ -60,15 +60,15 @@ ms.lasthandoff: 11/21/2017
 1. **bit**  
 1. **ntext**  
 1. **text**  
-1. **image**  
+1. **图像**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** (包括**nvarchar (max)** )  
+1. nvarchar（包括 nvarchar(max)）  
 1. **nchar**  
-1. **varchar** (包括**varchar （max)** )  
+1. varchar（包括 varchar(max)）  
 1. **char**  
-1. **varbinary** (包括**varbinary （max)** )  
-1. **二进制**（最低）  
+1. varbinary（包括 varbinary(max)）  
+1. binary（最低）  
   
 ## <a name="see-also"></a>另请参阅
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  

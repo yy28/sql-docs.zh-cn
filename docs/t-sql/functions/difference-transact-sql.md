@@ -1,5 +1,5 @@
 ---
-title: "差异 (Transact SQL) |Microsoft 文档"
+title: DIFFERENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ DIFFERENCE ( character_expression , character_expression )
   
 ## <a name="arguments"></a>参数  
  *character_expression*  
- 是一个字母数字[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的字符数据。 *character_expression*可以是常量、 变量或列。  
+ 字符数据的字母数字[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  返回的整数是 SOUNDEX 值中相同字符的个数。 返回的值从 0 到 4 不等：0 表示几乎不同或完全不同，4 表示几乎相同或完全相同。  
   
  DIFFERENCE 和 SOUNDEX 区分排序规则。  
   
 ## <a name="examples"></a>示例  
- 在以下示例的第一部分，对两个非常相似的字符串的 `SOUNDEX` 值进行了比较。 对于 Latin1_General 排序规则`DIFFERENCE`返回的值`4`。 下面的示例中，第二部分`SOUNDEX`值进行比较两个非常不同的字符串，以及用于 Latin1_General 排序规则`DIFFERENCE`返回的值`0`。  
+ 在以下示例的第一部分，对两个非常相似的字符串的 `SOUNDEX` 值进行了比较。 对于 Latin1_General 排序规则，`DIFFERENCE` 将返回值 `4`。 在以下示例的第二部分，对两个差别很大的字符串的 `SOUNDEX` 值进行了比较，对于 Latin1_General 排序规则，`DIFFERENCE` 将返回值 `0`。  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
@@ -85,8 +85,8 @@ B432  G650  0
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SOUNDEX &#40;Transact SQL &#41;](../../t-sql/functions/soundex-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [SOUNDEX (Transact-SQL)](../../t-sql/functions/soundex-transact-sql.md)   
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

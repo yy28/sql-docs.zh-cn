@@ -1,5 +1,5 @@
 ---
-title: "@@PROCID (Transact SQL) |Microsoft 文档"
+title: '@@PROCID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40procid-transact-sql"></a>& #x 40; 和 #x 40;PROCID (TRANSACT-SQL)
+# <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 当前模块的对象标识符 (ID)。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块可以是存储过程、用户定义函数或触发器。 @@PROCID不在 CLR 模块或在处理数据中指定访问接口。  
+  返回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 当前模块的对象标识符 (ID)。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块可以是存储过程、用户定义函数或触发器。 不能在 CLR 模块或进程内数据访问接口中指定 @@PROCID。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,9 +83,9 @@ EXECUTE dbo.usp_FindName 'P%', 'A%';
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sys.objects &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [RAISERROR &#40;Transact SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

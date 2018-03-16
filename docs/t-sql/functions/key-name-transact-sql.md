@@ -1,5 +1,5 @@
 ---
-title: "KEY_NAME (Transact SQL) |Microsoft 文档"
+title: KEY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,22 +46,22 @@ KEY_NAME ( ciphertext | key_guid )
 ```  
   
 ## <a name="arguments"></a>参数  
- *已加密文本*  
- 对称密钥加密的文本。 *cyphertext*是类型**varbinary （8000)**。  
+ ciphertext  
+ 对称密钥加密的文本。 cyphertext 是 varbinary(8000) 类型。  
   
- *key_guid*  
- 对称密钥的 GUID。 *key_guid*是类型**uniqueidentifier**。  
+ key_guid  
+ 对称密钥的 GUID。 key_guid 是 uniqueidentifier 类型。  
   
 ## <a name="returned-types"></a>返回类型  
- **varchar （128)**  
+ **varchar(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，元数据的可见性仅限用户所拥有的安全对象，或用户已获得某些权限的安全对象。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. 使用 key_guid 显示对称密钥的名称  
- **Master**数据库包含名为 # # MS_ServiceMasterKey # # 的对称密钥。 下面的示例从 sys.symmetric_keys 动态管理视图获取该密钥的 GUID，并将其赋值给一个变量，然后将该变量传递到 KEY_NAME 函数，从而演示如何返回与 GUID 对应的名称。  
+ master 数据库包含一个名为 ##MS_ServiceMasterKey## 的对称密钥。 下面的示例从 sys.symmetric_keys 动态管理视图获取该密钥的 GUID，并将其赋值给一个变量，然后将该变量传递到 KEY_NAME 函数，从而演示如何返回与 GUID 对应的名称。  
   
 ```  
 USE master;  
@@ -116,8 +116,8 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.symmetric_keys &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40;Transact SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40;Transact SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+ [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [ENCRYPTBYKEY (Transact-SQL)](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

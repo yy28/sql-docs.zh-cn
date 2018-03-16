@@ -1,5 +1,5 @@
 ---
-title: "UNICODE (Transact SQL) |Microsoft 文档"
+title: UNICODE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -47,13 +47,13 @@ UNICODE ( 'ncharacter_expression' )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** *ncharacter_expression* **'**  
- 是**nchar**或**nvarchar**表达式。  
+ **'** ncharacter_expression **'**  
+ 是 nchar 或 nvarchar 表达式。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函数返回一个在 0 到 0xFFFF 范围内的 UCS-2 代码点。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本中使用 SC 排序规则时，UNICODE 会返回一个在 0 到 0x10FFFF 范围内的 UTF-16 代码点。  
   
 ## <a name="examples"></a>示例  
@@ -146,11 +146,11 @@ Character # Unicode Character UNICODE Value
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
- [CHAR &#40;Transact SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
- [NCHAR &#40;Transact SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [ASCII (Transact-SQL)](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR (Transact-SQL)](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)   
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+ [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

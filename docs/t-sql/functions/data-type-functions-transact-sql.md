@@ -1,5 +1,5 @@
 ---
-title: "数据类型函数 (Transact SQL) |Microsoft 文档"
+title: "数据类型函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -35,8 +35,8 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|[Datalength 之外 &#40;Transact SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)|[IDENT_SEED &#40;Transact SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)|  
-|[IDENT_CURRENT &#40;Transact SQL &#41;](../../t-sql/functions/ident-current-transact-sql.md)|[标识 &#40;函数 &#41;&#40;Transact SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)|  
-|[Ident_incr 和 &#40;Transact SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)|[SQL_VARIANT_PROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)|  
+|[DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md)|[IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)|  
+|[IDENT_CURRENT (Transact-SQL)](../../t-sql/functions/ident-current-transact-sql.md)|[IDENTITY（函数）(Transact-SQL)](../../t-sql/functions/identity-function-transact-sql.md)|  
+|[IDENT_INCR (Transact-SQL)](../../t-sql/functions/ident-incr-transact-sql.md)|[SQL_VARIANT_PROPERTY (Transact-SQL)](../../t-sql/functions/sql-variant-property-transact-sql.md)|  
   
   

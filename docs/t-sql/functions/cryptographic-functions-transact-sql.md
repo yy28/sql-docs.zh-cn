@@ -1,5 +1,5 @@
 ---
-title: "加密函数 (Transact SQL) |Microsoft 文档"
+title: "加密函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="cryptographic-functions-transact-sql"></a>加密函数 (TRANSACT-SQL)
+# <a name="cryptographic-functions-transact-sql"></a>加密函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 以下函数支持加密、解密、数字签名以及数字签名验证。
@@ -64,13 +64,13 @@ ms.lasthandoff: 11/21/2017
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## <a name="symmetric-decryption-with-automatic-key-handling"></a>而不进行自动密钥处理的对称解密
+## <a name="symmetric-decryption-with-automatic-key-handling"></a>含自动密钥处理的对称解密
   
 |||  
 |-|-|  
 |[DecryptByKeyAutoCert](../../t-sql/functions/decryptbykeyautocert-transact-sql.md)||  
   
-## <a name="encryption-hashing"></a>加密哈希
+## <a name="encryption-hashing"></a>加密哈希运算
   
 |||  
 |-|-|  
@@ -80,8 +80,8 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|[CERTENCODED &#40;Transact SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40;Transact SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>另请参阅
 [函数](../../t-sql/functions/functions.md)  

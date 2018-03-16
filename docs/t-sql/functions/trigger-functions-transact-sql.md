@@ -1,5 +1,5 @@
 ---
-title: "触发函数 (Transact SQL) |Microsoft 文档"
+title: "触发器函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified

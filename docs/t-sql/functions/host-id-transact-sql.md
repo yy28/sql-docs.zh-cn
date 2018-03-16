@@ -1,5 +1,5 @@
 ---
-title: "HOST_ID (Transact SQL) |Microsoft 文档"
+title: HOST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,12 +49,12 @@ HOST_ID ()
 ```  
   
 ## <a name="return-types"></a>返回类型  
- **char （10)**  
+ **char(10)**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  当该参数对系统函数可选时，则采用当前数据库、主机、服务器用户或数据库用户。 内置函数后面必须跟括号。  
   
- 在选择列表中，在 WHERE 子句中，可以使用系统函数和允许的表达式的任意位置。  
+ 系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。  
   
 ## <a name="examples"></a>示例  
  以下示例创建一个表，该表在 `HOST_ID()` 定义中使用 `DEFAULT` 来记录那些向记录订单的表中插入行的计算机终端 ID。  
@@ -71,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [表达式 &#40;Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

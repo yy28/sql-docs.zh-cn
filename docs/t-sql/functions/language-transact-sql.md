@@ -1,5 +1,5 @@
 ---
-title: "@@LANGUAGE (Transact SQL) |Microsoft 文档"
+title: '@@LANGUAGE (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40language-transact-sql"></a>& #x 40; 和 #x 40;语言 (Transact SQL)
+# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回当前所用语言的名称。  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型  
  **nvarchar**  
   
-## <a name="remarks"></a>注释  
- 若要查看有关语言设置，包括有效的正式语言名称的信息运行**sp_helplanguage**而无需指定的参数。  
+## <a name="remarks"></a>Remarks  
+ 若要查看语言设置信息（包括有效的正式语言名称），可在不指定参数的情况下运行 sp_helplanguage。  
   
 ## <a name="examples"></a>示例  
  以下示例返回当前会话的语言。  
@@ -70,8 +70,8 @@ us_english
   
 ## <a name="see-also"></a>另请参阅  
  [配置函数 (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [设置语言 &#40;Transact SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   
 

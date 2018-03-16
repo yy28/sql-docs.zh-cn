@@ -1,5 +1,5 @@
 ---
-title: "ROWCOUNT_BIG (Transact SQL) |Microsoft 文档"
+title: ROWCOUNT_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回已执行的上一语句影响的行数。 此函数的执行操作如[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)，只是 ROWCOUNT_BIG 的返回类型是**bigint**。  
+  返回已执行的上一语句影响的行数。 该函数的功能与 [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md) 类似，区别在于 ROWCOUNT_BIG 的返回类型为 bigint。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ROWCOUNT_BIG ( )
 ## <a name="return-types"></a>返回类型  
  **bigint**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  位于 SELECT 语句之后时，该函数返回由 SELECT 语句返回的行数。  
   
  位于 INSERT、UPDATE 或 DELETE 语句之后时，该函数返回受数据修改语句影响的行数。  
@@ -60,7 +60,7 @@ ROWCOUNT_BIG ( )
  位于 IF 这类不返回行的语句之后时，该函数返回 0。  
   
 ## <a name="see-also"></a>另请参阅  
- [COUNT_BIG &#40;Transact SQL &#41;](../../t-sql/functions/count-big-transact-sql.md)   
+ [COUNT_BIG (Transact-SQL)](../../t-sql/functions/count-big-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

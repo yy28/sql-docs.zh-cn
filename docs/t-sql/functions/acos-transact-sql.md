@@ -1,5 +1,5 @@
 ---
-title: "ACOS (Transact SQL) |Microsoft 文档"
+title: ACOS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-数学函数的返回以弧度表示，其余弦是指定的角度， **float**表达式; 也称为反余弦值。
+数学函数，返回其余弦是所指定的 float 表达式的角（弧度）；也称为反余弦。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,8 +47,8 @@ ACOS ( float_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
-*float_expression*  
-类型的表达式**float**或可以隐式转换为的类型**float**，-1 到 1 的值。 对超出此范围的值，将返回 NULL 并报告域错误。
+float_expression  
+类型为 float 或类型可以隐式转换为 float 的表达式，其取值范围从 -1 到 1。 对超出此范围的值，将返回 NULL 并报告域错误。
   
 ## <a name="return-types"></a>返回类型  
 **float**
@@ -72,7 +72,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 
 以下示例返回指定数字的 ACOS。
   
@@ -92,7 +92,7 @@ The ACOS of the number is: 3.14159
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [函数](../../t-sql/functions/functions.md)
   
   

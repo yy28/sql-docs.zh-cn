@@ -1,5 +1,5 @@
 ---
-title: "SYMKEYPROPERTY (Transact SQL) |Microsoft 文档"
+title: SYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,16 +46,16 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *Key_ID*  
- 是数据库中对称密钥的 Key_ID。 若要查找您仅知道密钥名称的 Key_ID，请使用 SYMKEY_ID。 *Key_ID*是数据类型**int**。  
+ Key_ID  
+ 是数据库中对称密钥的 Key_ID。 若要查找您仅知道密钥名称的 Key_ID，请使用 SYMKEY_ID。 Key_ID 为 int 数据类型。  
   
- algorithm_desc  
+ **'**algorithm_desc**'**  
  指定输出应返回对称密钥的算法说明。 仅适用于从 EKM 模块创建的对称密钥。  
   
 ## <a name="return-types"></a>返回类型  
  **sql_variant**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对称密钥拥有某些权限，并且调用方对对称密钥的 VIEW 权限没有被拒绝。  
   
 ## <a name="examples"></a>示例  
@@ -67,13 +67,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ASYMKEY_ID &#40;Transact SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [ALTER SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.symmetric_keys &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [KEY_ID &#40;Transact SQL &#41;](../../t-sql/functions/key-id-transact-sql.md)   
- [ASYMKEYPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+ [KEY_ID (Transact-SQL)](../../t-sql/functions/key-id-transact-sql.md)   
+ [ASYMKEYPROPERTY (Transact-SQL)](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
   
   

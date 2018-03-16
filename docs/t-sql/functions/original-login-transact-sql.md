@@ -1,5 +1,5 @@
 ---
-title: "ORIGINAL_LOGIN (Transact SQL) |Microsoft 文档"
+title: ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,10 +52,10 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>返回类型  
  **sysname**  
   
-## <a name="remarks"></a>注释  
- 该函数在审核原始连接上下文的标识时非常有用。 而函数如[SESSION_USER](../../t-sql/functions/session-user-transact-sql.md)和[CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md)返回当前正在执行上下文 ORIGINAL_LOGIN 返回的第一次连接到的的实例的登录名标识[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]该会话中。  
+## <a name="remarks"></a>Remarks  
+ 该函数在审核原始连接上下文的标识时非常有用。 但是 [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) 和 [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) 之类的函数返回当前的执行上下文，ORIGINAL_LOGIN 返回该会话中首次连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的登录的标识。  
   
- 返回 NULL 上[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 针对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 返回 NULL。  
   
 ## <a name="examples"></a>示例  
  以下示例将当前会话的执行上下文从语句的调用方切换到 `login1`。 函数 `SUSER_SNAME` 和 `ORIGINAL_LOGIN` 用于返回当前会话用户（上下文切换到的用户）和原始登录帐户。  
@@ -86,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [执行 AS &#40;Transact SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [还原 &#40;Transact SQL &#41;](../../t-sql/statements/revert-transact-sql.md)  
+ [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)   
+ [REVERT (Transact-SQL)](../../t-sql/statements/revert-transact-sql.md)  
   
   

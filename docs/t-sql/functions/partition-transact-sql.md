@@ -1,5 +1,5 @@
 ---
-title: "$PARTITION (transact SQL) |Microsoft 文档"
+title: $PARTITION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ ms.lasthandoff: 11/21/2017
  *database_name*  
  包含分区函数的数据库的名称。  
   
- *partition_function_name*  
+ partition_function_name  
  对其应用一组分区列值的任何现有分区函数的名称。  
   
  *expression*  
- 是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)其数据类型必须匹配或者为隐式转换为其相应的分区列的数据类型。 *表达式*也可以是当前参与分区列的名称*partition_function_name*。  
+ 其数据类型必须匹配或可隐式转换为其对应分区列数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 表达式也可以是当前参与 partition_function_name 的分区列的名称。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
-## <a name="remarks"></a>注释  
- $PARTITION 返回**int**介于 1 和分区函数的分区数。  
+## <a name="remarks"></a>Remarks  
+ $PARTITION 返回从 1 到分区函数的分区数之间的 int 值。  
   
  $PARTITION 将针对任何有效值返回分区号，无论此值当前是否存在于使用分区函数的分区表或索引中。  
   
@@ -82,7 +82,7 @@ GO
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>B. 获取分区表或索引的每个非空分区的行数  
  以下示例将返回包含数据的表 `TransactionHistory` 的每个分区的行数。 `TransactionHistory` 表使用分区函数 `TransactionRangePF1`，并在 `TransactionDate` 列上进行分区。  
   
- 若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅[PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
+ 若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,7 +98,7 @@ GO
  以下示例将返回表 `5` 第 `TransactionHistory` 分区的所有行。  
   
 > [!NOTE]  
->  若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅[PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
+>  若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

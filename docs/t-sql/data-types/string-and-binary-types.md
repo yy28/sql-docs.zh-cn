@@ -1,5 +1,5 @@
 ---
-title: "字符串和二进制类型 |Microsoft 文档"
+title: "字符串和二进制类型 | Microsoft Docs"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -38,6 +38,6 @@ ms.lasthandoff: 11/21/2017
 [binary 和 varbinary (Transact-SQL)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
 [char 和 varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
 [nchar 和 nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
-[ntext、 文本和图像 &#40;Transact SQL &#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
+[ntext、 text 和 image (Transact-SQL)](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
   
   

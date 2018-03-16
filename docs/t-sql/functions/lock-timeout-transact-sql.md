@@ -1,5 +1,5 @@
 ---
-title: "@@LOCK_TIMEOUT (Transact SQL) |Microsoft 文档"
+title: '@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/19/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型  
  **integer**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  SET LOCK_TIMEOUT 允许应用程序设置语句等待阻塞资源的最长时间。 当一条语句等待的时间长度超过 LOCK_TIMEOUT 所设置的时间长度时，被锁住的语句将自动取消，并给应用程序返回一条错误消息。  
   
- @@LOCK_TIMEOUT如果 SET LOCK_TIMEOUT 尚未已运行在当前会话中，则返回值-1。  
+ 如果当前会话中尚未运行 SET LOCK_TIMEOUT，@@LOCK_TIMEOUT 将返回值 -1。  
   
 ## <a name="examples"></a>示例  
  以下示例显示当未设置 LOCK_TIMEOUT 值时的结果集。  
@@ -71,7 +71,7 @@ Lock Timeout
 -1  
 ```  
   
- 此示例将 LOCK_TIMEOUT 设置为 1800年毫秒，然后调用@LOCK_TIMEOUT 。  
+ 该示例将 LOCK_TIMEOUT 设置为 1800 毫秒，然后调用 @@LOCK_TIMEOUT。  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
@@ -89,6 +89,6 @@ Lock Timeout
   
 ## <a name="see-also"></a>另请参阅  
  [配置函数 (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [设置 LOCK_TIMEOUT &#40;Transact SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT (Transact-SQL)](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

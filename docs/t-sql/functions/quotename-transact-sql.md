@@ -1,5 +1,5 @@
 ---
-title: "QUOTENAME (Transact SQL) |Microsoft 文档"
+title: QUOTENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,11 +49,11 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- '*character_string*'  
- Unicode 字符数据构成的字符串。 *character_string*是**sysname**且最多 128 个字符。 超过 128 个字符的输入将返回 NULL。  
+ 'character_string'  
+ Unicode 字符数据构成的字符串。 character_string 是 sysname，且最多具有 128 个字符。 超过 128 个字符的输入将返回 NULL。  
   
- '*quote_character*'  
- 用作分隔符的单字符字符串。 可以是单引号 (  )，左或向右括号 ( **[]** )，或双引号 ( **"** )。 如果*quote_character*未指定，则使用方括号。  
+ 'quote_character'  
+ 用作分隔符的单字符字符串。 可以是单引号 (')、左方括号或右方括号 ([]) 或者英文双引号 (")。 如果未指定 quote_character，则使用方括号。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(258)**  
@@ -75,7 +75,7 @@ SELECT QUOTENAME('abc[]def');
   
  请注意，字符串 `abc[]def` 中的右方括号有两个，用于指示转义符。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例接受字符串 `abc def` 并使用 `[` 和 `]` 字符来创建有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分隔标识符。  
   
 ```  
@@ -91,17 +91,17 @@ SELECT QUOTENAME('abc def');
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [PARSENAME &#40;Transact SQL &#41;](../../t-sql/functions/parsename-transact-sql.md)  
- [CONCAT &#40;Transact SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [字符串函数 &#40;Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [PARSENAME (Transact-SQL)](../../t-sql/functions/parsename-transact-sql.md)  
+ [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

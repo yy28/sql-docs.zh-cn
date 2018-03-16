@@ -1,5 +1,5 @@
 ---
-title: "EVENTDATA (TRANSACT-SQL) |Microsoft 文档"
+title: EVENTDATA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  只有直接在 DDL 或登录触发器内部引用 EVENTDATA 时，EVENTDATA 才会返回数据。 如果 EVENTDATA 由其他例程调用（即使这些例程由 DDL 或登录触发器进行调用），将返回 NULL。  
   
  在隐式或显式调用 EVENTDATA 的事务提交或回滚之后，EVENTDATA 所返回的数据将无效。  
@@ -75,9 +75,9 @@ EVENTDATA( )
  为了保护登录名的安全性，当执行 CREATE LOGIN 或 ALTER LOGIN 语句时，将不显示密码。  
   
 ## <a name="schemas-returned"></a>返回的架构  
- EVENTDATA 返回类型的值**xml**。 默认情况下，所有事件的架构定义都安装在以下目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
+ EVENTDATA 返回类型为 xml 的值。 默认情况下，所有事件的架构定义都安装在以下目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
- 或者，在发布事件架构[Microsoft SQL Server XML 架构](http://go.microsoft.com/fwlink/?LinkID=31850)网页。  
+ 此外，事件架构还发布在 [Microsoft SQL Server XML 架构](http://go.microsoft.com/fwlink/?LinkID=31850)网页。  
   
  若要提取任何特定事件的架构，请搜索复杂类型 `EVENT_INSTANCE_\<event_type>` 的架构。 例如，若要提取 DROP_TABLE 事件的架构，请搜索 `EVENT_INSTANCE_DROP_TABLE` 的架构。  
   
@@ -87,7 +87,7 @@ EVENTDATA( )
  以下示例创建 DDL 触发器，以防止在数据库中创建新表。 通过对 EVENTDATA 生成的 XML 数据使用 XQuery，可以捕获激发触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 有关详细信息，请参阅 [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!NOTE]  
->  在您查询`\<TSQLCommand>`元素中的使用**结果显示为网格**中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，不会显示在命令文本中的分行符。 使用**结果显示为文本**相反。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“以网格显示结果”来查询 `\<TSQLCommand>` 元素时，命令文本中的分行符不会出现。 请改用“以文本格式显示结果”。  
   
 ```  
 USE AdventureWorks2012;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  如果你想要返回事件数据，我们建议你使用 XQuery **value （)**方法而不是**query （)**方法。 **Query （)**方法返回 XML，用 & 符转义的回车符和换行符 (CR/LF) 实例在输出中，虽然**value （)**方法呈现 CR/LF 实例在输出中不可见。  
+>  如果需要返回事件数据，建议使用 XQuery value() 方法而不是 query() 方法。 query() 方法可在输出中返回 XML 和以“and”符转义的回车符和换行符 (CR/LF) 实例，而 value() 方法无法在输出中呈现 CR/LF 实例。  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. 创建事件数据在 DDL 触发器中的日志表  
  以下示例创建用于存储所有数据库级事件的相关信息的表，并在表中填充 DDL 触发器。 通过对 `EVENTDATA` 生成的 XML 数据使用 XQuery，可以捕获事件类型和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  

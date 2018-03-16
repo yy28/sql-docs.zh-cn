@@ -1,5 +1,5 @@
 ---
-title: "COL_LENGTH (Transact SQL) |Microsoft 文档"
+title: COL_LENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ COL_LENGTH ( 'table' , 'column' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *表*   
-要确定其列长度信息的表的名称。 *表*类型的表达式**nvarchar**。
+**'** table **'**  
+要确定其列长度信息的表的名称。 table 是 nvarchar 类型的表达式。
   
- *列*   
-要确定其长度的列的名称。 *列*类型的表达式**nvarchar**。
+' column '  
+要确定其长度的列的名称。 column 是 nvarchar 类型的表达式。
   
 ## <a name="return-type"></a>返回类型
 **int**
@@ -62,8 +62,8 @@ COL_LENGTH ( 'table' , 'column' )
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 也就是说，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 COL_LENGTH）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
   
-## <a name="remarks"></a>注释  
-有关类型的列**varchar**使用声明**max**说明符 (**varchar （max)**)，COL_LENGTH 返回值为-1。
+## <a name="remarks"></a>Remarks  
+对于使用 max 说明符 (varchar(max)) 声明的 varchar 类型的列，COL_LENGTH 将返回值 –1。
   
 ## <a name="examples"></a>示例  
 以下示例将显示类型为 `varchar(40)` 和 `nvarchar(40)` 的列的返回值。
@@ -88,8 +88,8 @@ VarChar     NVarChar
   
 ## <a name="see-also"></a>另请参阅
 [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
-[元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40;Transact SQL &#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME (Transact-SQL)](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "COS (Transact SQL) |Microsoft 文档"
+title: COS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,8 +46,8 @@ COS ( float_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
-*float_expression*  
-是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)类型的**float**。
+float_expression  
+float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
 **float**
@@ -72,7 +72,7 @@ The COS of the angle is: -0.599465
 
 ## <a name="examples"></a>示例
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
 以下示例将返回指定角度的 COS 值。
@@ -90,7 +90,7 @@ cosCalc1  cosCalc2
 ```
   
 ## <a name="see-also"></a>另请参阅
-[数学函数 &#40;Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

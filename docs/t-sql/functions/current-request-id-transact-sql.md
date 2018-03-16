@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_REQUEST_ID (Transact SQL) |Microsoft 文档"
+title: CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,8 +47,8 @@ CURRENT_REQUEST_ID()
 ## <a name="return-types"></a>返回类型
 **int**
   
-## <a name="remarks"></a>注释  
-若要查找有关当前会话和当前请求的准确信息，请使用@SPID和 CURRENT_REQUEST_ID()，分别。
+## <a name="remarks"></a>Remarks  
+若要查找有关当前会话和当前请求的确切信息，请分别使用 @@SPID 和 CURRENT_REQUEST_ID()。
   
 ## <a name="see-also"></a>另请参阅
 [@@SPID (Transact-SQL)](../../t-sql/functions/spid-transact-sql.md)

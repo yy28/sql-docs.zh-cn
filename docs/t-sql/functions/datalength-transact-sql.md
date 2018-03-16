@@ -1,5 +1,5 @@
 ---
-title: "Datalength 之外 (Transact SQL) |Microsoft 文档"
+title: DATALENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ DATALENGTH ( expression )
   
 ## <a name="arguments"></a>参数  
 *expression*  
-是[表达式](../../t-sql/language-elements/expressions-transact-sql.md)的任何数据类型。
+任何数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
-**bigint**如果*表达式*的**varchar （max)**， **nvarchar (max)**或**varbinary （max)**数据类型;否则为**int**。
+bigint（如果 expression 的数据类型为 varchar(max)、nvarchar (max) 或 varbinary(max)）；否则为 int。
   
-## <a name="remarks"></a>注释  
-Datalength 之外是尤其有用**varchar**， **varbinary**，**文本**，**映像**， **nvarchar**，和**ntext**数据类型，因为这些数据类型可以存储长度可变的数据。
+## <a name="remarks"></a>Remarks  
+对于 varchar、varbinary、text、image、nvarchar 和 ntext 数据类型，DATALENGTH 尤其有用，因为这些数据类型可以存储长度可变的数据。
   
 NULL 的 DATALENGTH 的结果是 NULL。
   
@@ -76,10 +76,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[LEN &#40;Transact SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+[LEN (Transact-SQL)](../../t-sql/functions/len-transact-sql.md)  
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

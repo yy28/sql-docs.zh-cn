@@ -1,5 +1,5 @@
 ---
-title: "和 (Transact SQL) |Microsoft 文档"
+title: AND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  合并两个布尔表达式，并返回**TRUE**当这两个表达式均为**TRUE**。 在语句中使用多个逻辑运算符时**AND**运算符将首先计算。 可以通过使用括号改变求值顺序。  
+  合并两个布尔表达式；在两个表达式均为 TRUE 时返回 TRUE。 当语句中使用多个逻辑运算符时，将首先计算 AND 运算符。 可以通过使用括号改变求值顺序。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>参数  
  *boolean_expression*  
- 是任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)返回一个布尔值： **TRUE**， **FALSE**，或**未知**。  
+ 返回以下布尔值的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)：TRUE、FALSE 或 UNKNOWN。  
   
 ## <a name="result-types"></a>结果类型  
  **Boolean**  
@@ -58,14 +58,14 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>结果值  
  当两个表达式均为 TRUE 时返回 TRUE。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  下表显示了使用 AND 运算符比较 TRUE 值和 FALSE 值时的结果。  
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|FALSE|UNKNOWN|  
 |**FALSE**|FALSE|FALSE|FALSE|  
-|**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
+|UNKNOWN|UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>示例  
   
@@ -102,8 +102,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [运算符 &#40;Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
   
   

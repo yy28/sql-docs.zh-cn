@@ -1,5 +1,5 @@
 ---
-title: "聚合函数 (Transact SQL) |Microsoft 文档"
+title: "聚合函数 (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/16/2018
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 
 聚合函数对一组值执行计算，并返回单个值。 除了 COUNT 以外，聚合函数都会忽略空值。 聚合函数经常与 SELECT 语句的 GROUP BY 子句一起使用。
   
-所有聚合函数均为确定性函数。 这表示任何时候使用一组特定的输入值调用聚合函数，所返回的值都是相同的。 有关函数的确定性的详细信息，请参阅[Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可能遵循除分组和 GROUPING_ID 以外的所有聚合函数。
+所有聚合函数均为确定性函数。 这表示任何时候使用一组特定的输入值调用聚合函数，所返回的值都是相同的。 有关函数确定性的详细信息，请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可以跟在除 GROUPING 和 GROUPING_ID 以外的所有聚合函数的后面。
   
 聚合函数只能在以下位置作为表达式使用：
 -   SELECT 语句的选择列表（子查询或外部查询）。  
@@ -56,6 +56,6 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="see-also"></a>另请参阅
 [内置函数 (Transact-SQL)](../../t-sql/functions/functions.md)  
-[通过子句 &#40;Transact SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

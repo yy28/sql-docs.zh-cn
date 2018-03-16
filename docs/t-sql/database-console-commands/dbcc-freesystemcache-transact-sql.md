@@ -1,5 +1,5 @@
 ---
-title: "DBCC FREESYSTEMCACHE (Transact SQL) |Microsoft 文档"
+title: DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -55,9 +55,9 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>参数  
- ( 'ALL' [,*pool_name* ] )  
+ ( 'ALL' [,pool_name ] )  
  ALL 指定所有受支持的缓存。  
- *pool_name*指定资源调控器池缓存。 只释放与此池关联的条目。  
+ pool_name 指定 Resource Governor 池缓存。 只释放与此池关联的条目。  
   
  MARK_IN_USE_FOR_REMOVAL  
  当不再使用当前使用的条目后，将它们分别从其各自所属的缓存中进行异步释放。 当 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL 执行后，缓存中新创建的条目不会受到影响。  
@@ -65,11 +65,11 @@ DBCC FREESYSTEMCACHE
  NO_INFOMSGS  
  取消显示所有信息性消息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 执行 DBCC FREESYSTEMCACHE 将清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志将包含以下信息性消息：“由于 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新。” 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
 
 ## <a name="result-sets"></a>结果集  
-DBCC FREESYSTEMCACHE 返回:"DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”
+DBCC FREESYSTEMCACHE 返回：“DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”
   
 ## <a name="permissions"></a>权限  
 需要对服务器的 ALTER SERVER STATE 权限。

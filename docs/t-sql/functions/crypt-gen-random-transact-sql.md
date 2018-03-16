@@ -1,5 +1,5 @@
 ---
-title: "CRYPT_GEN_RANDOM (Transact SQL) |Microsoft 文档"
+title: CRYPT_GEN_RANDOM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,15 +46,15 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>参数  
 *length*  
-创建的数字的长度。 最大值为 8000。 *长度*是类型**int**。
+创建的数字的长度。 最大值为 8000。 length 的数据类型为 int 。
   
-*种子*  
-用作随机种子的可选数据。  必须有至少*长度*字节的数据。 *种子*是**varbinary （8000)**。
+seed  
+用作随机种子的可选数据。  必须至少包含 length 个字节的数据。 seed 的数据类型为 varbinary(8000)。
   
 ## <a name="returned-types"></a>返回类型  
-**varbinary （8000)**
+varbinary(8000)
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 此函数是公用的，因此不需要任何特殊权限。
   
 ## <a name="examples"></a>示例  
@@ -73,6 +73,6 @@ SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[RAND &#40;Transact SQL &#41;](../../t-sql/functions/rand-transact-sql.md)
+[RAND (Transact-SQL)](../../t-sql/functions/rand-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "APP_NAME (Transact SQL) |Microsoft 文档"
+title: APP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 返回当前会话的应用程序名称（如果应用程序进行了设置）。
   
 > [!IMPORTANT]  
->  应用程序名称由客户端提供，并不以任何方式进行验证。 不要使用**APP_NAME**作为一种安全检查的一部分。  
+>  应用程序名称由客户端提供，并不以任何方式进行验证。 请不要使用 APP_NAME 作为安全检查的一部分。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,12 +53,12 @@ APP_NAME  ( )
 ```  
   
 ## <a name="return-types"></a>返回类型  
-**nvarchar （128)**
+**nvarchar(128)**
   
-## <a name="remarks"></a>注释  
-使用**APP_NAME**如果想要为不同的应用程序执行不同操作。 例如，针对不同应用程序进行不同的日期格式化，或返回信息性消息到某些应用程序。
+## <a name="remarks"></a>Remarks  
+如果想针对不同应用程序执行不同的操作，请使用 APP_NAME。 例如，针对不同应用程序进行不同的日期格式化，或返回信息性消息到某些应用程序。
   
-在中设置应用程序名称[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中**连接到数据库引擎**对话框中，单击**选项**。 上**其他连接参数**选项卡上，提供**应用**格式的属性`;app='application_name'`
+要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中设置应用程序名称，在“连接到数据库引擎”对话框中单击“选项”。 在“其他连接参数”选项卡上，提供 app 属性，格式为 `;app='application_name'`
   
 ## <a name="examples"></a>示例  
 以下示例检查了初始化该进程的客户端应用程序是否是一个 `SQL Server Management Studio` 会话，并且提供 US 或 ANSI 格式的日期。
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅
-[系统函数 &#40;Transact SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [函数](../../t-sql/functions/functions.md)
   
   

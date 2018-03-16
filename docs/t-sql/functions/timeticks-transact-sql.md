@@ -1,5 +1,5 @@
 ---
-title: "@@TIMETICKS (Transact SQL) |Microsoft 文档"
+title: '@@TIMETICKS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40timeticks-transact-sql"></a>& #x 40; 和 #x 40;TIMETICKS (Transact SQL)
+# <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回每个时钟周期的微秒数。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>返回类型  
  **integer**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  每个时钟周期的时间量依赖于计算机。 操作系统的一个时钟周期是 31.25 毫秒，或是三十分之一秒。  
   
 ## <a name="examples"></a>示例  
@@ -62,6 +62,6 @@ SELECT @@TIMETICKS AS 'Time Ticks';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [系统统计函数 &#40;Transact-SQL&#41;1;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [系统统计函数 (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

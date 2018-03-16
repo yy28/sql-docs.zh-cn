@@ -1,5 +1,5 @@
 ---
-title: "TYPEPROPERTY (Transact SQL) |Microsoft 文档"
+title: TYPEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,17 +48,17 @@ TYPEPROPERTY (type , property)
   
 ## <a name="arguments"></a>参数  
  *type*  
- 是数据类型的名称。  
+ 数据类型的名称。  
   
- *属性*  
- 要为数据类型返回的信息类型。 *属性*可以是以下值之一。  
+ property  
+ 要为数据类型返回的信息类型。 property 可以是下列值之一。  
   
-|属性|Description|返回的值|  
+|“属性”|Description|返回的值|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|数据类型允许空值。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 找不到数据类型。|  
-|**OwnerId**|类型的所有者。<br /><br /> 注意： 架构所有者不一定是类型所有者。|Nonnull = 类型所有者的数据库用户 ID。<br /><br /> NULL = 不支持的类型，或类型 ID 无效。|  
-|**精度**|数据类型的精度。|数字位数或字符个数。<br /><br /> 为-1 = **xml**或大型值数据类型<br /><br /> NULL = 找不到数据类型。|  
-|**小数位数**|数据类型的小数位数。|数据类型的小数位的个数。<br /><br /> NULL = 的数据类型不是**数值**或找不到。|  
+|**OwnerId**|类型的所有者。<br /><br /> 注意：架构所有者不一定是类型所有者。|Nonnull = 类型所有者的数据库用户 ID。<br /><br /> NULL = 不支持的类型，或类型 ID 无效。|  
+|**精度**|数据类型的精度。|数字位数或字符个数。<br /><br /> -1 = xml 或大值数据类型<br /><br /> NULL = 找不到数据类型。|  
+|**小数位数**|数据类型的小数位数。|数据类型的小数位的个数。<br /><br /> NULL = 数据类型不是 numeric 或未找到。|  
 |**UsesAnsiTrim**|创建数据类型时 ANSI 填充设置为 ON。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 数据类型找不到，或不是二进制数据类型或字符串数据类型。|  
   
 ## <a name="return-types"></a>返回类型  
@@ -87,13 +87,13 @@ SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [TYPE_ID &#40;Transact SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [类型 _ 名称 &#40;Transact SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [COLUMNPROPERTY &#40;Transact SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [元数据函数 &#40;Transact SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [TYPE_ID (Transact-SQL)](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPE_NAME (Transact-SQL)](../../t-sql/functions/type-name-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [元数据函数 (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.types &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
 
