@@ -1,13 +1,8 @@
-# [入门](getting-started-with-machine-learning-services.md)
-
 # 概述
-## [Microsoft 机器学习服务介绍](r/r-services.md)
-## [机器学习中的新增功能](what-s-new-in-sql-server-machine-learning-services.md)
-## [新的和已更新的项目](new-updated-advanced-analytics.md)
-## [体系结构和概述](architecture-overview-machine-learning.md)
-## [不同 SQL Server 版本中机器学习功能的差异](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [在 Azure SQL 数据库中使用 R](r/using-r-in-azure-sql-database.md)
+## [什么是 SQL Server 机器学习服务？](what-is-sql-server-machine-learning.md)
+## [新增功能](what-s-new-in-sql-server-machine-learning-services.md)
+## [体系结构概述](architecture-overview-machine-learning.md)
+## [各版本功能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [机器学习服务 - R](r/sql-server-r-services.md)
 
@@ -97,8 +92,6 @@
 #### [定型并保存模型](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [运营模型](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python：通过独立服务器部署和使用模型](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [机器学习服务器 - 独立](r/r-server-standalone.md)
 ## [入门](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [设置机器学习服务器（独立）](r/create-a-standalone-r-server.md)
@@ -175,6 +168,8 @@
 
 ## [已知问题](known-issues-for-sql-server-machine-learning-services.md)
 ## [发行说明](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [新的和已更新的项目](new-updated-advanced-analytics.md)
+## [在 Azure SQL 数据库中使用 R](r/using-r-in-azure-sql-database.md)
 
 ## [安装和故障排除技巧](machine-learning-troubleshooting-faq.md)
 ### [收集数据进行故障排除](data-collection-ml-troubleshooting-process.md)

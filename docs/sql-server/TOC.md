@@ -52,6 +52,7 @@
 ### [第 9 频道上的 SQL](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
 
 ## 反馈和帮助
+### [参与编辑 SQL 文档！](sql-server-docs-contribute.md)
 ### [UserVoice - 提出 SQL Server 改进建议](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)

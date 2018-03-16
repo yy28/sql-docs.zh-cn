@@ -54,6 +54,7 @@
 ### [如何：在使用 SQLSRV 驱动程序时指定 SQL Server 数据类型](how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)
 ### [如何：指定 PHP 数据类型](how-to-specify-php-data-types.md)
 ### [如何：使用内置 UTF-8 支持发送和检索 UTF-8 数据](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+### [如何：在 Linux 和 macOS 中发送和检索 ASCII 数据](how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 ## [处理错误和警告](handling-errors-and-warnings.md)
 ### [如何：使用 SQLSRV 驱动程序配置错误和警告处理](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [如何：使用 SQLSRV 驱动程序处理错误和警告](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)
