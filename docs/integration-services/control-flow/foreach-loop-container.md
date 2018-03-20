@@ -39,10 +39,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  

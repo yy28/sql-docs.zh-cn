@@ -29,10 +29,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色（SSIS 服务）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了某些固定数据库级角色，以帮助安全访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的包。 可用的角色有所不同，具体取决于是将包保存在 SSIS 目录数据库 (SSISDB) 中还是 msdb 数据库中。  

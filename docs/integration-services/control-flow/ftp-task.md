@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="ftp-task"></a>FTP 任务
   FTP 任务可以下载和上载数据文件，并管理服务器上的目录。 例如，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中，包可以从远程服务器或 Internet 位置下载数据文件。 可以将 FTP 任务用于下列用途：  
