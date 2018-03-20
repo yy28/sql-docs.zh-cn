@@ -21,19 +21,19 @@ helpviewer_keywords:
 - PropertyNumVal property
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a434d70c5fe477054bfc24f49c169817959b4ef0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e2eb17b066487f9227f221243de4d4db4bde5212
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>PropertyNumVal 属性（ServerNetworkProtocolProperty 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-获取所引用属性的数值。  
+  获取所引用属性的数值。  
   
 ## <a name="syntax"></a>语法  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34535db5b43311e13d21fd663f5302327b24978e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>使用 SQL Server 功能和功能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters 使用 SQL Server 特性和 OLTP 数据库中的功能。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters 使用 SQL Server 特性和 OLTP 数据库中的功能。
 
 WideWorldImporters 旨在展示许多 SQL Server，包括 SQL Server 2016 中引入的最新功能的主要功能。 下面是 SQL Server 功能和功能，以及如何在 WideWorldImporters 中使用的说明的列表。
 
@@ -42,7 +44,7 @@ WideWorldImporters 旨在展示许多 SQL Server，包括 SQL Server 2016 中引
 |动态数据屏蔽|在数据库架构中，数据屏蔽已应用到持有供应商，表中的 bank 详细信息`Purchasing.Suppliers`。 非管理员人员不会访问此信息。|
 |始终加密|Always encrypted 演示纳入可下载 samples.zip，即一部分的[版本的示例](http://go.microsoft.com/fwlink/?LinkID=800630)... 演示创建加密密钥，对敏感数据，以及将数据插入到表的小的示例应用使用加密的表。|
 |延伸数据库|`Warehouse.ColdRoomTemperatures`表已实现为临时表，并且它是内存优化的示例数据库的完整版本。 存档表是基于磁盘的并可以扩展到 Azure。|
-|全文索引|全文本索引可提高搜索人员、 客户和 StockItems。 仅当你具有 SQL Server 实例上安装的全文索引，索引将应用于查询。 非持久化计算的列用于创建为全文索引 StockItems 表中的数据。<br/><br/>`CONCAT`用于连接的字段创建 SearchData 是全文索引。<br/>若要启用的全文索引，在此示例中使用数据库中执行以下语句：<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>该过程创建默认的全文目录如果一个尚不存在，则替换全文本版本的这些视图搜索视图）。<br/><br/>请注意，在 SQL Server 中使用的全文索引需要选择在安装过程中的全文索引选项。 Azure SQL 数据库不需要和特定配置，以启用的全文索引。|
+|全文索引|全文本索引可提高搜索人员、 客户和 StockItems。 仅当你具有 SQL Server 实例上安装的全文索引，索引将应用于查询。 非持久化计算的列用于创建为全文索引 StockItems 表中的数据。<br/><br/>`CONCAT` 用于连接的字段创建 SearchData 是全文索引。<br/>若要启用的全文索引，在此示例中使用数据库中执行以下语句：<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>该过程创建默认的全文目录如果一个尚不存在，则替换全文本版本的这些视图搜索视图）。<br/><br/>请注意，在 SQL Server 中使用的全文索引需要选择在安装过程中的全文索引选项。 Azure SQL 数据库不需要和特定配置，以启用的全文索引。|
 |索引的持久化计算的列|索引在 SupplierTransactions 和 CustomerTransactions 中使用的持久化计算的列。|
 |检查约束|相对较为复杂的 check 约束处于`Sales.SpecialDeals`。 这样可以确保一个且只有一个 DiscountAmount，DiscountPercentage，并且单价进行配置。|
 |唯一约束|多对多个构造 （和唯一约束） 是为 Warehouse.StockItemStockGroups 的设置。|

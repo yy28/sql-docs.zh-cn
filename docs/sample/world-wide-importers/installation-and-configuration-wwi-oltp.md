@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,22 +13,23 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 967755e34b397f2dfac98277d34cb799655f5165
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: add5788063cdc5026d343061b8111cbec42e5a4d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="installation-and-configuration"></a>安装和配置
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers OLTP 数据库安装和配置说明。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wide World Importers OLTP 数据库安装和配置说明。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必要條件
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) （或更高版本） 或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 有关示例的完整版本，使用 SQL Server 评估/开发人员/企业版。
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。 为获得最佳结果使用 2016 年 6 月发行版或更高版本。
@@ -36,13 +38,13 @@ ms.lasthandoff: 12/05/2017
 
 最新版本中的示例：
 
-[wide world 导入程序版本](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 将示例 WideWorldImporters 数据库备份/bacpac 下载对应到你的 SQL Server 或 Azure SQL 数据库版本。
 
 从以下位置提供了源代码以重新创建示例数据库。 请注意由于在数据生成过程中没有随机因子，重新创建该示例将导致在数据的细微差异：
 
-[wide world importers 计划](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
 ## <a name="install"></a>Install
 
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/05/2017
 示例数据库可使用的全文检索。 但是，默认情况下，与 SQL Server 未安装该功能-你需要在 SQL Server 安装程序 （默认情况下，Azure SQL 数据库中已启用） 期间选择它。 因此，安装后步骤是必需的。
 
 1. 在 SQL Server Management Studio，连接到 WideWorldImporters 数据库并打开新查询窗口。
-2. 运行以下的 T-SQL 命令，以启用在数据库中的全文索引使用：`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. 运行以下的 T-SQL 命令，以启用在数据库中的全文索引使用：  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server 审核

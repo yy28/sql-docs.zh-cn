@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 体系结构  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ ms.lasthandoff: 02/12/2018
 |任务   |相关的主题  |说明
 |---  |---  |---  |
 |SELECT |[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)|节点和边缘表作为内部存储，因此在的节点和边缘表上支持大多数 SQL Server 或 Azure SQL 数据库中的表上支持的操作  |
-|MATCH  | [匹配 &#40;Transact SQL &#41;](../../t-sql/queries/match-sql-graph.md)|引入了匹配内置来支持模式匹配和遍历关系图。  |
+|MATCH  | [匹配&#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)|引入了匹配内置来支持模式匹配和遍历关系图。  |
 
 
 

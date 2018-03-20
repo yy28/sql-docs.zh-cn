@@ -55,7 +55,6 @@
 ### [使用 PowerShell 进行管理](sql-server-linux-manage-powershell.md)
 ### [使用日志传送](sql-server-linux-use-log-shipping.md)
 ### [使用 DB 邮件和电子邮件警报](sql-server-linux-db-mail-sql-agent.md)
-### [创建多个子网以提高可用性](sql-server-linux-configure-multiple-subnet.md)
 
 ## [迁移](sql-server-linux-migrate-overview.md)
 ### [从 Windows 导出和导入 BACPAC](sql-server-linux-migrate-ssms.md)
@@ -85,6 +84,7 @@
 ##### [在 Ubuntu 上配置](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [故障转移](sql-server-linux-availability-group-failover-ha.md)
 ##### [操作](sql-server-linux-availability-group-operate-ha.md)
+##### [创建多个子网以提高可用性](sql-server-linux-configure-multiple-subnet.md)
 #### [仅为读取缩放创建]()
 ##### [配置 AG](sql-server-linux-availability-group-configure-rs.md)
 #### [配置跨平台（Windows 和 Linux）](sql-server-linux-availability-group-cross-platform.md)

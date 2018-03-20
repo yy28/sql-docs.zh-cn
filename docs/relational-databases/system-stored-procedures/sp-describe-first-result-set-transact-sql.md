@@ -1,7 +1,7 @@
 ---
 title: "sp_describe_first_result_set (TRANSACT-SQL) |Microsoft 文档"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -25,16 +25,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 76c5088e011f4111e67631a5e7cbfed1ff57059b
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  返回的元数据的第一个可能的结果集的[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 如果批处理没有返回结果，则返回一个空的结果集。 如果发出错误[!INCLUDE[ssDE](../../includes/ssde-md.md)]无法确定将由执行静态分析执行的第一个查询的元数据。 动态管理视图[sys.dm_exec_describe_first_result_set &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)返回相同的信息。  
+  返回的元数据的第一个可能的结果集的[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 如果批处理没有返回结果，则返回一个空的结果集。 如果发出错误[!INCLUDE[ssDE](../../includes/ssde-md.md)]无法确定将由执行静态分析执行的第一个查询的元数据。 动态管理视图[sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)返回相同的信息。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,15 +48,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tsql =** ] *Transact SQL_batch*  
+ [ **@tsql =** ] **'***Transact-SQL_batch***'**  
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar (max)**。  
   
- [  **@params =** ] **N***参数*  
- @params为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar （n)**或**nvarchar (max)**。  
+ [ **@params =** ] **N'***parameters***'**  
+ @params 为参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar （n)**或**nvarchar (max)**。  
   
  一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是一个占位符，表示附加参数定义。 必须在定义语句中指定的每个参数@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，@params不是必需的。 NULL 是此参数的默认值。  
   
- [  **@browse_information_mode =** ] *tinyint*  
+ [ **@browse_information_mode =** ] *tinyint*  
  指定是否返回其他键列和源表信息。 如果设置为 1，则分析每个查询，就好像它在查询中包含 FOR BROWSE 选项一样。 将返回其他键列和源表信息。  
   
 -   如果设置为 0，则无信息返回。  
@@ -79,9 +79,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**位 NOT NULL**|如果列允许 NULL，则包含值 1；如果列不允许 NULL，则包含 0；如果不能确定列是否允许 NULL，则为 1。|  
 |**system_type_id**|**int NOT NULL**|包含 sys.types 中指定的列的数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256) NULL**|包含为列数据类型指定的名称和参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
-|**max_length**|**smallint 不为 NULL**|列的最大长度（字节）。<br /><br /> 为-1 = 的列数据类型为**varchar （max)**， **nvarchar (max)**， **varbinary （max)**，或**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16 或设置的值**sp_tableoption 'text in row**。|  
+|**max_length**|**Smallint 不为 NULL**|列的最大长度（字节）。<br /><br /> 为-1 = 的列数据类型为**varchar （max)**， **nvarchar (max)**， **varbinary （max)**，或**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16 或设置的值**sp_tableoption 'text in row**。|  
 |**精度**|**tinyint 不为 NULL**|如果为基于数值的列，则为该列的精度。 否则，返回 0。|  
-|**缩放**|**tinyint 不为 NULL**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
+|**小数位数**|**tinyint 不为 NULL**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
 |**collation_name**|**sysname NULL**|如果列包含的是字符，则为该列的排序规则的名称。 否则返回 NULL。|  
 |**user_type_id**|**int NULL**|对于 CLR 和别名类型，包含在 sys.types 中指定的列数据类型的 user_type_id。 否则为 NULL。|  
 |**user_type_database**|**sysname NULL**|对于 CLR 和别名类型，包含在其中定义相应类型的数据库的名称。 否则为 NULL。|  
@@ -113,7 +113,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|供内部使用。|  
 |**tds_collation_sort_id**|**tinyint NULL**|供内部使用。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  **sp_describe_first_result_set**保证，如果该过程返回 （一个假想） 的第一个结果集元数据批处理 A 和该批处理 （A） 是否随后执行然后批处理将任一 (1) 引发优化时间错误，(2)引发运行时错误，(3) 返回任何结果集，或者 (4) 返回的第一个结果集所描述的相同元数据与**sp_describe_first_result_set**。  
   
  名称、为 Null 性和数据类型可能不同。 如果**sp_describe_first_result_set**返回空结果集，保证是批处理执行将返回任何结果集。  
@@ -148,15 +148,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varchar(a)**到**varchar(a')**其中 >。  
   
-    -   **varchar(a)**到**varchar （max)**  
+    -   **varchar(a)** to **varchar(max)**  
   
     -   **nvarchar(a)**到**nvarchar(a')**其中 >。  
   
-    -   **nvarchar(a)**到**nvarchar (max)**  
+    -   **nvarchar(a)** to **nvarchar(max)**  
   
     -   **varbinary(a)**到**varbinary(a')**其中 >。  
   
-    -   **varbinary(a)**到**varbinary （max)**  
+    -   **varbinary(a)** to **varbinary(max)**  
   
  **sp_describe_first_result_set**不支持间接递归。  
   
@@ -199,9 +199,9 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|b3|NULL|NULL|NULL|NULL|  
+|0|1|b3|NULL|NULL|NULL|NULL|  
   
  以下示例使用 1，指示它将返回信息，就好像它在查询中包含 FOR BROWSE 选项一样。  
   
@@ -212,10 +212,10 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|b3|dbo|t|B1|0|  
-|@shouldalert|2|（英文）。|dbo|t|（英文）。|@shouldalert|  
+|0|1|b3|dbo|t|B1|0|  
+|1|2|（英文）。|dbo|t|（英文）。|1|  
   
  以下示例使用 2，指示执行分析，就好像您在准备游标一样。  
   
@@ -225,10 +225,10 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|B3|dbo|v|B2|0|  
-|@shouldalert|2|ROWSTAT|NULL|NULL|NULL|0|  
+|0|1|B3|dbo|v|B2|0|  
+|1|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>问题示例  
  下面的示例对所有示例使用两个表。 请执行以下语句以创建示例表。  
@@ -408,8 +408,7 @@ N'
  结果： **int NULL**由于 dbo.t1.a 和 s1.t1.a 具有类型**int**和不同的可为 null。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_describe_undeclared_parameters &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
-  
-  
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ 

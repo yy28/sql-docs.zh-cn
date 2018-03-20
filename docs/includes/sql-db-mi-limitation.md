@@ -1,0 +1,2 @@
+> [!IMPORTANT]  
+> 上[Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)，此 T-SQL 功能具有的某些行为更改。 请参阅[从 SQL Server 的 Azure SQL 数据库托管实例 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)有关的所有 T-SQL 的行为更改的详细信息。

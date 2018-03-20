@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 10/31/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: d6b43b590e7a5e6117f6752e1eb1dec701ca645e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3957abef7fb70698c04fd22d390d96ac4cd17b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 数据库目录
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]架构、 表和 WideWorldImportersDW 数据库中的存储的过程的说明。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+架构、 表和 WideWorldImportersDW 数据库中的存储的过程的说明。 
 
 WideWorldImportersDW 数据库用于数据仓库和分析处理。 在 WideWorldImporters 数据库中，生成有关销售和购买的事务数据并将其加载到 WideWorldImportersDW 数据库使用**每日 ETL 过程**。
 
@@ -54,11 +56,11 @@ WideWorldImportersDW 具有以下维度表。 说明内容包括 WideWorldImport
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |日期|包含有关日期，包括财务年度的信息的新表 (基于年 11 月 1 日开始财务年)。|
-|Employee|`Application.People`。|
+|Employee|`Application.People`中创建已分区表或索引。|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |供应商|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`。|
-|TransactionType|`Application.TransactionTypes`。|
+|PaymentMethod|`Application.PaymentMethods`中创建已分区表或索引。|
+|TransactionType|`Application.TransactionTypes`中创建已分区表或索引。|
 
 ### <a name="fact-tables"></a>事实数据表
 
@@ -66,10 +68,10 @@ WideWorldImportersDW 具有以下事实数据表。 说明内容包括在 WideWo
 
 |表|源表|示例分析|
 |-----------------------------|---------------------|---------------------|
-|订单|`Sales.Orders`和`Sales.OrderLines`|销售人员，选取器/打包程序工作效率，以及上的时间选取订单。 此外，较低的常用的情况下导致回订单。|
-|销售点|`Sales.Invoices`和`Sales.InvoiceLines`|销售日期、 传递日期、 随时间推移的盈利率、 按销售人员列出收益率。|
+|订单|`Sales.Orders` 和 `Sales.OrderLines`|销售人员，选取器/打包程序工作效率，以及上的时间选取订单。 此外，较低的常用的情况下导致回订单。|
+|销售点|`Sales.Invoices` 和 `Sales.InvoiceLines`|销售日期、 传递日期、 随时间推移的盈利率、 按销售人员列出收益率。|
 |购买|`Purchasing.PurchaseOrderLines`|预期的 vs 实际前置时间|
-|事务|`Sales.CustomerTransactions`和`Purchasing.SupplierTransactions`|测量问题日期 vs 终止日期和金额。|
+|事务|`Sales.CustomerTransactions` 和 `Purchasing.SupplierTransactions`|测量问题日期 vs 终止日期和金额。|
 |移动|`Warehouse.StockTransactions`|随着时间的推移动作数。|
 |股票控股|`Warehouse.StockItemHoldings`|有关现有库存级别和值。|
 
@@ -97,7 +99,7 @@ WideWorldImportersDW 具有以下事实数据表。 说明内容包括在 WideWo
 在 ETL 过程中使用的过程划分这些类别中：
 - ETL 包的所有 Get * 过程的帮助器过程。
 - ETL 包用于迁移的过程 DW 表的所有迁移 * 过程暂存数据。
-- `PopulateDateDimensionForYear`-采用每一年，并确保在中进行填充该年度的所有日期`Dimension.Date`表。
+- `PopulateDateDimensionForYear` -采用每一年，并确保在中进行填充该年度的所有日期`Dimension.Date`表。
 
 ### <a name="sequences-schema"></a>序列架构
 

@@ -22,19 +22,19 @@ helpviewer_keywords:
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a81f11f9c28fe19b02890c665cf4ce1e4b6f4a94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: df9bbccadc0abb2ea1c8ca26093b8bdd0b893179
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>使用 WMI 提供程序进行配置管理
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-在使用用于计算机管理的 WMI 提供程序编程之前，请考虑下列事项：  
+  在使用用于计算机管理的 WMI 提供程序编程之前，请考虑下列事项：  
   
 ## <a name="binding"></a>Binding  
  用于配置管理的 WMI 提供程序是一个 COM 对象模型，它支持早期绑定和后期绑定。 借助后期绑定，您可以使用脚本语言（如 VBScript）以编程方式操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务、网络设置和别名。  

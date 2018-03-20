@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d458bc15530aa87bfa922787558fff3f07645f7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 数据库目录
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters 数据库包含所有事务信息和销售和采购，每日数据以及汽车和冷聊天室的传感器数据。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters 数据库包含所有事务信息和销售和采购，每日数据以及汽车和冷聊天室的传感器数据。
 
 ## <a name="schemas"></a>架构
 
@@ -101,7 +103,7 @@ WideWorldImporters 用于不同用途，例如存储数据、 定义用户可以
 
 |表|Description|
 |-----------------------------|---------------------|
-|Customers|客户 （组织或个人） 的主实体表|
+|客户|客户 （组织或个人） 的主实体表|
 |CustomerCategories|客户 （即新奇存储、 超市等） 的类别|
 |BuyingGroups|客户组织可以是施加更高的购买能力的组的一部分|
 |CustomerTransactions|所有的财务交易记录客户相关 （发票付款）。|
