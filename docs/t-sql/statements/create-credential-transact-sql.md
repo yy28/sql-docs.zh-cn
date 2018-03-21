@@ -31,17 +31,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0e46404d775da09f4aaeb7b9640dd2a35d3cfa2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 200adf6302cb0c86f487a7480579a173403ed14c
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   创建服务器级别的凭据。 凭据是包含连接到 SQL Server 以外的资源时所需的身份验证信息的记录。 多数凭据包括一个 Windows 用户和一个密码。 例如，将数据库备份保存到某个位置可能需要 SQL Server 提供访问该位置的特殊凭据。 有关详细信息，请参阅[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  若要创建数据库级别的凭据，请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。 需要为服务器上的多个数据库使用相同凭据时，请使用服务器级别凭据。 使用数据库范围的凭据以使数据库更易于移植。 数据库移动到新服务器时，数据库范围的凭据将随之移动。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上的数据库范围的凭据。  
   
@@ -61,10 +63,10 @@ WITH IDENTITY = 'identity_name'
  credential_name  
  指定要创建的凭据的名称。 credential_name 不能以数字符号 (#) 开头。 系统凭据以 ## 开头。  使用共享访问签名 (SAS) 时，该名称必须与容器路径匹配，以 https 开头并且不能包含正斜杠。 请参见下面的示例 D。  
   
- IDENTITY = 'identity_name'  
+ IDENTITY ='identity_name'  
  指定从服务器外部进行连接时要使用的帐户名称。 当凭据用于访问 Azure Key Vault 时，IDENTITY 是该密钥保管库的名称。 请参阅以下示例 C。 凭据使用共享访问签名 (SAS) 时，IDENTITY 是 SHARED ACCESS SIGNATURE。 请参见下面的示例 D。  
   
- SECRET = 'secret'  
+ SECRET ='secret'  
  指定发送身份验证所需的机密内容。  
   
  当该凭据用于访问 Azure Key Vault 时，CREATE CREDENTIAL 的 SECRET 参数要求将 \<客户端 ID>（无连字符）和 Azure Active Directory 中服务主体的 \<Secret> 一起传递，且二者之间不留空格。 请参阅以下示例 C。 凭据使用共享访问签名时，SECRET 是共享访问签名令牌。 请参见下面的示例 D。  有关在 Azure 容器上创建存储访问策略和共享访问签名的详细信息，请参阅[第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  
