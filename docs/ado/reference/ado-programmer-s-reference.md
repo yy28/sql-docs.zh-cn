@@ -1,5 +1,5 @@
 ---
-title: "ADO 程序员 &#39; s 引用 |Microsoft 文档"
+title: "ADO 程序员&#39;的参考 |Microsoft 文档"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,12 +20,12 @@ ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7632d4bed6a963e1015c4ae07adf4fbf7b034a37
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="ado-programmer39s-reference"></a>ADO 程序员 &#39; s 引用
+# <a name="ado-programmer39s-reference"></a>ADO 程序员&#39;的参考
 本部分包含以下主题。  
   
 -   [ADO API 参考](../../ado/reference/ado-api/ado-api-reference.md)  
