@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>安装 SQL Server 机器学习 Azure 虚拟机上的功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="create-a-new-sql-server-2017-virtual-machine"></a>创建新的 SQL Server 2017 虚拟机
 
-若要在 SQL Server 2017 中使用 R 或 Python，请务必获取基于 Windows 的虚拟机。 [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)]在 Linux 上支持快速[本机评分](../sql-native-scoring.md)使用 T-SQL 的预测函数中，但其他机器学习功能将不可用尚未在此版本中。
+若要在 SQL Server 2017 中使用 R 或 Python，请务必获取基于 Windows 的虚拟机。 [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] 在 Linux 上支持快速[本机评分](../sql-native-scoring.md)使用 T-SQL 的预测函数中，但其他机器学习功能将不可用尚未在此版本中。
 
 有关 SQL Server 虚拟机产品/服务的列表，请参阅此文章：[概述的 SQL Server 在 Azure 虚拟机 (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)。
 
@@ -74,11 +74,10 @@ ms.lasthandoff: 02/11/2018
 如果你创建 Azure 虚拟机而无需机器学习中包含 SQL Server，你可以通过执行以下步骤添加该功能：
 
 1. 重新运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序，在向导的“服务器配置”页上添加该功能。
-2. 启用外部脚本执行并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[设置 SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
+2. 启用外部脚本执行并重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
 3. （可选）如果需要，请为远程脚本执行配置 R 辅助角色帐户的数据库访问。
-   有关详细信息，请参阅 [安装 SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
-3. （可选）如果想要允许从远程数据科学客户端执行 R 脚本，请修改 Azure 虚拟机上的防火墙规则。 有关详细信息，请参阅[取消阻止防火墙](#firewall)。
-4. 安装或启用所需的网络库。 有关详细信息，请参阅[添加网络协议](#network)。
+4. （可选）如果想要允许从远程数据科学客户端执行 R 脚本，请修改 Azure 虚拟机上的防火墙规则。 有关详细信息，请参阅[取消阻止防火墙](#firewall)。
+5. 安装或启用所需的网络库。 有关详细信息，请参阅[添加网络协议](#network)。
 
 ## <a name="additional-steps"></a>额外的步骤
 
@@ -101,13 +100,13 @@ ms.lasthandoff: 02/11/2018
 ### <a name="enable-odbc-callbacks-for-remote-clients"></a>启用远程客户端的 ODBC 回调
 
 如果希望客户端调用服务器将需要发出 ODBC 查询作为其机器学习解决方案的一部分，则必须确保快速启动板可代表远程客户端的 ODBC 调用。 为此，必须允许 Launchpad 使用的 SQL 辅助角色帐户登录到实例。
-有关详细信息，请参阅 [安装 SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。
+有关详细信息，请参阅[安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
 
 ### <a name="network"></a>添加网络协议
 
 + 启用命名管道
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 客户端和服务器计算机之间的连接，以及对某些内部连接，请使用命名管道协议。 如果未启用命名管道，必须同时在 Azure 虚拟机以及连接到服务器的任何数据科学客户端上安装并启用命名管道。
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 对客户端与服务器计算机之间的连接以及某些内部连接使用命名管道协议。 如果未启用命名管道，必须同时在 Azure 虚拟机以及连接到服务器的任何数据科学客户端上安装并启用命名管道。
   
 + 启用 TCP/IP
 

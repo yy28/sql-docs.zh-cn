@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: af9896e9e0baa2899b9e9c95795907ca46463504
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>SQL Server 中的外部脚本执行的常见问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     * *安全日志指示 NT 服务的帐户无法登录*
 
-有关如何授予必要的权限的此用户组的信息，请参阅[设置 SQL Server R Services](r/set-up-sql-server-r-services-in-database.md)。
+有关如何授予必要的权限的此用户组的信息，请参阅[安装 SQL Server 2016 R Services](install/sql-r-services-windows-install.md)。
 
 > [!NOTE]
 > 如果使用 SQL 登录名从远程工作站运行 R 脚本，则没有此限制。
@@ -233,7 +233,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 尽管在 R 控制台工作时，清除工作区中均相同，但它可以有 SQL 中的意外的后果计算上下文。
 
-`revoScriptConnection`是包含有关从 SQL Server 调用 R 会话的信息的 R 工作区中的对象。 但是，如果 R 代码中包含的命令以清除工作区 (如`rm(list=ls())`)，以及清除有关会话和 R 工作区中的其他对象的所有信息。
+`revoScriptConnection` 是包含有关从 SQL Server 调用 R 会话的信息的 R 工作区中的对象。 但是，如果 R 代码中包含的命令以清除工作区 (如`rm(list=ls())`)，以及清除有关会话和 R 工作区中的其他对象的所有信息。
 
 一种解决方法，避免不加选择地清除的变量和其他对象，当 SQL Server 中运行 R 时。 你可以通过使用删除特定变量**删除**函数：
 

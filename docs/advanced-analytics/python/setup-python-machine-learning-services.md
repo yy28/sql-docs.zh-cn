@@ -15,10 +15,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>设置 Python 机器学习服务 （数据库）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/11/2018
 
 若要执行无人参与的安装，使用 SQL Server 安装程序和特定于 Python 的自变量的命令行选项。 有关详细信息，请参阅[无人参与安装的 SQL Server 的 Python 机器学习服务](unattended-installs-of-sql-server-python-services.md)。
 
-##  <a name="bkmk_installPythonInDatabase"></a>步骤 1： 安装机器学习 SQL 服务器上的服务 （数据库）
+##  <a name="bkmk_installPythonInDatabase"></a> 步骤 1： 安装机器学习 SQL 服务器上的服务 （数据库）
 
 1. 运行 SQL Server 2017 年 1 安装向导。
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/11/2018
 
 6. 安装完成后，重启计算机。
 
-##  <a name="bkmk_enableFeature"></a>步骤 2： 启用执行 Python 脚本
+##  <a name="bkmk_enableFeature"></a> 步骤 2： 启用执行 Python 脚本
 
 1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
@@ -168,7 +168,7 @@ ms.lasthandoff: 02/11/2018
 > [!NOTE]
 > 列或 Python 脚本中使用的标题将不返回，设计使然。 若要添加你的输出的列名称，必须指定返回的数据集的架构。 执行此操作使用存储的过程中，命名列和指定的 SQL 数据类型的与结果参数。
 > 
-> 例如，你可以添加以下行以生成任意列名称：`WITH RESULT SETS ((Col1 AS int))`
+> 例如，你可以添加以下行以生成任意列名称： `WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>步骤 4： 其他配置
 
@@ -180,7 +180,7 @@ ms.lasthandoff: 02/11/2018
 > 
 > 并非所有列出的更改是必需的且无可能需要。 要求取决于安全架构，安装 SQL Server，以及希望用户连接到数据库和运行外部脚本的位置。
 
-###  <a name="bkmk_configureAccounts"></a>启用快速启动板帐户组的隐式身份验证
+###  <a name="bkmk_configureAccounts"></a> 启用快速启动板帐户组的隐式身份验证
 
 在安装期间，已创建一些新的 Windows 用户帐户，用于运行 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务的安全令牌下的任务。 当用户从外部客户端，发送 Python 或 R 脚本时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]激活可用的工作帐户。 然后将其映射到的调用用户的标识，并运行代表用户的脚本。
 

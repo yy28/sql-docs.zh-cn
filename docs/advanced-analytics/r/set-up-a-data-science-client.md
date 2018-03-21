@@ -15,11 +15,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>设置 SQL Server 用于数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,13 +38,13 @@ ms.lasthandoff: 02/11/2018
 
 + Microsoft R Server (for SQL Server 2016)
 
-    - 若要从 SQL Server 安装程序安装，请参阅[创建独立的 R 服务器](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - 若要从 SQL Server 安装程序安装，请参阅[安装 SQL Server 2016 R Server （独立）](../install/sql-r-standalone-windows-install.md)
 
     - 若要使用单独的基于 Windows 的安装程序，请参阅[安装机器学习用于 Windows 的服务器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + 机器学习服务器 （用于 SQL Server 自 2017 年)
 
-    - 若要从 SQL Server 安装程序安装，请参阅[创建独立的 R 服务器](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - 若要从 SQL Server 安装程序安装，请参阅[安装 SQL Server 自 2017 年 1 机器学习服务器 （独立）](../install/sql-machine-learning-standalone-windows-install.md)
 
     - 若要使用单独的基于 Windows 的安装程序，请参阅[适用于 Windows 中安装 R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 

@@ -22,10 +22,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
 ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>设置 SQL Server 计算机学习 Services （数据库）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/11/2018
 
 **适用于：** SQL Server 2016、 SQL Server 自 2017 年 1
 
-## <a name="bkmk_prereqs"></a>预安装清单
+## <a name="bkmk_prereqs"> </a> 预安装清单
 
 + 机器学习中的数据库需要 SQL Server 2016 或更高版本。 
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/11/2018
 
 + 在安装完成后，机器学习框架需要额外配置。 确切步骤取决于你的组织和安全策略、 服务器配置和预期的用户。 我们建议你查看所有步骤，并确定你的环境中可能需要的其他配置。
 
-## <a name="bkmk2016top"></a>安装 SQL Server 2016 R Services （数据库）
+## <a name="bkmk2016top"></a> 安装 SQL Server 2016 R Services （数据库）
 
 > [!div class="checklist"]
 > * 安装数据库引擎和机器学习功能
@@ -119,7 +119,7 @@ ms.lasthandoff: 02/11/2018
 7. 安装完成后，重新启动计算机。
 
 
-## <a name="bkmk2017top"></a>安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）
+## <a name="bkmk2017top"></a> 安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）
 
 > [!div class="checklist"]
 > * 安装数据库引擎和机器学习功能
@@ -240,7 +240,7 @@ ms.lasthandoff: 02/11/2018
     + [可选的安装后步骤： 配置服务和权限](#bkmk_FollowUp) 
     + [SQL Server 中的故障排除机器学习](upgrade-and-installation-faq-sql-server-r-services.md)
 
-## <a name="bkmk_FollowUp"></a>可选的安装后步骤
+## <a name="bkmk_FollowUp"></a> 可选的安装后步骤
 
 具体取决于机器学习你用例，你可能需要对服务器、 防火墙、 使用的服务或数据库权限的帐户进行其他更改。 你必须作出更改因大小写。
 

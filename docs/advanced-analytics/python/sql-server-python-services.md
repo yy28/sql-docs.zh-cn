@@ -1,6 +1,6 @@
 ---
 title: "机器学习 Python 服务 |Microsoft 文档"
-ms.date: 11/03/2017
+ms.date: 03/16/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -9,40 +9,38 @@ ms.component: python
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 7051781664efd2924dcb187d456197bc9bc88686
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 47762e531cc3b0f78a17b19da80ad3ea2249a086
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="machine-learning-services-with-python"></a>机器学习服务与 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python 是机器的一种语言提供极大的灵活性和各种不同学习任务的能力。 For Python 开放源代码库包含多个平台的可自定义神经网络，以及用于自然语言处理的常用库。 现在，SQL Server 自 2017 年 1 CTP 2.0 及更高版本支持此广泛使用的语言。
+Python 是机器的一种语言提供极大的灵活性和各种不同学习任务的能力。 For Python 开放源代码库包含多个平台的可自定义神经网络，以及用于自然语言处理的常用库。 现在，在 SQL Server 自 2017 年 1 机器学习中支持此广泛使用的语言。
 
 由于与集成 Python[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库引擎，你可以使数据接近的分析并消除成本和与数据移动相关的安全风险。  你可以部署基于 Python 使用便利、 熟悉的工具，例如 Visual Studio 的计算机学习解决方案。 生产应用程序可以获取预测，模型，或从 Python 3.5 运行时通过只需调用 T-SQL 的视觉对象的存储过程。
 
-此版本包括 Python，以及新的 Anaconda 分布[revoscalepy](../python/what-is-revoscalepy.md)库，以提高缩放性和性能机器学习解决方案。
+此版本包括 Python，Anaconda 分发以及[revoscalepy](../python/what-is-revoscalepy.md)库，以提高缩放性和性能机器学习解决方案。
 
 你可以安装所需的一切若要开始使用 Python 通过 SQL Server 2017 安装程序：
 
-+ **机器学习服务 （数据库）：**安装此功能，以及 SQL Server 数据库引擎，若要启用安全执行 Python 脚本在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算机。
++ [**机器学习服务 （数据库）**](../install/sql-machine-learning-services-windows-install.md)： 安装此功能，以及 SQL Server 数据库引擎，若要启用安全执行 Python 脚本在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算机。
   
      当你选择了此功能，扩展安装中数据库引擎来支持执行 Python 脚本，以及创建新服务时， [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]、 管理 Python 运行时之间的通信和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。
 
-+ **机器学习 Server （独立版）：**如果不需要 SQL Server 的集成，将获得分布式的机器学习 Python 和 R 支持此功能的安装。 你还可以将你的 Python 解决方案通过使用部署作为 web 服务**mrsdeploy**。
-  
-     不要在运行 SQL Server 计算机学习 Services 的同一台计算机上安装此功能。
++ [**机器学习 Server （独立）**](../install/sql-machine-learning-standalone-windows-install.md)： 如果你不需要 SQL Server 的集成，将获得分布式的机器学习 Python 和 R 支持此功能的安装。
 
+## <a name="see-also"></a>另请参阅
 
-## <a name="additional-resources"></a>其他资源
-
-[设置 Python 机器学习服务数据库中](setup-python-machine-learning-services.md)
-
-[Python 教程](../tutorials/sql-server-python-tutorials.md)
++ [SQL Server 计算机学习和 R Services （数据库）](../r/sql-server-r-services.md)
++ [SQL Server 计算机学习和 R Server （独立）](../r/r-server-standalone.md)
++ [Python 体系结构](architecture-overview-sql-server-python.md)
++ [Python 教程](../tutorials/sql-server-python-tutorials.md)

@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: a54400e73c7789dcea15cbd4929c2a7878297df5
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>SQL Server 机器学习入门
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
   从 SQL Server 自 2017 年开始，你现在可以使用 Python 代码在 SQL Server 中。 以反映多种语言 （的更多内容 ！），和名称的解决方案更广泛的支持已更改为[!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]。 现在您可以通过使用 SQL 工具运行 R 或 Python 代码来自动化机器学习任务。 或者，使用 SQL Server 计算机作为_计算上下文_从远程开发环境中启动的作业。
 
     + [SQL Server 中的 Python 的体系结构概述](../advanced-analytics/python/architecture-overview-sql-server-python.md)
-    + [设置 SQL Server R Services 或机器学习服务](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [安装 SQL Server 2017 机器学习 Services](install/sql-machine-learning-services-windows-install.md)
 
 + SQL Server 2016
 
@@ -47,7 +47,7 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
   此集成为你的数据提供了安全性，并允许你管理并平衡资源使用。
 
     + [获取已启动产品 SQL Server R Services](r/getting-started-with-sql-server-r-services.md)
-    + [设置 SQL Server R Services 或机器学习服务](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [安装 SQL Server 2016 R Services](install/sql-r-services-windows-install.md)
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft 机器学习服务器 (Microsoft R Server)
 
@@ -66,7 +66,7 @@ Microsoft 提供的机器学习解决方案的集成、 可缩放集用于在本
 > [!IMPORTANT]
 > 如果你想要运行使用 R Server 的 Python，请务必安装最新版本， [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)]，即仅可通过提供[!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]安装程序：
 > 
->    + [设置 Microsoft R Server 或机器学习服务器](../advanced-analytics/r/create-a-standalone-r-server.md)
+>    + [安装 SQL Server 自 2017 年 1 机器学习 Server （独立）](install/sql-machine-learning-standalone-windows-install.md)或[安装 SQL Server 2016 R Server （独立）](install/sql-r-standalone-windows-install.md)。
 
 ## <a name="related-products"></a>相关的产品
 

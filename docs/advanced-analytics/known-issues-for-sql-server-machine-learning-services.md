@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2143b576e3104ba2cf707e8fada75471a007a987
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0e9f4351e74e73453182ff8e8f840f50f0085537
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ SQL Server 2016 需要客户端上的 R 库与服务器上的 R 库完全匹配�
 
 **适用于：**使用 Python 的 SQL Server 自 2017 年 1
 
-### <a name="bkmk_sqlbindr"></a>当你从连接到旧版本的 SQL Server R Services 客户端使用的不兼容版本警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> 当你从连接到旧版本的 SQL Server R Services 客户端使用的不兼容版本警告 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 当在运行 R 代码 SQL Server 2016 计算上下文，你可能会看到以下错误：
 
@@ -117,7 +117,7 @@ SQL Server 2016 需要客户端上的 R 库与服务器上的 R 库完全匹配�
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-若要获取的最新的安装程序，请参阅[安装没有 internet 访问权限的机器学习组件](r/installing-ml-components-without-internet-access.md)。
+若要获取的最新的安装程序，请参阅[安装没有 internet 访问权限的机器学习组件](install/sql-ml-component-install-without-internet-access.md)。
 
 **适用于：** SQL Server 2016 R Services，与 R Server 9.0.0 版或更早版本
 
@@ -155,7 +155,7 @@ SQL Server 2016 需要客户端上的 R 库与服务器上的 R 库完全匹配�
 
 例如，即使你使用的 SQL Server 的企业版，R 在单线程模式下运行时通过使用外部工具运行 R 代码。 若要获取 SQL Server 中的性能好处，请启动 SQL Server 连接，并使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)以调用外部脚本运行时。
 
-一般情况下，避免调用机器学习库通过外部工具使用的 SQL Server。 如果你需要调试 R 或 Python 代码，则通常很容易为此 SQL Server 外部。 若要获取 SQL Server 中的同一个库，你可以安装 Microsoft R 客户端或[机器学习服务器](r/create-a-standalone-r-server.md)。
+一般情况下，避免调用机器学习库通过外部工具使用的 SQL Server。 如果你需要调试 R 或 Python 代码，则通常很容易为此 SQL Server 外部。 若要获取 SQL Server 中的同一个库，你可以安装 Microsoft R 客户端， [SQL Server 自 2017 年 1 机器学习服务器 （独立）](install/sql-machine-learning-standalone-windows-install.md)，或[SQL Server 2016 R Server （独立）](install/sql-r-standalone-windows-install.md)。
 
 ### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>SQL Server Data Tools 不支持外部脚本所需权限
 
@@ -264,7 +264,7 @@ data <- RxSqlServerData(
 
 一种解决方法，避免不加选择地清除的变量和其他对象时你正在中运行 R [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 尽管在 R 控制台中工作时，清除工作区中均相同，但它可以有意想不到的后果。
 
-* 若要删除特定变量，使用 R`remove`函数： 例如，`remove('name1', 'name2', ...)`
+* 若要删除特定变量，使用 R`remove`函数： 例如， `remove('name1', 'name2', ...)`
 * 若要删除多个变量，请将临时变量的名称保存到列表中，然后执行定期的垃圾回收。
 
 ### <a name="restrictions-on-data-that-can-be-provided-as-input-to-an-r-script"></a>可作为输入提供给 R 脚本的数据的限制
@@ -305,7 +305,7 @@ data <- RxSqlServerData(
 
 此限制适用于以及 SQL Server 和 Python 之间传递数据。 多字节字符应传递为 utf-8，并存储为 Unicode。
 
-### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>只有一个值类型的`raw`可以从返回`sp_execute_external_script`
+### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>只有一个值类型的`raw`可以从返回 `sp_execute_external_script`
 
 当二进制数据类型 (R**原始**数据类型) 从返回 R，必须在输出数据框架中发送的值。
 
@@ -436,7 +436,7 @@ go
 
 > *来自外部脚本的 STDERR 消息：*
 > **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
-> *SyntaxWarning: telemetry_state使用在全局声明之前*
+> *SyntaxWarning: telemetry_state 是全局声明之前使用*
 
 
 在 SQL Server 自 2017 年 1 累积更新 3 (CU3) 中已修复此问题。 

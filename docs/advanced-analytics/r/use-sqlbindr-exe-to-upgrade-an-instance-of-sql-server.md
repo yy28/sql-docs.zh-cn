@@ -1,7 +1,7 @@
 ---
-title: "升级 SQL Server 实例中的机器学习组件 |Microsoft 文档"
+title: "将 SQL Server 上的机器学习组件绑定到 Microsoft 机器学习 Server |Microsoft 文档"
 ms.custom: 
-ms.date: 10/31/2017
+ms.date: 03/15/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,19 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
-ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c67d0accb7ac7be46105e5148028fac3f67aa0f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>升级 SQL Server 实例中的机器学习组件
+# <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>将 SQL Server 上的机器学习组件绑定到 Microsoft 机器学习 Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍的过程_绑定_，可以用于升级机器学习在 SQL Server 中使用的组件。 绑定的进程锁定服务器到基于在版本的机器学习服务器上的更新频率、 而不是使用 SQL Server 版本和更新计划。
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/11/2018
 > 
 > 找不到 SqlBindR.exe？ 你可能尚未下载上面列出的组件。 此实用程序时仅使用 Windows installer 机器学习服务器。
 
-1. 以管理员身份打开命令提示符并导航到包含 sqlbindr.exe 的文件夹。 默认位置是`C:\Program Files\Microsoft\MLServer\Setup`
+1. 以管理员身份打开命令提示符并导航到包含 sqlbindr.exe 的文件夹。 默认位置是 `C:\Program Files\Microsoft\MLServer\Setup`
 
 2. 键入以下命令，查看可用实例列表： `SqlBindR.exe /list`
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/11/2018
 
 3. 运行**SqlBindR.exe**命令*/绑定*自变量，并指定要升级，实例的名称使用上一步中返回的实例名称。
 
-   例如，若要升级的默认实例，请键入：`SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
+   例如，若要升级的默认实例，请键入：  `SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
 
 4. 完成升级后，重新启动任何实例已修改与关联的快速启动板服务。
 
@@ -135,7 +135,7 @@ ms.lasthandoff: 02/11/2018
 
     有关说明，请参阅[卸载机器学习用于 Windows 的服务器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall)。 
 
-### <a name="bkmk_wizunbind"></a>取消绑定使用向导
+### <a name="bkmk_wizunbind"></a> 取消绑定使用向导
 
 1. 找到的安装程序机器学习服务器。 如果你已删除安装程序，你可能需要再次下载或将其复制从另一台计算机。
 2. 请确保具有你想要取消绑定的实例的计算机上运行安装程序。
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/11/2018
 4. 接受许可协议。 在安装时，必须指示你接受许可条款偶数。
 5. 单击 **“完成”**。 该进程花费一段时间。
 
-### <a name="bkmk_cmdunbind"></a>取消绑定使用命令行
+### <a name="bkmk_cmdunbind"></a> 取消绑定使用命令行
 
 1. 如上节所述，打开命令提示符并导航到包含 **sqlbindr.exe** 的文件夹。
 
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/11/2018
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>绑定或取消绑定离开多个临时文件夹
 
 有时也无法清理临时文件夹的绑定和正在取消绑定操作。
-如果您发现具有类似名称的文件夹，则可以在安装完成后对其进行删除：`R_SERVICES_<guid>`
+如果您发现具有类似名称的文件夹，则可以在安装完成后对其进行删除： `R_SERVICES_<guid>`
 
 > [!NOTE]
 > 请务必等待，直到安装已完成。 它可能需要很长时间才能删除关联使用某一版本的 R 库，然后添加新的 R 库。 操作完成后，会删除临时文件夹。

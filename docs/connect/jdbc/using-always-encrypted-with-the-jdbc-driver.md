@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: af8b651364f58c3c4261666d5d6531e99e620efe
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC 驱动程序使用始终加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -136,7 +136,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> JDBC 驱动程序 SQLServerColumnEncryptionCertificateStoreProvider 实现是适用于 Windows 操作系统仅且具有可用的驱动程序包中 sqljdbc_auth.dll 的依赖关系。 若要使用此提供程序，请将 sqljdbc_auth.dll 文件复制到装有 JDBC 驱动程序的计算机上的 Windows 系统路径上的目录。 也可以设置 java.libary.path 系统属性以指定 sqljdbc_auth.dll 的目录。 如果您运行 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 sqljdbc_auth.dll 文件，即使操作系统是 x64 版本也不例外。 如果您在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 sqljdbc_auth.dll 文件。 例如，如果你使用的 32 位 JVM 和 JDBC 驱动程序安装在默认目录，你可以通过使用以下虚拟机 (VM) 参数启动 Java 应用程序时指定的 DLL 的位置： `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> 尽管这篇文章中的其他 keystore 提供程序可在所有驱动程序支持的平台上，是 Windows 仅在操作系统上可用的 JDBC 驱动程序的 SQLServerColumnEncryptionCertificateStoreProvider 实现。 它具有 sqljdbc_auth.dll 驱动程序包中提供的依赖关系。 若要使用此提供程序，请将 sqljdbc_auth.dll 文件复制到装有 JDBC 驱动程序的计算机上的 Windows 系统路径上的目录。 也可以设置 java.libary.path 系统属性以指定 sqljdbc_auth.dll 的目录。 如果您运行 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 sqljdbc_auth.dll 文件，即使操作系统是 x64 版本也不例外。 如果您在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 sqljdbc_auth.dll 文件。 例如，如果你使用的 32 位 JVM 和 JDBC 驱动程序安装在默认目录，你可以通过使用以下虚拟机 (VM) 参数启动 Java 应用程序时指定的 DLL 的位置： `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>使用 Java 密钥存储提供程序
 JDBC 驱动程序附带了 Java 密钥存储的内置密钥存储提供程序实现。 如果**keyStoreAuthentication**连接字符串中存在连接字符串属性，则和设置为"JavaKeyStorePassword"，该驱动程序自动实例化并注册用于 Java 密钥存储提供程序。 Java 密钥存储提供程序的名称是 MSSQL_JAVA_KEYSTORE。 此名称还可以通过使用 SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API 查询。 

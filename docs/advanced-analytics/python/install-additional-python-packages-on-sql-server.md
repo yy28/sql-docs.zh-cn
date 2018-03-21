@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 8509556cd886f90dbac2211bc0282e8656bdc03e
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>在 SQL Server 上安装新的 Python 软件包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="prerequisites"></a>必要條件
 
-+ 你必须已安装了机器学习服务 （数据库） 与 Python 语言选项。 有关说明，请参阅[设置 Python 机器学习服务](setup-python-machine-learning-services.md)。
++ 你必须已安装了机器学习服务 （数据库） 与 Python 语言选项。 有关说明，请参阅[安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](../install/sql-machine-learning-services-windows-install.md)。
 
 + 对于每个服务器实例，你必须安装包的单独副本。 包无法在实例之间共享。
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/28/2018
 
 + 如果没有 internet 访问的服务器上安装 Python 包，必须将的 WHL 文件下载到另一台计算机，然后将其复制到服务器。
 
-    例如，在单独的计算机，你可以下载的 WHL 文件从此站点[https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然后将文件复制`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 计算机上的本地文件夹。
+    例如，在单独的计算机，你可以下载的 WHL 文件从此站点[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然后将文件复制`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 计算机上的本地文件夹。
 
 + SQL Server 2017 使用 Python 3.5。 
 

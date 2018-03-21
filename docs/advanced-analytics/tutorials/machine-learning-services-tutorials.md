@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8631ebd8cee2eb5f94fd1c28bee71f9fcfee192f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>有关 SQL Server 计算机学习 Services 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -111,8 +111,8 @@ Microsoft 数据科学团队提供的解决方案模板，可以使用可快速�
 
 若要运行这些教程，必须下载并安装 SQL Server 机器学习组件，如下所述：
 
-+ [设置 SQL Server 自 2017 年 1 机器学习 Services 或 SQL Server 2016 R Services](../r/set-up-sql-server-r-services-in-database.md)
-+ [设置 SQL Server 自 2017 年 Python Services](../python/setup-python-machine-learning-services.md)
++ [安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](../install/sql-machine-learning-services-windows-install.md)
++ [安装 SQL Server 2016 R Services （数据库）](../install/sql-r-services-windows-install.md)
 
 使用 SQL Server 自 2017 年，你可以安装 R 和 / 或 Python。 否则总体的安装过程、 体系结构和要求是相同的。
 

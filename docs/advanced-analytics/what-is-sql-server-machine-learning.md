@@ -16,11 +16,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: 
-ms.openlocfilehash: 5e718755aeae67ba55165770dc323cad8d6a54a9
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: ccba60d0a3e0fe45f82215a045e53a265d6c0a92
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>什么是 SQL Server 计算机学习 Services？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,12 +31,12 @@ SQL Server 计算机学习 Services 是嵌入、 预测分析和数据科学引�
 
 有为使用 SQL Server 中的机器学习功能的两个选项： 
 
-+ **SQL Server 计算机学习 Services （数据库）**的范围内计算引擎，完全集成与数据库引擎的数据库引擎实例操作。 大多数安装是此选项。
-+ **SQL Server 计算机学习服务器 （独立）**是非 SQL 安装。 尽管你使用 SQL Server 安装程序以安装服务器，会将它从 SQL Server 完全分离。
++ [**SQL Server 计算机学习 Services （数据库）** ](r/sql-server-r-services.md)的范围内计算引擎，完全集成与数据库引擎的数据库引擎实例操作。 大多数安装是此选项。
++ [**SQL Server 计算机学习服务器 （独立）** ](r/r-server-standalone.md)是非 SQL 安装。 尽管你使用 SQL Server 安装程序以安装服务器，会将它从 SQL Server 完全分离。 就功能而言，它等效于非 SQL [Microsoft 机器学习用于 Windows 的服务器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
 
 ## <a name="r-and-python-packages"></a>R 和 Python 包
 
-对每种语言的支持是通过用于创建和定型模型为各种类型，评分的数据，并使用基础的系统资源的并行处理的专有 Microsoft 软件包。
+对每种语言的支持是通过用于创建和定型模型为各种类型，评分的数据，并且使用的基础系统资源的并行处理的专有 Microsoft 软件包。
 
 由于专有包基于开放源代码 R 和 Python 分发版，因此脚本或在 SQL Server 中运行的代码也可以调用基函数并使用与 SQL Server 中提供的语言版本兼容的第三方包 (Python 3.5 和最新版本的 R，当前 3.3.3）。
 
@@ -84,12 +84,24 @@ SQL Server 自 2017 年 1 机器学习 Services 是 SQL Server 2016 R Services�
 
 SQL Server 文档的最新版本的版本不可知。 对于 SQL Server 机器学习服务，Python 才可用 2017年及更高版本，在所有版本中 R 支持时。 除非另外说明，你可以假定 R 文档适用于 2016年和 2017年版本。
 
+
+## <a name="related-machine-learning-products"></a>相关的机器学习产品
+
+ +  [设置 Azure 虚拟机](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+  
+  Azure 应用商店包括包括计算机学习 Server 或 R Server 的多个虚拟机映像。 在 Microsoft Azure 中创建虚拟机是最快的方法，以获取对开发和部署预测模型。 映像附带的缩放和共享已配置，这样，就更容易将应用程序内的分析，并与后端系统集成的功能。
+
++ [数据科学虚拟机](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
+
+  数据科学虚拟机的最新版本包括计算机学习 Server，SQL Server，加上的机器学习，最常用的工具数组所有预安装和测试。 创建 Jupyter 笔记本、 Julia 中开发解决方案和使用 MXNet、 CNTK，等 TensorFlow GPU 启用深入学习库。
+
 <a name="next-steps"></a>
+
 ## <a name="next-steps"></a>后续步骤
 
 **步骤 1:**安装和配置软件。 
 
-+ [安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](python/setup-python-machine-learning-services.md#bkmk_installPythonInDatabase)
++ [安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](install/sql-machine-learning-services-windows-install.md)
 
 **步骤 2:**开始使用代码中使用的以下教程之一：
 

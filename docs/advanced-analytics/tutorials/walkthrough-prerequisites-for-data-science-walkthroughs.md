@@ -19,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ac8e646c93c0371f959afc212601e5abe0de213
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 35738101548f3b0790131c8106bb37e482cc7316
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>为 SQL Server 和 R 数据科学演练的先决条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/11/2018
 + SQL server 自 2017 年 1 机器学习服务 （数据库）
 + SQL Server 2016 R Services
 
-有关详细信息，请参阅[设置 SQL Server R Services (数据库中](../r/set-up-sql-server-r-services-in-database.md)。
+有关详细信息，请参阅[安装 SQL Server 自 2017 年 1 机器学习 Services](../install/sql-machine-learning-services-windows-install.md)或[安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
 
 > [!IMPORTANT]
 > SQL Server 版本更早版本高于 2016年不支持与。 的集成但是，你可以为 ODBC 数据源使用较旧的 SQL 数据库。
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/11/2018
 
 - **Microsoft R 客户端**是一个轻型开发工具，支持 R 使用 RevoScaleR 包中的开发。 若要了解此工具，请参阅 [Microsoft R 客户端入门](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)。
 
-- **RStudio** 是广受欢迎的 R 开发环境之一。 有关详细信息，请参阅 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)。
+- **RStudio** 是广受欢迎的 R 开发环境之一。 有关详细信息，请参阅[ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)。
 
     无法完成本教程中使用 RStudio 或其他环境中; 的泛型安装你还必须的 Microsoft R Open 安装 R 包和连接库。 有关详细信息，请参阅 [设置数据科学客户端](../r/set-up-a-data-science-client.md)。
 

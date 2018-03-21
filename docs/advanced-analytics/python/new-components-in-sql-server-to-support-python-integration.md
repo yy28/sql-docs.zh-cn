@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6f948473c51d6212d432ddb179d7a61fcfdef117
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>在 SQL Server 以支持 Python 集成的组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/11/2018
 
 可能需要其他步骤来支持远程脚本执行。
 
-有关详细信息，请参阅[设置机器学习服务](setup-python-machine-learning-services.md)
+有关详细信息，请参阅[安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](../install/sql-machine-learning-services-windows-install.md)。
 
 ### <a name="launchpad"></a>启动板
 
@@ -105,7 +105,7 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
   + 将数据写入到表： 例如，保存结果到表
   + 创建数据库对象： 例如，如果将外部脚本另存为新的存储过程的一部分。
 
-  当[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]是从远程客户端，执行 Python 脚本，Python 可执行文件必须从外部源中检索数据，请使用作为计算上下文，ODBC 用于写回。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]映射到在当前实例中，用户的标识发出远程命令的用户的标识，并运行使用该用户的凭据 ODBC 命令。 执行此 ODBC 调用所需的连接字符串从客户端代码中获取。
+  当[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]是从远程客户端，执行 Python 脚本，Python 可执行文件必须从外部源中检索数据，请使用作为计算上下文，ODBC 用于写回。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 映射到在当前实例中，用户的标识发出远程命令的用户的标识，并运行使用该用户的凭据 ODBC 命令。 执行此 ODBC 调用所需的连接字符串从客户端代码中获取。
 
 ## <a name="interaction-of-components"></a>组件的交互
 
@@ -125,7 +125,7 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 4. BxlServer 协调与要管理的数据交换和工作结果的存储的 Python 运行时。
 5. SQL 卫星管理相关任务有关的通信和处理[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。
 6. BxlServer 使用 SQL Satellite 向 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 传递状态和结果。
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 获取结果并关闭相关的任务和进程。
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 获取结果并关闭相关任务和进程。
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>从远程客户端执行的 Python 脚本
 
@@ -146,7 +146,7 @@ SQL 附属使用自定义数据格式进行了优化的快速数据传输之间[
 6. PythonLauncher 调用的实例安装 Python[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]计算机。
 7. 将结果返回到 BxlServer。
 8. SQL Satellite 管理与 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 之间的通信并清理相关的作业对象。
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将结果传递回客户端。
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 将结果传回客户端。
 
 ## <a name="next-steps"></a>后续步骤
 

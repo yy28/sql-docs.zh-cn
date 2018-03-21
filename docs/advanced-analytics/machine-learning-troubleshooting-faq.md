@@ -1,7 +1,7 @@
 ---
 title: "故障排除和 SQL Server 中的机器学习的常见问题 |Microsoft 文档"
 ms.custom: 
-ms.date: 06/16/2017
+ms.date: 03/16/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -11,20 +11,20 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 5b9a5c6497781ef67d9d2ef9b9032a4d9ee250e5
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>解决机器学习
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文提供了与 SQL Server 中的机器学习功能的设置和配置相关的疑难解答信息。 这些信息包括设置指南、 已知的问题和发行说明的链接。 其他文章链接这篇文章中提供有关 SQL Server 中的计算机学习解决方案的性能优化建议。
+本文提供了故障排除的链接，安装程序指南、 已知的问题和发行说明。 其他文章链接这篇文章中提供有关 SQL Server 中的计算机学习解决方案的性能优化建议。
 
 使用此页作为起始点，用于查找已知的问题，安装程序的常见问题和过程进行故障排除。
 
@@ -50,32 +50,18 @@ ms.lasthandoff: 02/11/2018
 
 如果不设置机器学习与 SQL Server，或如果你想要添加功能下，从此处开始：
 
-+ [将 R Services 或使用 R 的机器学习服务设置](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
-+ [设置与 Python 的机器学习服务](../advanced-analytics/python/setup-python-machine-learning-services.md)
-+ [安装程序常见问题](../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md)
-+ [使用 SqlBindR 升级 R services 的实例](../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-
-以下文章介绍 SQL Server 中的机器学习功能的脱机安装程序所需的其他步骤：
-
-+ [R Services 的无人参与的安装](../advanced-analytics/r/unattended-installs-of-sql-server-r-services.md) 
-+ [具有 Python 的机器学习服务的无人参与的安装](../advanced-analytics/python/unattended-installs-of-sql-server-python-services.md)
-
-如果你需要安装机器学习功能在无 Internet 连接的计算机上，使用本文中的链接以运行安装程序之前下载的 R 和 Python 组件：
-
-+ [在没有连接到 Internet 的情况下安装机器学习组件](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](install/sql-machine-learning-services-windows-install.md)
++ [安装 SQL Server 自 2017 年 1 机器学习服务器 （独立）](install/sql-machine-learning-standalone-windows-install.md)
++ [安装 SQL Server 2016 R Services （数据库）](install/sql-r-services-windows-install.md)
++ [安装 SQL Server 2016R Server （独立）](install/sql-r-standalone-windows-install.md)
++ [命令提示符安装程序](install/sql-ml-component-commandline-install.md)
++ [脱机安装程序 (没有 internet)](install/sql-ml-component-install-without-internet-access.md)
 
 ### <a name="configuration"></a>配置
 
 下列文章包含有关默认值的信息以及如何自定义机器学习的实例上的配置：
 
-+ [为 SQL Server R Services 中修改用户帐户池](../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)  
-+ [配置和管理高级的分析扩展](../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)  
++ [为 SQL Server R Services 中修改用户帐户池](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
++ [配置和管理高级的分析扩展](r/configure-and-manage-advanced-analytics-extensions.md)  
 + [如何创建资源池](r/how-to-create-a-resource-pool-for-r.md)
 + [R 工作负荷的优化](r/operationalizing-your-r-code.md)
-
-## <a name="related-tools-and-services"></a>相关的工具和服务
-
-+ [设置 Microsoft 机器学习服务器独立](../advanced-analytics/r/create-a-standalone-r-server.md)
-+ [设置 Azure VM 上的 R 服务器](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-+ [安装 R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
-+ [获取 R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)

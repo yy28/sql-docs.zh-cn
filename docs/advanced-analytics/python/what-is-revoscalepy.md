@@ -13,11 +13,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2649596abecfd92d40a860e743c867e0ff80ed26
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="introducing-revoscalepy"></a>引入 revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -108,7 +108,7 @@ SQL Server 2017，开头 CTP 2.0 中包含的以下机器学习算法和摘要�
 
 For Python MicrosoftML 还包括各种转换和帮助器函数，如：
 
-+ `rx_predict`从训练的模型生成预测，并可用于实时评分
++ `rx_predict` 从训练的模型生成预测，并可用于实时评分
 + 图像特征化函数
 + 文本处理和观点提取函数
 
@@ -157,7 +157,7 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 若要在 SQL Server 中运行 Python 代码，你必须已安装 SQL Server 2017 与功能结合**机器学习服务**，并启用 Python 的语言。 早期版本的 SQL Server 不支持 Python 集成。
 
 > [!NOTE]
-> Python 的开源分发不支持 SQL Server 计算上下文。 但是，如果你需要发布和使用在 Windows 中的 Python 应用程序，你可以安装 Microsoft 机器学习服务器而无需安装 SQL Server。 有关详细信息，请参阅[创建 a Standalone R Server](../r/create-a-standalone-r-server.md)
+> Python 的开源分发不支持 SQL Server 计算上下文。 但是，如果你需要发布和使用在 Windows 中的 Python 应用程序，你可以安装 Microsoft 机器学习服务器而无需安装 SQL Server。 有关详细信息，请参阅[安装 SQL Server 自 2017 年 1 机器学习服务器 （独立）](../install/sql-machine-learning-standalone-windows-install.md)。
 
 ## <a name="get-more-help"></a>获取更多帮助
 

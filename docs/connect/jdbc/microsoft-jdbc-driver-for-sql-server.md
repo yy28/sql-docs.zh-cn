@@ -1,27 +1,27 @@
 ---
-title: "Microsoft JDBC Driver for SQL Server |Microsoft 文档"
+title: Microsoft JDBC Driver for SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 231aeea7b69585b01df5064b62707a85ec016ff7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0f9ec204daf3c0e0130be3fc1e4a44bf2982cb68
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/18/2017
 * [安全性](securing-jdbc-driver-applications.md)  
 * [性能和可靠性](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [故障排除](diagnosing-problems-with-the-jdbc-driver.md)
-* [示例代码](sample-jdbc-driver-applications.md) 
+* [代码示例](sample-jdbc-driver-applications.md) 
 * [法规遵从性和法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>社区

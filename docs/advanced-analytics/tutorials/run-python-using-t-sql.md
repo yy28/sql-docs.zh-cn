@@ -18,11 +18,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 5c6145d3af6918a5f3daa954aae5522ffffebb89
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 3cff0d963dc365b60404893c1b15eb7733dbdfeb
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="run-python-using-t-sql"></a>运行 Python 使用 T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成本教程，必须先安装 SQL Server 2017 和中所述的实例上，启用机器学习服务[本文](../python/setup-python-machine-learning-services.md)。 
+若要完成本教程，必须先安装 SQL Server 2017 和中所述的实例上，启用机器学习服务[安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](../install/sql-machine-learning-services-windows-install.md)。 
 
 你还应安装[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。 或者，你可以使用另一个数据库管理或查询工具，只要它可以连接到服务器和数据库，并且运行 T-SQL 查询或存储的过程。
 
@@ -388,7 +388,7 @@ SQL Server 依赖于 Python **pandas**包，其中非常适合使用表格数据
 
 + 找不到存储的过程， `sp_execute_external_script`？ 这意味着你可能尚未完成的配置要支持外部脚本执行的实例。 运行 SQL Server 2017 安装程序并选择后 Python 作为机器学习语言，则必须还在显式启用功能使用`sp_configure`，然后重新启动实例。 
 
-    有关详细信息，请参阅[使用 Python 的安装程序机器学习服务](../python/setup-python-machine-learning-services.md)。
+    有关详细信息，请参阅[安装 SQL Server 自 2017 年 1 机器学习 Services （数据库）](../install/sql-machine-learning-services-windows-install.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 488661c917690c2ec5af6db40a135c8eb3927db1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>使用 TRANSACT-SQL (SQL 快速入门中的 R) 中的 R 代码
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +84,7 @@ SQL Server 实例可以是 Azure 虚拟机或本地。 只需注意，外部脚�
 
 ## <a name="troubleshooting"></a>故障排除
 
-+ 如果你将获得此查询的任何错误，安装可能不完整。 在使用 SQL Server 安装向导添加该功能后，你必须执行一些额外的步骤来启用外部代码库。  请参阅[安装 SQL Server R Services](../r/set-up-sql-server-r-services-in-database.md)。
++ 如果你将获得此查询的任何错误，安装可能不完整。 在使用 SQL Server 安装向导添加该功能后，你必须执行一些额外的步骤来启用外部代码库。  请参阅[安装 SQL Server 自 2017 年 1 机器学习服务](../install/sql-machine-learning-services-windows-install.md)或[安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
 
 + 确保启动板服务正在运行。 取决于你的环境，你可能需要使 R 辅助角色帐户能够连接到 SQL Server，安装额外的网络库，启用远程代码执行，或者在配置所有项后重新启动实例。 请参阅 [R Services 安装和升级常见问题](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 

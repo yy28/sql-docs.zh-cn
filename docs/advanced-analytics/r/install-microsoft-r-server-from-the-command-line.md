@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>从命令行安装机器学习 Server （独立） 或 Microsoft R Server （独立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/11/2018
 如果在没有 Internet 访问的计算机上安装机器学习服务器或 Microsoft R Server （独立），必须提前下载所需的 R （或 Python） 组件，并将它们复制到本地文件夹。 有关下载位置，请参阅[安装没有 internet 访问权限的机器学习组件](installing-ml-components-without-internet-access.md)。
 
 
-## <a name="bkmk_mls2017"></a>安装 Microsoft 机器学习 Server （独立）
+## <a name="bkmk_mls2017"></a> 安装 Microsoft 机器学习 Server （独立）
 
 **适用于： SQL Server 自 2017 年 1**
 
