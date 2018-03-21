@@ -45,11 +45,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fe700c3dc23125b21b24a749ca5ae5238d6a02c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 
 可以使用 GRANT、DENY 和 REVOKE 语句自定义用户定义数据库角色的权限。 有关详细信息，请参阅 [权限（数据库引擎）](../../../relational-databases/security/permissions-database-engine.md)。
 
-有关所有权限的列表，请参阅 [数据库引擎权限](http://go.microsoft.com/fwlink/?LinkId=229142) 招贴。 （不能向数据库角色授予服务器级别权限。 不能向数据库角色添加登录名和其他服务器级别主体（如服务器角色）。 对于 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的服务器级别安全性，请改为使用 [服务器角色](../../../relational-databases/security/authentication-access/server-level-roles.md) 。 不能通过 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中的角色授予服务器级别权限。）
+有关所有权限的列表，请参阅 [数据库引擎权限](https://aka.ms/sql-permissions-poster) 招贴。 （不能向数据库角色授予服务器级别权限。 不能向数据库角色添加登录名和其他服务器级别主体（如服务器角色）。 对于 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的服务器级别安全性，请改为使用 [服务器角色](../../../relational-databases/security/authentication-access/server-level-roles.md) 。 不能通过 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中的角色授予服务器级别权限。）
 
 ## <a name="fixed-database-roles"></a>固定数据库角色
   
@@ -145,11 +145,11 @@ ms.lasthandoff: 11/21/2017
 |[DROP ROLE (Transact-SQL)](../../../t-sql/statements/drop-role-transact-sql.md)|Command|从数据库中删除角色。|  
 |[sp_addrole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|在当前数据库中创建新的数据库角色。|  
 |[sp_droprole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|从当前数据库中删除数据库角色。|  
-|[sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 除外的所有平台应改为使用 `ALTER ROLE`。|  
+|[sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 除外的所有平台应改为使用 `ALTER ROLE` 。|  
 |[sp_droprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|从当前数据库的 SQL Server 角色中删除安全帐户。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 除外的所有平台应改为使用 `ALTER ROLE` 。|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | 向角色添加权限。
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | 拒绝向角色授予权限。
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | 撤消以前授予或拒绝的权限。
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| 权限 | 向角色添加权限。
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| 权限 | 拒绝向角色授予权限。
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| 权限 | 撤消以前授予或拒绝的权限。
   
   
 ## <a name="public-database-role"></a>public 数据库角色  

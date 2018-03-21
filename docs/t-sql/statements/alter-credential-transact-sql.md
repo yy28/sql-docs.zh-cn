@@ -29,17 +29,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d01e5460b01790ba6b7ac59b25e7726399522165
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f939a257a427007e4b0a101a933aafbff9e50546
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   更改凭据的属性。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
@@ -54,10 +56,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  credential_name  
  指定将要更改的凭据的名称。  
   
- IDENTITY = 'identity_name'  
+ IDENTITY ='identity_name'  
  指定从服务器外部进行连接时要使用的帐户名称。  
   
- SECRET = 'secret'  
+ SECRET ='secret'  
  指定发送身份验证所需的机密内容。 *secret* 是可选项。  
   
 ## <a name="remarks"></a>Remarks  

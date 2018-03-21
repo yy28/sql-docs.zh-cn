@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4ec43116cf548df0a6f3541ab882635331f1b395
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 07ffca5e9c5a3d80ccd5e9a61ffb035ec718f805
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法（xml 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,15 +109,16 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
  请注意，query() 方法和 exist() 方法都声明 PD 前缀。 在这些情况下，可以使用 WITH XMLNAMESPACES 首先定义前缀，然后在查询中使用它。  
   
 ```  
-WITH XMLNAMESPACES (  
+WITH XMLNAMESPACES 
+(  
    'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
-SELECT CatalogDescription.query('  
-<Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
-') as Result  
+   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM
+)  
+SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />')
+       AS Result  
 FROM Production.ProductModel  
-where CatalogDescription.exist('  
-     /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
+WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
+
 ```  
   
 ## <a name="see-also"></a>另请参阅  

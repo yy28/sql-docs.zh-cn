@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 25ab48e5b7b0ea6a8696c9ab03a9a7b08172ba53
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认设置或延迟的持久（也称作懒散提交）。    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认设置或延迟的持久（也称作迟缓提交）。    
     
  完全持久事务提交是同步的，仅在事务的日志记录写入磁盘后报告提交成功，并将控制权归还客户端。 延迟持久事务提交是异步的，并在事务的日志记录写入磁盘之前报告提交成功。 事务要成为持久事务，必须将事务日志条目写入磁盘。 当事务日志条目刷新到磁盘时，延迟持久事务成为持久事务。    
     
@@ -90,7 +90,7 @@ ms.lasthandoff: 02/12/2018
     
         如果成功提交完全持久的事务或 sp_flush_log，则保证之前提交的所有延迟持续性事务都已成为持久事务。
         
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使所有事务都是延迟持久事务，也要基于日志生成和计时尝试将日志刷新到磁盘。 如果 IO 设备保持正常运行，此操作通常可以成功。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供除持久事务和 sp_flush_log 以外的任何有力的持续性保证。      
+    - 即使所有事务都是延迟持久事务，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也会尝试基于日志生成和计时将日志刷新到磁盘。 如果 IO 设备保持正常运行，此操作通常可以成功。 但是， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供除持久事务和 sp_flush_log 以外的任何有力的持续性保证。      
     
   
     

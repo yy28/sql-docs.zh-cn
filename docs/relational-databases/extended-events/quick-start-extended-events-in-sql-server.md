@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b532bf37f99a3fc05b0f2999d0d3d301323457d6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: edba23fdc5d59a5b1a5d11d1efdfdc05d9132061
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -656,7 +656,7 @@ SELECT HAS_PERMS_BY_NAME(
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)（尤其适用于 Azure SQL 数据库）
 - 博客： [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)（有效的数据库引擎权限）
-- PDF 形式的可缩放 [海报](http://go.microsoft.com/fwlink/?LinkId=229142)，显示所有 SQL Server 权限的层次结构。
+- PDF 形式的可缩放 [海报](https://aka.ms/sql-permissions-poster)，显示所有 SQL Server 权限的层次结构。
 
 
 

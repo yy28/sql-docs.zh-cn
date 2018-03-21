@@ -14,15 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3482d6e097e77966be39e33b6eb31b7d941c7624
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 50d2fc5af283489b8f02d2a7e7aa54dc76d14e59
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用内存优化表的要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/12/2018
   
  除了需要满足 [安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)外，还要满足以下使用内存中 OLTP 的要求：  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 任何版本的 SP1（或更高版本）。 对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM（SP1 预览版），需要 Enterprise、Developer 或 Evaluation 版。
+-   任何版本的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1（或更高版本）。 对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM（SP1 预览版），需要 Enterprise、Developer 或 Evaluation 版。
     
     > [!NOTE]
     > 内存中 OLTP 要求 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

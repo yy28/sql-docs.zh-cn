@@ -13,19 +13,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 645a0115ba21c75e21d1f2aeaece4d498b9993b9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a04620bd69fb3e04e7f29ec5180854dc4813ca53
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-server-express-localdb-reference"></a>SQL Server Express LocalDB 参考
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本节包含有关 SQL Server Express LocalDB 的信息：  
+  本节包含有关 SQL Server Express LocalDB 的信息：  
   
 -   [SQL Server Express LocalDB 错误消息参考](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  
   

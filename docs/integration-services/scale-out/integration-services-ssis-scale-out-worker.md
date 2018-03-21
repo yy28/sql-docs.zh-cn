@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cd80620f668e87eba8a77f1ac6a9e5faa2378da
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0e3fdf8e84b12315ef3ce500b933c4b4d6580f13
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
 
@@ -43,8 +43,8 @@ StoreName|Worker 证书所在位置的存储名称。|My
 AgentHeartbeatInterval|Scale Out Worker 检测信号的间隔时间。|00:01:00         
 TaskHeartbeatInterval|Scale Out Worker 报告任务状态的间隔时间。|00:00:10         
 HeartbeatErrorTollerance|上一次任务检测信号成功后，如果接收到检测信号的错误响应，任务将终止。|00:10:00      
-TaskRequestMaxCPU|Scale Out Worker 请求任务的 CPU 上限。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。|70.0         
-TaskRequestMinMemory|Scale Out Worker 请求任务的内存（以 MB 表示）下限。 没有在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。|100.0         
+TaskRequestMaxCPU|Scale Out Worker 请求任务的 CPU 上限。|70.0         
+TaskRequestMinMemory|Scale Out Worker 请求任务的内存（以 MB 表示）下限。|100.0         
 MaxTaskCount|Scale Out Worker 可保留的最大任务数。|10         
 LeaseInternval|Scale Out Worker 可保留任务的租用间隔。|00:01:00         
 TasksRootFolder|任务日志的文件夹。 如果值为空，则使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 文件夹路径。 [account] 是运行 Scale Out Worker 服务的帐户。 默认情况下，该帐户为 SSISScaleOutWorker140。|Empty         

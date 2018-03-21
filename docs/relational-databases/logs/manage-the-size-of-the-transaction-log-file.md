@@ -18,15 +18,15 @@ helpviewer_keywords:
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: b604f834bbc1e3f08c30f3feae06d637036610d6
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,9 +103,9 @@ ms.lasthandoff: 02/23/2018
   
       |版本|默认值|  
       |-------------|--------------------|  
-      |高于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|数据 64 MB。 日志文件 64 MB。|  
-      |高于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|数据 1 MB。 日志文件 10%。|  
-      |低于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|数据 10%。 日志文件 10%。|  
+      |自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起|数据 64 MB。 日志文件 64 MB。|  
+      |自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 起|数据 1 MB。 日志文件 10%。|  
+      |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|数据 10%。 日志文件 10%。|  
 
 -   小型的增长增量可能生成过多的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 并且可能降低性能。 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
 
