@@ -1,4 +1,5 @@
 # [教程：SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+## [使用 SSMS 连接并查询 SQL Server](connect-query-sql-server.md)
 
 # 课程
 ## [第 1 课：SQL Server Management Studio 中的基本导航](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
