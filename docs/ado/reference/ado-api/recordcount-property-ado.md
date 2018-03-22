@@ -1,16 +1,16 @@
 ---
-title: "RecordCount 属性 (ADO) |Microsoft 文档"
+title: RecordCount 属性 (ADO) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -20,38 +20,50 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 92faeb5d2ec0b62c03292f71e0299c779e362478
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a6ee9d1ea1c4e996c9608bc1ce76ff3f1baa7c62
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 属性 (ADO)
-指示中的记录数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
+
+指示中的记录数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。
   
-## <a name="return-value"></a>返回值  
- 返回**长**值，该值指示中的记录数**记录集**。  
+## <a name="return-value"></a>返回值
+
+返回**长**值，该值指示中的记录数**记录集**。
   
-## <a name="remarks"></a>注释  
- 使用**RecordCount**属性来查明多少个记录位于**记录集**对象。 该属性返回-1 时 ADO 无法确定的记录数，或提供程序或光标类型不支持**RecordCount**。 读取**RecordCount**属性关闭**记录集**会导致错误。  
-  
- 如果**记录集**对象支持近似定位或创建一个书签，??? 也就是说，**支持 (adApproxPosition)**或**支持 (adBookmark)**分别返回**True**??? 此值将为中的记录的精确数目**记录集**，不管是否它已完全填充。 如果**记录集**对象不支持近似定位，此属性可能是大量消耗资源，因为所有记录都将都具有检索和计数以返回准确**RecordCount**值。  
-  
+## <a name="remarks"></a>注释
+
+使用**RecordCount**属性来查明多少个记录位于**记录集**对象。 该属性返回-1 时 ADO 无法确定的记录数，或提供程序或光标类型不支持**RecordCount**。 读取**RecordCount**属性关闭**记录集**会导致错误。
+
+#### <a name="bookmarks-or-approximate-positioning"></a>书签或近似定位
+
+如果记录集对象*未*支持任一书签或近似定位，此属性在记录集中返回的记录的精确数目。 此属性返回而不考虑是否记录集已完全填充的精确数目。
+
+相反，如果该记录集对象的功能*不*支持书签或近似定位，请访问此属性可能会大量消耗资源。 使用量，便会出现的所有记录必须检索计数以返回精确的 RecordCount 值。
+
+- **adBookmark**相关的书签。
+- **adApproxPosition**与近似定位相关。
+
 > [!NOTE]
->  在 ADO 版本 2.8 及更早版本中，SQLOLEDB 访问接口提取所有记录，当使用服务器端游标时，它将返回的情况下**True**两个**支持 (adApproxPosition)**和**支持 (adBookmark)**。  
+> 在 ADO 版本 2.8 及更早版本中，SQLOLEDB 访问接口提取所有记录，当使用服务器端游标时，它将返回的情况下**True**两个**支持 (adApproxPosition)**和**支持 (adBookmark)**。
   
- 游标类型的**记录集**对象会影响是否可以确定的记录数。 **RecordCount**属性将返回-1 表示只进游标; 输入一个静态的实际计数或键集游标; 或者为-1 或动态游标，具体取决于数据源的实际计数。  
+游标类型的**记录集**对象会影响是否可以确定的记录数。 **RecordCount**属性将返回-1 表示只进游标; 输入一个静态的实际计数或键集游标; 或者为-1 或动态游标，具体取决于数据源的实际计数。
   
-## <a name="applies-to"></a>适用范围  
- [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+## <a name="applies-to"></a>适用范围
+
+[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>另请参阅  
- [筛选器和 RecordCount 属性示例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
- [筛选器和 RecordCount 属性示例 （VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
- [AbsolutePosition 属性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [PageCount 属性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)
+## <a name="see-also"></a>另请参阅
+
+[筛选器和 RecordCount 属性示例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
+[筛选器和 RecordCount 属性示例 （VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
+[AbsolutePosition 属性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
+[PageCount 属性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

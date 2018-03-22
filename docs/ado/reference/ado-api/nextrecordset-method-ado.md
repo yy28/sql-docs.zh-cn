@@ -1,16 +1,16 @@
 ---
-title: "方法签名 (ADO) |Microsoft 文档"
+title: 方法签名 (ADO) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffbc85f40d684095b4f91512943f16911af3233f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b4e0e38fc9c01a65916d7979fddfae929d43acf1
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="nextrecordset-method-ado"></a>方法签名 (ADO)
 清除当前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象并返回下一个**记录集**方法通过一系列的命令。  
@@ -54,7 +54,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="remarks"></a>注释  
  使用**签名**方法以返回结果的复合命令语句中的下一步命令或存储过程返回多个结果。 如果你打开**记录集**复合命令语句上基于的对象 (例如，"选择\*从 table1;选择\*从 table2") 使用[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)方法[命令](../../../ado/reference/ado-api/command-object-ado.md)或[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**记录集**，ADO 执行仅第一个命令并返回到结果*记录集*。 若要访问的语句中的后续命令的结果，调用**签名**方法。  
   
- 只要有更多结果和**记录集**包含复合语句未断开连接或跨进程边界封送**签名**方法将继续到返回**记录集**对象。 如果返回行的命令成功执行，但未返回任何记录，返回**记录集**对象将被打开，但为空。 通过验证，这种情况下的测试[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性均**True**。 如果非???返回行的命令执行成功，返回**记录集**对象将被关闭，你可以通过测试来验证其[状态](../../../ado/reference/ado-api/state-property-ado.md)属性**记录集**。 当没有更多结果，*记录集*将设置为*执行任何操作*。  
+ 只要有更多结果和**记录集**包含复合语句未断开连接或跨进程边界封送**签名**方法将继续到返回**记录集**对象。 如果返回行的命令成功执行，但未返回任何记录，返回**记录集**对象将被打开，但为空。 通过验证，这种情况下的测试[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性均**True**。 如果非返回行的命令执行成功，返回**记录集**对象将被关闭，你可以通过测试来验证其[状态](../../../ado/reference/ado-api/state-property-ado.md)属性**记录集**. 当没有更多结果，*记录集*将设置为*执行任何操作*。  
   
  **签名**方法上断开连接没有**记录集**对象，其中[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)已设置为**执行任何操作**(在 Microsoft Visual Basic) 或 NULL （在其他语言） 中。  
   

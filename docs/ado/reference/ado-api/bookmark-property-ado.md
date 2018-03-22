@@ -1,16 +1,16 @@
 ---
-title: "书签属性 (ADO) |Microsoft 文档"
+title: 书签属性 (ADO) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59cc184403fff8b152ee7eabbdf823abd6c3d4bc
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bookmark-property-ado"></a>书签属性 (ADO)
 指示一个书签，用于唯一标识中的当前记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象或设置当前记录中**记录集**到由有效的书签记录的对象。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
  当你打开**记录集**对象时，每个其记录具有一个唯一的书签。 若要保存当前记录的书签，请将值指定**书签**给一个变量的属性。 若要快速返回到该记录移到另一条记录之后，任何时候，设置**记录集**对象的**书签**属性设置为该变量的值。  
   
- 用户可能无法以查看该书签的值。 另外，用户不应期望书签以直接比较??? 两个引用同一个记录的书签可能具有不同的值。  
+ 用户可能无法以查看该书签的值。 此外，用户不应期望书签直接比较，因为需要两个引用同一个记录的书签可能具有不同的值。  
   
  如果你使用[克隆](../../../ado/reference/ado-api/clone-method-ado.md)方法来创建一份**记录集**对象，**书签**原始和重复的属性设置**记录集**对象是相同的而且你可以交替使用它们。 但是，不能使用通过不同的书签**记录集**对象互换，即使它们已创建从相同的源或命令。  
   
