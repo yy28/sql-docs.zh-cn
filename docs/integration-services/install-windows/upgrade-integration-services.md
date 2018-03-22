@@ -1,16 +1,16 @@
 ---
-title: "升级 Integration Services | Microsoft Docs"
-ms.custom: 
+title: 升级 Integration Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/20/2018
 ---
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/20/2018
   
     -   将日志数据从 msdb.sysdtslog90 系统表移至 msdb.sysssislog 系统表。  
   
--   将数据移动到新的 msdb.sysssis\* 表后，删除 msdb.sysdts*90 系统表和用于访问它们的存储过程。 但是，升级过程将使用一个具有相同名称的 sysdtslog90 视图来替换 sysdtslog90 表。 这个新 sysdtslog90 视图将公开新的 msdb.sysssislog 系统表。 这可确保基于日志表的报表将继续运行而不会中断。  
+-   将数据移动到新的 msdb.sysssis\* 表后，删除 msdb.sysdts\*90 系统表和用于访问它们的存储过程。 但是，升级过程将使用一个具有相同名称的 sysdtslog90 视图来替换 sysdtslog90 表。 这个新 sysdtslog90 视图将公开新的 msdb.sysssislog 系统表。 这可确保基于日志表的报表将继续运行而不会中断。  
   
 -   为了控制对包的访问，将新建三个固定的数据库级角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator。 系统不会删除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色 db_dtsadmin、db_dtsltduser 和 db_dtsoperator，而是将其作为对应的新角色的成员。  
   
