@@ -4,18 +4,20 @@
 ## [体系结构概述](architecture-overview-machine-learning.md)
 ## [各版本功能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
+# Install 
+## [机器学习服务（数据库内）](install/sql-machine-learning-services-windows-install.md)
+## [机器学习服务器（独立）](install/sql-machine-learning-standalone-windows-install.md)
+## SQL Server 2016
+### [R Services（数据库内）](install/sql-r-services-windows-install.md)
+### [R Server（独立版）](install/sql-r-standalone-windows-install.md)
+## [命令提示符设置](install/sql-ml-component-commandline-install.md)
+## [脱机设置（无 Internet）](install/sql-ml-component-install-without-internet-access.md)
+
 # [机器学习服务 - R](r/sql-server-r-services.md)
-
-## [入门](r/getting-started-with-sql-server-r-services.md)
-### [设置 SQL Server 机器学习服务（数据库内）](r/set-up-sql-server-r-services-in-database.md)
-### [机器学习服务的无人参与安装](r/unattended-installs-of-sql-server-r-services.md)
-
 ## [体系结构](r/architecture-overview-sql-server-r.md)
 ### [R 互操作性](r/r-interoperability-in-sql-server.md)
 ### [支持 R 集成的组件](r/new-components-in-sql-server-to-support-r.md)
 ### [R 的安全性](r/security-overview-sql-server-r.md)
-
-## [监视](r/monitoring-r-services.md)
 
 ## [SQL Server 的 R 教程](tutorials/sql-server-r-tutorials.md)
 
@@ -64,13 +66,10 @@
 
 # [机器学习服务 - Python](python/sql-server-python-services.md)
 
-## [入门](python/setup-python-machine-learning-services.md)
-
 ## [体系结构](python/architecture-overview-sql-server-python.md)
 ### [Python 互操作性](python/python-interoperability.md)
 ### [Python 支持组件](python/new-components-in-sql-server-to-support-python-integration.md)
 ### [Python 安全性](python/security-overview-sql-server-python-services.md)
-## [监视](python/managing-and-monitoring-python-solutions.md)
 <!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
 <!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
@@ -93,10 +92,6 @@
 #### [运营模型](tutorials/sqldev-py6-operationalize-the-model.md)
 
 # [机器学习服务器 - 独立](r/r-server-standalone.md)
-## [入门](r/getting-started-with-microsoft-r-server-standalone.md)
-## [设置机器学习服务器（独立）](r/create-a-standalone-r-server.md)
-### [从命令行安装 Microsoft 机器学习服务器](r/install-microsoft-r-server-from-the-command-line.md)
-### [预配数据科学虚拟机](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
 # [操作指南](r/sql-server-machine-learning-tasks.md)
 
@@ -155,7 +150,7 @@
 
 ### [通过 Web 服务部署和使用模型](operationalization-with-mrsdeploy.md)
 
-### [管理和监视机器学习解决方案](r/managing-and-monitoring-r-solutions.md)
+### [管理和监视解决方案](r/managing-and-monitoring-r-solutions.md
 ### [机器学习服务的资源调控](r/resource-governance-for-r-services.md)
 ### [为机器学习创建资源池](r/how-to-create-a-resource-pool-for-r.md)
 ### [机器学习服务的扩展事件](r/extended-events-for-sql-server-r-services.md)
@@ -172,18 +167,14 @@
 ## [在 Azure SQL 数据库中使用 R](r/using-r-in-azure-sql-database.md)
 
 ## [安装和故障排除技巧](machine-learning-troubleshooting-faq.md)
+### [预配数据科学虚拟机](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [收集数据进行故障排除](data-collection-ml-troubleshooting-process.md)
 ### [升级和安装常见问题解答](r/upgrade-and-installation-faq-sql-server-r-services.md)
-
 ### [执行外部脚本的常见问题](common-issues-external-script-execution.md)
-### [在没有连接到 Internet 的情况下安装机器学习组件](r/installing-ml-components-without-internet-access.md)
-### [在 Azure 虚拟机上安装 SQL Server 机器学习服务](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [将 R 添加到现有的 Azure 虚拟机](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [使用 sqlBindR.exe 升级实例](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-### [从命令行安装 R Server](r/install-microsoft-r-server-from-the-command-line.md)
-### [预配企业数据科学虚拟机](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-### [设置数据科学工具](r/setup-or-configure-r-tools.md)
-### [设置数据科学客户端](r/set-up-a-data-science-client.md)
+## [绑定到 Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## [设置数据科学工具](r/setup-or-configure-r-tools.md)
+## [设置数据科学客户端](r/set-up-a-data-science-client.md)
+## [设置虚拟机](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 
 ## 博客
 
@@ -198,15 +189,12 @@
 # [参考](r/machine-learning-services-r-reference.md)
 ## [MicrosoftML](using-the-microsoftml-package.md)
 ## [RevoScaleR](r/revoscaler-overview.md)
-### [用于 SQL Server 数据的 ScaleR 函数](r/scaler-functions-for-working-with-sql-server-data.md)
+### [用于 SQL Server 数据的 RevoScaleR 函数](r/scaler-functions-for-working-with-sql-server-data.md)
 ## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [RevoScalePy](python/what-is-revoscalepy.md)
 
-# [教程和示例](tutorials/machine-learning-services-tutorials.md)
-
-## [SQL Server 的 Python 教程](tutorials/sql-server-python-tutorials.md)
-## [SQL Server 的 R 教程](tutorials/sql-server-r-tutorials.md)
+# [模板和示例](tutorials/machine-learning-services-tutorials.md)
 
 ## [数据科学解决方案模板](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [SQL Server 示例](https://github.com/Microsoft/sql-server-samples)
