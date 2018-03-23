@@ -101,6 +101,8 @@
 
 ### [在 SQL Server 上安装新 Python 包](python/install-additional-python-packages-on-sql-server.md)
 
+### [将 Python 工具配置为用于 SQL Server](python/setup-python-client-tools-sql.md)
+
 ### [为 SQL Server 实例启用 R 包管理](r/r-package-how-to-enable-or-disable.md)
 
 ### [确定要在 SQL Server 上安装的包](r/determine-which-packages-are-installed-on-sql-server.md)
