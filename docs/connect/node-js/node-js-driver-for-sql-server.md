@@ -1,33 +1,33 @@
 ---
-title: "Node.js Driver for SQL Server |Microsoft 文档"
-ms.custom: 
+title: Node.js Driver for SQL Server |Microsoft 文档
+ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 85c5c9f1fe80893c9d778c6e1cfb7ce889aa1c61
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 5cf72af4ebd9b00c06b80a64cd6f3017d9cd4a63
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="nodejs-driver-for-sql-server"></a>适用于 SQL Server 的 Node.js 驱动程序
 
 ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载 Node.js SQL 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-需要很长时间的模块是支持的所有现代版本的 SQL Server 的 TDS 协议的 javascript 实现。 驱动程序是一个开源项目，可在 Github 上找到。  
+需要很长时间的模块是支持的所有最新版本的 SQL Server 的 TDS 协议的 javascript 实现。 驱动程序是一个开放源代码项目，可在 Github 上找到。  
   
 你可以连接到在 Windows、 Linux 或 mac。 使用 Node.js 的 SQL 数据库  
   

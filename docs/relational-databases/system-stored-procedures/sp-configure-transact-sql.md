@@ -1,16 +1,16 @@
 ---
-title: "sp_configure (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_configure (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_configure
@@ -20,24 +20,26 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d6ff78066f307e70f37880eb57e2430774c242ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 63ab5d253d26375b3f53cb0f38ffa96f56e0a93d
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
 
-  显示或更改当前服务器的全局配置设置。  
+  显示或更改当前服务器的全局配置设置。
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
->  有关数据库级配置选项，请参阅[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). 若要配置 SOFT-NUMA，请参阅[SOFT-NUMA &#40;SQL server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  有关数据库级配置选项，请参阅[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 若要配置 SOFT-NUMA，请参阅[SOFT-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,9 +71,9 @@ RECONFIGURE
  [ **@configname=** ] **'***option_name***'**  
  配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
   
- 有关可用配置选项和其设置的信息，请参阅[服务器配置选项 &#40;SQL server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ 有关可用配置选项和其设置的信息，请参阅[服务器配置选项&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
- [ **@configvalue=** ] **'***value***'**  
+ [ @configvalue= ] 'value'****  
  新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
   
  若要查看每个选项的最大值，请参阅**最大**列**sys.configurations**目录视图。  
@@ -89,8 +91,8 @@ RECONFIGURE
 |**名称**|**nvarchar(35)**|配置选项的名称。|  
 |**最小值**|**int**|配置选项的最小值。|  
 |**最大值**|**int**|配置选项的最大值。|  
-|**config_value**|**int**|值配置选项已设置为使用**sp_configure** (中的值**sys.configurations.value**)。 有关这些选项的详细信息，请参阅[服务器配置选项 &#40;SQL server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|当前正在运行的配置选项的值 (中的值**sys.configurations.value_in_use**)。<br /><br /> 有关详细信息，请参阅[sys.configurations &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**config_value**|**int**|值配置选项已设置为使用**sp_configure** (中的值**sys.configurations.value**)。 有关这些选项的详细信息，请参阅[服务器配置选项&#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**run_value**|**int**|当前正在运行的配置选项的值 (中的值**sys.configurations.value_in_use**)。<br /><br /> 有关详细信息，请参阅[sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
 ## <a name="remarks"></a>注释  
  使用**sp_configure**显示或更改服务器级设置。 若要更改数据库级别设置，请使用 ALTER DATABASE。 若要更改仅影响当前用户会话的设置，请使用 SET 语句。  
@@ -105,19 +107,19 @@ RECONFIGURE
   
  RECONFIGURE 语句可以动态更新某些选项，而其他选项的更新则需要停止服务器再重新启动才能实现。 例如，**最小服务器内存**和**最大服务器内存**动态在更新服务器内存选项[!INCLUDE[ssDE](../../includes/ssde-md.md)]; 因此，你可以更改它们无需重新启动服务器。 与此相反，重新配置的运行值**填充因子**选项需要重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
- 运行 RECONFIGURE 之后配置选项，你可以看到是否已动态更新选项通过执行**sp_configure'***option_name*。 中的值**run_value**和**config_value**列应匹配动态更新选项。 你还可以检查以查看哪些选项是动态的通过查看**is_dynamic**列**sys.configurations**目录视图。  
+ 运行 RECONFIGURE 之后配置选项，你可以看到是否已动态更新选项通过执行**sp_configure'***option_name*****。 中的值**run_value**和**config_value**列应匹配动态更新选项。 你还可以检查以查看哪些选项是动态的通过查看**is_dynamic**列**sys.configurations**目录视图。  
   
 > [!NOTE]  
 >  如果指定*值*过高的选项， **run_value**列反映的情况是，[!INCLUDE[ssDE](../../includes/ssde-md.md)]已默认为动态内存，而不是使用不是有效的设置。  
   
- 有关详细信息，请参阅[RECONFIGURE &#40;Transact SQL &#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
+ 有关详细信息，请参阅[重新配置&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
   
-## <a name="advanced-options"></a>高级选项  
+## <a name="advanced-options"></a>“高级选项”  
  某些配置选项，如**关联掩码**和**恢复间隔**，指定为高级选项。 默认情况下，无法查看和更改这些选项。 若要使其可用，请设置**ShowAdvancedOptions**为 1 的配置选项。  
   
- 有关配置选项和其设置的详细信息，请参阅[服务器配置选项 &#40;SQL server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ 有关配置选项和其设置的详细信息，请参阅[服务器配置选项&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行**sp_configure**与这两个参数来更改配置选项或运行 RECONFIGURE 语句，您必须被授予 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ## <a name="examples"></a>示例  
@@ -168,10 +170,10 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>E. 设置 hadoop 连接  
- 设置 Hadoop 连接需要除了运行 sp_configure 的几个步骤。 有关完整的过程中，请参阅[CREATE EXTERNAL DATA SOURCE &#40;Transact SQL &#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ 设置 Hadoop 连接需要除了运行 sp_configure 的几个步骤。 有关完整的过程中，请参阅[CREATE EXTERNAL DATA SOURCE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [RECONFIGURE &#40;Transact SQL &#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   

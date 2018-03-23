@@ -1,25 +1,25 @@
 ---
-title: "在 Linux 上的 SQL Server 2017 的安装指南 |Microsoft 文档"
-description: "安装、 更新和卸载 Linux 上的 SQL Server。 本文介绍如何联机、 脱机和无人参与的方案。"
+title: 在 Linux 上的 SQL Server 2017 的安装指南 |Microsoft 文档
+description: 安装、 更新和卸载 Linux 上的 SQL Server。 本文介绍如何联机、 脱机和无人参与的方案。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 安装指南
 
@@ -47,12 +47,10 @@ Red Hat Enterprise Linux (RHEL)、 SUSE Linux 企业服务器 (SLES) 和 Ubuntu 
 | **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker 引擎** | 1.8+ | [获取 Docker](http://www.docker.com/products/overview)
 
+Microsoft 还支持部署和管理 SQL Server 容器通过 OpenShift 和 Kubernetes。
+
 > [!NOTE]
-> 它有时可以安装和运行 SQL Server 在其他密切相关 Linux 平台上，但 SQL Server 仅是测试，在前面的表中列出的平台上受支持。
-
-部署和管理 SQL Server 容器通过 OpenShift 和 Kubernetes，Microsoft 提供支持。
-
-SQL Server 自 2017 年的最新支持策略，请参阅[Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
+> SQL Server 经过测试且在 Linux 上支持的前面列出的分发版。 如果你选择的不受支持的操作系统上安装 SQL Server，请查看**支持策略**部分[Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)以了解支持影响。
 
 ## <a id="system"></a> 系统要求
 
@@ -170,7 +168,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 ## <a id="offline"></a> 脱机安装
 
-如果你的 Linux 计算机无访问权限到联机存储库中使用[快速入门](#platforms)，你可以直接下载的包文件。 这些包位于 Microsoft 存储库中，网址为 [https://packages.microsoft.com](https://packages.microsoft.com)。
+如果你的 Linux 计算机无访问权限到联机存储库中使用[快速入门](#platforms)，你可以直接下载的包文件。 这些包位于 Microsoft 存储库， [ https://packages.microsoft.com ](https://packages.microsoft.com)。
 
 > [!TIP]
 > 如果你成功安装快速入门中的步骤，你不需要下载，或者手动安装 SQL Server 程序包。 本部分项仅用于脱机方案。

@@ -4,7 +4,7 @@ description: 本文包含的发行说明，并支持在 Linux 上运行的 SQL S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/21/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 22c0bd360cd7b5cb6ac9dcc058a417d243b0fb3f
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: b6f6f6b19b145dfcaf4a59e8cf871bc1cb0c214a
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -70,6 +70,24 @@ ms.lasthandoff: 03/22/2018
 ## <a id="CU5"></a> CU5 (年 3 月 2018)
 
 这是 SQL Server 自 2017 年的累积更新 5 (CU5) 版本。 对于此版本的 SQL Server 引擎版本是 14.0.3023.8。 有关修补程序和此版本中的改进的信息，请参阅[ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643)。
+
+### <a name="known-upgrade-issue"></a>已知升级问题
+
+当从以前的版本升级到 CU5 时，SQL Server 可能无法启动并出现以下错误：
+
+```
+Error: 4860, Severity: 16, State: 1.
+Cannot bulk load. The file "C:\Install\SqlTraceCollect.dtsx" does not exist or you don't have file access rights.
+Error: 912, Severity: 21, State: 2.
+Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 200, state
+```
+
+若要解决此错误，启用 SQL Server 代理，并使用以下命令重新启动 SQL Server:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
+sudo systemctl start mssql-server
+```
 
 ### <a name="package-details"></a>包详细信息
 

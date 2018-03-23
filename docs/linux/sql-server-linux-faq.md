@@ -1,24 +1,24 @@
 ---
-title: "SQL Server on Linux 常见问题 |Microsoft 文档"
-description: "这篇文章提供了在 Linux 上运行的 SQL Server 相关的常见问题的答案。"
+title: SQL Server on Linux 常见问题 |Microsoft 文档
+description: 这篇文章提供了在 Linux 上运行的 SQL Server 相关的常见问题的答案。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 6fdf6679230141dd2dedb35a9ae7e9cc0fb1b9cb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>在 Linux 上的 SQL Server 常见问题 (FAQ)
 
@@ -30,11 +30,11 @@ ms.lasthandoff: 02/24/2018
 
 1. **支持哪些 Linux 平台？**
 
-   Red Hat Enterprise Server、 SUSE Linux 企业服务器和 Ubuntu 上当前支持 SQL Server。 它还可以运行在使用 Docker 容器中。 有关受支持版本的最新信息，请参阅[受支持的平台](sql-server-linux-setup.md#supportedplatforms)。
+   Red Hat Enterprise Server、 SUSE Linux 企业服务器和 Ubuntu 上当前支持 SQL Server。 它还支持在使用 Docker 容器中运行。 有关受支持版本的最新信息，请参阅[受支持的平台](sql-server-linux-setup.md#supportedplatforms)。
 
 1. **将在其他平台上的 Linux 上的 SQL Server 工作**？
 
-   你可能可以安装和 Linux 的其他发行版上运行 SQL Server。 例如，CentOS 是与紧密相关 Red Hat Enterprise Server，因此你可能能够安装 RPM SQL Server 包。 这可能是适用于其他密切相关的分布。 主要问题是测试和支持。 SQL Server 仅已测试，并且在 Red Hat Enterprise Linux、 SUSE Linux 企业服务器和 Ubuntu 上才支持。
+   SQL Server 经过测试且在 Linux 上支持的前面列出的分发版。 其他 Linux 分发密切相关，并且可能无法运行 SQL Server （例如，CentOS 密切相关到 Red Hat Enterprise Server）。 但如果你选择在不支持的操作系统上安装 SQL Server，请查看**支持策略**部分[Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)以了解支持影响。 另请注意，某些社区维护 Linux 分发没有正式无法接收支持，如果基础的操作系统是问题。
 
 1. **在 Linux 上支持哪些 SQL Server 功能？**
 

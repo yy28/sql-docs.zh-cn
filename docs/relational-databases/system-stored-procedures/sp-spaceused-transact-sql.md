@@ -1,16 +1,16 @@
 ---
-title: "sp_spaceused (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_spaceused (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_spaceused_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ef8781d5c6ab68b90aefcc9c7d01e0cb9f070a02
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +50,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>参数  
 
-有关[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]，`sp_spacedused`必须指定命名的参数 (例如`sp_spacedused (@objname= N'Table1');`而不依赖于参数的序号位置。 
+有关[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]，`sp_spaceused`必须指定命名的参数 (例如`sp_spaceused (@objname= N'Table1');`而不依赖于参数的序号位置。 
 
  [ **@objname=**] **'***objname***'** 
    
@@ -58,7 +58,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 如果*objname*未指定，则为整个数据库返回结果。  
 *objname*是**nvarchar(776)**，默认值为 NULL。  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]仅支持数据库和表对象。
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]仅支持数据库和表对象。
   
  [ **@updateusage=**] **'***updateusage***'**  
  指示应运行 DBCC UPDATEUSAGE 以更新空间使用信息。 当*objname*是未指定，在整个数据库上运行该语句; 否则，运行该语句*objname*。 值可以是**true**或**false**。 *updateusage*是**varchar(5)**，默认值为**false**。  
@@ -81,8 +81,8 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |“值”|说明|  
 |-----------|-----------------|  
-|0|当 *@objname* 为 null 或为未指定，返回两个结果集。 两个结果集是默认行为。|  
-|1|当 *@objname*  = null 或未指定，则返回单个结果集。|  
+|0|当*@objname*为 null 或为未指定，返回两个结果集。 两个结果集是默认行为。|  
+|1|当*@objname* = null 或未指定，则返回单个结果集。|  
   
  *oneresultset*是**位**，默认值为**0**。  
 
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. 显示有关远程表的空间使用情况信息与已启用延伸的表  
- 下面的示例概述了通过使用与已启用延伸的表关联的远程表占用的空间 **@mode** 自变量以指定在远程目标。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
+ 下面的示例概述了通过使用与已启用延伸的表关联的远程表占用的空间**@mode**自变量以指定在远程目标。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
 ```sql  
 USE StretchedAdventureWorks2016  
@@ -256,13 +256,13 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40;Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
