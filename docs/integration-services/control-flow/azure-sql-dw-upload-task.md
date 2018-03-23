@@ -1,29 +1,29 @@
 ---
-title: "Azure SQL DW 上传任务 | Microsoft Docs"
-ms.custom: 
+title: Azure SQL DW 上传任务 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/20/2018
 ---
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/20/2018
 -----|-----------
 LocalDirectory|指定包含待上传数据文件的本地目录。
 Recursively|指定是否以递归方式搜索子目录。
-FileName|指定用于选择具有特定名称模式的文件的名称筛选器。 例如 MySheet*.xls\* 将包含如 MySheet001.xsl 和 MySheetABC.xslx 等文件。
+FileName|指定用于选择具有特定名称模式的文件的名称筛选器。 例如 MySheet\*.xls\* 将包含如 MySheet001.xsl 和 MySheetABC.xslx 等文件。
 RowDelimiter|指定标记每一行末尾的字符。
 ColumnDelimiter|指定标记每一列末尾的一个或多个字符。 例如 |（管道）、\t（制表符）、'（单引号），"（双引号）以及 0x5c（反斜杠）。
 IsFirstRowHeader|指定每个数据文件的第一行是否包含列名称，而非实际数据。
