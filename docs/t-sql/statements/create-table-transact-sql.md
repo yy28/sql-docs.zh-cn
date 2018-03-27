@@ -1,16 +1,16 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -49,28 +49,30 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 33705d53cf51fa0aa32c386ff5cdf3fae54383ff
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中创建新表。  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]   
 >  关于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 语法，请请参阅 [CREATE TABLE（Azure SQL 数据仓库）](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>语法  
+## <a name="simple-syntax"></a>简单语法  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -80,7 +82,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## <a name="syntax"></a>语法  
+## <a name="full-syntax"></a>完整语法  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  
@@ -456,7 +458,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
  *精度*  
  指定的数据类型的精度。 有关有效精度值的详细信息，请参阅[精度、小数位数和长度](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
- *小数位数*  
+ *scale*  
  是指定数据类型的小数位数。 有关有效小数位数值的详细信息，请参阅[精度、小数位数和长度](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
  max  
@@ -485,7 +487,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
   
  在内存优化表中，唯一可用于种子和增量的值为 1；(1,1) 是种子和增量的默认值。  
   
- 种子  
+ seed  
  是装入表的第一行所使用的值。  
   
  increment  
@@ -499,7 +501,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
   
  指定系统使用指定的 datetime2 列来记录记录有效的开始时间或记录有效的结束时间。 此列须定义为 NOT NULL。 如果把该列定义为 NULL，系统便会引发错误。 如果不将时间段列显式指定为 NOT NULL，系统则会将该列默认定义为 NOT NULL。 将此参数与 SYSTEM_TIME 参数和 WITH SYSTEM_VERSIONING = ON 参数结合使用，启用表的系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
   
- 可将一个或两个时间段列标记为 HIDDEN 标志，隐式隐藏这些列，这样 SELECT \* FROM`<table>` 就不会返回这些列中的值。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。 若要更改现有时间段列的 HIDDEN 特性，须先删除 PERIOD，再使用不同的隐藏标志重新创建。  
+ 可将一个或两个时间段列标记为 HIDDEN 标志，隐式隐藏这些列，这样 SELECT \* FROM `<table>` 就不会返回这些列中的值。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。 若要更改现有时间段列的 HIDDEN 特性，须先删除 PERIOD，再使用不同的隐藏标志重新创建。  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -514,7 +516,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
   
  指定使用聚集列存储以分列格式存储整个表格。 此操作包含表中的所有列。 数据不按字母或数字顺序排序，因为行是按照可获得列存储压缩好处的原则而组织的。  
   
- INDEX index_name [ NONCLUSTERED ] COLUMNSTORE (column_name [ ,...  ] )*n*  
+ INDEX index_name [ NONCLUSTERED ] COLUMNSTORE (column_name [ ,... n ] )  
    
   
 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -523,7 +525,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
   
  将非聚集列存储索引作为聚集列存储索引进行存储和管理。 称其为非聚集列存储索引，是因为这些列可能是有限的，且作为表的二级索引存在。  
   
- ON partition_scheme_name(column_name)  
+ ON partition_scheme_name(column_name)***  
  指定分区方案，该方案定义要将分区索引的分区映射到的文件组。 须通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，使数据库中存在该分区方案。 column_name 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配。 column_name 不限于索引定义中的列。 除了在对 UNIQUE 索引分区时，必须从用作唯一键的列中选择 column_name 外，还可以指定基表中的任何列。 通过此限制，[!INCLUDE[ssDE](../../includes/ssde-md.md)]可验证单个分区中的键值唯一性。  
   
 > [!NOTE]  
@@ -659,7 +661,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  [ schema_name.] referenced_table_name]  
  是 FOREIGN KEY 约束引用的表的名称，以及该表所属架构的名称。  
   
- ( ref_column [ ,n...  ] )  
+ ( ref_column [ ,... n ] )  
  是 FOREIGN KEY 约束所引用的表中的一列或多列。  
   
  ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT }  
@@ -820,7 +822,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | OFF }  
  如果为 ON，则 FILLFACTOR 指定的可用空间百分比将应用于该索引的中间级别页。 如果未指定 OFF 或 FILLFACTOR 值，则考虑到中间级别页的键集，将中间级别页填充到一个近似容量，以留出足够的空间来容纳至少一个索引的最大行。 默认为 OFF。  
   
- FILLFACTOR =fillfactor  
+ FILLFACTOR = fillfactor  
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或修改索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数。 默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。  
   
  IGNORE_DUP_KEY = { ON | OFF }  

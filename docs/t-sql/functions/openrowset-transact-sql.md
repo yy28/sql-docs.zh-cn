@@ -1,16 +1,16 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -27,24 +27,26 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ee158cdc30d1c083151bc07c58ba7ddea515a308
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   包含访问 OLE DB 数据源中的远程数据所需的所有连接信息。 当访问链接服务器中的表时，这种方法是一种替代方法，并且是一种使用 OLE DB 连接并访问远程数据的一次性的临时方法。 对于较频繁引用 OLE DB 数据源的情况，请改为使用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。 `OPENROWSET` 函数可以在查询的 FROM 子句中引用，就好象它是一个表名。 依据 OLE DB 提供程序的功能，还可以将 `OPENROWSET` 函数引用为 `INSERT`、`UPDATE` 或 `DELETE` 语句的目标表。 尽管查询可能返回多个结果集，但 `OPENROWSET` 只返回第一个结果集。  
   
  `OPENROWSET` 还通过内置的 BULK 提供程序支持大容量操作，正是有了该提供程序，才能从文件读取数据并将数据作为行集返回。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
@@ -102,7 +104,7 @@ OPENROWSET
  *schema*  
  架构的名称或指定对象的对象所有者名称。  
   
- *object*  
+ 对象  
  对象名，它唯一地标识出将要操作的对象。  
   
  '*query*'  
@@ -173,7 +175,7 @@ OPENROWSET
   
  默认情况下，ROWS_PER_BATCH 是未知的。 指定 ROWS_PER_BATCH = 0 相当于忽略 ROWS_PER_BATCH。  
   
- ORDER ( { *column* [ ASC | DESC ] } [ ,... *n* ] [ UNIQUE ] )  
+ ORDER ( { column [ ASC | DESC ] } [ ,... n ] [ UNIQUE ] )  
  一个用于指定数据文件中数据的排序方式的可选提示。 默认情况下，大容量操作假定数据文件未排序。 如果查询优化器能够利用指定顺序来生成更有效的查询计划，则性能可能会得到改善。 指定一个排序可以取得益处的示例包括：  
   
 -   将行插入到具有聚集索引的表，其中行集数据按聚集索引键进行排序。  
@@ -228,7 +230,7 @@ FIELDQUOTE **=** 'field_quote'
   
  访问远程 OLE DB 数据源时，服务器不会自动委托可信连接的登录标识，客户端通过此登录标识才能连接到正在查询的服务器。 必须配置身份验证委托。  
   
- 如果 OLE DB 访问接口在指定的数据源中支持多个目录和架构，那么就需要目录及架构名称。 如果 OLE DB 提供程序并不支持多个目录和架构，那么可以忽略 catalog 和 schema 的值。 如果提供程序只支持架构名称，那么必须指定一个格式为 schema.object 的两部分名称。 如果提供程序只支持目录名称，那么必须指定一个格式为 catalog.schema.object 的三部分名称。 必须为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的传递查询指定由三部分组成的名称。 有关详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ 如果 OLE DB 访问接口在指定的数据源中支持多个目录和架构，那么就需要目录及架构名称。 如果 OLE DB 提供程序并不支持多个目录和架构，那么可以忽略 catalog 和 schema 的值。 如果提供程序只支持架构名称，那么必须指定一个格式为 schema.object 的两部分名称**。 如果提供程序只支持目录名称，那么必须指定一个格式为 catalog.schema.object 的三部分名称**。 必须为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的传递查询指定由三部分组成的名称。 有关详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
  `OPENROWSET` 不接受其参数的变量。  
   

@@ -1,16 +1,16 @@
 ---
 title: FROM (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JOIN
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,11 +137,15 @@ FROM { <table_source> [ ,...n ] }
   
 <table_source> ::=   
 {  
-    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [<tablesample_clause>]  
     | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
     | <joined_table>  
 }  
   
+<tablesample_clause> ::=
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+ 
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
@@ -230,8 +234,10 @@ FROM { <table_source> [ ,...n ] }
   
  指定从指定时态表及其链接的系统版本控制的历史记录表返回特定版本的数据  
   
-\<tablesample_clause>  
- 指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT、UPDATE 或 DELETE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。  
+### <a name="tablesample-clause"></a>Tablesample 子句
+适用范围：SQL Server、SQL 数据库 
+ 
+ 指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT 或 UPDATE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。  
   
 > [!NOTE]  
 >  对升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据库使用 TABLESAMPLE 时，数据库的兼容级别必须设置为 110 或更高，在递归公用表表达式 (CTE) 查询中不允许 PIVOT。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
@@ -254,13 +260,22 @@ FROM { <table_source> [ ,...n ] }
  repeat_seed  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于生成随机数的常量整数表达式。 repeat_seed 是 bigint。 如果未指定 repeat_seed，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将随机分配值。 对于特定的 repeat_seed 值，如果尚未对表应用任何更改，抽样结果始终相同。 repeat_seed 表达式的值必须是大于零的整数。  
   
- \<joined_table>  
- 由两个或更多表的积构成的结果集。 对于多个联接，请使用圆括号来更改联接的自然顺序。  
+### <a name="tablesample-clause"></a>Tablesample 子句
+适用范围：SQL 数据仓库
+
+ 指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT 或 UPDATE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。 
+
+ PERCENT  
+ 指定应该从表中检索表行的 sample_number 百分比。 指定 PERCENT 时，SQL 数据仓库返回指定的百分比的近似值。 指定 PERCENT 时，sample_number 表达式的结果必须是 0 到 100 之间的值。  
+
+
+### <a name="joined-table"></a>联接的表 
+联接的表是由两个或更多表的积构成的结果集。 对于多个联接，请使用圆括号来更改联接的自然顺序。  
   
-\<join_type>  
- 指定联接操作的类型。  
+### <a name="join-type"></a>联接类型
+指定联接操作的类型。  
   
- **INNER**  
+ INNER  
  指定返回所有匹配的行对。 放弃两个表中不匹配的行。 如果未指定任何联接类型，此设置为默认设置。  
   
  FULL [ OUTER ]  
@@ -272,8 +287,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  指定在结果集中包括右表中所有不满足联接条件的行，除了由内部联接返回所有的行之外，还将与另外一个表对应的输出列设置为 NULL。  
   
-\<join_hint>  
- 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器为在查询的 FROM 子句中指定的每个联接使用一个联接提示或执行算法。 有关详细信息，请参阅[联接提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-join.md)。  
+### <a name="join-hint"></a>联接提示  
+对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器为在查询的 FROM 子句中指定的每个联接使用一个联接提示或执行算法。 有关详细信息，请参阅[联接提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-join.md)。  
   
  对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，这些联接提示应用于两个分布不兼容列上的 INNER 联接。 它们可以通过限制查询处理期间发生的数据移动量来提高查询性能。 允许用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的联接提示如下：  
   
@@ -324,6 +339,8 @@ ON (p.ProductID = v.ProductID);
  right_table_source  
  上一个参数中定义的一个表源。 有关详细信息，请参见“备注”部分。  
   
+### <a name="pivot-clause"></a>PIVOT 子句
+
  table_source PIVOT \<pivot_clause>  
  指定基于 pivot_column 透视 table_source。 table_source 是一个表或表表达式。 输出是包含 table_source 的所有列（pivot_column 和 value_column 除外）的表。 table_source 中的列（pivot_column 和 value_column 除外）称为透视运算符的分组列。 有关 PIVOT 和 UNPIVOT 的详细信息，请参阅[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
@@ -854,6 +871,14 @@ FROM DimProduct AS dp
 INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
     ON dp.ProductKey = fis.ProductKey;  
 ```  
+
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V. 使用 TABLESAMPLE 从表中的行样本中读取数据  
+ 下面的示例在 `TABLESAMPLE` 子句中使用 `FROM`，大约返回 `10` 表中所有行的 `Customer`%。  
+  
+```sql    
+SELECT *  
+FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
+```
   
 ## <a name="see-also"></a>另请参阅  
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   

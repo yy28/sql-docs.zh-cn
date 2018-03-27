@@ -1,16 +1,16 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_LOGIN_TSQL
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 87b7859980292cd8c6bf50f72c59b3cd3125800e
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]登录名。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
@@ -105,7 +107,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
  login_name  
  指定创建的登录名。 有四种类型的登录名：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名、Windows 登录名、证书映射登录名和非对称密钥映射登录名。 在创建从 Windows 域帐户映射的登录名时，必须以 [\<domainName>\\<login_name>] 格式使用 Windows 2000 之前的用户登录名。 不能使用 login_name@DomainName 格式的 UPN。 有关示例，请参阅本主题后面的示例 D。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名的类型为 sysname，它必须符合[标识符](http://msdn.microsoft.com/library/ms175874.aspx)规则，且不能包含“\\”。 Windows 登录名可以包含“\\”。 Active Directory 用户的登录名需少于 21 个字符。  
   
- PASSWORD ='password'  
+ PASSWORD ='password'****  
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定正在创建的登录名的密码。 应使用强密码。 有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)和[密码策略](../../relational-databases/security/password-policy.md)。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。  
   
  密码是区分大小写的。 密码应始终至少包含 8 个字符，并且不能超过 128 个字符。  密码可以包含 a-z、A-Z、0-9 和大多数非字母数字字符。 密码不能包含单引号或 login_name。  
@@ -244,15 +246,17 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO  
 ```  
   
-### <a name="b-creating-a-login-with-a-password"></a>B. 创建带密码的登录名  
+### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>B. 创建带必须更改的密码的登录名
  以下示例为特定用户创建登录名并分配密码。 `MUST_CHANGE` 选项要求用户在首次连接服务器时更改此密码。  
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 ```  
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' MUST_CHANGE;  
+CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' 
+    MUST_CHANGE,  CHECK_EXPIRATION = ON;
 GO  
 ```  
+[!NOTE] 当 CHECK_EXPIRATION 设为 OFF (关)时，不能使用 MUST_CHANGE 选项。
   
 ### <a name="c-creating-a-login-mapped-to-a-credential"></a>C. 创建映射到凭据的登录名  
  以下示例使用该用户为特定用户创建登录名。 此登录名映射到凭据。  

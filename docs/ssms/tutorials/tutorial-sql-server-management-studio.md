@@ -1,17 +1,19 @@
 ---
-title: "教程：SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.custom: 
+title: 教程：SQL Server Management Studio (SSMS) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-tutorial
-ms.reviewer: 
+ms.reviewer: sstein
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.tutorialstart.ssms.f1
+f1_keywords:
+- sql13.tutorialstart.ssms.f1
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - templates [SQL Server], SQL Server Management Studio
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: "22"
-author: stevestein
-ms.author: sstein
+caps.latest.revision: ''
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e6ca96ba58cb6f32cdceb4a310ba5b94ce290ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a1cbac9e3eef44384313792d92f38ac90cce5e1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="tutorial-sql-server-management-studio"></a>教程：SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,29 +42,50 @@ ms.lasthandoff: 12/21/2017
 SQL Server Management Studio (SSMS) 将介绍用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的图形界面。 此外，它还允许部署、监视和升级应用程序使用的数据层组件，如数据库。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 还提供用于编辑和调试脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 语言编辑器。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
-本教程将帮助你理解 SSMS 中提供的信息以及如何利用其功能。
+
+这些教程将帮助你理解 SSMS 中提供的信息以及如何利用其功能。
   
-熟悉 SSMS 的最好方式是进行实践演练。 本教程将讲述如何管理 SSMS 组件以及如何查找常用的功能。  
+熟悉 SSMS 的最好方式是进行实践演练。 这些教程将使你熟悉 SSMS 中提供的各种功能。  这些教程将讲述如何管理 SSMS 组件以及如何查找常用的功能。  
+
+以下是本教程内容： 
+
   
-本教程分为三课：  
+- [教程：使用 SSMS 连接并查询 SQL Server](connect-query-sql-server.md)
+
+    在本部分中，你将了解如何连接到 SQL Server 实例。 此外，你还将了解用于创建并查询新数据库的一些基本 Transact-SQL (T-SQL) 命令。 
+
+- [教程：在 SSMS 中编写对象脚本](scripting-ssms.md)
+
+    在本部分中，你将了解如何在 SSMS 中编写各种对象（包括数据库和查询）的脚本。 
+
+- [教程：在 SSMS 中使用模板](templates-ssms.md)
+   
+    在本部分中，你将了解如何使用 SSMS 中的预建模板。 
+
+- [教程：SSMS 配置](ssms-configuration.md)
+
+    在本部分中，你将了解配置 SSMS 环境的基本信息。 
   
-[第 1 课：SQL Server Management Studio 中的基本导航](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
-在本课程中，您将学习如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]组件，如何重新配置环境布局以及如何还原默认布局。  
-  
-[第 2 课：编写 Transact-SQL](lesson-2-writing-transact-sql.md)  
-在本课程中，你将学习如何打开查询编辑器、如何管理代码以及如何使用查询编辑器的其他功能。  
-  
-[第 3 课：使用模板、解决方案和脚本项目](lesson-3-working-with-templates-solutions-and-script-projects.md)  
-在本课程中，您将学习如何使用模板，以及如何将脚本组织为解决方案和项目。  
+
+- [教程：使用 SSMS 的其他提示和技巧](ssms-tricks.md)
+
+    在本部分中，你将了解使用 SSMS 的其他提示和技巧。 本教程包括以下内容：
+    - 注释和取消注释文本
+    - 缩进文本
+    - 在对象资源管理器中筛选对象
+    - 访问 SQL Server 错误日志
+    - 查找实例名称 
+ 
   
 ## <a name="requirements"></a>要求  
 本教程面向不熟悉 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，但熟悉数据库概念和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的经验丰富的数据库管理员和数据库开发人员。  
   
 要使用此教程，必须安装以下组件：  
 
-  
--   下载最新版的 [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)。  
--   带 AdventureWorks 示例数据库的 SQL Server 2016 或更高版本。 要安装 AdventureWorks 示例数据库，请参阅 [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014) 并安装 AdventureWorks2014 (OLTP) 数据库。  
+  -   下载最新版的 [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)。  
+
+第一部分将指导你完成数据库的创建，但此处提供其他示例数据库：[AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+
 
   
 ## <a name="see-also"></a>另请参阅  

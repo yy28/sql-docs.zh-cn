@@ -1,16 +1,16 @@
 ---
 title: Reporting Services (SSRS) | Microsoft Docs
-description: "了解用于本地移动和分页 Reporting Services 报表和 Power BI 报表的工具和服务。"
-ms.custom: 
+description: 了解用于本地移动和分页 Reporting Services 报表和 Power BI 报表的工具和服务。
+ms.custom: ''
 ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: "70"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 85377a9d96bbaa8d7d94dacafc0989d3089ff7dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什么是 SQL Server Reporting Services (SSRS)？
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/09/2018
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-使用 SQL Server Reporting Services (SSRS) 和 Power BI 提供的一系列现成工具和服务在本地创建、部署和管理移动和分页 Reporting Services 与 Power BI 报表。
+使用 SQL Server Reporting Services (SSRS) 提供的一系列现成工具和服务本地创建、部署和管理移动和分页 Reporting Services 报表。
 
 ![SQL Server Reporting Services 汇总](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 汇总")
 
@@ -48,7 +48,7 @@ SQL Server Reporting Services 是客户在其本地部署的一种解决方案�
 
 * 提供最新的**传统分页报表** ，使用户可通过更新工具和用于创建报表的新功能创建新式报表。
 * 具有响应式布局的**新移动报表** ，可适应不同设备和保存方式。
-* **新式 Web 门户** ，可在任何新式浏览器中查看。 在新门户中，可以组织和显示移动和分页 Reporting Services 报表、KPI 以及 Power BI Desktop 报表。 还可在门户中存储 Excel 工作薄。
+* **新式 Web 门户** ，可在任何新式浏览器中查看。 在新门户中，可以组织和显示移动和分页 Reporting Services 报表及 KPI。 还可在门户中存储 Excel 工作薄。
 
 请继续阅读有关每项的详细信息。
 
@@ -90,13 +90,13 @@ Reporting Services 与“传统”分页文档样式报表相关联，这种报�
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-对于本机模式 Reporting Services 的最终用户，前门是可在任何新式浏览器中查看的新式 Web 门户。 可以在新门户中访问所有 Reporting Services 移动和分页报表、KPI 以及 Power BI Desktop 报表。 有关详细信息，请参阅 [Reporting Services 中的 Power BI 报表](../reporting-services/power-bi-reports-in-reporting-services.md)。  
+对于本机模式 Reporting Services 的最终用户，前门是可在任何新式浏览器中查看的新式 Web 门户。 可以在新门户中访问所有 Reporting Services 移动和分页报表及 KPI。
 
 可将自己的自定义品牌应用到 Web 门户。 可在 Web 门户中创建 KPI。 KPI 可结合浏览器查看关键业务指标，而无需打开报表。 
 
 新的 Web 门户是完全重写的报表管理器。 现在，它是单页、基于标准的 HTML5 应用，新式浏览器针已针对此应用进行了优化，这些浏览器包括：Microsoft Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari 以及所有主流浏览器。
 
-按类型整理的 Web 门户内容：Reporting Services 移动和分页报表、KPI 以及 Power BI Desktop 报表、Excel 工作簿、共享数据集和用作报表构建块的共享数据源。 可在此处安全存储和管理它们，并采用传统的文件夹层次结构。 可以标记收藏夹并管理内容（如果拥有该角色）。
+按类型整理的 Web 门户内容：Reporting Services 移动和分页报表及 KPI、Excel 工作簿、共享数据集和用作报表构建块的共享数据源。 可在此处安全存储和管理它们，并采用传统的文件夹层次结构。 可以标记收藏夹并管理内容（如果拥有该角色）。
 
 在新的 Web 门户中，仍可计划报表处理、按需访问报表并订阅已发布的报表。
 
@@ -119,6 +119,5 @@ Reporting Services 与“传统”分页文档样式报表相关联，这种报�
 * [安装 Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [安装报表生成器](../reporting-services/install-windows/install-report-builder.md)   
 * [下载 SQL Server Data Tools (SSDT)](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [Reporting Services 中的 Power BI 报表](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,16 +1,16 @@
 ---
-title: "ALTER DATABASE 兼容级别 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ALTER DATABASE 兼容级别 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -26,22 +26,24 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 750578d028077079b051a08cc2a0ed4276983cda
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 将某些数据库行为设置为与指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本兼容。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
@@ -155,7 +157,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 | 对于级别 120，统计信息通过单线程进程进行采样。 | 对于级别 130，统计信息通过多线程进程进行采样。 |  
 | 253 传入外键是限制。 | 给定表可以通过最多 10,000 个传入外键或类似引用进行引用。 有关限制，请参阅 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |  
 |允许使用弃用的 MD2、MD4、MD5、SHA 和 SHA1 哈希算法。|只允许使用 SHA2_256 和 SHA2_512 哈希算法。|
-||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在一些数据类型转换和一些（通常不常见）操作中包括改进。 有关详细信息，请参阅 [SQL Server 2016 improvements in handling some data types and uncommon operations（SQL Server 2016 在处理某些数据类型和不常见操作方面所做的改进）](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 包括对某些数据类型转换和某些不常见操作的改进。 有关详细信息，请参阅 [SQL Server 2016 improvements in handling some data types and uncommon operations（SQL Server 2016 在处理某些数据类型和不常见操作方面所做的改进）](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中处于跟踪标志 4199 下的修补程序现在默认情况下会启用。 具有兼容性模式 130。 跟踪标志 4199 仍会适用于在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之后发布的新查询优化器修补程序。 若要在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中使用较旧的查询优化器，必须选择兼容级别 110。 有关跟踪标志 4199 的信息，请参阅[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。  
   
@@ -164,7 +166,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
   
 |兼容性级别设置为 110 或更低|兼容性级别设置为 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括了对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在因为性能问题将数据库兼容级别设置为 110 前，请参阅 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [数据库引擎中的新增功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题的“查询计划”一节中的建议。|  
+|使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在因为性能问题将数据库兼容级别设置为 110 前，请参阅 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [数据库引擎中的新增功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题的“查询计划”一节中的建议。|  
 |如果兼容级别低于 120，则在将 **date** 值转换为字符串值时语言设置将被忽略。 请注意，此行为仅特定于 **date** 类型。 请参阅下面“示例”部分中的“示例 B”。|将 **date** 值转换为字符串值时，不忽略语言设置。|  
 |`EXCEPT` 子句右侧的递归引用产生无限循环。 下面“示例”部分中的示例 C 演示此行为。|`EXCEPT` 子句中的递归引用产生遵从 ANSI SQL 标准的错误。|  
 |递归公用表表达式 (CTE) 允许重复的列名。|递归 CTE 不允许列名重复。|  

@@ -1,163 +1,178 @@
 ---
-title: "SQL Server 2014 发行说明 | Microsoft Docs"
-ms.custom: 
-ms.date: 01/31/2017
+title: SQL Server 2014 发行说明 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
 ms.technology: server-general
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0eb2f0de2a013ae801330aee9154b764964868db
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
-本发行说明文档介绍了在安装 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]或者解决其相关问题之前应该了解的一些已知问题。  
-  
-## <a name="top"></a>目录  
-[1.0 安装之前](#BeforeInstall)  
-  
-[2.0 产品文档](#ProdDoc)  
-  
-[3.0 数据库引擎](#DBEngine)  
-  
-[4.0 Reporting Services](#SSRS)  
-  
-[5.0 Windows Azure 虚拟机上的 SQL Server 2014](#AzureVM)  
-  
-[6.0 Analysis Services](#SSAS)  
-  
-[7.0 Data Quality Services](#DQS)  
-  
-[8.0 升级顾问](#UA)  
-  
-## <a name="BeforeInstall"></a>1.0 安装之前  
-  
-### <a name="11-limitations-and-restrictions-in-sql-server-2014-rtm"></a>1.1 SQL Server 2014 RTM 中的限制和局限  
-  
-#### <a name="111-general-limitations-and-restrictions"></a>1.1.1 一般限制和局限  
-  
+本文介绍 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 版本的已知问题，包括相关服务包。
+
+## <a name="sql-server-2014-service-pack-2-sp2"></a>SQL Server 2014 Service Pack 2 (SP2)
+
+SQL Server 2014 SP2 包含针对 SQL Server 2014 SP1 CU7 发布的修补程序的汇总。 它包含以性能、可伸缩性以及基于来自客户和 SQL 社区的反馈的诊断为中心的改进。
+
+### <a name="performance-and-scalability-improvements-in-sp2"></a>SP2 中性能和可伸缩性方面的改进
+
+|功能|Description|有关详细信息，请参阅：|
+|---|---|---|
+|自动 Soft NUMA 分区|可在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft NUMA。|[软件 NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
+|缓冲池扩展|启用 SQL Server 缓冲池以缩放 8 TB 以上。|[缓冲池扩展](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
+|动态内存对象缩放| 基于节点数和核心数对内存对象进行动态分区。 此增强功能消除了对跟踪标志 8048 post SQL 2014 SP2 的需求。|[Dynamic Memory Object Scaling](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)（动态内存对象缩放）|
+|DBCC CHECK* 命令的 MAXDOP 提示|此改进有助于通过除 sp_configure 值之外的 MAXDOP 设置运行 DBCC CHECKDB。|[提示 (Transact-SQL) - 查询](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
+|SOS_RWLock 旋转锁改进|无需使用 SOS_RWLock 旋转锁，改为使用类似于内存中 OLTP 的无锁技术。 |[SOS_RWLock 重新设计](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
+|空间本机实现|空间查询性能有重大改进。|[SQL Server 2012 和 2014 中的空间性能改进](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
+
+### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2 中的可支持性和诊断改进
+
+|功能|Description|有关详细信息，请参阅：|
+|---|---|---|
+|AlwaysON 超时日志记录|添加租约超时消息的新日志记录功能，以便记录当前时间和预期的续订时间。 |[Improved AlwaysOn Availability Group Lease Timeout Diagnostics](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)（改进的 AlwaysOn 可用性组租约超时诊断）
+|AlwaysON XEvent 和性能计数器|新 AlwaysON XEvent 和性能计数器，在对 AlwaysON 的延迟问题进行故障排除时改进诊断。 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) 和 [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
+|更改跟踪清除|新存储过程 sp_flush_CT_internal_table_on_demand 根据需要清除更改跟踪内部表。|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
+|数据库克隆|通过克隆架构、元数据和统计信息（数据除外），使用新 DBCC 命令对现有生产数据库进行故障排除。 克隆的数据库并不用于生产环境。|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
+|DMF 添加件|新 DMF sys.dm_db_incremental_stats_properties 公开每个分区的增量统计信息。|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
+|用于检索 SQL Server 中输入缓冲区的 DMF|现提供用于检索会话/请求 (sys.dm_exec_input_buffer) 的输入缓冲区的新 DMF。 它在功能上等同于 DBCC INPUTBUFFER。|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
+|对复制的 DROP DDL 支持|允许从数据库和出版物中删除以文章形式包含在事务复制出版物中的表。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
+|针对 SQL 服务帐户的 IFI 特权|确定即时文件初始化 (IFI) 在 SQL Server 服务启动时是否有效。|[数据库文件初始化](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
+|内存授予 - 处理问题|可以通过设置诊断提示的内存授予上限，在运行查询时利用诊断提示防止内存争用。|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
+|轻型按运算符查询执行分析 |优化按运算符查询执行统计信息（如实际行数）的收集。|[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员选择：随时随地查询进度）
+|查询执行诊断|现可在查询执行计划中报告读取的实际行，以帮助改进查询性能故障排除。|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
+|Tempdb 溢出的查询执行诊断|哈希警告和排序警告现在具有其他列来跟踪物理 I/O 统计信息、使用的内存和受影响的行。 |[改进 temptdb 溢出诊断](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
+|Tempdb 可支持性 |在服务器启动时，为 tempdb 文件数、tempdb 数据文件更改使用新的错误日志消息。|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
+
+
+此外，请注意以下修补程序：
+- Xevent 调用堆栈现包含模块名称和偏移，而不是绝对地址。
+- 加强了 XE 和 DMV 诊断之间的关联 - 仅 Query_hash 和 query_plan_hash 用于标识查询。 DMV 将二者定义为 varbinary(8)，而 XEvent 将其定义为 UINT64。 由于 SQL Server 不具有“unsigned bigint”，因此强制转换并非始终有效。 这一改进引入了等效于 query_hash 和 query_plan_hash 的新 XEvent 操作/筛选器列，除非二者均定义为 INT64。 此修补程序有助于关联 XE 和 DMV 之间的查询。
+- BULK INSERT 和 BCP 中支持 UTF-8 - 现在 BULK INSERT 和 BCP 中启用了对导出和导入以 UTF-8 字符集编码的数据的支持。
+
+### <a name="download-pages-and-more-information-for-sp2"></a>下载页和 SP2 详细信息
+
+- [下载 Microsoft SQL Server 2014 Service Pack 2](https://www.microsoft.com/download/details.aspx?id=53168)
+- [SQL Server 2014 Service Pack 2 现在可用](https://www.microsoft.com/download/details.aspx?id=53167)
+- [SQL Server 2012 SP2 Express](https://www.microsoft.com/download/details.aspx?id=53167)
+- [SQL Server 2014 SP2 功能包](https://www.microsoft.com/download/details.aspx?id=53164)
+- [SQL Server 2014 SP2 报表生成器](https://www.microsoft.com/download/details.aspx?id=53163)
+- [用于 Microsoft Sharepoint 的 SQL Server 2014 SP2 Reporting Services 加载项](https://www.microsoft.com/download/details.aspx?id=53162)
+- [SQL Server 2014 SP2 语义语言统计信息](https://www.microsoft.com/download/details.aspx?id=53165)
+- [SQL Server 2014 Service Pack 2 版本信息](https://support.microsoft.com/help/3171021/sql-server-2014-service-pack-2-release-information)
+
+## <a name="sql-server-2014-service-pack-1-sp1"></a>SQL Server 2014 Service Pack 1 (SP1)
+
+SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提供的修补程序，以及以前 SQL Server 2012 SP2 中附带的修补程序汇总。
+
+> [!NOTE]
+> 如果 SQL Server 实例已启用 SSISDB 目录，并且在升级到 SP1 时遇到安装错误，请按照有关此问题的说明[安装 SQL Server 2014 SP1 时，出现错误 912 或 3417](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/) 进行操作。
+
+### <a name="download-pages-and-more-information-for-sp1"></a>下载页和 SP1 详细信息
+
+- [下载 Microsoft SQL Server 2014 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=46694)
+- [SQL Server 2014 Service Pack 1 has released – Updated](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)（SQL Server 2014 Service Pack 1 已发布 - 已更新）
+- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
+- [Microsoft SQL Server 2014 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=46696)
+
+
+## <a name="before-you-install-sql-server-2014-rtm"></a>安装 SQL Server 2014 RTM 之前
+
+### <a name="limitations-and-restrictions-in-sql-server-2014-rtm"></a>SQL Server 2014 RTM 中的限制和局限
+
 1.  不支持从 SQL Server 2014 CTP 1 升级到 SQL Server 2014 RTM。  
-  
 2.  不支持将 SQL Server 2014 CTP 1 与 SQL Server 2014 RTM 并行安装。  
-  
 3.  不支持将 SQL Server 2014 CTP 1 数据库附加到 SQL Server 2014 RTM 或将 SQL Server 2014 CTP 1 数据库还原到 SQL Server 2014 RTM。  
+
+**解决方法：** 无。
+
+#### <a name="upgrading-from-sql-server-2014-ctp-2-to-sql-server-rtm"></a>从 SQL Server 2014 CTP 2 升级到 SQL Server RTM
+完全支持升级。 具体而言，您可以：
+
+1.  将 SQL Server 2014 CTP 2 数据库附加到 SQL Server 2014 RTM 实例。    
+2.  将在 SQL Server 2014 CTP 2 上执行的数据库备份还原到 SQL Server 2014 RTM 实例。    
+3.  就地升级到 SQL Server 2014 RTM。
+4.  滚动升级到 SQL Server 2014 RTM。 在启动滚动升级前，您需要切换到手动故障转移模式。 有关详细信息，请参考[在停机时间和数据丢失最少的情况下升级和更新可用性组服务器](http://msdn.microsoft.com/library/dn178483.aspx)。    
+5.  通过 SQL Server 2014 CTP 2 中安装的事务性能收集组收集的数据不能通过 SQL Server 2014 RTM 中的 SQL Server Management Studio 查看，反之亦然。
   
-**解决方法：** 无。  
+#### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>从 SQL Server 2014 RTM 降级到 SQL Server 2014 CTP 2  
+不支持此操作。  
   
-#### <a name="12-considerations-for-upgrading-sql-server-2014-ctp-2-to-sql-server-2014-rtm-and-downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>1.2 将 SQL Server 2014 CTP 2 升级到 SQL Server 2014 RTM 和从 SQL Server 2014 RTM 降级到 SQL Server 2014 CTP 2 的注意事项  
+**解决方法：** 没有针对降级的解决方法。 我们建议你在升级到 SQL Server 2014 RTM 之前备份数据库。  
   
-#### <a name="121-upgrading-from-sql-server-2014-ctp-2-to-sql-server-rtm-is-fully-supported"></a>1.2.1 完全支持从 SQL Server 2014 CTP 2 升级到 SQL Server RTM  
-具体而言，您可以：  
-  
-1.  将 SQL Server 2014 CTP 2 数据库附加到 SQL Server 2014 RTM 实例。  
-  
-2.  将在 SQL Server 2014 CTP 2 上执行的数据库备份还原到 SQL Server 2014 RTM 实例。  
-  
-3.  就地升级到 SQL Server 2014 RTM。  
-  
-4.  滚动升级到 SQL Server 2014 RTM。 在启动滚动升级前，您需要切换到手动故障转移模式。 有关详细信息，请参考 [在停机时间和数据丢失最少的情况下升级和更新可用性组服务器](http://msdn.microsoft.com/library/dn178483.aspx) 。  
-  
-5.  通过 SQL Server 2014 CTP 2 中安装的事务性能收集组收集的数据不能通过 SQL Server 2014 RTM 中的 SQL Server Management Studio 查看，反之亦然。 使用 SQL Server 2014 CTP 2 中的 SQL Server Management Studio 可查看通过 SQL Server 2014 CTP 2 中安装的收集组收集的数据，使用 SQL Server 2014 RTM 中的 SQL Server Management Studio 可查看通过 SQL Server 2014 RTM 中安装的收集组收集的数据。  
-  
-### <a name="122-downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>1.2.2 从 SQL Server 2014 RTM 降级到 SQL Server 2014 CTP 2  
-不支持此设置。  
-  
-**解决方法：** 没有针对降级的解决方法。 我们建议您在升级到 SQL Server 2014 RTM 之前备份数据库。  
-  
-![与“返回首页”链接一起使用的箭头图标](../sql-server/media/uparrow16x16.gif "与“返回首页”链接一起使用的箭头图标")[顶部](#top)  
-  
-## <a name="13-incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>1.3 SQL Server 2014 介质/ISO/CAB 上 StreamInsight 客户端的版本不正确  
+#### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 介质/ISO/CAB 上 StreamInsight 客户端的版本不正确  
 错误版本的 StreamInsight.msi 和 StreamInsightClient.msi 位于 SQL Server 介质/ISO/CAB 上的以下路径中 (StreamInsight\\\<Architecture\>\\\<Language ID\>)。  
   
 **解决方法：** 从 [SQL Server 2014 功能包下载页](http://go.microsoft.com/fwlink/?LinkID=306709)下载并安装正确的版本。  
   
-## <a name="ProdDoc"></a>2.0 产品文档  
+### <a name="ProdDoc"></a>产品文档 RTM
   
-### <a name="21-report-builder-content-is-not-available-in-some-languages"></a>2.1 不提供某些语言的报表生成器内容  
-**问题：** 不提供以下语言的报表生成器内容。  
+不提供某些语言的报表生成器和 PowerPivit 内容。 
+
+**问题：**不提供以下语言的报表生成器内容：  
   
 -   希腊语 (el-GR)  
-  
 -   挪威语（博克马尔）(nb-NO)  
-  
 -   芬兰语 (fi-FI)  
-  
 -   丹麦语 (da-DK)  
   
 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中，此内容在产品随附的 CHM 文件中提供并且提供这些语言的内容。 这些 CHM 文件不再随产品一起提供，并且报表生成器内容仅在 MSDN 上提供。 MSDN 不支持这些语言。 报表生成器也已从 TechNet 中删除并且在这些支持的语言中不再提供。  
   
 **解决方法：** 无。  
   
-### <a name="22-powerpivot-content-is-not-available-in-some-languages"></a>2.2 某些语言版本不提供 PowerPivot 内容。  
-**问题：** 不提供以下语言的 Power Pivot 内容。  
+**问题：**不提供以下语言的 Power Pivot 内容：
   
 -   希腊语 (el-GR)  
-  
 -   挪威语（博克马尔）(nb-NO)  
-  
 -   芬兰语 (fi-FI)  
-  
 -   丹麦语 (da-DK)  
-  
 -   捷克语 (cs-CZ)  
-  
 -   匈牙利语 (hu-HU)  
-  
 -   荷兰语（荷兰）(nl-NL)  
-  
 -   波兰语 (pl-PL)  
-  
 -   瑞典语 (sv-SE)  
-  
 -   土耳其语 (tr-TR)  
-  
 -   葡萄牙语（葡萄牙）(pt-PT)  
   
 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中，已在 TechNet 上提供此内容并且提供这些语言的内容。 此内容已从 TechNet 中删除并且不再提供这些支持的语言的内容。  
   
 **解决方法：** 无。  
   
-![与“返回首页”链接一起使用的箭头图标](../sql-server/media/uparrow16x16.gif "与“返回首页”链接一起使用的箭头图标")[顶部](#top)  
+### <a name="DBEngine"></a>数据库引擎 (RTM)
   
-## <a name="DBEngine"></a>3.0 数据库引擎  
-  
-### <a name="31-changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>3.1 SQL Server 2014 RTM 中针对 Standard Edition 所做的更改  
+#### <a name="changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>SQL Server 2014 RTM 中针对 Standard Edition 所做的更改  
 SQL Server 2014 Standard 具有以下更改：  
   
--   缓冲池扩展功能允许使用的最大大小为所配置内存的 4 倍。  
+-   缓冲池扩展功能允许使用的最大大小为所配置内存的 4 倍。    
+-   最大内存从 64 GB 增加到 128 GB。  
+ 
+#### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>内存优化顾问将默认约束标记为不兼容  
+**问题：** SQL Server Management Studio 中的内存优化顾问将所有默认约束标记为不兼容。 内存优化表中不是所有默认约束都支持；顾问并不区分支持和不支持的默认约束类型。 支持的默认约束包括本机编译的存储过程中支持的所有常量、表达式和内置函数。 要查看本机编译的存储过程中支持的函数的列表，请参阅 [本机编译的存储过程中支持的构造](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)(#本机编译的存储过程中支持的构造)。  
   
--   最大内存从 64GB 增加到 128GB。  
+**解决方法：**如果要使用顾问识别阻塞程序，请忽略兼容的默认约束。 要使用内存优化顾问迁移具有兼容默认约束但没有其他阻塞程序的表，请按照以下步骤操作：  
   
-### <a name="32-in-memory-oltp-issues"></a>3.2 内存中 OLTP 问题  
-  
-#### <a name="321-memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>3.2.1 内存优化顾问将默认约束标记为不兼容  
-**问题：** SQL Server Management Studio 中的内存优化顾问将所有默认约束标记为不兼容。 内存优化表中不是所有默认约束都支持；顾问并不区分支持和不支持的默认约束类型。 支持的默认约束包括本机编译的存储过程中的所有常量、表达式和内置函数。 要查看本机编译的存储过程中支持的函数的列表，请参阅 [本机编译的存储过程中支持的构造](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)(#本机编译的存储过程中支持的构造)。  
-  
-**解决方法：** 如果要使用顾问识别阻塞程序，请忽略兼容的默认约束。 要使用内存优化顾问迁移具有兼容默认约束但没有其他阻塞程序的表，请按照以下步骤操作：  
-  
-1.  从表定义中删除默认约束。  
-  
-2.  使用顾问生成对表的迁移脚本。  
-  
-3.  在迁移脚本中添加回默认约束。  
-  
+1.  从表定义中删除默认约束。    
+2.  使用顾问生成对表的迁移脚本。    
+3.  在迁移脚本中添加回默认约束。    
 4.  执行迁移脚本。  
   
-#### <a name="322-informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>3.2.2 信息性消息“文件访问被拒绝”在 SQL Server 2014 错误日志中不正确地报告为错误  
+#### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>信息性消息“文件访问被拒绝”在 SQL Server 2014 错误日志中不正确地报告为错误  
 **问题：** 在重新启动的服务器具有包含内存优化表的数据库时，在 SQL Server 2014 错误日志中可能会看到以下类型的错误消息：  
   
 ```  
@@ -165,24 +180,23 @@ SQL Server 2014 Standard 具有以下更改：
 Server\....old.dll. This error may be due to a previous failure to unload   
 memory-optimized table DLLs.  
 ```  
-  
-实际上这是一条信息性消息，不需要用户执行任何操作。  
+此消息实际上是一条信息性消息，不需要用户执行任何操作。  
   
 **解决方法：** 无。 这是一条信息性消息。  
   
-#### <a name="323-missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>3.2.3 缺少索引详细信息不正确地报告内存优化表的包含列  
+#### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>缺少索引详细信息不正确地报告内存优化表的包含列  
 **问题：** 如果 SQL Server 2014 检测到对内存优化表的查询缺少索引，它会在 SHOWPLAN_XML 中报告缺少索引，并在缺少索引 DMV 中报告缺少索引，如 sys.dm_db_missing_index_details。 在某些情况下，缺少索引详细信息将包含有包含列。 因为所有列都是使用内存优化表的所有索引隐式包含的，所以不允许使用内存优化索引显式指定包含列。  
   
 **解决方法：** 不使用内存优化表索引指定 INCLUDE 字句。  
   
-#### <a name="324-missing-index-details-omit-missing-indexes-if-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>3.2.4 哈希索引存在但不适用于查询时缺失索引详细信息忽略缺失索引  
+#### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>哈希索引存在但不适用于查询时缺失索引详细信息忽略缺失索引  
 **问题：** 如果查询中引用的内存优化表的列存在哈希索引，但该索引不能用于查询，SQL Server 2014 将不会始终在 SHOWPLAN_XML 和 DMV sys.dm_db_missing_index_details 中报告缺失索引。  
   
 特别是查询包含涉及索引键列子集的相等谓词或包含涉及索引键列的相等谓词时，哈希索引不能原样使用，这时就需要不同的索引才能有效地执行查询。  
   
 **解决方法：** 在使用哈希索引时，检查查询和查询计划，确保查询可以从对索引键子集的 Index Seek 操作或对不等谓词的 Index Seek 操作获益。 如果需要查找索引键子集，请使用非聚集索引或对需要查找的列使用哈希索引。 如果需要查找不等谓词，请使用非聚集索引而不是哈希索引。  
   
-#### <a name="325-failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>3.2.5 在同一查询中使用内存优化表和内存优化表变量时，如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，就会失败  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>在同一查询中使用内存优化表和内存优化表变量时，如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，就会失败  
 **问题：** 如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，当在用户事务外的同一语句中访问内存优化表和内存优化表变量时，可能会看到这一错误消息：  
   
 ```  
@@ -200,12 +214,12 @@ ALTER DATABASE CURRENT
 SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 ```  
   
-#### <a name="326-procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>3.2.6 本机编译存储过程的过程和查询执行统计信息按 1000 倍记录工作线程时间  
+#### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>本机编译存储过程的过程和查询执行统计信息按 1000 倍记录工作线程时间  
 **问题：** 使用 sp_xtp_control_proc_exec_stats 或 sp_xtp_control_query_exec_stats 启用本机编译存储过程的过程或查询执行统计信息收集后，会看到 *_worker_time 在 DMV sys.dm_exec_procedure_stats 和 sys.dm_exec_query_stats 中按 1000 倍报告。 工作线程时间少于 500 毫秒的查询执行将按 worker_time 为 0 报告。  
   
 **解决方法：** 无。 对于本机编译存储过程中短时间运行的查询，不要依赖执行状态 DMV 中报告的 worker_time。  
   
-#### <a name="327-error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>3.2.7 包含长表达式的本机编译存储过程使用 SHOWPLAN_XML 的错误  
+#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>包含长表达式的本机编译存储过程使用 SHOWPLAN_XML 的错误  
 **问题：** 如果本机编译存储过程包含长表达式，使用 T-SQL 选项 SET SHOWPLAN_XML ON 或使用 Management Studio 中的“显示估计的执行计划”选项获取过程的 SHOWPLAN_XML 可能导致以下错误：  
   
 ```  
@@ -243,8 +257,8 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 +@v1  
     ```  
   
-#### <a name="328-using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>3.2.8 在本机编译存储过程中对 DATEPART 和相关函数使用字符串参数或变量会导致错误  
-**问题：** 在对本机编译存储过程中的内置函数 DATEPART、DAY、MONTH 和 YEAR 使用具有字符串数据类型（如 (var)char 或 n(var)char）的参数或变量时，会显示一条错误消息，说明本机编译存储过程不支持数据类型 datatype。  
+#### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>在本机编译存储过程中对 DATEPART 和相关函数使用字符串参数或变量会导致错误  
+**问题：**在对内置函数 DATEPART、DAY、MONTH 和 YEAR 使用利用字符串参数或变量的本机编译存储过程时，会显示一条错误消息，说明本机编译存储过程不支持 datetimeoffset。  
   
 **解决方法：** 将字符串参数或变量分配给一个新的 datetime2 类型的变量，在函数 DATEPART、DAY、MONTH 或 YEAR 中使用该变量。 例如：  
   
@@ -253,22 +267,20 @@ DECLARE @d datetime2 = @string
 DATEPART(weekday, @d)  
 ```  
   
-#### <a name="329-native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>3.2.9 本机编译顾问错误标记 DELETE FROM 子句  
+#### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>本机编译顾问错误标记 DELETE FROM 子句  
 **问题：** 本机编译顾问将存储过程内的 DELETE FROM 子句错误标记为不兼容。  
   
 **解决方法：** 无。  
   
-### <a name="33-register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>3.3 通过 SSMS 注册会为 DAC 元数据添加不匹配的 ID  
+#### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>通过 SSMS 注册会为 DAC 元数据添加不匹配的实例 ID  
 **问题：** 通过 SQL Server Management Studio 注册或删除数据层应用程序包 (.dacpac) 时，sysdac* 表不会正确更新以允许用户查询数据库的 dacpac 历史记录。  sysdac_history_internal 和 sysdac_instances_internal 的 instance_id 不匹配，无法联接。  
   
 **解决方法：** 此问题已通过 [数据层应用程序框架](https://www.microsoft.com/download/details.aspx?id=42295)(#数据层应用程序框架) 的功能包再分发得到修复。  应用更新后，所有的新历史记录条目都将使用 sysdac_instances_internal 表中为 instance_id 列出的值。  
   
-如果已经出现 instance_id 值不匹配的问题，纠正不匹配值的唯一方法是以拥有 MSDB 数据库写入权限的用户身份连接到服务器并更新 instance_id 值使其匹配。  如果同一数据库有多个注册和撤消注册事件，可能需要查看时间/日期来确定与当前 instance_id 值匹配的记录。  
+如果已经出现 instance_id 值不匹配的问题，纠正不匹配值的唯一方法是以拥有 MSDB 数据库写入权限的用户身份连接到服务器并更新 instance_id 值使其匹配。  如果从同一数据库获取多个注册和撤消注册事件，可能需要查看时间/日期来确定与当前 instance_id 值匹配的记录。  
   
-1.  在 SQL Server Management Studio 中使用对 MSDB 具有更新权限的登录名连接到服务器。  
-  
-2.  使用 MSDB 数据库打开一个新查询。  
-  
+1.  在 SQL Server Management Studio 中使用对 MSDB 具有更新权限的登录名连接到服务器。    
+2.  使用 MSDB 数据库打开一个新查询。    
 3.  运行此查询查看所有活动的 DAC 实例。  找到你要更正的实例并记下 instance_id：  
   
     `select * from` sysdac_instances_internal  
@@ -277,30 +289,26 @@ DATEPART(weekday, @d)
   
     `select * from` sysdac_history_internal  
   
-5.  确定与待修复实例对应的行  
-  
+5.  确定与待修复实例对应的行。 
 6.  将 sysdac_history_internal.instance_id 值更新为在步骤 3 中记下的值（来自 sysdac_instances_internal 表）：  
   
     `update` sysdac_history_internal `set` instance_id = '\<来自步骤 3 的值\>' `where` \<与要更新的行匹配的表达式\>  
   
-![与“返回首页”链接一起使用的箭头图标](../sql-server/media/uparrow16x16.gif "与“返回首页”链接一起使用的箭头图标")[顶部](#top)  
+### <a name="SSRS"></a>Reporting Services (RTM)
   
-## <a name="SSRS"></a>4.0 Reporting Services  
-  
-### <a name="41-the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>4.1 SQL Server 2012 Reporting Services 本机模式报表服务器不能与 SQL Server 2014 Reporting Services SharePoint 组件并行运行  
-**问题：**同一服务器上安装了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件时 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务“SQL Server Reporting Services”(ReportingServicesService.exe) 无法启动。  
+#### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 本机模式报表服务器不能与 SQL Server 2014 Reporting Services SharePoint 组件并行运行  
+**问题：**同一服务器上安装了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件时，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务“SQL Server Reporting Services”(ReportingServicesService.exe) 无法启动。  
   
 **解决方法：** 卸载 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件并重新启动 Microsoft SQL Server 2012 Reporting Services Windows 服务。  
   
 **详细信息：**  
   
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式不能与以下组件之一并行运行：  
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式不能在以下条件之一中并行运行：  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 用于 SharePoint 产品的外接程序  
-  
+-   用于 SharePoint 产品的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序    
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务  
   
-并行安装会阻止 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务启动。 在 Windows 事件日志中将看到类似以下的错误消息：  
+并行安装会阻止 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务启动。 Windows 事件日志中将看到类似于此处描述的错误消息：  
   
 ```  
 Log Name:   Application  
@@ -322,42 +330,37 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 有关详细信息，请参阅 [SQL Server 2014 Reporting Services 提示、技巧和故障排除](http://go.microsoft.com/fwlink/?LinkID=391254)。  
   
-### <a name="42-required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>4.2 多节点 SharePoint 场到 SQL Server 2014 Reporting Services 所需的升级顺序  
+#### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>多节点 SharePoint 场到 SQL Server 2014 Reporting Services 所需的升级顺序  
 **问题：** 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务实例在 SharePoint 产品的所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序实例前升级，多节点场中的报表呈现将失败。  
   
 **解决方法：** 在多节点 SharePoint 场中：  
   
-1.  首先升级 SharePoint 产品的所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序实例。  
-  
+1.  首先升级 SharePoint 产品的所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序实例。    
 2.  然后再升级 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务的所有实例。  
   
 有关详细信息，请参阅 [SQL Server 2014 Reporting Services 提示、技巧和故障排除](http://go.microsoft.com/fwlink/?LinkID=391254)。  
   
-![与“返回首页”链接一起使用的箭头图标](../sql-server/media/uparrow16x16.gif "与“返回首页”链接一起使用的箭头图标")[顶部](#top)  
+### <a name="AzureVM"></a>Microsoft Azure 虚拟机上的 SQL Server 2014 RTM  
   
-## <a name="AzureVM"></a>5.0 Windows Azure 虚拟机上的 SQL Server 2014 RTM  
-  
-### <a name="51-the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>5.1 在 Windows Azure 中配置可用性组侦听器时添加 Azure 副本向导返回错误  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>在 Microsoft Azure 中配置可用性组侦听器时添加 Azure 副本向导返回错误  
 **问题：** 如果可用性组具有侦听器，在您尝试在 Windows Azure 中配置可用性组侦听器时添加 Azure 副本向导将返回错误。  
   
-这是因为可用性组侦听器需要在每个子网托管可用性组中分配一个 IP 地址，包括 Azure 子网。  
+此问题是因为可用性组侦听器需要在每个托管可用性组副本的子网中分配一个 IP 地址，包括 Azure 子网。  
   
 **解决方法：**  
   
 1.  在“侦听器”页上，在将托管可用性组副本的 Azure 子网中为可用性组侦听器分配一个空闲的静态 IP 地址。  
   
-    这样，向导将在 Windows Azure 中完成添加副本的工作。  
+    此解决方法将允许向导在 Microsoft Azure 中完成添加副本的工作。  
   
 2.  向导完成后，您将需要按照 [Windows Azure 中 AlwaysOn 可用性组的侦听器配置](http://msdn.microsoft.com/library/dn376546.aspx)中所述在 Windows Azure 中完成侦听器配置。  
   
-![与“返回首页”链接一起使用的箭头图标](../sql-server/media/uparrow16x16.gif "与“返回首页”链接一起使用的箭头图标")[顶部](#top)  
+### <a name="SSAS"></a>Analysis Services (RTM)
   
-## <a name="SSAS"></a>6.0 Analysis Services  
-  
-### <a name="61-msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>6.1 必须为使用 SQL Server 2014 配置的 SharePoint 2010 新场下载、安装和注册 MSOLAP.5  
+#### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>必须为使用 SQL Server 2014 配置的 SharePoint 2010 新场下载、安装和注册 MSOLAP.5  
 **问题：**  
   
--   对于使用 SQL Server 2014 RTM 部署配置的 SharePoint 2010 场，PowerPivot 工作簿无法连接到数据模型，因为未安装连接字符串中引用的访问接口。  
+-   对于通过 SQL Server 2014 RTM 部署使用 SQL Server 2014 场配置的 SharePoint 2013 新场，必须下载、安装和注册 SharePoint 2010 MSOLAP.5 的情况，PowerPivot 工作簿无法连接到数据模型，因为连接字符串中引用的访问接口未安装。  
   
 **解决方法：**  
   
@@ -369,7 +372,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 包括 MSOLAP.6。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 工作簿使用 MSOLAP.5。 如果运行 Excel Services 的计算机上没有安装 MSOLAP.5，Excel Services 就无法加载数据模型。  
   
-### <a name="62-msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2013-new-farm-configured-with-sql-server-2014"></a>6.2 必须为使用 SQL Server 2014 配置的 SharePoint 2013 新场下载、安装和注册 MSOLAP.5  
+#### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2013-new-farm-configured-with-sql-server-2014"></a>必须为使用 SQL Server 2014 配置的 SharePoint 2013 新场下载、安装和注册 MSOLAP.5  
 **问题：**  
   
 -   对于使用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 部署配置的 SharePoint 2013 场，引用 MSOLAP.5 访问接口的 Excel 工作簿无法连接到表格数据模型，因为未安装连接字符串中引用的访问接口。  
@@ -384,24 +387,22 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 包括 MSOLAP.6。 但 SQL Server 2014 PowerPivot 工作簿使用 MSOLAP.5。 如果运行 Excel Services 的计算机上没有安装 MSOLAP.5，Excel Services 就无法加载数据模型。  
   
-### <a name="63-corrupt-data-refresh-schedules"></a>6.3 损坏数据刷新计划  
+#### <a name="corrupt-data-refresh-schedules-rtm"></a>损坏数据刷新计划 (RTM)
 **问题：**  
   
 -   更新刷新计划后计划损坏且不可用。  
   
 **解决方法：**  
   
-1.  在 Microsoft Excel 中，清除自定义高级属性。 请参阅以下知识库文章的“解决方法”部分： [KB 2927748](http://support.microsoft.com/kb/2927748)。  
+1.  在 Microsoft Excel 中，清除自定义高级属性。 请参阅以下知识库文章的“解决方法”部分：[KB 2927748](http://support.microsoft.com/kb/2927748)。  
   
 **详细信息：**  
   
--   为工作簿更新数据刷新计划时，如果刷新计划的序列化长度小于原有计划，则缓冲区大小不会正确更新，并且新计划信息将与旧计划信息合并，导致计划损坏。  
+-    如果刷新计划的序列化长度小于原有计划，则在为工作簿更新数据刷新计划时，缓冲区大小不会正确更新，并且新计划信息将与旧计划信息合并，导致计划损坏。  
   
-![与“返回首页”链接一起使用的箭头图标](../sql-server/media/uparrow16x16.gif "与“返回首页”链接一起使用的箭头图标")[顶部](#top)  
+### <a name="DQS"></a>Data Quality Services (RTM)
   
-## <a name="DQS"></a>7.0 Data Quality Services  
-  
-### <a name="71-no-cross-version-support-for-data-quality-services-in-master-data-services"></a>7.1 Master Data Services 中没有对 Data Quality Services 的跨版本支持  
+#### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Master Data Services 中没有对 Data Quality Services 的跨版本支持  
 **问题：** 不支持以下方案：  
   
 -   Master Data Services 2014 承载在安装了 Data Quality Services 2012 的 SQL Server 2012 中的 SQL Server 数据库引擎数据库中。  
@@ -410,16 +411,14 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **解决方法：** 使用相同版本的 Master Data Services 作为数据库引擎数据库和 Data Quality Services。  
   
-![与“返回首页”链接一起使用的箭头图标](../sql-server/media/uparrow16x16.gif "与“返回首页”链接一起使用的箭头图标")[顶部](#top)  
+### <a name="UA"></a>升级顾问问题 (RTM)
   
-## <a name="UA"></a>8.0 升级顾问问题  
-  
-### <a name="81--sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>8.1 SQL Server 2014 升级顾问报告与 SQL Server Reporting Services 不相关的升级问题  
-**问题：**SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 在分析 SQL Server Reporting Services 服务器时不正确地报告多个错误。  
+#### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 升级顾问报告与 SQL Server Reporting Services 不相关的升级问题  
+**问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 在分析 SQL Server Reporting Services 服务器时不正确地报告多个错误。  
   
 **解决方法：**[SQL Server 2014 SSUA](http://go.microsoft.com/fwlink/?LinkID=306709)(#sql-server-2014-ssua) 功能包中提供的 SQL Server 升级顾问中修复了此问题。  
   
-### <a name="82--sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>8.2 SQL Server 2014 升级顾问在分析 SQL Server Integration Services 服务器时报告错误  
+#### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 升级顾问在分析 SQL Server Integration Services 服务器时报告错误  
 **问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 在分析 SQL Server Integration Services 服务器时报告错误。  向用户显示的错误如下：  
   
 ```  
@@ -429,7 +428,5 @@ Culture=neutral, PublicKeyToken=89845dcd8080cc91
 ```  
   
 **解决方法：**[SQL Server 2014 SSUA](http://go.microsoft.com/fwlink/?LinkID=306709)(#sql-server-2014-ssua) 功能包中提供的 SQL Server 升级顾问中修复了此问题。  
-  
-![与“返回首页”链接一起使用的箭头图标](../sql-server/media/uparrow16x16.gif "与“返回首页”链接一起使用的箭头图标")[顶部](#top)  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

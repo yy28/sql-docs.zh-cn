@@ -1,25 +1,25 @@
 ---
-title: "在 SharePoint 模式下安装第一个 Report Server | Microsoft Docs"
-ms.custom: 
+title: 在 SharePoint 模式下安装第一个 Report Server | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>在 SharePoint 模式下安装第一个 Report Server
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/09/2018
  > 对于 SharePoint 2016，Reporting Services 将安装在其上的 SharePoint 服务器需要具有“自定义”服务器角色。 Reporting Services 将在不处于“自定义”角色中的 SharePoint 服务器上成功部署，但在下一次 SharePoint 维护时段期间，MinRole 将停止 Reporting Services 服务，因为它检测到 SharePoint 集成模式中的 Reporting Services 不指示对其他任何 SharePoint 服务器角色的支持。 Reporting Services 服务应用程序仅支持“自定义”角色。
  
  > [!NOTE]
- > 如果你打算同时在 Share Point 2016 上安装 Power Pivot 服务，请在安装 Reporting Services 之前安装。 Power Pivot 服务无法安装在处于“自定义”角色中的 SharePoint 服务器上。 这将避免进行多次角色切换。
+ > 如果你打算同时在 Share Point 2016 上安装 Power Pivot 服务，请在安装 Reporting Services 之前安装。 Power Pivot 服务仅能安装在处于“自定义”角色中的 SharePoint 服务器上。
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>将自定义服务器角色应用于 SharePoint 2016 服务器
  
@@ -420,7 +420,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  Reporting Services 提供预定义的内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”**、 **“报表模型”**和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>激活报表服务器文件同步功能  
- 如果用户经常直接将已发布的报表项上载到 SharePoint 文档库，则 **“报表服务器文件同步”** 站点级别功能将很有用。 文件同步功能将更频繁地将报表服务器目录与文档库中的项进行同步。 有关详细信息，请参阅 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  
+ 如果用户经常直接将已发布的报表项上载到 SharePoint 文档库，则 **“报表服务器文件同步”** 站点级别功能将很有用。 文件同步功能将更频繁地将报表服务器目录与文档库中的项进行同步。 有关详细信息，请参阅 [在 SharePoint 管理中心中激活报表服务器文件同步功能](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  
   
 ##  <a name="bkmk_verify_installation"></a> 验证安装  
  以下是验证 Reporting Services SharePoint 模式部署的建议步骤和过程。  

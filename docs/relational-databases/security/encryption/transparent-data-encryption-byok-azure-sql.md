@@ -1,29 +1,29 @@
 ---
-title: "TDE - 自带密钥 (BYOK) - Azure SQL | Microsoft Docs"
-description: "SQL 数据库和数据仓库的 Azure Key Vault 中用于透明数据加密 (TDE) 的自带密钥 (BYOK) 支持。 支持 BYOK 的 TDE 的概述、优点、工作原理、注意事项和建议。"
-keywords: 
+title: TDE - 自带密钥 (BYOK) - Azure SQL | Microsoft Docs
+description: SQL 数据库和数据仓库的 Azure Key Vault 中用于透明数据加密 (TDE) 的自带密钥 (BYOK) 支持。 支持 BYOK 的 TDE 的概述、优点、工作原理、注意事项和建议。
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: aliceku
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 01/31/2018
+ms.date: 03/16/2018
 ms.author: aliceku
-ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的“创建自己的密钥”（预览）支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -69,10 +69,10 @@ ms.lasthandoff: 02/11/2018
 - 在启用[软删除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的情况下使用密钥保管库，以防密钥（或密钥保管库）意外删除时丢失数据：  
   - 被软删除的资源将保留一段时间（90 天），除非它们被恢复或清除。
   - “恢复”和“清除”操作具有与密钥保管库访问策略相关的各自权限。 
-- 授予逻辑服务器权限，让其可以使用自己的 Azure Active Directory (AAD) 标识访问密钥保管库。  使用门户 UI 时会自动创建 AAD 标识，并向服务器授予密钥保管库的访问权限。  通过 PowerShell 使用 BYOK 配置 TDE，必须创建 AAD 标识，且应验证完成情况。 请参阅[使用 BYOK 配置 TDE](transparent-data-encryption-byok-azure-sql-configure.md)，获取使用 PowerShell 时的详细分步说明。
+- 授予逻辑服务器权限，让其可以使用自己的 Azure Active Directory (Azure AD) 标识访问密钥保管库。  使用门户 UI 时会自动创建 Azure AD 标识，并向服务器授予密钥保管库的访问权限。  通过 PowerShell 使用 BYOK 配置 TDE，必须创建 Azure AD 标识，且应验证完成情况。 请参阅[使用 BYOK 配置 TDE](transparent-data-encryption-byok-azure-sql-configure.md)，获取使用 PowerShell 时的详细分步说明。
 
   >[!NOTE]
-  >如果意外删除了 AAD 标识或者使用密钥保管库的访问策略撤销了服务器的权限，服务器就会失去访问密钥保管库的权限。
+  >如果意外删除了 Azure AD 标识或者使用密钥保管库的访问策略撤销了服务器的权限，服务器就会失去访问密钥保管库的权限。
   >
   
 - 为所有加密密钥启用审核和报告：Key Vault 提供了可轻松注入到其他安全信息和事件管理 (SIEM) 工具的日志。 Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) 是一个已集成的示例服务。
@@ -115,6 +115,12 @@ ms.lasthandoff: 02/11/2018
 
 若要在故障转移期间实现对 Azure Key Vault 中 TDE 保护程序的持续访问，则必须在复制数据库或故障转移至辅助服务器之前就对此进行配置。 主服务器和辅助服务器都必须存储所有其他 Azure Key Vault 中的 TDE 保护程序的副本，也就是说，在这个例子中，两个密钥保管库存储了相同的密钥。
 
+geo-dr 方案中的冗余需要包含辅助密钥保管库的辅助数据库，并且支持多达四个辅助数据库。  链接意味着不支持为辅助密钥保管库创建辅助数据库。  在初始设置期间，服务确认已为主密钥保管库和辅助密钥保管库正确设置权限。  保持这些权限并定期测试其仍处于正常状态至关重要。
+
+>[!NOTE]
+>在向主服务器和辅助服务器分配服务器标识时，必须首先向辅助服务器分配标识。
+>
+
 若要将一个密钥保管库中的现有密钥添加至另一个密钥保管库，请使用 [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet。
 
  ```powershell
@@ -149,4 +155,7 @@ ms.lasthandoff: 02/11/2018
    ```
 若要了解有关 SQL 数据库的备份恢复的详细信息，请参阅[恢复 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)。 若要了解有关 SQL 数据仓库的备份恢复的详细信息，请参阅[恢复 Azure SQL 数据仓库](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview)。
 
-已备份日志文件的其他注意事项：已备份日志文件仍使用原始 TDE 加密程序进行加密，即使 TDE 保护程序已轮换，数据库现在使用新的 TDE 保护程序也是如此。  在还原时，需要这两个密钥才能还原数据库。  如果日志文件使用存储在 Azure Key Vault 中的 TDE 保护程序，还原时需要此密钥，即使数据库此时已更改为使用服务托管的 TDE。   
+
+已备份日志文件的其他注意事项：已备份日志文件仍使用原始 TDE 加密程序进行加密，即使 TDE 保护程序已轮换，数据库现在使用新的 TDE 保护程序也是如此。  在还原时，需要这两个密钥才能还原数据库。  如果日志文件使用存储在 Azure Key Vault 中的 TDE 保护程序，还原时需要此密钥，即使数据库此时已更改为使用服务托管的 TDE。
+
+

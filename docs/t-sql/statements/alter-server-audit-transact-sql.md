@@ -1,16 +1,16 @@
 ---
 title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
@@ -22,22 +22,24 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f8c65e86bb3bea70a771cfcabf6b6e9049c6826a
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 功能更改服务器审核对象。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
@@ -84,10 +86,10 @@ ALTER SERVER AUDIT audit_name
  TO { FILE | APPLICATION_LOG | SECURITY }  
  确定审核目标的位置。 可用的选项包括二进制文件、Windows 应用程序日志或 Windows 安全日志。  
   
- FILEPATH = 'os_file_path'  
+ FILEPATH = 'os_file_path'****  
  审核记录的路径。 文件名是基于审核名称和审核 GUID 生成的。  
   
- MAXSIZE = max_size  
+ MAXSIZE =max_size  
  指定审核文件可增大到的最大大小。 max_size 值必须是后跟 MB、GB、TB 或 UNLIMITED 的整数。 可以为 max_size 指定的最小大小为 2 MB，最大大小为 2,147,483,647 TB。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止。 指定一个小于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED。  
   
  MAX_ROLLOVER_FILES =integer | UNLIMITED  
@@ -100,7 +102,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE = { ON | OFF }  
  此选项会按 MAXSIZE 值为磁盘上的文件预先分配大小。 仅在 MAXSIZE 不等于 UNLIMITED 时适用。 默认值为 OFF。  
   
- QUEUE_DELAY = integer  
+ QUEUE_DELAY =integer  
  确定在强制处理审核操作之前可能经过的时间（以毫秒为单位）。 值 0 指示同步传递。 可设置的最小延迟值为 1000（1 秒），这是默认值。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。 指定无效数字将引发 MSG_INVALID_QUEUE_DELAY 错误。  
   
  ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION}  

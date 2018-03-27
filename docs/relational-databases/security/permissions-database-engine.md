@@ -1,16 +1,16 @@
 ---
-title: "权限（数据库引擎）| Microsoft Docs"
-ms.custom: 
+title: 权限（数据库引擎）| Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 0932d368e23c01e181dbe94e3d27ce71e8c1b0f4
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/19/2018
   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 的权限总数是 237。 大多数权限适用于所有平台，但有些则不适用。 例如，无法对 SQL 数据库授予服务器级别权限，并且有几个权限仅在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]上有意义。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公布有 230 个权限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公布有 219 个权限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公布有 214 个权限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公布有 195 个权限。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主题指定哪些是最新版本中的新增主题。 下图显示了权限以及它们彼此之间的关系。 多次列出了某些更高级别的权限（如 `CONTROL SERVER`）。 单击图像下载 pdf 格式的**数据库引擎权限文章**。  
   
-[![数据库引擎权限](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![数据库引擎权限](../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 了解权限后，通过 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)和 [DENY](../../t-sql/statements/deny-transact-sql.md) 语句，将服务器级别权限应用于登录名和数据库级别权限用户。 例如：   
 ```sql
@@ -102,7 +102,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
      对象的 REFERENCES 权限是使用引用该对象的 `WITH SCHEMABINDING` 子句创建 FUNCTION 或 VIEW 时所必需的。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
- 有关 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 若要获取 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)。  
   
 ##  <a name="_securables"></a> 适用于特定安全对象的权限  
  下表列出了主要的权限类别以及可应用这些权限的安全对象的种类。  

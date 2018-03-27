@@ -1,34 +1,34 @@
 ---
-title: "DBCC SHRINKLOG（Azure SQL 数据仓库）| Microsoft Docs"
-ms.custom: 
-ms.date: 07/17/2017
+title: DBCC SHRINKLOG（并行数据仓库）| Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d06917a784e507ab5568e28b4d34273f5fe71063
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fc02884ed88c056eb2a7fedb57f7de701377ee37
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG（Azure SQL 数据仓库）
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG（并行数据仓库）
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-减少当前 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库在设备中的事务日志大小。 已对数据进行碎片整理，以便收缩事务日志。 随着时间推移，数据库事务日志可能会变得零碎且效率低下。 使用 DBCC SHRINKLOG 减少碎片并减小日志大小。
+减少当前 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库在设备中的事务日志大小。 已对数据进行碎片整理，以便收缩事务日志。 随着时间推移，数据库事务日志可能会变得零碎且效率低下。 使用 DBCC SHRINKLOG 减少碎片并减小日志大小。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,7 +56,7 @@ DBCC SHRINKLOG 结果中不显示信息性消息。
 ## <a name="general-remarks"></a>一般备注  
 DBCC SHRINKLOG 不会更改数据库的元数据中存储的日志大小。 元数据会继续包含 CREATE DATABASE 或 ALTER DATABASE 语句中指定的 LOG_SIZE 参数。
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples"></a>示例 
 ### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. 将事务日志收缩到 CREATE DATABASE 指定的原始大小。  
 假设创建 Addresses 数据库时，Addresses 数据库的事务日志已设置为 100 MB。 即 Addresses 的 CREATE DATABASE 语句的 LOG_SIZE = 100 MB。 现在，假设日志大小已增加到 150 MB，而你希望将其收缩到 100 MB。
   

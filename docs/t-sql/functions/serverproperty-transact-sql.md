@@ -1,16 +1,16 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f619623b90b784d9d44bc76c99daf3d9802cb8a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回有关服务器实例的属性信息。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
@@ -83,7 +85,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ProcessID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的进程 ID。 ProcessID 对于标识属于该实例的 Sqlservr.exe 很有用。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：int|  
 |ProductBuild|适用范围：2015 年 10 月开始的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。<br /><br /> 生成号。|  
 |ProductBuildType|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到当前版本 2015 年底开始的更新。<br /><br /> 当前版本的版本类型。<br /><br /> 返回下列项之一：<br /><br /> OD = 特定客户按需版本。<br /><br /> GDR = 通过 Windows 更新发布的常规分发版本。<br /><br /> NULL<br />= 不适用。|  
-|ProductLevel|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的版本级别。<br /><br /> 返回下列项之一：<br /><br /> “RTM”= 原始发布版本<br /><br /> 'SPn' = Service pack 版本<br /><br /> 'CTPn', = 社区技术预览版版本<br /><br /> 基本数据类型：nvarchar(128)|  
+|ProductLevel|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的版本级别。<br /><br /> 返回下列项之一：<br /><br /> “RTM”= 原始发布版本<br /><br /> “SPn”= 服务包版本<br /><br /> “CTPn”= 社区技术预览版版本<br /><br /> 基本数据类型：nvarchar(128)|  
 |ProductMajorVersion|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到当前版本 2015 年底开始的更新。<br /><br /> 主版本。|  
 |ProductMinorVersion|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到当前版本 2015 年底开始的更新。<br /><br /> 次版本。|  
 |ProductUpdateLevel|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到当前版本 2015 年底开始的更新。<br /><br /> 当前版本的更新级别。 CU 表示累积更新。<br /><br /> 返回下列项之一：<br /><br /> CUn = 累积更新<br /><br /> NULL<br />= 不适用。|  

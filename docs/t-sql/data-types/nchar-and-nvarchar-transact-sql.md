@@ -1,16 +1,16 @@
 ---
-title: "nchar 和 nvarchar (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: nchar 和 nvarchar (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: de099c00e160e212ff309abf74d5411687a82532
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="arguments"></a>参数  
 **nchar** [ ( n ) ]  
-固定长度的 Unicode 字符串数据。 n 用于定义字符串长度，并且它必须为 1 到 4,000 之间的值。 存储大小为 n 字节的两倍。 当排序规则代码页使用双字节字符时，存储大小仍然为 n 个字节。 根据字符串的不同，n 个字节的存储大小可能小于指定的值 n。 nchar 的 ISO 同义词是 national char 和 national character。
+固定长度的 Unicode 字符串数据。 n 用于定义字符串长度，并且它必须为 1 到 4,000 之间的值。 存储大小为 n 字节的两倍。 当排序规则代码页使用双字节字符时，存储大小仍然为 n 个字节。 根据字符串的不同，n 个字节的存储大小可能小于为 n 指定的值。 nchar 的 ISO 同义词是 national char 和 national character。
   
 **nvarchar** [ ( n | **max** ) ]  
-可变长度的 Unicode 字符串数据。 n 用于定义字符串长度，并且它可以为 1 到 4,000 之间的值。 max 指示最大存储大小是 2^31-1 个字符 (2 GB)。 存储大小（以字节为单位）是所输入数据实际长度的两倍 + 2 个字节。 nvarchar 的 ISO 同义词是 national char varying 和 national character varying。
+可变长度的 Unicode 字符串数据。 n 用于定义字符串长度，并且它可以为 1 到 4,000 之间的值。 max 指示最大存储大小是 2^30-1 个字符。  以字节为单位的最大存储大小为 2 GB。 实际存储大小（以字节为单位）是所输入字符个数的两倍 + 2 个字节。 nvarchar 的 ISO 同义词是 national char varying 和 national character varying。
   
 ## <a name="remarks"></a>Remarks  
 如果没有在数据定义或变量声明语句中指定 n，则默认长度为 1。 如果没有使用 CAST 函数指定 n，则默认长度为 30。
@@ -60,7 +60,7 @@ SET ANSI_PADDING 对于 nchar 和 nvarchar 始终为 ON。 SET ANSI_PADDING OFF 
 >  在字符串常量前面添加字母 N 作为前缀时，如果要转换的常量不超过 Unicode 字符串数据类型的最大长度 (4,000)，则隐式转换将生成 Unicode 字符串。 否则，隐式转换将生成 Unicode 大值（最大值）。
   
 > [!WARNING]  
->  每个非 null varchar(max) 或 nvarchar(max) 列都需要 24 个字节的附加固定分配，这将在执行排序操作期间根据 8,060 字节行限制进行计数。 这样一来，可能会为非 null varchar(max) 或 nvarchar(max)（可在表格中进行创建）列数创建隐式限制。 在以下情况下不提供特殊错误：创建表格（最大行大小超过允许的最大 8060 字节时出现的一般警告除外）时，或插入数据时。 这一较大的行大小可能会导致在执行某些正常操作（例如聚集索引键更新或完整列集排序）期间出现错误（例如错误 512），使得用户在执行操作前无法预料到此类错误。  
+>  每个非 null varchar(max) 或 nvarchar(max) 列都需要 24 个字节的附加固定分配，这将在执行排序操作期间根据 8,060 字节行限制进行计数。 这些附加的字节可在表中为非 null varchar(max) 或 nvarchar(max) 列数创建隐式限制。 在以下情况下不提供特殊错误：创建表格（最大行大小超过允许的最大 8060 字节时出现的一般警告除外）时，或插入数据时。 此较大行大小可能会导致用户在某些正常操作期间未意料到的错误（如错误 512）。  操作的两个示例是聚集索引密钥更新或完整列集排序。
   
 ## <a name="converting-character-data"></a>转换字符数据  
 有关转换字符数据的信息，请参阅 [char 和 varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md)。

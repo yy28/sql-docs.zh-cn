@@ -1,16 +1,16 @@
 ---
 title: GRANT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
@@ -27,23 +27,23 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b470e1247c98d35aff96e19216d0cec36650749
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为主体授予安全对象的权限。  一般概念是 GRANT \<某种权限> ON \<某个对象> TO \<某个用户、登录名或组>。 有关权限的一般讨论，请参阅[权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -83,7 +83,7 @@ GRANT
   
 ## <a name="arguments"></a>参数  
  ALL  
- 不推荐使用此选项，保留此选项仅用于向后兼容。 它不会授予所有可能的权限。 授予 ALL 参数相当于授予以下权限。  
+ 不推荐使用此选项，保留此选项仅用于向后兼容。 它不会授予所有可能的权限。 授予 ALL 等同于授予下列权限： 
   
 -   如果安全对象是数据库，则 ALL 对应 BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。  
   
@@ -100,7 +100,7 @@ GRANT
 PRIVILEGES  
  包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的行为。  
   
-*permission*  
+permission  
  权限的名称。 下面列出的子主题介绍了不同权限与安全对象之间的有效映射。  
   
 *column*  
@@ -126,7 +126,7 @@ AS principal
 在此语句中使用 AS 并不意味着能够模拟其他用户。 
   
 ## <a name="remarks"></a>Remarks  
- GRANT 语句的完整语法非常复杂。 上面的语法关系图进行了简化以突出其结构。 下面列出的主题介绍了在授予特定安全对象权限时使用的完整语法。  
+ GRANT 语句的完整语法非常复杂。 上面的语法关系图进行了简化以突出其结构。 下面列出的文章介绍了在授予特定安全对象权限时使用的完整语法。  
   
  REVOKE 语句可用于删除已授予的权限，DENY 语句可用于防止主体通过 GRANT 获得特定权限。  
   
@@ -154,17 +154,17 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ```  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
- 有关 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 若要获取 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)。  
   
 ## <a name="permissions"></a>权限  
- 授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。 如果使用 AS 选项，则还应满足其他要求。 有关详细信息，请参阅特定于安全对象的主题。  
+ 授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。 如果使用 AS 选项，则还应满足其他要求。 有关详细信息，请参阅特定于安全对象的文章。  
   
  对象所有者可以授予对其所拥有的对象的权限。 对某安全对象具有 CONTROL 权限的主体可以授予对该安全对象的权限。  
   
  被授予 CONTROL SERVER 权限的用户（例如，sysadmin 固定服务器角色的成员）可以授予对相应服务器中任一个安全对象的任意权限。 将某一数据库的 CONTROL 权限授予用户（例如，db_owner 固定数据库角色的成员）后，该用户就可授予对该数据库中任何一个安全对象的任意权限。 被授权 CONTROL 权限的用户可以授予对相应架构中任一个对象的任意权限。  
   
 ## <a name="examples"></a>示例  
- 下表列出了安全对象以及描述特定于安全对象的语法的主题。  
+ 下表列出了安全对象以及描述特定于安全对象的语法的文章。  
   
 |||  
 |-|-|  

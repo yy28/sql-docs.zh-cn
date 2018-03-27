@@ -1,29 +1,29 @@
 ---
-title: "在报表服务器上配置 Windows 身份验证 | Microsoft Docs"
-ms.custom: 
+title: 在报表服务器上配置 Windows 身份验证 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b948fea25ec62f338556b604812ff4d9574462ed
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e5ea30da8f6267bd864509ad48940b0a80f3d8c8
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>在报表服务器上配置 Windows 身份验证
   默认情况下， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 接受指定 Negotiate 或 NTLM 身份验证的请求。 如果部署中包括使用这些安全提供程序的客户端应用程序和浏览器，则可以使用这些默认值，而无需附加配置。 如果要使用不同的安全提供程序来获取 Windows 集成安全性（例如，如果要直接使用 Kerberos）或者修改了默认值并且要还原原始设置，则可以使用本主题中的信息来指定报表服务器上的身份验证设置。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
  同时，必须满足下列附加要求：  
   
--   RSeportServer.config 文件必须具有设置为 **AuthenticationType** 、 **RSWindowsNegotiate**或 **RSWindowsKerberos**的 **RSWindowsNTLM**。 默认情况下，如果报表服务器服务帐户是 NetworkService 或 LocalSystem，则 RSReportServer.config 文件包含 **RSWindowsNegotiate** 设置；否则使用 **RSWindowsNTLM** 设置。 如果拥有仅使用 Kerberos 身份验证的应用程序，则可以添加 **RSWindowsKerberos** 。  
+-   RSReportServer.config 文件必须具有设置为 RSWindowsNegotiate、RSWindowsKerberos 或 RSWindowsNTLM 的 AuthenticationType。 默认情况下，如果报表服务器服务帐户是 NetworkService 或 LocalSystem，则 RSReportServer.config 文件包含 **RSWindowsNegotiate** 设置；否则使用 **RSWindowsNTLM** 设置。 如果拥有仅使用 Kerberos 身份验证的应用程序，则可以添加 **RSWindowsKerberos** 。  
   
     > [!IMPORTANT]  
     >  如果将报表服务器服务配置为在域用户帐户下运行，并且没有为该帐户注册服务主体名称 (SPN)，使用 **RSWindowsNegotiate** 将导致 Kerberos 身份验证错误。 有关详细信息，请参阅本主题中的 [连接到报表服务器时纠正 Kerberos 身份验证错误](#proxyfirewallRSWindowsNegotiate) 。  

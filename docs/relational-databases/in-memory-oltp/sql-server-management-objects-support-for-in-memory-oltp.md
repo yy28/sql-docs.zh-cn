@@ -1,29 +1,29 @@
 ---
-title: "SQL Server 管理对象对内存中 OLTP 的支持 | Microsoft Docs"
-description: "介绍 SQL Server 管理对象 (SMO) 中支持内存中 OLTP 的项。"
-ms.custom: 
+title: SQL Server 管理对象对内存中 OLTP 的支持 | Microsoft Docs
+description: 介绍 SQL Server 管理对象 (SMO) 中支持内存中 OLTP 的项。
+ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
-caps.latest.revision: 
-author: JennieHubbard
+caps.latest.revision: ''
+author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 723de25c649545751bda5ddd79db47c5c367f478
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e1dd179fee8f797d42231f65dc8600508e6c7c67
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server 管理对象支持
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,18 +34,18 @@ ms.lasthandoff: 02/12/2018
 以下类型和成员位于命名空间 Microsoft.SqlServer.Management.Smo 中，且它们支持内存中 OLTP：
 
 - **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>**（枚举）
-- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>**（属性）
-- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>**（构造函数）
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** （属性）
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** （构造函数）
 - **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>**（枚举）
-- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>**（属性）
-- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>**（枚举成员）
-- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>**（属性）
-- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>**（属性）
-- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>**（属性）
-- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>**（属性）
-- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>**（属性）
-- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>**（属性）
-- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>**（属性）
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** （属性）
+- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** （枚举成员）
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** （属性）
+- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** （属性）
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** （属性）
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** （属性）
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** （属性）
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** （属性）
+- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** （属性）
 
 ## <a name="c-code-example"></a>C# 代码示例
 

@@ -1,27 +1,27 @@
 ---
-title: "为 Reporting Services 移动报表准备 Excel 数据 | Microsoft Docs"
-ms.custom: 
+title: 为 Reporting Services 移动报表准备 Excel 数据 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 57440dd767e421cb1448d8d365ebf894edbd065a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>为 Reporting Services 移动报表准备 Excel 数据
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/09/2018
   
 正如在上面示例中看到的，第一行包含该列的标准名称。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 将保留这些列标题，以方便在库元素设置中引用。 但列标题并不是必需的。 如果缺少列标题， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 将使用 Excel A、B、C、 …、AA、BB 等约定生成标题。  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]通过比较每一列中前两个单元格的数据类型，在导入 Excel 工作表时会自动检测第一行的标题。 如果任何列中前两个单元格的数据类型不匹配，则视为第一行包含列标题。 因此，如果表具有数值类型的列标题，请用字符串为标题名称加上前缀，以便在导入过程中将其检测为标题。  
+通过比较每一列中前两个单元格的数据类型，在导入 Excel 工作表时 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 会自动检测第一行的标题。 如果任何列中前两个单元格的数据类型不匹配，则视为第一行包含列标题。 因此，如果表具有数值类型的列标题，请用字符串为标题名称加上前缀，以便在导入过程中将其检测为标题。  
   
 ## <a name="cells"></a>单元  
   

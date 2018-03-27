@@ -1,35 +1,35 @@
 ---
-title: "SQL Server 2016 发行说明 | Microsoft Docs"
-ms.date: 02/27/2018
+title: SQL Server 2016 发行说明 | Microsoft Docs
+ms.date: 03/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 1a6d422098fdacb3a7bc6392b99fe63bb25c2c36
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-本主题介绍 SQL Server 2016 版本的限制和问题。 有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)（SQL Server 2016 的新增功能）。
+  本主题介绍 SQL Server 2016 版本的限制和问题，包括服务包。 有关新增功能的信息，请参阅 [《What's New in SQL Server 2016》](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)（SQL Server 2016 的新增功能）。
 
 > [![从评估中心下载](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)从**[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)下载 SQL Server 2016**
 >
@@ -37,12 +37,51 @@ ms.lasthandoff: 02/28/2018
 >
 > [![下载 SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 若要获取最新版本的 Management Studio，请参阅**[下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**。
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) 可用
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 会将 SQL Server 2016 所有版本和服务级别升级到 SQL Server 2016 SP1。 除了本文中列出的修补程序，SQL Server 2016 SP1 还包括 SQL Server 2016 累积更新 1 (CU1) 到 SQL Server 2016 CU3 中的修补程序。
+## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 包含至 SQL Server 2016 RTM CU3 的所有修补程序，包括安全更新 MS16-136。 它包含 SQL Server 2016 累积更新（并包含最新累积更新 - CU3 和 2016 年 11 月 8 日发布的安全更新 MS16-136）中提供的解决方案的汇总。 
 
-- [SQL Server 2016 SP1 下载页](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545) （SQL Server 2016 Service Pack 1 发布信息） 列出了 SP1 中修复或更改的单个 bug #s 和问题。
- - ![info_tip](../sql-server/media/info-tip.png) 有关所有受支持版本的链接和信息（包括 SQL Server 的服务包），请参阅 [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+以下功能在 SQL Server SP1 的标准、Web、Express 和 Local DB 版中均可用（另有注明的除外）：
+- Always Encrypted
+- 更改数据捕获（在 Express 版中不可用）
+- columnstore
+- 压缩
+- 动态数据屏蔽
+- 精细审核
+- 内存中 OLTP（在 Local DB 版中不可用）
+- 多文件流容器（在 Local DB 版中不可用）
+- 分区
+- Polybase
+- 行级别安全性
+
+下表总结了 SQL Server 2016 SP1 中提供的重要改进。
+
+|功能|Description|有关详细信息，请参阅：|
+|---|---|---|
+|在 TF 715 下与自动 TABLOCK 成堆的大容量插入| 跟踪标志 715 为没有非聚集索引的堆中的大容量加载操作启用表锁。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
+|CREATE 或 ALTER|部署存储过程、触发器、用户定义的函数和视图等对象。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|对复制的 DROP TABLE 支持|DROP TABLE DDL 支持复制，以允许删除复制文章。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
+|文件流 RsFx 驱动程序签名|文件流 RsFx 驱动程序使用 Windows 硬件开发人员中心仪表板门户（开发门户）签名和认证，从而允许在 Windows Server 2016/Windows 10 上毫无问题地安装 SQL Server 2016 SP1 文件流 RsFx 驱动程序。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
+|SQL 服务帐户的 LPIM - 编程识别|允许 DBA 以编程方式识别服务启动时内存中锁定页面 (LPIM) 特权是否生效。|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)（开发人员选择：以编程方式识别 SQL Server 中的 LPIM 和 IFI 特权）|
+|手动更改跟踪清除|新存储过程根据需要清除更改跟踪内部表。| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
+|本地临时表的并行 INSERT...SELECT 更改|INSERT..SELECT 操作中的新并行插入。|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)（SQL Server 客户咨询团队）|
+|Showplan XML|扩展诊断包括授予警告和针对查询启用的最大内存、启用的跟踪标志，并且还显示其他诊断信息。 | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
+|存储类内存|在 Windows Server 2016 中使用存储类内存推进事务处理，带来的结果是事务提交时间加快了几个数量级。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
+|USE HINT|使用查询选项 `OPTION(USE HINT('<option>'))` 通过受支持的查询级别提示更改查询优化器行为。 与 QUERYTRACEON 不同，USE HINT 选项不需要 sysadmin 特权。|[Developers Choice: USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)（开发人员选择：USE HINT 查询提示）|
+|XEvent 添加件|新 XEvent 和 Perfmon 诊断功能改进了延迟的故障排除。|[扩展事件](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+
+此外，请注意以下修补程序：
+- 根据来自 DBA 和 SQL 社区的反馈，启动 SQL 2016 SP1，Hekaton 日志记录消息会减少至最少。
+- 评审新的[跟踪标志](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。
+- WideWorldImporters 示例数据库的完整版本现在可用于 Standard Edition 和 Express Edition，启动 SQL Server 2016 SP1，在 [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 中可用。 示例中无需任何更改。 在 RTM 中创建的 Enterprise Edition 数据库备份可用于 SP1 中的 Standard 和 Express 版。 
+
+SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做法，建议在安装 SQL Server 2016 SP1 后计划并执行重新启动。
+
+### <a name="download-pages-and-more-information"></a>下载页和详细信息
+
+- [下载 Microsoft SQL Server 2016 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)
+- [SQL Server 2016 Service Pack 1 (SP1) 已发布](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [SQL Server 2016 Service Pack 1 的发布信息](https://support.microsoft.com/kb/3182545)
+- ![info_tip](../sql-server/media/info-tip.png) 有关所有受支持版本的链接和信息（包括 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的服务包），请参阅 [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx) 
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [数据库引擎 (GA)](#bkmk_ga_instalpatch) 

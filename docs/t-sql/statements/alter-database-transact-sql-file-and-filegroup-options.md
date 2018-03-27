@@ -1,16 +1,16 @@
 ---
-title: "ALTER DATABASE 文件和文件组选项 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ALTER DATABASE 文件和文件组选项 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
@@ -44,21 +44,23 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 826b8a5abb14ee677f89f1c77956215ec72f90c6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ef66eef5192d18cb2a443f0ed45f2b29a018c883
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 文件和文件组选项 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中修改与数据库关联的文件和文件组。 在数据库中添加或删除文件和文件组，并更改数据库或其文件和文件组的属性。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中修改与数据库关联的文件和文件组。 在数据库中添加或删除文件和文件组，并更改数据库或其文件和文件组的属性。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -180,7 +182,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  *new_logical_file_name*  
  用于替换现有逻辑文件名称的名称。 该名称在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该名称可以是字符或 Unicode 常量、常规标识符或分隔标识符。  
   
- FILENAME { 'os_file_name' | 'filestream_path' | 'memory_optimized_data_path'}  
+ FILENAME { 'os_file_name' | 'filestream_path' | 'memory_optimized_data_path'}************  
  指定操作系统（物理）文件名称。  
   
  ' *os_file_name* '  
@@ -285,7 +287,7 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
 > [!NOTE]  
 > 除非 FILESTREAM 垃圾回收器已从 FILESTREAM 容器中删除所有文件，删除 FILESTREAM 容器的 ALTER DATABASE REMOVE FILE 操作将失败并返回错误。 请参阅本主题后面“备注”中的“删除 FILESTREAM 容器”部分。  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。  
+MODIFY FILEGROUP filegroup_name { \<filegroup_updatability_option> | DEFAULT | NAME *=***new_filegroup_name } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。  
   
  \<filegroup_updatability_option>  
  对文件组设置只读或读/写属性。  

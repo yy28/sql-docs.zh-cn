@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 审核（数据库引擎）| Microsoft Docs"
-ms.custom: 
+title: SQL Server 审核（数据库引擎）| Microsoft Docs
+ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3ca903d27dc667095e8db79e3a92e8cb85737004
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   “审核”[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
+  
+[!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的审核级别有若干种，具体取决于您的安装的政府要求或标准要求。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核提供若干必需的工具和进程，用于启用、存储和查看对各个服务器和数据库对象的审核。  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  [SQL Server 审核操作组和操作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)主题介绍了数据库级别的审核操作组和审核操作。  
   
-### <a name="target"></a>Target  
+### <a name="target"></a>目标  
  审核结果将发送到目标，目标可以是文件、Windows 安全事件日志或 Windows 应用程序事件日志。 必须定期查看和归档这些日志，以确保目标具有足够的空间来写入更多记录。  
   
 > [!IMPORTANT]  
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="database-mirroring-and-sql-server-audit"></a>数据库镜像和 SQL Server 审核  
  已定义了数据库审核规范并使用数据库镜像的数据库将包括此数据库审核规范。 若要对已镜像的 SQL 实例进行正确的处理，必须配置下列项：  
   
--   镜像服务器必须拥有具有相同 GUID 的审核才能使数据库审核规范能够写入审核记录。 这可以通过使用命令 CREATE AUDIT WITH GUID**=***\<GUID from source Server Audit*> 进行配置。  
+-   镜像服务器必须拥有具有相同 GUID 的审核才能使数据库审核规范能够写入审核记录。 这可以通过使用命令 CREATE AUDIT WITH GUID*=***\<GUID from source Server Audit> 进行配置。  
   
 -   对于二进制文件目标，镜像服务器服务帐户对要写入审核记录的位置必须具有相应的权限。  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  具有 sysadmin 角色的主体可以篡改任意审核组件；具有 db_owner 角色的主体可以篡改数据库中的审核规范。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 将验证将创建或更改审核规范的登录帐户是否至少具有 ALTER ANY DATABASE AUDIT 权限。 但是，它不会在您附加数据库时进行验证。 您应假定所有的数据库审核规范的可信度只是相当于具有 sysadmin 或 db_owner 角色的主体。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [创建服务器审核和数据库审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -202,7 +204,7 @@ ms.lasthandoff: 11/21/2017
  介绍如何为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用登录审核。 审核记录存储在 Windows 应用程序日志中。  
   
  [c2 审核模式服务器配置选项](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
- 介绍 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 C2 符合安全标准审核模式。  
+ 介绍 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 C2 符合安全标准审核模式。  
   
  [安全审核事件类别 (SQL Server Profiler)](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  介绍您可以在 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]中使用的审核事件。 有关详细信息，请参阅 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)。  
