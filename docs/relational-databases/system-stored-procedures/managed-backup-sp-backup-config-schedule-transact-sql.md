@@ -1,16 +1,16 @@
 ---
-title: "managed_backup.sp_backup_config_schedule (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: managed_backup.sp_backup_config_schedule (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_schedule_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3ba08667f9eebe37cc5493903b714ee1bf0d67f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6325c940487b37fea083a923a20f884bd872a0b4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ EXEC managed_backup.sp_backup_config_schedule
  托管备份操作，可以将设置为 Daily 或每周频率类型。  
   
  @days_of_week  
- 备份每周天数时@full_backup_freq_type设置为每周。 指定类似星期一的完整字符串名称。  此外可以指定多个由逗号分隔的一天名称。 例如星期一、 星期三、 星期五。  
+ 备份每周天数时@full_backup_freq_type设置为每周。 指定类似星期一的完整字符串名称。  此外可以指定多个由竖线分隔的一天名称。 例如 N'Monday |星期三 |星期五。  
   
  @backup_begin_time  
  备份窗口开始时间。 备份将不会启动时间窗口，其中的组合来定义外部@backup_begin_time和@backup_duration。  
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_backup_config_schedule
  备份时间窗口的持续时间。 请注意，没有将由定义时间窗口内已完成备份不能保证@backup_begin_time和@backup_duration。 在此时间窗口中启动但超过时段的持续时间的备份操作将不会被取消。  
   
  @log_backup_freq  
- 这将确定的事务日志备份的频率。 这些备份发生固定时间间隔中，而不是在数据库备份指定的计划。 @log_backup_freq可以在几分钟或小时数，0 是有效的指示未执行日志备份。 禁用日志备份仅将适用于使用简单恢复模式的数据库。  
+ 这将确定的事务日志备份的频率。 这些备份发生固定时间间隔中，而不是在数据库备份指定的计划。 @log_backup_freq 可以在几分钟或小时数，0 是有效的指示未执行日志备份。 禁用日志备份仅将适用于使用简单恢复模式的数据库。  
   
 > [!NOTE]  
 >  如果恢复模式从简单更改为完整，你需要重新配置为非零值从 0 log_backup_freq。  

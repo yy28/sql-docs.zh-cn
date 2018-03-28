@@ -1,34 +1,34 @@
 ---
-title: "对 SQL Server 机器学习服务的体系结构概述 |Microsoft 文档"
-ms.custom: 
+title: 对 SQL Server 机器学习服务的体系结构概述 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7993a93eec3bd657f4d37fbbbfbb16dd514453fa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的体系结构概述 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主题介绍在 SQL Server 中支持的 Python 和 R 脚本执行的 extensibility framework 的目标。
+本指南介绍了在 SQL Server 中支持的 Python 和 R 脚本执行的 extensibility framework 的目标。
 
 它还提供概述如何设计体系结构以满足这些目标，如何 R 和 Python 支持和执行的 SQL Server 和集成的好处。
 
-总体上而言的扩展性框架是几乎完全相同的 R 和 Python，称为启动器的详细信息，配置选项和等一些细微的差别。 有关特定语言的实现详细信息，请参阅下列主题：
+总体上而言的扩展性框架是几乎完全相同的 R 和 Python，称为启动器的详细信息，配置选项和等一些细微的差别。 有关特定语言的实现详细信息，请参阅这些文章：
 
 - [SQL Server R Services 的体系结构概述](r/architecture-overview-sql-server-r.md)
 - [SQL Server 中的 Python 的体系结构概述](python/architecture-overview-sql-server-python.md)

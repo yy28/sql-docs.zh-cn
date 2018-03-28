@@ -1,23 +1,23 @@
 ---
-title: "用于 Microsoft SQL 数据库的连接库 |Microsoft 文档"
-description: "提供用于启用与 Microsoft SQL Server 和 Azure SQL 数据库，从多种编程语言的客户端的连接的模块下载链接。"
+title: 用于 Microsoft SQL 数据库的连接库 |Microsoft 文档
+description: 提供用于启用与 Microsoft SQL Server 和 Azure SQL 数据库，从多种编程语言的客户端的连接的模块下载链接。
 author: MightyPen
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: 
+ms.custom: ''
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 数据库的连接模块
 
@@ -60,7 +60,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Node.js 驱动程序，安装说明](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *操作系统：*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu 或 MacOS PHP 驱动程序，从 Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *操作系统：*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[从 Github 的 Linux 或 macOS PHP 驱动程序](http://github.com/Microsoft/msphpsql/) |
 | Python   | [pyodbc，安装说明](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[下载 ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Ruby 驱动程序，安装说明](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby 下载页](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
@@ -90,7 +90,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 ## <a name="build-an-app-webpages"></a>生成的应用的网页
 
 
-[http://aka.ms/sqldev](http://aka.ms/sqldev)将你带到一组*生成的应用*网页。 网页提供大量组合的编程语言、 操作系统和 SQL 连接驱动程序有关的信息。 生成的应用网页提供的信息包括以下各项：
+[http://aka.ms/sqldev](http://aka.ms/sqldev) 将你带到一组*生成的应用*网页。 网页提供大量组合的编程语言、 操作系统和 SQL 连接驱动程序有关的信息。 生成的应用网页提供的信息包括以下各项：
 
 - 有关如何开始从一开始，对于每个语言 + 操作系统 + 驱动程序组合的详细信息。
     - 安装最新的 SQL 连接驱动程序说明。

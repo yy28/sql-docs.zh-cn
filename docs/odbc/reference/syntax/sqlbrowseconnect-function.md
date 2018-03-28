@@ -1,35 +1,40 @@
 ---
-title: "SQLBrowseConnect 函数 |Microsoft 文档"
-ms.custom: 
+title: SQLBrowseConnect 函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLBrowseConnect
-apilocation: sqlsrv32.dll
+apiname:
+- SQLBrowseConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLBrowseConnect
-helpviewer_keywords: SQLBrowseConnect function [ODBC]
+f1_keywords:
+- SQLBrowseConnect
+helpviewer_keywords:
+- SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10470316e18dcedd1c3cd36c6f837a7deb4ceba3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函数
-**一致性**  
+**Conformance**  
  版本引入了： ODBC 1.0 标准合规性： ODBC  
   
  **摘要**  
@@ -80,7 +85,7 @@ SQLRETURN SQLBrowseConnect(
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|缓冲区\* *OutConnectionString*不是否足够大以返回整个浏览结果连接字符串，因此字符串被截断。 缓冲区 **StringLength2Ptr*包含未截断的浏览结果连接字符串的长度。 （函数返回 SQL_NEED_DATA。）|  
 |01S00|无效的连接字符串属性|浏览请求连接字符串中指定了无效的属性关键字 (*InConnectionString*)。 （函数返回 SQL_NEED_DATA。）<br /><br /> 在浏览请求连接字符串中指定的属性关键字 (*InConnectionString*) 不适用于当前的连接级别。 （函数返回 SQL_NEED_DATA。）|  
-|01S02 的警告|值已更改|该驱动程序不支持的指定的值*ValuePtr*中的参数**SQLSetConnectAttr**和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|01S02|值已更改|该驱动程序不支持的指定的值*ValuePtr*中的参数**SQLSetConnectAttr**和替换类似的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08001|客户端无法建立连接|该驱动程序无法建立与数据源的连接。|  
 |08002|连接名称已在使用|(DM) 指定的连接已用于建立与数据源的连接，并且连接已打开。|  
 |08004|服务器拒绝连接|数据源实现定义的原因拒绝建立连接。|  
@@ -113,7 +118,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 自变量  
  浏览请求连接字符串具有以下语法：  
   
- *连接字符串*:: =*属性*[;] &#124;*属性*;*连接 stringattribute* :: =*属性关键字*=*属性值*&#124;驱动程序 = [{}]*属性值 [*}]*属性关键字*:: = DSN &#124;UID &#124;PWD &#124;*驱动程序的定义的属性-keywordattribute-值*:: =*字符-stringdriver-定义的零个以上*:: =*标识符*  
+ *连接字符串*:: =*属性*[`;`] &#124; *属性* `;` *连接字符串*;<br>
+ *属性*:: =*属性关键字*`=`*属性值* &#124; `DRIVER=`[`{`]*属性-值*[`}`]<br>
+ *零个以上*:: = `DSN` &#124; `UID` &#124; `PWD` &#124; *驱动程序的定义的零个以上*<br>
+ *属性值*:: =*字符串*<br>
+ *驱动程序的定义的零个以上*:: =*标识符*<br>
   
  其中*字符串*具有零个或多个字符;*标识符*具有一个或多个字符;*属性关键字*不区分大小写;*属性值*可能区分大小写; 和的值**DSN**关键字不由单独的空格组成。 由于连接字符串和初始化文件语法、 关键字和属性值，包含字符**[] {} （)，;？\*= ！ @**应当避免。 由于系统信息中的语法，关键字和数据源名称不能包含反斜杠 (\\) 字符。 适用于 ODBC 2。*x*驱动程序，大括号所需的驱动程序关键字在属性值。  
   
@@ -124,7 +133,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 自变量  
  浏览结果连接字符串是连接属性的列表。 连接属性由属性关键字和相应的属性值组成。 浏览结果连接字符串具有以下语法：  
   
- *连接字符串*:: =*属性*[;] &#124;*属性*;*连接 stringattribute* :: = [\*]*属性关键字 = 属性 valueattribute 关键字*:: = *ODBC 属性关键字*&#124;*driver-defined-attribute-keywordODBC-attribute-keyword* = {UID &#124;PWD} [:*本地化标识符*]*驱动程序的定义的零个以上*:: =*标识符*[:*本地化的标识符*]*属性值*:: = {*属性值列表*} &#124;？ （大括号是文本的; 它们返回由驱动程序）。*属性值列表*:: =*字符串*[:*本地化字符串*] &#124;*字符串*[:*本地化字符串*]，*属性值列表*  
+ *连接字符串*:: =*属性*[`;`] &#124; *属性* `;` *连接字符串*<br>
+ *属性*:: = [`*`]*属性关键字*`=`*属性值*<br>
+ *零个以上*:: = *ODBC 属性关键字* &#124; *驱动程序的定义的零个以上*<br>
+ *ODBC 属性关键字*= {`UID` &#124; `PWD`} [`:`*本地化标识符*]*驱动程序的定义的零个以上*:: = *标识符*[`:`*本地化标识符*]*属性值*:: = `{` *属性值列表* `}` &#124; `?` （大括号是文本的; 它们返回由驱动程序）。<br>
+ *属性值列表*:: =*字符串*[`:`*本地化字符串*] &#124; *字符串*[`:`*本地化字符串*] `,` *属性值列表*<br>
   
  其中*字符串*和*本地化字符串*有零个或多个字符;*标识符*和*本地化标识符*具有一个或多个字符;*属性关键字*不区分大小写; 和*属性值*可能区分大小写。 由于连接字符串和初始化文件语法、 关键字、 本地化的标识符和属性包含字符的值，则**[] {} （)，;？\*= ！ @**应当避免。 由于系统信息中的语法，关键字和数据源名称不能包含反斜杠 (\\) 字符。  
   

@@ -1,33 +1,35 @@
 ---
-title: "如何： 检索使用 SQLSRV 驱动程序的 I/O 参数 |Microsoft 文档"
-ms.custom: 
+title: 如何： 检索使用 SQLSRV 驱动程序的 I/O 参数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 76423ca2d960951ecdc7a58181393eed792ab756
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 36a13b70c105ea6dfa27d7a261d2e926b122b569
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主题演示如何使用 SQLSRV 驱动程序调用其中一个参数已定义为输入/输出参数的存储过程，以及如何检索结果。 请注意，在检索输出参数或输入/输出参数时，必须在可以访问返回的参数值前使用存储过程返回的所有结果。  
+本主题演示如何使用 SQLSRV 驱动程序调用其中一个参数已定义为输入/输出参数的存储过程，以及如何检索结果。 在检索输出或输入/输出参数，可访问返回的参数值之前，必须先使用存储过程返回的所有结果。  
   
 > [!NOTE]  
 > 已初始化或更新为 **null**、 **DateTime**的变量或流类型无法用作输出参数。  
@@ -41,9 +43,9 @@ ms.lasthandoff: 11/18/2017
 存储的过程返回两个结果，因为[sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)后执行存储的过程以使输出参数的值可用必须调用。 在调用**sqlsrv_next_result**， *$vacationHrs*包含存储过程返回的输出参数的值。  
   
 > [!NOTE]  
-> 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅 [调用存储过程](http://go.microsoft.com/fwlink/?linkid=119517)。  
+> 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
-该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -128,7 +130,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[如何：使用 SQLSRV 驱动程序指定参数方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)  
-[如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[如何：使用 SQLSRV 驱动程序指定参数方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+
+[如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [检索数据](../../connect/php/retrieving-data.md)  
   

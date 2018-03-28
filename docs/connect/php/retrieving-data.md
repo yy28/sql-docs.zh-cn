@@ -1,27 +1,28 @@
 ---
-title: "检索数据 |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: 检索数据 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54cd9cef5cf2d0c7a1af40028adfb5340823e94b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 8f7482d5980d1e7a51479d9884623390b3e20fa5
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data"></a>检索数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,9 +74,9 @@ PDO_SQLSRV 驱动程序的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
   
 [PDO::prepare](../../connect/php/pdo-prepare.md) 可让你指定游标类型。 然后，你可以使用 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 选择一行。 有关示例和详细信息，请参阅 [PDO::prepare](../../connect/php/pdo-prepare.md) 。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
-|主题|说明|  
+|主题|Description|  
 |---------|---------------|  
 |[以流的形式检索数据](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|概述了如何从服务器中流式传输数据，并提供指向特定用例的链接。|  
 |[使用方向参数](../../connect/php/using-directional-parameters.md)|介绍如何在调用存储过程时使用方向参数。|  
@@ -86,6 +87,7 @@ PDO_SQLSRV 驱动程序的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
 [如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[PHP SQL 驱动程序编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [检索数据](../../connect/php/retrieving-data.md)  
   

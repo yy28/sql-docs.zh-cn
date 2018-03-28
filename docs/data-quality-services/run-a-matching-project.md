@@ -1,31 +1,32 @@
 ---
-title: "运行匹配项目 | Microsoft Docs"
-ms.custom: 
+title: 运行匹配项目 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9874323ad1bef8199d2ebc969bb3673826b946fb
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: cd76d59bc0c13742633185766f559bd3d189e228
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中执行数据匹配。 该匹配过程基于匹配策略中的匹配规则标识匹配记录的群集，基于存活规则将每个群集中的一个记录指定为存活，并且导出结果。 DQS 还在计算机辅助过程中执行匹配过程（也称作消除重复），但您以交互方式创建匹配规则，并且从若干选择中选择存活规则，以便控制匹配过程。  

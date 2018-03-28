@@ -1,33 +1,33 @@
 ---
-title: "体系结构概述 (SQL Server R Services) | Microsoft Docs"
-ms.custom: 
+title: 体系结构概述 (SQL Server R Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7ef5e5efd0e1efb1817e4b9d1577d3b0a8a82051
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>SQL Server 中的 R 的体系结构概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本部分概述了 SQL Server 2016 R services 和 SQL Server 自 2017 年 1 机器学习服务的体系结构。
 
-可扩展性体系结构的体系结构是相同或非常类似于 SQL Server 2016 和 SQL Server 自 2017 年 1 版本中，以及类似还为 R 和 Python。 但是，若要简化讨论，本主题讨论仅是 R 组件，包括 SQL Server 数据库引擎，以支持外部脚本执行、 安全、 R 库和与开放源代码。 互操作性中添加新组件
+可扩展性体系结构的体系结构是相同或非常类似于 SQL Server 2016 和 SQL Server 自 2017 年 1 版本中，以及类似还为 R 和 Python。 但是，若要简化讨论，本文讨论仅是 R 组件，包括 SQL Server 数据库引擎，以支持外部脚本执行、 安全、 R 库和与开放源代码。 互操作性中添加新组件
 
 每个部分的链接中提供其他详细信息。
 

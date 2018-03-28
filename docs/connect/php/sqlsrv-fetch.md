@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_fetch |Microsoft 文档"
-ms.custom: 
+title: sqlsrv_fetch | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch
+apiname:
+- sqlsrv_fetch
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9e7e835dbc1033fc5351f6a7af161c8ca021026
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cdb47b0250989bd2568a4b46f9957933f6f75130
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,7 +71,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 如果已成功检索结果集的下一行，将返回 **True** 。 如果结果集中没有更多结果，将返回 **null** 。 如果出现错误，将返回 **False** 。  
   
 ## <a name="example"></a>示例  
-以下示例使用 **sqlsrv_fetch** 检索包含产品审核和审阅者名称的数据行。 若要从结果集中检索数据[sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)使用。 该示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例使用 **sqlsrv_fetch** 检索包含产品审核和审阅者名称的数据行。 若要从结果集中检索数据[sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)使用。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -129,6 +131,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>另请参阅  
 [检索数据](../../connect/php/retrieving-data.md)  
+
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

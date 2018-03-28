@@ -1,27 +1,28 @@
 ---
-title: "PDOStatement::fetchAll |Microsoft 文档"
-ms.custom: 
+title: PDOStatement::fetchAll |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 64e8171c54768ca447438d245e16f149753566af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2eb146247b4180549aeaa595a8d18a94d5116ae6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -90,6 +91,7 @@ $*ctor_args*： 的类构造函数，参数数组时 $*fetch_style* pdo:: FETCH_
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[PDOStatement 类](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement 类](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

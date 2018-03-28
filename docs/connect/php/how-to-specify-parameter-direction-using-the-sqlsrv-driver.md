@@ -1,33 +1,35 @@
 ---
-title: "如何： 使用 SQLSRV 驱动程序指定参数方向 |Microsoft 文档"
-ms.custom: 
+title: 如何： 使用 SQLSRV 驱动程序指定参数方向 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 692d1cd432a7d156a4bb9d8cc2c3bfcf57c02d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b4004fa498c01e73c99204bb0d36ac4bded66a9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序指定参数方向
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主题介绍如何在调用存储过程时使用 SQLSRV 驱动程序指定参数方向。 请注意构造参数时，指定参数方向数组 （步骤 3） 传递给[sqlsrv_query](../../connect/php/sqlsrv-query.md)或[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。  
+本主题介绍如何在调用存储过程时使用 SQLSRV 驱动程序指定参数方向。 参数方向在构造传递给参数数组 （步骤 3） 时指定[sqlsrv_query](../../connect/php/sqlsrv-query.md)或[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。  
   
 ### <a name="to-specify-parameter-direction"></a>指定参数方向  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/18/2017
     ```  
   
     > [!NOTE]  
-    > 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅 [调用存储过程](http://go.microsoft.com/fwlink/?linkid=119517)。  
+    > 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
 2.  初始化或更新对应于 Transact-SQL 查询中的占位符的 PHP 变量。 例如，以下代码将初始化 UpdateVacationHours 存储过程的两个参数：  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/18/2017
   
     为了解在一般情况下指定参数方向的语法，假定 *$var1*、 *$var2*和 *$var3* 分别对应输入、输出和双向参数。 可以使用以下方法之一来指定参数方向：  
   
-    -   隐式指定输入参数、显式指定输出参数和显式指定双向参数：  
+    -   隐式指定输入的参数、 显式指定输出参数和显式指定双向参数：  
   
         ```  
         array(   
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/18/2017
                );  
         ```  
   
-    -   显式指定输入参数、显式指定输出参数和显式指定双向参数：  
+    -   显式指定输入的参数、 显式指定输出参数和显式指定双向参数：  
   
         ```  
         array(   
@@ -88,6 +90,7 @@ ms.lasthandoff: 11/18/2017
     ```  
   
 ## <a name="see-also"></a>另请参阅  
-[如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

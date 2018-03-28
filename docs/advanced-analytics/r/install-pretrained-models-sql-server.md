@@ -1,61 +1,62 @@
 ---
-title: "在 SQL Server 上安装预先训练的机器学习模型 |Microsoft 文档"
+title: 在 SQL Server 上安装预先训练的机器学习模型 |Microsoft 文档
 ms.date: 03/14/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: fd02766e4020e6f522d50bbd471c5f84c66a998b
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: a1228597a1781ca13952a249f554bdea0a990a4d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="install-pretrained-machine-learning-models-on-sql-server"></a>安装预先训练的机器学习模型上 SQL Server
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安装预先训练的机器学习模型上 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本指南介绍了如何将预先训练的模型添加到的 SQL Server 实例已具有 R Services 或机器学习服务安装。
+本指南介绍了如何将预先训练的模型添加到的 SQL Server 实例已具有 R Services 或 SQL Server 计算机学习 Services 安装。 
 
-为帮助的客户需要权限以执行任务，如观点分析或映像特征化，但未安装的资源来获取大型数据集或复杂模型定型，预先训练的模型包括在 MicrosoftML 而创建。 机器学习 Server 团队创建并定型这些模型来帮助你开始文本和图像有效地处理。 有关详细信息，请参阅[资源](#bkmk_resources)部分中的所述。
+如果存在预先训练的模型来帮助的客户需要权限以执行任务，如观点分析或映像特征化，但未安装的资源来获取大型数据集或复杂模型定型。 机器学习 Server 团队创建并定型这些模型来帮助你开始文本和图像有效地处理。 有关详细信息，请参阅[资源](#bkmk_resources)部分中的所述。
 
-有关如何使用 SQL Server 数据，使用预先训练的模型的示例，请参见 SQL Server 机器学习团队的以下博客：
+如何使用 SQL Server 数据，使用预先训练的模型的示例，请参阅这篇博客由 SQL Server 机器学习团队：[观点分析与 SQL Server 计算机学习 Services 中的 Python](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
-+ [使用 SQL Server 计算机学习 Services 中的 Python 的观点分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
+## <a name="pre-trained-model-availability"></a>预先训练的模型可用性
 
-## <a name="install-the-pre-trained-models"></a>安装的预先训练的模型
+预先训练的模型使用的 Microsoft 机器学习服务器 （或 Microsoft R Server，如果要将模型添加到 SQL Server 2016 安装） 安装媒体进行安装。 免费的开发人员版可用于安装模型。 没有任何额外成本与模型安装相关联。 
 
-预先训练的模型可用于以下产品：
+预先训练的模型中使用以下产品和语言。 安装程序检测到的语言集成、 MicrosoftML 或 microsoftml 库，然后再到各自的库将预先训练的模型。 模型安装完成后，可以通过库函数访问模型。
 
-+ SQL Server 2016 R Services （数据库）
-+ SQL Server 自 2017 年 1 机器学习服务 （数据库）
-+ 机器学习服务器（独立）
++ SQL Server 2016 R Services （数据库中）-仅，R 与[MicrosoftML 库](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2016 R Server （独立）-仅，R 与[MicrosoftML 库](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 自 2017 年 1 机器学习 Services （数据库中）-R 与 [MicrosoftML 库] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)，Python 与[microsoftml 库](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 自 2017 年 1 机器学习服务器 （独立）-R 与 [MicrosoftML 库] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)，Python 与[microsoftml 库](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 具体取决于你的 SQL Server 版本，安装进程会稍有不同。 请参阅以下各节，有关每个版本的说明。
 
 > [!NOTE]
-> 它不能读取或修改预先训练的模型，因为它们压缩的是使用本机格式，以提高性能。
+> 不能读取或修改预先训练的模型。 它们被压缩使用本机格式，以提高性能。
 
-### <a name="obtain-files-for-an-offline-installation"></a>获取文件进行脱机安装
+## <a name="obtain-files-for-an-offline-installation"></a>获取文件进行脱机安装
 
 若要在没有 internet 访问的服务器上安装的预先训练的模型，必须提前下载适当的安装程序并将安装程序复制到服务器上的本地文件夹。 
 
 有关所有 R Server 和机器学习服务器安装程序，请参见此页以进行下载链接：[脱机安装](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 
-### <a name="install-pretrained-models-with-sql-server-2016-r-services"></a>使用 SQL Server 2016 R Services 安装预先训练的模型
+## <a name="install-pre-trained-models-on-sql-server-2016-r-services"></a>在 SQL Server 2016 R Services 上安装预先训练的模型
 
 SQL Server 2016，你可以安装并使用预先训练的 R 模型，仅在第一次升级机器学习调用进程中的组件，**绑定**。 
 
-执行此操作通过 Microsoft R Server 或机器学习 Server、 运行单独的 Windows 安装程序并选择实例或者实例**绑定**。 绑定支持策略与实例关联的实例方法被更改，以允许更加频繁地更新。 
+您通过执行此操作具有的 SQL Server 2016 R Services 安装，并选择实例或到的实例的计算机上的 Microsoft R Server 或机器学习 Server 运行单独的 Windows installer**绑定**。 绑定支持策略与实例关联的实例方法被更改，以允许更加频繁地更新。 
 
 1. 启动单独的基于 Windows 的安装程序或者[R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server)或[机器学习服务器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
 
@@ -113,7 +114,7 @@ SQL Server 2016，你必须执行一些附加步骤以注册 SQL Server 2016 实
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-### <a name="install-pretrained-models-on-sql-server-2017"></a>在 SQL Server 2017 上安装预先训练的模型
+## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>在 SQL Server 计算机学习 Services （数据库） 上安装预先训练的模型
 
 如果你已经安装了 SQL Server 自 2017 年，你可以两种方式获得预先训练的模型：
 
@@ -140,7 +141,7 @@ SQL Server 2016，你必须执行一些附加步骤以注册 SQL Server 2016 实
 > 
 > 对于 Python 模型，只有在从 Python 代码中调用模型文件时可能会出错。 这是路径的因为在当前的 Python 实现中，限制该限制的模型文件长度。 此问题已修复，并将在即将发布的服务版本中可用。
 
-### <a name="installing-pretrained-models-with-r-server-standalone"></a>使用 R Server （独立） 安装预先训练的模型
+## <a name="install-pre-trained-models-with-sql-server-standalone-r-server"></a>使用 SQL Server 独立 R 服务器安装预先训练的模型
 
 如果你安装早期版本的 R Server （独立） 使用 SQL Server 2016 安装程序，可以添加预先训练的模型使用通过 R 服务器使用较新的基于 Windows 的安装程序升级的能力。 
 
@@ -183,7 +184,7 @@ SQL Server 2016，你必须执行一些附加步骤以注册 SQL Server 2016 实
 
     `RSetup.exe /install /component MLM /version 9.3.0 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
 
-### <a name="installing-pretrained-models-with-machine-learning-server-standalone"></a>使用机器学习 Server （独立） 安装预先训练的模型
+## <a name="install-pre-trained-models-with-sql-server-2017-standalone-server"></a>使用 SQL Server 2017 独立服务器安装预先训练的模型
 
 如果你安装使用 SQL Server 2017 安装程序的机器学习服务器，可以通过运行基于 Windows 的安装程序添加预先训练的模型。 可以选择此选项以升级 R 或 Python 组件中，并同时添加预先训练的模型。 
 
@@ -200,19 +201,19 @@ SQL Server 2016，你必须执行一些附加步骤以注册 SQL Server 2016 实
 + ResNet-101
 + AlexNet
 
-有关在学习模型，以及它们 ere 实现和定型使用 CNTK 这些深层中使用的算法的详细信息，请参阅这些文章：
+有关算法的详细信息用于这些深入学习模型，和实现方式，使用 CNTK 得出培训，请参阅以下文章：
 
 + [Microsoft 研究人员算法设置 ImageNet 质询里程碑](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
 + [Microsoft 计算网络工具包提供最高效的分布式的深层学习计算性能](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-### <a name="how-to-use-pre-trained-models-for-text-analysis"></a>如何使用预先训练的模型进行文本分析
+## <a name="how-to-use-pre-trained-models-for-text-analysis"></a>如何使用预先训练的模型进行文本分析
 
 请参阅下面的示例演示如何使用文本分类预先训练的文本特征化模型：
 
 [使用文本特征化器的观点分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
-### <a name="how-to-use-pretrained-models-for-image-detection"></a>如何将预先训练的模型用于映像检测
+## <a name="how-to-use-pre-trained-models-for-image-detection"></a>如何将预先训练的模型用于映像检测
 
 预先训练的模型的映像支持你提供的映像的特征。 若要使用模型，请调用**featurizeImage**转换。 在图像加载，调整大小，并通过经过训练的模型的垃圾桶。 DNN 特征化器的输出然后用于训练线性图像分类模型。
 

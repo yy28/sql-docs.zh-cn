@@ -1,30 +1,32 @@
 ---
-title: "如何： 使用 SQL Server 身份验证进行连接 |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: 如何： 使用 SQL Server 身份验证进行连接 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connecting to the server, SQL Server Authentication
+helpviewer_keywords:
+- connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: "34"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5802ddf79f53fda9e03c842ce21def20cb99f6e3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7885d3d2be29b2ad8de9c4f576c7441b43b37726
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="how-to-connect-using-sql-server-authentication"></a>如何：使用 SQL Server 身份验证进行连接
+# <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 当连接到 SQL Server 时， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持使用 SQL Server 身份验证。  
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="example"></a>示例  
 以下示例使用 SQLSRV 驱动程序和 SQL Server 身份验证来连接到 SQL Server 的本地实例。 所需的值*UID*和*PWD*连接属性会从应用程序特定的文本文件， *uid.txt*和*pwd.txt*中*C:\AppData*目录。 建立连接后，将查询服务器以验证用户登录名。  
   
-该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
   
 ```  
 <?php  
@@ -135,13 +137,21 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[PHP SQL 驱动程序编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
-[关于文档中的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
-[SUSER_SNAME (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=106382)  
-[如何创建 SQL Server 登录名](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[如何创建数据库用户](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[管理用户、角色和登录帐户](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[用户架构分离](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Grant 对象权限 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[如何：使用 SQL Server 身份验证进行连接](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+
+[如何： 创建 SQL Server 登录名](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[如何： 创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[管理用户、角色和登录帐户](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[用户架构分离](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Grant 对象权限 (TRANSACT-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

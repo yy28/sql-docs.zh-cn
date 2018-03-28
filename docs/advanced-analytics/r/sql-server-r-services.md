@@ -1,32 +1,32 @@
 ---
-title: "SQL Server 计算机学习和 R Services （数据库） |Microsoft 文档"
+title: SQL Server 计算机学习和 R Services （数据库） |Microsoft 文档
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server 计算机学习和 R Services （数据库）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 机器学习的数据库中安装 SQL Server 数据库引擎实例，为 SQL Server 实例中的常驻数据提供 R 和 Python 外部脚本支持的上下文中进行操作。 由于与集成机器学习[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以使数据接近的分析，并消除成本和与数据移动相关的安全风险。
 
-由于数据库引擎是多实例，你可以安装多个实例的数据库中分析或甚至较旧和较新版本的并行。 选择包括[SQL Server 自 2017 年 1 机器学习 Services （数据库）](../install/sql-machine-learning-standalone-windows-install.md)使用 R 和 Python，或[SQL Server 2016 R Services （数据库中）](../install/sql-r-standalone-windows-install.md)与刚。 
+由于数据库引擎是多实例，你可以安装多个实例的数据库中分析或甚至较旧和较新版本的并行。 选择包括[SQL Server 自 2017 年 1 机器学习 Services （数据库）](../install/sql-machine-learning-standalone-windows-install.md)使用 R 和 Python，或[SQL Server 2016 R Services （数据库）](../install/sql-r-standalone-windows-install.md)与刚。 
 
 也可以作为实例不可知安装机学习组件[独立服务器](r-server-standalone.md)。 通常情况下，我们建议您将 （独立版），并且 （数据库中） 安装为相互独占若要避免资源争用，但如果你有足够的资源，有针对这两个安装在同一台物理计算机上没有限制。
 

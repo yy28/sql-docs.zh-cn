@@ -1,17 +1,19 @@
 ---
-title: "sqlsrv_next_result |Microsoft 文档"
-ms.custom: 
+title: sqlsrv_next_result | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_next_result
+apiname:
+- sqlsrv_next_result
 apitype: NA
 helpviewer_keywords:
 - multiple result sets
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - stored procedure support
 - API Reference, sqlsrv_next_result
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb34a1e134bf13f797157fbe49d1cb210fb4f036
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1158706ba73a97a358e43bbe32e84bd85f926409
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,9 +57,9 @@ sqlsrv_next_result( resource $stmt )
 以下示例创建和执行将产品评论插入 *Production.ProductReview* 表的存储过程，然后选择指定产品的所有评论。 在存储过程的执行之后, 的第一个结果 （存储过程中的 INSERT 查询受影响的行数） 消耗情况下调用**sqlsrv_next_result**。 下一个结果 （存储过程中 SELECT 查询返回的行） 可通过调用**sqlsrv_next_result**和使用[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)。  
   
 > [!NOTE]  
-> 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅 [调用存储过程](http://go.microsoft.com/fwlink/?linkid=119517)。  
+> 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
-该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -190,7 +192,7 @@ sqlsrv_close( $conn );
 > [!NOTE]  
 > 返回的批查询或存储的过程的第一个 （或唯一） 结果处于活动状态而无需调用**sqlsrv_next_result**。  
   
-该示例使用 *AdventureWorks* 数据库的 [Purchasing.ProductReview](http://go.microsoft.com/fwlink/?linkid=67739) 表，并且假定已在服务器上安装了此数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例使用*Purchasing.ProductReview*表[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库，并假定已在服务器上安装了此数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -270,9 +272,14 @@ sqlsrv_close( $conn );
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
-[检索数据](../../connect/php/retrieving-data.md)  
-[更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)  
+[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[检索数据](../../connect/php/retrieving-data.md)
+
+[更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)
+
   

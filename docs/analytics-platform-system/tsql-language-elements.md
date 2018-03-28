@@ -1,30 +1,30 @@
 ---
-title: "T-SQL 语言元素的分析平台系统并行数据仓库 |Microsoft 文档"
+title: T-SQL 语言元素的分析平台系统并行数据仓库 |Microsoft 文档
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "TRANSACT-SQL (T-SQL) 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。"
+description: TRANSACT-SQL (T-SQL) 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
 services: sql-data-warehouse
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 0fa153859632739fe626a92dbf8d741a879dd74f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="language-elements"></a>语言元素
 TRANSACT-SQL (T-SQL) 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
@@ -71,7 +71,7 @@ TRANSACT-SQL (T-SQL) 语言元素的分析平台系统 (AP) SQL Server 并行数
 * [> = （等于）](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = （小于或等于）](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> （不等于）](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [！ = （不等于）](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [\!= （不等于）](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
@@ -266,24 +266,24 @@ TRANSACT-SQL (T-SQL) 语言元素的分析平台系统 (AP) SQL Server 并行数
 ## <a name="set-statements"></a>SET 语句
 * [SET ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
 * [SET ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
-* [集 ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
-* [设置 ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
-* [集 ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
+* [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
+* [SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
+* [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
 * [集 ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
 * [集 ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
-* [集 ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
+* [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
 * [集 CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
-* [集 DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
-* [集 FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
+* [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
+* [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
 * [集 IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
-* [集 LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
+* [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
 * [集 NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [集 QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [组行计数](../t-sql/statements/set-rowcount-transact-sql.md)
 * [集 TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
 * [将事务隔离级别设置](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-* [集 XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
+* [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>后续步骤
 有关更多参考信息，请参阅[T-SQL 语句](tsql-statements.md)和[T-SQL 的系统视图](tsql-system-views.md)。

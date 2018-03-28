@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_rollback |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_rollback | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_rollback
+apiname:
+- sqlsrv_rollback
 apitype: NA
 helpviewer_keywords:
 - transaction support
 - API Reference, sqlsrv_rollback
 - sqlsrv_rollback
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ce3939c990113302c82d744b82874647811e611
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fbc323ab197fdcba01048289d25650ff17baeffa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvrollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +60,7 @@ sqlsrv_rollback( resource $conn)
   
 该示例中的第一次查询向 AdventureWorks 数据库的 *Sales.SalesOrderDetail* 表格中插入了一个新销售订单。 该订单订购的是 5 套产品 ID 为 709 的产品。 第二次查询将产品 ID 为 709 的产品库存量减少 5 套。 这些查询包含在一个事务中，因为这两次查询均必须成功完成，数据库才能准确反映订单状态和产品供应情况。  
   
-该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -129,7 +131,9 @@ sqlsrv_close( $conn);
 > 不要使用嵌入式 Transact-SQL 来执行事务。 例如，不要以 Transact-SQL 查询的方式执行包含“BEGIN TRANSACTION”的语句来开始某一事务。 使用嵌入式的 Transact SQL 执行事务时，则无法保证出现预期的事务行为。  
   
 ## <a name="see-also"></a>另请参阅  
-[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[如何：执行事务](../../connect/php/how-to-perform-transactions.md)  
-[PHP SQL 驱动程序概述](../../connect/php/overview-of-the-php-sql-driver.md) 
+[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[如何：执行事务](../../connect/php/how-to-perform-transactions.md)
+
+[Microsoft Drivers for PHP for SQL Server 的概述](../../connect/php/overview-of-the-php-sql-driver.md) 
   

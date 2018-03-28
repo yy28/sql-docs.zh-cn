@@ -1,24 +1,24 @@
 ---
-title: "安装 SQL Server 自 2017 年 1 机器学习在 Windows 上的服务 （数据库） |Microsoft 文档"
-ms.custom: 
+title: 安装 SQL Server 自 2017 年 1 机器学习在 Windows 上的服务 （数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1904517351a23bfa736549a249d77be2932b3c07
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>安装 SQL Server 自 2017 年 1 机器学习在 Windows 上的服务 （数据库） 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ SQL Server 的计算机学习服务组件将添加数据库中预测分析、 �
 
 ## <a name="bkmk_prereqs"> </a> 预安装清单
 
-+ SQL Server 2017 是必需的。 如果你有 SQL Server 2016，请安装[SQL Server 2016 R Services （数据库）](sql-r-services-windows-install.md)相反。
++ 如果你想要安装机器学习服务语言支持的 R 和 / 或 Python，SQL Server 2017 安装程序是必需的。 如果你使用的 SQL Server 2016 安装媒体，你可以安装[SQL Server 2016 R Services （数据库）](sql-r-services-windows-install.md)获取 R 语言支持。
 
 + 数据库引擎实例是必需的。 无法安装仅 R 或 Python 功能，虽然你可以将它们添加以增量方式向现有实例。
 
@@ -67,7 +67,7 @@ SQL Server 的计算机学习服务组件将添加数据库中预测分析、 �
   
          若要使用 SQL Server R 和 Python，必须安装数据库引擎的实例。 你可以使用默认或命名的实例。
   
-    -   **机器学习服务 （数据库）**
+    -   **机器学习服务（数据库内）**
   
          此选项将安装支持 R 的数据库服务和 Python 脚本执行。
 

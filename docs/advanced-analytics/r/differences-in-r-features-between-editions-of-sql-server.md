@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 计算机学习 Services 的版本之间的功能可用性 |Microsoft 文档"
-ms.custom: 
+title: SQL Server 计算机学习 Services 的版本之间的功能可用性 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/17/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>跨版本的 SQL Server 计算机学习 Services 功能可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ ms.lasthandoff: 03/21/2018
  机器学习功能均可在 SQL Server 2016 和 SQL Server 自 2017 年。 本文列出提供功能的版本、 介绍适用于特定版本的限制和列表仅在某些版本中可用的功能。
 
 
-## <a name="sql-server-2017-machine-learning-features"></a>SQL Server 自 2017 年 1 机器学习功能
+## <a name="sql-server-2017-features"></a>SQL Server 2017 功能
 
-企业版和开发人员版具有相同的功能覆盖率，以便您可以而不会产生开销相同生成用于企业安装解决方案。 尽管版本功能上是 equivlanet，使用开发人员版不支持用于生产环境。
+企业版和开发人员版具有相同的功能覆盖率，以便您可以而不会产生开销相同生成用于企业安装解决方案。 虽然各个版本在功能上等效，开发人员版的使用不是支持用于生产环境。
 
 基本和高级集成之间的区别是小数位数。 高级的集成可用于在你的计算机可以容纳任何大小的数据集的并行处理所有可用的内核数。 仅限于 2 个核心以及到数据集在内存中不超过基本集成。 
 

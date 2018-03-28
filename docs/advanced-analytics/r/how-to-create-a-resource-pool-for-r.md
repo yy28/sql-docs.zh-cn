@@ -1,31 +1,31 @@
 ---
-title: "创建资源池的机器学习 |Microsoft 文档"
-ms.custom: 
+title: 创建资源池的机器学习 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/13/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 449b9b46b3f371ef7eca89a488201cdad05c232d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>创建机器学习的资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主题介绍如何创建资源池专门用于管理 SQL Server 中的机器学习工作负荷。 它假定你已安装并启用机器学习功能，并且想要重新配置要支持的 R 或 Python 等外部进程使用的资源的多个细化管理的实例。
+本文介绍如何创建资源池专门用于管理 SQL Server 中的机器学习工作负荷。 它假定你已安装并启用机器学习功能，并且想要重新配置要支持的 R 或 Python 等外部进程使用的资源的多个细化管理的实例。
 
 此过程包括多个步骤：
 
@@ -175,7 +175,7 @@ ms.lasthandoff: 02/11/2018
     |2|默认值|Medium|25|0|0|0|0|2|2|
     |256|ds_wg|Medium|25|0|0|0|0|2|256|
   
-2.  使用新的目录视图中， [sys.resource_governor_external_resource_pools & #40;Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)，若要查看所有外部资源池。
+2.  使用新的目录视图中， [sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)，若要查看所有外部资源池。
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -203,7 +203,7 @@ ms.lasthandoff: 02/11/2018
 有关管理服务器资源的详细信息，请参阅：
 
 +  [资源调控器](../../relational-databases/resource-governor/resource-governor.md) 
-+ [资源调控器相关的动态管理视图 & #40;Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [资源调控器相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 机器学习的资源调控的概述，请参阅：
 

@@ -1,27 +1,28 @@
 ---
-title: "Pdo:: query |Microsoft 文档"
-ms.custom: 
+title: PDO::query | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 42c24102f31df86ebf76d855d80487f5bba15e82
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b0ca9c3ffb50dc24d70f4db143d665a20794f65d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,17 +48,17 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 PDOException。  
   
 ## <a name="remarks"></a>注释  
-使用 pdo:: query 执行的查询可以执行预定义的语句或直接，具体取决于 PDO::SQLSRV_ATTR_DIRECT_QUERY; 的设置请参阅[直接语句执行和已准备 PDO_SQLSRV 驱动程序中的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)有关详细信息。  
+使用 pdo:: query 执行的查询可以执行预定义的语句或直接，具体取决于 PDO::SQLSRV_ATTR_DIRECT_QUERY 的设置。 有关详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
   
-PDO::SQLSRV_ATTR_QUERY_TIMEOUT 还会影响 pdo:: exec; 的行为请参阅[pdo:: setattribute](../../connect/php/pdo-setattribute.md)有关详细信息。  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT 还会影响 pdo:: exec; 的行为有关详细信息，请参阅[pdo:: setattribute](../../connect/php/pdo-setattribute.md)。  
   
 你可以为 $ 指定以下选项*fetch_style*。  
   
 |style|Description|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN， *num*|在指定列中查询数据。 表中的第一列为列 0.|  
-|Pdo:: FETCH_CLASS，*classname*，数组 ( *arglist* )|创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
-|Pdo:: FETCH_CLASS，*classname*|给现有类中的属性分配列名称。|  
+|PDO::FETCH_CLASS, '*classname*', array( *arglist* )|创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
+|PDO::FETCH_CLASS, '*classname*'|给现有类中的属性分配列名称。|  
   
 在再次调用 PDO::query 之前，请调用 PDOStatement::closeCursor 以释放与 PDOStatement 对象相关联的数据库资源。  
   
@@ -124,6 +125,7 @@ $stmt = null;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[PDO 类](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO 类](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

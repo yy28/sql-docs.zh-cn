@@ -1,28 +1,28 @@
 ---
-title: "解决 SQL Server 的用于机器学习的数据收集"
-ms.custom: 
+title: 解决 SQL Server 的用于机器学习的数据收集
+ms.custom: ''
 ms.date: 06/16/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 95b70a2992b5c43ebaefb8faa729ec16ac3c84f7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>解决机器学习的数据收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +51,7 @@ SQL Server 2016 中引入了 SQL Server R Services。 以前的版本不支持�
 
 根据你正在使用的 SQL Server 的版本，某些机器学习功能可能不可用，或限制。
 
-请参阅以下主题以企业、 开发人员、 标准和 Express 版本中的机器学习功能的列表。
+请参阅企业、 开发人员、 标准和 Express 版本中的机器学习功能的列表的以下文章。
 
 * [版本和 SQL Server 支持的功能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [在 R 功能的 SQL Server 的版本之间的差异](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
@@ -146,7 +146,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 如果机器学习服务未运行，则可以通过查看 pythonlauncher.config 文件来确定已安装的 Python 版本。 我们建议您创建并打开文件的副本，以便不会意外更改任何属性。
 
-1. 对于 SQL Server 自 2017 年 1 仅：`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. 对于 SQL Server 自 2017 年 1 仅： `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. 获取的值**PYTHONHOME**。
 3. 获取当前工作目录的值。
 
@@ -262,7 +262,7 @@ SQL Server 生成单独的外部脚本语言运行时日志。 这些错误不�
 
 例如，下面的消息是与 SQL Server 扩展性框架相关的常见系统错误： 
 
-* *SQL Server 快速启动板 (MSSQLSERVER) 服务启动因以下错误而失败：<text>*
+* *SQL Server 快速启动板 (MSSQLSERVER) 服务启动因以下错误而失败：  <text>*
 
 * *服务未响应及时启动或控制请求。* 
 

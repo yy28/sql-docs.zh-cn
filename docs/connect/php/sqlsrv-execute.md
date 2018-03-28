@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_execute |Microsoft 文档"
-ms.custom: 
+title: sqlsrv_execute | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_execute
+apiname:
+- sqlsrv_execute
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_exclude
 - executing queries
 - API Reference, sqlsrv_execute
 ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e73d11dd8d28d8cd845b71ea5694d1ad61ceada0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 409b07666870d0d5d567b9c550817c3cca804a16
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvexecute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +53,7 @@ sqlsrv_execute( resource $stmt)
 布尔值：如果成功执行语句，则为 **true** 。 否则为 **false**。  
   
 ## <a name="example"></a>示例  
-以下示例执行在 *AdventureWorks* 数据库的 [Sales.SalesOrderDetail](http://go.microsoft.com/fwlink/?LinkID=67739) 表中更新字段的语句。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+下面的示例执行更新中的字段的语句*Sales.SalesOrderDetail*表中[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库。 该示例假定已在本地计算机上安装了 SQL Server 和 AdventureWorks 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -105,7 +107,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
+[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [sqlsrv_query](../../connect/php/sqlsrv-query.md)  
   

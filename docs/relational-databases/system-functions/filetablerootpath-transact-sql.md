@@ -1,16 +1,16 @@
 ---
 title: FileTableRootPath (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dd6d1b54d92142f3089b6323127257341ffe4d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8ec947c95930b1f705465e8dfd8b815dad2b2419
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  FileTable 的名称。 *FileTable_name*属于类型**nvarchar**。 这是一个可选参数。 默认值为当前数据库。 指定*schema_name*也是可选的。 您可以传递 NULL *FileTable_name*若要使用的默认参数值  
   
  *@option*  
- 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *@option*可以具有以下值之一：  
+ 一个整数表达式，定义路径的服务器组件应如何进行格式化。 *@option* 可以具有以下值之一：  
   
 |“值”|说明|  
 |-----------|-----------------|  
-|**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> 这是默认值。|  
-|**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
-|**2**|返回完整的服务器路径，例如：<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDB`|  
+|**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 这是默认值。|  
+|**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
+|**2**|返回完整的服务器路径，例如：<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>返回类型  
  **nvarchar(4000)**  
@@ -76,7 +76,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，获得的完整路径的文件在运行时通过使用**FileTableRootPath**和**GetFileNamespacePath**函数组合，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
 ```sql  
-USE MyDocumentDB;  
+USE MyDocumentDatabase;  
   
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  
@@ -100,14 +100,14 @@ WHERE Name = N’document.docx’;
  下面的示例演示如何调用**FileTableRootPath**函数。  
   
 ```  
-USE MyDocumentDB;  
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDB”  
+USE MyDocumentDatabase;  
+-- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase”  
 SELECT FileTableRootPath();  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDB\MyFileTable”  
+-- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
 SELECT FileTableRootPath(N'dbo.MyFileTable');  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDB\MyFileTable”  
+-- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   

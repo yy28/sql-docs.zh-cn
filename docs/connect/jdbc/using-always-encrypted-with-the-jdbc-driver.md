@@ -1,28 +1,28 @@
 ---
-title: "JDBC 驱动程序使用始终加密 |Microsoft 文档"
-ms.custom: 
+title: JDBC 驱动程序使用始终加密 |Microsoft 文档
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC 驱动程序使用始终加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -408,7 +408,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 此属性的详细信息，请参阅[如何配置 java.sql.Time 值发送到服务器](configuring-how-java-sql-time-values-are-sent-to-the-server.md)。
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>配置如何将字符串值发送到服务器
-**SendStringParametersAsUnicode**连接属性用于配置如何将字符串值发送到 SQL Server。 如果设置为 true，字符串参数发送到 Unicode 格式中的服务器。 如果设置为 false，字符串参数以非 Unicode 格式，如 ASCII 或 MBCS，而不是 Unicode 发送的。 此属性的默认值为 true。 当启用始终加密和 char/varchar/varchar(max) 列已加密、 的值**sendStringParametersAsUnicode**必须设置为 true （或保留为默认值）。 如果此属性设置为 false，则该驱动程序插入到加密的 char/varchar/varchar(max) 列的数据时将引发异常。 此属性的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。
+**SendStringParametersAsUnicode**连接属性用于配置如何将字符串值发送到 SQL Server。 如果设置为 true，字符串参数发送到 Unicode 格式中的服务器。 如果设置为 false，字符串参数以非 Unicode 格式，如 ASCII 或 MBCS，而不是 Unicode 发送的。 此属性的默认值为 true。 当启用始终加密和 char/varchar/varchar(max) 列已加密、 的值**sendStringParametersAsUnicode**必须设置为 false。 如果此属性设置为 true，该驱动程序将引发异常时解密从加密的 char/varchar/varchar(max) 列具有 Unicode 字符的数据。 此属性的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 一旦为应用程序查询启用始终加密，你可以使用标准 JDBC Api 来检索或修改加密的数据库列中的数据。 如果你的应用程序具有所需的数据库权限，并且可以访问列主密钥，驱动程序将加密任何面向加密的列并解密从加密列检索到的数据的查询参数。

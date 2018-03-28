@@ -1,30 +1,31 @@
 ---
-title: "默认 SQL Server 数据类型 |Microsoft 文档"
-ms.custom: 
+title: 默认 SQL Server 数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b81f0a84c40fc7d184beccf1532386b4284fafd
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: c1facac748e24d465144f93d2e4ccdf38608e6b3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="default-sql-server-data-types"></a>默认 SQL Server 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/18/2017
 |Boolean|bit|bit|  
 |Integer|int|int|  
 |Float|float(24)|不支持|  
-|字符串（长度小于 8000 个字节）|varchar (<string length>)|varchar (<string length>)|  
+|字符串（长度小于 8000 个字节）|varchar(<string length>)|varchar(<string length>)|  
 |字符串（长度大于 8000 个字节）|varchar(max)|varchar(max)|  
 |资源|不提供支持。|不提供支持。|  
 |流（编码：不是二进制）|varchar(max)|varchar(max)|  
@@ -47,9 +48,13 @@ ms.lasthandoff: 11/18/2017
 |DateTime (1)|datetime|不提供支持。|  
   
 ## <a name="see-also"></a>另请参阅  
-[常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
-[PHP 类型](http://go.microsoft.com/fwlink/?LinkId=109071)  
-[数据类型 (Transact SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
+[常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[转换数据类型](../../connect/php/converting-data-types.md)
+
+[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
+
+[PHP 类型](http://php.net/manual/language.types.php)
+
+[Data Types (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
   

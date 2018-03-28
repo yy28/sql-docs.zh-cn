@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_errors |Microsoft 文档"
-ms.custom: 
+title: sqlsrv_errors | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_errors
+apiname:
+- sqlsrv_errors
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_errors
 - sqlsrv_errors
 - errors and warnings
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f75b6e72c4678de0e24bab58de7a159ee173cfa4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 439ea8c2730f777bc531d03a2db00b3ba54021e3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +64,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>Parameters  
 *$errorsAndOrWarnings*[可选]: 预定义的常量。 此参数可以采用下表中所列的值之一：  
   
-|值|Description|  
+|“值”|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|将返回在上次调用 **sqlsrv** 函数时生成的错误和警告。|  
 |SQLSRV_ERR_ERRORS|将返回上次调用 **sqlsrv** 函数时生成的错误。|  
@@ -73,16 +75,16 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ## <a name="return-value"></a>返回值  
 数组的 **array** 或 **null**。 每个**数组**在返回**数组**包含三个键-值对。 下表列出了每个键及其描述：  
   
-|Key|说明|  
+|Key|Description|  
 |-------|---------------|  
-|SQLSTATE|对于来源于 ODBC 驱动程序的错误，为 ODBC 返回的 SQLSTATE。 有关 ODBC 的 SQLSTATE 值的信息，请参阅 [ODBC 错误代码](http://go.microsoft.com/fwlink/?linkid=119618)。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的错误，为 IMSSP 的 SQLSTATE。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，为 01SSP 的 SQLSTATE。|  
+|SQLSTATE|对于来源于 ODBC 驱动程序的错误，为 ODBC 返回的 SQLSTATE。 了解适用于 ODBC 的 SQLSTATE 值时，请参阅[ODBC 错误代码](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的错误，为 IMSSP 的 SQLSTATE。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，为 01SSP 的 SQLSTATE。|  
 |代码|对于来源于 SQL Server 的错误，为本机 SQL Server 错误代码。<br /><br />对于来源于 ODBC 驱动程序的错误，为 ODBC 返回的错误代码。<br /><br />对于来源于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的错误，为 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 错误代码。 有关详细信息，请参阅 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)。|  
 |message|错误的说明。|  
   
 数组值还可以使用数值键 0、1 和 2 访问。 如果未发生任何错误或警告，将返回 **null** 。  
   
 ## <a name="example"></a>示例  
-以下示例显示在失败的语句执行期间发生的错误。 (该语句将失败，因为**InvalidColumName**不是指定表中的有效列名。)该示例假定 SQL Server 和[AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739)数据库安装在本地计算机上。 当从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例显示在失败的语句执行期间发生的错误。 (该语句将失败，因为**InvalidColumName**不是指定表中的有效列名。)该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -122,6 +124,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
+[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

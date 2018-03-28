@@ -1,33 +1,35 @@
 ---
-title: "如何： 处理错误和警告使用 SQLSRV 驱动程序 |Microsoft 文档"
-ms.custom: 
+title: 如何： 处理错误和警告使用 SQLSRV 驱动程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: errors and warnings
+helpviewer_keywords:
+- errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02aa17ddd031d351510f600f60dcd99b42a5d6e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 4b7e2c9157cf37ab35987ebc9bb6a4d6615f80ba
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序处理错误和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-默认情况下，SQLSRV 驱动程序会将警告视为错误；对生成错误或警告的 **sqlsrv** 函数的调用将返回 **false**。 本主题演示如何关闭此默认行为以及如何分别处理警告与错误。  
+默认情况下，SQLSRV 驱动程序将警告视为错误;调用**sqlsrv**生成错误或警告的函数将返回**false**。 本主题演示如何关闭此默认行为以及如何分别处理警告与错误。  
   
 > [!NOTE]  
 > 有一些例外情况，即将警告视为错误的默认行为。 对应于 SQLSTATE 值 01000、01001、01003 和 01S02 的警告决不会被视为错误。  
@@ -43,11 +45,11 @@ ms.lasthandoff: 11/18/2017
   
 4.  显示每个员工的剩余休假小时数。  
   
-请注意，在首次调用**sqlsrv**函数 ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md))，警告视为错误。 因为警告添加到了错误集合中，因此不需要分别检查警告和错误。 但是，在后续调用 **sqlsrv** 函数过程中，不会将警告视为错误，因此必须准确地检查警告和错误。  
+在首次调用**sqlsrv**函数 ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md))，警告视为错误。 因为警告添加到了错误集合中，因此不需要分别检查警告和错误。 但是，在后续调用 **sqlsrv** 函数过程中，不会将警告视为错误，因此必须准确地检查警告和错误。  
   
 另请注意，该示例代码在每次调用 **sqlsrv** 函数之后检查错误。 这是建议做法。  
   
-此示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。 当针对新安装的 AdventureWorks 数据库运行该示例时，它将产生三条警告和两个错误。 前两条警告是连接到数据库时就会发出的标准警告。 之所以出现第三条警告是因为员工的可用休假小时数更新为小于零的值。 发生错误的原因是员工的可用休假小时数更新为小于 40 小时的值，这与表中的约束条件冲突。  
+此示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。 当针对新安装的 AdventureWorks 数据库运行该示例时，它将产生三条警告和两个错误。 前两条警告是连接到数据库时就会发出的标准警告。 之所以出现第三条警告是因为员工的可用休假小时数更新为小于零的值。 发生错误的原因是员工的可用休假小时数更新为小于 40 小时的值，这与表中的约束条件冲突。  
   
 ```  
 <?php  
@@ -205,6 +207,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[如何：使用 SQLSRV 驱动程序配置错误和警告处理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)  
+[如何：使用 SQLSRV 驱动程序配置错误和警告处理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
   

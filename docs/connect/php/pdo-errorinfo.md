@@ -1,27 +1,28 @@
 ---
-title: "PDO::errorInfo |Microsoft 文档"
-ms.custom: 
+title: PDO::errorInfo | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1bd62c1914bf77a9e274fa04a953f5c9579a7699
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 41051d4425903e1a59392187e48c5defef4620c5
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +45,7 @@ array PDO::errorInfo();
   
 -   特定于驱动程序的错误消息。  
   
-如果没有错误或如果未设置 SQLSTATE，特定于驱动程序的字段将为 NULL。  
+如果没有错误，或如果未设置 SQLSTATE，特定于驱动程序的字段均为 NULL。  
   
 ## <a name="remarks"></a>注释  
 PDO::errorInfo 仅对直接在数据库上执行的操作检索错误信息。 在使用 PDO::prepare 或 PDO::query 创建 PDOStatement 实例时，使用 PDOStatement::errorInfo。  
@@ -67,6 +68,7 @@ print_r ($conn->errorInfo());
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[PDO 类](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO 类](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

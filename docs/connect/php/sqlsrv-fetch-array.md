@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_fetch_array |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_fetch_array | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch_array
+apiname:
+- sqlsrv_fetch_array
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_array
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63fd8fa0274ed5e83774d6d9929023fe58ad6553
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 087d26284d99ee0021acded71b7bb5a2ff3e2cd6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +48,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [可选]: 预定义的常量。 此参数可以采用下表中列出的值之一：  
   
-|值|Description|  
+|“值”|Description|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|下一行数据将以数值阵列的形式返回。|  
 |SQLSRV_FETCH_ASSOC|下一行数据将以关联阵列的形式返回。 阵列键是结果集中的列名称。|  
@@ -87,7 +89,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 如果结果集包含多个不带名称的列，则最后一个未命名列的值将分配到空字符串 ("") 键。  
   
 ## <a name="example"></a>示例  
-以下示例将每一行结果集检索为一个关联 **阵列**。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例将每一行结果集检索为一个关联 **阵列**。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -130,7 +132,7 @@ sqlsrv_close( $conn);
   
 该示例将检索产品信息从*Purchasing.PurchaseOrderDetail* AdventureWorks 数据库的指定的日期且库存的量的产品表 (*StockQty*)早于指定的值。  
   
-该示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -186,8 +188,11 @@ sqlsrv_close( $conn);
 如果检索没有名称的字段，阵列元素的关联键将为空字符串 ("")。 有关详细信息，请参阅 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[检索数据](../../connect/php/retrieving-data.md)  
-[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
-[PHP SQL 驱动程序编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[检索数据](../../connect/php/retrieving-data.md)
+
+[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

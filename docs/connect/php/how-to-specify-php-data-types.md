@@ -1,30 +1,31 @@
 ---
-title: "如何： 指定 PHP 数据类型 |Microsoft 文档"
-ms.custom: 
+title: 如何： 指定 PHP 数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a0374a32d2798a28cfe3e27ab557921763eea36
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b12a1042d4090a9e2369f602010199dea54431ed
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,12 +40,12 @@ ms.lasthandoff: 11/18/2017
   
 3.  结合使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 与所需的 PHP 数据类型（指定为可选的第三个参数）从返回行中检索字段数据。 如果未指定可选的第三个参数，将根据默认 PHP 类型返回数据。 有关默认 PHP 返回类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-    有关用于指定 PHP 数据类型的常量的信息，请参阅的 Phptype 部分[常量 &#40;Microsoft Drivers for PHP for SQL server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    有关用于指定 PHP 数据类型的常量的信息，请参阅的 Phptype 部分[常量&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   
 ## <a name="example"></a>示例  
-以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中， *ReviewDate* 字段以字符串的形式进行检索， *Comments* 字段以流的形式进行检索。 通过使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
+以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中， *ReviewDate*字段检索字符串形式和*注释*流的形式检索字段。 通过使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
   
-该示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -111,8 +112,11 @@ sqlsrv_close( $conn);
 > [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 函数提供了在执行查询之前获取字段信息（包括类型信息）的方法。  
   
 ## <a name="see-also"></a>另请参阅  
-[检索数据](../../connect/php/retrieving-data.md)  
-[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
-[如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[检索数据](../../connect/php/retrieving-data.md)
+
+[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[如何：使用 SQLSRV 驱动程序检索输出参数](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

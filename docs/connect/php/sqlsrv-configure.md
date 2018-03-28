@@ -1,32 +1,34 @@
 ---
-title: "sqlsrv_configure |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_configure | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_configure
+apiname:
+- sqlsrv_configure
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_configure
 - API Reference, sqlsrv_configure
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68ed443c80b2eff8405bb5419da132edf49a6807
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ea82fe41ac7a95fbdf1907709a34ad57f8a82495
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +43,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ```  
   
 #### <a name="parameters"></a>Parameters  
-*$setting*：要配置的设置的名称。 有关设置列表，请参阅下表。  
+*$setting*：要配置的设置的名称。 请参阅下表中的设置的列表。  
   
 *$value*：要应用于在 *$setting* 参数中指定的设置的值。 此参数的可能值取决于指定的设置。 下表列出了可能的组合：  
   
@@ -56,13 +58,14 @@ sqlsrv_configure( string $setting, mixed $value )
 如果使用不受支持的设置或值调用 **sqlsrv_configure** ，该函数将返回 **false**。 否则，该函数返回 **true**。  
   
 ## <a name="remarks"></a>注释  
-（1） 有关客户端查询的详细信息，请参阅[游标类型 &#40;SQLSRV 驱动程序 &#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
+（1） 有关客户端查询的详细信息，请参阅[游标类型&#40;SQLSRV 驱动程序&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 （2） 有关日志记录活动的详细信息，请参阅[日志记录活动](../../connect/php/logging-activity.md)。  
   
 （3） 有关配置错误和警告处理的详细信息，请参阅[如何： 配置错误和警告处理使用 SQLSRV 驱动程序](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[PHP SQL 驱动程序编程指南](../../connect/php/programming-guide-for-php-sql-driver.md) 
+[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md) 
   

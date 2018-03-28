@@ -1,27 +1,28 @@
 ---
-title: "Pdo:: errorcode |Microsoft 文档"
-ms.custom: 
+title: PDO::errorCode | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3342ebf997f8cd915efe939ead8baa5e868eb0f2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 143a7bef0a0be2d125068a7f003b0b941ff39617
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,9 +40,9 @@ mixed PDO::errorCode();
 如果数据库句柄上没有任何操作，PDO::errorCode 将以字符串或 NULL 形式返回五个字符的 SQLSTATE。  
   
 ## <a name="remarks"></a>注释  
-PDO_SQLSRV 驱动程序中的 PDO::errorCode 会针对某些成功操作返回警告。 例如，成功连接时，PDO::errorCode 会返回“01000”，该值指示 SQL_SUCCESS_WITH_INFO。  
+Pdo:: errorcode PDO_SQLSRV 驱动程序中的针对某些成功操作返回警告。 例如，在成功连接，pdo:: errorcode 返回"01000"，该值指示 SQL_SUCCESS_WITH_INFO。  
   
-PDO::errorCode 仅检索直接在数据库连接上执行的操作的错误代码。 如果通过 PDO::prepare 或 PDO::query 创建 PDOStatement 实例，并生成与语句对象有关的错误，PDO::errorCode 不会检索该错误。 必须调用 PDOStatement::errorCode 才可以返回在特定语句对象上执行的操作的错误代码。  
+PDO::errorCode 仅检索直接在数据库连接上执行的操作的错误代码。 如果创建 PDOStatement 实例通过 pdo:: prepare 或 pdo:: query 和错误可在语句对象上生成，pdo:: errorcode 不会检索该错误。 必须调用 PDOStatement::errorCode 才可以返回在特定语句对象上执行的操作的错误代码。  
   
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
@@ -59,6 +60,7 @@ print $conn->errorCode();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[PDO 类](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO 类](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

@@ -1,26 +1,26 @@
 ---
-title: "配置和管理 |Microsoft 文档"
-ms.custom: 
+title: 配置和管理 |Microsoft 文档
+ms.custom: ''
 ms.date: 05/31/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 63448281d0e1d135a52bc1c9d0c8afa097a87596
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f130f4a300351bb8384362affddc595aadf92148
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuration-and-management"></a>配置和管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="r-package-management"></a>R 包管理
 
-这些主题描述如何在 SQL Server 实例上安装新的 R 包，管理 R 包库和数据库还原后还原包库。
+这些文章介绍如何在 SQL Server 实例上安装新的 R 包，管理 R 包库和数据库还原后还原包库。
 
 + [安装和管理 R 包](installing-and-managing-r-packages.md)
 + [安装新的 R 包](install-additional-r-packages-on-sql-server.md)
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="service-configuration"></a>服务配置
 
-这些主题描述如何对基础服务体系结构进行更改以及如何管理与扩展服务关联的安全主体。
+这些文章介绍如何对基础服务体系结构进行更改以及如何管理与扩展服务关联的安全主体。
 
 + [安全注意事项](security-considerations-for-the-r-runtime-in-sql-server.md)
 + [修改 SQL Server R Services 的用户帐户池](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="resource-governance"></a>资源调控
 
-这些主题描述如何实现在 Enterprise Edition 中使用资源调控器功能可用的 R 或 Python 作业的资源管理。
+这些文章介绍如何实现在 Enterprise Edition 中使用资源调控器功能可用的 R 或 Python 作业的资源管理。
 
 + [R Services 的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [如何为 R 创建资源池](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="initial-setup"></a>初始安装
 
-可以在以下主题中找到初始设置和配置相关的更多帮助：
+初始设置和配置相关的更多帮助，请参阅这些文章：
 
 + [升级和安装常见问题解答](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 + [安全注意事项](../r/security-considerations-for-the-r-runtime-in-sql-server.md)

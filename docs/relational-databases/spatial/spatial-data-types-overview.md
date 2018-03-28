@@ -1,16 +1,16 @@
 ---
-title: "空间数据类型概述 | Microsoft Docs"
-ms.custom: 
+title: 空间数据类型概述 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -18,25 +18,22 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1eae19761ec8afa2ddf6491314d3f6ce5930f37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   
 有两种类型的空间数据。 **geometry** 数据类型支持平面或欧几里得（平面球）数据。 **geometry** 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。
 另外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 **geography** 数据类型，该数据类型可存储诸如 GPS 纬度和经度坐标之类的椭圆体（圆球）数据。
-
-> [!IMPORTANT]  
->  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括对空间数据类型的改进），请下载白皮书 [SQL Server Code-Named "Denali" 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
 
 ##  <a name="objects"></a> 空间数据对象  
 **geometry** 和 **geography** 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种“可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例的某些属性从其父级数据类型派生而来，使其在 **Points**中区分为 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** 、 **geometry** 或多个 **geography** 或 **GeometryCollection**实例。 **Geography** 类型具有附加实例类型 **FullGlobe**。  

@@ -1,32 +1,34 @@
 ---
-title: "sqlsrv_rows_affected |Microsoft 文档"
-ms.custom: 
+title: sqlsrv_rows_affected |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_rows_affected
+apiname:
+- sqlsrv_rows_affected
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_rows_affected
 - API Reference, sqlsrv_rows_affected
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62fd71d47b762680d9c85a24366c0c3b55cf9109
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5d796398575bd84ed87f65832825d1bc325864bb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +49,7 @@ sqlsrv_rows_affected( resource $stmt)
 一个整数，表示由上次执行的语句修改的行数。 如果未修改任何行，将返回零 (0)。 如果未提供有关修改的行数的任何信息，将返回负一 (-1)。 如果在检索修改的行数时出现错误，将返回 **false** 。  
   
 ## <a name="example"></a>示例  
-以下示例显示由 UPDATE 语句修改的行数。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例显示由 UPDATE 语句修改的行数。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -97,6 +99,9 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+
   

@@ -1,29 +1,29 @@
 ---
-title: "体系结构 |Microsoft 文档"
-ms.custom: 
+title: 体系结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 1cea2b772ec098a5354727ac9eca012ef443e3e6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>具有 Python 的机器学习服务的体系结构概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主题概述如何与 SQL Server，包括支持外部脚本执行的数据库引擎和启用与 SQL Server 的 Python 的互操作性的新组件中的安全模型，组件集成 Python。 有关详细信息，请参阅链接的主题。
+本文概述如何与 SQL Server，包括支持外部脚本执行的数据库引擎和启用与 SQL Server 的 Python 的互操作性的新组件中的安全模型，组件集成 Python。 有关详细信息，请参阅链接的文章。
 
 > [!IMPORTANT]
 > Python 支持的 SQL Server 自 2017 年 1 CTP 2.0 开始提供。 此预发行功能进行更改。

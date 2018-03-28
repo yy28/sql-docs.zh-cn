@@ -1,6 +1,6 @@
 ---
-title: "SQL Server 使用的 Visual Studio Code mssql 扩展 |Microsoft 文档"
-description: "本教程演示如何使用 VS Code 的 mssql 扩展。 此扩展，可编辑和运行在 VS Code 的 TRANSACT-SQL 脚本。"
+title: SQL Server 使用的 Visual Studio Code mssql 扩展 |Microsoft 文档
+description: 本教程演示如何使用 VS Code 的 mssql 扩展。 此扩展，可编辑和运行在 VS Code 的 TRANSACT-SQL 脚本。
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 创建和运行 SQL Server 的 TRANSACT-SQL 脚本
 
@@ -97,7 +97,7 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
 
    | 设置 | Description |
    |-----|-----|
-   | **服务器名称** | SQL Server 实例名称。 对于本教程中，使用**localhost**连接到您的计算机上的本地 SQL Server 实例。 如果要连接到远程 SQL Server，请输入目标 SQL Server 计算机的名称，或它的 IP 地址。 |
+   | **服务器名称** | SQL Server 实例名称。 对于本教程中，使用**localhost**连接到您的计算机上的本地 SQL Server 实例。 如果要连接到远程 SQL Server，请输入目标 SQL Server 计算机的名称，或它的 IP 地址。 如果你需要指定 SQL Server 实例的端口，使用逗号分隔的名称。 例如对于本地服务器在端口 1401年上运行你将输入**localhost，1401年**。 |
    | **[可选]数据库名称** | 要使用的数据库。 对于此教程的目的，不指定数据库和按**ENTER**以继续。 |
    | **用户名** | 输入拥有访问服务器上数据库权限的用户名。 对于本教程中，使用默认**SA** SQL Server 安装过程中创建的帐户。 |
    | **密码（SQL 登录名）** | 输入指定用户的密码。 | 

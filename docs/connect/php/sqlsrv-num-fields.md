@@ -1,37 +1,39 @@
 ---
-title: "sqlsrv_num_fields |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_num_fields | Microsoft Docs
+ms.custom: ''
+ms.date: 03/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_num_fields
+apiname:
+- sqlsrv_num_fields
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978f04e3796cc104844ca86e3ac74b1c24cc10e1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 80028fcf1b4a1c3d947bef49c2a4edc617f9d2d1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-检索活动结果集中的字段数目。 请注意，可以对任何已准备的语句调用 **sqlsrv_num_fields** ，不管是执行前还是执行后。  
+检索活动结果集中的字段数目。 可以对任何已准备的语句前, 还是执行后调用此函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,9 +49,9 @@ sqlsrv_num_fields( resource $stmt)
 表示活动结果集中的字段数目的整数值。 如果发生错误，将返回布尔值 **false** 。  
   
 ## <a name="example"></a>示例  
-以下示例执行查询来检索 Adventureworks 数据库的 *HumanResources.Department* 表中前三行的所有字段。 **Sqlsrv_num_fields**函数将确定的结果集中的字段的数目。 这允许数据通过迭代浏览每个返回行中的字段显示。  
+下面的示例执行一个查询来检索所有字段中的前三个行*HumanResources.Department* AdventureWorks 数据库表。 **Sqlsrv_num_fields**函数将确定的结果集中的字段的数目。 这允许数据通过迭代浏览每个返回行中的字段显示。  
   
-该示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -96,6 +98,8 @@ sqlsrv_close( $conn );
   
 ## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
+
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

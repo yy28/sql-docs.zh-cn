@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_fetch_object |Microsoft 文档"
-ms.custom: 
+title: sqlsrv_fetch_object | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch_object
+apiname:
+- sqlsrv_fetch_object
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_object
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68c6e32e4aa090dc76d80e176f7653815c80335b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 87477c1d30607d71e49729f73105905a2f64767a
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -94,7 +96,7 @@ SELECT SCOPE_IDENTITY()</pre>
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>示例  
-以下示例将每一行结果集检索为 PHP 对象。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例将每一行结果集检索为 PHP 对象。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -143,7 +145,7 @@ sqlsrv_close( $conn);
   
 -   将使用 *UnitPrice* 字段的值来填充私有属性 *UnitPrice* 。  
   
-该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -248,6 +250,8 @@ SELECT SCOPE_IDENTITY()</pre>
   
 ## <a name="see-also"></a>另请参阅  
 [检索数据](../../connect/php/retrieving-data.md)  
+
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
   

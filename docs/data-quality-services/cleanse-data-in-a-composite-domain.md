@@ -1,27 +1,28 @@
 ---
-title: "清理复合域中的数据 | Microsoft Docs"
-ms.custom: 
+title: 清理复合域中的数据 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b823b710ca928769db6ecc64b60abc714f41de5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 91d4c9da464b19edc803f7b8b2ff4e8995ed91fb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理复合域中的数据
   本主题提供有关清理 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的复合域的信息。 一个复合域由两个或更多的单一域构成，并且映射到一个由多个相关字词构成的数据字段。 复合域中的单独的域必须具有一个共同的知识范畴。 有关复合域的详细信息，请参阅 [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md)。  

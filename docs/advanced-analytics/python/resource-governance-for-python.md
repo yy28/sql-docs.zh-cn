@@ -1,24 +1,24 @@
 ---
-title: "资源调控 for Python |Microsoft 文档"
-ms.custom: 
+title: 资源调控 for Python |Microsoft 文档
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c1bf3fb84629310c09f0dc181f6b7eaa6707fa88
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="resource-governance-for-python"></a>Python 的资源调控
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="resource-management-using-resource-governor"></a>使用资源调控器进行资源管理
 
-如果你不熟悉资源调控器，请参阅以下主题，获取有关如何修改实例默认资源和新建外部资源池的快速演练：[如何为 R 创建资源池](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
+如果你不熟悉到资源调控器，请参阅有关的快速演练如何修改实例默认资源并创建新的外部资源池的此文章： [How To： 为 R 创建资源池](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 你可以使用*外部资源池*机制来管理使用以下支持可执行文件的资源：
 

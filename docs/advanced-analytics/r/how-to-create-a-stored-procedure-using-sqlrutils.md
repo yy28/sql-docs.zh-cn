@@ -1,39 +1,39 @@
 ---
-title: "如何使用 sqlrutils 创建存储过程 | Microsoft Docs"
-ms.custom: 
+title: 如何使用 sqlrutils 创建存储过程 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fe1e05ee854fb6a094a66d88981d74287aa96beb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>创建存储过程使用 sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主题介绍了转换 R 代码以作为 T-SQL 存储过程运行的步骤。 为了获得最佳的可能结果，可能需要对代码进行某种程度的修改，以确保所有输入可参数化。
+本文介绍转换 R 代码运行与 T-SQL 存储过程的步骤。 为了获得最佳的可能结果，可能需要对代码进行某种程度的修改，以确保所有输入可参数化。
 
 ## <a name="bkmk_rewrite"></a>步骤 1. 重写 R 脚本
 
 为获得最佳结果，则应重写 R 代码作为单个函数对其进行封装。
 
-函数所用的所有变量应内部函数，定义，或应定义为输入参数。 请参阅本主题中的 [示例代码](#samples) 。
+函数所用的所有变量应内部函数，定义，或应定义为输入参数。 请参阅[示例代码](#samples)这篇文章中。
 
 此外，因为 R 函数的输入的参数将成为输入的参数的 sql 存储过程，你必须确保你的输入和输出符合以下类型要求：
 
@@ -69,8 +69,8 @@ R 代码已被清除并可以作为单个函数调用后，你将使用中的函
 
 如果您的函数将接收输入，对于每个输入，调用以下函数：
 
-- `setInputData`如果输入数据帧
-- `setInputParameter`对于所有其他输入类型
+- `setInputData` 如果输入数据帧
+- `setInputParameter` 对于所有其他输入类型
 
 在进行每个函数调用时，将会更高版本传递的自变量作为创建 R 对象`StoredProcedure`，若要创建完整的存储的过程。
 
@@ -82,8 +82,8 @@ R 代码已被清除并可以作为单个函数调用后，你将使用中的函
 
 当将列表转换或从列表中，获取特定的项选择从这些函数：
 
-- `setOutputData`如果要从列表中获取的变量是一个数据帧
-- `setOutputParameter`所有其他成员的列表
+- `setOutputData` 如果要从列表中获取的变量是一个数据帧
+- `setOutputParameter` 所有其他成员的列表
 
 在进行每个函数调用时，将会更高版本传递的自变量作为创建 R 对象`StoredProcedure`，若要创建完整的存储的过程。
 

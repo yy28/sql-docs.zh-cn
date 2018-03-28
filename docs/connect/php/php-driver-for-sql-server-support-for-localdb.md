@@ -1,38 +1,39 @@
 ---
-title: "PHP Driver for SQL Server Support for LocalDB |Microsoft 文档"
-ms.custom: 
-ms.date: 02/03/2017
+title: 对 LocalDB 的支持 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: drivers
 ms.component: php
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9315847a8e36520b360d16681ffe5b00f08d6975
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-localdb"></a>PHP Driver for SQL Server 对 LocalDB 的支持
+# <a name="support-for-localdb"></a>对 LocalDB 的支持
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-从[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]的轻量版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 称为 LocalDB、 将可用。 本主题介绍如何连接到 LocalDB 实例中的数据库。
+LocalDB 是轻量版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，这也是可用自[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。 本主题介绍如何连接到 LocalDB 实例中的数据库。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注释
 
 有关 LocalDB，包括如何安装 LocalDB 和配置 LocalDB 实例，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]上的联机丛书主题[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express LocalDB。
 
-总之，通过 LocalDB，您可以：
+简单地说，LocalDB，你可以：
 
 -   使用**sqllocaldb.exe 我**来发现的默认实例的名称。
 
@@ -81,7 +82,7 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-你可以下载 LocalDB 从[SQL Server 2012 功能包页](http://go.microsoft.com/fwlink/?LinkID=236805)，或从[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express edition。 如果将使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，你将需要从 sqlcmd [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]，你可以通过在命令行实用工具下载[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]功能包页。
+有关安装 LocalDB 的说明，请参阅[LocalDB 文档](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)。 如果使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，你将需要[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。
 
 ## <a name="see-also"></a>另请参阅
 

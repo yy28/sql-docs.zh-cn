@@ -1,30 +1,31 @@
 ---
-title: "如何： 执行参数化的查询 |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: 如何： 执行参数化的查询 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：执行参数化查询
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/18/2017
   
 2.  初始化或更新对应于 Transact-SQL 查询中的占位符的 PHP 变量。  
   
-3.  使用步骤 2 中的 PHP 变量创建或更新按顺序对应于 Transact-SQL 字符串中的参数占位符的参数值数组。  
+3.  使用步骤 2 中的 PHP 变量创建或更新它们分别对应参数值的数组中的 TRANSACT-SQL 字符串参数占位符。 数组中的参数值必须为占位符用于表示它们的顺序相同。
   
 4.  执行查询：  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/18/2017
   
 然后，此示例查询数据库来验证数量是否已正确更新。 产品 ID 是 SELECT 查询中的参数。  
   
-该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -121,7 +122,7 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>示例  
 以下示例演示使用 **sqlsrv_prepare** 函数时隐式绑定变量。 此示例将多个销售订单插入到 *Sales.SalesOrderDetail* 表中。 *$Params*数组绑定到该语句 (*$stmt*) 时**sqlsrv_prepare**调用。 在每次执行将新的销售订单插入到表中的查询时，将使用对应于销售订单详细信息的新值更新 *$params* 数组。 后续查询执行使用新的参数值。  
   
-该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -194,8 +195,11 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[转换数据类型](../../connect/php/converting-data-types.md)  
-[PHP SQL 驱动程序安全注意事项](../../connect/php/security-considerations-for-php-sql-driver.md)
-[关于文档中的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
+[转换数据类型](../../connect/php/converting-data-types.md)
+
+[安全注意事项 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

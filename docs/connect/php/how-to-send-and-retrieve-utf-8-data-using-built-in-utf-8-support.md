@@ -1,32 +1,32 @@
 ---
-title: "如何： 发送和检索 utf-8 数据使用内置 utf-8 支持 |Microsoft 文档"
-ms.custom: 
-ms.date: 01/16/2018
+title: 如何： 发送和检索 utf-8 数据使用内置 utf-8 支持 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - retrieving data, UTF-8 encoded data
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2d2763ec8906cc3100c1259aa25473ae7e8d8b22
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 55c6c0293dddf4919c270f6feeb59f32670f4344
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>如何：使用内置 UTF-8 支持发送和检索 UTF-8 数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,12 +43,12 @@ ms.lasthandoff: 03/15/2018
   
     当你将字符集指定为连接选项的一部分时，驱动程序假定其他连接选项字符串使用相同的字符集。 也可以假定服务器名称和查询字符串使用相同的字符集。  
   
-你可以传递 utf-8 或到 SQLSRV_ENC_CHAR **CharacterSet** （不能将传递 SQLSRV_ENC_BINARY）。 默认编码是 SQLSRV_ENC_CHAR。  
+你可以传递 utf-8 或到 SQLSRV_ENC_CHAR **CharacterSet**，但不是能将传递 SQLSRV_ENC_BINARY。 默认编码是 SQLSRV_ENC_CHAR。  
   
 ## <a name="example"></a>示例  
-以下示例演示如何通过在建立连接时指定 UTF-8 字符集来发送和检索 UTF-8 编码的数据。 该示例会更新已指定查看 ID 的 Production.ProductReview 表的“注释”列。 该示例还会检索并显示最近更新的数据。 注释列属于类型**nvarchar(3850)。** 另请注意，数据发送到服务器之前它被转换为 utf-8 编码使用 PHP **utf8_encode**函数。 此步骤仅用于演示目的自动完成。 在实际的应用程序方案中，你将开始使用 utf-8 编码数据。  
+以下示例演示如何通过在建立连接时指定 UTF-8 字符集来发送和检索 UTF-8 编码的数据。 该示例会更新已指定查看 ID 的 Production.ProductReview 表的“注释”列。 该示例还会检索并显示最近更新的数据。 请注意，注释列是类型的**nvarchar(3850)。** 另请注意，数据发送到服务器之前它被转换为 utf-8 编码使用 PHP **utf8_encode**函数。 此操作仅用于演示目的。 在实际的应用程序方案中，你将开始使用 utf-8 编码数据。  
   
-该示例假定已在本地计算机上安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
+该示例假定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-有关存储 Unicode 数据的信息，请参阅 [使用 Unicode 数据](http://go.microsoft.com/fwlink/?LinkId=128236)。  
+有关存储 Unicode 数据的信息，请参阅[使用 Unicode 数据](https://msdn.microsoft.com/library/ms175180.aspx)。  
   
 ## <a name="example"></a>示例  
 以下示例类似于第一个示例，但并非指定连接上的 UTF-8 字符集，此示例显示如何指定列上的 UTF-8 字符集。  
@@ -226,10 +226,15 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[检索数据](../../connect/php/retrieving-data.md)  
+[检索数据](../../connect/php/retrieving-data.md)
+
 [在非 Windows 中使用 ASCII 数据](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
-[更新数据&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+
+[更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [示例应用程序（SQLSRV 驱动程序）](../../connect/php/example-application-sqlsrv-driver.md)  
   

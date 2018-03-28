@@ -1,28 +1,30 @@
 ---
-title: "常量 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文档"
-ms.custom: 
+title: 常量 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: constants
+helpviewer_keywords:
+- constants
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-caps.latest.revision: "72"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63f2812cc7c2aa19099a90518a3322084c1a94b3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9a7af0c51e115aae2fb8319a847d16b272001f93
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常量 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,9 +32,9 @@ ms.lasthandoff: 11/18/2017
 本主题将讨论 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]定义的常量。  
   
 ## <a name="pdosqlsrv-driver-constants"></a>PDO_SQLSRV 驱动程序常量  
-[PDO 网站](http://go.microsoft.com/fwlink/?LinkID=187441) 上列出的常量在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]中有效。  
+上列出的常量[PDO 网站](http://php.net/manual/book.pdo.php)在中有效[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。  
   
-下面介绍 PDO_SQLSRV 驱动程序中的 Microsoft 特定常量。  
+下面将介绍 PDO_SQLSRV 驱动程序中的 Microsoft 特定常量。  
   
 ### <a name="transaction-isolation-level-constants"></a>事务隔离级别常量  
 可与 **PDO::__construct** 结合使用的 [TransactionIsolation](../../connect/php/pdo-construct.md)键接受以下常量之一：  
@@ -57,7 +59,7 @@ PDO::SQLSRV_ATTR_ENCODING 属性可以传递给[pdostatement:: Setattribute](../
 |PDO_SQLSRV 驱动程序常量|Description|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|数据是来自服务器的原始字节流，无需执行编码或转换。<br /><br />对 PDO::setAttribute 无效。|  
-|PDO::SQLSRV_ENCODING_SYSTEM|数据是 8 位字符，该格式如在系统上设置的 Windows 区域设置的代码页中所指定。 任何多字节字符或未映射到此代码页中的字符都会替换为单字节问号 (?) 字符。|  
+|PDO::SQLSRV_ENCODING_SYSTEM|数据是 8 位字符，该格式如在系统上设置的 Windows 区域设置的代码页中所指定。 任何多字节字符或未映射到此代码页的字符替换为单字节问号 （？） 字符。|  
 |PDO::SQLSRV_ENCODING_UTF8|数据采用 UTF-8 编码。 这是默认编码。|  
 |PDO::SQLSRV_ENCODING_DEFAULT|使用 PDO::SQLSRV_ENCODING_SYSTEM（如果在连接过程中已指定）。<br /><br />使用连接的编码（如果在准备语句中已指定）。|  
   
@@ -70,7 +72,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性是任一非负整数，表示超时时间�
 可以使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 属性来选择直接查询执行或已准备的语句执行。 可以用来设置 PDO::SQLSRV_ATTR_DIRECT_QUERY [pdo:: prepare](../../connect/php/pdo-prepare.md)或[pdo:: setattribute](../../connect/php/pdo-setattribute.md)。 有关 PDO::SQLSRV_ATTR_DIRECT_QUERY 的详细信息，请参阅[直接语句执行和已准备 PDO_SQLSRV 驱动程序中的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
 
 ### <a name="handling-numeric-fetches"></a>处理数值提取
-PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类型 （位、 整数、 smallint、 tinyint、 float、 和实际） 列中的数值提取。 将为整数，表示 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 设置为 true，整数列的结果时，SQL 浮动而实数将表示为浮点数。 此属性可以设置与[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 
+PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类型 （位、 整数、 smallint、 tinyint、 float、 和实际） 列中的数值提取。 当 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 设置为 true，整数列的结果表示为整数，SQL 浮动而实数表示为浮点数。 此属性可以设置与[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 
 
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驱动程序常量  
@@ -79,7 +81,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类�
 ### <a name="err-constants"></a>ERR 常量  
 下表列出了用于指定如果常量[sqlsrv_errors](../../connect/php/sqlsrv-errors.md)返回错误、 警告，或两者。  
   
-|值|Description|  
+|“值”|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|将返回在上次调用 **sqlsrv** 函数时生成的错误和警告。 这是默认值。|  
 |SQLSRV_ERR_ERRORS|将返回上次调用 **sqlsrv** 函数时生成的错误。|  
@@ -136,22 +138,22 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类�
 |SQLSRV_PARAM_OUT|表示输出参数。|  
   
 ### <a name="phptype-constants"></a>PHPTYPE 常量  
-下表列出了用于描述 PHP 数据类型的常量。 有关 PHP 数据类型的信息，请参阅 [PHP 类型](http://go.microsoft.com/fwlink/?LinkId=104881)。  
+下表列出了用于描述 PHP 数据类型的常量。 有关 PHP 数据类型的信息，请参阅[PHP 类型](http://php.net/manual/en/language.types.php)。  
   
 |SQLSRV 常量|PHP 数据类型|  
 |-------------------|-----------------|  
 |SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|日期时间|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
-|SQLSRV_PHPTYPE_STREAM ($编码<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING ($编码<sup>1</sup>)|字符串|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|字符串|  
   
 1. **SQLSRV_PHPTYPE_STREAM**和**SQLSRV_PHPTYPE_STRING**接受一个参数，指定的流编码。 下表包含作为可接受参数的 SQLSRV 常量以及对相应编码的说明。  
   
 |SQLSRV 常量|Description|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|数据以原始字节流的形式从服务器返回，无需执行编码或转换。|  
-|SQLSRV_ENC_CHAR|数据以 8 位字符的形式返回，如在系统上设置的 Windows 区域设置的代码页中所指定。 任何多字节字符或未映射到此代码页中的字符都会替换为单字节问号 (?) 字符。<br /><br />这是默认编码。|  
+|SQLSRV_ENC_CHAR|数据以 8 位字符的形式返回，如在系统上设置的 Windows 区域设置的代码页中所指定。 任何多字节字符或未映射到此代码页的字符替换为单字节问号 （？） 字符。<br /><br />这是默认编码。|  
 |“UTF-8”|数据以 UTF-8 编码的形式返回。 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 1.1 中添加了此常量。 有关 utf-8 支持的详细信息，请参阅[如何： 发送和检索 utf-8 数据使用内置 utf-8 支持](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|  
   
 > [!NOTE]  
@@ -160,12 +162,12 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类�
 有关这些常量的详细信息，请参阅 [如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)， [如何：使用 SQLSRV 驱动程序以流的形式检索字符数据](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)。  
   
 ### <a name="sqltype-constants"></a>SQLTYPE 常量  
-下表列出了用于描述 SQL Server 数据类型的常量。 某些常量是类似于函数的和可能要花费对应的参数精度、 小数位数和/或长度。  当绑定参数，则应使用的类似函数的常量。 对于类型比较，标准 （非函数类似） 常量是必需的。 有关 SQL Server 数据类型的信息，请参阅[数据类型 (Transact SQL)。](http://go.microsoft.com/fwlink/?LinkId=104883) 有关精度、 小数位数和长度的信息，请参阅[精度、 小数位数和长度 (Transact SQL)。](http://go.microsoft.com/fwlink/?LinkId=104885)  
+下表列出了用于描述 SQL Server 数据类型的常量。 某些常量是类似于函数的和可能要花费对应的参数精度、 小数位数和/或长度。  当绑定参数，则应使用的类似函数的常量。 对于类型比较，标准 （非函数类似） 常量是必需的。 有关 SQL Server 数据类型的信息，请参阅[数据类型 (Transact SQL)。](../../t-sql/data-types/data-types-transact-sql.md) 有关精度、 小数位数和长度的信息，请参阅[精度、 小数位数和长度 (Transact SQL)。](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
   
 |SQLSRV 常量|SQL Server 数据类型|  
 |-------------------|------------------------|  
 |SQLSRV_SQLTYPE_BIGINT|bigint|  
-|SQLSRV_SQLTYPE_BINARY|binary|  
+|SQLSRV_SQLTYPE_BINARY|BINARY|  
 |SQLSRV_SQLTYPE_BIT|bit|  
 |SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
 |SQLSRV_SQLTYPE_CHAR($charCount)|char|  
@@ -173,15 +175,15 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可用来处理具有数值 SQL 类�
 |SQLSRV_SQLTYPE_DATETIME|datetime|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DECIMAL|十进制<sup>5</sup>|
+|SQLSRV_SQLTYPE_DECIMAL|decimal<sup>5</sup>|
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|decimal|  
 |SQLSRV_SQLTYPE_FLOAT|float|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
 |SQLSRV_SQLTYPE_INT|int|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
-|SQLSRV_SQLTYPE_NCHAR($charCount)|nchar|  
-|SQLSRV_SQLTYPE_NUMERIC|数值<sup>5</sup>|
+|SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
+|SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  

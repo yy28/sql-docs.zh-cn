@@ -1,30 +1,31 @@
 ---
-title: "运行 Data Quality Client 应用程序 | Microsoft Docs"
-ms.custom: 
+title: 运行 Data Quality Client 应用程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.browseforservers.f1
 - sql13.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 470523ae689891e12b119b03941ceb2f17f2d3ae
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 67aac939d1dcbdd657fab1934445782af5c9f52a
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="run-the-data-quality-client-application"></a>运行数据质量客户端应用程序
   运行 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]，并登录到 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  

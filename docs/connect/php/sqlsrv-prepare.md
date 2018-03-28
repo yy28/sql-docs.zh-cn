@@ -1,33 +1,35 @@
 ---
-title: "sqlsrv_prepare |Microsoft 文档"
-ms.custom: 
+title: sqlsrv_prepare | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_prepare
+apiname:
+- sqlsrv_prepare
 apitype: NA
 helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56dbdc5aad9e0c9362ee7d5f9ddb5650a920130d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dbfcece545b5fb66dbc8c2e8fd8afb1bcb9f9336
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,16 +65,16 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     下表将介绍这些阵列元素：  
   
-    |元素|说明|  
+    |元素|Description|  
     |-----------|---------------|  
     |*$value*|文字值或对 PHP 变量的引用。|  
-    |*$direction*[可选]|以下项之一**SQLSRV_PARAM_\*** 常量用于指示参数方向： **SQLSRV_PARAM_IN**， **SQLSRV_PARAM_OUT**， **SQLSRV_PARAM_INOUT**。 默认值是**SQLSRV_PARAM_IN**。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 &#40;Microsoft Drivers for PHP for SQL server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[可选]|A **SQLSRV_PHPTYPE_\*** 指定 PHP 数据类型的返回值的常量。|  
-    |*$sqlType*[可选]|A **SQLSRV_SQLTYPE_\*** 常量，用于指定输入值的 SQL Server 数据类型。|  
+    |*$direction*[OPTIONAL]|以下项之一**SQLSRV_PARAM_\*** 常量用于指示参数方向： **SQLSRV_PARAM_IN**， **SQLSRV_PARAM_OUT**， **SQLSRV_PARAM_INOUT**。 默认值是**SQLSRV_PARAM_IN**。<br /><br />有关 PHP 常量的详细信息，请参阅[常量&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\*** 指定 PHP 数据类型的返回值的常量。|  
+    |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\*** 常量，用于指定输入值的 SQL Server 数据类型。|  
   
 *$options* [可选]: 用于设置查询属性的关联数组。 下表列出了支持的键和相应值：  
   
-|Key|支持的值|说明|  
+|Key|支持的值|Description|  
 |-------|--------------------|---------------|  
 |QueryTimeout|正整数值。|设置查询超时（以秒为单位）。 默认情况下，该驱动程序将无限期等待结果。|  
 |SendStreamParamsAtExec|**true** 或 **false**<br /><br />默认值为 **true**。|配置要发送所有流在执行数据的驱动程序 (**true**)，或将流数据发送消息块 (**false**)。 默认情况下，该值设置为 **true**。 有关详细信息，请参阅 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
@@ -86,12 +88,12 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 组合**sqlsrv_prepare**和**sqlsrv_execute**离职语句准备和语句执行中的为两个函数调用，并且可以用于执行参数化的查询。 如果要对每次执行使用不同的参数值来多次执行语句，该函数是理想之选。  
   
-有关写入和读取大量信息的备用策略，请参阅 [SQL 语句的批处理](http://go.microsoft.com/fwlink/?LinkId=104225) 和 [BULK INSERT](http://go.microsoft.com/fwlink/?LinkId=104226)。  
+有关写入和读取大量信息的备用策略，请参阅[SQL 语句的批处理](../../odbc/reference/develop-app/batches-of-sql-statements.md)和[大容量插入](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
 有关详细信息，请参阅 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>示例  
-以下示例将准备和执行语句。 语句执行后 (请参阅[sqlsrv_execute](../../connect/php/sqlsrv-execute.md))，更新中的字段*Sales.SalesOrderDetail* AdventureWorks 数据库表。 该示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例将准备和执行语句。 语句执行后 (请参阅[sqlsrv_execute](../../connect/php/sqlsrv-execute.md))，更新中的字段*Sales.SalesOrderDetail* AdventureWorks 数据库表。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -138,7 +140,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>示例  
-以下示例演示如何准备语句，然后使用不同的参数值重新执行它。 该示例将更新 AdventureWorks 数据库中的 *Sales.SalesOrderDetail* 表格的 *OrderQty* 列。 发生更新后，将查询数据库以验证更新是否已成功。 该示例假定本地计算机上已安装了 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 数据库。 当从命令行运行该示例时，所有输出都将写入控制台。  
+以下示例演示如何准备语句，然后使用不同的参数值重新执行它。 该示例将更新 AdventureWorks 数据库中的 *Sales.SalesOrderDetail* 表格的 *OrderQty* 列。 发生更新后，将查询数据库以验证更新是否已成功。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -251,11 +253,17 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>另请参阅  
-[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[如何：执行参数化查询](../../connect/php/how-to-perform-parameterized-queries.md)  
-[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  
-[如何：以流的形式发送数据](../../connect/php/how-to-send-data-as-a-stream.md)  
-[使用方向参数](../../connect/php/using-directional-parameters.md)  
-[检索数据](../../connect/php/retrieving-data.md)  
-[更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-  
+[SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[如何：执行参数化查询](../../connect/php/how-to-perform-parameterized-queries.md)
+
+[文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[如何：以流的形式发送数据](../../connect/php/how-to-send-data-as-a-stream.md)
+
+[使用方向参数](../../connect/php/using-directional-parameters.md)
+
+[检索数据](../../connect/php/retrieving-data.md)
+
+[更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+

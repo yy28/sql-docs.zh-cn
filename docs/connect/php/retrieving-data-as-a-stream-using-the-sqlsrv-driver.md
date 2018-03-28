@@ -1,27 +1,28 @@
 ---
-title: "使用 SQLSRV 驱动程序流的形式检索数据 |Microsoft 文档"
-ms.custom: 
+title: 使用 SQLSRV 驱动程序流的形式检索数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53ff9f5cc78e1ccaec74425a47ac39bfca996aae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fa2d15dde596b9fb8ccd4d170281ef6fa4b2646f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>使用 SQLSRV 驱动程序以流的形式检索数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,15 +47,16 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 > 某些数据类型默认情况下以流的形式返回。 有关详细信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本節內容  
   
-|主题|说明|  
+|主题|Description|  
 |---------|---------------|  
 |[使用 SQLSRV 驱动程序时支持流的数据类型](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|列出可以流的形式进行检索的 SQL Server 数据类型。|  
 |[如何：使用 SQLSRV 驱动程序以流的形式检索字符数据](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|演示如何以流的形式检索字符数据。|  
 |[如何：使用 SQLSRV 驱动程序以流的形式检索二进制数据](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|演示如何以流的形式检索二进制数据。|  
   
 ## <a name="see-also"></a>另请参阅  
-[检索数据](../../connect/php/retrieving-data.md)  
+[检索数据](../../connect/php/retrieving-data.md)
+
 [常量（Microsoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
   

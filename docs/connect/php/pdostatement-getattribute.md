@@ -1,27 +1,28 @@
 ---
-title: "PDOStatement::getAttribute |Microsoft 文档"
-ms.custom: 
+title: PDOStatement::getAttribute | Microsoft Docs
+ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 41d0cca3-8556-4573-bb90-8e9402d9379f
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01332bc8166f2f242e4daffdd7204bbd5efe11de
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 98bf243805b739ec887ccdff3a70258b41e734b3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementgetattribute"></a>PDOStatement::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,6 +48,7 @@ $*属性*： 一个整数，其中一个 PDO::ATTR_ * 或 PDO::SQLSRV_ATTR_\*常
 已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 2.0 中添加了对 PDO 的支持。  
   
 ## <a name="see-also"></a>另请参阅  
-[PDOStatement 类](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement 类](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

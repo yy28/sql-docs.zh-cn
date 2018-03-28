@@ -1,27 +1,27 @@
 ---
-title: "使用 R 创建 BI 工作流 |Microsoft 文档"
+title: 使用 R 创建 BI 工作流 |Microsoft 文档
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: bd006f20f65b386a4351534e639b3b60db7e76de
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>使用 R 创建 BI 工作流
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +30,9 @@ ms.lasthandoff: 02/11/2018
 
 与此相反，传统上 R 解决方案具有通常依赖于从各种源，通常采用 CSV 格式，以执行进一步的数据浏览和建模导入数据。 这种做法不仅低效，而且不安全。
 
-本主题介绍与避免常见缺陷以及如果于数据库外部的开发计算机学习解决方案可能会出现的安全风险的 SQL Server R 集成方案。
+本文介绍面向 R 与避免常见缺陷以及如果于数据库外部的开发计算机学习解决方案可能会出现的安全风险的 SQL Server 的集成方案。
 
-它还介绍了如何商业智能应用程序，值得注意的是 Integration Services 和 Reportng 服务，可使用 R 代码交互，并且使用数据或图形。 所生成的示例
+它还介绍了如何商业智能应用程序，值得注意的是 Integration Services 和 Reporting Services，可以使用 R 代码进行交互和使用数据或图形。 所生成的示例
 
 适用于： SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/11/2018
 
 + 速度。 数据库针对基于集的操作进行了优化。 在数据库例如内存中表的最新创新请摘要和聚合既，和是对数据科学的完美补充。
 
-+ 易于部署和集成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是的操作的许多其他数据管理任务和应用程序的中心点。 通过使用位于报表仓库的数据库的数据，可以确保使用机器学习解决方案的数据一致和最新。 
++ 易于部署和集成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是的操作的许多其他数据管理任务和应用程序的中心点。 通过使用位于报表仓库的数据库的数据，可以确保使用机器学习解决方案的数据一致和最新。 
 
 + 跨云和本地的效率。 你可以依靠包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 Azure 数据工厂的企业数据管道，而非在 R 中处理数据。 可以通过 Power BI 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 轻松执行结果报告或分析。
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/11/2018
 
 由于 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 支持在 R 中通过 Transact-SQL 和存储过程运行复杂的操作，因此，你可以将特定于 R 的任务与现有的 ETL 过程集成，只需执行极少的重新开发工作。 而是不是在 R 中执行的占用大量内存的任务链，数据准备可使用优化的最有效的工具，包括[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和[!INCLUDE[tsql](../../includes/tsql-md.md)]。 
 
-有关如何自动执行你的数据处理 dmodeling 管道使用，以下是一些 ideass [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+下面是有关如何自动执行你处理的数据的一些观点和建模管道使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
 + 使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]任务以在 SQL 数据库中创建必要的数据的功能
 + 使用条件分支切换 R 作业的计算上下文
@@ -75,13 +75,13 @@ ms.lasthandoff: 02/11/2018
 
 + 使用“脚本任务”和“执行 SQL 任务”对模型执行评分
 
-##  <a name="bkmk_ssrs"></a>将 Reporting Services 用于可视化效果
+##  <a name="bkmk_ssrs"></a> 将 Reporting Services 用于可视化效果
 
 虽然 R 可以创建图表和有趣的可视化效果，但如果没有与外部数据源良好地集成，就意味着必须单独生成每个图表或图形。 共享可能也比较困难。
 
 借助 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，你可以在 R 中通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程运行复杂的操作，这些操作可通过各种企业报告工具（包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Power BI）轻松处理。
 
-+ 直观显示从 R 脚本使用返回的图形对象 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]直观显示从 R 脚本返回的图形对象
 + 在 Power BI 中使用表
 
 ### <a name="examples"></a>示例

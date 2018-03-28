@@ -1,31 +1,31 @@
 ---
-title: "对 SQL Server 机器学习服务 Dmv |Microsoft 文档"
-ms.custom: 
+title: 对 SQL Server 机器学习服务 Dmv |Microsoft 文档
+ms.custom: ''
 ms.date: 07/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e51f5229eb085eb4b92a4f6f53cc7b28ebb7485
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的 Dmv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-主题列出系统目录视图和 dmv，用来与 SQL Server 中的机器学习相关。
+本文列出的系统目录视图和 dmv，用来与 SQL Server 中的机器学习相关。
 
 有关扩展事件的信息，请参阅[扩展事件的机器学习](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)。
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/11/2018
   此 DMV 针对每个实例的外部脚本报告以下计数器：
 
   + **总执行**： 通过本地或远程调用启动的外部进程数
-  + **并行执行**： 脚本包含次数 _@parallel_ 规范，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能够生成并使用并行查询计划
+  + **并行执行**： 脚本包含次数_@parallel_规范，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能够生成并使用并行查询计划
   + **流式处理执行**： 的流式处理功能已调用的次数
   + **SQL CC 执行**： 数外部脚本的运行其中调用远程实例化和 SQL Server 已用作计算上下文
   + **隐含身份验证登录次数**：使用隐含身份验证进行 ODBC 环回调用（即，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 代表发送脚本请求的用户执行调用）的次数

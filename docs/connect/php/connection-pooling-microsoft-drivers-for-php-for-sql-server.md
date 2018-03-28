@@ -1,28 +1,30 @@
 ---
-title: "连接池 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文档"
-ms.custom: 
+title: 连接池 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文档
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connection pooling support
+helpviewer_keywords:
+- connection pooling support
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5edf501c5a3a46fd30d21c4c5fdad81711c539d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 287cba2cbca687ef5006ae0410b2cd6a0f2598b7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>连接池 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +39,13 @@ ms.lasthandoff: 11/18/2017
   
 -   关闭连接会将该连接返回到池。  
   
-有关连接池的详细信息，请参阅 [驱动程序管理器连接池](http://go.microsoft.com/fwlink/?linkid=119622)。  
+有关连接池的详细信息，请参阅[驱动程序管理器连接池](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)。  
   
 ## <a name="enablingdisabling-connection-pooling"></a>启用/禁用连接池
 ### <a name="windows"></a>Windows
 你可以强制驱动程序通过设置的值创建新的连接 （而不是查找等效连接连接池中） *ConnectionPooling*中的连接字符串属性**false** （或 0）。  
   
-如果*ConnectionPooling*连接字符串中省略属性或如果它设置为**true** （或 1），该驱动程序只有才会创建一个新的连接中不存在等效连接连接池。  
+如果*ConnectionPooling*连接字符串中省略属性或如果它设置为**true** （或 1），如果中不存在等效连接后，该驱动程序将仅创建一个新连接连接池。  
   
 有关其他连接属性的信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。  
 ### <a name="linux-and-mac-os-x"></a>Linux 和 Mac OS X
@@ -66,6 +68,7 @@ Pooling=No
 ```
   
 ## <a name="see-also"></a>另请参阅  
-[如何：使用 Windows 身份验证进行连接](../../connect/php/how-to-connect-using-windows-authentication.md)  
+[如何：使用 Windows 身份验证进行连接](../../connect/php/how-to-connect-using-windows-authentication.md)
+
 [如何：使用 SQL Server 身份验证进行连接](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

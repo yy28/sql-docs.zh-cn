@@ -1,29 +1,29 @@
 ---
-title: "如何执行实时评分或在 SQL Server 中的本机评分 |Microsoft 文档"
-ms.custom: 
+title: 如何执行实时评分或在 SQL Server 中的本机评分 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2a79ab351f109959a743fecfb4cb6a0d186c6892
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何执行实时评分或在 SQL Server 中的本机评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主题提供有关如何执行实时评分和 SQL Server 2017 和 SQL Server 2016 中的本机评分功能说明和示例代码。 同时实时评分和本机评分的目标是提高在小的批处理计分操作的性能。
+这篇文章提供有关如何执行实时评分和 SQL Server 2017 和 SQL Server 2016 中的本机评分功能说明和示例代码。 同时实时评分和本机评分的目标是提高在小的批处理计分操作的性能。
 
 同时实时评分和本机评分旨在让你使用机器学习模型，而无需安装。你需要做是获取预先训练的模型的兼容格式，并将其保存在 SQL Server 数据库中。
 
@@ -178,7 +178,7 @@ go
 
 本部分介绍设置所需的步骤**实时**预测，并提供了如何从 T-SQL 的调用函数的一个示例。
 
-### <a name ="bkmk_enableRtScoring"></a>步骤 1。 启用实时评分过程
+### <a name ="bkmk_enableRtScoring"></a> 步骤 1。 启用实时评分过程
 
 必须启用此功能，你想要用于评分的每个数据库。 服务器管理员应运行的命令行实用工具，RegisterRExt.exe，包含在 RevoScaleR 包。
 
@@ -202,7 +202,7 @@ go
 3. RegisterRExt.exe 创建以下对象：
 
     + 受信任的程序集
-    + 存储的过程`sp_rxPredict`
+    + 存储的过程 `sp_rxPredict`
     + 新的数据库角色， `rxpredict_users`。 数据库管理员可以使用此角色向使用实时评分功能的用户授予权限。
 
 4. 添加需要运行的任何用户`sp_rxPredict`到新的角色。
@@ -221,7 +221,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>步骤 3. 调用 sp_rxPredict
 
-Sp 调用\_rxPredict 作为你像对任何其他存储过程。 在当前版本中，该存储的过程将只有两个参数：  _@model_ 为二进制格式中的模型和 _@inputData_ 中评分，使用的数据定义为有效的 SQL 查询.
+Sp 调用\_rxPredict 作为你像对任何其他存储过程。 在当前版本中，该存储的过程将只有两个参数： _@model_为二进制格式中的模型和_@inputData_中评分，使用的数据定义为有效的 SQL 查询.
 
 由于二进制格式是相同的预测函数使用，你可以使用模型和数据从前面的示例表。
 
@@ -246,7 +246,7 @@ EXEC sp_rxPredict
 
 ## <a name="disable-realtime-scoring"></a>禁用实时评分
 
-若要禁用实时评分功能，打开提升的命令提示符，并运行以下命令：`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+若要禁用实时评分功能，打开提升的命令提示符，并运行以下命令： `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>在 Microsoft R Server 或机器学习 Server 评分的实时
 
