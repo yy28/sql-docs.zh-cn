@@ -1,27 +1,28 @@
 ---
-title: "管理复合域 | Microsoft Docs"
-ms.custom: 
+title: 管理复合域 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9a7ebf0d795639f59106afc0573f42d088926fa
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 67a253241fff3c1391fba522d6b3b659d03272bb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="managing-a-composite-domain"></a>管理复合域
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用复合域。 有时候，单一域不会令人满意地表示字段中的数据，并且您只能通过组合单一域来表示这些数据。 为此，您创建复合域。 一个复合域由两个或更多的单一域构成，并且映射到一个由多个相关字词构成的数据字段，这些相关字词未进行分析，但包括在单个复合值中。 该值中的每个字词都将由不同的单一域表示。 在您将单一域包括在复合域中，然后将复合域映射到数据字段后，可以通过在单一域中生成知识，在知识库中生成与该字段中的数据有关的知识。 复合域（与单一域相似）是单个数据字段中数据的语义表示形式。  

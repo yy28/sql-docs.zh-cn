@@ -1,27 +1,28 @@
 ---
-title: "使用 DQS 拼写检查器 | Microsoft Docs"
-ms.custom: 
+title: 使用 DQS 拼写检查器 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e336447f1719999505d03fff77d0343ff5adf5ef
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 0a362ebc450559580430a952b99fb0aebe93e97a
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼写检查器
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 拼写检查器会检查域中字符串值的语法、拼写和句子结构。 拼写检查器是独立的客户端功能，不与服务器端引擎集成并且对当前流或状态没有影响。 拼写检查器会标识它认为可能是错误的那些字符串值，然后在对域值进行其他手动更改的相同位置用红色的下划线标记这些字符串值。 这些位置包括：  

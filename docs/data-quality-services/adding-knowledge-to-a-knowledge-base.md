@@ -1,27 +1,28 @@
 ---
-title: "将知识添加到知识库 | Microsoft Docs"
-ms.custom: 
+title: 将知识添加到知识库 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/04/2013
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be0d167e1d4daf0049fed85c4cd28d670ddce200
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 50aa4f48ea862facd6863d59f47128f0376a4e12
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>将知识添加到知识库
   本主题介绍可在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将知识添加到知识库的方法。 您必须具备有关数据的知识才可以执行数据质量操作。 您可以通过生成和维护数据质量知识库，并向知识库添加与特定类型的数据源相关的知识，以获得知识。 知识库是有关数据的知识的存储库，通过它您可以了解自己的数据并维护其完整性。  

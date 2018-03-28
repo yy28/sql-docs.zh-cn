@@ -1,31 +1,32 @@
 ---
-title: "将值从 Excel 文件导入到域 | Microsoft Docs"
-ms.custom: 
+title: 将值从 Excel 文件导入到域 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c6331f1f695bb2e1c9974d27d8af76e03da55315
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
   本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 （有关将域导入到知识库的详细信息，请参阅[在知识发现中从 Excel 文件中导入域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。）不支持导出到 Excel 文件。  
@@ -109,7 +110,7 @@ ms.lasthandoff: 01/19/2018
   
 -   每一行都表示某个域值。  
   
--   第一行或者表示域名，或者是第一个数据值或记录，视 **“将第一行用作标题”** 复选框的设置而定。 如果您在使用 .xslx 或 .xls 文件时选择了 **Use First Row as header** ，则为 null 的任何列名都将自动转换为 F*n*，并且任何重复列都将在其名称后追加一个编号。  
+-   第一行或者表示域名，或者是第一个数据值或记录，视 **“将第一行用作标题”** 复选框的设置而定。 如果您在使用 .xslx 或 .xls 文件时选择了 **“将第一行用作标头”** ，则为 null 的任何列名都将自动转换为 F*n*，并且任何重复列都将在其名称后追加一个编号。  
   
 -   如果您在导入操作完成前取消该操作，则该操作将回滚，并且将不会导入任何数据。  
   
