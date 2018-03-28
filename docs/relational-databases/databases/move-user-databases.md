@@ -1,16 +1,16 @@
 ---
-title: "移动用户数据库 | Microsoft Docs"
-ms.custom: 
+title: 移动用户数据库 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - disaster recovery [SQL Server], moving database files
@@ -27,7 +27,7 @@ helpviewer_keywords:
 - planned database relocations [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/18/2018
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或关闭系统以执行维护。 有关详细信息，请参阅 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或关闭系统以执行维护。 有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  将文件移动到新位置。  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 01/18/2018
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     有关详细信息，请参阅 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+     有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  对于要移动的每个文件，请使用 **sqlcmd** 命令或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 运行以下语句。  
   
