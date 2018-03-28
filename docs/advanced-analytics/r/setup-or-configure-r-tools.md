@@ -1,26 +1,26 @@
 ---
-title: "SQL Server 安装程序中包含的 R 工具 |Microsoft 文档"
-ms.custom: 
+title: SQL Server 安装程序中包含的 R 工具 |Microsoft 文档
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 8178f4a1347ef58fd7ee143fbe843e3525ac4cf0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="r-tools-included-with-sql-server-setup"></a>SQL Server 安装程序中包含的 R 工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,9 +50,9 @@ ms.lasthandoff: 02/11/2018
 若要找到这些工具，确定设置 SQL Server 或独立机器学习功能一起安装的 R 库。 例如，在默认安装中，R 工具位于以下文件夹：
 
 + SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
-+ Microsoft R Server 独立：`~\Program Files\Microsoft R\R_SERVER\bin\x64`
-+ SQL Server 自 2017 年 1 机器学习服务：`~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
-+ 机器学习 Server （独立）：`~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
++ Microsoft R Server 独立： `~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 自 2017 年 1 机器学习服务： `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ 机器学习 Server （独立）： `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
 
 如果你需要使用 R 工具的帮助，只需打开**RGui**，单击**帮助**，然后选择其中一个选项。
 

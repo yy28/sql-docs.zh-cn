@@ -1,25 +1,25 @@
 ---
-title: "设置用于在 Azure 上的机器学习的虚拟机 |Microsoft 文档"
-ms.custom: 
+title: 设置用于在 Azure 上的机器学习的虚拟机 |Microsoft 文档
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>设置用于在 Azure 上的机器学习的虚拟机
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ ms.lasthandoff: 02/11/2018
 
 如果你只是想要使用如 RevoScaleR 或 MicrosoftML 的包，则不需要其他配置。
 
-## <a name="bkmk_list"></a>虚拟机的列表
+## <a name="bkmk_list"></a> 虚拟机的列表
 
 目前，以下虚拟机是可用于机器学习与 SQL Server:
 
