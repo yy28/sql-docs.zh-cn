@@ -13,6 +13,7 @@
 ## [备份和还原](tutorial-backup-restore-sql-server.md)
 # 操作指南
 ## [仪表板和见解小组件](insight-widgets.md)
+## [扩展](extensions.md)
 ## [代码片段](code-snippets.md)
 ## [集成终端（PowerShell、Bash）](integrated-terminal.md)
 ## [键盘快捷键](keyboard-shortcuts.md)
