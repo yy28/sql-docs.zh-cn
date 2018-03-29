@@ -1,11 +1,11 @@
 
-# [Microsoft PHP Driver for SQL Server](microsoft-php-driver-for-sql-server.md)
+# [Microsoft Drivers for PHP for SQL Server](microsoft-php-driver-for-sql-server.md)
 
 # [入门](getting-started-with-the-php-sql-driver.md)
 ## [步骤 1：配置用于 PHP 开发的开发环境](step-1-configure-development-environment-for-php-development.md)
 ## [步骤 2：创建用于 PHP 开发的 SQL 数据库](step-2-create-a-sql-database-for-php-development.md)
-## [步骤 3：使用 PHP 连接到 SQL 的概念验证](step-3-proof-of-concept-connecting-to-sql-using-php.md)
-## [步骤 4：使用 PHP 实现对 SQL 的弹性连接](step-4-connect-resiliently-to-sql-with-php.md)
+## [第 3 步：使用 PHP 连接到 SQL Server 的概念证明](step-3-proof-of-concept-connecting-to-sql-using-php.md)
+## [第 4 步：使用 PHP 弹性连接到 SQL Server](step-4-connect-resiliently-to-sql-with-php.md)
 
 # [概述](overview-of-the-php-sql-driver.md)
 ## [系统要求](system-requirements-for-the-php-sql-driver.md)
@@ -15,6 +15,7 @@
 ## [发行说明](release-notes-for-the-php-sql-driver.md)
 ## [支持资源](support-resources-for-the-php-sql-driver.md)
 ## [关于代码示例](about-code-examples-in-the-documentation.md)
+## [适用于 SQL Server 的 Microsoft PHP 驱动程序的支持矩阵](microsoft-php-drivers-for-sql-server-support-matrix.md)
 
 # [编程指南](programming-guide-for-php-sql-driver.md)
 ## [连接到服务器](connecting-to-the-server.md)
@@ -25,8 +26,8 @@
 ### [连接池](connection-pooling-microsoft-drivers-for-php-for-sql-server.md)
 ### [如何：禁用多个活动的结果集 (MARS)](how-to-disable-multiple-active-resultsets-mars.md)
 ### [连接选项](connection-options.md)
-### [PHP Driver for SQL Server 对 LocalDB 的支持](php-driver-for-sql-server-support-for-localdb.md)
-### [PHP Driver for SQL Server 对高可用性和灾难恢复的支持](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)
+### [支持 LocalDB](php-driver-for-sql-server-support-for-localdb.md)
+### [支持高可用性、灾难恢复](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)
 ### [连接到 Microsoft Azure SQL 数据库](connecting-to-microsoft-azure-sql-database.md)
 ### [连接复原](connection-resiliency.md)
 ## [比较执行函数](comparing-execution-functions.md)
@@ -59,6 +60,7 @@
 ### [如何：使用 SQLSRV 驱动程序配置错误和警告处理](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [如何：使用 SQLSRV 驱动程序处理错误和警告](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)
 ## [日志记录活动](logging-activity.md)
+## [在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted](using-always-encrypted-php-drivers.md)
 ## [常量（Microsoft Drivers for PHP for SQL Server）](constants-microsoft-drivers-for-php-for-sql-server.md)
 ## [SQLSRV 驱动程序 API 参考](sqlsrv-driver-api-reference.md)
 ### [sqlsrv_begin_transaction](sqlsrv-begin-transaction.md)

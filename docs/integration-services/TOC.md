@@ -104,7 +104,9 @@
 
 # [导入和导出数据](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [变更数据捕获](../integration-services/change-data-capture/change-data-capture-ssis.md)
+# [从 Excel 加载数据或将数据加载到 Excel](load-data-to-from-excel-with-ssis.md)
+
+# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [安装 Microsoft Connector for SAP BW](installing-the-microsoft-connector-for-sap-bw.md)

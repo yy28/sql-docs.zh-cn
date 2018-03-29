@@ -102,8 +102,8 @@
 ## [数据挖掘](data-mining-tutorials-analysis-services.md)  
 
 # 操作说明
-## [表格建模](../analysis-services/tabular-models/tabular-models-ssas.md)
-## [多维建模](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [表格模型](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [多维模型](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
 ## [数据挖掘](../analysis-services/data-mining/data-mining-ssas.md)
 ## [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
 ## [管理服务器](../analysis-services/instances/analysis-services-instance-management.md)
