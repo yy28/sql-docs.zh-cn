@@ -19,19 +19,21 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 2ee56bc26c22f91af7bf156ea967c19b61eab881
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: bc20cc573c6b0890e5b16f4876636534f9fbb916
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>教程：在 SQL Server Management Studio 中编写对象脚本
 本教程将指导如何为 SQL Server Management Studio 中找到的各种对象生成 Transact-SQL (T-SQL) 脚本。  本教程提供如何编写以下对象的脚本的示例： 
- - 在 GUI 中执行操作时的查询
- - 两种不同方式（“脚本编写为”和“生成脚本”）的数据库
- - 表
- - 存储过程
- - 扩展事件
+
+> [!div class="checklist"]
+> * 在 GUI 中执行操作时的查询
+> * 两种不同方式（“脚本编写为”和“生成脚本”）的数据库
+> * 表
+> * 存储过程
+> * 扩展事件
 
 本教程摘要：可为“对象资源管理器”中的任何对象编写脚本，方法是右键单击该对象并选择“编写对象脚本为”选项。 
 
@@ -40,15 +42,14 @@ ms.lasthandoff: 03/21/2018
 若要完成本教程，需要 SQL Server Management Studio、针对 SQL Server 的访问权限以及 AdventureWorks 数据库。 
 
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 
-    - 此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
+- 下载 [AdventureWorks 示例数据库](https://github.com/Microsoft/sql-server-samples/releases)。 此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
 
 
 ## <a name="script-queries-from-gui"></a>从 GUI 编写查询脚本
 在使用 SSMS 中的 GUI 执行任务时，还可以生成与该任务相关联的 T-SQL 代码。 以下示例演示如何在备份数据库和收缩事务日志时执行此操作。  可以向通过 GUI 完成的任何操作应用这些相同的步骤。 
 
-### <a name="scriptt-sql-when-backing-up-a-database"></a>备份数据库时编写 T-SQL 脚本
+### <a name="script-t-sql-when-backing-up-a-database"></a>备份数据库时编写 T-SQL 脚本
 1. 连接到 SQL Server。
 2. 展开 **“数据库”** 节点。
 3. 右键单击数据库>“任务” > “备份”：
@@ -124,7 +125,7 @@ ms.lasthandoff: 03/21/2018
 2. 展开“数据库”节点。
 3. 展开“AdventureWorks”数据库节点。 
 4. 展开“表”节点。
-5. 右键单击要编写脚本的表 >“编写表脚本为”
+5. 右键单击要编写脚本的表 >“编写表脚本为”：
     - 此处提供各种选项，例如创建表或向表中插入数据： 
     
     ![编写表脚本](media/scripting-ssms/scripttable.png)
@@ -136,7 +137,7 @@ ms.lasthandoff: 03/21/2018
 2. 展开“数据库”节点。
 3. 展开“可编程性”节点。 
 4. 展开“存储过程”节点。
-5. 右键单击感兴趣的存储过程 >“编写存储过程脚本为”
+5. 右键单击感兴趣的存储过程 >“编写存储过程脚本为”：
     
     ![编写存储过程脚本](media/scripting-ssms/scriptstoredprocedure.PNG)
 

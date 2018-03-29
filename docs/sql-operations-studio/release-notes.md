@@ -1,28 +1,45 @@
 ---
-title: "Microsoft SQL 操作 Studio （预览版） 发行说明 |Microsoft 文档"
-description: "Microsoft SQL 操作 Studio （预览版） 发行说明"
+title: Microsoft SQL 操作 Studio （预览版） 发行说明 |Microsoft 文档
+description: Microsoft SQL 操作 Studio （预览版） 发行说明
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio （预览版） 发行说明
 
-**[下载年 2 月公共预览版](download.md)**
+**[下载年 3 月公共预览版](download.md)**
+
+## <a name="march-2018-march-public-preview"></a>年 3 月 2018 （年 3 月公共预览版）
+
+发布日期： 2018 年 3 月 28，  
+version: 0.27.3
+
+*年 3 月公共预览版*继续解决的首要 GitHub 问题并集中于改进我们的扩展性故事。 具体而言启用扩展管理器，改进了仪表板管理，并提供 SQL 代理和 insights 扩展。 此版本包括以下增强功能：
+
+- 增强仪表板扩展性模型以支持选项卡式的见解和配置窗格。
+   - 扩展管理器使简单获取扩展。
+   - 从 sp_whoisactive 的仪表板扩展[whoisactive.com](http://www.whoisactive.com)。
+   - 有关详细信息，请参阅[扩展的功能的 SQL 操作 Studio](extensions.md)。
+- 添加其他[连接和对象资源管理器的扩展性 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API)管理。
+- 继续修复影响的重要客户[GitHub 问题](https://github.com/Microsoft/sqlopsstudio/issues)。
+
+有关详细信息，请参阅[更改日志](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)。
+
 
 ## <a name="february-2018-february-public-preview"></a>年 2 月 2018 （年 2 月公共预览版）
 
@@ -63,8 +80,6 @@ ms.lasthandoff: 02/19/2018
 - 修复拖放重大脚本 bug。
 - 修复不正确的固定开始菜单图标。
 - 修复缺少品牌图标的 Azure 帐户。
-
-有关详细信息，请参阅[更改日志](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)。
 
 
 ## <a name="december-2017-december-public-preview"></a>自 2017 年 12 月 （年 12 月公共预览版）

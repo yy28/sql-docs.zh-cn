@@ -10,21 +10,23 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 7b389c5b58dc0afde077f70e2fd8bec7c6cac4d0
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>教程：使用 SQL Server Management Studio 连接和查询 SQL Server
 本教程将指导如何使用 SQL Server Management Studio (SSMS) 连接到 SQL Server 实例以及运行一些基本的 Transact-SQL (T-SQL) 命令。 本文演示如何执行以下操作：
-    - [连接到 SQL Server](#connect-to-a-sql-server)
-    - [新建数据库 (TutorialDB)](#create-a-database)
-    - [在新数据库中创建表（“客户”）](#create-a-table)
-    - [在新“客户”表中插入行](#insert-rows)
-    - [查询“客户”表并查看结果](#view-query-results)
-    - [使用查询窗口表验证连接属性](#verify-your-query-window-connection-properties)
-    - [更改查询窗口连接到的服务器](#change-server-connection-within-query-window)
+
+> [!div class="checklist"]
+> * [连接到 SQL Server](#connect-to-a-sql-server)
+> * [新建数据库 (TutorialDB)](#create-a-database)
+> * [在新数据库中创建表（“客户”）](#create-a-table)
+> * [在新“客户”表中插入行](#insert-rows)
+> * [查询“客户”表并查看结果](#view-query-results)
+> * [使用查询窗口表验证连接属性](#verify-your-query-window-connection-properties)
+> * [更改查询窗口连接到的服务器](#change-server-connection-within-query-window)
 
 
 ## <a name="prerequisites"></a>必备条件

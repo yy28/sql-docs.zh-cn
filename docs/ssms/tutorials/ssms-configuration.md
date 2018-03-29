@@ -10,21 +10,22 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: c9ede90c1232469797f85af353c7e3fced6851b5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>教程：SQL Server Management Studio 组件和配置
 本教程介绍 SQL Server Management Studio (SSMS) 中的不同窗口组件和一些适用于工作区的基本配置选项。 本文将介绍以下内容： 
-- 构成 SSMS 环境的不同组件
-- 更改环境布局并将其重置为默认值
-- 最大化查询编辑器
-- 更改一些基本设置，例如
-    - 更改字体
-    - 配置启动选项
-    - 将配置重置回默认值
+
+> [!div class="checklist"]
+> * 构成 SSMS 环境的不同组件
+> * 更改环境布局并将其重置为默认值
+> * 最大化查询编辑器
+> * 更改字体 
+> * 配置启动选项 
+> * 将配置重置回默认值 
 
 ## <a name="prerequisites"></a>必备条件
 若要完成本教程，需要 SQL Server Management Studio。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/21/2018
 
     
 
-## <a name="changing-the-environmental-layout"></a>更改环境布局 
+## <a name="change-the-environmental-layout"></a>更改环境布局 
 本部分讨论操作环境布局，如移动各种窗口。 
 
 -  可通过按住标题并拖动窗口来移动每个窗口组件。 
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/21/2018
  
     ![还原窗口布局](media/ssms-configuration/resetwindowlayout.png)
     
-## <a name="maximizing-query-editor"></a>最大化查询编辑器
+## <a name="maximize-query-editor"></a>最大化查询编辑器
 查询编辑器可以最大化至全屏模式。
 
 1. 单击“查询编辑器”窗口中的任意位置。
@@ -100,7 +101,7 @@ ms.lasthandoff: 03/21/2018
 
 
 
-## <a name="changing-basic-settings"></a>更改基本设置
+## <a name="change-basic-settings"></a>更改基本设置
 本部分讨论如何修改 SSMS 中的一些基本设置。 这些选项位于“工具”菜单选项内：
 
   ![“工具”菜单](media/ssms-configuration/tools.png)
@@ -110,18 +111,32 @@ ms.lasthandoff: 03/21/2018
 
     ![自定义工具栏](media/ssms-configuration/toolbar.png)
 
+### <a name="change-the-font"></a>更改字体
 - 可从菜单“工具” > “选项” > “字体和颜色”中更改字体：
 
      ![字体和颜色](media/ssms-configuration/fontsandcolors.png)
 
+### <a name="change-the-startup-options"></a>更改启动选项
 - 启动选项确定首次启动 SSMS 时工作区的外观。 可从菜单“工具” > “选项” > “启动”中配置这些选项：
  
     ![启动选项](media/ssms-configuration/startup.png)
 
+### <a name="reset-settings-to-default"></a>将设置重置为默认值
 - 可从菜单“工具” > “导入和导出设置”中导出和导入所有这些设置 
 
     ![导入和导出设置](media/ssms-configuration/settings.png)
     - 还可在其中将所有设置重置为默认值。 
+
+
+## <a name="next-steps"></a>后续步骤
+下一篇文章将提供一些使用 SSMS（如查找 SQL Server 错误日志和 SQL 实例名称）的其他提示和技巧。 
+
+转到下一篇文章，了解详细信息
+> [!div class="nextstepaction"]
+> [后续步骤按钮](ssms-tricks.md)
+ 
+ 
+
 
 
 

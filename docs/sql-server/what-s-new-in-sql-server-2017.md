@@ -1,30 +1,32 @@
 ---
-title: "SQL Server 2017 的新增功能 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2017 的新增功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: "71"
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 445de7e87daf3d7e083532a06269d810f574fa96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 47d6f056dce4ad26a10e082d27119523fde303d0
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题概括了特定功能区域的新增功能，并包括指向其他详细信息的链接。 有关 Linux 上的 SQL Server 的相关详细信息，请参阅 [Linux 上的 SQL Server 文档](https://docs.microsoft.com/sql/linux/)
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强大功能引入 Linux、基于 Linux 的 Docker 容器和 Windows，使用户可以在 SQL Server 平台上选择开发语言、数据类型、本地开发或云端开发，以及操作系统开发。 本主题概括了特定功能区域的新增功能，并包括指向其他详细信息的链接。 有关 Linux 上的 SQL Server 的相关详细信息，请参阅 [Linux 上的 SQL Server 文档](https://docs.microsoft.com/sql/linux/)
 
 [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477)试用：[下载 SQL Server 2017 发行版 - 2017 年 10 月：](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
@@ -79,7 +81,7 @@ SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能�
 - 从 SQL Server 2012、SQL Server 2014 和 SQL Server 2016 升级到 SQL Server 2017 Master Data Services 时，体验和性能有所改进。 
 - 现在可以在 Web 应用程序的“资源管理器”页中查看实体、集合和层次结构的排序列表。
 - 提升了使用暂存存储过程暂存数百万条记录时的性能。
-- 提升了在“管理组”页中展开“实体”文件夹以分配模型权限时的性能。 “管理组”页位于 Web 应用程序的“安全性”部分中。 若要详细了解性能提升，请访问 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)。 若要详细了解如何分配权限，请参阅[分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)。
+- 提升了在“管理组”页中展开“实体”文件夹以分配模型权限时的性能。 “管理组”页位于 Web 应用程序的“安全性”部分中。 有关性能改进的详细信息，请参阅 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)。 若要详细了解如何分配权限，请参阅[分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)。
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强功能。 其中包括：
@@ -128,5 +130,7 @@ SQL Server 开发人员现在可访问开放源代码生态系统中提供的大
 - 查找 [SQL Server 2016 中的新增功能](what-s-new-in-sql-server-2016.md)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

@@ -1,34 +1,38 @@
 ---
-title: "为 SQL Server 代理服务设置 SQL Server 别名 | Microsoft Docs"
-ms.custom: 
+title: 为 SQL Server 代理服务设置 SQL Server 别名 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - aliases [SQL Server], creating
 - SQL Server Agent, aliases
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34ac8dbca47438f2a551a423a72db455d41298d0
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4a87a6895b4143925823b7899d9c01aa8851be80
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>使用 SQL Server Management Studio 为 SQL Server 代理服务设置 SQL Server 别名
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
 本主题说明了如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 设置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 别名以供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理用来连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务将通过命名管道，使用无需额外客户端配置的动态服务器名称连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的实例。 如果当前使用的不是默认网络传输或连接的是侦听备用命名管道的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例，则需要配置服务器连接别名。  
   
 **本主题内容**  
@@ -45,7 +49,7 @@ ms.lasthandoff: 02/23/2018
   
 ### <a name="Restrictions"></a>限制和局限  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 必须选择引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 本地实例的别名，代理才能正常工作。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 必须选择引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]本地实例的别名，代理才能正常工作。  
   
 -   “对象资源管理器”仅在您拥有使用权限时才显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理节点。  
   

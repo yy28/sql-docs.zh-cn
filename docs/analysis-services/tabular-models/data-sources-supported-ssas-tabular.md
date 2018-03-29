@@ -1,33 +1,36 @@
 ---
-title: "在 SQL Server Analysis Services 表格模型中支持的数据源 |Microsoft 文档"
-ms.custom: 
-ms.date: 02/22/2018
+title: 在 SQL Server Analysis Services 表格 1200年模型中支持的数据源 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/28/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 14aa6597e533000c259f513c503825e7993da77c
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/29/2018
 ---
-# <a name="data-sources-supported-in-tabular-models"></a>在表格模型中受支持的数据源
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>数据源支持在 SQL Server Analysis Services 中表格 1200年模型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Azure Analysis Services，请参阅[Azure Analysis Services 中支持的数据源](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)。
+  
+本文介绍了可以用于在 1200年的 SQL Server Analysis Services 表格模型和低的兼容级别的数据源的类型。 
 
-  本文介绍可与表格模型使用的数据源的类型。  
+对于 1400年兼容性级别的模型，请参阅[支持 SQL Server Analysis Services 表格 1400年模型中的数据源](data-sources-supported-ssas-tabular-1400.md)。
+
+Azure Analysis Services，请参阅[Azure Analysis Services 中支持的数据源](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)。
   
 ##  <a name="bkmk_supported_ds"></a> 内存中表格模型的支持的数据源  
 在您安装 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]时，安装程序不安装对每种数据源列出的访问接口。 某些提供可能与你的计算机上的其他应用程序一起安装。 在其他情况下，你可能需要下载并安装提供程序。  
@@ -75,3 +78,9 @@ Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 
 不同数据源中包含类似数据的列是在模型设计器中创建关系的基础。 在使用异类数据源时，应选择包含这样的列的表：这些列可以映射到其他数据源中包含相同或类似数据的表。  
   
 OLE DB 访问接口有时可以提供更快的性能的大规模数据。 在为同一数据源选择不同访问接口时，应首先尝试 OLE DB 访问接口。  
+
+## <a name="see-also"></a>另请参阅
+
+[数据源中支持 SQL Server Analysis Services 表格 1400年模型](data-sources-supported-ssas-tabular-1400.md)
+
+[在 Azure Analysis Services 中受支持的数据源](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

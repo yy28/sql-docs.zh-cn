@@ -1,28 +1,28 @@
 ---
-title: "使用 Azure Active Directory 身份验证进行连接 |Microsoft 文档"
-ms.custom: 
+title: 使用 Azure Active Directory 身份验证进行连接 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
 ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 28c8e53032cacb6620aeb304c228c35deec9e7a6
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: a0cbb8a2b6eff8e3a612039616f9b497a2ea2737
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 本文提供有关如何开发 Java 应用程序以使用用于 SQL Server 的 Microsoft JDBC Driver 6.0 （或更高版本） 的 Azure Active Directory 身份验证功能的信息。
@@ -212,16 +212,15 @@ You have successfully logged on as: <your user name>
 1.  为你的服务，在 Azure Active Directory 中创建的应用程序帐户。
     1. 登录到 Azure 管理门户
     2. 在左侧导航窗格中单击 Azure Active Directory
-    3. 单击你要在其中注册示例应用程序的目录租户。 这必须是与你的数据库 （承载你的数据库的服务器） 相关联的相同目录。
-    4. 单击应用程序选项卡。
-    5. 在抽屉中，单击添加。
-    6. 单击"添加我的组织正在开发的应用程序"。
-    7. 输入 mytokentest 作为应用程序的友好名称，选择"Web 应用程序和/或 Web API"，然后单击下一步。
-    8. 假设此应用程序为后台程序/服务并且不是 web 应用程序，它不具有登录 URL 或应用程序 ID URI。 对于这两个字段，输入 http://mytokentest
-    9. 仍然在 Azure 门户中，单击你的应用程序的配置选项卡
-    10. 找到客户端 ID 值并将其复制到某个位置，你需要此更高版本配置你的应用程序 (例如，a4bbfe26-dbaa-4fec-8ef5-223d229f647d) 时。 请参阅以下的快照。
-    11. 在"密钥"部分中，选择密钥的持续时间，保存配置，并复制以供将来使用的密钥。 这是客户端机密。
-    12. 在底部，单击"查看终结点"，并复制"OAUTH 2.0 授权终结点"下的 URL 以供将来使用。 这是 STS URL。
+    3. 单击"应用程序注册"选项卡。
+    4. 在抽屉中，单击"新应用程序注册"。
+    5. 输入 mytokentest 作为应用程序的友好名称，选择"Web 应用程序/API"。
+    6. 我们不需要登录 URL。 只需提供任何内容:"http://mytokentest"。
+    7. 在底部单击"创建"。
+    9. 仍然在 Azure 门户中，单击你的应用程序的"设置"选项卡并打开"属性"选项卡。
+    10. 找到"应用程序 ID"(也称为客户端 ID) 值并将其复制到某个位置，你需要此更高版本配置你的应用程序 (例如，1846943b-ad04-4808-aa13-4702d908b5c1) 时。 请参阅以下的快照。
+    11. 找到"应用程序 ID URL"值并将其复制到某个位置，这是 STS 的 URL。
+    12. 在"密钥"部分下，通过填写名称字段，选择持续时间的密钥，并保存配置 （将空值字段） 中创建密钥。 保存后，值字段应为自动填充，复制生成的值。 这是客户端机密。
 
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. 登录到你的 Azure SQL 服务器的用户数据库作为 Azure Active Directory 管理员和应用程序主体中使用 T-SQL 命令设置包含的数据库用户。 请参阅[连接到 SQL 数据库或 SQL 数据仓库使用 Azure Active Directory 身份验证](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)有关如何创建 Azure Active Directory 管理员和包含的数据库用户的详细信息。
@@ -253,8 +252,8 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-        String clientId = "a4bbfe26-dbaa-4fec-8ef5-223d229f647d"; // Replace with your client ID.
+        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
         AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));
