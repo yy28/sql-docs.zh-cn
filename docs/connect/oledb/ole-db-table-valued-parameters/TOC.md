@@ -1,0 +1,10 @@
+# [表值参数 (OLE DB)](table-valued-parameters-ole-db.md)
+
+# [执行包含表值参数的命令](executing-commands-containing-table-valued-parameters.md)
+# [向表值参数中插入数据](inserting-data-into-table-valued-parameters.md)
+# [OLE DB 表值参数类型支持（方法）](ole-db-table-valued-parameter-type-support-methods.md)
+# [OLE DB 表值参数类型支持（属性）](ole-db-table-valued-parameter-type-support-properties.md)
+# [OLE DB 表值参数类型支持](ole-db-table-valued-parameter-type-support.md)
+# [为 OLE DB 表值参数更改的架构行集](schema-rowsets-changed-for-ole-db-table-valued-parameters.md)
+# [创建表值参数行集](table-valued-parameter-rowset-creation.md)
+# [表值参数类型发现](table-valued-parameter-type-discovery.md)
