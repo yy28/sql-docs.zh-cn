@@ -1,35 +1,37 @@
 ---
-title: "Microsoft OLE DB Provider for SQL Server |Microsoft 文档"
+title: Microsoft OLE DB Provider for SQL Server |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 概述
 Microsoft OLE DB Provider for SQL Server，SQLOLEDB，允许 ADO 来访问 Microsoft SQL Server。
+
+**注意：**不建议新的开发使用该驱动程序。 新的 OLE DB 访问接口称为[Microsoft OLE DB 驱动程序的 SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 将更新其与今后的最新的服务器功能。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
  若要连接到此提供程序，设置*提供程序*参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性：
@@ -160,7 +162,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |线程处理模型的数据源对象|DBPROP_DSOTHREADMODEL|
 |DBMS 名称|DBPROP_DBMSNAME|
 |DBMS 版本|DBPROP_DBMSVER|
-|扩展的属性|DBPROP_INIT_PROVIDERSTRING|
+|扩展属性|DBPROP_INIT_PROVIDERSTRING|
 |按支持进行分组|DBPROP_GROUPBY|
 |异类表支持|DBPROP_HETEROGENEOUSTABLES|
 |标识符区分大小写|DBPROP_IDENTIFIERCASE|
