@@ -1,30 +1,30 @@
 ---
-title: "在 SQL Server 中处理 JSON 数据 | Microsoft Docs"
-ms.custom: 
+title: 在 SQL Server 中处理 JSON 数据 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92bac08a5168cb60477f8d253a9fee1f0fb5caef
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1e4e9f4a26b2d5ad3ee12975fa16d0442766f7e9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 数据
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,31 @@ FOR JSON PATH
 ```  
   
 有关详细信息，请参阅[借助 FOR JSON 将查询结果格式化为 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) 和 [FOR 子句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)。  
-  
+
+## <a name="use-cases-for-json-data-in-sql-server"></a>SQL Server 中 JSON 数据的用例
+
+通过 SQL Server 和 Azure SQL 数据库中的 JSON 支持，可合并关系和 NoSQL 概念。 可轻松将关系数据转换为半结构化数据，反之亦然。 但是，JSON 不可替换现有关系模型。 下面是几种得益于 SQL Server 和 SQL 数据库中的 JSON 支持的特定用例。 有关详细信息，请参阅 [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)（SQL Server 中的 JSON - 用例）。
+
+### <a name="simplify-complex-data-models"></a>简化复杂的数据模型
+
+请考虑使用 JSON 字段代替多个子表对数据模型进行反规范化。 有关详细信息，请参阅 [Simplify data access using de-normalized models](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/)（使用非规范化的模型简化数据访问）。
+
+### <a name="store-retail-and-e-commerce-data"></a>存储零售和电子商务数据
+
+在非规范化模型中存储有关含大量变量属性的产品的信息，以实现灵活性。 有关详细信息，请参阅 [Designing Product Catalogs in SQL Server using JSON](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/)（在 SQL Server 中使用 JSON 设计产品目录）和 [Indexing data in JSON product catalogs](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/)（为 JSON 产品目录中的数据编制索引）。
+
+### <a name="process-log-and-telemetry-data"></a>处理日志和遥测数据
+
+使用 Transact-SQL 语言的所有功能加载、查询和分析存储为 JSON 文件的日志数据。 有关详细信息，请参阅 [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)（SQL Server 中的 JSON - 用例）中的日志和遥测数据分析部分。
+
+### <a name="store-semi-structured-iot-data"></a>存储半结构化的 IoT 数据
+
+需要对 IoT 数据进行实时分析时，可直接将传入数据加载到数据库，而不是将其暂存在存储位置中。 有关详细信息，请参阅 [Working with Azure IoT data in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/)（使用 Azure SQL 数据库中的 Azure IoT 数据）。
+
+### <a name="simplify-rest-api-development"></a>简化 REST API 开发
+
+将数据库中的关系数据轻松转换为支持网站的 REST API 使用的 JSON 格式。 有关详细信息，请参阅 [Simplify REST API development for modern Single-page apps with SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/)（使用 SQL Server 简化现代单页面应用的 REST API 开发）。
+
 ## <a name="combine-relational-and-json-data"></a>合并关系数据和 JSON 数据
 SQL Server 提供混合模型，用于通过标准 Transact-SQL 语言存储和处理关系数据与 JSON 数据。 可以将 JSON 文档的集合组织到表中，在它们之间建立关系，将表中存储的强类型标量列与 JSON 列中存储的灵活键/值对合并，以及使用完整 Transact SQL 查询一个或多个表中的标量值和 JSON 值。
  

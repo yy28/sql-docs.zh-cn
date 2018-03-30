@@ -1,28 +1,28 @@
 ---
 title: RENAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/20/2017
-ms.prod: 
+ms.custom: ''
+ms.date: 03/21/2018
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1766a9e1dbe040ed120aaaf5d35fe0ab858c4e7a
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/25/2018
   在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中重命名用户创建的表。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中重命名用户创建的表或数据库。  
   
 > [!NOTE]  
->  若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中重命名数据库，请使用存储过程 [sp_renamedb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)。 若要重命名 Azure SQL 数据库中的数据库，可使用 [ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md) 语句。 
+>  若要重命名 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 中的数据库，请使用 [ALTER DATABASE（Azure SQL 数据仓库）](alter-database-azure-sql-data-warehouse.md)。  若要重命名 Azure SQL 数据库中的数据库，可使用 [ALTER DATABASE (Azure SQL Database)](alter-database-azure-sql-database.md) 语句。 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中重命名数据库，请使用存储过程 [sp_renamedb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)。
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 -- Syntax for Azure SQL Data Warehouse  
   
 -- Rename a table.  
-RENAME OBJECT [ :: ]  [ [ database_name .  [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name  
+RENAME OBJECT [::] [ [ database_name .  [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name  
 [;]  
   
 ```  
@@ -56,14 +56,12 @@ RENAME DATABASE [::] database_name TO new_database_name
 ```  
   
 ## <a name="arguments"></a>参数  
- RENAME OBJECT [::]   
-          [ [database_name . [ schema_name ] . ] | [ schema_name . ] ]*table_name* TO *new_table_name*  
+ RENAME OBJECT [::] [ [database_name . [ schema_name ] . ] | [ schema_name . ] ]*table_name* TO *new_table_name*  
  适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  更改用户定义的表的名称。 使用一部分、两部分或三部分名称指定要重命名的表。    以一部分名称的形式指定新表 new_table_name。  
   
- RENAME DATABASE [::]   
-          [ database_name TO new_database_name  
+ RENAME DATABASE [::] [ database_name TO new_database_name  
  适用范围：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  将用户定义的数据库的名称从 database_name 更改为 new_database_name。  无法将数据库重命名为以下任何 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 保留数据库名称：  
@@ -98,10 +96,10 @@ RENAME DATABASE [::] database_name TO new_database_name
 无法重命名外部表、索引或视图。 可以删除外部表、索引或视图，然后使用新名称重新创建它，而不是进行重命名。
 
 ### <a name="cannot-rename-a-table-in-use"></a>无法重命名正在使用的表  
- 无法重命名正在使用的表或数据库。 重命名表需要在表上使用排他锁。 如果表正在使用中，则可能需要终止使用表的会话。 若要终止会话，可以使用 KILL 命令。 应谨慎使用 KILL，因为终止会话时会回滚任何未提交的工作。 SQL 数据仓库中的会话使用“SID”作为前缀。 调用 KILL 命令时需要包括此前缀和会话编号。 此示例查看活动或空闲会话的列表，然后终止会话“SID1234”。  
+ 无法重命名正在使用的表或数据库。 重命名表需要在表上使用排他锁。 如果表正在使用中，则可能需要终止使用表的会话。 若要终止会话，可以使用 KILL 命令。 应谨慎使用 KILL，因为终止会话时会回滚任何未提交的工作。 SQL 数据仓库中的会话使用“SID”作为前缀。 调用 KILL 命令时包括“SID”和会话编号。 此示例查看活动或空闲会话的列表，然后终止会话“SID1234”。  
   
 ### <a name="views-are-not-updated"></a>视图不会进行更新  
- 重命名数据库时，使用以前数据库名称的所有视图都会变为无效状态。 这适用于数据库内部和外部的视图。 例如，如果对 Sales 数据库进行重命名，则包含 `SELECT * FROM Sales.dbo.table1` 的视图会变为无效状态。 若要解决此问题，可以避免在视图中使用三部分名称，或更新视图以引用新数据库名称。  
+ 重命名数据库时，使用以前数据库名称的所有视图都会变为无效状态。 此行为适用于数据库内部和外部的视图。 例如，如果对 Sales 数据库进行重命名，则包含 `SELECT * FROM Sales.dbo.table1` 的视图会变为无效状态。 若要解决此问题，可以避免在视图中使用三部分名称，或更新视图以引用新数据库名称。  
   
  重命名表时，视图不会进行更新以引用新表名。 数据库内部或外部引用以前表名的每个视图都会变为无效状态。 若要解决此问题，可以更新每个视图以引用新表名。  
   
@@ -141,7 +139,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. 将表移动到另一个架构  
  适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- 如果要将对象移动到另一个架构，请使用 [ALTER SCHEMA (Transact-SQL)](../../t-sql/statements/alter-schema-transact-sql.md). 例如，这会将表项从 product 架构移动到 dbo 架构。  
+ 如果要将对象移动到另一个架构，请使用 [ALTER SCHEMA (Transact-SQL)](../../t-sql/statements/alter-schema-transact-sql.md). 例如，以下语句会将表项从 product 架构移动到 dbo 架构。  
   
 ```  
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
@@ -150,7 +148,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. 在重命名表之前终止会话  
  适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- 请务必记住，无法重命名正在使用的表。 重命名表需要在表上使用排他锁。 如果表正在使用中，则可能需要终止使用表的会话。 若要终止会话，可以使用 KILL 命令。 应谨慎使用 KILL，因为终止会话时会回滚任何未提交的工作。 SQL 数据仓库中的会话使用“SID”作为前缀。 调用 KILL 命令时需要包括此前缀和会话编号。 此示例查看活动或空闲会话的列表，然后终止会话“SID1234”。  
+ 请务必记住，无法重命名正在使用的表。 重命名表需要在表上使用排他锁。 如果表正在使用中，则可能需要终止使用表的会话。 若要终止会话，可以使用 KILL 命令。 应谨慎使用 KILL，因为终止会话时会回滚任何未提交的工作。 SQL 数据仓库中的会话使用“SID”作为前缀。 调用 KILL 命令时需要包括“SID”和会话编号。 此示例查看活动或空闲会话的列表，然后终止会话“SID1234”。  
   
 ```  
 -- View a list of the current sessions  

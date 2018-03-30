@@ -1,31 +1,32 @@
 ---
-title: "将 DQS 配置为使用引用数据 | Microsoft Docs"
-ms.custom: 
+title: 将 DQS 配置为使用引用数据 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.administration.rdsconfiguration.f1
 - sql13.dqs.administration.configuration.createDirectRDS.f1
 - sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5be1119a1c6796c864bce4d0ea5ca3358894f8ba
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6d83e0d7cee787614832c94c75f6948ab0c00c84
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>将 DQS 配置为使用引用数据
   本主题介绍如何将 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 配置为使用引用数据来清理您的数据。 您可以使用来自 Windows Azure Marketplace 或来自直接联机第三方引用数据提供程序的引用数据。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="before-you-begin"></a>开始之前  
   
 ###  <a name="Prerequisites"></a> 先决条件  
- 若要使用来自 Marketplace 的引用数据，您必须具有有效的 Marketplace 帐户密钥。 有关创建 Marketplace 帐户密钥的详细信息，请参阅 [创建帐户](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建 Marketplace 帐户密钥。  
+ 若要使用来自 Marketplace 的引用数据，您必须具有有效的 Marketplace 帐户密钥。 有关创建 Marketplace 帐户密钥的详细信息，请参阅[创建帐户](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建 Marketplace 帐户密钥。  
   
 ###  <a name="Security"></a> 安全性  
   

@@ -1,42 +1,43 @@
 ---
-title: "PDF 设备信息设置 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: PDF 设备信息设置 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dccc67734b6cf54758ec14b326b171a6effef30b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0bd2635a54003fd663dadcf6d3bc5991c1841988
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="pdf-device-information-settings"></a>PDF 设备信息设置
   下表列出以 PDF 格式呈现报表时的设备信息设置。  
   
 |设置|ReplTest1|  
 |-------------|-----------|  
+| AccessiblePDF | 指示是否呈现可访问/已标记的 PDF，此 PDF 大小更大，但更易于屏幕阅读器和其他辅助技术读取和导航。 默认值是 **false**秒。 [在 Power BI 报表服务器（2018 年 3 月版）及更高版本中可用] |
 |**“列”**|要为报表设置的列数。 此值将覆盖报表的原始设置。|  
 |**ColumnSpacing**|要为报表设置的列间距。 此值将覆盖报表的原始设置。|  
 |**DpiX**|输出设备在 X 方向的分辨率。|  
 |**DpiY**|输出设备在 Y 方向的分辨率。|  
 |**EndPage**|要呈现的报表的最后一页。 默认值为 **StartPage**的值。|  
-|**HumanReadablePDF**|指示是否应压缩 PDF，这使得源更易于读取。 默认值为 **false.**|  
+|**HumanReadablePDF**|指示是否呈现未压缩的 PDF 文件，此文件大小更大，但在纯文本编辑器中更易于人们阅读。 默认值为 **false.**|  
 |**MarginBottom**|要为报表设置的下边距值，以英寸为单位。 必须包含一个整数或小数值，后跟“in”（例如，1in）。 此值将覆盖报表的原始设置。|  
 |**MarginLeft**|要为报表设置的左边距值，以英寸为单位。 必须包含一个整数或小数值，后跟“in”（例如，1in）。 此值将覆盖报表的原始设置。|  
 |**MarginRight**|要为报表设置的右边距值，以英寸为单位。 必须包含一个整数或小数值，后跟“in”（例如，1in）。 此值将覆盖报表的原始设置。|  

@@ -1,25 +1,25 @@
 ---
-title: "Reporting Services (SSRS) 中的新增功能 | Microsoft Docs"
-ms.date: 10/10/2017
+title: Reporting Services (SSRS) 中的新增功能 | Microsoft Docs
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f739af4e274a8d9ccdb4ccb3bc4ab3de3776d8a8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ecbce2bb1fa67b2a3db6bd01f5a4a371486cf531
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -33,7 +33,9 @@ ms.lasthandoff: 01/09/2018
 
 - 若要下载 SQL Server 2017 Reporting Services，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55252)。
 
-有关当前的发行说明，请参阅 [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)或 [Power BI 报表服务器发行说明](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)。 有关 Power BI 报表服务器的信息，请参阅[开始使用 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
+有关最新的发行说明，请参阅 [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)。 
+
+有关 Power BI 报表服务器的信息，请参阅[开始使用 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)。
 
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 
@@ -78,7 +80,7 @@ ms.lasthandoff: 01/09/2018
  #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   你可以通过品牌包使用组织的徽标和颜色来自定义 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 。  
   
-  有关自定义品牌的详细信息，请参阅 [设置 Web 门户的品牌](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
+  有关自定义品牌的详细信息，请参阅[设置 Web 门户的品牌](http://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/09/2018
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- 有关详细信息，请参阅 [使用 Web 门户中的 KPI](http://msdn.microsoft.com/en-us/a28cf500-6d47-4268-a248-04837e7a09eb)
+ 有关详细信息，请参阅[使用 Web 门户中的 KPI](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
   
  
  ### <a name="mobile-reports"></a>移动报表
@@ -189,13 +191,11 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ## <a name="next-steps"></a>后续步骤
 
-[Analysis Services 中的新增功能](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[SSRS 中的 Power BI 技术预览版报表 - 发行说明](../reporting-services/reporting-services-release-notes.md)  
+[Analysis Services 中的新增功能](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)   
-[后向兼容性](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
-[SQL Server 2016 各个版本支持的 Reporting Services 功能](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[后向兼容性](http://msdn.microsoft.com/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
+[SQL Server 2016 各个版本支持的 Reporting Services 功能](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [升级和迁移 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-[Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
