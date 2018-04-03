@@ -1,28 +1,28 @@
 ---
-title: "ADO 术语表 |Microsoft 文档"
-ms.custom: 
+title: ADO 术语表 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  表中的字段和变量之间的映射。 在 ADO 的 Visual c + + 扩展中，**记录集**字段映射到 C/c + + 变量。  
   
  位掩码  
- 数字值适用于与其他数字值的按位值比较通常可标志参数或返回值中的选项。 通常这种比较，可使用按位逻辑运算符，如**和**和**或者**在 Visual Basic 中，  **&** 和**&#124;**在 c + +。  
+ 数字值适用于与其他数字值的按位值比较通常可标志参数或返回值中的选项。 通常这种比较，可使用按位逻辑运算符，如**和**和**或者**在 Visual Basic 中， **&**和**&#124;** c + + 中。  
   
  例如，ADO **FieldAttributeEnum**值可以用作位掩码确定字段的特性。 假设你想要确定字段是否可更新。 无法使用以下表达式在 Visual Basic 中对此进行测试：`Field.Attributes AND adFldUpdatable`  
   
@@ -165,7 +165,7 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="e"></a>E  
  枚举  
- 命名常量的列表。 枚举的值不需要是唯一的。 但是每个值的名称必须是在其中定义枚举的作用域内唯一的。 在 ADO 中，枚举用于数字参数和返回值，以添加到 ADO 代码的含义并屏蔽的开发人员的数字值 （这可能会更改版本之间的差异）。 例如，若要打开一个静态**记录集**，使用**adOpenStatic**枚举值：`Recordset.Open ,,adOpenStatic`  
+ 命名常量的列表。 枚举的值不需要是唯一的。 但是每个值的名称必须是在其中定义枚举的作用域内唯一的。 在 ADO 中，枚举用于数字参数和返回值，以添加到 ADO 代码的含义并屏蔽的开发人员的数字值 （这可能会更改版本之间的差异）。 例如，若要打开一个静态**记录集**，使用**adOpenStatic**枚举值： `Recordset.Open ,,adOpenStatic`  
   
  也称为*枚举的常数*。 另请参阅*常量*。  
   

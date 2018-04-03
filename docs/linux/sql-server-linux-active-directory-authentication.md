@@ -1,6 +1,6 @@
 ---
-title: "在 Linux 上的 SQL Server 的 active Directory 身份验证教程 |Microsoft 文档"
-description: "本教程提供有关在 Linux 上的 SQL Server 的 AAD 身份验证的配置步骤。"
+title: 在 Linux 上的 SQL Server 的 active Directory 身份验证教程 |Microsoft 文档
+description: 本教程提供有关在 Linux 上的 SQL Server 的 AAD 身份验证的配置步骤。
 author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb
@@ -8,19 +8,19 @@ manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: f6acfbf1138507100a0b5b5a486d0e6288f8b372
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>在 Linux 上的 SQL 服务器的教程： 使用 Active Directory 身份验证
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/24/2018
 在配置 AD 身份验证之前，您需要：
 
 * 设置你的网络上的 AD 域控制器 (Windows)  
-* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* 安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/24/2018
 
 使用以下步骤以加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到 Active Directory 域的主机：
 
-1. 使用 **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 加入你的 AD 域的主机。 如果你尚未安装的 realmd 和 Kerberos 客户端包上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用你的 Linux 分发的包管理器的主机：
+1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**加入你的 AD 域的主机。 如果你尚未安装的 realmd 和 Kerberos 客户端包上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用你的 Linux 分发的包管理器的主机：
 
    ```bash
    # RHEL
@@ -137,6 +137,8 @@ ms.lasthandoff: 02/24/2018
    > 如果你看到的错误，"未安装必需的包，"，然后应安装这些包使用你的 Linux 分发的包管理器在运行前`realm join`试命令。
    >
    > 如果收到错误，"权限不足，无法加入域，"，然后需要与域管理员检查有足够的权限将 Linux 计算机加入到你的域。
+   >
+   > 如果收到错误，"KDC 答复不匹配的预期目标，"你可能未指定用户的正确领域名称。 领域名称区分大小写、 通常大写，并可以使用命令标识`realm discover contoso.com`。
    
    > SQL Server 使用 SSSD 和 NSS 用于将用户帐户和组映射到安全标识符 (SID)。 SSSD 必须进行配置并运行 SQL Server 已成功创建 AD 登录名的顺序。 Realmd 通常自动执行此操作一部分的加入域，但在某些情况下你必须单独执行此操作。
    >
@@ -145,7 +147,7 @@ ms.lasthandoff: 02/24/2018
   
 5. 验证，可以现在从域中，收集有关用户的信息以及您可以获取作为该用户的 Kerberos 票证。
 
-   下面的示例使用**id**，  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**，和 **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** 此的命令。
+   下面的示例使用**id**，  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**，和**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**此的命令。
 
    ```bash
    id user@contoso.com
@@ -206,7 +208,7 @@ ms.lasthandoff: 02/24/2018
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 创建具有的 keytab 文件 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 为你在上一步中创建的 AD 用户。 出现提示时，输入该 AD 帐户的密码。
+2. 创建具有的 keytab 文件**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**为你在上一步中创建的 AD 用户。 出现提示时，输入该 AD 帐户的密码。
 
    ```bash
    sudo ktutil

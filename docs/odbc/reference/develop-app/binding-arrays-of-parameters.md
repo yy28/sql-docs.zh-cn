@@ -1,31 +1,32 @@
 ---
-title: "绑定的参数数组 |Microsoft 文档"
-ms.custom: 
+title: 绑定的参数数组 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>绑定参数的数组
 应用程序使用的参数数组绑定到 SQL 语句中的参数的数组。 有两种绑定样式：  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  按列绑定是默认设置。 应用程序还可以更改从按行绑定到列绑定通过设置 SQL_ATTR_PARAM_BIND_TYPE 语句属性。 下图显示列绑定的原理。  
   
- ![演示如何列 &#45; 明智的做法绑定 works](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![演示如何列&#45;明智绑定的工作方式](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
  例如，下面的代码将 10 元素数组绑定到参数对于 PartID、 描述和价格的列，并执行一个语句来插入 10 行。 它使用专用于列的绑定。  
   
@@ -59,9 +60,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  
@@ -134,7 +135,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset
   
  其中为行编号从 1 到参数集的大小。 偏移量，如果定义，是由 SQL_ATTR_PARAM_BIND_OFFSET_PTR 语句属性指向的值。 下图显示行绑定的原理。 参数可以按任意顺序结构中放置，但为清楚起见的连续顺序显示。  
   
- ![显示行的方式 &#45; 明智的做法绑定 works](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![显示行的方式&#45;明智绑定的工作方式](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
  下面的代码创建一个结构与要 PartID、 描述和价格列中存储的值的元素。 然后将分配这些结构一个 10 元素数组，并将其绑定到 PartID、 描述和价格列，请使用按行绑定的参数。 然后，它将执行一个语句来插入 10 行。  
   

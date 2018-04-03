@@ -11,13 +11,13 @@ ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 08/09/2017
+ms.date: 03/29/2018
 ms.author: genemi
-ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: c1f0f197fbc01863ab06164282d2d007c2bd8214
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 数据库的连接模块
 
@@ -27,7 +27,6 @@ ms.lasthandoff: 03/28/2018
 - MacOS
 - Windows
 
-
 #### <a name="oop-to-relational-mismatch"></a>OOP-到-关系不匹配
 
 *关系*： 通常用一种面向对象编程 (OOP) 语言编写的客户端程序使用 SQL 驱动程序是多个关系比面向对象的格式返回查询的数据。 C# 使用 ADO.NET 是一个示例。 OOP 关系格式不匹配有时有 OOP 代码更难地编写和理解。
@@ -35,7 +34,6 @@ ms.lasthandoff: 03/28/2018
 *ORM*： 其他驱动程序或框架中避免这种不匹配的 OOP 格式返回查询的数据。 这些驱动程序工作应为类具有已定义以匹配特定的 SQL 表的数据列。 然后，该驱动程序执行*对象关系映射*(ORM) 类的实例形式返回查询的数据。 Microsoft 的 Entity Framework (EF)，对于 C# 中，和 for Java 的休眠是两个示例。
 
 本文用于单独的章节形成这些两种类型的连接驱动程序。
-
 
 <a name="anchor-20-drivers-relational-access" />
 
@@ -53,18 +51,16 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-
 | 语言 | 下载 SQL 驱动程序 |
 | :------- | :---------------------- |
-| C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET 核心，适用于 Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET 核心，适用于 Windows](https://www.microsoft.com/net/core) |
-| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
-| Node.js  | [Node.js 驱动程序，安装说明](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *操作系统：*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[从 Github 的 Linux 或 macOS PHP 驱动程序](http://github.com/Microsoft/msphpsql/) |
-| Python   | [pyodbc，安装说明](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[下载 ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Ruby     | [Ruby 驱动程序，安装说明](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby 下载页](https://rubyinstaller.org/downloads/) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET 核心，适用于 Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET 核心，适用于 Windows](https://www.microsoft.com/net/core) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| Java | [JDBC](./jdbc/microsoft-jdbc-driver-for-sql-server.md) |
+| Node.js | [Node.js 驱动程序，安装说明](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
+| PHP | *操作系统：*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[从 Github 的 Linux 或 macOS PHP 驱动程序](http://github.com/Microsoft/msphpsql/) |
+| Python | [pyodbc，安装说明](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[下载 ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Ruby 驱动程序，安装说明](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby 下载页](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
-
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -82,14 +78,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](http://rubyonrails.org/) |
-| &nbsp; | <br /> |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>生成的应用的网页
-
-
 [http://aka.ms/sqldev](http://aka.ms/sqldev) 将你带到一组*生成的应用*网页。 网页提供大量组合的编程语言、 操作系统和 SQL 连接驱动程序有关的信息。 生成的应用网页提供的信息包括以下各项：
 
 - 有关如何开始从一开始，对于每个语言 + 操作系统 + 驱动程序组合的详细信息。
@@ -99,24 +92,16 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
     - ORM 代码示例。
     - 更快的性能的列存储索引演示。
 
-
 #### <a name="first-page-of-build-an-app-webpages"></a>第一页，生成的应用的网页
-
 ![生成的应用网页，第一页的屏幕截图][image-ref-163-buildanapp-webpages-first-page]
 
-
 #### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Java-Ubuntu，生成的应用的网页的菜单
-
 ![生成的应用网页，菜单 Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
-
 
 &nbsp;
 
-
 ## <a name="related-links"></a>相关链接
-
 - [代码示例用于连接到 Azure SQL 数据库在云中，使用 Java 和其他语言](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)。
-
 
 <!-- Image references -->
 

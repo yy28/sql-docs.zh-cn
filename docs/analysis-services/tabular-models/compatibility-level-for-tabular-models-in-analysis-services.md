@@ -1,28 +1,29 @@
 ---
-title: "Analysis Services 中的表格模型的兼容性级别 |Microsoft 文档"
-ms.custom: 
-ms.date: 10/16/2017
+title: Analysis Services 中的表格模型的兼容性级别 |Microsoft 文档
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.versioncompat.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4dcc372bb9eac9887a06923cf517e4375ec1bbcb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6fbd08b52c50e8ea010f4fcc6664176935457322
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格模型的兼容性级别
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 1400 兼容级别中的主要功能包括：
 
 *  新的基础结构的数据连接和导入表格模型支持 TOM Api 和 TMSL 脚本。 这使对其他数据源，例如 Azure Blob 存储的支持。 其他数据源将包含在后续更新。
-*  数据转换，并通过使用获取数据和 M 表达式的数据混合应用程序功能。
+*  数据转换，并通过在 SSDT 中使用获取数据和 M 表达式的数据混合应用程序功能。
 *  度量值现在支持具有 DAX 表达式中，启用 BI 工具 （如 Microsoft Excel) 深化到详细数据从聚合报表的详细信息行属性。 例如，当最终用户查看地区和月的总销售额，则可查看关联的订单详细信息。 
 *  表名和列名，除了在其中的数据的对象级别安全。
 *  不规则层次结构的增强的支持。
@@ -47,11 +48,11 @@ ms.lasthandoff: 01/08/2018
 |-|-|- 
 |**兼容级别**|**服务器版本**| 
 |1400|Azure Analysis Services，SQL Server 自 2017 年 1 |  
-|1200|Azure Analysis Services，SQL Server 自 2017 年，SQL Server 2016| 
-|1103|SQL Server 自 2017 年 1 *，SQL Server 2016、 SQL Server 2014、 SQL Server 2012 SP1|  
-|1100|SQL Server 自 2017 年 1 *，SQL Server 2016、 SQL Server 2014、 SQL Server 2012 SP1、 SQL Server 2012| 
+|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
+|1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
-\*在 SQL Server 自 2017 年，1100年和 1103年兼容性级别已弃用。
+\* 在 SQL Server 自 2017 年，1100年和 1103年兼容性级别已弃用。
   
 ## <a name="set-compatibility-level"></a>将兼容性级别设置 
  如果创建新的表格模型项目之后在 SQL Server Data Tools (SSDT)，你可以在指定的兼容性级别**表格模型设计器**对话框。 

@@ -1,31 +1,31 @@
 ---
-title: "数据挖掘解决方案的相关项目 |Microsoft 文档"
-ms.custom: 
+title: 数据挖掘解决方案的相关项目 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>数据挖掘解决方案的相关项目
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-数据挖掘解决方案中至少要包含数据挖掘项目，该项目定义了数据源、数据源视图、挖掘结构和挖掘模型。 但是，在使用数据挖掘模型做出日常决策时，将数据挖掘与预测分析解决方案的其他部分集成非常重要，其中可包含以下过程和组成部分：  
+  数据挖掘解决方案中至少要包含数据挖掘项目，该项目定义了数据源、数据源视图、挖掘结构和挖掘模型。 但是，在使用数据挖掘模型做出日常决策时，将数据挖掘与预测分析解决方案的其他部分集成非常重要，其中可包含以下过程和组成部分：  
   
 -   准备和选择数据和变量。 这一过程包括数据清除、元数据管理和多个数据源的集成，以及数据的转换、合并和数据到数据仓库的上载。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/23/2018
  [语义索引](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供数据挖掘项目的数据准备和定型阶段所需的组件和功能。 虽然您可使用其他工具（如脚本）执行很多数据清除或准备任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在数据挖掘方面具有众多优势：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供了组件和功能所需的数据准备和定型阶段的数据挖掘项目。 虽然您可使用其他工具（如脚本）执行很多数据清除或准备任务，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在数据挖掘方面具有众多优势：  
   
 -   将任务表示为工作流的一部分，可对其进行重复、自动化、分支或扩展。  
   
@@ -209,6 +209,6 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型解决方案 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [表格模型解决方案](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [表格模型解决方案](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   
