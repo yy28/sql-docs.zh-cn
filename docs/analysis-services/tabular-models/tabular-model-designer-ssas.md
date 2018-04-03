@@ -1,31 +1,31 @@
 ---
-title: "表格模型设计器 |Microsoft 文档"
-ms.date: 10/19/2017
+title: SQL Server Data Tools 中的表格模型设计器 |Microsoft 文档
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 062505fcf50d84cb853cff541dc0cf6ed6ee0f3e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="tabular-model-designer-ssas"></a>表格模型设计器 (SSAS)
+# <a name="tabular-model-designer"></a>表格模型设计器
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 表格模型设计器是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的一部分（与 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成），它具有专用于开发专业表格模型解决方案的附加项目类型模板。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 作为免费 Web 下载内容安装。 有关详细信息，请参阅[下载 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。    
   
@@ -140,6 +140,5 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>另请参阅  
  [表格模型项目](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [属性](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
