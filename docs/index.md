@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
-title: "Microsoft SQL 文档 | Microsoft 文档"
-description: "了解 SQL"
+hide_bc: true
+title: Microsoft SQL 文档 | Microsoft 文档
+description: 了解 SQL
 author: barbkess
 ms.author: barbkess
 ms.topic: article
