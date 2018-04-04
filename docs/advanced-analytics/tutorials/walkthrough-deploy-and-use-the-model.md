@@ -1,30 +1,28 @@
 ---
-title: "将 R 模型部署和使用在 SQL （演练） |Microsoft 文档"
-ms.custom: 
+title: 将 R 模型部署和使用在 SQL （演练） |Microsoft 文档
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 771683f472af17292de62fb1591539f1215ebf57
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: de43bd77f7a5537265fb7cb74a59e326010a9f71
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>部署 R 模型，在 SQL 中使用它
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,9 +69,9 @@ ms.lasthandoff: 02/11/2018
     END
     ```
 
-    + 使用 SELECT 语句调用从 SQL 表的存储的模型。 从作为表中检索模型**varbinary （max)** SQL 变量中存储的数据 _@lmodel2_ ，作为参数传递和*mod*到存储的系统过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+    + 使用 SELECT 语句调用从 SQL 表的存储的模型。 从作为表中检索模型**varbinary （max)** SQL 变量中存储的数据_@lmodel2_，作为参数传递和*mod*到存储的系统过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 计分已定义为 SQL 查询，存储作为 SQL 变量中的字符串用作输入的数据 _@input_ 。 从数据库检索数据时，它存储在数据帧调用*InputDataSet*，这就是默认名称为输入数据传送到[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)过程; 你可以定义如果需要使用参数的其他变量名  *_@input_data_1_name_*  。
+    + 计分已定义为 SQL 查询，存储作为 SQL 变量中的字符串用作输入的数据_@input_。 从数据库检索数据时，它存储在数据帧调用*InputDataSet*，这就是默认名称为输入数据传送到[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)过程; 你可以定义如果需要使用参数的其他变量名*_@input_data_1_name_*。
 
     + 为了生成分数，存储过程会从 `rxPredict` RevoScaleR **库调用** 函数。
 

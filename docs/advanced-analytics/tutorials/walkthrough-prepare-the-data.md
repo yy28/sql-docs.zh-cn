@@ -1,30 +1,28 @@
 ---
-title: "准备使用 PowerShell （演练） 的数据 |Microsoft 文档"
-ms.custom: 
+title: 准备使用 PowerShell （演练） 的数据 |Microsoft 文档
+ms.custom: ''
 ms.date: 11/10/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>准备使用 PowerShell （演练） 的数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +110,7 @@ GitHub 存储库中提供了所需的所有代码。 可使用 PowerShell 脚本
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 此示例使用 R grep 函数搜索所向量的可用路径，并查找包括"Program Files"路径。 有关详细信息，请参阅 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)。
+    - 此示例使用 R grep 函数搜索所向量的可用路径，并查找包括"Program Files"路径。 有关详细信息，请参阅[ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep)。
 
     - 如果您认为程序包都已安装，请通过运行检查安装程序包的列表`installed.packages()`。
 
@@ -279,7 +277,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 + 公共数据集: [NYC Taxi 和 Limousine 佣金] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [NYC Taxi 数据集上生成 Azure ML 模型](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/。
++ [NYC Taxi 数据集上生成 Azure ML 模型](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell 和 R 脚本文件
 

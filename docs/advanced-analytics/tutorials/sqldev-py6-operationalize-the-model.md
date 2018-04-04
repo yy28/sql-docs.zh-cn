@@ -1,30 +1,28 @@
 ---
-title: "步骤 6： 具有可操作性 Python 模型时使用 SQL Server |Microsoft 文档"
-ms.custom: 
+title: 步骤 6： 具有可操作性 Python 模型时使用 SQL Server |Microsoft 文档
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: a93461ee03122a3bf70dc37cc2d0f639531d1bcf
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>步骤 6： 具有可操作性 Python 模型时使用 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -354,16 +352,16 @@ GO
 
 这两个过程的输出时，提示为与指定的参数或功能 taxi 行程正在付费的概率。
 
-### <a name="changes"></a>更改
+### <a name="changes"></a> 更改
 
 本部分列出了本教程中使用的代码更改。 进行这些更改以反映最新**revoscalepy**版本。 有关 API 的帮助，请参阅[Python 函数库参考](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)。
 
 | 更改的详细信息 | 说明|
 | ----|----|
 | 删除`import pandas`中的所有示例| 现在默认情况下加载的 pandas|
-| 函数`rx_predict_ex`更改为`rx_predict`| 需要 RTM 和预发行版本`rx_predict_ex`|
-| 函数`rx_logit_ex`更改为`rx_logit`| 需要 RTM 和预发行版本`rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])`更改为`prob_list = prob_array["tipped_Pred"].values`| 更新 API|
+| 函数`rx_predict_ex`更改为 `rx_predict`| 需要 RTM 和预发行版本 `rx_predict_ex`|
+| 函数`rx_logit_ex`更改为 `rx_logit`| 需要 RTM 和预发行版本 `rx_logit_ex`|
+| ` probList.append(probArray._results["tipped_Pred"])` 更改为 `prob_list = prob_array["tipped_Pred"].values`| 更新 API|
 
 如果你安装使用 SQL Server 自 2017 年的预发布版本的 Python 服务，我们建议你升级。 你还可以通过使用机器学习服务器的最新版本升级中的 Python 和 R 组件。 有关详细信息，请参阅[使用绑定来升级的 SQL Server 实例](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 

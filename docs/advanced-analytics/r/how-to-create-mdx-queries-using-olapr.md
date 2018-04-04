@@ -1,28 +1,26 @@
 ---
-title: "如何创建 MDX 查询使用 olapR |Microsoft 文档"
-ms.custom: 
+title: 如何创建 MDX 查询使用 olapR |Microsoft 文档
+ms.custom: ''
 ms.date: 11/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9d917316a9d25b0634605e0f55eae3eda93f8669
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>如何创建使用 olapR 的 MDX 查询
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/11/2018
 + 创建新的 OLAP 对象
 + 到分区，包括度量值或总和的写回
 
-## <a name="buildMDX"></a>从 R 生成的 MDX 查询
+## <a name="buildMDX"></a> 从 R 生成的 MDX 查询
 
 1. 定义指定 OLAP 数据源（SSAS 实例）和 MSOLAP 提供程序的连接字符串。
 
@@ -51,8 +49,8 @@ ms.lasthandoff: 02/11/2018
 4. 使用以下帮助程序函数，提供要包含在 MDX 查询中的维度和度量值的相关详细信息：
 
      + `cube()` 指定 SSAS 数据库的名称。 如果连接到命名实例，则提供的计算机名称和实例名称。 
-     + `columns()`提供要在中使用的度量值的名称**ON 列**自变量。
-     + `rows()`提供要在中使用的度量值的名称**ON 行**自变量。
+     + `columns()` 提供要在中使用的度量值的名称**ON 列**自变量。
+     + `rows()` 提供要在中使用的度量值的名称**ON 行**自变量。
      + `slicers()` 指定要作为切片器使用的字段或成员。 切片器就像应用于所有 MDX 查询数据的筛选器一样。
      
      + `axis()` 指定要在查询中使用的附加轴的名称。 
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/11/2018
   + `executeMD` 返回多维数组
   + `execute2D` 返回二维（表格）数据帧
 
-## <a name="executeMDX"></a>执行从 R 有效的 MDX 查询
+## <a name="executeMDX"></a> 执行从 R 有效的 MDX 查询
 
 1. 定义指定 OLAP 数据源（SSAS 实例）和 MSOLAP 提供程序的连接字符串。
 
@@ -191,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>返回指定维度和层次结构的所有成员
 
-定义源并创建句柄后，指定要返回的多维数据集、维度和层次结构。 在返回的结果中，以作为前缀的项 **->** 表示的上一个成员的子级。
+定义源并创建句柄后，指定要返回的多维数据集、维度和层次结构。 在返回的结果中，以作为前缀的项**->**表示的上一个成员的子级。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"

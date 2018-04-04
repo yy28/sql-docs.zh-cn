@@ -1,30 +1,29 @@
 ---
-title: "SQL Server R 教程 |Microsoft 文档"
+title: SQL Server R 教程 |Microsoft 文档
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 34fee91978a27e38fca6092a98596c701cfd32eb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server R 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +112,7 @@ ms.lasthandoff: 02/11/2018
 
 运行 SQL Server 安装程序之后, 不要忘记以下重要步骤：
 
-+ 通过运行启用外部脚本执行功能`sp_configure 'external scripts enabled', 1`
++ 通过运行启用外部脚本执行功能 `sp_configure 'external scripts enabled', 1`
 + 重新启动服务器
 + 请确保调用外部运行时服务的必需的权限
 + 确保你的 SQL 登录名或 Windows 用户帐户具有所必需的权限连接到服务器，以读取数据，并创建此示例要求任何数据库对象

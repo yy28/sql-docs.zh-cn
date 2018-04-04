@@ -1,27 +1,25 @@
 ---
-title: "转换 R 代码以便在 R Services 中使用 | Microsoft Docs"
+title: 转换 R 代码以便在 R Services 中使用 | Microsoft Docs
 ms.date: 12/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 669f52d499b9479e23266af91c04e6bc084bb8ea
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="converting-r-code-for-execution-in-database"></a>转换执行数据库中的 R 代码
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 02/11/2018
 
 + 使用 R 库访问网络或无法在 SQL Server 上安装的。
 + 代码使单独调用外部 SQL Server，如 Excel 工作表、 共享上的文件和其他数据库的数据源。 
-+ 你想要运行中的代码 *@script* 参数[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)和也参数化存储的过程。
++ 你想要运行中的代码*@script*参数[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)和也参数化存储的过程。
 + 您的原始解决方案包括多个步骤，可能会在生产环境中执行独立，如数据准备或与模型训练、 评分，或报告的特征工程如果更加高效。
 + 你想要提高通过更改库，使用并行执行，或卸载到 SQL Server 的某些处理优化性能。 
 

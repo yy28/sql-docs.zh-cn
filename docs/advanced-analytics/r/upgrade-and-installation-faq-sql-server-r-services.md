@@ -1,25 +1,23 @@
 ---
-title: "对 SQL Server 机器学习的升级和安装常见问题解答 |Microsoft 文档"
+title: 对 SQL Server 机器学习的升级和安装常见问题解答 |Microsoft 文档
 ms.date: 03/15/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
-author: HeidiSteen
 ms.author: heidist
+author: HeidiSteen
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 3cbb94081b2d056128fb4beda413c82cd4a20964
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 288c764a56cb7a97774e26645f175e912b56b2a7
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

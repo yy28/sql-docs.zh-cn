@@ -1,29 +1,27 @@
 ---
-title: "创建预测模型 (SQL 快速入门中的 R) |Microsoft 文档"
-ms.custom: 
+title: 创建预测模型 (SQL 快速入门中的 R) |Microsoft 文档
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
-ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c01d03ff9911a88851b5dd560aaa44e85d4c89ff
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>创建预测模型 (SQL 快速入门中的 R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,7 +150,7 @@ VALUES (' latest model', @model)
 
 请记住使用 SQL 参数和 R 变量中的这些规则`sp_execute_external_script`:
 
-+ 必须按名称的列出所有 SQL 参数映射到 R 脚本 _@params_ 自变量。
++ 必须按名称的列出所有 SQL 参数映射到 R 脚本_@params_自变量。
 + 若要输出其中一个参数，请在 _@params_ 列表中添加 OUTPUT 关键字。
 + 列出映射的参数后，请紧接在 _@params_ 列表的后面，逐行提供 SQL 参数到 R 变量的映射。
 

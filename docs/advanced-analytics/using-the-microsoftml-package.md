@@ -1,29 +1,27 @@
 ---
-title: "使用 SQL Server MicrosoftML 包 |Microsoft 文档"
-ms.custom: 
+title: 使用 SQL Server MicrosoftML 包 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8d3cec4401f23e4cf7f187b1a937eb10b60dbcd0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>使用 SQL Server MicrosoftML 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,7 @@ MicrosoftML 包含各种机器学习算法和经过优化的性能的转换。
 
 - 决策树和决策林模型：`rxFastTree`是最初称为 FastRank，开发的目标是在 Bing 中使用提升的决策树算法。 它是最快速和最流行的学习器之一。 支持二元分类和回归。
 
-  `rxFastForest`逻辑回归模型取决于随机林方法。 它相当于 RevoScaleR 中的 `rxLogit` 函数，但支持 L1 和 L2 正则化。 支持二元分类和回归。
+  `rxFastForest` 逻辑回归模型取决于随机林方法。 它相当于 RevoScaleR 中的 `rxLogit` 函数，但支持 L1 和 L2 正则化。 支持二元分类和回归。
 
 - 逻辑回归：`rxLogisticRegression`是一个逻辑回归模型类似于`rxLogit`RevoScaleR 中的额外支持 L1 和 L2 正则化的函数。 支持二进制或多类分类。
 

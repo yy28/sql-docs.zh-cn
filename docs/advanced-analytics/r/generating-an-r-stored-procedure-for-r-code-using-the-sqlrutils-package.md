@@ -1,28 +1,26 @@
 ---
-title: "使用 sqlrutils 包为 R 代码生成 R 存储过程 | Microsoft Docs"
-ms.custom: 
+title: 使用 sqlrutils 包为 R 代码生成 R 存储过程 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 2a119867b30b0d3ff8a0abb0b32e8017e5663969
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ac234229a5d44d2016252318093853b4dc9cd957
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>使用 sqlrutils 包为 R 代码生成 R 存储过程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/11/2018
 
 通过转换 R 代码以在单个存储过程中运行，可更有效地利用 SQL Server R Services，它要求将 R 脚本作为参数嵌入 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 **sqlrutils** 包有助于构建此嵌入的 R 脚本并正确设置相关参数。
 
- **Sqlrutils** 包执行以下任务：
+**Sqlrutils** 包执行以下任务：
 
 - 将生成的 T-SQL 脚本保存为 R 数据结构内的字符串
 - 可以选择为 T-SQL 脚本生成 .sql 文件，可编辑或运行此文件来创建存储过程

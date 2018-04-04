@@ -1,24 +1,24 @@
 ---
-title: "创建多个模型使用 rxExecBy |Microsoft 文档"
-ms.custom: 
+title: 创建多个模型使用 rxExecBy |Microsoft 文档
+ms.custom: ''
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 685833317453c1ed5765385a73ff892a85989c2c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dd104a75e207cc783350f96250911bc7e3f8c20c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>创建使用 rxExecBy 的多个模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,11 +47,11 @@ SQL Server 自 2017 年 1 CTP 2.0 包括一个新函数**rxExecBy**，支持多�
 
 ### <a name="supported-functions"></a>支持的函数
 
-建模： `rxLinMod`， `rxLogit`， `rxGlm`，`rxDtree`
+建模： `rxLinMod`， `rxLogit`， `rxGlm`， `rxDtree`
 
 评分： `rxPredict`，
 
-转换或进行分析：`rxCovCor`
+转换或进行分析： `rxCovCor`
 
 ## <a name="example"></a>示例
 

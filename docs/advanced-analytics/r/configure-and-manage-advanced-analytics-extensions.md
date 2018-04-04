@@ -1,27 +1,25 @@
 ---
-title: "高级机器学习服务的配置选项 |Microsoft 文档"
+title: 高级机器学习服务的配置选项 |Microsoft 文档
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>机器学习服务的高级的配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ ms.lasthandoff: 02/11/2018
 
 **适用于：** SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务
 
-##  <a name="bkmk_Provisioning"></a>设置其他用户帐户，机器学习
+##  <a name="bkmk_Provisioning"></a> 设置其他用户帐户，机器学习
 
 中的外部脚本进程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]低特权的本地用户帐户的上下文中运行。 在单个低特权帐户中运行这些过程具有以下优点：
 
@@ -45,13 +43,13 @@ ms.lasthandoff: 02/11/2018
 
 + 用户帐户池链接到一个特定的实例。 已针对哪台计算机启用了学习每个实例需要单独的池的工作帐户。 帐户不能在各个实例之间共享。
 
-+ 池中的用户帐户名采用 SQLInstanceName*nn*相关的其他服务进行轻微的配置更改。 例如，如果为机器学习中使用的默认实例，用户帐户池将支持帐户名称，例如 MSSQLSERVER01、 MSSQLSERVER02，等。
++ 池中的用户帐户名采用 SQLInstanceName*nn*格式。 例如，如果为机器学习中使用的默认实例，用户帐户池将支持帐户名称，例如 MSSQLSERVER01、 MSSQLSERVER02，等。
 
 + 用户帐户池的大小是静态的，默认值为 20。 可以同时启动的外部运行时会话数受此用户帐户池的大小。 若要更改此限制，管理员应使用 SQL Server 配置管理器。
 
 有关如何更改用户帐户池的详细信息，请参阅[修改 SQL Server 机器学习服务的用户帐户池](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)。
 
-##  <a name="bkmk_ManagingMemory"></a>管理外部脚本进程使用的内存
+##  <a name="bkmk_ManagingMemory"></a> 管理外部脚本进程使用的内存
 
 默认情况下，机器学习的外部脚本运行时仅限于不能超过 20%的总计算机内存。 它依赖于你的系统，但通常情况下，你可能会发现此限制不足的严重的机器学习任务，例如为模型定型或预测上很多行数据。 
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 02/11/2018
 
 若要深入了解运行 SQL Server 服务所需的权限，请参阅[配置 Windows 服务帐户和权限](https://msdn.microsoft.com/library/ms143504.aspx#Windows)。
 
-##  <a name="bkmk_ChangingConfig"></a>更改高级的服务选项
+##  <a name="bkmk_ChangingConfig"></a> 更改高级的服务选项
 
 在早期版本的 SQL Server 2016 R Services 中，你无法通过编辑更改服务的某些属性[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]配置文件。 
 
@@ -93,7 +91,7 @@ ms.lasthandoff: 02/11/2018
 
 **若要修改调试设置**
 
-使用快速启动板的配置文件，这可能会在有限情况下，例如调试很有用，仅可以更改的几个属性。 过程中创建配置文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置和默认情况下保存为纯文本文件中的以下位置：`<instance path>\binn\rlauncher.config`
+使用快速启动板的配置文件，这可能会在有限情况下，例如调试很有用，仅可以更改的几个属性。 过程中创建配置文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置和默认情况下保存为纯文本文件中的以下位置： `<instance path>\binn\rlauncher.config`
 
 你必须是运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上的管理员才能对此文件进行更改。 如果你要编辑该文件，我们建议你在保存更改之前创建备份副本。
 

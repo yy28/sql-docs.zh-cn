@@ -1,26 +1,24 @@
 ---
-title: "对 SQL Server 机器学习服务扩展事件 |Microsoft 文档"
-ms.custom: 
+title: 对 SQL Server 机器学习服务扩展事件 |Microsoft 文档
+ms.custom: ''
 ms.date: 12/21/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e16c8c468b4e82847e65e808f357e6eefb811f7
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的扩展的事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +51,7 @@ AND p.name = 'SQLSatellite';
 
 有关如何执行此操作的详细信息，请参阅明[从外部进程收集事件](#bkmk_externalevents)。
 
-##  <a name="bkmk_xeventtable"></a>扩展事件表
+##  <a name="bkmk_xeventtable"></a> 扩展事件表
 
 |事件|Description|说明|  
 |-----------|-----------------|---------|  
@@ -88,7 +86,7 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|卫星连接完成发送单个数据区块时触发。|包含列数、行数、数据包数量，以及发送数据区块所用的时间等信息。|  
 |satellite_sessionId_mismatch|消息的会话 ID 不匹配||  
   
-###  <a name="bkmk_externalevents"></a>从外部进程收集事件
+###  <a name="bkmk_externalevents"></a> 从外部进程收集事件
 
 SQL Server 机器学习服务开始在 SQL Server 进程外部运行某些服务。 若要捕获与这些外部进程相关的事件，必须创建一个事件跟踪配置文件，并将文件放在进程的可执行文件所在的目录。  
   

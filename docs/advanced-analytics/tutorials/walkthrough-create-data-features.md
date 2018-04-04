@@ -1,30 +1,28 @@
 ---
-title: "创建使用 R 和 SQL （演练） 的数据功能 |Microsoft 文档"
-ms.custom: 
+title: 创建使用 R 和 SQL （演练） 的数据功能 |Microsoft 文档
+ms.custom: ''
 ms.date: 08/23/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ecbdc28ac530dcee1ba9f5a3820d999ad4e0fcd9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>创建使用 R 和 SQL （演练） 的数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -242,7 +240,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 你的时间可能差异很大，具体取决于你网络的速度和你的硬件配置。 在我们测试的配置[!INCLUDE[tsql](../../includes/tsql-md.md)]函数的方法是比使用自定义 R 函数更快。 因此，我们已使用[!INCLUDE[tsql](../../includes/tsql-md.md)]这些计算在随后的步骤的函数。
 
 > [!TIP]
-> 通常，功能工程使用[!INCLUDE[tsql](../../includes/tsql-md.md)]会更快比。例如，T-SQL 包括快速窗口和可以应用于如滚动移动平均线的常见数据科学计算的排名函数和 *n* -磁贴。 请根据你的数据和任务选择最高效的方法。
+> 通常，功能工程使用[!INCLUDE[tsql](../../includes/tsql-md.md)]会更快比。例如，T-SQL 包括快速窗口和可以应用于如滚动移动平均线的常见数据科学计算的排名函数和*n*-磁贴。 请根据你的数据和任务选择最高效的方法。
 
 ## <a name="next-lesson"></a>下一课
 

@@ -1,24 +1,24 @@
 ---
-title: "本机评分 |Microsoft 文档"
-ms.custom: 
+title: 本机评分 |Microsoft 文档
+ms.custom: ''
 ms.date: 09/19/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 449773e8ca4f2e396dca4f8aed5299effb7aa49a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-scoring"></a>本机评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +99,7 @@ _评分_过程分为两步。 首先，你指定一个预先训练的模型，�
 + 必须事先使用支持之一定型模型**rx**算法。 有关详细信息，请参阅[支持算法](#bkmk_native_supported_algos)。
 + 必须使用新的序列化函数提供 Microsoft R Server 9.1.0 中保存模型。 序列化函数进行了优化以支持快速评分。
 
-### <a name="bkmk_native_supported_algos"></a>支持本机评分的算法
+### <a name="bkmk_native_supported_algos"></a> 支持本机评分的算法
 
 + RevoScaleR 模型
 

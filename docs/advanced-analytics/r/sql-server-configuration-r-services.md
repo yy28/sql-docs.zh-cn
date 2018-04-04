@@ -1,26 +1,24 @@
 ---
-title: "SQL Server 配置 (R Services) | Microsoft Docs"
-ms.custom: 
+title: SQL Server 配置 (R Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 794a15c6673a06ea261f66129035ea62ea31cb0e
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>与 R 一起使用的 SQL Server 配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -126,7 +124,7 @@ SQL Server 中的资源调控允许您集中监视和控制 SQL Server 以及。
 
 限制为 20%的适用于 SQL Server 本身的总内存的内存使用情况外部脚本的默认值。 默认情况下，以确保依赖于数据库服务器的所有任务不会严重都影响通过长时间运行的 R 作业才应用此限制。 但是，数据库管理员可以更改这些限制。 在许多情况下，20%限制不足够用来支持严重机器学习工作负荷。
 
-支持的配置选项是**MAX_CPU_PERCENT**， **MAX_MEMORY_PERCENT**，和**MAX_PROCESSES**。 若要查看当前设置，请使用以下语句：`SELECT * FROM sys.resource_governor_external_resource_pools`
+支持的配置选项是**MAX_CPU_PERCENT**， **MAX_MEMORY_PERCENT**，和**MAX_PROCESSES**。 若要查看当前设置，请使用以下语句： `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  如果服务器主要用于 R Services，它可能会很有用，以将 MAX_CPU_PERCENT 增加到 40%或 60%。
 
@@ -134,11 +132,11 @@ SQL Server 中的资源调控允许您集中监视和控制 SQL Server 以及。
 
 若要更改已分配的资源值，请使用 T-SQL 的语句。
 
-+ 此语句设置为 40%的内存使用率：`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
++ 此语句设置为 40%的内存使用率： `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
-+ 此语句将设置所有三个可配置值：`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
++ 此语句将设置所有三个可配置值： `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ 如果你改变内存、 CPU 或最大进程设置，然后想要立即应用设置，运行此语句：`ALTER RESOURCE GOVERNOR RECONFIGURE`
++ 如果你改变内存、 CPU 或最大进程设置，然后想要立即应用设置，运行此语句： `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## <a name="soft-numa-hardware-numa-and-cpu-affinity"></a>软件 NUMA、 硬件 NUMA 和 CPU 相关性
 
