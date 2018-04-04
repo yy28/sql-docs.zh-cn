@@ -1,19 +1,19 @@
-# [概述](tabular-models-ssas.md)  
-
-# [创建表格模型](tabular-model-solutions-ssas-tabular.md)  
+# [表格模型](tabular-models-ssas.md)  
+## [兼容级别](compatibility-level-for-tabular-models-in-analysis-services.md)  
 ## [表格 1400 模型中支持的数据源](data-sources-supported-ssas-tabular-1400.md)  
 ## [表格 1200 模型中支持的数据源](data-sources-supported-ssas-tabular.md)  
 ## [支持的数据类型](data-types-supported-ssas-tabular.md)  
+
+# 创建表格模型
 ## [表格模型设计器](tabular-model-designer-ssas.md)  
 ## [工作区数据库](workspace-database-ssas-tabular.md)  
-## [兼容级别](compatibility-level-for-tabular-models-in-analysis-services.md)  
 
 ## [表格模型项目](tabular-model-projects-ssas-tabular.md)  
 ### [创建新的表格模型项目](create-a-new-tabular-model-project-analysis-services.md)  
 ### [从 Analysis Services 导入](import-from-analysis-services-ssas-tabular.md)  
 ### [从 Power Pivot 导入](import-from-power-pivot-ssas-tabular.md)  
 
-## [属性](properties-ssas-tabular.md)  
+## 属性
 ### [Power View - 报表属性](power-view-reporting-properties-ssas-tabular.md)  
 ### [Power View - 配置默认字段集](power-view-configure-default-field-set-for-reports.md)  
 ### [Power View - 配置表行为属性](power-view-configure-table-behavior-properties-for-reports.md)  
