@@ -1,27 +1,27 @@
 ---
-title: "将 JSON 文档导入 SQL Server | Microsoft Docs"
-ms.custom: 
+title: 将 JSON 文档导入 SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e88356f3f8de8ba463b945c5806ea3cbed14bf2c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e16ca364f3e9ed5c65b89a1abdd554991558862e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>将 JSON 文档导入 SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -144,10 +144,10 @@ SELECT value
 OPENROWSET 从文件中读取单个文本值，以 BulkColumn 的形式返回该值，并将其传递给 OPENJSON 函数。 OPENJSON 循环访问 BulkColumn 数组中 JSON 对象的数组，并在每行中返回一本 JSON 格式的书籍：
 
 ```json
-{"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
-{"id":"978-1423103349″, "cat":["book","paperback"], "name":"The Sea of Monsters", … 
-{"id":"978-1857995879″, "cat":["book","paperback"], "name":"Sophie’s World : The Greek … 
-{"id":"978-1933988177″, "cat":["book","paperback"], "name":"Lucene in Action, Second … 
+{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", … }
+{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", … }
+{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie’s World : The Greek", … } 
+{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", … }
 ```
 
 ### <a name="example-3"></a>示例 3
@@ -183,11 +183,11 @@ SELECT book.*
 
 有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的视频介绍，请观看以下视频：
 
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)（SQL Server 2016 和 JSON 支持）
+-   [SQL Server 2016 和 JSON 支持](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
 
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)（在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON）
+-   [在 SQL Server 2016 和 Azure SQL 数据库中使用 JSON](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 
--   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)（JSON 充当 NoSQL 和关系环境之间的桥梁）
+-   [JSON 充当 NoSQL 和关系环境之间的桥梁](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a>另请参阅
 [使用 OPENJSON 将 JSON 数据转换为行和列](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)

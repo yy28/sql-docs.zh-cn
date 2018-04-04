@@ -29,16 +29,16 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: ''
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d06fb220e8ec0df0ba5aab4fe5983c928d6a732
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: de82cfb595559b738ca8db7d72acd620101d3995
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -136,6 +136,7 @@ CREATE DATABASE database_name
 |从 1024 GB 到最大 4096 GB，增量为 256 GB* |N/A|N/A|N/A|N/A|√|√|  
   
  \* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。  P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，以下区域当前提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、美国弗吉尼亚州政府、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关当前限制，请参阅[单个数据库](https://docs.microsoft.com/azure/sql-database-single-database-resources)。  
+<!---Loc Comment: Link [Single databases] is not working---> 
   
  以下规则适用于 MAXSIZE 和 EDITION 参数：  
   

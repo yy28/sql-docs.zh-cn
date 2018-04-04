@@ -1,16 +1,16 @@
 ---
 title: RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/15/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - VERIFYONLY
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - verifying backups
 - checking backups
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-caps.latest.revision: 
+caps.latest.revision: 64
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b5cd93baf9fc13bd5333f5589dbb56413091671a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b85303faa74d981462cfe1e59c19158df086ecd1
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 语句 - VERIFYONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   验证备份但不还原备份，检查备份集是否完整以及整个备份是否可读。 但是，RESTORE VERIFYONLY 不尝试验证备份卷中的数据结构。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，RESTORE VERIFYONLY 得到了增强以对数据进行附加检查，从而提高检测到错误的可能性。 其目标是尽可能接近实际的还原操作。 有关详细信息，请参阅“备注”部分。  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  如果备份有效，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会返回一条成功消息。  
   
 > [!NOTE]  

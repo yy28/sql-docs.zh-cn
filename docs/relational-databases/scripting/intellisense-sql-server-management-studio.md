@@ -1,31 +1,32 @@
 ---
 title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dbf4112403363ce7c3d19e433b1bcf028983823f
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.openlocfilehash: f9e2553224bfb95b294d1b7e9f7d676dd9dbf7b8
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的编辑器支持减少键入的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项，提供对语法信息的快速访问，还可以更加轻松地查看复杂表达式的分隔符。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的编辑器支持减少键入的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项，提供对语法信息的快速访问，还可以更加轻松地查看复杂表达式的分隔符。  
   
 ## <a name="benefits-of-intellisense"></a>IntelliSense 的好处  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 可以提供一组选项，使用户可以轻松访问各项语言参考。 在编写代码时，您不必为了查找语言元素而脱离编辑器。 您可以在当前环境下直接查找所需的信息，插入语言元素，甚至可以让 IntelliSense 为您完成键入内容。  

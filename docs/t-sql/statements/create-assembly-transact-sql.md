@@ -1,16 +1,16 @@
 ---
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 8/07/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASSEMBLY
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - CREATE ASSEMBLY statement
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: 
+caps.latest.revision: 94
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 62fb31b65d89180fa14d75670a7c4bdbf7e9942c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   创建包含类元数据和托管代码的托管应用程序模块，将其作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的对象。 通过引用此模块，可在数据库中创建公共语言运行时 (CLR) 函数、存储过程、触发器、用户定义聚合以及用户定义类型。  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 >  [!WARNING]
 >  CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管代码以及获取 sysadmin 特权。 从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，引入了名为 `clr strict security` 的 `sp_configure` 选项，以增强 CLR 程序集的安全性。 默认启用 `clr strict security`，并将 `SAFE` 和 `EXTERNAL_ACCESS` 程序集与标记为 `UNSAFE` 的程序集同等对待。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 Microsoft 建议所有程序集都通过证书或非对称密钥进行签名，且该证书或非对称密钥具有已在主数据库中获得 `UNSAFE ASSEMBLY` 权限的相应登录名。 有关详细信息，请参阅 [CLR 严格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
   
@@ -63,7 +65,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>参数  
- *assembly_name*  
+ assembly_name  
  程序集的名称。 此名称必须在数据库中唯一，并且是有效的[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
  AUTHORIZATION owner_name  
@@ -80,7 +82,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- *varbinary_literal*  
+ varbinary_literal  
  是 varbinary 文本。  
   
  *varbinary_expression*  

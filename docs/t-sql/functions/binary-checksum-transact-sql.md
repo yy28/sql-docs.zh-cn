@@ -1,16 +1,16 @@
 ---
 title: BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BINARY_CHECKSUM
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c5fd777c7ce4ecc4530c47a2e8eb8bb1e14ce2d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ff8368877b3fb2153685554f1484b5fbbcc7c3a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -51,6 +51,9 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
   
 *expression*  
 是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 BINARY_CHECKSUM 在计算中忽略具有不可比数据类型的表达式。
+
+## <a name="return-types"></a>返回类型  
+ **int**
   
 ## <a name="remarks"></a>Remarks  
 按照表中任一行计算的 BINARY_CHECKSUM(*) 返回相同的值，只要随后未修改行。 BINARY_CHECKSUM 满足哈希函数的下列属性：在使用等于 (=) 运算符比较时，如果两个列表的相应元素具有相同类型且相等，则在任何两个表达式列表上应用的 BINARY_CHECKSUM 将返回同一值。 对于该定义，指定类型的 Null 值被作为相等进行比较。 如果表达式列表中的某个值发生更改，则列表的校验和通常也会更改。 但只在极少数情况下，校验和会保持不变。 因此，我们不推荐使用 BINARY_CHECKSUM 来检测值是否更改，除非应用程序可以容忍偶尔丢失更改。 请考虑改用 HashBytes。 指定 MD5 哈希算法时，HashBytes 为两个不同输入返回相同结果的可能性比 BINARY_CHECKSUM 小得多。

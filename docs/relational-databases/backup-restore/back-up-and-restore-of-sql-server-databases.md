@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 数据库的备份和还原 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/29/2016
+title: SQL Server 数据库的备份和还原 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - disaster recovery [SQL Server], see restoring [SQL Server]
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-caps.latest.revision: 
+caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4dddfcc3841704e7863a55253e8152b44d73a8d9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   本主题介绍备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的优点、基本的备份和还原术语，还介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的备份和还原策略以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的安全注意事项。 
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > **在查找分步说明？** 本主题 **未提供任何关于如何备份的具体步骤！** 如果希望立即开始实际备份操作，请向下滚动该页面到链接部分，该部分包含备份任务以及是要使用 SSMS 还是 T-SQL 的内容。  
   
  SQL Server 备份和还原组件为保护存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的关键数据提供了基本安全保障。 为了最大限度地降低灾难性数据丢失的风险，您需要定期备份数据库以保留对数据所做的修改。 规划良好的备份和还原策略有助于防止数据库因各种故障而造成数据丢失。 通过还原一组备份，然后恢复数据库来测试您的策略，以便为有效地应对灾难做好准备。  
