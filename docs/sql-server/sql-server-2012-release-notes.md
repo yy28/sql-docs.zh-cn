@@ -1,28 +1,29 @@
 ---
-title: "SQL Server 2012 发行说明 | Microsoft Docs"
-ms.prod: sql-server
+title: SQL Server 2012 发行说明 | Microsoft Docs
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: ''
+ms.component: sql-non-specified
 ms.technology: server-general
-ms.custom: 
+ms.custom: ''
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Release Notes, SQL Server
+helpviewer_keywords:
+- Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a84e08ccbb7806dafe0549b5825192dfd6e33565
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[单击此处下载](http://go.microsoft.com/fwlink/?LinkId=238647)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  

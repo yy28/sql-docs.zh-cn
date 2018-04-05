@@ -1,19 +1,21 @@
 ---
-title: "检索日期和时间类型字符串的形式使用 SQLSRV 驱动程序 |Microsoft 文档"
-ms.custom: 
+title: 检索日期和时间类型字符串的形式使用 SQLSRV 驱动程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: date and time types, retrieving as strings
+helpviewer_keywords:
+- date and time types, retrieving as strings
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

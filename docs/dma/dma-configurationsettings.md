@@ -1,20 +1,22 @@
 ---
-title: "配置设置 (SQL Server 数据 Migration Assistant) |Microsoft 文档"
-ms.custom: 
+title: 配置设置 (SQL Server 数据 Migration Assistant) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-dma
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, Assess
-ms.assetid: 
-caps.latest.revision: 
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, Assess
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg

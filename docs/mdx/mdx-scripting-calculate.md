@@ -1,21 +1,24 @@
 ---
-title: "计算 (MDX) 语句 |Microsoft 文档"
-ms.custom: 
+title: 计算 (MDX) 语句 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: CALCULATE
-dev_langs: kbMDX
-helpviewer_keywords: CALCULATE statement
+f1_keywords:
+- CALCULATE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- CALCULATE statement
 ms.assetid: 41e196a1-d49e-487b-a42a-73e5d441ed1b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre

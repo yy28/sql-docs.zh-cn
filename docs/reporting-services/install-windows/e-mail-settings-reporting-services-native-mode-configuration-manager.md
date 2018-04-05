@@ -1,20 +1,22 @@
 ---
-title: "电子邮件设置 - Reporting Services 本机模式（配置管理器）| Microsoft Docs"
-ms.custom: 
+title: 电子邮件设置 - Reporting Services 本机模式（配置管理器）| Microsoft Docs
+ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: SQL13.rsconfigtool.emailsettings.F1
-helpviewer_keywords: SQL11.rsconfigtool.emailsettings.F1
+f1_keywords:
+- SQL13.rsconfigtool.emailsettings.F1
+helpviewer_keywords:
+- SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
