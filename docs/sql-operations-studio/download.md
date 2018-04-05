@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b52d06c5981a994ccb5ef3ace486ee0f6a946c38
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 31b4ee5f9bef46f6b3e654d1cf16a7abbd2cbac8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>下载并安装 SQL 操作 Studio （预览版）
 
@@ -78,6 +78,15 @@ ms.lasthandoff: 04/04/2018
 
    sqlops
    ```
+
+   **tar.gz 安装：**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc source ~/.bashrc 
+   sqlops 
+   ``` 
 
    > [!NOTE]
    > 在 Debian、 Redhat 和 Ubuntu，您可能必须缺失的依赖关系。 使用以下命令安装这些依赖项，具体取决于你的 Linux 版本：

@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_connections_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: 
+caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0cc531232731aa3e2b2bf29a5538396be06b7e5c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/03/2018
   返回有关与此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立的连接的信息以及每个连接的详细信息。 返回 SQL Server 的 server 宽的连接信息。 返回当前的 SQL 数据库的数据库连接信息。  
   
 > [!NOTE]
-> 若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用[sys.dm_pdw_exec_connections &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
+> 若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用[sys.dm_pdw_exec_connections &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -67,10 +67,11 @@ ms.lasthandoff: 02/03/2018
 |most_recent_sql_handle|**varbinary(64)**|此连接上执行的上一个请求的 SQL 句柄。 most_recent_sql_handle 列始终与 most_recent_session_id 列同步。 可以为 Null。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>权限
+
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。
-  
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+
 ## <a name="physical-joins"></a>物理联接  
  ![有关 sys.dm_exec_connections 联接](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "有关 sys.dm_exec_connections 联接")  
   
@@ -100,7 +101,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>另请参阅  
 
- [执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

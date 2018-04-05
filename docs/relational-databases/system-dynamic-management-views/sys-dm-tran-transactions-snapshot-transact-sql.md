@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_tran_transactions_snapshot (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_tran_transactions_snapshot (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_transactions_snapshot
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_transactions_snapshot dynamic management view
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f73b2955b25e17cd9c4aea963acb277f11bc3351
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 41eb79c5469a41e93f3fc5ae9564f031e1b24e51
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,10 +79,10 @@ dm_tran_transactions_snapshot
 |**snapshot_id**|**int**|在使用行版本控制已提交读的情况下启动的每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的快照 ID。 该值用于为数据库生成事务一致视图，该数据库支持在使用行版本控制已提交读的情况下运行的每个查询。|  
 |**snapshot_sequence_num**|**bigint**|启动快照事务时处于活动状态的事务的事务序列号。|  
   
-## <a name="permissions"></a>权限  
- 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
-  
- 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
+## <a name="permissions"></a>权限
+
+上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
   
 ## <a name="remarks"></a>注释  
  当快照事务启动时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会记录此时处于活动状态的所有事务。 **sys.dm_tran_transactions_snapshot**报告的所有当前处于活动状态的快照事务的此信息。  

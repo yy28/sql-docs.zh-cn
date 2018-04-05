@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_fts_index_population (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_fts_index_population (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_index_population
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0cfb07b67f17deeba2c0995ceace90335082cccb
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/03/2018
 |**is_clustered_index_scan**|**bit**|指示填充是否涉及对聚集索引的扫描。|  
 |**range_count**|**int**|并行执行填充的子范围数。|  
 |**completed_range_count**|**int**|处理完成的范围数。|  
-|**outstanding_batch_count**|**int**|此填充当前未完成的批处理个数。 有关详细信息，请参阅[sys.dm_fts_outstanding_batches &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**outstanding_batch_count**|**int**|此填充当前未完成的批处理个数。 有关详细信息，请参阅[sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
 |**status**|**int**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 此填充的状态。 说明：某些状态是暂时的。 可以是以下类型之一：<br /><br /> 3 = 正在启动<br /><br /> 5 = 正常处理<br /><br /> 7 = 已停止处理<br /><br /> 例如，正在进行自动合并时将出现此状态。<br /><br /> 11 = 已中止填充<br /><br /> 12 = 处理语义相似性提取|  
 |**status_description**|**nvarchar(120)**|对填充状态的说明。|  
 |**completion_type**|**int**|有关填充完成的状态。|  
@@ -64,9 +64,10 @@ ms.lasthandoff: 02/03/2018
  如果除了全文索引之外还启用了统计语义索引，则关键字短语的语义提取和填充以及文档相似性数据的提取与全文索引同时发生。 文档相似性索引的填充在后面的第二阶段中发生。 有关详细信息，请参阅[管理和监视语义搜索](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
   
 ## <a name="permissions"></a>权限  
+
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。  
- 
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+  
 ## <a name="physical-joins"></a>物理联接  
  ![此动态管理视图的重要联接](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "此动态管理视图的重要联接")  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [全文搜索和语义搜索动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [全文搜索和语义搜索动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

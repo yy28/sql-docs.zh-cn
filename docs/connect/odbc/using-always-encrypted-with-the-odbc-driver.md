@@ -1,27 +1,28 @@
 ---
-title: "使用始终加密的 ODBC 驱动程序适用于 SQL Server |Microsoft 文档"
-ms.custom: 
+title: 使用始终加密的 ODBC 驱动程序适用于 SQL Server |Microsoft 文档
+ms.custom: ''
 ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: "3"
+caps.latest.revision: 3
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>使用始终加密的 ODBC 驱动程序适用于 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -333,10 +334,16 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ### <a name="column-encryption-key-caching"></a>列加密密钥缓存
 
-若要减少的列主密钥存储的调用，以解密列加密密钥数，该驱动程序缓存在内存中的纯文本 Cek。 收到后 ECEK 从数据库元数据，该驱动程序首先尝试查找纯文本 CEK 对应于缓存中的加密密钥值。 该驱动程序调用包含 CMK，仅当在缓存中找不到相应的纯文本 CEK 的密钥存储。
+若要减少的列主密钥存储的调用，以解密列加密密钥数，该驱动程序缓存在内存中的纯文本 Cek。 CEK 缓存是全局的驱动程序，而不与任何一个连接。 收到后 ECEK 从数据库元数据，该驱动程序首先尝试查找纯文本 CEK 对应于缓存中的加密密钥值。 该驱动程序调用包含 CMK，仅当在缓存中找不到相应的纯文本 CEK 的密钥存储。
 
 > [!NOTE]
 > 在 ODBC Driver for SQL Server 中，在两个小时超时后被逐出缓存中的条目。 这意味着，给定 ECEK，有关该驱动程序生存期的应用程序或每隔两小时联系一次的密钥存储，小者为准。
+
+SQL server ODBC 驱动程序 17.1 从开始，CEK 缓存超时值可以调整使用`SQL_COPT_SS_CEKCACHETTL`连接属性，指定的 CEK 将保留在缓存秒数。 由于缓存的全局特性，可以从任何连接句柄有效驱动程序调整此属性。 当还将逐出的缓存 TTL 会降低，这将超过新 TTL 现有 Cek。 如果该值为 0，则不缓存没有 Cek。
+
+### <a name="trusted-key-paths"></a>受信任密钥路径
+
+对于 SQL Server，从 ODBC 驱动程序 17.1`SQL_COPT_SS_TRUSTEDCMKPATHS`连接属性允许应用程序需要始终加密操作，只能使用指定的 Cmk，由其密钥路径列表。 默认情况下，此属性为 NULL，这意味着该驱动程序，接受任何注册表项路径。 若要使用此功能，设置`SQL_COPT_SS_TRUSTEDCMKPATHS`以指向其中列出了允许的密钥路径的 null 分隔、 以 null 结尾宽字符字符串。 在加密或解密操作使用的连接句柄在其设置它---在其驱动程序将检查指定的服务器元数据的 CMK 路径区分大小写是否在此期间，通过此属性指向的内存必须保持有效列表。 如果 CMK 路径不在列表中，则操作将失败。 应用程序可以更改此属性指向，而无需再次设置该属性中更改其受信任 Cmk 的列表的内存中的内容。
 
 ## <a name="working-with-column-master-key-stores"></a>使用列主密钥存储
 
@@ -351,7 +358,7 @@ ODBC Driver for SQL Server 附带以下内置 keystore 提供程序：
 | 名称 | Description | 提供程序 （元数据） 名称 |可用性|
 |:---|:---|:---|:---|
 |Azure Key Vault |Azure 密钥保管库中存储 Cmk | `AZURE_KEY_VAULT` |Windows，macOS，Linux|
-|Windows 证书存储区|将 Cmk 本地存储在 Windows 密钥存储区| `MSSQL_CERTIFICATE_STORE`|Windows|
+|Windows 证书存储|将 Cmk 本地存储在 Windows 密钥存储区| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - 你 （或你的 DBA） 需要确保列主密钥元数据中配置的提供程序名称正确，以及列主密钥路径符合对于给定的提供程序的密钥路径格式。 建议你使用诸如 SQL Server Management Studio 之类的工具来配置密钥，这类工具在发出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) 语句时会自动生成有效的提供程序名称和密钥路径。
 
@@ -430,7 +437,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`CE203`|在库中找不到"CEKeyStoreProvider"导出符号。|
 |`CE203`|库中的一个或多个提供程序是已加载。|
 
-`SQLSetConnectAttr`返回的通常出现的错误或成功值和其他信息为可用于通过标准 ODBC 诊断机制发生任何错误。
+`SQLSetConnectAttr` 返回的通常出现的错误或成功值和其他信息为可用于通过标准 ODBC 诊断机制发生任何错误。
 
 > [!NOTE]
 > 应用程序程序员必须之前，确保任何自定义提供程序所加载通过任何连接发送需记忆任何查询。 如果不这样做会导致错误：
@@ -567,8 +574,8 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |名称|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|接受的值是`Enabled` / `Disabled`。<br>`Enabled`-启用始终加密的连接的功能。<br>`Disabled`-禁用始终加密连接的功能。 <br><br>默认值为 `Disabled`。|  
-|`KeyStoreAuthentication` | 有效值： `KeyVaultPassword`，`KeyVaultClientSecret` |
+|`ColumnEncryption`|接受的值是`Enabled` / `Disabled`。<br>`Enabled` -启用始终加密的连接的功能。<br>`Disabled` -禁用始终加密连接的功能。 <br><br>默认值为 `Disabled`。|  
+|`KeyStoreAuthentication` | 有效值： `KeyVaultPassword`， `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 当`KeyStoreAuthentication`  =  `KeyVaultPassword`，将此值设置为有效的 Azure Active Directory 用户主体名称。 <br>当`KeyStoreAuthetication`  =  `KeyVaultClientSecret`将此值设置为有效 Azure Active Directory 应用程序客户端 ID |
 |`KeyStoreSecret` | 当`KeyStoreAuthentication`  =  `KeyVaultPassword`将此值设置为相应的用户名的密码。 <br>当`KeyStoreAuthentication`  =  `KeyVaultClientSecret`将此值设置为与有效 Azure Active Directory 应用程序客户端 ID 关联的应用程序机密|
 
@@ -576,15 +583,17 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |名称|类型|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE`(0)-禁用始终加密 <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1)-启用始终加密|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE` (0)-禁用始终加密 <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1)-启用始终加密|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|后连接|[设置]尝试加载 CEKeystoreProvider<br>[Get]返回 CEKeystoreProvider 名称|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|后连接|[设置]将数据写入到 CEKeystoreProvider<br>[Get]从 CEKeystoreProvider 读取数据|
+|`SQL_COPT_SS_CEKCACHETTL`|后连接|[设置]设置 CEK 缓存 TTL<br>[Get]获取当前 CEK 缓存 TTL|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|后连接|[设置]设置受信任的 CMK 路径指针<br>[Get]获取当前的受信任的 CMK 路径指针|
 
 ### <a name="statement-attributes"></a>语句属性
 
 |名称|Description|  
 |----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0)-语句禁用始终加密 <br>`SQL_CE_RESULTSETONLY`(1)-仅解密。 结果集和返回值解密的、 和未加密的参数 <br>`SQL_CE_ENABLED`(3)--始终启用加密并将其用于参数和结果|
+|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0)-语句禁用始终加密 <br>`SQL_CE_RESULTSETONLY` (1)-仅解密。 结果集和返回值解密的、 和未加密的参数 <br>`SQL_CE_ENABLED` (3)--始终启用加密并将其用于参数和结果|
 
 ### <a name="descriptor-fields"></a>描述符字段
 

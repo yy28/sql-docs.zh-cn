@@ -1,27 +1,28 @@
 ---
-title: "SQL Server 登录对话框中 (ODBC) |Microsoft 文档"
-ms.custom: 
-ms.date: 09/27/2017
+title: SQL Server 登录对话框中 (ODBC) |Microsoft 文档
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 367559719da374be358f93821572df4365a278d7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>“SQL Server 登录”对话框 (ODBC)
 
@@ -44,6 +45,7 @@ ms.lasthandoff: 11/18/2017
 - **Windows 集成**使用当前登录的用户帐户的身份验证
 - **Active Directory 密码**与登录 ID 和密码
 - **Active Directory 集成**使用当前登录的用户帐户的身份验证
+- **Active Directory 交互式**登录 ID 的身份验证
 
 请参阅[数据源向导屏幕 2](../../../connect/odbc/windows/dsn-wizard-2.md)有关身份验证模式的详细信息。
 
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/18/2017
 
 ### <a name="login-id"></a>登录 ID
 
-指定 SQL Server 或 Azure Active Directory 登录 ID，如果用于连接**身份验证模式**设置为**SQL Server**或**Active Directory 密码**。 否则为**登录 ID**禁用框。
+指定 SQL Server 或 Azure Active Directory 登录 ID，如果用于连接**身份验证模式**设置为**SQL Server**或**Active Directory 密码**或**Active Directory 交互式**。 否则为**登录 ID**禁用框。
 
 ### <a name="password"></a>密码
 

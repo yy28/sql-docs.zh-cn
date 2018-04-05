@@ -1,29 +1,45 @@
 ---
-title: "发行说明-Microsoft ODBC Driver for SQL Server 在 Linux 和 macOS 上 |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: 发行说明-Microsoft ODBC Driver for SQL Server 在 Linux 和 macOS 上 |Microsoft 文档
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: f193f7e58fa2cf24d02a345d60ca6c74e211fc7e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>在 Linux 和 macOS 上的 SQL Server 的 Microsoft ODBC 驱动程序的发行说明
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>新增内容[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows 上
+
+**添加功能**:
+
+支持`SQL_COPT_SS_CEKCACHETTL`和`SQL_COPT_SS_TRUSTEDCMKPATHS`连接属性 (有关详细信息，请参阅[Using Always Encrypted with ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md))
+- `SQL_COPT_SS_CEKCACHETTL` 允许控制本地缓存的列加密密钥存在的时间，以及刷新它
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` 允许应用程序限制为仅使用指定的列表的列主密钥的自动曝光操作
+
+
+
+对加载支持`.rll`从默认位置 (有关详细信息，请参阅[安装文档中的资源文件加载部分](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading))
+
+[Bug 修复](../bug-fixes.md)
+
+
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>中[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC 驱动程序 17[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]在 Linux 和 macOS 上
 

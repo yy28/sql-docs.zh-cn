@@ -1,31 +1,31 @@
 ---
-title: "自动优化 |Microsoft 文档"
-description: "了解有关在 SQL Server 和 Azure SQL 数据库的自动调整"
-ms.custom: 
+title: 自动优化 |Microsoft 文档
+description: 了解有关在 SQL Server 和 Azure SQL 数据库的自动调整
+ms.custom: ''
 ms.date: 08/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: automatic-tuning
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance tuning [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04d8ac47233e0556cd54ed9fb2b3d22080b4ee42
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/12/2018
 
 可以针对每个数据库启用自动优化，并指定在每次检测到某些计划更改回归时强制使用最近一个良好计划。 使用以下命令启用自动优化：
 
-```   
+```sql   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
@@ -92,7 +92,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供所有必要的视图和监视性能和查询存储区中解决问题所需的过程。
 
-在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，你可以找到使用查询存储系统视图的计划选择回归。 在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]检测并演示了潜在计划选择回归并建议应在应用的操作[sys.dm_db_tuning_recommendations &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)视图。 该视图显示有关问题，例如标识查询，回归计划的 ID、 已用作基线进行比较，计划的 ID 的详细信息以及问题的重要性的信息和[!INCLUDE[tsql_md](../../includes/tsql_md.md)]可以执行以修复语句问题。
+在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，你可以找到使用查询存储系统视图的计划选择回归。 在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]检测并演示了潜在计划选择回归并建议应在应用的操作[sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)视图。 该视图显示有关问题，例如标识查询，回归计划的 ID、 已用作基线进行比较，计划的 ID 的详细信息以及问题的重要性的信息和[!INCLUDE[tsql_md](../../includes/tsql_md.md)]可以执行以修复语句问题。
 
 | type | description | datetime | score | 详细信息 | … |
 | --- | --- | --- | --- | --- | --- |
@@ -104,11 +104,12 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 为什么包含信息的说明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]认为此计划更改为潜在的性能回归。
  - 检测到潜在回归时的日期时间。
  - 此建议的分数。 
- - 有关检测到的计划中，回归计划，请解决问题，应强制计划 ID。 ID。 ID 如问题的详细信息[!INCLUDE[tsql_md](../../includes/tsql_md.md)]脚本可能应用以解决问题，等等。详细信息存储在[JSON 格式](../../relational-databases/json/index.md)。
+ - 有关检测到的计划中，回归计划，请解决问题，应强制计划 ID。 ID。 ID 如问题的详细信息 [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
+ 可能用于修复问题等的脚本。详细信息存储在[JSON 格式](../../relational-databases/json/index.md)。
 
 使用以下查询以获取修复的问题和其他信息的预计脚本获得：
 
-```   
+```sql   
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
@@ -171,12 +172,12 @@ FROM sys.dm_db_tuning_recommendations
 
 ### <a name="alternative---manual-index-management"></a>替代项-手动索引管理
 
-不自动索引管理，用户将需要手动查询[sys.dm_db_missing_index_details &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)视图以查找可能会提高性能、 创建使用此视图中提供的详细信息的索引和手动监视查询性能的索引。 为了找到应删除的索引，用户应监视极少数情况下使用的查找索引的索引操作的使用情况统计的信息。
+不自动索引管理，用户将需要手动查询[sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)视图以查找索引可能会提高性能，请创建索引使用的详细信息此视图，和手动查询性能监视器中提供。 为了找到应删除的索引，用户应监视极少数情况下使用的查找索引的索引操作的使用情况统计的信息。
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 可以简化此过程。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析你的工作负荷，标识无法使用新索引时，更快地执行的查询并确定未使用或重复的索引。 查找有关应在更改的索引标识的详细信息[在 Azure 门户中查找索引建议](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal)。
 
 ## <a name="see-also"></a>另请参阅  
- [ALTER 数据库集 AUTOMATIC_TUNING &#40;Transact SQL &#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER 数据库集 AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
  [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   

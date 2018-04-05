@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_tran_active_snapshot_database_transactions (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_tran_active_snapshot_database_transactions (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_active_snapshot_database_transactions_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-caps.latest.revision: 
+caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd3b38057150bbc8768169c362ec643b13a30c14
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f7e488c7c8bff4dda22c5c0a3488b56723fc0726
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,11 +77,11 @@ sys.dm_tran_active_snapshot_database_transactions
 |**elapsed_time_seconds**|**bigint**|自事务获取其事务序列号以来所经过的时间。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>权限  
- 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
-  
- 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
-  
+## <a name="permissions"></a>权限
+
+上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+
 ## <a name="remarks"></a>注释  
  **sys.dm_tran_active_snapshot_database_transactions**报告分配一个事务序列号 (XSN) 的事务。 XSN 在事务首次访问版本存储区时分配。 在为快照隔离或使用行版本控制的已提交读隔离启用的数据库中，下面的示例说明何时将 XSN 分配给事务：  
   
@@ -160,7 +160,7 @@ elapsed_time_seconds
 -   XSN-60：这是在快照隔离下运行的第二个事务。 输出显示了与 XSN-59 相同的信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [将事务隔离级别设置 &#40;Transact SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_file_space_usage (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sys.dm_db_file_space_usage (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_file_space_usage
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_file_space_usage dynamic management view
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e4e6cfa5fd274a9a3bc3e7a9e3a0f981be8e2b46
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 65be93c18aed0f9c03ea781ee7de3069c4e99698
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
   
  当前版本存储区的内容是在[sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)。 在文件级而不是会话级和任务级跟踪版本存储页，因为它们是全局资源。 会话会生成版本，但在会话结束时不能删除版本。 版本存储清除必须考虑需要访问特定版本的运行时间最长的事务。 可以通过查看 elapsed_time_seconds 列中的发现最长运行的事务与版本存储区清理相关[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)。  
   
- mixed_extent_page_count 列频繁更改可能指示大量使用 SGAM 页。 如出现此情况，您会看到多个 PAGELATCH_UP 等待，且正在等待 SGAM 页资源。 有关详细信息，请参阅[sys.dm_os_waiting_tasks &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)， [sys.dm_os_wait_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)，和[sys.dm_os_latch_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md).  
+ mixed_extent_page_count 列频繁更改可能指示大量使用 SGAM 页。 如出现此情况，您会看到多个 PAGELATCH_UP 等待，且正在等待 SGAM 页资源。 有关详细信息，请参阅[sys.dm_os_waiting_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)， [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)，和[sys.dm_os_latch_统计信息&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)。  
   
 ## <a name="user-objects"></a>用户对象  
  用户对象页计数器中包括下列对象：  
@@ -94,11 +94,11 @@ ms.lasthandoff: 02/03/2018
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id、file_id|sys.dm_io_virtual_file_stats.database_id、file_id|一对一|  
   
-## <a name="permissions"></a>权限  
- 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
-  
- 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
-  
+## <a name="permissions"></a>权限
+
+上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+
 ## <a name="examples"></a>示例  
   
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>确定 tempdb 中的可用空间量  
@@ -125,6 +125,6 @@ FROM sys.dm_db_file_space_usage;
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [与数据库相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ [与数据库相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_plan_attributes_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9a90a964bd8c1fce911e62ac9081b47d349e0a5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 43078471bab42b6249f89e4b17536b8aea6cc5d9
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +67,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |dbid|**int**|是包含计划引用的实体的数据库 ID。<br /><br /> 对于即席计划或已准备好的计划，它是执行批处理的数据库 ID。|  
 |dbid_execute|**int**|为系统对象存储在**资源**数据库，从其执行缓存的计划的数据库 ID。 对于所有其他情况，均为 0。|  
 |user_id|**int**|值 -2 指示已提交的批处理不依赖于隐式名称解析并可在不同的用户间共享。 这是首选方法。 任何其他值表示数据库中提交查询的用户的用户 ID。| 
-|language_id|**int**|创建缓存对象的连接的语言 ID。 有关详细信息，请参阅[sys.syslanguages &#40;Transact SQL &#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
-|date_format|**int**|创建缓存对象的连接的日期格式。 有关详细信息，请参阅[SET DATEFORMAT &#40;Transact SQL &#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
-|date_first|**tinyint**|第一个日期值。 有关详细信息，请参阅[SET DATEFIRST &#40;Transact SQL &#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
+|language_id|**int**|创建缓存对象的连接的语言 ID。 有关详细信息，请参阅[sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
+|date_format|**int**|创建缓存对象的连接的日期格式。 有关详细信息，请参阅 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
+|date_first|**tinyint**|第一个日期值。 有关详细信息，请参阅 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|缓存查找密钥中的内部状态位。|  
 |required_cursor_options|**int**|用户指定的游标选项，例如游标类型。|  
 |acceptable_cursor_options|**int**|为了支持语句的执行，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以隐式转换采用的游标选项。 例如，用户可能指定一个动态游标，但允许查询优化器将此游标类型转换为静态游标。|  
@@ -87,10 +87,10 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |merge_action_type|**int**|用作 MERGE 语句结果的触发器执行计划的类型。<br /><br /> 0 表示非触发器计划，或者不会作为 MERGE 语句结果来执行的触发器计划，或者作为仅指定 DELETE 操作的 MERGE 语句结果执行的触发器计划。<br /><br /> 1 表示作为 MERGE 语句结果运行的 INSERT 触发器计划。<br /><br /> 2 表示作为 MERGE 语句结果运行的 UPDATE 触发器计划。<br /><br /> 3 表示一个作为包含对应的 INSERT 或 UPDATE 操作的 MERGE 语句结果运行的 DELETE 触发器计划。<br /><br /> 对于由级联操作运行的嵌套触发器，此值是导致级联的 MERGE 语句的操作。|  
   
 ## <a name="permissions"></a>权限  
- 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
-  
- 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
-  
+
+上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+
 ## <a name="remarks"></a>注释  
   
 ## <a name="set-options"></a>Set 选项  
@@ -144,7 +144,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |STATIC|2048|  
 |FAST_FORWARD|4096|  
 |IN PLACE|8192|  
-|有关*select_statement*|16384|  
+|FOR select_statement|16384|  
   
 ## <a name="examples"></a>示例  
   
@@ -176,10 +176,10 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

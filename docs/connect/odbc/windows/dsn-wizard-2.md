@@ -1,27 +1,28 @@
 ---
-title: "数据源向导屏幕 2 (ODBC Driver for SQL Server) |Microsoft 文档"
-ms.custom: 
-ms.date: 09/27/2017
+title: 数据源向导屏幕 2 (ODBC Driver for SQL Server) |Microsoft 文档
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>数据源向导屏幕 2
 
@@ -47,9 +48,13 @@ ms.lasthandoff: 11/18/2017
 
 指定驱动程序向 SQL Server 使用 Azure Active Directory 登录 ID 和密码进行身份验证。
 
+### <a name="with-active-directory-interactive-authentication"></a>使用 Active Directory 交互式身份验证
+
+指定驱动程序对通过提供登录 id。 使用 Azure Active Directory 交互模式的 SQL Server 进行身份验证 这将触发 Windows Azure 身份验证提示对话框。
+
 ### <a name="login-id"></a>登录 ID
 
-指定如果连接到 SQL Server 时，将使用该驱动程序的登录 ID**与 SQL Server 身份验证使用的登录 ID 和用户输入的密码**或**使用登录 ID 与 Active Directory 密码身份验证和用户输入的密码**选择。 这仅适用于为确定服务器默认设置建立的连接；不适用于创建数据源之后使用该数据源建立的后续连接。
+指定如果连接到 SQL Server 时，将使用该驱动程序的登录 ID**与 SQL Server 身份验证使用的登录 ID 和用户输入的密码**或**使用登录 ID 与 Active Directory 密码身份验证和用户输入的密码**或**由用户输入与 Active Directory 交互身份验证使用的登录 ID**选择。 这仅适用于为确定服务器默认设置建立的连接；不适用于创建数据源之后使用该数据源建立的后续连接。
 
 ### <a name="password"></a>密码
 

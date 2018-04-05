@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_background_job_queue
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_background_job_queue dynamic management function
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d80848491c46046ba260956fb02ce41e7becdd6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0494a05f4e047084cf76e02eac0fafbe9e2daf67
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   对计划异步（后台）执行的每个查询处理器作业返回一行。  
   
-> **注意！！** 若要从我们称之为 **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** 或 **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** ，使用名称**sys.dm_pdw_nodes_exec_background_job_queue**。  
+> **注意！！** 若要从我们称之为**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]**或**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**，使用名称**sys.dm_pdw_nodes_exec_background_job_queue**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -56,10 +56,10 @@ ms.lasthandoff: 02/03/2018
 |**session_id**|**int**|会话标识符。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
   
-## <a name="permissions"></a>权限  
- 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要服务器上的 VIEW SERVER STATE 权限。  
-  
- 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要 VIEW DATABASE STATE 权限的数据库中。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
+## <a name="permissions"></a>权限
+
+上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
   
 ## <a name="remarks"></a>注释  
  该视图只返回有关异步更新统计作业的信息。 有关异步更新统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
@@ -83,9 +83,9 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [执行相关的动态管理视图和函数 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [统计信息](../../relational-databases/statistics/statistics.md)   
- [KILL STATS JOB &#40;Transact SQL &#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
+ [KILL STATS JOB &#40;Transact SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
   
 

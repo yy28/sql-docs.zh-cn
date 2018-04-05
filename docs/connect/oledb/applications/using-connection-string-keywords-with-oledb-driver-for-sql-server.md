@@ -24,11 +24,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 776562d89a12b544d6edbe475358067b39b58988
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 7917f0c1344ff8e79250791d1b262cece9ca3c4c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>将连接字符串关键字用于 OLE DB 驱动程序适用于 SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,6 +94,7 @@ ms.lasthandoff: 03/30/2018
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|故障转移伙伴的 SPN。 默认值为空字符串。 空字符串会导致 OLE DB 驱动程序的 SQL Server 以使用默认情况下，提供程序生成的 SPN。|  
 |**语言**|SSPROPT_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语言。|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|如果服务器是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本，则启用或禁用连接上的多个活动结果集 (MARS)。 可能的值为“yes”和“no”。 默认值为“no”。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|始终指定**MultiSubnetFailover = Yes**连接到的可用性组侦听器时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性组或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集实例。 **MultiSubnetFailover = Yes**配置 OLE DB 驱动程序的 SQL Server 以更快地检测和连接到 （当前） 活动服务器。 可能的值为“是”和“否”。 默认值是**否**。 例如：<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 有关 OLE DB 驱动程序有关的 SQL Server 支持的详细信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[OLE DB 驱动程序的 SQL 服务器支持对高可用性、 灾难恢复](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|“Network”的同义词。|  
 |**网络**|SSPROP_INIT_NETWORKLIBRARY|用于与组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的网络库。|  
 |**网络库**|SSPROP_INIT_NETWORKLIBRARY|“Network”的同义词。|  
@@ -149,6 +150,7 @@ ms.lasthandoff: 03/30/2018
 |**初始文件名**|SSPROP_INIT_FILENAME|可附加数据库的主文件的名称（包括完整路径名）。 若要使用**AttachDBFileName**，还必须使用提供程序字符串数据库关键字指定数据库名称。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会重新附加它（而是使用已附加的数据库作为连接的默认数据库）。|  
 |**Integrated Security**|DBPROP_AUTH_INTEGRATED|接受 Windows 身份验证的值“SSPI”。|  
 |**MARS 连接**|SSPROP_INIT_MARSCONNECTION|启用或禁用连接上的多个活动结果集 (MARS)。 可识别的值为“true”和“false”。 默认值为“false”。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|始终指定**MultiSubnetFailover = True**连接到的可用性组侦听器时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性组或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集实例。 **MultiSubnetFailover = True**配置 OLE DB 驱动程序的 SQL Server 以更快地检测和连接到 （当前） 活动服务器。 可能的值包括 **True** 和 **False**。 默认值为 **False**。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 有关 OLE DB 驱动程序有关的 SQL Server 支持的详细信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[OLE DB 驱动程序的 SQL 服务器支持对高可用性、 灾难恢复](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**网络地址**|SSPROP_INIT_NETWORKADDRESS|组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的网络地址。<br /><br /> 有关有效的地址语法的详细信息，请参阅的说明**地址**关键字，本主题中的。|  
 |**网络库**|SSPROP_INIT_NETWORKLIBRARY|用于与组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的网络库。|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|网络数据包大小。 默认值为 4096。|  
@@ -200,6 +202,7 @@ ms.lasthandoff: 03/30/2018
 |**初始文件名**|SSPROP_INIT_FILENAME|可附加数据库的主文件的名称（包括完整路径名）。 若要使用**AttachDBFileName**，还必须使用提供程序字符串数据库关键字指定数据库名称。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会重新附加它（而是使用已附加的数据库作为连接的默认数据库）。|  
 |**Integrated Security**|DBPROP_AUTH_INTEGRATED|接受 Windows 身份验证的值“SSPI”。|  
 |**MARS 连接**|SSPROP_INIT_MARSCONNECTION|如果服务器是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本，则启用或禁用连接上的多个活动结果集 (MARS)。 可识别的值为“true”和“false”。默认值为“false”。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|始终指定**MultiSubnetFailover = True**连接到的可用性组侦听器时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性组或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集实例。 **MultiSubnetFailover = True**配置 OLE DB 驱动程序的 SQL Server 以更快地检测和连接到 （当前） 活动服务器。 可能的值包括 **True** 和 **False**。 默认值为 **False**。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 有关 OLE DB 驱动程序有关的 SQL Server 支持的详细信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[OLE DB 驱动程序的 SQL 服务器支持对高可用性、 灾难恢复](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**网络地址**|SSPROP_INIT_NETWORKADDRESS|组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的网络地址。<br /><br /> 有关有效的地址语法的详细信息，请参阅的说明**地址**关键字，本主题中的。|  
 |**网络库**|SSPROP_INIT_NETWORKLIBRARY|用于与组织中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的网络库。|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|网络数据包大小。 默认值为 4096。|  
@@ -215,6 +218,6 @@ ms.lasthandoff: 03/30/2018
  **请注意**连接字符串中的"旧密码"属性设置 SSPROP_AUTH_OLD_PASSWORD，这是不是可通过提供程序字符串属性的当前 （可能已过期） 密码。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 OLE DB 驱动程序的 SQL Server 的生成应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

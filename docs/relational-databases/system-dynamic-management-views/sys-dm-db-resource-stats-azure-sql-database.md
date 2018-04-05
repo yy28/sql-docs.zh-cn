@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_resource_stats （Azure SQL 数据库） |Microsoft 文档"
-ms.custom: 
+title: sys.dm_db_resource_stats （Azure SQL 数据库） |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,20 +58,17 @@ ms.lasthandoff: 02/03/2018
  此视图需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="remarks"></a>注释  
- 返回的数据**sys.dm_db_resource_stats**允许你运行的基本、 标准和高级数据库的服务层/性能级别的 DTU 限制的最大的百分比表示。 对于 Web 层和业务层，这些数字表示 Standard S2 性能层限制的百分比。 例如，针对 Web 数据库或业务数据库执行操作时，如果 avg_cpu_percent 返回 70%，则表示 S2 层限制的 70%。 此外，对于 Web 层和业务层，这些百分比可能会反映大于 100% 的数字，这类数字同样基于 S2 层限制。  
-  
+ 返回的数据**sys.dm_db_resource_stats**允许你运行的基本、 标准和高级数据库的服务层/性能级别的 DTU 限制的最大的百分比表示。
+ 
  如果已在最后 60 分钟内将数据库故障转移到另一台服务器，该视图将仅返回主数据库故障转移后此时间段内的数据。  
   
- 对于此数据的粒度较低视图，使用**sys.resource_stats**目录视图中的**master**数据库。 此视图每 5 分钟捕获一次数据，并将历史数据保留 14 天。  有关详细信息，请参阅[sys.resource_stats &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ 对于此数据的粒度较低视图，使用**sys.resource_stats**目录视图中的**master**数据库。 此视图每 5 分钟捕获一次数据，并将历史数据保留 14 天。  有关详细信息，请参阅[sys.resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
   
  如果数据库是弹性池的成员，资源统计信息显示为百分比值，表示为数据库中的弹性池配置设置的最大 DTU 限制的百分比。  
   
 ## <a name="example"></a>示例  
   
-> [!NOTE]  
->  对于 Web 层和业务层，这些数字表示 Standard S2 性能层限制的百分比。 例如，针对 Web 数据库或业务数据库执行操作时，如果 avg_cpu_percent 返回 70%，则表示 S2 层限制的 70%。 此外，对于 Web 层和业务层，这些百分比可能会反映大于 100% 的数字，这类数字同样基于 S2 层限制。  
-  
- 以下示例将返回当前连接的数据库按最新时间排序的资源利用率数据。  
+以下示例将返回当前连接的数据库按最新时间排序的资源利用率数据。  
   
 ```  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  
@@ -106,7 +103,7 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.resource_stats &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [服务层功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
