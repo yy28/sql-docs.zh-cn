@@ -26,16 +26,16 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b64f3d78ceafd5e1eac62e1e3dd1155827e8c61
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 014067623255c257ee611b8be8a0b8f49f5e57bc
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -141,7 +141,7 @@ SQL 数据库托管实例：
 ### <a name="minimize-installation-reboots"></a>尽量减少安装重启的次数
 
 * 执行以下操作以降低 SSMS 安装程序在安装结束时需要重新启动的可能性：
-  * 请确保运行的是最新版 Visual C++ 2013 Redistributable Package。 需要版本 12.00.40649.5（或更高版本）。 仅需要版本 x64。
+  * 请确保运行的是最新版 Visual C++ 2013 Redistributable Package。 需要版本 12.0.40649.5（或更高版本）。 仅需要版本 x64。
   * 验证计算机上的 .NET Framework 版本是否为 4.6.1（或更高版本）。
   * 关闭计算机上打开的其他任何 Visual Studio 实例。
   * 请确保计算机上已安装所有最新 OS 更新。
