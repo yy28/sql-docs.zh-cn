@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 审核操作组和操作 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 审核操作组和操作 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -24,7 +24,7 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/21/2017
 |SERVER_PERMISSION_CHANGE_GROUP|为获取服务器范围内的权限（例如，创建登录名）而发出 GRANT、REVOKE 或 DENY 语句时，将引发此事件。 等效于 [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)。|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|创建、更改或删除服务器主体时将引发此事件。 等效于 [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md)。<br /><br /> 主体发出 sp_defaultdb 或 sp_defaultlanguage 存储过程或 ALTER LOGIN 语句时，将引发此事件。 等效于 [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md)。<br /><br /> 调用 sp_addlogin 和 sp_droplogin 存储过程时会引发此事件。 还等效于 [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md)。<br /><br /> 此事件由 sp_grantlogin 或 sp_revokelogin 存储过程引发。 等效于 [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md)。|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|服务器范围内发生模拟（如 EXECUTE AS \<登录名>）时将引发此事件。 等效于 [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)。|  
-|SERVER_ROLE_MEMBER_CHANGE_GROUP|向固定服务器角色添加登录名或从中删除登录名时将引发此事件。 此事件由 sp_addsrvrolemember 和 sp_dropsrvrolemember 存储过程引发。 等效于 [Audit Add Login to Server Role Event Class](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)。|  
+|SERVER_ROLE_MEMBER_CHANGE_GROUP|向固定服务器角色添加登录名或从中删除登录名时将引发此事件。 此事件由 sp_addsrvrolemember 和 sp_dropsrvrolemember 存储过程引发。 等效于 [Audit Add Login to Server Role 事件类](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)。|  
 |SERVER_STATE_CHANGE_GROUP|修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务状态时将引发此事件。 等效于 [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)。|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|指示主体已成功登录到包含数据库。 等效于 Audit Successful Database Authentication 事件类。|  
 |SUCCESSFUL_LOGIN_GROUP|指示主体已成功登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此类中的事件由新连接引发或由连接池中重用的连接引发。 等效于 [Audit Login Event Class](../../../relational-databases/event-classes/audit-login-event-class.md)。|  

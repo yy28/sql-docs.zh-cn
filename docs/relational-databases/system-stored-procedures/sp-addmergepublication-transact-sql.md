@@ -1,16 +1,16 @@
 ---
-title: "sp_addmergepublication (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_addmergepublication (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,7 +20,7 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -123,7 +123,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  允许合并发布使用参数化行筛选器。 *dynamic_filters*是**nvarchar(5)**，默认值为 FALSE。  
   
 > [!NOTE]  
->  如果正在使用参数化行筛选器，请勿指定此参数，而应由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自行确定。 如果指定的值**true**为*dynamic_filters*，必须定义为项目参数化的行筛选器。 有关详细信息，请参阅 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+>  如果正在使用参数化行筛选器，请勿指定此参数，而应由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自行确定。 如果指定的值**true**为*dynamic_filters*，必须定义为项目参数化的行筛选器。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
  [  **@snapshot_in_defaultfolder =** ] *snapshot_in_default_folder*  
  指定快照文件是否存储在默认文件夹中。 *snapshot_in_default_folder*是**nvarchar(5)**，默认值为 TRUE。 如果**true**，可以在默认文件夹中找到快照文件。 如果**false**，快照文件将存储在指定的备用位置*alternate_snapshot_folder*。 备用位置可以是另一台服务器、 网络驱动器，或可移动媒体 （如 CD-ROM 或可移动磁盘）。 也可以将快照文件保存到文件传输协议 (FTP) 站点以供订阅方以后检索。 请注意此参数可以是 true，仍具有由指定的位置*alt_snapshot_folder*。 该组合指定将快照文件同时存储在默认位置和备用位置。  
@@ -138,7 +138,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  指定指向的指针**.sql**文件位置。 *post_snapshot_script*是**nvarchar （255)**，默认值为 NULL。 当所有其他复制的对象脚本和数据均已在初始同步过程中应用之后，合并代理将运行快照后脚本。 该脚本将在合并代理连接到订阅数据库时使用的安全上下文中执行。 快照后脚本不运行[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器。  
   
  [  **@compress_snapshot =** ] *compress_snapshot*  
- 指定的写入到的快照 **@alt_snapshot_folder** 位置是压缩成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar(5)**，默认值为 FALSE。 **false**指定，将不会压缩快照;**true**指定要压缩快照。 无法压缩大于 2GB 的快照文件。 压缩的快照文件被解压缩到合并代理所在的位置；一般对压缩的快照使用请求订阅，以便在订阅服务器上解压缩文件。 不能压缩默认文件夹中的快照。 若要支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器，你必须指定**false**。  
+ 指定的写入到的快照**@alt_snapshot_folder**位置是压缩成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 *compress_snapshot*是**nvarchar(5)**，默认值为 FALSE。 **false**指定，将不会压缩快照;**true**指定要压缩快照。 无法压缩大于 2GB 的快照文件。 压缩的快照文件被解压缩到合并代理所在的位置；一般对压缩的快照使用请求订阅，以便在订阅服务器上解压缩文件。 不能压缩默认文件夹中的快照。 若要支持[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器，你必须指定**false**。  
   
  [  **@ftp_address =** ] *ftp_address*  
  分发服务器的 FTP 服务网络地址。 *ftp_address*是**sysname**，默认值为 NULL。 指定订阅服务器来选取的合并代理发布快照文件的位置。 由于此属性存储为每个发布中，每个发布都可以具有不同*ftp_address*。 该发布必须支持使用 FTP 来传播快照。  
@@ -219,11 +219,11 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *replicate_ddl*  
  指示是否架构复制支持发布。 *replicate_ddl*是**int**，默认值为 1。 **1**指明可将复制发布服务器上执行数据定义语言 (DDL) 语句，和**0**指示 DDL 语句不会复制。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
- *@replicate_ddl* 当 DDL 语句将添加一个列时，接受参数。 *@replicate_ddl*  DDL 语句更改或删除下列原因造成的列时，将忽略参数。  
+ *@replicate_ddl*当 DDL 语句将添加一个列时，接受参数。 *@replicate_ddl* DDL 语句更改或删除下列原因造成的列时，将忽略参数。  
   
--   当除去的列时，则必须更新 sysarticlecolumns 以防止新的 DML 语句，从包括已删除的列，从而导致分发代理失败。 *@replicate_ddl* 参数将被忽略，因为复制必须始终复制架构更改。  
+-   当除去的列时，则必须更新 sysarticlecolumns 以防止新的 DML 语句，从包括已删除的列，从而导致分发代理失败。 *@replicate_ddl*参数将被忽略，因为复制必须始终复制架构更改。  
   
--   更改列时，源数据类型或为 Null 性可能已更改，这导致 DML 语句包含可能与订阅服务器上的表不兼容的值。 这种 DML 语句可能导致分发代理失败。 *@replicate_ddl* 参数将被忽略，因为复制必须始终复制架构更改。  
+-   更改列时，源数据类型或为 Null 性可能已更改，这导致 DML 语句包含可能与订阅服务器上的表不兼容的值。 这种 DML 语句可能导致分发代理失败。 *@replicate_ddl*参数将被忽略，因为复制必须始终复制架构更改。  
   
 -   当 DDL 语句将添加一个新列时，sysarticlecolumns 不包括新的列。 DML 语句将不尝试复制新列的数据。 采用该参数，因为复制或不复制 DDL 均可接受。  
   
@@ -256,7 +256,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  指定在生成中包含的更改数。 代次是传递到发布服务器或订阅服务器的更改的集合。 *generation_leveling_threshold*是**int**，默认值为 1000年。  
   
  [  **@automatic_reinitialization_policy =** ] *automatic_reinitialization_policy*  
- 指定是否从之前所需的更改发布，其中的值自动重新初始化订阅服务器上载更改**1**为指定 **@force_reinit_subscription** 。 *automatic_reinitialization_policy*位，默认值为 0。 **1**表示自动重新初始化之前，将更改上载从订阅服务器。  
+ 指定是否从之前所需的更改发布，其中的值自动重新初始化订阅服务器上载更改**1**为指定**@force_reinit_subscription**。 *automatic_reinitialization_policy*位，默认值为 0。 **1**表示自动重新初始化之前，将更改上载从订阅服务器。  
   
 > [!IMPORTANT]  
 >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
@@ -277,7 +277,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="remarks"></a>注释  
  **sp_addmergepublication**合并复制中使用。  
   
- 与列表发布对象和 Active Directory 使用 **@add_to_active_directory** 参数，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须已在 Active Directory 中创建对象。  
+ 与列表发布对象和 Active Directory 使用**@add_to_active_directory**参数，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须已在 Active Directory 中创建对象。  
   
  如果存在多个发布，发布同一个数据库对象，仅发布*replicate_ddl*值**1**将复制 ALTER TABLE、 ALTER VIEW、 ALTER PROCEDURE、 ALTER FUNCTION 和ALTER TRIGGER DDL 语句。 但是，发布已删除列的所有发布都将复制 ALTER TABLE DROP COLUMN DDL 语句。  
   
