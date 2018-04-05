@@ -1,20 +1,20 @@
 ---
-title: "更新-为 SQL Server 文档高级分析 |Microsoft 文档"
-description: "显示更新内容的最近更改中的文档，为 Microsoft SQL server 的高级分析的代码的段。"
-manager: craigg
-author: MightyPen
-ms.author: genemi
+title: 更新-为 SQL Server 文档高级分析 |Microsoft 文档
+description: 显示更新内容的最近更改中的文档，为 Microsoft SQL server 的高级分析的代码的段。
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: advanced-analytics
 ms.date: 02/03/2018
-ms.openlocfilehash: a40a991abe8f82b553ae621c24f9d4e81a92f8f6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dcd40475cb297d480a76f2cb656f8d7ae790f10c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>新的和最近的更新： SQL Server 的高级分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/11/2018
 
 
 
-- *日期范围的更新：* &nbsp; **自 2017 年 1-12-03** &nbsp;到&nbsp; **2018年-02-03**
+- 更新日期范围：2017-12-03 到 2018-02-03
 - *主题区域：* &nbsp; **for SQL Server 的高级分析**。
 
 <!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/11/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-known-issues-in-machine-learning-servicesknown-issues-for-sql-server-machine-learning-servicesmd"></a>1.&nbsp;[机器学习服务中的已知问题](known-issues-for-sql-server-machine-learning-services.md)
+### <a name="1-nbsp-known-issues-in-machine-learning-servicesknown-issues-for-sql-server-machine-learning-servicesmd"></a>1.&nbsp; [机器学习服务中的已知的问题](known-issues-for-sql-server-machine-learning-services.md)
 
 *更新时间： 2018年-02-02* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
 
@@ -127,7 +127,7 @@ R 函数尝试进行读取的路径，而且如果失败，原因是内置的用
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-converting-r-code-for-execution-in-databaserconverting-r-code-for-use-in-sql-servermd"></a>2.&nbsp;[执行数据库中的转换 R 代码](r/converting-r-code-for-use-in-sql-server.md)
+### <a name="2-nbsp-converting-r-code-for-execution-in-databaserconverting-r-code-for-use-in-sql-servermd"></a>2.&nbsp; [转换执行数据库中的 R 代码](r/converting-r-code-for-use-in-sql-server.md)
 
 *更新时间： 2018年-01-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [下一步](#TitleNum_3))
 
@@ -177,7 +177,7 @@ R 函数尝试进行读取的路径，而且如果失败，原因是内置的用
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-determine-which-r-packages-are-installed-on-sql-serverrdetermine-which-packages-are-installed-on-sql-servermd"></a>3.&nbsp;[确定 SQL 服务器上安装哪些 R 包](r/determine-which-packages-are-installed-on-sql-server.md)
+### <a name="3-nbsp-determine-which-r-packages-are-installed-on-sql-serverrdetermine-which-packages-are-installed-on-sql-servermd"></a>3.&nbsp; [确定 SQL 服务器上安装哪些 R 包](r/determine-which-packages-are-installed-on-sql-server.md)
 
 *更新时间： 2018年-01-24* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_2))
 
@@ -230,32 +230,32 @@ STDOUT message(s) from external script:
 
 
 
-## <a name="similar-articles-about-new-or-updated-articles"></a>有关新的或更新的文章的类似文章
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新的文章的类似文章
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
 
-#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域的*执行*新或最近已更新的文章
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
 
-- [新 + 更新 (1 + 3):&nbsp; **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (0 + 1):&nbsp; **SQL 的分析平台系统**文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新 + 更新 (0 + 1):&nbsp; **连接到 SQL**文档](../connect/new-updated-connect.md)
-- [新 + 更新 (0 + 1):&nbsp; **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (12 + 1): **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (6 + 2):&nbsp; **sql Linux**文档](../linux/new-updated-linux.md)
-- [新 + 更新 (15 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
-- [新 + 更新 (2 + 9):&nbsp; **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (1 + 0):&nbsp; **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (1 + 1):&nbsp; **SQL 操作 Studio**文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新 + 更新 (1 + 1):&nbsp; **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
-- [新 + 更新 (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)**文档](../ssdt/new-updated-ssdt.md)
-- [新 + 更新 (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)**文档](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 2):&nbsp; **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
+- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 
 
 
-#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>使用者执行的区域*不*有任何新最近更新或文章
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
 
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
