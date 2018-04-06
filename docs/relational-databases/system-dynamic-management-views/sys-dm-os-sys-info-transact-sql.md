@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_sys_info_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: 
+caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d5284112257c5d1c2d23f354ec7690fab6abb90b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
 |**deadlock_monitor_serial_number**|**int**|指定当前死锁监视序列的 ID。 不可为 Null。|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|表示**ms_tick**数时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上次启动。 与当前 ms_ticks 列进行比较。 不可为 Null。|  
 |**sqlserver_start_time**|**datetime**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次启动时的日期和时间。 不可为 Null。|  
-|**affinity_type**|**int**|**适用于： [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定当前使用中的服务器 CPU 进程关联的类型。 不可为 Null。 有关详细信息，请参阅[ALTER SERVER CONFIGURATION &#40;Transact SQL &#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
+|**affinity_type**|**int**|**适用于： [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** 通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定当前使用中的服务器 CPU 进程关联的类型。 不可为 Null。 有关详细信息，请参阅[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 描述**affinity_type**列。 不可为 Null。<br /><br /> MANUAL = 已为至少一个 CPU 设置关联。<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以自由地在 CPU 之间移动线程。|  
 |**process_kernel_time_ms**|**bigint**|**适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]通过 [！包括 [ssCurrent]**(.../Token/ssCurrent_md.md)]。<br /><br /> 内核模式下所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程所用的总时间（毫秒）。 该值可能会大于单处理器时钟，因为它包括服务器上所有处理器的时间。 不可为 Null。|  
 |**process_user_time_ms**|**bigint**|**适用于：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 。<br /><br /> 用户模式下所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程所用的总时间（毫秒）。 该值可能会大于单处理器时钟，因为它包括服务器上所有处理器的时间。 不可为 Null。|  
@@ -81,19 +81,19 @@ ms.lasthandoff: 02/03/2018
 |**process_physical_affinity**|**nvarchar(3072)** |**适用于： 开头[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]** 。<br /><br />做好的信息。 |
 |**sql_memory_model**|**int**|**适用于： [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4，且开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**。<br /><br />指定 SQL Server 用于将内存分配的内存模型。 不可为 Null。<br /><br />1 = 常规内存模型<br />2 = 锁定内存页<br /> 3 = 在内存中的大型页|
 |**sql_memory_model_desc**|**nvarchar(120)**|**适用于： [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4，且开头[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1**。<br /><br />指定 SQL Server 用于将内存分配的内存模型。 不可为 Null。<br /><br />**常规**= SQL Server 使用传统的内存模型分配内存。 如果 SQL Server 服务帐户不具有锁定页中内存的权限在启动期间，这是默认 sql 内存模型。<br />**LOCK_PAGES** = SQL 服务器正在使用在内存中的中锁定页面的分配内存。 当 SQL Server 服务帐户在 SQL Server 启动过程中内存特权拥有锁定页时，这是默认 sql 内存管理器。<br /> **LARGE_PAGES** = SQL Server 正在使用在内存中的大页面分配内存。 SQL Server 使用大型页分配器时 SQL Server 服务帐户拥有内存特权锁定页在服务器启动时以及在开启跟踪标志 834 时将仅有企业版的内存分配。|
-|**pdw_node_id**|**int**|**适用于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> 此分布的节点标识符。|  
 |**socket_count** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]** 。<br /><br />指定在系统上可用的处理器插槽数。 |  
 |**cores_per_socket** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定在系统上的每个可用的插槽的处理器数。 |  
 |**numa_node_count** |**int** | **适用于： 开头[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。**。<br /><br />指定在系统上可用的 numa 节点数。 此列包含物理 numa 节点，以及软 numa 节点。 |  
   
-## <a name="permissions"></a>权限  
- 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要`VIEW SERVER STATE`服务器上的权限。  
-  
- 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]高级层需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]标准版和基本层需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]管理员帐户。  
-  
+## <a name="permissions"></a>权限
+
+上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 操作系统相关的动态管理视图 &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

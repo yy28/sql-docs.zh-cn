@@ -1,30 +1,30 @@
 ---
-title: "安装 Microsoft ODBC Driver for SQL Server 在 Linux 和 macOS 上 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/13/2018
+title: 安装 Microsoft ODBC Driver for SQL Server 在 Linux 和 macOS 上 |Microsoft 文档
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver, installing
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 
+caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4b5371302206f87f19632c55f90917de189b303a
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -500,6 +500,40 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 -   [错误详细信息 (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     应更改在 URL 中指定的错误号 (11001) 以与你看到的错误相匹配。  
+  
+## <a name="driver-files"></a>驱动程序文件
+在 Linux 和 MacOS 上 ODBC 驱动程序包括以下组件：
+
+### <a name="linux"></a>Linux
+
+|组件|Description|  
+|---------------|-----------------|  
+|libmsodbcsql-17。X.so.X.X 或 libmsodbcsql 13。X.so.X.X|共享的对象 (`so`) 包含的所有驱动程序的功能的动态库文件。 此文件安装在`/opt/microsoft/msodbcsql17/lib64/`驱动程序 17 并在`/opt/microsoft/msodbcsql/lib64/`为 Driver 13。|  
+|`msodbcsqlr17.rll`或`msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/`| 
+|msodbcsql.h|包含的所有新的定义使用的驱动程序所需的标头文件。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/opt/microsoft/msodbcsql17/include/`驱动程序 17 并在`/opt/microsoft/msodbcsql/include/`为 Driver 13。 |
+|LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/share/doc/msodbcsql17/`驱动程序 17 并在`/usr/share/doc/msodbcsql/`为 Driver 13。|
+|RELEASE_NOTES|包含发行说明的文本文件。 此文件放在`/usr/share/doc/msodbcsql17/`驱动程序 17 并在`/usr/share/doc/msodbcsql/`为 Driver 13。|
+
+
+### <a name="macos"></a>MacOS
+
+|组件|Description|  
+|---------------|-----------------|  
+|libmsodbcsql.17.dylib or libmsodbcsql.13.dylib|动态库 (`dylib`) 文件，其中包含的所有驱动程序的功能。 此文件安装在`/usr/local/lib/`。|  
+|`msodbcsqlr17.rll`或`msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在`[driver .dylib directory]../share/msodbcsql17/resources/en_US/`驱动程序 17 并在`[driver .dylib directory]../share/msodbcsql/resources/en_US/`为 Driver 13。 | 
+|msodbcsql.h|包含的所有新的定义使用的驱动程序所需的标头文件。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/usr/local/include/msodbcsql17/`驱动程序 17 并在`/usr/local/include/msodbcsql/`为 Driver 13。 |
+|LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/local/share/doc/msodbcsql17/`驱动程序 17 并在`/usr/local/share/doc/msodbcsql/`为 Driver 13。 |
+|RELEASE_NOTES|包含发行说明的文本文件。 此文件放在`/usr/local/share/doc/msodbcsql17/`驱动程序 17 并在`/usr/local/share/doc/msodbcsql/`为 Driver 13。 |
+
+## <a name="resource-file-loading"></a>资源文件加载
+
+该驱动程序必须才能正常加载资源文件。 此文件称为`msodbcsqlr17.rll`或`msodbcsqlr13.rll`具体取决于驱动程序版本。 位置`.rll`文件是相对于驱动程序本身的位置 (`so`或`dylib`)，如上面的表中所述。 截至版本 17.1 驱动程序也会尝试加载`.rll`从默认的目录，如果从相对路径加载失败。 默认资源文件路径是：
+
+Linux: `/opt/microsoft/msodbcsql17/share/resources/en_US/`
+
+macOS: `/usr/local/share/msodbcsql17/resources/en_US/`
+
+
   
 ## <a name="see-also"></a>另请参阅
 
