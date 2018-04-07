@@ -1,27 +1,27 @@
 ---
-title: "对高可用性、 灾难恢复的 SQL Server 本机客户端支持 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/16/2017
+title: 对高可用性、 灾难恢复的 SQL Server 本机客户端支持 |Microsoft 文档
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd805562b60d37b9988b9afeb84d81e2cb2f5125
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 82c0cd64a3638ad747ca1f4fa88fdc8a2fc5a0e2
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>对高可用性、灾难恢复的 SQL Server Native Client 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,29 +73,11 @@ ms.lasthandoff: 01/25/2018
  如果将当前使用数据库镜像的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 应用程序升级到多子网方案，则应删除 **Failover_Partner** 连接属性并使用设置为 **Yes** 的 **MultiSubnetFailover** 替换它，并且还应使用可用性组侦听程序替换连接字符串中的服务器名称。 如果连接字符串使用 **Failover_Partner** 和 **MultiSubnetFailover=Yes**，驱动程序将生成一个错误。 但是，如果连接字符串使用 **Failover_Partner** 和 **MultiSubnetFailover=No**（或 **ApplicationIntent=ReadWrite**），则该应用程序将使用数据库镜像。  
   
  如果数据库镜像用于可用性组中的主数据库，并且 **MultiSubnetFailover=Yes** 用于连接到主数据库（而非连接到可用性组侦听程序）的连接字符串中，则驱动程序将返回错误。  
-  
-## <a name="specifying-application-intent"></a>指定应用程序意向  
- 当**ApplicationIntent = ReadOnly**，客户端请求读取工作负荷时连接到 Always On 启用数据库。 服务器在连接时和在执行 USE 数据库语句的过程中将强制该意向，但仅针对启用了 AlwaysOn 的数据库。  
-  
- **ApplicationIntent** 关键字不适用于早期的只读数据库。  
-  
- 数据库可以允许或禁止目标 Alwayson 数据库上的读取工作负荷。 （此操作可通过 **PRIMARY_ROLE** 和 **SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的 **ALLOW_CONNECTIONS** 子句完成。）  
-  
- **ApplicationIntent** 关键字用于启用只读路由。  
-  
-## <a name="read-only-routing"></a>只读路由  
- 只读路由是一项可确保数据库只读副本的可用性的功能。 启用只读路由：  
-  
-1.  您必须连接到某一 AlwaysOn 可用性组侦听器。  
-  
-2.  **ApplicationIntent** 连接字符串关键字必须设置为 **ReadOnly**。  
-  
-3.  数据库管理员必须配置该可用性组以便启用只读路由。  
-  
- 使用只读路由的多个连接可能不会全部连接到相同的只读副本。 对数据库同步进行更改或对服务器的路由配置进行更改可能导致客户端连接到不同的只读副本。 若要确保所有只读请求都连接到相同的只读副本，请勿将可用性组侦听程序传递到 **Server** 连接字符串关键字。 而是指定只读实例的名称。  
-  
- 只读路由所用的时间可能会长于连接到主副本的时间，因为只读路由首先连接到主副本，然后查找可用的最佳可读取辅助副本。 为此，应增加您的登录超时。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc"></a>ODBC  
  添加了两个 ODBC 连接字符串关键字以在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Native Client 中支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   

@@ -2,7 +2,7 @@
 title: 用于高可用性、 灾难恢复的 SQL Server 支持的 OLE DB 驱动程序 |Microsoft 文档
 description: OLE DB 驱动程序的 SQL Server 支持的高可用性、 灾难恢复
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -17,9 +17,9 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: HT
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/06/2018
 ---
@@ -72,29 +72,11 @@ ms.lasthandoff: 04/06/2018
 如果升级 SQL Server 应用程序用于 OLE DB 驱动程序当前使用数据库镜像到多子网方案，你应删除**Failover_Partner**连接属性并将其替换**MultiSubnetFailover**设置为**是**并将连接字符串中的服务器名称替换为可用性组侦听器。 如果连接字符串使用 **Failover_Partner** 和 **MultiSubnetFailover=Yes**，驱动程序将生成一个错误。 但是，如果连接字符串使用 **Failover_Partner** 和 **MultiSubnetFailover=No**（或 **ApplicationIntent=ReadWrite**），则该应用程序将使用数据库镜像。  
   
 如果数据库镜像用于可用性组中的主数据库，并且 **MultiSubnetFailover=Yes** 用于连接到主数据库（而非连接到可用性组侦听程序）的连接字符串中，则驱动程序将返回错误。  
-  
-## <a name="specifying-application-intent"></a>指定应用程序意向  
-当**ApplicationIntent = ReadOnly**，客户端请求读取工作负荷时连接到 Always On 启用数据库。 服务器将执行该意向，在连接时和期间`USE`数据库但仅限于 Always On 启用的数据库的语句。  
-  
-**ApplicationIntent** 关键字不适用于早期的只读数据库。  
-  
-数据库可以允许或禁止目标 Alwayson 数据库上的读取工作负荷。 （此操作可通过 **PRIMARY_ROLE** 和 **SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的 **ALLOW_CONNECTIONS** 子句完成。）  
-  
-**ApplicationIntent** 关键字用于启用只读路由。  
-  
-## <a name="read-only-routing"></a>只读路由  
-只读路由是一项功能，可用于确保数据库的只读副本的可用性。 启用只读路由：  
-  
-1.  您必须连接到某一 AlwaysOn 可用性组侦听器。  
-  
-2.  **ApplicationIntent** 连接字符串关键字必须设置为 **ReadOnly**。  
-  
-3.  Always On 可用性组必须由数据库管理员若要启用只读路由配置。  
-  
-使用只读路由的多个连接可能不会全部连接到相同的只读副本。 对数据库同步进行更改或对服务器的路由配置进行更改可能导致客户端连接到不同的只读副本。 若要确保所有只读请求连接到相同的只读副本，不要将传递到一个 Always On 可用性组侦听器**服务器**连接字符串关键字。 而是指定只读实例的名称。  
-  
-因为只读路由首先连接到主副本，然后查找最适用的可读次副本，所以只读路由所需的时间可能会超过连接主副本的时间。 为此，应增加您的登录超时。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB  
 SQL Server 的 OLE DB 驱动程序同时支持**ApplicationIntent**和**MultiSubnetFailover**关键字。   
   

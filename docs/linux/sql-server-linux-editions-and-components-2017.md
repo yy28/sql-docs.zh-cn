@@ -1,17 +1,15 @@
 ---
-title: "版本和支持的功能的 SQL Server 2017 ~ Linux |Microsoft 文档"
+title: 版本和支持的功能的 SQL Server 2017 ~ Linux |Microsoft 文档
 ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-linux
-- server-general
-ms.tgt_pltfrm: 
+ms.technology: sql-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -30,16 +28,16 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: da867b1125d4ee444a0e04e34d729484bee43514
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本和支持的功能在 Linux 上的 SQL Server 2017
 
@@ -66,8 +64,8 @@ ms.lasthandoff: 02/13/2018
 |---------------------------------------|----------------|  
 |Enterprise|高级版产品， [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition 与超快的性能，让任务关键型工作负荷的高服务级别提供全面的高端数据中心功能。|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition 提供部门和小型组织能够运行其应用程序的基本数据管理和支持常见的开发工具用于在本地和云 — 启用用极少的 IT 资源的有效的数据库管理。|  
-|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，Web 版本是一项总拥有成本较低的选择。|  
-|开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建和测试应用程序的人员的理想之选。|  
+|Web|对于为从小规模至大规模 Web 资产提供可伸缩性、经济性和可管理性功能的 Web 宿主和 Web VAP 来说，[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 版本是一项总拥有成本较低的选择。|  
+|开发人员|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 版支持开发人员基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]构建任意类型的应用程序。 它包括 Enterprise 版的所有功能，但有许可限制，只能用作开发和测试系统，而不能用作生产服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是构建和测试应用程序的人员的理想之选。|  
 |Express Edition|Express 版本是入门级的免费数据库，是学习和构建桌面及小型服务器数据驱动应用程序的理想选择。 它是独立软件供应商、开发人员和热衷于构建客户端应用程序的人员的最佳选择。 如果您需要使用更高级的数据库功能，则可以将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 无缝升级到其他更高端的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用于客户端/服务器应用程序  
@@ -93,9 +91,9 @@ ms.lasthandoff: 02/13/2018
 |-------------|----------------|--------------|---------|------------------------|
 |单个实例使用的最大计算能力 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|操作系统支持的最大值|限制为 4 个插槽或 24 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值| 
 |单个实例使用的最大计算能力 - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|操作系统支持的最大值|限制为 4 个插槽或 24 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|
-|每个实例的缓冲池的最大内存 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|操作系统支持的最大值|128 GB|64 GB|1410 MB|
-|列存储段缓存的每个实例的最大内存 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|不受限制的内存| 32 GB| 16 GB| 352 MB|  
-|每个数据库中的最大内存优化数据大小 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|不受限制的内存| 32 GB| 16 GB| 352 MB|
+|每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的缓冲池的最大内存|操作系统支持的最大值|128 GB|64 GB|1410 MB|
+|每个 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例的列存储段缓存的最大内存|不受限制的内存| 32 GB| 16 GB| 352 MB|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中每个数据库的最大内存优化数据大小|不受限制的内存| 32 GB| 16 GB| 352 MB|
 |最大关系数据库大小|524 PB|524 PB|524 PB|10 GB|  
   
 <sup>1</sup> Enterprise edition 服务器 + 客户端访问许可证 (CAL) 基于授权 （不可用于新协议） 被限制为每个 SQL Server 实例的 20 个内核的最大值。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅[版本的 SQL Server 计算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  

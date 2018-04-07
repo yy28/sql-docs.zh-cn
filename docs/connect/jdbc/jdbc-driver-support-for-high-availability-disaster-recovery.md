@@ -1,27 +1,28 @@
 ---
-title: "针对高可用性、 灾难恢复的 JDBC 驱动程序支持 |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: 针对高可用性、 灾难恢复的 JDBC 驱动程序支持 |Microsoft 文档
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 621f31fbeddee6ec3705396b5d049f5496f4ae04
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/18/2017
   
  指定**multiSubnetFailover = true**时连接到内容以外的可用性组侦听器或故障转移群集实例可能会导致性能下降，并且不支持。  
   
- 如果未安装安全管理器，默认情况下，Java 虚拟机将缓存虚拟 IP 地址 (VIP) 一段时间（由您的 JDK 实现和 Java 属性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 定义）。 如果已安装 JDK 安全管理器，默认情况下，Java 虚拟机将缓存 VIP 且不会刷新缓存。 您应将 Java 虚拟机缓存的“生存时间”(networkaddress.cache.ttl) 设置为“一天”。 如果您未将默认生存时间更改为“一天（左右）”，则添加或更新 VIP 后，不会清除 Java 虚拟机缓存中的旧值。 有关 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的详细信息，请参阅[http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
+ 如果未安装安全管理器，默认情况下，Java 虚拟机将缓存虚拟 IP 地址 (VIP) 一段时间（由您的 JDK 实现和 Java 属性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 定义）。 如果已安装 JDK 安全管理器，默认情况下，Java 虚拟机将缓存 VIP 且不会刷新缓存。 您应将 Java 虚拟机缓存的“生存时间”(networkaddress.cache.ttl) 设置为“一天”。 如果您未将默认生存时间更改为“一天（左右）”，则添加或更新 VIP 后，不会清除 Java 虚拟机缓存中的旧值。 有关 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的详细信息，请参阅[ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
   
  使用以下准则可以连接到可用性组或故障转移群集实例中的服务器：  
   
@@ -93,29 +94,11 @@ ms.lasthandoff: 11/18/2017
  如果升级[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]应用程序当前使用数据库镜像到多子网方案中，你应该删除**failoverPartner**连接属性并将其替换**multiSubnetFailover**设置为**true**并将连接字符串中的服务器名称替换为可用性组侦听器。 如果使用的连接字符串**failoverPartner**和**multiSubnetFailover = true**，驱动程序将生成错误。 但是，如果使用的连接字符串**failoverPartner**和**multiSubnetFailover = false** (或**ApplicationIntent = ReadWrite**)，应用程序将使用数据库镜像。  
   
  该驱动程序将返回错误，如果在 AG 中，在主数据库上使用数据库镜像，并且**multiSubnetFailover = true**在连接到主数据库而不是到可用性组的连接字符串中使用侦听器。  
-  
-## <a name="specifying-application-intent"></a>指定应用程序意向  
- 当**applicationIntent = ReadOnly**，连接到已启用 AlwaysOn 数据库时，客户端请求只读工作负荷。 在连接时以及运行“USE database”语句期间，服务器将强制实施该意向（但仅针对已启用 AlwaysOn 的数据库）。  
-  
- **ApplicationIntent**关键字不适用于旧的、 只读数据库。  
-  
- 数据库可允许或禁止目标 AlwaysOn 数据库上的读取工作负荷。 （此操作可通过 **PRIMARY_ROLE** 和 **SECONDARY_ROLE** [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句的 **ALLOW_CONNECTIONS** 子句完成。）  
-  
- **ApplicationIntent**关键字用于启用只读路由。  
-  
-## <a name="read-only-routing"></a>只读路由  
- 只读路由是一项功能，可用于确保数据库的只读副本的可用性。 启用只读路由：  
-  
-1.  必须连接到“AlwaysOn 可用性组”可用性组侦听器。  
-  
-2.  **ApplicationIntent**连接字符串关键字必须设置为**ReadOnly**。  
-  
-3.  数据库管理员必须配置该可用性组以便启用只读路由。  
-  
- 使用只读路由的多个连接可能不会全部连接到相同的只读副本。 对数据库同步进行更改或对服务器的路由配置进行更改可能导致客户端连接到不同的只读副本。 若要确保所有只读请求连接到相同的只读副本，不要将传递到的虚拟 IP 地址的可用性组侦听器**serverName**连接字符串关键字。 而是指定只读实例的名称。  
-  
- 因为只读路由首先连接到主副本，然后查找最适用的可读次副本，所以只读路由所需的时间可能会超过连接主副本的时间。 为此，应增加您的登录超时。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>支持 multiSubnetFailover 和 applicationIntent 的新增方法  
  以下方法为你提供以编程方式访问**multiSubnetFailover**， **applicationIntent**和**transparentNetworkIPResolution**连接字符串关键字：  
   
@@ -136,7 +119,7 @@ ms.lasthandoff: 11/18/2017
  **GetMultiSubnetFailover**， **setMultiSubnetFailover**， **getApplicationIntent**， **setApplicationIntent**， **getTransparentNetworkIPResolution**和**setTransparentNetworkIPResolution**方法也会添加到[SQLServerDataSource 类](../../connect/jdbc/reference/sqlserverdatasource-class.md)， [SQLServerConnectionPoolDataSource 类](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)，和[SQLServerXADataSource 类](../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
   
 ## <a name="ssl-certificate-validation"></a>SSL 证书验证  
- 可用性组包含多个物理服务器。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]增加了对支持**使用者备用名称**中以便多个主机可以使用相同的证书相关联的 SSL 证书。 有关 SSL 的详细信息，请参阅[了解 SSL 支持](../../connect/jdbc/understanding-ssl-support.md)。  
+ 可用性组包含多个物理服务器。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 增加了对支持**使用者备用名称**中以便多个主机可以使用相同的证书相关联的 SSL 证书。 有关 SSL 的详细信息，请参阅[了解 SSL 支持](../../connect/jdbc/understanding-ssl-support.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [连接到 SQL Server 使用 JDBC 驱动程序](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

@@ -1,27 +1,28 @@
 ---
-title: "在 Linux 和 macOS 的高可用性和灾难恢复上的 ODBC 驱动程序 |Microsoft 文档"
-ms.custom: 
-ms.date: 01/19/2017
+title: 在 Linux 和 macOS 的高可用性和灾难恢复上的 ODBC 驱动程序 |Microsoft 文档
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>在 Linux 和 macOS 用于高可用性和灾难恢复的支持上的 ODBC 驱动程序
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,29 +75,11 @@ Linux 和 macOS 支持的 ODBC 驱动程序[!INCLUDE[ssHADR](../../../includes/s
 2.  如果应用程序使用 **ApplicationIntent=ReadWrite** 且将辅助副本位置配置为只读访问。  
   
 如果将主副本配置为拒绝只读工作负荷且连接字符串包含 **ApplicationIntent=ReadOnly**，连接将失败。  
-  
-## <a name="specifying-application-intent"></a>指定应用程序意向  
-如果使用 **ApplicationIntent=ReadOnly**，在连接到某一启用了 AlwaysOn 的数据库时，客户端将请求读取工作负荷。 在连接时和 USE 数据库语句期间但仅对启用 AlwaysOn 的数据库，服务器强制执行该意向。
 
-**ApplicationIntent** 关键字不适用于早期的只读数据库。  
 
-数据库可允许或禁止目标 AlwaysOn 数据库上的读取工作负荷。 (使用**ALLOW_CONNECTIONS**子句**PRIMARY_ROLE**和**SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)]语句。)  
-  
-**ApplicationIntent** 关键字用于启用只读路由。  
-  
-## <a name="read-only-routing"></a>只读路由  
-只读路由是一项功能，可用于确保数据库的只读副本的可用性。 启用只读路由：  
-  
-1.  连接到某一“Always On 可用性组”可用性组侦听程序。  
-  
-2.  **ApplicationIntent** 连接字符串关键字必须设置为 **ReadOnly**。  
-  
-3.  数据库管理员必须配置可用性组才能启用只读路由。  
-  
-多个使用只读路由的连接有可能连接到不同的只读副本。 对数据库同步进行更改或对服务器的路由配置进行更改可能导致客户端连接到不同的只读副本。 若要确保所有只读请求连接到相同的只读副本，请不要向 **Server** 连接关键字传递可用性组侦听程序。 而是指定只读实例的名称。  
-  
-期望与只读路由的连接时间长于连接主副本的时间。 因此，增加你的登录超时。 只读路由首先会连接到主副本，然后查找最合适的可读辅助副本。  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>ODBC 语法
 
 两个 ODBC 连接字符串关键字均支持[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
