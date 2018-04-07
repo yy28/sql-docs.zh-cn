@@ -1,25 +1,25 @@
 ---
-title: "备份和还原"
+title: 备份和还原
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "描述数据如何备份和还原的 SQL Server 并行数据仓库 (PDW) 的工作原理。"
+description: 描述数据如何备份和还原的 SQL Server 并行数据仓库 (PDW) 的工作原理。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 
-ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 50
+ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="backup-and-restore"></a>备份和还原
 描述数据如何备份和还原的 SQL Server 并行数据仓库 (PDW) 的工作原理。 备份和还原操作用于灾难恢复。 备份和还原还可将数据库从一个设备复制到另一个设备。  
@@ -35,7 +35,7 @@ The [master database](master-database.md) is a SMP SQL Server database. It is ba
 
 -->
   
-PDW 使用 SQL Server 的备份技术来备份和还原设备的数据库。 SQL Server 备份选项已预先配置为使用备份压缩。 不能设置如压缩、 校验和、 块大小以及缓冲区计数的备份选项。  
+PDW 使用 SQL Server 的备份技术来备份和还原设备的数据库。 SQL Server 备份选项已预先配置为使用备份压缩。 不能设置压缩、校验和、块大小和缓冲区计数等备份选项。  
   
 数据库备份存储在一个或多个备份服务器，它存在于客户网络上。  PDW 将用户数据库备份并行直接从计算节点写入一个备份服务器，并将并行的用户数据库备份直接从备份服务器还原到计算节点。  
   
@@ -46,7 +46,7 @@ PDW 使用 SQL Server 的备份技术来备份和还原设备的数据库。 SQL
   
 完整数据库备份是整个 PDW 数据库备份。 这是默认的备份类型。 用户数据库的完整备份包括数据库用户和数据库角色。 Master 数据库的备份包括登录名。  
   
-差异备份包含的所有更改自上次完整备份。 差异备份通常采用较少的时间比完全备份，并可以更频繁地执行。 多个差异备份都基于相同的完整备份，每个差异在上一个差异包括的所有更改。  
+差异备份包含的所有更改自上次完整备份。 差异备份所需的时间通常比完整备份所需的时间少，并且可以更频繁地执行。 多个差异备份都基于相同的完整备份，每个差异在上一个差异包括的所有更改。  
   
 例如，你可以创建完整备份每周和每日差异备份。 若要还原用户数据库、 完整备份加上最后一个差异 （如果存在） 需要还原。  
   
@@ -123,11 +123,11 @@ PDW 使用 SQL Server 的备份技术来备份和还原设备的数据库。 SQL
   
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>还原到设备，但有更多计算节点  
   
-将备份还原到设备，但有更多计算节点增长与计算节点数成比例的已分配的数据库大小。  
+将备份还原到计算节点数更大的设备会与计算节点数成比例地增加分配的数据库大小。  
   
 例如，当 2 节点设备 (每个节点的 30 GB) 为 60 GB 的数据库还原到一个 6 节点设备中，SQL Server PDW 就在 6 节点设备上创建一个 180 GB 的数据库 （6 个节点有 30 GB 每个节点）。 SQL Server PDW 最初将数据库还原到 2 个节点以匹配源配置，然后重新分配到所有 6 节点数据。  
   
-重新分发后每个计算节点将包含较少的实际数据和比在较小的源设备上每个计算节点的更多可用空间。 使用其他空间将更多的数据添加到数据库。 如果还原的数据库大小大于所需值，则可以使用[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)收缩数据库文件大小。  
+重新分发之后，与较小源设备上的每个计算节点相比，每个计算节点都会包含较少的实际数据和较多的可用空间。 使用附加空间可将更多数据添加到数据库。 如果还原的数据库大小大于所需值，则可以使用[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)收缩数据库文件大小。  
   
 ## <a name="related-tasks"></a>相关任务  
   

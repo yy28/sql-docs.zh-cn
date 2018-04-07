@@ -1,30 +1,31 @@
 ---
-title: "将 DB2 数据迁移到 SQL Server (DB2ToSQL) |Microsoft 文档"
+title: 将 DB2 数据迁移到 SQL Server (DB2ToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7249a757ecc1c7c8fb88687953eed93e98890d45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0714e217aff8f6aa728bbc401472b9b538add968
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>将 DB2 数据迁移到 SQL Server (DB2ToSQL)
 已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，可以将数据从 DB2 到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > 如果实例上未安装 DB2 扩展包的 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并且如果**服务器端数据迁移引擎**选中，那么在将数据迁移到目标数据库，遇到以下错误: SSMA 数据迁移组件上未找到 SQL Server，将无法进行服务器端数据迁移。 请检查是否正确安装了扩展包。 单击**取消**终止数据迁移。  
   
-5.  在**连接到 DB2**对话框中，输入连接凭据，，然后单击**连接**。 连接到 DB2 的详细信息，请参阅[连接到 DB2 数据库 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+5.  在**连接到 DB2**对话框中，输入连接凭据，，然后单击**连接**。 连接到 DB2 的详细信息，请参阅[连接到 DB2 数据库&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
     用于连接到目标数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，输入中的连接凭据**连接到 SQL Server**对话框中，单击**连接**。 有关详细信息连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请参阅[连接到 SQL Server](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
@@ -108,5 +109,5 @@ ms.lasthandoff: 12/21/2017
 > 当为目标数据库使用 SQL Express edition 时，允许仅限客户端数据迁移，并且不支持服务器端数据迁移。  
   
 ## <a name="see-also"></a>另请参阅  
-[将 DB2 数据迁移到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[将 DB2 数据迁移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

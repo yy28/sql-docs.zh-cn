@@ -1,33 +1,33 @@
 ---
-title: "下载 Microsoft JDBC Driver for SQL Server |Microsoft 文档"
-ms.custom: 
+title: 下载 Microsoft JDBC Driver for SQL Server |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f4e5bb82048fd9ce9d52635ee12be31dffe8940
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 8ebf8e77c5e5acdf5a6ef34935b5b86ec2f5611b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>下载 Microsoft JDBC Driver for SQL Server
 
-![下载向下箭头带圆圈](../../ssdt/media/download.png)[要下载 JDBC 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
- 
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>使用 Maven 中部的 JDBC 驱动程序
 JDBC 驱动程序可以通过将其添加为依赖项在 POM.xml 文件中替换为以下代码添加到 Maven 项目：
 
@@ -39,7 +39,7 @@ JDBC 驱动程序可以通过将其添加为依赖项在 POM.xml 文件中替换
 </dependency>
 ```  
 
-## <a name="download-previous-versions-of-jdbc-drivers-for-sql-server"></a>下载适用于 SQL Server JDBC 驱动程序的以前版本  
+## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>提供的 SQL Server JDBC 驱动程序的下载
  * [Microsoft JDBC Driver 6.4 for SQL Server](http://go.microsoft.com/fwlink/?linkid=868290) 
  * [Microsoft JDBC Driver 6.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=852460) 
  * [Microsoft JDBC Driver 6.0 for SQL Server](http://go.microsoft.com/fwlink/?LinkId=245496) 

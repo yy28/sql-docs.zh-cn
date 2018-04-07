@@ -1,30 +1,31 @@
 ---
-title: "项目设置 （转换） (SybaseToSQL) |Microsoft 文档"
-ms.custom: 
+title: 项目设置 （转换） (SybaseToSQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64845d9450c412ca975d541f1171a725271ec502
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6822c6f320bf7057eb05f75719bf19edfb4d24e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>项目设置 （转换） (SybaseToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Sybase 自适应 Server Enterprise (ASE) 语法的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 语法。  
@@ -271,7 +272,7 @@ ms.lasthandoff: 12/21/2017
 **默认/Optimistic/完整模式：**出现错误的标记  
   
 **RAISERROR 基消息号**  
-ASE 用户消息存储在每个数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]用户消息集中存储和可用于通过**sys.messages**目录视图。 此外 ASE 用户消息开始 20000，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]错误消息开始 50001。  
+ASE 用户消息存储在每个数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 用户消息集中存储和可用于通过**sys.messages**目录视图。 此外 ASE 用户消息开始 20000，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]错误消息开始 50001。  
   
 此设置指定的编号，以将添加到 ASE 用户消息编号，以将其转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]用户消息。 如果你[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]有用户消息**sys.messages**目录视图中，你可能需要将此数字更改为较高的值。 这是因此转换后的消息号不与现有消息号冲突。  
   
@@ -334,7 +335,7 @@ ASE 用户消息存储在每个数据库。 [!INCLUDE[ssNoVersion](../../include
 **完整模式：**将函数  
   
 **Datalength 之外函数**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 和 ASE 不同的值为一个空格时 datalength 之外函数返回的值中。 在这种情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure，则返回 0 并 ASE 返回 1。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] / SQL Azure 和 ASE 不同的值为一个空格时 datalength 之外函数返回的值中。 在这种情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure，则返回 0 并 ASE 返回 1。  
   
 -   若要使用的 ASE 行为，请选择**将函数**。 对 datalength 之外函数的所有调用将都替换与用例表达式模拟 Sybase ASE 行为。  
   
@@ -455,5 +456,5 @@ ASE，该函数中`SUBSTRING(expression, start, length)`如果指定开始值大
 > 当连接到 SQL Azure，它是默认情况下，True。  
   
 ## <a name="see-also"></a>另请参阅  
-[用户界面参考 &#40;SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+[用户界面参考&#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

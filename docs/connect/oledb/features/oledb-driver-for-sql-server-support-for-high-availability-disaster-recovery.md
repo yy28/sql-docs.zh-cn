@@ -10,25 +10,25 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05275a1f770ce4a01f583dda768872a26b5e3725
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>用于高可用性、 灾难恢复的 SQL Server 支持的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主题介绍 SQL Server 支持 OLE DB 驱动程序 (在中添加[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) 为[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+  本文介绍 SQL Server 支持 OLE DB 驱动程序 (在中添加[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) 为[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
- 您可以在连接字符串中指定给定可用性组的可用性组侦听器。 如果用于 SQL Server 应用程序的 OLE DB 驱动程序连接到故障转移可用性组中的数据库，原始连接已断开，并且该应用程序必须打开新的连接在故障转移后继续工作。  
+ 您可以在连接字符串中指定给定可用性组的可用性组侦听器。 如果 SQL Server 应用程序用于 OLE DB 驱动程序连接到故障转移可用性组中的数据库，原始连接已断开，并且该应用程序必须打开新的连接在故障转移后继续工作。  
   
  如果你没有连接到可用性组侦听器，并且如果多个 IP 地址关联一个主机名，OLE DB 驱动程序的 SQL Server 将按顺序循环访问与 DNS 条目关联的所有 IP 地址。 如果 DNS 服务器返回的第一个 IP 地址未绑定到任何网络接口卡 (NIC)，则上述遍历操作可能会用时较长。 连接到可用性组侦听器时，OLE DB 驱动程序的 SQL Server 将尝试并行建立与所有 IP 地址的连接，如果连接尝试成功，驱动程序将放弃所做的任何挂起的连接尝试。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/03/2018
 **ApplicationIntent** 关键字用于启用只读路由。  
   
 ## <a name="read-only-routing"></a>只读路由  
-只读路由是一项可确保数据库只读副本的可用性的功能。 启用只读路由：  
+只读路由是一项功能，可用于确保数据库的只读副本的可用性。 启用只读路由：  
   
 1.  您必须连接到某一 AlwaysOn 可用性组侦听器。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 04/03/2018
   
 使用只读路由的多个连接可能不会全部连接到相同的只读副本。 对数据库同步进行更改或对服务器的路由配置进行更改可能导致客户端连接到不同的只读副本。 若要确保所有只读请求连接到相同的只读副本，不要将传递到一个 Always On 可用性组侦听器**服务器**连接字符串关键字。 而是指定只读实例的名称。  
   
-只读路由所用的时间可能会长于连接到主副本的时间，因为只读路由首先连接到主副本，然后查找可用的最佳可读取辅助副本。 为此，应增加您的登录超时。  
+因为只读路由首先连接到主副本，然后查找最适用的可读次副本，所以只读路由所需的时间可能会超过连接主副本的时间。 为此，应增加您的登录超时。  
   
 ## <a name="ole-db"></a>OLE DB  
 SQL Server 的 OLE DB 驱动程序同时支持**ApplicationIntent**和**MultiSubnetFailover**关键字。   
@@ -113,18 +113,15 @@ SQL Server 的 OLE DB 驱动程序同时支持**ApplicationIntent**和**MultiSub
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-SQL Server OLE DB 应用程序用于 OLE DB 驱动程序可以使用一种方法来指定应用程序意向：  
+SQL Server 应用程序用于 OLE DB 驱动程序可以使用一种方法来指定应用程序意向：  
   
- **Idbinitialize:: Initialize**  
+ -   **Idbinitialize:: Initialize**  
  **IDBInitialize::Initialize** 使用以前配置的属性集来初始化数据源并创建数据源对象。 将应用程序意向指定为访问接口属性或作为扩展属性字符串的一部分。  
   
- **IDataInitialize::GetDataSource**  
+ -   **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** 使用可包含 **Application Intent** 关键字的输入连接字符串。  
   
- **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties** 检索当前为数据源设置的属性值。  可以通过 DBPROP_INIT_PROVIDERSTRING 属性和 SSPROP_INIT_APPLICATIONINTENT 属性检索 **Application Intent** 值。  
-  
- **IDBProperties::SetProperties**  
+ -   **IDBProperties::SetProperties**  
  若要设置 **ApplicationIntent** 属性值，请调用在带有“**ReadWrite**”或“**ReadOnly**”值的 **SSPROP_INIT_APPLICATIONINTENT** 属性或含有“**ApplicationIntent=ReadOnly**”或“**ApplicationIntent=ReadWrite**”值的 **DBPROP_INIT_PROVIDERSTRING** 属性中传递的 **IDBProperties::SetProperties**。  
   
 可以在“数据链接属性”对话框的“全部”选项卡的“应用程序意向属性”字段中指定应用程序意向。  
@@ -133,13 +130,22 @@ SQL Server OLE DB 应用程序用于 OLE DB 驱动程序可以使用一种方法
   
 ### <a name="multisubnetfailover"></a>MultiSubnetFailover
 
-是等效的连接属性：  
+等效的连接属性为：  
   
 -   **SSPROP_INIT_MULTISUBNETFAILOVER**  
+  
+-   **DBPROP_INIT_PROVIDERSTRING**  
 
-SSPROP_INIT_MULTISUBNETFAILOVER 属性是布尔类型。 属性接受 VARIANT_TRUE 或 VARIANT_FALSE 的值。
+SQL Server 应用程序用于 OLE DB 驱动程序可以使用以下方法之一设置 MultiSubnetFailover 选项：  
 
-若要设置 MultiSubnetFailover 属性值，调用**IDBProperties::SetProperties** SSPROP_INIT_MULTISUBNETFAILOVER 属性与值传入**VARIANT_TRUE**或**VARIANT_FALSE**。 
+ -   **Idbinitialize:: Initialize**  
+ **IDBInitialize::Initialize** 使用以前配置的属性集来初始化数据源并创建数据源对象。 将应用程序意向指定为访问接口属性或作为扩展属性字符串的一部分。  
+  
+ -   **IDataInitialize::GetDataSource**  
+ **IDataInitialize::GetDataSource**采用输入的连接字符串可以包含**MultiSubnetFailover**关键字。  
+
+-   **IDBProperties::SetProperties**  
+若要设置**MultiSubnetFailover**属性值，请调用**IDBProperties::SetProperties**传入**SSPROP_INIT_MULTISUBNETFAILOVER**具有值属性**VARIANT_TRUE**或**VARIANT_FALSE**或**DBPROP_INIT_PROVIDERSTRING**属性值包含"**MultiSubnetFailover = Yes**"**MultiSubnetFailover = 否**"。
 
 #### <a name="example"></a>示例
 

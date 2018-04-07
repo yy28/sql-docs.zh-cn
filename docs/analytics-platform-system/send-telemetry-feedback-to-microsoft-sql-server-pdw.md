@@ -1,26 +1,26 @@
 ---
-title: "将遥测反馈发送给 Microsoft (SQL Server PDW)"
+title: 将遥测反馈发送给 Microsoft (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: "18"
-ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 18
+ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>向 Microsoft 发送遥测反馈
 分析平台系统具有一个可选的遥测功能，将管理控制台数据发送给 Microsoft。 我们建议你启用此选项可帮助我们改进产品。  
@@ -39,11 +39,11 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-enable-feedback"></a>若要启用反馈  
   
-1.  使用设备的域管理员帐户，连接到管理节点 (***appliance_domain*-CTL01**)，然后打开命令提示符下使用您的 Windows 管理员凭据。  
+1.  使用设备的域管理员帐户，连接到管理节点 (***appliance_domain *-CTL01**)，然后打开命令提示符下使用您的 Windows 管理员凭据。  
   
 2.  导航到以下目录： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
-3.  导入模块`Configure-RemoteMonitoring.ps1`  
+3.  导入模块 `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > 若要导入你必须在命令中使用两个时间段。  
@@ -89,11 +89,11 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-disable-telemetry"></a>若要禁用遥测  
   
-1.  使用设备的域管理员帐户，连接到管理节点 (***appliance_domain*-CTL01**) 和使用管理员权限打开 PowerShell 窗口。  
+1.  使用设备的域管理员帐户，连接到管理节点 (***appliance_domain *-CTL01**) 和使用管理员权限打开 PowerShell 窗口。  
   
 2.  导航到以下目录： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
-3.  导入模块`Configure-RemoteMonitoring.ps1`  
+3.  导入模块 `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > 若要导入你必须在命令中使用两个时间段。  
@@ -117,8 +117,8 @@ ms.lasthandoff: 12/21/2017
 不没有运行任何影响`Disable-RemoteMonitoring`命令多次。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用管理控制台 &#40; 监视设备分析平台系统 &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[使用系统视图 &#40; 监视设备分析平台系统 &#41;](monitor-the-appliance-by-using-system-views.md)  
-[使用 System Center Operations Manager &#40; 监视设备分析平台系统 &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[使用 DNS 转发器来解析非设备 DNS 名称 &#40;分析平台系统 &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[通过使用管理控制台监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[使用系统视图来监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-views.md)  
+[使用 System Center Operations Manager 来监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+[使用 DNS 转发器来解析非设备 DNS 名称&#40;分析平台系统&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

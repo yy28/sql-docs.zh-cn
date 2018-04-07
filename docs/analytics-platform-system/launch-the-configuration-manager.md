@@ -1,37 +1,37 @@
 ---
-title: "启动配置管理器 (Analytics Platform System)"
+title: 启动配置管理器 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
-caps.latest.revision: "22"
-ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 0ea02f539633233b462cc6c4cc3cc7ba5d452da9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="launch-the-configuration-manager"></a>启动配置管理器
 本主题提供用于启动说明**Configuration Manager**针对分析平台系统设备。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
-### <a name="prerequisites"></a>必备条件  
-分析平台系统**Configuration Manager**只能由设备域管理员运行。 若要运行此工具，你需要设备域管理员密码。 若要创建 AP 的其他管理员，请参阅[创建 AP 域管理员 &#40;AP &#41;](create-an-aps-domain-administrator-aps.md).  
+### <a name="prerequisites"></a>必要條件  
+分析平台系统**Configuration Manager**只能由设备域管理员运行。 若要运行此工具，你需要设备域管理员密码。 若要创建 AP 的其他管理员，请参阅[创建 AP 域管理员&#40;AP&#41;](create-an-aps-domain-administrator-aps.md)。  
   
 ## <a name="Accessing"></a>启动配置管理器工具  
-若要运行配置管理器，使用远程桌面连接到 PDW 控制节点 (***PDW_region*-CTL01**) 节点，并作为登录*appliance_domain* **\Administrator**。 启动时**Configuration Manager**程序中，使用**以管理员身份运行**选项以确保使用你的管理员凭据。  
+若要运行配置管理器，使用远程桌面连接到 PDW 控制节点 (***PDW_region *-CTL01**) 节点，并作为登录 * appliance_domain ***\Administrator**。 启动时**Configuration Manager**程序中，使用**以管理员身份运行**选项以确保使用你的管理员凭据。  
   
 #### <a name="to-launch-from-a-browser-window"></a>若要在浏览器窗口中启动  
   
@@ -54,5 +54,5 @@ ms.lasthandoff: 12/21/2017
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>另请参阅  
-[使用管理控制台 &#40; 监视设备分析平台系统 &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[通过使用管理控制台监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

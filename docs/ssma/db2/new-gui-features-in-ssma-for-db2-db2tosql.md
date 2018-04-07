@@ -1,30 +1,31 @@
 ---
-title: "SSMA for DB2 中的新 GUI 功能 (DB2ToSQL) |Microsoft 文档"
+title: SSMA for DB2 中的新 GUI 功能 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4735320bb802c86cf0e3eaa563e49fa0542b294b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ed0e67bfcc5aaed3a11451d9fab562d368c8782c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中的新 GUI 功能 (DB2ToSQL)
 本章介绍 SSMA 用户界面的新的功能。  
@@ -104,7 +105,7 @@ GUI 对象历史记录可用于以下优势导航对象时：
   
 -   右键单击弹出菜单中选择快速信息  
   
--   按 Ctrl + Shift + 空格键  
+-   Press Ctrl+Shift+Space  
   
 ### <a name="find-declaration"></a>查找声明  
 你可以转到以下方式的光标位置处的对象的声明：  

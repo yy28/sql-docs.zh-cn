@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b76f06a3e1eff17bd1aafb7da06d00feb7da1280
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: e14bb0a5154101c8d7bc90db91e0c1d0d34f1ccf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db"></a>OLE DB Driver for SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ ms.lasthandoff: 03/30/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [为 SQL Server 应用程序创建 OLE DB 驱动程序](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
+-   [创建适用于 SQL Server 的 OLE DB 驱动程序应用程序](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [数据源对象 &#40; OLE DB &#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [数据源对象 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [命令](../../oledb/ole-db-commands/commands.md)  
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 03/30/2018
   
 -   [表和索引](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [数据类型 &#40; OLE DB &#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [数据类型 & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [架构行集支持&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [表值参数&#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [日期和时间改进 &#40; OLE DB &#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [日期和时间改进 & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [大型 CLR 用户定义类型&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
@@ -80,6 +80,6 @@ ms.lasthandoff: 03/30/2018
 -   [OLE DB 操作指南主题](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [用于 SQL Server 编程的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

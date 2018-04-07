@@ -1,25 +1,25 @@
 ---
-title: "获取和为 AP PDW 配置备份服务器"
+title: 获取和为 AP PDW 配置备份服务器
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "将非设备 Windows 系统配置为备份服务器用于备份和还原分析平台系统 (AP) 和 SQL Server 并行数据仓库 (PDW) 中的功能。"
+description: 将非设备 Windows 系统配置为备份服务器用于备份和还原分析平台系统 (AP) 和 SQL Server 并行数据仓库 (PDW) 中的功能。
 ms.date: 10/20/2016
 ms.topic: article
-caps.latest.revision: "20"
+caps.latest.revision: 20
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>获取和配置备份服务器
 本主题介绍如何将非设备 Windows 系统配置为与备份和还原功能在分析平台系统 (AP) 一起使用的备份服务器和 SQL Server 并行数据仓库 (PDW)。  
@@ -136,12 +136,12 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 ### <a name="manage-network-credentials"></a>管理网络凭据  
   
-对备份目录的网络访问权限基于标准 Windows 文件共享安全。 在执行之前备份，需要创建或指定将用于向备份目录进行 PDW 身份验证的 Windows 帐户。 此 windows 帐户必须有权访问、 创建和写入备份目录。  
+对备份目录的网络访问权限基于标准 Windows 文件共享安全。 在执行之前备份，需要创建或指定将用于向备份目录进行 PDW 身份验证的 Windows 帐户。 此 Windows 帐户必须有权访问、创建和写入备份目录。  
   
 > [!IMPORTANT]  
-> 若要减少与你的数据的安全风险，我们建议您指定一个 Windows 帐户专门用于执行备份和还原操作。 允许此帐户具有对备份的位置和其他地方的权限。  
+> 若要降低数据的安全风险，建议指定一个 Windows 帐户专门用于执行备份和还原操作。 仅允许此帐户访问备份位置，不要授予对其他位置的访问权限。  
   
-若要在 PDW 中存储的用户名和密码，使用[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)存储过程。 PDW 使用 Windows 凭据管理器来存储和加密用户名和密码的控件节点和计算节点。 凭据不会备份使用 BACKUP DATABASE 命令所造成。  
+若要在 PDW 中存储的用户名和密码，使用[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)存储过程。 PDW 使用 Windows 凭据管理器来存储和加密用户名和密码的控件节点和计算节点。 不使用 BACKUP DATABASE 命令备份凭据。  
   
 若要从 PDW 中删除网络凭据，使用[sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)存储过程。  
   

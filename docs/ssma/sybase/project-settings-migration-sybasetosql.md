@@ -1,30 +1,31 @@
 ---
-title: "项目设置 （迁移） (SybaseToSQL) |Microsoft 文档"
-ms.custom: 
+title: 项目设置 （迁移） (SybaseToSQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b032cb4f1453a3b9a2986e5d554d21c62e606001
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23e575ca7b7094ee835ff8432cfbdb906c875ce9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-sybasetosql"></a>项目设置 （迁移） (SybaseToSQL)
 迁移页的**项目设置**对话框中包含自定义 SSMA 如何将数据迁移从 Sybase 自适应 Server Enterprise (ASE) 中，到设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 |术语|定义|  
 |--------|--------------|  
-|**替换不受支持的日期**|指定是否 SSMA 应更正早于最早的日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日期 (01 1753 年 1 月)。<br /><br />若要保留当前的日期值，选择**不执行任何操作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 列中将不接受 01 1753 年 1 月之前的日期。 如果你使用较旧的日期，你必须将日期时间值转换为字符值。<br /><br />若要将 01 1753 年 1 月之前的日期转换为 NULL，选择**替换 NULL**。<br /><br />若要将替换受支持的日期 01 1753 年 1 月之前的日期，请选择**替换最受支持的日期接近**。<br /><br />**默认模式**： 不执行任何操作<br /><br />**开放式模式**： 不执行任何操作<br /><br />**完整模式**： 替换为最接近支持的日期|  
+|**替换不受支持的日期**|指定是否 SSMA 应更正早于最早的日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日期 (01 1753 年 1 月)。<br /><br />若要保留当前的日期值，选择**不执行任何操作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 列中将不接受 01 1753 年 1 月之前的日期。 如果你使用较旧的日期，你必须将日期时间值转换为字符值。<br /><br />若要将 01 1753 年 1 月之前的日期转换为 NULL，选择**替换 NULL**。<br /><br />若要将替换受支持的日期 01 1753 年 1 月之前的日期，请选择**替换最受支持的日期接近**。<br /><br />**默认模式**： 不执行任何操作<br /><br />**开放式模式**： 不执行任何操作<br /><br />**完整模式**： 替换为最接近支持的日期|  
   
 ## <a name="migration-engine"></a>迁移引擎  
   

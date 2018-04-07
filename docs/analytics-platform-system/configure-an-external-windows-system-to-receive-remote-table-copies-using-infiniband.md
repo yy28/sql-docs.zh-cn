@@ -1,26 +1,26 @@
 ---
-title: "配置外部的 Windows 系统要获取远程表的副本 InfiniBand PDW"
+title: 配置外部的 Windows 系统要获取远程表的副本 InfiniBand PDW
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
-caps.latest.revision: "11"
-ms.openlocfilehash: efebff74a8c17952b39efb43006051603c624a03
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 32875c5c7b93f47dbf9dbcc01c621df402ab782d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband"></a>外部 Windows 将系统配置为接收远程表副本使用 InfiniBand
 描述如何购买和配置用于远程表复制功能在 SQL Server PDW 中使用无限带宽网络连接的非设备 Windows 系统。 Windows 系统将承载 SQL Server 数据库从 SQL Server PDW 数据库接收的远程表副本。 它是从设备需单独购买，并连接到设备 InfiniBand 网络。  

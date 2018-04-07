@@ -1,30 +1,31 @@
 ---
-title: "菜单命令和其他快捷键 (Sybase SQL) |Microsoft 文档"
-ms.custom: 
+title: 菜单命令和其他快捷键 (Sybase SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc86f038488652df0bee371d695f5b21ce105147
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c0d4a6d5e9275c9d6f62b6ebe06b950f5600b4ee
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>菜单命令和其他快捷键 (Sybase SQL)
 以下各节描述了用于访问菜单命令和其他 Sybase 应用程序的 SSMA 的各种对话框中使用键盘快捷方式的键盘快捷键。  
@@ -207,5 +208,5 @@ ms.lasthandoff: 12/21/2017
 |请转到声明。|F12|  
   
 ## <a name="see-also"></a>另请参阅  
-[键盘快捷方式 &#40;Sybase 到 SQL &#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
+[键盘快捷方式&#40;Sybase To SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

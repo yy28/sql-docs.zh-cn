@@ -1,26 +1,26 @@
 ---
-title: "密码重置 (Analytics Platform System)"
+title: 密码重置 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: "26"
-ms.openlocfilehash: 5b342aca4498816e59e0fafcb882c5c039fed501
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="password-reset"></a>密码重置
 **密码重置**页使你可以更改由分析平台系统使用的管理员帐户的密码。  
@@ -30,10 +30,10 @@ ms.lasthandoff: 12/21/2017
   
 传递设备时，你可以分析平台系统密码。 当你拍摄负责你的设备时始终为新值更改的密码。 有三个密码更新。 密码不需要为每个其他相同。  
   
-**F <*xxxx*> \Administrator**  
+**F<*xxxx*>\Administrator**  
 **管理员**的设备域。  
   
-**。 \Administrator**  
+**.\Administrator**  
 本地**管理员**上托管的虚拟机的计算机帐户。  
   
 > [!IMPORTANT]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-reset-a-password"></a>若要重置密码  
   
-1.  连接到控制节点并启动**Configuration Manager** (**dwconfig.exe**)。 有关详细信息，请参阅[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md).  
+1.  连接到控制节点并启动**Configuration Manager** (**dwconfig.exe**)。 有关详细信息，请参阅[启动配置管理器&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 2.  在左窗格中**Configuration Manager**，单击**密码重置**。  
   
@@ -58,9 +58,9 @@ ms.lasthandoff: 12/21/2017
   
     对这些帐户所做的更改不会影响任何当前处于活动状态的会话，但将在每个用户下一次登录尝试应用。  
   
-    ![SQL Server DWConfig 密码](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## <a name="see-also"></a>另请参阅  
-[设置管理员密码用于登录到 AD 节点在目录服务还原模式 &#40; DSRM &#41;&#40;分析平台系统 &#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
-[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md)  
+[在目录服务还原模式中设置管理员密码用于登录到 AD 节点&#40;DSRM&#41; &#40;分析平台系统&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
+[启动配置管理器&#40;分析平台系统&#41;](launch-the-configuration-manager.md)  
   

@@ -1,25 +1,25 @@
 ---
-title: "dwloader 并行数据仓库的命令行加载程序"
+title: dwloader 并行数据仓库的命令行加载程序
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "**dwloader**是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。"
+description: '**dwloader**是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。'
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 
-ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 90
+ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader 命令行加载程序
 **dwloader**是一个并行数据仓库 (PDW) 命令行工具，将表行批量加载到现有表。 当加载行时，可以将所有行都添加到表的末尾 (*追加模式*或*fastappend 模式*)、 追加新行和更新现有行 (*upsert 模式*)，或删除所有现有的行之前加载，然后将所有行都插入空表 (*重新加载模式*)。  
@@ -140,7 +140,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 使用参数文件， *parameter_file_name*，代替命令行参数。 *parameter_file_name*可以包含除任何命令行参数*user_name*和*密码*。 如果在命令行和参数文件中指定参数，则命令行重写文件的参数。  
   
-参数文件包含一个参数，而不 **-** 前缀，每行。  
+参数文件包含一个参数，而不**-**前缀，每行。  
   
 示例：  
   

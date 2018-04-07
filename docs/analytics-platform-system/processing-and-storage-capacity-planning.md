@@ -1,25 +1,25 @@
 ---
-title: "分析平台处理和存储容量"
+title: 分析平台处理和存储容量
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "你的业务需求确定数据缩放单位数和计算节点磁盘中你分析平台系统 (AP) 的设备所需的大小。"
+description: 你的业务需求确定数据缩放单位数和计算节点磁盘中你分析平台系统 (AP) 的设备所需的大小。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
-caps.latest.revision: "7"
-ms.openlocfilehash: 9d7f933c45f05d7d4226a2f64fd41eff8d1c914a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 7
+ms.openlocfilehash: 68852344c65863ee051467e524eb0c3f09211483
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="analytics-platform-system-processing-and-storage-capacity"></a>分析平台系统处理和存储容量
 你的业务需求确定数据缩放单位数和计算节点磁盘中你分析平台系统 (AP) 的设备所需的大小。 使用这些处理和存储的计算来指导你购买和规划决策的容量。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 |数据扩展单元|计算节点|CPU 核心数|内存 (GB)|升级|  
 |--------------------|-----------------|-------------|-----------------|----------|  
-|@shouldalert|2|32|512|-|  
+|1|2|32|512|-|  
 |2|4|64|1024|100%|  
 |3|6|96|1536|50%|  
 |4|8|128|2048|33%|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
 |数据扩展单元|计算节点|CPU 核心数|内存 (GB)|升级|  
 |--------------------|-----------------|-------------|-----------------|----------|  
-|@shouldalert|3|48|768|-|  
+|1|3|48|768|-|  
 |2|6|96|1536|100%|  
 |3|9|144|2,304|50%|  
 |4|12|192|3,072|33%|  
@@ -91,9 +91,9 @@ ms.lasthandoff: 12/21/2017
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
 |HPE|3 TB|48 TB|8|384 TB|960 TB|7|6,720 TB|  
-|DELL|1 TB|16 TB|9|144 TB|360 TB|6|合 2160 TB|  
+|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  
 |DELL|2 TB|32 TB|9|288 TB|720 TB|6|4320 TB|  
-|DELL|3 TB|48 TB|9|高达 432 TB|1080 TB|6|6,480 TB|  
+|DELL|3 TB|48 TB|9|432 TB|1080 TB|6|6,480 TB|  
   
 说明：  
   

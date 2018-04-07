@@ -1,15 +1,16 @@
 ---
-title: "使用 SSMA 项目 (MySQLToSQL) |Microsoft 文档"
+title: 使用 SSMA 项目 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Working with SSMA projects, Open project
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7fd7677d8194938fdc11dc364de8ceea9fe1414
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 04c7be6a8dd46d0f35b14eb66eb1c244a5abe5cc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 项目 (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，必须首先创建的 SSMA 项目。 项目是一个文件，其中包含以下信息：  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   项目设置。  
   
-当你打开的项目时，它从 MySQL 和 SQL Server 或 SQL Azure 中断开。 允许您在脱机工作。 有关重新连接到 SQL Server 的详细信息，请参阅[连接到 SQL Server &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+当你打开的项目时，它从 MySQL 和 SQL Server 或 SQL Azure 中断开。 允许您在脱机工作。 有关重新连接到 SQL Server 的详细信息，请参阅[连接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="reviewing-default-project-settings"></a>查看默认项目设置  
 SSMA 进行转换和加载数据库、 迁移数据，和与 MySQL 和 SQL Server 或 SQL Azure 同步 SSMA 包含多个设置。 默认设置是适用于多个用户。 但是，在创建新的 SSMA 项目之前，你应查看这些设置。 如果需要，你可以更改将用于所有新项目的默认设置。  
@@ -55,19 +56,19 @@ SSMA 进行转换和加载数据库、 迁移数据，和与 MySQL 和 SQL Serve
   
 3.  在左窗格中，单击**转换**。  
   
-4.  在右窗格中，查看并根据需要更改设置。 有关这些设置的详细信息，请参阅[项目设置 &#40;转换 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md) .  
+4.  在右窗格中，查看并根据需要更改设置。 有关这些设置的详细信息，请参阅[项目设置&#40;转换&#41; &#40;MySQLToSQL&#41; ](../../ssma/mysql/project-settings-conversion-mysqltosql.md) 。  
   
 5.  重复步骤 1-3 的迁移、 同步、 SQL Azure、 GUI，和类型映射页。  
   
--   有关迁移设置的信息，请参阅[项目设置 &#40;迁移 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md).  
+-   有关迁移设置的信息，请参阅[项目设置&#40;迁移&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)。  
   
--   有关 SQL Server 的同步设置的信息，请参阅[项目设置 &#40;同步 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
+-   有关 SQL Server 的同步设置的信息，请参阅[项目设置&#40;同步&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)。  
   
 -   有关 GUI 设置的信息，请参阅[项目设置 (GUI) （SSMA 常见）](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   
--   有关数据类型映射设置的信息，请参阅[项目设置 &#40;类型映射 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+-   有关数据类型映射设置的信息，请参阅[项目设置&#40;类型映射&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
   
--   有关 SQL Azure 设置信息，请参阅[项目设置 &#40;Azure SQL DB &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
+-   有关 SQL Azure 设置信息，请参阅[项目设置&#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)。  
   
 > [!NOTE]  
 > 仅当你选择时，将显示 SQL Azure 设置**迁移到 SQL Azure**在创建项目。  
@@ -93,16 +94,16 @@ SSMA 进行转换和加载数据库、 迁移数据，和与 MySQL 和 SQL Serve
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
   
-    -   Azure SQL 数据库  
+    -   Azure SQL DB  
   
 然后单击**确定**  
   
 SSMA 创建项目文件。  
   
 ## <a name="customizing-project-settings"></a>自定义项目设置  
-除了定义默认值应用于所有新的 SSMA 项目的项目设置还可以自定义的每个项目的设置。 有关详细信息，请参阅[设置项目选项 &#40;MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md).  
+除了定义默认值应用于所有新的 SSMA 项目的项目设置还可以自定义的每个项目的设置。 有关详细信息，请参阅[设置项目选项&#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)。  
   
-当你自定义源和目标数据库之间的数据类型映射时，你可以定义在项目、 数据库或对象级别的映射。 有关详细信息，请参阅[映射 MySQL 和 SQL Server 数据类型 &#40;MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md).  
+当你自定义源和目标数据库之间的数据类型映射时，你可以定义在项目、 数据库或对象级别的映射。 有关详细信息，请参阅[映射 MySQL 和 SQL Server 数据类型&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)。  
   
 ## <a name="saving-projects"></a>保存项目  
 保存项目功能允许用户将实质上是 SSMA 项目文件中保存项目设置和数据库元数据 （可选）。  
@@ -139,11 +140,11 @@ SSMA 将分析 MySQL 架构并将元数据保存到项目文件。
 4.  若要重新连接到 SQL Azure 上**文件**菜单上，选择**重新连接到 SQL Azure。**  
   
 ## <a name="next-step"></a>下一步  
-迁移过程的下一步是[连接到 MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+迁移过程的下一步是[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[连接到 MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[将 MySQL 数据库迁移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-[连接到 SQL Server &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[连接到 Azure SQL DB &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+[迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[连接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+[连接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

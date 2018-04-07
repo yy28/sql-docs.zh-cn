@@ -1,15 +1,16 @@
 ---
-title: "项目设置 (Azure SQL DB) (AccessToSQL) |Microsoft 文档"
+title: 项目设置 (Azure SQL DB) (AccessToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Project Settings dialog box, SQL Azure
 - SQL Azure settings
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56fa5657caf60e0dcb5682658504b67f860938c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca33c5cfd48b8ebc9c9b98bd6a0b606fec61ef96
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>项目设置 (Azure SQL DB) (AccessToSQL)
 SQL Azure 项目设置允许你配置要添加在连接对话框，并还允许在 SQL Azure 连接中实现检测信号机制的 SQL Azure 数据库后缀。  
@@ -38,7 +39,7 @@ SQL Azure 窗格位于**项目设置**和**默认项目设置**对话框。
   
 -   使用默认项目设置对话框中设置的所有项目的配置选项。 若要访问 SQL Azure 设置中，在**工具**菜单上，选择**DefaultProject 设置**，选择项目类型作为"SQL Azure"中**迁移目标版本**组合框，以访问 SQL Azure 窗格的设置中单击**常规**底部的左窗格中，，然后选择**SQL Azure**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ## <a name="connectivity"></a>连接  
 **检测信号间隔**  

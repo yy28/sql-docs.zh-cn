@@ -1,41 +1,42 @@
 ---
-title: "保存元数据 (SybaseToSQL) |Microsoft 文档"
-ms.custom: 
+title: 保存元数据 (SybaseToSQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 982a481a1476dab39ce91c500d7c60b256bea1ed
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 417734fc80e92ef454625a6d8cad4f9f81d48ec0
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="save-metadata--sybasetosql"></a>保存元数据 (SybaseToSQL)
 **保存元数据**对话框会提示您以在保存它之前将元数据加载到你的 SSMA 项目。 这样，你已可以脱机使用，还可以发送给他人，请与技术支持人员如完成的项目文件。  
   
 访问**保存元数据**对话框中，保存该项目。 如果缺少任何元数据时，将显示 SSMA**保存元数据**对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **名称**  
 在项目中的每个数据库的名称。  
   
-**“状态”**  
+**状态**  
 指示如果元数据加载到 SSMA 项目中，或缺少元数据时。  
   
 SSMA 将元数据加载到根据项目。 当您浏览元数据和转换架构时，将自动加载元数据。  

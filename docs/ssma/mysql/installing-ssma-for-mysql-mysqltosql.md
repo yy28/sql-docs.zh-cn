@@ -21,13 +21,13 @@ ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8984aaeb9240c8c3b309925e151e79688bc7be3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40515884db1dc08b0d3ebe7384ba46b98a961342
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>安装适用于 MySQL (MySqlToSql) SSMA
 SQL Server 迁移助手 (SSMA) mysql 包含的客户端应用程序将用于执行到 MySQL 迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 它还包含已迁移数据库中支持数据迁移和 MySQL 系统函数的使用的扩展包。  
@@ -42,10 +42,10 @@ SQL Server 迁移助手 (SSMA) mysql 包含的客户端应用程序将用于执�
 |||  
 |-|-|  
 |**主题**|**Description**|  
-|[安装适用于 MySQL 客户端 &#40; SSMAMySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|提供有关安装 SSMA 客户端有关的信息和说明。|  
+|[安装 MySQL 客户端的 SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|提供有关安装 SSMA 客户端有关的信息和说明。|  
 |[在 SQL Server (MySQL to SQL) 上安装 SSMA 组件](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|提供有关的信息和说明的实例上安装的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
-|[为 MySQL 组件 &#40; 删除 SSMAMySQLToSql &#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|提供用于卸载客户端程序的说明。|  
+|[为 MySQL 组件删除 SSMA &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|提供用于卸载客户端程序的说明。|  
   
 ## <a name="see-also"></a>另请参阅  
-[将 MySQL 数据库迁移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

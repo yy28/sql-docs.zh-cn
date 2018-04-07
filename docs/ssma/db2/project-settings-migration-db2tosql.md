@@ -1,30 +1,31 @@
 ---
-title: "项目设置 （迁移） (DB2ToSQL) |Microsoft 文档"
+title: 项目设置 （迁移） (DB2ToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf47fee6992ec74ca331972e711be931d4dfb34e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d143857c00815a8d219b5add7b3281cf982723d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-db2tosql"></a>项目设置 （迁移） (DB2ToSQL)
 迁移页的**项目设置**对话框中包含自定义如何 SSMA 会将数据迁移到的 DB2 从设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 |**保留 Null**|指定是否 SSMA 保留源数据中的 null 值，当它将数据添加到 SQL Server 的而不考虑 SQL Server 中指定的默认值。<br /><br />**默认模式**: True<br /><br />**开放式模式**: True<br /><br />**完整模式**: True|  
 |**将出现错误的字符串剪裁操作标记**|如果目标列大小小于源字符串长度，则将删除值，并将其标记为错误。<br /><br />**默认模式**: 是<br /><br />**开放式模式**: 是<br /><br />**完整模式**: 是|  
 |**出错时**|发生错误时，请停止数据迁移。 它具有三个选项：<br /><br />**停止迁移：**停止数据迁移操作<br /><br />**转到下一个表：**停止数据迁移到当前表，并将继续到下一个<br /><br />**继续执行下一批：**停止数据迁移到当前批次，并将继续到下一个<br /><br />**默认模式**： 继续执行下一批<br /><br />**开放式模式**： 继续执行下一批<br /><br />**完整模式**： 继续执行下一批|  
-|**替换不受支持的日期**|指定是否 SSMA 应更正早于最早的日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日期 (01 1753 年 1 月)。<br /><br />若要保留当前的日期值，选择**不执行任何操作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 列中将不接受 01 1753 年 1 月之前的日期。 如果你使用较旧的日期，你必须将日期时间值转换为字符值。<br /><br />若要将 01 1753 年 1 月之前的日期转换为 NULL，选择**替换 NULL**。<br /><br />若要将替换受支持的日期 01 1753 年 1 月之前的日期，请选择**替换最受支持的日期接近**。<br /><br />**默认模式**： 不执行任何操作<br /><br />**开放式模式**： 不执行任何操作<br /><br />**完整模式**： 替换为最接近支持的日期|  
+|**替换不受支持的日期**|指定是否 SSMA 应更正早于最早的日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日期 (01 1753 年 1 月)。<br /><br />若要保留当前的日期值，选择**不执行任何操作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 列中将不接受 01 1753 年 1 月之前的日期。 如果你使用较旧的日期，你必须将日期时间值转换为字符值。<br /><br />若要将 01 1753 年 1 月之前的日期转换为 NULL，选择**替换 NULL**。<br /><br />若要将替换受支持的日期 01 1753 年 1 月之前的日期，请选择**替换最受支持的日期接近**。<br /><br />**默认模式**： 不执行任何操作<br /><br />**开放式模式**： 不执行任何操作<br /><br />**完整模式**： 替换为最接近支持的日期|  
 |**表锁**|指定当它将添加数据到表数据迁移期间，SSMA 是否锁定表。 大容量复制操作期间获取大容量更新锁。 如果值为 False，在行级别设置锁。<br /><br />**默认模式**: True<br /><br />**开放式模式**: True<br /><br />**完整模式**: True|  
   
 ## <a name="parallel-data-migration"></a>并行数据迁移  

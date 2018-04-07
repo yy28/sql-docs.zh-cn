@@ -1,30 +1,31 @@
 ---
-title: "项目设置 （类型映射） (SybaseToSQL) |Microsoft 文档"
-ms.custom: 
+title: 项目设置 （类型映射） (SybaseToSQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 594ef6405a41b199d527eaae56a77c7f1d91c4e6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 411cb12d17399e43ebdc454f5f55a5c5595972a2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置 （类型映射） (SybaseToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Sybase 自适应 Server Enterprise (ASE) 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   若要对指定为当前项目中，设置**工具**菜单上，选择**项目设置**，然后选择**类型映射**在左窗格的底部。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **源类型**  
 映射的 ASE 数据类型。  
   
@@ -63,93 +64,93 @@ ms.lasthandoff: 12/21/2017
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**二进制 [\*...8000]**|**二进制 [\*]**|  
-|**二进制 [8001..\*]**|**varbinary(max)**|  
+|**binary[\*..8000]**|**binary[\*]**|  
+|**binary[8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
-|**不同的 char**|**varchar**|  
-|**不同的 char [\*...8000]**|**varchar [\*]**|  
-|**不同的 char [8001..\*]**|**varchar(max)**|  
+|**char varying**|**varchar**|  
+|**char varying[\*..8000]**|**varchar[\*]**|  
+|**char varying[8001..\*]**|**varchar(max)**|  
 |**char[\*..8000]**|**char[\*]**|  
-|**char [8001..\*;]**|**varchar(max)**|  
-|**字符**|**char**|  
+|**char[8001..\*;]**|**varchar(max)**|  
+|**character**|**char**|  
 |**不同的字符**|**varchar**|  
-|**不同的字符 [\*...8000]**|**varchar [\*]**|  
-|**不同的字符 [8001..\*]**|**varchar(max)**|  
-|**字符 [\*...8000]**|**char[\*]**|  
-|**字符 [8001..\*]**|**varchar(max)**|  
+|**character varying[\*..8000]**|**varchar[\*]**|  
+|**character varying[8001..\*]**|**varchar(max)**|  
+|**character[\*..8000]**|**char[\*]**|  
+|**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
-|**datetime**|**datetime2 [3]**|  
-|**年 12 月**|**decimal**|  
-|**dec[\*..\*]**|**十进制 [\*]**|  
+|**datetime**|**datetime2[3]**|  
+|**dec**|**decimal**|  
+|**dec[\*..\*]**|**decimal[\*]**|  
 |**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
-|**十进制 [\*...\*]**|**十进制 [\*]**|  
-|**十进制 [\*...\*][\*..\*]**|**decimal[\*][\*]**|  
-|**双精度**|**float [53]**|  
-|**float**|**float [53]**|  
-|**float [\*...15]**|**float [24]**|  
-|**float [16..\*]**|**float [53]**|  
-|**图像**|**图像**|  
+|**decimal[\*..\*]**|**decimal[\*]**|  
+|**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**双精度**|**float[53]**|  
+|**float**|**float[53]**|  
+|**float[\*..15]**|**float[24]**|  
+|**float[16..\*]**|**float[53]**|  
+|**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
-|**longsysname**|**nvarchar [255]**|  
+|**longsysname**|**nvarchar[255]**|  
 |**money**|**money**|  
 |**国家/地区 char**|**nchar**|  
-|**国家/地区 char [\*...4000]**|**nchar [\*]**|  
+|**国家/地区 char [\*...4000]**|**nchar[\*]**|  
 |**不同的国家/地区 char**|**nvarchar**|  
-|**不同的国家/地区 char [\*...4000]**|**nvarchar [\*]**|  
+|**不同的国家/地区 char [\*...4000]**|**nvarchar[\*]**|  
 |**不同的国家/地区 char [4001..\*]**|**nvarchar(max)**|  
 |**国家/地区 char [4001..\*]**|**nvarchar(max)**|  
 |**国家/地区字符**|**nchar**|  
-|**国家/地区字符 [\*...4000]**|**nchar [\*]**|  
+|**国家/地区字符 [\*...4000]**|**nchar[\*]**|  
 |**国家/地区字符 [4001..\*]**|**nvarchar(max)**|  
 |**不同的国家/地区字符**|**nvarchar**|  
-|**不同的国家/地区字符 [\*...4000]**|**nvarchar [\*]**|  
+|**不同的国家/地区字符 [\*...4000]**|**nvarchar[\*]**|  
 |**不同的国家/地区字符 [4001..\*]**|**nvarchar(max)**|  
 |**国家/地区 varchar**|**nvarchar**|  
-|**国家/地区 varchar [\*...4000]**|**nvarchar [\*]**|  
+|**国家/地区 varchar [\*...4000]**|**nvarchar[\*]**|  
 |**国家/地区 varchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**不同的 nchar**|**nvarchar**|  
-|**不同的 nchar [\*...4000]**|**nvarchar [\*]**|  
-|**不同的 nchar [4001..\*]**|**nvarchar(max)**|  
-|**nchar [\*...4000]**|**nchar [\*]**|  
-|**nchar [4001..\*]**|**nvarchar(max)**|  
+|**nchar varying[\*..4000]**|**nvarchar[\*]**|  
+|**nchar varying[4001..\*]**|**nvarchar(max)**|  
+|**nchar[\*..4000]**|**nchar[\*]**|  
+|**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**数字 [\*...\*]**|**数字 [\*]**|  
-|**数字 [\*...\*][\*..\*]**|**numeric[\*][\*]**|  
+|**numeric[\*..\*]**|**numeric[\*]**|  
+|**numeric[\*..\*][\*..\*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar [\*...4000]**|**nvarchar [\*]**|  
-|**nvarchar [4001..\*]**|**nvarchar(max)**|  
-|**real**|**float [24]**|  
+|**nvarchar[\*..4000]**|**nvarchar[\*]**|  
+|**nvarchar[4001..\*]**|**nvarchar(max)**|  
+|**real**|**float[24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**int**|**int**|  
 |**smallmoney**|**smallmoney**|  
-|**sysname**|**nvarchar [128]**|  
-|**sysname [\*...\*]**|**nvarchar [255]**|  
+|**sysname**|**nvarchar[128]**|  
+|**sysname[\*..\*]**|**nvarchar[255]**|  
 |**text**|**text**|  
-|**time**|**时间 [3]**|  
+|**time**|**time[3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**unichar 不同**|**nvarchar**|  
-|**unichar 改变 [\*...4000]**|**nvarchar [\*]**|  
-|**unichar 改变 [4001..\*]**|**nvarchar(max)**|  
-|**unichar [\*...4000]**|**nchar [\*]**|  
-|**unichar [4001..\*]**|**nvarchar(max)**|  
+|**unichar varying[\*..4000]**|**nvarchar[\*]**|  
+|**unichar varying[4001..\*]**|**nvarchar(max)**|  
+|**unichar[\*..4000]**|**nchar[\*]**|  
+|**unichar[4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar [\*...4000]**|**nvarchar [\*]**|  
-|**univarchar [4001..\*]**|**nvarchar(max)**|  
-|**无符号的 bigint**|**数字 [20] [0]**|  
+|**univarchar[\*..4000]**|**nvarchar[\*]**|  
+|**univarchar[4001..\*]**|**nvarchar(max)**|  
+|**无符号的 bigint**|**numeric[20][0]**|  
 |**无符号的整数**|**bigint**|  
 |**无符号的 smallint**|**int**|  
 |**无符号的 tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary [\*...8000]**|**varbinary [\*]**|  
-|**varbinary [8001..\*]**|**varbinary(max)**|  
+|**varbinary[\*..8000]**|**varbinary[\*]**|  
+|**varbinary[8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar [\*...8000]**|**varchar [\*]**|  
-|**varchar [8001..\*]**|**varchar(max)**|  
+|**varchar[\*..8000]**|**varchar[\*]**|  
+|**varchar[8001..\*]**|**varchar(max)**|  
   

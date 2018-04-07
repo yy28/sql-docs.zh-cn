@@ -1,26 +1,26 @@
 ---
-title: "远程表复制 (SQL Server PDW)"
+title: 远程表复制 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
-caps.latest.revision: "23"
-ms.openlocfilehash: 3de6700957b48c5022c73c3d521bf6f6ed090553
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 23
+ms.openlocfilehash: fe6e808b8db8534f38db250d838d6a2cf132a30d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="remote-table-copy"></a>远程表复制
 描述如何使用远程表复制功能将从 SQL Server PDW 数据库的表复制到远程的 （非设备） SMP SQL Server 数据库。 用于 SQL Server PDW 的远程表复制到启用中心辐射方案。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   要复制的数据必须是可选择使用单个的有效 SQL Server PDW[选择](../t-sql/queries/select-transact-sql.md)语句。  
   
--   目标服务器必须是非设备服务器。 数据无法直接从一个设备复制到另一个使用本主题中的说明。  
+-   目标服务器必须为非设备服务器。 数据无法直接从一个设备复制到另一个使用本主题中的说明。  
   
 -   目标服务器必须可以访问设备的无限带宽网络上的所有节点。  
   

@@ -1,24 +1,24 @@
 ---
-title: "“授予权限”"
+title: “授予权限”
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="grant-permissions"></a>“授予权限”
 
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>授予权限来监视设备
-可以使用的管理控制台或 SQL Server PDW 系统视图监视 SQL Server PDW 设备。 登录名需要服务器级别**VIEW SERVER STATE**监视设备的权限。 登录名需要**ALTER ANY CONNECTION**权限才能通过使用管理控制台终止连接或**终止**命令。 有关使用管理控制台所需权限的信息，请参阅[授予权限以使用管理控制台 &#40;SQL Server PDW &#41;](#grant-permissions-to-use-the-admin-console).  
+可以使用的管理控制台或 SQL Server PDW 系统视图监视 SQL Server PDW 设备。 登录名需要服务器级别**VIEW SERVER STATE**监视设备的权限。 登录名需要**ALTER ANY CONNECTION**权限才能通过使用管理控制台终止连接或**终止**命令。 有关使用管理控制台所需权限的信息，请参阅[授予权限以使用管理控制台&#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console)。  
   
 ### <a name="PermsAdminConsole"></a>授予权限以使用系统视图来监视设备  
 以下 SQL 语句创建一个登录名`monitor_login`并授予**VIEW SERVER STATE**权限`monitor_login`登录名。  

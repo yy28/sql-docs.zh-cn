@@ -10,7 +10,7 @@ ms.component: ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,18 +23,18 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2afff6a5d9f19c0db2063ab0e0c486cc7460e971
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6bc3707dca715ec5b6bee83d181c4792aea6c949
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   SQL Server 的 OLE DB 驱动程序公开**ISequentialStream**接口以支持对使用者访问[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**，**文本**，**映像**， **varchar （max)**， **nvarchar (max)**， **varbinary （max)**，和 xml 数据类型作为二进制大型对象 (Blob)。 **读取**方法**ISequentialStream**允许使用者检索的可管理区块中的数据量。  
   
- 有关演示此功能的示例，请参阅[设置大型数据 &#40; OLE DB &#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
+ 有关演示此功能的示例，请参阅[设置大型数据 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
  SQL Server 的 OLE DB 驱动程序可以使用使用者实现**IStorage**接口时使用者提供在访问器中的接口指针绑定针对数据修改。  
   

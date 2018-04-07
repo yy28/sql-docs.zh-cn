@@ -21,13 +21,13 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 938f0dd71ea980af429591cf53bc8f6bd39e9b13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>使用测试存储库 (SybaseToSQL)
 SSMA 测试储存库中存储 SSMA 测试器测试用例和测试结果以供将来使用。 存储库数据保存在 SQL Server 表**TestCaseRepository**和**RunTestCaseResultRepository**架构中**ssma_sybase_utilities**的**ssmatesterdb_syb**数据库。  
@@ -59,7 +59,7 @@ SSMA 测试储存库中存储 SSMA 测试器测试用例和测试结果以供将
   
 -   单击**编辑**按钮以运行测试用例向导并更改所选的测试。  
   
--   单击**运行**按钮以打开[运行测试用例 &#40;SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)对话框并执行所选的测试。  
+-   单击**运行**按钮以打开[运行测试用例&#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md)对话框并执行所选的测试。  
   
 ## <a name="test-results-repository"></a>测试结果储存库  
 你可以查看测试结果储存库上**测试结果**页**存储库的测试用例**窗口。 通过单击打开**测试结果...** 从**测试人员**菜单。  
@@ -80,11 +80,11 @@ SSMA 测试储存库中存储 SSMA 测试器测试用例和测试结果以供将
   
 测试结果页上提供了以下按钮：  
   
--   单击**视图**按钮以打开[查看测试用例报表 &#40;SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)的当前的测试用例结果。  
+-   单击**视图**按钮以打开[查看测试用例报表&#40;SybaseToSQL&#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)的当前的测试用例结果。  
   
 -   单击**删除**按钮以删除所选的测试结果  
   
 ## <a name="see-also"></a>另请参阅  
-[运行测试用例 &#40;SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[测试迁移数据库对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[运行测试用例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

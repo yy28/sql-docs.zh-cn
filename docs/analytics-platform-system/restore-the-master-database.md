@@ -1,26 +1,26 @@
 ---
-title: "还原 Master 数据库 (Analytics Platform System)"
+title: 还原 Master 数据库 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
-caps.latest.revision: "11"
-ms.openlocfilehash: b82ef65734b6953c085436d5322e7bf42ef979b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 0f1acb692198873897d5dc26e2074beab4517e44
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="restore-the-master-database"></a>还原 Master 数据库
 **还原 Master**页的 SQL Server PDW 配置管理器使你可以从备份还原 master 数据库。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-restore-the-master-database"></a>还原 master 数据库  
   
-1.  启动 Configuration Manager。 有关详细信息，请参阅[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md).  
+1.  启动 Configuration Manager。 有关详细信息，请参阅[启动配置管理器&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 2.  在配置管理器的左窗格中，单击**还原 Master**。  
   

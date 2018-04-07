@@ -1,15 +1,16 @@
 ---
-title: "项目设置 （迁移） (AccessToSQL) |Microsoft 文档"
+title: 项目设置 （迁移） (AccessToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 83f7ad0fbda7ead76a24e40f971e9589719fb788
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-accesstosql"></a>项目设置 （迁移） (AccessToSQL)
 迁移项目设置允许你配置如何将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用**默认项目设置**对话框中设置的所有项目的配置选项。 若要访问的迁移设置中，在**工具**菜单上，选择**默认项目设置**，选择项目类型中的**迁移目标版本**你想要访问设置，请单击其中的组合框**常规**中左窗格中，然后单击底部**迁移**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **检查约束**  
 指定是否将数据添加到表时，SSMA 应检查约束。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 **替换不受支持的日期**  
 指定是否 SSMA 应更正早于最早的访问日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]日期日期 (01 1753 年 1 月)。  
   
--   若要保留当前的日期值，选择**不执行任何操作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 列中将不接受 01 1753 年 1 月之前的日期。 如果你使用较旧的日期，你必须将日期时间值转换为字符值。  
+-   若要保留当前的日期值，选择**不执行任何操作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 列中将不接受 01 1753 年 1 月之前的日期。 如果你使用较旧的日期，你必须将日期时间值转换为字符值。  
   
 -   若要将 01 1753 年 1 月之前的日期转换为 NULL，选择**替换 NULL**。  
   

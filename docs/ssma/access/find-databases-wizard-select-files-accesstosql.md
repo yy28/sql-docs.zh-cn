@@ -21,13 +21,13 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84759a9bee3439f0a561176a6d8583149770f02d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d1f3250b044706f742310a575135b0526484403
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>查找数据库向导 （选择文件） (AccessToSQL)
 找到数据库向导的选择文件页列出在搜索过程找到的文件。 若要选择要添加到 SSMA 文件，选择包含的文件名称的行。 在完成选择文件，请单击**下一步**若要查看确认选择页。  
@@ -36,23 +36,23 @@ ms.lasthandoff: 12/21/2017
   
 若要选择要添加到 SSMA 文件，选择的文件名称旁边的复选框。 在完成选择文件，请单击**下一步**若要查看完成页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **全选**  
 选择此复选框可选择列表中的所有数据库。  
   
 **取消选择所有**  
 选中此复选框，以取消选择列表中的所有数据库。  
   
-**文件名**  
+**File name**  
 显示要添加到 SSMA 的 Access 数据库文件的名称。  
   
-**“所有者”**  
+**所有者**  
 显示文件的所有者。  
   
 **文件路径**  
 显示的 Access 数据库文件的路径。  
   
-**大小**  
+**Size**  
 数据库，以字节为单位的大小。  
   
 **创建时间**  

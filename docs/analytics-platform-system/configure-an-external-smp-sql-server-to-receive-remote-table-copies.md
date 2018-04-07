@@ -1,26 +1,26 @@
 ---
-title: "外部 SMP SQL Server 配置为接收远程表副本 (PDW)"
+title: 外部 SMP SQL Server 配置为接收远程表副本 (PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
-caps.latest.revision: "13"
-ms.openlocfilehash: 18b61d60e8ca771feab84b24a9ff53cc7bdfc193
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 13
+ms.openlocfilehash: 94b62dbae331c19fa97c1625a53804f4cd96bfa5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a>配置外部 SMP SQL 服务器以接收远程表副本
 描述如何配置一个外部的 SQL Server 实例，以便从 SQL Server PDW 接收远程表副本。  

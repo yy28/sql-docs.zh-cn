@@ -1,31 +1,31 @@
 ---
-title: "PDW 证书设置 (Analytics Platform System)"
+title: PDW 证书设置 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: a08a739c490f0cbd49f615441f557d5200107443
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW 证书设置
 **PDW 证书预配**Analytics Platform System 页**Configuration Manager**导入或删除 PDW 区域使用的证书。 使用，对通信进行加密的证书有助于给控制节点通过 SQL Server 客户端，使用 SQL Server PDW 驱动程序的工具的安全通信[管理控制台](monitor-the-appliance-by-using-the-admin-console.md)，并 Integration Services 将加载。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
 然后再安装证书，请执行以下操作：  
   
 1.  获取安全证书。 如果你需要有关如何获取安全证书的详细信息，请联系 Microsoft 支持部门。  
@@ -51,7 +51,7 @@ SQL Server PDW 支持使用证书来加密连接到管理节点中;包括连接�
   
 ### <a name="to-import-the-certificate"></a>导入证书  
   
-1.  启动**Configuration Manager**。 有关详细信息，请参阅[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md).  
+1.  启动**Configuration Manager**。 有关详细信息，请参阅[启动配置管理器&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 2.  在左窗格中**Configuration Manager**，展开**并行数据仓库拓扑**，然后单击**证书**。  
   
@@ -65,7 +65,7 @@ SQL Server PDW 不会通过使用导入的证书，加密当前连接，但将�
   
 ### <a name="to-remove-the-previously-imported-certificate"></a>若要删除以前导入的证书  
   
-1.  启动**Configuration Manager**。 有关详细信息，请参阅[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md).  
+1.  启动**Configuration Manager**。 有关详细信息，请参阅[启动配置管理器&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 2.  在左窗格中**Configuration Manager**，展开**并行数据仓库拓扑**，然后单击**证书**。  
   
@@ -78,6 +78,6 @@ SQL Server PDW 加密当前连接，将继续，但将不使用已删除的证�
 ![DWConfig 设备 PDW 证书](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
 ## <a name="see-also"></a>另请参阅  
-[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md)  
+[启动配置管理器&#40;分析平台系统&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

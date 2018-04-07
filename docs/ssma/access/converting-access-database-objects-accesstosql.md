@@ -1,15 +1,16 @@
 ---
-title: "转换访问数据库对象 (AccessToSQL) |Microsoft 文档"
+title: 转换访问数据库对象 (AccessToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a710d76b5df020e258676e0b1ff160c0e2e7a353
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c05d0dd92d0802260f59f86fef13e617f6eea899
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>转换访问数据库对象 (AccessToSQL)
 在已添加访问数据库并连接到后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure、 SSMA 用于访问显示元数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库对象。 你可以现在选择访问数据库对象，然后将转换到的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 架构。  
@@ -65,14 +66,14 @@ ms.lasthandoff: 12/21/2017
   
 |访问对象|生成的 SQL Server 对象|  
 |-----------------|-------------------------------|  
-|表|表|  
+|table|table|  
 |column|column|  
 |索引|索引|  
 |外键 (foreign key)|外键 (foreign key)|  
 |Query|view<br /><br />最 SELECT 查询将转换为视图中。 其他查询，如更新查询，不会迁移。<br /><br />采用参数的 SELECT 查询不会转换，也不会交叉表查询。|  
 |报表|不转换|  
 |窗体|不转换|  
-|宏|不转换|  
+|macro|不转换|  
 |module|不转换|  
 |默认值|默认值|  
 |允许零长度列属性|检查约束|  

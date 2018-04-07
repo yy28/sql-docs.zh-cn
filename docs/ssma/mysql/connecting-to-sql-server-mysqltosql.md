@@ -1,15 +1,16 @@
 ---
-title: "连接到 SQL Server (MySQLToSQL) |Microsoft 文档"
+title: 连接到 SQL Server (MySQLToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed92b4a6b8b54e797f6dd623153ea677743a6c7b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d35db5eb35e4e27a2ea9724cdc2d5d017a8e02e8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>连接到 SQL Server (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server，必须连接到 SQL Server 的目标实例。 连接时，SSMA 获取有关 SQL Server 实例中的所有数据库的元数据，并在 SQL 服务器元数据资源管理器中显示数据库元数据。 SSMA 存储的连接，但不会存储密码的 SQL Server 实例的信息。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="establishing-a-sql-server-connection"></a>建立 SQL Server 连接  
 MySQL 数据库对象转换为 SQL Server 语法之前，必须建立与想要迁移或多个 MySQL 数据库的 SQL Server 的实例的连接。  
   
-在定义的连接属性时，你还指定对象和数据将迁移的数据库。 连接到 SQL Server 后，可以自定义此映射架构级别的 MySQL 的文件。 有关详细信息，请参阅[将 MySQL 数据库映射到 SQL Server 架构 &#40;MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+在定义的连接属性时，你还指定对象和数据将迁移的数据库。 连接到 SQL Server 后，可以自定义此映射架构级别的 MySQL 的文件。 有关详细信息，请参阅[将 MySQL 数据库映射到 SQL Server 架构&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 > [!IMPORTANT]  
 > 尝试连接到 SQL Server 之前，请确保 SQL Server 实例正在运行，并且可以接受连接。  
@@ -90,9 +91,9 @@ MySQL 数据库对象转换为 SQL Server 语法之前，必须建立与想要�
 ||||||||  
 |-|-|-|-|-|-|-|  
 |**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005<br /> (版本： 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008<br /> (版本： 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016<br />(Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|是|是|是|是|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||是|是|是|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|是|用户帐户控制|用户帐户控制|用户帐户控制|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||是|用户帐户控制|用户帐户控制|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||是|用户帐户控制|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014||||是|是||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016|||||是||  
 |SQL Azure||||||是|  
@@ -116,14 +117,14 @@ MySQL 数据库对象转换为 SQL Server 语法之前，必须建立与想要�
 ## <a name="next-step"></a>下一步  
 迁移的下一步取决于您的项目需求：  
   
--   若要自定义 MySQL 架构和 SQL Server 数据库和架构之间的映射，请参阅[映射到 SQL Server 架构 &#40; 的 MySQL 数据库MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   若要自定义 MySQL 架构和 SQL Server 数据库和架构之间的映射，请参阅[映射 MySQL 数据库迁移到 SQL Server 架构&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
--   若要自定义项目的配置选项，请参阅[设置项目选项 &#40;MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
+-   若要自定义项目的配置选项，请参阅[设置项目选项&#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   
--   若要自定义的源和目标数据类型映射，请参阅[映射 MySQL 和 SQL Server 数据类型 &#40;MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   若要自定义的源和目标数据类型映射，请参阅[映射 MySQL 和 SQL Server 数据类型&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   如果不需要执行任何这些任务，你可以将 MySQL 数据库对象定义转换为 SQL Server 对象定义。 有关详细信息，请参阅[转换 MySQL 数据库 &#40;MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   如果不需要执行任何这些任务，你可以将 MySQL 数据库对象定义转换为 SQL Server 对象定义。 有关详细信息，请参阅[转换 MySQL 数据库&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[将 MySQL 数据库迁移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -1,25 +1,25 @@
 ---
-title: "并行数据仓库的监视器加载"
+title: 并行数据仓库的监视器加载
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "你可以监视活动和最新[dwloader](dwloader.md)加载使用分析平台系统 (AP) 管理员控制台或并行数据仓库 (PDW) 系统视图。"
+description: 你可以监视活动和最新[dwloader](dwloader.md)加载使用分析平台系统 (AP) 管理员控制台或并行数据仓库 (PDW) 系统视图。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: "6"
-ms.openlocfilehash: 988c34b248b0058941f53575a79e4f3b6acb4de0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-loads"></a>监视的加载
 你可以监视活动和最新[dwloader](dwloader.md)通过使用分析平台系统 (AP) 管理员控制台或并行数据仓库 (PDW) 加载[系统视图](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)。 
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>必要條件  
 用于监视负载的方法，无论该登录名必须有权访问基础数据源。 
 
 <!-- MISSING LINKS

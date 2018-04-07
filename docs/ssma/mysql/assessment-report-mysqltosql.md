@@ -1,41 +1,42 @@
 ---
-title: "评估报表 (MySQLToSQL) |Microsoft 文档"
+title: 评估报表 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e12233fc2506d7cbb7fd85b1068053cb26627b2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37ea0744861296d4a3ec4a97f3736835bfd23b0b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessment-report-mysqltosql"></a>评估报表 (MySQLToSQL)
 评估报表窗口中显示的数据库的对象添加到转换的结果[!INCLUDE[tsql](../../includes/tsql_md.md)]语法，并且还可以帮助您评估的复杂性和成本的迁移项目。  
   
 若要访问评估报表中，选择的对象将转换源元数据资源管理器中右键单击**架构**，然后选择**创建报表**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |||  
 |-|-|  
-|**术语**|**定义**|  
+|**术语**|**“定义”**|  
 |**转换统计信息**|显示按语句类型转换统计信息。 此窗格是可见的组对象，如架构时, 或在左窗格中选择而无需代码的对象。|  
 |**按类别的对象**|按类别显示对象的数。 此窗格是可见的组对象，如架构时仅, 或左窗格中选择而无需代码的对象。|  
 |**统计信息**|显示所选对象的转换统计信息。 仅当具有代码的单个对象选择左窗格中，此窗格才可见。 你可能必须展开**统计信息**，即立即上面**源**窗格中，若要查看此窗格。|  

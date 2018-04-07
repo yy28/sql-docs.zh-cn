@@ -1,37 +1,38 @@
 ---
-title: "连接到 DB2 (DB2ToSQL) |Microsoft 文档"
+title: 连接到 DB2 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b590cbfefdbc01e67e4049ffa3d920afd08b1f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-db2-db2tosql"></a>连接到 DB2 (DB2ToSQL)
 使用**连接到 DB2**对话框中，连接到你想要迁移的 DB2 数据库。  
   
 若要访问此对话框中，在**文件**菜单上，选择**连接到 DB2**。 如果你以前连接，则命令是**重新连接到 DB2**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **提供程序**  
 选择你连接到 DB2 数据库的数据访问提供程序。 可用的提供程序是 DB2 客户端提供程序和 OLE DB 访问接口。 默认值为 DB2 客户端提供程序。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 这是标准模式选项。  
   
-**User name**  
+**用户名**  
 输入 SSMA 将用于连接到 DB2 数据库的用户名称。  
   
 **密码**  

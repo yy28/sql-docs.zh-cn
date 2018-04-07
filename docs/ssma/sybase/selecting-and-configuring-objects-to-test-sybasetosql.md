@@ -1,15 +1,16 @@
 ---
-title: "选择并配置的对象添加到测试 (SybaseToSQL) |Microsoft 文档"
-ms.custom: 
+title: 选择并配置的对象添加到测试 (SybaseToSQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23c5a636c3031fce08294de4640799fde34362d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>选择并配置的对象添加到测试 (SybaseToSQL)
 在此步骤中，您将选择对象进行测试，以及如何用于比较过程的和函数的输出参数，以及函数的返回值配置设置。  
   
 ## <a name="selection-of-objects-to-test"></a>选择向测试的对象  
-在位于窗口左侧 Sybase 对象树中，检查你想要在测试过程中调用的对象。 请参阅中的可测试对象的完整列表[测试迁移的数据库对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)主题。  
+在位于窗口左侧 Sybase 对象树中，检查你想要在测试过程中调用的对象。 请参阅中的可测试对象的完整列表[测试迁移的数据库对象&#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)主题。  
   
 如果 SSMA Tester 不支持任何选定的测试对象，你将看到该链接标记为**某些所选的对象包含错误**下对象树。 单击此链接来查看为什么是这些对象不能测试的原因并清除所选内容的错误的对象。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="use-during-comparisons"></a>在比较时使用  
 启用使用的测试结果比较中的所选参数。  
   
--   如果你选择**True**，SSMA 上执行 Sybase 上具有相应的值的过程后将比较此参数的输出值[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   如果你选择**True**，SSMA 上执行 Sybase 上具有相应的值的过程后将比较此参数的输出值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   如果你选择**False**，参数将从结果验证中排除。  
   
@@ -90,8 +91,8 @@ ms.lasthandoff: 12/21/2017
 你可以在指定输入的参数值**调用值**页。 **添加调用**按钮添加使用空的参数值的新调用。 **删除调用**按钮可移除当前的调用。  
   
 ## <a name="next-step"></a>下一步  
-[选择并配置受影响的对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[选择并配置受影响的对象&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[测试迁移数据库对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

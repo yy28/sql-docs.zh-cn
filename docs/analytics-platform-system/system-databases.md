@@ -1,27 +1,27 @@
 ---
-title: "系统数据库 (SQL Server PDW)"
+title: 系统数据库 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f03e26be-1b16-4526-b4b8-1f17b91d3635
-caps.latest.revision: "9"
+caps.latest.revision: 9
 ms.workload: not set
-ms.openlocfilehash: aeb69f118abf6bb40db6bbdadd1e30adfc47cd44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be24472c9c007735f4625d079d27815862457c02
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="system-databases"></a>系统数据库
 系统数据库是 SQL Server PDW 使用来管理用户、 数据库和临时数据的数据库。 SQL Server PDW 包括以下系统数据库： master 和 tempdb。  

@@ -1,35 +1,36 @@
 ---
-title: "项目设置 （同步） (MySQLToSQL) |Microsoft 文档"
+title: 项目设置 （同步） (MySQLToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc7bd0c7dce1c8ad2b70cdaa6b66ed7872c5062d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a53e15a5bdadae9b0ca67980419fd9ae299e258
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>项目设置 （同步） (MySQLToSQL)
 同步**项目设置**让你配置 MySQL 数据库对象都在与 SQL Server 数据库对象进行同步。  
   
-默认操作指定默认设置，为刷新中的 MySQL 数据库的对象和与 SQL Server 数据库同步对象。 有关详细信息，请参阅[刷新从数据库 &#40;MySQLToSQL &#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
+默认操作指定默认设置，为刷新中的 MySQL 数据库的对象和与 SQL Server 数据库同步对象。 有关详细信息，请参阅[从数据库刷新&#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)  
   
 您可以访问包含相同的设置的两个不同的同步页：  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   若要对指定为当前项目中，设置**工具**菜单上，单击**项目设置**，然后单击**同步**在左窗格的底部。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ##### <a name="misc"></a>杂项  
   

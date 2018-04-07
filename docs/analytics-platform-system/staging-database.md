@@ -1,25 +1,25 @@
 ---
-title: "为并行数据仓库中创建的临时数据库"
+title: 为并行数据仓库中创建的临时数据库
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "SQL Server 并行数据仓库 (PDW) 使用临时数据库的加载过程中临时存储数据。"
+description: SQL Server 并行数据仓库 (PDW) 使用临时数据库的加载过程中临时存储数据。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6d0b2726-4772-4858-b700-885cc12219b2
-caps.latest.revision: "20"
-ms.openlocfilehash: 073dbb385d34d67b9274ac46828df5887abfe5a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: c85a2490f9c74839f795a1dffab106f9a92c528c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="staging-database"></a>临时数据库 
 SQL Server 并行数据仓库 (PDW) 使用临时数据库的加载过程中临时存储数据。 默认情况下，SQL Server PDW 作为临时数据库，这可能导致表碎片使用目标数据库。 若要减少表碎片，可以创建用户定义的临时数据库。 或者，从加载失败的回滚并不是问题，你可以使用 fastappend 加载模式通过跳过临时表并加载直接到目标表来提高性能。  

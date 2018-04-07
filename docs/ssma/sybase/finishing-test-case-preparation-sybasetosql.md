@@ -21,13 +21,13 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41a22720524b4105bff9eec3dcf38e7183f01cc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 089bd7e6fe013f3cd590ff0c3e23929c367e67c8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>完成测试用例准备 (SybaseToSQL)
 向导的最后一页显示的测试用例说明和有关测试中涉及的对象的信息。 此外，在此页上你可以设置测试执行选项。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 -   如果你选择**否**，执行将保存数据更改的所有测试。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>保存模式的辅助表  
-定义测试执行过程中创建的辅助表的保存模式。 请参阅辅助表中的说明[运行测试用例 &#40;SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)主题。  
+定义测试执行过程中创建的辅助表的保存模式。 请参阅辅助表中的说明[运行测试用例&#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md)主题。  
   
 -   如果你选择**始终将保存**，辅助表数据将始终存储供以后使用。  
   
@@ -66,10 +66,10 @@ ms.lasthandoff: 12/21/2017
   
 -   如果你选择**询问用户如果表比较失败**，用户可以选择必要的操作，如果发生错误。  
   
-单击**完成**按钮以保存到已准备的测试用例[使用测试存储库 &#40;SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+单击**完成**按钮以保存到已准备的测试用例[使用测试存储库&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用测试存储库 &#40;SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[运行测试用例 &#40;SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[测试迁移数据库对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[使用测试存储库&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[运行测试用例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

@@ -1,35 +1,36 @@
 ---
-title: "项目 （加载对象） 的设置 (AccessToSQL) |Microsoft 文档"
+title: 项目 （加载对象） 的设置 (AccessToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da86fe46153ede299a41a2b4e308f1b5b51f6947
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16d21bbe8cb2d3bc2e2d069c12fe53607774373e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>项目 （加载对象） 的设置 (AccessToSQL)
 加载对象项目设置允许你配置访问数据库对象都在与 SQL Server 数据库对象进行同步。  
   
-默认操作指定默认设置，用于刷新 Access 数据库中的对象以及用于与 SQL Server 数据库进行同步对象。 有关详细信息，请参阅[刷新从数据库 &#40;AccessToSQL &#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
+默认操作指定默认设置，用于刷新 Access 数据库中的对象以及用于与 SQL Server 数据库进行同步对象。 有关详细信息，请参阅[从数据库刷新&#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
   
 您可以访问包含相同的设置的两个不同的同步页：  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   若要对指定为当前项目中，设置**工具**菜单上，单击**项目设置**，然后单击**加载对象**在左窗格的底部。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ##### <a name="misc"></a>杂项  
   

@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bda748c764d49044a76638ebd2e87a6d831ae66f
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6c56a145ecfbb986c7ec0124202ff61e89036657
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>用于 SQL Server 功能的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/30/2018
  [服务主体名称&#40;SPN&#41;中客户端连接的支持](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)  
  讨论如何扩展对服务主体名称 (SPN) 的支持，以便能够跨所有协议进行相互身份验证。  
   
- [OLE DB 驱动程序中的 SQL Server 的稀疏列支持](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序的稀疏列支持](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
  对于稀疏列的 SQL Server 支持讨论 OLE DB 驱动程序。  
   
  [日期和时间改进](../../oledb/features/date-and-time-improvements.md)  
@@ -87,21 +87,21 @@ ms.lasthandoff: 03/30/2018
  [元数据发现](../../oledb/features/metadata-discovery.md)  
  讨论对 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的元数据发现功能进行的改进。  
   
- [OLE DB 驱动程序中的 SQL Server 的 utf-16 支持](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序的 UTF-16 支持](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 如果绑定列结果或输出参数时提供固定长度缓冲区，并且如果**wchar**字符写入到缓冲区之前终止字符是一个高代理项码位的代理项对，并且如果下一步**wchar**字符是一个低代理项码位，OLE DB 驱动程序的 SQL Server 将不向缓冲区添加的高代理项码位。  
   
- [用于高可用性、 灾难恢复的 SQL Server 支持的 OLE DB 驱动程序](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序对高可用性和灾难恢复的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  讨论如何配置你的应用程序以充分利用添加功能的高可用性、 灾难恢复[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
  [访问扩展事件日志中的诊断信息](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  讨论 OLE DB 驱动程序用于 SQL Server 和环形缓冲区和 XEvents 日志中的诊断信息使你可以访问的数据跟踪的增强功能。  
   
- [For SQL Server 对 LocalDB 的支持的 OLE DB 驱动程序](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  介绍对 LocalDB 功能的 SQL Server 支持 OLE DB 驱动程序。  
   
 ## <a name="see-also"></a>另请参阅  
  [用于 SQL Server 编程的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server-programming.md)      
  [OLE DB 操作指南主题](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
- [安装适用于 SQL Server OLE DB 驱动程序](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
+ [安装适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   
   

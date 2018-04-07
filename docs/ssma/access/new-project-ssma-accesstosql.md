@@ -21,18 +21,18 @@ ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1ffcacafa80c8679f2aae6cb873d1c802e84ebf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2f788be62ba1dae50f3bcefd9993cfec38aa5549
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="new-project-ssma-accesstosql"></a>新项目 (SSMA) (AccessToSQL)
 使用**新项目**对话框中，创建新的 SSMA 项目。 访问**新项目**对话框中，在**文件**菜单上，单击**新项目**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **名称**  
   
 输入项目的名称。 SSMA 将追加文件扩展名。  

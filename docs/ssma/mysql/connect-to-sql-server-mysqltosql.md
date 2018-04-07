@@ -1,35 +1,36 @@
 ---
-title: "连接到 SQL Server (MySQLToSQL) |Microsoft 文档"
+title: 连接到 SQL Server (MySQLToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37b9e5f23045ee2bc0bd2e35384e32c28474cb5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3e1e57b9c9ce766a78259376fe641a970aff9b15
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>连接到 SQL Server (MySQLToSQL)
 使用**连接到 SQL Server**对话框中，连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]你想要迁移到。 访问**连接到 SQL Server**对话框中，在**文件**菜单上，单击**连接到 SQL Server**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **服务器名称**  
 输入或选择要连接到的 SQL Server 实例。 默认情况下，显示最近连接到的实例。  
   
@@ -42,13 +43,13 @@ ms.lasthandoff: 12/21/2017
 **服务器端口**  
 如果你的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]未配置为接受默认值上的连接端口 (1433)，输入端口号。 否则，将此值留空。  
   
-**“数据库”**  
+**数据库**  
 指定要迁移对象和数据迁移到的数据库。 此选项不可用，当重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 **身份验证**  
 选择用于连接到的身份验证方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 若要使用您当前的 Windows 帐户，选择 Windows 身份验证。 若要指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登录名和密码，选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]身份验证。  
   
-**User name**  
+**用户名**  
 如果你使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]身份验证，该实例的输入的登录名[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如果使用 Windows 身份验证，则此选项不可用。  
   
 **密码**  

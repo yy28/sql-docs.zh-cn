@@ -1,30 +1,31 @@
 ---
-title: "将 Sybase ASE 数据库迁移到 SQL Server 的 Azure SQL DB |Microsoft 文档"
-ms.custom: 
+title: 将 Sybase ASE 数据库迁移到 SQL Server 的 Azure SQL DB |Microsoft 文档
+ms.custom: ''
 ms.date: 11/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72fb7a884a7cf87f50327a2e653493cdc3522f3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 36019a97ab90eac654e0dba90a1cacaa381b88ab
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>将 SAP ASE 数据库迁移到 SQL Server 的 Azure SQL 数据库 (SybaseToSQL)
 SQL Server 迁移助手 (SSMA) 的 SAP 自适应 Server Enterprise (ASE) 是一个全面的环境，可帮助你快速 SAP ASE 将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库。 通过用于 SAP ASE SSMA，可以查看数据库对象和数据、 评估迁移的数据库，迁移到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库，然后将数据迁移到和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 数据库。  
@@ -34,7 +35,7 @@ SQL Server 迁移助手 (SSMA) 的 SAP 自适应 Server Enterprise (ASE) 是一�
   
 1.  [创建新的 SSMA 项目](http://msdn.microsoft.com/en-us/11091d95-c488-48c3-891a-743cac94ac93)。  
   
-    创建项目后，你可以设置项目转换、 迁移和类型映射选项。 有关项目设置的信息，请参阅[设置项目选项 &#40;SybaseToSQL &#41;](../../ssma/sybase/setting-project-options-sybasetosql.md). 有关自定义数据类型映射的信息，请参阅[映射 Sybase ASE 和 SQL Server 数据类型 &#40;SybaseToSQL &#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
+    创建项目后，你可以设置项目转换、 迁移和类型映射选项。 有关项目设置的信息，请参阅[设置项目选项&#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)。 有关自定义数据类型映射的信息，请参阅[映射 Sybase ASE 和 SQL Server 数据类型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)。  
   
 2.  [连接到 SAP ASE 数据库服务器](http://msdn.microsoft.com/en-us/a45a2330-9175-4c9e-af38-ef920e350614)。  
   
@@ -55,6 +56,6 @@ SQL Server 迁移助手 (SSMA) 的 SAP 自适应 Server Enterprise (ASE) 是一�
 9. 如有必要，更新你的数据库应用程序。  
   
 ## <a name="see-also"></a>另请参阅  
-[安装适用于 SAP ASE &#40; SSMASybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
-[用于 SAP ASE &#40; 入门 SSMASybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
+[安装适用于 SAP ASE SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+[入门 SAP ASE SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

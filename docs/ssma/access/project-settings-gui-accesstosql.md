@@ -1,30 +1,31 @@
 ---
-title: "项目设置 (GUI) (AccessToSQL) |Microsoft 文档"
+title: 项目设置 (GUI) (AccessToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb8a538b22a1623b2b54bec8cf339ba8be365fc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d8108d257fd635162dda6a31bf6467fd7ca5e17
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-gui-accesstosql"></a>项目设置 (GUI) (AccessToSQL)
 GUI 项目设置允许你配置数据上的显示方式**数据**选项卡; 如果要包括的评估报表的数据报表。  
@@ -35,7 +36,7 @@ GUI 窗格位于**项目设置**和**默认项目设置**对话框。
   
 -   使用**默认项目设置**对话框可设置的所有项目的用户界面选项。 若要访问的完全安装设置中，在**工具**菜单上，选择**默认项目设置**，然后单击**GUI**在左窗格的底部。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **源的最大行数**  
 配置上显示数据的行数**数据**的所选的源表选项卡。  
   

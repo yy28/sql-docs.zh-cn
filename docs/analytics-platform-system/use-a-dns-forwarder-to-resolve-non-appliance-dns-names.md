@@ -1,36 +1,36 @@
 ---
-title: "使用 DNS 转发器来解析非设备 DNS 名称 (AP)"
+title: 使用 DNS 转发器来解析非设备 DNS 名称 (AP)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: "21"
-ms.openlocfilehash: 6538ec32f141592b6cf21a325b74f3e451e73092
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 21
+ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>使用 DNS 转发器来解析非设备 DNS 名称
-可以在 Active Directory 域服务节点上配置 DNS 转发器 (***appliance_domain*-AD01**和 ***appliance_domain*-AD02**)你分析平台系统的设备为允许脚本和访问外部服务器的软件应用程序。  
+可以在 Active Directory 域服务节点上配置 DNS 转发器 (***appliance_domain *-AD01**和 ***appliance_domain *-AD02**) 以允许你分析平台系统设备的脚本和访问外部服务器的软件应用程序。  
   
 ## <a name="ResolveDNS"></a>使用 DNS 转发器  
 分析平台系统设备被配置为阻止不在该设备的服务器的 DNS 名称解析。 某些进程，如 Windows 软件更新服务 (WSUS)，将需要访问外部设备的服务器。 若要支持这种使用方案分析平台系统 DNS 可以配置为支持将允许使用外部 DNS 服务器来解析外部设备的名称 Analytics Platform System 主机和虚拟机 (Vm) 的外部名称转发器。 不支持自定义配置的 DNS 后缀，这意味着你必须使用完全限定的域名来解析非设备服务器名称。  
   
 **使用 DNS GUI 创建 DNS 转发器**  
   
-1.  登录到 ***appliance_domain*-AD01**节点。  
+1.  登录到 ***appliance_domain *-AD01**节点。  
   
 2.  打开 DNS 管理器 (**dnsmgmt.msc**)。  
   
@@ -42,13 +42,13 @@ ms.lasthandoff: 12/21/2017
   
 6.  将提供的名称解析的外部 DNS 服务器输入的 IP 地址。 虚拟机和设备中的服务器 （主机） 将使用连接到外部服务器完全限定的域名。  
   
-7.  重复步骤 1 – 6 上 ***appliance_domain*-AD02**节点  
+7.  重复步骤 1 – 6 上 ***appliance_domain *-AD02**节点  
   
 **若要使用 Windows PowerShell 创建 DNS 转发器**  
   
-1.  登录到 ***appliance_domain*-AD01**节点。  
+1.  登录到 ***appliance_domain *-AD01**节点。  
   
-2.  运行以下 Windows PowerShell 脚本从 ***appliance_domain*-AD01**节点。 在运行之前的 Windows PowerShell 脚本，将替换为你非设备的 DNS 服务器的 IP 地址的 IP 地址。  
+2.  运行以下 Windows PowerShell 脚本从 ***appliance_domain *-AD01**节点。 在运行之前的 Windows PowerShell 脚本，将替换为你非设备的 DNS 服务器的 IP 地址的 IP 地址。  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
     $DNS.put()  
     ```  
   
-3.  在执行同一命令 ***appliance_domain*-AD02**节点。  
+3.  在执行同一命令 ***appliance_domain *-AD02**节点。  
   
 ## <a name="configuring-dns-resolution-for-wsus"></a>为 WSUS 配置 DNS 解析  
 SQL Server PDW 2012 提供集成服务和修补功能。 SQL Server PDW 使用 Microsoft 更新和其他 Microsoft 服务技术。 若要启用该设备必须能够连接到公司的 WSUS 存储库中或 Microsoft 公共 WSUS 存储库的更新。  

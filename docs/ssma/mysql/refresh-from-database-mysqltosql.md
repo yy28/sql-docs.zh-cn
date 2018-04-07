@@ -1,30 +1,31 @@
 ---
-title: "刷新从数据库 (MySQLToSQL) |Microsoft 文档"
+title: 刷新从数据库 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18656f8929e52d23e10ccc5fafe8139544bf44a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1881df93e8b26463b4f7a638e5b1e94674442013
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="refresh-from-database-mysqltosql"></a>刷新从数据库 (MySQLToSQL)
 **从数据库刷新**对话框中，可以选择要刷新从 MySQL 数据库的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  
@@ -37,15 +38,15 @@ ms.lasthandoff: 12/21/2017
   
 -   如果对象是 MySQL 数据库中的新增功能，该行是粉红色。  
   
-你可以指定中的默认对象刷新设置**项目设置**对话框。 有关详细信息，请参阅[项目设置 &#40;同步 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+你可以指定中的默认对象刷新设置**项目设置**对话框。 有关详细信息，请参阅[项目设置&#40;同步&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
 访问**从数据库刷新**对话框中，右键单击 MySQL 元数据资源管理器中单击对象**从数据库刷新**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |||  
 |-|-|  
-|**术语**|**定义**|  
+|**术语**|**“定义”**|  
 |**折叠 （-）**|折叠所有对象组，以隐藏的单个对象。|  
 |**展开 （+）**|展开要显示单个对象的所有对象组。|  
 |**隐藏/显示相等的对象**|隐藏对象从列表中的对象元数据是否在 MySQL 数据库和中 SSMA 相同。|  

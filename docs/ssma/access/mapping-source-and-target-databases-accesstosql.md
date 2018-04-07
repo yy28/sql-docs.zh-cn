@@ -1,15 +1,16 @@
 ---
-title: "映射源和目标数据库 (AccessToSQL) |Microsoft 文档"
+title: 映射源和目标数据库 (AccessToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -23,22 +24,22 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48e87d2b6c84db3534a3c52ee6176e29fd34257f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eed81b1bf2d9f3f2e70f30a6744c4d7ad9bf33d3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>映射源和目标数据库 (AccessToSQL)
 当您连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你需要指定用于迁移的目标数据库。 如果你有多个访问数据库可以将它们映射到多个[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库 （或架构） 或连接的 SQL Azure 数据库下的多个架构。  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server 或 SQL Azure 数据库架构  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库使用的架构的概念来进行分隔为逻辑组的数据库中的对象。 例如，是库数据库可以使用名为的三个架构**丛书**，**音频**，和**视频**相互分隔书籍，音频和视频对象。 默认情况下，访问数据库映射到**master**数据库和**dbo**架构中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和连接的数据库和**dbo** SQL Azure 中的架构。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库使用的架构的概念来进行分隔为逻辑组的数据库中的对象。 例如，是库数据库可以使用名为的三个架构**丛书**，**音频**，和**视频**相互分隔书籍，音频和视频对象。 默认情况下，访问数据库映射到**master**数据库和**dbo**架构中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和连接的数据库和**dbo** SQL Azure 中的架构。  
   
 除非你自定义每个访问数据库之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库和架构，SSMA 将迁移所有的架构和数据与访问数据库，到映射的默认数据库关联。  
   

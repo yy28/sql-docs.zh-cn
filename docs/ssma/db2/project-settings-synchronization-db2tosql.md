@@ -1,35 +1,36 @@
 ---
-title: "项目 Settings(Synchronization) (DB2ToSQL) |Microsoft 文档"
+title: 项目 Settings(Synchronization) (DB2ToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a701544d5f7d111d234b4a87def52beb3e1edbd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: da4be629e37646b10011c76f5a78a2cde246865e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>项目 Settings(Synchronization) (DB2ToSQL)
 同步页**项目设置**对话框中包含自定义如何 SSMA 加载和刷新到数据库对象，如表和存储的过程，设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-默认操作选项指定默认设置，用于刷新从 DB2 数据库的对象和与 SQL Server 数据库同步对象。 有关详细信息，请参阅[刷新从数据库 &#40; DB2ToSQL &#41;](../../ssma/db2/refresh-from-database-db2tosql.md)。  
+默认操作选项指定默认设置，用于刷新从 DB2 数据库的对象和与 SQL Server 数据库同步对象。 有关详细信息，请参阅[从数据库刷新&#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)。  
   
 您可以访问包含相同的设置的两个不同的同步页：  
   

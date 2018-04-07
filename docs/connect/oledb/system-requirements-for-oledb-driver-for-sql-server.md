@@ -10,7 +10,7 @@ ms.component: oledb
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0669847f648668144e079bc7437d28e8a5ad7a87
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 5169c841784230d1ad4d99472dd636a490c750ce
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server 的 OLE DB 驱动程序的系统要求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,4 +84,4 @@ ms.lasthandoff: 03/30/2018
 
 ## <a name="see-also"></a>另请参阅  
  [用于 SQL Server 编程的 OLE DB 驱动程序](../oledb/oledb-driver-for-sql-server-programming.md)   
- [安装适用于 SQL Server OLE DB 驱动程序](../oledb/applications/installing-oledb-driver-for-sql-server.md)  
+ [安装适用于 SQL Server 的 OLE DB 驱动程序](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

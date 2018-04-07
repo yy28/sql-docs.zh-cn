@@ -1,27 +1,27 @@
 ---
-title: "tempdb 数据库 (SQL Server PDW)"
+title: tempdb 数据库 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: "22"
+caps.latest.revision: 22
 ms.workload: not set
-ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a52f21b266d277f3bda205803d38431598545f7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
 **tempdb**是存储的用户数据库的本地临时表的 SQL Server PDW 系统数据库。 临时表通常用于提高查询性能。 例如，你可以使用临时表来将模块化脚本，并重复使用计算的数据。  
@@ -81,7 +81,7 @@ SQL Server PDW 执行临时表和永久表上的相同操作，除非有其他�
   
 -   临时表上运行数据库控制台命令。  
   
--   使用相同的批中的两个或多个临时表的相同名称。 如果一个批次内使用多个本地临时表，则每个必须具有唯一名称。 如果多个会话运行同一个批处理和创建同一个本地临时表，则 SQL Server PDW 内部将数字后缀追加到本地临时表名称，以维护每个本地临时表的唯一名称。  
+-   使用相同的批中的两个或多个临时表的相同名称。 如果批处理中使用多个本地临时表，每个临时表都必须具有唯一的名称。 如果多个会话运行同一个批处理和创建同一个本地临时表，则 SQL Server PDW 内部将数字后缀追加到本地临时表名称，以维护每个本地临时表的唯一名称。  
   
 > [!NOTE]  
 > 你*可以*创建和更新临时表的统计信息。**ALTER INDEX**可用来重新生成聚集的索引。  

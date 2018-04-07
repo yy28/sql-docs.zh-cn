@@ -1,33 +1,33 @@
 ---
-title: "PDW 防火墙配置 (Analytics Platform System)"
+title: PDW 防火墙配置 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: "28"
-ms.openlocfilehash: e74ffd88f0b2c10a6120c4411e4647c2fb84f249
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 28
+ms.openlocfilehash: 8795f2254160a4ba605643b89dc4b9df0cce4c7f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-firewall-configuration"></a>PDW 防火墙配置
 **防火墙**页的 SQL Server PDW 配置管理器使你可以启用或禁用防火墙规则来允许或阻止对分析平台系统设备上的特定端口的访问。  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>为设备节点管理端口和防火墙规则  
   
-1.  启动 Configuration Manager。 有关详细信息，请参阅[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md).  
+1.  启动 Configuration Manager。 有关详细信息，请参阅[启动配置管理器&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 2.  在配置管理器的左窗格中，展开**并行数据仓库拓扑**，然后单击**防火墙**。  
   

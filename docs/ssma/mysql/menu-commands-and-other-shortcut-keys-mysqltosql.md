@@ -1,30 +1,31 @@
 ---
-title: "菜单命令和其他快捷键 (MySQLToSQL) |Microsoft 文档"
+title: 菜单命令和其他快捷键 (MySQLToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd2d8321fb6fe50e952bf9a92ee07e1d97f29bc6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec0bab67f16fbd67a0fe6ffaa759e578882035e1
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>菜单命令和其他快捷键 (MySQLToSQL)
 以下各节描述了用于访问菜单命令和其他的 SSMA 的各种对话框中为 MySQL 应用程序使用键盘快捷方式的键盘快捷键。  
@@ -190,5 +191,5 @@ ms.lasthandoff: 12/21/2017
 |请转到声明。|F12|  
   
 ## <a name="see-also"></a>另请参阅  
-[键盘快捷方式 &#40;MySQLToSQL &#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
+[键盘快捷方式&#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

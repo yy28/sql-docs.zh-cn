@@ -1,30 +1,31 @@
 ---
-title: "创建脚本文件 (DB2ToSQL) |Microsoft 文档"
+title: 创建脚本文件 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 088cd42b2635193ff34e45490811c44d6450ffc5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c07c232e22ba41899846f6e9cb5e6ecfa5783be
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-db2tosql"></a>创建脚本文件 (DB2ToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建的变量值文件和服务器连接文件。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
     -   源-使用-最后使用 ="true"（默认值） 或源服务器 ="source_servername"  
   
-    -   目标-使用-最后使用 ="true"（默认值） 或目标服务器 ="target_servername"  
+    -   target-use-last-used="true" (default) or target-server="target_servername"  
   
     **示例：**  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -141,7 +142,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -174,7 +175,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -185,7 +186,7 @@ ms.lasthandoff: 12/21/2017
   
     </synchronize-target>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -220,7 +221,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -273,7 +274,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -315,7 +316,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -348,14 +349,14 @@ ms.lasthandoff: 12/21/2017
 -   **最大重新连接尝试次数：**时建立的连接超时或中断由于网络故障，则需要服务器来重新连接。 重新连接尝试所允许的最大**5**重试后，控制台会自动执行重新连接。 自动重新连接的工具可减少你的工作量中重新运行该脚本。  
   
 ## <a name="server-connection-parameters"></a>服务器连接参数  
-脚本文件中或将服务器连接文件中，可以定义服务器连接参数。 请参阅[创建服务器连接文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)有关详细信息部分。  
+脚本文件中或将服务器连接文件中，可以定义服务器连接参数。 请参阅[服务器连接文件创建&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)有关详细信息部分。  
   
 ## <a name="script-commands"></a>脚本命令  
 脚本文件包含 XML 格式的迁移工作流命令的序列。 SSMA 控制台应用程序处理顺序显示在脚本文件中的命令迁移。  
   
 例如，典型的数据迁移的特定表中的 DB2 数据库的如下所示的层次结构： 架构-&gt;表。  
   
-已成功执行脚本文件中的所有命令，SSMA 控制台应用程序退出，并将控制权返回给用户。 脚本文件的内容可能会更多或更少静态变量的信息包含在[创建变量值文件 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或变量值的脚本文件中的单独部分中。  
+已成功执行脚本文件中的所有命令，SSMA 控制台应用程序退出，并将控制权返回给用户。 脚本文件的内容可能会更多或更少静态变量的信息包含在[创建变量值文件&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md)或变量值的脚本文件中的单独部分中。  
   
 **示例：**  
   
@@ -396,14 +397,14 @@ ms.lasthandoff: 12/21/2017
   
 更改为相关性其中显示的参数后，你可以执行模板 （文件）。  
   
-在找不到的脚本命令的完整列表[执行 SSMA 控制台 &#40; DB2ToSQL &#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+在找不到的脚本命令的完整列表[执行 SSMA 控制台&#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="script-file-validation"></a>脚本文件验证  
 用户可以轻松地验证他/她脚本文件的架构定义文件对照**O2SSConsoleScriptSchema.xsd**架构文件夹中可用。  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[创建变量的值文件 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)。  
+操作控制台的下一步是[创建变量的值文件&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[创建变量的值文件 &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[创建变量值文件&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

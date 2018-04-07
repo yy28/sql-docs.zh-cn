@@ -1,26 +1,26 @@
 ---
-title: "设备网络配置 (Analytics Platform System)"
+title: 设备网络配置 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appliance-network-configuration"></a>设备网络配置
 SQL Server PDW 设备生成和使用修复的一组 IP 地址在所有服务器和合适的设备从 IHV 的工厂配置。 在设备的传递，必须重新配置外部 （以太网） IP 地址以匹配特定客户的数据中心的要求。  
@@ -30,7 +30,7 @@ SQL Server PDW 设备生成和使用修复的一组 IP 地址在所有服务器�
   
 **网络配置**页使你可以在分析平台系统设备上查看节点的面向外部的网络设置。 此页是只读的。  
   
-![DWConfig 设备网络](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>若要更新你的设备上的网络配置  
 通过编辑更改 fabric 域、 工作负荷域和 HDInsight 域的 IP 地址**AplianceInfo.xml**文件，然后运行安装程序。 这是脱机操作。 PDW 和 （如果存在） 的 HDInsight 区域将自动停止 IP 地址更改过程。  
@@ -65,5 +65,5 @@ SQL Server PDW 设备生成和使用修复的一组 IP 地址在所有服务器�
 -   PDU 的**Dell 流量机架 PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
 ## <a name="see-also"></a>另请参阅  
-[启动 Configuration Manager &#40;分析平台系统 &#41;](launch-the-configuration-manager.md)  
+[启动配置管理器&#40;分析平台系统&#41;](launch-the-configuration-manager.md)  
   

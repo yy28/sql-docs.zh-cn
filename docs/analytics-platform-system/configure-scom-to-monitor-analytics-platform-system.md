@@ -1,26 +1,26 @@
 ---
-title: "配置 SCOM 以便监视分析平台系统"
+title: 配置 SCOM 以便监视分析平台系统
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
-caps.latest.revision: "10"
-ms.openlocfilehash: 435bbae75548d1959d509b9833bd9a6f7ec658e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 53fc0bce73f2fd30553e2a834122e86cdb0a65fc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-scom-to-monitor-analytics-platform-system"></a>配置 SCOM 以便监视分析平台系统
 请按照下列步骤为分析平台系统配置 System Center Operations Manager (SCOM) 管理包。 监视 SCOM 中的分析平台系统所需管理包。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 System Center Operations Manager 2007 R2 必须已安装并且正在运行。  
   
-必须安装和配置管理包。 请参阅[安装 SCOM 管理包 &#40;分析平台系统 &#41;](install-the-scom-management-packs.md)和[导入 PDW &#40; 的 SCOM 管理包分析平台系统 &#41;](import-the-scom-management-pack-for-pdw.md).  
+必须安装和配置管理包。 请参阅[安装 SCOM 管理包&#40;Analytics Platform System&#41; ](install-the-scom-management-packs.md)和[PDW SCOM 管理包导入&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)。  
   
 ## <a name="ConfigureRunAsProfile"></a>在 System Center 中配置运行方式配置文件  
 若要配置 System Center 必须执行以下步骤：  
@@ -121,7 +121,7 @@ System Center Operations Manager 2007 R2 必须已安装并且正在运行。
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>下一步  
-现在，你配置了管理包，你就可以开始监视设备。 有关详细信息，请参阅[监视通过使用 System Center Operations Manager &#40; 设备分析平台系统 &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+现在，你配置了管理包，你就可以开始监视设备。 有关详细信息，请参阅[监视通过使用 System Center Operations Manager 设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

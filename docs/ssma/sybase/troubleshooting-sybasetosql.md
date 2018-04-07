@@ -21,13 +21,13 @@ ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28a845f17f96b4d48de6fdd7825998add2a1b2b5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e55d7db3efd06bea9610161d9a2b5cc2f779820d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="troubleshooting-sybasetosql"></a>故障排除 (SybaseToSQL)
 并不少见运行迁移问题中途执行控制台脚本或命令。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  过程  
   
-3.  “查看”  
+3.  视图  
   
 4.  触发器  
   

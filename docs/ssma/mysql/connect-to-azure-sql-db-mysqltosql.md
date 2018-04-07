@@ -1,49 +1,50 @@
 ---
-title: "连接到 Azure SQL DB (MySQLToSQL) |Microsoft 文档"
+title: 连接到 Azure SQL DB (MySQLToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3f0572426b6c90aa7b56c1f81e077f05f01caae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 21b24f9b46490f0eb83a0b9508b8b5b2213cd7a9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>连接到 Azure SQL DB (MySQLToSQL)
 用于连接到 SQL Azure 对话框连接到你想要迁移的 SQL Azure 数据库。  
   
 若要访问此对话框中，在**文件**菜单上，选择**连接到 SQL Azure**。 如果你以前连接，则命令是**重新连接到 SQL Azure。**  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **服务器名称**  
   
 选择或输入用于连接到 SQL Azure 服务器名称。  
   
-**“数据库”**  
+**数据库**  
   
 选择中，输入或**浏览**数据库名称。  
   
 > [!IMPORTANT]  
 > 有关 MySQL 的 SSMA 不支持在 SQL Azure 中的 master 数据库的连接。  
   
-**User name**  
+**用户名**  
   
 输入 SSMA 将用于连接到 SQL Azure 数据库的用户名称  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 输入用户名的密码。  
   
-**加密**  
+**Encrypt**  
   
 SSMA 建议加密的连接到 SQL Azure。  
   

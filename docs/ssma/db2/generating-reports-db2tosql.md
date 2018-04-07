@@ -1,62 +1,63 @@
 ---
-title: "生成报表 (DB2ToSQL) |Microsoft 文档"
+title: 生成报表 (DB2ToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77bca9dfb3bb5ff1f2d12fc112ae39a4dda4ed15
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b26ed81725f95fc8c75c052cc5a45e6ad44ab5be
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="generating-reports-db2tosql"></a>生成报表 (DB2ToSQL)
 使用命令执行特定活动的报告中在对象树级别的 SSMA 控制台中生成。  
   
 使用以下过程以生成报告：  
   
-1.  指定**摘要-报表-向其写入**参数。 相关的报表，存储作为文件名称 （如果指定） 或指定的文件夹中。 文件名称是系统预定义的位置下, 表中所述 **&lt; n &gt;** 是唯一的文件数以每次执行同一命令与数字递增。  
+1.  指定**摘要-报表-向其写入**参数。 相关的报表，存储作为文件名称 （如果指定） 或指定的文件夹中。 文件名称是系统预定义的位置下, 表中所述**&lt;n&gt;**是唯一的文件数以每次执行同一命令与数字递增。  
   
     报表 vis à vis 命令是：  
   
     ||||  
     |-|-|-|  
     |**Sl。不。**|**Command**|**报表标题**|  
-    |@shouldalert|生成评估报表|AssessmentReport&lt;n&gt;。XML|  
-    |2|转换架构|SchemaConversionReport&lt;n&gt;。XML|  
-    |3|迁移数据|DataMigrationReport&lt;n&gt;。XML|  
-    |4|转换 sql 语句|ConvertSQLReport&lt;n&gt;。XML|  
-    |5|同步目标|TargetSynchronizationReport&lt;n&gt;。XML|  
-    |6|从数据库中刷新|SourceDBRefreshReport&lt;n&gt;。XML|  
+    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
+    |3|迁移数据|DataMigrationReport&lt;n&gt;.XML|  
+    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
+    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > 输出报告是不同的评估报表。 前者是对执行命令时的性能报表，后者是以编程方式使用的 XML 报表。  
   
-    （从 Sl 输出报告命令选项。 否。 上面的 2-4)，请参阅[执行 SSMA 控制台 &#40; DB2ToSQL &#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)部分。  
+    （从 Sl 输出报告命令选项。 否。 上面的 2-4)，请参阅[执行 SSMA 控制台&#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md)部分。  
   
 2.  指示输出报告使用报告详细级别设置所需的详细信息的范围：  
   
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |@shouldalert|详细 ="false"|生成的活动汇总的报告。|  
-    |2|详细 ="true"|生成每个活动的摘要和详细状态报表。|  
+    |1|verbose=”false”|生成的活动汇总的报告。|  
+    |2|verbose=”true”|生成每个活动的摘要和详细状态报表。|  
   
     > [!NOTE]  
     > 上面指定的报表详细级别设置是适用于生成评估报表、 转换架构、 迁移数据、 转换 sql 语句命令。  
@@ -66,8 +67,8 @@ ms.lasthandoff: 12/21/2017
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |@shouldalert|报告错误 ="false"|没有错误的详细信息 / 警告 / 信息消息。|  
-    |2|报告错误 ="true"|详细的错误 / 警告 / 信息消息。|  
+    |1|report-errors=”false”|没有错误的详细信息 / 警告 / 信息消息。|  
+    |2|report-errors=”true”|详细的错误 / 警告 / 信息消息。|  
   
     > [!NOTE]  
     > 上面指定的错误报告设置是适用于生成评估报表、 转换架构、 迁移数据、 转换 sql 语句命令。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ### <a name="synchronize-target"></a>同步目标：  
-该命令**同步目标**具有**报表-到错误**参数，指定该同步操作的错误报告的位置。 然后，名称的文件**TargetSynchronizationReport&lt;n&gt;。XML**创建在指定的位置，其中 **&lt; n &gt;** 是唯一的文件数以每次执行同一命令与数字递增。  
+该命令**同步目标**具有**报表-到错误**参数，指定该同步操作的错误报告的位置。 然后，名称的文件**TargetSynchronizationReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;**是唯一的文件数以每次执行同一命令与数字递增。  
   
 **注意：**如果给定的文件夹路径，则报表-错误-到参数成为可选命令 ' 同步-target' 属性。  
   
@@ -112,14 +113,14 @@ ms.lasthandoff: 12/21/2017
   
 **-错误：**指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
--   为警告报告总数  
+-   report-total-as-warning  
   
--   报表-每个-作为-警告  
+-   report-each-as-warning  
   
--   失败脚本  
+-   fail-script  
   
 ### <a name="refresh-from-database"></a>刷新从数据库：  
-该命令**从数据库中刷新**具有**报表-到错误**参数，指定刷新操作的错误报告的位置。 然后，名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中 **&lt; n &gt;** 是唯一的文件数以每次执行同一命令与数字递增。  
+该命令**从数据库中刷新**具有**报表-到错误**参数，指定刷新操作的错误报告的位置。 然后，名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;**是唯一的文件数以每次执行同一命令与数字递增。  
   
 **注意：**如果给定的文件夹路径，则报表-错误-到参数成为可选命令 ' 同步-target' 属性。  
   
@@ -140,11 +141,11 @@ ms.lasthandoff: 12/21/2017
   
 **-错误：**指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
--   为警告报告总数  
+-   report-total-as-warning  
   
--   报表-每个-作为-警告  
+-   report-each-as-warning  
   
--   失败脚本  
+-   fail-script  
   
 ## <a name="see-also"></a>另请参阅  
 [执行 SSMA 控制台](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

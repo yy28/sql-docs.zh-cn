@@ -1,25 +1,25 @@
 ---
-title: "使用 Integration Services 加载数据"
+title: 使用 Integration Services 加载数据
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "提供数据加载到 SQL Server 并行数据仓库，通过使用 SQL Server Integration Services (SSIS) 包的引用和部署的信息。"
+description: 提供数据加载到 SQL Server 并行数据仓库，通过使用 SQL Server Integration Services (SSIS) 包的引用和部署的信息。
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>使用 Integration Services 加载数据
 提供数据加载到 SQL Server 并行数据仓库，通过使用 SQL Server Integration Services (SSIS) 包的引用和部署的信息。  
@@ -59,12 +59,12 @@ Integration Services 的完整文档，请参阅[SQL Server Integration Services
 若要运行 SQL Server Data Tools 中的从包，右键单击你的包，然后选择**执行包**。  
   
 ### <a name="run-from-powershell"></a>从 PowerShell 中运行  
-若要从 Windows PowerShell，运行包使用**dtexec**实用程序：`dtexec /FILE <packagePath>`  
+若要从 Windows PowerShell，运行包使用**dtexec**实用程序： `dtexec /FILE <packagePath>`  
   
-例如，使用 IPv4 地址 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>运行从 Windows 命令提示符 
-若要从 Windows 命令提示符，运行包使用**dtexec**实用程序：`dtexec /FILE <packagePath>`  
+若要从 Windows 命令提示符，运行包使用**dtexec**实用程序： `dtexec /FILE <packagePath>`  
   
 例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -89,7 +89,7 @@ Integration Services 的完整文档，请参阅[SQL Server Integration Services
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -156,7 +156,7 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
   
 ## <a name="Examples"></a>示例  
   
-### <a name="Walkthrough"></a>答： 从平面文件的简单负载  
+### <a name="Walkthrough"></a>A. 从平面文件的简单负载  
 下面的演练演示如何使用 Integration Services 来加载到 SQL Server PDW 设备的平面文件数据的简单数据负载。  此示例假定已在客户端计算机上安装集成服务，并已安装 SQL Server PDW 目标，如上面所述。  
   
 在此示例中我们将加载到`Orders`具有以下 DDL 的表。 `Orders`表属于`LoadExampleDB`数据库。  

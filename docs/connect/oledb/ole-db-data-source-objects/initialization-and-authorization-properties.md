@@ -10,7 +10,7 @@ ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6be9ab05f9f7a5c669e62f92c238be3d06dbf44d
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: a785c2bf470df9f09b177fc7b5119132ed93c319
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授权属性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/30/2018
 |SSPROP_INIT_ENCRYPT|类型：VT_BOOL<br /><br /> R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：若要加密通过网络传输的数据，应将 SSPROP_INIT_ENCRYPT 属性设置为 VARIANT_TRUE。<br /><br /> 如果打开了“启用协议加密”，则不论 SSPROP_INIT_ENCRYPT 如何设置，始终都会进行加密。 如果将它关闭，并将 SSPROP_INIT_ENCRYPT 设置为 VARIANT_TRUE，那么将进行加密。<br /><br /> 如果关闭“启用协议加密”，并将 SSPROP_INIT_ENCRYPT 设置为 VARIANT_FALSE，那么不进行加密。|  
 |SSPROP_INIT_FAILOVERPARTNER|类型：VT_BSTR<br /><br /> 读/写︰ 读/写<br /><br /> 说明：指定用于数据库镜像的故障转移伙伴的名称。 它是初始化属性，并且只能在初始化之前设置。 在初始化之后，它将返回由主服务器返回的故障转移伙伴（如果有）。<br /><br /> 这允许智能应用程序缓存最新确定的备份服务器，但这样的应用程序应当知道，仅当初次建立（对于池连接则是重置）连接时该信息才会更新，因而在经过长时间的连接后可能会过时。<br /><br /> 建立连接之后，应用程序可以查询该属性，以确定故障转移伙伴的标识。 如果主服务器没有故障转移伙伴，则此属性将返回空字符串。 有关详细信息，请参阅[Using Database Mirroring](../../oledb/features/using-database-mirroring.md)。|  
 |SSPROP_INIT_FILENAME|类型：VT_BSTR<br /><br /> 读/写︰ 读/写<br /><br /> 说明：指定可附加数据库的主文件名。 附加此数据库并使其成为连接的默认数据库。 若要使用 SSPROP_INIT_FILENAME，必须指定该数据库的名称作为初始化属性 DBPROP_INIT_CATALOG 的值。 如果该数据库名称不存在，它将查找在 SSPROP_INIT_FILENAME 中指定的主文件名，并使用在 DBPROP_INIT_CATALOG 中指定的名称来附加该数据库。 如果数据库是以前附加的，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不重新附加它。|  
-|SSPROP_INIT_MARSCONNECTION|类型：VT_BOOL<br /><br /> 读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：指定是否对连接启用多个活动结果集 (MARS)。 必须在与数据库建立连接之前将该选项设置为 true。 有关详细信息，请参阅[使用多个活动结果集 &#40;MARS &#41;](../../oledb/features/using-multiple-active-result-sets-mars.md).|  
+|SSPROP_INIT_MARSCONNECTION|类型：VT_BOOL<br /><br /> 读/写︰ 读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：指定是否对连接启用多个活动结果集 (MARS)。 必须在与数据库建立连接之前将该选项设置为 true。 有关详细信息，请参阅[使用多个活动结果集 & #40;MARS & #41;](../../oledb/features/using-multiple-active-result-sets-mars.md).|  
 |SSPROP_INIT_NETWORKADDRESS|类型：VT_BSTR<br /><br /> 读/写︰ 读/写<br /><br /> 说明：运行由 DBPROP_INIT_DATASOURCE 属性指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。|  
 |SSPROP_INIT_NETWORKLIBRARY|类型：VT_BSTR<br /><br /> 读/写︰ 读/写<br /><br /> 说明：用于与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例通信的网络库 (DLL) 的名称。 该名称不应当包含路径或 .dll 文件扩展名。<br /><br /> 可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端配置实用工具来自定义其默认值。<br /><br /> 注意： 只有 TCP 和 Named Pipes 支持此属性。 如果该属性在使用时带有前缀，最后将得到导致错误的双前缀，因为该属性用于在内部生成前缀。|  
 |SSPROP_INIT_PACKETSIZE|类型：VT_I4<br /><br /> 读/写︰ 读/写<br /><br /> 说明：以字节为单位表示的网络数据包大小。 数据包大小属性值必须介于 512 和 32,767 之间。 默认值 OLE DB 驱动程序的 SQL Server 网络数据包大小为 4096。|  
@@ -93,6 +93,6 @@ Server=MyServer;UID=MyUserName;
  SQL Server 的 OLE DB 驱动程序中可用的关键字的列表，请参阅[OLE DB 驱动程序的 SQL Server 连接字符串关键字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据源对象 &#40; OLE DB &#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [数据源对象 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

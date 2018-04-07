@@ -1,15 +1,16 @@
 ---
-title: "项目设置 （类型映射） (AccessToSQL) |Microsoft 文档"
+title: 项目设置 （类型映射） (AccessToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81c2512eacc634de526ecffb0d56d86dbcecca87
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30586710c156ffe14028e8395b0e887419a36584
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>项目设置 （类型映射） (AccessToSQL)
 类型映射的项目设置，可以设置 SSMA 项目的默认类型映射。 你还可以指定单个数据库对象的类型映射。 有关详细信息，请参阅[映射源和目标数据类型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用**默认项目设置**对话框中设置的所有项目的配置选项。 若要访问的类型映射设置，在**工具**菜单上，选择**默认项目设置**，选择为其设置所需查看 / 更改，不再是迁移项目类型**迁移目标版本**下拉列表中，然后单击**类型映射**的左窗格中。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **源类型**  
 要映射的访问的数据类型。  
   
@@ -53,22 +54,22 @@ ms.lasthandoff: 12/21/2017
   
 |访问数据类型|SQL Server 数据类型|  
 |--------------------|------------------------|  
-|**二进制 [\*...\*]**|**varbinary [\*]**|  
+|**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
-|**字节**|**tinyint**|  
-|**货币**|**money**|  
+|**byte**|**tinyint**|  
+|**currency**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**int**|  
-|**长**|**int**|  
-|**长二进制**|**varbinary(max)**|  
-|**备注**|**nvarchar(max)**|  
+|**long**|**int**|  
+|**longbinary**|**varbinary(max)**|  
+|**memo**|**nvarchar(max)**|  
 |**备注**-对于 Access 97|**varchar(max)**|  
-|**单个**|**real**|  
-|**text[\*..\*]**|**nvarchar [\*]**|  
-|**text[\*..\*]** -对于 Access 97|**varchar [\*]**|  
+|**single**|**real**|  
+|**text[\*..\*]**|**nvarchar[\*]**|  
+|**文本 [\*...\*]** -对于 Access 97|**varchar[\*]**|  
   
 **“添加”**  
 单击此项可将数据类型添加到映射列表。  

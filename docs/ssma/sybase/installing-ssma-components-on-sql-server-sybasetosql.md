@@ -1,30 +1,31 @@
 ---
-title: "在 SQL Server (SybaseToSQL) 上安装 SSMA 组件 |Microsoft 文档"
-ms.custom: 
+title: 在 SQL Server (SybaseToSQL) 上安装 SSMA 组件 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27ca7f0bc45c1d81118f0441d2ee4ff751d4c95
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97c0e5dc529a6563212dc3ddedce5014ccfd463a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server (SybaseToSQL) 上安装 SSMA 组件
 除了安装之外 SSMA，使用服务器端数据迁移，你还必须安装组件正在运行的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 这些组件包括 SSMA 扩展包，它支持数据迁移和 Sybase 提供程序启用服务器到服务器的连接。  
@@ -42,9 +43,9 @@ SSMA 扩展包增加了数据库， **sysdb**和**ssmatesterdb_syb**，到的指
   
 **若要安装的扩展包**  
   
-1.  将 SSMA 复制 Sybase 扩展包。*n*.Install.exe，其中 *n* 是到正在运行的计算机的生成号[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+1.  将 SSMA 复制 Sybase 扩展包。*n*。Install.exe，其中*n*是到正在运行的计算机的生成号[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-2.  双击 SSMA Sybase 扩展包。*n*.Install.exe。  
+2.  双击 SSMA Sybase 扩展包。*n*。Install.exe。  
   
 3.  在欢迎页上，单击**下一步**。  
   
@@ -66,7 +67,7 @@ SSMA 扩展包增加了数据库， **sysdb**和**ssmatesterdb_syb**，到的指
   
     Windows 身份验证将使用您的 Windows 凭据来尝试登录到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如果你选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]身份验证，你必须输入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登录名和密码。  
   
-10. 在管理服务器页中，选择**安装实用工具数据库**  *n* ，其中 *n* 是版本号，并依次**下一步**。  
+10. 在管理服务器页中，选择**安装实用工具数据库** *n*，其中*n*是版本号，并依次**下一步**。  
   
     **Sysdb**会创建数据库并在该数据库中创建的存储的过程。  
   
@@ -117,6 +118,6 @@ SSMA 扩展包增加了数据库， **sysdb**和**ssmatesterdb_syb**，到的指
 4.  验证所选的功能，然后单击**完成**安装数据提供程序。  
   
 ## <a name="see-also"></a>另请参阅  
-[安装适用于 Sybase 客户端 &#40; SSMASybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[Sybase ASE 将数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase 客户端安装 SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[将 Sybase ASE 数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

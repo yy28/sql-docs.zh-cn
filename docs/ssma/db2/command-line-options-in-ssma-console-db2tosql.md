@@ -1,31 +1,31 @@
 ---
-title: "SSMA 控制台 (DB2ToSQL) 中的命令行选项 |Microsoft 文档"
+title: SSMA 控制台 (DB2ToSQL) 中的命令行选项 |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ece5c9b4a72f588608103437b03902fd81cc89f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 控制台 (DB2ToSQL) 中的命令行选项
 Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选项。 接下来的部分详细介绍相同。  
@@ -163,21 +163,21 @@ Microsoft 为你提供了用于执行并控制 SSMA 活动组可靠命令行选�
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md)。  
+有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword Help 选项:-securepassword-？ / 帮助  
 显示 SSMA 控制台选项的语法的摘要：  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md)  
+有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
 ### <a name="next-step"></a>下一步  
 下一步取决于您的项目要求：  
   
-1.  用于指定的密码或导出 / 导入密码，请参阅[管理密码 &#40; DB2ToSQL &#41;](../../ssma/db2/managing-passwords-db2tosql.md)。  
+1.  用于指定的密码或导出 / 导入密码，请参阅[管理密码&#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)。  
   
-2.  有关生成报表，请参阅[生成报表 &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md)。  
+2.  有关生成报表，请参阅[生成报表&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)。  
   
-3.  有关故障排除控制台中的问题，请参阅[故障排除 &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md)。  
+3.  有关故障排除控制台中的问题，请参阅[故障排除&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)。  
   

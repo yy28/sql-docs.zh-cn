@@ -21,13 +21,13 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd9859a3292d7cb9ec00f22f695be9aaa25b59f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 617c897ce05b3b57b32e8ffd67606d4314fb5c80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>使用示例控制台脚本文件 (SybaseToSQL)
 几个示例文件已与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足的最终用户需求。  
@@ -51,12 +51,12 @@ ms.lasthandoff: 12/21/2017
   
     -   只需将值更改为所需的源和目标服务器定义的情况下，用户可以连接到所需的数据库。 提供的示例中的所有值都提供了为变量的值中提供的**VariableValueFileSample.xml**。  所有其他连接参数可以删除从用户的工作服务器连接文件。  
   
-    -   连接到源和目标服务器的详细信息，请参阅[创建服务器连接文件 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md).  
+    -   连接到源和目标服务器的详细信息，请参阅[服务器连接文件创建&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)。  
   
 -   **VariableValueFileSample.xml:**  
     已用在示例控制台中的所有变量都脚本文件和`ServersConnectionFileSample.xml`整理后要在此文件中。 若要执行用户必须只需将示例变量的示例控制台脚本值与用户定义的并将此文件作为脚本文件以及其他命令行自变量传递。  
   
-    变量的值文件的详细信息，请参阅[创建变量的值文件 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+    变量的值文件的详细信息，请参阅[创建变量的值文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)。  
   
 -   **AssessmentReportGenerationSample.xml:**  
     此示例使用户能够生成可由用户以进行分析之前他开始转换和迁移数据的 xml 评估报表。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
     如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`generate-assessment-report`示例控制台脚本文件的命令的示例 4。  
   
-    生成报表的详细信息，请参阅[生成报表 &#40;SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+    生成报表的详细信息，请参阅[生成报表&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)。  
   
     > [!NOTE]  
     > -   确保变量值文件命令行自变量传递到控制台应用程序，并使用指定的用户更新 VariableValueFileSample.xml 值。  
@@ -90,9 +90,9 @@ ms.lasthandoff: 12/21/2017
   
     架构映射到目标架构的源数据库。  
   
-    **Attribute**  
+    **属性**  
   
-    -   `source-schema:`指定需要要转换的源数据库。  
+    -   `source-schema:` 指定需要要转换的源数据库。  
   
     -   `sql-server-schema`： 指定是要迁移到目标数据库  
   
@@ -104,9 +104,9 @@ ms.lasthandoff: 12/21/2017
   
     -   如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`示例控制台脚本文件的命令的示例 4。  
   
-    **Attribute**  
+    **属性**  
   
-    `object-name`： 指定源数据库/对象需要要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`  
+    `object-name`： 指定源数据库/对象需要要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
     **命令名称**  
   
@@ -116,9 +116,9 @@ ms.lasthandoff: 12/21/2017
   
     -   如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`synchronize-target`示例控制台脚本文件的命令的示例 3。  
   
-    **Attribute**  
+    **属性**  
   
-    `object-name:`指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`  
+    `object-name:` 指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
     **命令名称**  
   
@@ -128,12 +128,12 @@ ms.lasthandoff: 12/21/2017
   
     -   如果用户必须评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`migrate-data`示例控制台脚本文件的命令的示例 2。  
   
-    **Attribute**  
+    **属性**  
   
-    `object-name:`指定的源数据库/表需要要迁移的名称。 确保相应`object-type`根据中指定的对象的类型进行更改`object-name`  
+    `object-name:` 指定的源数据库/表需要要迁移的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
 ## <a name="see-also"></a>另请参阅  
-[创建变量的值文件 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
-[创建服务器连接文件 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
-[生成报表 &#40;SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
+[创建变量值文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+[创建服务器连接文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+[生成报表&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   

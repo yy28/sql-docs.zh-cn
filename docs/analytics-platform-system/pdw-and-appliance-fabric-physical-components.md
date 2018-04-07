@@ -1,26 +1,26 @@
 ---
-title: "PDW 和装置 Fabric 物理组件 (Analytics Platform System)"
+title: PDW 和装置 Fabric 物理组件 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: "17"
-ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 17
+ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>PDW 和装置 Fabric 物理组件
 名称和 PDW 和装置 fabric 物理组件的说明。 PDW 区域不包含所有这些组件。  
@@ -61,7 +61,7 @@ PDW 虚拟机将 PDW 区域的一部分。
   
 *Appliance_domain*-WDS 虚拟机在 HST01 上运行，并且可以故障转移到 HST02。 WDS 虚拟机和 VMM 虚拟机，部署在物理主机上 Windows 设备安装的过程。 在设备生命周期，WDS 和 VMM 执行操作，如替换主机。  
   
-*appliance_domain*VMM  
+*appliance_domain*-VMM  
 Virtual Machine Manager (VMM) 在虚拟机中运行，并可以故障转移到 HST02。 VMM 托管系统中心来部署物理主机上的操作系统。 VMM 还提供了 Windows Server Update Services (WSUS) 应用或删除的所有主机和虚拟机的 Windows 更新。  
   
 *appliance_domain*-AD01， *appliance_domain*-AD02  
@@ -87,6 +87,6 @@ PDW 群集名为 WFOHST01。 它管理的所有物理主机和虚拟机属于 PD
   
 ## <a name="see-also"></a>另请参阅  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[设备配置 &#40;分析平台系统 &#41;](appliance-configuration.md)  
-[设备管理任务 &#40;分析平台系统 &#41;](appliance-management-tasks.md)  
+[设备配置&#40;分析平台系统&#41;](appliance-configuration.md)  
+[设备管理任务&#40;分析平台系统&#41;](appliance-management-tasks.md)  
   

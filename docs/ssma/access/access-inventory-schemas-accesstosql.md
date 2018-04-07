@@ -1,15 +1,16 @@
 ---
-title: "访问清单架构 (AccessToSQL) |Microsoft 文档"
+title: 访问清单架构 (AccessToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -42,16 +43,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>访问清单架构 (AccessToSQL)
 下列各节描述 SSMA 在导出到的访问架构时创建的表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -65,9 +66,9 @@ ms.lasthandoff: 12/21/2017
 |**DatabaseName**|**nvarchar(4000)**|访问数据库的名称。|  
 |**ExportTime**|**datetime**|此元数据创建的 SSMA 的日期和时间。|  
 |**文件路径**|**nvarchar(4000)**|访问数据库的完整路径和文件名称。|  
-|**文件大小**|**bigint**|以 kb 为单位的 Access 数据库的大小。|  
+|**FileSize**|**bigint**|以 kb 为单位的 Access 数据库的大小。|  
 |**FileOwner**|**nvarchar(4000)**|指定访问数据库的所有者为 Windows 帐户。|  
-|**时间**|**datetime**|日期和 Access 数据库的创建的时间。|  
+|**DateCreated**|**datetime**|日期和 Access 数据库的创建的时间。|  
 |**DateModified**|**datetime**|日期和 Access 数据库的上次修改的时间。|  
 |**TablesCount**|**int**|访问数据库中的表数。|  
 |**QueriesCount**|**int**|访问数据库中的查询数。|  
@@ -88,13 +89,13 @@ ms.lasthandoff: 12/21/2017
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含此表的数据库。|  
 |**TableId**|**uniqueidentifier**|用于唯一标识该表的 GUID。 此列也是表的主键。|  
-|**表名**|**nvarchar(4000)**|表的名称。|  
+|**TableName**|**nvarchar(4000)**|表的名称。|  
 |**RowsCount**|**int**|该表中的行数。|  
 |**ValidationRule**|**nvarchar(4000)**|定义表的有效输入的规则。 如果不存在任何验证规则，该字段将包含空字符串。|  
 |**LinkedTable**|**nvarchar(4000)**|另一个表，如果有的话，链接表。 链接表允许通过使用此表添加、 删除和对其他表的更新。|  
 |**ExternalSource**|**nvarchar(4000)**|数据源中，如果有的话，与该键相关联的表。 如果链接表，它具有在此字段中指定外部数据源。|  
   
-## <a name="columns"></a>“列”  
+## <a name="columns"></a>列  
 列元数据导出到**SSMA_Access_InventoryColumns**表。 此表包含以下列：  
   
 |列名|数据类型|Description|  
@@ -104,10 +105,10 @@ ms.lasthandoff: 12/21/2017
 |**ColumnId**|**int**|一个递增整数，用于标识列。 **ColumnId**是表的主键。|  
 |**ColumnName**|**nvarchar(4000)**|列的名称。|  
 |**IsNullable**|**bit**|指定是否此列可以包含 null 值。 如果值为 1，列可以包含 null 值。 如果值为 0，则列不能包含 null 值。 请注意，验证规则还可用来防止 null 值。|  
-|**DataType**|**nvarchar(4000)**|访问数据的列，如键入**文本**或**长**。|  
+|**数据类型**|**nvarchar(4000)**|访问数据的列，如键入**文本**或**长**。|  
 |**IsAutoIncrement**|**bit**|指定是否该列自动递增整数值。 如果值为 1，将自动递增整数。|  
 |**Ordinal**|**int**|在表中，从零开始的列的顺序。|  
-|**默认值**|**nvarchar(4000)**|列的默认值。|  
+|**DefaultValue**|**nvarchar(4000)**|列的默认值。|  
 |**ValidationRule**|**nvarchar(4000)**|用于验证数据的规则添加到或更新列中。|  
   
 ## <a name="indexes"></a>索引  
@@ -120,7 +121,7 @@ ms.lasthandoff: 12/21/2017
 |**IndexId**|**int**|一个用于标识索引递增整数。 此列是表的主键。|  
 |**IndexName**|**nvarchar(4000)**|索引的名称。|  
 |**ColumnsIncluded**|**nvarchar(4000)**|列出索引中包含的列。 由分号分隔列名称。|  
-|**是唯一的**|**bit**|指定是否在索引中的每个项必须是唯一的。 在多列索引，值的组合必须唯一。 如果值为 1，索引强制使用唯一值。|  
+|**IsUnique**|**bit**|指定是否在索引中的每个项必须是唯一的。 在多列索引，值的组合必须唯一。 如果值为 1，索引强制使用唯一值。|  
 |**IsPK**|**bit**|指定是否定义的主键的一部分自动创建索引。|  
 |**IsClustered**|**bit**|指定是否群集索引。 聚集的索引重新排序的数据的物理存储。 表可以有一个聚集的索引。|  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 12/21/2017
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含此表单的数据库。|  
 |**FormId**|**int**|一个用于标识窗体的递增整数。 此列是表的主键。|  
-|**窗体名称**|**nvarchar(4000)**|窗体的名称。|  
+|**FormName**|**nvarchar(4000)**|窗体的名称。|  
   
 ## <a name="macros"></a>宏  
 宏元数据导出到**SSMA_Access_InventoryMacros**表。 此表包含以下列：  

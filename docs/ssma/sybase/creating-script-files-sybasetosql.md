@@ -1,15 +1,16 @@
 ---
-title: "创建脚本文件 (SybaseToSQL) |Microsoft 文档"
-ms.custom: 
+title: 创建脚本文件 (SybaseToSQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27c1d881b13dccecbe7d8fb66f8ea47376895f04
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9639d7527d910e61cd799ab616f10eb20b5262e4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-sybasetosql"></a>创建脚本文件 (SybaseToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建的变量值文件和服务器连接文件。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -100,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
     -   源-使用-最后使用 ="true"（默认值） 或源服务器 ="source_servername"  
   
-    -   目标-使用-最后使用 ="true"（默认值） 或目标服务器 ="target_servername"  
+    -   target-use-last-used="true" (default) or target-server="target_servername"  
   
     **示例：**  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -146,7 +147,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -179,7 +180,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -190,7 +191,7 @@ ms.lasthandoff: 12/21/2017
   
     </synchronize-target>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -225,7 +226,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -278,7 +279,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -320,7 +321,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-    *或*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -353,7 +354,7 @@ ms.lasthandoff: 12/21/2017
 -   **最大重新连接尝试次数：**时建立的连接超时或中断由于网络故障，则需要服务器来重新连接。 重新连接尝试所允许的最大**5**重试后，控制台会自动执行重新连接。 自动重新连接的工具可减少你的工作量中重新运行该脚本。  
   
 ## <a name="server-connection-parameters"></a>服务器连接参数  
-脚本文件中或将服务器连接文件中，可以定义服务器连接参数。 请参阅[创建服务器连接文件 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)有关详细信息部分  
+脚本文件中或将服务器连接文件中，可以定义服务器连接参数。 请参阅[服务器连接文件创建&#40;SybaseToSQL&#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)有关详细信息部分  
   
 ## <a name="script-commands"></a>脚本命令  
 脚本文件包含 XML 格式的迁移工作流命令的序列。 SSMA 控制台应用程序处理顺序显示在脚本文件中的命令迁移。  
@@ -401,14 +402,14 @@ ms.lasthandoff: 12/21/2017
   
 更改为相关性其中显示的参数后，你可以执行模板 （文件）。  
   
-在找不到的脚本命令的完整列表[执行 SSMA 控制台 &#40;SybaseToSQL &#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+在找不到的脚本命令的完整列表[执行 SSMA 控制台&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="script-file-validation"></a>脚本文件验证  
 用户可以轻松地验证他/她脚本文件的架构定义文件对照**S2SSConsoleScriptSchema.xsd**架构文件夹中可用  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[创建变量的值文件 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+操作控制台的下一步是[创建变量的值文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
-[创建变量的值文件 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+[创建变量值文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   

@@ -21,13 +21,13 @@ ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5fd268b84300a15eb67b767858e7ac53ed2fdf3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>在 SQL Server (MySQLToSql) 上安装 SSMA 组件
 除了安装 SSMA，你还必须安装组件正在运行的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 这些组件包括 SSMA 扩展包，它支持数据迁移和 MySQL 提供程序以启用服务器到服务器的连接。  
@@ -37,7 +37,7 @@ SSMA 扩展包增加了一个数据库， **sysdb**，到的指定实例[!INCLUD
   
 此外，当你将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理作业，当服务器端数据迁移引擎用于将数据迁移。  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>必要條件  
 在上安装 MySQL 服务器组件 SSMA 之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请确保计算机满足以下要求：  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
@@ -57,9 +57,9 @@ SSMA 扩展包增加了一个数据库， **sysdb**，到的指定实例[!INCLUD
   
 **若要安装的扩展包**  
   
-1.  将 SSMA 复制 MySQL 扩展包。*n*.Install.exe，其中 *n* 是到正在运行的计算机的生成号[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+1.  将 SSMA 复制 MySQL 扩展包。*n*。Install.exe，其中*n*是到正在运行的计算机的生成号[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-2.  双击 SSMA MySQL 扩展包。*n*.Install.exe。  
+2.  双击 SSMA MySQL 扩展包。*n*。Install.exe。  
   
 3.  在欢迎对话框上单击**下一步**。  
   
@@ -81,13 +81,13 @@ SSMA 扩展包增加了一个数据库， **sysdb**，到的指定实例[!INCLUD
   
     Windows 身份验证将使用您的 Windows 凭据来尝试登录到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如果你选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]身份验证，你必须输入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登录名和密码。  
   
-10. 在下一步的对话框中，选择**安装实用工具数据库**  *n* ，其中 *n* 是版本号，并依次**下一步**。  
+10. 在下一步的对话框中，选择**安装实用工具数据库** *n*，其中*n*是版本号，并依次**下一步**。  
   
     **Sysdb**与表中创建数据库和数据迁移 （使用服务器端数据迁移引擎） 所需的存储的过程创建该数据库中。  
   
 11. 若要安装到另一个实例的实用工具[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，选择**是**，然后单击**下一步**。 或者，若要退出向导，请单击**否**。  
   
 ## <a name="see-also"></a>另请参阅  
-[安装适用于 MySQL 客户端 &#40; SSMAMySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[将 MySQL 数据库迁移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[安装 MySQL 客户端的 SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

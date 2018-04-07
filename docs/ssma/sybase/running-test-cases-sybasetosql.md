@@ -21,13 +21,13 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 687fa8b221a31e0c1c447b5c5cbee85cc31d1702
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
 SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创建报告，有关验证结果。 如果在这两个平台上完全相同结果，测试成功。 Sybase 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -41,11 +41,11 @@ SSMA 测试人员运行时测试用例，它将执行测试所选的对象并创
   
 2.  在**连接到 Sybase**对话框中，输入连接信息，然后单击**连接**。  
   
-测试完成后，创建测试用例报告。 单击**报表**按钮，以查看[查看测试用例报表 &#40;SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). 测试 （测试用例报告） 的结果会自动存储在[使用测试存储库 &#40;SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)以供将来使用。  
+测试完成后，创建测试用例报告。 单击**报表**按钮，以查看[查看测试用例报表&#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)。 测试 （测试用例报告） 的结果会自动存储在[使用测试存储库&#40;SybaseToSQL&#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md)以供将来使用。  
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>必要條件  
 SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有先决条件。 如果未满足某些条件，则将显示一条错误消息。  
   
 ### <a name="initialization"></a>初始化  
@@ -55,21 +55,21 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
   
 以下对象创建在 Sybase SSMATESTER2005db 或 SSMATESTER2008db 数据库中和在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb_syb 数据库中。  
   
-|“属性”|类型|Description|  
+|名称|类型|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
+|USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
 |USER_TABLE$ Aud|表|保存已删除并覆盖的行的表。|  
-|USER_TABLE$ AudID|表|保存新的和已更改行的表。|  
-|USER_TABLE|“查看”|简化的表示形式的表修改。|  
-|新的 USER_TABLE $|“查看”|简化的表示形式插入的和被覆盖的行。|  
-|USER_TABLE$ new_id|“查看”|插入的和已更改行的标识。|  
-|旧的 USER_TABLE $|“查看”|简化的表示形式被删除，而且覆盖的行。|  
+|USER_TABLE$AudID|表|保存新的和已更改行的表。|  
+|USER_TABLE|视图|简化的表示形式的表修改。|  
+|新的 USER_TABLE $|视图|简化的表示形式插入的和被覆盖的行。|  
+|USER_TABLE$new_id|视图|插入的和已更改行的标识。|  
+|USER_TABLE$old|视图|简化的表示形式被删除，而且覆盖的行。|  
   
 以下对象创建的数据库中的已验证表 Sybase 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-|“属性”|类型|Description|  
+|名称|类型|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|触发器|审核已验证的表中的更改的触发器。|  
+|USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
   
 ### <a name="test-object-calls"></a>测试对象调用  
 在此步骤中，SSMA 测试人员时，将调用选择用于测试每个对象的结果进行比较并显示报表。  
@@ -78,10 +78,10 @@ SSMA 测试人员检查是否用于测试的测试执行开始之前满足所有
 在终止期间 SSMA 测试人员负责清除在创建的辅助对象**初始化**步骤。  
   
 ## <a name="next-step"></a>下一步  
-[查看测试用例报表 &#40;SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
+[查看测试用例报表&#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[选择并配置的对象添加到测试 &#40;SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
-[选择并配置受影响的对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
-[测试迁移数据库对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[选择并配置的对象添加到测试&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[选择并配置受影响的对象&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

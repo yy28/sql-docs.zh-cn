@@ -1,31 +1,31 @@
 ---
-title: "项目设置 （类型映射） (DB2ToSQL) |Microsoft 文档"
+title: 项目设置 （类型映射） (DB2ToSQL) |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ab07bb5ad3932c45dacb7aa1b359083f05ec9bf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a268c4a080248028d8eeb399db68f0de57412b01
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>项目设置 （类型映射） (DB2ToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 数据类型的设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/15/2018
 **源类型**  
 映射的 DB2 数据类型。  
   
-目标类型  
+**目标类型**  
 目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]指定 DB2 数据类型的数据类型。  
   
 请参阅下一部分对于 DB2 类型映射的默认 SSMA 中的表。  
@@ -276,5 +276,5 @@ SSMA for DB2，你可以设置为自变量、 列、 本地变量和返回值的
 |Xmltype|xml|  
   
 ## <a name="see-also"></a>另请参阅  
-[用户界面参考 &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[用户界面参考&#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

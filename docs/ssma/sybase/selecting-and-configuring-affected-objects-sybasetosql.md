@@ -21,13 +21,13 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9871370dc3e6e8ca9d148a4df2435ce94286903
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>选择并配置受影响的对象 (SybaseToSQL)
 在此页中，你可以选择表和外键，在其中更改与其进行比较，如果 SSMA 验证上一步中选择的对象的执行结果。 此外，还可以自定义验证参数。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   规则  
   
--   ，则“默认”  
+-   默认  
   
 -   标识  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="sql"></a>Sql  
 SQL 选项卡包含的"创建表"选定的表的 SQL。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Data  
 数据选项卡显示所选表中显示的数据。  
   
 ## <a name="properties"></a>属性  
@@ -126,9 +126,9 @@ SQL 选项卡包含的"创建表"选定的表的 SQL。
 你可以编辑这些 SELECT 语句，以提供自定义验证。 若要保存更改在 Sybase 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]语句，使用**应用**相应按钮源和目标 SQL 下。  
   
 ## <a name="next-step"></a>下一步  
-[自定义调用顺序 &#40;SybaseToSQL &#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
+[自定义调用顺序&#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[运行测试用例 &#40;SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[测试迁移数据库对象 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[运行测试用例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[测试迁移的数据库对象&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

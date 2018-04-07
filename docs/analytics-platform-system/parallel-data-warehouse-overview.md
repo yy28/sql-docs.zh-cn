@@ -1,25 +1,25 @@
 ---
-title: "并行数据仓库概述"
+title: 并行数据仓库概述
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "本主题介绍设备软件和分析平台系统的非设备软件组件。"
+description: 本主题介绍设备软件和分析平台系统的非设备软件组件。
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: "20"
-ms.openlocfilehash: f2b6708f6e82340c971bdd3a6cc0cdb7e67f2d65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="parallel-data-warehouse-overview"></a>并行数据仓库概述
 本主题介绍设备软件和分析平台系统的非设备软件组件。  
@@ -248,15 +248,15 @@ For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw
 ### <a name="admin-console"></a>管理控制台  
 管理员控制台允许你查看有关设备运行状况的当前状态。 这在管理节点上作为 web 应用程序运行并能够通过 https 进行访问。  
   
-有关详细信息，请参阅[使用管理控制台 &#40; 监视设备分析平台系统 &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+有关详细信息，请参阅[通过使用管理控制台监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### <a name="system-views"></a>系统视图  
 管理控制台基于系统视图查询。 您可以查询单独要获取所需的信息的特定部分的系统视图。  
 
-有关详细信息，请参阅[监视通过使用系统视图 &#40; 设备分析平台系统 &#41;](monitor-the-appliance-by-using-system-views.md) 
+有关详细信息，请参阅[监视通过使用系统视图设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### <a name="system-center-operations-manager"></a>System Center Operations Manager  
 没有为 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 
 
-若要为 SCOM 中配置设备，请参阅[监视通过使用 System Center Operations Manager &#40; 设备分析平台系统 &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+若要为 SCOM 中配置设备，请参阅[监视通过使用 System Center Operations Manager 设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   

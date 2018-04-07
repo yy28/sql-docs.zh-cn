@@ -21,13 +21,13 @@ ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eb96fb924a26d691db1ba6577d0b6f9c93e49ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 控制台 (SybaseToSQL) 中的命令行选项
 Microsoft 为你提供了一组可靠的命令行选项来执行和控制 SSMA 活动。 接下来的部分详细介绍相同。  
@@ -95,7 +95,7 @@ Microsoft 为你提供了一组可靠的命令行选项来执行和控制 SSMA �
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 输出选项:-x / xmloutput [xmloutputfile]  
 此命令用于输出到控制台或 xml 文件以 xml 格式的命令输出消息。  
   
-有两个选项可用于 xmloutput，viz。。，：  
+有两个选项可用于 xmloutput，viz..,:  
   
 -   如果 filepath 提供 xmloutput 切换后输出重定向到文件。  
   
@@ -165,21 +165,21 @@ Microsoft 为你提供了一组可靠的命令行选项来执行和控制 SSMA �
   
 `C:\>SSMAforSybaseConsole.EXE -?`  
   
-有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md).  
+有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword Help 选项:-securepassword-？ / 帮助  
 显示 SSMA 控制台选项的语法的摘要：  
   
 `C:\>SSMAforSybaseConsole.EXE -securepassword -?`  
   
-有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
+有关 SSMA 控制台命令行选项以表格形式显示，请参阅[附录-1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
   
 ### <a name="next-step"></a>下一步  
 下一步取决于您的项目要求：  
   
--   用于指定的密码或导出 / 导入密码，请参阅[管理密码 &#40;SybaseToSQL &#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   用于指定的密码或导出 / 导入密码，请参阅[管理密码&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)。  
   
--   有关生成报表，请参阅[生成报表 &#40;SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   有关生成报表，请参阅[生成报表&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)。  
   
--   有关故障排除控制台中的问题，请参阅[故障排除 &#40;SybaseToSQL &#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   有关故障排除控制台中的问题，请参阅[故障排除&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)。  
   

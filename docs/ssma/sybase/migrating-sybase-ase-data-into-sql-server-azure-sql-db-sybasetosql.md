@@ -1,15 +1,16 @@
 ---
-title: "将 Sybase ASE 数据迁移到 SQL Server 的 Azure SQL DB |Microsoft 文档"
-ms.custom: 
+title: 将 Sybase ASE 数据迁移到 SQL Server 的 Azure SQL DB |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Migrating data,Client Side Data Migration
 - Migrating data,Server Side Data Migration
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ff0dfa9d72d7616d7e775361de03728fd951bea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab42e495eb4e76b6e9d7b6a2cca3d031eed12448
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>将 Sybase ASE 数据迁移到 SQL Server 的 Azure SQL DB (SybaseToSQL)
 你已成功加载到 Sybase 自适应 Server Enterprise (ASE) 数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，你可以将数据从迁移到的 ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
@@ -106,11 +107,11 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > 如果 SQL Server 实例上未安装 SSMA for Sybase 扩展包并且**服务器端数据迁移引擎**选中，那么在将数据迁移到目标数据库，遇到以下错误: SSMA 数据迁移组件上未找到 SQL Server，将无法进行服务器端数据迁移。 请检查是否正确安装了扩展包。 单击**取消**终止数据迁移。  
   
-5.  在**连接到 Sybase ASE**对话框中，输入连接凭据，，然后单击**连接**。 连接到 Sybase ASE 的详细信息，请参阅[连接到 Sybase &#40;SybaseToSQL &#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
+5.  在**连接到 Sybase ASE**对话框中，输入连接凭据，，然后单击**连接**。 连接到 Sybase ASE 的详细信息，请参阅[连接到 Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
     如果目标数据库是 SQL Server，然后，输入中的连接凭据**连接到 SQL Server**对话框中，单击**连接**。 连接到 SQL Server 的详细信息，请参阅[连接到 SQL Server(SybaseToSQL)](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
   
-    如果目标数据库是 Azure SQL DB，然后输入中的连接凭据**连接到 Azure SQL DB**对话框中，单击**连接**。 连接到 Azure SQL DB 的详细信息，请参阅[连接到 Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+    如果目标数据库是 Azure SQL DB，然后输入中的连接凭据**连接到 Azure SQL DB**对话框中，单击**连接**。 连接到 Azure SQL DB 的详细信息，请参阅[连接到 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
     消息将出现在**输出**窗格。 在迁移完成后，**数据迁移报告**显示。 如果任何数据未迁移，单击包含错误的行，然后单击**详细信息**。 在完成与报表，请单击**关闭**。 有关数据迁移报表的详细信息，请参阅[（SSMA 常见） 的数据迁移报告](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
@@ -118,5 +119,5 @@ ms.lasthandoff: 12/21/2017
 > 当为目标数据库使用 SQL Express edition 时，允许仅限客户端数据迁移，并且不支持服务器端数据迁移。  
   
 ## <a name="see-also"></a>另请参阅  
-[Sybase ASE 将数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[将 Sybase ASE 数据库迁移到 SQL Server 的 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

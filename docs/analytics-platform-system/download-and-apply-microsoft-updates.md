@@ -1,26 +1,26 @@
 ---
-title: "下载并应用 Microsoft 更新 (Analytics Platform System)"
+title: 下载并应用 Microsoft 更新 (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: "51"
-ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 51
+ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="download-and-apply-microsoft-updates"></a>下载并应用 Microsoft 更新
 本主题讨论如何从 Microsoft 更新目录到 Windows Server Update Services (WSUS) 下载更新并将这些更新应用于分析平台系统设备服务器。 Microsoft 更新将安装所有合适的更新，Windows 和 SQL Server。 VMM 虚拟机的设备上安装 WSUS。  
@@ -32,22 +32,22 @@ ms.lasthandoff: 12/21/2017
 >   
 > 当设备正在使用时，不适用于 Microsoft 更新。 应用更新可能会导致设备节点重新启动。 当不使用该设备时，应在维护时段内应用这些更新。  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>必要條件  
 在执行这些步骤之前, 你需要：  
   
--   中的说明在你的设备上配置 WSUS[配置 Windows Server Update Services &#40;WSUS &#41;&#40;分析平台系统 &#41;](configure-windows-server-update-services-wsus.md).  
+-   中的说明在你的设备上配置 WSUS[配置 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)。  
   
 -   结构域管理员帐户登录信息的知识。  
   
 -   有一个登录名有权访问分析平台系统管理员控制台并查看设备状态信息。  
   
--   在大多数情况下，WSUS 需要访问外部设备的服务器。 若要支持这种分析平台系统 DNS 可以配置为支持将允许使用外部 DNS 服务器来解析名称 Analytics Platform System 主机和虚拟机 (Vm) 的外部名称转发器之外的使用方案设备。 有关详细信息，请参阅[使用 DNS 转发器来解决非设备 DNS 名称 &#40;分析平台系统 &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   在大多数情况下，WSUS 需要访问外部设备的服务器。 若要支持这种分析平台系统 DNS 可以配置为支持将允许使用外部 DNS 服务器来解析名称 Analytics Platform System 主机和虚拟机 (Vm) 的外部名称转发器之外的使用方案设备。 有关详细信息，请参阅[使用 DNS 转发器来解决非设备 DNS 名称&#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
   
 ## <a name="bkmk_ImportUpdates"></a>若要下载并应用 Microsoft 更新  
   
 #### <a name="verify-the-appliance-state-indicators"></a>验证设备状态指示器  
   
-1.  打开管理控制台并导航到的设备状态页。 有关详细信息，请参阅[使用管理控制台 &#40; 监视设备分析平台系统 &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+1.  打开管理控制台并导航到的设备状态页。 有关详细信息，请参阅[通过使用管理控制台监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
 2.  验证设备状态的所有节点的状态指示符。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/21/2017
   
     ![选择应用，并单击批准的所有更新。] (./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  选择你在中创建的设备服务器组[配置 Windows Server Update Services &#40;WSUS &#41;&#40;分析平台系统 &#41;](configure-windows-server-update-services-wsus.md).  
+4.  选择你在中创建的设备服务器组[配置 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)。  
   
 5.  单击**批准安装**，然后单击**确定**。  
   
@@ -111,9 +111,9 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="apply-microsoft-updates"></a>应用 Microsoft 更新  
   
-1.  在开始之前，打开[使用管理控制台 &#40; 监视设备分析平台系统 &#41;](monitor-the-appliance-by-using-the-admin-console.md)，单击**装置状态更改为**选项卡上，并确认**群集**和**网络**所有节点的列显示绿色 （或 NA）。 如果在任一这些列中存在任何警报，设备可能无法正确安装更新。 地址中的所有现有警报**群集**和**网络**列然后再继续。  
+1.  在开始之前，打开[通过使用管理控制台监视设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)，单击**装置状态更改为**选项卡上，并确认**群集**和**网络**所有节点的列显示绿色 （或 NA）。 如果在任一这些列中存在任何警报，设备可能无法正确安装更新。 地址中的所有现有警报**群集**和**网络**列然后再继续。  
   
-2.  登录到*< 域名 >***-HST01**节点作为构造域管理员联系。  
+2.  登录到*< 域名 > * * *-HST01** 节点作为构造域管理员联系。  
   
 3.  若要将应用所有 wsus 批准的更新，运行更新程序。 请参阅[运行更新程序](#RunUpdateWizard)下面有关的说明。  
   
@@ -125,11 +125,11 @@ ms.lasthandoff: 12/21/2017
   
 3.  展开**所有计算机**。  
   
-4.  选择你在中创建的设备服务器组[配置 Windows Server Update Services &#40;WSUS &#41;&#40;分析平台系统 &#41;](configure-windows-server-update-services-wsus.md).  
+4.  选择你在中创建的设备服务器组[配置 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md)。  
   
 5.  在**状态**下拉列表菜单上，选择**任何**单击**刷新**。  
   
-6.  展开**更新服务**，  *<appliance name>* VMM，**更新**，**所有更新**，其中 *<appliance name>*是你的设备名称。  
+6.  展开**更新服务**， *<appliance name>*VMM，**更新**，**所有更新**，其中 *<appliance name>*是你的设备名称。  
   
 7.  在**所有更新**窗口集**批准**到**Any 除拒绝**。  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="ensure-there-are-no-critical-alerts-in-the-sql-server-pdw-admin-console"></a>确保在 SQL Server PDW 管理控制台中没有关键警报  
   
-1.  打开管理控制台中，单击设备状态选项卡。请参阅[使用管理控制台 &#40; 监视设备分析平台系统 &#41;](monitor-the-appliance-by-using-the-admin-console.md).  
+1.  打开管理控制台中，单击设备状态选项卡。请参阅[通过使用管理控制台监视设备&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。  
   
 2.  验证**群集**和**网络**所有节点的列显示绿色 （或 NA）。 如果在任一这些列中存在任何警报，设备可能无法正确安装更新。 如果有任何严重警报，请联系支持部门。  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  请确保你登录到 HST01 节点作为构造域管理员联系。  
   
-2.  打开命令提示符窗口并输入以下命令。 替换 *<parameter>* 与指定的信息。  
+2.  打开命令提示符窗口并输入以下命令。 替换*<parameter>*与指定的信息。  
   
 **若要运行 Microsoft Update:**  
   
@@ -168,8 +168,8 @@ C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAd
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[卸载 Microsoft 更新 &#40;分析平台系统 &#41;](uninstall-microsoft-updates.md)  
-[应用分析平台系统修补程序 &#40;分析平台系统 &#41;](apply-analytics-platform-system-hotfixes.md)  
-[卸载分析平台系统修补程序 &#40;分析平台系统 &#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[软件维护 &#40;分析平台系统 &#41;](software-servicing.md)  
+[卸载 Microsoft 更新&#40;分析平台系统&#41;](uninstall-microsoft-updates.md)  
+[将分析平台系统修补程序应用&#40;分析平台系统&#41;](apply-analytics-platform-system-hotfixes.md)  
+[卸载分析平台系统修补程序&#40;分析平台系统&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[软件维护&#40;分析平台系统&#41;](software-servicing.md)  
   

@@ -1,26 +1,26 @@
 ---
-title: "通过使用管理控制台 （分析平台系统） 来监视设备"
+title: 通过使用管理控制台 （分析平台系统） 来监视设备
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>通过使用管理控制台监视设备
 管理员控制台是一个 SQL Server PDW web 应用程序呈现的设备状态、 运行状况和性能信息。 用户连接到 Internet 资源管理器通过管理控制台。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 加载  
 显示加载计划、 PDW 加载和相关的错误的当前状态，如果有的话。  
   
-备份/还原  
+Backups/Restores  
 显示的 PDW 的日志备份和还原操作。  
   
 运行状况  
@@ -112,12 +112,12 @@ HDFS
 |-|-|  
 |**信息类型**|**如何在管理控制台的访问权限**|  
 |设备的总体状态|单击**装置状态更改为**在顶部菜单中，或**主页**。|  
-|Alerts|单击**警报**。 有关详细信息，请参阅[了解管理员控制台警报 &#40;分析平台系统 &#41;](understanding-admin-console-alerts.md).|  
+|警报|单击**警报**。 有关详细信息，请参阅[了解管理员控制台警报&#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)。|  
 |设备组件和它们的状态|单击**装置状态更改为**在顶部菜单中，或**主页**。|  
 |监视器请求 （包括查询、 加载、 备份和还原）|单击**会话**若要查看当前活动或新会话。<br /><br />单击**查询**若要查看当前活动或新的查询。 显示查询的信息包括加载、 备份和还原。<br /><br />单击**锁**若要查看活动的锁。|  
 |监视负载、 备份和还原的其他信息。|单击**加载**或**备份/还原**。|  
 |性能信息|单击**性能监视器**。|  
   
 ## <a name="see-also"></a>另请参阅  
-[设备监视 &#40;分析平台系统 &#41;](appliance-monitoring.md)  
+[设备监视&#40;分析平台系统&#41;](appliance-monitoring.md)  
   
