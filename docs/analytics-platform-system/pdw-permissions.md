@@ -1,26 +1,26 @@
 ---
-title: "PDW 权限 (SQL Server PDW)"
+title: PDW 权限 (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: "23"
-ms.openlocfilehash: 49bcb7cf5e8d4bb03acd9db5de87716ec2462191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 23
+ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-permissions"></a>PDW 权限
 本主题介绍的要求和用于管理 SQL Server PDW 的数据库权限的选项。  
@@ -64,11 +64,11 @@ SQL Server PDW 上的数据库引擎权限管理服务器级别通过登录名�
 用户和数据库角色是数据库级别对象，可以通过查看列出[sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)。 仅数据库级权限可以授予数据库主体。  
   
 ## <a name="BackupTypes"></a>默认权限  
-以下列表描述了默认权限：  
+以下列表对默认权限进行了说明：  
   
 -   Using 创建登录名时**CREATE LOGIN**语句，该登录名接收**CONNECT SQL**允许登录的权限连接到 SQL Server PDW。  
   
--   通过使用创建数据库用户时**CREATE USER**语句中，用户会收到**连接 ON DATABASE::***< a s e _ >*权限，允许若要连接到该数据库的用户的登录名。  
+-   通过使用创建数据库用户时**CREATE USER**语句中，用户会收到 **连接 ON DATABASE:: * * * < s e _ >*权限，允许连接到该数据库的登录名作为的用户。  
   
 -   因为从显式权限继承的隐式权限，所有主体，包括 PUBLIC 角色，默认情况下有任何显式或隐式权限。 因此，当存在任何显式权限不时，还有其他任何隐式权限。  
   
@@ -80,7 +80,7 @@ SQL Server PDW 上的数据库引擎权限管理服务器级别通过登录名�
   
 -   事务不需要的权限。 可以运行所有主体**BEGIN TRANSACTION**，**提交**，和**回滚**事务命令。 但是，主体必须具有运行在事务中的每个语句的适当权限。  
   
--   **使用**语句不需要权限。 可以运行所有主体**使用**语句上任何数据库，但若要访问数据库它们必须用户主体拥有数据库中，或者必须启用了 guest 用户。  
+-   USE 语句不需要权限。 可以运行所有主体**使用**语句上任何数据库，但若要访问数据库它们必须用户主体拥有数据库中，或者必须启用了 guest 用户。  
   
 ### <a name="the-public-role"></a>公共角色  
 所有新的设备登录名自动属于 PUBLIC 角色。 PUBLIC 服务器角色具有以下特征：  
@@ -95,7 +95,7 @@ SQL Server PDW 上的数据库引擎权限管理服务器级别通过登录名�
 登录名有权执行特定的操作取决于授予或拒绝登录名、 用户和用户角色的成员的权限。 服务器级权限 (如**CREATE LOGIN**和**VIEW SERVER STATE**) 可供服务器级别主体 （登录名）。 数据库级别权限 (如**选择**从表或**执行**对过程) 可供数据库级主体 （用户和数据库角色）。  
   
 ### <a name="implicit-and-explicit-permissions"></a>隐式和显式权限  
-*显式权限*是**授予**或**拒绝**向通过主体授予的权限**授予**或**拒绝**语句。 中列出了数据库级别权限[sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)视图。 中列出了服务器级权限[sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)视图。  
+显式权限是 GRANT 或 DENY 语句给授予某主体的 GRANT 或 DENY 权限。 中列出了数据库级别权限[sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)视图。 中列出了服务器级权限[sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)视图。  
   
 *隐式权限*是**授予**或**拒绝**主体 （登录名或服务器角色） 已继承的权限。 可以通过以下方式继承权限。  
   
@@ -103,7 +103,7 @@ SQL Server PDW 上的数据库引擎权限管理服务器级别通过登录名�
   
 -   如果主体具有对某个对象父作用域 （如表或整个数据库的权限的架构） 的权限，则主体可以继承从属的对象 （如表） 的权限。  
   
--   主体可以具有的权限，包括从属权限继承权限。 例如**ALTER ANY USER**权限包括**CREATE USER**和**ALTER ON USER::**  *<name>* 权限。  
+-   主体可以具有的权限，包括从属权限继承权限。 例如**ALTER ANY USER**权限包括**CREATE USER**和 **ALTER ON USER:: * * *<name>* 权限。  
   
 ### <a name="determining-permissions-when-performing-actions"></a>执行操作时确定权限  
 确定要分配给主体的权限复杂的过程。 确定隐式权限，因为主体可以是多个角色的成员和权限可以通过角色层次结构中的多个级别时发生复杂性。  
@@ -225,7 +225,7 @@ SQL Server 提供了预配置的 （固定） 数据库级角色，来帮助你�
 SQL Server 自动创建固定的服务器角色。 SQL Server PDW 具有 SQL Server 固定服务器角色的有限的实现。 仅**sysadmin**和**公共**具有作为成员的用户登录名。 **Setupadmin**和**dbcreator**角色内部使用的 SQL Server PDW。 无法添加或从任何角色中删除其他成员。  
   
 ### <a name="sysadmin-fixed-server-role"></a>sysadmin 固定服务器角色  
-sysadmin 固定服务器角色的成员可以在服务器上执行任何活动。 **Sa**登录名是唯一的成员**sysadmin**固定的服务器角色。 无法将其他登录名添加到**sysadmin**固定的服务器角色。 授予**CONTROL SERVER**权限总数接近于中的成员身份**sysadmin**固定的服务器角色。 下面的示例授予**CONTROL SERVER**登录名具有权限的名为 Fay。  
+sysadmin 固定服务器角色的成员可以在服务器上执行任何活动。 **Sa**登录名是唯一的成员**sysadmin**固定的服务器角色。 无法将其他登录名添加到**sysadmin**固定的服务器角色。 授予 CONTROL SERVER 权限近似拥有 sysadmin 固定服务器角色的成员身份。 下面的示例授予**CONTROL SERVER**登录名具有权限的名为 Fay。  
   
 ```sql  
 USE master;  

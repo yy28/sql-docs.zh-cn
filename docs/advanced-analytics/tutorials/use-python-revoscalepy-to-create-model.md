@@ -13,11 +13,11 @@ ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: f54d131868caf332351d7806881ea89238843236
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 21d4ea90d5ee29c68161f9cf2d59ed2d31002d0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>使用与 revoscalepy Python 创建模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,6 @@ ms.lasthandoff: 04/04/2018
 ## <a name="prerequisites"></a>必要條件
 
 + 本课程中使用不同数据比前面的课程。 不需要先完成前面的课程。 但是，如果你已完成前面的课程中，并且已将服务器已配置为运行 Python，使用该服务器和数据库作为计算上下文。
-
 + 若要运行 Python 代码使用 SQL Server 作为计算上下文，请要求 2017年或更高版本的 SQL Server。 此外，你必须显式安装，，然后启用功能，**机器学习服务**，选择 Python 语言选项。
 
     如果你安装 SQL Server 自 2017 年的预发行版本，则应更新到至少的 RTM 版本。 更高版本的服务版本不断扩展和改进 Python 功能。 本教程中的某些功能可能无法在早期的预发行版本。
@@ -52,9 +51,9 @@ ms.lasthandoff: 04/04/2018
 
     ```sql
     CREATE DATABASE sqlpy;
-    GO;
+    GO
     USE sqlpy;
-    GO;
+    GO
     ```
 
     > [!IMPORTANT]

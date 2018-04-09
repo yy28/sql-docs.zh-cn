@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats （Azure SQL 数据库） |Microsoft 文档
 ms.custom: ''
-ms.date: 03/16/2016
+ms.date: 04/06/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: f09cea24068fe63dd1609e26c7835662369d8f0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ ms.lasthandoff: 04/05/2018
 |xtp_storage_percent|**十进制 (5,2)**|存储使用率内存中 OLTP 中的服务层限制的百分比 （报告间隔末尾）。 这包括用于存储以下内存中 OLTP 对象的内存： 内存优化表、 索引和表变量。 它还包括用于处理 ALTER TABLE 操作的内存。<br /><br /> 如果在数据库中未使用内存中 OLTP，则返回 0。|  
 |max_worker_percent|**十进制 (5,2)**|最大并发辅助进程 （请求） 中的数据库的服务层限制百分比表示。|  
 |max_session_percent|**十进制 (5,2)**|中的数据库的服务层限制百分比表示的最大并发会话。|  
-|dtu_limit|**int**|当前最大数据库 DTU 设置为此数据库的在此间隔。|  
+|dtu_limit|**int**|当前最大数据库 DTU 设置为此数据库的在此间隔。 |
+|||
   
 > [!TIP]  
 >  有关这些限制和服务层的更多上下文，请参阅主题[服务层](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)和[服务层功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)。  
@@ -58,13 +59,13 @@ ms.lasthandoff: 04/05/2018
  此视图需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="remarks"></a>注释  
- 返回的数据**sys.dm_db_resource_stats**允许你运行的基本、 标准和高级数据库的服务层/性能级别的 DTU 限制的最大的百分比表示。
+ 返回的数据**sys.dm_db_resource_stats**允许你运行的服务层/性能级别限制的最大的百分比表示。
  
  如果已在最后 60 分钟内将数据库故障转移到另一台服务器，该视图将仅返回主数据库故障转移后此时间段内的数据。  
   
  对于此数据的粒度较低视图，使用**sys.resource_stats**目录视图中的**master**数据库。 此视图每 5 分钟捕获一次数据，并将历史数据保留 14 天。  有关详细信息，请参阅[sys.resource_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
   
- 如果数据库是弹性池的成员，资源统计信息显示为百分比值，表示为数据库中的弹性池配置设置的最大 DTU 限制的百分比。  
+ 如果数据库是弹性池的成员，资源统计信息显示为百分比值，表示为数据库中的弹性池配置设置的最大限制的百分比。  
   
 ## <a name="example"></a>示例  
   

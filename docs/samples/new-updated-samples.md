@@ -1,6 +1,6 @@
 ---
-title: 已更新-SQL Server 文档 DMA |Microsoft 文档
-description: 显示有关最近更改中的文档，有关数据迁移助手 (DMA) 的 Microsoft SQL Server 的更新内容的代码段。
+title: 已更新-SQL Server 文档的示例 |Microsoft 文档
+description: 显示更新内容的最近更改中的文档，有关 Microsoft SQL server 示例的代码的段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: dma
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: 236cd49678974c9bc625be9b363e92b84d803d49
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>新的和最近的更新： 的 SQL Server 的数据迁移助手 (DMA)
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>新的和最近的更新： SQL Server 的示例
 
 
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/08/2018
 
 
 - 更新日期范围：2017-12-03 到 2018-02-03
-- *主题区域：* &nbsp; **数据迁移助手 (DMA) for SQL Server**。
+- *主题区域：* &nbsp; **的 SQL Server 示例**。
 
 
 

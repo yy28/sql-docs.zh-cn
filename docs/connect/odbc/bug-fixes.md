@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>修复 bug 的列表
 
@@ -38,10 +38,10 @@ ms.lasthandoff: 04/05/2018
 - 修复了极少数 32 位 Windows 上时将转换的浮点数转化为整数
 - 修复了问题其中将 double 插入使用始终加密的十进制字段上将不返回数据截断错误
 - 在 MacOS 安装程序修复警告
+- 修复了不正确状态发送到 SQL Server 会话恢复尝试期间连接复原和连接池都启用时，会导致删除的服务器的会话
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC 驱动程序 17 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- 修复了不正确状态发送到 SQL Server 会话恢复尝试期间连接复原和连接池都启用时，会导致删除的服务器的会话
 - 修复了 bug 的位置时使用 Kerberos 身份验证，大容量插入可能失败，出现"拒绝访问"错误
 - 针对 unixODBC bug 版本低于 2.3.1 中存在已删除的解决方法 （驱动程序翻倍传递给 unixODBC 某些缓冲区的大小）
 - 固定连接复原 （重新连接） 时使用 ColumnEncryption 悬挂 = 已启用

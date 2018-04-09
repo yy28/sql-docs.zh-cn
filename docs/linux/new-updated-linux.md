@@ -1,6 +1,6 @@
 ---
-title: "已更新-Linux 文档上的 SQL Server |Microsoft 文档"
-description: "显示有关最近更改中的文档，在 Linux 上的 Microsoft SQL server 的更新内容的代码段。"
+title: 已更新-Linux 文档上的 SQL Server |Microsoft 文档
+description: 显示有关最近更改中的文档，在 Linux 上的 Microsoft SQL server 的更新内容的代码段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,13 +8,13 @@ ms.topic: article
 ms.custom: sql-linux,UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: 
+ms.component: ''
 ms.date: 02/03/2018
-ms.openlocfilehash: 827399587a8147c59caf6bf31bf8b10f10c83211
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3395059669c3bcf406e8542c97bd87b80479fccd
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新的和最近的更新： Linux 文档上的 SQL Server
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/15/2018
 
 
 
-- *日期范围的更新：* &nbsp; **自 2017 年 1-12-03** &nbsp;到&nbsp; **2018年-02-03**
+- 更新日期范围：2017-12-03 到 2018-02-03
 - *主题区域：* &nbsp; **在 Linux 上的 Microsoft SQL Server**。
 
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/15/2018
 
 如果满足这些条件，承载主副本的服务器失败，则可用性组将将所有权更改为同步的副本。 同步副本的行为 (的其中可以有三个总： 一个主节点和两个辅助副本) 进一步可通过控制`required_synchronized_secondaries_to_commit`。 这在 Windows 和 Linux 上配合承载个可用性组，但配置完全不同。 在 Linux 上，通过该可用性组资源本身上的群集自动配置的值。
 
-仅配置副本和仲裁
+**仅配置副本和仲裁**
 
 
 此外新在 SQL Server 自 2017 年截至 CU1 是仅配置副本。 因为 Pacemaker 不同于 WSFC，尤其是当涉及到仲裁和需要 STONITH，只需两个节点配置将无法工作时涉及到可用性组。 Fci，提供 Pacemaker 的仲裁机制可以是不错，因为所有 FCI 故障转移仲裁都发生在群集层。 对于可用性组，在 Linux 下的仲裁都会在 SQL Server 中，所有元数据的存储位置。 这是仅配置副本就会起作用。
@@ -159,7 +159,7 @@ ms.lasthandoff: 02/15/2018
     or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
     ```
 
-设计包
+**设计包**
 
 
 **连接到 ODBC 数据源**。 借助上 Linux CTP 2.1 刷新及更高版本的 SSIS，SSIS 包可以在 Linux 上使用 ODBC 连接。 此功能已测试 SQL Server 和 MySQL ODBC 驱动程序，但还需要使用任何 Unicode ODBC 驱动程序观察到 ODBC 规范。 在设计时，你可以提供一个 DSN 或连接字符串以连接到 ODBC 数据中;你还可以使用 Windows 身份验证。 有关详细信息，请参阅[博客文章在 Linux 上的宣布推出的 ODBC 支持](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)。
@@ -170,32 +170,32 @@ ms.lasthandoff: 02/15/2018
 
 
 
-## <a name="similar-articles-about-new-or-updated-articles"></a>有关新的或更新的文章的类似文章
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新的文章的类似文章
 
 本节列出了 GitHub.com 公共存储库 ([MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)) 内其他主题区域中与最近更新的文章非常相似的文章。
 
 
-#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域的*执行*新或最近已更新的文章
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主题区域具有新的或最近更新的文章
 
 
-- [新 + 更新 (1 + 3):&nbsp; **sql 高级分析**文档](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (0 + 1):&nbsp; **SQL 的分析平台系统**文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新 + 更新 (0 + 1):&nbsp; **连接到 SQL**文档](../connect/new-updated-connect.md)
-- [新 + 更新 (0 + 1):&nbsp; **sql 数据库引擎**文档](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (12 + 1): **sql Integration Services**文档](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (6 + 2):&nbsp; **sql Linux**文档](../linux/new-updated-linux.md)
-- [新 + 更新 (15 + 0):**适用于 SQL PowerShell**文档](../powershell/new-updated-powershell.md)
-- [新 + 更新 (2 + 9):&nbsp; **sql 的关系数据库**文档](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (1 + 0):&nbsp; **sql Reporting Services**文档](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (1 + 1):&nbsp; **SQL 操作 Studio**文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新 + 更新 (1 + 1):&nbsp; **Microsoft SQL Server**文档](../sql-server/new-updated-sql-server.md)
-- [新 + 更新 (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)**文档](../ssdt/new-updated-ssdt.md)
-- [新 + 更新 (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)**文档](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 2):&nbsp; **TRANSACT-SQL**文档](../t-sql/new-updated-t-sql.md)
+- [新文章和更新的文章 (1+3)：SQL&nbsp;高级分析文档](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;分析平台系统文档](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新文章和更新的文章 (0+1)：连接到&nbsp;SQL 文档](../connect/new-updated-connect.md)
+- [新文章和更新的文章 (0+1)：SQL&nbsp;数据库引擎文档](../database-engine/new-updated-database-engine.md)
+- [新文章和更新的文章 (12+1)：SQL Integration Services 文档](../integration-services/new-updated-integration-services.md)
+- [新文章和更新的文章&nbsp;(6+2)：Linux for SQL 文档](../linux/new-updated-linux.md)
+- [新文章和更新的文章 (15+0)：PowerShell for SQL 文档](../powershell/new-updated-powershell.md)
+- [新文章和更新的文章&nbsp;(2+9)：SQL 关系数据库文档](../relational-databases/new-updated-relational-databases.md)
+- [新文章和更新的文章&nbsp;(1+0)：SQL Reporting Services 文档](../reporting-services/new-updated-reporting-services.md)
+- [新文章和更新的文章&nbsp;(1+1)：SQL Operations Studio 文档](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章和更新的文章&nbsp;(1+1)：Microsoft SQL Server 文档](../sql-server/new-updated-sql-server.md)
+- [新文章和更新的文章&nbsp;(0+1)：SQL Server Data Tools (SSDT) 文档](../ssdt/new-updated-ssdt.md)
+- [新文章和更新的文章&nbsp;(1+2)：SQL Server Management Studio (SSMS) 文档](../ssms/new-updated-ssms.md)
+- [新文章和更新的文章&nbsp;(0+2)：Transact-SQL 文档](../t-sql/new-updated-t-sql.md)
 
 
 
-#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>使用者执行的区域*不*有任何新最近更新或文章
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主题区域没有新的或最近更新的文章
 
 
 - [新文章和更新的文章 (0+0)：SQL 数据迁移助手 (DMA) 文档](../dma/new-updated-dma.md)
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/15/2018
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新 + 更新 (0 + 0):**多维表达式 (MDX) sql**文档](../mdx/new-updated-mdx.md)
 - [新 + 更新 (0 + 0): **sql 的 ODBC （开放式数据库连接）**文档](../odbc/new-updated-odbc.md)
-- [新 + 更新 (0 + 0): **SQL 的示例**文档](../sample/new-updated-sample.md)
+- [新 + 更新 (0 + 0): **SQL 的示例**文档](../samples/new-updated-samples.md)
 - [新 + 更新 (0 + 0): **SQL Server 迁移助手 (SSMA)**文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新 + 更新 (0 + 0): **SQL 的 XQuery**文档](../xquery/new-updated-xquery.md)
