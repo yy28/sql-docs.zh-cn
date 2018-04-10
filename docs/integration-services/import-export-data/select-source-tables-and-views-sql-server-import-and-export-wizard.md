@@ -1,30 +1,30 @@
 ---
-title: "选择源表和视图（SQL Server 导入和导出向导）| Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: 选择源表和视图（SQL Server 导入和导出向导）| Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-caps.latest.revision: 
+caps.latest.revision: 96
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 600e734c11a597cdcbae0279e1604bd96ccfb06f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b2424f3f7ad290a3ae81c7b97a39abf55f52e771
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>选择源表和源视图（SQL Server 导入和导出向导）
   指定要复制整个表或提供查询之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“选择源表和源视图” 。 在此页上，选择想要复制的现有表和视图。 然后将源表映射到新的或现有的目标表。 或者，还可查看单个列的映射并预览示例数据。
@@ -73,6 +73,9 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="select-source-and-destination-tables-for-excel"></a>选择 Excel 的源表和目标表
 
+> [!IMPORTANT]
+> 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
+
 ### <a name="excel-source-tables"></a>Excel 源表
 Excel 数据源的源表和视图的列表包括两种类型的 Excel 对象。
 -   **工作表**。 工作表名称后跟美元符号 ($) ，例如， **“Sheet1$”**。
@@ -80,41 +83,21 @@ Excel 数据源的源表和视图的列表包括两种类型的 Excel 对象。
 
 如果想要加载来自特定的、未命名的单元格区域的数据（或将数据加载到其中）- 例如，来自或加载到 **[Sheet1$ A1: B4]**，则必须编写查询。 后退到“指定表复制或查询”  页，选择“编写查询以指定要传输的数据” 。
 
-#### <a name="prepare-the-excel-source-data"></a>准备 Excel 源数据
-无论是否将工作表或区域指定为源表，该驱动程序都将读取从工作表或区域左上角第一个非空单元开始的连续  单元块。 因此，源数据中不能有空行。 例如，列标题和数据行之间不能有空行。 如果工作表顶部数据上面的标题后跟有空行，则无法查询该工作表。 在 Excel 中，必须为区域内的数据分配名称，并查询命名区域而非工作表。
-
 ### <a name="excel-destination-tables"></a>Excel 目标表
 如果将数据导出到 Excel，可以通过以下三种方式之一来指定目标。
 -   **工作表。** 若要指定工作表，请将 $ 字符附加到表名称的末尾，并用分隔符包围字符串 - 例如， **[Sheet1$]**。
 -   **命名区域。** 若要指定命名区域，只需使用区域名称 - 例如， **MyDataRange**。
 -   **未命名区域。** 若要指定未命名的单元格区域，请将 $ 字符附加到表名称的末尾，添加区域说明，并用分隔符包围字符串 - 例如， **[Sheet1$ A1: B4]**。
 
-## <a name="special-considerations-for-excel-sources-and-destinations"></a>Excel 源和目标的特殊注意事项
-使用 Excel 作为源或目标时，最好单击“编辑映射”  并在“列映射”  页查看数据类型映射。 
-
-**Excel 工作簿中的数据类型**。 Excel 不是一个典型的数据库。 它的列不具有固定的数据类型。 向导仅能识别 Excel 中一组有限的数据类型 - 数字、货币、布尔值，日期/时间、字符串（最多 255 个字符）和备注（255 个字符以上）。 向导对某个现有 Excel 数据源中一定数量的行（默认情况下为前八行）进行采样以推测每列的数据类型。
-
-当向导必须执行从 Excel 加载或加载到 Excel 的显式数据类型转换时，它通常会显示“查看数据类型映射”  页，你可以在其中查看这些转换。 这些转换可能包括以下内容。
--   双精度 Excel 数值列与其他类型的数值列之间的转换。
--   在 255 个字符的 Excel 字符串列和不同长度的字符串列之间转换。
--   Unicode Excel 字符串列与使用特定代码页的非 Unicode 字符串列之间的转换。
-
-### <a name="special-considerations-for-excel-sources"></a>Excel 源的特殊注意事项
-**导入的数据中的 null 值或缺少值**。 当 Excel 列在由向导采样的前八行中似乎包含混合数据类型时（例如，数值与文本值混合），向导会提取大多数数据的类型作为列的数据类型，并为包含其他类型数据的单元格返回 NULL 值。 无法更改向导的此行为。
-
-**导入的数据中截断的字符串**。 向导在确定 Excel 列是否包含文本数据时，它将基于前 8 行中采样的最长值来选择列的数据类型（字符串或备注）。 如果向导没有在其采样的行中发现任何长于 255 个字符的值，那么它会将该列视为 255 个字符的字符串的列而不是备注列，并截断长于 255 个字符的值。 若要从备注列导入数据而无需截断，则必须确保备注列在由向导采样的前八行中至少包含一个超过 255 个字符的值。
-
-### <a name="special-considerations-for-excel-destinations"></a>Excel 目标的特殊注意事项
-**指定现有范围**。 指定现有范围为目标时，如果范围具有的列比源数据少，则将收到错误消息。 但是，如果指定的范围具有的行比源数据少，则向导将继续写入行并扩展范围定义以匹配新的行数。
-
-**保存备注 (ntext) 数据**。 若要将大于 255 个字符的字符串成功地保存到 Excel 列中，向导必须将该目标列的数据类型识别为 **memo** ，而不是 **string**。
--   如果目标表中已存在数据行，则由向导采样的前八行的备注列中必须至少包含一个长度大于 255 个字符的值的行。
--   如果目标表由向导创建，则 CREATE TABLE 语句必须使用 LONGTEXT（或其同义词之一）作为备注列的数据类型。 根据需要，通过单击“列映射”页上的“创建目标表”选项旁的“编辑 SQL”，检查 CREATE TABLE 语句并对其进行修订。
+> [!TIP]
+> 使用 Excel 作为源或目标时，最好单击“编辑映射”  并在“列映射”  页查看数据类型映射。 
 
 ## <a name="whats-next"></a>下一步是什么？  
  选择现有表和视图以进行复制并将它们映射到其目标之后，下一页是“保存并运行包” 。 在此页上，你可以指定是否要立即运行复制操作。 根据你的配置，或许还可以保存向导创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，以便对其进行自定义并在以后重新使用。 有关详细信息，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
  
  ## <a name="see-also"></a>另请参阅
-[导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
+[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)
+
 
 

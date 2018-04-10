@@ -1,15 +1,15 @@
 ---
-title: "使用脚本任务处理 Excel 文件 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
+title: 使用脚本任务处理 Excel 文件 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-task-examples
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,39 +20,30 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a533795d6d6017c885b887e35b8e996ab82493df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。 可以轻松修改这些示例以处理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 访问接口支持的所有其他基于文件的数据源。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。
   
- [配置用于测试示例的包](#configuring)  
-  
- [示例 1：检查 Excel 文件是否存在](#example1)  
-  
- [示例 2：检查 Excel 表是否存在](#example2)  
-  
- [示例 3：获取文件夹中的 Excel 文件的列表](#example3)  
-  
- [示例 4：获取 Excel 文件中的表的列表](#example4)  
-  
- [显示示例的结果](#testing)  
-  
-> [!NOTE]  
->  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
-  
+> [!TIP]  
+>  如果希望创建可重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
+
+> [!IMPORTANT]
+> 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
+ 
 ##  <a name="configuring"></a> 配置用于测试示例的包  
  您可以配置单个包来测试本主题中的所有示例。 这些示例使用许多相同的包变量和相同的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类。  
   
-#### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>将包配置为用于本主题中的示例  
+### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>将包配置为用于本主题中的示例  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中创建新的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目，并打开默认的包进行编辑。  
   
@@ -85,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 ##  <a name="example1"></a> 示例 1 说明：检查 Excel 文件是否存在  
  本示例可确定 `ExcelFile` 变量中指定的 Excel 工作簿文件是否存在，然后根据该结果设置 `ExcelFileExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
-#### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
+### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
 1.  将新的脚本添加到包中，并将其名称更改为 ExcelFileExists。  
   
@@ -155,7 +146,7 @@ public class ScriptMain
 ##  <a name="example2"></a> 示例 2 说明：检查 Excel 表是否存在  
  本示例可确定 `ExcelTable` 变量中指定的 Excel 工作表或命名范围是否存在于 `ExcelFile` 变量中指定的 Excel 工作簿文件中，然后根据该结果设置 `ExcelTableExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
-#### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
+### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
 1.  将新的脚本任务添加到包，并将其名称更改为 ExcelTableExists。  
   
@@ -262,7 +253,7 @@ public class ScriptMain
 ##  <a name="example3"></a> 示例 3 说明：获取文件夹中的 Excel 文件的列表  
  本示例使用由 `ExcelFolder` 变量值指定的文件夹中找到的 Excel 文件的列表来填充数组，然后将该数组复制到 `ExcelFiles` 变量。 您可以使用 Foreach 源变量枚举器循环访问数组中的文件。  
   
-#### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
+### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
 1.  将新的脚本任务添加到包，并将其名称更改为 GetExcelFiles。  
   
@@ -337,7 +328,7 @@ public class ScriptMain
 > [!NOTE]  
 >  Excel 工作簿中的表列表同时包括工作表（具有 $ 后缀）和指定范围。 如果要从列表中只筛选出工作表或指定范围，则必须添加其他代码来实现这一点。  
   
-#### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
+### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
 1.  将新的脚本任务添加到包中，并将其名称更改为 GetExcelTables。  
   
@@ -446,7 +437,7 @@ public class ScriptMain
 ##  <a name="testing"></a> 显示示例的结果  
  如果已在同一个包中配置本主题的所有示例，则可以将所有脚本任务连接到用于显示所有示例输出的其他脚本任务。  
   
-#### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>配置用于显示本主题中的示例输出的脚本任务  
+### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>配置用于显示本主题中的示例输出的脚本任务  
   
 1.  将新的脚本任务添加到包中，并将其名称更改为 DisplayResults。  
   
@@ -550,7 +541,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Excel 连接管理器](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)  
  [使用 Foreach 循环容器循环遍历 Excel 文件和表](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

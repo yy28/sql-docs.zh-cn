@@ -1,16 +1,16 @@
 ---
 title: CREATE ROUTE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -29,19 +29,19 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 
+caps.latest.revision: 42
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8ef29633b2585a139fdd9e009458f36f38f00c56
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   在当前数据库的路由表中添加一个新路由。 对于外发消息，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 通过检查本地数据库中的路由表来确定路由。 对于在另一个实例中发起的会话的消息（包括要转发的消息），[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将在 msdb 中检查路由。  
   
@@ -72,10 +72,10 @@ WITH
  替换为  
  介绍用于定义要创建的路由的子句。  
   
- SERVICE_NAME = 'service_name'  
+ SERVICE_NAME = 'service_name'****  
  指定此路由指向的远程服务的名称。 service_name 必须与远程服务使用的名称完全匹配。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 service_name 匹配。 也就是说，这种比较区分大小写，并且不考虑当前的排序规则。 如果省略 SERVICE_NAME，则此路由将与任何服务名称匹配，但比指定 SERVICE_NAME 的路由的匹配优先级低。 服务名称为 'SQL/ServiceBroker/BrokerConfiguration' 的路由是指向 Broker Configuration Notice 服务的路由。 指向此服务的路由不能指定 Broker 实例。  
   
- BROKER_INSTANCE = 'broker_instance_identifier'  
+ BROKER_INSTANCE = 'broker_instance_identifier'****  
  指定承载目标服务的数据库。 broker_instance_identifier 参数必须是远程数据库的 Broker 实例标识符，该标识符可以通过在所选数据库中运行以下查询获得：  
   
 ```  
@@ -89,8 +89,10 @@ WHERE database_id = DB_ID()
  LIFETIME =route_lifetime  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在路由表中保留路由的时间（秒）。 在生存期结束后，相应的路由即过期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为新会话选择路由时将不再考虑该路由。 如果省略此子句，则 route_lifetime 为 NULL，并且路由始终不过期。  
   
- ADDRESS ='next_hop_address'  
- 指定此路由的网络地址。 next_hop_address 按以下格式指定 TCP/IP 地址：  
+ ADDRESS ='next_hop_address'****  
+对于 SQL 数据库托管实例，`ADDRESS` 必须是本地的。 
+
+指定此路由的网络地址。 next_hop_address 按以下格式指定 TCP/IP 地址：  
   
  TCP://{ dns_name | netbios_name | ip_address } :port_number  
   
@@ -110,7 +112,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  当路由为 next_hop_address 指定 'TRANSPORT' 时，根据服务名称中的网络地址确定网络地址。 指定了 'TRANSPORT' 的路由不能指定服务名称或 Broker 实例。  
   
- MIRROR_ADDRESS ='next_hop_mirror_address'  
+ MIRROR_ADDRESS ='next_hop_mirror_address'****  
  指定有一个镜像数据库驻留在 next_hop_address 的镜像数据库的网络地址。 next_hop_mirror_address 按以下格式指定 TCP/IP 地址：  
   
  TCP://{ dns_name | netbios_name | ip_address } : port_number  

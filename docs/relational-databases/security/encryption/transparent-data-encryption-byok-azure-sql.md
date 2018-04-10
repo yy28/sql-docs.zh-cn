@@ -17,13 +17,13 @@ ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 03/16/2018
+ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>使用 Azure SQL 数据库和数据仓库的“创建自己的密钥”（预览）支持进行透明数据加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -109,33 +109,64 @@ ms.lasthandoff: 03/21/2018
 
 ![单一服务器 HA 且没有 geo-dr](./media/transparent-data-encryption-byok-azure-sql/SingleServer_HA_Config.PNG)
 
-在第二种情况中，需要基于现有 SQL 数据库故障转移组或数据库的活动异地复制副本配置冗余 Azure Key Vault，从而保持 Azure Key Vault 中 TDE 保护程序的高可用性。  每个异地复制服务器都需要一个单独的密钥保管库，理想情况下和它们的服务器位于同一个 Azure 区域。 如果因为一个区域发生中断而无法访问主数据库，且触发了故障转移，则可以使用辅助密钥保管库让辅助数据库进行接管。  
+## <a name="how-to-configure-geo-dr-with-azure-key-vault"></a>如何使用 Azure Key Vault 配置 Geo-DR
+
+要保持用于加密数据库的 TDE 保护程序的高可用性，需要基于现有的或所需的 SQL 数据库故障转移组或活动异地复制实例配置冗余 Azure Key Vault。  每个异地复制服务器都需要一个单独的 Key Vault，该 Key Vault 必须与服务器位于同一个 Azure 区域。 如果因为一个区域发生中断而无法访问主数据库，且触发了故障转移，则可以使用辅助密钥保管库让辅助数据库进行接管。 
+ 
+对于异地复制的 Azure SQL 数据库，需要以下 Azure Key Vault 配置：
+- 区域中需要有一个具有 Key Vault 的主数据库和一个具有 Key Vault 的辅助数据库。 
+- 至少需要一个辅助数据库，最多支持四个辅助数据库。 
+- 不支持链式辅助数据库。
+
+以下部分将详细说明安装和配置步骤。 
+
+### <a name="azure-key-vault-configuration-steps"></a>Azure Key Vault 配置步骤
+
+- 安装 [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
+- 使用 Key Vault 中的 [PowerShell 启用“软删除”属性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell)，在两个不同区域创建两个 Azure Key Vault（该选项在 AKV 门户中还不可用，但 SQL 需要该选项） 
+- 在第一个 Key Vault 中创建新的密钥：  
+  - RSA/RSA HSA 2048 密钥 
+  - 永久有效 
+  - 密钥已启用且具备执行 get、wrap key 和 unwrap key 操作的权限 
+- 备份主密钥，并将该密钥还原到第二个 Key Vault 中。  请参阅 [BackupAzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) 和 [Restore-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/restore-azurekeyvaultkey?view=azurermps-5.5.0)。 
+
+### <a name="azure-sql-database-configuration-steps"></a>Azure SQL 数据库配置步骤
+
+无论从新的 SQL 部署开始，还是使用现有的 SQL Geo-DR 部署，以下配置步骤都不相同。  我们首先概述新部署的配置步骤，然后说明如何将存储在 Azure Key Vault 中的 TDE 保护程序分配到已创建 Geo-DR 链接的现有部署。 
+
+新部署的步骤：
+- 在与之前创建的 Key Vault 相同的两个区域中创建两个逻辑 SQL Server。 
+- 选择逻辑服务器 TDE 窗格，并用于每个逻辑 SQL Server：  
+   - 在相同区域中选择 AKV 
+   - 选择密钥用作 TDE 保护程序 - 每个服务器都将使用该 TDE 保护程序的本地副本。 
+   - 在门户中执行此操作将为逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限）创建 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，请勿删除此标识符。  可通过删除 Azure Key Vault 中的权限来撤销访问权限。 对于逻辑 SQL Server（用于分配访问 Key Vault 的逻辑 SQL Server 权限），请勿删除此标识符。  可通过删除 Azure Key Vault 中的权限来撤销访问权限。 
+- 创建主数据库。 
+- 请按照[活动异地复制指南](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)完成方案，此步骤将创建辅助数据库。
 
 ![故障转移组和 geo-dr](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
 
-若要在故障转移期间实现对 Azure Key Vault 中 TDE 保护程序的持续访问，则必须在复制数据库或故障转移至辅助服务器之前就对此进行配置。 主服务器和辅助服务器都必须存储所有其他 Azure Key Vault 中的 TDE 保护程序的副本，也就是说，在这个例子中，两个密钥保管库存储了相同的密钥。
-
-geo-dr 方案中的冗余需要包含辅助密钥保管库的辅助数据库，并且支持多达四个辅助数据库。  链接意味着不支持为辅助密钥保管库创建辅助数据库。  在初始设置期间，服务确认已为主密钥保管库和辅助密钥保管库正确设置权限。  保持这些权限并定期测试其仍处于正常状态至关重要。
-
 >[!NOTE]
->在向主服务器和辅助服务器分配服务器标识时，必须首先向辅助服务器分配标识。
+>请务必先确保两个 Key Vault 显示相同的 TDE 保护程序，再继续创建数据库之间的异地链接。
 >
 
-若要将一个密钥保管库中的现有密钥添加至另一个密钥保管库，请使用 [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet。
+针对已配置 Geo-DR 的现有 SQL DB 部署的步骤：
 
- ```powershell
-   <# Include the version guid in the KeyId #>
-   Add-AzureRmSqlServerKeyVaultKey `
-   -KeyId <KeyVaultKeyId> `
-   -ServerName <LogicalServerName> `
-   -ResourceGroup <SQLDatabaseResourceGroupName>
-   ```
+因为已存在逻辑 SQL Server，并已分配主数据库和辅助数据库，所以配置 Azure Key Vault 的步骤必须按照以下顺序执行： 
+- 从托管辅助数据库的逻辑 SQL Server 开始： 
+   - 分配位于相同区域的 Key Vault 
+   - 分配 TDE 保护程序 
+- 现在转到托管主数据库的逻辑 SQL Server： 
+   - 选择与辅助 DB 使用的相同的 TDE 保护程序
+   
+![故障转移组和 geo-dr](./media/transparent-data-encryption-byok-azure-sql/geo_DR_ex_config.PNG)
 
 >[!NOTE]
->密钥保管库名称和密钥名称的组合字符长度不能超过 94 个字符。
+>将 Key Vault 分配到服务器时，请务必从辅助服务器开始。  在第二步中，将 Key Vault 分配到主服务器并升级 TDE 保护程序时，Geo-DR 链接将继续工作，因为此时复制的数据库使用的 TDE 保护程序对两台服务器都可用。
 >
+
+使用 Azure Key Vault 中客户托管的密钥为 SQL 数据库 Geo-DR 方案启用 TDE 之前，请务必保证在同一区域创建和维护具有相同内容的两个 Azure Key Vault，该区域将用于 SQL 数据库异地复制。  “相同内容”特指这两个 Key Vault 都必须包含相同的 TDE 保护程序副本，以便两个服务器都具有对所有数据库使用的 TDE 保护程序的访问权限。  具体而言，两个 Key Vault 必须保持同步，即密钥轮替之后它们必须包含 TDE 保护程序的相同副本，并保留用于日志文件或备份的旧版密钥，TDE 保护程序必须保持相同的密钥属性，而 Key Vault 必须保持对 SQL 同样的访问权限。  
  
-按照[活动异地复制概述](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)中的步骤来使用这些服务器配置活动异地复制并触发故障转移。 
+请按照[活动异地复制概述](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)中的步骤测试和触发故障转移，应定期执行此操作以确认保留了 SQL 对两个 Key Vault 的访问权限。 
 
 
 ### <a name="backup-and-restore"></a>备份和还原

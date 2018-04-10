@@ -1,30 +1,30 @@
 ---
-title: "提供源查询（SQL Server 导入和导出向导）| Microsoft Docs"
-ms.custom: 
+title: 提供源查询（SQL Server 导入和导出向导）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4399fdeb68ee0768ac083e0193ae0513b221021d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 485faeca41d64c744a091c0efd4be8a05109a6b8
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供源查询（SQL Server 导入和导出向导）
 如果指定要提供查询以选择要复制的数据，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“提供源查询” 。 在此页上，可编写并测试选择要从数据源复制到目标的数据的 SQL 查询。 还可以粘贴已保存的查询的文本或从文件加载它。
@@ -64,7 +64,10 @@ WHERE CommissionPct > 0.015
  使用“打开”对话框选择包含 SQL 查询的文本的已保存文件。 选择一个文件可以将该文件中的文本复制到“SQL 语句”  文本框中。  
  
 ## <a name="excelQueries"></a> 为 Excel 提供源查询
-### <a name="specify-excel-objects-in-queries"></a>在查询中指定 Excel 对象
+
+> [!IMPORTANT]
+> 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
+
 可查询三种类型的 Excel 对象。
 -   **工作表。** 若要查询工作表，请将 $ 字符附加到表名称的末尾，并用分隔符包含字符串 - 例如， **[Sheet1$]**。
 
@@ -83,9 +86,6 @@ WHERE CommissionPct > 0.015
     ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
-
-### <a name="prepare-the-excel-source-data"></a>准备 Excel 源数据
-无论是否将工作表或区域指定为源表，该驱动程序都将读取从工作表或区域左上角第一个非空单元开始的连续  单元块。 因此，源数据中不能有空行。 例如，列标题和数据行之间不能有空行。 如果工作表顶部数据上面的标题后跟有空行，则无法查询该工作表。 在 Excel 中，必须为区域内的数据分配名称，并查询命名区域而非工作表。
 
 ## <a name="whats-next"></a>下一步是什么？  
  编写并测试选择要从复制的数据的 SQL 查询之后，下一页取决于数据目标。  

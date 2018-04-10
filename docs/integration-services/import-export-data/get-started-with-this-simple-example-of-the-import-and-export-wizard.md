@@ -1,28 +1,28 @@
 ---
-title: "导入和导出向导的简单示例入门 | Microsoft Docs"
-ms.custom: 
+title: 导入和导出向导的简单示例入门 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: a684f719495083d5ca4e79a2fbc0213ab83a95a6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>导入和导出向导的简单示例入门
 通过浏览常见方案 - 从 Excel 电子表中将数据导入 SQL Server 数据库，了解 SQL Server 导入和导出向导中的内容。 即使计划使用其他源和目标，也可通过本主题最大程度地了解所需的向导相关内容。
@@ -62,9 +62,12 @@ ms.lasthandoff: 02/19/2018
 ## <a name="step-3---pick-excel-as-your-data-source"></a>步骤 3 - 选取 Excel 作为数据源
 在下一页“选择数据源”中，选取 Microsoft Excel 作为数据源。 然后浏览选取 Excel 文件。 最后，指定用于创建该文件的 Excel 版本。
 
+> [!IMPORTANT]
+> 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
+
 ![选择 Excel 数据源](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-有关如何连接到 Excel 的详细信息，请参阅[连接到 Excel 数据源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。 有关向导中这一页的详细信息，请参阅[选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
+有关向导中这一页的详细信息，请参阅[选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>步骤 4 - 选取 SQL Server 作为目标
 在下一页“选择目标”中，选择 Microsoft SQL Server 作为目标，方法是在列表中选择一个用于连接到 SQL Server 的数据提供程序。 在本示例中，选择“用于 SQL Server 的 .NET Framework 数据提供程序”。
@@ -162,4 +165,4 @@ ms.lasthandoff: 02/19/2018
 
 -   **了解如何连接到数据源和目标。** 如需有关如何连接到数据的信息，请从此处列表中选择所需的页面：[使用 SQL Server 导入和导出向导连接到数据源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。 其中为几个常用数据源中的每一个数据源专门设有一页文档信息页。
 
-
+-   **了解有关从 Excel 加载数据和将数据加载到 Excel 中的详细信息。** 如果想要了解连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。

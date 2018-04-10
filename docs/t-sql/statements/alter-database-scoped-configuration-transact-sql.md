@@ -1,16 +1,16 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/04/2018
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f7bac70742dee98e760f93c3345df0546a058932
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  此语句在单个数据库级别启用多个数据库配置设置。 此语句可用于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 以及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这些设置包括：  
+  此语句在单个数据库级别启用多个数据库配置设置。 此语句可用于 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 以及 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这些设置包括：  
   
 - 清除过程缓存。  
 - 根据最适合特定主数据库的情况，将 MAXDOP 参数设置为该数据库的任意值（1、2、…），为使用的所有辅助数据库（例如，针对报告查询）设置不同的值（例如 0）。  
@@ -46,7 +46,8 @@ ms.lasthandoff: 01/25/2018
 - 在数据库级别启用或禁用参数探查。
 - 在数据库级别启用或禁用查询优化修补程序。
 - 在数据库级别启用或禁用标识缓存。
-- 在第一次编译批处理时启用或禁用要存储在缓存中的已编译计划存根。    
+- 在第一次编译批处理时启用或禁用要存储在缓存中的已编译计划存根。  
+- 启用或禁用对本机编译的 T-SQL 模块的执行统计信息收集。
   
  ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,6 +70,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
 }  
 ```  
   
@@ -133,7 +136,7 @@ CLEAR PROCEDURE_CACHE
 
 IDENTITY_CACHE = { ON | OFF }  
 
-**适用对象**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**适用对象**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 在数据库级别启用或禁用标识缓存。 默认值为 ON。 标识缓存用于提高具有标识列的表的 INSERT 性能。 为了避免服务器意外重启或故障转移到辅助服务器时出现标识列值的差值，请禁用 IDENTITY_CACHE 选项。 该选项与现有[跟踪标志 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 类似，但前者可在数据库级别设置，而不只是可在服务器级别设置。   
 
@@ -142,9 +145,27 @@ IDENTITY_CACHE = { ON | OFF }
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }  
 
-适用于：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+适用于：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 
 
 第一次编译批处理时，启用或禁用要存储在缓存中的已编译计划存根。 默认为 OFF。 为数据库启用了数据库作用域内配置 OPTIMIZE_FOR_AD_HOC_WORKLOADS 后，已编译计划存根可在第一次编译批处理时存储在缓存中。 与完全编译的计划大小相比，计划存根的内存占用空间更小。  如果编译或再次执行批处理，则会删除已编译计划存根，并将其替换为完全编译的计划。
+
+XTP_PROCEDURE_EXECUTION_STATISTICS  = { ON | OFF }  
+
+适用于：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 
+
+启用或禁用对当前数据库的本机编译的 T-SQL 模块在模块级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 中。
+
+如果该选项为“开”，或通过 [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 启用了统计信息收集，则收集对本机编译的 T-SQL 模块的模块级别执行统计信息。
+
+XTP_QUERY_EXECUTION_STATISTICS  = { ON | OFF }  
+
+适用于：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+
+启用或禁用对当前数据库的本机编译的 T-SQL 模块语句级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 和[查询存储](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)中。
+
+如果该选项为“开”，或通过 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用了统计信息收集，则收集对本机编译的 T-SQL 模块的语句级别执行统计信息。
+
+有关本机编译的 T-SQL 模块的性能监视的详细信息，请参阅[监视本机编译的存储过程的执行](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
 
 ##  <a name="Permissions"></a> Permissions  
  需要针对数据库的   

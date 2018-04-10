@@ -1,24 +1,24 @@
 ---
-title: "连接到 Azure 上的 SSISDB 目录数据库 | Microsoft Docs"
+title: 连接到 Azure 上的 SSISDB 目录数据库 | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 218890a01c98c51c570255dce0ad2c34bc5c26db
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 148cd6e05063902fb0e171e498ce08c7e05b92e7
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>连接到 Azure 上的 SSISDB 目录数据库
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/08/2018
 > 如果尚未在 Azure 数据工厂版本 2 中创建 Azure-SSIS Integration Runtime，则无法在 Azure SQL 数据库中创建 SSISDB 目录数据库。 这是因为，在 Azure 上运行 SSIS 包的是 Azure-SSIS IR。 有关详细信息，请参阅[将 SSIS 包部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
 
 ## <a name="prerequisites"></a>必备条件
-开始之前，请确保有 SQL Server Management Studio 版本 17.2 或更高版本。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+开始之前，请确保具有 SQL Server Management Studio (SSMS) 版本 17.2 或更高版本。 如果 SSISDB 目录数据库托管在 SQL 数据库托管实例（预览版）中，请确保安装了 17.6 版或更高版本的 SSMS。 若要下载 SSMS 最新版本，请参阅[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>从 Azure 门户获取连接信息
 1. 登录到 [Azure 门户](https://portal.azure.com/)。

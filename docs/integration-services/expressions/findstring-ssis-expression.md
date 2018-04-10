@@ -1,30 +1,30 @@
 ---
-title: "FINDSTRING（SSIS 表达式）| Microsoft Docs"
-ms.custom: 
+title: FINDSTRING（SSIS 表达式）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2787fdb4663ea8c1495a811b44f878b896498eb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 56520a56a70622e23e7c407ed788f8f8f0ba3dc6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING（SSIS 表达式）
   返回一个字符串的指定出现在字符表达式中的位置。 返回结果是该出现的索引（索引从 1 开始）。 字符串参数的取值必须为字符表达式，而 occurrence 参数的取值必须为整数。 如果找不到字符串，则返回值是 0。 如果字符串的出现次数少于所指定的 occurrence 参数，则返回值为 0。  
@@ -71,10 +71,10 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- 此示例使用 **Name** 列。 它返回 **Name** 列中值 n 的位置。 返回结果因 **Name**中值的不同而不同。 如果 **Name** 包含 Anderson，则函数返回 8。  
+ 此示例使用 **Name** 列。 它返回“Name”列中第二个“n”的位置。 返回结果因 **Name**中值的不同而不同。 如果 **Name** 包含 Anderson，则函数返回 8。  
   
 ```  
-FINDSTRING(Name,"n", 2)   
+FINDSTRING(Name, "n", 2)   
 ```  
   
  此示例使用 **Name** 和 **Size** 列。 它返回 **Name** 列中 **Size** 值的最左侧字符的位置。 返回结果因列值的不同而不同。 如果 **Name** 包含 Mountain,500Red,42，且 **Size** 包含 42，则返回结果为 17。  

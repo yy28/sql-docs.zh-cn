@@ -1,26 +1,27 @@
 ---
-title: "自动初始化 AlwaysOn 可用性组 | Microsoft Docs"
-ms.custom: 
-ms.date: 08/23/2017
+title: 自动初始化 AlwaysOn 可用性组 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44ff615a44427cdf0e5ed6e06937181762deb7a0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>自动初始化 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,6 +170,12 @@ FROM sys.dm_hadr_automatic_seeding
 ```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
+
+total_disk_io_wait_time_ms 列和 total_network_wait_time_ms 列可用于确定自动种子设定过程中的性能瓶颈。 这两列还显示在 hadr_physical_seeding_progress 扩展事件中。
+
+**total_disk_io_wait_time_ms** 表示在磁盘上等待时备份/还原线程所花费的时间。 该值从种子设定操作开始时逐渐累积。 如果磁盘还未准备好读取或写入备份流，则备份/还原线程转换为睡眠状态，并通过每秒唤醒一次来检查磁盘是否准备就绪。
+        
+**total_network_wait_time_ms** 在主要副本和次要副本中具有不同的涵义。 在主要副本中，该计数器表示网络流控制时间。 在次要副本中，该计数器表示还原线程等待可用消息写入磁盘的时间。
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>在错误日志中使用自动种子设定来诊断数据库初始化
 

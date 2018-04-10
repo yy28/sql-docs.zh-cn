@@ -1,16 +1,16 @@
 ---
-title: "Excel 源 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: Excel 源 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Excel 源
   Excel 源从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿的工作表或范围中提取数据。  
-  
+
+> [!IMPORTANT]
+> 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
+
+## <a name="access-mode"></a>访问模式
  Excel 源提供了四种提取数据的数据访问方式：  
   
 -   表或视图。  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   SQL 语句的运行结果。 查询可以是参数化查询。  
   
 -   存储在变量中的 SQL 语句的运行结果。  
-  
-> [!IMPORTANT]  
->  在 Excel 中，工作表或范围等同于表或视图。 Excel 源和目标编辑器中的可用表列表显示现有工作表（以追加到工作表名称后的 $ 符号标识，如 Sheet1$）和命名区域（不用 $ 符号标识，如 MyRange）。 有关详细信息，请参阅“使用注意事项”部分。  
   
  Excel 源使用 Excel 连接管理器与数据源建立连接，连接管理器可指定要使用的工作簿文件。 有关详细信息，请参阅 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)。  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="related-content"></a>相关内容  
-  
--   hrvoje.piasevoli.com 上的博客文章： [在 SSIS 中从 64 位 Excel 导入数据](http://go.microsoft.com/fwlink/?LinkId=217673)。  
-  
--   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 1 部分（共 3 部分）：连接和组件](http://go.microsoft.com/fwlink/?LinkId=217674)。  
-  
--   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 2 部分（共 3 部分）：表和数据类型](http://go.microsoft.com/fwlink/?LinkId=217675)。  
-  
--   dougbert.com 上的博客文章： [Integration Services 中的 Excel 第 3 部分（共 3 部分）：问题和替代方案](http://go.microsoft.com/fwlink/?LinkId=217676)。  
-  
-  
+[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)
+[Excel 目标提供程序](excel-destination.md)  
+[Excel 连接管理器](../connection-manager/excel-connection-manager.md)

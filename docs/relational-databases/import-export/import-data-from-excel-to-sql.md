@@ -1,26 +1,26 @@
 ---
-title: "将 Excel 数据导入 SQL | Microsoft Docs"
-ms.custom: 
-ms.date: 08/02/2017
+title: 将 Excel 数据导入 SQL | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158a6c72c0c172b061d79bb52a276bacc22c0fcd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b935bd332e5cbfa481f9400968a7c8188e2bc603
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ ms.lasthandoff: 02/03/2018
     -   BCP
     -   Azure 数据工厂
 
+SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本概述的范围。 若要详细了解感兴趣的解决方案，请单击所提供的链接查看详细信息。
+
 > [!IMPORTANT]
-> SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本概述的范围。 若要详细了解感兴趣的解决方案，请单击所提供的链接查看详细信息。
+> 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../../integration-services/load-data-to-from-excel-with-ssis.md)。
 
 ## <a name="sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导
 
@@ -209,6 +211,5 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 -   [使用复制活动移动数据](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [教程：使用 Azure 门户创建带有复制活动的管道](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
-## <a name="next-steps"></a>后续步骤
-
-若要详细了解感兴趣的解决方案，请单击所提供的链接查看详细信息。
+## <a name="see-also"></a>另请参阅
+[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../../integration-services/load-data-to-from-excel-with-ssis.md)

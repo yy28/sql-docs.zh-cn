@@ -1,35 +1,35 @@
 ---
-title: "监视本机编译存储过程的执行 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: 监视本机编译存储过程的执行 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5f180e94f835adaa91812e0341dab85d382c2c2
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 1912c692998f08f947b9fb147d049048b8101ad6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本主题论述如何监视本机编译的存储过程的性能  
+  本文介绍如何监视本机编译的存储过程和其他本机编译的 T-SQL 模块的性能。  
   
 ## <a name="using-extended-events"></a>使用扩展事件  
- 使用 **sp_statement_completed** 扩展事件可以跟踪查询的执行情况。 使用此事件或者可以选择使用针对某一特定本机编译的存储过程的 object_id 的筛选器创建一个扩展事件会话。在执行各查询后引发该扩展事件。 该扩展事件报告的 CPU 时间和持续时间指示该查询占用了多少 CPU 以及执行时间。 占用大量 CPU 时间的本机编译的存储过程可能具有性能问题。  
+ 使用 **sp_statement_completed** 扩展事件可以跟踪查询的执行情况。 使用此事件或者可以选择使用针对某一特定本机编译的存储过程的 object_id 的筛选器创建一个扩展事件会话。 在执行各种查询之后引发扩展事件。 该扩展事件报告的 CPU 时间和持续时间指示该查询占用了多少 CPU 以及执行时间。 占用大量 CPU 时间的本机编译的存储过程可能具有性能问题。  
   
  **line_number**，连同扩展事件中的 **object_id** 可用于调查该查询。 可以使用以下查询检索过程定义。 可以使用行号标识该定义内的查询：  
   
@@ -39,21 +39,39 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  有关 **sp_statement_completed** 扩展事件的详细信息，请参阅 [如何检索导致了事件的语句](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
   
-## <a name="using-data-management-views"></a>使用数据管理视图  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在过程级别和查询级别收集本机编译的存储过程的执行统计信息。 由于对性能的影响，默认不启用收集执行统计信息。  
-  
- 可使用 [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 对本机编译的存储过程启用和禁用统计信息收集。  
-  
- 通过 [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 启用统计信息收集后，你可以使用 [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 监视本机编译存储过程的性能。  
-  
- 通过 [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用统计信息收集后，你可以使用 [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 监视本机编译存储过程的性能。  
-  
- 在收集开始时，启用统计信息收集。 然后，执行本机编译的存储过程。 在收集结束时，禁用统计信息收集。 然后，对 DMV 返回的执行统计信息进行分析。  
-  
+## <a name="using-data-management-views-and-query-store"></a>使用数据管理视图和查询存储
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 支持在过程级别和查询级别收集本机编译的存储过程的执行统计信息。 由于对性能的影响，默认不启用收集执行统计信息。  
+
+执行统计信息反映在系统视图 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 和 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 以及[查询存储](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)中。
+
+### <a name="enabling-procedure-level-execution-statistics-collection"></a>启用过程级别执行统计信息收集
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：可使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用过程级别统计信息收集。  以下语句针对当前实例上所有本机编译的 T-SQL 模块启用过程级别的执行统计信息收集：
+```sql
+EXEC sys.sp_xtp_control_proc_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：可使用[数据库范围的配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_PROCEDURE_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用过程级别的统计信息收集。 以下语句对当前数据库中的所有本地编译的 T-SQL 模块启用过程级别的执行统计信息收集：
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+```
+
+### <a name="enabling-query-level-execution-statistics-collection"></a>启用查询级别执行统计信息收集
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：可使用 [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 对本机编译的存储过程启用或禁用查询级别的统计信息收集。  以下语句对当前实例的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
+```sql
+EXEC sys.sp_xtp_control_query_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：可使用[数据库范围配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)选项 `XTP_QUERY_EXECUTION_STATISTICS` 对本机编译的存储过程启用或禁用语句级别统计信息收集。 以下语句对当前数据库中的所有本机编译的 T-SQL 模块启用查询级别的执行统计信息收集：
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+```
+
+## <a name="sample-queries"></a>示例查询
+
  在你收集统计信息后，可以使用 [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 针对某一过程查询本机编译的存储过程的执行统计信息，以及使用 [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 针对查询来查询本机编译的存储过程的执行统计信息。  
-  
-> [!NOTE]  
->  对于启用统计信息收集时的本机编译的存储过程，以毫秒为单位收集工作线程时间。 如果查询执行不到 1 毫秒，则该值将为 0。 对于本机编译的存储过程，如果许多执行所用的时间都不到 1 毫秒，则 **total_worker_time** 可能不精确。  
+ 
   
  下面的查询在统计信息收集后返回当前数据库中本机编译的存储过程的过程名称和执行统计信息：  
   
@@ -99,7 +117,9 @@ where  st.dbid=db_id() and st.objectid in (select object_id
 from sys.sql_modules where uses_native_compilation=1)  
 order by qs.total_worker_time desc  
 ```  
-  
+
+## <a name="query-execution-plans"></a>查询执行计划
+
  本机编译的存储过程支持 SHOWPLAN_XML（估计的执行计划）。 可以使用该估计的执行计划检查查询计划，以便找到任何错误计划问题。 错误计划的常见原因是：  
   
 -   在创建过程前未更新统计信息。  

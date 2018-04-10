@@ -1,29 +1,29 @@
 ---
-title: "SQL Server 中扩展事件的目标 | Microsoft Docs"
-ms.custom: 
-ms.date: 06/12/2017
+title: SQL Server 中扩展事件的目标 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: extended-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e75149107c4576a51737f77cf49679c62a2a0d42
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,6 +90,10 @@ SQL Server 扩展事件可以和 Windows 事件跟踪 (ETW) 相互操作来监�
 
 此 ETW 目标 *以同步方式* 处理其接收的数据，而大多数目标 *以异步方式*进行处理。
 
+> [!NOTE]
+> Azure SQL 数据库不支持 ETW 目标。 Azure SQL 数据库托管实例也不支持。
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 <a name="h2_target_event_counter"></a>
 
@@ -152,6 +156,12 @@ CREATE EVENT SESSION [event_counter_1]
 
 
 - 系统会将你选择的文件名用作基于日期时间的长整型的前缀，后接 .xel 扩展名。
+
+> [!NOTE]
+> Azure SQL 数据库支持“event_file”目标，但对于输出，只能通过在 Azure 存储中使用 blob。 SQL 数据库不能将事件输出存储在本地硬盘上的文件中。
+> 有关特定于 SQL 数据库和 SQL 数据库托管实例的“event_file”代码示例，请参阅 [SQL 数据库中扩展事件的事件文件目标代码](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)。
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>使用 **event_file** 目标的 CREATE EVENT SESSION

@@ -1,16 +1,16 @@
 ---
-title: "从表中删除列 | Microsoft Docs"
-ms.custom: 
+title: 从表中删除列 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - columns [SQL Server], deleting
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57897bbf048817c930984a58a244525ceb4a48ee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 3b16e2ae7b17f7c38e47971d1ad60b6a38ca1481
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="delete-columns-from-a-table"></a>从表中删除列
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/18/2018
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除表列。  
   
 > [!CAUTION]  
->  删除表中的某一列后，该列及其包含的所有数据都将从数据库中删除。 无法撤消此操作。  
+>  删除表中的某一列后，该列及其包含的所有数据都将删除。
   
  **本主题内容**  
   

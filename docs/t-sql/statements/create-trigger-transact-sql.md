@@ -1,16 +1,16 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: mathoma
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE TRIGGER
@@ -31,23 +31,23 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 
+caps.latest.revision: 140
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21d9fd7428af28eec0d739da212887973592401c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 23cb33dffcc9753200d24116b4a6d279c8fe8db5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  创建 DML、DDL 或登录触发器。 触发器是数据库服务器中发生事件时自动执行的特种存储过程。 如果用户要通过数据操作语言 (DML) 事件编辑数据，则执行 DML 触发器。 DML 事件是针对表或视图的 INSERT、UPDATE 或 DELETE 语句。 在激发任何有效的事件时，将会激发这些触发器，而无论是否会影响任何表行。 有关详细信息，请参阅 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
+  创建 DML、DDL 或登录触发器。 触发器是数据库服务器中发生事件时自动执行的一种特殊存储过程。 如果用户要通过数据操作语言 (DML) 事件编辑数据，则执行 DML 触发器。 DML 事件是针对表或视图的 INSERT、UPDATE 或 DELETE 语句。 在激发任何有效的事件时，将会激发这些触发器，而无论是否会影响任何表行。 有关详细信息，请参阅 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
   
- DDL 触发器用于响应各种数据定义语言 (DDL) 事件。 这些事件主要对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE、ALTER 和 DROP 语句，以及执行类似 DDL 操作的某些系统存储过程。 登录触发器在遇到 LOGON 事件时触发。LOGON 事件是在建立用户会话时引发的。 触发器可以由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接创建，也可以由程序集方法创建，这些方法在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建并上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许为任何特定语句创建多个触发器。  
+ DDL 触发器用于响应各种数据定义语言 (DDL) 事件。 这些事件主要对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE、ALTER 和 DROP 语句，以及执行类似 DDL 操作的某些系统存储过程。 登录触发器在遇到 LOGON 事件时触发，该事件是在建立用户会话时引发的。 触发器可以由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接创建，也可以由程序集方法创建，这些方法在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建并上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许为任何特定语句创建多个触发器。  
   
 > [!IMPORTANT]  
 >  触发器内部的恶意代码可以在升级后的权限下运行。 有关如何缓解此威胁的详细信息，请参阅[管理触发器安全](../../relational-databases/triggers/manage-trigger-security.md)。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -81,7 +81,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -100,7 +100,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-```  
+```sql  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -116,7 +116,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```  
+```sql  
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -133,7 +133,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -149,7 +149,7 @@ ON { table | view }
   
 ```  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
@@ -233,10 +233,10 @@ OR ALTER
   
  指定应该再添加一个现有类型的触发器。 WITH APPEND 不能与 INSTEAD OF 触发器一起使用。如果显式声明了 AFTER 触发器，则也不能使用该子句。 仅当为了向后兼容而指定了 FOR 时（但没有 INSTEAD OF 或 AFTER）时，才能使用 WITH APPEND。 如果指定了 EXTERNAL NAME（即触发器为 CLR 触发器），则不能指定 WITH APPEND。  
   
- *event_type*  
+ event_type  
  执行之后将导致激发 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件的名称。 [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出了 DDL 触发器的有效事件。  
   
- *event_group*  
+ event_group  
  预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 执行任何属于 event_group 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件之后，都将激发 DDL 触发器。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。  
   
  CREATE TRIGGER 运行完成后，*event_group* 还将充当宏，将它涉及的事件类型添加到 sys.trigger_events 目录视图中。  
@@ -251,11 +251,11 @@ OR ALTER
   
  尝试上述操作时，将执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中指定的触发器操作。  
   
- 触发器可以包含任意数量和种类的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，但也有例外。 有关详细信息，请参阅“备注”。 触发器的用途是根据数据修改或定义语句来检查或更改数据；它不应向用户返回数据。 触发器中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句常常包含[控制流语言](~/t-sql/language-elements/control-of-flow.md)。  
+ 触发器可以包含任意数量和类型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，但也有例外。 有关详细信息，请参阅“备注”。 触发器的用途是根据数据修改或定义语句来检查或更改数据；它不应向用户返回数据。 触发器中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句常常包含[控制流语言](~/t-sql/language-elements/control-of-flow.md)。  
   
  DML 触发器使用 deleted 和 inserted 逻辑（概念）表。 它们在结构上类似于定义了触发器的表，即对其尝试执行了用户操作的表。 deleted 和 inserted 表保存了可能会被用户更改的行的旧值或新值。 例如，若要检索 `deleted` 表中的所有值，则使用：  
   
-```  
+```sql  
 SELECT * FROM deleted;  
 ```  
   
@@ -277,7 +277,7 @@ SELECT * FROM deleted;
 > [!NOTE]  
 >  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法运行 CLR 代码。 你可以创建、修改和删除引用托管代码模块的数据库对象，但是，除非使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 启用了 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)，否则不会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中执行这些引用。  
   
-## <a name="remarks-dml-triggers"></a>注释 DML 触发器  
+## <a name="remarks-for-dml-triggers"></a>DML 触发器的注释  
  DML 触发器经常用于强制执行业务规则和数据完整性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 ALTER TABLE 和 CREATE TABLE 语句来提供声明性引用完整性 (DRI)。 但是，DRI 不提供跨数据库引用完整性。 引用完整性是指有关表的主键和外键之间的关系的规则。 若要强制实现引用完整性，请在 ALTER TABLE 和 CREATE TABLE 中使用 PRIMARY KEY 和 FOREIGN KEY 约束。 如果触发器表存在约束，则在 INSTEAD OF 触发器执行之后和 AFTER 触发器执行之前检查这些约束。 如果违反了约束，则将回滚 INSTEAD OF 触发器操作，并且不激活 AFTER 触发器。  
   
  可以使用 sp_settriggerorder 来指定要对表执行的第一个和最后一个 AFTER 触发器。 对于一个表，只能为每个 INSERT、UPDATE 和 DELETE 操作指定一个第一个和最后一个 AFTER 触发器。 如果在同一个表上还有其他 AFTER 触发器，这些触发器将随机执行。  
@@ -330,9 +330,22 @@ SELECT * FROM deleted;
 |用于执行以下操作的 ALTER TABLE：<br /><br /> 添加、修改或删除列。<br /><br /> 切换分区。<br /><br /> 添加或删除 PRIMARY KEY 或 UNIQUE 约束。|||  
   
 > [!NOTE]  
->  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持针对系统表的用户定义的触发器，因此我们建议不要为系统表创建用户定义触发器。  
+>  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持针对系统表的用户定义的触发器，因此我们建议不要为系统表创建用户定义触发器。 
+
+### <a name="optimizing-dml-triggers"></a>优化 DML 触发器
+ 触发器在事务中工作（隐式的或非隐式的），开启后，它们会锁定资源。 除非确认（使用 COMMIT）或拒绝（使用 ROLLBACK）事务，否则，锁定将保持不变。 触发器运行时间越长，另一进程被锁定的可能性就越高。 因此，触发器应以尽可能减少持续时间的方式写入。 一种实现方法是，在 DML 语句更改 0 行时发布触发器。 
+
+要发布不更改任何行的触发器命令，可使用系统变量 [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql)。 
+
+以下 T-SQL 代码片段将完成此目标，并应显示在每个 DML 触发器的开头：
+
+```sql
+IF (@@ROWCOUNT_BIG = 0)
+RETURN;
+```
   
-## <a name="remarks-ddl-triggers"></a>注释 DDL 触发器  
+  
+## <a name="remarks-for-ddl-triggers"></a>DDL 触发器的注释  
  DDL 触发器像标准触发器一样，在响应事件时执行存储过程。 但与标准触发器不同的是，它们并不在响应对表或视图的 UPDATE、INSERT 或 DELETE 语句时执行存储过程。 它们主要在响应数据定义语言 (DDL) 语句执行存储过程。 这些语句包括 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 和 UPDATE STATISTICS 等语句。 执行 DDL 式操作的系统存储过程也可以激发 DDL 触发器。  
   
 > [!IMPORTANT]  
@@ -409,7 +422,7 @@ SELECT * FROM deleted;
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. 使用包含提醒消息的 DML 触发器  
  如果有人试图在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Customer` 表中添加或更改数据，下列 DML 触发器将向客户端显示一条消息。  
   
-```  
+```sql  
 CREATE TRIGGER reminder1  
 ON Sales.Customer  
 AFTER INSERT, UPDATE   
@@ -420,7 +433,7 @@ GO
 ### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. 使用包含提醒电子邮件的 DML 触发器  
  如果 `MaryM` 表发生更改，以下示例将向指定人员 (`Customer`) 发送电子邮件。  
   
-```  
+```sql  
 CREATE TRIGGER reminder2  
 ON Sales.Customer  
 AFTER INSERT, UPDATE, DELETE   
@@ -438,13 +451,15 @@ GO
   
  以下示例在 AdventureWorks2012 数据库中创建 DML 触发器。 如果有人试图将一个新采购订单插入到 `PurchaseOrderHeader` 表中，此触发器会进行检查以确保供应商具有良好的信用等级（不为 5）。 若要获取供应商的信用等级，必须引用 `Vendor` 表。 如果信用等级太低，则显示信息，并且不执行该插入操作。  
   
-```  
+```sql  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
 -- table when the credit rating of the specified vendor is set to 5 (below average).  
   
 CREATE TRIGGER Purchasing.LowCredit ON Purchasing.PurchaseOrderHeader  
 AFTER INSERT  
 AS  
+IF (@@ROWCOUNT_BIG  = 0)
+RETURN;
 IF EXISTS (SELECT *  
            FROM Purchasing.PurchaseOrderHeader AS p   
            JOIN inserted AS i   
@@ -485,11 +500,13 @@ GO
 ### <a name="d-using-a-database-scoped-ddl-trigger"></a>D. 使用具有数据库范围的 DDL 触发器  
  下面的示例使用 DDL 触发器来防止从数据库中删除任何同义词。  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_SYNONYM  
 AS   
+IF (@@ROWCOUNT = 0)
+RETURN;
    RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
    ROLLBACK  
 GO  
@@ -503,7 +520,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql  
 CREATE TRIGGER ddl_trig_database   
 ON ALL SERVER   
 FOR CREATE_DATABASE   
@@ -521,7 +538,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE LOGIN login_test WITH PASSWORD = '3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
@@ -546,14 +563,16 @@ END;
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. 查看导致触发器触发的事件  
  以下示例将查询 `sys.triggers` 和 `sys.trigger_events` 目录视图，以确定是哪个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件导致触发了 `safety`。 `safety` 是在前一个示例中创建的。  
   
-```  
+```sql  
 SELECT TE.*  
 FROM sys.trigger_events AS TE  
 JOIN sys.triggers AS T ON T.object_id = TE.object_id  
 WHERE T.parent_class = 0 AND T.name = 'safety';  
 GO  
 ```  
-  
+
+    
+
 ## <a name="see-also"></a>另请参阅  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   

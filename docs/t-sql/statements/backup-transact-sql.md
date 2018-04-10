@@ -1,16 +1,16 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/22/2018
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BACKUP_TSQL
@@ -48,21 +48,23 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: 
+caps.latest.revision: 275
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 506cda0644c6e3d144d5b02ff208d78e7305dfcc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ad21db12a4d147f8d999c7774a773082cbc6b1b5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
-  备份完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以创建数据库备份，或者备份数据库的一个或多个文件或文件组以创建文件备份 (BACKUP DATABASE)。 另外，在完整恢复模式或大容量日志恢复模式下备份数据库事务日志以创建日志备份 (BACKUP LOG)。  
+  备份完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以创建数据库备份，或者备份数据库的一个或多个文件或文件组以创建文件备份 (BACKUP DATABASE)。 另外，在完整恢复模式或大容量日志恢复模式下备份数据库事务日志以创建日志备份 (BACKUP LOG)。 
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +75,8 @@ Backing Up a Whole Database
 BACKUP DATABASE { database_name | @database_name_var }   
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
-  [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]  
+  [ WITH { DIFFERENTIAL -- Not supporterd in SQL Database Managed Instance
+           | <general_WITH_options> [ ,...n ] } ]  
 [;]  
   
 Backing Up Specific Files or Filegroups  
@@ -93,7 +96,8 @@ BACKUP DATABASE { database_name | @database_name_var }
 [;]  
   
 Backing Up the Transaction Log (full and bulk-logged recovery models)  
-BACKUP LOG { database_name | @database_name_var }   
+BACKUP LOG -- Not supported in SQL Database Managed Instance
+  { database_name | @database_name_var }  
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
   [ WITH { <general_WITH_options> | \<log-specific_optionspec> } [ ,...n ] ]  
@@ -102,7 +106,9 @@ BACKUP LOG { database_name | @database_name_var }
 <backup_device>::=   
  {  
    { logical_device_name | @logical_device_name_var }   
- | { DISK | TAPE | URL} =   
+ | {   DISK -- Not supported in SQL Database Managed Instance
+     | TAPE -- Not supported in SQL Database Managed Instance
+     | URL } =   
      { 'physical_device_name' | @physical_device_name_var | 'NUL' }  
  }   
   
@@ -120,13 +126,13 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
 <general_WITH_options> [ ,...n ]::=   
 --Backup Set Options  
-   COPY_ONLY   
+   COPY_ONLY -- Only backup set option supported by SQL Database Managed Instance  
  | { COMPRESSION | NO_COMPRESSION }   
  | DESCRIPTION = { 'text' | @text_variable }   
  | NAME = { backup_set_name | @backup_set_name_var }   
  | CREDENTIAL  
  | ENCRYPTION  
- | FILE_SNAPSHOT  
+ | FILE_SNAPSHOT  --Not supported in SQL Database Managed Instance
  | { EXPIREDATE = { 'date' | @date_var }   
         | RETAINDAYS = { days | @days_var } }   
   
@@ -152,11 +158,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 --Monitoring Options  
    STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. These are not supported in SQL Database Managed Instance
    { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
---Log-specific Options  
+--Log-specific Options. These are not supported in SQL Database Managed Instance 
    { NORECOVERY | STANDBY = undo_file_name }  
  | NO_TRUNCATE  
   
@@ -166,7 +172,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 ```  
   
 ## <a name="arguments"></a>参数  
- DATABASE  
+
+DATABASE  
  指定一个完整数据库备份。 如果指定了一个文件和文件组的列表，则仅备份该列表中的文件和文件组。 在进行完整数据库备份或差异数据库备份的过程中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会备份足够多的事务日志，以便在还原备份时生成一个一致的数据库。  
   
  还原由 BACKUP DATABASE（“数据备份”）创建的备份时，将还原整个备份。 只有日志备份才能还原到备份中的特定时间或事务。  
@@ -174,7 +181,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 > 对 master 数据库，只能执行完整数据库备份。  
   
- LOG  
+LOG 适用范围：SQL Server
+
  指定仅备份事务日志。 该日志是从上一次成功执行的日志备份到当前日志的末尾。 必须创建完整备份，才能创建第一个日志备份。  
   
  通过在 [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) 语句中指定 `WITH STOPAT`、`STOPATMARK` 或 `STOPBEFOREMARK`，可以将日志备份还原到备份中的特定时间或事务。  
@@ -182,7 +190,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 >  执行典型日志备份后，如果没有指定 `WITH NO_TRUNCATE` 或 `COPY_ONLY`，某些事务日志记录将变为不活动状态。 一个或多个虚拟日志文件中的所有记录变为不活动状态后，日志将被截断。 如果日志在常规日志备份后未被截断，则可能是某些操作延迟了日志截断。 有关详细信息，请参阅[可能延迟日志截断的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。  
   
- { database_name | @***database_name_var } 是备份事务日志、部分数据库或完整的数据库时所用的源数据库*。如果作为变量 (**@***database_name_var) 提供，则可以将此名称指定为字符串常量 (*@database_name_var=***database name) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
+ { database_name | @***database_name_var } 是备份事务日志、部分数据库或完整的数据库时所用的源数据库*。如果作为变量 (**@***database_name_var) 提供，则可以将此名称指定为字符串常量 (*@database_name_var=***database name) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量***。  
   
 > [!NOTE]  
 > 不能备份数据库镜像伙伴关系中的镜像数据库。  
@@ -221,14 +229,13 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  有关部分备份的详细信息，请参阅[部分备份 (SQL Server)](../../relational-databases/backup-restore/partial-backups-sql-server.md)。  
   
-TO \<backup_device> [ **,**...*n* ] 指示附带的[备份设备](../../relational-databases/backup-restore/backup-devices-sql-server.md)集是一个未镜像的媒体集，或者是镜像媒体集中的第一批镜像（为其声明了一个或多个 MIRROR TO 子句）。  
+TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-databases/backup-restore/backup-devices-sql-server.md)集是一个未镜像的媒体集，或者是镜像媒体集中的第一批镜像（为其声明了一个或多个 MIRROR TO 子句）。  
   
-\<backup_device> 指定用于备份操作的逻辑备份设备或物理备份设备：  
+\<backup_device> 适用范围：SQL Server。指定用于备份操作的逻辑备份设备或物理备份设备。  
   
- { *logical_device_name* | **@***logical_device_name_var* } 要将数据库备份到的备份设备的逻辑名称。逻辑名称必须遵守标识符规则。如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量 (@logical_device_name_var*= logical backup device name) 或任何字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
+ { logical_device_name | @logical_device_name_var } 适用范围：SQL Server。要将数据库备份到的备份设备的逻辑名称*。逻辑名称必须遵守标识符规则。如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量 (@logical_device_name_var*= logical backup device name) 或任何字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
   
- { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' }  
- 指定磁盘文件或磁带设备，或者 Windows Azure 存储服务。 此 URL 格式用于创建到 Windows Azure 存储服务的备份。 有关详细信息和示例，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 有关教程的信息，请参阅[教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
+ { DISK | TAPE | URL} = { 'physical_device_name' | *@***physical_device_name_var | 'NUL' } 适用范围：磁盘、磁带和用于 SQL Server 的 URL****。 仅 URL 适用于 SQL 数据库托管实例。指定磁盘文件或磁带设备，或者 Windows Azure 存储服务。 此 URL 格式用于创建到 Windows Azure 存储服务的备份。 有关详细信息和示例，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 有关教程的信息，请参阅[教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
 
 > [!NOTE] 
 > NUL 磁盘设备将弃用发送给它的所有信息，且仅应用于测试。 这不适用于生产用途。
@@ -236,7 +243,7 @@ TO \<backup_device> [ **,**...*n* ] 指示附带的[备份设备](../../relation
 > [!IMPORTANT]  
 > 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，备份到 URL 时只能备份到单个设备。 备份到 URL 时，若要备份到多个设备，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及共享访问签名 (SAS) 令牌。 有关创建共享访问签名的示例，请参阅 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。  
   
-URL 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
+URL 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 SQL 数据库托管实例。  
   
  如果某一磁盘设备不存在，也可以在 BACKUP 语句中指定它。 如果存在物理设备且 BACKUP 语句中未指定 INIT 选项，则备份将追加到该设备。  
  
@@ -251,7 +258,7 @@ URL 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[
  *n*  
  一个占位符，表示最多可以在逗号分隔的列表中指定 64 个备份设备。  
   
-MIRROR TO \<backup_device> [ **,**...*n* ] 指定一组辅助备份设备（最多三个），其中每个设备都镜像 TO 子句中指定的备份设备。 MIRROR TO 子句和 TO 子句必须指定相同类型和数量的备份设备。 最多可以使用三个 MIRROR TO 子句。  
+MIRROR TO \<backup_device> [ ,...n ] 指定一组辅助备份设备（最多三个），其中每个设备都镜像 TO 子句中指定的备份设备。 MIRROR TO 子句和 TO 子句必须指定相同类型和数量的备份设备。 最多可以使用三个 MIRROR TO 子句。  
   
  此选项仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise 版中可用。  
   
@@ -272,17 +279,15 @@ MIRROR TO \<backup_device> [ **,**...*n* ] 指定一组辅助备份设备（最�
  指定要用于备份操作的选项。  
   
  CREDENTIAL  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 SQL 数据库托管实例。  
  仅在创建到 Windows Azure Blob 存储服务的备份时使用。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
-  
- FILE_SNAPSHOT  
+ FILE_SNAPSHOT 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。
+
  用于在使用 Azure Blob 存储服务存储所有 SQL Server 数据库文件时，创建数据库文件的 Azure 快照。 有关详细信息，请参阅 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照备份将数据库文件（数据和日志文件）的 Azure 快照保持为一致的状态。 一组一致的 Azure 快照构成备份并记录在备份文件中。 `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` 和 `BACKUP LOG TO URL WITH FILE_SNAPSHOT` 之间的唯一区别是后者会截断事务日志，而前者不会。 借助 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照备份，在完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立备份链时所需的初始完整备份之后，只需单个事务日志备份即可将数据库还原到事务日志备份的时间点。 此外，只需两次事务日志备份即可将数据库还原到两次事务日志备份之间的时间点。  
-  
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
-  
+    
  DIFFERENTIAL  
- 只能与 BACKUP DATABASE 一起使用，指定数据库备份或文件备份应该只包含上次完整备份后更改的数据库或文件部分。 差异备份一般会比完整备份占用更少的空间。 对于上一次完整备份后执行的所有单个日志备份，使用该选项可以不必再进行备份。  
+**适用范围：**SQL Server。只能与 BACKUP DATABASE 一起使用，指定数据库备份或文件备份应该只包含上次完整备份后更改的数据库或文件部分。 差异备份一般会比完整备份占用更少的空间。 对于上一次完整备份后执行的所有单个日志备份，使用该选项可以不必再进行备份。  
   
 > [!NOTE]  
 > 默认情况下，`BACKUP DATABASE` 创建完整备份。  
@@ -313,8 +318,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] 指定一组辅助备份设备（最�
 > [!NOTE]  
 > 若要为还原操作指定备份集，请使用 `FILE = <backup_set_file_number>` 选项。 有关如何指定备份集的详细信息，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的“指定备份集”。
   
- COPY_ONLY  
- 指定备份为“仅复制备份”，该备份不影响正常的备份顺序。 仅复制备份是独立于定期计划的常规备份而创建的。 仅复制备份不会影响数据库的总体备份和还原过程。  
+ COPY_ONLY 适用范围：SQL Server 和 SQL 数据库托管实例。指定备份为“仅复制备份”，该备份不影响正常的备份顺序。 仅复制备份是独立于定期计划的常规备份而创建的。 仅复制备份不会影响数据库的总体备份和还原过程。  
   
  应在出于特殊目的而进行备份的情况下使用仅复制备份，例如在进行联机文件还原前备份日志。 通常，仅复制日志备份仅使用一次即被删除。  
   
@@ -340,7 +344,7 @@ COMPRESSION
 NO_COMPRESSION  
 显式禁用备份压缩。  
   
-DESCRIPTION = { 'text' | @text_variable }  
+DESCRIPTION = { 'text' | @text_variable }****  
 指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。  
   
 NAME **=** { *backup_set_name* | **@***backup_set_var* }  
@@ -501,15 +505,13 @@ STATS [ **=** *percentage* ]
 STATS 选项报告截止报告下一个间隔的阈值时的完成百分比。 这是指定百分比的近似值；例如，当 STATS=10 时，如果完成进度为 40%，则该选项可能显示 43%。 对于较大的备份集，这不是问题，因为完成百分比在已完成的 I/O 调用之间变化非常缓慢。  
   
 **磁带选项**  
-  
+**适用范围**：SQL Server  
 这些选项只用于 TAPE 设备。 如果使用的是非磁带设备，则会忽略这些选项。  
   
 { **REWIND** | NOREWIND }  
-REWIND  
- 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 释放和倒带磁带。 REWIND 是默认设置。  
+REWIND 适用范围：SQL Server。指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 释放和倒带磁带。 REWIND 是默认设置。  
   
-NOREWIND  
-指定在备份操作之后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 让磁带一直处于打开状态。 在对磁带执行多个备份操作时，可以使用此选项来帮助改进性能。  
+NOREWIND 适用范围：SQL Server。指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在备份操作之后让磁带一直处于打开状态。 在对磁带执行多个备份操作时，可以使用此选项来帮助改进性能。  
   
 NOREWIND 包含 NOUNLOAD，并且这些选项在单个 BACKUP 语句中不兼容。  
   
@@ -517,33 +519,33 @@ NOREWIND 包含 NOUNLOAD，并且这些选项在单个 BACKUP 语句中不兼容
 > 如果使用 `NOREWIND`，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将一直保留磁带机的所有权，直到在同一进程中运行的 BACKUP 或 RESTORE 语句使用 `REWIND` 或 `UNLOAD` 选项或服务器实例关闭为止。 磁带保持打开将防止其他进程访问磁带。 有关如何显示打开的磁带列表和如何将打开的磁带关闭的信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
 { **UNLOAD** | NOUNLOAD }    
-
+**适用范围**：SQL Server 
 > [!NOTE]  
 > `UNLOAD` 和 `NOUNLOAD` 会话设置可在整个会话期间存在，或者在通过指定其他设置而进行重置之前一直存在。  
   
-UNLOAD  
+UNLOAD 适用范围：SQL Server   
  指定在备份完成后自动重绕并卸载磁带。 会话开始时 UNLOAD 是默认值。 
   
-NOUNLOAD  
- 指定在 BACKUP 操作之后磁带继续在磁带机中加载。  
+NOUNLOAD 适用范围：SQL Server，指定在 BACKUP 操作之后磁带继续在磁带机中加载。  
   
 > [!NOTE]  
 > 备份到磁带备份设备时，`BLOCKSIZE` 选项会影响备份操作的性能。 通常，只有写入磁带设备时，此选项才会影响性能。  
   
 **特定于日志的选项**  
-  
+**适用范围**：SQL Server  
 这些选项仅与 `BACKUP LOG` 一起使用。  
   
 > [!NOTE]  
 > 如果不想进行日志备份，则请使用简单恢复模式。 有关详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
 { NORECOVERY | STANDBY **=** *undo_file_name* }  
-  NORECOVERY  
+  NORECOVERY 适用范围：SQL Server   
   备份日志的尾部并使数据库处于 RESTORING 状态。 当将故障转移到辅助数据库或在执行 RESTORE 操作前保存日志尾部时，NORECOVERY 很有用。  
   
   若要执行最大程度的日志备份（跳过日志截断）并自动将数据库置于 RESTORING 状态，请同时使用 `NO_TRUNCATE` 和 `NORECOVERY` 选项。  
   
-  STANDBY **=** *standby_file_name*  
+  STANDBY = standby_file_name  
+适用范围：SQL Server**********   
   备份日志的尾部并使数据库处于只读和 STANDBY 状态。 将 STANDBY 子句写入备用数据（执行回滚，但需带进一步还原选项）。 使用 STANDBY 选项等同于 BACKUP LOG WITH NORECOVERY 后跟 RESTORE WITH STANDBY。  
   
   使用备用模式需要一个备用文件，该文件由 standby_file_name 指定，其位置存储于数据库的日志中。 如果指定的文件已经存在，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会覆盖该文件；如果指定的文件不存在，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将创建它。 备用文件将成为数据库的一部分。  
@@ -551,6 +553,7 @@ NOUNLOAD
   该文件将保存对回滚所做的更改，如果要在以后应用 RESTORE LOG 操作，则必须反转这些更改。 必须有足够的磁盘空间供备用文件增长，以使备用文件能够包含数据库中由回滚的未提交事务修改的所有不重复的页。  
   
 NO_TRUNCATE  
+**适用范围**：SQL Server  
 指定不截断日志，并使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 尝试执行备份，而不考虑数据库的状态。 因此，使用 `NO_TRUNCATE` 执行的备份可能具有不完整的元数据。 该选项允许在数据库损坏时备份日志。  
   
 BACKUP LOG 的 NO_TRUNCATE 选项相当于同时指定 COPY_ONLY 和 CONTINUE_AFTER_ERROR。  
@@ -700,7 +703,8 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 
 > [!NOTE]  
 > 在以下情况下，自动使用 TDE 加密数据库的优化压缩算法：
-> * 使用备份到 URL，默认的 `MAXTRANSFERSIZE` 更改为 1048576 (1 MB) 且不强制为较低值。
+> * 
+>  使用时，默认的 `MAXTRANSFERSIZE` 更改为 1048576 (1 MB) 且不强制为较低值。
 > * 数据库具有多个数据文件，默认的 `MAXTRANSFERSIZE` 更改为 65536 (64 KB) 的倍数，且不更改为较低值（如 `MAXTRANSFERSIZE = 65536`）。 
   
 默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地备份日志，这些成功消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
@@ -715,7 +719,16 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
 -   收缩数据库或文件操作。 这包括自动收缩操作。  
   
 如果备份操作与文件管理操作或收缩操作重叠，则产生冲突。 无论哪个冲突操作先行开始，第二个操作总会等待第一个操作设置的锁超时（超时期限由会话超时设置控制）。 如果在超时期限内释放锁，第二个操作将继续执行。 如果锁超时，则第二个操作失败。  
-  
+
+## <a name="limitations-for-sql-database-managed-instance"></a>SQL 数据库托管实例的限制
+SQL 数据库托管实例可将数据库备份为最多具有 32 个带状线的备份，如果使用了备份压缩，这对于 4 TB 的数据库都足够了。
+
+最大备份带状线大小为 195 GB（最大 blob 大小）。 增加备份命令中的带状线数量以缩小单个带状线大小，将其保持在限制范围内。
+
+> [!NOTE]
+> 要解决本地上的此限制，可备份到 `DISK`，而不是备份到 `URL`，将备份文件上传到 blob，然后将其还原。 因为使用了不同的 blob 类型，所以还原可支持更大型的文件。
+
+ 
 ## <a name="metadata"></a>元数据  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含以下备份历史记录表以跟踪备份活动：  
   
@@ -740,7 +753,8 @@ BACKUP 支持 `RESTART` 选项以提供与 [!INCLUDE[ssNoVersion](../../includes
   
 -   A. [备份整个数据库](#backing_up_db)  
 -   B. [备份数据库和日志](#backing_up_db_and_log)  
--   C. [创建辅助文件组的完整文件备份](#full_file_backup)  
+-   C. [创建辅助文件组的完整文件备份]
+-   (#full_file_backup)  
 -   D. [创建辅助文件组的差异文件备份](#differential_file_backup)  
 -   E. [创建和备份到单簇镜像媒体集](#create_single_family_mirrored_media_set)  
 -   F. [创建和备份到多簇镜像媒体集](#create_multifamily_mirrored_media_set)  

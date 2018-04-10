@@ -1,16 +1,16 @@
 ---
-title: "SQL Server - Deprecated Features 对象 | Microsoft Docs"
-ms.custom: 
+title: SQL Server - Deprecated Features 对象 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a9a674bac91e77945fd7493cee22a11f44639a75
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |------------------------------------------------------|-----------------|  
 |“#”和“##”作为临时表和存储过程的名称|遇到不包含 # 以外的任何字符的标识符。 请至少使用一个其他字符。 每次编译时发生。|  
 |“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为 `SELECT column_list FROM` *< function_name>*`()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)` 替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
-|“@”和以“@@”开头的名称作为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符|遇到以 @ 或 @@ 开头的标识符。 请勿使用 @ 或 @@ 或以 @@ 开头的名称作为标识符。 每次编译时发生。|  
+|“\@”和以“\@\@”开头的名称作为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符|遇到以 \@ 或 \@\@ 开头的标识符。 请勿使用 \@ 或 \@v@ 或以 \@\@ 开头的名称作为标识符。 每次编译时发生。|  
 |ADDING TAPE DEVICE|遇到不推荐使用的功能 sp_addumpdevice'**tape**'。 请改用 sp_addumpdevice'**disk**'。 每次使用时发生。|  
 |ALL 权限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 语法的总次数。 请修改语法以拒绝特定权限。 每次查询时发生。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|自服务器实例启动以来，ALTER DATABASE 的不推荐使用的功能 TORN_PAGE_DETECTION 选项的使用总次数。 请改用 PAGE_VERIFY 语法。 每次在 DDL 语句中使用时发生。|  
@@ -193,7 +193,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_defaultlanguage|遇到 sp_defaultlanguage 过程。 请改用 ALTER LOGIN。 每次编译时发生。|  
 |sp_denylogin|遇到 sp_denylogin 过程。 请改用 ALTER LOGIN DISABLE。 每次查询时发生。|  
 |sp_depends|遇到 sp_depends 过程。 请改用 sys.dm_sql_referencing_entities 和 sys.dm_sql_referenced_entities。 每次查询时发生。|  
-|sp_detach_db @keepfulltextindexfile|在 sp_detach_db 语句中遇到 @keepfulltextindexfile 参数。 请勿使用此参数。|  
+|sp_detach_db \@keepfulltextindexfile|在 sp_detach_db 语句中遇到 \@keepfulltextindexfile 参数。 请勿使用此参数。|  
 |sp_dropalias|遇到 sp_dropalias 过程。 请将别名替换为用户帐户和数据库角色的组合。 请使用 sp_dropalias 删除已升级数据库中的别名。 每次编译时发生。|  
 |sp_dropapprole|遇到 sp_dropapprole 过程。 请改用 DROP APPLICATION ROLE。 每次查询时发生。|  
 |sp_dropextendedproc|遇到 sp_dropextendedproc 过程。 请改用 CLR。 每次编译时发生。|  
@@ -206,10 +206,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_fulltext_catalog|遇到 sp_fulltext_catalog 过程。 请改用 CREATE/ALTER/DROP FULLTEXT CATALOG。 每次编译时发生。|  
 |sp_fulltext_column|遇到 sp_fulltext_column 过程。 请改用 ALTER FULLTEXT INDEX。 每次编译时发生。|  
 |sp_fulltext_database|遇到 sp_fulltext_database 过程。 请改用 ALTER DATABASE。 每次编译时发生。|  
-|sp_fulltext_service @action=clean_up|遇到 sp_fulltext_service 过程的 clean_up 选项。 每次查询时发生。|  
-|sp_fulltext_service @action=connect_timeout|遇到 sp_fulltext_service 过程的 connect_timeout 选项。 每次查询时发生。|  
-|sp_fulltext_service @action=data_timeout|遇到 sp_fulltext_service 过程的 data_timeout 选项。 每次查询时发生。|  
-|sp_fulltext_service @action=resource_usage|遇到 sp_fulltext_service 过程的 resource_usage 选项。 此选项没有函数。 每次查询时发生。|  
+|sp_fulltext_service \@action=clean_up|遇到 sp_fulltext_service 过程的 clean_up 选项。 每次查询时发生。|  
+|sp_fulltext_service \@action=connect_timeout|遇到 sp_fulltext_service 过程的 connect_timeout 选项。 每次查询时发生。|  
+|sp_fulltext_service \@action=data_timeout|遇到 sp_fulltext_service 过程的 data_timeout 选项。 每次查询时发生。|  
+|sp_fulltext_service \@action=resource_usage|遇到 sp_fulltext_service 过程的 resource_usage 选项。 此选项没有函数。 每次查询时发生。|  
 |sp_fulltext_table|遇到 sp_fulltext_table 过程。 请改用 CREATE/ALTER/DROP FULLTEXT INDEX。 每次编译时发生。|  
 |sp_getbindtoken|遇到 sp_getbindtoken 过程。 请改用多个活动结果集 (MARS) 或分布式事务。 每次编译时发生。|  
 |sp_grantdbaccess|遇到 sp_grantdbaccess 过程。 请改用 CREATE USER。 每次查询时发生。|  

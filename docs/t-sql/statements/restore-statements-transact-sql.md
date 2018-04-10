@@ -1,16 +1,16 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2016
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -42,19 +42,19 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 
+caps.latest.revision: 248
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ff7514b66515dbeac88a3506723f1cdb8a2279bd
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   还原使用 BACKUP 命令所做的备份。 通过此命令，您可以执行下列还原方案：  
   
@@ -70,6 +70,8 @@ ms.lasthandoff: 01/25/2018
   
 -   将数据库恢复到数据库快照捕获的时间点。  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原方案的信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  有关参数说明的详细信息，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。   从其他实例还原数据库时，请考虑 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)中的信息。
   
 > 注意：有关从 Microsoft Azure Blob 存储服务还原的详细信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
@@ -132,7 +134,7 @@ RESTORE DATABASE { database_name | @database_name_var }
 [;]  
   
 --To Restore a Transaction Log:  
-RESTORE LOG { database_name | @database_name_var }   
+RESTORE LOG { database_name | @database_name_var }  -- Does not apply to SQL Database Managed Instance 
  [ <file_or_filegroup_or_pages> [ ,...n ] ]  
  [ FROM <backup_device> [ ,...n ] ]   
  [ WITH   
@@ -155,7 +157,10 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
- | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
+ | { DISK    -- Does not apply to SQL Database Managed Instance
+     | TAPE  -- Does not apply to SQL Database Managed Instance
+     | URL   -- Applies to SQL Server and SQL Database Managed Instance
+   } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
 Note: URL is the format used to specify the location and the file name for the Windows Azure Blob. Although Windows Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
@@ -194,7 +199,7 @@ Note: URL is the format used to specify the location and the file name for the W
 --Monitoring Options  
  | STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. Does not apply to SQL Database Managed Instance
  | { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
@@ -334,7 +339,32 @@ Note: URL is the format used to specify the location and the file name for the W
  还原数据库将清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划高速缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划高速缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
  要还原可用性数据库，首先需要将数据库还原成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后再将数据库添加到可用性组。  
-  
+
+## <a name="general-remarks---sql-database-managed-instance"></a>一般注释 - SQL 数据库托管实例
+
+对于异步还原，即使客户端连接中断，还原操作也会继续运行。 如果连接断开，可检查 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 视图，查看还原操作的状态（以及查看 CREATE 和 DROP 数据库）。 
+
+已设置/覆盖以下数据库选项，这些选项稍后无法进行更改：
+
+- NEW_BROKER（如果 .bak 文件中未启用中转站）
+- ENABLE_BROKER（如果 .bak 文件中未启用中转站）
+- AUTO_CLOSE=OFF（如果 .bak 文件中的数据库具有 AUTO_CLOSE=ON）
+- RECOVERY FULL（如果 .bak 文件中的数据库具有 SIMPLE 或 BULK_LOGGED 恢复模式）
+- 如果源 .bak 文件中不存在内存优化文件组，则会添加一个，并将其命名为 XTP。 任何现有内存优化文件组都会重命名为 XTP
+- SINGLE_USER 和 RESTRICTED_USER 选项会转换为 MULTI_USER
+
+## <a name="limitations---sql-database-managed-instance"></a>限制 - SQL 数据库托管实例
+这些限制包括：
+
+- 无法还原包含多个备份集的 .BAK 文件。
+- 无法还原包含多个日志文件的 .BAK 文件。
+- 如果 .bak 中包含 FILESTREAM 数据，则还原将失败。
+- 如果备份中包含的数据库具有活动的内存中对象，则该备份当前无法还原。
+- 如果备份中包含的数据库中某些时候存在内存中对象，则该备份当前无法还原。
+- 如果备份包含处于只读模式的数据库，则该备份当前无法还原。 此限制很快就会取消。
+
+有关详细信息，请参阅[托管实例](/azure/sql-database/sql-database-managed-instance)
+
 ## <a name="interoperability"></a>互操作性  
   
 ### <a name="database-settings-and-restoring"></a>数据库设置和还原  

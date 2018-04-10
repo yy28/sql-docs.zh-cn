@@ -61,16 +61,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: ''
+caps.latest.revision: 281
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -413,7 +413,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
  指定在指定列中添加或删除 ROWGUIDCOL 属性。 ROWGUIDCOL 指示列为行 GUID 列。 每个表中只有一个 uniqueidentifier 列能指定为 ROWGUIDCOL 列，并且只能为 uniqueidentifier 列分配 ROWGUIDCOL 属性。 不能将 ROWGUIDCOL 分配给用户定义数据类型的列。  
   
- ROWGUIDCOL 不强制要求列中存储的值的唯一性，也不为插入到表中的新行自动生成值。 若要为每列生成唯一值，则可以在 INSERT 语句中使用 NEWID 函数，也可以将 NEWID 函数指定为列的默认值。  
+ ROWGUIDCOL 不强制要求列中存储的值的唯一性，也不为插入到表中的新行自动生成值。 若要为每列生成唯一值，请使用 INSERT 语句上的 NEWID 或 NEWSEQUENTIALID 函数，或将这些函数指定为该列的默认值。  
   
  [ {ADD | DROP} PERSISTED ]  
  指定在指定列中添加或删除 PERSISTED 属性。 该列必须是由确定性表达式定义的计算列。 对于指定为 PERSISTED 的列，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将以物理方式在表中存储计算值；并且，当更新了计算列依赖的任何其他列时，这些值也将被更新。 通过将计算列标记为 PERSISTED，可以对确定（但不精确）的表达式中定义的计算列创建索引。 有关详细信息，请参阅 [计算列上的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  

@@ -1,28 +1,28 @@
 ---
-title: "连接到 Excel 数据源（SQL Server 导入和导出向导）| Microsoft Docs"
-ms.custom: 
-ms.date: 06/20/2017
+title: 连接到 Excel 数据源（SQL Server 导入和导出向导）| Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16ace15a73d9ef727612c59f8c9329a4d4437312
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 42af9f992c293f9872080a69cf6a7a4890ff205f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>连接到 Excel 数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 **Microsoft Excel** 数据源。
@@ -30,6 +30,11 @@ ms.lasthandoff: 01/25/2018
 下面的屏幕截图显示到 Microsoft Excel 工作簿的示例连接。
 
 ![Excel 连接](../../integration-services/import-export-data/media/excel-connection.png) 
+
+可能需要下载并安装其他文件，才能连接到 Excel 文件。 有关详细信息，请参阅[获取连接到 Excel 所需的文件](../load-data-to-from-excel-with-ssis.md#get-the-files-you-need-to-connect-to-excel)。
+
+> [!IMPORTANT]
+> 有关连接到 Excel 文件的详细信息，以及从 Excel 文件加载数据或将数据加载到 Excel 文件的限制和已知问题，请参阅[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)。
 
 ## <a name="options-to-specify"></a>要指定的选项
 
@@ -50,10 +55,7 @@ ms.lasthandoff: 01/25/2018
 > 该向导无法打开受密码保护的 Excel 文件。
 
  **Excel 版本**  
-选择源工作簿使用的 Excel 版本。
-
-> [!IMPORTANT]
-> 可能需要下载并安装其他文件，才能连接到 Excel 文件。 有关详细信息，请参阅本页的[获取连接到 Excel 所需的文件](#officeDownloads)。
+选择源或目标工作簿使用的 Excel 版本。
 
 **首行包含列名称**  
 指示数据的首行是否包含列名称。
@@ -68,18 +70,8 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]
 > 若要使用 64 位版本的 SQL Server 导入和导出向导，必须安装 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位应用程序且仅安装 32 位文件，包括 32 位版本的向导。
 
-## <a name="officeDownloads"></a>获取连接到 Excel 所需的文件  
-如果尚未安装 Microsoft Office 数据源（包括 Excel 和 Access）的连接组件，则可能需要下载它们。 在 [Microsoft Access 2016 数据库引擎可再发行（程序包）](https://www.microsoft.com/download/details.aspx?id=54920)中为 Excel 和 Access 文件下载最新版本的连接组件。
-  
-最新版组件可以打开 Excel 早期版本创建的文件。
-
-如果计算机有 32 位版本的 Office，则必须安装 32 位版本的组件，还须确保在 32 位模式下运行程序包。
-
-如果有 Office 365 订阅，请确保下载 Access 数据库引擎 2016 可再发行组件，而不是 Microsoft Access 2016 Runtime。 运行安装程序时，可能会看到一条错误消息，指出该下载项无法与 Office 即点即用组件并行安装。 若要绕过此错误消息，请打开命令提示符窗口并使用 `/quiet` 开关运行下载的 .EXE 文件，从而在安静模式下运行安装。 例如：
-
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
-
 ## <a name="see-also"></a>另请参阅
+[使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)  
 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

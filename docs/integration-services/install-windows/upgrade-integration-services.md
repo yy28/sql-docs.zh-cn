@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: ''
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
   如果计算机上当前安装了 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本，可以升级到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -43,12 +43,12 @@ ms.lasthandoff: 03/20/2018
  建议您在升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前先运行升级顾问。 如果将现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所采用的新的包格式，则可能会遇到升级顾问报表问题。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，已不支持迁移或运行数据转换服务 (DTS) 包。 不再提供以下 DTS 功能：  
+>  SQL Server 2012 版已不支持迁移或运行 Data Transformation Services (DTS) 包。 不再提供以下 DTS 功能：  
 >   
 >  -   DTS 运行时  
 > -   DTS API  
-> -   用于将 DTS 包迁移到下一版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的包迁移向导  
-> -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对 DTS 包维护的支持  
+> -   用于将 DTS 包迁移到下一版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+> -   中对 DTS 包维护的支持 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   执行 DTS 2000 包任务  
 > -   升级 DTS 包的顾问扫描。  
 >   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/20/2018
   
 -   运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序，然后选择“从 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升级 **”选项**。  
   
--   在命令提示符处运行 **setup.exe**，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中“的安装脚本”部分。  
+-   在命令提示符处运行 **setup.exe**，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅[从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的“[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安装脚本”部分。  
   
  不能通过升级执行下列操作：  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/20/2018
   
     -   将日志数据从 msdb.sysdtslog90 系统表移至 msdb.sysssislog 系统表。  
   
--   将数据移动到新的 msdb.sysssis\* 表后，删除 msdb.sysdts\*90 系统表和用于访问它们的存储过程。 但是，升级过程将使用一个具有相同名称的 sysdtslog90 视图来替换 sysdtslog90 表。 这个新 sysdtslog90 视图将公开新的 msdb.sysssislog 系统表。 这可确保基于日志表的报表将继续运行而不会中断。  
+-   将数据移动到新的 msdb.sysssis\* 表后，删除 msdb.sysdts*90 系统表和用于访问它们的存储过程。 但是，升级过程将使用一个具有相同名称的 sysdtslog90 视图来替换 sysdtslog90 表。 这个新 sysdtslog90 视图将公开新的 msdb.sysssislog 系统表。 这可确保基于日志表的报表将继续运行而不会中断。  
   
 -   为了控制对包的访问，将新建三个固定的数据库级角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator。 系统不会删除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色 db_dtsadmin、db_dtsltduser 和 db_dtsoperator，而是将其作为对应的新角色的成员。  
   

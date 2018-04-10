@@ -1,81 +1,41 @@
 ---
-title: "用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/27/2015
+title: 用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b713cbe4afa9a54e9753e3347d4b2e6b85d91144
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f80aebe1158d3ac4d64bd49c683b43719ab1a6f3
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本
-  本主题包括并说明一个示例 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本，该脚本使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. 本机模式和 SharePoint 模式下，RS.exe 都随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装。 脚本将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 项（例如，报表和订阅）从一个服务器复制到另一个服务器。 该脚本支持 SharePoint 模式和本机模式报表服务器。  
-  
-  
-> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 
-  
-## <a name="in-this-topic"></a>本主题内容：  
-  
--   [下载 ssrs_migration.rss 脚本](#bkmk_download_script)  
-  
--   [支持的方案](#bkmk_supported_scenarios)  
-  
--   [脚本迁移的项和资源](#bkmk_what_is_migrated)  
-  
--   [所需的权限](#bkmk_required_permissions)  
-  
--   [如何使用该脚本](#bkmk_how_to_use_the_script)  
-  
--   [参数说明](#bkmk_parameter_description)  
-  
--   [更多示例](#bkmk_more_examples)  
-  
-    -   [本机模式报表服务器到本机模式报表服务器](#bkmk_native_2_native)  
-  
-    -   [本机模式到 SharePoint 模式 – 根网站](#bkmk_native_2_sharepoint_root)  
-  
-    -   [本机模式到 SharePoint 模式 –“bi”网站集](#bkmk_native_2_sharepoint_with_site)  
-  
-    -   [SharePoint 模式到 SharePoint 模式 –“bi”网站集](#bkmk_sharepoint_2_sharepoint)  
-  
-    -   [本机模式到本机模式 – Windows Azure 虚拟机](#bkmk_native_to_native_Azure_vm)  
-  
-    -   [SharePoint 模式 –“bi”网站集到 Windows Azure 虚拟机上的本机模式服务器](#bkmk_sharepoint_site_to_native_Azure_vm)  
-  
--   [验证](#bkmk_verification)  
-  
--   [故障排除](#bkmk_troubleshoot)  
-  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
+
+本文包括并说明一个示例 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本，该脚本使用“RS.exe”实用工具将来自一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的内容项和设置复制到另一个报表服务器中。 本机模式和 SharePoint 模式下，RS.exe 都随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装。 脚本将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 项（例如，报表和订阅）从一个服务器复制到另一个服务器。 该脚本支持 SharePoint 模式和本机模式报表服务器。  
+
 ##  <a name="bkmk_download_script"></a> 下载 ssrs_migration.rss 脚本  
- 从 CodePlex 站点 [Reporting Services RS.exe 脚本迁移内容](https://azuresql.codeplex.com/releases/view/115207) 将脚本下载到本地文件夹。 有关详细信息，请参阅本主题中的 [如何使用该脚本](#bkmk_how_to_use_the_script) 部分。  
+ 从 GitHub 站点 [Reporting Services RS.exe 迁移脚本](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss)，将脚本下载到本地文件夹。 有关详细信息，请参阅本文中的[如何使用脚本](#bkmk_how_to_use_the_script)部分。  
   
 ##  <a name="bkmk_supported_scenarios"></a> 支持的方案  
- 该脚本支持 SharePoint 模式和本机模式报表服务器。 该脚本支持以下报表服务器版本：  
+ 该脚本支持 SharePoint 模式和本机模式报表服务器。 该脚本支持报表服务器版本 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和更高版本，也支持 Power BI 报表服务器。  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
-  
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
-  
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
- 该脚本可用于在相同模式或不同模式的报表服务器之间复制内容。 例如，可以运行该脚本以便将 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 本机模式报表服务器的内容复制到 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 模式报表服务器。 可以从安装了 RS.exe 的任何服务器运行该脚本。 例如，在以下部署中，您可以：  
+该脚本可用于在相同模式或不同模式的报表服务器之间复制内容。 例如，可以运行该脚本以便将 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 本机模式报表服务器的内容复制到 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 模式报表服务器。 可以从安装了 RS.exe 的任何服务器运行该脚本。 例如，在以下部署中，您可以：  
   
 -   在服务器 A **上** 运行 RS.exe 和脚本。  
   
@@ -92,20 +52,20 @@ ms.lasthandoff: 01/09/2018
  有关使用 RS.exe 实用工具的详细信息，请参阅 [RS.exe 实用工具 (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)。  
   
 ###  <a name="bkmk_what_is_migrated"></a> 脚本迁移的项和资源  
- 该脚本将不会覆盖同名的现有内容项。  如果该脚本在目标服务器上检测到名称与源服务器上相同的项，则这些单独的项将导致“失败”消息，但该脚本将继续运行。 下表列出该脚本可迁移到目标报表服务器模式的内容和资源的类型。  
+ 此脚本不会覆盖同名的现有内容项。  如果该脚本在目标服务器上检测到名称与源服务器上相同的项，则这些单独的项将导致“失败”消息，但该脚本将继续运行。 下表列出该脚本可迁移到目标报表服务器模式的内容和资源的类型。  
   
 |项|是否迁移|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |密码|**是**|**是**|**不** 迁移密码。 在迁移内容项后，在目标服务器上更新凭据信息。 例如，具有已存储凭据的数据源。|  
-|我的报表|**是**|**是**|本机模式“我的报表”功能基于单个用户登录名，因此，对于使用 **–u** 参数以外的参数运行 rss 脚本的用户，脚本服务无权访问其“我的报表”文件夹中的内容。 此外“我的报表”不是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式下的功能，并且这些文件夹中的项不能复制到 SharePoint 环境。 因此，此脚本不复制源本机模式报表服务器上“我的报表”文件夹中的报表项<br /><br /> 若要使用该脚本迁移“我的报表”文件夹中的内容，请完成以下任务：<br /><br /> 1.在报表管理器中创建新文件夹。 或者，您可为每个用户创建文件夹或子文件夹。<br />2.以具有“我的报表”内容的用户身份登录。<br />3.在报表管理器中，单击“我的报表”文件夹。<br />4.单击该文件夹的“详细信息”视图。<br />5.选择要复制的每个报表。<br />6.在报表管理器工具栏中，单击“移动”。<br />7.选择所需的目标文件夹。<br />8.为每个用户重复步骤 2-7。<br />9.运行该脚本。|  
+|我的报表|**是**|**是**|本机模式“我的报表”功能基于单个用户登录名，因此，对于使用 **–u** 参数以外的参数运行 rss 脚本的用户，脚本服务无权访问其“我的报表”文件夹中的内容。 此外，“我的报表”不是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式下的功能，并且这些文件夹中的项不能复制到 SharePoint 环境。 因此，此脚本不复制源本机模式报表服务器上“我的报表”文件夹中的报表项<br /><br /> 若要使用该脚本迁移“我的报表”文件夹中的内容，请完成以下步骤：<br /><br /> 1.在报表管理器中创建新文件夹。 或者，您可为每个用户创建文件夹或子文件夹。<br />2.以具有“我的报表”内容的用户身份登录。<br />3.在报表管理器中，单击“我的报表”文件夹。<br />4.单击该文件夹的“详细信息”视图。<br />5.选择要复制的每个报表。<br />6.在报表管理器工具栏中，单击“移动”。<br />7.选择所需的目标文件夹。<br />8.为每个用户重复步骤 2-7。<br />9.运行该脚本。|  
 |历史记录|**是**|**是**||  
 |历史记录设置|是|是|将迁移历史记录设置，但不迁移历史记录详细信息。|  
-|“计划”|是|是|若要迁移计划，在目标服务器上需运行 SQL Server 代理。 如果在目标服务器上未运行 SQL Server 代理，将会显示如下错误消息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|角色和系统策略|是|是|默认情况下，该脚本不会在服务器之间复制自定义权限架构。 默认行为是项将复制到目标服务器并且“从父项继承权限”标志设置为 TRUE。 如果您希望该脚本复制单独项的权限，请使用 SECURITY 开关。<br /><br /> 如果源服务器和目标服务器 **未处于相同报表服务器模式下**，例如从本机模式到 SharePoint 模式，并且您使用 SECURITY 开关，则该脚本将尝试基于比较（请参阅主题 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)）映射默认角色和组。 自定义角色和组不复制到目标服务器。<br /><br /> 在 **处于相同模式下**的服务器之间复制脚本并且使用 SECURITY 开关时，该脚本将在目标服务器上创建新角色（本机模式）或组（SharePoint 模式）。<br /><br /> 如果某一角色已在目标服务器上存在，该脚本将创建如下“失败”消息，并且继续迁移其他项。 在该脚本运行完毕之后，请验证目标服务器上的角色已配置为满足您的需要。 迁移角色：找到了 8 项。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> **注意：** 如果某一用户在源服务器上存在，但在目标服务器上不存在，则该脚本无法在目标服务器上应用角色分配，即使使用了 SECURITY 开关，该脚本也无法应用角色分配。|  
-|共享数据源|是|是|该脚本将不覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 凭据 **不** 作为数据源的一部分被复制。 在迁移内容项后，在目标服务器上更新凭据信息。|  
+|“计划”|是|是|若要迁移计划，在目标服务器上需运行 SQL Server 代理。 如果在目标服务器上未运行 SQL Server 代理，将会显示如下错误消息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
+|角色和系统策略|是|是|默认情况下，该脚本不会在服务器之间复制自定义权限架构。 默认行为是项将复制到目标服务器，并且“从父项继承权限”标志设置为 TRUE。 如果您希望该脚本复制单独项的权限，请使用 SECURITY 开关。<br /><br /> 如果源服务器和目标服务器“未处于相同报表服务器模式下”，例如从本机模式到 SharePoint 模式，并且使用 SECURITY 开关，则该脚本将尝试基于比较（请参阅本文 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)）映射默认角色和组。 自定义角色和组不会复制到目标服务器。<br /><br /> 在 **处于相同模式下**的服务器之间复制脚本并且使用 SECURITY 开关时，该脚本将在目标服务器上创建新角色（本机模式）或组（SharePoint 模式）。<br /><br /> 如果某一角色已在目标服务器上存在，该脚本将创建如下“失败”消息，并且继续迁移其他项。 在该脚本运行完毕之后，请验证目标服务器上的角色已配置为满足您的需要。 迁移角色：找到了 8 项。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> **注意：** 如果某一用户在源服务器上存在，但在目标服务器上不存在，则该脚本无法在目标服务器上应用角色分配，即使使用了 SECURITY 开关，该脚本也无法应用角色分配。|  
+|共享数据源|是|是|该脚本将不会覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 凭据 **不** 作为数据源的一部分被复制。 在迁移内容项后，在目标服务器上更新凭据信息。|  
 |共享数据集|是|是||  
-|文件夹|是|是|该脚本将不覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
-|报告|是|是|该脚本将不覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
+|文件夹|是|是|该脚本将不会覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
+|报告|是|是|该脚本将不会覆盖目标服务器上的现有项。 如果目标服务器上已存在同名的项，将显示如下错误消息：<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
 |Parameters|是|是||  
 |订阅|是|是||  
 |历史记录设置|是|是|将迁移历史记录设置，但不迁移历史记录详细信息。|  
@@ -116,7 +76,7 @@ ms.lasthandoff: 01/09/2018
 |报表部件|是|是||  
   
 ##  <a name="bkmk_required_permissions"></a> 所需的权限  
- 读取或写入项和资源的权限并不是对于在该脚本中使用的所有方法全都相同。 下表总结了用于每一项或资源的方法以及相关内容的链接。 导航到单独的主题可看到所需权限。 例如，ListChildren 方法主题记录了以下所需权限：  
+ 读取或写入项和资源的权限对于在该脚本中使用的所有方法并不全部相同。 下表总结了用于每一项或资源的方法以及相关内容的链接。 导航到单独的主题可看到所需权限。 例如，ListChildren 方法主题记录了以下所需权限：  
   
 -   **本机模式所需的权限：** 对项的 ReadProperties  
   
@@ -160,7 +120,7 @@ ms.lasthandoff: 01/09/2018
   
      第一步是审核，以便返回将迁移的项的列表，第二步是迁移过程。  
   
-     如果你只想要查看可能的迁移列表或者想要修改参数，则可以在第一步后 **取消该脚本** 。 相关设置不在第一步中列出。 例如，不列出报表的高速缓存选项，而只列出报表本身。  
+     如果你只想要查看可能的迁移列表或者想要修改参数，则可以在第一步后 **取消该脚本** 。 相关设置未在第一步中列出。 例如，不列出报表的高速缓存选项，而只列出报表本身。  
   
     > [!TIP]  
     >  如果想要仅审核单个服务器，则对源和目标使用相同的服务器并在步骤 1 后取消  
@@ -233,17 +193,17 @@ ms.lasthandoff: 01/09/2018
   
          `Report: /Reports/TitleOnly`  
   
--   SOURCE_URL 和 TARGET_URL 必须是指向源和目标 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的有效报表服务器 URL。 在本机模式下，报表服务器 URL 如下所示：  
+-   SOURCE_URL 和 TARGET_URL 必须是指向源和目标 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的有效报表服务器 URL。 在本机模式下，报表服务器 URL 如以下 URL 所示：  
   
     -   `http://servername/reportserver`  
   
-     在 SharePoint 模式下，URL 如下所示：  
+     在 SharePoint 模式下，URL 如以下 URL 所示：  
   
     -   `http://servername/_vti_bin/reportserver`  
   
 -   在 SharePoint 中提供给用户的虚拟文件夹结构可能与基础结构不同。 在浏览器中打开 `http://servername/_vti_bin/reportserver` 或 `http://servername/sites/site_name/_vti_bin/reportserver` 可看到非虚拟文件夹结构。 对于 SharePoint 模式下的服务器，这有助于将源文件夹和目标文件夹设置为“/”以外的内容。  
   
--   密码不迁移，并且必须重新输入，例如具有存储的凭据的数据源。  
+-   不迁移密码，并且必须重新输入密码，例如具有存储凭据的数据源。  
   
 ##  <a name="bkmk_parameter_description"></a> 参数说明  
   
@@ -256,8 +216,8 @@ ms.lasthandoff: 01/09/2018
 |**-v ts**="TARGET_URL"|目标 RS 服务器的 URL||  
 |**-v tu**="domain\username" **-v tp**="password"|目标服务器的凭据。|可选，如果缺失则使用默认凭据。 **注意：** 在目标服务器中，用户将作为共享计划的“创建者”以及报表项的“修改者”帐户列出。|  
 |**-v tst**="SITE"||可选。 此参数仅用于 SharePoint 模式报表服务器。|  
-|**-v tf** ="TARGETFOLDER"|设置为“/”可迁移到根级别中。 设置为“/folder/subfolder”可复制到已存在的目录下。 “SOURCEFOLDER”内的所有内容都将复制到“TARGETFOLDER”。|可选，默认为“/”。|  
-|**-v security**= "True/False"|如果设置为“False”，目标目录项将根据目标系统的设置继承安全设置。 这是在不同的报表服务器类型之间进行迁移（例如本机模式到 SharePoint 模式）的推荐设置。 如果设置为“True”，则该脚本将尝试迁移安全设置。|可选，默认值为“False”。|  
+|**-v tf** ="TARGETFOLDER"|设置为“/”可迁移到根级别中。 设置为“/folder/subfolder”可复制到已存在的文件夹中。 “SOURCEFOLDER”内的所有内容都将复制到“TARGETFOLDER”。|可选，默认为“/”。|  
+|**-v security**= "True/False"|如果设置为“False”，目标目录项将根据目标系统的设置继承安全设置。 建议在不同的报表服务器类型之间进行迁移（例如本机模式到 SharePoint 模式）时使用该设置。 如果设置为“True”，则该脚本将尝试迁移安全设置。|可选，默认值为“False”。|  
   
 ##  <a name="bkmk_more_examples"></a> 更多示例  
   
@@ -306,7 +266,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
   
 -   从本机模式报表服务器 **SourceServer**。  
   
--   到在 Windows Azure 虚拟机上运行的 **TargetServer** 本机模式报表服务器。 **TargetServer** 未加入 **SourceServer** 的域，并且 **User2** 是 Windows Azure 虚拟机 **TargetServer**上的管理员。  
+-   到在 Windows Azure 虚拟机上运行的 **TargetServer** 本机模式报表服务器。 “TargetServer”未加入“SourceServer”的域，并且“User2”是 Windows Azure 虚拟机“TargetServer”上的管理员。  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
@@ -320,7 +280,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
 -   从包含网站集 “sites/bi” 和共享文档库的 SharePoint 模式报表服务器 **SourceServer** 。  
   
--   到在 Windows Azure 虚拟机上运行的 **TargetServer** 本机模式报表服务器。 **TargetServer** 未加入 **SourceServer** 的域，并且 **User2** 是 Windows Azure 虚拟机 **TargetServer**上的管理员。  
+-   到在 Windows Azure 虚拟机上运行的 **TargetServer** 本机模式报表服务器。 “TargetServer”未加入“SourceServer”的域，并且“User2”是 Windows Azure 虚拟机“TargetServer”上的管理员。  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
@@ -360,7 +320,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 -   无法连接到服务器：http://\<servername>/ReportServer/ReportService2010.asmx  
   
- 使用 **–t** 标志再次运行该脚本，以便看到如下消息：  
+ 使用“–t”标记再次运行该脚本，以便看到如下消息：  
   
 -   System.Exception: 无法连接到服务器: http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **请求失败，具有 HTTP 状态 401: 未授权**。   在 System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse （SoapClientMessage 消息、 WebResponse 响应、 流 responseStream、 布尔值 asyncCall） 在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke （字符串方法名称，对象 [] 参数） 在 Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() 在 Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService （字符串 url、 String userName、 字符串密码字符串域、 Int32 超时) 在 Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()-内部异常堆栈跟踪结束----  
   

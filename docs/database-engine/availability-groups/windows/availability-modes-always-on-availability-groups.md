@@ -1,15 +1,16 @@
 ---
-title: "可用性模式（AlwaysOn 可用性组）| Microsoft Docs"
-ms.custom: 
+title: 可用性模式（AlwaysOn 可用性组）| Microsoft Docs
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fd0254134d929dd14b1bddab09cae409b999b21d
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/18/2018
 -   [相关内容](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> 受支持的可用性模式  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持异步提交模式和同步提交模式这两种可用性模式：  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支持三种可用性模式：异步提交模式、同步提交模式和仅配置模式，如下所示：  
   
 -   异步提交模式是一种灾难恢复解决方案，适合于可用性副本的分布距离较远的情况。 如果每个辅助副本都在异步提交模式下运行，则主副本不会等待任何辅助副本强制写入日志， 而会在将日志记录写入本地日志文件后，立即将事务确认发送到客户端。 主副本使用与针对异步提交模式配置的辅助副本相关的最小事务滞后运行。  如果为当前主副本配置了异步提交可用性模式，则它将通过异步方式为所有辅助副本提交事务，而不管这些副本各自的可用性模式设置如何。  
   
