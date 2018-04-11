@@ -1,6 +1,6 @@
 ---
-title: "已更新 - PowerShell 文档 | Microsoft Docs"
-description: "显示 PowerShell 文档中最近更改的更新内容片段。"
+title: 已更新 - PowerShell 文档 | Microsoft Docs
+description: 显示 PowerShell 文档中最近更改的更新内容片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: powershell
 ms.date: 02/03/2018
-ms.openlocfilehash: 4c14ff7713b6ca4138407cd105bb010e004e781c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8967deea4eb4a64b58166d859fabcf0db44a01c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>新的和最近更新的文章：PowerShell 文档
 
@@ -28,7 +28,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：2017-12-03 到 2018-02-03
+- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
 - 主题区域：&nbsp; PowerShell。
 
 
@@ -130,7 +130,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新的和更新的文章 (0+0)：SQL 示例文档](../samples/new-updated-samples.md)
 - [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)

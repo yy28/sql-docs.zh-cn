@@ -1,16 +1,16 @@
 ---
-title: "XQuery 语言参考 (SQL Server) |Microsoft 文档"
-ms.custom: 
+title: XQuery 语言参考 (SQL Server) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   
  XQuery 基于现有的 XPath 查询语言，并支持更好的迭代、更好的排序结果以及构造必需的 XML 的功能。 XQuery 在 XQuery 数据模型上运行。 此模型是 XML 文档以及可能为类型化也可能为非类型化的 XQuery 结果的抽象概念。 类型信息基于 W3C XML 架构语言所提供的类型。 如果没有可用的类型化信息，XQuery 将按照非类型化处理数据。 这与 XPath 1.0 版处理 XML 的方式相似。  
   
- 若要查询的变量或列中存储的 XML 实例**xml**类型，则使用[xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md)。 例如，可以声明的变量**xml**键入和使用查询**query （)**方法**xml**数据类型。  
+ 若要查询的变量或列中存储的 XML 实例**xml**类型，则使用[xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md)。 例如，可以声明的变量**xml**键入和使用查询**query()**方法**xml**数据类型。  
   
 ```  
 DECLARE @x xml  
@@ -63,7 +63,7 @@ WHERE ProductModelID=7
   
  XQuery 包括命名空间声明， `declare namespace``AWMI=...`，和查询表达式中， `/AWMI:root/AWMI:Location[@LocationID=10]`。  
   
- 请注意，针对 Instructions 列指定 XQuery **xml**类型。 [Query （） 方法](../t-sql/xml/query-method-xml-data-type.md)xml 数据类型用于指定 XQuery。  
+ 请注意，针对 Instructions 列指定 XQuery **xml**类型。 XML 数据类型的 [query() 方法](../t-sql/xml/query-method-xml-data-type.md)用于指定 XQuery。  
   
  下表列出了有助于理解如何在 [!INCLUDE[ssDE](../includes/ssde-md.md)]中实现 XQuery 的相关主题。  
   
@@ -82,7 +82,7 @@ WHERE ProductModelID=7
 |-----------|-----------------|  
 |[XQuery 基础知识](../xquery/xquery-basics.md)|简要介绍了 XQuery 概念，以及表达式计算（静态和动态上下文）、原子化、有效的布尔值、XQuery 类型系统、序列类型匹配和错误处理。|  
 |[XQuery 表达式](../xquery/xquery-expressions.md)|介绍 XQuery 主表达式、路径表达式、序列表达式、算术比较和逻辑表达式、XQuery 构造、FLWOR 表达式、条件和定量表达式以及序列类型的各种表达式。|  
-|[模块和起始 &#40;XQuery &#41;](../xquery/modules-and-prologs-xquery.md)|介绍 XQuery prolog。|  
+|[模块和起始&#40;XQuery&#41;](../xquery/modules-and-prologs-xquery.md)|介绍 XQuery prolog。|  
 |[针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)|介绍支持的一系列 XQuery 函数。|  
 |[针对 xml 数据类型的 XQuery 运算符](../xquery/xquery-operators-against-the-xml-data-type.md)|介绍支持的 XQuery 运算符。|  
 |[针对 xml 数据类型的其他示例 XQuery](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|提供附加的 XQuery 示例。|  
