@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 04/06/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: ''
+caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9865ff96b084d70b3dcd067ad8d57c7cece01a62
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 75e8afe2561b49b2479d7b65d1c7aff9854fa420
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ SQL 数据库托管实例：
 - 添加了设置，以便在从对象资源管理器拖放至查询窗口时，不强制使用括号括住名称。 （用户建议 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 和 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051)。）
 
 数据分类：
-- 一般改进和 Bug 修复。
+- 一般改进和 bug 修复。
 
 **Integration Services (IS)**
 
@@ -109,7 +109,7 @@ SMO：
 
 ### <a name="known-issues"></a>已知问题
 
-此版本当前没有已知问题。
+- 目前存在一个已知问题，即在维护计划中配置日程安排时，SSMS 17.6 会发生故障。
 
 ## <a name="previous-ssms-releases"></a>SSMS 的早期版本
 

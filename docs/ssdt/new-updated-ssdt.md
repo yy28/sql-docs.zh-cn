@@ -1,6 +1,6 @@
 ---
-title: "已更新 - SQL Server SSDT 文档 | Microsoft Docs"
-description: "显示 Microsoft SQL Server 的 SQL Server Data Tools (SSDT) 文档中最近更新内容的片段。"
+title: 已更新 - SQL Server SSDT 文档 | Microsoft Docs
+description: 显示 Microsoft SQL Server 的 SQL Server Data Tools (SSDT) 文档中最近更新内容的片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: ssdt
 ms.date: 02/03/2018
-ms.openlocfilehash: c591ddddd60af31fe2d338fdee25ea2c17ab0ea5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ad139f5ff9389c1a04a7f077d61facc7643db323
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>新的和最近更新的文章：SQL Server Data Tools (SSDT)
 
@@ -28,7 +28,7 @@ Microsoft 几乎每天都会更新其 [Docs.Microsoft.com](http://docs.microsoft
 
 
 
-- 更新日期范围：2017-12-03 到 2018-02-03
+- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
 - 主题区域：&nbsp;**SQL Server Data Tools (SSDT)**。
 
 
@@ -188,7 +188,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 - [新文章和更新的文章 (0+0)：Master Data Services (MDS) for SQL 文档](../master-data-services/new-updated-master-data-services.md)
 - [新的和更新的文章 (0+0)：SQL 多维表达式 (MDX) 文档](../mdx/new-updated-mdx.md)
 - [新的和更新的文章 (0+0)：SQL 开放式数据库连接 (ODBC) 文档](../odbc/new-updated-odbc.md)
-- [新的和更新的文章 (0+0)：SQL 示例文档](../sample/new-updated-sample.md)
+- [新的和更新的文章 (0+0)：SQL 示例文档](../samples/new-updated-samples.md)
 - [新的和更新的文章 (0+0)：SQL Server Migration Assistant (SSMA) 文档](../ssma/new-updated-ssma.md)
 - [新文章和更新的文章 (0+0)：SQL 工具文档](../tools/new-updated-tools.md)
 - [新的和更新的文章 (0+0)：XQuery for SQL 文档](../xquery/new-updated-xquery.md)
