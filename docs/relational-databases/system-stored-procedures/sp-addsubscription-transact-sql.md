@@ -1,16 +1,16 @@
 ---
-title: "sp_addsubscription (Transact SQL) |Microsoft 文档"
+title: sp_addsubscription (Transact SQL) |Microsoft 文档
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-caps.latest.revision: 
+caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,22 +82,22 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication=] '*发布*  
+ [ @publication=] '*publication*'  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ @article=] '*文章*  
+ [ @article=] '*article*'  
  发布所订阅的项目。 *文章*是**sysname**，默认值为所有。 如果为 all，则订阅将添加到该发布的所有项目中。 Oracle 发布服务器只支持 all 或 NULL 值。  
   
- [ @subscriber=] '*订阅服务器*  
+ [ @subscriber=] '*subscriber*'  
  订阅服务器的名称。 *订阅服务器*是**sysname**，默认值为 NULL。  
   
- [ @destination_db=] '*destination_db*  
+ [ @destination_db=] '*destination_db*'  
  用于放置复制数据的目标数据库的名称。 *destination_db*是**sysname**，默认值为 NULL。 当为 NULL 时， *destination_db*设置为发布数据库的名称。 对于 Oracle 发布者， *destination_db*必须指定。 对于非 SQL Server 订阅服务器，请为指定值的 （默认目标） *destination_db*。  
   
- [ @sync_type=] '*sync_type*  
+ [ @sync_type=] '*sync_type*'  
  订阅同步类型。 *sync_type*是**nvarchar （255)**，和可以是以下值之一：  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |none|订阅服务器已包含发布表的架构和初始数据。<br /><br /> 注意： 此选项已弃用。 请改用仅支持复制。|  
 |automatic（默认值）|已发布表的架构和初始数据将首先传输到订阅服务器。|  
@@ -108,24 +108,24 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  始终会传输系统表和数据。  
   
- [ @status=] '*状态*  
+ [ @status=] '*status*'  
  订阅状态。 *状态*是**sysname**，默认值为 NULL。 当此参数未显式设置时，复制会自动将其设置为下列值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |active|订阅已初始化并可接受更改。 当设置此选项的值*sync_type*为 none，与备份或复制仅支持 32 位的初始化。|  
 |subscribed|订阅需要进行初始化。 当设置此选项的值*sync_type*是自动的。|  
   
- [ @subscription_type=] '*subscription_type*  
+ [ @subscription_type=] '*subscription_type*'  
  是一种订阅。 *subscription_type*是**nvarchar(4)**，默认值为推送。 可以为 push 或 pull。 推送订阅的分发代理程序驻留在分发服务器，而请求订阅的分发代理程序驻留在订阅服务器上。 *subscription_type*可以请求创建对发布服务器已知的命名的请求订阅。 有关详细信息，请参阅[订阅发布](../../relational-databases/replication/subscribe-to-publications.md)。  
   
 > [!NOTE]  
 >  匿名订阅无需使用此存储过程。  
   
- [ @update_mode=] '*update_mode*  
+ [ @update_mode=] '*update_mode*'  
  是更新的类型。*update_mode*是**nvarchar (30)**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |read only（默认值）|该订阅是只读的。 在订阅服务器上所做的更改不会发送到发布服务器。|  
 |sync tran|支持立即更新订阅。 Oracle 发布服务器不支持。|  
@@ -135,19 +135,19 @@ sp_addsubscription [ @publication = ] 'publication'
   
  请注意在被订阅该发布允许 DTS 是否不允许的值同步事务和排队的 tran。  
   
- [ @loopback_detection=] '*loopback_detection*  
+ [ @loopback_detection=] '*loopback_detection*'  
  指定分发代理是否将从订阅服务器发起的事务发送回该订阅服务器。 *loopback_detection*是**nvarchar(5)**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
-|true|分发代理不将从订阅服务器上发起的事务发送回该订阅服务器。 与双向事务复制一起使用。 有关详细信息，请参阅 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
+|true|分发代理不将从订阅服务器上发起的事务发送回该订阅服务器。 与双向事务复制一起使用。 有关详细信息，请参阅[双向事务复制](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |false|分发代理将在订阅服务器上发起的事务发送回订阅服务器。|  
 |NULL（默认值）|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器，自动设置为 true，对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器，则设置为 false。|  
   
  [ @frequency_type=] *frequency_type*  
  安排分发任务所使用的频率。 *frequency_type* int，并且可以是下列值之一。  
   
-|值|说明|  
+|“值”|Description|  
 |-----------|-----------------|  
 |1|一次|  
 |2|按需|  
@@ -164,7 +164,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=] *frequency_relative_interval*  
  分发代理的日期。 使用此参数时*frequency_type*设置为 32 （每月相对）。 *frequency_relative_interval*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|Description|  
 |-----------|-----------------|  
 |1|第一个|  
 |2|第二个|  
@@ -179,7 +179,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday=] *frequency_subday*  
  在定义周期内重新调度的频率（分钟）。 *frequency_subday*是**int**，并且可以为这些值之一。  
   
-|值|说明|  
+|“值”|Description|  
 |-----------|-----------------|  
 |1|一次|  
 |2|第二个|  
@@ -202,49 +202,49 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @active_end_date=] *active_end_date*  
  停止安排分发代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
- [ @optional_command_line=] '*optional_command_line*  
+ [ @optional_command_line=] '*optional_command_line*'  
  要执行的可选命令提示符。 *optional_command_line*是**nvarchar （4000)**，默认值为 NULL。  
   
- [ @reserved=] '*保留*  
+ [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*  
+ [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  是是否通过同步订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同步管理器。 *enabled_for_syncmgr*是**nvarchar(5)**，默认值为 FALSE。 如果为 false，则表示订阅没有在 Windows 同步管理器中注册。 如果为 true，则表示订阅已向 Windows 同步管理器注册，因而可以在不启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的情况下同步。 Oracle 发布服务器不支持。  
   
- [ @offloadagent=] '*remote_agent_activation*  
+ [ @offloadagent= ] '*remote_agent_activation*'  
  指定可远程激活代理。 *remote_agent_activation*是**位**默认值为 0。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它只是为了让脚本能够向后兼容。  
   
- [ @offloadserver=] '*remote_agent_server_name*  
+ [ @offloadserver= ] '*remote_agent_server_name*'  
  指定用于远程激活的服务器的网络名称。 *remote_agent_server_name*是**sysname**，默认值为 NULL。  
   
- [ @dts_package_name=] '*dts_package_name*  
+ [ @dts_package_name= ] '*dts_package_name*'  
  指定 Data Transformation Services (DTS) 包的名称。 *dts_package_name*是**sysname**默认值为 NULL。 例如，若要指定 DTSPub_Package 包，则该参数将为 `@dts_package_name = N'DTSPub_Package'`。 该参数可用于推送订阅。 若要将 DTS 包信息添加到请求订阅，请使用 sp_addpullsubscription_agent。  
   
- [ @dts_package_password=] '*dts_package_password*  
+ [ @dts_package_password= ] '*dts_package_password*'  
  指定用于包的密码（如果有）。 *dts_package_password*是**sysname**默认值为 NULL。  
   
 > [!NOTE]  
 >  如果满足以下条件，则必须指定密码*dts_package_name*指定。  
   
- [ @dts_package_location=] '*dts_package_location*  
+ [ @dts_package_location= ] '*dts_package_location*'  
  指定包位置。 *dts_package_location*是**nvarchar(12)**，默认值为分发服务器。 包的位置可以是 distributor 或 subscriber。  
   
- [ @distribution_job_name=] '*distribution_job_name*  
+ [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher=] '*发布服务器*  
+ [ @publisher= ] '*publisher*'  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*不应为指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
- [ @backupdevicetype=] '*backupdevicetype*  
+ [ @backupdevicetype= ] '*backupdevicetype*'  
  指定从备份初始化订阅服务器时使用的备份设备的类型。 *backupdevicetype*是**nvarchar(20)**，并且可以为这些值之一：  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |logical（默认值）|备份设备是逻辑设备。|  
 |disk|备份设备是磁盘驱动器。|  
@@ -252,28 +252,28 @@ sp_addsubscription [ @publication = ] 'publication'
   
  *backupdevicetype*仅当使用*sync_method*设置为 initialize_with_backup。  
   
- [ @backupdevicename=] '*backupdevicename*  
+ [ @backupdevicename= ] '*backupdevicename*'  
  指定从备份初始化订阅服务器时使用的设备的名称。 *backupdevicename*是**nvarchar(1000)**，默认值为 NULL。  
   
- [ @mediapassword=] '*mediapassword*  
+ [ @mediapassword= ] '*mediapassword*'  
  指定介质集的密码（如果在格式化介质时设置了密码）。 *mediapassword*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password=] '*密码*  
+ [ @password= ] '*password*'  
  指定备份的密码（如果在创建备份时设置了密码）。 *密码*是**sysname**，默认值为 NULL。  
   
- [ @fileidhint=] *fileidhint*  
+ [ @fileidhint= ] *fileidhint*  
  标识要还原的备份集的序号值。 *fileidhint*是**int**，默认值为 NULL。  
   
- [ @unload=]*卸载*  
+ [ @unload= ] *unload*  
  指定在从备份进行的初始化完成后是否应取出磁带备份设备。 *卸载*是**位**，默认值为 1。 1 表示指定应卸载磁带。 *卸载*仅当使用*backupdevicetype*是磁带。  
   
- [ @subscriptionlsn=] *subscriptionlsn*  
+ [ @subscriptionlsn= ] *subscriptionlsn*  
  指定订阅应从其开始将更改传递给对等事务复制拓扑中的节点的日志序列号 (LSN)。 与使用@sync_type从 lsn，若要确保所有的相关事务将复制到新节点的初始化值。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
- [ @subscriptionstreams=] *subscriptionstreams*  
+ [ @subscriptionstreams= ] *subscriptionstreams*  
  每个分发代理允许的连接数，用于将成批更改并行应用于订阅服务器，同时保留在使用单线程时具有的多种事务特征。 *subscriptionstreams*是**tinyint**，默认值为 NULL。 支持使用 1 到 64 之间的值。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器、Oracle 发布服务器和对等订阅均不支持此参数。 每当使用订阅流时，都会在 msreplication_subscriptions 表中添加附加行（每个流一行），且 agent_id 设置为 NULL。  
   
 > [!NOTE]  
@@ -282,9 +282,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=] *subscriber_type*  
  订阅服务器的类型。 *subscriber_type*是**tinyint**，并且可以为这些值之一。  
   
-|值|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
-|0（默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器|  
+|0（默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器|  
 |1|ODBC 数据源服务器|  
 |2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 数据库|  
 |3|OLE DB 访问接口|  
@@ -316,7 +316,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  选择 **sync_type** 选项 *replication support only*、 *initialize with backup*或 *initialize from lsn*时，日志读取器代理必须在执行 **sp_addsubscription**后运行，以便将设置脚本写入分发数据库。 日志读取器代理必须在作为 **sysadmin** 固定服务器角色成员的帐户下运行。 将 **sync_type** 选项设置为 *Automatic*时，不需要执行任何特殊日志读取器代理操作。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有 sysadmin 固定服务器角色成员或 db_owner 固定数据库角色成员才能执行 sp_addsubscription。 对于请求订阅，在发布访问列表中有登录权的用户可以执行 sp_addsubscription。  
   
 ## <a name="example"></a>示例  
@@ -326,10 +326,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [为非 SQL Server 订阅服务器创建订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [sp_changesubstatus &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_changesubstatus &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

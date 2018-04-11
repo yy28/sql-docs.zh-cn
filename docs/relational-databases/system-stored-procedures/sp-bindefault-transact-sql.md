@@ -1,16 +1,16 @@
 ---
-title: "sp_bindefault (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_bindefault (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindefault
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindefault
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b3e23435d6c0a2db3809722856b9daa6b2d66505
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   将默认值绑定到列或绑定到别名数据类型。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]我们建议使用的 DEFAULT 关键字创建默认定义[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)语句相反。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用的 DEFAULT 关键字创建默认定义[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)语句相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@defname=** ] *默认*  
+ [ **@defname=** ] **'***default***'**  
  由 CREATE DEFAULT 创建的默认值的名称。 *默认*是**nvarchar(776)**，无默认值。  
   
- [  **@objname=** ] *object_name*  
+ [ **@objname=** ] **'***object_name***'**  
  将默认值绑定到的表名、列名或别名数据类型。 *object_name*是**nvarchar(776)**无默认值。 *object_name*不能使用定义**varchar （max)**， **nvarchar (max)**， **varbinary （max)**， **xml**，或 CLR用户定义的类型。  
   
  如果*object_name*是一个部分名称，它被解析为别名数据类型。 如果它是两个或三个部分名称，它是第一次解析为的表和列;并且，如果此解决方法失败，则将它解析为别名数据类型。 默认情况下，该别名数据类型的现有列继承*默认*，除非已直接到列绑定默认值。 默认值不能绑定到**文本**， **ntext**，**映像**， **varchar （max)**， **nvarchar (max)**，**varbinary （max)**， **xml**，**时间戳**，或 CLR 用户定义类型的列、 一个包含标识属性列、 计算的列或列，已有默认约束。  
@@ -62,7 +62,7 @@ sp_bindefault [ @defname = ] 'default' ,
 > [!NOTE]  
 >  *object_name*可以包含括号**[]**作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
- [  **@futureonly=** ] *futureonly_flag*  
+ [ **@futureonly=** ] **'***futureonly_flag***'**  
  仅当将默认值绑定到别名数据类型时才能使用。 *futureonly_flag*是**varchar(15)**默认值为 NULL。 当此参数设置为**futureonly**，该数据类型的现有列不能继承新的默认值。 将默认值绑定到列时，从不使用此参数。 如果*futureonly_flag*为 NULL，新的默认值绑定到当前具有无默认值或使用现有的默认值的别名数据类型别名数据类型的列。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -75,7 +75,7 @@ sp_bindefault [ @defname = ] 'default' ,
   
  当你将默认值绑定到列时，将相关的信息添加到**sys.columns**目录视图。 当你将默认值绑定到别名数据类型时，将相关的信息添加到**sys.types**目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有某个表，或者是的成员**sysadmin**固定服务器角色或**db_owner**和**db_ddladmin**固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -122,10 +122,10 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
- [删除默认 &#40;Transact SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_unbindefault &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [DROP DEFAULT (Transact-SQL)](../../t-sql/statements/drop-default-transact-sql.md)   
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

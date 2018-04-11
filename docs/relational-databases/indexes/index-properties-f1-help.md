@@ -1,16 +1,16 @@
 ---
-title: "索引属性 F1 帮助 | Microsoft Docs"
-ms.custom: 
+title: 索引属性 F1 帮助 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -21,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 
+caps.latest.revision: 38
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 02/23/2018
  **允许 Null**  
  显示组成索引键的列是否允许在表或视图列中存储 Null 值。  
   
- **“添加”**  
+ **添加**  
  向索引键添加列。 从单击“添加”时出现的“从 \<table name> 选择列”对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
   
  **删除**  
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/23/2018
 >  此选项对 XML 索引不可用，或者如果索引为禁用的聚集索引，此选项也不可用。  
   
  **设置最大并行度**  
- 限制执行并行计划时所使用的处理器数。 默认值为 0，表示使用实际可用的 CPU 数。 若将此值设置为 1，则取消生成并行计划；若将此值设置为大于 1 的数，则会限制单个查询执行使用的最多处理器数。 该选项仅在此对话框处于 **“重新生成”** 或 **“重新创建”** 状态时才可用。 有关详细信息，请参阅 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
+ 限制执行并行计划时所使用的处理器数。 默认值为 0，表示使用实际可用的 CPU 数。 若将此值设置为 1，则取消生成并行计划；若将此值设置为大于 1 的数，则会限制单个查询执行使用的最多处理器数。 该选项仅在此对话框处于 **“重新生成”** 或 **“重新创建”** 状态时才可用。 有关详细信息，请参阅 [设置最大并行度选项以获取最佳性能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
   
 > [!NOTE]  
 >  如果指定的值比可用 CPU 数大，则将使用实际的可用 CPU 数。  
@@ -189,7 +189,7 @@ ms.lasthandoff: 02/23/2018
 ### <a name="bounding-box"></a>边界框  
  “边界框”  为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
   
- 面板将显示边界框的（X-min、Y-min）和（X-max、Y-max）坐标。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
+ 面板将显示边界框的（X-min、Y-min）和（X-max、Y-max）坐标********。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
   
  **X-min**  
  边界框左下角的 X 坐标。  

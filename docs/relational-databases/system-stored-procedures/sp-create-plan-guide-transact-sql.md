@@ -1,16 +1,16 @@
 ---
-title: "sp_create_plan_guide (TRANSACT-SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_create_plan_guide (TRANSACT-SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_plan_guide
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-caps.latest.revision: 
+caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,27 +58,27 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @name =] N*plan_guide_name*  
+ [ @name = ] N'*plan_guide_name*'  
  是计划指南的名称。 计划指南名称的作用域限于当前数据库。 *plan_guide_name*必须遵从的规则[标识符](../../relational-databases/databases/database-identifiers.md)和不能以数字符号开头 （#）。 最大长度*plan_guide_name*为 124 个字符。  
   
- [ @stmt =] N*statement_text*  
+ [ @stmt = ] N'*statement_text*'  
  根据其创建计划指南的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]查询优化器识别匹配的查询*statement_text*， *plan_guide_name*将生效。 创建计划指南来成功， *statement_text*必须出现在由指定的上下文@type， @module_or_batch，和@params参数。  
   
  *statement_text*必须允许查询优化器将其与批处理中提供的相应语句或模块由标识匹配的方式提供@module_or_batch和@params。 有关详细信息，请参阅"备注"部分。 大小*statement_text*仅受可用内存的服务器。  
   
- [@type =] N'{对象 |SQL |模板}  
+ [@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
  是实体在其中一种*statement_text*显示。 这将指定匹配的上下文*statement_text*到*plan_guide_name*。  
   
  OBJECT  
  指示*statement_text*的上下文中出现[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程、 标量函数、 多语句表值函数，或[!INCLUDE[tsql](../../includes/tsql-md.md)]当前数据库中的 DML 触发器。  
   
  SQL  
- 指示*statement_text*出现在独立的语句或批处理可以提交到上下文中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过任何机制。 [!INCLUDE[tsql](../../includes/tsql-md.md)]提交通过公共语言运行时 (CLR) 对象或扩展存储的过程，或者使用 EXEC N 语句*sql_string*，作为批次在服务器上处理，并因此，应标识为@type  **=**  'SQL'。 如果指定 SQL，则查询提示参数化 {FORCED |不能指定简单}@hints参数。  
+ 指示*statement_text*出现在独立的语句或批处理可以提交到上下文中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过任何机制。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 提交通过公共语言运行时 (CLR) 对象或扩展存储的过程，或者使用 EXEC N 语句*sql_string*，作为批次在服务器上处理，并因此，应标识为@type **=** 'SQL'。 如果指定 SQL，则查询提示参数化 {FORCED |不能指定简单}@hints参数。  
   
  TEMPLATE  
  指示计划指南适用于任何查询都会向窗体中所示对参数化*statement_text*。 如果指定模板，则只参数化 {FORCED |简单} 查询提示可以指定在@hints参数。 TEMPLATE 计划指南的详细信息，请参阅[通过使用计划指南指定查询参数化行为](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
   
- [@module_or_batch =] {N'[ *schema_name*。 ] *object_name*|N*batch_text*|NULL}  
+ [@module_or_batch =] {N'[ *schema_name*。 ] *object_name*' | N'*batch_text*' | NULL }  
  在其中指定的对象名称*statement_text*出现，或在其中的批处理文本*statement_text*显示。 批处理文本不能包括使用*数据库*语句。  
   
  计划指南，以匹配应用程序，从提交一批*batch_tex*t 必须提供相同的格式字符对字符，如提交给[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不会执行内部转换来帮助完成该匹配。 有关详细信息，请参见“备注”部分。  
@@ -86,13 +86,13 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [*schema_name*。]*object_name*指定的名称[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程、 标量函数、 多语句表值函数，或[!INCLUDE[tsql](../../includes/tsql-md.md)]包含的 DML 触发器*statement_text*. 如果*schema_name*未指定， *schema_name*使用当前用户的架构。 如果指定 NULL 和@type= 'SQL' 的值@module_or_batch设置的值为@stmt。如果@type= 模板，@module_or_batch必须为 NULL。  
   
  [ @params =] {N' *@parameter_name data_type* [，*...n* ] |NULL}  
- 指定的定义中嵌入的所有参数*statement_text*。 @params适用以下方法之一时才 true:  
+ 指定的定义中嵌入的所有参数*statement_text*。 @params 适用以下方法之一时才 true:  
   
--   @type= 'SQL' 或 'TEMPLATE'。 如果 'TEMPLATE'@params必须不为 NULL。  
+-   @type = 'SQL' 或 'TEMPLATE'。 如果 'TEMPLATE'@params必须不为 NULL。  
   
 -   *statement_text*通过使用 sp_executesql 和的值提交@params指定参数，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部提交后它中参数化语句。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来说，从数据库 API（包括 ODBC、OLE DB 和 ADO.NET）提交参数化查询类似于调用 sp_executesql 或 API 服务器游标例程；因此，它们也可以通过 SQL 或 TEMPLATE 计划指南进行匹配。  
   
- *@parameter_namedata_type*作为提交给必须完全相同的格式提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用 sp_executesql 或参数化之后内部提交。 有关详细信息，请参见“备注”部分。 如果批处理不包含参数，则必须指定 NULL。 大小@params仅受可用的服务器内存限制。  
+ *@parameter_name data_type*作为提交给必须完全相同的格式提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用 sp_executesql 或参数化之后内部提交。 有关详细信息，请参见“备注”部分。 如果批处理不包含参数，则必须指定 NULL。 大小@params仅受可用的服务器内存限制。  
   
  [@hints =] {N'OPTION (*query_hint* [，*...n* ]) |N*XML_showplan*|NULL}  
  N'OPTION (*query_hint* [，*...n* ])  
@@ -104,7 +104,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  建议将 XML 显示计划分配给变量；否则，必须通过在单引号前面再加上一个单引号来对显示计划中的任何单引号进行转义。 请参见示例 E。  
   
  NULL  
- 指示查询的 OPTION 子句中指定的任何现有提示不应用于该查询。 有关详细信息，请参阅[OPTION 子句 &#40;Transact SQL &#41;](../../t-sql/queries/option-clause-transact-sql.md).  
+ 指示查询的 OPTION 子句中指定的任何现有提示不应用于该查询。 有关详细信息，请参阅[OPTION 子句&#40;TRANSACT-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)。  
   
 ## <a name="remarks"></a>注释  
  sp_create_plan_guide 的参数必须以显示的顺序提供。 为 **sp_create_plan_guide**的参数提供值时，必须显式指定所有的参数名称，或全部都不指定。 例如，如果指定了 **@name =**，则也必须指定 **@stmt =**、**@type =** 等。 同样，如果省略了 **@name =** 并仅提供了参数值，则其余的参数名称也必须省略并仅提供它们的值。 参数名称仅用于说明，以帮助了解语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会验证指定的参数名称是否与使用此名称的位置中的参数名称相匹配。  
@@ -127,7 +127,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   字符串内部的空白字符（制表符、空格、回车符或换行符）。  
   
--   注释 ( **--** 或 **/ \* \* /** )。  
+-   注释 (**--**或**/ \* \* /**)。  
   
 -   尾随分号  
   
@@ -148,7 +148,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>计划指南对计划缓存的影响  
  对模块创建计划指南将会从计划缓存中删除该模块的查询计划。 对批处理创建类型为 OBJECT 或 SQL 的计划指南会删除具有相同哈希值的批处理的查询计划。 创建类型为 TEMPLATE 的计划指南会从该数据库中的计划缓存中删除所有单语句批处理。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要创建类型为 OBJECT 的计划指南，需要拥有对被引用对象的 ALTER 权限。 若要创建类型为 SQL 或 TEMPLATE 的计划指南，需要拥有对当前数据库的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -336,13 +336,13 @@ GO
  [计划指南](../../relational-databases/performance/plan-guides.md)   
  [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys.plan_guides (Transact-SQL)](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
- [数据库引擎存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_cached_plans & #40;Transact SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys.fn_validate_plan_guide (Transact-SQL)](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
- [sp_get_query_template &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
+ [sp_get_query_template &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

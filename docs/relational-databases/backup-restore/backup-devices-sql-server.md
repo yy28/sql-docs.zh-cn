@@ -1,16 +1,16 @@
 ---
-title: "备份设备 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 备份设备 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 
+caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，将备份的数据（“备份”）写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个媒体集。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，将备份的数据（“备份”）写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个媒体集。  
    
 ##  <a name="TermsAndDefinitions"></a> 术语和定义  
  备份磁盘 (backup disk)  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/23/2018
   
  例如：  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';  
 GO  
@@ -89,9 +89,9 @@ GO
   
  FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- 例如，  
+ 例如：  
   
-```  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
@@ -102,7 +102,7 @@ RESTORE DATABASE AdventureWorks2012
   
  为防止产生歧义，尤其是在脚本中，我们建议您在每个 DISK 子句中显式指定备份目录的路径。 但是，当您使用查询编辑器时这一点不再那么重要。 此时，如果您确定备份文件位于默认备份目录中，则可以省略 DISK 子句中的路径。 例如，下面的 `BACKUP` 语句将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库备份到默认的备份目录中。  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = ’AdventureWorks2012.bak’;  
 GO  
@@ -127,7 +127,7 @@ GO
   
  例如：  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = '\\BackupSystem\BackupDisk1\AW_backups\AdventureWorksData.Bak';  
 GO  
@@ -157,7 +157,7 @@ GO
   
  例如：  
   
-```  
+```sql  
 BACKUP LOG AdventureWorks2012   
    TO TAPE = '\\.\tape0';  
 GO  
@@ -200,7 +200,7 @@ GO
   
  定义逻辑备份设备后，您可以在 BACKUP 或 RESTORE 命令中指定此逻辑备份设备而不是设备的物理名称。 例如，下面的语句将 `AdventureWorks2012` 数据库备份到 `AdventureWorksBackups` 逻辑备份设备。  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO AdventureWorksBackups;  
 GO  
@@ -256,7 +256,7 @@ GO
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
--   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
+-   [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **查看有关备份设备的信息**  
   
@@ -277,7 +277,7 @@ GO
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
  [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sys.dm_io_backup_tapes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)   

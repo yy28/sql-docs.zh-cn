@@ -1,16 +1,16 @@
 ---
-title: "dbo.sysjobsteps (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: dbo.sysjobsteps (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobsteps
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysjobsteps system table
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f29d3ef22b724abc095da01ea5eef70aa9c447dd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/03/2018
 |**step_name**|**sysname**|作业步骤的名称。|  
 |**subsystem**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于执行作业步骤的子系统的名称。|  
 |**command**|**nvarchar(max)**|要执行的命令**子系统**。|  
-|**flags**|**int**|保留。|  
+|**flag**|**int**|保留。|  
 |**additional_parameters**|**ntext**|保留。|  
 |**cmdexec_success_code**|**int**|返回的错误级值**CmdExec**子系统步骤，以指明成功。|  
 |**on_success_action**|**tinyint**|成功执行了某个步骤时将要执行的操作。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/03/2018
 |**retry_interval**|**int**|每次重试间的等待时间。|  
 |**os_run_priority**|**int**|保留。|  
 |**output_file_name**|**nvarchar(200)**|在其中步骤的输出文件的名称保存时**子系统**是 TSQL、 PowerShell 或 **CmdExec * * *。*|  
-|**last_run_outcome**|**int**|前一次执行作业步骤的结果。<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = Retry<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
+|**last_run_outcome**|**int**|前一次执行作业步骤的结果。<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|该步骤上次运行时的持续时间 (hhmmss)。|  
 |**last_run_retries**|**int**|上一次执行作业步骤时的重试次数。|  
 |**last_run_date**|**int**|上次开始执行该步骤的日期 (yyyymmdd)。|  
@@ -68,6 +68,6 @@ ms.lasthandoff: 02/03/2018
 |**step_uid**|**uniqueidentifier**|作业步骤的标识符。|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 代理表 &#40;Transact SQL &#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+ [SQL Server 代理表&#40;Transact SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "配置数据库邮件 | Microsoft Docs"
-ms.custom: 
+title: 配置数据库邮件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -42,20 +42,20 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主题说明如何使用数据库邮件配置向导启用和配置数据库邮件，以及使用模板创建数据库邮件配置脚本。  
+  本主题说明如何使用数据库邮件配置向导启用和配置数据库邮件，以及使用模板创建数据库邮件配置脚本。  
   
 -   **准备工作：**[限制和局限](#Restrictions)、[安全性](#Security)  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 02/12/2018
  键入电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户的回信可能会发送给数据库管理员 danw@Adventure-Works.com。  
   
  **服务器名称**  
- 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常此格式类似于 smtp.<your_company>.com。如需相关帮助，请询问您的邮件管理员。  
+ 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常此格式类似于 smtp.<your_company>.com****。如需相关帮助，请询问您的邮件管理员。  
   
  **端口号**  
  键入此帐户的 SMTP 服务器的端口号。 大多数 SMTP 服务器使用端口 25。  
@@ -225,7 +225,7 @@ ms.lasthandoff: 02/12/2018
  **基本身份验证**  
  指定 SMTP 服务器要求的用户名和密码。  
   
- **User name**  
+ **用户名**  
  查看或更新数据库邮件登录 SMTP 服务器所用的用户名。 如果 SMTP 服务器要求基本身份验证，则需要提供用户名。  
   
  **密码**  
@@ -293,7 +293,7 @@ ms.lasthandoff: 02/12/2018
  **“上移”**  
  提高所选帐户的故障转移优先级。  
   
- **“下移”**  
+ **下移**  
  降低所选帐户的故障转移优先级。  
   
  **Priority**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 02/12/2018
   
  配置文件可以是默认的配置文件。 在这种情况下，用户或角色可以使用该配置文件发送电子邮件，而无需显式指定配置文件。 如果发送电子邮件的用户或角色具有默认的专用配置文件，则数据库邮件将使用该配置文件。 如果用户或角色没有默认的专用配置文件，则 **sp_send_dbmail** 将使用 **msdb** 数据库的默认公共配置文件。 如果用户或角色没有默认的专用配置文件，且该数据库也没有默认的公共配置文件，则 **sp_send_dbmail** 将返回错误。  
   
- **User name**  
+ **用户名**  
  在 **msdb** 数据库中选择用户或角色的名称。  
   
  **访问**  

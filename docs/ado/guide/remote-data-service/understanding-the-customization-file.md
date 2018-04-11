@@ -1,30 +1,30 @@
 ---
-title: "了解自定义文件 |Microsoft 文档"
+title: 了解自定义文件 |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个部分标头包含方括号 (**[]**) 包含的类型和参数。 文字字符串由指示四个部分类型**连接**， **sql**， **userlist**，或**日志**。 该参数是文字字符串、 默认值、 用户指定的标识符，或执行任何操作。  
@@ -54,7 +54,7 @@ identifier
 |**sql**|修改的命令字符串的文本字符串。|  
 |**userlist**|修改的特定用户的访问权限的文本字符串。|  
 |**logs**|一个文本字符串，指定录制操作的错误日志文件。|  
-|**default**|如果没有标识符指定或未找到，则使用一个文本字符串。|  
+|default|如果没有标识符指定或未找到，则使用一个文本字符串。|  
 |*identifier*|与中的字符串匹配的字符串**连接**或**命令**字符串。<br /><br /> -使用本部分，如果部分标头包含**连接**和连接字符串中找到的标识符字符串。<br />-使用本部分，如果部分标头包含**sql**和命令字符串中找到的标识符字符串。<br />-使用本部分，如果部分标头包含**userlist**和标识符字符串匹配**连接**部分标识符。|  
   
  **DataFactory**调用处理程序，传递客户端参数。 处理程序搜索整个字符串中匹配相应的部分标头中的标识符的客户端参数。 如果找到匹配项，则该节的内容应用于客户端参数。  

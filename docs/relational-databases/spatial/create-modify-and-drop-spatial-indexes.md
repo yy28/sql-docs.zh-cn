@@ -1,16 +1,16 @@
 ---
-title: "创建、修改和删除空间索引 | Microsoft Docs"
-ms.custom: 
+title: 创建、修改和删除空间索引 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-空间索引可以更高效地对数据类型为“geometry”或“geography”的列（空间数据列）执行特定操作。 可对空间数据列指定多个空间索引。 这非常有用，例如，对单一列中的不同分割参数建立索引时，就是如此。  
+  空间索引可以更高效地对数据类型为“geometry”或“geography”的列（空间数据列）执行特定操作。 可对空间数据列指定多个空间索引。 这非常有用，例如，对单一列中的不同分割参数建立索引时，就是如此。  
   
  创建空间索引时有许多限制。 有关详细信息，请参阅本主题中的 [对空间索引的限制](#restrictions) 。  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/23/2018
   
 11. 在 **“空间”** 页上，指定要用于索引的空间属性的值。  
   
-     在对类型为“geometry”的列创建索引时，必须指定边界框的（X-min、Y-min）和（X-max、Y-max）坐标。 对于“geography”类型列的索引，当你指定“地理网格”分割方案后，边界框字段变为只读状态，因为地理网格分割不使用边界框。  
+     在对类型为“geometry”的列创建索引时，必须指定边界框的（X-min、Y-min）和（X-max、Y-max）********坐标。 对于“geography”类型列的索引，当你指定“地理网格”分割方案后，边界框字段变为只读状态，因为地理网格分割不使用边界框。  
   
      您还可以指定任意级别的分割方案的 **“每个对象的单元数”** 字段和网格密度的非默认值。 对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，每个对象的默认单元数为 16；对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更高版本，则为 8。对于 **，默认网格密度为** “中” [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   

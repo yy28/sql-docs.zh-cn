@@ -1,16 +1,16 @@
 ---
-title: "sp_control_dbmasterkey_password (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_control_dbmasterkey_password (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_dbmasterkey_password
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8564e7fc3ab9f9e6419ebe7ff140408cb1940b29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
  **潜在的向后兼容性问题：**目前，存储的过程不会检查是否存在主密钥。 这是为了向后兼容，但会显示警告。 不推荐使用此行为。 主密钥必须存在的未来版本中存储的过程中使用的密码**sp_control_dbmasterkey_password**必须是一个用于加密数据库主密钥的密码和密码相同。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
@@ -108,7 +108,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [安全存储过程 &#40;Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)  

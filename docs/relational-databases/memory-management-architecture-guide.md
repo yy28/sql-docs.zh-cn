@@ -1,31 +1,31 @@
 ---
-title: "内存管理体系结构指南 | Microsoft Docs"
-ms.custom: 
+title: 内存管理体系结构指南 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存体系结构
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 根据需要动态获取并释放内存。 虽然该选项仍然存在且在有些环境下需要用到，但通常情况下管理员不必指定为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]分配多少内存。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将根据需要动态获取并释放内存。 虽然该选项仍然存在且在有些环境下需要用到，但通常情况下管理员不必指定为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]分配多少内存。
 
 所有数据库软件的主要设计目标之一是尽量减少磁盘 I/O，因为磁盘的读取和写入操作占用大量资源。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在内存中生成缓冲池，用于保存从数据库读取的页。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的大量代码专门用于尽可能减少磁盘与缓冲池之间的物理读写次数。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 设法在以下两个目标之间达到平衡：
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/09/2018
 |-------|-------|-------| 
 |常规内存 |所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 最大处理虚拟地址空间限制： <br>- 2 GB<br>- 3 GB，带有 /3gb 引导参数 <sup>2</sup> <br>- 4 GB，在 WOW64 <sup>3</sup>上 |所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 最大处理虚拟地址空间限制： <br>- 7 TB，带有 IA64 体系结构（ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本中不支持 IA64）<br>- 操作系统支持的最大值，带有 x64 体系结构 <sup>4</sup>
 |AWE 机制（允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 32 位平台上超过处理虚拟地址空间限制。） |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition、Enterprise Edition 和 Developer Edition：缓冲池最多可以访问 64 GB 内存。|不适用 <sup>5</sup> |
-|“锁定内存页”操作系统 (OS) 权限（允许锁定物理内存，防止 OS 对锁定的内存进行分页。）<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition、Enterprise Edition 和 Developer Edition：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程使用 AWE 机制所必需。 通过 AWE 机制分配的内存不能出页。 <br> 授予此权限但未启用 AWE 不会对服务器产生影响。 | 仅在必要时使用，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|“锁定内存页”操作系统 (OS) 权限（允许锁定物理内存，防止 OS 对锁定的内存进行分页。）<sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition、Enterprise Edition 和 Developer Edition：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程使用 AWE 机制所必需的。 通过 AWE 机制分配的内存不能出页。 <br> 授予此权限但未启用 AWE 不会对服务器产生影响。 | 仅在必要时使用，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32 位版本不可用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]作为开头。  
 <sup>2</sup> /3gb 是一个操作系统启动参数。 有关详细信息，请访问 MSDN 库。  
@@ -91,13 +91,13 @@ ms.lasthandoff: 02/09/2018
 
 下表指示特定类型的内存分配是否受“max server memory (MB)和“min server memory (MB)”配置选项控制：
 
-|内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 高于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起|
 |-------|-------|-------|
 |单页分配|是|是，合并到“任意大小”页分配|
-|多页分配|是|是，合并到“任意大小”页分配|
-|CLR 分配|是|是|
-|线程堆栈内存|是|是|
-|从 Windows 直接分配|是|是|
+|多页分配|否|是，合并到“任意大小”页分配|
+|CLR 分配|否|是|
+|线程堆栈内存|否|否|
+|从 Windows 直接分配|否|否|
 
 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能会分配比 max server memory 设置中指定的值更多的内存。 当 Total Server Memory (KB) 值已达到 Total Server Memory (KB)（由 max server memory 指定）时，可能会出现这种情况。 如果因内存碎片造成连续空闲内存不足，无法满足多页内存请求的需求（超过 8 KB），[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以执行超额承诺使用量，而不是拒绝内存请求。 
 
@@ -119,9 +119,9 @@ ms.lasthandoff: 02/09/2018
 
 下表指示特定类型的内存分配是否属于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程虚拟地址空间的 memory_to_reserve 区域：
 
-|内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 高于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
+|内存分配的类型| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| 自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 起|
 |-------|-------|-------|
-|单页分配|是|否，合并到“任意大小”页分配|
+|单页分配|否|否，合并到“任意大小”页分配|
 |多页分配|是|否，合并到“任意大小”页分配|
 |CLR 分配|是|是|
 |线程堆栈内存|是|是|
@@ -180,7 +180,7 @@ FROM sys.dm_os_process_memory;
 “min server memory”和“max server memory”配置选项建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎缓冲池和其他缓存使用的内存量的上限和下限。 缓冲池并不立即获取最小服务器内存中指定的内存量。 缓冲池启动时只使用初始化所需的内存。 随着[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]工作负荷的增加，它将继续获取支持工作负荷所需的内存。 在达到最小服务器内存中指定的内存量之前，缓冲池不会释放它获取的任何内存。 达到最小服务器内存后，缓冲池将使用标准算法，根据需要来获取和释放内存。 唯一的区别是缓冲池从不将内存分配降到最小服务器内存所指定的水平下，也从不获取超过最大服务器内存所指定水平的内存。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作为进程，获取超过最大服务器内存选项所指定的内存。 内部和外部组件都可以分配缓冲池以外的内存，这将占用额外内存，但是分配给缓冲池的内存通常仍表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 占用的内存的最大部分。
+> 作为进程的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将获取超过最大服务器内存选项所指定的内存。 内部和外部组件都可以分配缓冲池以外的内存，这将占用额外内存，但是分配给缓冲池的内存通常仍表示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 占用的内存的最大部分。
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]获取的内存量完全取决于放置在实例上的工作负荷。 不处理很多请求的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例可能永远不会达到最小服务器内存。
 
@@ -261,7 +261,7 @@ FROM sys.dm_os_process_memory;
 ### <a name="error-detection"></a>错误检测  
 数据库页可使用下面两种可选机制之一来保证页在从写入磁盘到再次读取期间的完整性：残缺页保护和校验和保护。 这些机制允许采用独立方法验证数据存储以及诸如控制器、驱动程序、电缆等硬件组件甚至操作系统的正确性。 在即将把页写入磁盘之前将向页添加保护，并在从磁盘读取页后对它进行验证。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对因校验和、页撕裂或其他 I/O 错误而失败的任何读取都重试四次。 如果在其中一次重试中读取成功，则会向错误日志中写入一条消息，且触发读取的命令将继续执行。 如果重试失败，则该命令失败，且显示错误消息 824。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将对因校验和、页撕裂或其他 I/O 错误而失败的任何读取都重试四次。 如果在其中一次重试中读取成功，则会向错误日志中写入一条消息，且触发读取的命令将继续执行。 如果重试失败，则该命令失败，且显示错误消息 824。 
 
 页保护类型是包含此页的数据库的属性之一。 校验和保护是在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 和更高版本中创建的数据库的默认保护。 页保护机制是在创建数据库时指定的，并且可以使用 ALTER DATABASE SET 进行更改。 可通过查询 [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的 page_verify_option 列或 [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md) 函数的 IsTornPageDetectionEnabled 属性来确定当前的页保护设置。 
 
@@ -280,7 +280,7 @@ FROM sys.dm_os_process_memory;
 
 ## <a name="understanding-non-uniform-memory-access"></a>了解非一致性内存访问
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能识别非一致性内存访问 (NUMA)，无需特殊配置便可在 NUMA 硬件上顺利地执行。 随着处理器时钟速度的提高和处理器数量的增加，使用这种额外处理能力所需的内存滞后时间越来越难以减少。 为了避开这一问题，硬件供应商提供了大型的 L3 缓存，但这只是一种有限的解决方案。 NUMA 体系结构为此问题提供了可缩放的解决方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已设计为利用基于 NUMA 的计算机而无需更改任何应用程序。 有关详细信息，请参阅 [如何：将 SQL Server 配置为使用软件 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  能识别非一致性内存访问 (NUMA)，无需特殊配置便可在 NUMA 硬件上顺利地执行。 随着处理器时钟速度的提高和处理器数量的增加，使用这种额外处理能力所需的内存滞后时间越来越难以减少。 为了避开这一问题，硬件供应商提供了大型的 L3 缓存，但这只是一种有限的解决方案。 NUMA 体系结构为此问题提供了可缩放的解决方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已设计为利用基于 NUMA 的计算机而无需更改任何应用程序。 有关详细信息，请参阅 [如何：将 SQL Server 配置为使用软件 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
 
 ## <a name="see-also"></a>另请参阅
 [“服务器内存”服务器配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

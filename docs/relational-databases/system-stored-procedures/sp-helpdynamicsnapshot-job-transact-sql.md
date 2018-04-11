@@ -1,16 +1,16 @@
 ---
-title: "sp_helpdynamicsnapshot_job (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_helpdynamicsnapshot_job (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -26,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8f9accc8ae7ffb64d82fa10c3b60a2f8fec44b8a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,22 +54,22 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ ** @publication =** ] *发布*  
- 发布的名称。 *发布*是**sysname**，默认值为** % **，它返回的匹配指定的所有已筛选的数据快照作业的信息*dynamic_snapshot_jobid*和*dynamic_snapshot_jobname*所有发布。  
+ [ **@publication =** ] **'***publication***'**  
+ 发布的名称。 *发布*是**sysname**，默认值为**%**，它返回的匹配指定的所有已筛选的数据快照作业的信息*dynamic_snapshot_jobid*和*dynamic_snapshot_jobname*所有发布。  
   
- [ ** @dynamic_snapshot_jobname =** ] *dynamic_snapshot_jobname*  
- 筛选数据快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，使用默认的** % **，这将返回具有指定的发布的所有动态作业*dynamic_snapshot_jobid*。 如果创建作业时未显式指定作业名称，则作业名称具有以下格式：  
+ [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+ 筛选数据快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，使用默认的**%**，这将返回具有指定的发布的所有动态作业*dynamic_snapshot_jobid*。 如果创建作业时未显式指定作业名称，则作业名称具有以下格式：  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [ ** @dynamic_snapshot_jobid =** ] *dynamic_snapshot_jobid*  
+ [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  筛选数据快照作业的标识符。 *dynamic_snapshot_jobid*是**uniqueidentifier**，使用默认值为 NULL，它返回具有指定的所有快照作业*dynamic_snapshot_jobname*。  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|说明|  
+|列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|标识已筛选的数据快照作业。|  
 |**job_name**|**sysname**|已筛选数据快照作业的名称。|  
@@ -96,7 +96,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
  如果使用所有默认参数值，则将返回用于整个发布数据库的所有已分区数据快照作业的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色、 **db_owner**固定数据库角色和发布访问列表的发布可以执行**sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>另请参阅  

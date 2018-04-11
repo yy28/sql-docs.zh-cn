@@ -1,16 +1,16 @@
 ---
-title: "sp_help_peerconflictdetection (Transact SQL) |Microsoft 文档"
-ms.custom: 
+title: sp_help_peerconflictdetection (Transact SQL) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 43221792e6f2b29ac86fc6d4ef70376ba4896c49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication=] '*发布*  
+ [ @publication= ] '*publication*'  
  要返回信息的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ @timeout=]*超时*  
+ [ @timeout= ] *timeout*  
  以秒为单位指定一段时间，经过这段时间后，等待拓扑中各个节点响应的该过程将超时。 如果拓扑中有一个只读订阅服务器，则指定的超时值无效。 只读订阅服务器从不响应来自该过程的调用， *超时*是**int**，默认值为 60。  
   
 ## <a name="result-sets"></a>结果集  
@@ -68,12 +68,12 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="remarks"></a>注释  
  sp_help_peerconflictdetection 用于对等事务复制。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
  [对等复制中的冲突检测](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [对等事务复制](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

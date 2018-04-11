@@ -1,16 +1,16 @@
 ---
 title: sp_add_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_add_job [ @job_name = ] 'job_name'
  一种与语言无关的机制，用于指定作业类别。 *category_id*是**int**，默认值为 NULL。  
   
  [ **@owner_login_name =** ] **'***login***'**  
- 拥有该作业的登录的名称。 *登录名*是**sysname**，默认值为 NULL，则它被解释为当前的登录名。 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值 **@owner_login_name** 。 如果不是成员的用户的**sysadmin**角色设置或更改的值 **@owner_login_name** ，此存储过程的执行将失败并返回错误。  
+ 拥有该作业的登录的名称。 *登录名*是**sysname**，默认值为 NULL，则它被解释为当前的登录名。 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值**@owner_login_name**。 如果不是成员的用户的**sysadmin**角色设置或更改的值**@owner_login_name**，此存储过程的执行将失败并返回错误。  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
  一个值，用于指示何时在 Microsoft Windows 应用程序日志中放入与该作业对应的项。 *eventlog_level*是**int**，并且可以为这些值之一。  
@@ -126,7 +126,7 @@ sp_add_job [ @job_name = ] 'job_name'
  InclusionThresholdSetting  
   
 ## <a name="remarks"></a>注释  
- **@originating_server**中存在**sp_add_job，**但未列在自变量。 **@originating_server**是保留供内部使用。  
+ **@originating_server** 中存在**sp_add_job，**但未列在自变量。 **@originating_server** 是保留供内部使用。  
   
  后**sp_add_job**已执行来添加作业， **sp_add_jobstep**可以用于添加作业执行活动的步骤。 **sp_add_jobschedule**可用于创建此计划[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务将使用来执行该作业。 使用**sp_add_jobserver**设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作业的执行位置的实例和**sp_delete_jobserver**若要删除的作业[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
   
@@ -145,7 +145,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  有关与每个这些固定相关联的特定权限的信息数据库角色，请参阅[SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
   
- 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值 **@owner_login_name** 。 如果不是成员的用户的**sysadmin**角色设置或更改的值 **@owner_login_name** ，此存储过程的执行将失败并返回错误。  
+ 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值**@owner_login_name**。 如果不是成员的用户的**sysadmin**角色设置或更改的值**@owner_login_name**，此存储过程的执行将失败并返回错误。  
   
 ## <a name="examples"></a>示例  
   

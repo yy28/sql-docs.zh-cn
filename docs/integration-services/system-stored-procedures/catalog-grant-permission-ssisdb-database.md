@@ -1,31 +1,31 @@
 ---
-title: "catalog.grant_permission（SSISDB 数据库）| Microsoft Docs"
-ms.custom: 
+title: catalog.grant_permission（SSISDB 数据库）| Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c7c079453409e0af538aaeb2c82f6596e05b7d49
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ catalog.grant_permission [ @object_type = ] object_type
 
 此过程不能由 SQL Server 验证了身份的登录名调用。 它不能由 sa 登录名调用。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  通过此存储过程可以授予下表中所示的权限类型：  
   
 |permission_type 值|权限名称|权限说明|适用对象类型|  

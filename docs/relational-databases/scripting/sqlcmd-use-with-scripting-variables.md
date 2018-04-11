@@ -1,16 +1,16 @@
 ---
-title: "将 sqlcmd 与脚本变量结合使用 | Microsoft Docs"
-ms.custom: 
+title: 将 sqlcmd 与脚本变量结合使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 
+caps.latest.revision: 47
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 与脚本变量结合使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]脚本中使用的变量称为脚本变量。 使用脚本变量，一个脚本可以应用于多个方案中。 例如，如果需要对多台服务器运行单个脚本，则可以用脚本变量来表示服务器名称，而不必为每台服务器修改脚本。 通过更改脚本变量表示的服务器名称，可以在不同的服务器上运行同一脚本。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  脚本中使用的变量称为脚本变量。 使用脚本变量，一个脚本可以应用于多个方案中。 例如，如果需要对多台服务器运行单个脚本，则可以用脚本变量来表示服务器名称，而不必为每台服务器修改脚本。 通过更改脚本变量表示的服务器名称，可以在不同的服务器上运行同一脚本。  
   
  可以使用 **setvar** 命令显式定义脚本变量，也可以使用 **sqlcmd-v** 选项隐式定义脚本变量。  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/24/2018
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要查看环境变量，请在“控制面板” 中打开“系统” ，然后单击“高级”  选项卡。  
+>  若要查看环境变量，请在“控制面板”中打开“系统”，然后单击“高级”选项卡。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隐式设置脚本变量  
  使用具有相关 **sqlcmd** 变量的选项启动 **sqlcmd** 时， **sqlcmd** 变量将被隐式设置为使用该选项指定的值。 在下面的示例中，启动 `sqlcmd` 时使用了 `-l` 选项。 这会隐式设置 SQLLOGINTIMEOUT 变量。  
@@ -115,7 +116,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
  将 **sqlcmd** 定义的变量称为脚本变量。 下表列出了 **sqlcmd** 脚本变量。  
   
-|        变量         | 相关选项 | R/W |         ，则“默认”         |
+|        变量         | 相关选项 | R/W |         默认         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |

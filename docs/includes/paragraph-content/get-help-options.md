@@ -1,6 +1,7 @@
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 获取帮助 
 - [UserVoice-建议以提高 SQL Server？](https://feedback.azure.com/forums/908035-sql-server)
-- [堆栈溢出（标记 sql-server）- 询问 SQL 开发问题](http://stackoverflow.com/questions/tagged/sql-server)
+- [DBA 堆栈 Exchange （标记 sql 服务器） 的 SQL Server 提问](https://dba.stackexchange.com/questions/tagged/sql-server)
+    - [堆栈溢出 （标记 sql 的服务器）-还具有一些解答 SQL 开发](http://stackoverflow.com/questions/tagged/sql-server) 
 - [安装和升级的 MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools-MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
 - [Reddit - 有关 SQL Server 的一般讨论](https://www.reddit.com/r/SQLServer/)

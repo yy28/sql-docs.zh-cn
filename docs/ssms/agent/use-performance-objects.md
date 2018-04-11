@@ -23,16 +23,16 @@ helpviewer_keywords:
 - performance counters [SQL Server], SQL Server Agent
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 73a727c385ce24f9d1490de52e1e563510d3dfa5
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-performance-objects"></a>使用性能对象
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/22/2018
   
 |实例类型|对象名称|  
 |-----------------|---------------|  
-|，则“默认”|SQLAgent:object:counter*|  
+|默认|SQLAgent:object:counter*|  
 |已命名|**SQLAgent$**<br /> *instance_name* :object:counter*|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的下列性能对象。  

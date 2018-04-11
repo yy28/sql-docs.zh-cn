@@ -1,31 +1,31 @@
 ---
-title: "必需的提供程序数据成型 |Microsoft 文档"
+title: 必需的提供程序数据成型 |Microsoft 文档
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 577c377c4c8022272ffb7c55507d3fdc378aa440
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="required-providers-for-data-shaping"></a>所需的提供程序，供你调整数据
 数据成型通常需要两个提供程序。 服务提供商[用于 OLE DB 数据调整服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，提供调整功能和数据提供程序，如 OLE DB Provider for SQL Server 的数据，提供要填充形状的数据行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md).  

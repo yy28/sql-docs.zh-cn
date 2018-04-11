@@ -1,16 +1,16 @@
 ---
-title: "调试控制流 | Microsoft Docs"
-ms.custom: 
+title: 调试控制流 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.setbreakpoints.f1
@@ -22,19 +22,19 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="debugging-control-flow"></a>调试控制流
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features 和 tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中控制流故障的功能和工具。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含了可用于排除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中控制流故障的功能和工具。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持容器和任务上的断点。  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 01/25/2018
 |窗口|Description|  
 |------------|-----------------|  
 |断点|列出包中的断点并提供启用和删除断点的选项。|  
-|“输出”|显示 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中各功能的状态消息。|  
+|输出|显示 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中各功能的状态消息。|  
 |“即时”|用于调试和评估表达式，并打印变量值。|  
 
 ## <a name="debug"></a> 通过在任务或容器上设置断点调试包
@@ -144,10 +144,10 @@ ms.lasthandoff: 01/25/2018
   
 6.  若要保存包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
 
-## <a name="set-breakpoints"></a>“设置断点”
+## <a name="set-breakpoints"></a>设置断点
   可以使用 **“设置断点”** 对话框，指定要启用断点和控制断点行为的事件。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **已启用**  
  选择此选项可以对事件启用断点。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 01/25/2018
  **命中计数类型**  
  指定断点生效的时间。  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |**始终**|断点命中时始终挂起执行。|  
 |**命中计数等于**|断点发生的次数等于命中计数时挂起执行。|  

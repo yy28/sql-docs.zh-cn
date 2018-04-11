@@ -1,16 +1,16 @@
 ---
-title: "修改外键关系 | Microsoft Docs"
-ms.custom: 
+title: 修改外键关系 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:65538
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server], modifying
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/23/2018
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **修改外键，使用：**  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -78,7 +78,7 @@ ms.lasthandoff: 02/23/2018
      **选定的关系**  
      列出现有的关系。 选择一个关系将在右侧的网格中显示其属性。 如果该列表为空，则表示尚未为该表定义关系。  
   
-     **“添加”**  
+     **添加**  
      创建新关系。 必须先设置 **“表和列规范”** ，之后该关系才会生效。  
   
      **删除**  
@@ -111,7 +111,7 @@ ms.lasthandoff: 02/23/2018
      **名称**  
      显示关系的名称。 在创建新关系时，将基于 **表设计器**的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
   
-     **Description**  
+     **说明**  
      描述该关系。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号 **(...)**。 这可以提供一个更大的文本编写区域。  
   
      **表设计器类别**  
