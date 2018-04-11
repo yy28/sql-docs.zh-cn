@@ -1,28 +1,28 @@
 ---
-title: "系统版本控制的内存优化临时表的性能 | Microsoft Docs"
-ms.custom: 
+title: 系统版本控制的内存优化临时表的性能 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/28/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
-caps.latest.revision: 
+caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cc7a8ac4a47a479e87702ddd429a95ca00b8336
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 73b0036271e1c2356ca9f520a8a4ccd3d27c137c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>系统版本控制的内存优化临时表的性能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.lasthandoff: 01/18/2018
 -   数据刷新任务的激活时间段无法进行配置，但是你可以通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)时删除数据。  
   
 -   请考虑将群集列存储用作基于磁盘的历史记录表的存储选项，特别是在你计划对历史数据使用聚合或开窗函数运行分析查询时。 在这种情况下，群集列存储将成为历史记录表的最佳选择，因为它不仅提供良好的数据压缩，还具有“插入友好”的行为，可与历史记录数据的生成方式保持协调。  
-  
-## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
- 你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Performance%20Considerations%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
 ## <a name="see-also"></a>另请参阅  
  [系统版本控制临时表与内存优化表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   

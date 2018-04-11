@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ffe97ae02f04c6ff8df04755d24ea6f771133cc6
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 785a3740d27b57bc4aee02f3cfccfd22b95d987f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的数据库引擎功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |远程服务器|SET REMOTE_PROC_TRANSACTIONS|用链接服务器替代远程服务器。|SET REMOTE_PROC_TRANSACTIONS|110|  
 |SET 选项|适用于**SET ROWCOUNT** 、 **INSERT**, **UPDATE**语句的 **DELETE** |TOP 关键字|SET ROWCOUNT|109|  
 |表提示|不带括号的 HOLDLOCK 表提示。|使用 HOLDLOCK 以及括号。|不带括号的 HOLDLOCK 表提示|167|  
-|工具|sqlmaint 实用工具|使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划功能|InclusionThresholdSetting|InclusionThresholdSetting|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 未来版本中不支持的功能  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的下一版本仍支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能，但以后的版本将删除这些功能。 具体是哪一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本现在还未确定。  

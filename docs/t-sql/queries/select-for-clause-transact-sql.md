@@ -1,16 +1,16 @@
 ---
 title: FOR Clause (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FOR
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 085a9c7f6422c70cc43086d2174a5c7aa485040e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 15eb6f5f9be81551bf0ce36c3826948c77c0a37d
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ JSON
  指定以 XML 文档返回查询的结果。 必须指定下列 XML 模式之一：RAW、AUTO、EXPLICIT。 有关 XML 数据和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)。  
   
  RAW [ ('ElementName') ]  
- 获得查询结果并将结果集内的每一行转换为以一般标识符 \<row /> 作为元素标记的 XML 元素。 （可选）可以为该行元素指定名称。 产生的 XML 输出将指定的 ElementName 用作每行生成的行元素。 有关详细信息，请参阅[将 RAW 模式与 FOR XML 一起使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)和[将 RAW 模式与 FOR XML 一起使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)。  
+ 获得查询结果并将结果集内的每一行转换为以一般标识符 \<row /> 作为元素标记的 XML 元素。 （可选）可以为该行元素指定名称。 产生的 XML 输出将指定的 ElementName 用作每行生成的行元素。 有关详细信息，请参阅 [将 RAW 模式与 FOR XML 一起使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)。
   
  AUTO  
  以简单的嵌套 XML 树返回查询结果。 FROM 子句中每个在 SELECT 子句中至少列出一次的表都被表示为一个 XML 元素。 SELECT 子句中列出的列映射到适当的元素属性。 有关详细信息，请参阅 [将 AUTO 模式与 FOR XML 一起使用](../../relational-databases/xml/use-auto-mode-with-for-xml.md)。  

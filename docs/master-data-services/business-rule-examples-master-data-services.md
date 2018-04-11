@@ -1,28 +1,28 @@
 ---
-title: "业务规则示例 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 业务规则示例 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: 
+caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e01b4c5141011209f5fdf314711e9cc26595c5f5
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3e10456b5254bc007420eb6850f00ede131f31aa
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>业务规则示例 (Master Data Services)
 本文演示 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的业务规则示例。 你会在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]安装附带的示例模型中找到这些示例。   
@@ -160,8 +160,7 @@ Else
 3. 单击应用规则的实体（如以下表所列），然后单击“业务规则”。  
 4. 单击要查看的业务规则的名称。 UI 将展开，以显示 **If**、 **Then** 和 **Else** 语句。  
   
-## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听   
-你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com)的业务规则示例。   
+ 
   
   
   

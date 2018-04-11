@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 数据库引擎和 Azure SQL 数据库的性能中心 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 数据库引擎和 Azure SQL 数据库的性能中心 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: performance
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Performance (SQL Server)
@@ -23,27 +23,24 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f17dd20a0a6c3ffd93cc89dd97140341ed893383
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.openlocfilehash: 1e3b52ab64122fab76182d355cbd5c54d2b72c39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL 数据库的性能中心
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本页提供的链接可帮助你找到有关 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中的性能的必要信息。  
+  本页提供的链接可帮助你找到有关 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中的性能的必要信息。  
   
  **图例**  
   
  ![security-center-legend](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
-  
-## <a name="this-is-a-work-in-process-does-this-performance-center-help-you-how-can-we-improve-it"></a>这是正在进行中的工作。 此性能中心对你是否有帮助？ 我们可以如何改进它？  
- 你正在查找哪些信息，是否已经找到？ 有哪些我们遗漏了的方面？ 你希望在此看到什么内容？ 我们不断听取你的反馈来改进内容。 请将你的意见提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="configuration-options-for-performance"></a>性能的配置选项  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过许多 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 级别的配置选项，提供了可影响数据库引擎性能的功能。 通过 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，Microsoft 可为你执行这些优化中的大多数（不是全部）。  

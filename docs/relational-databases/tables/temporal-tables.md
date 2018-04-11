@@ -1,28 +1,28 @@
 ---
-title: "临时表 | Microsoft Docs"
-ms.custom: 
+title: 临时表 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 
+caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ba3bc1642b2b266c030f8ec326d001a8fb56b4ab
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ecb95a2087d7946d4298176f32f88e278b4b6828
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="temporal-tables"></a>临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -155,9 +155,6 @@ SELECT * FROM Employee
   
 > [!NOTE]  
 >  （可选）可以选择隐藏这些期限列，以便不显式引用这些期限列的查询不会返回这些列（SELECT \* FROM\<table> 方案）。 若要返回隐藏的列，只需在查询中显式引用隐藏的列。 同样，如果这些新的期限列不存在， **INSERT** 和 **BULK INSERT** 语句将会继续（并且列值将自动填充）。 有关使用 **HIDDEN** 子句的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)的支持。  
-  
-## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
- 你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="see-also"></a>另请参阅  
  [系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
