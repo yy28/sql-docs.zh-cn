@@ -1,6 +1,6 @@
 ---
-title: "SQL 操作 Studio （预览版） 用户和工作区设置 |Microsoft 文档"
-description: "如何修改 SQL 操作 Studio （预览版） 用户和工作区设置。"
+title: SQL Operations Studio (preview) 用户和工作区设置 |Microsoft 文档
+description: 如何修改 SQL Operations Studio (preview) 用户和工作区设置。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="hot-exit"></a>热退出
 
-当你退出默认情况下 SQL 操作 Studio 将记住文件未保存的更改。 这是与 Visual Studio 代码中的热退出功能相同。
+当你退出默认情况下 SQL Operations Studio 将记住文件未保存的更改。 这是与 Visual Studio 代码中的热退出功能相同。
 
 默认情况下，热退出处于关闭状态。 启用作用通过编辑退出`files.hotExit`设置。 有关详细信息，请参阅[（在 Visual Studio Code 文档中） 的热退出](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
 

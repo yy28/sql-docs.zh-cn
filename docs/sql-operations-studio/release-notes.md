@@ -1,6 +1,6 @@
 ---
-title: Microsoft SQL 操作 Studio （预览版） 发行说明 |Microsoft 文档
-description: Microsoft SQL 操作 Studio （预览版） 发行说明
+title: Microsoft SQL Operations Studio (preview) 发行说明 |Microsoft 文档
+description: Microsoft SQL Operations Studio (preview) 发行说明
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio （预览版） 发行说明
+# <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (preview) 发行说明
 
 **[下载年 3 月公共预览版](download.md)**
 
@@ -34,7 +34,7 @@ version: 0.27.3
 - 增强仪表板扩展性模型以支持选项卡式的见解和配置窗格。
    - 扩展管理器使简单获取扩展。
    - 从 sp_whoisactive 的仪表板扩展[whoisactive.com](http://www.whoisactive.com)。
-   - 有关详细信息，请参阅[扩展的功能的 SQL 操作 Studio](extensions.md)。
+   - 有关详细信息，请参阅[扩展的功能的 SQL Operations Studio](extensions.md)。
 - 添加其他[连接和对象资源管理器的扩展性 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API)管理。
 - 继续修复影响的重要客户[GitHub 问题](https://github.com/Microsoft/sqlopsstudio/issues)。
 

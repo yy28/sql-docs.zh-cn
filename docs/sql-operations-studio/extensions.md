@@ -1,6 +1,6 @@
 ---
-title: 扩展的功能的 SQL 操作 Studio （预览版） |Microsoft 文档
-description: 将扩展添加到 SQL 操作 Studio （预览版）
+title: 扩展的功能的 SQL Operations Studio (preview) |Microsoft 文档
+description: 将扩展添加到 SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.reviewer: alayu; erickang; sstein
@@ -24,10 +24,10 @@ ms.lasthandoff: 03/28/2018
 
 中的扩展[!INCLUDE[name-sos](../includes/name-sos-short.md)]提供更多的功能添加到基的简单办法[!INCLUDE[name-sos](../includes/name-sos-short.md)]安装。 
 
-（你 ！） 的第三方团体还扩展提供由 SQL 操作 Studio 团队 (Microsoft)。 有关创建扩展的详细信息，请参阅[入门扩展性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
+（你 ！） 的第三方团体还扩展提供由 SQL Operations Studio 团队 (Microsoft)。 有关创建扩展的详细信息，请参阅[入门扩展性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
 
 
-## <a name="add-sql-operations-studio-extensions"></a>添加 SQL 操作 Studio 扩展
+## <a name="add-sql-operations-studio-extensions"></a>添加 SQL Operations Studio 扩展
 
 1. 若要打开的扩展管理器并访问可用的扩展，选择扩展图标，或选择**扩展**中**视图**菜单。
 2. 选择可用扩展以查看它的详细信息。

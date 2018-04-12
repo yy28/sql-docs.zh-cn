@@ -1,6 +1,6 @@
 ---
-title: "启用或禁用使用情况数据收集和崩溃报告 SQL 操作 studio （预览版） |Microsoft 文档"
-description: "此文章介绍了如何控制如果使用情况和崩溃报告数据收集和发送给 Microsoft。"
+title: 启用或禁用使用情况数据收集和崩溃报告 SQL Operations Studio (preview) |Microsoft 文档
+description: 此文章介绍了如何控制如果使用情况和崩溃报告数据收集和发送给 Microsoft。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

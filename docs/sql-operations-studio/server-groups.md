@@ -1,6 +1,6 @@
 ---
-title: "SQL 操作 Studio （预览版） 中的服务器组 |Microsoft 文档"
-description: "了解有关 SQL 操作 Studio （预览版） 中的服务器组。"
+title: SQL Operations Studio (preview) 中的服务器组 |Microsoft 文档
+description: 了解有关 SQL Operations Studio (preview) 中的服务器组。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

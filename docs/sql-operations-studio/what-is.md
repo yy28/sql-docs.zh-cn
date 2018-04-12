@@ -1,6 +1,6 @@
 ---
-title: "什么是 SQL 操作 Studio （预览版）？ | Microsoft Docs"
-description: "SQL 操作 Studio （预览版） 是免费的轻量运行的工具，在 Windows、 macOS 和 Linux，用于管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库;它们运行任何位置。"
+title: 什么是 SQL Operations Studio (preview)？ | Microsoft Docs
+description: SQL Operations Studio (preview) 是免费的轻量运行的工具，在 Windows、 macOS 和 Linux，用于管理 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库;它们运行任何位置。
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: overview
 author: stevestein
 ms.author: sstein

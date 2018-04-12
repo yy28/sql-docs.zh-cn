@@ -1,6 +1,6 @@
 ---
-title: "教程： 启用表空间使用情况示例见解小组件，在 SQL 操作 Studio （预览版） |Microsoft 文档"
-description: "本教程演示如何启用表空间使用情况示例见解小组件，在 SQL 操作 Studio （预览版） 数据库仪表板。"
+title: 教程： 启用表空间使用情况示例见解小组件，在 SQL Operations Studio (preview) |Microsoft 文档
+description: 本教程演示如何启用表空间使用情况示例见解小组件，在 SQL Operations Studio (preview) 数据库仪表板。
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

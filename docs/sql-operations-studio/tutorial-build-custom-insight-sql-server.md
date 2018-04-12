@@ -1,6 +1,6 @@
 ---
-title: "教程： 生成 SQL 操作 Studio （预览版） 中的自定义见解小组件 |Microsoft 文档"
-description: "本教程演示如何生成自定义见解小组件并将其添加到 SQL 操作 Studio （预览版） 中的数据库和服务器仪表板。"
+title: 教程： 生成 SQL Operations Studio (preview) 中的自定义见解小组件 |Microsoft 文档
+description: 本教程演示如何生成自定义见解小组件并将其添加到 SQL Operations Studio (preview) 中的数据库和服务器仪表板。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

@@ -1,6 +1,6 @@
 ---
-title: "在 SQL 操作 Studio （预览版） 中创建的代码段 |Microsoft 文档"
-description: "了解如何创建和使用 SQL 操作 Studio （预览版） 中的 SQL 代码段"
+title: 在 SQL Operations Studio (preview) 中创建的代码段 |Microsoft 文档
+description: 了解如何创建和使用 SQL Operations Studio (preview) 中的 SQL 代码段
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
@@ -8,7 +8,7 @@ ms.prod: sql-non-specified
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

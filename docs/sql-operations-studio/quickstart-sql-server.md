@@ -1,6 +1,6 @@
 ---
-title: "快速入门： 连接和查询 SQL Server 使用 SQL 操作 Studio （预览版） |Microsoft 文档"
-description: "本快速入门演示如何使用 SQL 操作 Studio （预览版） 以连接到 SQL Server 并运行查询"
+title: 快速入门： 连接和查询 SQL Server 使用 SQL Operations Studio (preview) |Microsoft 文档
+description: 本快速入门演示如何使用 SQL Operations Studio (preview) 以连接到 SQL Server 并运行查询
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -38,8 +38,8 @@ ms.lasthandoff: 03/09/2018
 ## <a name="connect-to-a-sql-server"></a>连接到 SQL Server
 
    
-1. 启动 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
-1. 首次运行 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  **连接**对话框随即打开。 如果**连接**对话框不会打开，请单击**新连接**图标**服务器**页：
+1. 启动**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
+1. 首次运行*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* **连接**对话框随即打开。 如果**连接**对话框不会打开，请单击**新连接**图标**服务器**页：
    
    ![新建连接图标](media/quickstart-sql-server/new-connection-icon.png)
 

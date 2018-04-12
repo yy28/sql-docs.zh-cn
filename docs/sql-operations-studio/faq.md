@@ -1,6 +1,6 @@
 ---
-title: "SQL 操作 Studio （预览版） 常见问题 |Microsoft 文档"
-description: "常见问题 (FAQ) SQL 操作 studio （预览版）。"
+title: SQL Operations Studio (preview) 常见问题 |Microsoft 文档
+description: 常见问题 (FAQ) SQL Operations Studio (preview)。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

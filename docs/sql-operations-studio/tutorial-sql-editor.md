@@ -1,6 +1,6 @@
 ---
-title: "教程： 使用 SQL 操作 Studio （预览版） TRANSACT-SQL 编辑器创建数据库对象 |Microsoft 文档"
-description: "本教程演示简化使用 T-SQL 的 SQL 操作 Studio （预览版） 中的关键功能。"
+title: 教程： 使用 SQL Operations Studio (preview) TRANSACT-SQL 编辑器创建数据库对象 |Microsoft 文档
+description: 本教程演示简化使用 T-SQL 的 SQL Operations Studio (preview) 中的关键功能。
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
@@ -57,13 +57,13 @@ ms.lasthandoff: 03/15/2018
 
    ![快速搜索小组件](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 编辑**电子邮件**第一行中，类型的列 *orlando0@adventure-works.com* ，按**Enter**以保存更改。
+1. 编辑**电子邮件**第一行中，类型的列*orlando0@adventure-works.com*，按**Enter**以保存更改。
 
    ![编辑数据](./media/tutorial-sql-editor/edit-data.png)
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>使用 T-SQL 的代码段创建存储的过程
 
-SQL 操作 Studio 于快速创建语句提供了许多内置的 T-SQL 代码段。
+SQL Operations Studio 于快速创建语句提供了许多内置的 T-SQL 代码段。
 
 
 1. 打开一个新的查询编辑器按**Ctrl + N**。
@@ -117,7 +117,7 @@ SQL 操作 Studio 于快速创建语句提供了许多内置的 T-SQL 代码段�
 
 ## <a name="use-peek-definition"></a>使用查看定义 
 
-SQL 操作 Studio 提供的功能，若要查看使用查看定义功能的对象定义。 本部分创建的第二个存储的过程，并使用查看定义查看表以快速创建存储过程的正文中有哪些列。
+SQL Operations Studio 提供的功能，若要查看使用查看定义功能的对象定义。 本部分创建的第二个存储的过程，并使用查看定义查看表以快速创建存储过程的正文中有哪些列。
 
 1. 通过按下打开新的编辑器**Ctrl + N**。 
 
@@ -185,7 +185,7 @@ SQL 操作 Studio 提供的功能，若要查看使用查看定义功能的对�
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用将查询结果保存为 JSON 测试 setCustomer 存储过程
 
-*SetCustomer*在上一节中创建的存储的过程需要 JSON 将数据传入 *@json_val* 参数。 本部分演示如何获取要传递到参数，以便你可以测试存储的过程的 JSON 格式正确位。
+*SetCustomer*在上一节中创建的存储的过程需要 JSON 将数据传入*@json_val*参数。 本部分演示如何获取要传递到参数，以便你可以测试存储的过程的 JSON 格式正确位。
 
 1. 在**服务器**边栏右键单击*dbo。客户*表，然后单击**选择前 1000年行**。
 

@@ -1,6 +1,6 @@
 ---
-title: 在连接 SQL 操作 Studio （预览版） 时使用 Active Directory 身份验证 (Kerberos) |Microsoft 文档
-description: 了解如何启用 Kerberos 要用于 SQL 操作 Studio （预览版） 的 Active Directory 身份验证
+title: 在连接 SQL Operations Studio (preview) 时使用 Active Directory 身份验证 (Kerberos) |Microsoft 文档
+description: 了解如何启用 Kerberos 要用于 SQL Operations Studio (preview) 的 Active Directory 身份验证
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
