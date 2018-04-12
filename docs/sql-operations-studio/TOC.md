@@ -1,4 +1,4 @@
-# [SQL Operations Studio（预览版）](what-is.md)
+# [SQL Operations Studio (preview)](what-is.md)
 # [安装](download.md)
 # [发行说明](release-notes.md)
 # 快速入门
@@ -24,7 +24,7 @@
 ## [使用情况数据收集](usage-data-collection.md)
 # Resources
 ## [Transact-SQL 参考](../t-sql/language-reference.md)
-## [SQL Operations Studio（预览版）GitHub 存储库](https://www.github.com/Microsoft/SqlOpsStudio)
+## [SQL Operations Studio (preview) GitHub 存储库](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [SQL Server 博客](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ## [新的和已更新的项目](new-updated-sql-operations-studio.md)
 # [常见问题解答](faq.md)
