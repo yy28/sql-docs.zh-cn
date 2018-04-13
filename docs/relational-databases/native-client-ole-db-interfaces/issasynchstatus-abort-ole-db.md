@@ -1,16 +1,16 @@
 ---
-title: "ISSAsynchStatus::Abort (OLE DB) |Microsoft 文档"
-ms.custom: 
+title: ISSAsynchStatus::Abort (OLE DB) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSAsynchStatus::Abort (OLE DB)
@@ -18,7 +18,7 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -74,7 +74,7 @@ HRESULT Abort(
   
  **ISSAsynchStatus::Abort**对数据源对象在其上调用了**idbinitialize:: Initialize**随后之前已取消初始化，但调用时或超时为止。数据源对象仍未初始化。  
   
- **ISSAsynchStatus::Abort**对在其上的行集调用**itransaction:: 提交**或**ITransaction::Abort**之前已调用和行集未幸存提交或中止和处于僵停状态。  
+ **ISSAsynchStatus::Abort**对在其上的行集调用**itransaction:: 提交**或**ITransaction::Abort**之前已调用和行集未幸存提交或中止，处于僵停状态。  
   
  **ISSAsynchStatus::Abort**已以异步方式取消其初始化阶段中的行集调用的。 该行集处于僵停状态。  
   
