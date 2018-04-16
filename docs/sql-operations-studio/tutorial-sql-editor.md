@@ -63,7 +63,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>使用 T-SQL 的代码段创建存储的过程
 
-SQL Operations Studio 于快速创建语句提供了许多内置的 T-SQL 代码段。
+SQL Operations Studio 提供許多內建的 T-SQL 程式碼片段，可快速建立陳述式。
 
 
 1. 打开一个新的查询编辑器按**Ctrl + N**。
@@ -151,7 +151,7 @@ SQL Operations Studio 提供的功能，若要查看使用查看定义功能的�
                Email nvarchar(50)
     )
    ```
-7. 删除 （或注释掉）*执行*底部的查询命令。
+7. 刪除 （或註解）查詢底下的 *EXECUTE* 命令。
 8. 整个语句应类似下面的代码：
 
    ```sql
