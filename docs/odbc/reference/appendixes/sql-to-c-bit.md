@@ -1,31 +1,32 @@
 ---
-title: "为 c： 位的 SQL |Microsoft 文档"
-ms.custom: 
+title: 为 c： 位的 SQL |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], bit
 - bit data type [ODBC]
 - data conversions from SQL to C types [ODBC], bit
 ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b0cb6f2dacadde22ee78b6cbb4b9acc3e824630
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 15d3523876808946c14aaddac58ea2725b4e0782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-bit"></a>为 c： 位的 SQL
 ODBC SQL 数据类型是位标识符：  
@@ -36,10 +37,10 @@ ODBC SQL 数据类型是位标识符：
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* < = 1|data<br /><br /> 未定义|@shouldalert<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|无 [a]|data|C 数据类型的大小|不适用|  
-|SQL_C_BIT|无 [a]|data|1 [b]|不适用|  
-|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|data<br /><br /> 未定义|@shouldalert<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* < = 1|Data<br /><br /> 未定义|1<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|无 [a]|Data|C 数据类型的大小|不适用|  
+|SQL_C_BIT|无 [a]|Data|1 [b]|不适用|  
+|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|Data<br /><br /> 未定义|1<br /><br /> 未定义|不适用<br /><br /> 22003|  
   
  [a] 的值*BufferLength*忽略此转换。 该驱动程序假定的大小 **TargetValuePtr*是 C 数据类型的大小。  
   

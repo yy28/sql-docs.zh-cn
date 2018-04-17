@@ -1,15 +1,16 @@
 ---
-title: "分配的环境句柄 |Microsoft 文档"
-ms.custom: 
+title: 分配的环境句柄 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], environment handles
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcbfc5e9a8be2bf1fc543e9d458658a918e40b6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-the-environment-handle"></a>分配的环境句柄
 任何 ODBC 应用程序的第一个任务是加载驱动程序管理器;如何做到这一点与操作系统相关。 例如，在运行 Microsoft® Windows NT® Server/Windows 2000 Server、 Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98 的计算机，在应用程序或者链接到驱动程序管理器库或调用**LoadLibrary**加载驱动程序管理器 DLL。  

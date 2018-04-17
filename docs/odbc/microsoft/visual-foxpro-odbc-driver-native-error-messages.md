@@ -1,31 +1,32 @@
 ---
-title: "Visual FoxPro ODBC 驱动程序的本机错误消息 |Microsoft 文档"
-ms.custom: 
+title: Visual FoxPro ODBC 驱动程序的本机错误消息 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], Visual FoxPro ODBC driver
 - Visual FoxPro ODBC driver [ODBC], error messages
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9bc0b106b88eee6335514723aa083aef44bd5b66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ea42345439cfba41cc6c22788f76307ecab0876
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC 驱动程序的本机错误消息
 下表列出了本机到 Visual FoxPro ODBC 驱动程序的错误消息。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|@shouldalert|功能不可用。|  
+|1|功能不可用。|  
 |2|输入/输出操作失败。|  
 |3|找不到可用的句柄。|  
 |5|使用未分配的句柄。|  
@@ -108,7 +109,7 @@ ms.lasthandoff: 12/21/2017
 |206|递归宏的定义。|  
 |209|行是太长。|  
 |210|允许使用 DO 嵌套级别超过了。|  
-|211|如果将 &#124;其他 &#124;缺少 ENDIF 语句。|  
+|211|IF &#124; ELSE&#124;遗漏了 ENDIF 语句。|  
 |212|结构嵌套太深。|  
 |213|对于没有缺少关键字...ENDFOR 或执行操作的用例...ENDCASE 命令结构。|  
 |219|命令包含无法识别的短语关键字。|  

@@ -2,7 +2,7 @@
 title: 索引命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1a3cd65cf38079a6d6c23cd08f371841a0463f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b989e45c8a3779108316358d34df472103a71676
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="index-command"></a>索引命令
 创建要显示和访问表记录按逻辑顺序排列的索引文件。  
@@ -97,7 +97,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  累加性  
  保持打开的任何先前已打开的索引文件。 如果省略累加性子句使用索引创建的索引文件或表的文件时，将关闭 （除外的结构化的复合索引） 的任何先前已打开的索引文件。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  表包含索引文件中的记录显示和访问索引表达式所指定的顺序。 物理表中记录的顺序未被索引文件更改。  
   
 ## <a name="index-types"></a>索引类型  

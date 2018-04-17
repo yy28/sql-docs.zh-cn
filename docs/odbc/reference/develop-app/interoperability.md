@@ -1,30 +1,31 @@
 ---
-title: "互操作性 |Microsoft 文档"
-ms.custom: 
+title: 互操作性 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC]
 - interoperability [ODBC], about interoperability
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b797bcf1e8e5521ea2b4fd57a68969b3f04e802d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e7bbec995af3475208afa328c163dbbd42f0e46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interoperability"></a>互操作性
 *互操作性*是单个应用程序以运行许多不同 Dbms 的功能。 编写泛型且可互操作应用程序的需求是导致的 ODBC 开发的主要因素之一。 但是，互操作性不是简单的路径，然后从"不可互操作"到"完全可互操作。" 路径具有许多分支，并且每个需要功能、 速度、 代码复杂性和开发时间之间的权衡。  

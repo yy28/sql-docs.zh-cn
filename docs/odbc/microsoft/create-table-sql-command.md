@@ -2,7 +2,7 @@
 title: 创建表的 SQL 命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b0e3fa9e8bfd3385988435670e9714f48ef44164
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table---sql-command"></a>创建表的 SQL 命令
 创建具有指定的字段的表。  
@@ -53,7 +53,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>参数  
- 创建表 &#124;DBF *TableName1*  
+ 创建表&#124;DBF *TableName1*  
  指定要创建的表的名称。 表和 DBF 选项是相同的。  
   
  名称*LongTableName*  
@@ -140,7 +140,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  从数组*ArrayName*  
  指定一个现有数组，其内容是名称、 类型、 精度和小数位数为表中每个字段的名称。 可以使用定义数组的内容**AFIELDS**（） 函数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  新的表在最低可用的工作区中打开，并可以通过其别名访问。 以独占方式，打开为新表，而不考虑独占设置的当前设置。  
   
  如果数据库处于打开状态，并且不包含可用子句，新表添加到数据库。 与数据库中表同名，无法创建新表。  

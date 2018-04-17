@@ -1,27 +1,27 @@
 ---
-title: "在 SQL Server Management Studio 中使用 Analysis Services 模板 |Microsoft 文档"
-ms.custom: 
+title: 在 SQL Server Management Studio 中使用 Analysis Services 模板 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d2f4f817acd9c83264ea1cb472bf9d39d898b120
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -29,18 +29,6 @@ ms.lasthandoff: 02/15/2018
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
   
  本主题包括多维模型和表格模型的模板列表，并且提供如何通过使用元数据资源管理器和模板资源管理器生成 MDX 查询和 XMLA 语句的示例。  
-  
- 本主题包含以下各节：  
-  
- [打开 Analysis Services 模板](#bkmk_usingTE)  
-  
- [使用模板对表格模型生成并运行 MDX 查询](#BKMK_Building_Queries)  
-  
- [从模板创建 XMLA 脚本](#bkmk_backup)  
-  
- [使用 XMLA 模板生成架构行集查询](#bkmk_schemarowset)  
-  
- [Analysis Services 模板参考](#bkmk_Ref)  
   
  本主题不涉及 DMX 模板。 有关如何使用模板创建数据挖掘查询的示例，请参阅 [在 SQL Server Management Studio 中创建一个 DMX 查询](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md) 或 [通过模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)。  
   
@@ -151,7 +139,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  打开 **“模板资源管理器”**，将模板 **“发现架构行集”**拖入空白查询窗口中。  
   
-3.  在模板中，替换[RequestType 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)元素与以下文本： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  在模板中，替换[RequestType 元素&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)元素与以下文本： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  单击 **“执行”**。  
   
@@ -234,8 +222,8 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 ## <a name="see-also"></a>另请参阅  
  [多维表达式 (MDX) 参考](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [数据挖掘扩展插件 &#40; DMX &#41;引用](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件 & #40; DMX & #41;引用](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services 脚本语言 &#40;ASSL 为 XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services 脚本语言&#40;的 XMLA ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

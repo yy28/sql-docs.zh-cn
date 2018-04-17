@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services tutorial 课 8 创建透视 |Microsoft 文档"
-description: "描述如何在 Analysis Services tutorial 项目中创建透视。"
+title: Analysis Services tutorial 课 8 创建透视 |Microsoft 文档
+description: 描述如何在 Analysis Services tutorial 项目中创建透视。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 3b28d60cd5e1fc4050e72cd4ac56b2db882cbafa
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7b6d5dd474719f33d285ac04f1643f330a618a7a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-perspectives"></a>创建透视
 

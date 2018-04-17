@@ -1,26 +1,19 @@
 ---
-title: 创建资源池的机器学习 |Microsoft 文档
-ms.custom: ''
-ms.date: 11/13/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 为 SQL Server 机器学习创建资源池 |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: afbcccda85e4d8e575306e5c17faeb8316b9b84c
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: af01eb3308b08c4ef7cfc78e5ee615f8dd984713
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-a-resource-pool-for-machine-learning"></a>创建机器学习的资源池
+# <a name="create-a-resource-pool-for-machine-learning-in-sql-server"></a>在 SQL Server 中创建机器学习的资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何创建资源池专门用于管理 SQL Server 中的机器学习工作负荷。 它假定你已安装并启用机器学习功能，并且想要重新配置要支持的 R 或 Python 等外部进程使用的资源的多个细化管理的实例。

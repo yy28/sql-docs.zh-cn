@@ -1,7 +1,7 @@
 ---
 title: 合并评估报表 (SQL Server 数据 Migration Assistant) |Microsoft 文档
 ms.custom: ''
-ms.date: 09/07/2017
+ms.date: 04/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: ''
@@ -21,15 +21,15 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d0dd690a34cf2e4bf5df2d758f65da9b1123506
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f13ca7479abf67c63bdb2d1de53523737d975180
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="consolidate-assessment-reports-data-migration-assistant"></a>合并评估报表 （数据迁移助手）
 
-命令行可用于执行迁移评估在无人参与模式下，从开始数据迁移助手 2.1 版。 此功能可帮助你大规模运行评估。  中的 JSON 或 CSV 文件形式的评估结果。
+命令行可用于执行迁移评估在无人参与模式下，从开始数据迁移助手 2.1 版。 此功能可帮助你大规模运行评估。 中的 JSON 或 CSV 文件形式的评估结果。
 
 可以评估多个数据库中的单个实例化的数据迁移助手的命令行实用工具，还可以将所有的评估结果导出到单个的 JSON 文件。 或者，可以在时间评估一个数据库，稍后将从这些多个的 JSON 文件的结果合并到 SQL 数据库。
 
@@ -39,6 +39,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="import-assessment-results-into-a-sql-server-database"></a>导入 SQL Server 数据库的评估结果
 
 使用 PowerShell 脚本可在此[Github 存储库](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)评估结果从 JSON 文件导入到 SQL Server 数据库。
+
+> [!NOTE]
+> PowerShell v5 或更高版本是必需的。
 
 当执行脚本时，你需要提供以下信息： 
 
@@ -71,7 +74,7 @@ dmaProcessor -serverName localhost \`\
 
 - **表**-BreakingChangeWeighting
 
-  - 所有的重大更改的引用表。  你可以在此处定义你自己的权重值来影响更准确的百分比 （%） 升级成功排名。
+  - 所有的重大更改的引用表。 你可以在此处定义你自己的权重值来影响更准确的百分比 （%） 升级成功排名。
 
 - **视图**– UpgradeSuccessRanking\_OnPrem
 
@@ -103,7 +106,7 @@ PowerShell 脚本将创建**处理**目录内您提供包含要处理的 JSON �
 
 ### <a name="viewing-the-results-in-sql-server"></a>在 SQL Server 中查看结果
 
-加载数据后，连接到 SQL Server 实例。 你应看到以下信息：
+加载数据后，连接到 SQL Server 实例。 你的屏幕应显示下图中所示：
 
 ![SQL Server 数据库中的统一的报表](../dma/media/DMAReportingDatabase.png)
 
@@ -115,13 +118,13 @@ Dbo。报告表包含以其原始形式的 JSON 文件的内容。
 
 ![UpgradeSuccessRaning_OnPrem 视图中的数据](../dma/media/UpgradeSuccessRankingView.png)
 
-在这里我们可以看到给定数据库什么是不同的兼容级别的升级的成功机会。  因此，例如，HR 数据库所评估针对兼容性级别 100、 110、 120 和 130。  此评估有助于你直观地查看工作量参与迁移到更高版本的 SQL Server 数据库上当前对当前版本。
+在这里看到给定的数据库并什么是不同的兼容级别的升级的成功机会。 因此，例如，HR 数据库所评估针对兼容性级别 100、 110、 120 和 130。 此评估有助于你直观地查看工作量参与迁移到更高版本的 SQL Server 数据库上当前对当前版本。
 
-通常我们很关心的指标是多少的重大更改用于给定的数据库。  在前面的示例中，我们可以看到 HR 数据库具有兼容性级别 100、 110、 120 和 130 的 50%升级成功因素。
+通常你关注的度量值是多少的重大更改用于给定的数据库。 在前面的示例中，你可以看到 HR 数据库具有兼容性级别 100、 110、 120 和 130 的 50%升级成功因素。
 
 此指标可以受更改 dbo 中的权重值。BreakingChangeWeighting 表。
 
-在下面的示例中，所涉及的修复 HR 数据库中的语法问题工作被认为高因此值为 3 分配给**工作量**。 由于它不会花费长时间才能解决语法问题，因此值为 1 分配给**FixTime**。 由于将有一些成本参与进行更改，因此值为 2 分配给**成本**。  这会混合的 Changerank 更改为 2。
+在下面的示例中，所涉及的修复 HR 数据库中的语法问题工作被认为高因此值为 3 分配给**工作量**。 由于它不会花费长时间才能解决语法问题，因此值为 1 分配给**FixTime**。 由于将有一些成本参与进行更改，因此值为 2 分配给**成本**。 使用此值更改为 2 的混合的 Changerank。
 
 > [!NOTE]
 > 评分是范围为 1-5。  1 过低，和 5 较高。 此外，ChangeRank 是计算的列。
@@ -138,10 +141,8 @@ Dbo。报告表包含以其原始形式的 JSON 文件的内容。
 
 ![UpgradeSuccessRanking_Azure 视图中的数据](../dma/media/UpgradeSuccessRankingView_Azure.png)
 
-此处我们感兴趣的 MigrationBlocker 值。  100.00 意味着将数据库移动到 Azure SQL 数据库 v12 具有 100%成功的排名。
+此处你感兴趣的 MigrationBlocker 值。 100.00 意味着将数据库移动到 Azure SQL 数据库 v12 具有 100%成功的排名。
 
 与此视图的区别是，目前不重写用于更改迁移窗口阻止程序规则的权重。
 
 有关使用 Power BI 此数据报告的信息，请参阅[报告使用 PowerBI 你合并评估](../dma/dma-powerbiassesreport.md)。
-
-

@@ -1,15 +1,16 @@
 ---
-title: "驱动程序管理器连接池 |Microsoft 文档"
-ms.custom: 
+title: 驱动程序管理器连接池 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>驱动程序管理器连接池
 连接池可让应用程序使用的不需要为每种使用重新建立的连接池中的连接。 创建并放在池中的连接后，应用程序可以重复使用该连接，而不执行完整的连接过程。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
  除了提高性能，连接池体系结构启用了环境和其关联的连接，以供在单个进程的多个组件。 这意味着在同一进程中的独立组件可以彼此交互，在不知道对方。 连接池中的连接可以重复使用多个组件。  
   
 > [!NOTE]  
->  暴露 ODBC 2 的 ODBC 应用程序可以使用连接池。*x*行为，只要该应用程序可以调用*SQLSetEnvAttr*。 当使用连接池时，应用程序不能执行 SQL 语句更改数据库或数据库，如更改的上下文\<*数据库**名称*>，后者更改数据源使用的目录。  
+>  暴露 ODBC 2 的 ODBC 应用程序可以使用连接池。*x*行为，只要该应用程序可以调用*SQLSetEnvAttr*。 当使用连接池时，应用程序不能执行 SQL 语句更改数据库或数据库，如更改的上下文\<*数据库 * * 名称*>，其中更改使用的目录数据源。  
   
  ODBC 驱动程序必须是完全线程安全的并且连接必须不具有线程关联，以支持连接池。 这意味着该驱动程序是能够在任何时间处理任何线程上的调用，并且能够连接上一个线程，以在另一个线程上使用连接，并且将在第三个线程上断开连接。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  驱动程序必须高效地实施此选项，或它将会影响连接池性能。 具体而言，若要获取此连接属性的调用应不会导致到服务器的往返行程。 相反，驱动程序应只返回连接的最后一个已知的状态。 连接状态死如果最后一个行程到服务器失败，且不死如果最后一个行程成功。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果连接已丢失 （通过 SQL_ATTR_CONNECTION_DEAD 报告），ODBC 驱动程序管理器将通过驱动程序中调用 SQLDisconnect 销毁该连接。 新的连接请求可能无法找到在池中可用的连接。 最终驱动程序管理器可能会使新的连接，假设该池为空。  
   
  若要使用的连接池，应用程序，请执行以下步骤：  

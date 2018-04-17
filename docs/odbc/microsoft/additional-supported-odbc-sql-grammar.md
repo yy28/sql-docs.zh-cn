@@ -1,30 +1,31 @@
 ---
-title: "其他支持 ODBC SQL 语法 |Microsoft 文档"
-ms.custom: 
+title: 其他支持 ODBC SQL 语法 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86be4015366a6e18e5a97a2fd719e44298c23465
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9073c9c1da0797af40395c8ba204342e1ed6d094
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>其他支持的 ODBC SQL 语法
 ODBC 驱动程序完全支持最小 ODBC 2.5 语法和以下子句中的核心安装选项和扩展 ODBC 2.5 语法。 可以通过跳转到显示其他信息[ALTER TABLE 语句](../../odbc/microsoft/alter-table-statement.md)，[相关名称](../../odbc/microsoft/correlation-names.md)，和[过程调用](../../odbc/microsoft/procedure-invocation.md)主题。  

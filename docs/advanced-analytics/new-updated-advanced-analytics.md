@@ -1,20 +1,18 @@
 ---
 title: 更新-为 SQL Server 文档高级分析 |Microsoft 文档
 description: 显示更新内容的最近更改中的文档，为 Microsoft SQL server 的高级分析的代码的段。
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.topic: article
-ms.custom: UpdArt.exe
-ms.suite: sql
-ms.prod_service: sql-non-specified
-ms.component: advanced-analytics
-ms.date: 02/03/2018
-ms.openlocfilehash: fa0c25c193ea2815773ed9d08a50194d825f0a8a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 058278df1ee54a6440f8225ea15f727857df76f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>新的和最近的更新： SQL Server 的高级分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +25,7 @@ ms.lasthandoff: 04/08/2018
 
 
 
-- 更新日期范围：2017-12-03 到 2018-02-03
+- 更新日期范围：&nbsp;从 2017-12-03&nbsp; 到 2018-02-03&nbsp;
 - *主题区域：* &nbsp; **for SQL Server 的高级分析**。
 
 <!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
@@ -100,7 +98,7 @@ ms.lasthandoff: 04/08/2018
 
 如果 SQL Server 的实例已安装到非默认位置，如外部`Program Files`文件夹中，当你尝试运行安装包的脚本时引发 ACCESS_DENIED 警告。 例如：
 
-> *In normalizePath(path.expand(path), winslash, mustWork) : path[2]="~ExternalLibraries/R/8/1": Access is denied*
+> *在 normalizePath(path.expand(path)、 winslash、 mustWork）： 路径 [2] ="~ExternalLibraries/R/8/1": 访问被拒绝*
 
 R 函数尝试进行读取的路径，而且如果失败，原因是内置的用户组**SQLRUserGroup**，不具有读取权限。 引发警告不会阻止执行当前的 R 脚本，但警告可能重复发生，每当用户在运行任何其他 R 脚本。
 

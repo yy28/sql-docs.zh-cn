@@ -1,31 +1,32 @@
 ---
-title: "SQL 数据类型 |Microsoft 文档"
-ms.custom: 
+title: SQL 数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-data-types"></a>SQL 数据类型
 每个 DBMS 定义其自己的 SQL 类型。 每个 ODBC 驱动程序公开仅关联的 DBMS 定义这些 SQL 数据类型。 有关如何将驱动程序映射信息 DBMS SQL 类型到 ODBC 定义的 SQL 类型标识符和驱动程序将 DBMS SQL 类型映射到其自己的特定于驱动程序的 SQL 类型标识符如何通过调用返回**SQLGetTypeInfo**。 驱动程序也会返回 SQL 数据类型变为描述列和通过对的调用的参数的数据类型时**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，和**SQLSpecialColumns**。  
@@ -42,24 +43,24 @@ ms.lasthandoff: 12/21/2017
   
 |SQL 类型标识符 [1]|典型的 SQL 数据<br /><br /> 类型 [2]|典型的类型说明|  
 |------------------------------|------------------------------------|------------------------------|  
-|SQL_CHAR|CHAR (*n*)|字符的固定的字符串长度的字符串 *n* 。|  
-|SQL_VARCHAR|VARCHAR (*n*)|最大字符串长度的可变长度字符串 *n* 。|  
+|SQL_CHAR|CHAR (*n*)|字符的固定的字符串长度的字符串*n*。|  
+|SQL_VARCHAR|VARCHAR (*n*)|最大字符串长度的可变长度字符串*n*。|  
 |SQL_LONGVARCHAR|LONG VARCHAR|可变长度的字符数据。 最大长度为数据源而定。[9]|  
-|SQL_WCHAR|WCHAR (*n*)|Unicode 字符的固定的字符串长度的字符串*n*|  
+|SQL_WCHAR|WCHAR (*n*)|固定的字符串长度的 Unicode 字符字符串*n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Unicode 可变长度字符串，最大字符串长度*n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode 长度可变的字符数据。 最大长度是数据源而定|  
 |SQL_DECIMAL|十进制 (*p*，*s*)|已签名，精确数值的值的精度至少*p*和小数位数*s。* （最大精度是驱动程序定义的。）(1 < = *p* < = 15;*s* <= *p*)。 [4]|  
 |SQL_NUMERIC|数字 (*p*，*s*)|有符号的确切数字，其精度*p*和小数位数*s* (1 < = *p* < = 15;*s* <= *p*)。 [4]|  
-|SQL_SMALLINT|SMALLINT|确切数字值，该值精度为 5，小数位数为 0 (签名:-32768 < =  *n*  < = 32,767，未签名： 0 < =  *n*  < = 65535) [3]。|  
-_INTEGER|整数|确切数字值，该值精度为 10，小数位数为 0 (签名:-2 [31] < =  *n*  < = 2 [31] – 1，未签名： 0 < =  *n*  < = 2 [32] – 1) [3]。|  
-|SQL_REAL|real|已签名，其二进制精度为 24 的近似的数字值 （0 或绝对值 10 [–38] 到 10[38])。|  
+|SQL_SMALLINT|SMALLINT|确切数字值，该值精度为 5，小数位数为 0 (签名:-32768 < = *n* < = 32,767，未签名： 0 < = *n* < = 65535) [3]。|  
+_INTEGER|整数|确切数字值，该值精度为 10，小数位数为 0 (签名:-2 [31] < = *n* < = 2 [31] – 1，未签名： 0 < = *n* < = 2 [32] – 1) [3]。|  
+|SQL_REAL|REAL|已签名，其二进制精度为 24 的近似的数字值 （0 或绝对值 10 [–38] 到 10[38])。|  
 |SQL_FLOAT|FLOAT (*p*)|有符号，近似数值二进制精度为至少*p*。 （最大精度是驱动程序定义的。）[5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|有符号的近似数值，其二进制精度 53 （零或绝对值 10 [–308] 到 10[308])。|  
 |SQL_BIT|BIT|一个位的二进制数据。[8]|  
-|SQL_TINYINT|TINYINT|确切其精度为 3 的数字值，小数位数为 0 (签名: – 128 < =  *n*  < = 127，未签名： 0 < =  *n*  < = 255) [3]。|  
-_BIGINT|bigint|确切数字值，该值精度为 19 （如果有符号） 或 20 （如果无符号），小数位数为 0 (签名:-2 [63] < =  *n*  < = 2 [63] – 1，未签名： 0 < =  *n*  < = 2 [64] – 1) [3] [9]。|  
-|SQL_BINARY|二进制 (*n*)|固定长度的二进制数据 *n* 。 [9]|  
-|SQL_VARBINARY|VARBINARY (*n*)|可变长度的最大长度的二进制数据 *n* 。 用户设置的最大。[9]|  
+|SQL_TINYINT|TINYINT|确切其精度为 3 的数字值，小数位数为 0 (签名: – 128 < = *n* < = 127，未签名： 0 < = *n* < = 255) [3]。|  
+_BIGINT|bigint|确切数字值，该值精度为 19 （如果有符号） 或 20 （如果无符号），小数位数为 0 (签名:-2 [63] < = *n* < = 2 [63] – 1，未签名： 0 < = *n* < = 2 [64] – 1) [3] [9]。|  
+|SQL_BINARY|二进制 (*n*)|固定长度的二进制数据*n*。 [9]|  
+|SQL_VARBINARY|VARBINARY (*n*)|可变长度的最大长度的二进制数据*n*。 用户设置的最大。[9]|  
 |SQL_LONGVARBINARY|长 VARBINARY|可变长度的二进制数据。 最大长度为数据源而定。[9]|  
 |SQL_TYPE_DATE [6]|DATE|年、 月和天字段，符合规则的公历。 (请参阅[约束的公历](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)、 本附录内容更高版本。)|  
 |SQL_TYPE_TIME [6]|时间 (*p*)|小时、 分钟和具有有效的值为小时的 00 到 23 有效的值为 00 到 59 分钟和秒 00 到 61 的有效值的第二个字段。 精度*p*指示秒精度。|  

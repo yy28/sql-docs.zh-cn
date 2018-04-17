@@ -1,16 +1,16 @@
 ---
-title: "定位 Update 和 Delete 语句 |Microsoft 文档"
-ms.custom: 
+title: 定位 Update 和 Delete 语句 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f1685fb077fbc7d5b99f0d33f58f7624d6bd23c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>定位的 Update 和 Delete 语句
 应用程序可以更新或删除中定位的更新的结果集的当前行或删除语句。 定位 update 和 delete 语句支持的某些数据源，但不是所有异常。 若要确定是否定位数据源支持更新和 delete 语句，应用程序调用**SQLGetInfo**使用 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1*信息类型*（具体取决于游标的类型）。 请注意 ODBC 游标库模拟定位的 update 和 delete 语句。  
@@ -36,9 +36,9 @@ ms.lasthandoff: 02/15/2018
   
  **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
- **FROM** *table-reference-list*  
+ **从***表引用列表*  
   
- [**WHERE** *search-condition*]  
+ [**其中***搜索条件*]  
   
  **有关更新的**[*列名称*[**，** *列名称*]...]  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 02/15/2018
   
  **更新***表名称*  
   
- **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+ **设置***列标识符* **=** {*表达式* &#124; **NULL**}  
   
- [**，** *列标识符*  **=**  {*表达式*&#124;**NULL**}]...  
+ [**，** *列标识符* **=** {*表达式* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *游标名称*  
   

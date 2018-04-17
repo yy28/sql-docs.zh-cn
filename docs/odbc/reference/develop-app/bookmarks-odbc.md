@@ -1,30 +1,31 @@
 ---
-title: "书签 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 书签 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 294589b508ccec13b7d2670283a576a094426acb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52921fdcc0c71e771b8427cbf2ce0b2f1e1f1f35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bookmarks-odbc"></a>书签 (ODBC)
 书签是用于标识数据行的值。 只有驱动程序或数据源才知道书签值的含义。 例如，书签可能与行号一样简单，也可能与磁盘地址一样复杂。 ODBC 中的书签会稍有不同从真实丛书中的书签。 在实际簿中，读取器将书签放置在特定页，然后查找该书签以返回到页。 在 ODBC 中，应用程序为特定行请求书签，存储该书签，并将其传回到游标以返回到该行。 因此，ODBC 中的书签是类似于读取器写下页号，请记住，，然后再次查看页面。  

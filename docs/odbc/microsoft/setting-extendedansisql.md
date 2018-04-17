@@ -2,7 +2,7 @@
 title: 设置 ExtendedAnsiSQL |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,18 +18,18 @@ ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d263d57d9fecbcb03f737dc73472452367900a47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c120d665c1b3c1838214a8991334d421b96c71ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-extendedansisql"></a>设置 ExtendedAnsiSQL
 该属性可通过添加 ExtendedAnsiSQL 属性控制的连接字符串：  
   
-|ReplTest1|Description|  
+|“值”|Description|  
 |-----------|-----------------|  
 |ExtendedAnsiSQL = 0 （默认值）|此设置不启用新功能。|  
 |ExtendedAnsiSQL = 1|此设置启用了新功能。|  

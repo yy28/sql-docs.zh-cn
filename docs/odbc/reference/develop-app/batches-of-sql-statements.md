@@ -1,31 +1,32 @@
 ---
-title: "SQL 语句的批处理 |Microsoft 文档"
-ms.custom: 
+title: SQL 语句的批处理 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batches [ODBC]
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d2ae8d60d6e41536bc67bd14f9252c372fdeaa5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e7f0119110e1bc57d106163d2e187bf599a0c596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="batches-of-sql-statements"></a>SQL 语句的批处理
 SQL 语句的批处理是一组两个或多个 SQL 语句或具有相同的效果的一组两个或多个 SQL 语句的单个 SQL 语句。 在某些实现中，可使用任何结果之前执行整个批处理语句。 这通常会更高效比单独，提交语句，因为通常可以减少网络流量和数据源有时可以优化的一批 SQL 语句的执行。 在其他实现中，调用**SQLMoreResults**触发的批次中的下一个语句执行。 ODBC 支持以下类型的批处理：  

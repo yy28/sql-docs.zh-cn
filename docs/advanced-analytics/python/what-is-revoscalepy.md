@@ -1,28 +1,22 @@
 ---
-title: 引入 revoscalepy |Microsoft 文档
-ms.custom: ''
-ms.date: 10/05/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 简介 SQL Server 机器学习中的 revoscalepy Python 包 |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fc59cbc5a34e79a98a787dea34f5ff1440fbe8c3
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 450aa7cc002da9b42379330141f34ee33eedbde6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="introducing-revoscalepy"></a>引入 revoscalepy
+# <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>在 SQL Server 机器学习中的简介 revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**revoscalepy**提供由 Microsoft，以支持分布式计算、 远程计算上下文和高性能算法 for Python 是一个新的库。
+**revoscalepy**提供由 Microsoft，以支持分布式计算、 远程计算上下文和高性能算法面向 Python 开发人员是一个新的 Python 库。
 
 它基于**RevoScaleR** ，提供 Microsoft R Server 和 SQL Server R Services 和旨在提供相同的功能中的包：
 
@@ -53,7 +47,7 @@ ms.lasthandoff: 04/04/2018
 
 + [revoscalepy for Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
-+ [microsoftml for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
++ [Microsoftml for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
 ### <a name="data-types-data-sources-and-compute-contexts"></a>数据类型、 数据源和计算上下文
 
@@ -84,12 +78,12 @@ SQL Server 2017，开头 CTP 2.0 中包含的以下机器学习算法和摘要�
 
 | 函数| Description|说明|
 | ------ | ------ |------ |
-|`rx_btrees` | 适合的随机渐变提升决策树|`rx_btrees_ex` in CTP 2.0|
-|`rx_dforest` | 适合分类和回归的决策林|`rx_dforest_ex` in CTP 2.0|
-|`rx_dtree` | 适合的分类和回归树 |`rx_dtree_ex` in CTP 2.0|
-|`rx_lin_mod` | 创建线性模型|`rx_lin_mod_ex` in CTP 2.0|
-|`rx_logit` | 创建逻辑回归模型|`rx_logit_ex` in CTP 2.0|
-|`rx_predict` | 从训练的模型生成预测|`rx_predict_ex` in CTP 2.0|
+|`rx_btrees` | 适合的随机渐变提升决策树|`rx_btrees_ex` 在 CTP 2.0|
+|`rx_dforest` | 适合分类和回归的决策林|`rx_dforest_ex` 在 CTP 2.0|
+|`rx_dtree` | 适合的分类和回归树 |`rx_dtree_ex` 在 CTP 2.0|
+|`rx_lin_mod` | 创建线性模型|`rx_lin_mod_ex` 在 CTP 2.0|
+|`rx_logit` | 创建逻辑回归模型|`rx_logit_ex` 在 CTP 2.0|
+|`rx_predict` | 从训练的模型生成预测|`rx_predict_ex` 在 CTP 2.0|
 |`rx_summary` | 生成模型的摘要||
 
 新的机器学习算法还提供的 Python 版本[MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):

@@ -1,33 +1,34 @@
 ---
-title: "ODBC 术语表 |Microsoft 文档"
-ms.custom: 
+title: ODBC 术语表 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bb77308b74a57fa192acf9aba3fa7d88090d93a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-glossary"></a>ODBC 术语表
-## <a name="a"></a>仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，  
+## <a name="a"></a>指向  
  **访问计划**  
  计划生成的数据库引擎执行的 SQL 语句。 等效于从 c。 如的第三代语言编译的可执行代码  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
  **C 数据类型**  
  C 程序中，在此情况下应用程序中的变量数据类型。  
   
- **目录**  
+ **catalog**  
  系统数据库的表中描述的数据库的形状的集。 也称为*架构*或*数据字典*。  
   
  **目录函数**  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/20/2017
  **客户端/服务器**  
  在其中一个或多个客户端数据通过服务器访问该数据库访问策略。 客户端通常实现用户界面，而服务器控件数据库访问。  
   
- **列**  
+ **column**  
  用于在一行中的信息的单个项的容器。 也称为*字段*。  
   
  **提交**  
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/20/2017
  **escape 子句**  
  SQL 语句中的子句。  
   
- **执行**  
+ **execute**  
  若要运行的 SQL 语句。  
   
 ## <a name="f"></a>F  
@@ -213,7 +214,7 @@ ms.lasthandoff: 11/20/2017
  **提取**  
  若要从结果集中检索一个或多个行。  
   
- **字段**  
+ field  
  *请参阅*列。  
   
  **基于文件的驱动程序**  
@@ -275,7 +276,7 @@ ms.lasthandoff: 11/20/2017
  将使用键集来检测更新和删除的行的可滚动游标。  
   
 ## <a name="l"></a>L  
- **文本**  
+ literal  
  字符表示形式中的 SQL 语句的实际数据值。  
   
  **锁定**  
@@ -327,7 +328,7 @@ ms.lasthandoff: 11/20/2017
  表的所有者。  
   
 ## <a name="p"></a>P  
- **参数**  
+ **parameter**  
  在 SQL 语句中，标记有参数标记或问号 （？） 变量。 参数绑定到应用程序变量和执行该语句时会检索到其值。  
   
  **参数说明符**  
@@ -357,7 +358,7 @@ ms.lasthandoff: 11/20/2017
  **主键**  
  列或唯一标识表中的行的列。  
   
- **过程**  
+ procedure  
  一组的一个或多个预编译作为命名对象在数据库中存储的 SQL 语句。  
   
  **过程列**  
@@ -414,7 +415,7 @@ ms.lasthandoff: 11/20/2017
  **标量函数**  
  从单个值生成单个值的函数。 例如，更改字符数据的大小写的函数。  
   
- **架构**  
+ **schema**  
  *请参阅*目录。  
   
  **可滚动游标**  

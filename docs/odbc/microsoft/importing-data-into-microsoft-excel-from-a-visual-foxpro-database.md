@@ -1,15 +1,16 @@
 ---
-title: "将数据导入 Microsoft Excel 从 Visual FoxPro 数据库 |Microsoft 文档"
-ms.custom: 
+title: 将数据导入 Microsoft Excel 从 Visual FoxPro 数据库 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - importing data [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], importing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1c452e99e0da8b000163c50643b8ce93efe73e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0fac6cd5b43f83f447f7ad1c8082243f5bc9491f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>将数据导入从 Visual FoxPro 数据库的 Microsoft Excel
 如果已为其定义的数据源，你可以 Visual FoxPro 数据导入 Microsoft Excel 工作表。 有关创建 Visual FoxPro 数据源的信息，请参阅[访问 Visual FoxPro 数据源从 Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)。  

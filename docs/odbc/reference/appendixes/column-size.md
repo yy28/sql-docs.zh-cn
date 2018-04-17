@@ -1,15 +1,16 @@
 ---
-title: "列大小 |Microsoft 文档"
-ms.custom: 
+title: 列大小 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], column size
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bc56113933e993b5748564a1c64ef1798ed8ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2178697aef549d86fedfa3d4bb70c8b45ba1f68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-size"></a>列大小
 数值数据类型的列 （或参数） 大小定义为最多的使用的数据类型的列或参数或数据的精度的位数。 对于字符类型，这是以字符为单位的数据; 的长度对于二进制数据类型，列大小被指以字节为单位的数据的长度。 对于时间、 时间戳，和所有 interval 数据类型，这是此数据的字符表示形式中的字符数。 下表中显示为每种简洁的 SQL 数据类型定义的列大小。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 |-------------------------|-----------------|  
 |所有字符类型 [a]，[b]。|以字符为单位的列或参数 （如 SQL_DESC_LENGTH 描述符字段中包含） 定义或最大列大小。 例如，定义为 char （10） 的单字节字符列的列大小为 10。|  
 |SQL_DECIMAL SQL_NUMERIC|定义的数字个数。 例如，定义为 NUMERIC(10,3) 列的精度为 10。|  
-|SQL_BIT [c]|@shouldalert|  
+|SQL_BIT [c]|1|  
 |SQL_TINYINT [c]|3|  
 |SQL_SMALLINT [c]|5|  
 |SQL_INTEGER [c]|10|  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 |所有二进制类型 [a]，[b]。|定义或最大长度以字节为单位的列或参数。 例如，定义为 binary （10） 的列的长度为 10。|  
 |SQL_TYPE_DATE [c]|10 (中的字符数*yyyy-月-日*格式)。|  
 |SQL_TYPE_TIME [c]|8 (中的字符数*hh mm ss*格式)，或 9 + *s* (中的字符数*hh: mm:*[.fff...] 格式，其中*的*是秒精度)。|  
-|SQL_TYPE_TIMESTAMP|16 (中的字符数*yyyy mm dd hh: mm*格式)<br /><br /> 19 (中的字符数*yyyy-月-日* *hh: mm:*格式)<br /><br /> 或多个<br /><br /> 20 + *s* (中的字符数*yyyy mm dd hh: mm:*[.fff...] 格式，其中*s*是秒精度)。|  
+|SQL_TYPE_TIMESTAMP|16 (中的字符数*yyyy mm dd hh: mm*格式)<br /><br /> 19 (中的字符数*yyyy-月-日* *hh: mm:*格式)<br /><br /> 或<br /><br /> 20 + *s* (中的字符数*yyyy mm dd hh: mm:*[.fff...] 格式，其中*s*是秒精度)。|  
 |SQL_INTERVAL_SECOND|其中*p*前导精度的时间间隔和*s*是秒精度， *p* (如果*s*= 0) 或*p* + *s*+ 1 (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|其中*p*前导精度的时间间隔和*s*是秒精度 9 +*p* (如果*s*= 0) 或 10 +*p*+ *s* (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|其中*p*前导精度的时间间隔和*s*是秒精度 6 +*p* (如果*s*= 0) 或 7 +*p* + *s* (如果*s*> 0)。 [d]|  

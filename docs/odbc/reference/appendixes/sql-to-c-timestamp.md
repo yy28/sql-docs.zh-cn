@@ -1,31 +1,32 @@
 ---
-title: "为 c： 时间戳的 SQL |Microsoft 文档"
-ms.custom: 
+title: 为 c： 时间戳的 SQL |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d877c369a071dfc9c28f2500dc6584fe99808cfa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 66e6d84f713911b91bc55a8757bb6b149d6ec582
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-timestamp"></a>为 c： 时间戳的 SQL
 时间戳 ODBC SQL 数据类型的标识符是：  
@@ -36,10 +37,10 @@ ms.lasthandoff: 12/21/2017
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 字符字节长度<br /><br /> 20 < = *BufferLength* < = 字符字节长度<br /><br /> *BufferLength* < 20|data<br /><br /> 截断的数据 [b]<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 字符长度<br /><br /> 20 < = *BufferLength* < = 字符长度<br /><br /> *BufferLength* < 20|data<br /><br /> 截断的数据 [b]<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|data<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|时间部分的时间戳为零 [a]<br /><br /> 时间部分的时间戳为非零 [a]|data<br /><br /> 截断的数据 [c]|6 [f]<br /><br /> 6 [f]|不适用<br /><br /> 01S07|  
+|SQL_C_CHAR|*BufferLength* > 字符字节长度<br /><br /> 20 < = *BufferLength* < = 字符字节长度<br /><br /> *BufferLength* < 20|Data<br /><br /> 截断的数据 [b]<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 字符长度<br /><br /> 20 < = *BufferLength* < = 字符长度<br /><br /> *BufferLength* < 20|Data<br /><br /> 截断的数据 [b]<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|Data<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|时间部分的时间戳为零 [a]<br /><br /> 时间部分的时间戳为非零 [a]|Data<br /><br /> 截断的数据 [c]|6 [f]<br /><br /> 6 [f]|不适用<br /><br /> 01S07|  
 |SQL_C_TYPE_TIME|时间戳的秒的小数部分部分为零 [a]<br /><br /> 秒的小数部分的时间戳的部分为非零 [a]|数据 [d]<br /><br /> 截断的数据 [d]、 [e]|6 [f]<br /><br /> 6 [f]|不适用<br /><br /> 01S07|  
 _C_TYPE_TIMESTAMP|时间戳的秒的小数部分部分不会被截断 [a]<br /><br /> 截断的时间戳的秒的小数部分部分 [a]|数据 [e]<br /><br /> 截断的数据 [e]|16 [f]<br /><br /> 16 [f]|不适用<br /><br /> 01S07|  
   

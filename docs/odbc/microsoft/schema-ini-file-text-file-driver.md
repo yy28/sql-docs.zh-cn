@@ -1,30 +1,31 @@
 ---
-title: "Schema.ini 文件 （文本文件驱动程序） |Microsoft 文档"
-ms.custom: 
+title: Schema.ini 文件 （文本文件驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 602582886c1eb02e34bad9127e5ab1e55a22a86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 文件 （文本文件驱动程序）
 当使用文本驱动程序时，使用的架构信息文件来确定文本文件的格式。 架构信息文件始终名为 Schema.ini，会始终保留在文本数据源所在的目录。 架构信息文件提供了有关的一般格式的文件、 列名称和数据类型信息和若干其他数据特性的信息 IISAM。 Schema.ini 文件始终是必需的访问固定长度的数据。 当文本表包含日期时间、 货币或小数数据或随时根据需要更好地控制的表中的数据的处理时，应使用 Schema.ini 文件。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 |----------------------|------------------|---------------------------------|  
 |**制表符分隔**|由制表符分隔文件中的字段。|格式 = TabDelimited|  
 |**CSV 分隔**|文件中的字段由逗号 （以逗号分隔值） 分隔。|格式 = CSVDelimited|  
-|**自定义分隔符**|由你选择输入到对话框中的任何字符分隔文件中的字段。 除双引号 （"） 允许所有，包括空白。|格式 = 带分隔符 (*自定义字符集*)<br /><br /> -或 -<br /><br /> 无分隔符替换为指定：<br /><br /> 格式 = 分隔 （）|  
+|**自定义分隔符**|由你选择输入到对话框中的任何字符分隔文件中的字段。 除双引号 （"） 允许所有，包括空白。|格式 = 带分隔符 (*自定义字符集*)<br /><br /> - 或 -<br /><br /> 无分隔符替换为指定：<br /><br /> 格式 = 分隔 （）|  
 |**固定的长度**|文件中的字段均为固定长度。|格式 = FixedLength|  
   
 ## <a name="specifying-the-fields"></a>指定的字段  
@@ -85,28 +86,28 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- 下一个条目使用的列号指定表中的字段 (**Col***n*) 选项，这是可选的字符分隔的文件和固定长度的文件需要。 该示例演示两个字段、 10 个字符 CustomerNumber 文本字段和 30 个字符 CustomerName 文本字段的 Schema.ini 项：  
+ 下一个条目使用的列号指定表中的字段 (**Col * * * n*) 选项，这是可选的字符分隔的文件和固定长度的文件需要。 该示例演示两个字段、 10 个字符 CustomerNumber 文本字段和 30 个字符 CustomerName 文本字段的 Schema.ini 项：  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- 语法**Col**  *n* 是：  
+ 语法 **Col * * * n*是：  
   
 ```  
   
 n=ColumnNametype [#]  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 下表介绍每个部分的**Col**  *n* 条目。  
+## <a name="remarks"></a>注释  
+ 下表介绍每个部分的 **Col * * * n*条目。  
   
 |参数|Description|  
 |---------------|-----------------|  
-|*列名称*|列的文本名称。 如果列名称包含嵌入的空格，必须将它括在双引号中。|  
-|*type*|数据类型如下所示：<br /><br /> **Microsoft Jet 数据类型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 货币<br /><br /> Single<br /><br /> 双精度<br /><br /> DateTime<br /><br /> 文本<br /><br /> 备忘录<br /><br /> **ODBC 数据类型**Char （与文本相同）<br /><br /> Float （与 Double 相同）<br /><br /> 整数 （短格式相同）<br /><br /> LongChar （等同于备注）<br /><br /> 日期*日期格式*|  
-|宽度|文本字符串值`Width`。 指示下面的编号，指定列的宽度 （对于字符分隔的文件是可选的; 固定长度的文件需要）。|  
+|*ColumnName*|列的文本名称。 如果列名称包含嵌入的空格，必须将它括在双引号中。|  
+|*类型*|数据类型如下所示：<br /><br /> **Microsoft Jet 数据类型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 货币<br /><br /> Single<br /><br /> 双精度<br /><br /> DateTime<br /><br /> Text<br /><br /> 备忘录<br /><br /> **ODBC 数据类型**Char （与文本相同）<br /><br /> Float （与 Double 相同）<br /><br /> 整数 （短格式相同）<br /><br /> LongChar （等同于备注）<br /><br /> 日期*日期格式*|  
+|**宽度**|文本字符串值`Width`。 指示下面的编号，指定列的宽度 （对于字符分隔的文件是可选的; 固定长度的文件需要）。|  
 |*#*|指定列的宽度的整数值 (如果存在**宽度**指定)。|  
   
 ## <a name="selecting-a-character-set"></a>选择一种字符集  

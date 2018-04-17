@@ -1,15 +1,16 @@
 ---
-title: "错误消息 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档"
-ms.custom: 
+title: 错误消息 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], Visual FoxPro ODBC driver
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ec1cbc18c952c4394f16123c76a32330116d5af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0d8bb313af52507b1b14cd085044c334f3e664f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>错误消息 （Visual FoxPro ODBC 驱动程序）
 发生错误时，Visual FoxPro 驱动程序将返回以下信息：  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  方括号 ([]) 中的前缀确定下表中定义的错误根源。  
   
-|数据源|Prefix|ReplTest1|  
+|数据源|Prefix|“值”|  
 |-----------------|------------|-----------|  
 |驱动程序管理器|[供应商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驱动程序管理器]<br />N/A|  
 |Visual FoxPro 驱动程序|供应商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro 驱动程序]<br />N/A|  

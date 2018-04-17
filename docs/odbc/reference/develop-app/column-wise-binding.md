@@ -1,38 +1,39 @@
 ---
-title: "按列绑定 |Microsoft 文档"
-ms.custom: 
+title: 按列绑定 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe322c1184c4b46eb2354a58177f5cb00aa6f10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bd05626aeb421bbe0b671a20b76f544f9a0f425
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-wise-binding"></a>按列绑定
 使用专用于列的绑定时，应用程序会将一个或两个，或在某些情况下的三个，数组绑定到数据要为其返回每个列。 第一个数组中包含的数据值，并第二个数组拥有长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果此操作后，将绑定的第三个数组。 每个数组包含有行的行集中的所有元素。  
   
  应用程序声明，它使用的专用于列的绑定具有 SQL_ATTR_ROW_BIND_TYPE 语句属性，它确定的绑定类型。 而不是参数行集缓冲区设置缓冲区。 驱动程序中的每个数组的连续元素返回每个行的数据。 下图显示列绑定的原理。  
   
- ![列 &#45; 的三个列的明智的做法绑定](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![列&#45;的三个列的明智的做法绑定](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
  例如，下面的代码将 10 元素数组绑定到 OrderID、 销售人员，和状态列：  
   

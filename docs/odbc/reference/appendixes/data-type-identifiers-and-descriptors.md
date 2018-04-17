@@ -1,15 +1,16 @@
 ---
-title: "数据类型标识符和描述符 |Microsoft 文档"
-ms.custom: 
+title: 数据类型标识符和描述符 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], identifiers
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data types [ODBC], descriptors
 - concise data types [ODBC]
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f54638aa02c885ee0e6fe8d14310d319dafb11c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9d36c0308ae7afb12541a0f33f4d2b417dfb15e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>数据类型标识符和描述符
 中列出的数据类型[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)和[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)本附录前面的部分是"简洁"数据类型： 每个标识符是指一种数据类型。 没有标识符和数据类型之间的一一对应关系。 描述符，但是，此未显示在所有情况下使用单个值以确定数据类型。 在某些情况下，它们可以使用"详细"数据类型和类型子代码。 对于除日期时间和间隔数据类型以外的所有数据类型，详细类型标识符等同于简洁类型标识符和 SQL_DESC_DATETIME_INTERVAL_CODE 中的值等于 0。 对于日期时间和间隔的数据类型，但是，详细的类型 （SQL_DATETIME 或 SQL_INTERVAL） 存储在 SQL_DESC_TYPE、 简洁类型存储在 SQL_DESC_CONCISE_TYPE，和为每种简洁的类型的子存储在 SQL_DESC_DATETIME_INTERVAL_CODE。 设置这些字段之一将影响其他。 有关这些字段的详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函数说明。  

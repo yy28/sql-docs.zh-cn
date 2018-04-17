@@ -1,51 +1,35 @@
 ---
-title: "连接字符串属性 (Analysis Services) |Microsoft 文档"
-ms.custom: 
+title: 连接字符串属性 (Analysis Services) |Microsoft 文档
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c2daf9234b44f7108339d9a743118373b9b42c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>连接字符串属性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主题介绍的是连接字符串属性，您可能需要在某个设计器或管理工具中设置这些属性，也可能在连接到并查询 Analysis Services 数据的客户端应用程序所生成的连接字符串中看到这些属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
+  本主题介绍的是连接字符串属性，您可能需要在某个设计器或管理工具中设置这些属性，也可能在连接到并查询 Analysis Services 数据的客户端应用程序所生成的连接字符串中看到这些属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
   
  在应用程序代码中生成自定义连接字符串的开发人员应查看 ADOMD.NET 客户端的 API 文档，以查看更详细的列表： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- 本主题中所述的属性由以下 Analysis Services 客户端库使用：ADOMD.NET、AMO 和 Analysis Services 的 OLE DB 访问接口。 大多数连接字符串属性可用于所有这三种客户端库。 例外将专门进行说明。  
-  
- 本主题包含以下各节：  
-  
- [常用的连接参数](#bkmk_common)  
-  
- [身份验证和安全](#bkmk_auth)  
-  
- [特殊用途的参数](#bkmk_special)  
-  
- [保留供将来使用](#bkmk_reserved)  
-  
- [连接字符串示例](#bkmk_examples)  
-  
- [Analysis Services 中使用的连接字符串格式](#bkmk_supportedstrings)  
-  
- [加密连接字符串](#bkmk_encrypt)  
+ 本主题中所述的属性由以下 Analysis Services 客户端库使用：ADOMD.NET、AMO 和 Analysis Services 的 OLE DB 访问接口。 大多数连接字符串属性可用于所有这三种客户端库。 例外将专门进行说明。
   
 > [!NOTE]  
 >  设置属性时，如果您无意中两次设置同一属性，则在连接字符串中使用后设置的那个属性。  
@@ -149,7 +133,7 @@ ms.lasthandoff: 02/15/2018
   
  `Provider=MSOLAP.5;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=Adventure Works DW 2008R2;Data Source=AW-SRV01;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error`  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和 [SharePoint Server 2013 中用于 Excel Services 的数据身份验证](http://go.microsoft.com/fwlink/?LinkId=296350)。  
+ 有关详细信息，请参阅[数据连接、数据源和连接字符串&#40;报表生成器和 SSRS& #41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 和 [SharePoint Server 2013 中用于 Excel Services 的数据身份验证](http://go.microsoft.com/fwlink/?LinkId=296350)。  
   
 ##  <a name="bkmk_supportedstrings"></a>Analysis Services 中使用的连接字符串格式  
  本节列出了 Analysis Services 支持的所有连接字符串格式。 除了与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库的连接，你还可以在连接 Analysis Services 的应用程序中指定这些连接字符串。  

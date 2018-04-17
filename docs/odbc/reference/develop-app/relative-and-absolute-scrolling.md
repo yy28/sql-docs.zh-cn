@@ -1,15 +1,16 @@
 ---
-title: "相对和绝对滚动 |Microsoft 文档"
-ms.custom: 
+title: 相对和绝对滚动 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - absolute scrolling [ODBC]
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 41155a5536493ba77941855e0283011ccda7d1a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>相对和绝对滚动
-中的滚动选项大多数**SQLFetchScroll**将光标位置相对于当前的位置或位置的绝对位置。 **SQLFetchScroll**支持提取下一行，之前，第一个和最后一个行集，作为很好地为相对提取 (提取行集 *n* 从开始的当前行集的行) 和绝对提取 (提取从行开始的行集 *n* )。 如果 *n* 是中的绝对读取负，行进行计数从结果集的末尾。 因此，行为-1 的绝对读取意味着提取开头结果集中的最后一行的行集。  
+中的滚动选项大多数**SQLFetchScroll**将光标位置相对于当前的位置或位置的绝对位置。 **SQLFetchScroll**支持提取下一行，之前，第一个和最后一个行集，作为很好地为相对提取 (提取行集*n*从开始的当前行集的行) 和绝对提取 （提取行集开始在行*n*)。 如果*n*是中的绝对读取负，行进行计数从结果集的末尾。 因此，行为-1 的绝对读取意味着提取开头结果集中的最后一行的行集。  
   
  动态游标检测行插入和删除从结果集中，因此没有为动态游标来检索从结果集，这可能非常缓慢的开头处以外读取特定数量的行的轻松方法。 此外，绝对提取不是在动态游标中非常有用因为行号更改随着行的插入和删除;因此，连续提取相同的行数可以产生不同的行。  
   

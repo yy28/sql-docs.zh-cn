@@ -1,15 +1,16 @@
 ---
-title: "阻止游标可滚动游标，向后兼容性 |Microsoft 文档"
-ms.custom: 
+title: 阻止游标可滚动游标，向后兼容性 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00e83e48a76e3c9159b50eb63fe4aec657baf928
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7e25e546b359dd7178739e074664c3239fcfbdba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>块状游标可滚动游标，向后兼容性
 同时存在**SQLFetchScroll**和**SQLExtendedFetch**首先清除拆分 ODBC 之间应用程序编程接口 (API)，这是组的函数中的表示应用程序调用和服务提供程序接口 (SPI)，这是函数的一套驱动程序实现。 此拆分是必需的以便 ODBC 3。*x*，它使用**SQLFetchScroll**，与标准 bealigned 并同时符合 ODBC 2。*x*，它使用**SQLExtendedFetch**。  

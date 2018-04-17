@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 教程第 3 课： 标记为日期表 |Microsoft 文档"
-description: "描述如何将标记中 Analysis Services tutorial 项目的日期表。"
+title: Analysis Services 教程第 3 课： 标记为日期表 |Microsoft 文档
+description: 描述如何将标记中 Analysis Services tutorial 项目的日期表。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: b747791b4e33683c2eaad73b3d19d80e7c10f601
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 679e3d629bb69ce4aab067b1becc7df8af24e140
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mark-as-date-table"></a>将标记为日期表
 

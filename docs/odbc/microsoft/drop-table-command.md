@@ -2,7 +2,7 @@
 title: DROP TABLE 命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6b38eeeba42f1a24520c176fb2f49caac1712e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd9798d5394f4291b0ff77abba55cb7c780aa4f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-table-command"></a>DROP TABLE 命令
 从指定与数据源的数据库中删除一个表并将其从磁盘中删除。  
@@ -38,8 +38,8 @@ ms.lasthandoff: 12/21/2017
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>“设置”  
- *表名*  
+## <a name="settings"></a>设置  
+ *TableName*  
  指定要与数据源指定的数据库中删除并从磁盘中删除的表。  
   
  *FileName*  
@@ -48,7 +48,7 @@ DROP TABLE TableName | FileName | ?
  ?  
  显示删除对话框中，你可以从中选择一个表，从指定与数据源的数据库中删除，若要从磁盘中删除。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  发出 DROP TABLE 后，还会删除所有主索引、 默认值，以及与该表关联的验证规则。 DROP TABLE 还会影响其他表中的数据库指定与数据源，如果这些表具有规则或要删除的表关联的关系。 从数据库中删除表时，将不再有效的规则和关系。  
   
 ## <a name="driver-remarks"></a>驱动程序备注  

@@ -2,7 +2,7 @@
 title: SET NULL 命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1050db2b6a50fc794626b6017bd26af05f458a8a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1e4b0c9aa4b20245ef2de03a5f9fb7eba9a44a73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-null-command"></a>SET NULL 命令
 确定如何支持 null 值的 ALTER TABLE-SQL、 创建表的 SQL 和插入的 SQL 命令。  
@@ -47,7 +47,7 @@ SET NULL ON | OFF
   
  此外指定它插入-SQL 将插入空值到插入-SQL VALUE 子句中不包含任何列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  ALTER TABLE、 CREATE TABLE 和 INSERT-SQL 支持 SET NULL 影响仅如何 null 值。 其他命令不会受到设置为 NULL。  
   
 ## <a name="see-also"></a>另请参阅  

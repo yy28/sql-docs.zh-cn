@@ -1,15 +1,16 @@
 ---
-title: "Interval 数据类型 |Microsoft 文档"
-ms.custom: 
+title: Interval 数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - second intervals [ODBC]
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ce8aff0605f1fc8baa772e5e22409baf1240c556
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interval-data-types"></a>Interval 数据类型
 一个时间间隔被指两个日期和时间之间的差异。 按两种不同方式之一表示的时间间隔。 其中一个是*年-月*表示年和月八进制整数方面的时间间隔的间隔。 另一种是*一天时间*表示按天、 分钟和秒的间隔的间隔。 这两种类型的间隔不同，并且不能混合，因为月份可以具有不同的天数。  

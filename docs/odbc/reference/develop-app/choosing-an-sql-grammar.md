@@ -1,31 +1,32 @@
 ---
-title: "选择的 SQL 语法 |Microsoft 文档"
-ms.custom: 
+title: 选择的 SQL 语法 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6eedc2466842d922e1b10445500f05ad904d1a0b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 90aba694c610f34d2f6da93a3e5d155cb4fc4ab0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choosing-an-sql-grammar"></a>选择的 SQL 语法
 可以在构造 SQL 语句时使用的第一个决定是要使用的语法。 除了可从各种标准的正文，如 Open Group、 ANSI 和 ISO，语法几乎每个 DBMS 供应商定义其自己的语法，其中每个会稍有不同于标准。  

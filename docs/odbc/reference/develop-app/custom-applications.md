@@ -1,31 +1,32 @@
 ---
-title: "自定义应用程序 |Microsoft 文档"
-ms.custom: 
+title: 自定义应用程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], custom applications
 - custom applications [ODBC]
 - interoperability [ODBC], levels
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bac0656a0e0de15d216b73b76285d1ddede6e74
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f2a4eab813bc691fd435dc00778cbfe41c8bdcc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-applications"></a>自定义应用程序
 自定义应用程序通常为几个 Dbms 执行特定任务。 例如，应用程序可能会从单个 DBMS 中检索数据并生成报告，或它可能在几个 Dbms 之间的数据传输。 这些应用程序具有共同点是这些 Dbms 写入应用程序之前已知的而是可能会更改应用程序的生命周期。  

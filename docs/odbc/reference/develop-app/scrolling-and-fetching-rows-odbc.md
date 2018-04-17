@@ -1,15 +1,16 @@
 ---
-title: "滚动和提取行 (ODBC) |Microsoft 文档"
-ms.custom: 
+title: 滚动和提取行 (ODBC) |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 304baeafe4918433ab5c9495d54e4cd8970eb628
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 273046a04849b0b1501e2dd4be476c9abb540c5f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>滚动和提取行 (ODBC)
-使用可滚动游标时，应用程序调用**SQLFetchScroll**定位游标和提取行。 **SQLFetchScroll**支持相对滚动 (下一步、 之前，和相对 *n* 行)，绝对滚动 (名字、 姓氏，和行 *n* )，和定位的书签。 *FetchOrientation*和*FetchOffset*中的自变量**SQLFetchScroll**指定要提取，哪些行集，如以下关系图中所示。  
+使用可滚动游标时，应用程序调用**SQLFetchScroll**定位游标和提取行。 **SQLFetchScroll**支持相对滚动 (下一步、 之前，和相对*n*行)，绝对滚动 (名字、 姓氏，和行*n*)，和由书签定位。 *FetchOrientation*和*FetchOffset*中的自变量**SQLFetchScroll**指定要提取，哪些行集，如以下关系图中所示。  
   
  ![接下来，提取之前，第一个和最后一个行集](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   

@@ -1,31 +1,32 @@
 ---
-title: "诊断消息 |Microsoft 文档"
-ms.custom: 
+title: 诊断消息 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic messages messages
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35cf3118e503193200dec0e5e07714aa4e2a54ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d8820ce1c437d4bb5012a84ced5db6040cd1b552
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnostic-messages"></a>诊断消息
 诊断消息将返回每个 SQLSTATE 带。 使用大量不同的消息通常返回相同的 SQLSTATE。 例如，为 SQL 语法中的大多数错误返回 SQLSTATE 42000 （语法错误或访问冲突）。 但是，每个语法错误很可能可以通过不同的消息进行描述。  

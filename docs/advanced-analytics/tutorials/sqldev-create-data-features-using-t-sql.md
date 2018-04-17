@@ -1,29 +1,17 @@
 ---
-title: 第 4 课： 创建数据功能使用 T-SQL |Microsoft 文档
-ms.custom: ''
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: 课使用 T-SQL 的 4 请数据功能 |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-- TSQL
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 20e1a425f297165b5d82a00b8722407913b4bbc0
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 7007d418b14e2c965252ca2a4f7bc3c529e63173
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-4-create-data-features-using-t-sql"></a>第 4 课： 创建使用 T-SQL 的数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

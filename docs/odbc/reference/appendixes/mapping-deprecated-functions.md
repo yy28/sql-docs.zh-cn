@@ -1,15 +1,16 @@
 ---
-title: "映射函数弃用 |Microsoft 文档"
-ms.custom: 
+title: 映射函数弃用 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa5f1fb5c50911718adf3aa509dd99fb6e30673c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cfa4d8cd2a21363e1b3aa0588ae4def8ed011005
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-deprecated-functions"></a>映射函数弃用
 本部分介绍如何已弃用的函数映射由 ODBC 3*.x*驱动程序管理器，以保证向后兼容性的 ODBC 3*.x*与 ODBC 2 一起使用的驱动程序。*x*应用程序。 驱动程序管理器执行此映射而不考虑应用程序的版本。 因为每个 ODBC 2。*x*以下列表中的函数映射到相应的 ODBC 3*.x*函数 ODBC 3 中调用时*.x*驱动程序，ODBC 3*.x*驱动程序不需要实现 ODBC 2。*x*函数。  

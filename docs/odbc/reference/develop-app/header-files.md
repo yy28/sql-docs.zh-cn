@@ -2,7 +2,7 @@
 title: 标头文件 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 197c7ef28124fb1b1c52facbec541913330c69c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 75a2e7bcee4f777a3f0442425c0395be99000668
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="header-files"></a>标头文件
 Sql.h 标头文件包含函数和核心 ODBC 接口一致性级别中的功能的原型。 Sqlext.h 标头文件包含为函数和中的级别 1 和级别 2 API 一致性级别的功能的原型。 Sqltypes.h 标头文件包含类型定义和 SQL 数据类型的指示符。  

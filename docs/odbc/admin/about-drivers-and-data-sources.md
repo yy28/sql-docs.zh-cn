@@ -2,7 +2,7 @@
 title: 有关驱动程序和数据源 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6422e855b126245fd7118ce2518538aa0305484a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0f6f20a4903aaabb7a6c8062cb714b847134cae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="about-drivers-and-data-sources"></a>有关驱动程序和数据源
 *驱动程序*是处理 ODBC 请求并将数据返回到应用程序的组件。 如有必要，驱动程序将修改到理解数据源的窗体的应用程序的请求。 必须使用驱动程序的安装程序以添加或删除驱动程序从你的计算机。  
@@ -39,4 +39,4 @@ ms.lasthandoff: 12/21/2017
   
  用户和系统数据源统称为*机*数据源，因为它们是计算机的本地。  
   
- 每个这些数据源有一个选项卡**ODBC 数据源管理器**对话框。 有关数据源的详细信息，请参阅 [数据源](../../odbc/reference/data-sources.md)。
+ 每个这些数据源有一个选项卡**ODBC 数据源管理器**对话框。 有关数据源的详细信息，请参阅[数据源](../../odbc/reference/data-sources.md)。

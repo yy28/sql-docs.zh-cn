@@ -1,29 +1,22 @@
 ---
-title: 在 SQL Server 上安装新的 Python 包 |Microsoft 文档
-ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology:
-- r-services
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 在 SQL Server 机器学习上安装新的 Python 包 |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: dbf91e37bde5e648113ce2040f695fd41047808d
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 927d34755dbe291d1b208d968b13d36baf90bc15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>在 SQL Server 上安装新的 Python 软件包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何在 SQL Server 自 2017 年的实例上安装新的 Python 包。
+本文介绍如何在 SQL Server 自 2017 年 1 机器学习 Services 的实例上安装新的 Python 包。
 
 通常情况下，安装新包的过程是类似于在标准的 Python 环境。 但是，执行一些其他步骤是必需的如果服务器没有 internet 连接。
 

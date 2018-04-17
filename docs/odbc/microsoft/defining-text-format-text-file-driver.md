@@ -1,30 +1,31 @@
 ---
-title: "定义文本格式 （文本文件驱动程序） |Microsoft 文档"
-ms.custom: 
+title: 定义文本格式 （文本文件驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ccccd8ea0a26c48f5d817ea5b9c0163d8a3cb6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 55a900ec55e4dc93b53168a2949de06fa9f2e879
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="defining-text-format-text-file-driver"></a>定义文本格式 （文本文件驱动程序）
 当使用文本驱动程序时，你可以使用**定义文本格式**对话框可以定义在所选文件中的列的格式。 此对话框中，你可以指定每个数据表的架构。 此信息写入到中的数据源目录的 Schema.ini 文件。 为每个文本数据源目录创建单独的 Schema.ini 文件。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |**“添加”**|添加使用中的值的列**数据类型**，**名称**，和**宽度**从对话框中，并且如果适用，日期分隔符值从 Schema.ini。|  
 |**字符**|**ANSI**或**OEM**。 OEM 指定非 ANSI 字符集。 如果选择中的项的格式，则默认为 OEM**表**列表不以前定义过通过此对话框。|  
 |**列名称标头**|指示所选表的第一行的列是否用于作为列名称。 任一**TRUE**或**FALSE**。 中的选定项的格式默认为 false**表**列表不以前定义过通过此对话框。|  
-|**“列”**|列出所选表中每一列的列名称。 列的顺序反映表中的列的顺序。 如果尚未在选择了一个文件启用此列表**表**列表。|  
+|**列**|列出所选表中每一列的列名称。 列的顺序反映表中的列的顺序。 如果尚未在选择了一个文件启用此列表**表**列表。|  
 |**数据类型**|可以是位、 字节、 CHAR、 货币、 日期、 FLOAT、 整数、 LONGCHAR、 短，或单。 日期数据类型可以采用以下格式:"dd-mmm-yy"、"mm dd yy"、"mmm-dd-yy"、"yyyy-月-日"或"yyyy-mmm-日"。 "mm"表示个月; 数字"mmm"表示个月的字母。|  
 |**分隔符**|指定要用于分隔列的自定义分隔符字符。 启用时**自定义分隔**选择格式。 分隔符可以是仅一个字符的长度，并且两个双引号 （"） 不能用作分隔符字符。 （分隔符不能指定十六进制或十进制格式。）|  
 |**格式**|分隔或固定长度。 如果分隔，该值指示使用的分隔符类型： 以逗号 (CSV)、 制表符或特殊字符 （自定义）。 这将默认为**CSV 分隔**如果选择中的项的格式**表**列表不以前定义过通过此对话框。<br /><br /> 如果**格式**是固定长度和**列名称标头**为 TRUE 时，必须以逗号分隔的第一行。|  
@@ -49,4 +50,4 @@ ms.lasthandoff: 12/21/2017
 |**删除**|删除所选的列。|  
 |**扫描的行数**|在设置列和列数据类型取决于现有数据时，安装程序或驱动程序将扫描的行数。<br /><br /> 你可以输入一个介于 1 到 32767 之间的要扫描的行数。 这将默认为 25 如果中选定的项的格式**表**列表不以前定义过通过此对话框。 （限制以外的数字将返回错误。）|  
 |**表**|包含列表中选择的目录中的所有文件**文本安装**对话框中指定的扩展名的列表相匹配。<br /><br /> 当\<默认 > 选择后，并且以下其中一个是 true，表中的属性的值**表**组写入的 Schema.ini （接触 Schema.ini 中的没有其他项）：<br /><br /> -没有任何 Schema.ini 指定目录中。<br />-该 Schema.ini 文件存在，但在目录中的文本文件 （具有指定的扩展） 之一的 Schema.ini 没有节。<br />的文本文件部分存在于 Schema.ini，但响应正文为空。<br /><br /> 当\<默认 > 选择，则**列**组处于禁用状态。|  
-|宽度|可以为 CHAR 或 LONGCHAR 列更改列的宽度。 默认为 1 如果中选定的项的格式的宽度**表**列表不以前定义过通过此对话框。<br /><br /> 对于其他数据类型，禁用了宽度控件并不显示任何值。|
+|**宽度**|可以为 CHAR 或 LONGCHAR 列更改列的宽度。 默认为 1 如果中选定的项的格式的宽度**表**列表不以前定义过通过此对话框。<br /><br /> 对于其他数据类型，禁用了宽度控件并不显示任何值。|

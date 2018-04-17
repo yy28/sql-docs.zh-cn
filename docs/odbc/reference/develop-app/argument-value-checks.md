@@ -1,31 +1,32 @@
 ---
-title: "自变量值检查 |Microsoft 文档"
-ms.custom: 
+title: 自变量值检查 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], driver manager error checking
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c5980573d67eff7b791af6f01d3881524312474
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b3e4c8772a8d6a6b2a00f6c8ffe4ab610d0e1ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="argument-value-checks"></a>自变量值检查
 驱动程序管理器检查以下类型的自变量。 除非另行说明，否则驱动程序管理器将返回 SQL_ERROR 自变量值中的错误。  

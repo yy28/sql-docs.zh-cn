@@ -1,36 +1,37 @@
 ---
-title: "SQLStatistics （Excel 驱动程序） |Microsoft 文档"
-ms.custom: 
+title: SQLStatistics （Excel 驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Excel driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Excel Driver
 ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4b68e127a196dc0be7e2f0eab501e01dde8dcf6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f467200af26d193bdafe405fa454d646a566da48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlstatistics-excel-driver"></a>SQLStatistics （Excel 驱动程序）
 > [!NOTE]  
 >  本主题提供 Excel 驱动程序相关的信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
-|“列”|注释|  
+|列|注释|  
 |------------|--------------|  
 |TABLE_QUALIFIER|目录的路径。<br /><br /> 模式匹配中不支持*szTableQualifier*自变量。|  
 |TABLE_OWNER|因为不支持所有者名称，将在此列中返回 NULL。|  

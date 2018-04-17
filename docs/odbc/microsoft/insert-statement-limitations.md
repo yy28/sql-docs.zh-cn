@@ -1,31 +1,32 @@
 ---
-title: "INSERT 语句限制 |Microsoft 文档"
-ms.custom: 
+title: INSERT 语句限制 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC SQL grammar, INSERT statement limitations
 - INSERT statement limitations [ODBC]
 - truncation of data [ODBC]
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c8547de55d04aefbd3c847fca9b53b411b5ee80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 32371e206e37df3efa621047e43b179aeaed917e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="insert-statement-limitations"></a>插入语句的限制
 如果太长，无法适应列，而不发出警告右侧截断插入的数据。  

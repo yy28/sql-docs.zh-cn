@@ -1,15 +1,16 @@
 ---
-title: "为 c： 年-月间隔 SQL |Microsoft 文档"
-ms.custom: 
+title: 为 c： 年-月间隔 SQL |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - intervals [ODBC], converting
 - year-month intervals [ODBC]
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 680143b9cc20b910e65218bfe222bd43654bcb21
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7c54f671d1cb7fbf5ab0f0be6ca5f47ea9281fd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-year-month-intervals"></a>为 c： 年-月间隔的 SQL
 年-月间隔 ODBC SQL 数据类型的标识符都是：  
@@ -41,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_INTERVAL_MONTH [a]<br /><br /> SQL_C_INTERVAL_YEAR [a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH [a]|不会被截断的尾随字段部分<br /><br /> 尾随字段部分被截断<br /><br /> 前导精度不是目标的不够大，无法从源中保存数据|data<br /><br /> 截断的数据<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT [b]<br /><br /> SQL_C_UTINYINT [b]<br /><br /> SQL_C_USHORT [b]<br /><br /> SQL_C_SHORT [b]<br /><br /> SQL_C_SLONG [b]<br /><br /> SQL_C_ULONG [b]<br /><br /> SQL_C_NUMERIC [b]<br /><br /> SQL_C_BIGINT [b]|间隔精度是单个字段和数据转换而不发生截断<br /><br /> 间隔精度是单个字段的和已截断整个<br /><br /> 间隔精度不是单个字段|data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> 以字节为单位的数据的长度<br /><br /> C 数据类型的大小|不适用<br /><br /> 22003<br /><br /> 22015|  
-_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|data<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_CHAR|字符字节长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|字符长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH [a]<br /><br /> SQL_C_INTERVAL_YEAR [a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH [a]|不会被截断的尾随字段部分<br /><br /> 尾随字段部分被截断<br /><br /> 前导精度不是目标的不够大，无法从源中保存数据|Data<br /><br /> 截断的数据<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b]<br /><br /> SQL_C_UTINYINT [b]<br /><br /> SQL_C_USHORT [b]<br /><br /> SQL_C_SHORT [b]<br /><br /> SQL_C_SLONG [b]<br /><br /> SQL_C_ULONG [b]<br /><br /> SQL_C_NUMERIC [b]<br /><br /> SQL_C_BIGINT [b]|间隔精度是单个字段和数据转换而不发生截断<br /><br /> 间隔精度是单个字段的和已截断整个<br /><br /> 间隔精度不是单个字段|Data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> 以字节为单位的数据的长度<br /><br /> C 数据类型的大小|不适用<br /><br /> 22003<br /><br /> 22015|  
+_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|Data<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_CHAR|字符字节长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|Data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|字符长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|Data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
   
  可以为任何年-月间隔 C 类型转换 [a] 的年-月间隔 SQL 类型。  
   

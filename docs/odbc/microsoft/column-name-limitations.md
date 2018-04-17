@@ -1,30 +1,31 @@
 ---
-title: "列名称限制 |Microsoft 文档"
-ms.custom: 
+title: 列名称限制 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 91fe107bf25d2ec2702778475af9f366af22a120
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7d51f87a2fbb3552dd323469d60bd50c7bab7f22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-name-limitations"></a>列名称限制
 列名称可以包含任何有效字符 （例如，空格）。 如果列名包含除字母、 数字和下划线的任何字符，必须由将其括起来后引号 （'） 中分隔名称。  

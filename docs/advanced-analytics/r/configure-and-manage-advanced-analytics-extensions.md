@@ -1,27 +1,19 @@
 ---
-title: 高级机器学习服务的配置选项 |Microsoft 文档
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 对 SQL Server 机器学习服务的高级的配置 |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 5fc4e661f68a23ff2a954b832463eb60c7449057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="advanced-configuration-options-for-machine-learning-services"></a>机器学习服务的高级的配置选项
+# <a name="advanced-configuration-options-for-sql-server-machine-learning-services"></a>SQL Server 计算机学习 Services 的高级的配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本指南介绍你可以在设置之后，若要修改的外部脚本运行时和 SQL Server 中的机器学习与关联的其他服务配置的更改。

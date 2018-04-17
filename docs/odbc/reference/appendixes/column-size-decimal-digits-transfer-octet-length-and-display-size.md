@@ -1,15 +1,16 @@
 ---
-title: "列大小、 十进制数字，传输八位字节长度显示大小 |Microsoft 文档"
-ms.custom: 
+title: 列大小、 十进制数字，传输八位字节长度显示大小 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - display size of data types [ODBC]
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa5322870c92ee8c48d9d4dc49fbc5a50b6b3e7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ce63d73b21d7eee16d0b17100ff9c18cde265d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列大小、 十进制数，再传输八位字节长度和显示大小-ODBC
 数据类型的特征是其列 （或参数） 的大小、 小数位数、 长度、 和显示大小。 以下的 ODBC 函数返回数据源上的这些属性中的 SQL 语句的参数或 SQL 数据类型。 每个 ODBC 函数返回一组不同的这些属性，如下所示：  

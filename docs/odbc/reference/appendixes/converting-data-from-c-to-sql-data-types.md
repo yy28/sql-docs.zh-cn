@@ -1,15 +1,16 @@
 ---
-title: "将 C 中的数据转换为 SQL 数据类型 |Microsoft 文档"
-ms.custom: 
+title: 将 C 中的数据转换为 SQL 数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d87c393e9af2b3b24bd50b41287b9323a6e114cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>将 C 中的数据转换为 SQL 数据类型
 在应用程序调用**SQLExecute**或**SQLExecDirect**，驱动程序检索数据的任何参数绑定与**SQLBindParameter**从存储位置中应用程序。 在应用程序调用**SQLSetPos**，驱动程序检索更新的数据，或者从与绑定的列添加操作**SQLBindCol**。 对于数据在执行参数，应用程序发送具有的参数数据**SQLPutData**。 如果有必要，该驱动程序将数据从指定的数据类型*ValueType*中的参数**SQLBindParameter**到由指定的数据类型*ParameterType*中的参数**SQLBindParameter**，然后将数据发送到数据源。  

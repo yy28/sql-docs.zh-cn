@@ -1,32 +1,32 @@
 ---
-title: "附录 b: ODBC 状态转换表 |Microsoft 文档"
-ms.custom: 
+title: '附录 b: ODBC 状态转换表 |Microsoft 文档'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附录 b: ODBC 状态转换表
 本附录中的表显示如何 ODBC 函数导致的环境、 连接、 语句和描述符状态的转换。 通常，环境、 连接、 语句或描述符的状态决定使用句柄 （环境、 连接、 语句或描述符） 的相应类型的函数可以调用时。 环境、 连接、 语句中，和描述符状态重叠大致如下图中所示。 例如，连接的确切重叠状态 C5，C6 并且语句说明了通过 S12 S1 是数据源而定，因为在不同的数据源，在不同时间开始事务，描述符状态 D1i （隐式已分配的描述符） 依赖描述符与之关联的语句的状态，在状态 D1e （显式已分配的描述符） 时不依赖于状态的任何语句。 有关每个状态的说明，请参阅[环境转换](../../../odbc/reference/appendixes/environment-transitions.md)，[连接转换](../../../odbc/reference/appendixes/connection-transitions.md)，[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述符转换](../../../odbc/reference/appendixes/descriptor-transitions.md)、 本附录内容更高版本。  

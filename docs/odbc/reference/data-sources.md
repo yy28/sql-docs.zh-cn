@@ -1,31 +1,32 @@
 ---
-title: "数据源 | Microsoft Docs"
-ms.custom: 
+title: 数据源 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b16699f67a74232730b2b96a2fdeeb4545d1fe46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="data-sources"></a>“数据源”
+# <a name="data-sources"></a>数据源
 A*数据源*是只需数据源。 它可以是文件，DBMS 或甚至实时数据源上的特定数据库。 数据可能位于与该程序，在同一计算机上，也可以在网络上的某个位置的另一台计算机上。 例如，数据源可能是由 Novell® Netware; 访问 OS/2® 操作系统系统上运行 Oracle DBMS访问通过网关; IBM DB2 DBMS中的服务器目录中; Xbase 文件的集合或本地的 Microsoft® Access 数据库文件。  
   
  数据源的用途是收集所有所需访问数据的技术信息 — 驱动程序名称、 网络地址、 网络软件等-到单个放置和隐藏用户。 用户应能够查看包含工资单、 清单和人员的列表，从列表中，选择工资单并将所有这些操作都无需知道工资单数据所在的位置，或如何应用程序是怎样到达它连接到的工资单数据，该应用程序。  

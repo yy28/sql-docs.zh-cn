@@ -1,15 +1,16 @@
 ---
-title: "提交和回滚的事务 |Microsoft 文档"
-ms.custom: 
+title: 提交和回滚的事务 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transactions [ODBC], rolling back
 - transactions [ODBC], committing
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534c6181a1634eb4963bc4f448939f335d821e5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b828c7080737989c4bcefa99f18d715fe04eddc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="committing-and-rolling-back-transactions"></a>提交和回滚的事务
 若要提交或回滚的事务在手动提交模式下，应用程序调用**SQLEndTran**。 通常支持事务的 Dbms 的驱动程序实现此函数通过执行**提交**或**回滚**语句。 驱动程序管理器不会调用**SQLEndTran**连接时在自动提交模式下; 它只需返回 SQL_SUCCESS，即使应用程序将尝试回滚事务。 因为不支持事务的 Dbms 的驱动程序始终处于自动提交模式下，它们可以实现**SQLEndTran**不执行任何操作就返回 SQL_SUCCESS 或根本未实现。  

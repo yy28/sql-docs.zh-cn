@@ -1,15 +1,16 @@
 ---
-title: "目录函数中的参数 |Microsoft 文档"
-ms.custom: 
+title: 目录函数中的参数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - arguments in catalog functions [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], about arguments
 - functions [ODBC], catalog functions
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb973a525b5a978d16566edc02fb4d4651e11406
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f46b286a929d261b1cf1c608fefccd5f266b92b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="arguments-in-catalog-functions"></a>目录函数中的参数
 所有目录函数都接受的参数与该应用程序可以将限制返回的数据的作用域。 例如，在第一个和第二个调用到**SQLTables**下面的代码中返回的结果集包含所有表有关的信息，而第三个调用返回有关订单表的信息：  

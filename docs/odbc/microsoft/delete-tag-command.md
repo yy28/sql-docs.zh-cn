@@ -2,7 +2,7 @@
 title: 删除标记命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf31107e21cee13d51046e43acc5c557cf20b9ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 909c0b94127547e27c10deef107a62af6400a9d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-tag-command"></a>删除标记命令
 从复合索引 (.cdx) 文件中删除一个标记。  
@@ -46,7 +46,7 @@ DELETE TAG ALL [OF CDXFileName]
  所有 [OF *CDXFileName*]  
  从复合索引文件中删除每个标记。 如果当前表具有结构的复合索引文件，所有标记都会从索引文件、 从磁盘中，删除该索引文件和都删除表的标头，该值指示存在相关联的结构化复合索引文件中的标志。 所有用于 OF *CDXFileName*若要从非结构化的复合索引文件打开复合索引文件中删除所有标记。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  复合索引文件，使用索引创建，包含对应于索引条目的标记。 删除标记用于从打开的复合索引文件中删除一个标记。 从当前工作区中打开的复合索引文件，可以删除仅标记。 如果从复合索引文件中删除所有标记，将从磁盘中删除该文件。  
   
  Visual FoxPro 会首先中查找的结构化的复合索引文件中的标记 （如果打开）。 如果标记不在结构化的复合索引文件，Visual FoxPro 然后查找其他打开的复合索引文件中的标记。  

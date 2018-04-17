@@ -1,30 +1,31 @@
 ---
-title: "保留关键字 |Microsoft 文档"
-ms.custom: 
+title: 保留关键字 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54df53e2ff5f095a0404719d6e1219013d90d47f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eb908b1fe38e0bd193a17ac66c753d4057fed4a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reserved-keywords"></a>保留关键字
 保留了下列关键字以用于 ODBC 函数调用。 这些单词不会限制的最小的 SQL 语法;但是，若要确保使用支持的核心 SQL 语法的驱动程序的兼容性，应用程序应避免使用任何这些关键字。 #**定义**值 SQL_ODBC_KEYWORDS 包含这些关键字的以逗号分隔列表。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 |AS|LOCAL|  
 |ASC|LOWER|  
 |ASSERTION|MATCH|  
-|在|MAX|  
+|AT|MAX|  
 |AUTHORIZATION|MIN|  
 |AVG|MINUTE|  
 |BEGIN|MODULE|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 12/21/2017
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|real|  
+|CURSOR|REAL|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 12/21/2017
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|删除|SECOND|  
+|DELETE|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -117,7 +118,7 @@ ms.lasthandoff: 12/21/2017
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|timestamp|  
+|FIRST|TIMESTAMP|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -133,9 +134,9 @@ ms.lasthandoff: 12/21/2017
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|User|  
+|IDENTITY|USER|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|VALUE|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  

@@ -1,30 +1,31 @@
 ---
-title: "键集驱动游标 |Microsoft 文档"
-ms.custom: 
+title: 键集驱动游标 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eff91b12ebf378aa4bbcdbbfbdfa84c40a66f06b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: acc3a757493c935d5b37c278eb77b9b849f85873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="keyset-driven-cursors"></a>键集驱动游标
 键集驱动游标静态和动态游标之间在于它能够检测更改。 如静态游标，它不始终检测到的成员资格和顺序的结果集的更改。 动态游标，像它未在结果集中 （遵从事务，如所 SQL_ATTR_TXN_ISOLATION 连接属性设置的隔离级别） 检测更改的行的值。  

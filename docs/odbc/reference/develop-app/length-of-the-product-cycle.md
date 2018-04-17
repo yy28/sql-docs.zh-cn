@@ -1,30 +1,31 @@
 ---
-title: "在产品周期长度 |Microsoft 文档"
-ms.custom: 
+title: 在产品周期长度 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], product cycle
 - length of the product cycle [ODBC]
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddd48de7b988cf16fb8c3ce5d3bc33088f487308
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ab57383e7702b981566b67a6c1b21f3e9f767de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="length-of-the-product-cycle"></a>在产品周期的长度
 关于互操作性最后一个问题是时间。 通常在开发可互操作应用程序时，所用时间长于开发一个 noninteroperable。 原因是应用程序必须检查 DBMS 功能、 为不同 Dbms 以不同的方式执行相同的任务、 解决某些 Dbms 而非任何其他支持的功能和等。  

@@ -2,7 +2,7 @@
 title: SQLGetInfo （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4c1d3356b91e3cb311c1dbf5ee7246bbb4baaa8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 136d3eabc7ef35105204ec3b0332f5a1df3a2a91
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo （Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  有关详细信息，请参阅[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md)中*ODBC 程序员参考*。  
   
-## <a name="a"></a>仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，  
+## <a name="a"></a>指向  
  SQL_ACCESSIBLE_PROCEDURES 返回 ' N '。  
   
  SQL_ACCESSIBLE_TABLES 返回 Y。  

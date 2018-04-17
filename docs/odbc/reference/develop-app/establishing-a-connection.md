@@ -1,15 +1,16 @@
 ---
-title: "建立的连接 |Microsoft 文档"
-ms.custom: 
+title: 建立的连接 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b782f94bb67580308c844a653389800fb0ff7af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 80de9f41bf4c535f7d9daa34b7b14d0377ab2383
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="establishing-a-connection"></a>建立连接
 后分配环境和连接句柄并设置任何连接属性，应用程序已准备好连接到数据源或驱动程序。 应用程序可用于执行此操作的三个不同函数： **SQLConnect** （核心接口一致性级别）， **SQLDriverConnect** （核心） 和**SQLBrowseConnect**(级别 1)。 这三个用于在不同的方案中使用。 连接之前，，应用程序可以确定这这些函数与受支持**ConnectFunctions**关键字由**SQLDrivers**。  

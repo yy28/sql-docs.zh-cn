@@ -1,30 +1,31 @@
 ---
-title: "系统函数 |Microsoft 文档"
-ms.custom: 
+title: 系统函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - system functions [ODBC]
 - functions [ODBC], system functions
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79cbe8677ba4401fb779dc9765d639b1d86a0f5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b9005b533f6fdad687b98530aecfbbcdff3807fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-functions"></a>系统函数
 下表列出了 ODBC 标量函数集中包括的系统函数。 通过调用**SQLGetInfo**与*信息类型*的 SQL_SYSTEM_FUNCTIONS，应用程序可以确定由驱动程序支持的系统函数。  
@@ -38,5 +39,5 @@ ms.lasthandoff: 12/21/2017
 |函数|Description|  
 |--------------|-----------------|  
 |**数据库 （)** (ODBC 1.0)|返回与连接句柄对应的数据库的名称。 (数据库的名称，也可以通过调用**SQLGetConnectOption**包含 SQL_CURRENT_QUALIFIER 连接选项。)|  
-|**IFNULL (** *exp*，*值***)** (ODBC 1.0)|如果*exp*为 null，*值*返回。 如果*exp*不为 null， *exp*返回。 可能的数据类型或类型的*值*必须与的数据类型兼容*exp*。|  
+|**IFNULL (** *exp*，*值 * * *)** (ODBC 1.0)|如果*exp*为 null，*值*返回。 如果*exp*不为 null， *exp*返回。 可能的数据类型或类型的*值*必须与的数据类型兼容*exp*。|  
 |**用户 （)** (ODBC 1.0)|在 DBMS 中返回的用户名。 (用户名称也是可**SQLGetInfo**通过指定信息类型： SQL_USER_NAME。)这可以是不同的登录名。|

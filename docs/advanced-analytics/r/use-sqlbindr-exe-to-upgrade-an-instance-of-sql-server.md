@@ -1,36 +1,28 @@
 ---
 title: 将 SQL Server 上的机器学习组件绑定到 Microsoft 机器学习 Server |Microsoft 文档
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>将 SQL Server 上的机器学习组件绑定到 Microsoft 机器学习 Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍的过程_绑定_，可以用于升级机器学习在 SQL Server 中使用的组件。 绑定的进程锁定服务器到基于在版本的机器学习服务器上的更新频率、 而不是使用 SQL Server 版本和更新计划。
+本文介绍的过程*绑定*为了上升级 R 和 Python 包的 SQL Server 计算机学习 Services 或 Microsoft 机器学习 Server 到 SQL Server R Services （数据库） 实例更快的发布频率。 
 
-> [!IMPORTANT]
-> 不需要使用此升级过程，如果你想要作为 SQL Server 更新的一部分中获取的升级。 每当你安装新的 service pack 或服务版本，机器学习组件将始终自动升级到最新版本。 仅使用_绑定_处理如果你想要升级以更快的速度比 SQL Server 服务版本提供的组件。
+更改服务更新机制的绑定的过程。 不绑定，仅当你安装 service pack 或累积更新 (CU) 时刷新 R 和 Python 包的版本。 使用绑定，较新的包版本可以应用于您的实例，独立于 CU 发布计划。
 
-如果在任何你想要停止在机器学习服务器计划的升级的时，你必须_取消绑定_实例中所述[本节](#bkmk_Unbind)，卸载机器学习服务器。
+绑定会影响只是数据库引擎实例，而不是本身数据库引擎实例的机器学习或 R 组件。 它仅适用于 （数据库） 实例。 （独立） 安装不在作用域中。
+
+如果在任何时候，你想要还原到 SQL Server 维护为你的机器学习组件，你可以_取消绑定_实例中所述[本节](#bkmk_Unbind)，卸载机器学习的服务器。
 
 **适用于：** SQL Server 2016 R Services、 SQL Server 自 2017 年 1 机器学习服务
 

@@ -2,7 +2,7 @@
 title: 选择的 SQL 命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---sql-command"></a>选择的 SQL 命令
 从一个或多个表中检索数据。  
@@ -54,7 +54,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A*子查询*、 在以下自变量中称为、 SELECT 中 select 和必须括在括号中。 你可以在同一级别中具有最多两个子查询 （不嵌套） WHERE 子句中。 （请参阅自变量的那一节。）子查询可以包含多个联接条件。  
   
- [所有 &#124;非重复] [*别名*。]*Select_Item* [AS *Column_Name*] [，[*别名*。]*Select_Item* [AS *Column_Name*]...]  
+ [所有&#124;DISTINCT]  [*别名*。]*Select_Item* [AS *Column_Name*] [，[*别名*。]*Select_Item* [AS *Column_Name*]...]  
  SELECT 子句指定字段、 常量和查询结果中显示的表达式。  
   
  默认情况下，所有查询结果中显示的所有行。  
@@ -110,7 +110,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias*指定中名为的表的临时名称*表*。 如果你指定的本地别名，则必须使用本地的别名，而不是整个 SELECT 语句的表名称。 本地别名并不影响 Visual FoxPro 环境。  
   
- 其中*JoinCondition* [AND *JoinCondition* ...]   [和 &#124;或者*FilterCondition* [AND &#124;或者*FilterCondition* ...]]  
+ 其中*JoinCondition* [AND *JoinCondition* ...]   [AND&#124;或者*FilterCondition* [AND&#124;或者*FilterCondition* ...]]  
  告知 Visual FoxPro 将只有某些记录包括在查询结果。 如果需要从多个表检索数据。  
   
  *JoinCondition*指定链接的 FROM 子句中表的字段。 如果您在查询中包含多个表，则应后第一个指定每个表的联接条件。  
@@ -159,7 +159,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  当筛选条件包含所有时，该字段必须满足在查询结果中包含的记录之前生成的子查询的所有值的比较条件。  
   
- **示例 4** *FieldName 比较*任何 &#124;一些 (*子查询*)  
+ **示例 4** *FieldName 比较*ANY &#124; SOME (*子查询*)  
   
  `company < ANY ;`  
   
@@ -265,7 +265,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  占位符必须与它们所表示的字段相同的类型。 如果此字段为日期类型，将占位符应为 {/ /}。 如果该字段是字符字段，将占位符应为空字符串 ("")。  
   
- ORDER BY *Order_Item* [ASC &#124;DESC] [， *Order_Item* [ASC &#124;DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [， *Order_Item* [ASC &#124; DESC]...]  
  排序查询结果基于一个或多个列中的数据。 每个*Order_Item*必须对应于查询结果中的列，可以是以下之一：  
   
 -   也是主要的 SELECT 子句 （不在子查询） 中选择项的从表中的字段。  
@@ -278,7 +278,7 @@ WHERE customer.cust_id NOT IN ;
   
  如果你没有使用 ORDER BY 指定订单，查询结果将显示未排序。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  选择是像任何其他 Visual FoxPro 命令内置于 Visual FoxPro 一个 SQL 命令。 当你使用选择引起查询、 Visual FoxPro 解释查询和检索表中指定的数据。 你可以创建 SELECT 查询从命令提示符窗口或 Visual FoxPro 程序中的 （与任何其他 Visual FoxPro 命令）。  
   
 > [!NOTE]  

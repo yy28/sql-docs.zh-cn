@@ -1,15 +1,16 @@
 ---
-title: "文本文件格式 （文本文件驱动程序） |Microsoft 文档"
-ms.custom: 
+title: 文本文件格式 （文本文件驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - delimited text lines
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7d111fee1ae82fc3dbb1fff3eec2dd9dff53465
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 32de9cd4d9f471f53735dae1251494121d034188
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-file-format-text-file-driver"></a>文本文件格式 （文本文件驱动程序）
 ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 文本文件由可选的标头行和零个或多个文本行组成。  
@@ -43,7 +44,7 @@ ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 �
   
  以下语法，为程序员，编写定义可由 ODBC 文本驱动程序读取的文本文件的格式：  
   
-|“格式”|表示|  
+|格式|表示|  
 |------------|--------------------|  
 |非斜体|必须按所示方式输入的字符|  
 |*斜体*|在语法中其他位置定义的自变量|  

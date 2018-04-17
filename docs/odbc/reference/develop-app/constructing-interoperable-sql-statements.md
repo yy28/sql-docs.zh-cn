@@ -1,30 +1,31 @@
 ---
-title: "构造可互操作的 SQL 语句 |Microsoft 文档"
-ms.custom: 
+title: 构造可互操作的 SQL 语句 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34636d9ead963cf9548d8ff1345424f4283fd1fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b9419a3e242510a0c65ac87f2c1601c59fdafbd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constructing-interoperable-sql-statements"></a>构造可互操作的 SQL 语句
 如前面的部分中所述，可互操作的应用程序应使用 ODBC SQL 语法。 除了使用此语法，但是，许多其他问题面临的可互操作的应用程序。 例如，应用程序作用是什么如果它想要使用包含的功能，如外部联接中，不支持的所有数据源？  

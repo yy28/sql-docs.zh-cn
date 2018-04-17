@@ -2,7 +2,7 @@
 title: 对齐方式 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 527e8d47d4d352a0fad579d3c12c5ef3768c402b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0368a42e1f6238e151dd14de03012237f9c20cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alignment"></a>Alignment
 ODBC 应用程序中的对齐方式问题并通常没有什么区别不是它们处于任何其他应用程序。 这就是，大多数 ODBC 应用程序具有带对齐方式的弱或根本没有问题。 因为不对齐地址受到处罚硬件和操作系统而异，并且可能导致性能略微下降作为等小或为主要视为致命的运行时错误。 因此，ODBC 应用程序和可移植的 ODBC 应用程序尤其是，应小心地将其正确对齐的数据。  

@@ -1,15 +1,16 @@
 ---
-title: "Visual FoxPro 命令和函数不受支持 |Microsoft 文档"
-ms.custom: 
+title: Visual FoxPro 命令和函数不受支持 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37231b78815901678b1956d89e9bc3720ae1590d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>不支持 Visual FoxPro 命令和函数 （Visual FoxPro ODBC 驱动程序）
 下表列出 FoxPro 命令和不受 Visual FoxPro ODBC 驱动程序，但 Microsoft® Visual FoxPro 所支持的函数。  
@@ -38,15 +39,15 @@ ms.lasthandoff: 12/21/2017
   
 ||||  
 |-|-|-|  
-|#DEFINE...#UNDEF|#IF...#ENDIF 预处理器指令|#IFDEF &#124;#IFNDEF|  
-|#INCLUDE 预处理器指令|:: 范围解析运算符|! 命令 （请参阅运行 &#124; ！ 命令中）|  
-|? &#124; ?? Command|??? Command|\ &#124;\\\ 命令|  
+|#DEFINE...#UNDEF|#IF...#ENDIF 预处理器指令|#IFDEF &AMP;#124; #IFNDEF|  
+|#INCLUDE 预处理器指令|:: 范围解析运算符|! 命令 (请参阅运行&#124;！ 命令中）|  
+|? &#124; ?? Command|??? Command|\ &#124; \\\ 命令|  
 |@ ...框命令|@ ...类命令|@ ...清除命令|  
 |@ ...编辑-编辑框命令|@ ...填充命令|@ ...GET|  
 |@ ...菜单命令|@ ...提示命令|@ ...说出命令|  
 |@ ...滚动命令|@ ...为命令||  
   
-## <a name="a"></a>仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，  
+## <a name="a"></a>指向  
   
 ||||  
 |-|-|-|  
@@ -242,7 +243,7 @@ ms.lasthandoff: 12/21/2017
 |重命名连接命令|重命名表命令|从命令还原|  
 |报表命令|REQUERY （） 函数|还原窗口命令|  
 |还原宏命令|还原屏幕命令|RGBSCHEME （） 函数|  
-|RESUME 命令|RGB （） 函数|运行 &#124; ！ Command|  
+|RESUME 命令|RGB （） 函数|运行&AMP;#124;！ Command|  
 |RMDIR 命令|ROW （） 函数||  
 |了 RUNSCRIPT 命令|RDLEVEL （） 函数||  
   

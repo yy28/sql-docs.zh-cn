@@ -2,7 +2,7 @@
 title: SQLGetConnectOption （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41fdb44589b0a788591b6d31ee8ff03de965cd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d00ae529d6dacc001b29cc97da8fcf1d987caaa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption （Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  下表描述仅与特定于 Visual FoxPro ODBC 驱动程序实现的行为的这些自变量**SQLGetConnectOption**。  
   
-|*fOption*|Remarks|  
+|*fOption*|注释|  
 |---------------|-------------|  
 |SQL_AUTOCOMMIT|如果你选择 SQL_AUTOCOMMIT_OFF，你的应用程序必须显式提交或回滚的事务[SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); Visual FoxPro ODBC 驱动程序不会自动提交完成后的 transactable 语句。 如果语句是 transactable，驱动程序才开始事务。|  
 |SQL_CURRENT_QUALIFIER|可以是完全限定的数据库 （.dbc 文件） 名称或指向包含零个或多个表 （.dbf 文件） 的目录的完全限定的路径。|  

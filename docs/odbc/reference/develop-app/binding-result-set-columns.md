@@ -1,30 +1,31 @@
 ---
-title: "设置列的绑定结果 |Microsoft 文档"
-ms.custom: 
+title: 设置列的绑定结果 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 156d7a4fa40e28f2526b5ab3f5fd1a5bef19c003
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 107a89aeca70d7b28958c475994e3c41f417fa26
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-result-set-columns"></a>设置列的绑定结果
 应用程序可以为多或尽可能少的结果集根据他们的选择，包括在所有绑定没有列的列将绑定。 时提取数据行，该驱动程序将返回到应用程序对于绑定列的数据。 应用程序是否在结果集中绑定的所有列都取决于应用程序。 例如，应用程序通常生成报表具有固定的格式;此类应用程序创建一个包含所有报表中使用的列的结果集，然后将绑定和检索所有这些列的数据。 有时显示屏幕完整的数据的应用程序允许用户决定哪些列显示;此类应用程序创建的结果集包含用户可能想，但将绑定和检索由用户选择这些列的数据的所有列。  

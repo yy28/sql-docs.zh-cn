@@ -1,15 +1,16 @@
 ---
-title: "为 dBASE 驱动程序选项以编程方式设置 |Microsoft 文档"
-ms.custom: 
+title: 为 dBASE 驱动程序选项以编程方式设置 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - DBase driver [ODBC], setting options programmatically
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79bf64c2f577935b26dcb64b93e7f3567924291b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 517d7053b651c6698e8b8ded7901d9dbcf1168f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>以编程方式设置 dBASE 驱动程序的选项
 |选项|Description|方法|  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |估计行数|确定是否近似表大小统计信息。 此选项适用于使用 ODBC 驱动程序的所有数据源。|若要动态设置此选项，使用**统计信息**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
 |排序规则序列|字段的排序顺序的序列。<br /><br /> 序列可以是： ASCII （默认值） 或 International。|若要动态设置此选项，使用**COLLATINGSEQUENCE**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
 |数据源名称|用于标识数据源，例如工资单或人员的名称。|若要动态设置此选项，使用**DSN**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
-|“数据库”|而无需选择或创建数据库，可以设置 Microsoft Access 数据源。 如果没有数据库在安装程序时提供的则将提示用户在连接到数据源时选择数据库文件。|若要动态设置此选项，使用**DBQ**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
+|数据库|而无需选择或创建数据库，可以设置 Microsoft Access 数据源。 如果没有数据库在安装程序时提供的则将提示用户在连接到数据源时选择数据库文件。|若要动态设置此选项，使用**DBQ**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
 |Description|数据源; 中的数据的可选描述例如，"雇用日期、 薪金历史记录和当前查看的所有雇员。"|若要动态设置此选项，使用**说明**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
 |排他|如果**独占**框为选中状态，数据库将以独占方式打开并将一次只能有一个用户可以访问。 它以独占模式运行时，得到增强性能。|若要动态设置此选项，使用**独占**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
 |页超时|以十分之一秒，缓冲区中保留的页 （如果未使用），移除之前指定的时间，段。 默认值为 600 秒 （60 秒） 的十分之几。 此选项适用于使用 ODBC 驱动程序的所有数据源。<br /><br /> 页超时不能为 0，由于固有的延迟。 页超时不能早于固有的延迟，即使页 timeout 选项设置为低于该值的过程。|若要动态设置此选项，使用**PAGETIMEOUT**对的调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  

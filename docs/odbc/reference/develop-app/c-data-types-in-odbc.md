@@ -1,31 +1,32 @@
 ---
-title: "ODBC 中的 C 数据类型 |Microsoft 文档"
-ms.custom: 
+title: ODBC 中的 C 数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
 - C data types [ODBC]
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 713b9448ecb70b57f0aace7f05aa9b977511323b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05a8ce31caf23a29a51cd9329c2c85950e15580e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC 中的 C 数据类型
 ODBC 定义由应用程序变量和其相应的类型标识符的 C 数据类型。 绑定到结果集中的列和语句参数的缓冲区使用这些名称。 例如，假设应用程序想要从字符格式的结果集列中检索数据。 它声明的变量 SQLCHAR * 数据类型，并将此变量绑定到结果集列与 SQL_C_CHAR 类型标识符。 C 数据类型和类型标识符的完整列表，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  

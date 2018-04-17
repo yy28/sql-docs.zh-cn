@@ -1,8 +1,8 @@
 ---
-title: SQLDriverConnect (Visual FoxPro ODBC Driver) | Microsoft Docs
+title: SQLDriverConnect （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,13 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67961f2d5b02bf203e67c82ed1406739aba914a1
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: f463f7c1c71ef120c7fb5446e3edd1f77c791137
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro ODBC Driver)
+# <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect （Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序相关的信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/03/2018
 |Description||  
 |排他|"是"或者"否"|  
 |SourceDB|完全限定的路径的目录包含零个或多个[释放表](../../odbc/microsoft/visual-foxpro-terminology.md)，或为绝对路径和文件名称[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)。|  
-|SourceType|"DBC" or "DBF"|  
+|SourceType|"DBC"或者"DBF"|  
 |版本||  
   
  如果未指定数据源名称，驱动程序管理器会提示用户输入的信息 (具体取决于的设置*fDriverCompletion*自变量)，然后继续。 如果需要详细信息，Visual FoxPro ODBC 驱动程序将显示提示对话框。  

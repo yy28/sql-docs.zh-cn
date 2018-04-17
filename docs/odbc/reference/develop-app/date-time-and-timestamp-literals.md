@@ -2,7 +2,7 @@
 title: 日期、 时间和时间戳文本 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b9102d2c54c308304ea326d5a3a710a7703f275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、 时间和时间戳文本
 日期、 时间和时间戳文本的转义序列是  
@@ -35,9 +35,9 @@ ms.lasthandoff: 12/21/2017
   
 |*文本类型*|含义|格式化的*值*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*yyyy*-*mm*-*dd*|  
-|**t**|时间 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|时间戳|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] [1]|  
+|**d**|日期|*yyyy*-*mm*-*dd*|  
+|**T**|时间 *|*hh*:*mm*:*ss*[1]|  
+|**ts**|时间戳|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[。*f...*] [1]|  
   
  [SQL_DESC_PRECISION 描述符字段中包含就依赖于秒精度，1] 的数字文本，其中包含秒数部分的时间戳间隔中小数点右侧位数。 (有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   

@@ -1,30 +1,31 @@
 ---
-title: "并发控制 |Microsoft 文档"
-ms.custom: 
+title: 并发控制 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab0a0838c2bac6359452d3870cf3d3c7d8b472d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca6003893c767cf7fe3a5649097d816c96b6f064
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="concurrency-control"></a>并发控制
 *并发*是两个事务能够在同一时间，使用相同的数据和增加的事务隔离通常伴随并发减少。 这是因为事务隔离通常实现锁定的行，并且因为锁定更多的行，可以不会被锁定的行至少暂时阻止的情况下完成更少的事务。 尽管并发减少通常作为用来维护数据库完整性更高事务隔离级别权衡可接受，它可以获得交互式应用程序中的问题就成为与使用游标的高读/写活动。  

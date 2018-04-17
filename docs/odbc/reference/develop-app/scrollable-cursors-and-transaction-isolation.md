@@ -1,15 +1,16 @@
 ---
-title: "可滚动游标，事务隔离 |Microsoft 文档"
-ms.custom: 
+title: 可滚动游标，事务隔离 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - isolation levels [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 68517f733dcb10f75669341bdef861b035b79a72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>可滚动游标，事务隔离
 下表列出的因素控制的可见性更改。  
@@ -46,17 +47,17 @@ ms.lasthandoff: 12/21/2017
 |光标 type\action|自己|拥有<br /><br /> Txn|其他<br /><br /> Txn<br /><br /> (RU[a])|其他<br /><br /> Txn<br /><br /> (RC[a])|其他<br /><br /> Txn<br /><br /> (RR[a])|其他<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |静态|||||||  
-|Insert|Maybe [b]|是|是|是|是|是|  
-|Update|Maybe [b]|是|是|是|是|是|  
-|DELETE|Maybe [b]|是|是|是|是|是|  
+|Insert|Maybe [b]|否|“否”|“否”|“否”|否|  
+|Update|Maybe [b]|否|“否”|“否”|“否”|否|  
+|删除|Maybe [b]|否|“否”|“否”|“否”|否|  
 |键集驱动|||||||  
-|Insert|Maybe [b]|是|是|是|是|是|  
-|Update|是|是|是|是|是|是|  
-|DELETE|Maybe [b]|是|是|是|是|是|  
+|Insert|Maybe [b]|否|“否”|“否”|“否”|否|  
+|Update|是|用户帐户控制|用户帐户控制|用户帐户控制|是|否|  
+|删除|Maybe [b]|是|用户帐户控制|用户帐户控制|是|否|  
 |Dynamic|||||||  
-|Insert|是|是|是|是|是|是|  
-|Update|是|是|是|是|是|是|  
-|DELETE|是|是|是|是|是|是|  
+|Insert|是|用户帐户控制|用户帐户控制|用户帐户控制|用户帐户控制|否|  
+|Update|是|用户帐户控制|用户帐户控制|用户帐户控制|是|否|  
+|删除|是|用户帐户控制|用户帐户控制|用户帐户控制|是|否|  
   
  [a] 中括号的字母指示包含游标的事务的隔离级别（在其中进行了更改） 另一个事务的隔离级别是不相关。  
   

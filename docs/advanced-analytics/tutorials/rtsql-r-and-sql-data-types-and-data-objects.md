@@ -1,27 +1,17 @@
 ---
 title: R 和 SQL 数据类型和数据对象 (SQL 快速入门中的 R) |Microsoft 文档
-ms.custom: ''
-ms.date: 07/26/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-dev_langs:
-- R
-- SQL
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: b763fd5b7c5707d5cc4f49c1ec93b10a0b53c321
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: eeed977c3b942f0c23e4036f514018f54b966b70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R 和 SQL 数据类型和数据对象 (SQL 快速入门中的 R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -265,7 +255,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 + 日期时间列已使用 R 数据类型 **POSIXct** 进行处理。
 + "ProductSeries"已被标识为文本列**因素**，这意味着分类变量。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
 
-### <a name="summary"></a>摘要
+### <a name="summary"></a>“摘要”
 
 从即使这些简短的示例中，你可以看到需要时将传递 SQL 查询中用作输入，请检查数据转换的效果。 因为某些 SQL Server 数据类型不受 R，请考虑这些方法，从而避免错误：
 

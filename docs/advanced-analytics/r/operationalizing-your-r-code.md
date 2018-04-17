@@ -1,25 +1,17 @@
 ---
-title: 具有可操作性 R 代码 （机器学习服务） |Microsoft 文档
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 实施 SQL Server 计算机学习 Services 中的 R 代码 |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 460605c8cd9040cbf9586ab91227c5e09ec526cf
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>具有可操作性 R 代码 （机器学习服务）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +22,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>要开始使用 SQL Server 中的 R 代码
 
-传统上，计算机学习解决方案的集成目的是广泛重新编码工作量以支持性能和集成。 但是，移动到生产环境中的 R 和 Python 代码是在 Microsoft 机器学习服务中，要容易得多，因为可以在 SQL Server 中运行代码，并使用调用存储过程。 你可以继续使用熟悉的工具，并且无需安装的 R 开发环境。 
+传统上，计算机学习解决方案的集成目的是广泛重新编码工作量以支持性能和集成。 但是，移动到生产环境中的 R 和 Python 代码是在 SQL Server 计算机学习 Services，容易得多，因为可以在 SQL Server 中运行代码，并使用调用存储过程。 你可以继续使用熟悉的工具，并且无需安装的 R 开发环境。 
 
 有关基本语法的详细信息，请参阅：
 

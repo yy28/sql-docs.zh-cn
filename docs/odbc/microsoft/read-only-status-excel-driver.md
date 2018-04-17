@@ -1,30 +1,31 @@
 ---
-title: "只读状态 （Excel 驱动程序） |Microsoft 文档"
-ms.custom: 
+title: 只读状态 （Excel 驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - read-only status for Excel driver [ODBC]
 - Excel driver [ODBC], read-only status
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2778444177477548a28b4139b6ba4bdb3bdea6fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b61c66536c40aeb39033fb93e315b320d83070cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="read-only-status-excel-driver"></a>只读状态 （Excel 驱动程序）
 当使用 Microsoft Excel 驱动程序时，默认情况下，情况下以只读方式打开数据源表和源一次只能有一个用户可以打开。 即使表具有只读状态，但是，应用程序可以执行插入和更新 Microsoft Excel 表。  

@@ -2,7 +2,7 @@
 title: 描述参数 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b90b71a5e327e894329ca8474e8edff5740d8826
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f746b7df2ac3ef4de73e54c6d78df02e0c64ec34
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="describing-parameters"></a>描述参数
 **SQLBindParameter**包含描述参数的自变量： 其 SQL 类型、 精度和小数位数。 驱动程序使用此信息，或*元数据，*将参数值转换为所需的数据源的类型。 从表面看，这看起来可能驱动程序处于更有利知道比应用程序; 的参数元数据的位置毕竟，该驱动程序可以轻松地发现元数据的一个结果集列。 事实证明，这不是这种情况。 首先，大多数数据源不提供驱动程序来发现参数元数据的方法。 第二个，大多数应用程序已经知道元数据。  

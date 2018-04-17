@@ -1,16 +1,16 @@
 ---
-title: "注册表项 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档"
-ms.custom: 
+title: 注册表项 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - registry keys [ODBC]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9b1ade1fb23e07a25a903b7e04beb8def84900fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>注册表项 （Visual FoxPro ODBC 驱动程序）
 在安装 Visual FoxPro ODBC 驱动程序时，安装程序将更新你的系统注册表中，注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，添加新项称为 Microsoft Visual FoxPro 驱动程序中。 在该注册表项，添加以下表中描述的值。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/15/2018
 |排他||是或否|  
 |BackgroundFetch||是或否|  
 |SourceDB|REG_SZ|路径。DBC 文件|  
-|SourceType|REG_SZ|"DBC" or "DBF"|  
+|SourceType|REG_SZ|"DBC"或者"DBF"|  
   
  不应直接调用访问此信息在添加、 修改或删除数据源时，任何管理注册表被处理由 ODBC 管理器。  
   

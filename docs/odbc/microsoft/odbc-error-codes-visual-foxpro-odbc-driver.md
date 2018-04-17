@@ -1,15 +1,16 @@
 ---
-title: "ODBC 错误代码 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档"
-ms.custom: 
+title: ODBC 错误代码 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error codes
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d867b0a2a61c9d60ce91453b43d1a19b2f37935e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7f698b08178897f48ee742e5034f7112465fc21e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 错误代码 （Visual FoxPro ODBC 驱动程序）
 下表列出了 Visual FoxPro 错误代码映射到 ODBC 错误代码 SQLSTATE 值。 映射的 SQLSTATE 值的来源[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)和[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)。 从其他 ODBC API 的其他任何 SQLSTATE 值映射因为**SQLExecDirect**和**SQLPrepare**是仅访问 Visual FoxPro 引擎的函数。  

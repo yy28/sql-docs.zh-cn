@@ -1,15 +1,16 @@
 ---
-title: "字符串函数 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档"
-ms.custom: 
+title: 字符串函数 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC string functions [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], string functions
 - FoxPro ODBC driver [ODBC], string functions
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60de82a28d6b85d04dc76cacc7d557cbeffe37e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 482c21b4c9f872490ac9a2d36165fdc3fc9d8246
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>字符串函数 （Visual FoxPro ODBC 驱动程序）
 下表列出了 Visual FoxPro ODBC 驱动程序; 支持 ODBC 字符串操作函数当相同的功能的 Visual FoxPro 语法不同于 ODBC 语法，将列等效 Visual FoxPro。  

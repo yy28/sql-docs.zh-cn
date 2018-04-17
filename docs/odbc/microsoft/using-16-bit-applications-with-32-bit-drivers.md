@@ -1,30 +1,31 @@
 ---
-title: "16 位应用程序使用 32 位驱动程序 |Microsoft 文档"
-ms.custom: 
+title: 16 位应用程序使用 32 位驱动程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d389ada78e2a04b23b046f9a4c1eab8cff736227
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>16 位应用程序使用 32 位驱动程序
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="architecture"></a>体系结构  
  下图显示了如何 16 位应用程序与 32 位驱动程序通信。 16 位驱动程序管理器和 32 位驱动程序之间是通用的形式转换转换为 32 位 ODBC 调用的 16 位 ODBC 调用的 Dll。  
   
- ![如何 16 &#45; 位应用程序与 32 &#45; 通信位驱动程序](../../odbc/microsoft/media/sdka2.gif "sdka2")  
+ ![如何 16&#45;与 32 位应用程序通信&#45;位驱动程序](../../odbc/microsoft/media/sdka2.gif "sdka2")  
   
 > [!NOTE]  
 >  将 16 位应用程序交互使用 32 位驱动程序，每当 32 位驱动程序管理器将始终返回"2.0"作为 ODBC 版本驱动程序支持。  
@@ -45,14 +46,14 @@ ms.lasthandoff: 12/21/2017
   
  下图显示的 16 位应用程序如何调用 32 位驱动程序安装程序 DLL。 16 位安装程序 DLL 之间的 32 位驱动程序安装程序 DLL 是将转换的 16 位安装程序对 32 位安装程序 DLL 调用的 DLL 调用的泛型形式转换 DLL。  
   
- ![如何 16 &#45; 位应用程序调用 32 &#45; 位驱动程序安装程序 DLL](../../odbc/microsoft/media/sdka3.gif "sdka3")  
+ ![如何 16&#45;位应用程序调用 32&#45;位驱动程序安装程序 DLL](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
  在 Windows 中 （形式转换为 32 位的 16 位） 的 Windows 上，名为 Ds32gt.dll 转换为 16 位自变量值传递 32 位安装程序的其他形式转换 DLL DLL 回 16 位。  
   
-## <a name="components"></a>组件  
+## <a name="components"></a>Components  
  MDAC 2.8 SP1 SDK 的 ODBC 组件包括以下文件运行 32 位驱动程序的 16 位应用程序。 这些组件是 \Redist 目录中。  
   
-|File name|Description|  
+|文件名|Description|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 位 ODBC 泛型形式转换 DLL|  
 |Odbc32gt.dll|32 位 ODBC 泛型形式转换 DLL|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  此外，不是 ODBC 3.51 的一部分，以及 16 位 ODBC 2.10 驱动程序管理器中的以下文件所需的并且应与 16 位应用程序安装。  
   
-|File name|Description|  
+|文件名|Description|  
 |---------------|-----------------|  
 |Odbc.dll|16 位驱动程序管理器|  
 |Odbcinst.dll|16 位安装程序 DLL|  

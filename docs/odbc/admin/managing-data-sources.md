@@ -1,15 +1,16 @@
 ---
-title: "管理数据源 |Microsoft 文档"
-ms.custom: 
+title: 管理数据源 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - removing data sources [ODBC], ODBC data source administrator
 - ODBC data source administrator [ODBC], data source management
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea157fd72ab1cc2b37ba32e198bde5ff47eff0fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 679edbfc02628e9a78b209961b22f576f627f057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-data-sources"></a>管理数据源
 从驱动程序的安装程序安装 ODBC 驱动程序后，你可以为它定义一个或多个数据源。 数据源名称 (DSN) 应提供数据; 的唯一的说明例如，*工资单*或*Accounts Payable*。 为所有当前安装的驱动程序定义的用户和系统数据源中列出**用户 DSN**或**系统 DSN**选项卡**ODBC 数据源管理器**对话框。 中列出给定目录中的文件数据源**文件 DSN**选项卡中输入要显示的目录**查找**框中**文件 DSN**选项卡。  

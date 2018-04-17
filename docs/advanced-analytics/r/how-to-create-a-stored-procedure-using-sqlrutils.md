@@ -1,28 +1,19 @@
 ---
-title: 如何使用 sqlrutils 创建存储过程 | Microsoft Docs
-ms.custom: ''
-ms.date: 12/16/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+title: 如何创建存储的过程，请使用 sqlrutils |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 8d451a353e9bcd1468b1ebea4920182efaead182
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 82af827d95def976a04ac69073b58e1420cc9130
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-a-stored-procedure-using-sqlrutils"></a>创建存储过程使用 sqlrutils
+# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>创建使用 sqlrutils 存储的 pProcedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍转换 R 代码运行与 T-SQL 存储过程的步骤。 为了获得最佳的可能结果，可能需要对代码进行某种程度的修改，以确保所有输入可参数化。

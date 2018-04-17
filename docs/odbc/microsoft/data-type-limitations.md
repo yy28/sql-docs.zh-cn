@@ -1,31 +1,32 @@
 ---
-title: "数据类型限制 |Microsoft 文档"
-ms.custom: 
+title: 数据类型限制 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], data types
 - data types [ODBC], desktop database drivers
 - desktop database drivers [ODBC], data types
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b75544506500b5a1743c135d0bf6f4e5dedbde44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f7be82a89d81f887baf0ae6ef0fe7cd00e72c27
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-limitations"></a>数据类型限制
 Microsoft ODBC 桌面数据库驱动程序施加对数据类型的以下限制：  
@@ -38,6 +39,6 @@ Microsoft ODBC 桌面数据库驱动程序施加对数据类型的以下限制�
 |十进制 （精确数字）|不提供支持。|  
 |浮点数据类型|通过在 Windows 控制面板的国际部分中设置的数字格式，可能仅限于的浮点数中的小数位数。|  
 |NUMERIC|支持最大精度和小数位数为 28。|  
-|timestamp|时间戳数据类型无法由 CONVERT 函数转换为其自身。|  
+|TIMESTAMP|时间戳数据类型无法由 CONVERT 函数转换为其自身。|  
 |TINYINT|TINYINT 值始终是无符号的。|  
 |零长度字符串|当使用 dBASE、 Microsoft Excel、 Paradox 或 Textdriver 时，将一个零长度字符串插入列实际上将插入 NULL 改为。|

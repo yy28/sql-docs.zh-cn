@@ -1,31 +1,32 @@
 ---
-title: "为 c： 时间 SQL |Microsoft 文档"
-ms.custom: 
+title: 为 c： 时间 SQL |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], time
 - time data type [ODBC]
 - data conversions from SQL to C types [ODBC], time
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b9879b2a051045fb4ecc6aeb75b92020b187652
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f8db10d126eab69546b2d81eaf4d93743a63238
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-time"></a>为 c： 时间 SQL
 ODBC SQL 数据类型是次标识符：  
@@ -36,10 +37,10 @@ ODBC SQL 数据类型是次标识符：
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 字符字节长度<br /><br /> *9* <= *BufferLength* < = 字符字节长度<br /><br /> *BufferLength* < 9|data<br /><br /> 截断的数据 [a]<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 字符长度<br /><br /> *9* <= *BufferLength* < = 字符长度<br /><br /> *BufferLength* < 9|data<br /><br /> 截断的数据 [a]<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|data<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|无 [b]|data|6 [d]|不适用|  
+|SQL_C_CHAR|*BufferLength* > 字符字节长度<br /><br /> *9* <= *BufferLength* < = 字符字节长度<br /><br /> *BufferLength* < 9|Data<br /><br /> 截断的数据 [a]<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 字符长度<br /><br /> *9* <= *BufferLength* < = 字符长度<br /><br /> *BufferLength* < 9|Data<br /><br /> 截断的数据 [a]<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|Data<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|无 [b]|Data|6 [d]|不适用|  
 |SQL_C_TYPE_TIMESTAMP|无 [b]|数据 [c]|16 [d]|不适用|  
   
  [a] 时间的秒的小数部分将被截断。  

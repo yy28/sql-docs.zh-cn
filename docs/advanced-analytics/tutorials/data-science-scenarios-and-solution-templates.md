@@ -1,26 +1,17 @@
 ---
-title: 数据科学方案和解决方案模板 |Microsoft 文档
-ms.custom: ''
-ms.date: 08/22/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: 数据科学方案和解决方案模板 （SQL Server 机器学习） |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: d7fb0e16b20089d9d84ef8df66c8b97cc254cda4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>数据科学方案和解决方案模板
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +30,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="fraud-detection"></a>欺诈检测
 
-[联机欺诈行为检测模板 (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[联机欺诈行为检测模板 (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **新增功能：**检测欺诈性交易的能力是针对在线业务重要。 若要减少计费的损失，企业需要快速确定使用被盗的付款方式或凭据所执行的事务。 发现欺诈性交易后，企业通常会采取措施尽快地阻止某些帐户，以防止进一步损失。 在此方案中，你将了解如何使用在线购买事务中的数据来标识可能的欺诈行为。
 

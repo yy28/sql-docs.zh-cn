@@ -1,15 +1,16 @@
 ---
-title: "分配连接句柄 ODBC |Microsoft 文档"
-ms.custom: 
+title: 分配连接句柄 ODBC |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - allocating connection handles [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd1f07d35356efda77edeaf08d851ad4d7d9bcb0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 33aad1fdd9b707847d7a122d56ba5207e0074f01
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>分配 ODBC 连接句柄
 应用程序可以连接到数据源或驱动程序，它必须先分配然后连接句柄，如下所示：  

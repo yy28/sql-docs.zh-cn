@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 教程课 10： 创建分区 |Microsoft 文档"
-description: "描述如何在 Analysis Services tutorial 项目中创建分区。"
+title: Analysis Services 教程课 10： 创建分区 |Microsoft 文档
+description: 描述如何在 Analysis Services tutorial 项目中创建分区。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 417bcbe36a49c44bcb5c8297968e6595d1ed3d91
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9f393e0f7100236df428dcceacf55444048fddef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partitions"></a>创建分区
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 02/20/2018
 
 6.  在筛选行对话框中，在**显示行： OrderDate**，保留**是晚于或等于**，然后在日期字段中，输入**1/1/2010年**。 保留**和**运算符选择，然后选择**早**，然后在日期字段中，输入**2011 年 1 月 1 日**，然后单击**确定**。
 
-    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![作为 lesson10-筛选器的行](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     请注意在查询编辑器中，在应用步骤中，你将看到另一个名为筛选行的步骤。 此筛选器是从 2010年选择仅订单日期。
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 02/20/2018
 
     在分区管理器中，请注意现在的查询表达式具有其他行筛选子句。
 
-    ![as-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
+    ![为 lesson10 查询](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
     此语句指定此分区应只包括数据 OrderDate 处于 2010年日历年在行筛选的子句中指定这些行中。  
   
@@ -114,13 +115,13 @@ ms.lasthandoff: 02/20/2018
   
 4.  在“处理”列中选中所创建的全部五个分区的复选框，然后单击“确定”。  
 
-    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![作为-lesson10-处理的分区](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     如果系统提示输入模拟凭据，则输入 Windows 用户名称和你在第 2 课中指定的密码。  
   
     “数据处理”对话框将出现，并显示每个分区的处理详细信息。 您将注意到对于每个分区转移了不同的行数。 每个分区的 SQL 语句中的 WHERE 子句中指定的年包括仅这些行。 完成处理后，继续操作并关闭“数据处理”对话框。  
   
-    ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
+    ![作为 lesson10-过程-完成](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>下一步是什么？
 

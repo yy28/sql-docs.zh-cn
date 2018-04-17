@@ -1,16 +1,16 @@
 ---
-title: "支持规则、 触发器、 默认值和存储的过程 |Microsoft 文档"
-ms.custom: 
+title: 支持规则、 触发器、 默认值和存储的过程 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], stored procedures
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c7e7c1794d2caa3a6b76a4b8075bd7d0a07323a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>支持规则、 触发器、 默认值和存储的过程 （Visual FoxPro ODBC 驱动程序）
 无法创建 Visual FoxPro 规则、 触发器、 默认值或使用 Visual FoxPro ODBC 驱动程序的存储的过程。 但是，你的应用程序可以交互与现有规则、 触发器、 默认值或存储的过程中，因为它将插入、 更新或删除数据库中存储的 Visual FoxPro 数据。  
@@ -81,24 +81,24 @@ ms.lasthandoff: 02/15/2018
   
 ||||  
 |-|-|-|  
-|开始事务命令|BETWEEN( ) Function|BITNOT （） 函数|  
+|开始事务命令|之间 （） 函数|BITNOT （） 函数|  
 |BITCLEAR （） 函数|BITLSHIFT （） 函数|BITSET （） 函数|  
 |BITOR （） 函数|BITRSHIFT （） 函数|空白的命令|  
-|BITTEST （） 函数|BITXOR( ) Function||  
+|BITTEST （） 函数|BITXOR （） 函数||  
 |BOF （） 函数|BITAND （） 函数||  
   
 ## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
-|计算命令|候选 （） 函数|CHR( ) Function|  
+|计算命令|候选 （） 函数|CHR （） 函数|  
 |Cdx 文件 （） 函数|CEILING （） 函数|关闭命令|  
-|CHRTRAN( ) Function|CHRTRANC （） 函数|复制索引命令|  
+|CHRTRAN （） 函数|CHRTRANC （） 函数|复制索引命令|  
 |CMONTH （） 函数|继续命令|复制结构扩展命令|  
 |复制过程命令|复制结构的命令|将复制到命令|  
 |复制标记命令|将复制到数组命令|CPCONVERT （） 函数|  
 |COS （） 函数|将计数命令|CTOD （） 函数|  
-|CPCURRENT （） 函数|CPDBF( ) Function|CURSORSETPROP （） 函数|  
+|CPCURRENT （） 函数|CPDBF （） 函数|CURSORSETPROP （） 函数|  
 |CTOT （） 函数|CURSORGETPROP （） 函数||  
 |CURVAL （） 函数|CDOW （） 函数||  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 02/15/2018
 |INDBC （） 函数|索引命令|Inlist 的情况下 （） 函数|  
 |插入 SQL 命令|INT （） 函数|ISALPHA （） 函数|  
 |ISBLANK （） 函数|ISDIGIT （） 函数|ISEXCLUSIVE （） 函数|  
-|ISLEADBYTE （） 函数|ISLOWER( ) Function|ISNULL （） 函数|  
+|ISLEADBYTE （） 函数|ISLOWER （） 函数|ISNULL （） 函数|  
 |ISREADONLY （） 函数|ISUPPER （） 函数||  
   
 ## <a name="k"></a>K  
@@ -208,7 +208,7 @@ ms.lasthandoff: 02/15/2018
 |参数的命令|主 （） 函数|私有命令|  
 |PI （） 函数|程序 （） 函数|正确 （） 函数|  
 |过程命令|PV （） 函数||  
-|公共命令|PADL （) &#124;PADR （) &#124;PADC （） 函数||  
+|公共命令|PADL （) &#124; PADR （) &#124; PADC （） 函数||  
   
 ## <a name="r"></a>R  
   

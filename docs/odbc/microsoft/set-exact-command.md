@@ -2,7 +2,7 @@
 title: SET 确切命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dcb836649993ddb644006986f284f0c0a362ed81
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 12ef2fa98b5e8c451b7c9d047ed33ebea50c5f9e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-exact-command"></a>SET 确切命令
 指定用于比较两个不同长度的字符串的规则。  
@@ -43,7 +43,7 @@ SET EXACT ON | OFF
  OFF  
  （默认值。）指定，为等效，表达式必须匹配的字符直到到达右侧表达式的末尾。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  如果两个字符串长度相同，则完全设置的设置无效。  
   
 ## <a name="string-comparisons"></a>字符串比较  

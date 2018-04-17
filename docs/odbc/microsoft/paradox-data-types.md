@@ -1,15 +1,16 @@
 ---
-title: "Paradox 数据类型 |Microsoft 文档"
-ms.custom: 
+title: Paradox 数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40266f580e162ed021c069c1b583748906b3b336
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cee6fd6f7b13b10a59047964ba0d344ba13b8381
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="paradox-data-types"></a>Paradox 数据类型
 ODBC Paradox 驱动程序将 Paradox 数据类型映射到 ODBC SQL 数据类型。 下表列出了所有 Paradox 数据类型，并显示它们映射到的数据类型的 ODBC SQL。  
@@ -64,6 +65,6 @@ ODBC Paradox 驱动程序将 Paradox 数据类型映射到 ODBC SQL 数据类型
 |字母数字|创建零的字母数字列或未指定的长度实际返回 255 字节的列。|  
 |BYTES|如果使用 Paradox5 驱动程序二进制列中插入 NULL，则将它更改为 0。|  
 |LONG|Paradox 5 中的长整型数据类型可能是驱动程序支持最大负值。*x*不是-2 ^31 (-2147483648)，也应该是因为长映射到 ODBC 数据键入 SQL_INTEGER。 支持长时间的最大负数的值是实际-2 ^31 + 1 (在-2147483647)。|  
-|timestamp|当值插入时间戳列 Paradox 驱动程序，则随后从该列检索时，检索到的值可能不同于插入的值由多达 1 秒由于舍入。|  
+|TIMESTAMP|当值插入时间戳列 Paradox 驱动程序，则随后从该列检索时，检索到的值可能不同于插入的值由多达 1 秒由于舍入。|  
   
  了解更多限制对数据类型可在[数据类型限制](../../odbc/microsoft/data-type-limitations.md)。

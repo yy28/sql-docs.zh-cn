@@ -1,31 +1,32 @@
 ---
-title: "为 c： 数字 SQL |Microsoft 文档"
-ms.custom: 
+title: 为 c： 数字 SQL |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], numeric
 - numeric data type [ODBC], converting
 - converting data from SQL to C types [ODBC], numeric
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f09af0c145da9d435bce70619a5388f1cecb581
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 48158aa2b41d61a5fa4031582f9b6be8c631acca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-numeric"></a>SQL 为 c： 数字
 数值 ODBC SQL 数据类型的标识符都是：  
@@ -50,13 +51,13 @@ ms.lasthandoff: 12/21/2017
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|字符字节长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|data<br /><br /> 截断的数据<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|字符长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|data<br /><br /> 截断的数据<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|数据转换而不会截断 [a]<br /><br /> 数据转换使用的小数位数 [a] 的截断<br /><br /> 数据的转换将导致丢失的整体 （而不是小数） 数字，[a]|data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22003|  
-_C_FLOAT<br /><br /> SQL_C_DOUBLE|数据是数转换到的目标的数据类型的范围内 [a]<br /><br /> 数据超出了范围数转换到的目标的数据类型 [a]|data<br /><br /> 未定义|C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_BIT|数据为 0 或 1 [a]<br /><br /> 数据为大于 0，小于 2，且不等于 1，[a]<br /><br /> 数据是小于 0 或大于或等于 2 [a]|data<br /><br /> 截断的数据<br /><br /> 未定义|1 [b]<br /><br /> 1 [b]<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|data<br /><br /> 未定义|数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|不会被截断的数据<br /><br /> 秒的小数部分部分被截断<br /><br /> 截断的数字的整数部分|data<br /><br /> 截断的数据<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_CHAR|字符字节长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|Data<br /><br /> 截断的数据<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|字符长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|Data<br /><br /> 截断的数据<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|数据转换而不会截断 [a]<br /><br /> 数据转换使用的小数位数 [a] 的截断<br /><br /> 数据的转换将导致丢失的整体 （而不是小数） 数字，[a]|Data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22003|  
+_C_FLOAT<br /><br /> SQL_C_DOUBLE|数据是数转换到的目标的数据类型的范围内 [a]<br /><br /> 数据超出了范围数转换到的目标的数据类型 [a]|Data<br /><br /> 未定义|C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_BIT|数据为 0 或 1 [a]<br /><br /> 数据为大于 0，小于 2，且不等于 1，[a]<br /><br /> 数据是小于 0 或大于或等于 2 [a]|Data<br /><br /> 截断的数据<br /><br /> 未定义|1 [b]<br /><br /> 1 [b]<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|Data<br /><br /> 未定义|数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|不会被截断的数据<br /><br /> 秒的小数部分部分被截断<br /><br /> 截断的数字的整数部分|Data<br /><br /> 截断的数据<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22015|  
 _C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|截断的数字的整数部分|未定义|未定义|22015|  
   
  [a] 的值*BufferLength*忽略此转换。 该驱动程序假定的大小 **TargetValuePtr*是 C 数据类型的大小。  

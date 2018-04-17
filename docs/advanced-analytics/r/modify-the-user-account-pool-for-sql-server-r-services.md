@@ -1,23 +1,17 @@
 ---
 title: 修改用户帐户池的 SQL Server 机器学习 |Microsoft 文档
-ms.date: 11/03/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 77b84e3117b0a1366f3d0b5f9d74802d938bc86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>修改用户帐户池的 SQL Server 机器学习
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +29,7 @@ ms.lasthandoff: 04/04/2018
 -   在默认实例中，该组的名称为 **SQLRUserGroup**。 无论你使用 R 和 / 或 Python，名称都是相同的。
 -   在命名的实例中，默认的组名称以实例名称作为后缀：例如 **SQLRUserGroupMyInstanceName**。
 
-用户帐户池默认包含 20 个用户帐户。 在大多数情况下，20 多个足够用来支持机器学习任务，但你可以更改的帐户的数量。
+用户帐户池默认包含 20 个用户帐户。 在大多数情况下，20 多个足够用来支持机器学习任务，但你可以更改的帐户的数量。 帐户的最大数目为 100。
 -  在默认实例中，各个帐户命名为 **MSSQLSERVER01** 到 **MSSQLSERVER20**。
 -   对于命名的实例，各个帐户根据实例名称命名：例如，**MyInstanceName01** 到 **MyInstanceName20**。
 
@@ -50,7 +44,7 @@ ms.lasthandoff: 04/04/2018
 1. 打开 SQL Server 配置管理器并选择“SQL Server 服务”。
 2. 双击 SQL Server Launchpad 服务并停止该服务（如果正在运行）。
 3.  在“服务”选项卡上，确保“启动模式”设置为“自动”。 快速启动板未运行时，无法启动外部脚本。
-4.  单击“高级”选项卡，然后根据需要编辑“外部用户计数”的值。 此设置控制如何多个不同的 SQL 用户可以运行外部脚本并发会话。 默认值为 20 的帐户。
+4.  单击“高级”选项卡，然后根据需要编辑“外部用户计数”的值。 此设置控制如何多个不同的 SQL 用户可以运行外部脚本并发会话。 默认值为 20 的帐户。 最大用户数为 100。
 5. （可选）如果组织中的策略要求定期更改密码，可将选项“重置外部用户密码”设置为“是”。 这样，便会重新生成 Launchpad 为用户帐户维护的已加密密码。 有关详细信息，请参阅[实施密码策略](#bkmk_EnforcePolicy)。
 6.  重新启动快速启动板服务。
 

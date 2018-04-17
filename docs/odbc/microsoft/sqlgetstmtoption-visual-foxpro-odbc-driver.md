@@ -2,7 +2,7 @@
 title: SQLGetStmtOption （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9042a1a951d08c60e8dc795cd58f2a525cf39cda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 219435c21d74ca0f70f8bd3b158875f402083b85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption （Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  返回语句选项的当前设置。  
   
-|*FOption*|返回|  
+|*fOption*|返回|  
 |---------------|-------------|  
 |SQL_GET_BOOKMARK|为当前记录号的书签的 32 位整数值|  
 |SQL_ROW_NUMBER|指定的结果中的当前行的位置的 32 位整数设置|  

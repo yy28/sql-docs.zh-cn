@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 教程第 4 课： 创建关系 |Microsoft 文档"
-description: "描述如何在 Analysis Services tutorial 项目中创建关系。"
+title: Analysis Services 教程第 4 课： 创建关系 |Microsoft 文档
+description: 描述如何在 Analysis Services tutorial 项目中创建关系。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 2776649b049254e27851a9d4ce95e8d6dea81067
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: eedbdf50d33e7aed380cfb98b3cdf85d7ea9a3f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-relationships"></a>创建关系
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/20/2018
 
     模型设计器现在将显示在关系图视图以图形格式显示所有表你使用导入它们之间的界限。 表之间的线条指示当您导入数据时自动创建的关系。
     
-    ![as-lesson4-diagram](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
+    ![作为 lesson4 图](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
   
     > [!NOTE]
     > 如果看不到任何表之间的关系，但很可能意味着在数据源的这些表之间没有任何关系。
@@ -78,11 +79,11 @@ ms.lasthandoff: 02/20/2018
 
 在关系图视图中，请注意箭头、 星号和显示表之间的关系的行数。
 
-![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
+![作为 lesson4 行](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 箭头显示的筛选器方向。 星号显示此表是*许多*端中的关系的基数和一个显示此表是*一个*侧的关系。 如果你需要编辑关系;例如，更改关系的筛选器方向或基数，双击该关系连线以打开编辑关系对话框。
 
-![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![作为 lesson4 编辑](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 这些功能用于建模的高级数据，并在本教程中的范围以外。 若要了解详细信息，请参阅[双向交叉筛选器的 Analysis Services 中的表格模型](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)。
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/20/2018
 
     一条实线显示显示你已创建一个活动关系之间**OrderDate**中的列**Internet Sales**表，与**日期**中的列**日期**表。 
   
-      ![as-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
+      ![作为-lesson4-新建](../tutorial-tabular-1400/media/as-lesson4-new.png) 
   
     > [!NOTE]  
     > 在创建关系时，会自动选择主表和相关的查找表之间的基数和筛选器方向。  

@@ -1,31 +1,32 @@
 ---
-title: "设置 ODBC 连接池选项 |Microsoft 文档"
-ms.custom: 
+title: 设置 ODBC 连接池选项 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 939ac623b62b4b079e81a5c3f12df804e0b6171c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a7c21b511f88b8f26d8cc4bdbff40c37c096dcb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>设置 ODBC 连接池选项
 应用程序，从无需为每种使用重新建立的连接池使用连接可以连接池。 你可以使用**连接池**选项卡**ODBC 数据源管理器**对话框中，若要启用和禁用性能监视。 双击要设置的连接超时期限的驱动程序名称。  

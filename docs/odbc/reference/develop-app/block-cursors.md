@@ -1,31 +1,32 @@
 ---
-title: "阻止游标 |Microsoft 文档"
-ms.custom: 
+title: 阻止游标 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5e136741491e644a223eb4f9294179893121d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fdda088594fcad53b1d53093e2ef4a39adb5cf75
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="block-cursors"></a>块状游标
 许多应用程序花费大量时间将跨网络的数据。 这一次的一部分花费实际跨网络，使数据以及它的部分是在上所花费网络开销，例如，为请求的数据行所做的驱动程序调用。 如果应用程序能够高效地使用可以降低后一种时间*块，*或*fat、* *光标、*可一次返回多个行。  

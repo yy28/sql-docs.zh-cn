@@ -2,7 +2,7 @@
 title: 数据源示例 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29fe9b818d34f620ededd9d07eab5cfbecfbee47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c7d80fc111164b2f32a1394f214dc09c3f61c51c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-example"></a>数据源示例
 运行 Microsoft® Windows NT® Server/Windows 2000 Server、 Microsoft Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98，机数据的计算机上源信息存储在注册表中。 具体取决于哪一个注册表密钥信息存储在下，数据源称为*用户数据源*或*系统数据源*。 用户数据源存储在 HKEY_CURRENT_USER 键下，并且仅适用于当前用户。 系统数据源存储在 HKEY_LOCAL_MACHINE 键下，并且可以由一台计算机上的多个用户。 它们还可以使用由系统级服务，即使没有用户登录到计算机，然后可以获得对数据源的访问。 有关用户和系统数据源的详细信息，请参阅[SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)。  

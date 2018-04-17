@@ -1,31 +1,32 @@
 ---
-title: "适用于 Oracle 的 ODBC 驱动程序 |Microsoft 文档"
-ms.custom: 
+title: 适用于 Oracle 的 ODBC 驱动程序 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70ae9b447f0f3bcc6e70060b2f46f994ef3ea773
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1745942fff2488fe97d2860f17fc7b5239ba3942
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-for-oracle"></a>适用于 Oracle 的 ODBC 驱动程序
 > [!IMPORTANT]  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  用于 Oracle 的 ODBC 驱动程序可让应用程序通过 ODBC 界面访问 Oracle 数据库中的数据。 驱动程序可以访问本地 Oracle 数据库或其能够与通过 SQL 网络通信 * Net。 下图详细说明了此应用程序和驱动程序的体系结构。  
   
- ![ODBC Driver for Oracle app&#47; 驱动程序体系结构](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![ODBC Driver for Oracle 应用&#47;驱动程序体系结构](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
  用于 Oracle 的 ODBC 驱动程序遵守 API 一致性级别 1 和 SQL 一致性级别核心。 它还支持 API 一致性级别 2 和大部分核心和扩展 SQL 一致性级别中的语法中的某些函数。 该驱动程序 ODBC 2.5 符合并支持 32 位系统。 Oracle 7.3 x 支持完全;Oracle8 提供有限支持。 用于 Oracle 的 ODBC 驱动程序不支持的任何新 Oracle8 数据类型，Unicode 数据类型，Blob、 Clob，，依此类推 — 也不支持 Oracle 的新的关系对象模型。 有关支持的数据类型的详细信息，请参阅[支持的数据类型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)本指南中。  
   

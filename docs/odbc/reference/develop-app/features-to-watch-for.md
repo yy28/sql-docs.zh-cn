@@ -2,7 +2,7 @@
 title: 监视的功能 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a2e4c0e37d62eccccf1e0af0f2acc28ed09e8b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 714aaf94c126b99aaea51cf7e3eef8201a4386da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-to-watch-for"></a>监视的功能
 本部分介绍大量的应用程序开发人员通常需要理所当然的功能。 实际上，这些功能差别很大支持和 Dbms; 支持的方式为它们的代码的失败是可能会导致可互操作的应用程序中的问题。  

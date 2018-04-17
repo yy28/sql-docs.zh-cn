@@ -1,31 +1,31 @@
 ---
-title: "在 IIS 8.0 上配置对 Analysis Services 的 HTTP 访问 |Microsoft 文档"
-ms.custom: 
+title: 在 IIS 8.0 上配置对 Analysis Services 的 HTTP 访问 |Microsoft 文档
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f178be3c4cdd74d0ea1a5aadbb4106a1bf7b285e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>在 IIS 8.0 上配置对 Analysis Services 的 HTTP 访问
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-此文章介绍了如何设置用于访问 Analysis Services 实例的 HTTP 端点。 你可以通过配置 MSMDPUMP.dll（一种在 Internet Information Services (IIS) 中运行的 ISAPI 扩展，可以在客户端应用程序和 Analysis Services 服务器之间抽送数据）实现对 HTTP 的访问。 在您的 BI 解决方案需要以下功能时，此方法可替代用于连接到 Analysis Services 的方法：  
+  此文章介绍了如何设置用于访问 Analysis Services 实例的 HTTP 端点。 你可以通过配置 MSMDPUMP.dll（一种在 Internet Information Services (IIS) 中运行的 ISAPI 扩展，可以在客户端应用程序和 Analysis Services 服务器之间抽送数据）实现对 HTTP 的访问。 在您的 BI 解决方案需要以下功能时，此方法可替代用于连接到 Analysis Services 的方法：  
   
 -   客户端访问通过 Internet 或 extranet 连接进行，并且对可以启用的端口有限制。  
   
@@ -42,22 +42,6 @@ ms.lasthandoff: 02/15/2018
  设置 HTTP 访问权限需要在安装后进行。 必须先安装 analysis Services 然后才能为其配置 HTTP 访问权限。 作为 Analysis Services 管理员，你需要向 Windows 帐户授权，然后才能进行 HTTP 访问。 此外，最佳做法是首先验证你的安装，确保它完全可操作，然后才能进一步配置服务器。 配置 HTTP 访问权限后，你可以通过 TCP/IP 使用 HTTP 端点和服务器的常规网络名称。 设置 HTTP 访问权限不会使数据访问的其他方法无效。  
   
  当你使用 MSMDPUMP 配置进行操作时，请记住可考虑两种连接：客户端到 IIS 和 IIS 到 SSAS。 本文将针对 IIS 到 SSAS 进行说明。 你的客户端应用程序可能需要进行其他配置才能连接到 IIS。 有关是否使用 SSL，或如何配置绑定等问题的决定不在本文所述范围之内。 有关 IIS 的详细信息，请参阅 [Web 服务器 (IIS)](http://technet.microsoft.com/library/hh831725.aspx) 。  
-  
- 本主题包含以下各节：  
-  
--   [概述](#bkmk_overview)  
-  
--   [先决条件](#bkmk_prereq)  
-  
--   [将 MSMDPUMP.dll 复制到 Web 服务器上的某个文件夹](#bkmk_copy)  
-  
--   [在 IIS 中创建应用程序池和虚拟目录](#bkmk_appPool)  
-  
--   [配置 IIS 身份验证和添加扩展插件](#bkmk_auth)  
-  
--   [编辑 MSMDPUMP.INI 文件以便设置目标服务器](#bkmk_edit)  
-  
--   [测试您的配置](#bkmk_test)  
   
 ##  <a name="bkmk_overview"></a> 概述  
  MSMDPUMP 是一个 ISAPI 扩展，可加载到 IIS 以及向本地或远程 Analysis Services 实例提供重定向。 配置此 ISAPI 扩展后，即创建 Analysis Services 实例的 HTTP 端点。  
@@ -261,7 +245,7 @@ ms.lasthandoff: 02/15/2018
 |-|-|  
 |匿名|向成员身份列表添加在 IIS 的 **“编辑匿名身份验证凭据”** 中指定的帐户。 有关详细信息，请参阅 [匿名身份验证](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)。|  
 |Windows 身份验证|向成员身份列表添加通过模拟或委托请求 Analysis Services 数据的 Windows 用户或组帐户。<br /><br /> 假设使用 Kerberos 约束的委派，唯一需要权限的帐户是请求访问的 Windows 用户和组帐户。 应用程序池标识不需要任何权限。|  
-|基本身份验证|向成员身份列表添加将在连接字符串中传递的 Windows 用户或组帐户。<br /><br /> 此外，如果通过连接字符串上的 **EffectiveUserName** 传递凭据，则应用程序池标识必须具有 Analysis Services 实例上的管理员权限。 在 SSMS 中，右键单击实例 &#124;**属性**&#124;**安全**&#124;**添加**。 输入应用程序池标识。 如果你使用内置的默认标识，帐户被指定为**IIS AppPool\DefaultAppPool**。<br /><br /> ![演示如何输入 AppPoolIdentity 帐户](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "演示如何输入 AppPoolIdentity 帐户")|  
+|基本身份验证|向成员身份列表添加将在连接字符串中传递的 Windows 用户或组帐户。<br /><br /> 此外，如果通过连接字符串上的 **EffectiveUserName** 传递凭据，则应用程序池标识必须具有 Analysis Services 实例上的管理员权限。 在 SSMS 中，右键单击该实例&#124;**属性** &#124; **安全** &#124; **添加**。 输入应用程序池标识。 如果你使用内置的默认标识，帐户被指定为**IIS AppPool\DefaultAppPool**。<br /><br /> ![演示如何输入 AppPoolIdentity 帐户](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "演示如何输入 AppPoolIdentity 帐户")|  
   
  有关设置权限的详细信息，请参阅 [授予对对象和操作的访问权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
   

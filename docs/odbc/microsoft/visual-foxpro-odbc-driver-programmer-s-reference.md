@@ -1,32 +1,33 @@
 ---
-title: "Visual FoxPro ODBC 驱动程序程序员 &#39; s 引用 |Microsoft 文档"
-ms.custom: 
+title: Visual FoxPro ODBC 驱动程序程序员&#39;的参考 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], technical reference
 - FoxPro ODBC driver [ODBC], technical reference
 ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e626d433ae1546eb346c53708086c32f58e5096b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a95322aad17e46e87175247fec9eb2b018e8daf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC 驱动程序程序员 &#39; s 引用
+# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC 驱动程序程序员&#39;的参考
 Visual FoxPro ODBC 驱动程序文档的此部分包含以下主题：  
   
 -   [书签支持](../../odbc/microsoft/bookmark-support-visual-foxpro-odbc-driver.md)  

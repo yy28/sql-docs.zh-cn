@@ -1,31 +1,32 @@
 ---
-title: "附录 e： 标量函数 |Microsoft 文档"
-ms.custom: 
+title: 附录 e： 标量函数 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - scalar functions [ODBC]
 - functions [ODBC], scalar
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c622054c6c9d4c2314fe2ae0af9fb8574c338312
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ee9e2ab75f22ae3090d87d5c232f88423df9360
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-e-scalar-functions"></a>附录 e： 标量函数
 ODBC 指定以下类型的标量函数，有关上述每种函数类型，在此附录的相应章节中提供的详细信息。 函数说明中包含相关联的语法。  

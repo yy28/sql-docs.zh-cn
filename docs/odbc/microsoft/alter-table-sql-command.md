@@ -2,7 +2,7 @@
 title: 更改表的 SQL 命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9897be4d0e594c82aa872f904d500bd1216d40f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table---sql-command"></a>更改表的 SQL 命令
 以编程方式修改一个表结构。  
@@ -83,7 +83,7 @@ ALTER TABLE TableName1
   
  *nFieldWidth*和*nPrecision* D、 G、 I、 L、 M、 P、 T、 和 Y 为忽略类型。 默认情况下， *nPrecision*是零 （没有小数位），如果*nPrecision*不包含 B、 F 或 N 类型。  
   
- NULL &#124;不为 NULL  
+ NULL &#124; NOT NULL  
  允许或阻止的字段中的 null 值。  
   
  如果你省略 NULL，而不为 NULL，设置为 NULL 的当前设置将确定在字段中是否允许空值。 但是，如果你省略 NULL 和 NOT NULL，并且包括主键或唯一子句，忽略设置为 NULL 的当前设置，该字段不是默认情况下为 NULL。  
@@ -187,7 +187,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  指定 Visual FoxPro 允许进行表; 的结构更改这些更改可能会违反的表中数据的完整性。 默认情况下，Visual FoxPro 阻止 ALTER TABLE 进行更改违反的表中数据的完整性。 包括 NOVALIDATE 重写此默认行为。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  ALTER TABLE 可以用于修改尚未添加到数据库表的结构。 但是，如果包括默认、 外键、 主键、 引用，或修改可用的表时，SET 子句 Visual FoxPro 将生成错误。  
   
  ALTER TABLE 可能通过创建新的表头和记录追加到表标头来重建表。 例如，更改字段的类型或宽度可能会导致要重新生成的表。  

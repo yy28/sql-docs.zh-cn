@@ -2,7 +2,7 @@
 title: SQLGetTypeInfo （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e552a73289da6d78223b6416b7be7fe125e23e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c69f1e0c2a2dd9c67b5f36776f945d8aa06d6a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo （Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_BIGINT|不提供支持。 没有 64 位 Visual FoxPro 类型。|  
 |SQL_BIT|逻辑函数|  
 |SQL_CHAR|字符|  
-|SQL_DATE|date|  
+|SQL_DATE|日期|  
 |SQL_DECIMAL|数字|  
 |SQL_DOUBLE|双精度|  
 |SQL_FLOAT|双精度|  

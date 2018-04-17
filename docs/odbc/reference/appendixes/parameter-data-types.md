@@ -1,15 +1,16 @@
 ---
-title: "参数数据类型 |Microsoft 文档"
-ms.custom: 
+title: 参数数据类型 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], parameters
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1deb0723864a0ed27f639a5060cc17afe886b9e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7a198f2bf8b13b5bd4d8424c8fdf41f6352b92a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parameter-data-types"></a>参数数据类型
 即使每个参数指定与**SQLBindParameter**是定义使用 SQL 数据类型，SQL 语句中的参数具有任何内部函数的数据类型。 因此，参数标记可以包含在 SQL 语句才可以从语句中的另一个操作数推断其数据类型。 例如，在如算术表达式？ + 可以从 COLUMN1 所表示的指定列的数据类型推断出 COLUMN1，参数的数据类型。 如果无法确定的数据类型，应用程序无法使用参数标记。  

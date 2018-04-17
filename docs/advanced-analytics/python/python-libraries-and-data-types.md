@@ -1,32 +1,22 @@
 ---
-title: Python 库 |Microsoft 文档
-ms.custom: ''
-ms.date: 03/30/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 在 SQL Server 机器学习中的 Python 库和数据类型 |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 70156a6b4d443c54f9b6244e5491da63ce345198
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f8dfa7f343a3a179b05b624a083238e08011c4a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Python 库和数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本指南介绍了以下产品附带的 Python 库：
-
-+ SQL Server 机器学习服务 （数据库）
-+ Microsoft 机器学习 Server （独立）
+本文介绍随 SQL Server 计算机学习 Services （数据库） 和 （独立） 安装的 Python 库。
 
 本文还列出了不支持的数据类型和列表的数据类型转换可能会执行隐式当 Python 和 SQL Server 之间传递的数据。
 

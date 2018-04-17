@@ -1,15 +1,16 @@
 ---
-title: "自动提交模式 |Microsoft 文档"
-ms.custom: 
+title: 自动提交模式 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2a9fd1565d0980e5af77d3cded499ce1f0091e5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 046b9a0ec140404418b7b868f2061cbabf7b0d3e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="auto-commit-mode"></a>自动提交模式
 *在自动提交模式下，*每个数据库操作是执行时提交的事务。 此模式适合于很多包含单个 SQL 语句的实际事务。 它是不必要分隔或指定这些事务完成。 在数据库中没有事务支持，自动提交模式是唯一支持的模式。 在此类数据库中，语句时，将提交，它们将执行，并且没有无法回滚它们;它们是因此始终在自动提交模式下。  

@@ -2,7 +2,7 @@
 title: 更新-SQL 命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8c1189955ee62fd14484816358feffc38e002c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update---sql-command"></a>更新-SQL 命令
 使用新值更新表中的记录。  
@@ -50,12 +50,12 @@ SET Column_Name1 = eExpression1
  设置*Column_Name1*= *eExpression1*[， *Column_Name2*= *eExpression2*  
  指定更新的列和其新值。 如果省略 WHERE 子句，使用相同的值更新列中的每个行。  
   
- 其中*FilterCondition1*[AND &#124;或者*FilterCondition2*...]  
+ 其中*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  
  指定使用新值更新的记录。  
   
  *FilterCondition*指定记录为使用新值更新而必须满足的条件。 可以包含任意数量的筛选条件根据需要，将它们连接使用 AND 或 OR 运算符。 你还可以使用 NOT 运算符颠倒的逻辑表达式时，值或可以使用**空**（) 检查是否有一个空的字段。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  更新-SQL 可以更新仅在单个表的记录。  
   
  与替换，不同更新-SQL 使用记录锁定更新表中的多个记录打开以进行共享访问时。 这将减少在多用户情况下记录争用，但可能会降低性能。 为获得最佳性能，打开该表的独占使用，或者使用**FLOCK**（) 锁定表。  

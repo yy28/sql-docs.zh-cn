@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 教程第 2 课： 获取数据 |Microsoft 文档"
-description: "介绍如何获取和导入 Analysis Services 教程项目中的数据。"
+title: Analysis Services 教程第 2 课： 获取数据 |Microsoft 文档
+description: 介绍如何获取和导入 Analysis Services 教程项目中的数据。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 1fd06f563581d42764b5b6f29b3c22d8129f9160
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3dd8c6e562fa1c792ff5bf9c117b687f8d77475b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-data"></a>获取数据
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 02/20/2018
   
 6.  在导航器中，选择以下各表的复选框： **DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，和**FactInternetSales**。  
 
-    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![作为-第 2 课-选择的表](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 单击确定后，将打开查询编辑器。 在下一步的部分中，选择你想要导入的数据。
 
@@ -151,7 +152,7 @@ AdventureWorksDW 示例数据库中的表具有无需在模型中包括的数据
   
 1.  检查所做选择。 如果一切看上去没有问题，请单击**导入**。 数据处理对话框中显示的数据导入从你的数据源到工作区数据库的状态。
   
-    ![as-lesson2-success](../tutorial-tabular-1400/media/as-lesson2-success.png) 
+    ![作为第 2 课成功](../tutorial-tabular-1400/media/as-lesson2-success.png) 
   
 2.  单击 **“关闭”**。  
 

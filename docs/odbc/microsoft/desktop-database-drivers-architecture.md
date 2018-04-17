@@ -1,31 +1,32 @@
 ---
-title: "桌面数据库驱动程序体系结构 |Microsoft 文档"
-ms.custom: 
+title: 桌面数据库驱动程序体系结构 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2b68b735a278fd00b4d472eb881594c0bf4245
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面数据库驱动程序体系结构
 这些驱动程序旨在为使用在 Microsoft Windows 95 或更高版本，或 Windows NT 4.0 和 Windows 2000。 唯一的 32 位应用程序支持 Windows 95 或更高版本;在 Windows NT 4.0 和 Windows 2000 上支持 16 位和 32 位应用程序。  
@@ -37,13 +38,13 @@ ms.lasthandoff: 12/21/2017
   
  Windows 95 或更高版本的应用程序/驱动程序体系结构是：  
   
- ![应用程序 &#47; 驱动程序体系结构： Windows 95 和更高版本](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![应用&#47;驱动程序体系结构： Windows 95 和更高版本](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  不支持的 Windows 95 上的 16 位应用程序通过这些驱动程序使用。  
   
  在 Windows NT 4.0 和 Windows 2000 上的应用程序/驱动程序体系结构是：  
   
- ![应用程序 &#47; 驱动程序体系结构： NT 4.0 和 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![应用&#47;驱动程序体系结构： NT 4.0 和 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  桌面数据库驱动程序是两层驱动程序。 在两层配置中，该驱动程序不执行分析、 验证、 优化和执行查询的过程。 相反，Microsoft Jet 执行这些任务。 它处理 ODBC API 调用，并且可作为 SQL 引擎。 Microsoft Jet 已变得驱动程序的整型、 不可分割组成部分： 它随驱动程序，并且位于的驱动程序，即使计算机上的任何其他应用程序使用它。  
   

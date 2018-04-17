@@ -2,7 +2,7 @@
 title: SET 唯一命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ba0921d2bfab8911d129ac4d1430e6d8d9bd6fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0e73315f1dca11f4b43d743e0b9dd3feb31bbab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-unique-command"></a>SET 唯一命令
 指定是否具有重复的索引键值的记录保留在索引文件。  
@@ -43,5 +43,5 @@ SET UNIQUE ON | OFF
  OFF  
  （默认值。）指定在索引文件中包含具有重复的索引键值的记录。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  当发出重新编制索引时，索引文件将保留其唯一设置的设置。 有关详细信息，请参阅[索引](../../odbc/microsoft/index-command.md)。

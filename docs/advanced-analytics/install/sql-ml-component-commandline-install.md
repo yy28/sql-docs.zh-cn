@@ -1,26 +1,17 @@
 ---
-title: "命令提示符安装 SQL Server 计算机学习组件 |Microsoft 文档"
-ms.custom: 
-ms.date: 03/15/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+title: 命令提示符安装 SQL Server 计算机学习组件 |Microsoft 文档
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c51d8299837f0eda02a07afe1ea4d34d3ecd5e31
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>从命令行安装 SQL Server 计算机学习组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +47,10 @@ ms.lasthandoff: 03/21/2018
 | 参数 | Description |
 |-----------|-------------|
 | / 功能 = AdvancedAnalytics | 安装中数据库版本： SQL Server 自 2017 年 1 机器学习 Services （数据库） 或 SQL Server 2016 R Services （数据库）。  |
-| /FEATURES = SQL_INST_MR | 适用于仅 SQL Server 自 2017 年。 与 AdvancedAnalytics 配对。 安装 （数据库中） R 功能，包括 Microsoft R Open 和专有的 R 包。 SQL Server 2016 R Services 功能是 R 只读，因此没有该版本参数。|
-| /FEATURES = SQL_INST_MPY | 适用于仅 SQL Server 自 2017 年。 与 AdvancedAnalytics 配对。 安装 （数据库） Python 功能，包括 Anaconda 和专有的 Python 包。 |
-| /FEATURES = SQL_SHARED_MR | 安装独立版本的 R 功能： SQL Server 自 2017 年 1 机器学习服务器 （独立） 或 SQL Server 2016 R Server （独立）。 独立服务器是未绑定到数据库引擎实例的"共享的功能"。|
-| /FEATURES = SQL_SHARED_MPY | 适用于仅 SQL Server 自 2017 年。 安装独立版本的 Python 功能： SQL Server 自 2017 年 1 机器学习服务器 （独立）。 独立服务器是未绑定到数据库引擎实例的"共享的功能"。|
+| / 功能 = SQL_INST_MR | 适用于仅 SQL Server 自 2017 年。 与 AdvancedAnalytics 配对。 安装 （数据库中） R 功能，包括 Microsoft R Open 和专有的 R 包。 SQL Server 2016 R Services 功能是 R 只读，因此没有该版本参数。|
+| / 功能 = SQL_INST_MPY | 适用于仅 SQL Server 自 2017 年。 与 AdvancedAnalytics 配对。 安装 （数据库） Python 功能，包括 Anaconda 和专有的 Python 包。 |
+| / 功能 = SQL_SHARED_MR | 安装独立版本的 R 功能： SQL Server 自 2017 年 1 机器学习服务器 （独立） 或 SQL Server 2016 R Server （独立）。 独立服务器是未绑定到数据库引擎实例的"共享的功能"。|
+| / 功能 = SQL_SHARED_MPY | 适用于仅 SQL Server 自 2017 年。 安装独立版本的 Python 功能： SQL Server 自 2017 年 1 机器学习服务器 （独立）。 独立服务器是未绑定到数据库引擎实例的"共享的功能"。|
 | /IACCEPTROPENLICENSETERMS  | 指示已接受使用的开放源代码 R 组件的许可条款。 |
 | / IACCEPTPYTHONLICENSETERMS | 指示已接受使用 Python 组件的许可条款。 |
 | /IACCEPTSQLSERVERLICENSETERMS | 指示已接受使用 SQL Server 的许可条款。|

@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 教程课 12： 在 Excel 中分析 |Microsoft 文档"
-description: "描述如何在 Analysis Services tutorial 项目中，在 Excel 中使用分析。"
+title: Analysis Services 教程课 12： 在 Excel 中分析 |Microsoft 文档
+description: 描述如何在 Analysis Services tutorial 项目中，在 Excel 中使用分析。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: dda8a42cd5e82c60f98de8ab351274f3c1e93820
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 17fee33ed671ba60625a2df7629890c8abbbaed5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 02/20/2018
     
 3.  在 Excel 中，在**数据透视表字段**，请注意从字段列表中排除 DimCustomer 表。  
     
-    ![as-lesson12-fields](../tutorial-tabular-1400/media/as-lesson12-fields.png)
+    ![作为 lesson12 字段](../tutorial-tabular-1400/media/as-lesson12-fields.png)
     
 4.  关闭 Excel 而不保存工作簿。  
   

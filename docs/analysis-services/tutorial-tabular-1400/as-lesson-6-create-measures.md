@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 教程第 6 课： 创建度量值 |Microsoft 文档"
-description: "描述如何在 Analysis Services tutorial 项目中创建度量值。"
+title: Analysis Services 教程第 6 课： 创建度量值 |Microsoft 文档
+description: 描述如何在 Analysis Services tutorial 项目中创建度量值。
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: b4de99f18366afefaeb5411e0fc5454d378b87f7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d37b1c5a307ea7f9c90fa29c83536a4b3d8ef0bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-measures"></a>创建度量值
 
@@ -57,7 +58,7 @@ ms.lasthandoff: 02/20/2018
   
     请注意左上角单元格现在包含度量值名称， **DaysCurrentQuarterToDate**后, 跟结果， **92**。 结果是不相关此时因为任何用户筛选器已不应用。
     
-      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![作为 lesson6 newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     与计算列，不同的度量值公式可以键入度量值名称后, 跟冒号后, 跟公式的表达式。
 

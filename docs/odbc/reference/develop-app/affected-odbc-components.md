@@ -1,15 +1,16 @@
 ---
-title: "受影响的 ODBC 组件 |Microsoft 文档"
-ms.custom: 
+title: 受影响的 ODBC 组件 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading applications [ODBC], affected components
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], backward compatibility
 - backward compatibility [ODBC], affected components
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e74a2a77a224fd4ef7e48f9211857d42732d84dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb58971a193a210f927d1b0a38f2be671b749468
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="affected-odbc-components"></a>受影响的 ODBC 组件
 向后兼容性介绍的新版本的驱动程序管理器简介如何影响应用程序、 驱动程序管理器和驱动程序。 这会影响应用程序和驱动程序时这两个或其中任何一个保留在旧版本。 有，因此，三种类型的向后兼容性，还需要考虑下表中所示。  

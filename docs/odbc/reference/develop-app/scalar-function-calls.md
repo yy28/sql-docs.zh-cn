@@ -2,7 +2,7 @@
 title: 标量函数调用 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scalar-function-calls"></a>标量函数调用
 标量函数返回每一行的值。 例如，该绝对值标量函数将作为自变量的数值列，并返回列中的每个值的绝对值的数值。 调用标量函数的转义序列是  
@@ -49,7 +49,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  应用程序应使用的最大互操作性，**转换**标量函数，以确保一个标量函数的输出所需的类型。 **转换**函数将数据从一种 SQL 数据类型转换为指定的 SQL 数据类型。 语法**转换**技术支持部门  
   
- **转换 (** *value_exp* **，** *data_type***)**  
+ **转换 (** *value_exp* **，** *data_type * * *)**  
   
  其中*value_exp*列名称，另一个标量函数，或文本值，而结果和*data_type*是匹配的关键字**#define**使用的名称SQL 数据类型标识符中定义[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，以下 SQL 语句使用**转换**若要确保的函数的输出**CURDATE**函数是一个日期，而不是时间戳或字符数据：  
   

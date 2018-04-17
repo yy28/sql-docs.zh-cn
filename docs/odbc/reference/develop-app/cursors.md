@@ -1,15 +1,16 @@
 ---
-title: "游标 | Microsoft Docs"
-ms.custom: 
+title: 游标 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - forward-only cursors [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c0c6ae5b9bda276bcd1296fcb475063fea6db204
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursors"></a>游标
 应用程序会获取与数据*光标*。 一种不同于结果集： 结果集是与特定搜索条件匹配的行集，而一种软件，将返回这些行到应用程序。 名称*游标，*因为它应用到数据库，可能源自终端的计算机上闪烁的光标。 就像该游标指示当前位置屏幕和类型化的单词出现的位置下一步，结果集上的光标指示结果集和下一步将返回哪些行中的当前位置。  

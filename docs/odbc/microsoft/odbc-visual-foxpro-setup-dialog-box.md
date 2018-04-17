@@ -1,31 +1,32 @@
 ---
-title: "ODBC Visual FoxPro 安装程序对话框中 |Microsoft 文档"
-ms.custom: 
+title: ODBC Visual FoxPro 安装程序对话框中 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - installing Visual FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4142d2806cb71f8cb188f1ab155213493d4dc975
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6d9a21f344687878d1a5b63073f1e23078386868
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 安装程序对话框
 **ODBC Visual FoxPro 安装**对话框中，可以添加或更改 Visual FoxPro 数据源。  
@@ -51,10 +52,10 @@ ms.lasthandoff: 12/21/2017
  **路径**  
  显示的路径和用于数据库或数据源连接到的可用表的目录的名称。  
   
- **“浏览”**  
+ **浏览**  
  使您可以搜索您的系统和网络中的数据库或你想要连接的数据源的目录。  
   
- **选项**  
+ **Options**  
  展开对话框中，以便您可以设置 Visual FoxPro ODBC 驱动程序选项。  
   
 ## <a name="driver"></a>驱动程序  

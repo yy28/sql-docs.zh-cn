@@ -2,7 +2,7 @@
 title: SET 重新处理命令 |Microsoft 文档
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba3689fb9d70418d546d9583a537b2112a65a71b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fb1ee7ee957ef5a7872a87a47d5615f1d241aa6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-reprocess-command"></a>SET 重新处理命令
 指定多少时间或如何长度后不成功的锁定尝试锁定文件或记录。  
@@ -59,5 +59,5 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
  为自动  
  指定 Visual FoxPro 尝试锁定记录或无限期地文件。 （为-2 的集重新处理是等效的命令。）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注释  
  第一次尝试锁定记录或文件并不总是成功。 通常情况下，记录或文件已由网络上的另一个用户锁定。 设置重新处理确定 Visual FoxPro 是否使最初尝试不成功时锁定记录或文件的更多尝试。 你可以指定多少次的更多尝试进行，或对于多长时间尝试将生成。 ON 错误例程会影响如何不成功尝试处理的锁。

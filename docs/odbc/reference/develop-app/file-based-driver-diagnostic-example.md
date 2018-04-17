@@ -1,31 +1,32 @@
 ---
-title: "基于文件的驱动程序诊断示例 |Microsoft 文档"
-ms.custom: 
+title: 基于文件的驱动程序诊断示例 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - file-based driver diagnostic [ODBC]
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8b4fab8c7d39acbffc73959ec06adb830716003
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8dd8323e268ec31c33db3b850ee2b449264ed3f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-based-driver-diagnostic-example"></a>基于文件的驱动程序诊断示例
 基于文件的驱动程序可以充当同时 ODBC 驱动程序和数据源。 因此可以生成错误和警告同时作为组件中的 ODBC 连接和作为数据源。 它也是接口与驱动程序管理器中的组件，因为它格式，并返回自变量**SQLGetDiagRec**。  

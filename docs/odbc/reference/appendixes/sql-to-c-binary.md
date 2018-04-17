@@ -1,15 +1,16 @@
 ---
-title: "为 c： 二进制 SQL |Microsoft 文档"
-ms.custom: 
+title: 为 c： 二进制 SQL |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], binary
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], binary
 - binary data transfers [ODBC]
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 293c18d2206d1b034eadc532f8850c6599e904e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 36f1faed079da9dd8b3d04f659bc079583abd044
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-binary"></a>为 c： 二进制 SQL
 二进制 ODBC SQL 数据类型的标识符都是：  
@@ -41,9 +42,9 @@ ms.lasthandoff: 12/21/2017
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|（数据的字节长度）\* 2 < *BufferLength*<br /><br /> （数据的字节长度）\* 2 > = *BufferLength*|data<br /><br /> 截断的数据|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度|不适用<br /><br /> 01004|  
-|SQL_C_WCHAR|（字符长度的数据）\* 2 < *BufferLength*<br /><br /> （字符长度的数据）\* 2 > = *BufferLength*|data<br /><br /> 截断的数据|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度|不适用<br /><br /> 01004|  
-|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|data<br /><br /> 截断的数据|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度|不适用<br /><br /> 01004|  
+|SQL_C_CHAR|（数据的字节长度）\* 2 < *BufferLength*<br /><br /> （数据的字节长度）\* 2 > = *BufferLength*|Data<br /><br /> 截断的数据|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度|不适用<br /><br /> 01004|  
+|SQL_C_WCHAR|（字符长度的数据）\* 2 < *BufferLength*<br /><br /> （字符长度的数据）\* 2 > = *BufferLength*|Data<br /><br /> 截断的数据|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度|不适用<br /><br /> 01004|  
+|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|Data<br /><br /> 截断的数据|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度|不适用<br /><br /> 01004|  
   
  当二进制 SQL 数据转换为字符 C 数据时，源数据的每个字节 （8 位） 都表示为两个 ASCII 字符。 这些字符是数字的 ASCII 字符表示形式中其十六进制格式。 例如，二进制 00000001 转换为"01"，二进制 11111111 转换为"FF"。  
   

@@ -1,31 +1,32 @@
 ---
-title: "使用 SQLBrowseConnect 连接 |Microsoft 文档"
-ms.custom: 
+title: 使用 SQLBrowseConnect 连接 |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to driver [ODBC], SQLBrowseConnect
 - SQLBrowseConnect function [ODBC], connecting
 - connecting to data source [ODBC], SQLBrowseConnect
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d8f7e8722c9386267aeb429301a71132c999d8a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f6382b0a02963395008dd02c962c10479aa5f29d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>使用 SQLBrowseConnect 连接
 **SQLBrowseConnect**、 like **SQLDriverConnect**，使用的连接字符串。 但是，通过使用**SQLBrowseConnect**，应用程序可以在运行时构造完整连接字符串。 这允许应用程序执行以下两种操作：  

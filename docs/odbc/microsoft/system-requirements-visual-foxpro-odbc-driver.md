@@ -1,15 +1,16 @@
 ---
-title: "系统要求 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档"
-ms.custom: 
+title: 系统要求 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], accessing Visual FoxPro data
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed926636cbfb7c31c9a6312abf296a7d1e4f0993
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d88a72ff8c871ecccf2f100e8b1472394492240e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>系统要求 （Visual FoxPro ODBC 驱动程序）
 安装的系统要求提供的最小操作系统和已成功安装驱动程序所需的磁盘空间。 已安装了驱动程序后，你可以选择想要用于访问 Visual FoxPro 数据的特定应用程序软件。  
